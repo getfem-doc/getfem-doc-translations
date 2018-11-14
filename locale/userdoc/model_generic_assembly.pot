@@ -2,13 +2,13 @@
 # Copyright (C) 2004-2018 GetFEM++ project
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 15:44+0900\n"
+"POT-Creation-Date: 2018-11-15 02:08+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,115 +17,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/model_generic_assembly.rst:13
+# 4e3de5bb41ed4d9fb39172e96f97eaa5
 msgid "Generic assembly bricks"
-msgstr "Generic assembly bricks"
+msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:16
-msgid ""
-"A mean to add a term either on one variable or on several ones is to "
-"directly use the weak form language described in Section :ref:`ud-gasm-"
-"high`. The more general way is to use::"
+# 2c0b4a25f5ab40bfa3af6d1e75d923ca
+msgid "A mean to add a term either on one variable or on several ones is to directly use the weak form language described in Section :ref:`ud-gasm-high`. The more general way is to use::"
 msgstr ""
-"A mean to add a term either on one variable or on several ones is to "
-"directly use the weak form language described in Section :ref:`ud-gasm-"
-"high`. The more general way is to use::"
 
 #: ../source/userdoc/model_generic_assembly.rst:21
-msgid ""
-"This adds a brick to the model ``md``, using the integration method ``mim``,"
-" the assembly string ``expr`` on the mesh region ``region``. If the result "
-"is symmetric, you can specify it on the 5th argument and if it is coercive "
-"on the 6th argument. The latter indications of symmetry and coercivness are "
-"used to determine the right linear solver. If you are not so sure, it is "
-"preferable not to indicate anything."
+# 452043ad7ab54a0e87bdeb26e0d1749e
+msgid "This adds a brick to the model ``md``, using the integration method ``mim``, the assembly string ``expr`` on the mesh region ``region``. If the result is symmetric, you can specify it on the 5th argument and if it is coercive on the 6th argument. The latter indications of symmetry and coercivness are used to determine the right linear solver. If you are not so sure, it is preferable not to indicate anything."
 msgstr ""
-"This adds a brick to the model ``md``, using the integration method ``mim``,"
-" the assembly string ``expr`` on the mesh region ``region``. If the result "
-"is symmetric, you can specify it on the 5th argument and if it is coercive "
-"on the 6th argument. The latter indications of symmetry and coercivness are "
-"used to determine the right linear solver. If you are not so sure, it is "
-"preferable not to indicate anything."
 
 #: ../source/userdoc/model_generic_assembly.rst:23
-msgid ""
-"However, this brick consider that the expression is nonlinear. This brick is"
-" especially indicated to obtain nonlinear coupled terms between several "
-"variables. This means in particular that the assembly of the term is "
-"performed at each call of the assembly of the model and that a Newton "
-"algorithm will be used to solve the problem. If the term is indeed linear, "
-"you should use instead::"
+# 556e60594f4d469fa4cff1ed1303a2d5
+msgid "However, this brick consider that the expression is nonlinear. This brick is especially indicated to obtain nonlinear coupled terms between several variables. This means in particular that the assembly of the term is performed at each call of the assembly of the model and that a Newton algorithm will be used to solve the problem. If the term is indeed linear, you should use instead::"
 msgstr ""
-"However, this brick consider that the expression is nonlinear. This brick is"
-" especially indicated to obtain nonlinear coupled terms between several "
-"variables. This means in particular that the assembly of the term is "
-"performed at each call of the assembly of the model and that a Newton "
-"algorithm will be used to solve the problem. If the term is indeed linear, "
-"you should use instead::"
 
 #: ../source/userdoc/model_generic_assembly.rst:28
-msgid ""
-"with the same arguments. Conversely, this brick alway assume that the term "
-"corresponding to ``expr`` is linear and the assembly will be performed only "
-"once if the data used do not change. Thus, you have to care that your "
-"expression is indeed linear (affine in fact) with respect to each variable. "
-"Otherwise, the result is of course not guaranted. Source terms in the "
-"expression are taken into account. Still for linear problem, it is possible "
-"to perform the assembly of a sole source term thanks to::"
+# bdba92dcbfc24d3b85a194fd1d658c7e
+msgid "with the same arguments. Conversely, this brick alway assume that the term corresponding to ``expr`` is linear and the assembly will be performed only once if the data used do not change. Thus, you have to care that your expression is indeed linear (affine in fact) with respect to each variable. Otherwise, the result is of course not guaranted. Source terms in the expression are taken into account. Still for linear problem, it is possible to perform the assembly of a sole source term thanks to::"
 msgstr ""
-"with the same arguments. Conversely, this brick alway assume that the term "
-"corresponding to ``expr`` is linear and the assembly will be performed only "
-"once if the data used do not change. Thus, you have to care that your "
-"expression is indeed linear (affine in fact) with respect to each variable. "
-"Otherwise, the result is of course not guaranted. Source terms in the "
-"expression are taken into account. Still for linear problem, it is possible "
-"to perform the assembly of a sole source term thanks to::"
 
 #: ../source/userdoc/model_generic_assembly.rst:32
-msgid ""
-"with again the same arguments except the symmetry and coercivness. This "
-"brick performs the assembly of the corresponding order 1 term (residual "
-"vector) and add it as a right hand side to the problem. The assembly will be"
-" performed only once, so the term should not depend on the variables of the "
-"model (but could depend of course on the constants)."
+# 13218c0c0dfe486a9bb141419461f465
+msgid "with again the same arguments except the symmetry and coercivness. This brick performs the assembly of the corresponding order 1 term (residual vector) and add it as a right hand side to the problem. The assembly will be performed only once, so the term should not depend on the variables of the model (but could depend of course on the constants)."
 msgstr ""
-"with again the same arguments except the symmetry and coercivness. This "
-"brick performs the assembly of the corresponding order 1 term (residual "
-"vector) and add it as a right hand side to the problem. The assembly will be"
-" performed only once, so the term should not depend on the variables of the "
-"model (but could depend of course on the constants)."
 
 #: ../source/userdoc/model_generic_assembly.rst:35
-msgid ""
-"For instance, if one wants to solve a Poisson problem on a predefined "
-"variable ``u`` of the model, one may use the corresponding pre-defined "
-"bricks (see below) or simply use::"
+# 92c8977cea9e4394b0351e840a4ec654
+msgid "For instance, if one wants to solve a Poisson problem on a predefined variable ``u`` of the model, one may use the corresponding pre-defined bricks (see below) or simply use::"
 msgstr ""
-"For instance, if one wants to solve a Poisson problem on a predefined "
-"variable ``u`` of the model, one may use the corresponding pre-defined "
-"bricks (see below) or simply use::"
 
 #: ../source/userdoc/model_generic_assembly.rst:39
-msgid ""
-"where ``F`` is a pre-defined constant of the model representing the right "
-"hand side. Of course, doing so, Newton's algorithms will be called. So, the "
-"more appropriate manner is to use the linear bricks as follows::"
+# 5c4a24cd21a44486b4da7344484a8f0f
+msgid "where ``F`` is a pre-defined constant of the model representing the right hand side. Of course, doing so, Newton's algorithms will be called. So, the more appropriate manner is to use the linear bricks as follows::"
 msgstr ""
-"where ``F`` is a pre-defined constant of the model representing the right "
-"hand side. Of course, doing so, Newton's algorithms will be called. So, the "
-"more appropriate manner is to use the linear bricks as follows::"
 
 #: ../source/userdoc/model_generic_assembly.rst:49
-msgid ""
-"Note that for the moment, the use of the weak form language is not possible "
-"for complex valued problems."
+# 0722abbfb7494071b6283e079c9c5a90
+msgid "Note that for the moment, the use of the weak form language is not possible for complex valued problems."
 msgstr ""
-"Note that for the moment, the use of the weak form language is not possible "
-"for complex valued problems."
 
 #: ../source/userdoc/model_generic_assembly.rst:7
+# 719714a7eee4454a9a399d3235690f8e
 msgid "models"
-msgstr "models"
+msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:7
+# 719714a7eee4454a9a399d3235690f8e
 msgid "model bricks"
-msgstr "model bricks"
+msgstr ""
+

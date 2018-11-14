@@ -2,13 +2,13 @@
 # Copyright (C) 2004-2018 GetFEM++ project
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 15:44+0900\n"
+"POT-Creation-Date: 2018-11-15 02:08+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,257 +17,137 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/parallel.rst:10
+# 25e7b02077064ac6b118bd69b859f42f
 msgid "MPI Parallelization of |gf|"
-msgstr "MPI Parallelization of |gf|"
+msgstr ""
 
 #: ../source/userdoc/parallel.rst:12
-msgid ""
-"Of course, each different problem should require a different parallelization"
-" adapted to its specificities in order to obtain a good load balancing. You "
-"may build your own parallelization using the mesh regions to parallelize "
-"assembly procedures."
+# 3dab5d64bbee4ac49569ac8ffb0da7cb
+msgid "Of course, each different problem should require a different parallelization adapted to its specificities in order to obtain a good load balancing. You may build your own parallelization using the mesh regions to parallelize assembly procedures."
 msgstr ""
-"Of course, each different problem should require a different parallelization"
-" adapted to its specificities in order to obtain a good load balancing. You "
-"may build your own parallelization using the mesh regions to parallelize "
-"assembly procedures."
 
 #: ../source/userdoc/parallel.rst:17
-msgid ""
-"Nevertheless, the brick system offers a generic parallelization based on MPI"
-" (communication between processes), `METIS "
-"<http://glaros.dtc.umn.edu/gkhome/metis/metis/overview>`_ (partition of the "
-"mesh) and `MUMPS <http://graal.ens-lyon.fr/MUMPS>`_ (parallel sparse direct "
-"solver). It is available with the compiler option ``-D GETFEM_PARA_LEVEL=2``"
-" and the library itself has to be compiled with the option ``--enable-"
-"paralevel=2`` of the configure script. Initial MPI parallelization of |gf| "
-"has been designed with the help of Nicolas Renon from CALMIP, Toulouse."
+# f28533706a734ea190da3f73ba422352
+msgid "Nevertheless, the brick system offers a generic parallelization based on MPI (communication between processes), `METIS <http://glaros.dtc.umn.edu/gkhome/metis/metis/overview>`_ (partition of the mesh) and `MUMPS <http://graal.ens-lyon.fr/MUMPS>`_ (parallel sparse direct solver). It is available with the compiler option ``-D GETFEM_PARA_LEVEL=2`` and the library itself has to be compiled with the option ``--enable-paralevel=2`` of the configure script. Initial MPI parallelization of |gf| has been designed with the help of Nicolas Renon from CALMIP, Toulouse."
 msgstr ""
-"Nevertheless, the brick system offers a generic parallelization based on MPI"
-" (communication between processes), `METIS "
-"<http://glaros.dtc.umn.edu/gkhome/metis/metis/overview>`_ (partition of the "
-"mesh) and `MUMPS <http://graal.ens-lyon.fr/MUMPS>`_ (parallel sparse direct "
-"solver). It is available with the compiler option ``-D GETFEM_PARA_LEVEL=2``"
-" and the library itself has to be compiled with the option ``--enable-"
-"paralevel=2`` of the configure script. Initial MPI parallelization of |gf| "
-"has been designed with the help of Nicolas Renon from CALMIP, Toulouse."
 
 #: ../source/userdoc/parallel.rst:28
-msgid ""
-"When the configure script is run with the option ``--enable-paralevel=2``, "
-"it searches for MPI, METIS and parallel MUMPS libraries. If the python "
-"interface is built, it searches also for MPI4PY library. In that case, the "
-"python interface can be used to drive the parallel version of getfem (the "
-"other interfaces has not been parallelized for the moment). See "
-"demo_parallel_laplacian.py in the interface/test/python directory."
+# 759d3262bb4b4f9891b450ce713139c6
+msgid "When the configure script is run with the option ``--enable-paralevel=2``, it searches for MPI, METIS and parallel MUMPS libraries. If the python interface is built, it searches also for MPI4PY library. In that case, the python interface can be used to drive the parallel version of getfem (the other interfaces has not been parallelized for the moment). See demo_parallel_laplacian.py in the interface/test/python directory."
 msgstr ""
-"When the configure script is run with the option ``--enable-paralevel=2``, "
-"it searches for MPI, METIS and parallel MUMPS libraries. If the python "
-"interface is built, it searches also for MPI4PY library. In that case, the "
-"python interface can be used to drive the parallel version of getfem (the "
-"other interfaces has not been parallelized for the moment). See "
-"demo_parallel_laplacian.py in the interface/test/python directory."
 
 #: ../source/userdoc/parallel.rst:36
-msgid ""
-"With the option ``-D GETFEM_PARA_LEVEL=2``, each mesh used is implicitely "
-"partitionned (using METIS) into a number of regions corresponding to the "
-"number of processors and the assembly procedures are parallelized. This "
-"means that the tangent matrix and the constraint matrix assembled in the "
-"model_state variable are distributed. The choice made (for the moment) is "
-"not to distribute the vectors. So that the right hand side vectors in the "
-"model_state variable are communicated to each processor (the sum of each "
-"contribution is made at the end of the assembly and each processor has the "
-"complete vector). Note that you have to think to the fact that the matrices "
-"stored by the bricks are all distributed."
+# 8a8e59709ed440dea277c27160ac5616
+msgid "With the option ``-D GETFEM_PARA_LEVEL=2``, each mesh used is implicitely partitionned (using METIS) into a number of regions corresponding to the number of processors and the assembly procedures are parallelized. This means that the tangent matrix and the constraint matrix assembled in the model_state variable are distributed. The choice made (for the moment) is not to distribute the vectors. So that the right hand side vectors in the model_state variable are communicated to each processor (the sum of each contribution is made at the end of the assembly and each processor has the complete vector). Note that you have to think to the fact that the matrices stored by the bricks are all distributed."
 msgstr ""
-"With the option ``-D GETFEM_PARA_LEVEL=2``, each mesh used is implicitely "
-"partitionned (using METIS) into a number of regions corresponding to the "
-"number of processors and the assembly procedures are parallelized. This "
-"means that the tangent matrix and the constraint matrix assembled in the "
-"model_state variable are distributed. The choice made (for the moment) is "
-"not to distribute the vectors. So that the right hand side vectors in the "
-"model_state variable are communicated to each processor (the sum of each "
-"contribution is made at the end of the assembly and each processor has the "
-"complete vector). Note that you have to think to the fact that the matrices "
-"stored by the bricks are all distributed."
 
 #: ../source/userdoc/parallel.rst:48
-msgid ""
-"A model of C++ parallelized program is :file:`tests/elastostatic.cc`. To run"
-" it in parallel you have to launch for instance::"
+# 8b827d74a87d4f849d1c2fa84fda680b
+msgid "A model of C++ parallelized program is :file:`tests/elastostatic.cc`. To run it in parallel you have to launch for instance::"
 msgstr ""
-"A model of C++ parallelized program is :file:`tests/elastostatic.cc`. To run"
-" it in parallel you have to launch for instance::"
 
 #: ../source/userdoc/parallel.rst:53
+# 003812352402449eb924711ce19664d6
 msgid "For a python interfaced program, the call reads::"
-msgstr "For a python interfaced program, the call reads::"
+msgstr ""
 
 #: ../source/userdoc/parallel.rst:57
-msgid ""
-"If you do not perform a `make install`, do not forget to first set the shell"
-" variable PYTHONPATH to the python-getfem library with for instance::"
+# bd97fc1b78e64dcf84622ac04c80b749
+msgid "If you do not perform a `make install`, do not forget to first set the shell variable PYTHONPATH to the python-getfem library with for instance::"
 msgstr ""
-"If you do not perform a `make install`, do not forget to first set the shell"
-" variable PYTHONPATH to the python-getfem library with for instance::"
 
 #: ../source/userdoc/parallel.rst:63
+# 26cd39623ace422fa57533e177ed90c5
 msgid "State of progress of |gf| MPI parallelization"
-msgstr "State of progress of |gf| MPI parallelization"
+msgstr ""
 
 #: ../source/userdoc/parallel.rst:65
-msgid ""
-"Parallelization of getfem is still considered a \"work in progress\". A "
-"certain number of procedure are still remaining sequential. Of course, a "
-"good test to see if the parallelization of your program is correct is to "
-"verify that the result of the computation is indeed independent of the "
-"number of process."
+# b9fa449509d3425897809f498393d728
+msgid "Parallelization of getfem is still considered a \"work in progress\". A certain number of procedure are still remaining sequential. Of course, a good test to see if the parallelization of your program is correct is to verify that the result of the computation is indeed independent of the number of process."
 msgstr ""
-"Parallelization of getfem is still considered a \"work in progress\". A "
-"certain number of procedure are still remaining sequential. Of course, a "
-"good test to see if the parallelization of your program is correct is to "
-"verify that the result of the computation is indeed independent of the "
-"number of process."
 
 #: ../source/userdoc/parallel.rst:67
+# f5c1aa005afa42d18af8e9e25f9c0495
 msgid "Assembly procedures"
-msgstr "Assembly procedures"
+msgstr ""
 
 #: ../source/userdoc/parallel.rst:69
-msgid ""
-"Most of assembly procedures (in :file:`getfem/getfem_assembling.h`) have a "
-"parameter corresponding to the region in which the assembly is to be "
-"computed. They are not parallelized themselves but aimed to be called with a"
-" different region in each process to distribute the job. Note that the file "
-":file:`getfem/getfem_config.h` contains a procedures called "
-"MPI_SUM_SPARSE_MATRIX allowing to gather the contributions of a distributed "
-"sparse matrix."
+# 86cf4c4b8e01458a89997603bb43153f
+msgid "Most of assembly procedures (in :file:`getfem/getfem_assembling.h`) have a parameter corresponding to the region in which the assembly is to be computed. They are not parallelized themselves but aimed to be called with a different region in each process to distribute the job. Note that the file :file:`getfem/getfem_config.h` contains a procedures called MPI_SUM_SPARSE_MATRIX allowing to gather the contributions of a distributed sparse matrix."
 msgstr ""
-"Most of assembly procedures (in :file:`getfem/getfem_assembling.h`) have a "
-"parameter corresponding to the region in which the assembly is to be "
-"computed. They are not parallelized themselves but aimed to be called with a"
-" different region in each process to distribute the job. Note that the file "
-":file:`getfem/getfem_config.h` contains a procedures called "
-"MPI_SUM_SPARSE_MATRIX allowing to gather the contributions of a distributed "
-"sparse matrix."
 
 #: ../source/userdoc/parallel.rst:71
-msgid ""
-"The following assembly procedures are implicitely parallelized using the "
-"option ``-D GETFEM_PARA_LEVEL=2``:"
+# d6a822a581304c6eaa5b02ad7475a7d4
+msgid "The following assembly procedures are implicitely parallelized using the option ``-D GETFEM_PARA_LEVEL=2``:"
 msgstr ""
-"The following assembly procedures are implicitely parallelized using the "
-"option ``-D GETFEM_PARA_LEVEL=2``:"
 
 #: ../source/userdoc/parallel.rst:73
-msgid ""
-"computation of norms (``asm_L2_norm``, ``asm_H1_norm``, ``asm_H2_norm`` ...,"
-" in :file:`getfem/getfem_assembling.h`),"
+# 44beb5c045d74ed8b0d8297bacd552e7
+msgid "computation of norms (``asm_L2_norm``, ``asm_H1_norm``, ``asm_H2_norm`` ..., in :file:`getfem/getfem_assembling.h`),"
 msgstr ""
-"computation of norms (``asm_L2_norm``, ``asm_H1_norm``, ``asm_H2_norm`` ...,"
-" in :file:`getfem/getfem_assembling.h`),"
 
 #: ../source/userdoc/parallel.rst:75
+# 7f5544e961a04a4e8d6036c38c2f5d1a
 msgid "``asm_mean_value`` (in :file:`getfem/getfem_assembling.h`),"
-msgstr "``asm_mean_value`` (in :file:`getfem/getfem_assembling.h`),"
+msgstr ""
 
 #: ../source/userdoc/parallel.rst:77
+# 12403a7ca90446cc8f7fcdd5c3a83641
 msgid "``error_estimate`` (in :file:`getfem/getfem_error_estimate.h`)."
-msgstr "``error_estimate`` (in :file:`getfem/getfem_error_estimate.h`)."
+msgstr ""
 
 #: ../source/userdoc/parallel.rst:79
-msgid ""
-"This means in particular that these functions have to be called on each "
-"processor."
+# 428c0600a8a94677877569b067dd0f7a
+msgid "This means in particular that these functions have to be called on each processor."
 msgstr ""
-"This means in particular that these functions have to be called on each "
-"processor."
 
 #: ../source/userdoc/parallel.rst:82
+# faf61bea14bd433aac44b6a93c87ad97
 msgid "Mesh_fem object"
-msgstr "Mesh_fem object"
+msgstr ""
 
 #: ../source/userdoc/parallel.rst:84
-msgid ""
-"The dof numbering of the getfem::mesh_fem object remains sequential and is "
-"executed on each process.  The parallelization is to be done. This could "
-"affect the efficiency of the parallelization for very large and/or evoluting"
-" meshes."
+# 69331c63497a4fbca4777e56d668a222
+msgid "The dof numbering of the getfem::mesh_fem object remains sequential and is executed on each process.  The parallelization is to be done. This could affect the efficiency of the parallelization for very large and/or evoluting meshes."
 msgstr ""
-"The dof numbering of the getfem::mesh_fem object remains sequential and is "
-"executed on each process.  The parallelization is to be done. This could "
-"affect the efficiency of the parallelization for very large and/or evoluting"
-" meshes."
 
 #: ../source/userdoc/parallel.rst:87
+# 04a3b0e12ddc451185b218e5c513db61
 msgid "Model object and bricks"
-msgstr "Model object and bricks"
+msgstr ""
 
 #: ../source/userdoc/parallel.rst:89
-msgid ""
-"The model system is globally parallelized, which mainly means that the "
-"assembly procedures of standard bricks use a METIS partition of the meshes "
-"to distribute the assembly. The tangent/stiffness matrices remain distibuted"
-" and the standard solve call the parallel version of MUMPS (which accept "
-"distributed matrices)."
+# 17232bc294124393adceea51c9c858db
+msgid "The model system is globally parallelized, which mainly means that the assembly procedures of standard bricks use a METIS partition of the meshes to distribute the assembly. The tangent/stiffness matrices remain distibuted and the standard solve call the parallel version of MUMPS (which accept distributed matrices)."
 msgstr ""
-"The model system is globally parallelized, which mainly means that the "
-"assembly procedures of standard bricks use a METIS partition of the meshes "
-"to distribute the assembly. The tangent/stiffness matrices remain distibuted"
-" and the standard solve call the parallel version of MUMPS (which accept "
-"distributed matrices)."
 
 #: ../source/userdoc/parallel.rst:95
-msgid ""
-"For the moment, the procedure ``actualize_sizes()`` of the model object "
-"remains sequential and is executed on each process. The parallelization is "
-"to be done."
+# 2674c6d18b4f4a6db1246ebfa19b38da
+msgid "For the moment, the procedure ``actualize_sizes()`` of the model object remains sequential and is executed on each process. The parallelization is to be done."
 msgstr ""
-"For the moment, the procedure ``actualize_sizes()`` of the model object "
-"remains sequential and is executed on each process. The parallelization is "
-"to be done."
 
 #: ../source/userdoc/parallel.rst:99
+# 9f43fa1e43134ee9a9d37c4e5a2877fd
 msgid "Some specificities:"
-msgstr "Some specificities:"
+msgstr ""
 
 #: ../source/userdoc/parallel.rst:101
-msgid ""
-"The explicit matrix brick: the given matrix is considered to be distributed."
-" If it is not, only add it on the master process (otherwise, the "
-"contribution will be multiplied by the number of processes)."
+# 457a42a92b2546e486874dcc4ec35be1
+msgid "The explicit matrix brick: the given matrix is considered to be distributed. If it is not, only add it on the master process (otherwise, the contribution will be multiplied by the number of processes)."
 msgstr ""
-"The explicit matrix brick: the given matrix is considered to be distributed."
-" If it is not, only add it on the master process (otherwise, the "
-"contribution will be multiplied by the number of processes)."
 
 #: ../source/userdoc/parallel.rst:105
-msgid ""
-"The explicit rhs brick: the given vector is not considered to be "
-"distributed. Only the given vector on the master process is taken into "
-"account."
+# 07136bfddfcc491bbe2a2b7dce8b085a
+msgid "The explicit rhs brick: the given vector is not considered to be distributed. Only the given vector on the master process is taken into account."
 msgstr ""
-"The explicit rhs brick: the given vector is not considered to be "
-"distributed. Only the given vector on the master process is taken into "
-"account."
 
 #: ../source/userdoc/parallel.rst:109
-msgid ""
-"Constraint brick: The given matrix and rhs are not considered to be "
-"distributed. Only the given matrix and vector on the master process are "
-"taken into account."
+# 7ac07fbfeec74fef8500a57436e745f6
+msgid "Constraint brick: The given matrix and rhs are not considered to be distributed. Only the given matrix and vector on the master process are taken into account."
 msgstr ""
-"Constraint brick: The given matrix and rhs are not considered to be "
-"distributed. Only the given matrix and vector on the master process are "
-"taken into account."
 
 #: ../source/userdoc/parallel.rst:113
-msgid ""
-"Concerning contact bricks, only integral contact bricks are fully "
-"parallelized for the moment. Nodal contact bricks work in parallel but all "
-"the computation is done on the master process."
+# 1ee52985f5c3496680a8d85aac7ebe36
+msgid "Concerning contact bricks, only integral contact bricks are fully parallelized for the moment. Nodal contact bricks work in parallel but all the computation is done on the master process."
 msgstr ""
-"Concerning contact bricks, only integral contact bricks are fully "
-"parallelized for the moment. Nodal contact bricks work in parallel but all "
-"the computation is done on the master process."
+

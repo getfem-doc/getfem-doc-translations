@@ -2,13 +2,13 @@
 # Copyright (C) 2004-2018 GetFEM++ project
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 15:44+0900\n"
+"POT-Creation-Date: 2018-11-15 02:08+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,91 +17,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/rmesh.rst:10
+# 39b194e809f24a1291f59f3b3fc5281a
 msgid "Mesh refinement"
-msgstr "Mesh refinement"
+msgstr ""
 
 #: ../source/userdoc/rmesh.rst:12
-msgid ""
-"Mesh refinement with the Bank et all method (see [bank1983]_) is available "
-"in dimension 1, 2 or 3 for simplex meshes (segments, triangles and "
-"tetrahedrons). For a given object ``mymesh`` of type |gf_m|, the method::"
+# 797ee94c816745a18fbd22340a5350eb
+msgid "Mesh refinement with the Bank et all method (see [bank1983]_) is available in dimension 1, 2 or 3 for simplex meshes (segments, triangles and tetrahedrons). For a given object ``mymesh`` of type |gf_m|, the method::"
 msgstr ""
-"Mesh refinement with the Bank et all method (see [bank1983]_) is available "
-"in dimension 1, 2 or 3 for simplex meshes (segments, triangles and "
-"tetrahedrons). For a given object ``mymesh`` of type |gf_m|, the method::"
 
 #: ../source/userdoc/rmesh.rst:18
-msgid ""
-"refines the elements whose indices are stored in ``bv`` (a |dal_bv| object)."
-" The conformity of the mesh is kept thanks to additional refinement (the so "
-"called green triangles). Information about green triangles (in Figure :ref"
-":`ud-fig-refine`) is stored on the mesh object to gather them for further "
-"refinements (see [bank1983]_)."
+# 3fbe8cf56e404661a96a2e1ecb6b8c16
+msgid "refines the elements whose indices are stored in ``bv`` (a |dal_bv| object). The conformity of the mesh is kept thanks to additional refinement (the so called green triangles). Information about green triangles (in Figure :ref:`ud-fig-refine`) is stored on the mesh object to gather them for further refinements (see [bank1983]_)."
 msgstr ""
-"refines the elements whose indices are stored in ``bv`` (a |dal_bv| object)."
-" The conformity of the mesh is kept thanks to additional refinement (the so "
-"called green triangles). Information about green triangles (in Figure :ref"
-":`ud-fig-refine`) is stored on the mesh object to gather them for further "
-"refinements (see [bank1983]_)."
 
 #: ../source/userdoc/rmesh.rst:29
+# 904fa567e78a4beb852187c0cd39bdd8
 msgid "Example of Bank refinement in 2D"
-msgstr "Example of Bank refinement in 2D"
+msgstr ""
 
 #: ../source/userdoc/rmesh.rst:31
-msgid ""
-"Mesh refinement is most of the time coupled with an *a posteriori* error "
-"estimate. A very basic error estimate is available in the file "
-":file:`getfem/getfem_error_estimate.h`::"
+# 4963faa3f4194871b041d7e4e21c4874
+msgid "Mesh refinement is most of the time coupled with an *a posteriori* error estimate. A very basic error estimate is available in the file :file:`getfem/getfem_error_estimate.h`::"
 msgstr ""
-"Mesh refinement is most of the time coupled with an *a posteriori* error "
-"estimate. A very basic error estimate is available in the file "
-":file:`getfem/getfem_error_estimate.h`::"
 
 #: ../source/userdoc/rmesh.rst:37
-msgid ""
-"where ``mim`` is the integration method (a |gf_mim| object), ``mf`` is the "
-"finite element method on which the unknown has been computed (a |gf_mf| "
-"object), ``U`` is the vector of degrees of freedom of the unknown, ``err`` "
-"is a sufficiently large vector in which the error estimate is computed for "
-"each element of the mesh, and ``rg`` is a mesh region bulild from elements "
-"on which the error estimate should be computed (a |gf_mr| object)."
+# 7ef78d3806034c2c8c0d84c4319200f7
+msgid "where ``mim`` is the integration method (a |gf_mim| object), ``mf`` is the finite element method on which the unknown has been computed (a |gf_mf| object), ``U`` is the vector of degrees of freedom of the unknown, ``err`` is a sufficiently large vector in which the error estimate is computed for each element of the mesh, and ``rg`` is a mesh region bulild from elements on which the error estimate should be computed (a |gf_mr| object)."
 msgstr ""
-"where ``mim`` is the integration method (a |gf_mim| object), ``mf`` is the "
-"finite element method on which the unknown has been computed (a |gf_mf| "
-"object), ``U`` is the vector of degrees of freedom of the unknown, ``err`` "
-"is a sufficiently large vector in which the error estimate is computed for "
-"each element of the mesh, and ``rg`` is a mesh region bulild from elements "
-"on which the error estimate should be computed (a |gf_mr| object)."
 
 #: ../source/userdoc/rmesh.rst:43
-msgid ""
-"This basic error estimate is only valid for order two problems and just "
-"compute the sum of the jump in normal derivative across the elements on each"
-" edge (for two-dimensional problems) or each face (for three-dimensional "
-"problems). This means that for each face :math:`e` of the mesh the following"
-" quantity is computed:"
+# a299867d6e2b4667b220cb5c41e1974b
+msgid "This basic error estimate is only valid for order two problems and just compute the sum of the jump in normal derivative across the elements on each edge (for two-dimensional problems) or each face (for three-dimensional problems). This means that for each face :math:`e` of the mesh the following quantity is computed:"
 msgstr ""
-"This basic error estimate is only valid for order two problems and just "
-"compute the sum of the jump in normal derivative across the elements on each"
-" edge (for two-dimensional problems) or each face (for three-dimensional "
-"problems). This means that for each face :math:`e` of the mesh the following"
-" quantity is computed:"
 
 #: ../source/userdoc/rmesh.rst:54
-msgid ""
-"where :math:`[\\hspace{-0.12em}[\\partial_n u]\\hspace{-0.12em}]` is the "
-"jump of the normal derivative. Then, the error estimate for a given element "
-"is the sum of the computed quantities on each internal face multiplied by "
-"the element diameter. This basic error estimate can be taken as a model for "
-"more elaborated ones. It uses the high-level generic assembly and the "
-"``neighbour_elt`` interpolate transformation (see :ref:`ud-gasm-high-inter-"
-"elt-disc`)."
+# 948f43b433284edf811444451ee4c6a4
+msgid "where :math:`[\\hspace{-0.12em}[\\partial_n u]\\hspace{-0.12em}]` is the jump of the normal derivative. Then, the error estimate for a given element is the sum of the computed quantities on each internal face multiplied by the element diameter. This basic error estimate can be taken as a model for more elaborated ones. It uses the high-level generic assembly and the ``neighbour_elt`` interpolate transformation (see :ref:`ud-gasm-high-inter-elt-disc`)."
 msgstr ""
-"where :math:`[\\hspace{-0.12em}[\\partial_n u]\\hspace{-0.12em}]` is the "
-"jump of the normal derivative. Then, the error estimate for a given element "
-"is the sum of the computed quantities on each internal face multiplied by "
-"the element diameter. This basic error estimate can be taken as a model for "
-"more elaborated ones. It uses the high-level generic assembly and the "
-"``neighbour_elt`` interpolate transformation (see :ref:`ud-gasm-high-inter-"
-"elt-disc`)."
+

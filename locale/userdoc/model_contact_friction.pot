@@ -2,13 +2,13 @@
 # Copyright (C) 2004-2018 GetFEM++ project
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 15:44+0900\n"
+"POT-Creation-Date: 2018-11-15 02:08+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,1404 +17,581 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/model_contact_friction.rst:14
+# 76933fd66b2046069097b35c1a0f1a90
 msgid "Small sliding contact with friction bricks"
-msgstr "Small sliding contact with friction bricks"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:16
-msgid ""
-"The aim of these bricks is to take into account a contact condition with or "
-"without friction of an elastic structure on a rigid foundation or between "
-"two elastic structures. These bricks are restricted to small deformation "
-"approximation of contact (this may include large deformations on a flat "
-"obstacle)."
+# 7ce6f54a39ff4dadb1db5e48aef805f5
+msgid "The aim of these bricks is to take into account a contact condition with or without friction of an elastic structure on a rigid foundation or between two elastic structures. These bricks are restricted to small deformation approximation of contact (this may include large deformations on a flat obstacle)."
 msgstr ""
-"The aim of these bricks is to take into account a contact condition with or "
-"without friction of an elastic structure on a rigid foundation or between "
-"two elastic structures. These bricks are restricted to small deformation "
-"approximation of contact (this may include large deformations on a flat "
-"obstacle)."
 
 #: ../source/userdoc/model_contact_friction.rst:19
+# 21b3e6b1b821459597f09ebeab59d09c
 msgid "Approximation of contact"
-msgstr "Approximation of contact"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:21
-msgid ""
-"For small deformation problems submitted a simple (compared to large "
-"deformation !) expression of the contact with friction condition is usually "
-"used where the tangential displacement do not influence the normal one. This"
-" is an approximation in the sense that if an obstacle is not perfectly flat,"
-" the tangential displacement of course influence the point where the contact"
-" holds. This will not be the case in small deformation where the contact "
-"condition can be considered to be described on the reference configuration."
+# bd43265995854832af3b26a52eaa8595
+msgid "For small deformation problems submitted a simple (compared to large deformation !) expression of the contact with friction condition is usually used where the tangential displacement do not influence the normal one. This is an approximation in the sense that if an obstacle is not perfectly flat, the tangential displacement of course influence the point where the contact holds. This will not be the case in small deformation where the contact condition can be considered to be described on the reference configuration."
 msgstr ""
-"For small deformation problems submitted a simple (compared to large "
-"deformation !) expression of the contact with friction condition is usually "
-"used where the tangential displacement do not influence the normal one. This"
-" is an approximation in the sense that if an obstacle is not perfectly flat,"
-" the tangential displacement of course influence the point where the contact"
-" holds. This will not be the case in small deformation where the contact "
-"condition can be considered to be described on the reference configuration."
 
 #: ../source/userdoc/model_contact_friction.rst:24
-msgid ""
-"There are mainly two largely used discretizations of the contact with "
-"friction condition in this framework: a direct nodal contact condition "
-"(usually prescribed on the displacement finite element nodes) or a weak "
-"nodal contact condition (usually prescribed on the multiplier finite element"
-" nodes). The two discretization leads to similar system. However, the "
-"interpretation of quantities is not the same. A third approach is developed "
-"on Getfem contact bricks: a weak integral contact condition. It needs the "
-"computation of a non-linear integral on the contact boundary at each "
-"iteration but the numerical resolution is potentially more scalable because "
-"it derives directly from continuous principles."
+# d575bec9b7f54ab591c0e462f2fd251e
+msgid "There are mainly two largely used discretizations of the contact with friction condition in this framework: a direct nodal contact condition (usually prescribed on the displacement finite element nodes) or a weak nodal contact condition (usually prescribed on the multiplier finite element nodes). The two discretization leads to similar system. However, the interpretation of quantities is not the same. A third approach is developed on Getfem contact bricks: a weak integral contact condition. It needs the computation of a non-linear integral on the contact boundary at each iteration but the numerical resolution is potentially more scalable because it derives directly from continuous principles."
 msgstr ""
-"There are mainly two largely used discretizations of the contact with "
-"friction condition in this framework: a direct nodal contact condition "
-"(usually prescribed on the displacement finite element nodes) or a weak "
-"nodal contact condition (usually prescribed on the multiplier finite element"
-" nodes). The two discretization leads to similar system. However, the "
-"interpretation of quantities is not the same. A third approach is developed "
-"on Getfem contact bricks: a weak integral contact condition. It needs the "
-"computation of a non-linear integral on the contact boundary at each "
-"iteration but the numerical resolution is potentially more scalable because "
-"it derives directly from continuous principles."
 
 #: ../source/userdoc/model_contact_friction.rst:26
-msgid ""
-"More details can be found for instance in [KI-OD1988]_, [KH-PO-RE2006]_ and "
-"[LA-RE2006]_."
+# 20a66b1a6f5044a7a16a84a68a47ad45
+msgid "More details can be found for instance in [KI-OD1988]_, [KH-PO-RE2006]_ and [LA-RE2006]_."
 msgstr ""
-"More details can be found for instance in [KI-OD1988]_, [KH-PO-RE2006]_ and "
-"[LA-RE2006]_."
 
 #: ../source/userdoc/model_contact_friction.rst:29
+# ebcbe1bd17b34125b811fc9dd41ba007
 msgid "Direct nodal contact condition"
-msgstr "Direct nodal contact condition"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:31
-msgid ""
-"A nodal contact condition consists in a certain number of contact nodes "
-":math:`a_i`, :math:`i=1..N_c` on which a contact with (or without) friction "
-"condition is applied. The contact condition reads"
+# 83921a92f9d249559e8cac1ce25abc53
+msgid "A nodal contact condition consists in a certain number of contact nodes :math:`a_i`, :math:`i=1..N_c` on which a contact with (or without) friction condition is applied. The contact condition reads"
 msgstr ""
-"A nodal contact condition consists in a certain number of contact nodes "
-":math:`a_i`, :math:`i=1..N_c` on which a contact with (or without) friction "
-"condition is applied. The contact condition reads"
 
 #: ../source/userdoc/model_contact_friction.rst:37
-msgid ""
-"where :math:`\\lambda_N^i` is the equivalent nodal contact force on "
-":math:`a_i` and :math:`u_N(a_i)` is the normal relative displacement between"
-" the elastic solid and an obstacle or between two elastic solids. The term "
-":math:`\\text{gap}_i` represents the normal gap between the two solids in "
-"the reference configuration. The friction condition reads"
+# 134c1a0672944b3ca4a70395aad1767d
+msgid "where :math:`\\lambda_N^i` is the equivalent nodal contact force on :math:`a_i` and :math:`u_N(a_i)` is the normal relative displacement between the elastic solid and an obstacle or between two elastic solids. The term :math:`\\text{gap}_i` represents the normal gap between the two solids in the reference configuration. The friction condition reads"
 msgstr ""
-"where :math:`\\lambda_N^i` is the equivalent nodal contact force on "
-":math:`a_i` and :math:`u_N(a_i)` is the normal relative displacement between"
-" the elastic solid and an obstacle or between two elastic solids. The term "
-":math:`\\text{gap}_i` represents the normal gap between the two solids in "
-"the reference configuration. The friction condition reads"
 
 #: ../source/userdoc/model_contact_friction.rst:45
-msgid ""
-"where :math:`\\dot{u}_T` is the relative slip velocity, :math:`{\\mathscr "
-"F}` is the friction coefficient and :math:`\\lambda_T^i` the equivalent "
-"nodal friction force on :math:`a_i`. The friction condition can be "
-"summarized by the inclusion"
+# 2a6621f92ea84e1fb5ddb121441e6b87
+msgid "where :math:`\\dot{u}_T` is the relative slip velocity, :math:`{\\mathscr F}` is the friction coefficient and :math:`\\lambda_T^i` the equivalent nodal friction force on :math:`a_i`. The friction condition can be summarized by the inclusion"
 msgstr ""
-"where :math:`\\dot{u}_T` is the relative slip velocity, :math:`{\\mathscr "
-"F}` is the friction coefficient and :math:`\\lambda_T^i` the equivalent "
-"nodal friction force on :math:`a_i`. The friction condition can be "
-"summarized by the inclusion"
 
 #: ../source/userdoc/model_contact_friction.rst:51
-msgid ""
-"where :math:`\\text{Dir}(\\dot{u}_T)` is the multivalued map being the sub-"
-"differential of :math:`x \\mapsto \\|x_T\\|` (i.e. :math:`\\text{Dir}(x) = "
-"\\frac{x}{\\|x\\|}` when :math:`x \\ne 0` and :math:`\\text{Dir}(0)` the "
-"closed unit ball). For two dimensional cases, "
-":math:`\\text{Dir}(\\dot{u}_T)` reduces to :math:`\\text{Sign}(\\dot{u}_T)` "
-"where :math:`\\text{Sign}` is the multivalued sign map."
+# f67108989a224a469127505bb902a112
+msgid "where :math:`\\text{Dir}(\\dot{u}_T)` is the multivalued map being the sub-differential of :math:`x \\mapsto \\|x_T\\|` (i.e. :math:`\\text{Dir}(x) = \\frac{x}{\\|x\\|}` when :math:`x \\ne 0` and :math:`\\text{Dir}(0)` the closed unit ball). For two dimensional cases, :math:`\\text{Dir}(\\dot{u}_T)` reduces to :math:`\\text{Sign}(\\dot{u}_T)` where :math:`\\text{Sign}` is the multivalued sign map."
 msgstr ""
-"where :math:`\\text{Dir}(\\dot{u}_T)` is the multivalued map being the sub-"
-"differential of :math:`x \\mapsto \\|x_T\\|` (i.e. :math:`\\text{Dir}(x) = "
-"\\frac{x}{\\|x\\|}` when :math:`x \\ne 0` and :math:`\\text{Dir}(0)` the "
-"closed unit ball). For two dimensional cases, "
-":math:`\\text{Dir}(\\dot{u}_T)` reduces to :math:`\\text{Sign}(\\dot{u}_T)` "
-"where :math:`\\text{Sign}` is the multivalued sign map."
 
 #: ../source/userdoc/model_contact_friction.rst:53
-msgid ""
-"A complete linearized elasticity problem with contact with friction reads as"
+# 6450b01ba6ea4c198a6314ae084afc1a
+msgid "A complete linearized elasticity problem with contact with friction reads as"
 msgstr ""
-"A complete linearized elasticity problem with contact with friction reads as"
 
 #: ../source/userdoc/model_contact_friction.rst:55
-msgid ""
-"Given an augmentation parameter :math:`r`, the contact and friction "
-"conditions can be equivalently expressed in term of projection as"
+# 01c5146a400845ae92521507aef11201
+msgid "Given an augmentation parameter :math:`r`, the contact and friction conditions can be equivalently expressed in term of projection as"
 msgstr ""
-"Given an augmentation parameter :math:`r`, the contact and friction "
-"conditions can be equivalently expressed in term of projection as"
 
 #: ../source/userdoc/model_contact_friction.rst:63
-msgid ""
-"where :math:`P_K` is the projection on the convex :math:`K` and "
-":math:`{\\mathscr B}(-{\\mathscr F}\\lambda_N^i)` is the ball of center "
-":math:`0` and radius :math:`-{\\mathscr F}\\lambda_N^i`. These expressions "
-"will be used to perform a semi-smooth Newton method."
+# 01f59c56a41342bcbd5f456ca04babc6
+msgid "where :math:`P_K` is the projection on the convex :math:`K` and :math:`{\\mathscr B}(-{\\mathscr F}\\lambda_N^i)` is the ball of center :math:`0` and radius :math:`-{\\mathscr F}\\lambda_N^i`. These expressions will be used to perform a semi-smooth Newton method."
 msgstr ""
-"where :math:`P_K` is the projection on the convex :math:`K` and "
-":math:`{\\mathscr B}(-{\\mathscr F}\\lambda_N^i)` is the ball of center "
-":math:`0` and radius :math:`-{\\mathscr F}\\lambda_N^i`. These expressions "
-"will be used to perform a semi-smooth Newton method."
 
 #: ../source/userdoc/model_contact_friction.rst:66
-msgid ""
-"Suppose now that you approximate a linearized elasticity problem submitted "
-"to contact with friction. Then, if :math:`U` is the vector of the unknown "
-"for the displacement you will be able to express the matrices :math:`B_N` "
-"and :math:`B_T` such that"
+# 4ac8d016c1534326bd8249753a23e604
+msgid "Suppose now that you approximate a linearized elasticity problem submitted to contact with friction. Then, if :math:`U` is the vector of the unknown for the displacement you will be able to express the matrices :math:`B_N` and :math:`B_T` such that"
 msgstr ""
-"Suppose now that you approximate a linearized elasticity problem submitted "
-"to contact with friction. Then, if :math:`U` is the vector of the unknown "
-"for the displacement you will be able to express the matrices :math:`B_N` "
-"and :math:`B_T` such that"
 
 #: ../source/userdoc/model_contact_friction.rst:74
-msgid ""
-"where :math:`d` is the dimension of the domain and :math:`k = 1..d-1`. The "
-"expression of the elasticity problem with contact with friction can be "
-"written as"
+# cc326e0679e94517be7c078aae452442
+msgid "where :math:`d` is the dimension of the domain and :math:`k = 1..d-1`. The expression of the elasticity problem with contact with friction can be written as"
 msgstr ""
-"where :math:`d` is the dimension of the domain and :math:`k = 1..d-1`. The "
-"expression of the elasticity problem with contact with friction can be "
-"written as"
 
 #: ../source/userdoc/model_contact_friction.rst:84
-msgid ""
-"where :math:`\\alpha_i` is a parameter which can be added for the "
-"homogenization of the augmentation parameter, :math:`(B_T U)_i` denotes here"
-" the sub-vector of indices from :math:`(d-1)(i-1)+1` to :math:`(d-1)i` for "
-"the sake of simplicity and the sliding velocity :math:`B_T \\dot{U}` have "
-"been discretized into :math:`\\frac{(B_T U - B_T U^{0})}{\\Delta t}` with "
-":math:`U^{0}` the displacement at the previous time step. Note that of "
-"course another discretization of the sliding velocity is possible and that "
-"the time step :math:`\\Delta t` do not appear in the expression of the "
-"friction condition since it does not influence the direction of the sliding "
-"velocity."
+# 8933b9993baf40d8a168eb23084c92b5
+msgid "where :math:`\\alpha_i` is a parameter which can be added for the homogenization of the augmentation parameter, :math:`(B_T U)_i` denotes here the sub-vector of indices from :math:`(d-1)(i-1)+1` to :math:`(d-1)i` for the sake of simplicity and the sliding velocity :math:`B_T \\dot{U}` have been discretized into :math:`\\frac{(B_T U - B_T U^{0})}{\\Delta t}` with :math:`U^{0}` the displacement at the previous time step. Note that of course another discretization of the sliding velocity is possible and that the time step :math:`\\Delta t` do not appear in the expression of the friction condition since it does not influence the direction of the sliding velocity."
 msgstr ""
-"where :math:`\\alpha_i` is a parameter which can be added for the "
-"homogenization of the augmentation parameter, :math:`(B_T U)_i` denotes here"
-" the sub-vector of indices from :math:`(d-1)(i-1)+1` to :math:`(d-1)i` for "
-"the sake of simplicity and the sliding velocity :math:`B_T \\dot{U}` have "
-"been discretized into :math:`\\frac{(B_T U - B_T U^{0})}{\\Delta t}` with "
-":math:`U^{0}` the displacement at the previous time step. Note that of "
-"course another discretization of the sliding velocity is possible and that "
-"the time step :math:`\\Delta t` do not appear in the expression of the "
-"friction condition since it does not influence the direction of the sliding "
-"velocity."
 
 #: ../source/userdoc/model_contact_friction.rst:87
-msgid ""
-"In that case, the homogenization coefficient :math:`\\alpha_i` can be taken "
-"proportional to :math:`h^{d-2}` (:math:`h` being the diameter of the "
-"element). In this way, the augmentation parameter :math:`r` can be expressed"
-" in :math:`N/m^2` and chosen closed to the Young modulus of the elastic "
-"body. Note that the solution is not sensitive to the value of the "
-"augmentation parameter."
+# bdf02ca2eacb403385f07a9f2fed04fc
+msgid "In that case, the homogenization coefficient :math:`\\alpha_i` can be taken proportional to :math:`h^{d-2}` (:math:`h` being the diameter of the element). In this way, the augmentation parameter :math:`r` can be expressed in :math:`N/m^2` and chosen closed to the Young modulus of the elastic body. Note that the solution is not sensitive to the value of the augmentation parameter."
 msgstr ""
-"In that case, the homogenization coefficient :math:`\\alpha_i` can be taken "
-"proportional to :math:`h^{d-2}` (:math:`h` being the diameter of the "
-"element). In this way, the augmentation parameter :math:`r` can be expressed"
-" in :math:`N/m^2` and chosen closed to the Young modulus of the elastic "
-"body. Note that the solution is not sensitive to the value of the "
-"augmentation parameter."
 
 #: ../source/userdoc/model_contact_friction.rst:91
+# 34714f120b354067931dc9edca851fdf
 msgid "Weak nodal contact condition"
-msgstr "Weak nodal contact condition"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:93
-msgid ""
-"The direct nodal condition may have some drawback : locking phenomena, over-"
-"constraint. It is in fact often more stable and for the same accuracy to use"
-" multiplier of reduced order compared to the displacement (the direct nodal "
-"contact condition corresponds more or less to a multiplier described on the "
-"same finite element method than the displacement)."
+# 964514abca0d4261b48c37e0f62baf99
+msgid "The direct nodal condition may have some drawback : locking phenomena, over-constraint. It is in fact often more stable and for the same accuracy to use multiplier of reduced order compared to the displacement (the direct nodal contact condition corresponds more or less to a multiplier described on the same finite element method than the displacement)."
 msgstr ""
-"The direct nodal condition may have some drawback : locking phenomena, over-"
-"constraint. It is in fact often more stable and for the same accuracy to use"
-" multiplier of reduced order compared to the displacement (the direct nodal "
-"contact condition corresponds more or less to a multiplier described on the "
-"same finite element method than the displacement)."
 
 #: ../source/userdoc/model_contact_friction.rst:95
-msgid ""
-"Let :math:`\\varphi_i` be the shapes functions of the finite element "
-"describing the displacement and :math:`\\psi_i` be the shape functions of a "
-"finite element describing a multiplier on the contact boundary "
-":math:`\\Gamma_c`. It is assumed that the set of admissible multiplier "
-"describing the normal stress will be"
+# a3938379077741b7a9611950183de75a
+msgid "Let :math:`\\varphi_i` be the shapes functions of the finite element describing the displacement and :math:`\\psi_i` be the shape functions of a finite element describing a multiplier on the contact boundary :math:`\\Gamma_c`. It is assumed that the set of admissible multiplier describing the normal stress will be"
 msgstr ""
-"Let :math:`\\varphi_i` be the shapes functions of the finite element "
-"describing the displacement and :math:`\\psi_i` be the shape functions of a "
-"finite element describing a multiplier on the contact boundary "
-":math:`\\Gamma_c`. It is assumed that the set of admissible multiplier "
-"describing the normal stress will be"
 
 #: ../source/userdoc/model_contact_friction.rst:101
-msgid ""
-"where :math:`a_i`, :math:`~~i=1..N_c` are the finite element nodes "
-"corresponding to the multiplier. The discrete contact condition is now "
-"expressed in a weak form by"
+# b204b883379f406085df481ed905a392
+msgid "where :math:`a_i`, :math:`~~i=1..N_c` are the finite element nodes corresponding to the multiplier. The discrete contact condition is now expressed in a weak form by"
 msgstr ""
-"where :math:`a_i`, :math:`~~i=1..N_c` are the finite element nodes "
-"corresponding to the multiplier. The discrete contact condition is now "
-"expressed in a weak form by"
 
 #: ../source/userdoc/model_contact_friction.rst:107
-msgid ""
-"In that case, the component :math:`\\lambda_N^i` is a contact stress "
-"(:math:`N/m^2`) and the matrix :math:`B_N` can be written"
+# 36a7c694c3b8410290a1c2ee780735e4
+msgid "In that case, the component :math:`\\lambda_N^i` is a contact stress (:math:`N/m^2`) and the matrix :math:`B_N` can be written"
 msgstr ""
-"In that case, the component :math:`\\lambda_N^i` is a contact stress "
-"(:math:`N/m^2`) and the matrix :math:`B_N` can be written"
 
 #: ../source/userdoc/model_contact_friction.rst:113
-msgid ""
-"The matrix :math:`B_T` can also be written in a similar way. The friction "
-"condition can be written in a weak form"
+# 934eae2030184e43a71a459a1652a33a
+msgid "The matrix :math:`B_T` can also be written in a similar way. The friction condition can be written in a weak form"
 msgstr ""
-"The matrix :math:`B_T` can also be written in a similar way. The friction "
-"condition can be written in a weak form"
 
 #: ../source/userdoc/model_contact_friction.rst:119
-msgid ""
-"where :math:`\\Lambda_T^h({\\mathscr F}\\lambda_N^h)` is the discrete set of"
-" admissible friction stress."
+# 44d9288e5ef84bab9f19c587e775f989
+msgid "where :math:`\\Lambda_T^h({\\mathscr F}\\lambda_N^h)` is the discrete set of admissible friction stress."
 msgstr ""
-"where :math:`\\Lambda_T^h({\\mathscr F}\\lambda_N^h)` is the discrete set of"
-" admissible friction stress."
 
 #: ../source/userdoc/model_contact_friction.rst:121
-msgid ""
-"Finally, the expression of the direct nodal contact condition are recovered"
+# 5dcb5a4dffa14dd2a9a38f73f2c44e79
+msgid "Finally, the expression of the direct nodal contact condition are recovered"
 msgstr ""
-"Finally, the expression of the direct nodal contact condition are recovered"
 
 #: ../source/userdoc/model_contact_friction.rst:131
-msgid ""
-"except that now :math:`\\lambda_N^i` and :math:`\\lambda_T^i` are force "
-"densities, and :math:`\\alpha_i` has to be now chosen proportional to "
-":math:`1/h^d` such that the augmentation parameter :math:`r` can still be "
-"chosen close to the Young modulus of the elastic body."
+# 67846f9dfd1b4831b45d6a4bebd6f981
+msgid "except that now :math:`\\lambda_N^i` and :math:`\\lambda_T^i` are force densities, and :math:`\\alpha_i` has to be now chosen proportional to :math:`1/h^d` such that the augmentation parameter :math:`r` can still be chosen close to the Young modulus of the elastic body."
 msgstr ""
-"except that now :math:`\\lambda_N^i` and :math:`\\lambda_T^i` are force "
-"densities, and :math:`\\alpha_i` has to be now chosen proportional to "
-":math:`1/h^d` such that the augmentation parameter :math:`r` can still be "
-"chosen close to the Young modulus of the elastic body."
 
 #: ../source/userdoc/model_contact_friction.rst:134
-msgid ""
-"Note that without additional stabilization technique (see [HI-RE2010]_) an "
-"inf-sup condition have to be satisfied between the finite element of the "
-"displacement and the one for the multipliers. This means in particular that "
-"the finite element for the multiplier have to be \"less rich\" than the one "
-"for the displacement."
+# e29af2475b7d45b08dafa4231a4870c9
+msgid "Note that without additional stabilization technique (see [HI-RE2010]_) an inf-sup condition have to be satisfied between the finite element of the displacement and the one for the multipliers. This means in particular that the finite element for the multiplier have to be \"less rich\" than the one for the displacement."
 msgstr ""
-"Note that without additional stabilization technique (see [HI-RE2010]_) an "
-"inf-sup condition have to be satisfied between the finite element of the "
-"displacement and the one for the multipliers. This means in particular that "
-"the finite element for the multiplier have to be \"less rich\" than the one "
-"for the displacement."
 
 #: ../source/userdoc/model_contact_friction.rst:140
+# 8f0370b4447c40629ba985954b2158f6
 msgid "Weak integral contact condition"
-msgstr "Weak integral contact condition"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:142
-msgid ""
-"The weak integral contact formulation allows not to explicitly describe the "
-"discrete set of admissible stress. See also "
-":ref:`nitsche_contact_small_def_section`. The contact stress (including the "
-"friction one) is described on a finite element space :math:`W^h` on the "
-"contact boundary :math:`\\Gamma_c`:"
+# aa4fb304ddf34e9c94072840ca3f5130
+msgid "The weak integral contact formulation allows not to explicitly describe the discrete set of admissible stress. See also :ref:`nitsche_contact_small_def_section`. The contact stress (including the friction one) is described on a finite element space :math:`W^h` on the contact boundary :math:`\\Gamma_c`:"
 msgstr ""
-"The weak integral contact formulation allows not to explicitly describe the "
-"discrete set of admissible stress. See also "
-":ref:`nitsche_contact_small_def_section`. The contact stress (including the "
-"friction one) is described on a finite element space :math:`W^h` on the "
-"contact boundary :math:`\\Gamma_c`:"
 
 #: ../source/userdoc/model_contact_friction.rst:148
-msgid ""
-"where :math:`d` is the dimension of the problem and :math:`\\psi_i` still "
-"the shapes functions on which the contact stress is developed. Now, given a "
-"outward unit vector :math:`n` on the contact boundary :math:`\\Gamma_c` "
-"(usually the normal to the obstacle), we make the standard decompositions:"
+# faa31bab43974717b87c946e75dda083
+msgid "where :math:`d` is the dimension of the problem and :math:`\\psi_i` still the shapes functions on which the contact stress is developed. Now, given a outward unit vector :math:`n` on the contact boundary :math:`\\Gamma_c` (usually the normal to the obstacle), we make the standard decompositions:"
 msgstr ""
-"where :math:`d` is the dimension of the problem and :math:`\\psi_i` still "
-"the shapes functions on which the contact stress is developed. Now, given a "
-"outward unit vector :math:`n` on the contact boundary :math:`\\Gamma_c` "
-"(usually the normal to the obstacle), we make the standard decompositions:"
 
 #: ../source/userdoc/model_contact_friction.rst:155
-msgid ""
-"where :math:`u^h` is the displacement field approximated on a finite element"
-" space :math:`V^h`. This allows to express the contact condition in the "
-"following way"
+# 54d2be268a6e4a82b9c1b7cb37a2458e
+msgid "where :math:`u^h` is the displacement field approximated on a finite element space :math:`V^h`. This allows to express the contact condition in the following way"
 msgstr ""
-"where :math:`u^h` is the displacement field approximated on a finite element"
-" space :math:`V^h`. This allows to express the contact condition in the "
-"following way"
 
 #: ../source/userdoc/model_contact_friction.rst:161
-msgid ""
-"where :math:`gap` is a given initial gap in reference configuration, "
-":math:`r` is an augmentation parameter and "
-":math:`(\\cdot)_-:I\\hspace{-0.2em}R\\rightarrow I\\hspace{-0.2em}R_+` is "
-"the negative part. The friction condition can similarly be written:"
+# 592b5b719eb348dc9525b4415928e6dd
+msgid "where :math:`gap` is a given initial gap in reference configuration, :math:`r` is an augmentation parameter and :math:`(\\cdot)_-:I\\hspace{-0.2em}R\\rightarrow I\\hspace{-0.2em}R_+` is the negative part. The friction condition can similarly be written:"
 msgstr ""
-"where :math:`gap` is a given initial gap in reference configuration, "
-":math:`r` is an augmentation parameter and "
-":math:`(\\cdot)_-:I\\hspace{-0.2em}R\\rightarrow I\\hspace{-0.2em}R_+` is "
-"the negative part. The friction condition can similarly be written:"
 
 #: ../source/userdoc/model_contact_friction.rst:167
-msgid ""
-"where :math:`B(\\rho)` is the closed ball of center  :math:`0` and radius "
-":math:`\\rho` and :math:`P_{B(\\rho)}` is the orthogonal projection on it "
-"(By convenyion, the ball reduces to the origin dor :math:`\\rho \\le 0`). "
-"The term :math:`\\alpha(u^h_T-w^h_T)` represent here an approximation of the"
-" sliding velocity. The parameter :math:`\\alpha` and the field :math:`w^h_T`"
-" have to be adapted with respect to the chosen approximation. For instance, "
-"if the standard finite difference"
+# ce58d02363004914a995d068a9aa0cac
+msgid "where :math:`B(\\rho)` is the closed ball of center  :math:`0` and radius :math:`\\rho` and :math:`P_{B(\\rho)}` is the orthogonal projection on it (By convenyion, the ball reduces to the origin dor :math:`\\rho \\le 0`). The term :math:`\\alpha(u^h_T-w^h_T)` represent here an approximation of the sliding velocity. The parameter :math:`\\alpha` and the field :math:`w^h_T` have to be adapted with respect to the chosen approximation. For instance, if the standard finite difference"
 msgstr ""
-"where :math:`B(\\rho)` is the closed ball of center  :math:`0` and radius "
-":math:`\\rho` and :math:`P_{B(\\rho)}` is the orthogonal projection on it "
-"(By convenyion, the ball reduces to the origin dor :math:`\\rho \\le 0`). "
-"The term :math:`\\alpha(u^h_T-w^h_T)` represent here an approximation of the"
-" sliding velocity. The parameter :math:`\\alpha` and the field :math:`w^h_T`"
-" have to be adapted with respect to the chosen approximation. For instance, "
-"if the standard finite difference"
 
 #: ../source/userdoc/model_contact_friction.rst:173
-msgid ""
-"is chosen, then one has to take :math:`\\alpha = 1/dt` and :math:`w^h_T = "
-"(u^h_T)^{n}`. Note that due to the symmetry of the ball, the parameter "
-":math:`\\alpha` do not play an important role in the formulation. It can "
-"simply be viewed as a scaling between the augmentation parameter for the "
-"contact condition and the one for the friction condition. Note also that "
-"contrarily to the previous formulations of contact, here there is not a "
-"strict independance of the conditions with respect to the augmentation "
-"parameter (the independance only occurs at the continuous level)."
+# b3217cd53e1d4e76b1a8d6fe330d044a
+msgid "is chosen, then one has to take :math:`\\alpha = 1/dt` and :math:`w^h_T = (u^h_T)^{n}`. Note that due to the symmetry of the ball, the parameter :math:`\\alpha` do not play an important role in the formulation. It can simply be viewed as a scaling between the augmentation parameter for the contact condition and the one for the friction condition. Note also that contrarily to the previous formulations of contact, here there is not a strict independance of the conditions with respect to the augmentation parameter (the independance only occurs at the continuous level)."
 msgstr ""
-"is chosen, then one has to take :math:`\\alpha = 1/dt` and :math:`w^h_T = "
-"(u^h_T)^{n}`. Note that due to the symmetry of the ball, the parameter "
-":math:`\\alpha` do not play an important role in the formulation. It can "
-"simply be viewed as a scaling between the augmentation parameter for the "
-"contact condition and the one for the friction condition. Note also that "
-"contrarily to the previous formulations of contact, here there is not a "
-"strict independance of the conditions with respect to the augmentation "
-"parameter (the independance only occurs at the continuous level)."
 
 #: ../source/userdoc/model_contact_friction.rst:176
-msgid ""
-"GetFEM++ bricks implement four versions of the contact condition derived "
-"from the Alart-Curnier augmented Lagrangian formulation [AL-CU1991]_. The "
-"first one corresponds to the non-symmetric version. It consists in solving:"
+# ff1ae8137391477b8d860a16e03b8ba1
+msgid "GetFEM++ bricks implement four versions of the contact condition derived from the Alart-Curnier augmented Lagrangian formulation [AL-CU1991]_. The first one corresponds to the non-symmetric version. It consists in solving:"
 msgstr ""
-"GetFEM++ bricks implement four versions of the contact condition derived "
-"from the Alart-Curnier augmented Lagrangian formulation [AL-CU1991]_. The "
-"first one corresponds to the non-symmetric version. It consists in solving:"
 
 #: ../source/userdoc/model_contact_friction.rst:186
-msgid ""
-"where :math:`a(\\cdot, \\cdot)` and :math:`\\ell(v)` represent the remaining"
-" parts of the problem in  :math:`u`, for instance linear elasticity and "
-":math:`\\rho={\\mathscr F}(\\lambda^h_N - r(u^h_N-gap))_-`. Note that in "
-"this case, the mathematical analysis leads to choose a value for the "
-"augmentation parameter of the kind :math:`r = r_0 / r` with :math:`r_0` "
-"having the dimension of a elasticity modulus (a classical choice is the "
-"value of Young's modulus). In order to write a Newton iteration, one has to "
-"derive the tangent system. It can be written, reporting only the contact and"
-" friction terms and not the right hand side:"
+# 0b671ad2aca94670a3be5c58185ba8f4
+msgid "where :math:`a(\\cdot, \\cdot)` and :math:`\\ell(v)` represent the remaining parts of the problem in  :math:`u`, for instance linear elasticity and :math:`\\rho={\\mathscr F}(\\lambda^h_N - r(u^h_N-gap))_-`. Note that in this case, the mathematical analysis leads to choose a value for the augmentation parameter of the kind :math:`r = r_0 / r` with :math:`r_0` having the dimension of a elasticity modulus (a classical choice is the value of Young's modulus). In order to write a Newton iteration, one has to derive the tangent system. It can be written, reporting only the contact and friction terms and not the right hand side:"
 msgstr ""
-"where :math:`a(\\cdot, \\cdot)` and :math:`\\ell(v)` represent the remaining"
-" parts of the problem in  :math:`u`, for instance linear elasticity and "
-":math:`\\rho={\\mathscr F}(\\lambda^h_N - r(u^h_N-gap))_-`. Note that in "
-"this case, the mathematical analysis leads to choose a value for the "
-"augmentation parameter of the kind :math:`r = r_0 / r` with :math:`r_0` "
-"having the dimension of a elasticity modulus (a classical choice is the "
-"value of Young's modulus). In order to write a Newton iteration, one has to "
-"derive the tangent system. It can be written, reporting only the contact and"
-" friction terms and not the right hand side:"
 
 #: ../source/userdoc/model_contact_friction.rst:200
-msgid ""
-"where :math:`H(\\cdot)` is the Heaviside function (0 for a negative argument"
-" and 1 for a non-negative argument), :math:`D_xP_{B(\\rho)}(x)` and "
-":math:`D_{\\rho}P_{B(\\rho)}(x)` are the derivatives of the projection on "
-":math:`B(\\rho)` (assumed to vanish for :math:`\\rho \\le 0`) and "
-":math:`\\delta_{\\lambda}` and :math:`\\delta_{u}` are the unknown "
-"corresponding to the tangent problem."
+# a1b86d7a39d145b8b9c3f32be7013c98
+msgid "where :math:`H(\\cdot)` is the Heaviside function (0 for a negative argument and 1 for a non-negative argument), :math:`D_xP_{B(\\rho)}(x)` and :math:`D_{\\rho}P_{B(\\rho)}(x)` are the derivatives of the projection on :math:`B(\\rho)` (assumed to vanish for :math:`\\rho \\le 0`) and :math:`\\delta_{\\lambda}` and :math:`\\delta_{u}` are the unknown corresponding to the tangent problem."
 msgstr ""
-"where :math:`H(\\cdot)` is the Heaviside function (0 for a negative argument"
-" and 1 for a non-negative argument), :math:`D_xP_{B(\\rho)}(x)` and "
-":math:`D_{\\rho}P_{B(\\rho)}(x)` are the derivatives of the projection on "
-":math:`B(\\rho)` (assumed to vanish for :math:`\\rho \\le 0`) and "
-":math:`\\delta_{\\lambda}` and :math:`\\delta_{u}` are the unknown "
-"corresponding to the tangent problem."
 
 #: ../source/userdoc/model_contact_friction.rst:203
-msgid ""
-"The second version corresponds to the \"symmetric\" version. It is in fact "
-"symmetric in the frictionless case only (because in this case it directly "
-"derives from the augmented Lagrangian formulation). It reads:"
+# 9f3555c58a2a4275b8dfc3ccb21a84d6
+msgid "The second version corresponds to the \"symmetric\" version. It is in fact symmetric in the frictionless case only (because in this case it directly derives from the augmented Lagrangian formulation). It reads:"
 msgstr ""
-"The second version corresponds to the \"symmetric\" version. It is in fact "
-"symmetric in the frictionless case only (because in this case it directly "
-"derives from the augmented Lagrangian formulation). It reads:"
 
 #: ../source/userdoc/model_contact_friction.rst:214
 #: ../source/userdoc/model_contact_friction.rst:243
+# a5c237a068704043b7bb871cc52ed221
+# f816b7314e4b4f309cf8e731067430c8
 msgid "and the tangent system:"
-msgstr "and the tangent system:"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:232
+# 842b8d5669e745be8823cd4a03dd1577
 msgid "still with :math:`\\rho={\\mathscr F}(\\lambda^h_N - r(u^h_N-gap))_-`."
-msgstr "still with :math:`\\rho={\\mathscr F}(\\lambda^h_N - r(u^h_N-gap))_-`."
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:234
-msgid ""
-"The third version corresponds to a penalized contact and friction condition."
-" It does not require the use of a multiplier. In this version, the parameter"
-" :math:`r` is a penalization parameter and as to be large enough to perform "
-"a good approximation of the non-penetration and the Coulomb friction "
-"conditions. The formulation reads:"
+# 6ecf6135333045ef9ebedba214eb7407
+msgid "The third version corresponds to a penalized contact and friction condition. It does not require the use of a multiplier. In this version, the parameter :math:`r` is a penalization parameter and as to be large enough to perform a good approximation of the non-penetration and the Coulomb friction conditions. The formulation reads:"
 msgstr ""
-"The third version corresponds to a penalized contact and friction condition."
-" It does not require the use of a multiplier. In this version, the parameter"
-" :math:`r` is a penalization parameter and as to be large enough to perform "
-"a good approximation of the non-penetration and the Coulomb friction "
-"conditions. The formulation reads:"
 
 #: ../source/userdoc/model_contact_friction.rst:255
+# 09c5c64e4464457892cb6b1a8516c7fa
 msgid "Numerical continuation"
-msgstr "Numerical continuation"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:257
-msgid ""
-"In addition, |gf| develops a method of numerical continuation for finding "
-"numerical solutions of discretized evolutionary contact problems based on "
-"the weak integral contact condition (see :ref:`ud-model-continuation` for a "
-"general introduction). For this purpose, a parameter-dependent sliding "
-"velocity may be added to the friction condition so that it becomes:"
+# eb331d03c2dd44b899fcfa5c7127422d
+msgid "In addition, |gf| develops a method of numerical continuation for finding numerical solutions of discretized evolutionary contact problems based on the weak integral contact condition (see :ref:`ud-model-continuation` for a general introduction). For this purpose, a parameter-dependent sliding velocity may be added to the friction condition so that it becomes:"
 msgstr ""
-"In addition, |gf| develops a method of numerical continuation for finding "
-"numerical solutions of discretized evolutionary contact problems based on "
-"the weak integral contact condition (see :ref:`ud-model-continuation` for a "
-"general introduction). For this purpose, a parameter-dependent sliding "
-"velocity may be added to the friction condition so that it becomes:"
 
 #: ../source/userdoc/model_contact_friction.rst:263
-msgid ""
-"Here, :math:`\\gamma` is a parameter and :math:`z^h_T` is an initial sliding"
-" velocity. It is worth mentioning that if one chooses"
+# 706cce7cf2dc4efdbbf4e7d6012a7203
+msgid "Here, :math:`\\gamma` is a parameter and :math:`z^h_T` is an initial sliding velocity. It is worth mentioning that if one chooses"
 msgstr ""
-"Here, :math:`\\gamma` is a parameter and :math:`z^h_T` is an initial sliding"
-" velocity. It is worth mentioning that if one chooses"
 
 #: ../source/userdoc/model_contact_friction.rst:269
-msgid ""
-"then he recovers the standard friction condition at time :math:`t_{n}` and "
-":math:`t_{n+1}` for :math:`\\gamma` equal to 0 and 1, respectively."
+# c52b48111ca9441ba70f994fda235003
+msgid "then he recovers the standard friction condition at time :math:`t_{n}` and :math:`t_{n+1}` for :math:`\\gamma` equal to 0 and 1, respectively."
 msgstr ""
-"then he recovers the standard friction condition at time :math:`t_{n}` and "
-":math:`t_{n+1}` for :math:`\\gamma` equal to 0 and 1, respectively."
 
 #: ../source/userdoc/model_contact_friction.rst:274
+# 1c2f9df62f504dfb95fc9c43eb64cbfe
 msgid "Friction law"
-msgstr "Friction law"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:276
-msgid ""
-"Apart from pure Coulomb friction :math:`\\rho = {\\mathscr F} \\left| "
-"\\sigma_n \\right|`, the weak integral contact framework in |gf| also "
-"supports a more generic friction law description:"
+# 61b17bcf755b42debd5b4dbbb59537bb
+msgid "Apart from pure Coulomb friction :math:`\\rho = {\\mathscr F} \\left| \\sigma_n \\right|`, the weak integral contact framework in |gf| also supports a more generic friction law description:"
 msgstr ""
-"Apart from pure Coulomb friction :math:`\\rho = {\\mathscr F} \\left| "
-"\\sigma_n \\right|`, the weak integral contact framework in |gf| also "
-"supports a more generic friction law description:"
 
 #: ../source/userdoc/model_contact_friction.rst:288
-msgid ""
-"In this equation :math:`\\rho` is the admissible friction stress for a given"
-" normal stress :math:`\\sigma_n`, :math:`{\\mathscr F}` is the coefficient "
-"of friction, :math:`\\tau_{adh}` is an adhesional (load-independent) shear "
-"stress and :math:`\\tau_{tresca}` is a maximum shear stress limit."
+# dd591af68cb845a382597f8ac6a461cc
+msgid "In this equation :math:`\\rho` is the admissible friction stress for a given normal stress :math:`\\sigma_n`, :math:`{\\mathscr F}` is the coefficient of friction, :math:`\\tau_{adh}` is an adhesional (load-independent) shear stress and :math:`\\tau_{tresca}` is a maximum shear stress limit."
 msgstr ""
-"In this equation :math:`\\rho` is the admissible friction stress for a given"
-" normal stress :math:`\\sigma_n`, :math:`{\\mathscr F}` is the coefficient "
-"of friction, :math:`\\tau_{adh}` is an adhesional (load-independent) shear "
-"stress and :math:`\\tau_{tresca}` is a maximum shear stress limit."
 
 #: ../source/userdoc/model_contact_friction.rst:300
+# 1227bc8ffbdb41198b1c58d2f8a2b4c1
 msgid "Add a contact with or without friction to a model"
-msgstr "Add a contact with or without friction to a model"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:303
+# 0c12adcf9c594c87915564a40a53a722
 msgid "Frictionless basic contact brick"
-msgstr "Frictionless basic contact brick"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:305
-msgid ""
-"In order to add a frictionless contact brick you call the model object "
-"method::"
+# 22486aa71822443399d1910b1363e68d
+msgid "In order to add a frictionless contact brick you call the model object method::"
 msgstr ""
-"In order to add a frictionless contact brick you call the model object "
-"method::"
 
 #: ../source/userdoc/model_contact_friction.rst:310
-msgid ""
-"This function adds a frictionless contact brick on ``varname_u`` thanks to a"
-" multiplier variable ``multname_n``. If :math:`U` is the vector of degrees "
-"of freedom on which the unilateral constraint is applied, the matrix "
-":math:`B_N` have to be such that this condition is defined by :math:`B_N U "
-"\\le 0`. The constraint is prescribed thank to a multiplier ``multname_n`` "
-"whose dimension should be equal to the number of lines of :math:`B_N`. The "
-"variable ``dataname_r`` is the name of the augmentation parameter :math:`r` "
-"should be chosen in a range of acceptable values. ``dataname_gap`` is an "
-"optional parameter representing the initial gap. It can be a single value or"
-" a vector of value. ``dataname_alpha`` is an optional homogenization "
-"parameter for the augmentation parameter."
+# 7deb7cb7f08749089c7690d0205ede9c
+msgid "This function adds a frictionless contact brick on ``varname_u`` thanks to a multiplier variable ``multname_n``. If :math:`U` is the vector of degrees of freedom on which the unilateral constraint is applied, the matrix :math:`B_N` have to be such that this condition is defined by :math:`B_N U \\le 0`. The constraint is prescribed thank to a multiplier ``multname_n`` whose dimension should be equal to the number of lines of :math:`B_N`. The variable ``dataname_r`` is the name of the augmentation parameter :math:`r` should be chosen in a range of acceptable values. ``dataname_gap`` is an optional parameter representing the initial gap. It can be a single value or a vector of value. ``dataname_alpha`` is an optional homogenization parameter for the augmentation parameter."
 msgstr ""
-"This function adds a frictionless contact brick on ``varname_u`` thanks to a"
-" multiplier variable ``multname_n``. If :math:`U` is the vector of degrees "
-"of freedom on which the unilateral constraint is applied, the matrix "
-":math:`B_N` have to be such that this condition is defined by :math:`B_N U "
-"\\le 0`. The constraint is prescribed thank to a multiplier ``multname_n`` "
-"whose dimension should be equal to the number of lines of :math:`B_N`. The "
-"variable ``dataname_r`` is the name of the augmentation parameter :math:`r` "
-"should be chosen in a range of acceptable values. ``dataname_gap`` is an "
-"optional parameter representing the initial gap. It can be a single value or"
-" a vector of value. ``dataname_alpha`` is an optional homogenization "
-"parameter for the augmentation parameter."
 
 #: ../source/userdoc/model_contact_friction.rst:312
-msgid ""
-"The parameter `aug_version` indicates the augmentation strategy : 1 for the "
-"non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
-" for the unsymmetric method based on augmented multipliers."
+# 540e18c2d67a472c8d3f06f7a4063341
+msgid "The parameter `aug_version` indicates the augmentation strategy : 1 for the non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for the unsymmetric method based on augmented multipliers."
 msgstr ""
-"The parameter `aug_version` indicates the augmentation strategy : 1 for the "
-"non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
-" for the unsymmetric method based on augmented multipliers."
 
 #: ../source/userdoc/model_contact_friction.rst:314
-msgid ""
-"Note that is possible to change the basic contact matrix :math:`B_N` by "
-"using::"
+# ffced2349dc04c51adf86a34e9127336
+msgid "Note that is possible to change the basic contact matrix :math:`B_N` by using::"
 msgstr ""
-"Note that is possible to change the basic contact matrix :math:`B_N` by "
-"using::"
 
 #: ../source/userdoc/model_contact_friction.rst:320
+# 88d458586a0942939a9f98580779cdc5
 msgid "Basic contact brick with friction"
-msgstr "Basic contact brick with friction"
-
-#: ../source/userdoc/model_contact_friction.rst:323
-msgid "getfem::add_basic_contact_brick"
-msgstr "getfem::add_basic_contact_brick"
-
-#: ../source/userdoc/model_contact_friction.rst:323
-msgid ""
-"(md, varname_u, multname_n, multname_t, dataname_r, BN, "
-"dataname_friction_coeff, dataname_gap, dataname_alpha, aug_version);"
 msgstr ""
-"(md, varname_u, multname_n, multname_t, dataname_r, BN, "
-"dataname_friction_coeff, dataname_gap, dataname_alpha, aug_version);"
+
+#: ../source/userdoc/model_contact_friction.rst:323
+# fe82ea924f3d4937a1ad6b6b1b2fc62d
+msgid "getfem::add_basic_contact_brick"
+msgstr ""
+
+#: ../source/userdoc/model_contact_friction.rst:323
+# f847ed6b731949e5ba4136c9c5bfffd8
+msgid "(md, varname_u, multname_n, multname_t, dataname_r, BN, dataname_friction_coeff, dataname_gap, dataname_alpha, aug_version);"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:325
-msgid ""
-"This function adds a contact brick with friction on ``varname_u`` thanks to "
-"two multiplier variables ``multname_n`` and ``multname_t``. If ``U`` is the "
-"vector of degrees of freedom on which the condition is applied, the matrix "
-"``B_N`` has to be such that the contact condition is defined by :math:`B_N U"
-" \\le gap` and ``B_T`` have to be such that the relative tangential "
-"displacement is :math:`B_T U`. The matrix ``B_T`` should have as many rows "
-"as ``B_N`` multiplied by :math:`d-1` where :math:`d` is the domain "
-"dimension. The contact condition is prescribed thank to a multiplier "
-"``multname_n`` whose dimension should be equal to the number of rows of "
-"``B_N`` and the friction condition by a multiplier ``multname_t`` whose size"
-" should be the number of rows of ``B_T``. The parameter "
-"``dataname_friction_coeff`` describes the friction coefficient. It could be "
-"a scalar or a vector describing the coefficient on each contact condition. "
-"The augmentation parameter ``r`` should be chosen in a range of acceptable "
-"values (see Getfem user documentation). ``dataname_gap`` is an optional "
-"parameter representing the initial gap. It can be a single value or a vector"
-" of value. ``dataname_alpha`` is an optional homogenization parameter for "
-"the augmentation parameter."
+# 939086fd93744e5aa7098d358a3536fd
+msgid "This function adds a contact brick with friction on ``varname_u`` thanks to two multiplier variables ``multname_n`` and ``multname_t``. If ``U`` is the vector of degrees of freedom on which the condition is applied, the matrix ``B_N`` has to be such that the contact condition is defined by :math:`B_N U \\le gap` and ``B_T`` have to be such that the relative tangential displacement is :math:`B_T U`. The matrix ``B_T`` should have as many rows as ``B_N`` multiplied by :math:`d-1` where :math:`d` is the domain dimension. The contact condition is prescribed thank to a multiplier ``multname_n`` whose dimension should be equal to the number of rows of ``B_N`` and the friction condition by a multiplier ``multname_t`` whose size should be the number of rows of ``B_T``. The parameter ``dataname_friction_coeff`` describes the friction coefficient. It could be a scalar or a vector describing the coefficient on each contact condition. The augmentation parameter ``r`` should be chosen in a range of acceptable values (see Getfem user documentation). ``dataname_gap`` is an optional parameter representing the initial gap. It can be a single value or a vector of value. ``dataname_alpha`` is an optional homogenization parameter for the augmentation parameter."
 msgstr ""
-"This function adds a contact brick with friction on ``varname_u`` thanks to "
-"two multiplier variables ``multname_n`` and ``multname_t``. If ``U`` is the "
-"vector of degrees of freedom on which the condition is applied, the matrix "
-"``B_N`` has to be such that the contact condition is defined by :math:`B_N U"
-" \\le gap` and ``B_T`` have to be such that the relative tangential "
-"displacement is :math:`B_T U`. The matrix ``B_T`` should have as many rows "
-"as ``B_N`` multiplied by :math:`d-1` where :math:`d` is the domain "
-"dimension. The contact condition is prescribed thank to a multiplier "
-"``multname_n`` whose dimension should be equal to the number of rows of "
-"``B_N`` and the friction condition by a multiplier ``multname_t`` whose size"
-" should be the number of rows of ``B_T``. The parameter "
-"``dataname_friction_coeff`` describes the friction coefficient. It could be "
-"a scalar or a vector describing the coefficient on each contact condition. "
-"The augmentation parameter ``r`` should be chosen in a range of acceptable "
-"values (see Getfem user documentation). ``dataname_gap`` is an optional "
-"parameter representing the initial gap. It can be a single value or a vector"
-" of value. ``dataname_alpha`` is an optional homogenization parameter for "
-"the augmentation parameter."
 
 #: ../source/userdoc/model_contact_friction.rst:346
 #: ../source/userdoc/model_contact_friction.rst:406
-msgid ""
-"The parameter `aug_version` indicates the augmentation strategy : 1 for the "
-"non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
-" for the unsymmetric method based on augmented multipliers and 4 for the "
-"unsymmetric method based on augmented multipliers with De Saxce projection."
+# 69312922f4224ceda2789e97e9cc1f2d
+# 251a97c1dea447648c3ec5ee1d16dda7
+msgid "The parameter `aug_version` indicates the augmentation strategy : 1 for the non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for the unsymmetric method based on augmented multipliers and 4 for the unsymmetric method based on augmented multipliers with De Saxce projection."
 msgstr ""
-"The parameter `aug_version` indicates the augmentation strategy : 1 for the "
-"non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
-" for the unsymmetric method based on augmented multipliers and 4 for the "
-"unsymmetric method based on augmented multipliers with De Saxce projection."
 
 #: ../source/userdoc/model_contact_friction.rst:352
-msgid ""
-"Note that is possible to change the basic contact matrices :math:`B_N` and "
-":math:`B_T` by using::"
+# d452f18bfe644f04b534c9419b2e1043
+msgid "Note that is possible to change the basic contact matrices :math:`B_N` and :math:`B_T` by using::"
 msgstr ""
-"Note that is possible to change the basic contact matrices :math:`B_N` and "
-":math:`B_T` by using::"
 
 #: ../source/userdoc/model_contact_friction.rst:359
+# b0c8d0ec3c1444ea8e22b6c1567e9775
 msgid "Frictionless nodal contact with a rigid obstacle brick"
-msgstr "Frictionless nodal contact with a rigid obstacle brick"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:362
 #: ../source/userdoc/model_contact_friction.rst:384
+# 3359d4733c85455ebf745b826656dff6
+# a790dd2929644513909f9c1a58c33910
 msgid "getfem::add_nodal_contact_with_rigid_obstacle_brick"
-msgstr "getfem::add_nodal_contact_with_rigid_obstacle_brick"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:362
-msgid ""
-"(md, mim, varname_u, multname_n, dataname_r, region, obstacle, aug_version);"
+# 4ac5d0cc9b59477b9b05fb0723712d82
+msgid "(md, mim, varname_u, multname_n, dataname_r, region, obstacle, aug_version);"
 msgstr ""
-"(md, mim, varname_u, multname_n, dataname_r, region, obstacle, aug_version);"
 
 #: ../source/userdoc/model_contact_friction.rst:364
-msgid ""
-"This function adds a direct nodal frictionless contact condition with a "
-"rigid obstacle to the model. The condition is applied on the variable "
-"``varname_u`` on the boundary corresponding to ``region``. The rigid "
-"obstacle should be described with the string ``obstacle`` being a signed "
-"distance to the obstacle. This string should be an expression where the "
-"coordinates are 'x', 'y' in 2D and 'x', 'y', 'z' in 3D. For instance, if the"
-" rigid obstacle correspond to :math:`z \\le 0`, the corresponding signed "
-"distance will be simply 'z'. ``multname_n`` should be a fixed size variable "
-"whose size is the number of degrees of freedom on boundary ``region``. It "
-"represents the contact equivalent nodal forces. The augmentation parameter "
-"``r`` should be chosen in a range of acceptable values (close to the Young "
-"modulus of the elastic body, see Getfem user documentation). 1 for the non-"
-"symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for"
-" the unsymmetric method based on augmented multipliers."
+# b353a0b54925431abe516d8e655f330f
+msgid "This function adds a direct nodal frictionless contact condition with a rigid obstacle to the model. The condition is applied on the variable ``varname_u`` on the boundary corresponding to ``region``. The rigid obstacle should be described with the string ``obstacle`` being a signed distance to the obstacle. This string should be an expression where the coordinates are 'x', 'y' in 2D and 'x', 'y', 'z' in 3D. For instance, if the rigid obstacle correspond to :math:`z \\le 0`, the corresponding signed distance will be simply 'z'. ``multname_n`` should be a fixed size variable whose size is the number of degrees of freedom on boundary ``region``. It represents the contact equivalent nodal forces. The augmentation parameter ``r`` should be chosen in a range of acceptable values (close to the Young modulus of the elastic body, see Getfem user documentation). 1 for the non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for the unsymmetric method based on augmented multipliers."
 msgstr ""
-"This function adds a direct nodal frictionless contact condition with a "
-"rigid obstacle to the model. The condition is applied on the variable "
-"``varname_u`` on the boundary corresponding to ``region``. The rigid "
-"obstacle should be described with the string ``obstacle`` being a signed "
-"distance to the obstacle. This string should be an expression where the "
-"coordinates are 'x', 'y' in 2D and 'x', 'y', 'z' in 3D. For instance, if the"
-" rigid obstacle correspond to :math:`z \\le 0`, the corresponding signed "
-"distance will be simply 'z'. ``multname_n`` should be a fixed size variable "
-"whose size is the number of degrees of freedom on boundary ``region``. It "
-"represents the contact equivalent nodal forces. The augmentation parameter "
-"``r`` should be chosen in a range of acceptable values (close to the Young "
-"modulus of the elastic body, see Getfem user documentation). 1 for the non-"
-"symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for"
-" the unsymmetric method based on augmented multipliers."
 
 #: ../source/userdoc/model_contact_friction.rst:379
+# 2798f56c8a2b4f9cb1ef992d865eef1e
 msgid "Nodal contact with a rigid obstacle brick with friction"
-msgstr "Nodal contact with a rigid obstacle brick with friction"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:382
-msgid ""
-"(md, mim, varname_u, multname_n, multname_t, dataname_r, "
-"dataname_friction_coeff, region, obstacle, aug_version);"
+# a210bf394b664690b94a35ff594b0ed7
+msgid "(md, mim, varname_u, multname_n, multname_t, dataname_r, dataname_friction_coeff, region, obstacle, aug_version);"
 msgstr ""
-"(md, mim, varname_u, multname_n, multname_t, dataname_r, "
-"dataname_friction_coeff, region, obstacle, aug_version);"
 
 #: ../source/userdoc/model_contact_friction.rst:386
-msgid ""
-"This function adds a direct nodal contact with friction condition with a "
-"rigid obstacle to the model. The condition is applied on the variable "
-"``varname_u`` on the boundary corresponding to ``region``. The rigid "
-"obstacle should be described with the string ``obstacle`` being a signed "
-"distance to the obstacle. This string should be an expression where the "
-"coordinates are 'x', 'y' in 2D and 'x', 'y', 'z' in 3D. For instance, if the"
-" rigid obstacle correspond to :math:`z \\le 0`, the corresponding signed "
-"distance will be simply 'z'. ``multname_n`` should be a fixed size variable "
-"whose size is the number of degrees of freedom on boundary ``region``. It "
-"represents the contact equivalent nodal forces. ``multname_t`` should be a "
-"fixed size variable whose size is the number of degrees of freedom on "
-"boundary ``region`` multiplied by :math:`d-1` where :math:`d` is the domain "
-"dimension. It represents the friction equivalent nodal forces. The "
-"augmentation parameter ``r`` should be chosen in a range of acceptable "
-"values (close to the Young modulus of the elastic body, see Getfem user "
-"documentation). ``dataname_friction_coeff`` is the friction coefficient. It "
-"could be a scalar or a vector of values representing the friction "
-"coefficient on each contact node."
+# f5c0f9816d4742f08e56cc7827371c54
+msgid "This function adds a direct nodal contact with friction condition with a rigid obstacle to the model. The condition is applied on the variable ``varname_u`` on the boundary corresponding to ``region``. The rigid obstacle should be described with the string ``obstacle`` being a signed distance to the obstacle. This string should be an expression where the coordinates are 'x', 'y' in 2D and 'x', 'y', 'z' in 3D. For instance, if the rigid obstacle correspond to :math:`z \\le 0`, the corresponding signed distance will be simply 'z'. ``multname_n`` should be a fixed size variable whose size is the number of degrees of freedom on boundary ``region``. It represents the contact equivalent nodal forces. ``multname_t`` should be a fixed size variable whose size is the number of degrees of freedom on boundary ``region`` multiplied by :math:`d-1` where :math:`d` is the domain dimension. It represents the friction equivalent nodal forces. The augmentation parameter ``r`` should be chosen in a range of acceptable values (close to the Young modulus of the elastic body, see Getfem user documentation). ``dataname_friction_coeff`` is the friction coefficient. It could be a scalar or a vector of values representing the friction coefficient on each contact node."
 msgstr ""
-"This function adds a direct nodal contact with friction condition with a "
-"rigid obstacle to the model. The condition is applied on the variable "
-"``varname_u`` on the boundary corresponding to ``region``. The rigid "
-"obstacle should be described with the string ``obstacle`` being a signed "
-"distance to the obstacle. This string should be an expression where the "
-"coordinates are 'x', 'y' in 2D and 'x', 'y', 'z' in 3D. For instance, if the"
-" rigid obstacle correspond to :math:`z \\le 0`, the corresponding signed "
-"distance will be simply 'z'. ``multname_n`` should be a fixed size variable "
-"whose size is the number of degrees of freedom on boundary ``region``. It "
-"represents the contact equivalent nodal forces. ``multname_t`` should be a "
-"fixed size variable whose size is the number of degrees of freedom on "
-"boundary ``region`` multiplied by :math:`d-1` where :math:`d` is the domain "
-"dimension. It represents the friction equivalent nodal forces. The "
-"augmentation parameter ``r`` should be chosen in a range of acceptable "
-"values (close to the Young modulus of the elastic body, see Getfem user "
-"documentation). ``dataname_friction_coeff`` is the friction coefficient. It "
-"could be a scalar or a vector of values representing the friction "
-"coefficient on each contact node."
 
 #: ../source/userdoc/model_contact_friction.rst:414
+# 78c62de9ebfa4786b7c7e520a1ed6073
 msgid "Frictionless nodal contact between non-matching meshes brick"
-msgstr "Frictionless nodal contact between non-matching meshes brick"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:418
 #: ../source/userdoc/model_contact_friction.rst:456
+# 0d4cfa5c894a48deb2ba0252f63a0163
+# 4e566826be4641649b3f0fcfe1a7a323
 msgid "getfem::add_nodal_contact_between_nonmatching_meshes_brick"
-msgstr "getfem::add_nodal_contact_between_nonmatching_meshes_brick"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:417
-msgid ""
-"(md, mim1, mim2, varname_u1, varname_u2, multname_n, dataname_r, rg1, rg2, "
-"slave1=true, slave2=false, aug_version=1);"
+# 7237ef80814f4384aee7981b0386593f
+msgid "(md, mim1, mim2, varname_u1, varname_u2, multname_n, dataname_r, rg1, rg2, slave1=true, slave2=false, aug_version=1);"
 msgstr ""
-"(md, mim1, mim2, varname_u1, varname_u2, multname_n, dataname_r, rg1, rg2, "
-"slave1=true, slave2=false, aug_version=1);"
 
 #: ../source/userdoc/model_contact_friction.rst:420
-msgid ""
-"This function adds a frictionless contact condition between two faces of one"
-" or two elastic bodies. The condition is applied on the variable `varname_u`"
-" or the variables `varname_u1` and `varname_u2` depending if a single or two"
-" distinct displacement fields are given. Vectors `rg1` and `rg2` contain "
-"pairs of regions expected to come in contact with each other. In case of a "
-"single region per side, `rg1` and `rg2` can be given as normal integers. In "
-"the single displacement variable case the regions defined in both `rg1` and "
-"`rg2` refer to the variable `varname_u`. In the case of two displacement "
-"variables, `rg1` refers to `varname_u1` and `rg2` refers to `varname_u2`. "
-"`multname_n` should be a fixed size variable whose size is the number of "
-"degrees of freedom on those regions among the ones defined in `rg1` and "
-"`rg2` which are characterized as \"slaves\". It represents the contact "
-"equivalent nodal forces. The augmentation parameter `r` should be chosen in "
-"a range of acceptabe values (close to the Young modulus of the elastic body,"
-" see Getfem user documentation). The optional parameters `slave1` and "
-"`slave2` declare if the regions defined in `rg1` and `rg2` are "
-"correspondingly considered as \"slaves\". By default `slave1` is true and "
-"`slave2` is false, i.e. `rg1` contains the slave surfaces, while `rg2` the "
-"master surfaces. Preferably only one of `slave1` and `slave2` is set to "
-"true."
+# e805bc38957849a49116006104b8cebd
+msgid "This function adds a frictionless contact condition between two faces of one or two elastic bodies. The condition is applied on the variable `varname_u` or the variables `varname_u1` and `varname_u2` depending if a single or two distinct displacement fields are given. Vectors `rg1` and `rg2` contain pairs of regions expected to come in contact with each other. In case of a single region per side, `rg1` and `rg2` can be given as normal integers. In the single displacement variable case the regions defined in both `rg1` and `rg2` refer to the variable `varname_u`. In the case of two displacement variables, `rg1` refers to `varname_u1` and `rg2` refers to `varname_u2`. `multname_n` should be a fixed size variable whose size is the number of degrees of freedom on those regions among the ones defined in `rg1` and `rg2` which are characterized as \"slaves\". It represents the contact equivalent nodal forces. The augmentation parameter `r` should be chosen in a range of acceptabe values (close to the Young modulus of the elastic body, see Getfem user documentation). The optional parameters `slave1` and `slave2` declare if the regions defined in `rg1` and `rg2` are correspondingly considered as \"slaves\". By default `slave1` is true and `slave2` is false, i.e. `rg1` contains the slave surfaces, while `rg2` the master surfaces. Preferably only one of `slave1` and `slave2` is set to true."
 msgstr ""
-"This function adds a frictionless contact condition between two faces of one"
-" or two elastic bodies. The condition is applied on the variable `varname_u`"
-" or the variables `varname_u1` and `varname_u2` depending if a single or two"
-" distinct displacement fields are given. Vectors `rg1` and `rg2` contain "
-"pairs of regions expected to come in contact with each other. In case of a "
-"single region per side, `rg1` and `rg2` can be given as normal integers. In "
-"the single displacement variable case the regions defined in both `rg1` and "
-"`rg2` refer to the variable `varname_u`. In the case of two displacement "
-"variables, `rg1` refers to `varname_u1` and `rg2` refers to `varname_u2`. "
-"`multname_n` should be a fixed size variable whose size is the number of "
-"degrees of freedom on those regions among the ones defined in `rg1` and "
-"`rg2` which are characterized as \"slaves\". It represents the contact "
-"equivalent nodal forces. The augmentation parameter `r` should be chosen in "
-"a range of acceptabe values (close to the Young modulus of the elastic body,"
-" see Getfem user documentation). The optional parameters `slave1` and "
-"`slave2` declare if the regions defined in `rg1` and `rg2` are "
-"correspondingly considered as \"slaves\". By default `slave1` is true and "
-"`slave2` is false, i.e. `rg1` contains the slave surfaces, while `rg2` the "
-"master surfaces. Preferably only one of `slave1` and `slave2` is set to "
-"true."
 
 #: ../source/userdoc/model_contact_friction.rst:441
-msgid ""
-"The parameter `aug_version` indicates the augmentation strategy : 1 for the "
-"non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
-" for the unsymmetric method with augmented multiplier."
+# 8b0b6bc93aa14181839fb5e957801c3e
+msgid "The parameter `aug_version` indicates the augmentation strategy : 1 for the non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for the unsymmetric method with augmented multiplier."
 msgstr ""
-"The parameter `aug_version` indicates the augmentation strategy : 1 for the "
-"non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
-" for the unsymmetric method with augmented multiplier."
 
 #: ../source/userdoc/model_contact_friction.rst:446
-msgid ""
-"Basically, this brick computes the matrix :math:`B_N` and the vectors gap "
-"and alpha and calls the basic contact brick."
+# 506c65fea9644df1835c1d42ebb65a9f
+msgid "Basically, this brick computes the matrix :math:`B_N` and the vectors gap and alpha and calls the basic contact brick."
 msgstr ""
-"Basically, this brick computes the matrix :math:`B_N` and the vectors gap "
-"and alpha and calls the basic contact brick."
 
 #: ../source/userdoc/model_contact_friction.rst:451
+# db0972e5c3ac47819f270c1d779284df
 msgid "Nodal contact between non-matching meshes brick with friction"
-msgstr "Nodal contact between non-matching meshes brick with friction"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:456
+# bd27c3225db74b63a8f00206d4f0f613
 msgid "(md, mim1, mim2, varname_u1, varname_u2, multname_n, multname_t,"
-msgstr "(md, mim1, mim2, varname_u1, varname_u2, multname_n, multname_t,"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:455
-msgid ""
-"dataname_r, dataname_friction_coeff, rg1, rg2, slave1=true, slave2=false, "
-"aug_version=1);"
+# f1512b1c92784a488e806d5917591ddf
+msgid "dataname_r, dataname_friction_coeff, rg1, rg2, slave1=true, slave2=false, aug_version=1);"
 msgstr ""
-"dataname_r, dataname_friction_coeff, rg1, rg2, slave1=true, slave2=false, "
-"aug_version=1);"
 
 #: ../source/userdoc/model_contact_friction.rst:458
-msgid ""
-"This function adds a contact with friction condition between two faces of "
-"one or two elastic bodies. The condition is applied on the variable "
-"`varname_u` or the variables `varname_u1` and `varname_u2` depending if a "
-"single or two distinct displacement fields are given. Vectors `rg1` and "
-"`rg2` contain pairs of regions expected to come in contact with each other. "
-"In case of a single region per side, `rg1` and `rg2` can be given as normal "
-"integers. In the single displacement variable case the regions defined in "
-"both `rg1` and `rg2` refer to the variable `varname_u`. In the case of two "
-"displacement variables, `rg1` refers to `varname_u1` and `rg2` refers to "
-"`varname_u2`. `multname_n` should be a fixed size variable whose size is the"
-" number of degrees of freedom on those regions among the ones defined in "
-"`rg1` and `rg2` which are characterized as \"slaves\". It represents the "
-"contact equivalent nodal normal forces. `multname_t` should be a fixed size "
-"variable whose size corresponds to the size of `multname_n` multiplied by "
-"qdim - 1 . It represents the contact equivalent nodal tangent (frictional) "
-"forces. The augmentation parameter `r` should be chosen in a range of "
-"acceptabe values (close to the Young modulus of the elastic body, see Getfem"
-" user documentation). The friction coefficient stored in the parameter "
-"`friction_coeff` is either a single value or a vector of the same size as "
-"`multname_n`. The optional parameters `slave1` and `slave2` declare if the "
-"regions defined in `rg1` and `rg2` are correspondingly considered as "
-"\"slaves\". By default `slave1` is true and `slave2` is false, i.e. `rg1` "
-"contains the slave surfaces, while `rg2` the master surfaces. Preferably "
-"only one of `slave1` and `slave2` is set to true."
+# 4ea66014b4264857918868736857ccbe
+msgid "This function adds a contact with friction condition between two faces of one or two elastic bodies. The condition is applied on the variable `varname_u` or the variables `varname_u1` and `varname_u2` depending if a single or two distinct displacement fields are given. Vectors `rg1` and `rg2` contain pairs of regions expected to come in contact with each other. In case of a single region per side, `rg1` and `rg2` can be given as normal integers. In the single displacement variable case the regions defined in both `rg1` and `rg2` refer to the variable `varname_u`. In the case of two displacement variables, `rg1` refers to `varname_u1` and `rg2` refers to `varname_u2`. `multname_n` should be a fixed size variable whose size is the number of degrees of freedom on those regions among the ones defined in `rg1` and `rg2` which are characterized as \"slaves\". It represents the contact equivalent nodal normal forces. `multname_t` should be a fixed size variable whose size corresponds to the size of `multname_n` multiplied by qdim - 1 . It represents the contact equivalent nodal tangent (frictional) forces. The augmentation parameter `r` should be chosen in a range of acceptabe values (close to the Young modulus of the elastic body, see Getfem user documentation). The friction coefficient stored in the parameter `friction_coeff` is either a single value or a vector of the same size as `multname_n`. The optional parameters `slave1` and `slave2` declare if the regions defined in `rg1` and `rg2` are correspondingly considered as \"slaves\". By default `slave1` is true and `slave2` is false, i.e. `rg1` contains the slave surfaces, while `rg2` the master surfaces. Preferably only one of `slave1` and `slave2` is set to true."
 msgstr ""
-"This function adds a contact with friction condition between two faces of "
-"one or two elastic bodies. The condition is applied on the variable "
-"`varname_u` or the variables `varname_u1` and `varname_u2` depending if a "
-"single or two distinct displacement fields are given. Vectors `rg1` and "
-"`rg2` contain pairs of regions expected to come in contact with each other. "
-"In case of a single region per side, `rg1` and `rg2` can be given as normal "
-"integers. In the single displacement variable case the regions defined in "
-"both `rg1` and `rg2` refer to the variable `varname_u`. In the case of two "
-"displacement variables, `rg1` refers to `varname_u1` and `rg2` refers to "
-"`varname_u2`. `multname_n` should be a fixed size variable whose size is the"
-" number of degrees of freedom on those regions among the ones defined in "
-"`rg1` and `rg2` which are characterized as \"slaves\". It represents the "
-"contact equivalent nodal normal forces. `multname_t` should be a fixed size "
-"variable whose size corresponds to the size of `multname_n` multiplied by "
-"qdim - 1 . It represents the contact equivalent nodal tangent (frictional) "
-"forces. The augmentation parameter `r` should be chosen in a range of "
-"acceptabe values (close to the Young modulus of the elastic body, see Getfem"
-" user documentation). The friction coefficient stored in the parameter "
-"`friction_coeff` is either a single value or a vector of the same size as "
-"`multname_n`. The optional parameters `slave1` and `slave2` declare if the "
-"regions defined in `rg1` and `rg2` are correspondingly considered as "
-"\"slaves\". By default `slave1` is true and `slave2` is false, i.e. `rg1` "
-"contains the slave surfaces, while `rg2` the master surfaces. Preferably "
-"only one of `slave1` and `slave2` is set to true."
 
 #: ../source/userdoc/model_contact_friction.rst:484
-msgid ""
-"The parameter `aug_version` indicates the augmentation strategy : 1 for the "
-"non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
-" for the unsymmetric method with augmented multiplier and 4 for the "
-"unsymmetric method with augmented multiplier and De Saxce projection."
+# 64acb51601f74e24baab5ae3411310a7
+msgid "The parameter `aug_version` indicates the augmentation strategy : 1 for the non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for the unsymmetric method with augmented multiplier and 4 for the unsymmetric method with augmented multiplier and De Saxce projection."
 msgstr ""
-"The parameter `aug_version` indicates the augmentation strategy : 1 for the "
-"non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
-" for the unsymmetric method with augmented multiplier and 4 for the "
-"unsymmetric method with augmented multiplier and De Saxce projection."
 
 #: ../source/userdoc/model_contact_friction.rst:490
-msgid ""
-"Basically, this brick computes the matrices :math:`B_N` and :math:`B_T` as "
-"well the vectors gap and alpha and calls the basic contact brick."
+# 611b0a994de446bda0ed7f944a91428c
+msgid "Basically, this brick computes the matrices :math:`B_N` and :math:`B_T` as well the vectors gap and alpha and calls the basic contact brick."
 msgstr ""
-"Basically, this brick computes the matrices :math:`B_N` and :math:`B_T` as "
-"well the vectors gap and alpha and calls the basic contact brick."
 
 #: ../source/userdoc/model_contact_friction.rst:496
+# b5b5b34f77764740b152cdcfbe6a3937
 msgid "Hughes stabilized frictionless contact condition"
-msgstr "Hughes stabilized frictionless contact condition"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:498
-msgid ""
-"In order to add a Hughes stabilized frictionless contact brick you call the "
-"model object method::"
+# dfed2d9ea6e8471ca22e38c70fef3b2f
+msgid "In order to add a Hughes stabilized frictionless contact brick you call the model object method::"
 msgstr ""
-"In order to add a Hughes stabilized frictionless contact brick you call the "
-"model object method::"
 
 #: ../source/userdoc/model_contact_friction.rst:503
-msgid ""
-"This function adds a Hughes stabilized frictionless contact brick on "
-"``varname_u`` thanks to a multiplier variable ``multname_n``. If we take "
-":math:`U` is the vector of degrees of freedom on which the unilateral "
-"constraint is applied, and :math:`\\lambda` the multiplier Vector of contact"
-" force. Then Hughes stabilized frictionless contact condition is defined by "
-"the matrix :math:`B_N` and :math:`D_N` have to be such that this condition "
-"is defined by :math:`B_N U - D_N \\lambda \\le 0`. Where :math:`D_N` is the "
-"mass matrix relative to stabilized term. The variable ``dataname_r`` is the "
-"name of the augmentation parameter :math:`r` should be chosen in a range of "
-"acceptable values. ``dataname_gap`` is an optional parameter representing "
-"the initial gap. It can be a single value or a vector of value. "
-"``dataname_alpha`` is an optional homogenization parameter for the "
-"augmentation parameter."
+# 1a5b043149dd4a97995f65684051759b
+msgid "This function adds a Hughes stabilized frictionless contact brick on ``varname_u`` thanks to a multiplier variable ``multname_n``. If we take :math:`U` is the vector of degrees of freedom on which the unilateral constraint is applied, and :math:`\\lambda` the multiplier Vector of contact force. Then Hughes stabilized frictionless contact condition is defined by the matrix :math:`B_N` and :math:`D_N` have to be such that this condition is defined by :math:`B_N U - D_N \\lambda \\le 0`. Where :math:`D_N` is the mass matrix relative to stabilized term. The variable ``dataname_r`` is the name of the augmentation parameter :math:`r` should be chosen in a range of acceptable values. ``dataname_gap`` is an optional parameter representing the initial gap. It can be a single value or a vector of value. ``dataname_alpha`` is an optional homogenization parameter for the augmentation parameter."
 msgstr ""
-"This function adds a Hughes stabilized frictionless contact brick on "
-"``varname_u`` thanks to a multiplier variable ``multname_n``. If we take "
-":math:`U` is the vector of degrees of freedom on which the unilateral "
-"constraint is applied, and :math:`\\lambda` the multiplier Vector of contact"
-" force. Then Hughes stabilized frictionless contact condition is defined by "
-"the matrix :math:`B_N` and :math:`D_N` have to be such that this condition "
-"is defined by :math:`B_N U - D_N \\lambda \\le 0`. Where :math:`D_N` is the "
-"mass matrix relative to stabilized term. The variable ``dataname_r`` is the "
-"name of the augmentation parameter :math:`r` should be chosen in a range of "
-"acceptable values. ``dataname_gap`` is an optional parameter representing "
-"the initial gap. It can be a single value or a vector of value. "
-"``dataname_alpha`` is an optional homogenization parameter for the "
-"augmentation parameter."
 
 #: ../source/userdoc/model_contact_friction.rst:505
-msgid ""
-"The parameter `aug_version` indicates the augmentation strategy :  1 for the"
-" non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, "
-"3 for the unsymmetric method based on augmented multipliers."
+# f9e69ea2ba5e4984b19f7b3580bb1368
+msgid "The parameter `aug_version` indicates the augmentation strategy :  1 for the non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for the unsymmetric method based on augmented multipliers."
 msgstr ""
-"The parameter `aug_version` indicates the augmentation strategy :  1 for the"
-" non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, "
-"3 for the unsymmetric method based on augmented multipliers."
 
 #: ../source/userdoc/model_contact_friction.rst:507
-msgid ""
-"Note that the matrix :math:`D_N` is a sum of the basic contact term and the "
-"Hughes stabilised term. You can change it with::"
+# 5f64c9fa03b149029fb95326bfb73077
+msgid "Note that the matrix :math:`D_N` is a sum of the basic contact term and the Hughes stabilised term. You can change it with::"
 msgstr ""
-"Note that the matrix :math:`D_N` is a sum of the basic contact term and the "
-"Hughes stabilised term. You can change it with::"
 
 #: ../source/userdoc/model_contact_friction.rst:513
+# 360f6d57cb6343c9b809c070c792cccb
 msgid "Frictionless integral contact with a rigid obstacle brick"
-msgstr "Frictionless integral contact with a rigid obstacle brick"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:520
-msgid ""
-"This function adds a frictionless contact condition with a rigid obstacle to"
-" the model, which is defined in an integral way. It is the direct "
-"approximation of an augmented Lagrangian formulation defined at the "
-"continuous level. The advantage should be a better scalability: the number "
-"of Newton iterations should be more or less independent of the mesh size. "
-"The condition is applied on the variable ``varname_u`` on the boundary "
-"corresponding to ``region``. The rigid obstacle should be described with the"
-" data ``dataname_obstacle`` being a signed distance to the obstacle "
-"(interpolated on a finite element method). ``multname_n`` should be a fem "
-"variable representing the contact stress. An inf-sup condition between "
-"``multname_n`` and ``varname_u`` is required. The augmentation parameter "
-"``dataname_r`` should be chosen in a range of acceptable values."
+# d6d334b7faa44678aa59a6856e139e37
+msgid "This function adds a frictionless contact condition with a rigid obstacle to the model, which is defined in an integral way. It is the direct approximation of an augmented Lagrangian formulation defined at the continuous level. The advantage should be a better scalability: the number of Newton iterations should be more or less independent of the mesh size. The condition is applied on the variable ``varname_u`` on the boundary corresponding to ``region``. The rigid obstacle should be described with the data ``dataname_obstacle`` being a signed distance to the obstacle (interpolated on a finite element method). ``multname_n`` should be a fem variable representing the contact stress. An inf-sup condition between ``multname_n`` and ``varname_u`` is required. The augmentation parameter ``dataname_r`` should be chosen in a range of acceptable values."
 msgstr ""
-"This function adds a frictionless contact condition with a rigid obstacle to"
-" the model, which is defined in an integral way. It is the direct "
-"approximation of an augmented Lagrangian formulation defined at the "
-"continuous level. The advantage should be a better scalability: the number "
-"of Newton iterations should be more or less independent of the mesh size. "
-"The condition is applied on the variable ``varname_u`` on the boundary "
-"corresponding to ``region``. The rigid obstacle should be described with the"
-" data ``dataname_obstacle`` being a signed distance to the obstacle "
-"(interpolated on a finite element method). ``multname_n`` should be a fem "
-"variable representing the contact stress. An inf-sup condition between "
-"``multname_n`` and ``varname_u`` is required. The augmentation parameter "
-"``dataname_r`` should be chosen in a range of acceptable values."
 
 #: ../source/userdoc/model_contact_friction.rst:535
 #: ../source/userdoc/model_contact_friction.rst:615
-msgid ""
-"Possible values for `option` is 1 for the non-symmetric Alart-Curnier "
-"augmented Lagrangian method, 2 for the symmetric one, 3 for the non-"
-"symmetric Alart-Curnier method with an additional augmentation and 4 for a "
-"new unsymmetric method. The default value is 1."
+# 250457c564e5429e90463462e987ca0e
+# d8588432fe164715b4a57da63b0980ee
+msgid "Possible values for `option` is 1 for the non-symmetric Alart-Curnier augmented Lagrangian method, 2 for the symmetric one, 3 for the non-symmetric Alart-Curnier method with an additional augmentation and 4 for a new unsymmetric method. The default value is 1."
 msgstr ""
-"Possible values for `option` is 1 for the non-symmetric Alart-Curnier "
-"augmented Lagrangian method, 2 for the symmetric one, 3 for the non-"
-"symmetric Alart-Curnier method with an additional augmentation and 4 for a "
-"new unsymmetric method. The default value is 1."
 
 #: ../source/userdoc/model_contact_friction.rst:540
 #: ../source/userdoc/model_contact_friction.rst:620
-msgid ""
-"``mim`` represents of course the integration method. Note that it should be "
-"accurate enough to integrate efficiently the nonlinear terms involved."
+# 94d8916f3d8e4c9b925f9e9e58a7e397
+# 6e578fd8b5d040a79b3b78b90d4aa36e
+msgid "``mim`` represents of course the integration method. Note that it should be accurate enough to integrate efficiently the nonlinear terms involved."
 msgstr ""
-"``mim`` represents of course the integration method. Note that it should be "
-"accurate enough to integrate efficiently the nonlinear terms involved."
 
 #: ../source/userdoc/model_contact_friction.rst:545
+# 91707757f97841f7985775394461afc5
 msgid "Integral contact with a rigid obstacle brick with friction"
-msgstr "Integral contact with a rigid obstacle brick with friction"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:555
-msgid ""
-"This function adds a contact with friction condition with a rigid obstacle "
-"to the model, which is defined in an integral way. It is the direct "
-"approximation of an augmented Lagrangian formulation defined at the "
-"continuous level. The advantage should be a better scalability: the number "
-"of Newton iterations should be more or less independent of the mesh size. "
-"The condition is applied on the variable ``varname_u`` on the boundary "
-"corresponding to ``region``. The rigid obstacle should be described with the"
-" data ``dataname_obstacle`` being a signed distance to the obstacle "
-"(interpolated on a finite element method). ``multname_n`` should be a fem "
-"variable representing the contact stress. An inf-sup condition between "
-"``multname_n`` and ``varname_u`` is required. The augmentation parameter "
-"``dataname_r`` should be chosen in a range of acceptable values."
+# 3cacfd2304f44b37936253e6833edc30
+msgid "This function adds a contact with friction condition with a rigid obstacle to the model, which is defined in an integral way. It is the direct approximation of an augmented Lagrangian formulation defined at the continuous level. The advantage should be a better scalability: the number of Newton iterations should be more or less independent of the mesh size. The condition is applied on the variable ``varname_u`` on the boundary corresponding to ``region``. The rigid obstacle should be described with the data ``dataname_obstacle`` being a signed distance to the obstacle (interpolated on a finite element method). ``multname_n`` should be a fem variable representing the contact stress. An inf-sup condition between ``multname_n`` and ``varname_u`` is required. The augmentation parameter ``dataname_r`` should be chosen in a range of acceptable values."
 msgstr ""
-"This function adds a contact with friction condition with a rigid obstacle "
-"to the model, which is defined in an integral way. It is the direct "
-"approximation of an augmented Lagrangian formulation defined at the "
-"continuous level. The advantage should be a better scalability: the number "
-"of Newton iterations should be more or less independent of the mesh size. "
-"The condition is applied on the variable ``varname_u`` on the boundary "
-"corresponding to ``region``. The rigid obstacle should be described with the"
-" data ``dataname_obstacle`` being a signed distance to the obstacle "
-"(interpolated on a finite element method). ``multname_n`` should be a fem "
-"variable representing the contact stress. An inf-sup condition between "
-"``multname_n`` and ``varname_u`` is required. The augmentation parameter "
-"``dataname_r`` should be chosen in a range of acceptable values."
 
 #: ../source/userdoc/model_contact_friction.rst:570
 #: ../source/userdoc/model_contact_friction.rst:707
-msgid ""
-"The parameter `dataname_friction_coeffs` contains the Coulomb friction "
-"coefficient and optionally an adhesional shear stress threshold and the "
-"tresca limit shear stress. For constant coefficients its size is from 1 to "
-"3. For coefficients described on a finite element method, this vector "
-"contains a number of single values, value pairs or triplets equal to the "
-"number of the corresponding mesh_fem's basic dofs."
+# 5ea7406948a2470984d92ba7f22dc715
+# aa197d21f59e4b9ab99525b415131d88
+msgid "The parameter `dataname_friction_coeffs` contains the Coulomb friction coefficient and optionally an adhesional shear stress threshold and the tresca limit shear stress. For constant coefficients its size is from 1 to 3. For coefficients described on a finite element method, this vector contains a number of single values, value pairs or triplets equal to the number of the corresponding mesh_fem's basic dofs."
 msgstr ""
-"The parameter `dataname_friction_coeffs` contains the Coulomb friction "
-"coefficient and optionally an adhesional shear stress threshold and the "
-"tresca limit shear stress. For constant coefficients its size is from 1 to "
-"3. For coefficients described on a finite element method, this vector "
-"contains a number of single values, value pairs or triplets equal to the "
-"number of the corresponding mesh_fem's basic dofs."
 
 #: ../source/userdoc/model_contact_friction.rst:577
-msgid ""
-"Possible values for `option` is 1 for the non-symmetric Alart-Curnier "
-"augmented Lagrangian method, 2 for the symmetric one, 3 for the non-"
-"symmetric Alart-Curnier method with an additional augmentation and 4 for a "
-"new unsymmetric method. The default value is 1. Option 4, assumes pure "
-"Coulomb friction and ignores any adhesional stress and tresca limit "
-"coefficients."
+# dd26eb6a8c0244a68730f6b535e3d30e
+msgid "Possible values for `option` is 1 for the non-symmetric Alart-Curnier augmented Lagrangian method, 2 for the symmetric one, 3 for the non-symmetric Alart-Curnier method with an additional augmentation and 4 for a new unsymmetric method. The default value is 1. Option 4, assumes pure Coulomb friction and ignores any adhesional stress and tresca limit coefficients."
 msgstr ""
-"Possible values for `option` is 1 for the non-symmetric Alart-Curnier "
-"augmented Lagrangian method, 2 for the symmetric one, 3 for the non-"
-"symmetric Alart-Curnier method with an additional augmentation and 4 for a "
-"new unsymmetric method. The default value is 1. Option 4, assumes pure "
-"Coulomb friction and ignores any adhesional stress and tresca limit "
-"coefficients."
 
 #: ../source/userdoc/model_contact_friction.rst:584
-msgid ""
-"``dataname_alpha`` and ``dataname_wt`` are optional parameters to solve "
-"evolutionary friction problems. ``dataname_gamma`` and ``dataname_vt`` "
-"denote optional data for adding a parameter-dependent sliding velocity to "
-"the friction condition. ``mim`` represents of course the integration method."
-" Note that it should be accurate enough to integrate efficiently the "
-"nonlinear terms involved."
+# b1a5316e857b42068cb97b0ee4eba2dc
+msgid "``dataname_alpha`` and ``dataname_wt`` are optional parameters to solve evolutionary friction problems. ``dataname_gamma`` and ``dataname_vt`` denote optional data for adding a parameter-dependent sliding velocity to the friction condition. ``mim`` represents of course the integration method. Note that it should be accurate enough to integrate efficiently the nonlinear terms involved."
 msgstr ""
-"``dataname_alpha`` and ``dataname_wt`` are optional parameters to solve "
-"evolutionary friction problems. ``dataname_gamma`` and ``dataname_vt`` "
-"denote optional data for adding a parameter-dependent sliding velocity to "
-"the friction condition. ``mim`` represents of course the integration method."
-" Note that it should be accurate enough to integrate efficiently the "
-"nonlinear terms involved."
 
 #: ../source/userdoc/model_contact_friction.rst:592
+# 050a52c640ed40d48e443e9f2bf42cb5
 msgid "Frictionless integral contact between non-matching meshes brick"
-msgstr "Frictionless integral contact between non-matching meshes brick"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:600
-msgid ""
-"This function adds a frictionless contact condition between nonmatching "
-"meshes to the model, which is defined in an integral way. It is the direct "
-"approximation of an augmented Lagrangian formulation defined at the "
-"continuous level. The advantage should be a better scalability: the number "
-"of Newton iterations should be more or less independent of the mesh size. "
-"The condition is applied on the variables ``varname_u1`` and ``varname_u2`` "
-"on the boundaries corresponding to ``region1`` and ``region2``. "
-"``multname_n`` should be a fem variable representing the contact stress. An "
-"inf-sup condition between ``multname_n`` and ``varname_u1`` and "
-"``varname_u2`` is required. The augmentation parameter ``dataname_r`` should"
-" be chosen in a range of acceptable values."
+# 21a057ccfc8b4ac6a9d2a218f862a42c
+msgid "This function adds a frictionless contact condition between nonmatching meshes to the model, which is defined in an integral way. It is the direct approximation of an augmented Lagrangian formulation defined at the continuous level. The advantage should be a better scalability: the number of Newton iterations should be more or less independent of the mesh size. The condition is applied on the variables ``varname_u1`` and ``varname_u2`` on the boundaries corresponding to ``region1`` and ``region2``. ``multname_n`` should be a fem variable representing the contact stress. An inf-sup condition between ``multname_n`` and ``varname_u1`` and ``varname_u2`` is required. The augmentation parameter ``dataname_r`` should be chosen in a range of acceptable values."
 msgstr ""
-"This function adds a frictionless contact condition between nonmatching "
-"meshes to the model, which is defined in an integral way. It is the direct "
-"approximation of an augmented Lagrangian formulation defined at the "
-"continuous level. The advantage should be a better scalability: the number "
-"of Newton iterations should be more or less independent of the mesh size. "
-"The condition is applied on the variables ``varname_u1`` and ``varname_u2`` "
-"on the boundaries corresponding to ``region1`` and ``region2``. "
-"``multname_n`` should be a fem variable representing the contact stress. An "
-"inf-sup condition between ``multname_n`` and ``varname_u1`` and "
-"``varname_u2`` is required. The augmentation parameter ``dataname_r`` should"
-" be chosen in a range of acceptable values."
 
 #: ../source/userdoc/model_contact_friction.rst:625
+# e6594ab06c194b68b6de70ce3cf6ddbf
 msgid "Integral contact between non-matching meshes brick with friction"
-msgstr "Integral contact between non-matching meshes brick with friction"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:634
-msgid ""
-"This function adds a contact with friction condition between nonmatching "
-"meshes to the model. This brick adds a contact which is defined in an "
-"integral way. It is the direct approximation of an augmented Lagrangian "
-"formulation defined at the continuous level. The advantage should be a "
-"better scalability: the number of Newton iterations should be more or less "
-"independent of the mesh size. The condition is applied on the variables "
-"``varname_u1`` and ``varname_u2`` on the boundaries corresponding to "
-"``region1`` and ``region2``. ``multname`` should be a fem variable "
-"representing the contact and friction stress. An inf-sup condition between "
-"``multname`` and ``varname_u1`` and ``varname_u2`` is required. The "
-"augmentation parameter ``dataname_r`` should be chosen in a range of "
-"acceptable values."
+# b8f2068be3844a34973019de1d52c7f9
+msgid "This function adds a contact with friction condition between nonmatching meshes to the model. This brick adds a contact which is defined in an integral way. It is the direct approximation of an augmented Lagrangian formulation defined at the continuous level. The advantage should be a better scalability: the number of Newton iterations should be more or less independent of the mesh size. The condition is applied on the variables ``varname_u1`` and ``varname_u2`` on the boundaries corresponding to ``region1`` and ``region2``. ``multname`` should be a fem variable representing the contact and friction stress. An inf-sup condition between ``multname`` and ``varname_u1`` and ``varname_u2`` is required. The augmentation parameter ``dataname_r`` should be chosen in a range of acceptable values."
 msgstr ""
-"This function adds a contact with friction condition between nonmatching "
-"meshes to the model. This brick adds a contact which is defined in an "
-"integral way. It is the direct approximation of an augmented Lagrangian "
-"formulation defined at the continuous level. The advantage should be a "
-"better scalability: the number of Newton iterations should be more or less "
-"independent of the mesh size. The condition is applied on the variables "
-"``varname_u1`` and ``varname_u2`` on the boundaries corresponding to "
-"``region1`` and ``region2``. ``multname`` should be a fem variable "
-"representing the contact and friction stress. An inf-sup condition between "
-"``multname`` and ``varname_u1`` and ``varname_u2`` is required. The "
-"augmentation parameter ``dataname_r`` should be chosen in a range of "
-"acceptable values."
 
 #: ../source/userdoc/model_contact_friction.rst:647
-msgid ""
-"The parameter `dataname_friction_coeffs` contains the Coulomb friction "
-"coefficient and optionally an adhesional shear stress threshold and the "
-"tresca limit shear stress. For constant coefficients its size is from 1 to "
-"3. For coefficients described on a finite element method on the same mesh as"
-" ``varname_u1``, this vector contains a number of single values, value pairs"
-" or triplets equal to the number of the corresponding mesh_fem's basic dofs."
+# 773f945842234ab3a3583eb60a05b72d
+msgid "The parameter `dataname_friction_coeffs` contains the Coulomb friction coefficient and optionally an adhesional shear stress threshold and the tresca limit shear stress. For constant coefficients its size is from 1 to 3. For coefficients described on a finite element method on the same mesh as ``varname_u1``, this vector contains a number of single values, value pairs or triplets equal to the number of the corresponding mesh_fem's basic dofs."
 msgstr ""
-"The parameter `dataname_friction_coeffs` contains the Coulomb friction "
-"coefficient and optionally an adhesional shear stress threshold and the "
-"tresca limit shear stress. For constant coefficients its size is from 1 to "
-"3. For coefficients described on a finite element method on the same mesh as"
-" ``varname_u1``, this vector contains a number of single values, value pairs"
-" or triplets equal to the number of the corresponding mesh_fem's basic dofs."
 
 #: ../source/userdoc/model_contact_friction.rst:655
-msgid ""
-"Possible values for `option` is 1 for the non-symmetric Alart-Curnier "
-"augmented Lagrangian method, 2 for the symmetric one, 3 for the non-"
-"symmetric Alart-Curnier method with an additional augmentation and 4 for a "
-"new unsymmetric method. The default value is 1. ``dataname_alpha``, "
-"``dataname_wt1`` and ``dataname_wt2`` are optional parameters to solve "
-"evolutionary friction problems. ``mim`` represents the integration method on"
-" the same mesh as ``varname_u1``. Note that it should be accurate enough to "
-"integrate efficiently the nonlinear terms involved."
+# 85c722c7471f42218909beb036037ee9
+msgid "Possible values for `option` is 1 for the non-symmetric Alart-Curnier augmented Lagrangian method, 2 for the symmetric one, 3 for the non-symmetric Alart-Curnier method with an additional augmentation and 4 for a new unsymmetric method. The default value is 1. ``dataname_alpha``, ``dataname_wt1`` and ``dataname_wt2`` are optional parameters to solve evolutionary friction problems. ``mim`` represents the integration method on the same mesh as ``varname_u1``. Note that it should be accurate enough to integrate efficiently the nonlinear terms involved."
 msgstr ""
-"Possible values for `option` is 1 for the non-symmetric Alart-Curnier "
-"augmented Lagrangian method, 2 for the symmetric one, 3 for the non-"
-"symmetric Alart-Curnier method with an additional augmentation and 4 for a "
-"new unsymmetric method. The default value is 1. ``dataname_alpha``, "
-"``dataname_wt1`` and ``dataname_wt2`` are optional parameters to solve "
-"evolutionary friction problems. ``mim`` represents the integration method on"
-" the same mesh as ``varname_u1``. Note that it should be accurate enough to "
-"integrate efficiently the nonlinear terms involved."
 
 #: ../source/userdoc/model_contact_friction.rst:667
+# d299fa766f4a493ead17492d4f099de1
 msgid "Frictionless penalized contact with a rigid obstacle brick"
-msgstr "Frictionless penalized contact with a rigid obstacle brick"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:675
-msgid ""
-"This function adds a frictionless penalized contact condition with a rigid "
-"obstacle to the model. The condition is applied on the variable "
-"``varname_u`` on the boundary corresponding to ``region``. The rigid "
-"obstacle should be described with the data ``dataname_obstacle`` being a "
-"signed distance to the obstacle (interpolated on a finite element method). "
-"The penalization parameter ``dataname_r`` should be chosen large enough to "
-"prescribe an approximate non-penetration condition but not too large not to "
-"deteriorate too much the conditioning of the tangent system. ``dataname_n`` "
-"is an optional parameter used if option is 2. In that case, the penalization"
-" term is shifted by ``lambda_n`` (this allows the use of an Uzawa algorithm "
-"on the corresponding augmented dLagrangian formulation)"
+# 115d21c4e80e48509b9b31d5751188a4
+msgid "This function adds a frictionless penalized contact condition with a rigid obstacle to the model. The condition is applied on the variable ``varname_u`` on the boundary corresponding to ``region``. The rigid obstacle should be described with the data ``dataname_obstacle`` being a signed distance to the obstacle (interpolated on a finite element method). The penalization parameter ``dataname_r`` should be chosen large enough to prescribe an approximate non-penetration condition but not too large not to deteriorate too much the conditioning of the tangent system. ``dataname_n`` is an optional parameter used if option is 2. In that case, the penalization term is shifted by ``lambda_n`` (this allows the use of an Uzawa algorithm on the corresponding augmented dLagrangian formulation)"
 msgstr ""
-"This function adds a frictionless penalized contact condition with a rigid "
-"obstacle to the model. The condition is applied on the variable "
-"``varname_u`` on the boundary corresponding to ``region``. The rigid "
-"obstacle should be described with the data ``dataname_obstacle`` being a "
-"signed distance to the obstacle (interpolated on a finite element method). "
-"The penalization parameter ``dataname_r`` should be chosen large enough to "
-"prescribe an approximate non-penetration condition but not too large not to "
-"deteriorate too much the conditioning of the tangent system. ``dataname_n`` "
-"is an optional parameter used if option is 2. In that case, the penalization"
-" term is shifted by ``lambda_n`` (this allows the use of an Uzawa algorithm "
-"on the corresponding augmented dLagrangian formulation)"
 
 #: ../source/userdoc/model_contact_friction.rst:691
+# 3089c7970b1e4eed8520a966cf529bf3
 msgid "Penalized contact with a rigid obstacle brick with friction"
-msgstr "Penalized contact with a rigid obstacle brick with friction"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:700
-msgid ""
-"This function adds a penalized contact condition with Coulomb friction with "
-"a rigid obstacle to the model. The condition is applied on the variable "
-"``varname_u`` on the boundary corresponding to ``region``. The rigid "
-"obstacle should be described with the data `dataname_obstacle` being a "
-"signed distance to the obstacle (interpolated on a finite element method)."
+# aa3b385b7b1d4499a3bb771f4b5dd274
+msgid "This function adds a penalized contact condition with Coulomb friction with a rigid obstacle to the model. The condition is applied on the variable ``varname_u`` on the boundary corresponding to ``region``. The rigid obstacle should be described with the data `dataname_obstacle` being a signed distance to the obstacle (interpolated on a finite element method)."
 msgstr ""
-"This function adds a penalized contact condition with Coulomb friction with "
-"a rigid obstacle to the model. The condition is applied on the variable "
-"``varname_u`` on the boundary corresponding to ``region``. The rigid "
-"obstacle should be described with the data `dataname_obstacle` being a "
-"signed distance to the obstacle (interpolated on a finite element method)."
 
 #: ../source/userdoc/model_contact_friction.rst:714
-msgid ""
-"The penalization parameter ``dataname_r`` should be chosen large enough to "
-"prescribe approximate non-penetration and friction conditions but not too "
-"large not to deteriorate too much the conditioning of the tangent system. "
-"``dataname_lambda`` is an optional parameter used if ``option`` is 2. In "
-"that case, the penalization term is shifted by ``lambda`` (this allows the "
-"use of an Uzawa algorithm on the corresponding augmented Lagrangian "
-"formulation). ``dataname_alpha`` and ``dataname_wt`` are optional parameters"
-" to solve evolutionary friction problems."
+# 6b962ed411504d77a239928e656ef43c
+msgid "The penalization parameter ``dataname_r`` should be chosen large enough to prescribe approximate non-penetration and friction conditions but not too large not to deteriorate too much the conditioning of the tangent system. ``dataname_lambda`` is an optional parameter used if ``option`` is 2. In that case, the penalization term is shifted by ``lambda`` (this allows the use of an Uzawa algorithm on the corresponding augmented Lagrangian formulation). ``dataname_alpha`` and ``dataname_wt`` are optional parameters to solve evolutionary friction problems."
 msgstr ""
-"The penalization parameter ``dataname_r`` should be chosen large enough to "
-"prescribe approximate non-penetration and friction conditions but not too "
-"large not to deteriorate too much the conditioning of the tangent system. "
-"``dataname_lambda`` is an optional parameter used if ``option`` is 2. In "
-"that case, the penalization term is shifted by ``lambda`` (this allows the "
-"use of an Uzawa algorithm on the corresponding augmented Lagrangian "
-"formulation). ``dataname_alpha`` and ``dataname_wt`` are optional parameters"
-" to solve evolutionary friction problems."
 
 #: ../source/userdoc/model_contact_friction.rst:727
+# 355491758e8f4799a1e4ebb66eb70c60
 msgid "Frictionless penalized contact between non-matching meshes brick"
-msgstr "Frictionless penalized contact between non-matching meshes brick"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:735
-msgid ""
-"This function adds a penalized contact frictionless condition between "
-"nonmatching meshes to the model. The condition is applied on the variables "
-"``varname_u1`` and ``varname_u2`` on the boundaries corresponding to "
-"``region1` and ``region2`. The penalization parameter ``dataname_r`` should "
-"be chosen large enough to prescribe an approximate non-penetration condition"
-" but not too large not to deteriorate too much the conditionning of the "
-"tangent system. ``dataname_n`` is an optional parameter used if option is 2."
-" In that case, the penalization term is shifted by ``lambda_n`` (this allows"
-" the use of an Uzawa algorithm on the corresponding augmented Lagrangian "
-"formulation)"
+# 7f6d3bb69e214bde8508ffadad6de614
+msgid "This function adds a penalized contact frictionless condition between nonmatching meshes to the model. The condition is applied on the variables ``varname_u1`` and ``varname_u2`` on the boundaries corresponding to ``region1` and ``region2`. The penalization parameter ``dataname_r`` should be chosen large enough to prescribe an approximate non-penetration condition but not too large not to deteriorate too much the conditionning of the tangent system. ``dataname_n`` is an optional parameter used if option is 2. In that case, the penalization term is shifted by ``lambda_n`` (this allows the use of an Uzawa algorithm on the corresponding augmented Lagrangian formulation)"
 msgstr ""
-"This function adds a penalized contact frictionless condition between "
-"nonmatching meshes to the model. The condition is applied on the variables "
-"``varname_u1`` and ``varname_u2`` on the boundaries corresponding to "
-"``region1` and ``region2`. The penalization parameter ``dataname_r`` should "
-"be chosen large enough to prescribe an approximate non-penetration condition"
-" but not too large not to deteriorate too much the conditionning of the "
-"tangent system. ``dataname_n`` is an optional parameter used if option is 2."
-" In that case, the penalization term is shifted by ``lambda_n`` (this allows"
-" the use of an Uzawa algorithm on the corresponding augmented Lagrangian "
-"formulation)"
 
 #: ../source/userdoc/model_contact_friction.rst:749
+# 865e2b4a79c5404799ae3344f0689d76
 msgid "Penalized contact between non-matching meshes brick with friction"
-msgstr "Penalized contact between non-matching meshes brick with friction"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:758
-msgid ""
-"This function adds a penalized contact condition with Coulomb friction "
-"between nonmatching meshes to the model. The condition is applied on the "
-"variables ``varname_u1`` and ``varname_u2`` on the boundaries corresponding "
-"to ``region1` and ``region2`. The penalization parameter ``dataname_r`` "
-"should be chosen large enough to prescribe an approximate non-penetration "
-"condition but not too large not to deteriorate too much the conditionning of"
-" the tangent system."
+# 80dd6ec67fe849ceb454627815d99e1f
+msgid "This function adds a penalized contact condition with Coulomb friction between nonmatching meshes to the model. The condition is applied on the variables ``varname_u1`` and ``varname_u2`` on the boundaries corresponding to ``region1` and ``region2`. The penalization parameter ``dataname_r`` should be chosen large enough to prescribe an approximate non-penetration condition but not too large not to deteriorate too much the conditionning of the tangent system."
 msgstr ""
-"This function adds a penalized contact condition with Coulomb friction "
-"between nonmatching meshes to the model. The condition is applied on the "
-"variables ``varname_u1`` and ``varname_u2`` on the boundaries corresponding "
-"to ``region1` and ``region2`. The penalization parameter ``dataname_r`` "
-"should be chosen large enough to prescribe an approximate non-penetration "
-"condition but not too large not to deteriorate too much the conditionning of"
-" the tangent system."
 
 #: ../source/userdoc/model_contact_friction.rst:767
-msgid ""
-"The parameter `dataname_friction_coeffs` contains the Coulomb friction "
-"coefficient and optionally an adhesional shear stress threshold and the "
-"tresca limit shear stress. For constant coefficients its size is from 1 to "
-"3. For coefficients described on a finite element method on the same mesh as"
-" `varname_u1`, this vector contains a number of single values, value pairs "
-"or triplets equal to the number of the corresponding mesh_fem's basic dofs."
+# 33910890083e499387834392655d16c2
+msgid "The parameter `dataname_friction_coeffs` contains the Coulomb friction coefficient and optionally an adhesional shear stress threshold and the tresca limit shear stress. For constant coefficients its size is from 1 to 3. For coefficients described on a finite element method on the same mesh as `varname_u1`, this vector contains a number of single values, value pairs or triplets equal to the number of the corresponding mesh_fem's basic dofs."
 msgstr ""
-"The parameter `dataname_friction_coeffs` contains the Coulomb friction "
-"coefficient and optionally an adhesional shear stress threshold and the "
-"tresca limit shear stress. For constant coefficients its size is from 1 to "
-"3. For coefficients described on a finite element method on the same mesh as"
-" `varname_u1`, this vector contains a number of single values, value pairs "
-"or triplets equal to the number of the corresponding mesh_fem's basic dofs."
 
 #: ../source/userdoc/model_contact_friction.rst:775
-msgid ""
-"``dataname_lambda`` is an optional parameter used if ``option`` is 2. In "
-"that case, the penalization term is shifted by ``lambda`` (this allows the "
-"use of an Uzawa algorithm on the corresponding augmented Lagrangian "
-"formulation) ``dataname_alpha``, ``dataname_wt1`` and ``dataname_wt2`` are "
-"optional parameters to solve evolutionary friction problems. ``mim`` "
-"represents the integration method on the same mesh as ``varname_u1``. Note "
-"that it should be accurate enough to integrate efficiently the nonlinear "
-"terms involved."
+# 33b1dff6b7944b4094b1c2998650e5da
+msgid "``dataname_lambda`` is an optional parameter used if ``option`` is 2. In that case, the penalization term is shifted by ``lambda`` (this allows the use of an Uzawa algorithm on the corresponding augmented Lagrangian formulation) ``dataname_alpha``, ``dataname_wt1`` and ``dataname_wt2`` are optional parameters to solve evolutionary friction problems. ``mim`` represents the integration method on the same mesh as ``varname_u1``. Note that it should be accurate enough to integrate efficiently the nonlinear terms involved."
 msgstr ""
-"``dataname_lambda`` is an optional parameter used if ``option`` is 2. In "
-"that case, the penalization term is shifted by ``lambda`` (this allows the "
-"use of an Uzawa algorithm on the corresponding augmented Lagrangian "
-"formulation) ``dataname_alpha``, ``dataname_wt1`` and ``dataname_wt2`` are "
-"optional parameters to solve evolutionary friction problems. ``mim`` "
-"represents the integration method on the same mesh as ``varname_u1``. Note "
-"that it should be accurate enough to integrate efficiently the nonlinear "
-"terms involved."
 
 #: ../source/userdoc/model_contact_friction.rst:7
+# 182160e3b53b4c11a715a533ddf219af
 msgid "models"
-msgstr "models"
+msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:7
+# 182160e3b53b4c11a715a533ddf219af
 msgid "model bricks"
-msgstr "model bricks"
+msgstr ""
+

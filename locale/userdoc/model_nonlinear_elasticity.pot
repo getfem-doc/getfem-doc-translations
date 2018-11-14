@@ -2,13 +2,13 @@
 # Copyright (C) 2004-2018 GetFEM++ project
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 15:44+0900\n"
+"POT-Creation-Date: 2018-11-15 02:08+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,646 +17,397 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:12
+# ed7809e817e84dd48499eb13decf60e8
 msgid "Finite strain Elasticity bricks"
-msgstr "Finite strain Elasticity bricks"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:14
-msgid ""
-"This brick implements some classical hyperelastic constitutive law for large"
-" deformation elasticity."
+# af82e58cefa14931961121c90c5a4cf0
+msgid "This brick implements some classical hyperelastic constitutive law for large deformation elasticity."
 msgstr ""
-"This brick implements some classical hyperelastic constitutive law for large"
-" deformation elasticity."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:17
+# 0fcd795b2271429b97e6beaec7bfbe8e
 msgid "Some recalls on finite strain elasticity"
-msgstr "Some recalls on finite strain elasticity"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:19
-msgid ""
-"Let :math:`\\Omega` be the reference configuration and :math:`\\Omega_t` the"
-" deformed configuration of an elastic media. Then for :math:`X \\in \\Omega`"
-" we will denote by :math:`\\Phi(x) = u(X) + X` the deformation. the vector "
-"field :math:`u` is the displacement with respect to the initial position."
+# ccc5cd497060412b883022b3dd919593
+msgid "Let :math:`\\Omega` be the reference configuration and :math:`\\Omega_t` the deformed configuration of an elastic media. Then for :math:`X \\in \\Omega` we will denote by :math:`\\Phi(x) = u(X) + X` the deformation. the vector field :math:`u` is the displacement with respect to the initial position."
 msgstr ""
-"Let :math:`\\Omega` be the reference configuration and :math:`\\Omega_t` the"
-" deformed configuration of an elastic media. Then for :math:`X \\in \\Omega`"
-" we will denote by :math:`\\Phi(x) = u(X) + X` the deformation. the vector "
-"field :math:`u` is the displacement with respect to the initial position."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:21
+# 395c91a29c794d2fb57f5f261ae13568
 msgid "The Cauchy-Green tensor is defined by"
-msgstr "The Cauchy-Green tensor is defined by"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:27
+# cddd934218064cf8a6d6e7c9c7a40298
 msgid "The deformation tensor (Green-Lagrange)"
-msgstr "The deformation tensor (Green-Lagrange)"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:35
-msgid ""
-"(In the case of linear elasticity, :math:`{\\nabla u^T}{\\nabla u}` is "
-"neglected)."
+# efc4ad5ccc4140e196dfb946e26570be
+msgid "(In the case of linear elasticity, :math:`{\\nabla u^T}{\\nabla u}` is neglected)."
 msgstr ""
-"(In the case of linear elasticity, :math:`{\\nabla u^T}{\\nabla u}` is "
-"neglected)."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:37
+# c4b24a7f712c42288d256f4114700d8c
 msgid "One has"
-msgstr "One has"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:43
-msgid ""
-"Both tensors :math:`E` and :math:`C` are used to describe finite strain "
-"elasticity constitutive laws."
+# c6e878e0fa35485e96e38b75d74df25c
+msgid "Both tensors :math:`E` and :math:`C` are used to describe finite strain elasticity constitutive laws."
 msgstr ""
-"Both tensors :math:`E` and :math:`C` are used to describe finite strain "
-"elasticity constitutive laws."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:46
+# 12407df787d6445f82ede8ace000504e
 msgid "Main invariants and derivatives"
-msgstr "Main invariants and derivatives"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:48
-msgid ""
-"The description of finite strain elasticity constitutive laws often requires"
-" the principal invariants of the deformation tensors:"
+# 03d43782468741eba8f2bc91b2df10c9
+msgid "The description of finite strain elasticity constitutive laws often requires the principal invariants of the deformation tensors:"
 msgstr ""
-"The description of finite strain elasticity constitutive laws often requires"
-" the principal invariants of the deformation tensors:"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:50
-msgid ""
-":math:`i_1,i_2,i_3` are the invariants of orders :math:`1,2` and :math:`3`:"
+# 383953a5dcdb4a55a74bb2395e319d36
+msgid ":math:`i_1,i_2,i_3` are the invariants of orders :math:`1,2` and :math:`3`:"
 msgstr ""
-":math:`i_1,i_2,i_3` are the invariants of orders :math:`1,2` and :math:`3`:"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:58
-msgid ""
-"The derivatives of the invariants with respect to the tensor :math:`E` in "
-"the direction :math:`H` are:"
+# edc9f84f857240cb8a7d19f4692b3494
+msgid "The derivatives of the invariants with respect to the tensor :math:`E` in the direction :math:`H` are:"
 msgstr ""
-"The derivatives of the invariants with respect to the tensor :math:`E` in "
-"the direction :math:`H` are:"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:66
+# bc2dbd4239ea480bb0c5fed8a393bed2
 msgid "We will write"
-msgstr "We will write"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:74
+# 7a9104e3360841e1b86b405ef712ebc2
 msgid "Let us also recall that"
-msgstr "Let us also recall that"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:81
-msgid ""
-"The second derivatives of the invariants are fourth order tensors defined by"
+# 92250bb44f3a4099903e6ee6528acaae
+msgid "The second derivatives of the invariants are fourth order tensors defined by"
 msgstr ""
-"The second derivatives of the invariants are fourth order tensors defined by"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:90
-msgid ""
-"The notation :math:`A:B` denotes the Frobenius product :math:`A:B = "
-"\\displaystyle\\sum_{ij}A_{ij}B_{ij}`. This product has the following "
-"properties:"
+# 4020b56f2c6b41228050e952e3195262
+msgid "The notation :math:`A:B` denotes the Frobenius product :math:`A:B = \\displaystyle\\sum_{ij}A_{ij}B_{ij}`. This product has the following properties:"
 msgstr ""
-"The notation :math:`A:B` denotes the Frobenius product :math:`A:B = "
-"\\displaystyle\\sum_{ij}A_{ij}B_{ij}`. This product has the following "
-"properties:"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:100
+# ceaf912db00046ca959175a605a6c4e8
 msgid "Note also that"
-msgstr "Note also that"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:106
-msgid ""
-"This property enables us to write the constitutive laws as a function of the"
-" Cauchy-Green tensor invariants, especially for the case of the generalized "
-"Blatz-Ko strain energy."
+# 4fa109493df54af4b1289f4c5d5507b9
+msgid "This property enables us to write the constitutive laws as a function of the Cauchy-Green tensor invariants, especially for the case of the generalized Blatz-Ko strain energy."
 msgstr ""
-"This property enables us to write the constitutive laws as a function of the"
-" Cauchy-Green tensor invariants, especially for the case of the generalized "
-"Blatz-Ko strain energy."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:110
+# 5925837652f94f2c97b870d723703572
 msgid "Potential elastic energy and its derivative"
-msgstr "Potential elastic energy and its derivative"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:112
-msgid ""
-"The stress in the reference configuration can be describe by the second "
-"Piola-Kirchhoff stress tensor :math:`{\\hat{\\hat{\\sigma}}} = "
-"\\nabla\\Phi^{-1}\\sigma\\nabla\\Phi^{-t}~\\det \\nabla\\Phi` where "
-":math:`\\sigma` is the Cauchy stress tensor in the deformed configuration "
-":math:`\\Omega_t`. An hyper-elastic constitutive law is given by"
+# f5375c3ff76a4e3a85c147089653185e
+msgid "The stress in the reference configuration can be describe by the second Piola-Kirchhoff stress tensor :math:`{\\hat{\\hat{\\sigma}}} = \\nabla\\Phi^{-1}\\sigma\\nabla\\Phi^{-t}~\\det \\nabla\\Phi` where :math:`\\sigma` is the Cauchy stress tensor in the deformed configuration :math:`\\Omega_t`. An hyper-elastic constitutive law is given by"
 msgstr ""
-"The stress in the reference configuration can be describe by the second "
-"Piola-Kirchhoff stress tensor :math:`{\\hat{\\hat{\\sigma}}} = "
-"\\nabla\\Phi^{-1}\\sigma\\nabla\\Phi^{-t}~\\det \\nabla\\Phi` where "
-":math:`\\sigma` is the Cauchy stress tensor in the deformed configuration "
-":math:`\\Omega_t`. An hyper-elastic constitutive law is given by"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:118
-msgid ""
-"where :math:`{W}` is the density of strain energy of the material. The total"
-" strain energy is given by"
+# 6db2fe3b249843f5ac3eb17b5b90a368
+msgid "where :math:`{W}` is the density of strain energy of the material. The total strain energy is given by"
 msgstr ""
-"where :math:`{W}` is the density of strain energy of the material. The total"
-" strain energy is given by"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:124
-msgid ""
-"and the derivative of the energy in a direction :math:`v` can be writen"
+# 5d2d06a2f6444f898ef49a090f12f209
+msgid "and the derivative of the energy in a direction :math:`v` can be writen"
 msgstr ""
-"and the derivative of the energy in a direction :math:`v` can be writen"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:130
+# 24ed7b5109924c32ae66d15776097e0a
 msgid "because in particular"
-msgstr "because in particular"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:137
-msgid ""
-"and :math:`A:B = A:(B+B^T)/2` when A is symmetric which is the case for "
-":math:`{\\hat{\\hat{\\sigma}}}`."
+# 452f978ee1904764b758455e00bb75a9
+msgid "and :math:`A:B = A:(B+B^T)/2` when A is symmetric which is the case for :math:`{\\hat{\\hat{\\sigma}}}`."
 msgstr ""
-"and :math:`A:B = A:(B+B^T)/2` when A is symmetric which is the case for "
-":math:`{\\hat{\\hat{\\sigma}}}`."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:139
-msgid ""
-"Another way is to consider the static equilibrium which can be written as "
-"follows in the reference configuration:"
+# a74da95f94584f41a116a8d64fed6702
+msgid "Another way is to consider the static equilibrium which can be written as follows in the reference configuration:"
 msgstr ""
-"Another way is to consider the static equilibrium which can be written as "
-"follows in the reference configuration:"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:145
+# afc3740d65264cfa81c230929ef31098
 msgid "Integrating by parts, one obtains:"
-msgstr "Integrating by parts, one obtains:"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:153
+# fbf1f37c0df0420c888faf617f36c826
 msgid "Tangent matrix"
-msgstr "Tangent matrix"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:155
-msgid ""
-"The displacement :math:`u` is fixed. In order to obtain the tangent matrix, "
-"one subsitutes :math:`u` with :math:`u+h`"
+# 241737ef9a374d599eb8853286700f7e
+msgid "The displacement :math:`u` is fixed. In order to obtain the tangent matrix, one subsitutes :math:`u` with :math:`u+h`"
 msgstr ""
-"The displacement :math:`u` is fixed. In order to obtain the tangent matrix, "
-"one subsitutes :math:`u` with :math:`u+h`"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:161
+# 523d4271ffcc4d0e865d6767ef4ed59d
 msgid "and considers the linear part w.r.t. :math:`h`, which is"
-msgstr "and considers the linear part w.r.t. :math:`h`, which is"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:169
-msgid ""
-"which is symmetric w.r.t. :math:`v` and :math:`h`. It can be rewritten as"
+# 11828f181b194386ba3f6c44b5365dfe
+msgid "which is symmetric w.r.t. :math:`v` and :math:`h`. It can be rewritten as"
 msgstr ""
-"which is symmetric w.r.t. :math:`v` and :math:`h`. It can be rewritten as"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:175
-msgid ""
-"where :math:`\\mathcal{A}` is the symmetric "
-":math:`3\\times3\\times3\\times3` tensor given by :math:`\\mathcal{A}_{ijkl}"
-" = ((\\frac{\\partial^2 W}{\\partial E^2})_{ijkl} + (\\frac{\\partial^2 "
-"W}{\\partial E^2})_{ijlk})/2`."
+# 1cce69297853438295812a9bd577de06
+msgid "where :math:`\\mathcal{A}` is the symmetric :math:`3\\times3\\times3\\times3` tensor given by :math:`\\mathcal{A}_{ijkl} = ((\\frac{\\partial^2 W}{\\partial E^2})_{ijkl} + (\\frac{\\partial^2 W}{\\partial E^2})_{ijlk})/2`."
 msgstr ""
-"where :math:`\\mathcal{A}` is the symmetric "
-":math:`3\\times3\\times3\\times3` tensor given by :math:`\\mathcal{A}_{ijkl}"
-" = ((\\frac{\\partial^2 W}{\\partial E^2})_{ijkl} + (\\frac{\\partial^2 "
-"W}{\\partial E^2})_{ijlk})/2`."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:178
+# 275eb7279f724acba967248a982e6305
 msgid "Some classical constitutive laws"
-msgstr "Some classical constitutive laws"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:182
+# d135d7336a004682a64057597024e446
 msgid "``Linearized: Saint-Venant Kirchhoff  law (small deformations)``"
-msgstr "``Linearized: Saint-Venant Kirchhoff  law (small deformations)``"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:191
+# e022f4489b3b49bb9a622131d061c3ac
 msgid "``Three parameters Mooney-Rivlin law``"
-msgstr "``Three parameters Mooney-Rivlin law``"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:193
+# 573c9694618f4d9b827c5b7fc3437afc
 msgid "Compressible material."
-msgstr "Compressible material."
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:199
-msgid ""
-"where :math:`c_1`, :math:`c_2` and :math:`d_1` are given coefficients and"
+# 98e7be1be9cf452cac518c591d27ac7c
+msgid "where :math:`c_1`, :math:`c_2` and :math:`d_1` are given coefficients and"
 msgstr ""
-"where :math:`c_1`, :math:`c_2` and :math:`d_1` are given coefficients and"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:212
+# caf292d3010e447098475a220097e579
 msgid "and then"
-msgstr "and then"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:220
+# 03fafe3c42ee47fa805729671ec031e8
 msgid "Incompressible material."
-msgstr "Incompressible material."
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:228
-msgid ""
-"The incompressibility constraint :math:`i_3( C) = 1` is handled with a "
-"Lagrange multiplier :math:`p` (the pressure)"
+# 836e7f28bc1a4826a4c0b5c92d920596
+msgid "The incompressibility constraint :math:`i_3( C) = 1` is handled with a Lagrange multiplier :math:`p` (the pressure)"
 msgstr ""
-"The incompressibility constraint :math:`i_3( C) = 1` is handled with a "
-"Lagrange multiplier :math:`p` (the pressure)"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:230
-msgid ""
-"constraint: :math:`\\sigma = -pI \\Rightarrow {\\hat{\\hat{\\sigma}}} = "
-"-p\\nabla\\Phi\\nabla\\Phi^{-T}\\det\\nabla\\Phi`"
+# f2ab68f47829443ebd162f8edaf78718
+msgid "constraint: :math:`\\sigma = -pI \\Rightarrow {\\hat{\\hat{\\sigma}}} = -p\\nabla\\Phi\\nabla\\Phi^{-T}\\det\\nabla\\Phi`"
 msgstr ""
-"constraint: :math:`\\sigma = -pI \\Rightarrow {\\hat{\\hat{\\sigma}}} = "
-"-p\\nabla\\Phi\\nabla\\Phi^{-T}\\det\\nabla\\Phi`"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:247
+# 12761128ca874405bcca9093d43ef52c
 msgid "``Ciarlet-Geymonat law``"
-msgstr "``Ciarlet-Geymonat law``"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:253
-msgid ""
-"with  :math:`\\lambda, \\mu` the Lame coefficients and "
-":math:`\\max(0,\\frac{\\mu}{2}-\\frac{\\lambda}{4})<a<\\frac{\\mu}{2}` (see "
-"[ciarlet1988]_)."
+# dca10da45b2c4b9f8327fd98ae09563e
+msgid "with  :math:`\\lambda, \\mu` the Lame coefficients and :math:`\\max(0,\\frac{\\mu}{2}-\\frac{\\lambda}{4})<a<\\frac{\\mu}{2}` (see [ciarlet1988]_)."
 msgstr ""
-"with  :math:`\\lambda, \\mu` the Lame coefficients and "
-":math:`\\max(0,\\frac{\\mu}{2}-\\frac{\\lambda}{4})<a<\\frac{\\mu}{2}` (see "
-"[ciarlet1988]_)."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:257
+# 9917b7ff63244f438ecf9ec645ef1e2e
 msgid "``Generalized Blatz-Ko law``"
-msgstr "``Generalized Blatz-Ko law``"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:263
-msgid ""
-"Since :math:`\\frac{\\partial}{\\partial C} {W}(C) = "
-"\\displaystyle\\sum_{j}\\frac{\\partial W}{\\partial i_j(C)} "
-"\\frac{\\partial i_j(C)}{\\partial C}`, and "
-":math:`\\frac{\\partial^2}{\\partial C^2} {W}(C) = \\displaystyle\\sum_{j} "
-"\\displaystyle\\sum_{k} \\frac{\\partial^2 W}{\\partial i_j(C) \\partial "
-"i_k(C)} \\frac{\\partial i_k(C)}{\\partial C} \\otimes \\frac{\\partial "
-"i_j(C)}{\\partial C} + \\displaystyle\\sum_{j} \\frac{\\partial W}{\\partial"
-" i_j(C)} \\frac{\\partial^2 i_j(C)}{\\partial C^2}` we must compute the "
-"derivatives of the strain energy function with respect to the Cauchy-Green "
-"tensor invariants (we don't need to compute the invariants derivatives with "
-"respect to :math:`E` since :math:`\\frac{\\partial i_j}{\\partial E}(C;H) = "
-"2 \\frac{\\partial i_j}{\\partial C}(C;H)`) :"
+# 8cf148b5154344b3b08a913a0c511566
+msgid "Since :math:`\\frac{\\partial}{\\partial C} {W}(C) = \\displaystyle\\sum_{j}\\frac{\\partial W}{\\partial i_j(C)} \\frac{\\partial i_j(C)}{\\partial C}`, and :math:`\\frac{\\partial^2}{\\partial C^2} {W}(C) = \\displaystyle\\sum_{j} \\displaystyle\\sum_{k} \\frac{\\partial^2 W}{\\partial i_j(C) \\partial i_k(C)} \\frac{\\partial i_k(C)}{\\partial C} \\otimes \\frac{\\partial i_j(C)}{\\partial C} + \\displaystyle\\sum_{j} \\frac{\\partial W}{\\partial i_j(C)} \\frac{\\partial^2 i_j(C)}{\\partial C^2}` we must compute the derivatives of the strain energy function with respect to the Cauchy-Green tensor invariants (we don't need to compute the invariants derivatives with respect to :math:`E` since :math:`\\frac{\\partial i_j}{\\partial E}(C;H) = 2 \\frac{\\partial i_j}{\\partial C}(C;H)`) :"
 msgstr ""
-"Since :math:`\\frac{\\partial}{\\partial C} {W}(C) = "
-"\\displaystyle\\sum_{j}\\frac{\\partial W}{\\partial i_j(C)} "
-"\\frac{\\partial i_j(C)}{\\partial C}`, and "
-":math:`\\frac{\\partial^2}{\\partial C^2} {W}(C) = \\displaystyle\\sum_{j} "
-"\\displaystyle\\sum_{k} \\frac{\\partial^2 W}{\\partial i_j(C) \\partial "
-"i_k(C)} \\frac{\\partial i_k(C)}{\\partial C} \\otimes \\frac{\\partial "
-"i_j(C)}{\\partial C} + \\displaystyle\\sum_{j} \\frac{\\partial W}{\\partial"
-" i_j(C)} \\frac{\\partial^2 i_j(C)}{\\partial C^2}` we must compute the "
-"derivatives of the strain energy function with respect to the Cauchy-Green "
-"tensor invariants (we don't need to compute the invariants derivatives with "
-"respect to :math:`E` since :math:`\\frac{\\partial i_j}{\\partial E}(C;H) = "
-"2 \\frac{\\partial i_j}{\\partial C}(C;H)`) :"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:280
+# c45d1b8ead804c6cbee7463d58b69702
 msgid "``Plane strain hyper-elasticity``"
-msgstr "``Plane strain hyper-elasticity``"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:282
-msgid ""
-"All previous models are valid in volumic domains. Corresponding plane strain"
-" 2D models can be obtained by restricting the stress tensor and the fourth "
-"order tensor :math:`\\mathcal{A}` to their plane components."
+# 96cf78442b3e45428d5f4514b118befb
+msgid "All previous models are valid in volumic domains. Corresponding plane strain 2D models can be obtained by restricting the stress tensor and the fourth order tensor :math:`\\mathcal{A}` to their plane components."
 msgstr ""
-"All previous models are valid in volumic domains. Corresponding plane strain"
-" 2D models can be obtained by restricting the stress tensor and the fourth "
-"order tensor :math:`\\mathcal{A}` to their plane components."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:287
+# 6d9e9de063504bbda6ed21f9740b9893
 msgid "Add an nonlinear elasticity brick to a model"
-msgstr "Add an nonlinear elasticity brick to a model"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:289
-msgid ""
-"This brick represents a large strain elasticity problem. It is defined in "
-"the files :file:`getfem/getfem_nonlinear_elasticity.h` and "
-":file:`getfem/getfem_nonlinear_elasticity.cc`. The function adding this "
-"brick to a model is ::"
+# 9c7aeb8a8657494eabee95c2801b6877
+msgid "This brick represents a large strain elasticity problem. It is defined in the files :file:`getfem/getfem_nonlinear_elasticity.h` and :file:`getfem/getfem_nonlinear_elasticity.cc`. The function adding this brick to a model is ::"
 msgstr ""
-"This brick represents a large strain elasticity problem. It is defined in "
-"the files :file:`getfem/getfem_nonlinear_elasticity.h` and "
-":file:`getfem/getfem_nonlinear_elasticity.cc`. The function adding this "
-"brick to a model is ::"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:294
-msgid ""
-"where ``AHL`` is an object of type ``getfem::abstract_hyperelastic_law`` "
-"which represents the considered hyperelastic law. It has to be chosen "
-"between: ::"
+# e63c44d242ec4aeda5630fbd479bc06e
+msgid "where ``AHL`` is an object of type ``getfem::abstract_hyperelastic_law`` which represents the considered hyperelastic law. It has to be chosen between: ::"
 msgstr ""
-"where ``AHL`` is an object of type ``getfem::abstract_hyperelastic_law`` "
-"which represents the considered hyperelastic law. It has to be chosen "
-"between: ::"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:302
-msgid ""
-"The Saint-Venant Kirchhoff law is a linearized law defined with the two Lame"
-" coefficients, Ciarlet Geymonat law is defined with the two Lame "
-"coefficients and an additional coefficient (:math:`\\lambda, \\mu, a`)."
+# 9ff470f3c77d4796ba45788d185fb903
+msgid "The Saint-Venant Kirchhoff law is a linearized law defined with the two Lame coefficients, Ciarlet Geymonat law is defined with the two Lame coefficients and an additional coefficient (:math:`\\lambda, \\mu, a`)."
 msgstr ""
-"The Saint-Venant Kirchhoff law is a linearized law defined with the two Lame"
-" coefficients, Ciarlet Geymonat law is defined with the two Lame "
-"coefficients and an additional coefficient (:math:`\\lambda, \\mu, a`)."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:304
-msgid ""
-"The Mooney-Rivlin law accepts two optional flags, the first one determines "
-"if the material will be compressible (:math:`d_1 \\neq 0`) and the second "
-"one determines if the material is neo Hookean (:math:`c_2 = 0`). Depending "
-"on these flags one to three coefficients may be necessary. By default it is "
-"defined as incompressible and non neo Hookean, thus it needs two material "
-"coefficients (:math:`c_1`, :math:`c_2`). In this case, it is to be used with"
-" the large strain incompressibility condition."
+# 3406bd4914f44bc6a81497834bbcc9a3
+msgid "The Mooney-Rivlin law accepts two optional flags, the first one determines if the material will be compressible (:math:`d_1 \\neq 0`) and the second one determines if the material is neo Hookean (:math:`c_2 = 0`). Depending on these flags one to three coefficients may be necessary. By default it is defined as incompressible and non neo Hookean, thus it needs two material coefficients (:math:`c_1`, :math:`c_2`). In this case, it is to be used with the large strain incompressibility condition."
 msgstr ""
-"The Mooney-Rivlin law accepts two optional flags, the first one determines "
-"if the material will be compressible (:math:`d_1 \\neq 0`) and the second "
-"one determines if the material is neo Hookean (:math:`c_2 = 0`). Depending "
-"on these flags one to three coefficients may be necessary. By default it is "
-"defined as incompressible and non neo Hookean, thus it needs two material "
-"coefficients (:math:`c_1`, :math:`c_2`). In this case, it is to be used with"
-" the large strain incompressibility condition."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:306
-msgid ""
-"The plane strain hyperelastic law takes a pointer on a hyperelastic law as a"
-" parameter and performs a 2D plane strain approximation."
+# ae428af17cf6470ebfedff0b53f350d0
+msgid "The plane strain hyperelastic law takes a pointer on a hyperelastic law as a parameter and performs a 2D plane strain approximation."
 msgstr ""
-"The plane strain hyperelastic law takes a pointer on a hyperelastic law as a"
-" parameter and performs a 2D plane strain approximation."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:308
-msgid ""
-"``md`` is the model variable, ``mim`` the integration method, ``varname`` "
-"the string being the name of the variable on which the term is added, "
-"``dataname`` the string being the name of the data in the model representing"
-" the coefficients of the law (can be constant or decribe on a finite element"
-" method) and ``region`` is the region on which the term is considered (by "
-"default, all the mesh)."
+# 9881384f346e42f2ab936aea4d187dcb
+msgid "``md`` is the model variable, ``mim`` the integration method, ``varname`` the string being the name of the variable on which the term is added, ``dataname`` the string being the name of the data in the model representing the coefficients of the law (can be constant or describe on a finite element method) and ``region`` is the region on which the term is considered (by default, all the mesh)."
 msgstr ""
-"``md`` is the model variable, ``mim`` the integration method, ``varname`` "
-"the string being the name of the variable on which the term is added, "
-"``dataname`` the string being the name of the data in the model representing"
-" the coefficients of the law (can be constant or decribe on a finite element"
-" method) and ``region`` is the region on which the term is considered (by "
-"default, all the mesh)."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:311
-msgid ""
-"The program :file:`nonlinear_elastostatic.cc` in :file:`tests` directory and"
-" :file:`demo_nonlinear_elasticity.m` in :file:`interface/tests/matlab` "
-"directory are some examples of use of this brick with or without an "
-"incompressibility condition."
+# f236fa8371014b478735101b231b972a
+msgid "The program :file:`nonlinear_elastostatic.cc` in :file:`tests` directory and :file:`demo_nonlinear_elasticity.m` in :file:`interface/tests/matlab` directory are some examples of use of this brick with or without an incompressibility condition."
 msgstr ""
-"The program :file:`nonlinear_elastostatic.cc` in :file:`tests` directory and"
-" :file:`demo_nonlinear_elasticity.m` in :file:`interface/tests/matlab` "
-"directory are some examples of use of this brick with or without an "
-"incompressibility condition."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:314
-msgid ""
-"Note that the addition of a new hyperelastic constitutive law consists in "
-"furnishing the expression of the strain energy, the stress tensor and the "
-"derivative of the stress tensor. See the file  "
-":file:`getfem/getfem_nonlinear_elasticity.cc` for more details. In "
-"particular, expression of the invariants and their derivatives are "
-"available."
+# 9ed254c49dce41eeb803a6599378e0fb
+msgid "Note that the addition of a new hyperelastic constitutive law consists in furnishing the expression of the strain energy, the stress tensor and the derivative of the stress tensor. See the file  :file:`getfem/getfem_nonlinear_elasticity.cc` for more details. In particular, expression of the invariants and their derivatives are available."
 msgstr ""
-"Note that the addition of a new hyperelastic constitutive law consists in "
-"furnishing the expression of the strain energy, the stress tensor and the "
-"derivative of the stress tensor. See the file  "
-":file:`getfem/getfem_nonlinear_elasticity.cc` for more details. In "
-"particular, expression of the invariants and their derivatives are "
-"available."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:317
-msgid ""
-"A function which computes the Von Mises or Tresca stresses is also "
-"available: ::"
+# ba5b24e2ce884626ba01f83974e2e8a9
+msgid "A function which computes the Von Mises or Tresca stresses is also available: ::"
 msgstr ""
-"A function which computes the Von Mises or Tresca stresses is also "
-"available: ::"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:322
-msgid ""
-"It returns a vector of the degrees of freedom of the Von Mises or Tresca "
-"stress on the finite element method mf_vm. ``tresca`` is a boolean whose "
-"value should be ``true`` for Tresca stress and ``false`` for Von Mises "
-"stress."
+# 1c14392e91fb407a9e45d471dedbb607
+msgid "It returns a vector of the degrees of freedom of the Von Mises or Tresca stress on the finite element method mf_vm. ``tresca`` is a boolean whose value should be ``true`` for Tresca stress and ``false`` for Von Mises stress."
 msgstr ""
-"It returns a vector of the degrees of freedom of the Von Mises or Tresca "
-"stress on the finite element method mf_vm. ``tresca`` is a boolean whose "
-"value should be ``true`` for Tresca stress and ``false`` for Von Mises "
-"stress."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:327
+# 22e58df8638946b6b4554b0fd6478c5d
 msgid "Add a large strain incompressibility brick to a model"
-msgstr "Add a large strain incompressibility brick to a model"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:330
-msgid ""
-"This brick adds an incompressibility condition in a large strain problem of "
-"type"
+# e924de2038ed46e78693082f3749ed1d
+msgid "This brick adds an incompressibility condition in a large strain problem of type"
 msgstr ""
-"This brick adds an incompressibility condition in a large strain problem of "
-"type"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:336
-msgid ""
-"A Lagrange multiplier representing the pressure is introduced in a mixed "
-"formulation. The function adding this brick to a model is ::"
+# 59cea047bb4c4c709f5e7738919d7463
+msgid "A Lagrange multiplier representing the pressure is introduced in a mixed formulation. The function adding this brick to a model is ::"
 msgstr ""
-"A Lagrange multiplier representing the pressure is introduced in a mixed "
-"formulation. The function adding this brick to a model is ::"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:342
-msgid ""
-"where ``md`` is the model, ``mim`` the integration method, ``varname`` the "
-"variable of the model on which the incompressibility condition is added, "
-"``multanme`` the multiplier variable corresponding to the pressure (be aware"
-" that at least a linear Ladyzhenskaja-Babuska-Brezzi inf-sup condition is "
-"satisfied between the f.e.m. of the variable and the one of the multiplier)."
-" ``region`` is an optional parameter correponding to the mesh region on "
-"which the term is considered (by default, all the mesh)."
+# 2543d939bce346c385ba27d835f9e6ae
+msgid "where ``md`` is the model, ``mim`` the integration method, ``varname`` the variable of the model on which the incompressibility condition is added, ``multanme`` the multiplier variable corresponding to the pressure (be aware that at least a linear Ladyzhenskaja-Babuska-Brezzi inf-sup condition is satisfied between the f.e.m. of the variable and the one of the multiplier). ``region`` is an optional parameter correponding to the mesh region on which the term is considered (by default, all the mesh)."
 msgstr ""
-"where ``md`` is the model, ``mim`` the integration method, ``varname`` the "
-"variable of the model on which the incompressibility condition is added, "
-"``multanme`` the multiplier variable corresponding to the pressure (be aware"
-" that at least a linear Ladyzhenskaja-Babuska-Brezzi inf-sup condition is "
-"satisfied between the f.e.m. of the variable and the one of the multiplier)."
-" ``region`` is an optional parameter correponding to the mesh region on "
-"which the term is considered (by default, all the mesh)."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:346
+# 6bf89f76b3fe430da04a18c2c2f1c524
 msgid "High-level generic assembly versions"
-msgstr "High-level generic assembly versions"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:348
-msgid ""
-"The weak form language gives access to the hyperelastic potential and "
-"constitutive laws implemented in |gf|. This allows to directly use them in "
-"the language, for instance using a generic assembly brick in a model or for "
-"interpolation of certain quantities (the stress for instance)."
+# e709404ec1604742b6c81507528116a4
+msgid "The weak form language gives access to the hyperelastic potential and constitutive laws implemented in |gf|. This allows to directly use them in the language, for instance using a generic assembly brick in a model or for interpolation of certain quantities (the stress for instance)."
 msgstr ""
-"The weak form language gives access to the hyperelastic potential and "
-"constitutive laws implemented in |gf|. This allows to directly use them in "
-"the language, for instance using a generic assembly brick in a model or for "
-"interpolation of certain quantities (the stress for instance)."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:350
-msgid ""
-"Here is the list of nonlinear operators in the language which can be useful "
-"for nonlinear elasticity::"
+# 7a0285e860814362ae11959732abb8c3
+msgid "Here is the list of nonlinear operators in the language which can be useful for nonlinear elasticity::"
 msgstr ""
-"Here is the list of nonlinear operators in the language which can be useful "
-"for nonlinear elasticity::"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:362
+# a9f0aa70364c4ba9b9e27dc591a8b092
 msgid "The potentials::"
-msgstr "The potentials::"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:384
+# a56d8adc01f24dca878184194bb89a70
 msgid "The second Piola-Kirchhoff stress tensors::"
-msgstr "The second Piola-Kirchhoff stress tensors::"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:406
-msgid ""
-"Note that the derivatives with respect to the material parameters have not "
-"been implemented apart for the Saint Venant Kirchhoff hyperelastic law. "
-"Therefore, it is not possible to make the parameter depend on other "
-"variables of a model (derivatives are not necessary complicated to implement"
-" but for the moment, only a wrapper with old implementations has been "
-"written)."
+# 76fb8597b00e42e0a326cd245c5a2c5a
+msgid "Note that the derivatives with respect to the material parameters have not been implemented apart for the Saint Venant Kirchhoff hyperelastic law. Therefore, it is not possible to make the parameter depend on other variables of a model (derivatives are not necessary complicated to implement but for the moment, only a wrapper with old implementations has been written)."
 msgstr ""
-"Note that the derivatives with respect to the material parameters have not "
-"been implemented apart for the Saint Venant Kirchhoff hyperelastic law. "
-"Therefore, it is not possible to make the parameter depend on other "
-"variables of a model (derivatives are not necessary complicated to implement"
-" but for the moment, only a wrapper with old implementations has been "
-"written)."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:408
-msgid ""
-"Note that the coupling of models is to be done at the weak formulation "
-"level. In a general way, it is recommended not to use the potential to "
-"define a problem. Two reasons are first that the second order derivative of "
-"the potential (necessary to obtain the tangent system) can be very "
-"complicated and non-optimized and main couplings cannot be obtained at the "
-"potential level. Thus the use of potential should be restricted to the "
-"actual computation of the potential."
+# 40f8ec6db7224851a8c2eb3a54a1ac8e
+msgid "Note that the coupling of models is to be done at the weak formulation level. In a general way, it is recommended not to use the potential to define a problem. Main couplings cannot be obtained at the potential level. Thus the use of potential should be restricted to the actual computation of the potential."
 msgstr ""
-"Note that the coupling of models is to be done at the weak formulation "
-"level. In a general way, it is recommended not to use the potential to "
-"define a problem. Two reasons are first that the second order derivative of "
-"the potential (necessary to obtain the tangent system) can be very "
-"complicated and non-optimized and main couplings cannot be obtained at the "
-"potential level. Thus the use of potential should be restricted to the "
-"actual computation of the potential."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:410
-msgid ""
-"An example of use to add a Saint Venant-Kirchhoff hyperelastic term to a "
-"variable ``u`` in a model or a ga_workspace is given by the addition of the "
-"following assembly string::"
+# 1099b479e594489f94f41bac67fe370c
+msgid "An example of use to add a Saint Venant-Kirchhoff hyperelastic term to a variable ``u`` in a model or a ga_workspace is given by the addition of the following assembly string::"
 msgstr ""
-"An example of use to add a Saint Venant-Kirchhoff hyperelastic term to a "
-"variable ``u`` in a model or a ga_workspace is given by the addition of the "
-"following assembly string::"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:414
-msgid ""
-"Note that in that case, ``lambda`` and ``mu`` have to be declared data of "
-"the model/ga_workspace. It is of course possible to replace them by explicit"
-" constants or expressions depending on several data."
+# b740ea0bebb5420899c746c793f32e69
+msgid "Note that in that case, ``lambda`` and ``mu`` have to be declared data of the model/ga_workspace. It is of course possible to replace them by explicit constants or expressions depending on several data."
 msgstr ""
-"Note that in that case, ``lambda`` and ``mu`` have to be declared data of "
-"the model/ga_workspace. It is of course possible to replace them by explicit"
-" constants or expressions depending on several data."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:416
-msgid ""
-"Concerning the incompressible Mooney-Rivlin law, it has to be completed by "
-"an incompressibility term. For instance by adding the following "
-"incompressibility brick::"
+# 69ffbe24623d4dfc95421f3555f20314
+msgid "Concerning the incompressible Mooney-Rivlin law, it has to be completed by an incompressibility term. For instance by adding the following incompressibility brick::"
 msgstr ""
-"Concerning the incompressible Mooney-Rivlin law, it has to be completed by "
-"an incompressibility term. For instance by adding the following "
-"incompressibility brick::"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:420
-msgid ""
-"This brick just adds the term ``p*(1-Det(Id(meshdim)+Grad_u))`` if ``p`` is "
-"the multiplier and ``u`` the variable which represents the displacement."
+# 2f7044f4afdd45c89b4bb4a06f4b3612
+msgid "This brick just adds the term ``p*(1-Det(Id(meshdim)+Grad_u))`` if ``p`` is the multiplier and ``u`` the variable which represents the displacement."
 msgstr ""
-"This brick just adds the term ``p*(1-Det(Id(meshdim)+Grad_u))`` if ``p`` is "
-"the multiplier and ``u`` the variable which represents the displacement."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:422
-msgid ""
-"The addition of an hyperelastic term to a model can also be done thanks to "
-"the following function::"
+# 387d218a8a284b4eaec0d624b8209793
+msgid "The addition of an hyperelastic term to a model can also be done thanks to the following function::"
 msgstr ""
-"The addition of an hyperelastic term to a model can also be done thanks to "
-"the following function::"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:427
-msgid ""
-"where ``md`` is the model, ``mim`` the integration method, ``varname`` the "
-"variable of the model representing the large strain displacement, "
-"``lawname`` is the constitutive law name which could be "
-"``Saint_Venant_Kirchhoff``, ``Generalized_Blatz_Ko``, ``Ciarlet_Geymonat``, "
-"``Incompressible_Mooney_Rivlin``, ``Compressible_Mooney_Rivlin``, "
-"``Incompressible_Neo_Hookean``, ``Compressible_Neo_Hookean``, "
-"``Compressible_Neo_Hookean_Bonet`` or ``Compressible_Neo_Hookean_Ciarlet``. "
-"``params`` is a string representing the parameters of the law defined as a "
-"small vector or a vector field."
+# f4dc994432b8475e88791031629c819d
+msgid "where ``md`` is the model, ``mim`` the integration method, ``varname`` the variable of the model representing the large strain displacement, ``lawname`` is the constitutive law name which could be ``Saint_Venant_Kirchhoff``, ``Generalized_Blatz_Ko``, ``Ciarlet_Geymonat``, ``Incompressible_Mooney_Rivlin``, ``Compressible_Mooney_Rivlin``, ``Incompressible_Neo_Hookean``, ``Compressible_Neo_Hookean``, ``Compressible_Neo_Hookean_Bonet`` or ``Compressible_Neo_Hookean_Ciarlet``. ``params`` is a string representing the parameters of the law defined as a small vector or a vector field."
 msgstr ""
-"where ``md`` is the model, ``mim`` the integration method, ``varname`` the "
-"variable of the model representing the large strain displacement, "
-"``lawname`` is the constitutive law name which could be "
-"``Saint_Venant_Kirchhoff``, ``Generalized_Blatz_Ko``, ``Ciarlet_Geymonat``, "
-"``Incompressible_Mooney_Rivlin``, ``Compressible_Mooney_Rivlin``, "
-"``Incompressible_Neo_Hookean``, ``Compressible_Neo_Hookean``, "
-"``Compressible_Neo_Hookean_Bonet`` or ``Compressible_Neo_Hookean_Ciarlet``. "
-"``params`` is a string representing the parameters of the law defined as a "
-"small vector or a vector field."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:429
+# 39dc7313897b4de4b331d2628ce74ca2
 msgid "The Von Mises stress can be interpolated with the following function::"
 msgstr ""
-"The Von Mises stress can be interpolated with the following function::"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:434
-msgid ""
-"where ``md`` is the model, ``varname`` the variable of the model "
-"representing the large strain displacement, ``lawname`` is the constitutive "
-"law name (see previou brick), ``params`` is a string representing the "
-"parameters of the law, ``mf_vm`` a (preferably discontinuous) Lagrange  "
-"finite element method on which the interpolation will be done and ``VM`` a "
-"vector of type ``model_real_plain_vector`` in which the interpolation will "
-"be stored."
+# aad10cb5b26b44a79a096be04bcf03cf
+msgid "where ``md`` is the model, ``varname`` the variable of the model representing the large strain displacement, ``lawname`` is the constitutive law name (see previou brick), ``params`` is a string representing the parameters of the law, ``mf_vm`` a (preferably discontinuous) Lagrange  finite element method on which the interpolation will be done and ``VM`` a vector of type ``model_real_plain_vector`` in which the interpolation will be stored."
 msgstr ""
-"where ``md`` is the model, ``varname`` the variable of the model "
-"representing the large strain displacement, ``lawname`` is the constitutive "
-"law name (see previou brick), ``params`` is a string representing the "
-"parameters of the law, ``mf_vm`` a (preferably discontinuous) Lagrange  "
-"finite element method on which the interpolation will be done and ``VM`` a "
-"vector of type ``model_real_plain_vector`` in which the interpolation will "
-"be stored."
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:7
+# 4ec53f158565442889e786d57e364888
 msgid "models"
-msgstr "models"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:7
+# 4ec53f158565442889e786d57e364888
 msgid "model bricks"
-msgstr "model bricks"
+msgstr ""
+
