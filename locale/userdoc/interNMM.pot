@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-16 15:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/userdoc/interNMM.rst:10
+msgid "Interpolation of a finite element method on non-matching meshes"
+msgstr "Interpolation of a finite element method on non-matching meshes"
+
+#: ../source/userdoc/interNMM.rst:12
+msgid ""
+"A special finite element method is defined in "
+":file:`getfem/getfem_interpolated_fem.h` which is not a real finite element "
+"method, but a pseudo-fem which interpolates a finite element method defined "
+"on another mesh. If you need to assemble a matrix with finite element "
+"methods defined on different meshes, you may use the \"interpolated fem\" "
+"for that purpose::"
+msgstr ""
+"A special finite element method is defined in "
+":file:`getfem/getfem_interpolated_fem.h` which is not a real finite element "
+"method, but a pseudo-fem which interpolates a finite element method defined "
+"on another mesh. If you need to assemble a matrix with finite element "
+"methods defined on different meshes, you may use the \"interpolated fem\" "
+"for that purpose::"
+
+#: ../source/userdoc/interNMM.rst:21
+msgid ""
+"Because each base function of the finite element method has to be "
+"interpolated, such a computation can be a heavy procedure. By default, the "
+"interpolated fem object store the interpolation data."
+msgstr ""
+"Because each base function of the finite element method has to be "
+"interpolated, such a computation can be a heavy procedure. By default, the "
+"interpolated fem object store the interpolation data."
+
+#: ../source/userdoc/interNMM.rst:25
+msgid ""
+"The interpolation is made on each Gauss point of the integration methods of "
+"``mim``, so that you have to use these integration methods in the assembling"
+" procedures."
+msgstr ""
+"The interpolation is made on each Gauss point of the integration methods of "
+"``mim``, so that you have to use these integration methods in the assembling"
+" procedures."
+
+#: ../source/userdoc/interNMM.rst:29
+msgid ""
+"For instance if you need to compute the mass matrix between two different "
+"finite element methods defined on two different meshes, this is an example "
+"of code which interpolate the second FEM. on the mesh of the first FEM., "
+"assuming that ``mf`` describes the finite element method and ``mim`` is the "
+"chosen integration method::"
+msgstr ""
+"For instance if you need to compute the mass matrix between two different "
+"finite element methods defined on two different meshes, this is an example "
+"of code which interpolate the second FEM. on the mesh of the first FEM., "
+"assuming that ``mf`` describes the finite element method and ``mim`` is the "
+"chosen integration method::"
+
+#: ../source/userdoc/interNMM.rst:41
+msgid ""
+"The object pointed by ``ifem`` contains all the information concerning the "
+"interpolation. It could use a lot of memory. As pfem is a smart pointer (a "
+"boost `intrusive_ptr "
+"<http://www.boost.org/libs/smart_ptr/intrusive_ptr.html>`_), the "
+"interpolated fem will be automatically destroyed when the last pointer on it"
+" is destroyed. To obtain a better accuracy, it is better to refine the "
+"integration method (with ``IM_STRUCTURED_COMPOSITE`` for instance) rather "
+"than increase its order."
+msgstr ""
+"The object pointed by ``ifem`` contains all the information concerning the "
+"interpolation. It could use a lot of memory. As pfem is a smart pointer (a "
+"boost `intrusive_ptr "
+"<http://www.boost.org/libs/smart_ptr/intrusive_ptr.html>`_), the "
+"interpolated fem will be automatically destroyed when the last pointer on it"
+" is destroyed. To obtain a better accuracy, it is better to refine the "
+"integration method (with ``IM_STRUCTURED_COMPOSITE`` for instance) rather "
+"than increase its order."
+
+#: ../source/userdoc/interNMM.rst:51
+msgid "mixed methods with different meshes"
+msgstr "mixed methods with different meshes"
+
+#: ../source/userdoc/interNMM.rst:52 ../source/userdoc/interNMM.rst:57
+msgid "to be described ..."
+msgstr "to be described ..."
+
+#: ../source/userdoc/interNMM.rst:56
+msgid "mortar methods"
+msgstr "mortar methods"
