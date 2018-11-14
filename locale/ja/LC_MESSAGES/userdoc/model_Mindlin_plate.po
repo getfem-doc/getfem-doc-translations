@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-16 15:44+0900\n"
+"PO-Revision-Date: 2018-07-16 07:04+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:12
+msgid "Mindlin-Reissner plate model"
+msgstr "Mindlin-Reissner板モデル"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:14
+msgid ""
+"This brick implements the classical Mindlin-Reissner bending model for "
+"isotropic plates."
+msgstr "このブリック要素は等方性プレート用の古典的なMindlin-Reissner曲げモデルを実装しています。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:17
+msgid "The Mindlin-Reissner plate model"
+msgstr "Mindlin-Reissner板モデル"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:19
+msgid ""
+"Let :math:`\\Omega \\subset \\R^2` be the reference configuration of the "
+"mid-plane of a plate of thickness :math:`\\epsilon`."
+msgstr ":math:`\\Omega\\subset\\R^2` は厚さ :math:`\\epsilon` のプレートの中間面の参照構成です。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:21
+msgid ""
+"The weak formulation of the Mindlin-Reissner model for isotropic material "
+"can be written as follows for :math:`u_3` the transverse displacement and "
+":math:`\\theta` the rotation of fibers normal to the mid-plane:"
+msgstr ""
+"等方性材料のMindlin-Reissnerモデルの弱定式化は以下のように書くことができます。ここで :math:`u_3` は横方向の変位であり、 "
+":math:`\\theta` は中間面に垂直なファイバーの回転です。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:28
+msgid ""
+"for all admissible test functions :math:`v_3 : \\Omega \\rightarrow \\R,$ "
+"$\\psi : \\Omega \\rightarrow \\R^2` and where:"
+msgstr ""
+"すべての許容可能な試行関数について :math:`v_3 : \\Omega \\rightarrow \\R,$ $\\psi : \\Omega "
+"\\rightarrow \\R^2` です。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:36
+msgid ""
+":math:`f` being a volumic force applied inside the three dimensional plate, "
+":math:`g^+` and :math:`g^-` a force applied on the top and bottom surface of"
+" the plate, :math:`E` Young's modulus, :math:`\\nu` Poisson's ratio and "
+":math:`\\kappa` the shear correction factor (usually set to 5/6)."
+msgstr ""
+":math:`f` は3次元板の内部に加えられる体積力であり、 :math:`g^+` と :math:`g^-` は板の上面と底面に加えられる力です。"
+" :math:`E` はYoung率、 :math:`\\nu` Poisson比そして :math:`\\kappa` "
+"はせん断補正係数（通常5/6に設定）です。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:38
+msgid "The classical boundary conditions are the following:"
+msgstr "古典的な境界条件は次のとおりです。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:40
+msgid "Simple support :  a dirichlet condition on :math:`u_3`."
+msgstr "単純支持： :math:`u_3` 上のDirichlet条件。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:42
+msgid ""
+"Clamped support : a dirichlet condition on both :math:`u_3` and "
+":math:`\\theta`."
+msgstr "固定支持: :math:`u_3` と :math:`\\theta` のDirichlet条件。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:44
+msgid "Prescribed transverse force : boundary source term on :math:`u_3`."
+msgstr "既定の横力： :math:`u_3` 上の境界ソース項。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:46
+msgid "Prescribed moment : boundary source term on :math:`\\theta`."
+msgstr "既定のモーメント： :math:`\\ theta` 上の境界源項。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:49
+msgid ""
+"An important issue of this model is that it is subjected to the so called "
+"shear locking so that a direct Galerkin procedure do not give a satisfactory"
+" approximation. There is several ways to circumvent the shear locking "
+"problem : reduced integration, projection of the transverse shear term, "
+"mixed methods. The two first method are proposed."
+msgstr ""
+"このモデルの重要な問題は、直接的Galerkin法が満足できる近似を与えないため、いわゆるせん断ロッキングが発生することです。せん断ロッキングの問題を回避するには、積分の低減・横方向のせん断項の投影・混合方法があります。2つの高速な方法が提案されています。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:53
+msgid "Reduced integration of the transverse shear term"
+msgstr "横断せん断項の積分を減少させる"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:55
+msgid ""
+"This strategy consists simply to use a lower order integration method to "
+"numerically compute the term"
+msgstr "この方法では単に下位の積分法を使用して数値的に計算します。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:61
+msgid ""
+"This strategy is working properly at least when both the rotation and the "
+"transverse displacement is approximated with Q1 quadrilateral element with a"
+" degree one reduced integration method (the so-called QUAD4 element)."
+msgstr ""
+"この戦略は少なくとも回転変位と横変位の両方を選択的1次低減積分法を用いたQ1四辺形要素（いわゆるQUAD4要素）で近似するとき適切に機能します。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:64
+msgid "Projection of the transverse shear term"
+msgstr "横断方向せん断項の射影"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:66
+msgid ""
+"Another strategy comes from the MITC elements (Mixed Interpolation of "
+"Tensorial Components) which correspond to a re-interpretation in terms of "
+"projection of some mixed methods. The most popular element of this type is "
+"the MITC4 which correspond to the quadrilateral element Q1 with a projection"
+" of the transverse shear term on a rotated Raviart-Thomas element of lowest "
+"degree (RT0) (see [ba-dv1985]_, [br-ba-fo1989]_). This means that the "
+"transverse shear term becomes"
+msgstr ""
+"もう1つの方法はいくつかの混合方法の投影の再解釈に対応するMITC要素（テンソリアル成分の混合補間）に由来します"
+"。このタイプの最も汎用的な要素は回転度の低いRaviart-"
+"Thomas要素（RT0）の横断方向せん断項の投影を伴う四辺形要素Q1に対応するMITC4です（ [ba-dv1985]_ , [br-ba-"
+"fo1989]_ を参照）。横せん断項は次の通りです。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:72
+msgid ""
+"where :math:`P^h(T)` is the elementwize :math:`L^2`-projection onto the "
+"rotated RT0 space.  For the moment, the only projection implemented is the "
+"previous described one (projection on rotated RT0 space for quadrilateral "
+"element). Higher degree elements and triangular elements can be found in the"
+" litterature (see [Mi-Zh2002]_, [br-ba-fo1989]_, [Duan2014]_) and will be "
+"under consideration for a future implementation. Note also that since "
+":math:`P^h(\\nabla u_3) = \\nabla u_3`, the term reduces to"
+msgstr ""
+"ここで、 :math:`P^h(T)` は回転されたRT0空間上の要素の大きさ :math:`L^2` "
+"-投影です。現時点では、実装されている唯一のプロジェクションは、前に説明したものです（4角形要素の回転RT0空間上の投影）。より高度の要素と3角形の要素はライブラリで見つけることができます（"
+" [Mi-Zh2002]_, [br-ba-fo1989]_, [Duan2014]_ を参照）。また、以下のことに注意してください。 "
+":math:`P^h(\\nabla u_3) = \\nabla u_3` であるため、項は"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:78
+msgid ""
+"The principle of the definition of an elementary projection is explained if "
+"the description of the weak form language (see :ref:`ud-gasm-high-elem-"
+"trans`) and an example can be found in the file "
+":file:`src/getfem_linearized_plates.cc`."
+msgstr ""
+"に減らすことができることに留意してください。弱形式言語の記述であれば基本的な要素投影の定義の原則が説明されています（ :ref:`ud-gasm-"
+"high-elem-trans` を参照）。また例はファイル :file:`src/getfem_linearized_plates.cc` "
+"にあります。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:83
+msgid "Add a Mindlin-Reissner plate model brick to a model"
+msgstr "Mindlin-Reissner板モデルブリック要素をモデルに追加する"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:85
+msgid ""
+"The following function defined in "
+":file:`src/getfem/getfem_linearized_plates.h` allows to add a Mindlin-"
+"Reissner plate model term to a transverse displacement `u3` and a rotation "
+"`theta`::"
+msgstr ""
+":file:`src/getfem/getfem_linearized_plates.h` で定義されている次の関数はMindlin-"
+"Reissner板モデル項を横方向変位 `u3` と回転 `theta` に追加します。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:91
+msgid ""
+"where `name_u3` is name of the variable which represents the transverse "
+"displacmenent, `name_theta` the variable which represents the rotation, "
+"'param_E' the Young Modulus, `param_nu` the poisson ratio, `param_epsilon` "
+"the plate thickness, `param_kappa` the shear correction factor. Note that "
+"since this brick uses the weak form language, the parameter can be regular "
+"expression of this language. There are three variants. `variant = 0` "
+"corresponds to the an unreduced formulation and in that case only the "
+"integration method `mim` is used. Practically this variant is not usable "
+"since it is subject to a strong locking phenomenon. `variant = 1` "
+"corresponds to a reduced integration where `mim` is used for the rotation "
+"term and `mim_reduced` for the transverse shear term. `variant = 2` "
+"(default) corresponds to the projection onto a rotated RT0 element of the "
+"transverse shear term. For the moment, this is adapted to quadrilateral only"
+" (because it is not sufficient to remove the locking phenomenon on triangle "
+"elements). Note also that if you use high order elements, the projection on "
+"RT0 will reduce the order of the approximation. Returns the brick index in "
+"the model."
+msgstr ""
+"`name_u3` は横変位を表す変数の名前、 `name_theta` は回転を表す変数、 `param_E` はヤング係数、 `param_nu` "
+"はPoisson比、 `param_epsilon` は板厚、 `param_kappa` "
+"はせん断補正係数です。このブリック要素は弱形式言語を使用するため、パラメータはこの言語の正規表現にすることができます。 3つの変数があります。 "
+"`variant = 0` は非還元式に対応し、その場合には積分法 `mim` "
+"のみが使用されます。実際にはこの変形は強力なロッキング現象の影響を受けやすいので使用できません。 `variant = 1` は回転項に `mim` "
+"が使用され、横断せん断項に `mim_reduced` が使用される縮小積分に対応します。 `variant = 2` "
+"（デフォルト）は横せん断項の回転RT0要素への投影に対応します。現時点では、四辺形のみに適用されています（3角形要素のロッキング現象を除去するには不十分であるため）。高次の要素を使用すると、RT0の投影によって近似の次数が減少することにも注意してください。モデル内の要素のインデックスを返します。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:112
+msgid ""
+"The projection on rotated RTO element can be added to a model thanks to the "
+"following function::"
+msgstr "回転RTO要素の投影は次の関数によってモデルに追加できます。"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:7
+msgid "models"
+msgstr "モデル"
+
+#: ../source/userdoc/model_Mindlin_plate.rst:7
+msgid "model bricks"
+msgstr "モデルブリック要素"
