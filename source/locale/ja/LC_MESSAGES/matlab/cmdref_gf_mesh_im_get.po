@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+# de39e1fa11c142cba7283c15d0c4e1b1
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:8
+msgid "gf_mesh_im_get"
+msgstr ""
+
+# 1c5f3d43ea2746118d563f397720ce8d
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:10
+msgid "**Synopsis**"
+msgstr ""
+
+# d7b3840d78cb496483d21cc0a275b5e1
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:24
+msgid "**Description :**"
+msgstr ""
+
+# e8ceb93a827040ae8038537c01ca2305
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:27
+msgid "General function extracting information from mesh_im objects."
+msgstr ""
+
+# 85702cf781f6481880a0b0463c0a8b1a
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:30
+msgid "**Command list :**"
+msgstr ""
+
+# b4eb0be47fd345328672d32a5cbdc7ec
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:34
+msgid "``{I, CV2I} = gf_mesh_im_get(mesh_im MI, 'integ'[, mat CVids])``"
+msgstr ""
+
+# d38425e9ce5448db9c4980e05eb13585
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:36
+msgid "Return a list of integration methods used by the mesh_im."
+msgstr ""
+
+# 70a11e90ade249a8bb883c102e72c923
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:38
+msgid ""
+"`I` is an array of all integ objects found in the convexes given in "
+"`CVids`. If `CV2I` was supplied as an output argument, it contains, for "
+"each convex listed in `CVids`, the index of its correspounding "
+"integration method in `I`."
+msgstr ""
+
+# b4502a35cdf04432856bf38a1928c10b
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:43
+msgid ""
+"Convexes which are not part of the mesh, or convexes which do not have "
+"any integration method have their correspounding entry in `CV2I` set to "
+"-1."
+msgstr ""
+
+# 537c2e7263c14b908c0b4d3fd518ef60
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:47
+msgid "Example::"
+msgstr ""
+
+# 7c33c5e6c9184f3cb45a7d17e7194beb
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:60
+msgid "``CVids = gf_mesh_im_get(mesh_im MI, 'convex_index')``"
+msgstr ""
+
+# 3b024bd9ab234d8390d4c1a06faa118d
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:62
+msgid "Return the list of convexes who have a integration method."
+msgstr ""
+
+# 2525f0160f17419192b32dcd5331fc1a
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:64
+msgid "Convexes who have the dummy IM_NONE method are not listed."
+msgstr ""
+
+# 00dffeb7e2e7435ea00a81f7e6cfe37f
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:67
+msgid "``M = gf_mesh_im_get(mesh_im MI, 'eltm', eltm em, int cv [, int f])``"
+msgstr ""
+
+# 9d39dd33b41444ab8e82ec14235b9d53
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:69
+msgid "Return the elementary matrix (or tensor) integrated on the convex `cv`."
+msgstr ""
+
+# e85088758b61475695f442e1f97ab023
+# ea1523b4c1224cee8789ccb8b3b8429c
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:71
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:86
+msgid "**WARNING**"
+msgstr ""
+
+# ce5941e544354e1eac77ed3f0a9af946
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:73
+msgid ""
+"Be sure that the fem used for the construction of `em` is compatible with"
+" the fem assigned to element `cv` ! This is not checked by the function !"
+" If the argument `f` is given, then the elementary tensor is integrated "
+"on the face `f` of `cv` instead of the whole convex."
+msgstr ""
+
+# edce797503364138be9fa3b31c0d45f2
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:79
+msgid "``Ip = gf_mesh_im_get(mesh_im MI, 'im_nodes'[, mat CVids])``"
+msgstr ""
+
+# 6250da4eb5cf4cf99f89e8f469cb8c60
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:81
+msgid "Return the coordinates of the integration points, with their weights."
+msgstr ""
+
+# 6c0a0b4b831e44319f7a8638e3a6b6cf
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:83
+msgid ""
+"`CVids` may be a list of convexes, or a list of convex faces, such as "
+"returned by gf_mesh_get(mesh M, 'region')"
+msgstr ""
+
+# df02843baae447a98b3a7020ab6295e6
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:88
+msgid ""
+"Convexes which are not part of the mesh, or convexes which do not have an"
+" approximate integration method do not have their corresponding entry "
+"(this has no meaning for exact integration methods!)."
+msgstr ""
+
+# 58ab4dc7edf54d00b19f526a00a26b54
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:94
+msgid "``gf_mesh_im_get(mesh_im MI, 'save',string filename[, 'with mesh'])``"
+msgstr ""
+
+# 233ec3b479cc40a0a301127c803c69e9
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:96
+msgid "Saves a mesh_im in a text file (and optionaly its linked mesh object)."
+msgstr ""
+
+# 9fcde608c8d14680b5a217bf1d394ab6
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:99
+msgid "``gf_mesh_im_get(mesh_im MI, 'char'[,'with mesh'])``"
+msgstr ""
+
+# 26fc2d10474c43d1a75fbf25ef6e6898
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:101
+msgid "Output a string description of the mesh_im."
+msgstr ""
+
+# 33aa481f831e4d709a8719bbce290ef3
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:103
+msgid "By default, it does not include the description of the linked mesh object."
+msgstr ""
+
+# 27b4631e1d33478c97869891e81844b6
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:107
+msgid "``gf_mesh_im_get(mesh_im MI, 'display')``"
+msgstr ""
+
+# 31fe650cd0a34cab95adb5e52b2d477a
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:109
+msgid "displays a short summary for a mesh_im object."
+msgstr ""
+
+# f25f69c91cc3471090b17864364c29e5
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:112
+msgid "``m = gf_mesh_im_get(mesh_im MI, 'linked mesh')``"
+msgstr ""
+
+# 0dde554fbce644cf83b97c0fcc276892
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:114
+msgid "Returns a reference to the mesh object linked to `mim`."
+msgstr ""
+
+# 2ad18aefdade48c49573dbab6b7e8626
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:117
+msgid "``z = gf_mesh_im_get(mesh_im MI, 'memsize')``"
+msgstr ""
+
+# 83e88e4a859d4685a66168f0713b8cbb
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:119
+msgid "Return the amount of memory (in bytes) used by the mesh_im object."
+msgstr ""
+
+# efbf0c3070f045258a26160a5dd84571
+#: ../source/matlab/cmdref_gf_mesh_im_get.rst:121
+msgid "The result does not take into account the linked mesh object."
+msgstr ""
+

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 02:08+0900\n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,49 +17,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/interNMM.rst:10
-# 70e947f92c6d4b11b4b9201179ecbe1e
+# 63a923ebfe9f4bcfb8c93833a2cc3c2d
 msgid "Interpolation of a finite element method on non-matching meshes"
 msgstr ""
 
 #: ../source/userdoc/interNMM.rst:12
-# 48977816c2b44afc92883606d3974aec
+# 4bb1a325f0d4400f992adeed316f74ee
 msgid "A special finite element method is defined in :file:`getfem/getfem_interpolated_fem.h` which is not a real finite element method, but a pseudo-fem which interpolates a finite element method defined on another mesh. If you need to assemble a matrix with finite element methods defined on different meshes, you may use the \"interpolated fem\" for that purpose::"
 msgstr ""
 
 #: ../source/userdoc/interNMM.rst:21
-# b0aaf60bad8943938854ddf38b8e8078
+# eec287fa0fcd4dd39892932cef479dd3
 msgid "Because each base function of the finite element method has to be interpolated, such a computation can be a heavy procedure. By default, the interpolated fem object store the interpolation data."
 msgstr ""
 
 #: ../source/userdoc/interNMM.rst:25
-# d91ab62312294900aecc53e172897457
+# 8b18abee3a4e475fb614977c612cc6d8
 msgid "The interpolation is made on each Gauss point of the integration methods of ``mim``, so that you have to use these integration methods in the assembling procedures."
 msgstr ""
 
 #: ../source/userdoc/interNMM.rst:29
-# e6f90f93840541bc90c1922396892360
+# fd5b3b48ab374b5ebfd2ec947508b34e
 msgid "For instance if you need to compute the mass matrix between two different finite element methods defined on two different meshes, this is an example of code which interpolate the second FEM. on the mesh of the first FEM., assuming that ``mf`` describes the finite element method and ``mim`` is the chosen integration method::"
 msgstr ""
 
 #: ../source/userdoc/interNMM.rst:41
-# 19efbedacb7c43d4a9698621f60c521d
+# c6cee67de76849259abf231b798f0beb
 msgid "The object pointed by ``ifem`` contains all the information concerning the interpolation. It could use a lot of memory. As pfem is a smart pointer (a boost `intrusive_ptr <http://www.boost.org/libs/smart_ptr/intrusive_ptr.html>`_), the interpolated fem will be automatically destroyed when the last pointer on it is destroyed. To obtain a better accuracy, it is better to refine the integration method (with ``IM_STRUCTURED_COMPOSITE`` for instance) rather than increase its order."
 msgstr ""
 
 #: ../source/userdoc/interNMM.rst:51
-# bf5749067965455eb5fafab35a033cd3
+# c684cceb885241f6860fdd9a80311384
 msgid "mixed methods with different meshes"
 msgstr ""
 
 #: ../source/userdoc/interNMM.rst:52
 #: ../source/userdoc/interNMM.rst:57
-# 4dc48b55e95b42638d472ca10f3109f5
-# beace060582449d5b65797bb5adf7ee6
+# a8b04c244f764eeeb42830035eb60b7e
+# 319727c8892246b79b83a8fcfbc7f14a
 msgid "to be described ..."
 msgstr ""
 
 #: ../source/userdoc/interNMM.rst:56
-# a1d884ced27e412b8a1aefcf32a8a016
+# 63f23cc069ae44adbfc95ad0aa96d2a3
 msgid "mortar methods"
 msgstr ""
 

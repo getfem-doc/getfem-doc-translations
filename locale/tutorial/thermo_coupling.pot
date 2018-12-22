@@ -1,0 +1,467 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/tutorial/thermo_coupling.rst:8
+# abf9116676e847989c58dc6511d32d02
+msgid "Example of Thermo-elastic and electrical coupling (simple nonlinear coupled problem, model object, generic assembly, solve and visualization)"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:10
+# f6bc141ebe2a417798779eecba647a33
+msgid "This example aims to present a simple example of a multiphysics problem with a nonlinear coupling of a displacement field, a temperature field and an electric potential field. It also aims to compare the use of the C++ library and the different interfaces. The corresponding demo files are present in the test directories of |gf| (`tests/`, `interface/tests/python`, `interface/scr/scilab/demos` and `interface/tests/matlab`)."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:13
+# 67795f0f63af4d0f87cf7c3787b68cea
+msgid "The problem setting"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:15
+# 7d910176e1d747369f96e893c85a7df4
+msgid "Let :math:`\\Omega \\subset \\R^2` be the reference configuration of a 2D plate (see the geometry :ref:`here <tut-fig-meshthermo>`) of thickness :math:`\\varepsilon` submitted to external forces, electric potential and heating. We will denote by  :math:`\\theta : \\Omega \\rightarrow \\R` the temperature field (in |degreC|),  :math:`V : \\Omega \\rightarrow \\R` the electric potential field and :math:`u : \\Omega \\rightarrow \\R^2` the membrane displacement field."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:18
+#: ../source/tutorial/thermo_coupling.rst:641
+# 15a2fe2708544959a327c00aabcc6d2b
+# 1b9b52aded204a9a8aebcf28a4d0f472
+msgid "Thermal problem"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:20
+# 9ca33d0853274d1aa1d3f4db4c42ba57
+msgid "The lateral faces of the plates are supposed to be in thermal insulation since the front and back faces of the plate are supposed to be in thermal exchange with the air (supposed at 20 |degreC|) with a heat transfer coefficient :math:`D`."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:22
+# 0b93362ae42a4c1e881aba4a6a26e44f
+msgid "The equation on the temperature :math:`\\theta` and boundary condition can be written as follows:"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:32
+# 3a35ecf5c48b4c07a497a2f3a2736ef6
+msgid "where the thermal conductivity is designed by :math:`\\kappa`, :math:`T_0` is the temperature of the air, :math:`\\partial \\Omega` the boundary of the domain :math:`\\Omega` and :math:`n` the outward unit normal vector to :math:`\\Omega` on :math:`\\partial \\Omega`."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:34
+# 0c5df3e8a2384439988c105901134d5b
+msgid "The term :math:`\\sigma|\\nabla V|^2` is a nonlinear coupling term corresponding to the Joule heating term, where :math:`\\sigma` is the electrical conductivity."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:37
+#: ../source/tutorial/thermo_coupling.rst:587
+# 062c4cc369954114b1d5aefc6aefbda4
+# 701b598b09fb48919b1a2107ea4d65cf
+msgid "Electric potential problem"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:39
+# 7a187ca32a0845558db0d7088ab705fa
+msgid "We consider a potential difference of :math:`0.1V` between the right and left lateral face of the plate. The other faces are considered electrically insulated. The equation for the electric potential reads as"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:50
+# 48707d0be9bd490a9366ade78ac32170
+msgid "where :math:`\\sigma` is still the electrical conductivity. Moreover, we consider that :math:`\\sigma` depends on the temperature as follows:"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:56
+# bb94a6f34ccb4577a77232bad5de68a8
+msgid "where :math:`T_0` is a reference temperature (air temperature here), :math:`\\rho_0` the resistance temperature coefficient at :math:`T_0` and :math:`\\alpha` a second resistance temperature coefficient."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:61
+# aeb31bdc021d4bc184122985870f53c5
+msgid "Deformation problem"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:63
+# d5adfe5a3e9244109d8d540edc96bf8b
+msgid "We consider the membrane small deformation of the plate under a force applied on the right lateral face and influenced by the heating of the plate. The displacement :math:`u` will be solution of the following problem (linearized elasticity):"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:74
+# 3d8657acada94f3ca70b528c32c457a7
+msgid "where :math:`F` is the force density applied on the right lateral boundary and :math:`\\bar{\\sigma}(u)` is the Cauchy stress tensor defined by"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:80
+# 0bc56926bbbf4a6caff2fc22655828d9
+msgid ":math:`\\bar{\\varepsilon}(u) = (\\nabla u + (\\nabla u)^T)/2` being the linearized strain tensor, :math:`I` the identity second order tensor and :math:`\\lambda^*, \\mu` being the |Lame| coefficients defined  by"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:88
+# 77eefd429ece4b38a41f4546f6f917f5
+msgid "from :math:`E` the Young modulus and :math:`\\nu` the Poisson ratio of the material."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:90
+# 5ea09b18682a4c7a9424b72e2653bb21
+msgid "The term :math:`\\beta(T_0-\\theta) I` corresponds to the thermal expansion term, where :math:`\\beta = \\alpha_{th} E/(1-2\\nu)`, :math:`\\alpha_{th}` being the thermal expansion coefficient."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:94
+# 9e9831c230c14b719b581bbf9c47c276
+msgid "The weak formulation"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:96
+# 38f8353e8b3c4efcad55de6a7226dbd4
+msgid "An important step is to obtain the weak formulation of the coupled system of equations. This is a crucial step since the finite element formulation is based on the weak formulation (Galerkin approximation) and the weak formulation is the only one which can give us the expression of the terms to be added."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:98
+# b02965938efe4c1697d4871eea32ec65
+msgid "Weak formulation of each partial differential equation is obtained by multiplying the equation with a test function corresponding to the main unknown satisfying homogeneous Dirichlet conditions where the main unknown satisfies a Dirichlet condition, then integrating over the domain :math:`\\Omega` and performing some integrations by parts (using Green's formula). The weak formulation of the system of partial differential equations reads:"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:108
+# ab390700134f4eabbf197a39e2dac76a
+msgid "where :math:`\\delta_{\\theta}, \\delta_V, \\delta_u` are the test functions corresponding to :math:`\\theta, V, u`, respectively, :math:`\\Gamma_N` denotes the right boundary where the density of force :math:`F` is applied and :math:`\\bar{\\sigma}:\\bar{\\varepsilon}` is the Frobenius scalar product between second order tensors."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:111
+# 22e4b5aa29ca4d8cb25f75320cfd7a10
+msgid "Implementation in C++ and with the interface"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:113
+# f3366f92f013416884773d50512543aa
+msgid "Let us now make a detailed presentation of the use of |gf| to approximate the problem. We build simultaneously a C++, Python, Scilab and Matlab program. For Matlab and Scilab programs, we will not use the oriented object commands (see :ref:`mlab-oocmd` how to use them)"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:116
+# 923b53af5cb547fea47999a13a4c1245
+msgid "Initialization"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:118
+# 1faec017efb84798996f6f9c27f44018
+msgid "First, in C++, ones has to include a certain number of headers for the model object, the generic assembly, the linear interface (Gmm++), the experimental mesher and the export facilities. For Python, this is simpler, |gf| can be imported globally (numpy has also to be imported). For Scilab, the library has first to be loaded in the Scilab console (this is not described here) and for Matlab, nothing is necessary, except a `gf_workspace('clear all')` which allows to clear all |gf| variables."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:122
+#: ../source/tutorial/thermo_coupling.rst:159
+#: ../source/tutorial/thermo_coupling.rst:206
+#: ../source/tutorial/thermo_coupling.rst:268
+#: ../source/tutorial/thermo_coupling.rst:360
+#: ../source/tutorial/thermo_coupling.rst:416
+#: ../source/tutorial/thermo_coupling.rst:475
+#: ../source/tutorial/thermo_coupling.rst:528
+#: ../source/tutorial/thermo_coupling.rst:592
+#: ../source/tutorial/thermo_coupling.rst:646
+#: ../source/tutorial/thermo_coupling.rst:699
+#: ../source/tutorial/thermo_coupling.rst:726
+#: ../source/tutorial/thermo_coupling.rst:773
+# 48e679bf7af44ce4b0f356a77b4ae86d
+# c7f47abb439a4a86997be62e2d0bf473
+# 19e9d899e243489ea623e5938a5ec102
+# cc983954a1834f809e9139a893dbda55
+# 605c0a61ebc64113bac8921cce7ec3ee
+# ab4974ded2214f849437e36a91af82a4
+# fa58b17e57864c06988d77dadf4dc2bc
+# 9ea352f2ff544cf0aab9723f3bc769fe
+# ee1b801988a647278e72c2e2cc3302ab
+# a1ea5fcc39214dc7b617c59d55832207
+# bed3ef6671a948a89cb3ccd5e4e916c4
+# 5337f450ddb544d4bed893f02ea3241c
+# 9dc0c710f57341e280df6f86444b96dc
+msgid "**C++**"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:137
+#: ../source/tutorial/thermo_coupling.rst:220
+#: ../source/tutorial/thermo_coupling.rst:294
+#: ../source/tutorial/thermo_coupling.rst:368
+#: ../source/tutorial/thermo_coupling.rst:428
+#: ../source/tutorial/thermo_coupling.rst:482
+#: ../source/tutorial/thermo_coupling.rst:543
+#: ../source/tutorial/thermo_coupling.rst:606
+#: ../source/tutorial/thermo_coupling.rst:658
+#: ../source/tutorial/thermo_coupling.rst:704
+#: ../source/tutorial/thermo_coupling.rst:737
+#: ../source/tutorial/thermo_coupling.rst:803
+# 5dd63f8314b44664b8beabaab70f58e1
+# 5bfaa55453244092b1e7f62e7a20f05e
+# c4cd7bb9b6b04779a09b0adcc9f951d0
+# d4c5ce7b07644f11a0398e9c18e65ece
+# 6e014e9efbf54f4983b2be1e40c5619e
+# 4b2f68fd556d4578a5163b1d2f4d31a1
+# 6ea66ef65846498ba283efd88c684403
+# 4a3b327659ae41f18149e3f4a981efe1
+# 2834659d9f894e21911a7861ce5292e3
+# 677c52c7c19e424dac7d0ad306b2d244
+# 31f9ce1296e340f09db183f994f06155
+# 5de51fbebee740479c8aa2e785726517
+msgid "**Python**"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:142
+#: ../source/tutorial/thermo_coupling.rst:231
+#: ../source/tutorial/thermo_coupling.rst:314
+#: ../source/tutorial/thermo_coupling.rst:374
+#: ../source/tutorial/thermo_coupling.rst:438
+#: ../source/tutorial/thermo_coupling.rst:489
+#: ../source/tutorial/thermo_coupling.rst:557
+#: ../source/tutorial/thermo_coupling.rst:617
+#: ../source/tutorial/thermo_coupling.rst:669
+#: ../source/tutorial/thermo_coupling.rst:708
+#: ../source/tutorial/thermo_coupling.rst:746
+#: ../source/tutorial/thermo_coupling.rst:820
+# 63684ffcce8d44bc92ccef636e566813
+# 6e4a07629b9e4f9e9d70233b7ab37e35
+# 9589d6581bcc458d9da0f32d32cb05ae
+# 499eb483afb942c0ade847d5187ce9dc
+# 9cff0e54cf544079a9f69c3d24cabdc1
+# d18a45d7dbf9406882bedecfdfa895c0
+# 27ea71790be64d2ca3741bba192e4d6e
+# 93ef233c2c4a499f9a00f9ffa269d3e9
+# 5133f488e7684a2a8500034f3843bb94
+# 9db9a2c8c5e44ff8aea6e230e5034cf8
+# 09fa43244f3044e38503ded982d16037
+# 44cc59d4c1074aabb75b9657e2560940
+msgid "**Scilab**"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:146
+#: ../source/tutorial/thermo_coupling.rst:242
+#: ../source/tutorial/thermo_coupling.rst:333
+#: ../source/tutorial/thermo_coupling.rst:382
+#: ../source/tutorial/thermo_coupling.rst:448
+#: ../source/tutorial/thermo_coupling.rst:496
+#: ../source/tutorial/thermo_coupling.rst:571
+#: ../source/tutorial/thermo_coupling.rst:628
+#: ../source/tutorial/thermo_coupling.rst:680
+#: ../source/tutorial/thermo_coupling.rst:712
+#: ../source/tutorial/thermo_coupling.rst:755
+#: ../source/tutorial/thermo_coupling.rst:848
+# c407ebe0bf45439d8aedaddcb54f79b1
+# 4f14d6dfa27f4ac9be2877bebefe054d
+# bd212b6b9efa47d683b16a9833e96453
+# 2486491c5938410e9802847ed0e9139b
+# b4ec1e05b1f04e198f8d64afe627aa9e
+# 61bed2eb32be4b6ea26a032d8d1a2d4b
+# a01c91ecbbae483ebe1bf33e60da70c7
+# a8abe42b473341f68789e44f1b3c882c
+# 1c7e20bb6a5e48beb290ea41a35f6824
+# 9b9cc84cc31941c79f755ff1431ba62a
+# b26ce66e30b948a5bc4b297c397dc4b2
+# 2c29bb167b69477295a97b1562c9cc62
+msgid "**Matlab**"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:153
+# 0f2007ba709942508145b2f173239652
+msgid "Parameters of the model"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:155
+# b934a3ee880c46e18293d96bd795e1b8
+msgid "Let us now define the different physical and numerical parameters of the problem. For script languages (Python, Scilab and Matlab) there is no differences."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:179
+# 8d9962132a074bf5ac5c1ff6471a0b7e
+msgid "**Scripts**"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:198
+# 234eeecbc0864ebe9609997cc99a9e49
+msgid "Mesh generation"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:200
+# 8bebc604e01f41e38407596236bfe185
+msgid "|gf| has some limited meshing facilities which are described here. We are going to use them. However, there is no guaranty of the quality and conformity of the obtained mesh, so it is better to verify the mesh if you use |gf| meshing facilities. You can also use external meshers (GiD or Gmsh for instance) and import them (see :ref:`ud-load_save_mesh`)."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:202
+# 28a0cfcf28de46c187b8b2ed0aad0da9
+msgid "The geometry of the domain is supposed to be a rectangle with three circular holes (see :ref:`tut-fig-meshthermo`). The geometry is described thanks to some geometrical primitives and union/setminus operations (see :file:`src/getfem/getfem)_mesher.h` file. In the following, `h` stands for the mesh size and `2` is the degree of the mesh (this means that the transformation is of degree two, we used curved edges)."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:259
+# 2889d777df4a4d36afdbb682e8e1afb0
+msgid "The obtained mesh."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:262
+# 28e9b3ec35454d2790546de1c2e627cf
+msgid "Boundary selection"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:264
+# 1447b2f448ca4ee8b9e941a19c2de20c
+msgid "Since we have different boundary conditions on the different parts of the boundary, we have to number the different parts of the boundary (in the hole, thermal and electrical insulation together with a stress free boundary conditions are assumed). Thus, we have to select the element faces on the mesh and define mesh regions (see :ref:`ud-mesh_regions`) 1, 2, 3, 4 to be the right boundary, the left one, the top one and the bottom one respectively. These boundary numbers will be used in the model bricks."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:355
+# 002447bbb1b94727ae5acedebd98fd50
+msgid "Mesh draw"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:357
+# c90ee65bc3e24ca79ee608e7d1a805fb
+msgid "In order to preview the mesh and to control its validity, the following instructions can be used:"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:391
+# a638a7efdb5c4b6580b76b8bc43e169b
+msgid "In C++ and with the Python interface, an external graphical post-processor has to be used (for instance, gmsh, Mayavi2 or Paraview). With Scilab and Matlab interfaces, the internal plot facilities can be used (see the result :ref:`tut-fig-meshthermo`)."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:395
+# 952816b37af14e599115f0a7ead0f85f
+msgid "Definition of finite element methods and integration method"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:397
+# 512ec261ad3b481dbdf1fd0b894eb155
+msgid "We will define three finite element methods. The first one, `mfu` is to approximate the displacement field. This is a vector field. This is defined in C++ by"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:404
+# 400e2410edfc48ab9533db15c490247a
+msgid "where the `2` stands for the dimension of the vector field. The second line sets the finite element used. `classical_finite_element` means a continuous Lagrange element and remember that `elements_degree` has been set to `2` which means that we will use quadratic (isoparametric) elements."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:406
+# fa3532d8b3cd4674a9a16a90dea994c2
+msgid "There is a wide choice of pre-existing finite element methods in |gf|, see :ref:`ud-appendixa`. However, Lagrange finite element methods are the most used in practice."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:408
+# 4449b51b71cc471ea0322569cd49f4c5
+msgid "The second finite element method is a scalar one, `mft` with which we will approximate both the temperature field and the electric potential field. A single finite element method can serve to approximate an arbitrary number of finite element variables."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:410
+# 6f52be7d743a486d9990cb95a7d06772
+msgid "The third finite element method is a discontinuous scalar Lagrange one which will allow us to interpolate the derivative of one of the variables (for instance to interpolate the Von Mises stress)."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:412
+# 626b3568ba274a98aae9cdb5352331f6
+msgid "The last thing to define is an integration method `mim`. There is no default integration method in |gf| so this is mandatory to define an integration method. Of course, the order of the integration method have to be chosen sufficient to make a convenient integration of the selected finite element method. Here, the square of `elements_degree` is sufficient."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:463
+# 7ad0c800d985481c98d9813fbd7760de
+msgid "Model definition"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:465
+# 0d749fd0905448449cf825d46cc10af9
+msgid "The model object in |gf| gather the variables of the models (the unknowns), the data and what is called the model bricks. The model bricks are some parts of the model (linear or nonlinear terms) applied on a single variable or linking several variables. They are used to make the assembly of the (tangent) linear system (see :ref:`ud-model-object` for more details)."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:467
+# a2b94bedfed34854a621758395de3292
+msgid "This is not strictly mandatory to use the model object since one may use directly the assembly procedures and build by it own the (tangent) linear system. The model object allows a rapid build of the model since most classical parts of a model are pre-programmed: standard boundary conditions, standard partial differential equations, use of multipliers to prescribe a constraint ... Moreover, some bricks are designed to extend the possibilities of the standard bricks (generic assembly bricks, explicit matrix brick ...). Thus, it is recommended to use the framework of the model object."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:469
+# 264d2ac3aea842198b16720415c9b7fa
+msgid "There are two versions of the model: the real one and the complex one. Complex models have to be reserved for special applications (some electromagnetism problems for instance) where it is advantageous to solve a complex linear system."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:471
+# d3a4030e3e46442b9697e0c1a688432a
+msgid "Let us declare a real model with the three variables corresponding to the three fields to be computed:"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:506
+# 604e415e90244f9fa298f033541f6680
+msgid "Membrane elastic deformation problem"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:508
+# 9bdeba4eaa7942b89fc727a1db05522b
+msgid "Let us now begin by the elastic deformation problem. We will use the predefined brick added by `add_isotropic_linearized_elasticity_brick` below. Basically it adds the term corresponding to"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:514
+# f4363505e385403c83b828dfb53d844f
+msgid "to the tangent linear system. In order to use this model brick, the data corresponding to he |Lame| coefficient have to be added to the model first. Here, the |Lame| coefficients are constant over the domain. However, it it also possible to define some non-constant data. Note also that instead of using this predefined brick, one can use equivalently the weak form language term `add_linear_term(md mim, \"lambda*(Div_u*Div_Test_u) + mu*((Grad_u + Grad_u'):Grad_Test_u)\"`."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:516
+# 3f63f3c413354ee98c2dd3e60bfc64a4
+msgid "Concerning the coupling term"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:522
+# 44069981f9b447db87f1d22820e49a66
+msgid "there is no predefined brick and we use directly a weak form language term `add_linear_term(md mim, \"beta*theta*Div_Test_u)\"`. See :ref:`ud-gasm-high` for more details on the weak form language. Basically, the principle is that the assembly string is compiled into a list of optimized assembly instructions which are executed on each Gauss point."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:524
+# 87ad6756b5d64fc4894b540bbfa74194
+msgid "The following program allows to take into account the whole elastic deformation equation. Note the use of specific brick to prescribe the Dirichlet condition on the left boundary. There is several option to prescribe a Dirichlet condition (see :ref:`ud-model-Dirichlet`)."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:589
+# 78820f42f03e47dabde5af8ca60056ec
+msgid "Similarly, the following program take into account the electric potential equation. Note the definition of the  electrical conductivity :math:`\\sigma` and again the use of weak form language terms."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:643
+# 11ba1a6749a1450697bb827ba456f9ce
+msgid "Now, the program to take into account the thermal problem:"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:694
+# f6a40259a1bb43709452f65ffcea1c94
+msgid "Model solve"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:696
+# 3dc1e94147c84ba088614d901634a429
+msgid "Once the model is correctly defined, we can simply solve it by:"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:717
+# 19f4f9896e254c49a85f69fc50bb30c1
+msgid "Since the problem is globally nonlinear, a Newton method is used to iteratively solve the problem. It needs a few iterations (about 4 in that case)."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:721
+# 135aa743f0604dfd9b7e41142979c356
+msgid "Model solve with two steps"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:723
+# fc7f6ac1a44a49219e1116c5f2069eaf
+msgid "Another option to solve the problem is to solve first the thermal and electric potential problems. Indeed, in our model, the thermal and  electric potential do not depend on the deformation. Once the  thermal and electric potential problem, we then solve the deformation problem. This can be done as follows:"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:768
+# df6602d68d3446419650af3904ca74c4
+msgid "Export/visualization of the solution"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:770
+# 3c16cb57399b4428b1f9b728f1b91a52
+msgid "The finite element problem is now solved. We can plot the solution as follows. Note that for the C++ and Python programs, it is necessary to use an external external graphical post-processor. Note also that arbitrary quantities can be post-processed using the generic interpolation (see `ga_interpolation_Lagrange_fem` below). It is also possible to make complex exports and slices (see :ref:`ud-export`)."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:883
+# a59450c2bab74e5b84d946401aadb6e3
+msgid "Plot of the solution."
+msgstr ""
+

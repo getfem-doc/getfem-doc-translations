@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 02:08+0900\n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,177 +17,177 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/gasm_low.rst:12
-# d3db18f23f39497d8ff304bc7f5320d9
+# 9f6c0e65ec24401cb149712d97051b02
 msgid "Compute arbitrary terms - low-level generic assembly procedures"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:14
-# ff03292f477543339fe20e6b293cc6f3
+# 80c232c49ef949c68639d3bf31a6fa73
 msgid "This section present the first version of generic assembly procedure which has been implemented in |gf|. It allows to easily make the assembly of arbitrary matrices in the linear case. In the nonlinear case, some special \"non_linear_term\" object have to be implemented, which could be a bit tricky and obliges to use very low-level internal tools of |gf|. The high-level generic assembly has been developped to circumvent these difficulties (see :ref:`ud-gasm-high`)."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:16
-# d67880ed7e0a4ac3af4e92e58684a4b5
+# 4c3e5b6bbf5745cab791c3be79f73ff1
 msgid "As it can be seen in the file :file:`getfem/getfem_assembling.h`, all the previous assembly procedures use a |gf_gasm| object and provide it an adequate description of what must be done. For example, the assembly of a volumic source term for a scalar FEM is done with the following excerpt of code::"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:31
-# 69aa7902bcf74887ba5d26edacba23b6
+# 51e4eeba033648e7898c6415579f4f91
 msgid "The first instructions declare the object, and set the data that it will use: a |mim| object which holds the integration methods, two |mf| objects, the input data ``F``, and the destination vector ``B``."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:35
-# 2b5f582b158744ba9c15e7dbc40f3d8c
+# 3e3accb6e0784ab0b22cb9f820e2cb4f
 msgid "The input data is the vector :math:`F`, defined on ``mfdata``. One wants to evaluate :math:`\\sum_{j} f_j (\\int_\\Omega \\phi^i \\psi^j)`. The instruction must be seen as something that will be executed for each convex ``cv`` of the mesh. The terms ``#1`` and ``#2`` refer to the first |mf| and the second one (i.e. ``mf`` and ``mfdata``).  The instruction ``Z=data(#2);`` means that for each convex, the \"tensor\" ``Z`` will receive the values of the first data argument provided with ``push_data``, at indexes corresponding to the degrees of freedom attached to the convex of the second (``#2``) |mf| (here, ``Z = F[mfdata.ind_dof_of_element(cv)]``."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:45
-# a46e1b019b5c4f19a7be8c8ad279e67c
+# 88f5fff7080a43268aa8b3161aa4f7dd
 msgid "The part ``V(#1)+=...`` means that the result of the next expression will be accumulated into the output vector (provided with ``push_vec``). Here again, ``#1`` means that we will write the result at indexes corresponding to the degrees of freedom of the current convex with respect to the first (``#1``) |mf|."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:50
-# 36f6b6a5d08543ea94a66b2d2240df00
+# 0e0efae68a214e3092b2c19ed09bc4ff
 msgid "The right hand side ``comp(Base(#1).Base(#2))(:,j).Z(j)`` contains two operations. The first one is a computation of a tensor on the convex: ``comp(Base(#1).Base(#2))`` is evaluated as a 2-dimensions tensor, :math:`\\int\\phi^i \\psi^j`, for all degrees of freedom :math:`i` of ``mf`` and :math:`j` of ``mfdata`` attached to the current convex. The next part is a reduction operation, ``C(:,j).Z(j)``: each named index (here :math:`j`) is summed, i.e. the result is :math:`\\sum_j c_{i,j} z_j`."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:58
-# 2002163d465642ff933311ce3ce9540b
+# a6eea6e89db544278edad1344fa4b2ec
 msgid "The integration method used inside ``comp(Base(#1).Base(#2))`` is taken from ``mim``. If you need to use integration methods from another |mim| object, you can specify it as the first argument of ``comp``, for example ``comp(\\%2, Base(#1).Grad(#2))`` will use the second |mim| object (New in getfem++-2.0)."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:63
-# 952a5658d7ab4a738fce4ae6ee8cb331
+# 80a7d0794e184ebd918eee70b20a8df9
 msgid "An other example is the assembly of the stiffness matrix for a vector Laplacian::"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:75
-# b3a83a46af2a4a5fa3de742e2cf7e326
+# 0398ee8c21fa4d8f953f7deb702d1347
 msgid "Now the output is written in a sparse matrix, inserted with ``assem.push_mat(SM)``. The ``$1`` in ``M$1(#1,#1)`` just indicates that we refer to the first matrix \"pushed\" (it is optional, but if the assembly builds two matrices, the second one must be referred this way). The ``sym`` function ensure that the result is symmetric (if this is not done, some round-off errors may cancel the symmetricity, and the assembly will be a little bit slower). Next, the ``comp`` part evaluates a 7D tensor,"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:87
-# a1388d1bea454c12a162ca3af887b87d
+# 60ab6b33290e4302a750f0e18f916805
 msgid "where :math:`\\varphi^i_j` is a :math:`jth` component of the :math:`ith` base function of ``mf`` and :math:`\\psi^p` is a (scalar) base function of the second |mf|. Since we want to assemble"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:97
-# 5a420b58a00f48268ba267098ba81ae6
+# 6489fd843ec445658f155876ad795672
 msgid "the reduction is:"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:105
-# 31417c6c984c41f999a3a3bde4ebe53c
+# 045ef025d5d94fc7970eeb1f5e801f15
 msgid "In the ``comp`` function, ``vGrad`` was used instead of ``Grad`` since we said that we were assembling a *vector* Laplacian: that is why each ``vGrad`` part has three dimensions (dof number, component number, and derivative number). For a scalar Laplacian, we could have used ``comp(Grad(#1).Grad(#1).Base(#2))(:,k,:,k,p).a(p)``. But the vector form has the advantage to work in both vector and scalar case."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:112
-# 1da2a5f3155644d7b68d940389a716ed
+# a233e2b68a4340fc80bff4e91f2d8e26
 msgid "The last instruction, ``assem.assembly()``, does evaluate the expression on each convex. For an assembly over a boundary just call ``assem.assembly(rg)``, where ``rg`` is a |gf_mr| object.  ``rg`` might also be a number, in that case the mesh region taken into account is ``mim.linked_mesh().region(rg)``."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:117
-# bcac05aeb23f446794f41c789976b31f
+# 032c0571858145909dd07ec0e3d1b3ae
 msgid "The third example shows how to compute the :math:`L^2` norm of a scalar or vector field on a mesh boundary::"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:129
-# 01a7ad9f782948878310949f16f8944d
+# cf66844001b54fe185f35d041d110135
 msgid "This one is easy to read. When ``assembly`` returns, ``v[0]`` will contain"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:135
-# 6f0bbf9d34954f83af4e61d9c5a77bbe
+# b2f2c82344bf4ebeb1fd75934e7b68c2
 msgid "The fourth and last example shows an (sub-optimal) assembly of the linear elasticity problem with a complete Hooke tensor::"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:143
-# 3c4263c50810408798e056254b9e28aa
+# 99ee0dfdb7c846109b42a04ad526e954
 msgid "The original equations are:"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:151
-# 7643a16929aa4cb4ad6fe88113a7bd56
+# edc038ca05914b4db2f17fc651691ef2
 msgid "where :math:`h` is the Hooke tensor, and :math:`:` means the scalar product between matrices. Since we assume it is not constant, :math:`h` is given on the second |mf|: :math:`h_{ijkl}(x)=\\sum_p h_{ijkl}^p \\psi^p`. Hence the first line declares that the first data \"pushed\" is indeed a five-dimensions tensor, the first fourth ones being all equal to the target dimension of the first |mf|, and the last one being equal to the number of degrees of freedom of the second |mf|. The ``comp`` part still computes the same 7D tensor than for the vector Laplacian case. From this tensor, one evaluates :math:`\\varepsilon(\\varphi^i)_{jk}\\varepsilon(\\phi^l)_{mn}\\psi^p` via permutations, and finally the expression is reduced against the hook tensor."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:164
-# 9e7ccf0c966e47e6acfbbc6c90ba9f56
+# b85c66f850914dedab27a2461ed42cec
 msgid "available operations inside the ``comp`` command"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:166
-# c6f303694f0e4737b843745f02f72837
+# 54e5acbe661f429ea70996d6f22c7872
 msgid "``Base(#i)``: evaluate the value of the base functions of the *ith* |mf|"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:168
-# d703f715812649598a1e44be35106ee2
+# a0ba24dcd66c4d45b60028ed4ef089b6
 msgid "``Grad(#i)``: evaluate the value of the gradient of the base functions of the *ith* |mf|"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:171
-# f56101f7bb2c47baaa1cb9f2b990d390
+# 240f5228ad394190970381aba46e1184
 msgid "``Hess(#i)``: evaluate the value of the Hessian of the base functions of the *ith* |mf|"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:174
-# 7885420e45274ef395eabaccd08baa98
+# 304098ee22bb42ce9c7958e50acda22d
 msgid "``Normal()``: evaluate the unit normal (should not be used for volumic integrations !)"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:177
-# 713aba1e54e240ef86b3780c35bd0920
+# 27461bd25eb04e429acc6beb299fe46d
 msgid "``NonLin$x(#mf1,... #mfn)``: evaluate the *xth* non-linear term (inserted with ``push_nonlinear_term(pnonlinear_elem_term)``) using the listed |mf| objects."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:181
-# f7d3b0df413740f6bc9f152afbc1c376
+# 3f8d5791cbf84f309d86179779a3d89c
 msgid "``GradGT()``, ``GradGTInv()``: evaluate the gradient (and its inverse) of the geometric transformation of the current convex."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:186
-# f899476d1c0d4d86bebabf58ac018b4e
+# e8cc8719ee8f47ef9fa65bfa528e9c59
 msgid "you may reference any data object inside the ``comp`` command, and perform reductions inside the ``comp()``. This feature is mostly interesting for speeding up assembly of nonlinear terms (see the file :file:`getfem/getfem_nonlinear_elasticity.h` for an example of use)."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:193
-# f89a0d13ce7848069a52256f94b59fa6
+# 89c16c0134504a67b89b804d0f0740d3
 msgid "others operations"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:195
-# 72661ebe908843fa9ecd1456c9676d16
+# 34a511ff2bb04a3d99933ca8465c9b22
 msgid "Slices may be mixed with reduction operations ``t(:,4,i,i)`` takes a slice at index 4 of the second dimension, and reduces the diagonal of dimension 3 and 4. *Please note that index numbers for slices start at 1 and not 0 !!*"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:199
-# ed99fae0a2fa441dbcffe6e83ee8b533
+# c743d2936f0f4ff4a2fd374c3f879022
 msgid "``mdim(#2)`` is evaluated as the mesh dimension associated to the second |mf|, while ``qdim(#2)`` is the target dimension of the |mf|."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:202
-# 4a0dd0c68f1e4d098988ba686928715e
+# 7c217d3752924077a38f5787d7da2838
 msgid "The diagonal of a tensor can be obtained with ``t{:,:,3,3}`` (which is strictly equivalent to ``t{1,2,3,3}``: the colon is just here to improve the readability). This is the same operator than for permutation operations. Note that ``t{:,:,1,1}`` or ``t{:,:,4,4}`` are not valid operations."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:207
-# 7cd154fd91c646d89a48768edbc43bd7
+# 745e9d7c2b3541dfbd5de3669160e14c
 msgid "The ``print`` command can be used to see the tensor: ``\"print comp(Base(#1));\"`` will print the integrals of the base functions for each convex."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:210
-# bb3e8c66973744a3a9eebd6f6154b0ac
+# 6d11c2e22457403a92d7729f5ae71c44
 msgid "If there is more than one data array, output array or output sparse matrix, one can use ``data$2``, ``data$3, ``V$2``, ``M$2``,..."
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:7
-# f130a7bc73b840a0b1f809343dc5d08f
+# 320602979e664a0287f4a458b9c6c785
 msgid "asm"
 msgstr ""
 
 #: ../source/userdoc/gasm_low.rst:7
-# f130a7bc73b840a0b1f809343dc5d08f
+# 320602979e664a0287f4a458b9c6c785
 msgid "generic assembly"
 msgstr ""
 

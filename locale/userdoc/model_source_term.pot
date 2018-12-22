@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 02:08+0900\n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,57 +17,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/model_source_term.rst:13
-# 10011cfed95d46baa17548715d416194
+# bb87679922634795b3aac2e76826a346
 msgid "Source term bricks (and Neumann condition)"
 msgstr ""
 
 #: ../source/userdoc/model_source_term.rst:15
-# a8d90f1ba67b448b9176a63d3a359ce2
+# a2a77cf4ccef4f1fb81f53b5b0984f39
 msgid "This brick adds a source term, i.e. a term which occurs only in the right hand side of the linear (tangent) system build by the model. If :math:`f` denotes the value of the source term, the weak form of such a term is"
 msgstr ""
 
 #: ../source/userdoc/model_source_term.rst:23
-# 1a9e4afc91fb488c91ecc431472387a8
+# 1d97715c4cb74767ada2e899c94c0900
 msgid "where :math:`v` is the test function. The value :math:`f` can be constant or described on a finite element method."
 msgstr ""
 
 #: ../source/userdoc/model_source_term.rst:26
-# 9401926980074cc493571f6ad01addc1
+# 385b4245f7224811a9fe015c9eea9362
 msgid "It can also represent a Neumann condition if it is applied on a boundary of the domain."
 msgstr ""
 
 #: ../source/userdoc/model_source_term.rst:29
-# ab544ecd854b468697ee4a60090f1887
+# 4f55bdd53b6e4b9c8199e080e34b343d
 msgid "The function to add a source term to a model is::"
 msgstr ""
 
 #: ../source/userdoc/model_source_term.rst:35
-# eaa9f28cc1bd439a8884126ffd073f6a
+# 9245a975036e4fa58dc341ecf255ead9
 msgid "where ``md``is the model object, ``mim`` is the integration method, ``varname`` is the variable of the model for which the source term is added, ``dataexpr`` has to be  a regular expression of the weak form language (except for the complex version where it has to be a declared data of the model). It has to be scalar or vector valued depending on the fact that the variable is scalar or vector valued itself. ``region`` is a mesh region on which the term is added. If the region corresponds to a boundary, the source term will represent a Neumann condition. ``directdataname`` is an optional additional data which will directly be added to the right hand side without assembly."
 msgstr ""
 
 #: ../source/userdoc/model_source_term.rst:43
-# 5e072a7c863446268ad3ff800c1a464f
+# 8e0a69d2bfe9468c9225560dc6ffed84
 msgid "The brick has a working complex version."
 msgstr ""
 
 #: ../source/userdoc/model_source_term.rst:45
-# 4a0967806839413e8966d2416893d25e
+# e9268ae602e1424db474c3d02b8e1295
 msgid "A slightly different brick, especially dedicated to deal with a Neumann condition, is added by the following function::"
 msgstr ""
 
 #: ../source/userdoc/model_source_term.rst:51
-# 7fe12fe1b13041ee9f4690ef7d5e470a
+# 90d0f7d33ba942aa92be22afa35361e4
 msgid "The difference compared to the basic source term brick is that the data should be a vector field (a matrix field if the variable ``varname`` is itself vector valued) and a scalar product with the outward unit normal is performed on it."
 msgstr ""
 
 #: ../source/userdoc/model_source_term.rst:7
-# 64d445c7ddc44de18abffa80a90dc6ee
+# 49fe4dd5cda84ba6a9bde460f0a00e72
 msgid "models"
 msgstr ""
 
 #: ../source/userdoc/model_source_term.rst:7
-# 64d445c7ddc44de18abffa80a90dc6ee
+# 49fe4dd5cda84ba6a9bde460f0a00e72
 msgid "model bricks"
 msgstr ""
 

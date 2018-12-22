@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:8
+# bfcb613995c74b5eb0a142586f748c56
+msgid "gf_mesh_fem"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:10
+# 5bc54c59129648b3b0f26c9cf9569e9f
+msgid "**Synopsis**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:24
+# c8fb9061da904017bdcfff4ab35c8b53
+msgid "**Description :**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:27
+# 25ea5e9d236d4a95a8afedf5686ea3de
+msgid "General constructor for mesh_fem objects."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:29
+# 020edf9c881f45d483442335724a4a95
+msgid "This object represents a finite element method defined on a whole mesh."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:32
+# 18c5b52818534ca280aff6e948f190d9
+msgid "**Command list :**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:36
+# 115c50d466ce4e2c9bd42e315c2cbae6
+msgid "``MF = gf_mesh_fem(mesh m[, int Qdim1=1[, int Qdim2=1, ...]])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:38
+# 1d8ebfcc82b444848e61de402e609195
+msgid "Build a new mesh_fem object."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:40
+# a7508f36e3784152a40ec2a8102bfba1
+msgid "The `Qdim` parameters specifies the dimension of the field represented by the finite element method. Qdim1 = 1 for a scalar field, Qdim1 = n for a vector field off size n, Qdim1=m, Qdim2=n for a matrix field of size mxn ... Returns the handle of the created object."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:47
+# 103f2f50954e4c79922f73caed0ba75d
+msgid "``MF = gf_mesh_fem('load', string fname[, mesh m])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:49
+# 39ac8ff4533e462d9a2da534b2a89e77
+msgid "Load a mesh_fem from a file."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:51
+# 9c8ead11bc0143bb9246495857f21f9f
+msgid "If the mesh `m` is not supplied (this kind of file does not store the mesh), then it is read from the file `fname` and its descriptor is returned as the second output argument."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:56
+# 22bf4067d9d2476d91e09ae1fad5929f
+msgid "``MF = gf_mesh_fem('from string', string s[, mesh m])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:58
+# 5d8ee073eba34945b5159e2d628f7cfd
+msgid "Create a mesh_fem object from its string description."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:60
+# 6e52651ce44242949bfe54d0b082d826
+msgid "See also ``gf_mesh_fem_get(mesh_fem MF, 'char')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:63
+# 8f6c71672681409da9ba9400599c3e3d
+msgid "``MF = gf_mesh_fem('clone', mesh_fem mf)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:65
+# bac98d74a5414778a5ebdc205359e375
+msgid "Create a copy of a mesh_fem."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:68
+# dff4bd09b4714f7fb8e18b8ddbb8ef28
+msgid "``MF = gf_mesh_fem('sum', mesh_fem mf1, mesh_fem mf2[, mesh_fem mf3[, ...]])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:70
+# 12fbac9077564469ac6eca5cc4384598
+msgid "Create a mesh_fem that spans two (or more) mesh_fem's."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:72
+# ea9d134c99f24706a60f24f459185f2c
+msgid "All mesh_fem must share the same mesh."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:74
+# 986eca739443430f850d354f88b007e0
+msgid "After that, you should not modify the FEM of `mf1`, `mf2` etc."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:77
+# 469ad673fc264d3184e356757e64f952
+msgid "``MF = gf_mesh_fem('product', mesh_fem mf1, mesh_fem mf2)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:79
+# 5dddc160fc4542899910157eb125cd80
+msgid "Create a mesh_fem that spans all the product of a selection of shape functions of `mf1` by all shape functions of `mf2`. Designed for Xfem enrichment."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:83
+# 356cbae333f640d1b0ca58b5e8b06b0c
+msgid "`mf1` and `mf2` must share the same mesh."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:85
+# 246af11a3dd847a8953586d43f005476
+msgid "After that, you should not modify the FEM of `mf1`, `mf2`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:88
+# 5b74ebc80558481fbd3aeecc7cf8bb90
+msgid "``MF = gf_mesh_fem('levelset', mesh_levelset mls, mesh_fem mf)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:90
+# a4035d2519f64eada457f82ce6179617
+msgid "Create a mesh_fem that is conformal to implicit surfaces defined in mesh_levelset."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:94
+# cfc1f17ebb364949914edb44a1c6efe1
+msgid "``MF = gf_mesh_fem('global function', mesh m, levelset ls, {global_function GF1,...}[, int Qdim_m])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:96
+# 338f8e620fa94719a04825b1609000c0
+msgid "Create a mesh_fem whose base functions are global function given by the user in the system of coordinate defined by the iso-values of the two level-set function of `ls`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:101
+# 37e25f0929f54d00915ec2c23fd1ed93
+msgid "``MF = gf_mesh_fem('partial', mesh_fem mf, ivec DOFs[, ivec RCVs])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:103
+# 9300dc410c6b487ea067182b39a2a8f9
+msgid "Build a restricted mesh_fem by keeping only a subset of the degrees of freedom of `mf`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_fem.rst:106
+# 68267fc37e3a40b3bbb31b908bb2c881
+msgid "If `RCVs` is given, no FEM will be put on the convexes listed in `RCVs`."
+msgstr ""
+

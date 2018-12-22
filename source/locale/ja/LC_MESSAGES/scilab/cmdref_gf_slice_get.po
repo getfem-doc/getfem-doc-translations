@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+# 12066780cbda4be6acf73e352adcd37a
+#: ../source/scilab/cmdref_gf_slice_get.rst:8
+msgid "gf_slice_get"
+msgstr ""
+
+# be32d9ec3d4641f89fb3909264c27e3c
+#: ../source/scilab/cmdref_gf_slice_get.rst:10
+msgid "**Synopsis**"
+msgstr ""
+
+# 94270a3012f44f1ab2e34ab3283a2128
+#: ../source/scilab/cmdref_gf_slice_get.rst:33
+msgid "**Description :**"
+msgstr ""
+
+# 9cb0850b68494074a2604f9b3885d645
+#: ../source/scilab/cmdref_gf_slice_get.rst:36
+msgid "General function for querying information about slice objects."
+msgstr ""
+
+# 2146f924f4ae4ba9a205c9c348c1efdd
+#: ../source/scilab/cmdref_gf_slice_get.rst:39
+msgid "**Command list :**"
+msgstr ""
+
+# ff14de546c414dfc93eac81802095e13
+#: ../source/scilab/cmdref_gf_slice_get.rst:43
+msgid "``d = gf_slice_get(slice S, 'dim')``"
+msgstr ""
+
+# 4a12893fc0634e1ab9d9d4112b451cf6
+#: ../source/scilab/cmdref_gf_slice_get.rst:45
+msgid "Return the dimension of the slice (2 for a 2D mesh, etc..)."
+msgstr ""
+
+# a363190b10ca4f148755f510579db4cb
+#: ../source/scilab/cmdref_gf_slice_get.rst:48
+msgid "``a = gf_slice_get(slice S, 'area')``"
+msgstr ""
+
+# 8739f9bbb6ce4e86b9f002de3d0e034e
+#: ../source/scilab/cmdref_gf_slice_get.rst:50
+msgid "Return the area of the slice."
+msgstr ""
+
+# 7ccbcfd5ef3a46ea8bf34186c5b05e19
+#: ../source/scilab/cmdref_gf_slice_get.rst:53
+msgid "``CVids = gf_slice_get(slice S, 'cvs')``"
+msgstr ""
+
+# 4072a2409ba94778953da4bb1f19a196
+#: ../source/scilab/cmdref_gf_slice_get.rst:55
+msgid "Return the list of convexes of the original mesh contained in the slice."
+msgstr ""
+
+# 47529bb08450423099293df984536e60
+#: ../source/scilab/cmdref_gf_slice_get.rst:58
+msgid "``n = gf_slice_get(slice S, 'nbpts')``"
+msgstr ""
+
+# dfb74aba51a1412a8312d73892ede3b9
+#: ../source/scilab/cmdref_gf_slice_get.rst:60
+msgid "Return the number of points in the slice."
+msgstr ""
+
+# 0d691816088c459699692c57450ad78f
+#: ../source/scilab/cmdref_gf_slice_get.rst:63
+msgid "``ns = gf_slice_get(slice S, 'nbsplxs'[, int dim])``"
+msgstr ""
+
+# 76c9a4c1b57d4cffa31179f7e5cc4372
+#: ../source/scilab/cmdref_gf_slice_get.rst:65
+msgid "Return the number of simplexes in the slice."
+msgstr ""
+
+# 99eab826a6e3410da5e723e76fcadf58
+#: ../source/scilab/cmdref_gf_slice_get.rst:67
+msgid ""
+"Since the slice may contain points (simplexes of dim 0), segments "
+"(simplexes of dimension 1), triangles etc., the result is a vector of "
+"size gf_slice_get(slice S, 'dim')+1, except if the optional argument "
+"<literal>dim</literal> is used."
+msgstr ""
+
+# 11813278d4d34be8bfc87a76223a8f00
+#: ../source/scilab/cmdref_gf_slice_get.rst:73
+msgid "``P = gf_slice_get(slice S, 'pts')``"
+msgstr ""
+
+# 7ade49982cab4030b109f5f9f45981f1
+#: ../source/scilab/cmdref_gf_slice_get.rst:75
+msgid "Return the list of point coordinates."
+msgstr ""
+
+# b873be2859864be4be62efee2e7e910e
+#: ../source/scilab/cmdref_gf_slice_get.rst:78
+msgid "``{S, CV2S} = gf_slice_get(slice S, 'splxs',int dim)``"
+msgstr ""
+
+# ff2d390d2f7a4338b1b4957332dda69d
+#: ../source/scilab/cmdref_gf_slice_get.rst:80
+msgid "Return the list of simplexes of dimension <literal>dim</literal>."
+msgstr ""
+
+# 6386c6108b4f44a18efefbd81a47e787
+#: ../source/scilab/cmdref_gf_slice_get.rst:82
+msgid ""
+"On output, S has 'dim+1' rows, each column contains the point numbers of "
+"a simplex.  The vector <literal>CV2S</literal> can be used to find the "
+"list of simplexes for any convex stored in the slice. For example "
+"'S(:,CV2S(4):CV2S(5)-1)' gives the list of simplexes for the fourth "
+"convex."
+msgstr ""
+
+# aad4190ea5d44abfb61e3469deb27db3
+#: ../source/scilab/cmdref_gf_slice_get.rst:89
+msgid "``{P, E1, E2} = gf_slice_get(slice S, 'edges')``"
+msgstr ""
+
+# e53bf3aa1b8741038a36ca7f1cb6b83e
+#: ../source/scilab/cmdref_gf_slice_get.rst:91
+msgid "Return the edges of the linked mesh contained in the slice."
+msgstr ""
+
+# 2e6ee876dfc74d7e995c64c3fa93516f
+#: ../source/scilab/cmdref_gf_slice_get.rst:93
+msgid ""
+"<literal>P</literal> contains the list of all edge vertices, "
+"<literal>E1</literal> contains the indices of each mesh edge in "
+"<literal>P</literal>, and <literal>E2</literal> contains the indices of "
+"each \"edges\" which is on the border of the slice. This function is "
+"useless except for post-processing purposes."
+msgstr ""
+
+# 31a943e9c29143799d286294a5ba07e9
+#: ../source/scilab/cmdref_gf_slice_get.rst:99
+msgid "``Usl = gf_slice_get(slice S, 'interpolate_convex_data', mat Ucv)``"
+msgstr ""
+
+# 9f43ee5b0b6744deb784439b94bd889e
+#: ../source/scilab/cmdref_gf_slice_get.rst:101
+msgid "Interpolate data given on each convex of the mesh to the slice nodes."
+msgstr ""
+
+# e3aef5f8dc97437fa8535a92b7a92054
+#: ../source/scilab/cmdref_gf_slice_get.rst:103
+msgid ""
+"The input array <literal>Ucv</literal> may have any number of dimensions,"
+" but its last dimension should be equal to gf_mesh_get(mesh M, 'max "
+"cvid')."
+msgstr ""
+
+# 7735f82aa1b84371a88841553cc13cc1
+#: ../source/scilab/cmdref_gf_slice_get.rst:106
+msgid ""
+"Example of use: gf_slice_get(slice S, 'interpolate_convex_data', "
+"gf_mesh_get(mesh M, 'quality'))."
+msgstr ""
+
+# b4d322fe5c1544a787b85a75f0aa82b3
+#: ../source/scilab/cmdref_gf_slice_get.rst:109
+msgid "``m = gf_slice_get(slice S, 'linked mesh')``"
+msgstr ""
+
+# 8760e0eecd2f4efea8ecff0b840c5bb8
+#: ../source/scilab/cmdref_gf_slice_get.rst:111
+msgid "Return the mesh on which the slice was taken."
+msgstr ""
+
+# ea3ed3301f6d40c4a1ec86ad917fe656
+#: ../source/scilab/cmdref_gf_slice_get.rst:114
+msgid "``m = gf_slice_get(slice S, 'mesh')``"
+msgstr ""
+
+# e2600d7aeb6f47bdbf68cbb37202985b
+#: ../source/scilab/cmdref_gf_slice_get.rst:116
+msgid "Return the mesh on which the slice was taken (identical to 'linked mesh')"
+msgstr ""
+
+# 8df36bbebaed481d9ba440432f7e8c40
+#: ../source/scilab/cmdref_gf_slice_get.rst:120
+msgid "``z = gf_slice_get(slice S, 'memsize')``"
+msgstr ""
+
+# b1fea83ac07540dd9c47b53211d610b7
+#: ../source/scilab/cmdref_gf_slice_get.rst:122
+msgid "Return the amount of memory (in bytes) used by the slice object."
+msgstr ""
+
+# 4584b1af117b40b3bdce191e522e4f9a
+#: ../source/scilab/cmdref_gf_slice_get.rst:125
+msgid "``gf_slice_get(slice S, 'export to vtk', string filename, ...)``"
+msgstr ""
+
+# 4e74e202a178421ba4906f3eda9800be
+#: ../source/scilab/cmdref_gf_slice_get.rst:127
+msgid "Export a slice to VTK."
+msgstr ""
+
+# fb53147763004e8584f876e8ba32947c
+# 7d9ad2b5a8f84cd48dc61d1cca900a2f
+#: ../source/scilab/cmdref_gf_slice_get.rst:129
+#: ../source/scilab/cmdref_gf_slice_get.rst:160
+msgid ""
+"Following the <literal>filename</literal>, you may use any of the "
+"following options:"
+msgstr ""
+
+# d3def955a9174889b65250f160de455b
+# 58b785a5db714569a4ed5ea0712804eb
+#: ../source/scilab/cmdref_gf_slice_get.rst:131
+#: ../source/scilab/cmdref_gf_slice_get.rst:163
+msgid ""
+"if 'ascii' is not used, the file will contain binary data (non portable, "
+"but fast)."
+msgstr ""
+
+# f26fc4e89fbf420dbda7330aefb4a452
+# 8a7254fbff6d453ab335552622f973d2
+#: ../source/scilab/cmdref_gf_slice_get.rst:133
+#: ../source/scilab/cmdref_gf_slice_get.rst:165
+msgid ""
+"if 'edges' is used, the edges of the original mesh will be written "
+"instead of the slice content."
+msgstr ""
+
+# 4f57d60c0d7a4f0c98893f2f07377267
+# 45d9d524bd474464b36391e18dbcb81d
+# 6b1a923d1f5e4953bec6fdc8ca2b2b10
+#: ../source/scilab/cmdref_gf_slice_get.rst:136
+#: ../source/scilab/cmdref_gf_slice_get.rst:170
+#: ../source/scilab/cmdref_gf_slice_get.rst:182
+msgid ""
+"More than one dataset may be written, just list them. Each dataset "
+"consists of either:"
+msgstr ""
+
+# 6944fa99d9d94d1a9b6f6da246934d44
+# a866af52359a4fefbb753c5e2b348ce6
+#: ../source/scilab/cmdref_gf_slice_get.rst:139
+#: ../source/scilab/cmdref_gf_slice_get.rst:173
+msgid ""
+"a field interpolated on the slice (scalar, vector or tensor), followed by"
+" an optional name."
+msgstr ""
+
+# 1948e8a60f6a413c832f9ba7e976d5ab
+# d4713700912c4199b76e19aeecbfc6dd
+#: ../source/scilab/cmdref_gf_slice_get.rst:141
+#: ../source/scilab/cmdref_gf_slice_get.rst:175
+msgid "a mesh_fem and a field, followed by an optional name."
+msgstr ""
+
+# 8136ba98c9224411bf6a0f56c380c42c
+#: ../source/scilab/cmdref_gf_slice_get.rst:143
+msgid "Examples:"
+msgstr ""
+
+# 2fccf4606a4145529e4b20c4033cddf0
+#: ../source/scilab/cmdref_gf_slice_get.rst:145
+msgid ""
+"gf_slice_get(slice S, 'export to vtk', 'test.vtk', Usl, 'first_dataset', "
+"mf, U2, 'second_dataset')"
+msgstr ""
+
+# fbd8645934d74da0a9929107ed75505b
+#: ../source/scilab/cmdref_gf_slice_get.rst:147
+msgid "gf_slice_get(slice S, 'export to vtk', 'test.vtk', 'ascii', mf,U2)"
+msgstr ""
+
+# 634d61b63e02478cb4953ab7d6c369e6
+#: ../source/scilab/cmdref_gf_slice_get.rst:148
+msgid ""
+"gf_slice_get(slice S, 'export to vtk', 'test.vtk', 'edges', 'ascii', "
+"Uslice)"
+msgstr ""
+
+# 1ef5b34726f440ffaeaed7f8d1c8e835
+#: ../source/scilab/cmdref_gf_slice_get.rst:151
+msgid "``gf_slice_get(slice S, 'export to pov', string filename)``"
+msgstr ""
+
+# efab82ab9d0d401295d8c2b5ff388019
+#: ../source/scilab/cmdref_gf_slice_get.rst:153
+msgid "Export a the triangles of the slice to POV-RAY."
+msgstr ""
+
+# 34de651b4a6543328e1938da96f3016f
+#: ../source/scilab/cmdref_gf_slice_get.rst:156
+msgid "``gf_slice_get(slice S, 'export to dx', string filename, ...)``"
+msgstr ""
+
+# 3612d40c0d1343e0a7f050b83c253b61
+#: ../source/scilab/cmdref_gf_slice_get.rst:158
+msgid "Export a slice to OpenDX."
+msgstr ""
+
+# 4ee82dc9434c4c788d0ad4737e491b56
+#: ../source/scilab/cmdref_gf_slice_get.rst:167
+msgid ""
+"if 'append' is used, the opendx file will not be overwritten, and the new"
+" data will be added at the end of the file."
+msgstr ""
+
+# f24679e39d214ea883ed7044db181085
+#: ../source/scilab/cmdref_gf_slice_get.rst:178
+msgid ""
+"``gf_slice_get(slice S, 'export to pos', string filename[, string "
+"name][[,mesh_fem mf1], mat U1, string nameU1[[,mesh_fem mf1], mat U2, "
+"string nameU2,...])``"
+msgstr ""
+
+# 726b3e7826084d23bc187fc393537238
+#: ../source/scilab/cmdref_gf_slice_get.rst:180
+msgid "Export a slice to Gmsh."
+msgstr ""
+
+# adca4535f2e24631a16a8d37b4515a14
+#: ../source/scilab/cmdref_gf_slice_get.rst:185
+msgid "a field interpolated on the slice (scalar, vector or tensor)."
+msgstr ""
+
+# c98152f01627435cb87a6a4f36c13d2e
+#: ../source/scilab/cmdref_gf_slice_get.rst:186
+msgid "a mesh_fem and a field."
+msgstr ""
+
+# 974315bea69b45a3abb7c63cec0055a2
+#: ../source/scilab/cmdref_gf_slice_get.rst:189
+msgid "``s = gf_slice_get(slice S, 'char')``"
+msgstr ""
+
+# 2ea002bc89cd426a8f1343e8e86c8031
+#: ../source/scilab/cmdref_gf_slice_get.rst:191
+msgid "Output a (unique) string representation of the slice."
+msgstr ""
+
+# ae84df9a249b41a7a04d95e7dc33f2a8
+#: ../source/scilab/cmdref_gf_slice_get.rst:193
+msgid ""
+"This can be used to perform comparisons between two different slice "
+"objects. This function is to be completed."
+msgstr ""
+
+# a501ccf16bb9464299a293dad1297c7f
+#: ../source/scilab/cmdref_gf_slice_get.rst:199
+msgid "``gf_slice_get(slice S, 'display')``"
+msgstr ""
+
+# e68f572e560c4437994a80f947a80b1f
+#: ../source/scilab/cmdref_gf_slice_get.rst:201
+msgid "displays a short summary for a slice object."
+msgstr ""
+

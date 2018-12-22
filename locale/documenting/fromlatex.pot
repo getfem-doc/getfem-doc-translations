@@ -1,0 +1,255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/documenting/fromlatex.rst:4
+# 455375a855d34efa9ebbfe4c68f0bf9a
+msgid "Differences to the LaTeX markup"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:6
+# 7f4f8ab604bc46ca889a5c9714d3060c
+msgid "Though the markup language is different, most of the concepts and markup types of the old LaTeX docs have been kept -- environments as reST directives, inline commands as reST roles and so forth."
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:10
+# 37f7bbe889594500af66163699333089
+msgid "However, there are some differences in the way these work, partly due to the differences in the markup languages, partly due to improvements in Sphinx.  This section lists these differences, in order to give those familiar with the old format a quick overview of what they might run into."
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:16
+# 7f0755a7b17441dbb82cd4f91b44498f
+msgid "Inline markup"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:18
+# 85b0a4a604f747b0bc0027b87813818a
+msgid "These changes have been made to inline markup:"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:20
+# 5e4fbf2f600640be9a707d268afca33e
+msgid "**Cross-reference roles**"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:22
+# 0d28d6b54e10484fb534882f120ef214
+msgid "Most of the following semantic roles existed previously as inline commands, but didn't do anything except formatting the content as code.  Now, they cross-reference to known targets (some names have also been shortened):"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:39
+# 96e8834b72d44e3f967bc5ee4e77b73f
+msgid "Also different is the handling of *func* and *meth*: while previously parentheses were added to the callable name (like ``\\func{str()}``), they are now appended by the build system -- appending them in the source will result in double parentheses.  This also means that ``:func:`str(object)``` will not work as expected -- use ````str(object)```` instead!"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:45
+# 6400da32ec3e435398973b55ac6ff775
+msgid "**Inline commands implemented as directives**"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:47
+# 17a1e356d2ae458298dce50022e847bc
+msgid "These were inline commands in LaTeX, but are now directives in reST:"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:53
+#: ../source/documenting/fromlatex.rst:64
+# fd129d4c00e5471b94b76085bf7d442a
+# 820a151486574d35bad4b903b6650f31
+msgid "These are used like so::"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:58
+# a36a40b7ea524597940bcb51e310c2e9
+msgid "Also, no period is appended to the text for *versionadded* and *versionchanged*."
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:70
+# 9b0101922d624925aa60de52ccaea374
+msgid "**Otherwise changed commands**"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:72
+# f168c4718f36450b9d19bf1622e90c15
+msgid "The *samp* command previously formatted code and added quotation marks around it.  The *samp* role, however, features a new highlighting system just like *file* does:"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:76
+# e9bf3f004444498498c4ce2abb2fd25d
+msgid "``:samp:`open({filename}, {mode})``` results in :samp:`open({filename}, {mode})`"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:78
+# 22d0a705a65a4ac283eb05e2a26813d5
+msgid "**Dropped commands**"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:80
+# 22208c84072c4491b26509a12df3c568
+msgid "These were commands in LaTeX, but are not available as roles:"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:97
+# 246d4fb8875d4aa2936093791c3e2cb2
+msgid "**Backslash escaping**"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:99
+# 1785bf1397184f72b7117e820be3d1d4
+msgid "In reST, a backslash must be escaped in normal text, and in the content of roles.  However, in code literals and literal blocks, it must not be escaped. Example: ``:file:`C:\\\\Temp\\\\my.tmp``` vs. ````open(\"C:\\Temp\\my.tmp\")````."
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:105
+# d5cb612ae1734b6b81f42e3ba5f48181
+msgid "Information units"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:107
+# 050d79361d8c4342a3847b1f82e4b9f6
+msgid "Information units (*...desc* environments) have been made reST directives. These changes to information units should be noted:"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:110
+# aba14aa8f5474c7da7fae9e9691b094b
+msgid "**New names**"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:112
+# 19030388742a424bb3b1077405d02f32
+msgid "\"desc\" has been removed from every name.  Additionally, these directives have new names:"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:121
+# a36e8d432a8b4d1e9912b9a7dff8947c
+msgid "The *classdesc\\** and *excclassdesc* environments have been dropped, the *class* and *exception* directives support classes documented with and without constructor arguments."
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:125
+# 85234cf3540e48ca9994fa8b95d40002
+msgid "**Multiple objects**"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:127
+# 62e44961d6c24b3c9fc390cb843f9cf7
+msgid "The equivalent of the *...line* commands is::"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:134
+# a5618ce096ed48c784fdb42afead2e02
+msgid "IOW, just give one signatures per line, at the same indentation level."
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:136
+# 719217e181a740e0a3b2597155305e84
+msgid "**Arguments**"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:138
+# 7f54384d5ba643af8063eb382be5a0aa
+msgid "There is no *optional* command.  Just give function signatures like they should appear in the output::"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:145
+# 83c8d85ba7de48069f551076802ed445
+msgid "Note: markup in the signature is not supported."
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:147
+# d459c1eb7be74826b8387019719f8bd9
+msgid "**Indexing**"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:149
+# 66485f4e121a489288a421ff522116f7
+msgid "The *...descni* environments have been dropped.  To mark an information unit as unsuitable for index entry generation, use the *noindex* option like so::"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:157
+# 90e665fa0487497abdbf6e099ffd6911
+msgid "**New information units**"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:159
+# 56c9404dba794ddb937d8d8739bf646e
+msgid "There are new generic information units: One is called \"describe\" and can be used to document things that are not covered by the other units::"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:166
+# 607bcfea2838472a97865fcadd22d330
+msgid "The others are::"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:178
+# 48e4be012630434bbc818fed83cdcba1
+msgid "Structure"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:180
+# 901a61247d714ace91559fb8acb37296
+msgid "The LaTeX docs were split in several toplevel manuals.  Now, all files are part of the same documentation tree, as indicated by the *toctree* directives in the sources (though individual output formats may choose to split them up into parts again).  Every *toctree* directive embeds other files as subdocuments of the current file (this structure is not necessarily mirrored in the filesystem layout).  The toplevel file is :file:`contents.rst`."
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:187
+# 639bfb4b8e2a43339a14a8440d0bd603
+msgid "However, most of the old directory structure has been kept, with the directories renamed as follows:"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:190
+# 5adf40b870d04b2082ac1d21e738a54f
+msgid ":file:`api` -> :file:`c-api`"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:191
+# e949fc27ba8749deb6604531c0f9d827
+msgid ":file:`dist` -> :file:`distutils`, with the single TeX file split up"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:192
+# c9120fc8051e427a9a8e0726fcbeff77
+msgid ":file:`doc` -> :file:`documenting`"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:193
+# 73ff3147276645ecaaf6dd8d2b5cb219
+msgid ":file:`ext` -> :file:`extending`"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:194
+# e49417bff19b41d3bdfd329febb0780f
+msgid ":file:`inst` -> :file:`installing`"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:195
+# 5cbea4ef52a842a0bdba99c7fbbac698
+msgid ":file:`lib` -> :file:`library`"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:196
+# 8f0c64aa2aaa4a97a1fad3337ed112be
+msgid ":file:`mac` -> merged into :file:`library`, with :file:`mac/using.tex` moved to :file:`using/mac.rst`"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:198
+# e5eb4f01af0641698bfdd466c33f20d3
+msgid ":file:`ref` -> :file:`reference`"
+msgstr ""
+
+#: ../source/documenting/fromlatex.rst:199
+# f4bf5b4a4cb0421382bc2d2f466b0f3a
+msgid ":file:`tut` -> :file:`tutorial`, with the single TeX file split up"
+msgstr ""
+

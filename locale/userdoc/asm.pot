@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 02:08+0900\n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,207 +17,207 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/asm.rst:10
-# 317128780d724606905cce0cd1cb78df
+# f1349dbf21be4d138f29c36b231a56f8
 msgid "Some Standard assembly procedures (low-level generic assembly)"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:12
-# 70f1f3f29a88475ca11691f3abf22aa8
+# edd42bbaf2e24194882c5426a23396cc
 msgid "Procedures defined in the file :file:`getfem/getfem_assembling.h` allow the assembly of stiffness matrices, mass matrices and boundary conditions for a few amount of classical partial differential equation problems. All the procedures have vectors and matrices template parameters in order to be used with any matrix library."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:17
-# f845925db65a474d93dd7a6a4f9de6ad
+# 87b6941ef4024f3c9ba373de849c21d3
 msgid "CAUTION: The assembly procedures do not clean the matrix/vector at the begining of the assembly in order to keep the possibility to perform several assembly operations on the same matrix/vector. Consequently, one has to clean the matrix/vector before the first assembly operation."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:21
-# 7c7eda364b4e499ba906314a88312e0f
+# db31563d48c942658e99f0c184294289
 msgid "Laplacian (Poisson) problem"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:23
-# c890ed12060742d999fabd361aa03331
+# 3aaa774ccf3a4030b357a1f31ba22b93
 msgid "An assembling procedure is defined to solve the problem:"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:31
-# d75530687f8542eda5f8d92b9577bd4b
+# e24f2c8017514712850efd1514bd8977
 msgid "where :math:`\\Omega` is an open domain of arbitrary dimension, :math:`\\Gamma_{D}` and :math:`\\Gamma_{N}` are parts of the boundary of :math:`\\Omega`, :math:`u(x)` is the unknown, :math:`a(x)` is a given coefficient, :math:`f(x)` is a given source term, :math:`U(x)` the prescribed value of :math:`u(x)` on :math:`\\Gamma_{D}` and :math:`F(x)` is the prescribed normal derivative of :math:`u(x)` on :math:`\\Gamma_{N}`. The function to be called to assemble the stiffness matrix is::"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:41
-# 1c8517f9f12d48cf8bfc6bf3ec9f3c04
+# ca1203c08bcb4a8da2fe94af438e8df8
 msgid "where"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:43
-# 0d365133d83d49faad67312efe9f90e7
+# 4f2e2c196c0c40c993c2732cfd638c88
 msgid "``SM`` is a matrix of any type having the right dimension (i.e. ``mfu.nb_dof()``),"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:46
-# 3d45e55cf72a4e509ce679868d0dd172
+# c23d97dbd76a480596d84e488249a376
 msgid "``mim`` is a variable of type |gf_mim| defining the integration method used,"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:48
-# 93452e29bd2a4ca590de6807dad34083
+# a5f95a5d4d224b6da4ce2b39133a0b99
 msgid "``mfu`` is a variable of type |gf_mf| and should define the finite element method for the solution,"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:51
-# 60afcdc7f0e54f759828b69ab6c397cd
+# 534089aa98264c35b119c6cee294ba9a
 msgid "``mfd`` is a variable of type |gf_mf| (possibly equal to ``mfu``) describing the finite element method on which the coefficient :math:`a(x)` is defined,"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:54
-# 7dcfbafd718346eda67f29e4f88ac29c
+# dfd008cb9f6a496d9259a95ca1b6bad3
 msgid "``A`` is the (real or complex) vector of the values of this coefficient on each degree of freedom of ``mfd``."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:57
-# f39f973aea9443bdb9b0c58ba8ad5fe5
+# d48d4d3fb5ed44fd97365b72b8c30189
 msgid "Both |mf| should use the same mesh (i.e. ``&mfu.linked_mesh() == &mfd.linked_mesh()``)."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:60
-# b3d2d54e794a44efb183451276e4f60c
+# f9e6f1b2b8244ce4a8c11b8dd53076dc
 msgid "It is important to pay attention to the fact that the integration methods stored in ``mim``, used to compute the elementary matrices, have to be chosen of sufficient order. The order has to be determined considering the polynomial degrees of element in ``mfu``, in ``mfd`` and the geometric transformations for non-linear cases. For example, with linear geometric transformations, if ``mfu`` is a :math:`P_{K}` FEM, and ``mfd`` is a :math:`P_{L}` FEM, the integration will have to be chosen of order :math:`\\geq 2(K-1) + L`, since the elementary integrals computed during the assembly of ``SM`` are :math:`\\int\\nabla\\varphi_i\\nabla\\varphi_j\\psi_k` (with :math:`\\varphi_i` the basis functions for ``mfu`` and :math:`\\psi_i` the basis functions for ``mfd``)."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:71
-# 7d5b0c6b564c4f9ca10410dec2681071
+# ff102b828f9c4f319db78f0394357cd5
 msgid "To assemble the source term, the function to be called is::"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:75
-# f816879669f845358b398f868428b413
+# dac5b917ba7d4b5585b27362f7d3add1
 msgid "where ``B`` is a vector of any type having the correct dimension (still ``mfu.nb_dof()``), ``mim`` is a variable of type |gf_mim| defining the integration method used, ``mfd`` is a variable of type |gf_mf| (possibly equal to ``mfu``) describing the finite element method on which :math:`f(x)` is defined, and ``V`` is the vector of the values of :math:`f(x)` on each degree of freedom of ``mfd``."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:81
-# d28a5edae92f441ba2c5a07ef8dded06
+# c02b1ee5440a4713a153a83a414bb0ae
 msgid "The function ``asm_source_term`` also has an optional argument, which is a reference to a |gf_mr| (or just an integer ``i``, in which case ``mim.linked_mesh().region(i)`` will be considered). Hence for the Neumann condition on :math:`\\Gamma_{N}`, the same function::"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:88
-# a5e66ad4e1584c0a9b03b2cbf9df0d77
+# 9565be36d209482588e52ee680094e2c
 msgid "is used again, with ``nbound`` is the index of the boundary :math:`\\Gamma_{N}` in the linked mesh of ``mim``, ``mfu`` and ``mfd``."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:91
-# c9812264096446069e221de98dedcad6
+# 93309b18f69c4c7581f752254a9993bb
 msgid "There is two manner (well not really, since it is also possible to use Lagrange multipliers, or to use penalization) to take into account the Dirichlet condition on :math:`\\Gamma_{D}`, changing the linear system or explicitly reduce to the kernel of the Dirichlet condition. For the first manner, the following function is defined::"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:99
-# 9e576a4592fe45269435aba655fc2e15
+# d8272378f5304a84a8227267b5abc95e
 msgid "where ``nbound`` is the index of the boundary :math:`\\Gamma_D` where the Dirichlet condition is applied, ``R`` is the vector of the values of :math:`R(x)` on each degree of freedom of ``mfu``. This operation should be the last one because it transforms the stiffness matrix ``SM``. It works only for Lagrange elements. At the end, one obtains the discrete system:"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:109
-# 52b6078e63f5491fac553dce25a4f9ff
+# 8550cffd5472417b9fa5c85fe29f49aa
 msgid "where :math:`U` is the discrete unknown."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:111
-# ec92b70ce2584747a890e4d00c3c5680
+# 95c5cdbcd6f94386800fc8d21d4b84ca
 msgid "For the second manner, one should use the more general::"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:116
-# 8036108b7c024d1286c8022199914f4d
+# 526543fb6df14c369d9dc19a22f286aa
 msgid "See the Dirichlet condition as a general linear constraint that must satisfy the solution :math:`u`. This function does the assembly of Dirichlet conditions of type :math:`\\int_{\\Gamma} u(x)v(x) = \\int_{\\Gamma}r(x)v(x)` for all :math:`v` in the space of multiplier defined by ``mf_mult``. The fem ``mf_mult`` could be often chosen equal to ``mf_u`` except when ``mf_u`` is too \"complex\"."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:122
-# 47ecd6dbc2c941f788a7fce44483c50d
+# 5794f5afd3b24c9f860de750659424d1
 msgid "This function just assemble these constraints into a new linear system :math:`H u=R`, doing some additional simplification in order to obtain a \"simple\" constraints matrix."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:126
-# 88654dd3be7147cea174d59791556786
+# f17e2e42132e4419a710d7b2e34aff91
 msgid "Then, one should call::"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:130
-# 47ff30b75fba435c87a7a937e0051b5c
+# 89b6992f73f647be8b1d4bc816d307a8
 msgid "which will return a vector :math:`U_d` which satisfies the Dirichlet condition, and an orthogonal basis :math:`N` of the kernel of :math:`H`. Hence, the discrete system that must be solved is:"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:138
-# d7d302e38b984914a468f332a3be2bd4
+# 8d5335a400b3401fa7e3a2e80e5d486f
 msgid "and the solution is $U=N U_{int}+U_d$. The output matrix :math:`N` should be a :math:`nbdof \\times nbdof` (sparse) matrix but should be resized to ``ncols`` columns. The output vector :math:`U_d` should be a :math:`nbdof` vector. A big advantage of this approach is to be generic, and do not prescribed for the finite element method ``mf_u`` to be of Lagrange type. If ``mf_u`` and ``mf_d`` are different, there is implicitly a projection (with respect to the :math:`L^2` norm) of the data on the finite element ``mf_u``."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:146
-# 202b7fe96301415eba6631eedd3f5d5a
+# 23a9a2719b31495899bdff7840d725b2
 msgid "If you want to treat the more general scalar elliptic equation :math:`\\mbox{div}(A(x)\\nabla u)`, where :math:`A(x)` is square matrix, you should use::"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:153
-# 4e898ae736444b8899766a7ce6fe0d99
+# 5979122ffa8246288d05ad002f789979
 msgid "The matrix data ``A`` should be defined on ``mfdata``. It is expected as a vector representing a :math:`n \\times n \\times nbdof` tensor (in Fortran order), where :math:`n` is the mesh dimension of ``mfu``, and :math:`nbdof` is the number of dof of ``mfdata``."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:160
-# 31df8e60e5b44b0084ac6a8913d0d49e
+# f624dcedf2b34ad3b47760a6eff4a22b
 msgid "Linear Elasticity problem"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:162
-# 2aff3241297343268537f7198886ca70
+# 0702c2f344d34f18902d7d14cb3338fa
 msgid "The following function assembles the stiffness matrix for linear elasticity::"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:167
-# e0b0ac4cbcd14f4b9612041a245e18ec
+# 5f0ad3af91524853bd4658cfd9d17307
 msgid "where ``SM`` is a matrix of any type having the right dimension (i.e. here ``mfu.nb_dof()``), ``mim`` is a variable of type |gf_mim| defining the integration method used, ``mfu`` is a variable of type |gf_mf| and should define the finite element method for the solution, ``mfd`` is a variable of type |gf_mf| (possibly equal to ``mfu``) describing the finite element method on which the Lamé coefficient are defined, ``LAMBDA`` and ``MU`` are vectors of the values of Lamé coefficients on each degree of freedom of ``mfd``."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:177
-# a8baf5b5abe64090977c6613d5470938
+# 167439e994e64464b2164a3e0c8be9d1
 msgid "Linear elasticity problem is a vectorial problem, so the target dimension of ``mfu`` (see ``mf.set_qdim(Q)``) should be the same as the dimension of the mesh."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:181
-# 2259aa95d2d84f41be9e46dbda1ed4c9
+# 943087daa9194e4190cb29dee7702e1c
 msgid "In order to assemble source term, Neumann and Dirichlet conditions, same functions as in previous section can be used."
 msgstr ""
 
 #: ../source/userdoc/asm.rst:186
-# f3661a394ab34aef8bff94e86b91ec52
+# e4b799e41c6540acafd8b5fd90e2c10a
 msgid "Stokes Problem with mixed finite element method"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:188
-# 6c1c19b8b95e4339bf1ba50f8b769357
+# 4f6a289323724c73b6df908824a49a23
 msgid "The assembly of the mixed term :math:`B = - \\int p\\nabla.v` is done with::"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:195
-# 725016f9d8c44e12a30b91bdef91d80a
+# 33871341758e44a4a0b74c09e5316fc9
 msgid "Assembling a mass matrix"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:197
-# 3e00eae3a1ff4ebaa249a2299a22a78f
+# 6c67874705fc4757a260c4e4469e3d8f
 msgid "Assembly of a mass matrix between two finite elements::"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:201
-# 084eaab272d54f729611f78bdd166c19
+# 9deb40b88b4b4c56a980a9699d3ca1df
 msgid "It is also possible to obtain mass matrix on a boundary with the same function:"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:203
-# 345a171232704a2880c616c4e5f0576e
+# cc870dcdfee64992a96d43b8a3e5eecb
 msgid "getfem::asm_mass_matrix(M, mim, mf1, mf2, nbound);"
 msgstr ""
 
 #: ../source/userdoc/asm.rst:205
-# ef673734d37f48c1a688e4d4eb64abbe
+# 16db09ce61874e04bd2819a9e9f04bc3
 msgid "where ``nbound`` is the region index in ``mim.linked_mesh()``, or a ``mesh_region`` object."
 msgstr ""
 

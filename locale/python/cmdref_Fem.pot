@@ -1,0 +1,310 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/python/cmdref_Fem.rst:8
+# b4156f7983fa44b889b242de922e67bd
+msgid "Fem"
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:1
+# bdab218c5bb34cbda903fa40a1616e4f
+msgid "GeFEM Fem object"
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:3
+# 99c87124f6664068a76a6380ba2d40c2
+msgid "This object represents a finite element method on a reference element."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:6
+# 55bde1c8953f4e299e40cd7fbf15d356
+msgid "General constructor for Fem objects"
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:8
+# 989c618849ac4f86a8116221ef619884
+msgid "``F = Fem('interpolated_fem', MeshFem mf, MeshIm mim, [ivec blocked_dof])`` Build a special Fem which is interpolated from another MeshFem."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:11
+# 80e828878bf24bafa40fcb75461b9754
+msgid "Using this special finite element, it is possible to interpolate a given MeshFem `mf` on another mesh, given the integration method `mim` that will be used on this mesh."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:15
+# f6782f6fdeaf4b69bdbdaebb7a6eff70
+msgid "Note that this finite element may be quite slow, and eats much memory."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:18
+# a4cf078aff024e2fb2d2b3151a477460
+msgid "``F = Fem(string fem_name)`` The `fem_name` should contain a description of the finite element method. Please refer to the getfem++ manual (especially the description of finite element and integration methods) for a complete reference. Here is a list of some of them:"
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:24
+# 597f3d4f6e1f421294e27df09c4649b8
+msgid "FEM_PK(n,k) : classical Lagrange element Pk on a simplex of dimension `n`."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:26
+# b4242af1ec184347a165d68187920a40
+msgid "FEM_PK_DISCONTINUOUS(n,k[,alpha]) : discontinuous Lagrange element Pk on a simplex of dimension `n`."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:28
+# 0f249474fa4c4c45a0643ba6e0eaa660
+msgid "FEM_QK(n,k) : classical Lagrange element Qk on quadrangles, hexahedrons etc."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:30
+# a4e2cece268a48048dc1a1a69581a282
+msgid "FEM_QK_DISCONTINUOUS(n,k[,alpha]) : discontinuous Lagrange element Qk on quadrangles, hexahedrons etc."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:32
+# 40cc1136cfce4e6f95e9b3dbd83e36eb
+msgid "FEM_Q2_INCOMPLETE(n) : incomplete Q2 elements with 8 and 20 dof (serendipity Quad 8 and Hexa 20 elements)."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:35
+# d6cbaa2e362f433db03d13bce46ff245
+msgid "FEM_PK_PRISM(n,k) : classical Lagrange element Pk on a prism of dimension `n`."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:37
+# bdaf18f0e129464baa8dabd96ff252f5
+msgid "FEM_PK_PRISM_DISCONTINUOUS(n,k[,alpha]) : classical discontinuous Lagrange element Pk on a prism."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:39
+# 7d4b920c82a64618ad5c4f14b822aa16
+msgid "FEM_PK_WITH_CUBIC_BUBBLE(n,k) : classical Lagrange element Pk on a simplex with an additional volumic bubble function."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:42
+# f1040b00332b4530a7c290703dfbcbe7
+msgid "FEM_P1_NONCONFORMING : non-conforming P1 method on a triangle."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:44
+# e49f77976f4a49b292a568d11caf7869
+msgid "FEM_P1_BUBBLE_FACE(n) : P1 method on a simplex with an additional bubble function on face 0."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:46
+# 20ad8bb041664e1b9b517c15fe1a48cf
+msgid "FEM_P1_BUBBLE_FACE_LAG : P1 method on a simplex with an additional lagrange dof on face 0."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:48
+# dea96567e12245f49de50fbd39264e9a
+msgid "FEM_PK_HIERARCHICAL(n,k) : PK element with a hierarchical basis."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:50
+# 67deb3ce4c9b40d8ba5a332531ddb9a2
+msgid "FEM_QK_HIERARCHICAL(n,k) : QK element with a hierarchical basis"
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:52
+# c7615423104d4c2ca655bc77ae8b1a34
+msgid "FEM_PK_PRISM_HIERARCHICAL(n,k) : PK element on a prism with a hierarchical basis."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:54
+# 5f0f9c00943d41f2a27170fe18eb59e8
+msgid "FEM_STRUCTURED_COMPOSITE(Fem f,k) : Composite Fem `f` on a grid with `k` divisions."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:56
+# cd6bbbda630144afbf4506073f77f589
+msgid "FEM_PK_HIERARCHICAL_COMPOSITE(n,k,s) : Pk composite element on a grid with `s` subdivisions and with a hierarchical basis."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:59
+# 4b0e8e15e59e48b7b1c12cbc2e3da457
+msgid "FEM_PK_FULL_HIERARCHICAL_COMPOSITE(n,k,s) : Pk composite element with `s` subdivisions and a hierarchical basis on both degree and subdivision."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:62
+# c030b81888134bafbc7de11bc5db8633
+msgid "FEM_PRODUCT(A,B) : tensorial product of two polynomial elements."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:64
+# 7ceffe461ace4cb68e133ebfb1bb80e6
+msgid "FEM_HERMITE(n) : Hermite element P3 on a simplex of dimension `n = 1, 2, 3`."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:66
+# 763a231159994100899fee753bc1d293
+msgid "FEM_ARGYRIS : Argyris element P5 on the triangle."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:68
+# 866b9d113c414b339c940e237a845bea
+msgid "FEM_HCT_TRIANGLE : Hsieh-Clough-Tocher element on the triangle (composite P3 element which is C1), should be used with IM_HCT_COMPOSITE() integration method."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:72
+# dcef314462eb42ae88b08460688e0dba
+msgid "FEM_QUADC1_COMPOSITE : Quadrilateral element, composite P3 element and C1 (16 dof)."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:74
+# c174a4aaec27475dbbce756ff9b247f7
+msgid "FEM_REDUCED_QUADC1_COMPOSITE : Quadrilateral element, composite P3 element and C1 (12 dof)."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:76
+# d85845c8ac9a4e9799ddb94e5212c14d
+msgid "FEM_RT0(n) : Raviart-Thomas element of order 0 on a simplex of dimension `n`."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:78
+# 20705dbefa6f495d86c3aaa41e4a5a4c
+msgid "FEM_NEDELEC(n) : Nedelec edge element of order 0 on a simplex of dimension `n`."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem:81
+# 444054ee4cb54099b6449c99c88018b1
+msgid "Of course, you have to ensure that the selected fem is compatible with the geometric transformation: a Pk fem has no meaning on a quadrangle."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.base_value:1
+# 2ee1e9c67b1f4039b10451b43c6a99be
+msgid "Evaluate all basis functions of the FEM at point `p`."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.base_value:3
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.grad_base_value:3
+# 5d92615fce4a4449ab560675a8818df3
+# 605037ff5600463a99bf0bf0f089c0a9
+msgid "`p` is supposed to be in the reference convex!"
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.char:1
+# 870fdfa49a944e45aa1a3477baa14813
+msgid "Ouput a (unique) string representation of the Fem."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.char:3
+# 9f45501d94f64948a5c5aefaf6f75f37
+msgid "This can be used to perform comparisons between two different Fem objects."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.dim:1
+# fde8e618b8e440febce96299a60da061
+msgid "Return the dimension (dimension of the reference convex) of the Fem."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.display:1
+# 392e5c4fa2e545709268ed3cc59e1fd1
+msgid "displays a short summary for a Fem object."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.estimated_degree:1
+# a4b57811588a4b74af55faeca63ff798
+msgid "Return an estimation of the polynomial degree of the Fem."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.estimated_degree:3
+# a4971be8265b4dee8a3f6e40ba9cbc1c
+msgid "This is an estimation for fem which are not polynomials."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.grad_base_value:1
+# bda0c0385d294169877b52eb74920b0c
+msgid "Evaluate the gradient of all base functions of the Fem at point `p`."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.hess_base_value:1
+# c474278ab4524280bf0210ba15e39858
+msgid "Evaluate the Hessian of all base functions of the Fem at point `p`."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.hess_base_value:3
+# cabac41a36e449089561689f058f3eb3
+msgid "`p` is supposed to be in the reference convex!."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.index_of_global_dof:1
+# 9f4f9ffcbe9d4dd6bb4f9d2626fbccb7
+msgid "Return the index of global dof for special fems such as interpolated fem."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.is_equivalent:1
+# 03cefbb41af84cb3bb521e9a704d5305
+msgid "Return 0 if the Fem is not equivalent."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.is_equivalent:3
+# f50af541f6514182a4b2d75a975b18b3
+msgid "Equivalent Fem are evaluated on the reference convex. This is the case of most classical Fem's."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.is_lagrange:1
+# d11614fef5294e4488a409ec4aa43195
+msgid "Return 0 if the Fem is not of Lagrange type."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.is_polynomial:1
+# 57627186619b4cc3928b0cf7d997d1dd
+msgid "Return 0 if the basis functions are not polynomials."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.nbdof:1
+# 3a00c2f4645140d6967af41934b5da01
+msgid "Return the number of dof for the Fem."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.nbdof:3
+# 5657c7ebd7454ae7bcadf863bd6787c8
+msgid "Some specific Fem (for example 'interpolated_fem') may require a convex number `cv` to give their result. In most of the case, you can omit this convex number."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.poly_str:1
+# 5e5275d1cb10445595a3b5135b68fcce
+msgid "Return the polynomial expressions of its basis functions in the reference convex."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.poly_str:4
+# c48f493bdcfa469d97e2826f5fc3b4f5
+msgid "The result is expressed as a tuple of strings. Of course this will fail on non-polynomial Fem's."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.pts:1
+# b78571b2944f46bd8d37232398906254
+msgid "Get the location of the dof on the reference element."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.pts:3
+# d8c17d0509fd43fab3b78094f600627d
+msgid "Some specific Fem may require a convex number `cv` to give their result (for example 'interpolated_fem'). In most of the case, you can omit this convex number."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.target_dim:1
+# 66a41dcd9be74a97b4eecdb3cf75b5f6
+msgid "Return the dimension of the target space."
+msgstr ""
+
+#: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Fem.target_dim:3
+# f68d864f5f7f4f8d865135fd70322044
+msgid "The target space dimension is usually 1, except for vector Fem."
+msgstr ""
+

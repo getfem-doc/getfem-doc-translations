@@ -1,0 +1,159 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-16 15:44+0900\n"
+"PO-Revision-Date: 2018-07-16 07:02+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 83eb649b60754536bbb54a5b82c4c897
+#: ../source/project/libdesc_event.rst:11
+msgid "Events management"
+msgstr "イベント管理\n"
+
+# 74e4920529904abcbcc0e3d5db2a99c4
+# d659e7d93c784453ac899c6aa660289d
+#: ../source/project/libdesc_event.rst:14
+#: ../source/project/libdesc_event.rst:1
+msgid "Description"
+msgstr "説明\n"
+
+# 1f3ee71f64f141c9a3b101664d5ed506
+#: ../source/project/libdesc_event.rst:16
+msgid ""
+"The ``mesh``, |mf|, |mim| and |mo| description are linkedtogether in the "
+"sense that there is some dependencies between them. For instance, when an "
+"element is suppressed to a mesh, the |mf| object has to react."
+msgstr ""
+"' ' メッシュ ' ', | mf |, | mim |と | mo |説明は、それらの間にいくつかの依存関係があるという意味で "
+"linkedtogether です。たとえば、要素がメッシュに対して抑制されている場合、| mf |オブジェクトは反応しなければなりません。\n"
+
+# fe642dce73814367a958f9390907a917
+#: ../source/project/libdesc_event.rst:21
+msgid "Files"
+msgstr "ファイル\n"
+
+# dbbf1f47ae0846d18846e1f2335419c5
+#: ../source/project/libdesc_event.rst:1
+msgid "File(s)"
+msgstr "ファイル\n"
+
+# 1558f353e1984c72b4443333fe8e85b3
+#: ../source/project/libdesc_event.rst:1
+msgid ":file:`getfem_context.h` and :file:`getfem_context.cc`"
+msgstr ": ファイル: ' getfem_context ' と: ファイル: ' getfem_context '\n"
+
+# 194a0bc0e6634f9785a4628ccc12e8ec
+#: ../source/project/libdesc_event.rst:1
+msgid ""
+"Define a class `context_dependencies` from which all object has to derive in"
+" order to manage events."
+msgstr "イベントを管理するために、すべてのオブジェクトの派生元となるクラス ' context_dependencies ' を定義します。\n"
+
+# c57e1fdcd8d1402b8d0ac87b755b2809
+#: ../source/project/libdesc_event.rst:31
+msgid "State"
+msgstr "状態\n"
+
+# 999c8a9902ee4af6b0724a77a92a69e7
+#: ../source/project/libdesc_event.rst:33
+msgid ""
+"The main tool to deal with simple dependence of object is in "
+":file:`getfem_context.h`. An object ``context_dependencies`` is defined "
+"there. In order to deal with the dependencies of an object, the object "
+"``context_dependencies`` needs to be a parent class of this object. It adds "
+"the following methods to the object:"
+msgstr ""
+"オブジェクトの単純な依存性に対処するための主なツールは: ファイル: ' getfem_context '。オブジェクト ' ' "
+"context_dependencies ' ' が定義されています。オブジェクトの依存関係を処理するために、オブジェクト ' ' "
+"context_dependencies ' ' はこのオブジェクトの親クラスである必要があります。オブジェクトに次のメソッドを追加します。\n"
+
+# 241befcd1a2a48e4b0170ec1881a457f
+#: ../source/project/libdesc_event.rst:41
+msgid ""
+"Add an object (which has to have ``context_dependencies`` as a parent class)"
+" to the list of objects from which the current object depend."
+msgstr ""
+"オブジェクト (親クラスとして ' ' context_dependencies ' ' を持つ必要があります) "
+"を、現在のオブジェクトが依存するオブジェクトのリストに追加します。\n"
+
+# c8e61c9ce91847399c21381d1cb2edbf
+#: ../source/project/libdesc_event.rst:46
+msgid ""
+"Indicates to the dependent objects that something has change in the object."
+msgstr "オブジェクトに何か変化があることを従属オブジェクトに示します。\n"
+
+# 47b1d8d3ccb74ad384e9eaf52251faad
+#: ../source/project/libdesc_event.rst:50
+msgid ""
+"Check if the object has to be updated. if it is the case it makes first a "
+"check to the dependency list and call the update function of the object. "
+"(the update function of the dependencies are called before the update "
+"function of the current object)."
+msgstr ""
+"オブジェクトを更新するかどうかを確認します。その場合は、最初に依存関係リストにチェックを行い、オブジェクトの update "
+"関数を呼び出します。(依存関係の更新関数は、現在のオブジェクトの update 関数の前に呼び出されます)。\n"
+
+# b25bb7a356de4b1bad71e9439026fb10
+#: ../source/project/libdesc_event.rst:57
+msgid ""
+"Says if the object has still a valid context, i.e. if the object in the "
+"dependency list still exist."
+msgstr "オブジェクトがまだ有効なコンテキストを持っているかどうか、つまり、依存関係リスト内のオブジェクトがまだ存在する場合を言います。\n"
+
+# 95640d32ac61495faa571293578e8552
+#: ../source/project/libdesc_event.rst:60
+msgid "Moreover, the object has to define a method::"
+msgstr "さらに、オブジェクトはメソッドを定義しなければなりません::\n"
+
+# e7127be4f5374c5ca87fced19b6c3c2b
+#: ../source/project/libdesc_event.rst:64
+msgid ""
+"which is called after a ``context_check()`` if the context has changed."
+msgstr "コンテキストが変更された場合は ' ' context_check () ' ' の後に呼び出されます。\n"
+
+# fced7605d7a3470a80fbf6ec337db693
+#: ../source/project/libdesc_event.rst:66
+msgid ""
+"An additional system is present in the object |m|. Each individual element "
+"has a version number in order for the objects |mf| and |mim| to detect which"
+" element has changed between two calls."
+msgstr ""
+"オブジェクト | m | に追加のシステムが存在します。個々の要素には、オブジェクトの順序でバージョン番号があります | オス-メス |と | mim "
+"|2つの呼び出しの間で変更された要素を検出します。\n"
+
+# 23e5873d403c4a189919f7dd09befcd4
+#: ../source/project/libdesc_event.rst:71
+msgid "Perspectives"
+msgstr "視点\n"
+
+# e7c577c216234043b63baa7585cb1a22
+#: ../source/project/libdesc_event.rst:73
+msgid ""
+"The event management of some objects should be analysed with care  This is "
+"the case for instance of|mls|, |mfls|, |pmf|, etc."
+msgstr ""
+"いくつかのオブジェクトのイベント管理は、注意して分析する必要があります。これは、| mls |、| mfls |、| pmf | "
+"などのインスタンスの場合です。\n"
+
+# 283a66012f734603b1768c69b25fadca
+#: ../source/project/libdesc_event.rst:75
+msgid ""
+"The event management still have to be improved to be a fully reactive "
+"system."
+msgstr "イベント管理は、まだ完全に反応するシステムであるために改善される必要があります。\n"

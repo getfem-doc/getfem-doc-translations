@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 02:08+0900\n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,52 +17,52 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/model_solvers.rst:12
-# 02bf37274f144a778c30b461d12ead0e
+# 9a876c2b76554c1abb1e317178003cdc
 msgid "Predefined solvers"
 msgstr ""
 
 #: ../source/userdoc/model_solvers.rst:14
-# 5b5d0502a84e444eaa4cdb162c739da0
+# 09592783460648baba95b6ffc15062c8
 msgid "Although it will be more convenient to build a specific solver for some problems, a generic solver is available to test your models quickly. It can also be taken as an example to build your own solver. It is defined in :file:`src/getfem/getfem_model_solvers.h` and :file:`src/getfem_model_solvers.cc` and the call is::"
 msgstr ""
 
 #: ../source/userdoc/model_solvers.rst:21
-# 4afc250c6e81442eacd8c52e14eb877a
+# 32ce619a99e640e289af3602977b5308
 msgid "where ``md`` is the model object and ``iter`` is an iteration object from |gmm|. See also the next section for an example of use."
 msgstr ""
 
 #: ../source/userdoc/model_solvers.rst:24
-# ac4b63261c35410cb0058a2d7dccfed2
+# 314a12c1129446a8a9f249f41fceebdf
 msgid "Note that |sLU| is used as a default linear solver on \"small\" problems. You can also link |mumps| with |gf| (see section :ref:`ud-linalg`) and use the parallel version. For nonlinear problems, A Newton method (also called Newton-Raphson method) is used."
 msgstr ""
 
 #: ../source/userdoc/model_solvers.rst:26
-# f9920282adc94810aaedd1959fbc0b83
+# 078fa39fed324cc4aff5072e5bde753d
 msgid "Note also that it is possible to disable some variables (with the method md.disable_variable(varname) of the model object) in order to solve the problem only with respect to a subset of variables (the disabled variables are the considered as data) for instance to replace the global Newton strategy with a fixed point one."
 msgstr ""
 
 #: ../source/userdoc/model_solvers.rst:32
-# e86c8723ed8e48ea967a6f4d027d4cb1
+# 2c301a77829140ad932d561ccf740ecb
 msgid "Let us recall that a standard initialization for the iter object is the folowwing (see Gmm++ documentation on :ref:`gmm-iter`)::"
 msgstr ""
 
 #: ../source/userdoc/model_solvers.rst:36
-# 1872fd9c213740b58c1a500282e643b6
+# db79e95105a94a05bb5058682318674a
 msgid "where ``1E-7`` is the relative tolerance for the stopping criterion, `1` is the noisy option and `200` is the maximum number of iterations. The stopping criterion of Newton's method is build as follows. For a relative tolerance :math:`\\varepsilon`, the algorithm stops when:"
 msgstr ""
 
 #: ../source/userdoc/model_solvers.rst:42
-# f4b395bb87da4ea6a90f27563a892ea3
+# f9db383710fc462684e48c09838f1f9e
 msgid "where :math:`F(u)` is the residual vector, :math:`\\|\\cdot\\|_1` is the classical 1-norm in :math:`\\R^n`, :math:`h` is the search direction given by Newton's algorithm, :math:`L` is the norm of an estimated external loads (coming from source term and Dirichlet bricks) and :math:`u` is the current state of the searched variable. The maximum taken with :math:`10^{-25}` is to avoid pathological cases when :math:`L` and/or :math:`u` are vanishing."
 msgstr ""
 
 #: ../source/userdoc/model_solvers.rst:7
-# aa79523259f74776be6ad6a179c65217
+# 1a4a993c1bbb4b95804b176a435d06f2
 msgid "models"
 msgstr ""
 
 #: ../source/userdoc/model_solvers.rst:7
-# aa79523259f74776be6ad6a179c65217
+# 1a4a993c1bbb4b95804b176a435d06f2
 msgid "model bricks"
 msgstr ""
 

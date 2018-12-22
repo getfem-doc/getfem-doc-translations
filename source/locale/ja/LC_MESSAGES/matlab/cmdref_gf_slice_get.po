@@ -1,0 +1,368 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+# 88b164898f0f49c29f3319ec06e092b4
+#: ../source/matlab/cmdref_gf_slice_get.rst:8
+msgid "gf_slice_get"
+msgstr ""
+
+# 0bea20316eb5429cb45ad484da5cd5c9
+#: ../source/matlab/cmdref_gf_slice_get.rst:10
+msgid "**Synopsis**"
+msgstr ""
+
+# 3da27754d50d48c782a9e686fe639721
+#: ../source/matlab/cmdref_gf_slice_get.rst:33
+msgid "**Description :**"
+msgstr ""
+
+# 50e712f51180429c8c5d027983a2f237
+#: ../source/matlab/cmdref_gf_slice_get.rst:36
+msgid "General function for querying information about slice objects."
+msgstr ""
+
+# 675f1aa51dad4f85ae06babc5e479d48
+#: ../source/matlab/cmdref_gf_slice_get.rst:39
+msgid "**Command list :**"
+msgstr ""
+
+# 11395a529623492688806adacca3c6ea
+#: ../source/matlab/cmdref_gf_slice_get.rst:43
+msgid "``d = gf_slice_get(slice S, 'dim')``"
+msgstr ""
+
+# 043573ff9ae24b2dae68e0f22ae0e951
+#: ../source/matlab/cmdref_gf_slice_get.rst:45
+msgid "Return the dimension of the slice (2 for a 2D mesh, etc..)."
+msgstr ""
+
+# d7854fc7a0674dd59a32e17f74092f85
+#: ../source/matlab/cmdref_gf_slice_get.rst:48
+msgid "``a = gf_slice_get(slice S, 'area')``"
+msgstr ""
+
+# 977ec72135694d18914cafd05992c819
+#: ../source/matlab/cmdref_gf_slice_get.rst:50
+msgid "Return the area of the slice."
+msgstr ""
+
+# bcd1ed2b2d454a65a0028f19b597a833
+#: ../source/matlab/cmdref_gf_slice_get.rst:53
+msgid "``CVids = gf_slice_get(slice S, 'cvs')``"
+msgstr ""
+
+# 7eaea243c99a43f5a55e57d4fe840bed
+#: ../source/matlab/cmdref_gf_slice_get.rst:55
+msgid "Return the list of convexes of the original mesh contained in the slice."
+msgstr ""
+
+# 0cc732c91958406392c0cb517af3e278
+#: ../source/matlab/cmdref_gf_slice_get.rst:58
+msgid "``n = gf_slice_get(slice S, 'nbpts')``"
+msgstr ""
+
+# 08488fde06e7422a83cf5264f477b098
+#: ../source/matlab/cmdref_gf_slice_get.rst:60
+msgid "Return the number of points in the slice."
+msgstr ""
+
+# 4adaa06d86f64230b98aa693c17aedb0
+#: ../source/matlab/cmdref_gf_slice_get.rst:63
+msgid "``ns = gf_slice_get(slice S, 'nbsplxs'[, int dim])``"
+msgstr ""
+
+# d81d3923b0a34d3fb1552af260fbc098
+#: ../source/matlab/cmdref_gf_slice_get.rst:65
+msgid "Return the number of simplexes in the slice."
+msgstr ""
+
+# bfa0970bab814928a16674944e5c2add
+#: ../source/matlab/cmdref_gf_slice_get.rst:67
+msgid ""
+"Since the slice may contain points (simplexes of dim 0), segments "
+"(simplexes of dimension 1), triangles etc., the result is a vector of "
+"size gf_slice_get(slice S, 'dim')+1, except if the optional argument "
+"`dim` is used."
+msgstr ""
+
+# 6a3dabd4a5e44c21a8fb052816fc8b0b
+#: ../source/matlab/cmdref_gf_slice_get.rst:73
+msgid "``P = gf_slice_get(slice S, 'pts')``"
+msgstr ""
+
+# a3d0f774a9bb48348d3cad5c7bd79268
+#: ../source/matlab/cmdref_gf_slice_get.rst:75
+msgid "Return the list of point coordinates."
+msgstr ""
+
+# d90541eebadb4f4bb98d66641a232366
+#: ../source/matlab/cmdref_gf_slice_get.rst:78
+msgid "``{S, CV2S} = gf_slice_get(slice S, 'splxs',int dim)``"
+msgstr ""
+
+# b1d00e63d57f4d4fb0ac577d272b4163
+#: ../source/matlab/cmdref_gf_slice_get.rst:80
+msgid "Return the list of simplexes of dimension `dim`."
+msgstr ""
+
+# 9a2f35980a2240cdbbf487e14536e0ae
+#: ../source/matlab/cmdref_gf_slice_get.rst:82
+msgid ""
+"On output, S has 'dim+1' rows, each column contains the point numbers of "
+"a simplex.  The vector `CV2S` can be used to find the list of simplexes "
+"for any convex stored in the slice. For example 'S(:,CV2S(4):CV2S(5)-1)' "
+"gives the list of simplexes for the fourth convex."
+msgstr ""
+
+# 944dc0fbe637445cbd7cf4d8f47fd9c7
+#: ../source/matlab/cmdref_gf_slice_get.rst:89
+msgid "``{P, E1, E2} = gf_slice_get(slice S, 'edges')``"
+msgstr ""
+
+# 4193ca46f678441f895622e924f2e3c1
+#: ../source/matlab/cmdref_gf_slice_get.rst:91
+msgid "Return the edges of the linked mesh contained in the slice."
+msgstr ""
+
+# 22449e00d3d84a0d99de8cdaed202200
+#: ../source/matlab/cmdref_gf_slice_get.rst:93
+msgid ""
+"`P` contains the list of all edge vertices, `E1` contains the indices of "
+"each mesh edge in `P`, and `E2` contains the indices of each \"edges\" "
+"which is on the border of the slice. This function is useless except for "
+"post-processing purposes."
+msgstr ""
+
+# 82e8d1d277154cb7bc77ca0e20c2a6ad
+#: ../source/matlab/cmdref_gf_slice_get.rst:99
+msgid "``Usl = gf_slice_get(slice S, 'interpolate_convex_data', mat Ucv)``"
+msgstr ""
+
+# ab54d3965eb8434293f52fc4cc70fb34
+#: ../source/matlab/cmdref_gf_slice_get.rst:101
+msgid "Interpolate data given on each convex of the mesh to the slice nodes."
+msgstr ""
+
+# b199b325572e437d855fec6bb9a73709
+#: ../source/matlab/cmdref_gf_slice_get.rst:103
+msgid ""
+"The input array `Ucv` may have any number of dimensions, but its last "
+"dimension should be equal to gf_mesh_get(mesh M, 'max cvid')."
+msgstr ""
+
+# 5296daf13d374231870b998b09587994
+#: ../source/matlab/cmdref_gf_slice_get.rst:106
+msgid ""
+"Example of use: gf_slice_get(slice S, 'interpolate_convex_data', "
+"gf_mesh_get(mesh M, 'quality'))."
+msgstr ""
+
+# 7eec67b4753b411090ddb5597906c347
+#: ../source/matlab/cmdref_gf_slice_get.rst:109
+msgid "``m = gf_slice_get(slice S, 'linked mesh')``"
+msgstr ""
+
+# 338e73f8511e4dbc8c64b827f454fb2f
+#: ../source/matlab/cmdref_gf_slice_get.rst:111
+msgid "Return the mesh on which the slice was taken."
+msgstr ""
+
+# 02b0ad2fb8ad4b5e86a3ce625407abe0
+#: ../source/matlab/cmdref_gf_slice_get.rst:114
+msgid "``m = gf_slice_get(slice S, 'mesh')``"
+msgstr ""
+
+# aed0cf02b75c4eb694ff0984a22dc740
+#: ../source/matlab/cmdref_gf_slice_get.rst:116
+msgid "Return the mesh on which the slice was taken (identical to 'linked mesh')"
+msgstr ""
+
+# 6ef91f08143442abb8210ea4fc987b1a
+#: ../source/matlab/cmdref_gf_slice_get.rst:120
+msgid "``z = gf_slice_get(slice S, 'memsize')``"
+msgstr ""
+
+# dd4015d46aa44a07a91a34a1620190e7
+#: ../source/matlab/cmdref_gf_slice_get.rst:122
+msgid "Return the amount of memory (in bytes) used by the slice object."
+msgstr ""
+
+# 809884595aae4201a74d0ebdf08a7f60
+#: ../source/matlab/cmdref_gf_slice_get.rst:125
+msgid "``gf_slice_get(slice S, 'export to vtk', string filename, ...)``"
+msgstr ""
+
+# e1079db286294eba8bf82921c686afbe
+#: ../source/matlab/cmdref_gf_slice_get.rst:127
+msgid "Export a slice to VTK."
+msgstr ""
+
+# 19cd2ba2e68b456fb1a364105bf78ee5
+# 4f08248cb2a9471983f47ce1fc1f460e
+#: ../source/matlab/cmdref_gf_slice_get.rst:129
+#: ../source/matlab/cmdref_gf_slice_get.rst:160
+msgid "Following the `filename`, you may use any of the following options:"
+msgstr ""
+
+# 861bc975c64e452daa30455488573f89
+# 48af7805c958449f9733e5819ea28d5c
+#: ../source/matlab/cmdref_gf_slice_get.rst:131
+#: ../source/matlab/cmdref_gf_slice_get.rst:163
+msgid ""
+"if 'ascii' is not used, the file will contain binary data (non portable, "
+"but fast)."
+msgstr ""
+
+# c9922ca2f1bb4b03bb8358ed89f6ec52
+# 764a5b36dddc4382a49c7771b8356ec6
+#: ../source/matlab/cmdref_gf_slice_get.rst:133
+#: ../source/matlab/cmdref_gf_slice_get.rst:165
+msgid ""
+"if 'edges' is used, the edges of the original mesh will be written "
+"instead of the slice content."
+msgstr ""
+
+# 2e779072a5fd49918d85ad547d17d3a1
+# 5931b96ec0b74af9a03ef508384e1d05
+# 5c040c89eaf24062a6329c053d2625c8
+#: ../source/matlab/cmdref_gf_slice_get.rst:136
+#: ../source/matlab/cmdref_gf_slice_get.rst:170
+#: ../source/matlab/cmdref_gf_slice_get.rst:182
+msgid ""
+"More than one dataset may be written, just list them. Each dataset "
+"consists of either:"
+msgstr ""
+
+# a44e5f45c41e4fd3a701557692675ef4
+# 590f8c37ea5746f285990a9648f50fca
+#: ../source/matlab/cmdref_gf_slice_get.rst:139
+#: ../source/matlab/cmdref_gf_slice_get.rst:173
+msgid ""
+"a field interpolated on the slice (scalar, vector or tensor), followed by"
+" an optional name."
+msgstr ""
+
+# c4bfd2bbb920482ebcf8f193ed1d2783
+# 1cc6de1762534d798210eae7efd35633
+#: ../source/matlab/cmdref_gf_slice_get.rst:141
+#: ../source/matlab/cmdref_gf_slice_get.rst:175
+msgid "a mesh_fem and a field, followed by an optional name."
+msgstr ""
+
+# ee5d82dfce69485d8fac7f4d13b5cdfb
+#: ../source/matlab/cmdref_gf_slice_get.rst:143
+msgid "Examples:"
+msgstr ""
+
+# 225fa09551bc481b817de40e58fc0876
+#: ../source/matlab/cmdref_gf_slice_get.rst:145
+msgid ""
+"gf_slice_get(slice S, 'export to vtk', 'test.vtk', Usl, 'first_dataset', "
+"mf, U2, 'second_dataset')"
+msgstr ""
+
+# b8385ed2eead480d8033e918ef3e6af3
+#: ../source/matlab/cmdref_gf_slice_get.rst:147
+msgid "gf_slice_get(slice S, 'export to vtk', 'test.vtk', 'ascii', mf,U2)"
+msgstr ""
+
+# ea102913b822455e996c075986cd9972
+#: ../source/matlab/cmdref_gf_slice_get.rst:148
+msgid ""
+"gf_slice_get(slice S, 'export to vtk', 'test.vtk', 'edges', 'ascii', "
+"Uslice)"
+msgstr ""
+
+# 4977a5ed308d4f4f843a882cd48228ae
+#: ../source/matlab/cmdref_gf_slice_get.rst:151
+msgid "``gf_slice_get(slice S, 'export to pov', string filename)``"
+msgstr ""
+
+# f8433df92d1045b586cacb8e39df7ff2
+#: ../source/matlab/cmdref_gf_slice_get.rst:153
+msgid "Export a the triangles of the slice to POV-RAY."
+msgstr ""
+
+# a88097acd2a14636a59933f18edf304f
+#: ../source/matlab/cmdref_gf_slice_get.rst:156
+msgid "``gf_slice_get(slice S, 'export to dx', string filename, ...)``"
+msgstr ""
+
+# e316643ad01a4d36a6eb7c73094b2129
+#: ../source/matlab/cmdref_gf_slice_get.rst:158
+msgid "Export a slice to OpenDX."
+msgstr ""
+
+# 15d7082dba5a4824a6eb6da0813c1dc2
+#: ../source/matlab/cmdref_gf_slice_get.rst:167
+msgid ""
+"if 'append' is used, the opendx file will not be overwritten, and the new"
+" data will be added at the end of the file."
+msgstr ""
+
+# e34f888dc8e44b54b46e8f721c7eeef7
+#: ../source/matlab/cmdref_gf_slice_get.rst:178
+msgid ""
+"``gf_slice_get(slice S, 'export to pos', string filename[, string "
+"name][[,mesh_fem mf1], mat U1, string nameU1[[,mesh_fem mf1], mat U2, "
+"string nameU2,...])``"
+msgstr ""
+
+# 3683e6221636416cab0dfa94629e5caa
+#: ../source/matlab/cmdref_gf_slice_get.rst:180
+msgid "Export a slice to Gmsh."
+msgstr ""
+
+# 3fe1603fe54f49a9a1cd10143afd6025
+#: ../source/matlab/cmdref_gf_slice_get.rst:185
+msgid "a field interpolated on the slice (scalar, vector or tensor)."
+msgstr ""
+
+# ea7e38053c0241909f8dfd781dcd09c6
+#: ../source/matlab/cmdref_gf_slice_get.rst:186
+msgid "a mesh_fem and a field."
+msgstr ""
+
+# 9bf4719f7e0f4c66a363618707e2fdc2
+#: ../source/matlab/cmdref_gf_slice_get.rst:189
+msgid "``s = gf_slice_get(slice S, 'char')``"
+msgstr ""
+
+# bcdeb00154ff49559f4b68ffcfeb7f79
+#: ../source/matlab/cmdref_gf_slice_get.rst:191
+msgid "Output a (unique) string representation of the slice."
+msgstr ""
+
+# b4cffcd778824239987917fab1a2156e
+#: ../source/matlab/cmdref_gf_slice_get.rst:193
+msgid ""
+"This can be used to perform comparisons between two different slice "
+"objects. This function is to be completed."
+msgstr ""
+
+# 48e7ee20c21f4bd69608ecda56ee30d3
+#: ../source/matlab/cmdref_gf_slice_get.rst:199
+msgid "``gf_slice_get(slice S, 'display')``"
+msgstr ""
+
+# 26c8e9cf5d3d49e782fb9a662ff14906
+#: ../source/matlab/cmdref_gf_slice_get.rst:201
+msgid "displays a short summary for a slice object."
+msgstr ""
+

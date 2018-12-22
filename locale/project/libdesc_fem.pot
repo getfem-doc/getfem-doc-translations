@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/project/libdesc_fem.rst:10
+# fe2acf97a1f446bd94109afc963f8f8f
+msgid "Fem module"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:13
+#: ../source/project/libdesc_fem.rst:1
+# 2d763c381e8d43bda631b84beba4a9fe
+# 5783aaf114274842bc53e3a13e8f0435
+msgid "Description"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:15
+# 5d46558ebff84d2f83b941d07d29e16d
+msgid "The Fem module is the part of |gf| which describes the finite elements at the element level and the degrees of freedom. Finite element methods can be of different types. They could be scalar or vectorial, polynomial, piecewise polynomial or non-polynomial, equivalent via the geometric transformation or not. Moreover, the description of the degrees of freedom have to be such that it is possible to gather the compatible degrees of freedom between two neighbour elements in a generic way (for instance connecting a Lagrange 2D element to another Lagrange 1D element)."
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:26
+# 1c751328c2ed4008850e10db8702fdc9
+msgid "Files"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:1
+# e3b5053e3a3d4154bd65e1d1fb710419
+msgid "File(s)"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:1
+# f70325bd91f6436580c48934d1e9f88d
+msgid ":file:`bgeot_poly.h` and :file:`bgeot_poly_composite.h` and :file:`bgeot_poly.cc` and :file:`bgeot_poly_composite.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:1
+# c508368d5eb345de9cfcb7bd1b2a4a36
+msgid "Some classes to represent polynomials and piecewise polynomials in order to describe shape functions of a finite element method on the reference element."
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:1
+# d2615c951d4d483796fc884219e3847a
+msgid ":file:`getfem_fem.h` and :file:`getfem_fem.cc` and :file:`getfem_fem_composite.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:1
+# 96366aed9f664cf38fb021842ff4ff55
+msgid "Descriptors for finite element and a degree of freedom. Polynomial finite elements are defined in :file:`getfem_fem.cc` and piecewise polynomial finite elements in :file:`getfem_fem_composite.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:1
+# aa7f3f7118f8403c8d06519996bfc21d
+msgid ":file:`getfem_fem_global_function.h` and :file:`getfem_fem_global_function.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:1
+# c3c54f7688e743e18cd8cf1c9161910f
+msgid "Defines a fem with base functions defined as global functions given by the user. Useful for enrichment with singular functions and for implementation of meshless methods."
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:1
+# d64573e7821d4ca78652e7153dd3ce7d
+msgid ":file:`getfem_projected_fem.h` and :file:`getfem_projected_fem.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:1
+# df3a86c0c0be4654b1f2ad743d72aaea
+msgid "Defines a fem which is the projection of a finite element space (represented by a mesh_fem) on a different mesh. Note that the high-generic assembly language offers also this functionality by means of the interpolated transformations."
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:1
+# 5b6c5b3a8b1f491d8f6aa9104948a86c
+msgid ":file:`getfem_interpolated_fem.h` and :file:`getfem_interpolated_fem.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:1
+# c0098f794b7c41099d2c98213103f5fa
+msgid "Dsfines a fem which is the interpolation of a finite element space (represented by a mesh_fem) on a different mesh. Note that the high-generic assembly language offers also this functionality by means of the interpolated transformations."
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:42
+# fdc544d23c9545c2a3058ef167ea1a1a
+msgid "State"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:46
+# 12e800b440d94b5faac0735eb955d26c
+msgid "The two files :file:`getfem_fem.cc` and :file:`getfem_fem_composite.cc` mainly contains all the finite element description for basic elements. A exhaustive list of the defined finite elements is given in :ref:`ud-appendixa`."
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:50
+# b5d49e9032dd417297401a6df62d4e2c
+msgid "Some other files define some specific finite element such as :file:`getfem_fem_level_set.h` which is a complex construction which allows to \"cut\" a existing element by one or several level sets."
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:54
+# 638f6545a46340ec8b9540186781b0e5
+msgid "The manner to describe the degrees of freedom globally satisfies the needing (connecting dof from an element to another in a generic way) but is a little bit obscure and too much complicated."
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:58
+# 33335907bf204fd19082cff8d24980de
+msgid "Conversely, the way to represent non-equivalent elements with the supplementary matrix ``M`` has proven its efficiency on several elements (Hermites elements, Argyris, etc.)."
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:63
+# d721cbe6cfa44c569d3d9c1077f009b5
+msgid "Perspectives"
+msgstr ""
+
+#: ../source/project/libdesc_fem.rst:65
+# 5552509cd4ae45c389a67efa2d3f24da
+msgid "The principal dissatisfaction of this module is that description of the degrees of freedom is not completely satisfactory. It is the principal reason why one documentation on how to build an element from A to Z was not made for the moment because description of the degrees of freedom was conceived to be temporary. An effort of design is thus to be provided to completely stabilize this module mainly thus with regard to the description of degrees of freedom but also perhaps the description of finite elements which could be partially externalized in a similar way to the cubature methods , at least for the simplest finite elements (equivalent and polynomial finite elements)."
+msgstr ""
+

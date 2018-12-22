@@ -1,0 +1,663 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+# 26055c0c37f94a25932985aa805ed4b4
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:8
+msgid "gf_mesh_fem_get"
+msgstr ""
+
+# 7879360c983b4c93a7ccefdf5864d878
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:10
+msgid "**Synopsis**"
+msgstr ""
+
+# 98bccfdcf04741b783e70529a4884e4c
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:52
+msgid "**Description :**"
+msgstr ""
+
+# 726563c1684a4f80be6653f5b7d668bf
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:55
+msgid "General function for inquiry about mesh_fem objects."
+msgstr ""
+
+# e198d94b19e54b10a604aa6a1552dbc6
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:58
+msgid "**Command list :**"
+msgstr ""
+
+# 4f1eee7c9d504112b91848e1e15f0b99
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:62
+msgid "``n = gf_mesh_fem_get(mesh_fem MF, 'nbdof')``"
+msgstr ""
+
+# 19c275eac1ba48e5ae701d17fade1b21
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:64
+msgid "Return the number of degrees of freedom (dof) of the mesh_fem."
+msgstr ""
+
+# f94e035700684a4fbd70e7a3bc39948d
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:67
+msgid "``n = gf_mesh_fem_get(mesh_fem MF, 'nb basic dof')``"
+msgstr ""
+
+# a1f470ae5a404ee8b903022e2b7470da
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:69
+msgid "Return the number of basic degrees of freedom (dof) of the mesh_fem."
+msgstr ""
+
+# 16af0951b6a34507be6acf5ca1e4084c
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:72
+msgid "``DOF = gf_mesh_fem_get(mesh_fem MF, 'dof from cv',mat CVids)``"
+msgstr ""
+
+# 6e90fc8cbfbc4b79ad3eaca51f466342
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:74
+msgid ""
+"Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof from "
+"cv') instead."
+msgstr ""
+
+# 41dddf47a645467fafb99e9fc41b5887
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:77
+msgid "``DOF = gf_mesh_fem_get(mesh_fem MF, 'basic dof from cv',mat CVids)``"
+msgstr ""
+
+# ce5e324ef03b4244a5528971a4bfcf37
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:79
+msgid "Return the dof of the convexes listed in <literal>CVids</literal>."
+msgstr ""
+
+# 2d628edb7dcf4f61ab3f34a9699374a7
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:81
+msgid ""
+"WARNING: the Degree of Freedom might be returned in ANY order, do not use"
+" this function in your assembly routines. Use 'basic dof from cvid' "
+"instead, if you want to be able to map a convex number with its "
+"associated degrees of freedom."
+msgstr ""
+
+# fa5d09a1df9e406cbe1ce598e463e859
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:86
+msgid ""
+"One can also get the list of basic dof on a set on convex faces, by "
+"indicating on the second row of <literal>CVids</literal> the faces "
+"numbers (with respect to the convex number on the first row)."
+msgstr ""
+
+# 817acaf2a7f9463e807238f8fd9d707a
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:91
+msgid ""
+"``{DOFs, IDx} = gf_mesh_fem_get(mesh_fem MF, 'dof from cvid'[, mat "
+"CVids])``"
+msgstr ""
+
+# cb052184bcf84fcdaa44c09e8a6b949c
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:93
+msgid ""
+"Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof from "
+"cvid') instead."
+msgstr ""
+
+# dc505f3eabf445fdbfe78c39f71750fc
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:97
+msgid ""
+"``{DOFs, IDx} = gf_mesh_fem_get(mesh_fem MF, 'basic dof from cvid'[, mat "
+"CVids])``"
+msgstr ""
+
+# 631a5c3554f0415fa55078d0ec0cbc6b
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:99
+msgid "Return the degrees of freedom attached to each convex of the mesh."
+msgstr ""
+
+# 93a76636adcf4bcfa1f018053aa30e95
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:101
+msgid ""
+"If <literal>CVids</literal> is omitted, all the convexes will be "
+"considered (equivalent to <literal>CVids = 1 ... gf_mesh_get(mesh M, 'max"
+" cvid')</literal>)."
+msgstr ""
+
+# 5309e374c74f49d7bd3a69e444be6c2b
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:104
+msgid ""
+"<literal>IDx</literal> is a vector, <literal>length(IDx) = "
+"length(CVids)+1</literal>. <literal>DOFs</literal> is a vector containing"
+" the concatenated list of dof of each convex in <literal>CVids</literal>."
+" Each entry of <literal>IDx</literal> is the position of the "
+"corresponding convex point list in <literal>DOFs</literal>. Hence, for "
+"example, the list of points of the second convex is "
+"DOFs(IDx(2):IDx(3)-1)."
+msgstr ""
+
+# 4f469277cfb447e18203e0ee9dc7465b
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:110
+msgid ""
+"If <literal>CVids</literal> contains convex #id which do not exist in the"
+" mesh, their point list will be empty."
+msgstr ""
+
+# 17ad8f88b1c44ab7be92baf411760a69
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:114
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'non conformal dof'[, mat CVids])``"
+msgstr ""
+
+# 775deb4729bd40cea8866424f1167372
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:116
+msgid ""
+"Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'non conformal "
+"basic dof') instead."
+msgstr ""
+
+# 65479181e9b440c1aaa3e2646c2cd89b
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:120
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'non conformal basic dof'[, mat CVids])``"
+msgstr ""
+
+# 018333c5e0814ef69c48eaf06ed9b6f2
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:122
+msgid "Return partially linked degrees of freedom."
+msgstr ""
+
+# 2e3ca2fd624b4df0a249b42fb0fcc484
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:124
+msgid ""
+"Return the basic dof located on the border of a convex and which belong "
+"to only one convex, except the ones which are located on the border of "
+"the mesh.  For example, if the convex 'a' and 'b' share a common face, "
+"'a' has a P1 FEM, and 'b' has a P2 FEM, then the basic dof on the middle "
+"of the face will be returned by this function (this can be useful when "
+"searching the interfaces between classical FEM and hierarchical FEM)."
+msgstr ""
+
+# 85528390ac2b40f28cab3d01bfddea6c
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:133
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'qdim')``"
+msgstr ""
+
+# 148cb1fb28474ef2a0c72fbd8d109105
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:135
+msgid "Return the dimension Q of the field interpolated by the mesh_fem."
+msgstr ""
+
+# 3cad0884c89e4543be30d9ea68a28f8b
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:137
+msgid "By default, Q=1 (scalar field). This has an impact on the dof numbering."
+msgstr ""
+
+# ac704484a54340b0b068c6c0a0007b9a
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:140
+msgid "``{FEMs, CV2F} = gf_mesh_fem_get(mesh_fem MF, 'fem'[, mat CVids])``"
+msgstr ""
+
+# 2461b5ff715b41188f889761f3d098ff
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:142
+msgid "Return a list of FEM used by the mesh_fem."
+msgstr ""
+
+# 60c6fc798705455292c60387ec8d260a
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:144
+msgid ""
+"<literal>FEMs</literal> is an array of all fem objects found in the "
+"convexes given in <literal>CVids</literal>. If <literal>CV2F</literal> "
+"was supplied as an output argument, it contains, for each convex listed "
+"in <literal>CVids</literal>, the index of its correspounding FEM in "
+"<literal>FEMs</literal>."
+msgstr ""
+
+# 061f7916f3f64a84829f7801024c6560
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:149
+msgid ""
+"Convexes which are not part of the mesh, or convexes which do not have "
+"any FEM have their correspounding entry in <literal>CV2F</literal> set to"
+" -1."
+msgstr ""
+
+# f61318bb02954c0e93ba7c8edd517705
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:155
+msgid "``CVs = gf_mesh_fem_get(mesh_fem MF, 'convex_index')``"
+msgstr ""
+
+# 4fee3e005d3f4812b6e5769c92ff050e
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:157
+msgid "Return the list of convexes who have a FEM."
+msgstr ""
+
+# 75ba7dfd38e5402e9ba6fb591f1e7c11
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:160
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_lagrangian'[, mat CVids])``"
+msgstr ""
+
+# ba8aa25b2aed4822b9719ceabb29b199
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:162
+msgid "Test if the mesh_fem is Lagrangian."
+msgstr ""
+
+# d0033bc0466d4351917dd18a0be19c2a
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:164
+msgid ""
+"Lagrangian means that each base function Phi[i] is such that Phi[i](P[j])"
+" = delta(i,j), where P[j] is the dof location of the jth base function, "
+"and delta(i,j) = 1 if i==j, else 0."
+msgstr ""
+
+# c41960accdfb47f7b3447ad04e970a8f
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:168
+msgid ""
+"If <literal>CVids</literal> is omitted, it returns 1 if all convexes in "
+"the mesh are Lagrangian. If <literal>CVids</literal> is used, it returns "
+"the convex indices (with respect to <literal>CVids</literal>) which are "
+"Lagrangian."
+msgstr ""
+
+# b818dc780de04e6dbfcfbc8a72f97c32
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:173
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_equivalent'[, mat CVids])``"
+msgstr ""
+
+# 6a417313224a40f4ba97ba4fd09e78f9
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:175
+msgid "Test if the mesh_fem is equivalent."
+msgstr ""
+
+# d34e936b13a14142af435a3a6abf53fa
+# 56799dcec2eb4610aba06b04a5e74a29
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:177
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:184
+msgid "See gf_mesh_fem_get(mesh_fem MF, 'is_lagrangian')"
+msgstr ""
+
+# 1e16d82b766f4c7a929684b4d5ff2e2c
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:180
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_polynomial'[, mat CVids])``"
+msgstr ""
+
+# b96c92e833cc40a08f0128a75d2676b3
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:182
+msgid "Test if all base functions are polynomials."
+msgstr ""
+
+# 274c95bccbc54422b37ecac366a4e2c0
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:187
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_reduced')``"
+msgstr ""
+
+# a37799ca25a541678fc7587e53868912
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:189
+msgid "Return 1 if the optional reduction matrix is applied to the dofs."
+msgstr ""
+
+# 15d889a811294b3c91fecbb7058a6541
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:192
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'reduction matrix')``"
+msgstr ""
+
+# 01ed920717ea47abafac8289f4aed21b
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:194
+msgid "Return the optional reduction matrix."
+msgstr ""
+
+# cd49fe84523549238f3aca53db962265
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:197
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'extension matrix')``"
+msgstr ""
+
+# 12fc953a78544150a9c00823ea1dc11d
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:199
+msgid "Return the optional extension matrix."
+msgstr ""
+
+# c6bdb8b4f8314c988d68e7008ffcae2c
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:202
+msgid "``Vr = gf_mesh_fem_get(mesh_fem MF, 'reduce vector', vec V)``"
+msgstr ""
+
+# fbce476008a64482a1d8ba0f2c30d36e
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:204
+msgid "Multiply the provided vector V with the extension matrix of the mesh_fem."
+msgstr ""
+
+# 59871e797376470186521f620a81e748
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:207
+msgid "``Ve = gf_mesh_fem_get(mesh_fem MF, 'extend vector', vec V)``"
+msgstr ""
+
+# 17c1272559384de6ba69393c4819e00d
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:209
+msgid "Multiply the provided vector V with the reduction matrix of the mesh_fem."
+msgstr ""
+
+# fcfa6d4e2c85499185eb482468d83050
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:212
+msgid "``DOFs = gf_mesh_fem_get(mesh_fem MF, 'basic dof on region',mat Rs)``"
+msgstr ""
+
+# f12b5b5aadc5467f8ac9649f62f56ba4
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:214
+msgid ""
+"Return the list of basic dof (before the optional reduction) lying on one"
+" of the mesh regions listed in <literal>Rs</literal>."
+msgstr ""
+
+# cca60e4c587845cfa678dd243a9ea2b1
+# 9d03f6c85381477bba6f19610a85ad27
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:217
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:230
+msgid ""
+"More precisely, this function returns the basic dof whose support is non-"
+"null on one of regions whose #ids are listed in <literal>Rs</literal> "
+"(note that for boundary regions, some dof nodes may not lie exactly on "
+"the boundary, for example the dof of Pk(n,0) lies on the center of the "
+"convex, but the base function in not null on the convex border)."
+msgstr ""
+
+# e981a90c1a0546e1baaae75729ece80c
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:225
+msgid "``DOFs = gf_mesh_fem_get(mesh_fem MF, 'dof on region',mat Rs)``"
+msgstr ""
+
+# ee1505904d544fb4aad34eea0791de6e
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:227
+msgid ""
+"Return the list of dof (after the optional reduction) lying on one of the"
+" mesh regions listed in <literal>Rs</literal>."
+msgstr ""
+
+# 18433c4ab6a2445d9986445b1591a3a2
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:237
+msgid ""
+"For a reduced mesh_fem a dof is lying on a region if its potential "
+"corresponding shape function is nonzero on this region. The extension "
+"matrix is used to make the correspondance between basic and reduced dofs."
+msgstr ""
+
+# 33a3f6f4298c4311a6bf92b861c32ca1
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:243
+msgid "``DOFpts = gf_mesh_fem_get(mesh_fem MF, 'dof nodes'[, mat DOFids])``"
+msgstr ""
+
+# 205769ce741042c69931c82e177589a7
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:245
+msgid ""
+"Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof nodes') "
+"instead."
+msgstr ""
+
+# 4f101ffcd86c4abf93c3bbe44fcf1c31
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:248
+msgid "``DOFpts = gf_mesh_fem_get(mesh_fem MF, 'basic dof nodes'[, mat DOFids])``"
+msgstr ""
+
+# ae6c52e3508f40c3bb4d1daff2b48536
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:250
+msgid "Get location of basic degrees of freedom."
+msgstr ""
+
+# fb3b9858c1de44838014a0af6ac21726
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:252
+msgid ""
+"Return the list of interpolation points for the specified dof #IDs in "
+"<literal>DOFids</literal> (if <literal>DOFids</literal> is omitted, all "
+"basic dof are considered)."
+msgstr ""
+
+# 5421a6e99eca447685033f29fdffac99
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:257
+msgid "``DOFP = gf_mesh_fem_get(mesh_fem MF, 'dof partition')``"
+msgstr ""
+
+# 4d1dd233c9cd447d91ce80e296159979
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:259
+msgid "Get the 'dof_partition' array."
+msgstr ""
+
+# d584a9f166424341a444c478ef6c3a16
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:261
+msgid ""
+"Return the array which associates an integer (the partition number) to "
+"each convex of the mesh_fem. By default, it is an all-zero array. The "
+"degrees of freedom of each convex of the mesh_fem are connected only to "
+"the dof of neighbouring convexes which have the same partition number, "
+"hence it is possible to create partially discontinuous mesh_fem very "
+"easily."
+msgstr ""
+
+# c0d23a965bc84ad99197c576e7567a82
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:269
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'save',string filename[, string opt])``"
+msgstr ""
+
+# 18224876812546d08b16a887d2667a3a
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:271
+msgid ""
+"Save a mesh_fem in a text file (and optionaly its linked mesh object if "
+"<literal>opt</literal> is the string 'with_mesh')."
+msgstr ""
+
+# 5a76886ec0cd43d2a12e14bddfded63d
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:275
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'char'[, string opt])``"
+msgstr ""
+
+# ed847080876e48368999541fd8645f3b
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:277
+msgid "Output a string description of the mesh_fem."
+msgstr ""
+
+# 39a161c93cef4c198123454c224c666c
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:279
+msgid ""
+"By default, it does not include the description of the linked mesh "
+"object, except if <literal>opt</literal> is 'with_mesh'."
+msgstr ""
+
+# b0c5e43ce2494004a5ac187318e3f388
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:283
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'display')``"
+msgstr ""
+
+# b1fe6e06e0394baba435054fcf4099eb
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:285
+msgid "displays a short summary for a mesh_fem object."
+msgstr ""
+
+# b062636cb1d64978a2f7deba7f6072c5
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:288
+msgid "``m = gf_mesh_fem_get(mesh_fem MF, 'linked mesh')``"
+msgstr ""
+
+# 81108953d72e45009f55b164cebf9754
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:290
+msgid "Return a reference to the mesh object linked to <literal>mf</literal>."
+msgstr ""
+
+# 2ab8688db168498db1e6a67a7aeb8ffa
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:293
+msgid "``m = gf_mesh_fem_get(mesh_fem MF, 'mesh')``"
+msgstr ""
+
+# 60cb8bde9a9f40d495789c3b5e0e3ef0
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:295
+msgid ""
+"Return a reference to the mesh object linked to <literal>mf</literal>. "
+"(identical to gf_mesh_get(mesh M, 'linked mesh'))"
+msgstr ""
+
+# 1c134d82a6b74262807820ef54ec0119
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:299
+msgid ""
+"``gf_mesh_fem_get(mesh_fem MF, 'export to vtk',string filename, ... "
+"['ascii'], U, 'name'...)``"
+msgstr ""
+
+# 53b29e942c31450c8c9cc3aeeedb904f
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:301
+msgid "Export a mesh_fem and some fields to a vtk file."
+msgstr ""
+
+# ddf91775280f465e8e7c4c4fc7f03801
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:303
+msgid ""
+"The FEM and geometric transformations will be mapped to order 1 or 2 "
+"isoparametric Pk (or Qk) FEMs (as VTK does not handle higher order "
+"elements). If you need to represent high-order FEMs or high-order "
+"geometric transformations, you should consider gf_slice_get(slice S, "
+"'export to vtk')."
+msgstr ""
+
+# e4e66a8903984180aed557443d99d347
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:310
+msgid ""
+"``gf_mesh_fem_get(mesh_fem MF, 'export to dx',string filename, ...['as', "
+"string mesh_name][,'edges']['serie',string "
+"serie_name][,'ascii'][,'append'], U, 'name'...)``"
+msgstr ""
+
+# 98f7bd334b7e460489ae48bbfc2d8cfe
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:312
+msgid "Export a mesh_fem and some fields to an OpenDX file."
+msgstr ""
+
+# 02e01261009a49498847d001aa1b56a3
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:314
+msgid ""
+"This function will fail if the mesh_fem mixes different convex types "
+"(i.e. quads and triangles), or if OpenDX does not handle a specific "
+"element type (i.e. prism connections are not known by OpenDX)."
+msgstr ""
+
+# ad2e886247b3486ca7f348b32613c757
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:318
+msgid ""
+"The FEM will be mapped to order 1 Pk (or Qk) FEMs. If you need to "
+"represent high-order FEMs or high-order geometric transformations, you "
+"should consider gf_slice_get(slice S, 'export to dx')."
+msgstr ""
+
+# 9549a8e0798b420eb67e412b4d6cae52
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:323
+msgid ""
+"``gf_mesh_fem_get(mesh_fem MF, 'export to pos',string filename[, string "
+"name][[,mesh_fem mf1], mat U1, string nameU1[[,mesh_fem mf2], mat U2, "
+"string nameU2,...]])``"
+msgstr ""
+
+# baced7705735492b86e4c7e53e5969c0
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:325
+msgid "Export a mesh_fem and some fields to a pos file."
+msgstr ""
+
+# b9f7bea260fd44e0bd4205ed2a17e7b9
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:327
+msgid ""
+"The FEM and geometric transformations will be mapped to order 1 "
+"isoparametric Pk (or Qk) FEMs (as GMSH does not handle higher order "
+"elements)."
+msgstr ""
+
+# 87c8a9d3a27942949c03386063ceb508
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:332
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'dof_from_im',mesh_im mim[, int p])``"
+msgstr ""
+
+# fc91be19f3c14594a564c63702a17458
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:334
+msgid ""
+"Return a selection of dof who contribute significantly to the mass-matrix"
+" that would be computed with <literal>mf</literal> and the integration "
+"method <literal>mim</literal>."
+msgstr ""
+
+# 294b23ad5d7e45bf889d6da9da16488d
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:338
+msgid ""
+"<literal>p</literal> represents the dimension on what the integration "
+"method operates (default <literal>p = mesh dimension</literal>)."
+msgstr ""
+
+# 2f6da6611db349e1a6d4db2f964cd51d
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:341
+msgid ""
+"IMPORTANT: you still have to set a valid integration method on the "
+"convexes which are not crosses by the levelset!"
+msgstr ""
+
+# 208788af75b04e6ea3cbd6d6a20781c4
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:345
+msgid "``U = gf_mesh_fem_get(mesh_fem MF, 'interpolate_convex_data',mat Ucv)``"
+msgstr ""
+
+# 64d599b3f01e4552963ab7286f14cc64
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:347
+msgid ""
+"Interpolate data given on each convex of the mesh to the mesh_fem dof. "
+"The mesh_fem has to be lagrangian, and should be discontinuous (typically"
+" a FEM_PK(N,0) or FEM_QK(N,0) should be used)."
+msgstr ""
+
+# 67ae01557e7d4269987f10573925092f
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:351
+msgid ""
+"The last dimension of the input vector Ucv should have gf_mesh_get(mesh "
+"M, 'max cvid') elements."
+msgstr ""
+
+# 433fa1ca54c7434ca2b8335ad4dff977
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:354
+msgid ""
+"Example of use: gf_mesh_fem_get(mesh_fem MF, 'interpolate_convex_data', "
+"gf_mesh_get(mesh M, 'quality'))"
+msgstr ""
+
+# c4e9da638257412f964d67ade7c410bd
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:357
+msgid "``z = gf_mesh_fem_get(mesh_fem MF, 'memsize')``"
+msgstr ""
+
+# 0832eadfa6d842f496bc811e86a90ee2
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:359
+msgid "Return the amount of memory (in bytes) used by the mesh_fem object."
+msgstr ""
+
+# abbdf4dde6884dc9bd7ecfa4de0c9075
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:361
+msgid "The result does not take into account the linked mesh object."
+msgstr ""
+
+# 7f4a5e9991454ebe9db1981362636265
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:364
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'has_linked_mesh_levelset')``"
+msgstr ""
+
+# 3b8c91c211e845c29f00ed19a84e2e25
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:366
+msgid "Is a mesh_fem_level_set or not."
+msgstr ""
+
+# 02af472e7067419985f89a9c7c8bfc0c
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:369
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'linked_mesh_levelset')``"
+msgstr ""
+
+# a784a7b27a954fe5b81b0d904c4c3e84
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:371
+msgid "if it is a mesh_fem_level_set gives the linked mesh_level_set."
+msgstr ""
+

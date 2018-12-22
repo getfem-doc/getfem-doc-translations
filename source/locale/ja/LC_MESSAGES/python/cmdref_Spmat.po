@@ -1,0 +1,359 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+# 5ab05b5d4f16431a90ae01ba80180760
+#: ../source/python/cmdref_Spmat.rst:8
+msgid "Spmat"
+msgstr ""
+
+# e7228f7d04244ade9923b9eac8657fc2
+#: getfem.Spmat:1 of
+msgid "GeFEM Spmat object"
+msgstr ""
+
+# 288b6865f991419593b966cef7128729
+#: getfem.Spmat:3 of
+msgid ""
+"Create a new sparse matrix in getfem++ format. These sparse matrix can be"
+" stored as CSC (compressed column sparse), which is the format used by "
+"Matlab, or they can be stored as WSC (internal format to getfem). The CSC"
+" matrices are not writable (it would be very inefficient), but they are "
+"optimized for multiplication with vectors, and memory usage. The WSC are "
+"writable, they are very fast with respect to random read/write operation."
+" However their memory overhead is higher than CSC matrices, and they are "
+"a little bit slower for matrix-vector multiplications."
+msgstr ""
+
+# 391733369a614ef38bb80d95db66bc02
+#: getfem.Spmat:12 of
+msgid ""
+"By default, all newly created matrices are build as WSC matrices. This "
+"can be changed later with ``Spmat.to_csc(...)``, or may be changed "
+"automatically by getfem (for example ``gf_linsolve()`` converts the "
+"matrices to CSC)."
+msgstr ""
+
+# 8a7c60e246644936bd4c9276478c104c
+#: getfem.Spmat:17 of
+msgid "The matrices may store REAL or COMPLEX values."
+msgstr ""
+
+# ae6040f35c7d47f9a5d897f6027fbc91
+#: getfem.Spmat:19 of
+msgid "General constructor for Spmat objects"
+msgstr ""
+
+# 47108a347b574898bb3855fead6a1e03
+#: getfem.Spmat:21 of
+msgid ""
+"``SM = Spmat('empty', int m [, int n])`` Create a new empty (i.e. full of"
+" zeros) sparse matrix, of dimensions `m x n`. If `n` is omitted, the "
+"matrix dimension is `m x m`."
+msgstr ""
+
+# 538a0547acab4c798b2b72e0b3468f64
+#: getfem.Spmat:25 of
+msgid ""
+"``SM = Spmat('copy', mat K [, list I [, list J]])`` Duplicate a matrix "
+"`K` (which might be a SpMat). If index `I` and/or `J` are given, the "
+"matrix will be a submatrix of `K`. For example::"
+msgstr ""
+
+# cc9b6d8afee345c98f75703f4fdeac85
+#: getfem.Spmat:33 of
+msgid "will return a 40x5 matrix."
+msgstr ""
+
+# a6ba8ffe500c427fa767d849a3174f28
+#: getfem.Spmat:35 of
+msgid "``SM = Spmat('identity', int n)`` Create a `n x n` identity matrix."
+msgstr ""
+
+# 0812db62cd7f4c82b600f50cd43b6c3a
+#: getfem.Spmat:38 of
+msgid ""
+"``SM = Spmat('mult', Spmat A, Spmat B)`` Create a sparse matrix as the "
+"product of the sparse matrices `A` and `B`. It requires that `A` and `B` "
+"be both real or both complex, you may have to use ``Spmat.to_complex()``"
+msgstr ""
+
+# cd848fd5dd2d48a081087ddf866c8edc
+#: getfem.Spmat:43 of
+msgid ""
+"``SM = Spmat('add', Spmat A, Spmat B)`` Create a sparse matrix as the sum"
+" of the sparse matrices `A` and `B`. Adding a real matrix with a complex "
+"matrix is possible."
+msgstr ""
+
+# d27d841730c6411e8931da9635002f4a
+#: getfem.Spmat:47 of
+msgid ""
+"``SM = Spmat('diag', mat D [, ivec E [, int n [,int m]]])`` Create a "
+"diagonal matrix. If `E` is given, `D` might be a matrix and each column "
+"of `E` will contain the sub-diagonal number that will be filled with the "
+"corresponding column of `D`."
+msgstr ""
+
+# c7eb43d5c7984d4e8f81405f0b395ca7
+#: getfem.Spmat:52 of
+msgid ""
+"``SM = Spmat('load','hb'|'harwell-boeing'|'mm'|'matrix-market', string "
+"filename)`` Read a sparse matrix from an Harwell-Boeing or a Matrix-"
+"Market file ."
+msgstr ""
+
+# 75ed7128b3ae45be93823973a45d5057
+#: getfem.Spmat.add:1 of
+msgid "Add `V` to the sub-matrix 'M(I,J)'."
+msgstr ""
+
+# 6fe5fafd76134b4f9842715d0bb24932
+# 26ffb4cde1a943f9b702e02e075bd189
+#: getfem.Spmat.add:3 getfem.Spmat.assign:3 of
+msgid "`V` might be a sparse matrix or a full matrix."
+msgstr ""
+
+# fe30caedf6b84d8db9a82cc6dc63dadb
+#: getfem.Spmat.assign:1 of
+msgid "Copy V into the sub-matrix 'M(I,J)'."
+msgstr ""
+
+# fba412d665d5483e8a789ad1535c7a28
+#: getfem.Spmat.char:1 of
+msgid "Output a (unique) string representation of the Spmat."
+msgstr ""
+
+# ae788e2546ae4c6d9645a87b35ebec45
+#: getfem.Spmat.char:3 of
+msgid ""
+"This can be used to perform comparisons between two different Spmat "
+"objects. This function is to be completed."
+msgstr ""
+
+# 3cf70ff83a9641dda98a07e515d9ae64
+#: getfem.Spmat.clear:1 of
+msgid "Synopsis: Spmat.clear(self[, list I[, list J]])"
+msgstr ""
+
+# cc7c541b1f31420086ff3dfccdd96590
+#: getfem.Spmat.clear:3 of
+msgid "Erase the non-zero entries of the matrix."
+msgstr ""
+
+# e8b7b2a63d404c1aaf6d747713f990f6
+#: getfem.Spmat.clear:5 of
+msgid ""
+"The optional arguments `I` and `J` may be specified to clear a sub-matrix"
+" instead of the entire matrix."
+msgstr ""
+
+# ffa16951527e4e9d8c553044787a2caa
+#: getfem.Spmat.conjugate:1 of
+msgid "Conjugate each element of the matrix."
+msgstr ""
+
+# e8b3acb4d117451dbe42e83da19e9d61
+#: getfem.Spmat.csc_ind:1 of
+msgid "Return the two usual index arrays of CSC storage."
+msgstr ""
+
+# d018849438f74e2787fe5dc133248b8a
+# f5787937fe7b4a5fb590c6b979f9ee00
+#: getfem.Spmat.csc_ind:3 getfem.Spmat.csc_val:3 of
+msgid "If `M` is not stored as a CSC matrix, it is converted into CSC."
+msgstr ""
+
+# 3c58875f072e498483e0c3d28b9d3a45
+#: getfem.Spmat.csc_val:1 of
+msgid "Return the array of values of all non-zero entries of `M`."
+msgstr ""
+
+# 1d12c6c33c1140d896ac4d605911b00a
+#: getfem.Spmat.determinant:1 of
+msgid "returns the matrix determinant calculated using MUMPS."
+msgstr ""
+
+# 7c6d1ad9764943dfa0d918b82340222b
+#: getfem.Spmat.diag:1 of
+msgid "Return the diagonal of `M` as a vector."
+msgstr ""
+
+# 5feb79edb5e24a74b7b6a9c692865f11
+#: getfem.Spmat.diag:3 of
+msgid "If `E` is used, return the sub-diagonals whose ranks are given in E."
+msgstr ""
+
+# a0d7b7d31d154127b8d0289671a82c3f
+#: getfem.Spmat.dirichlet_nullspace:1 of
+msgid "Solve the dirichlet conditions `M.U=R`."
+msgstr ""
+
+# 59c35c25dd2e4d9cbcb3c1d5dd8cbf9b
+#: getfem.Spmat.dirichlet_nullspace:3 of
+msgid ""
+"A solution `U0` which has a minimum L2-norm is returned, with a sparse "
+"matrix `N` containing an orthogonal basis of the kernel of the "
+"(assembled) constraints matrix `M` (hence, the PDE linear system should "
+"be solved on this subspace): the initial problem"
+msgstr ""
+
+# 24788cc7861e43d0a5aae21812bb471f
+#: getfem.Spmat.dirichlet_nullspace:8 of
+msgid "`K.U = B` with constraints `M.U = R`"
+msgstr ""
+
+# 5b8c29cb3e8b497fa838b3569cc12732
+#: getfem.Spmat.dirichlet_nullspace:10 of
+msgid "is replaced by"
+msgstr ""
+
+# 3e1e36ba7be94c12b25543e1abad8af2
+#: getfem.Spmat.dirichlet_nullspace:12 of
+msgid "`(N'.K.N).UU = N'.B` with `U = N.UU + U0`"
+msgstr ""
+
+# 731c3c540cb14587afe7d6d22ea000f8
+#: getfem.Spmat.display:1 of
+msgid "displays a short summary for a Spmat object."
+msgstr ""
+
+# 7cab169e6936438b930c5a158cb4b895
+#: getfem.Spmat.full:1 of
+msgid "Synopsis: Sm = Spmat.full(self[, list I[, list J]])"
+msgstr ""
+
+# f3f96ebda23f4fafa256ca0e013dfcd4
+#: getfem.Spmat.full:3 of
+msgid "Return a full (sub-)matrix."
+msgstr ""
+
+# 6db135a22ca549a79190c744f8807f99
+#: getfem.Spmat.full:5 of
+msgid ""
+"The optional arguments `I` and `J`, are the sub-intervals for the rows "
+"and columns that are to be extracted."
+msgstr ""
+
+# 65ec682cdeba40eb906126dfbbd444f5
+#: getfem.Spmat.is_complex:1 of
+msgid "Return 1 if the matrix contains complex values."
+msgstr ""
+
+# 73428d9b335342158778917b8421b95e
+#: getfem.Spmat.mult:1 of
+msgid "Product of the sparse matrix `M` with a vector `V`."
+msgstr ""
+
+# a89e5dffa74e4550aef5313cd47c4bc8
+#: getfem.Spmat.mult:3 of
+msgid "For matrix-matrix multiplications, see Spmat('mult')."
+msgstr ""
+
+# 49019d04e3144a1a936bf3f55c51b150
+#: getfem.Spmat.nnz:1 of
+msgid "Return the number of non-null values stored in the sparse matrix."
+msgstr ""
+
+# 690bb3456dc543429bf736a8cb20fa50
+#: getfem.Spmat.save:1 of
+msgid "Export the sparse matrix."
+msgstr ""
+
+# a647b1e8ed2d4c309aa416aa1da5c573
+#: getfem.Spmat.save:3 of
+msgid ""
+"the format of the file may be 'hb' for Harwell-Boeing, or 'mm' for "
+"Matrix-Market."
+msgstr ""
+
+# 168b2664eac447eba6b830aaf8a84c61
+#: getfem.Spmat.scale:1 of
+msgid "Multiplies the matrix by a scalar value `v`."
+msgstr ""
+
+# ebcd023af5cc4c6c9b1125df49422fd8
+#: getfem.Spmat.set_diag:1 of
+msgid "Change the diagonal (or sub-diagonals) of the matrix."
+msgstr ""
+
+# 81e0d92b44aa44f59c10558a33c8c303
+#: getfem.Spmat.set_diag:3 of
+msgid ""
+"If `E` is given, `D` might be a matrix and each column of `E` will "
+"contain the sub-diagonal number that will be filled with the "
+"corresponding column of `D`."
+msgstr ""
+
+# a6c458ab085d4f5d90b6353da9ca3d3a
+#: getfem.Spmat.size:1 of
+msgid "Return a vector where `ni` and `nj` are the dimensions of the matrix."
+msgstr ""
+
+# 9e637ccfafb347119af707990cf90033
+#: getfem.Spmat.storage:1 of
+msgid "Return the storage type currently used for the matrix."
+msgstr ""
+
+# 010ef85a509140f6acfeb2b6c497940d
+#: getfem.Spmat.storage:3 of
+msgid "The storage is returned as a string, either 'CSC' or 'WSC'."
+msgstr ""
+
+# 9c1227a237ae438fa0aa83e67cd4c787
+#: getfem.Spmat.tmult:1 of
+msgid ""
+"Product of `M` transposed (conjugated if `M` is complex) with the vector "
+"`V`."
+msgstr ""
+
+# cb102b20933b481aa23118d8d75b8b8d
+#: getfem.Spmat.to_complex:1 of
+msgid "Store complex numbers."
+msgstr ""
+
+# 5f7b83485788440aab491bf5a3cf1266
+#: getfem.Spmat.to_csc:1 of
+msgid "Convert the matrix to CSC storage."
+msgstr ""
+
+# 929de08091fd40fb85df1a41c6a82972
+#: getfem.Spmat.to_csc:3 of
+msgid "CSC storage is recommended for matrix-vector multiplications."
+msgstr ""
+
+# 5e708038ceee4e46a0ca0efc9c37503f
+#: getfem.Spmat.to_wsc:1 of
+msgid "Convert the matrix to WSC storage."
+msgstr ""
+
+# 78491584da814a06949f72e41961d721
+#: getfem.Spmat.to_wsc:3 of
+msgid "Read and write operation are quite fast with WSC storage."
+msgstr ""
+
+# 4861da403033402ca1009e8f6781cb6a
+#: getfem.Spmat.transconj:1 of
+msgid "Transpose and conjugate the matrix."
+msgstr ""
+
+# 63fc50591d674371974336842079b958
+#: getfem.Spmat.transpose:1 of
+msgid "Transpose the matrix."
+msgstr ""
+

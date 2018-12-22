@@ -1,0 +1,568 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/matlab/cmdref_gf_model_get.rst:8
+# f0e4b079320645968bcc7ab20572e6ef
+msgid "gf_model_get"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:10
+# e40314b21f6e427b9698334d2b1f97e3
+msgid "**Synopsis**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:60
+# f638678be5804d45873af06e01abda1b
+msgid "**Description :**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:63
+# e0ad168e372345989f7434a74a698078
+msgid "Get information from a model object."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:66
+# c45e890673b64db4834f08434256ead8
+msgid "**Command list :**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:70
+# 997d53c138774b00be77274d2885a235
+msgid "``b = gf_model_get(model M, 'is_complex')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:72
+# af5536c70e8943e690cbcd9cf4393af6
+msgid "Return 0 is the model is real, 1 if it is complex."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:75
+# e4cbc9af16f94068806460ab45ba4973
+msgid "``T = gf_model_get(model M, 'nbdof')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:77
+# 3f059ada6c974b6b987a9c7f6bf36128
+msgid "Return the total number of degrees of freedom of the model."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:80
+# b802477b17c6435f91467bece0099d87
+msgid "``dt = gf_model_get(model M, 'get time step')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:82
+# 74236f797f1242f4ab0b730e416a1950
+msgid "Gives the value of the time step."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:85
+# 9a592544b9c0491f95ee9a71cde2d354
+msgid "``t = gf_model_get(model M, 'get time')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:87
+# 96ded02892b241a8b3e22a5299eade29
+msgid "Give the value of the data `t` corresponding to the current time."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:91
+# 003be853b73d4beeac075d39980b3f92
+msgid "``T = gf_model_get(model M, 'tangent_matrix')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:93
+# 10f5c76f6c414c7fa5301e49973fa1cd
+msgid "Return the tangent matrix stored in the model ."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:96
+# 33aa45a09fd04874b872d10965f856e1
+msgid "``gf_model_get(model M, 'rhs')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:98
+# b68a1283e5f646f8a6187f94f2b0a767
+msgid "Return the right hand side of the tangent problem."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:101
+# e6359b7c59aa4d56873759e342311c5f
+msgid "``gf_model_get(model M, 'brick term rhs', int ind_brick[, int ind_term, int sym, int ind_iter])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:103
+# 5b6c1c80ae314a88be3bc78352905ba4
+msgid "Gives the access to the part of the right hand side of a term of a particular nonlinear brick. Does not account of the eventual time dispatcher. An assembly of the rhs has to be done first. `ind_brick` is the brick index. `ind_term` is the index of the term inside the brick (default value : 1). `sym` is to access to the second right hand side of for symmetric terms acting on two different variables (default is 0). `ind_iter` is the iteration number when time dispatchers are used (default is 1)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:115
+# ec183c77d23b410b929184662a01cb6d
+msgid "``z = gf_model_get(model M, 'memsize')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:117
+# fb2c5662775e4be8918ff76ea8d77812
+msgid "Return a rough approximation of the amount of memory (in bytes) used by the model."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:121
+# 6fdd7d4c8c424a96a5ed76cb70f6a527
+msgid "``gf_model_get(model M, 'variable list')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:123
+# e7af35d1f40c4caea327136e5a2e260e
+msgid "print to the output the list of variables and constants of the model."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:126
+# 0607fb1dadcc4ab59e6a3c67d62cfa72
+msgid "``gf_model_get(model M, 'brick list')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:128
+# 8a2f4e6cb91f419b9a1a57d08b851051
+msgid "print to the output the list of bricks of the model."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:131
+# 3f0620ab75ce4192b932b8ef4be15451
+msgid "``gf_model_get(model M, 'list residuals')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:133
+# b763b732eca44d009991338ac4826e42
+msgid "print to the output the residuals corresponding to all terms included in the model."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:137
+# a775248688b14102a06ba2475fd9d6b2
+msgid "``V = gf_model_get(model M, 'variable', string name)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:139
+# 72a03e7331874c6cbb9a464b3ba0afa8
+msgid "Gives the value of a variable or data."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:142
+# c09cff808e484980a563e529c64ad1a2
+msgid "``V = gf_model_get(model M, 'interpolation', string expr, {mesh_fem mf | mesh_imd mimd | vec pts,  mesh m}[, int region[, int extrapolation[, int rg_source]]])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:144
+# 8c6ef037d3234feea7dfd36c780cb839
+msgid "Interpolate a certain expression with respect to the mesh_fem `mf` or the mesh_im_data `mimd` or the set of points `pts` on mesh `m`. The expression has to be valid according to the high-level generic assembly language possibly including references to the variables and data of the model."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:150
+# b3196a1b147f48d8aab1af01582f8038
+msgid "The options `extrapolation` and `rg_source` are specific to interpolations with respect to a set of points `pts`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:154
+# e20fac72f1b44113865aa44777b250a8
+msgid "``V = gf_model_get(model M, 'local_projection', mesh_im mim, string expr, mesh_fem mf[, int region])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:156
+# fa133a29e6bd415885535351f0c8be25
+msgid "Make an elementwise L2 projection of an expression with respect to the mesh_fem `mf`. This mesh_fem has to be a discontinuous one. The expression has to be valid according to the high-level generic assembly language possibly including references to the variables and data of the model."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:164
+# 87daa102cda545bfbe1c98dbebbaad70
+msgid "``mf = gf_model_get(model M, 'mesh fem of variable', string name)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:166
+# 8fc2f7943f6e4a9e8dba6677f6300d2e
+msgid "Gives access to the `mesh_fem` of a variable or data."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:169
+# 0fdadd0a8044440ebf74260a2fa79feb
+msgid "``name = gf_model_get(model M, 'mult varname Dirichlet', int ind_brick)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:171
+# b6035010f0994a1eaff0b7ae8ad4ad2b
+msgid "Gives the name of the multiplier variable for a Dirichlet brick. If the brick is not a Dirichlet condition with multiplier brick, this function has an undefined behavior"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:176
+# bcac7f54b6f2495b93533a6f3d3982a4
+msgid "``I = gf_model_get(model M, 'interval of variable', string varname)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:178
+# dbde12915c1c441c8a5fb7cfaf30195d
+msgid "Gives the interval of the variable `varname` in the linear system of the model."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:182
+# d953b5d0ad524828b599d01ac17dfed6
+msgid "``V = gf_model_get(model M, 'from variables')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:184
+# a82c59ed18244e8397e46f0aacf0e469
+msgid "Return the vector of all the degrees of freedom of the model consisting of the concatenation of the variables of the model (useful to solve your problem with you own solver)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:189
+# 4f5b02c790df4a978fad463f52ff1d35
+msgid "``gf_model_get(model M, 'assembly'[, string option])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:191
+# bff448637e644aff8842aa8c06b85b97
+msgid "Assembly of the tangent system taking into account the terms from all bricks. `option`, if specified, should be 'build_all', 'build_rhs', 'build_matrix'. The default is to build the whole tangent linear system (matrix and rhs). This function is useful to solve your problem with you own solver."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:199
+# c217727a9ba1423f9f52777b4c22163f
+msgid "``{nbit, converged} = gf_model_get(model M, 'solve'[, ...])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:201
+# 57b0ea7b857e42c3b426e3f0d843ce74
+msgid "Run the standard getfem solver."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:203
+# 81124deba33e439f803fc3b89dc7489c
+msgid "Note that you should be able to use your own solver if you want (it is possible to obtain the tangent matrix and its right hand side with the gf_model_get(model M, 'tangent matrix') etc.)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:207
+# ed130d3066d54103bf85581fc0f58716
+msgid "Various options can be specified:"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:210
+# 797eb77f140e46e2ae91252e9ffb9295
+msgid "'noisy' or 'very_noisy'"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:210
+# 622e7d1b43994609b95e987de6be8d82
+msgid "the solver will display some information showing the progress (residual values etc.)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:212
+# c8f64418e53a4ce88826b702f76a6bc0
+msgid "'max_iter', int NIT"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:213
+# 3990271f4c8244d19cc1edea829e9de5
+msgid "set the maximum iterations numbers."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:214
+# 04acc4a1dd874384839a2c06f3197de1
+msgid "'max_res', @float RES"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:215
+# 4259f7df61d94f2687abb9b23e481f2e
+msgid "set the target residual value."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:217
+# 8a93c0f7546942eb93e5939a3e312726
+msgid "'diverged_res', @float RES"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:217
+# 68258f71c3c84836b1bacae478236155
+msgid "set the threshold value of the residual beyond which the iterative method is considered to diverge (default is 1e200)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:222
+# e7f0c47df69e4f1eaba8c96480152d9f
+msgid "'lsolver', string SOLVER_NAME"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:220
+# 90249769b53748e1aa17504253221004
+msgid "select explicitely the solver used for the linear systems (the default value is 'auto', which lets getfem choose itself). Possible values are 'superlu', 'mumps' (if supported), 'cg/ildlt', 'gmres/ilu' and 'gmres/ilut'."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:227
+# b47eef2bedbc4685b8c6a76a99c70c5d
+msgid "'lsearch', string LINE_SEARCH_NAME"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:225
+# 1c527eff77484b8eab39bcdd66a45db9
+msgid "select explicitely the line search method used for the linear systems (the default value is 'default'). Possible values are 'simplest', 'systematic', 'quadratic' or 'basic'."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:229
+# cc1a8f8921cf4d7890f18d90e4caf8df
+msgid "Return the number of iterations, if an iterative method is used."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:231
+# cc29ba27c1d7450f8fcab6f0ff079a71
+msgid "Note that it is possible to disable some variables (see gf_model_set(model M, 'disable variable') ) in order to solve the problem only with respect to a subset of variables (the disabled variables are then considered as data) for instance to replace the global Newton strategy with a fixed point one."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:240
+# 8531829ff6ac4fbca7d6cc9d85330bcf
+msgid "``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar scale]]])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:242
+# 57fd617b88bc44c2b0b9f4831ea451fb
+msgid "Test the consistency of the tangent matrix in some random positions and random directions (useful to test newly created bricks). `EPS` is the value of the small parameter for the finite difference computation of the derivative is the random direction (default is 1E-6). `NN` is the number of tests (default is 100). `scale` is a parameter for the random position (default is 1, 0 is an acceptable value) around the current position. Each dof of the random position is chosen in the range [current-scale, current+scale]."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:254
+# ea632661d5304c2ca2e91c3be7103329
+msgid "``gf_model_get(model M, 'test tangent matrix term', string varname1, string varname2[, scalar EPS[, int NB[, scalar scale]]])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:256
+# 9f798547e19a427a966a440b9c8413ee
+msgid "Test the consistency of a part of the tangent matrix in some random positions and random directions (useful to test newly created bricks). The increment is only made on variable `varname2` and tested on the part of the residual corresponding to `varname1`. This means that only the term (`varname1`, `varname2`) of the tangent matrix is tested. `EPS` is the value of the small parameter for the finite difference computation of the derivative is the random direction (default is 1E-6). `NN` is the number of tests (default is 100). `scale` is a parameter for the random position (default is 1, 0 is an acceptable value) around the current position. Each dof of the random position is chosen in the range [current-scale, current+scale]."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:272
+# 87952cd6870f4fb48426301f26a32914
+msgid "``expr = gf_model_get(model M, 'Neumann term', string varname, int region)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:274
+# 532685f2088843e39d46dbd5b0aa9f9d
+msgid "Gives the assembly string corresponding to the Neumann term of the fem variable `varname` on `region`. It is deduced from the assembly string declared by the model bricks. `region` should be the index of a boundary region on the mesh where `varname` is defined. Care to call this function only after all the volumic bricks have been declared. Complains, if a brick omit to declare an assembly string."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:284
+# dfe358589dd8459c9e29039d882289f9
+msgid "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises or Tresca', string varname, string dataname_lambda, string dataname_mu, mesh_fem mf_vm[, string version])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:286
+# cbc893f45fa24788a14362a2cd0ea921
+msgid "Compute the Von-Mises stress or the Tresca stress of a field (only valid for isotropic linearized elasticity in 3D). `version` should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default). Parametrized by Lame coefficients."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:293
+# ae60376e76094a4a9f6e8977bbc69ec9
+msgid "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:295
+# f39ec6e213bc4aa7bb69fa3aca9e50d0
+msgid "Compute the Von-Mises stress  of a displacement field for isotropic linearized elasticity in 3D or in 2D with plane strain assumption. Parametrized by Young modulus and Poisson ratio."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:301
+# 1cf024675c7543a288ac84d73e3edc09
+msgid "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:303
+# c7c3a23f80ca44b58477b76ed306ab63
+msgid "Compute the Von-Mises stress  of a displacement field for isotropic linearized elasticity in 3D or in 2D with plane stress assumption. Parametrized by Young modulus and Poisson ratio."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:309
+# 176c5a7dd1c143a5871958390aa8ac68
+msgid "``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, string lawname, string dataname, mesh_fem mf_vm[, string version])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:311
+# 3c53a3d48c8e44d7b5627c223e67c8e7
+msgid "Compute on `mf_vm` the Von-Mises stress or the Tresca stress of a field for nonlinear elasticity in 3D. `lawname` is the constitutive law which could be 'SaintVenant Kirchhoff', 'Mooney Rivlin', 'neo Hookean' or 'Ciarlet Geymonat'. `dataname` is a vector of parameters for the constitutive law. Its length depends on the law. It could be a short vector of constant values or a vector field described on a finite element method for variable coefficients. `version` should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:322
+# 26e23bd7b65144daa5e95a0d09eaff7e
+msgid "``V = gf_model_get(model M, 'compute finite strain elasticity Von Mises',  string lawname, string varname, string params, mesh_fem mf_vm[, int region])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:324
+# 438121495bbf42278b33a864d272894e
+msgid "Compute on `mf_vm` the Von-Mises stress of a field `varname` for nonlinear elasticity in 3D. `lawname` is the constitutive law which should be a valid name. `params` are the parameters law. It could be a short vector of constant values or may depend on data or variables of the model. Uses the high-level generic assembly."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:333
+# aa977558bf6346e582033b79914c75e6
+msgid "``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string varname, string lawname, string dataname, mesh_fem mf_sigma)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:335
+# 46f9a48ec7184f089a0ec4406f4e8a97
+msgid "Compute on `mf_sigma` the second Piola Kirchhoff stress tensor of a field for nonlinear elasticity in 3D. `lawname` is the constitutive law which could be 'SaintVenant Kirchhoff', 'Mooney Rivlin', 'neo Hookean' or 'Ciarlet Geymonat'. `dataname` is a vector of parameters for the constitutive law. Its length depends on the law. It could be a short vector of constant values or a vector field described on a finite element method for variable coefficients."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:346
+# 278214fcf245475eacadbf92a9a24cf3
+msgid "``gf_model_get(model M, 'elastoplasticity next iter', mesh_im mim, string varname, string previous_dep_name, string projname, string datalambda, string datamu, string datathreshold, string datasigma)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:348
+# 680aa4f7ca6e4d2a869ddf685ccb7fe4
+msgid "Used with the old (obsolete) elastoplasticity brick to pass from an iteration to the next one. Compute and save the stress constraints sigma for the next iterations. 'mim' is the integration method to use for the computation. 'varname' is the main variable of the problem. 'previous_dep_name' represents the displacement at the previous time step. 'projname' is the type of projection to use. For the moment it could only be 'Von Mises' or 'VM'. 'datalambda' and 'datamu' are the Lame coefficients of the material. 'datasigma' is a vector which will contain the new stress constraints values."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:359
+# 8ce8df195e9145408a51421ae54da983
+msgid "``gf_model_get(model M, 'small strain elastoplasticity next iter', mesh_im mim,  string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int region = -1])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:361
+# a16e019c464a484fb317e131511ae2df
+msgid "Function that allows to pass from a time step to another for the small strain plastic brick. The parameters have to be exactly the same than the one of `add_small_strain_elastoplasticity_brick`, so see the documentation of this function for the explanations. Basically, this brick computes the plastic strain and the plastic multiplier and stores them for the next step. Additionaly, it copies the computed displacement to the data that stores the displacement of the previous time step (typically 'u' to 'Previous_u'). It has to be called before any use of `compute_small_strain_elastoplasticity_Von_Mises`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:374
+# 9788d0d839244feb9d6169998e729f80
+msgid "``V = gf_model_get(model M, 'small strain elastoplasticity Von Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int region])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:376
+# 856256b6d9f345478a0f0b317d0e69b3
+msgid "This function computes the Von Mises stress field with respect to a small strain elastoplasticity term, approximated on `mf_vm`, and stores the result into `VM`.  All other parameters have to be exactly the same as for `add_small_strain_elastoplasticity_brick`. Remember that `small_strain_elastoplasticity_next_iter` has to be called before any call of this function."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:385
+# 86e01e1762054ab392c6b2162aeb8acf
+msgid "``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', string datasigma, mesh_fem mf_vm[, string version])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:387
+# 7f2d1e839b0c4bde98d31d5dc82f8be7
+msgid "Compute on `mf_vm` the Von-Mises or the Tresca stress of a field for plasticity and return it into the vector V. `datasigma` is a vector which contains the stress constraints values supported by the mesh. `version` should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:392
+# 0493981c40de4a81a6c38c77144c37d2
+msgid "``V = gf_model_get(model M, 'compute plastic part', mesh_im mim, mesh_fem mf_pl, string varname, string previous_dep_name, string projname, string datalambda, string datamu, string datathreshold, string datasigma)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:394
+# fd32f583ec684825b6ed8937b0b084f9
+msgid "Compute on `mf_pl` the plastic part and return it into the vector V. `datasigma` is a vector which contains the stress constraints values supported by the mesh."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:398
+# a4be86c970574f1ebb4aef5d97921417
+msgid "``gf_model_get(model M, 'finite strain elastoplasticity next iter', mesh_im mim, string lawname, string unknowns_type, [, string varnames, ...] [, string params, ...] [, int region = -1])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:400
+# 67eaee862dce4c1fad01c607e054c436
+msgid "Function that allows to pass from a time step to another for the finite strain plastic brick. The parameters have to be exactly the same than the one of `add_finite_strain_elastoplasticity_brick`, so see the documentation of this function for the explanations. Basically, this brick computes the plastic strain and the plastic multiplier and stores them for the next step. For the Simo-Miehe law which is currently the only one implemented, this function updates the state variables defined in the last two entries of `varnames`, and resets the plastic multiplier field given as the second entry of `varnames`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:413
+# 1ba5f8963ca34d6b823b0031c4382fa0
+msgid "``V = gf_model_get(model M, 'compute finite strain elastoplasticity Von Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, [, string varnames, ...] [, string params, ...] [, int region = -1])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:415
+# 52cf184a37af40ce803c6e4696d24dd8
+msgid "Compute on `mf_vm` the Von-Mises or the Tresca stress of a field for plasticity and return it into the vector V. The first input parameters ar as in the function 'finite strain elastoplasticity next iter'."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:420
+# 21acc5c4f4104b8fa86e265e4d911944
+msgid "``V = gf_model_get(model M, 'sliding data group name of large sliding contact brick', int indbrick)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:422
+#: ../source/matlab/cmdref_gf_model_get.rst:428
+#: ../source/matlab/cmdref_gf_model_get.rst:434
+#: ../source/matlab/cmdref_gf_model_get.rst:440
+#: ../source/matlab/cmdref_gf_model_get.rst:446
+#: ../source/matlab/cmdref_gf_model_get.rst:452
+# 5919d8acbf5d42a797dda636ef73528f
+# ef61a59bf29b498aa19274c5e30da3af
+# 3276e7891ee54dd7814d700854c93acf
+# eeef9353d3a64d2cac4b495261a8e76b
+# be01d24ffc574f74974c9bae93e105a7
+# ae4265106c5c465ea5915cc04ade3bf1
+msgid "Gives the name of the group of variables corresponding to the sliding data for an existing large sliding contact brick."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:426
+# 13dba88b8219404e8de4b3d482276e5b
+msgid "``V = gf_model_get(model M, 'displacement group name of large sliding contact brick', int indbrick)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:432
+# bffa8c0ff6384e1ba430498e5cfa0158
+msgid "``V = gf_model_get(model M, 'transformation name of large sliding contact brick', int indbrick)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:438
+# 3a831cb5281b4abd961167ca2e816626
+msgid "``V = gf_model_get(model M, 'sliding data group name of Nitsche large sliding contact brick', int indbrick)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:444
+# 8decbb7e6f7e4e728be3e9889f5beec8
+msgid "``V = gf_model_get(model M, 'displacement group name of Nitsche large sliding contact brick', int indbrick)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:450
+# 0730e06c73f7441fb284ffe509eb0326
+msgid "``V = gf_model_get(model M, 'transformation name of Nitsche large sliding contact brick', int indbrick)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:456
+# e1c2125c19194b7b86bac143d35cc04f
+msgid "``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:458
+# daf9de79cac44ec6860cbd0ae8e5e123
+msgid "Gives the matrix term ind_term of the brick ind_brick if it exists"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:462
+# a978af03bd2b4d798fabb4d7994e9a41
+msgid "``s = gf_model_get(model M, 'char')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:464
+# 274073ecdb4749879a960d21b2332d21
+msgid "Output a (unique) string representation of the model."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:466
+# e4ff90a0015c459c9945c0b378a9d38e
+msgid "This can be used to perform comparisons between two different model objects. This function is to be completed."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:472
+# 723d66c439474686bdd09eaa3c6c5527
+msgid "``gf_model_get(model M, 'display')``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_model_get.rst:474
+# d84080ee5beb4e99a7c8f1d262f807f7
+msgid "displays a short summary for a model object."
+msgstr ""
+

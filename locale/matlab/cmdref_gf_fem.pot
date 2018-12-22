@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/matlab/cmdref_gf_fem.rst:8
+# 1833d7055dde427d8b89cbdaec1ab76e
+msgid "gf_fem"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:10
+# 5da67a9d60754f8db9a8bb7045914929
+msgid "**Synopsis**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:17
+# 1cdddb2de8a74d9da10dacd38e0a8109
+msgid "**Description :**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:20
+# 37d514f1862541568dd41a090878faf5
+msgid "General constructor for fem objects."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:22
+# f62be14d5b0f46f89d798860e657871b
+msgid "This object represents a finite element method on a reference element."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:25
+# 2aedf6edff214a7c8ac5abff165157de
+msgid "**Command list :**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:29
+# e2f046d7e8df44cda3f38e30a36fd469
+msgid "``F = gf_fem('interpolated_fem', mesh_fem mf, mesh_im mim, [ivec blocked_dof])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:31
+# 19b641acca324604b31b5bbae65a745a
+msgid "Build a special fem which is interpolated from another mesh_fem."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:33
+# 0a6cad8c1d5a453fa41d810e720e92f3
+msgid "Using this special finite element, it is possible to interpolate a given mesh_fem `mf` on another mesh, given the integration method `mim` that will be used on this mesh."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:37
+# f0268834b28a45d2aa5af345f5a3a252
+msgid "Note that this finite element may be quite slow, and eats much memory."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:41
+# d32ae8daa4f9406384b9ed4cc541c8bc
+msgid "``F = gf_fem(string fem_name)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:43
+# c9ccd14acc864816960788d73468ccc7
+msgid "The `fem_name` should contain a description of the finite element method. Please refer to the getfem++ manual (especially the description of finite element and integration methods) for a complete reference. Here is a list of some of them:"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:48
+# 698a5c20f3e24c46a5aa2a3c30993a00
+msgid "FEM_PK(n,k) : classical Lagrange element Pk on a simplex of dimension `n`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:50
+# 938453a3038548608cff4bf43bccc2bf
+msgid "FEM_PK_DISCONTINUOUS(n,k[,alpha]) : discontinuous Lagrange element Pk on a simplex of dimension `n`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:52
+# 077d9ff48dc94f5896fba0a8b2b91c4f
+msgid "FEM_QK(n,k) : classical Lagrange element Qk on quadrangles, hexahedrons etc."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:54
+# fe597e9a6eda4a4eb7873143b85f2ab8
+msgid "FEM_QK_DISCONTINUOUS(n,k[,alpha]) : discontinuous Lagrange element Qk on quadrangles, hexahedrons etc."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:56
+# 54e7622304724110ab7609d8b90f2ece
+msgid "FEM_Q2_INCOMPLETE(n) : incomplete Q2 elements with 8 and 20 dof (serendipity Quad 8 and Hexa 20 elements)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:59
+# ffe5dc50cb7d447d91dc03b036f8c9ae
+msgid "FEM_PK_PRISM(n,k) : classical Lagrange element Pk on a prism of dimension `n`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:61
+# 4b04e847d1b34228b77d4d8fd277811b
+msgid "FEM_PK_PRISM_DISCONTINUOUS(n,k[,alpha]) : classical discontinuous Lagrange element Pk on a prism."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:63
+# 44f7ee221c4c4b4690c340c4f8e0d0c0
+msgid "FEM_PK_WITH_CUBIC_BUBBLE(n,k) : classical Lagrange element Pk on a simplex with an additional volumic bubble function."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:66
+# 7824ec1f564a459497cbed3a452fb192
+msgid "FEM_P1_NONCONFORMING : non-conforming P1 method on a triangle."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:68
+# 4145f068667f49a2a32176c4a6a246b0
+msgid "FEM_P1_BUBBLE_FACE(n) : P1 method on a simplex with an additional bubble function on face 0."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:70
+# 468bcc6282d942b49f65ef33bf96fc83
+msgid "FEM_P1_BUBBLE_FACE_LAG : P1 method on a simplex with an additional lagrange dof on face 0."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:72
+# 886f2d0d45604e0f8ee563578ef06101
+msgid "FEM_PK_HIERARCHICAL(n,k) : PK element with a hierarchical basis."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:74
+# 6fed12c47a30438ea96ce07183e7edb1
+msgid "FEM_QK_HIERARCHICAL(n,k) : QK element with a hierarchical basis"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:76
+# a822f6b122684fe3b5c5bfbb72112726
+msgid "FEM_PK_PRISM_HIERARCHICAL(n,k) : PK element on a prism with a hierarchical basis."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:78
+# 43d128d4aa8443c3833ae70297a7329d
+msgid "FEM_STRUCTURED_COMPOSITE(fem f,k) : Composite fem `f` on a grid with `k` divisions."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:80
+# a215c7201e0043c696a554290d1b8caf
+msgid "FEM_PK_HIERARCHICAL_COMPOSITE(n,k,s) : Pk composite element on a grid with `s` subdivisions and with a hierarchical basis."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:83
+# efde2ac8780b4c54b33a8698782dc543
+msgid "FEM_PK_FULL_HIERARCHICAL_COMPOSITE(n,k,s) : Pk composite element with `s` subdivisions and a hierarchical basis on both degree and subdivision."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:86
+# 851490be692943aeaab9dfb3ecad86bc
+msgid "FEM_PRODUCT(A,B) : tensorial product of two polynomial elements."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:88
+# d508de9eef7a416b90d67acb746c3b7a
+msgid "FEM_HERMITE(n) : Hermite element P3 on a simplex of dimension `n = 1, 2, 3`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:90
+# 0abe9953afec43a59ec0cb1397cbb2ad
+msgid "FEM_ARGYRIS : Argyris element P5 on the triangle."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:92
+# 5e0eccb5df3e4d158e20e5bbed9cbd07
+msgid "FEM_HCT_TRIANGLE : Hsieh-Clough-Tocher element on the triangle (composite P3 element which is C1), should be used with IM_HCT_COMPOSITE() integration method."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:96
+# bb94c4957961478da6a81ccf98b66b5a
+msgid "FEM_QUADC1_COMPOSITE : Quadrilateral element, composite P3 element and C1 (16 dof)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:98
+# 1de3dcc4b7e94d4cb6c7531e3c3f85bc
+msgid "FEM_REDUCED_QUADC1_COMPOSITE : Quadrilateral element, composite P3 element and C1 (12 dof)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:100
+# dd8e2104337a47ec92fd6abfc2f782ff
+msgid "FEM_RT0(n) : Raviart-Thomas element of order 0 on a simplex of dimension `n`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:102
+# 7dcbe21880a145aaa0eb2d03a4c467e1
+msgid "FEM_NEDELEC(n) : Nedelec edge element of order 0 on a simplex of dimension `n`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_fem.rst:105
+# 2c1d5ed782f1486389e39cb03d50fbb7
+msgid "Of course, you have to ensure that the selected fem is compatible with the geometric transformation: a Pk fem has no meaning on a quadrangle."
+msgstr ""
+

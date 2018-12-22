@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 02:08+0900\n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,72 +17,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/model_bilaplacian.rst:13
-# 3e663a20edad4192b71fd629688d4936
+# aade35f33178451ca7f8cb59df4caf5e
 msgid "Bilaplacian and Kirchhoff-Love plate bricks"
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:15
-# 0ada977f6e904b749da4bccdd178d6c5
+# 3bbdda5a410d499e9c47e9962a7aaef1
 msgid "The following function ::"
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:20
-# 7021acc707c94a62915d584701c928c8
+# 35502bec919648c1aa97fe6d7715a06a
 msgid "adds a bilaplacian brick on the variable `varname` and on the mesh region `region`. This represent a term :math:`\\Delta(D \\Delta u)`. where :math:`D(x)` is a coefficient determined by `dataname` which could be constant or described on a f.e.m. The corresponding weak form is :math:`\\int D(x)\\Delta u(x) \\Delta v(x) dx`."
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:23
-# 076557e6c07a44eeb9b793309c3249b3
+# 4906e4489bdc43d9ac9389134abefc21
 msgid "For the Kirchhoff-Love plate model, the weak form is a bit different (and more stable than the previous one). the function to add that term is ::"
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:28
-# d783a778cdc34f5cbd65e30729619e21
+# 8918fcc2c14a433fa0685efbeb004a1e
 msgid "It adds a bilaplacian brick on the variable `varname` and on the mesh region `region`. This represent a term :math:`\\Delta(D \\Delta u)` where :math:`D(x)` is a the flexion modulus determined by `dataname1`. The term is integrated by part following a Kirchhoff-Love plate model with `dataname2` the poisson ratio."
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:34
-# fe3787295dea4549811f152e97cd76b0
+# 28cd93d012c84cd3b273f32feab11da1
 msgid "There is specific bricks to add appropriate boundary conditions for fourth order partial differential equations. The first one is ::"
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:39
-# 4f7f04ec6eca42a0b1cac599f009a908
+# b3b716940acb4f9c8c061490ff40a36b
 msgid "which adds a normal derivative source term brick :math:`F = \\int b.\\partial_n v` on the variable `varname` and on the mesh region `region`. It updates the right hand side of the linear system. `dataname` represents `b` and `varname` represents `v`."
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:45
-# 2e415de53a42480fb691af7e0afa682b
+# 4689282f564241a58e68a0799368f07c
 msgid "A Neumann term can be added thanks to the following bricks ::"
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:50
-# d758a496ed6c428ba860ec9d3ab60df5
+# 9740bc25bcfe4d7aad1cadae0224086c
 msgid "which adds a Neumann term brick for Kirchhoff-Love model on the variable `varname` and the mesh region `region`. `dataname1` represents the bending moment tensor and  `dataname2` its divergence."
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:55
-# 6be34160dcdb4f5881c9d6dd205b0cf5
+# aecac159f6d24a408e482d181f2eb4e5
 msgid "And a Dirichlet condition on the normal derivative can be prescribed thanks to the following bricks ::"
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:69
-# dfdf5e9189154621a2e6fafb05ce16e8
+# 26352454f1184261a52898836c770011
 msgid "These bricks add a Dirichlet condition on the normal derivative of the variable `varname` and on the mesh region `region` (which should be a boundary. The general form is :math:`\\int \\partial_n u(x)v(x) = \\int r(x)v(x) \\forall v` where :math:`r(x)` is the right hand side for the Dirichlet condition (0 for homogeneous conditions) and :math:`v` is in a space of multipliers defined by the variable `multname` (first version) or defined on the finite element method `mf_mult` (second version) or simply on a Lagrange finite element method of degree `degree` (third version) on the part of boundary determined by `region`. `dataname` is an optional parameter which represents the right hand side of the Dirichlet condition. If `R_must_be_derivated` is set to `true` then the normal derivative of `dataname` is considered."
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:81
-# 136cf8d50fc74f9ca10797c918edd0bf
+# 7054d8d4145f455499f53b206c9463c1
 msgid "The test program :file:`bilaplacian.cc` is a good example of the use of the previous bricks."
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:7
-# 05632692c3da480c80370e592a743794
+# fa557a53fe97464dae6fb9788da0c2e9
 msgid "models"
 msgstr ""
 
 #: ../source/userdoc/model_bilaplacian.rst:7
-# 05632692c3da480c80370e592a743794
+# fa557a53fe97464dae6fb9788da0c2e9
 msgid "model bricks"
 msgstr ""
 

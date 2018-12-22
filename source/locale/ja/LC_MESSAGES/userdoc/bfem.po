@@ -1,10 +1,11 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2004-2018 GetFEM++ project
 # This file is distributed under the same license as the GetFEM++ package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -13,31 +14,30 @@ msgstr ""
 "POT-Creation-Date: 2018-11-15 02:08+0900\n"
 "PO-Revision-Date: 2018-07-16 07:06+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
-"Language: ja\n"
-"Language-Team: Japanese (https://www.transifex.com/getfem-"
-"doc/teams/87607/ja/)\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
+# 89d552b4d2b34f7fbdba7d0503cde8a1
 #: ../source/userdoc/bfem.rst:12
 msgid "Build a finite element method on a mesh"
 msgstr "メッシュ上に有限要素法を構築します"
 
+# c10f1aeb2079403cb65b3326cdf87d1e
 #: ../source/userdoc/bfem.rst:15
 msgid ""
-"The object |gf_mf| defined in :file:`getfem/getfem_mesh_fem.h` is "
-"designed to describe a finite element method on a whole mesh, i.e. to "
-"describe the finite element space on which some variables will be "
-"described. This is a rather complex object which is central in |gf|. "
-"Basically, this structure describes the finite element method on each "
-"element of the mesh and some additional optional transformations. It is "
-"possible to have an arbitrary number of finite element descriptions for a"
-" single mesh. This is particularly necessary for mixed methods, but also "
-"to describe different data on the same mesh. One can instantiate a "
-"|gf_mf| object as follows::"
+"The object |gf_mf| defined in :file:`getfem/getfem_mesh_fem.h` is designed "
+"to describe a finite element method on a whole mesh, i.e. to describe the "
+"finite element space on which some variables will be described. This is a "
+"rather complex object which is central in |gf|. Basically, this structure "
+"describes the finite element method on each element of the mesh and some "
+"additional optional transformations. It is possible to have an arbitrary "
+"number of finite element descriptions for a single mesh. This is "
+"particularly necessary for mixed methods, but also to describe different "
+"data on the same mesh. One can instantiate a |gf_mf| object as follows::"
 msgstr ""
 ":file:`getfem/getfem_mesh_fem.h` で定義されているオブジェクト |gf_mf| "
 "は、メッシュ全体に有限要素法を記述するために、すなわちいくつかの変数が記述される有限要素空間を記述するために設計されています。これは |gf| "
@@ -45,96 +45,106 @@ msgstr ""
 "1つのメッシュに対して任意の数の有限要素法を持つことが可能です。これは、混合法には特に必要ですが、同じメッシュ上の異なるデータを記述する場合にも必要です。次のように"
 " |gf_mf| オブジェクトをインスタンス化することもできます::"
 
+# bcf5375b36c14d12892a9663a0aefc75
 #: ../source/userdoc/bfem.rst:27
 msgid ""
-"where ``mymesh`` is an already existing mesh. The structure will be "
-"linked to this mesh and will react when modifications will be done on it."
+"where ``mymesh`` is an already existing mesh. The structure will be linked "
+"to this mesh and will react when modifications will be done on it."
 msgstr "``mymesh`` は既に存在するメッシュです。構造はこのメッシュにリンクされ、メッシュに変更が行われると同期されます。"
 
+# e3e011ad985c450996c108246def53ba
 #: ../source/userdoc/bfem.rst:30
 msgid ""
-"It is possible to specify element by element the finite element method, "
-"so that element of mixed types can be treated, even if the dimensions are"
-" different. For usual elements, the connection between two elements is "
-"done when the two elements are compatibles (same degrees of freedom on "
-"the common face). A numeration of the degrees of freedom is automatically"
-" done with a Cuthill Mc Kee like algorithm. You have to keep in mind that"
-" there is absolutely no connection between the numeration of vertices of "
-"the mesh and the numeration of the degrees of freedom. Every |gf_mf| "
-"object has its own numeration."
+"It is possible to specify element by element the finite element method, so "
+"that element of mixed types can be treated, even if the dimensions are "
+"different. For usual elements, the connection between two elements is done "
+"when the two elements are compatibles (same degrees of freedom on the common"
+" face). A numeration of the degrees of freedom is automatically done with a "
+"Cuthill Mc Kee like algorithm. You have to keep in mind that there is "
+"absolutely no connection between the numeration of vertices of the mesh and "
+"the numeration of the degrees of freedom. Every |gf_mf| object has its own "
+"numeration."
 msgstr ""
 "要素ごとに有限要素法を指定することができるので、たとえ次元が異なっていても混合型要素を扱うことができます。通常の要素では、2つの要素に互換性がある場合（共通面で同じ自由度）、2つの要素の間の接続が行われます。自由度の数値は、Cuthill"
-" Mc Keeアルゴリズムのように自動的に行われます。メッシュの頂点の数と自由度の数値との間には絶対的な関係はないことに注意してください。すべての"
-" |gf_mf| オブジェクトには独自の数値があります。"
+" Mc Keeアルゴリズムのように自動的に行われます。メッシュの頂点の数と自由度の数値との間には絶対的な関係はないことに注意してください。すべての "
+"|gf_mf| オブジェクトには独自の数値があります。"
 
+# 529ad18029994a9fb53a8ff7b2ae9d52
 #: ../source/userdoc/bfem.rst:39
 msgid "There are three levels in the |gf_mf| object:"
 msgstr "|gf_mf| オブジェクトには3つのレベルがあります。"
 
+# 570b3e83c53e4223ad4db6aadcfea411
 #: ../source/userdoc/bfem.rst:41
 msgid ""
-"The element level: one finite element method per element. It is possible "
-"to mix the dimensions of the elements and the property to be vectorial or"
-" scalar."
+"The element level: one finite element method per element. It is possible to "
+"mix the dimensions of the elements and the property to be vectorial or "
+"scalar."
 msgstr "要素レベル：要素ごとに1つの有限要素法。要素の次元とベクトルまたはスカラーのプロパティを混在させることは可能です。"
 
+# 41159dd272b54d3994694cc8ec469c6e
 #: ../source/userdoc/bfem.rst:44
 msgid ""
 "The optional vectorization/tensorization (the qdim in getfem jargon, see "
-"`vocabulary`_). For instance to represent a displacement or a tensor "
-"field in continuum mechanics. Scalar elements are used componentwise. "
-"Note that you can mix some intrinsic vectorial elements (Raviart-Thomas "
-"element for instance) which will not be vectorized and scalar elements "
-"which will be."
+"`vocabulary`_). For instance to represent a displacement or a tensor field "
+"in continuum mechanics. Scalar elements are used componentwise. Note that "
+"you can mix some intrinsic vectorial elements (Raviart-Thomas element for "
+"instance) which will not be vectorized and scalar elements which will be."
 msgstr ""
 "オプションのベクトル化/テンソル化（getfemの専門用語qdim。`vocabulary`_ "
-"を参照）。例えば、連続体力学における変位またはテンソル場を表します。スカラー要素は成分単位で使用されます。ベクトル化されない固有のベクトル要素（例えば、Raviart-"
-"Thomas要素）とスカラー要素を混在させることができます。"
+"を参照）。例えば、連続体力学における変位またはテンソル場を表します。スカラー要素は成分単位で使用されます。ベクトル化されない固有のベクトル要素（例えば"
+"、Raviart-Thomas要素）とスカラー要素を混在させることができます。"
 
+# f565bb11dce4403189bd3300729d6f5f
 #: ../source/userdoc/bfem.rst:52
 msgid ""
-"(|gf| version 4.0) The optional additional linear transformation "
-"(reduction) of the degrees of freedom. It will consist in giving two "
-"matrices, the reduction matrix and the extension matrix. The reduction "
-"matrix should transform the basic dofs into the reduced dofs (the number "
-"of reduced dofs should be less or equal than the number of basic dofs). "
-"The extension matrix should describe the inverse transformation. The "
-"product of the reduction matrix with the extension matrix should be the "
-"identity matrix (ensuring in particular that the two matrices are of "
-"maximal rank). This optional transformation can be used to reduce the "
-"finite element space to a certain region (tipically a boundary) or to "
-"prescribe some matching conditions between non naturally compatible fems "
-"(for instance fems with different degrees)."
+"(|gf| version 4.0) The optional additional linear transformation (reduction)"
+" of the degrees of freedom. It will consist in giving two matrices, the "
+"reduction matrix and the extension matrix. The reduction matrix should "
+"transform the basic dofs into the reduced dofs (the number of reduced dofs "
+"should be less or equal than the number of basic dofs). The extension matrix"
+" should describe the inverse transformation. The product of the reduction "
+"matrix with the extension matrix should be the identity matrix (ensuring in "
+"particular that the two matrices are of maximal rank). This optional "
+"transformation can be used to reduce the finite element space to a certain "
+"region (tipically a boundary) or to prescribe some matching conditions "
+"between non naturally compatible fems (for instance fems with different "
+"degrees)."
 msgstr ""
 "（ |gf|  version "
 "4.0）自由度のオプションの追加線形変換（縮小）。これは、2つの行列すなわち、縮小行列と拡張行列を与えます。縮小行列は、基本的な自由度を縮小された自由度に変換する必要があります（縮小された自由度の数は、基本的な自由度の数よりも少ないか等しい必要があります）。拡張行列は、逆変換を記述する必要があります。縮小行列と拡張行列との積は、単位行列でなければなりません（特に、2つの行列が最大ランクであることを保証する必要があります）。この任意の変換を使用して、有限要素空間を特定の領域（基本的に境界）に縮小したり、本来適合しない有限要素法（例えば、自由度度の異なる有限要素法）間のいくつかの一致条件を指定することができます。"
 
+# f0a162fea0db4f2e909fac4e8673f47e
 #: ../source/userdoc/bfem.rst:64
 msgid ""
 "One has to keep in mind this construction manipulating the degrees of "
 "freedom of a |gf_mf| object."
 msgstr "|gf_mf| オブジェクトの自由度を操作するこの構造を念頭に置いておく必要があります。"
 
+# 4fcd8f734b4a47b085c6780a23f21be7
 #: ../source/userdoc/bfem.rst:69
 msgid "First level: manipulating fems on each elements"
 msgstr "第1レベル：各要素の有限要素法の操作"
 
+# 15d0b0ecbf54451d9c8028f0d94b2a06
 #: ../source/userdoc/bfem.rst:71
 msgid ""
 "To select a particular finite element method on a given element, use the "
 "method::"
 msgstr "特定の要素に対して特定の有限要素法を選択するメソッドは::"
 
+# cc2a28c2871c47ec97243b61e99de16a
 #: ../source/userdoc/bfem.rst:75
 msgid ""
 "where ``i`` is the index of the element and ``pf`` is the descriptor (of "
 "type |gf_pfem|, basically a pointer to an object which inherits from "
-"|gf_vfem|) of the finite element method. Alternative forms of this member"
-" function are::"
+"|gf_vfem|) of the finite element method. Alternative forms of this member "
+"function are::"
 msgstr ""
 "``i`` は要素のインデックスで、 ``pf`` は有限要素法の記述子( |gf_pfem| 型、基本的には |gf_vfem| "
 "から継承するオブジェクトへのポインタ)です。このメンバ関数の代わりのフォーマットは::"
 
+# 56641500b8ad4b0aaf23e50317e102cd
 #: ../source/userdoc/bfem.rst:83
 msgid ""
 "which set the finite elements for either the convexes listed in the "
@@ -144,116 +154,135 @@ msgstr ""
 "``bit_vector cvs`` "
 "にリストアップされた凸包、またはメッシュのすべての凸包の有限要素を設定します。最後のメソッドは次のメソッドを呼び出します::"
 
+# 9576dfea92934c56b473ae59b3f7084f
 #: ../source/userdoc/bfem.rst:89
 msgid ""
-"which defines the default finite element method which will be "
-"automatically added on new elements of the mesh (this is very useful, for"
-" instance, when a refinement of the mesh is performed)."
-msgstr "これは、メッシュの新しい要素に自動的に追加されるデフォルトの有限要素法を定義します（例えば、メッシュの細分化が実行されるときに非常に便利です）。"
+"which defines the default finite element method which will be automatically "
+"added on new elements of the mesh (this is very useful, for instance, when a"
+" refinement of the mesh is performed)."
+msgstr ""
+"これは、メッシュの新しい要素に自動的に追加されるデフォルトの有限要素法を定義します（例えば、メッシュの細分化が実行されるときに非常に便利です）。"
 
+# dfec88589dee40f3be526f19afe7ddf4
 #: ../source/userdoc/bfem.rst:93
 msgid ""
-"Descriptors for finite element methods and integration methods are "
-"available thanks to the following function::"
+"Descriptors for finite element methods and integration methods are available"
+" thanks to the following function::"
 msgstr "有限要素法と積分法の記述子は、次の関数によって利用できます。"
 
+# 672e3cfcec344af89da3efadf4b7b02b
 #: ../source/userdoc/bfem.rst:98
 msgid ""
-"where ``\"name of method\"`` is to be chosen among the existing methods. "
-"A name of a method can be retrieved thanks to the following functions::"
+"where ``\"name of method\"`` is to be chosen among the existing methods. A "
+"name of a method can be retrieved thanks to the following functions::"
 msgstr "既存のメソッドの中で ``\"メソッド名\"`` を選択する場所です。メソッドの名前は、次の関数によって取得できます::"
 
+# da3a7c4a3f00490eac640578d73965f1
 #: ../source/userdoc/bfem.rst:103
 msgid ""
 "A non exhaustive list (see :ref:`ud-appendixa` or "
-":file:`getfem/getfem_fem.h` for exhaustive lists) of finite element "
-"methods is given by:"
+":file:`getfem/getfem_fem.h` for exhaustive lists) of finite element methods "
+"is given by:"
 msgstr ""
 "有限要素法の非網羅的リスト( :ref:`ud-appendixa` または :file:`getfem/getfem_fem.h` "
 "を参照)は次のように与えられます:"
 
+# 53d5bd6489024260a8423f4aed28e959
 #: ../source/userdoc/bfem.rst:106
 msgid ""
-"``\"FEM_PK(n,k)\"``: Classical :math:`P_K` methods on simplexes of "
-"dimension ``n`` with degree ``k`` polynomials."
+"``\"FEM_PK(n,k)\"``: Classical :math:`P_K` methods on simplexes of dimension"
+" ``n`` with degree ``k`` polynomials."
 msgstr ""
-"``\"FEM_PK(n,k)\"`` : 次数 ``k`` の多項式を用いた次元 ``n`` の古典的なシンプレックスの :math:`P_K`"
-" 法"
+"``\"FEM_PK(n,k)\"`` : 次数 ``k`` の多項式を用いた次元 ``n`` の古典的なシンプレックスの :math:`P_K` 法"
 
+# 6366b6122e334c4584c9abec91925560
 #: ../source/userdoc/bfem.rst:109
 msgid ""
 "``\"FEM_QK(n,k)\"``: Classical :math:`Q_K` methods on parallelepiped of "
-"dimension ``n``. Tensorial product of degree ``k`` :math:`P_K` method on "
-"the segment."
+"dimension ``n``. Tensorial product of degree ``k`` :math:`P_K` method on the"
+" segment."
 msgstr ""
 "``\"FEM_QK(n,k)\"``: 次元nの平行6面体上の古典的 :math:`Q_K` 法。セグメント上の次数 ``k`` の "
 ":math:`P_K` 法のテンソルによる生成物。"
 
+# 081105473d2e46d495c42da59051a797
 #: ../source/userdoc/bfem.rst:112
 msgid ""
-"``\"FEM_PK_PRISM(n,k)\"``: Classical methods on prism of dimension ``n``."
-" Tensorial product of two degree ``k`` :math:`P_K` method."
+"``\"FEM_PK_PRISM(n,k)\"``: Classical methods on prism of dimension ``n``. "
+"Tensorial product of two degree ``k`` :math:`P_K` method."
 msgstr ""
 "``\"FEM_PK_PRISM(n,k)\"``: 次元 ``n`` のプリズムに関する古典的な方法。 2次の ``k`` の "
 ":math:`|P_K|` 法のテンソル積。"
 
+# 2fc4807500624032aa36fef93cd37987
 #: ../source/userdoc/bfem.rst:115
 msgid ""
 "``\"FEM_PRODUCT(a,b)\"``: Tensorial product of the two polynomial finite "
 "element method ``a`` and ``b``."
 msgstr "``\"FEM_PRODUCT(a,b)\"``: 2つの多項式有限要素法 ``a`` と ``b`` のテンソル積。"
 
+# 27041014fb8a49fbb63dc30fadb488a5
 #: ../source/userdoc/bfem.rst:118
 msgid ""
 "``\"FEM_PK_DISCONTINUOUS(n,k)\"``: discontinuous :math:`P_K` methods on "
 "simplexes of dimension ``n`` with degree ``k`` polynomials."
 msgstr ""
-"``\"FEM_PK_DISCONTINUOUS(n,k)\"``: 次数 ``k`` の多項式を持つ次元 ``n`` "
-"のシンプレックスに関する不連続 :math:`P_K` 法。"
+"``\"FEM_PK_DISCONTINUOUS(n,k)\"``: 次数 ``k`` の多項式を持つ次元 ``n`` のシンプレックスに関する不連続 "
+":math:`P_K` 法。"
 
+# adea89541f624148a900419bdf3cef07
 #: ../source/userdoc/bfem.rst:121
 msgid ""
-"An alternative way to obtain a Lagrange polynomial fem suitable for a "
-"given geometric transformation is to use::"
+"An alternative way to obtain a Lagrange polynomial fem suitable for a given "
+"geometric transformation is to use::"
 msgstr "与えられた幾何学変換に適したLagrange多項式の有限要素法を得る別の方法は::"
 
+# 9b48aca7c2744ffeac0f4226621e4d89
 #: ../source/userdoc/bfem.rst:129
 msgid "The |mf| can call directly these functions via::"
 msgstr "|mf| は次のように直接これらの関数を呼び出すことができます ::"
 
+# b7e0660a27b94a718d6f2602ab314827
 #: ../source/userdoc/bfem.rst:138
 msgid "Some other methods:"
 msgstr "いくつかの他の方法:"
 
+# 4756a1cca4ef43cdbaa6ed5c841f8c08
 #: ../source/userdoc/bfem.rst:142
-msgid "Set of indexes (a |dal_bv|) on which a finite element method is defined."
+msgid ""
+"Set of indexes (a |dal_bv|) on which a finite element method is defined."
 msgstr "有限要素法が定義されている索引( |dal_bv| )の集合。"
 
+# f463bde68e494cd0b03a14d184796a52
 #: ../source/userdoc/bfem.rst:146
 msgid "gives a reference to the linked mesh."
 msgstr "リンクされたメッシュへの参照を与えます。"
 
+# b4884c20a4b44cb0a70324df6c83525b
 #: ../source/userdoc/bfem.rst:150
 msgid ""
-"gives a descriptor on the finite element method defined on element of "
-"index ``i`` (does not take into account the qdim nor the optional "
-"reduction)."
+"gives a descriptor on the finite element method defined on element of index "
+"``i`` (does not take into account the qdim nor the optional reduction)."
 msgstr "インデックス ``i`` の要素に定義されている有限要素法の記述子を与えます（qdimもオプションの削減も考慮しない）。"
 
+# b1b7db45f8c04d2b997e1d11a0e433ed
 #: ../source/userdoc/bfem.rst:155
 msgid "Clears the structure, no finite element method is still defined."
 msgstr "構造をクリアし、有限要素法が定義されない状態になります。"
 
+# ccb0f60e1ee54663a032e414b3deff4a
 #: ../source/userdoc/bfem.rst:159
 msgid "Examples"
 msgstr "例"
 
+# 144085d663964743bb77ada072732ece
 #: ../source/userdoc/bfem.rst:161
 msgid ""
 "For instance if one needs to have a description of a :math:`P_1` finite "
 "element method on a triangle, the way to set it is::"
 msgstr "例えば、3角形上に :math:`P_1` 有限要素法の記述が必要な場合、それを設定する方法は::"
 
+# 9fcc681e8a8c4594bf42bb3ce3deeb34
 #: ../source/userdoc/bfem.rst:166
 msgid ""
 "where ``i`` is still the index of the triangle. It is also possible to "
@@ -264,292 +293,326 @@ msgstr ""
 "ここで ``i`` はまだ単一のインデックスではなく、3角形のインデックスです。 ``mf.set_finite_element`` に "
 "|dal_bv| を渡して、要素集合上で直接特定のメソッドを選択することもできます。例えば、"
 
+# 4e1a07d7d20048e3af1f264c2d04cdfc
 #: ../source/userdoc/bfem.rst:173
 msgid "selects the method on all the elements of the mesh."
 msgstr "はメッシュのすべての要素のメソッドを選択します。"
 
+# 0b27f46e13ec49afb9ca57e65bb6e532
 #: ../source/userdoc/bfem.rst:177
 msgid "Second level: the optional \"vectorization/tensorization\""
 msgstr "第2レベル：オプションである「ベクトル化/テンソル化」"
 
+# 7fe8e609640745108474a8b19288437f
 #: ../source/userdoc/bfem.rst:179
 msgid ""
 "If the finite element represents an unknown which is a vector field, the "
-"method ``mf.set_qdim(Q)`` allows set the target dimension for the "
-"definition of the target dimension :math:`Q`."
+"method ``mf.set_qdim(Q)`` allows set the target dimension for the definition"
+" of the target dimension :math:`Q`."
 msgstr ""
-"有限要素がベクトルフィールドである未知数を表す場合、メソッド ``mf.set_qdim(Q)`` は、ターゲットディメンション "
-":math:`Q` が定義しているターゲットディメンションを設定します。"
+"有限要素がベクトルフィールドである未知数を表す場合、メソッド ``mf.set_qdim(Q)`` は、ターゲットディメンション :math:`Q` "
+"が定義しているターゲットディメンションを設定します。"
 
+# 9705f72a80e64587a9029c520c6b8bff
 #: ../source/userdoc/bfem.rst:182
 msgid ""
-"If the target dimension :math:`Q` is set to a value different of "
-":math:`1`, the scalar FEMs (such as :math:`P_k` fems etc.) are "
-"automatically \"vectorized\" from the |mf| object point of view, i.e. "
-"each scalar degree of freedom appears :math:`Q` times in order to "
-"represent the :math:`Q` components of the vector field. If an "
-"intrinsically vectorial element is used, the target dimension of the "
-"``fem`` and the one of the |mf| object have to match. To sum it up,"
+"If the target dimension :math:`Q` is set to a value different of :math:`1`, "
+"the scalar FEMs (such as :math:`P_k` fems etc.) are automatically "
+"\"vectorized\" from the |mf| object point of view, i.e. each scalar degree "
+"of freedom appears :math:`Q` times in order to represent the :math:`Q` "
+"components of the vector field. If an intrinsically vectorial element is "
+"used, the target dimension of the ``fem`` and the one of the |mf| object "
+"have to match. To sum it up,"
 msgstr ""
 "対象の次元Qが :math:`1` 以外の値に設定されている場合、スカラFEM（ :math:`P_k` 有限要素法など）は |mf| "
-"オブジェクトの観点から自動的に「ベクトル化」されます。つまり、各スカラー自由度はベクトル場の :math:`Q` 成分を表現するため "
-":math:`Q` 回表示されます。本質的にベクトル要素が使用される場合、 ``有限要素法`` のターゲットディメンションと |mf| "
+"オブジェクトの観点から自動的に「ベクトル化」されます。つまり、各スカラー自由度はベクトル場の :math:`Q` 成分を表現するため :math:`Q`"
+" 回表示されます。本質的にベクトル要素が使用される場合、 ``有限要素法`` のターゲットディメンションと |mf| "
 "オブジェクトのターゲットディメンションが一致しなければなりません。要約すると、"
 
+# 6b7fdd87ed38465e8dbda7e3fb0209c7
 #: ../source/userdoc/bfem.rst:189
 msgid ""
-"if the fem of the :math:`ith` element is intrinsically a vector FEM, "
-"then::"
+"if the fem of the :math:`ith` element is intrinsically a vector FEM, then::"
 msgstr ":math:`i` の要素の有限要素法が本質的にベクトルFEMである場合::"
 
+# fa28328997ee4464a543356002294c3a
 #: ../source/userdoc/bfem.rst:195
 msgid "if the fem has a ``target_dim`` equal to :math:`1`, then::"
 msgstr "もしFEMが :math:`1` に等しい ``target_dim`` を持つならば::"
 
+# 5c0b66e7f31d442085ea3eff42cb626f
 #: ../source/userdoc/bfem.rst:199
 msgid ""
-"Additionally, if the field to be represented is a tensor field instead of"
-" a vector field (for instance the stress or strain tensor field in "
-"elasticity), it is possible to specify the tensor dimensions with the "
-"methods::"
-msgstr "さらに、表現されるフィールドがベクトル場の代わりにテンソル場（例えば、弾性の応力またはひずみテンソル場）である場合、テンソルの次元を以下の方法で指定することが可能です。"
+"Additionally, if the field to be represented is a tensor field instead of a "
+"vector field (for instance the stress or strain tensor field in elasticity),"
+" it is possible to specify the tensor dimensions with the methods::"
+msgstr ""
+"さらに、表現されるフィールドがベクトル場の代わりにテンソル場（例えば、弾性の応力またはひずみテンソル場）である場合、テンソルの次元を以下の方法で指定することが可能です。"
 
+# f16dd051787144e6a29bd5b8c9b4452d
 #: ../source/userdoc/bfem.rst:205
 msgid ""
 "respectively for a tensor field of order two, four and arbitrary (but "
-"limited to 6). For most of the operations, this is equivalent to declare "
-"a vector field of the size the product of the dimensions. However, the "
+"limited to 6). For most of the operations, this is equivalent to declare a "
+"vector field of the size the product of the dimensions. However, the "
 "declared tensor dimensions are taken into account into the high level "
-"generic assembly. Remember that the components inside a tensor are stored"
-" in Fortran order."
-msgstr "2次、4次、任意（但し、6に限定される）のテンソル場について、ほとんどの演算では、これは次元の積であるベクトル場を宣言するのと同じです。しかし、宣言されたテンソルの次元は、高水準の汎用構築に考慮されます。テンソル内の成分はFortranの次数で格納されることに注意してください。"
+"generic assembly. Remember that the components inside a tensor are stored in"
+" Fortran order."
+msgstr ""
+"2次、4次、任意（但し、6に限定される）のテンソル場について、ほとんどの演算では、これは次元の積であるベクトル場を宣言するのと同じです。しかし、宣言されたテンソルの次元は、高水準の汎用構築に考慮されます。テンソル内の成分はFortranの次数で格納されることに注意してください。"
 
+# c87972e118a44bfebda991a8d58b2146
 #: ../source/userdoc/bfem.rst:209
 msgid ""
-"At this level are defined the basic degrees of freedom. Some methods of "
-"the |gf_mf| allows to obtain information on the basic dofs:"
+"At this level are defined the basic degrees of freedom. Some methods of the "
+"|gf_mf| allows to obtain information on the basic dofs:"
 msgstr "このレベルでは、基本的な自由度が定義されています。 |gf_mf| のいくつかのメソッドは基本的な自由度に関する情報を得ることができます："
 
+# 9dc65116480c4fd69a13ebf3b8e9f143
 #: ../source/userdoc/bfem.rst:214
 msgid ""
-"gives the number of basic degrees of freedom on the element of index "
-"``i``."
+"gives the number of basic degrees of freedom on the element of index ``i``."
 msgstr "インデックス ``i`` の要素の基本自由度の数を返します。"
 
+# 9747d2b633924ea98aa588a2c4a4d1a1
 #: ../source/userdoc/bfem.rst:218
 msgid ""
 "gives a container (an array) with all the global indexes of the basic "
 "degrees of freedom of element of index ``i``."
 msgstr "インデックス ``i`` の要素の基本自由度のすべてのグローバルインデックスを持つコンテナ（配列）を返します。"
 
+# 7ed8dcdfed3e47e1b9373c18e4ae56be
 #: ../source/userdoc/bfem.rst:223
 msgid ""
-"gives a ``bgeot::base_node`` which represents the point associated with "
-"the basic dof of local index ``j`` on element of index ``i``."
-msgstr "インデックス ``i`` の要素上のローカルインデックス ``j`` の基本自由度点を表す ``bgeot::base_node`` を返します。"
+"gives a ``bgeot::base_node`` which represents the point associated with the "
+"basic dof of local index ``j`` on element of index ``i``."
+msgstr ""
+"インデックス ``i`` の要素上のローカルインデックス ``j`` の基本自由度点を表す ``bgeot::base_node`` を返します。"
 
+# dea12ea567b241c9a4fcb9a83ff16b15
 #: ../source/userdoc/bfem.rst:228
 msgid ""
-"gives a ``bgeot::base_node`` which represents the point associated with "
-"the basic dof of global index ``j``."
+"gives a ``bgeot::base_node`` which represents the point associated with the "
+"basic dof of global index ``j``."
 msgstr "グローバルインデックス ``j`` の基本自由度に関連する点を表す ``bgeot::base_node`` を返します。"
 
+# 0e1a3ff8a81a46f1a296d50adc7e7cc6
 #: ../source/userdoc/bfem.rst:233
 msgid ""
-"gives a ``bgeot::base_node`` which represents the point associated with "
-"the basic dof of local index ``j`` on element of index ``i`` in the "
-"coordinates of the reference element."
+"gives a ``bgeot::base_node`` which represents the point associated with the "
+"basic dof of local index ``j`` on element of index ``i`` in the coordinates "
+"of the reference element."
 msgstr ""
 "参照要素の座標におけるインデックス ``i`` の要素上のローカルインデックス ``j`` の基本自由度に関連する点を表す "
 "``bgeot::base_node`` を与えます。"
 
+# 8ad941cca59340d0ad9d5003984b6eb1
 #: ../source/userdoc/bfem.rst:239
 msgid ""
-"gives the index of the first element on which the basic degree of freedom"
-" of global index ``j`` is defined."
+"gives the index of the first element on which the basic degree of freedom of"
+" global index ``j`` is defined."
 msgstr "グローバルインデックス ``j`` の基本自由度が定義されている最初の要素のインデックスを返します。"
 
+# cc6689fad0d7453f8f5c45b79ca3dc1b
 #: ../source/userdoc/bfem.rst:244
 msgid "gives the total number of different basic degrees of freedom."
 msgstr "異なる基本自由度の総数を与えます。"
 
+# f0b041b70a6041629222514db47cf9b4
 #: ../source/userdoc/bfem.rst:248
 msgid "gives the target dimension ``Q``."
 msgstr "対象の次元 ``Q`` を与えます。"
 
+# f75fff78febc46dcb512b6b5b9e84ac1
 #: ../source/userdoc/bfem.rst:252
 msgid ""
-"Return a |dal_bv| which represents the indices of basic dof which are in "
-"the set of convexes or the set of faces of index ``i`` (see the |gf_m| "
-"object)."
+"Return a |dal_bv| which represents the indices of basic dof which are in the"
+" set of convexes or the set of faces of index ``i`` (see the |gf_m| object)."
 msgstr ""
 "凸包要素の集合またはインデックス ``i`` の面の集合にある基本自由度のインデックスを表す |dal_bv| を返します（ |gf_m| "
 "オブジェクトを参照）。"
 
+# 1c2eb5f26c2d460ca8b1bba72bc0d7ec
 #: ../source/userdoc/bfem.rst:257
 msgid ""
-"Return a |dal_bv| which represents the indices of dof which are in the "
-"set of convexes or the set of faces of index ``i`` (see the |gf_m| "
-"object). For a reduced mesh_fem, a dof is lying on a region if its "
-"potential corresponding shape function is nonzero on this region. The "
-"extension matrix is used to make the correspondence between basic and "
-"reduced dofs."
+"Return a |dal_bv| which represents the indices of dof which are in the set "
+"of convexes or the set of faces of index ``i`` (see the |gf_m| object). For "
+"a reduced mesh_fem, a dof is lying on a region if its potential "
+"corresponding shape function is nonzero on this region. The extension matrix"
+" is used to make the correspondence between basic and reduced dofs."
 msgstr ""
 "凸包の集合またはインデックス ``i`` の面の集合にある自由度のインデックスを表す |dal_bv| を返します（ |gf_m| "
 "オブジェクトを参照）。 "
 "mesh_femを小さくすると、対応している試行関数がこの領域上でゼロでない場合、自由度は領域上に設定されます。拡張行列は、基本と縮小の自由度間の対応付けを行うために使用されます。"
 
+# b6ae0cca6c484706ad1b45ba12641f6e
 #: ../source/userdoc/bfem.rst:265
 msgid "Third level: the optional linear transformation (or reduction)"
 msgstr "第3レベル：オプションである線形（または縮小）変換"
 
+# 3691810df4444cd099435894d1a9498b
 #: ../source/userdoc/bfem.rst:267
-#, fuzzy
 msgid ""
 "As described above, it is possible to provide two matrices, a reduction "
 "matrix :math:`R` and an extension matrix :math:`E` which will describe a "
-"linear transformation of the degrees of freedom. If :math:`V` is the "
-"vector of basic degrees of freedom, then :math:`U=RV` will be the vector "
-"of reduced degrees of freedom. Contrarily, given a vector :math:`U` of "
-"reduced dof, :math:`V=EU` will correspond to a vector of basic dof. In "
-"simple cases, :math:`E` will be simply the transpose of :math:`R`. NOTE "
-"that every line of the extension matrix should be sparse. Otherwise, each"
-" assembled matrix will be plain !"
+"linear transformation of the degrees of freedom. If :math:`V` is the vector "
+"of basic degrees of freedom, then :math:`U=RV` will be the vector of reduced"
+" degrees of freedom. Contrarily, given a vector :math:`U` of reduced dof, "
+":math:`V=EU` will correspond to a vector of basic dof. In simple cases, "
+":math:`E` will be simply the transpose of :math:`R`. NOTE that every line of"
+" the extension matrix should be sparse. Otherwise, each assembled matrix "
+"will be plain !"
 msgstr ""
 "上述のように、自由度の線形変換を記述する2つの行列、縮小行列 :math:`R` および拡張行列 :math:`E` が提供されています。 "
 ":math:`V` が基本自由度のベクトルである場合、 :math:`U=RV` "
 "は上述のように減少した自由度のベクトルとなります。逆に、減少した自由度のベクトル :math:`U` が与えられると、 :math:`V=EU` "
 "は元の自由度のベクトルとなります。単純な場合、Eは単にRの転置になります。拡張行列のすべての行は疎でなければなりません。これに注意しないと、各マトリックスの構築は難しくなります！"
 
+# bfc13bd911ef46ca8ccafa69cbfc9165
 #: ../source/userdoc/bfem.rst:276
 msgid ""
-"A natural condition is that :math:`RE = I` where :math:`I` is the "
-"identity matrix."
+"A natural condition is that :math:`RE = I` where :math:`I` is the identity "
+"matrix."
 msgstr "自然条件は :math:`RE = I` であり :math:`I` は単位行列です。"
 
+# 17c11062be2d4e49bbc0a92e9bfb5e1d
 #: ../source/userdoc/bfem.rst:280
 msgid ""
 "gives the total number of different degrees of freedom. If the optional "
 "reduction is used, this will be the number of columns of the reduction "
 "matrix. Otherwise it will return the number of basic degrees of freedom."
-msgstr "は異なる自由度の総数を与えます。オプションの縮小が使用される場合、これは削減行列の列の数になります。それ以外の場合、基本自由度の数が返されます。"
+msgstr ""
+"は異なる自由度の総数を与えます。オプションの縮小が使用される場合、これは削減行列の列の数になります。それ以外の場合、基本自由度の数が返されます。"
 
+# d7e4001114a84b4ebbd3725828678148
 #: ../source/userdoc/bfem.rst:286
 msgid "return a boolean. True if the reduction is used."
 msgstr "ブール値を返します。縮小が使用されている場合はTrueです。"
 
+# e7e2aae9212542698fe3afae4c2ea65d
 #: ../source/userdoc/bfem.rst:290
 msgid "return a const reference to the reduction matrix :math:`R`."
 msgstr "縮小行列 :math:`R` にconst参照を返します。"
 
+# 01fd62c4c4db48b2b6083296ec3cbbab
 #: ../source/userdoc/bfem.rst:294
 msgid "return a const reference to the extension matrix :math:`E`."
 msgstr "縮小行列 :math:`E` にconst参照を返す。"
 
+# 1960b784e23543c0948f96104b3dd464
 #: ../source/userdoc/bfem.rst:298
 msgid ""
 "Set the reduction and extension matrices to ``R`` and ``E`` and validate "
 "their use."
 msgstr "縮小行列と拡張行列を ``R`` と ``E`` と定義し、それらの使用法を検証します。"
 
+# ff6c3105c9fd4929a5fa0e613b118c5e
 #: ../source/userdoc/bfem.rst:303
 msgid ""
-"Where :math:`b` is a boolean. Cancel the reduction if :math:`b` is false "
-"and validate it if ``b`` is true. If ``b`` is true, the extension and "
-"reduction matrices have to be set previously."
+"Where :math:`b` is a boolean. Cancel the reduction if :math:`b` is false and"
+" validate it if ``b`` is true. If ``b`` is true, the extension and reduction"
+" matrices have to be set previously."
 msgstr ""
 ":math:`b` はブール値です。 :math:`b` が偽であれば削減を取り消し、 :math:`b` が真であれば削除を検証します。 "
 ":math:`b` が真の場合は、事前に拡張行列と縮約行列を設定している必要があります。"
 
+# f8a55f4f2e40484bac41e7f60b8c8ca5
 #: ../source/userdoc/bfem.rst:309
 msgid ""
 "Set the reduction and extension matrices corresponding to keep only the "
-"basic dofs present in ``idof``. The parameter ``idof`` is either a "
-"|dal_bv| or a ``std::set<size_type>``. This is equivalent to the use of a"
-" ``getfem::partial_mesh_fem`` object."
+"basic dofs present in ``idof``. The parameter ``idof`` is either a |dal_bv| "
+"or a ``std::set<size_type>``. This is equivalent to the use of a "
+"``getfem::partial_mesh_fem`` object."
 msgstr ""
-"``idof`` に存在する基本自由度のみを保持するように対応する縮小行列と拡張行列を設定します。パラメータ ``idof`` は "
-"|dal_bv| または ``std::set<size_type>`` のいずれかです。これは "
-"``getfem::partial_mesh_fem`` オブジェクトの使用方法と同じです。"
+"``idof`` に存在する基本自由度のみを保持するように対応する縮小行列と拡張行列を設定します。パラメータ ``idof`` は |dal_bv| "
+"または ``std::set<size_type>`` のいずれかです。これは ``getfem::partial_mesh_fem`` "
+"オブジェクトの使用方法と同じです。"
 
+# 6dc0b93bee2e4d98b202def2e5df7955
 #: ../source/userdoc/bfem.rst:316
 msgid "Obtaining generic |mf|'s"
 msgstr "汎用的な |mf| の取得"
 
+# cc36928689be4d6c993459ecb4bd5a54
 #: ../source/userdoc/bfem.rst:318
 msgid "It is possible to use the function::"
 msgstr "次の関数を使うことができます::"
 
+# 0fae08043f284f86bc403b1733f1e6c8
 #: ../source/userdoc/bfem.rst:322
 msgid ""
 "to get a classical polynomial |mf| of order :math:`K` on the given "
 "``mymesh``. The returned |mf| will be destroyed automatically when its "
-"linked mesh is destroyed. All the |mf| built by this function are stored "
-"in a cache, which means that calling this function twice with the same "
-"arguments will return the same |mf| object. A consequence is that you "
-"should NEVER modify this |mf|!"
+"linked mesh is destroyed. All the |mf| built by this function are stored in "
+"a cache, which means that calling this function twice with the same "
+"arguments will return the same |mf| object. A consequence is that you should"
+" NEVER modify this |mf|!"
 msgstr ""
 "与えられた ``mymesh`` 上で次数 :math:`K` の古典的多項式 |mf| を得ることができます。 |mf| "
 "はリンクされたメッシュが破棄されると自動的に破棄されます。この関数によって構築されたすべての |mf| "
 "はキャッシュに格納されます。つまり、この関数を同じ引数で2回呼び出すと、同じ |mf| オブジェクトが返されます。ゆえに、決してこの |mf| "
 "を修正してはいけません！"
 
+# dfe0aff1624f4487a20a07fdfb1d6649
 #: ../source/userdoc/bfem.rst:330
 msgid "The partial_mesh_fem object"
 msgstr "partial_mesh_femオブジェクト"
 
+# 0487deed0fe04509871c02836fc8e8c1
 #: ../source/userdoc/bfem.rst:332
 msgid ""
 "The ``getfem::partial_mesh_fem`` object defined in the file "
-"``getfem_partial_mesh_fem.h`` allows to reduce a |gf_mf| object to a set "
-"of dofs. The interest is this is not a complete description of a finite "
-"element method, it refers to the original |gf_mf| and just add reduction "
-"and extension matrices. For instance, you can reduce a |mf| obtained by "
-"the function ``getfem::classical_mesh_fem(mesh, K)`` to obtain a finite "
-"element method on a mesh region (which can be a boundary). The "
+"``getfem_partial_mesh_fem.h`` allows to reduce a |gf_mf| object to a set of "
+"dofs. The interest is this is not a complete description of a finite element"
+" method, it refers to the original |gf_mf| and just add reduction and "
+"extension matrices. For instance, you can reduce a |mf| obtained by the "
+"function ``getfem::classical_mesh_fem(mesh, K)`` to obtain a finite element "
+"method on a mesh region (which can be a boundary). The "
 "``getfem::partial_mesh_fem`` is in particular used to obtain multiplier "
 "description to prescribed boundary conditions."
 msgstr ""
 "``getfem_partial_mesh_fem.h`` ファイルで定義された ``getfem::partial_mesh_fem`` "
-"オブジェクトは |gf_mf| オブジェクトを自由度の集合に減らすことができます。注目してほしいことは、これは有限要素法の完全な記述ではなく、元の"
-" |gf_mf| "
-"を参照して、縮小と拡張行列を追加しているだけということです。例えば、``getfem::classical_mesh_fem(mesh, K)``"
-" 関数で得られた |mf| を縮約し、メッシュ領域（境界でもよい）上で有限要素法を得ることができます。 "
+"オブジェクトは |gf_mf| オブジェクトを自由度の集合に減らすことができます。注目してほしいことは、これは有限要素法の完全な記述ではなく、元の "
+"|gf_mf| を参照して、縮小と拡張行列を追加しているだけということです。例えば、``getfem::classical_mesh_fem(mesh,"
+" K)`` 関数で得られた |mf| を縮約し、メッシュ領域（境界でもよい）上で有限要素法を得ることができます。 "
 "``getfem::partial_mesh_fem`` は特に指定された境界条件の乗数記述を得るために使用されます。"
 
+# 1278e78dcdb140028f3609a5b34b1229
 #: ../source/userdoc/bfem.rst:342
 msgid ""
-"The declaration of a ``getfem::partial_mesh_fem`` object is the "
-"following::"
+"The declaration of a ``getfem::partial_mesh_fem`` object is the following::"
 msgstr "``getfem::partial_mesh_fem`` オブジェクトの宣言は次のとおりです::"
 
+# 1d002387484049cb8776ff872bad6421
 #: ../source/userdoc/bfem.rst:346
 msgid "Then, one has to call the adapt method as follows::"
 msgstr "次に、適合メソッドを次のように呼び出す必要があります::"
 
+# 209629a59f444d309c8d6d2722291eb3
 #: ../source/userdoc/bfem.rst:350
 msgid ""
-"where ``kept_dof`` and ``rejected_elt`` are some |dal_bv|. ``kept_dof`` "
-"is the list of dof indices of the original |mf| ``mf`` to be kept. "
-"``rejected_elt`` is an optional parameter that contains a list of element"
-" indices on which the ``getfem::partial_mesh_fem`` states that there is "
-"no finite element method. This is to avoid unnecessary computations "
-"during assembly procedures."
+"where ``kept_dof`` and ``rejected_elt`` are some |dal_bv|. ``kept_dof`` is "
+"the list of dof indices of the original |mf| ``mf`` to be kept. "
+"``rejected_elt`` is an optional parameter that contains a list of element "
+"indices on which the ``getfem::partial_mesh_fem`` states that there is no "
+"finite element method. This is to avoid unnecessary computations during "
+"assembly procedures."
 msgstr ""
-"``kept_dof`` と ``rejected_elt`` はいくつかの |dal_bv| です。 ``kept_dof`` "
-"は、保持される元の |mf| ``mf`` の自由度インデックスのリストです。 rejected_eltは "
-"``getfem::partial_mesh_fem`` "
+"``kept_dof`` と ``rejected_elt`` はいくつかの |dal_bv| です。 ``kept_dof`` は、保持される元の "
+"|mf| ``mf`` の自由度インデックスのリストです。 rejected_eltは ``getfem::partial_mesh_fem`` "
 "が有限要素法がないことを示す要素インデックスのリストを含むオプションのパラメータです。これは、構築中の不要な計算を避けるためです。"
 
+# c132773e47e74184b0b4332d4d17b516
 #: ../source/userdoc/bfem.rst:7
 msgid "fem"
 msgstr "fem"
 
+# c132773e47e74184b0b4332d4d17b516
 #: ../source/userdoc/bfem.rst:7
 msgid "mesh"
 msgstr "mesh"
 
+# c132773e47e74184b0b4332d4d17b516
 #: ../source/userdoc/bfem.rst:7
 msgid "mesh_fem"
 msgstr "mesh_fem"
-

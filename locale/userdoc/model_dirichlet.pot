@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 02:08+0900\n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,137 +17,137 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/model_dirichlet.rst:13
-# e270e8629d0b4f31bcf20d761eb77b91
+# a98ece7080ed493e8f7280603a59c5c8
 msgid "Dirichlet condition brick"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:15
-# 6b64eb5b37854a71bd6c7eb1189bebee
+# 90269682ffa44adcbf45658b954b476b
 msgid "The aim of the Dirichlet condition brick is to prescribe a Dirichlet condition on a part of the boundary of the domain for a variable of the model. This means that the value of this variable is prescribed on the boundary. There is three versions of this brick (see also the section :ref:`ud-model-Nitsche`). The first version prescribe the Dirichlet thank to a multiplier. The associated weak form of the term is the following:"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:25
-# 888e6abe9c4244a2b7fddfa60e653d7b
+# 4e8c4162136b4746a7ce69ac2bbe20ad
 msgid "where :math:`u` is the variable, :math:`M` is the space of multipliers, :math:`u` is the variable and :math:`\\Gamma` the Dirichlet boundary. For this version, an additional variable have to be added to represent the multiplier. It can be done directly to the model or thanks to the functions below. There are three functions allowing to add a Dirichlet condition prescribed with a multiplier. The first one is::"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:36
-# 3f309047bf0244ce970515b8e8ddfb4a
+# fb81f9099c2246e8b4893bf2528b1e32
 msgid "adding a Dirichlet condition on ``varname`` thanks to a multiplier variable ``multname`` on the mesh region ``region`` (which should be a boundary). The value of the variable on that boundary is described by the data ``dataname`` which should be previously defined in the model. If the data is omitted, the Dirichlet condition is assumed to be an homogeneous one (vanishing variable on the boundary). The data can be constant or described on a FEM. It can also be scalar or vector valued, depending on the variable. The variable ``multname`` should be added to the model by the method ``add_multiplier``. The function returns the brick index in the model. The second function is::"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:50
-# 718b9c78d03b4be3952a70de4cf4736e
+# 66151f29695c424fba87ce64e2682b1f
 msgid "The only difference is that ``multname`` is replaced by ``mf_mult`` which means that only the finite element on which the multiplier will be built is given. The function adds itself the multiplier variable to the model. The third function is very similar::"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:59
-# 4379c4e205cb41d8b42f2f3408c7a82b
+# 14950906f51942c5a195529a67a90a8d
 msgid "The parameter ``mf_mult`` is replaced by an integer ``degree`` indicating that the multiplier will be built on a classical finite element method of that degree."
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:62
-# 858d6b8bc0df4ca1bc84be70d017dd99
+# 4d18edb03c1e42958e911f86e2ef2c51
 msgid "Note, that in all the cases, when a variable is added by the method ``add_multiplier`` of the model object, the |mf| will be filtered (thank to a ``partial_mesh_fem_object`` in order to retain only the degrees of freedom having a non vanishing contribution on the considered boundary."
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:67
-# a6648a8fa87f4b809bf7a3cdb63a0fc8
+# 5bccb66e689c48329aed6fd8f34ad63a
 msgid "Finally, the variable name of the multiplier can be obtained thank to the function::"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:72
-# 4a57a5099a4442c59d8ca27bd60c3c15
+# e6197f7679d642f7993507c3382e4129
 msgid "where ``ind_brick`` is the brick index in the model. This function has an undefined behavior if it applied to another kind of brick."
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:75
-# cb237177710245deb5b790417d73a6de
+# b22b4ebe80bc4563a523486dc2a028c7
 msgid "The second version of the Dirichlet condition brick is the one with penalization. The function allowing to add this brick is::"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:83
-# c21858f92c054dc38024418a9c959833
+# db2dad3262314b2a9a6f91737f99affa
 msgid "The penalization consists in computing the mass matrix of the variable and add it multiplied by the penalization coefficient to the stiffness matrix. The parameter `mf_mult` (a pointer to a ``getfem::mesh_fem`` object) is optional. It allows to weaken the Dirichlet condition for locking situations. In that case, the penalization matrix is of the form :math:`B^TB` where :math:`B` is the \"mass matrix\" on the boundary between the shape functions of the variable `varname` and the shape function of the multiplier space. The penalization coefficient is added as a data of the model and can be changed thanks to the function::"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:91
-# 37de918000b84fc9a56ebee102fbf191
+# aafbf8dffd7843018c567407cd87c915
 msgid "The third version of the Dirichlet condition brick use a simplification of the linear system (tangent linear system for nonlinear problems). Basically, it enforces a 1 on the diagonal components of the lines corresponding to prescribed degrees of freedom, it completes the lines with some zeros (for symmetric problems, it also complete the columns with some zeros) and it adapts the right-hand side accordingly. This is a rather simple and economic way to prescribe a Dirichlet condition. However, it can only be applied when one can identify the degrees of freedom prescribed by the the Dirichlet condition. So, it has to be use with care with reduced finite element methods, Hermite element methods and cannot be applied for a normal (or generalized) Dirichlet condition on vectorial problems. The function allowing to add this brick is::"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:97
-# 219e274a592f4d18bf94907db07c0f03
+# a3530832b425414286e84b03b87ed516
 msgid "If `dataname` is ommited, an homogeneous Dirichlet condition is applied. If `dataname` is given, the constraint is that it has to be constant or described on the same finite element method as the variable `varname` on which the Dirichlet condition is applied. Additionaly, If `dataname` is constant, it can only be applied to Lagrange finite element methods."
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:100
-# 46da2109e9f945d1a7fa8d92a08f302c
+# 5e1568c045b6452f9c7721eb987f4487
 msgid "Generalized Dirichlet condition brick"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:102
-# f3f906f7ea3f47889c099f9bfd35b319
+# 59d7dd64c6074074b3ea2a04f8275a79
 msgid "The generalized Dirichlet condition is a boundary condition of a vector field u of the type"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:109
-# 9c79759fb63d4dc6aa0e487751d8cef5
+# c1406cf009084bcf9ccbaced10291a31
 msgid "where :math:`H` is a matrix field. The functions adding the corresponding bricks are similar to the ones of the standard Dirichlet condition except that they need the supplementary parameter `Hname` which gives the name of the data corresponding to :math:`H`. This data can be a matrix field described on a scalar fem or a constant matrix. ::"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:137
-# 58e969123b2646f4b1293146ed12724b
+# 5d964c87af0d48579c0b5e3057d4dfd0
 msgid "Pointwise constraints brick"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:139
-# e02b3c2e91f24355940740f9bc5d8403
+# 702f0a359b4e4e53bdbb93c6feef3dfb
 msgid "The pointwise constraints brick is a Dirichlet condition like brick which allows to prescribe the value of an unknown on given points of the domain. These points are not necessarily some vertex of the mesh or some points corresponding to degrees of freedom of the finite element method on which the unknown is described."
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:142
-# c4ebb1fdb57149538a39cf6f9e59de61
+# 4a80192080ed489da5ecfc9ac933421c
 msgid "For scalar field variables, given a set of :math:`N_p` points :math:`x_i, i = 1\\cdots N_p`, the brick allows to prescribe the value of the variable on these points, i.e. to enforce the condition"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:148
-# 3c746daaa2004693a93cc7d358bf5587
+# 191dd7d13bf142db93a1657224b839be
 msgid "where :math:`u` is the scalar field and :math:`l_i` the value to be prescribed on the point :math:`x_i`."
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:150
-# 1c0b43f5dd98433e8237611c27c51a95
+# be08f91b1f1b4e19bd8921e44945aeb6
 msgid "For vector field variables, given a set of :math:`N_p` points :math:`x_i, i = 1\\cdots N_p`, the brick allows to prescribe the value of one component of the variable on these points, i.e. to enforce the condition"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:156
-# 48a57409053446969b2e4bf7834ded80
+# 66513739355c4b57bdc5e809ffd6672e
 msgid "where :math:`n_i` is the vector such that :math:`u(x_i)\\cdot n_i` represent the component to be prescribed."
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:158
-# 8e915ea642a04f789943ea9bb7a8fed4
+# 0fb76db92ef14062b6cf27860ef69fe9
 msgid "The brick has two versions: a penalized version and a version with multipliers. The call is the following::"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:171
-# 194fcea532564e1095282d12c9b51904
+# f085800dc0744a00b5b9fbab2df8960a
 msgid "respectively for the penalized version, the one with a given multiplier fixed size variable and the one which automatically adds a multiplier variable of the right size to the model. The data `dataname_pt`, `dataname_unitv` and `dataname_val` should be added first to the model. `dataname_pt` should be a vector containing the coordinates of the points where to prescribed the value of the variable `varname`. It is thus of size :math:`N N_p` where :math:`N` is the dimension of the mesh. `dataname_unitv` is ignored for a scalar field variable. For a vector field variable, it should contain the vector :math:`n_i`. In that case, it size should be :math:`Q N_p` where :math:`Q` is the dimension of the vector field. `dataname_val` is optional and represent the right hand side, it should contain the components :math:`l_i`. The default value for :math:`l_i` is 0."
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:173
-# 63150aa804dd41378c2016aecf05e0de
+# e6aa129284294d44b236d8f7a3c81df8
 msgid "This brick is mainly designed to prescribe the rigid displacements for pure Neumann problems."
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:7
-# 4f42e10f86ba4cc1b275f77bd0700d91
+# db7384deda5f488796f30250d31087aa
 msgid "models"
 msgstr ""
 
 #: ../source/userdoc/model_dirichlet.rst:7
-# 4f42e10f86ba4cc1b275f77bd0700d91
+# db7384deda5f488796f30250d31087aa
 msgid "model bricks"
 msgstr ""
 

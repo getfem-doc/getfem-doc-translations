@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 02:08+0900\n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,107 +17,107 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/interMM.rst:10
-# ad44e64e2c0a4ab6b3c1411cee5212fd
+# 3dbd59821c204f0dbc7f74472f593974
 msgid "Interpolation of arbitrary quantities"
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:12
-# ed433c3d19be469a9ea0edc7df3a8582
+# fd8d0cb2d89d4d3a82b28002224b388f
 msgid "Once a solution has been computed, it is quite easy to extract any quantity of interest on it with the interpolation functions for instance for post-treatment."
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:15
-# d4c3b5cdcbbd4a80a70b3bf01aa7150c
+# b25f50131d014a568e0810b5838dcc55
 msgid "Basic interpolation"
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:17
-# 236ba7710fbb4896afbbd13a1b8a4854
+# c58273801a2e4f65bf91088b46084ef5
 msgid "The file :file:`getfem/getfem_interpolation.h` defines the function ``getfem::interpolation(...)`` to interpolate a solution from a given mesh/finite element method on another mesh and/or another Lagrange finite element method::"
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:23
-# 9e94380942a34d47b78570060e09fdd8
+# 1f8f1e8b4bcf4bcf9a10642ef095f0de
 msgid "where ``mf1`` is a variable of type |gf_mf| and describes the finite element method on which the source field ``U`` is defined, ``mf2`` is the finite element method on which ``U`` will be interpolated. ``extrapolation`` is an optional parameter. The values are ``0`` not to allow the extrapolation, ``1`` for an extrapolation of the exterior points near the boundary and ``2`` for the extrapolation of all exterior points (could be expensive)."
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:31
-# 56659b9268c945ce8a325938a149c551
+# 57fabe1cf18b4d00b879ed7cf0199772
 msgid "The dimension of ``U`` should be a multiple of ``mf1.nb_dof()``, and the interpolated data ``V`` should be correctly sized (multiple of ``mf2.nb_dof()``)."
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:34
-# dc3757047c2443f895a4b5be25ca8e07
+# 1664778c6f324fd480ae59a4abbee5eb
 msgid "... important::"
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:41
-# d1b15d60373143ea8a2cf5f94ab34aac
+# 6de7db3887324b09b49b089a04ea8edc
 msgid "If you need to perform more than one interpolation between the same finite element methods, it might be more efficient to use the function::"
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:46
-# f21e00b70ec44113a215352be0aaab5b
+# 628e2740b48246e09d1aad152ece44d2
 msgid "where ``M`` is a row matrix which will be filled with the linear map representing the interpolation (i.e. such that ``V = MU``). The matrix should have the correct dimensions (i.e. ``mf2.nb_dof()``x``mf1.nb_dof()``). Once this matrix is built, the interpolation is done with a simple matrix multiplication::"
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:55
-# 40ecdeace41c4158a51c28e0e9ccb61f
+# 63d274274dfa4aed9fc15a2aa392a810
 msgid "Interpolation based on the high-level weak form language"
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:57
-# e6b30cdd081647a3a4ad773d58141124
+# 3d6172f636b24f3db12c9949433c67d5
 msgid "It is possible to extract some arbitrary expressions on possibly several fields thanks to the weak form language and the interpolation functions."
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:59
-# 5b5275ef1ba44cacaee8d4bb31a1e0b9
+# 93bfc09790c74898a875784b2b75e163
 msgid "This is specially dedicated to the model object (but it can also be used with a ga_workspace object). For instance if ``md`` is a valid object containing some defined variables ``u`` (vectorial) and ``p`` (scalar), one can interpolate on a Lagrange finite element method an expression such as ``p*Trace(Grad_u)``. The resulting expression can be scalar, vectorial or tensorial. The size of the resulting vector is automatically adapted."
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:61
-# 82cd76b37d2f4a19ac57cfbd9099b20d
+# 08718958b122436bbb0edd116dd754b5
 msgid "The high-level generic interpolation functions are defined in the file :file:`getfem/getfem_generic_assembly.h`."
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:63
-# 72fd76e5d2e34f93bd6791a0bcfc3a37
+# bc86fb3ac2f54ee4ba7d1e424b825002
 msgid "There is different interpolation functions corresponding to the interpolation on a Lagrange fem on the same mesh, the interpolation on a cloud on points or on a ``getfem::im_data`` object."
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:65
-# 11e9181710c1421fb8944406fc4c5b94
+# d08df3681c7e409f9357fb9976488c55
 msgid "Interpolation on a Lagrange fem::"
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:69
-# 6dc747f798724e24adb1490115463235
+# b738e2b227264eb4a45d2b69df88b162
 msgid "where ``workspace`` is a ``getfem::ga_workspace`` object which aims to store the different variables and data (see  :ref:`ud-gasm-high`), ``mf`` is the ``getfem::mesh_fem`` object reresenting the Lagrange fem on which the interpolation is to be done and ``result`` is a ``beot::base_vector`` which store the interpolatin. Note that the workspace should contain the epression to be interpolated. ::"
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:73
-# 21ab6f3e8a64485989b9087aa8d3eb4c
+# 4b94d6fd27a8496baf93cb081b96c403
 msgid "where ``md`` is a ``getfem::model`` object (containing the variables and data), ``expr`` (std::string object) is the expression to be interpolated, ``mf`` is the ``getfem::mesh_fem`` object reresenting the Lagrange fem on which the interpolation is to be done, ``result`` is the vector in which the interpolation is stored and ``rg`` is the optional mesh region."
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:75
-# a545d7fea7b64e33a4d201db4e08d5d5
+# 768ffe216a814a9590960ce8d3ad60a2
 msgid "Interpolation on a cloud of points::"
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:79
-# a18a5bce2e3945d5b8fd2027180ecefa
+# d7a061f244794e1597aed8a0b5e4a5d0
 msgid "where ``md`` is a ``getfem::model`` object (containing the variables and data), ``expr`` (std::string object) is the expression to be interpolated, ``mti`` is a ``getfem::mesh_trans_inv`` object which stores the cloud of points (see :file:`getfem/getfem_interpolation.h`), ``result`` is the vector in which the interpolation is stored, ``extrapolation`` is an option for extrapolating the field outside the mesh for outside points, ``rg`` is the optional mesh region and ``nbpoints`` is the optional maximal number of points."
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:81
-# c51b273b107349c39dfdcb7acc8ceca0
+# 7bc79c1897d945c49db5e0ce69f32bf6
 msgid "Interpolation on an im_data object (on the Gauss points of an integration method)::"
 msgstr ""
 
 #: ../source/userdoc/interMM.rst:86
-# f4feda51bf154afa81b2e0a89326d7e3
+# fa0a4699323a42f2a5f23b9803104998
 msgid "where ``md`` is a ``getfem::model`` object (containing the variables and data), ``expr`` (std::string object) is the expression to be interpolated, ``imd`` is a ``getfem::im_data`` object which refers to a integration method (see :file:`getfem/getfem_im_data.h`), ``result`` is the vector in which the interpolation is stored and ``rg`` is the optional mesh region."
 msgstr ""
 

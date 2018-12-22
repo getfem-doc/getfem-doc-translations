@@ -1,0 +1,272 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/scilab/cmdref_gf_compute.rst:8
+# 9ebd1546e0e6449c87a0c317322f300b
+msgid "gf_compute"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:10
+# 26bc7fa802014a33ade2a1badf1c365f
+msgid "**Synopsis**"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:30
+# d42d2cb21aa74d30b800265db7884012
+msgid "**Description :**"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:34
+# b374f173a98141c3b91d7e8a75c608b7
+msgid "Various computations involving the solution U to a finite element problem."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:37
+# 18a4d1b93e094a5093900e3b9eabe453
+msgid "**Command list :**"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:41
+# eea46ef0b21f460880f43e7bbd00b3f7
+msgid "``n = gf_compute(mesh_fem MF, vec U, 'L2 norm', mesh_im mim[, mat CVids])``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:43
+# 94ea1c6734fa4cdaa68d9ac38007267a
+msgid "Compute the L2 norm of the (real or complex) field <literal>U</literal>."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:45
+#: ../source/scilab/cmdref_gf_compute.rst:53
+#: ../source/scilab/cmdref_gf_compute.rst:61
+#: ../source/scilab/cmdref_gf_compute.rst:69
+#: ../source/scilab/cmdref_gf_compute.rst:77
+#: ../source/scilab/cmdref_gf_compute.rst:85
+#: ../source/scilab/cmdref_gf_compute.rst:93
+# 5ed75ee6a4ac4dd28c5f09fa71642a51
+# 502360a8af6b49499af51b9ed9a42757
+# 14eec95bb1ac48ed99656efee4bb2088
+# 97602b1ccdf04054b4146f8df777e94a
+# 03a004cc7d024833984556b5b20feb80
+# 000f8db8dae547388de6bddcc8c0e606
+# d58ff1e2448543fe8db2b2421ca17213
+msgid "If <literal>CVids</literal> is given, the norm will be computed only on the listed elements."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:49
+# 3e8225f6033f457886bd30669b959095
+msgid "``n = gf_compute(mesh_fem MF, vec U, 'L2 dist', mesh_im mim, mesh_fem mf2, vec U2[, mat CVids])``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:51
+# 76df4e85b80441edb772f824f6d9bb13
+msgid "Compute the L2 distance between <literal>U</literal> and <literal>U2</literal>."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:57
+# c09a0a5840dd4a7c970fc33c6876763a
+msgid "``n = gf_compute(mesh_fem MF, vec U, 'H1 semi norm', mesh_im mim[, mat CVids])``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:59
+# c9fef898c7294f74a03a5dfd91e4a3d6
+msgid "Compute the L2 norm of grad(<literal>U</literal>)."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:65
+# 952b66ebfee24b4f9d7d40414188d827
+msgid "``n = gf_compute(mesh_fem MF, vec U, 'H1 semi dist', mesh_im mim, mesh_fem mf2, vec U2[, mat CVids])``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:67
+# 9a329c74d4494bd38ac5425d466ec8bc
+msgid "Compute the semi H1 distance between <literal>U</literal> and <literal>U2</literal>."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:73
+# 68012edce5cc44ac92e442e2db5315a2
+msgid "``n = gf_compute(mesh_fem MF, vec U, 'H1 norm', mesh_im mim[, mat CVids])``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:75
+# abfc3392fcce4f33b23960b405b3dee3
+msgid "Compute the H1 norm of <literal>U</literal>."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:81
+# 973de17c2572437ca39246882b3a382b
+msgid "``n = gf_compute(mesh_fem MF, vec U, 'H2 semi norm', mesh_im mim[, mat CVids])``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:83
+# 75b86470ce364c0bb3b8a810fca6968b
+msgid "Compute the L2 norm of D^2(<literal>U</literal>)."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:89
+# d8a62a2bbdcc4f6695a26dfb3f5aa2d4
+msgid "``n = gf_compute(mesh_fem MF, vec U, 'H2 norm', mesh_im mim[, mat CVids])``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:91
+# 0d954b8bc0f340cebec628f902408128
+msgid "Compute the H2 norm of <literal>U</literal>."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:97
+# 3005c3f8c8f449e695d0e9f307aca19a
+msgid "``DU = gf_compute(mesh_fem MF, vec U, 'gradient', mesh_fem mf_du)``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:99
+# 2b15eb37f7784beb8738b58139152deb
+msgid "Compute the gradient of the field <literal>U</literal> defined on mesh_fem <literal>mf_du</literal>."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:101
+# 9aa63a0c4f594452bc896fd41cb46b3e
+msgid "The gradient is interpolated on the mesh_fem <literal>mf_du</literal>, and returned in <literal>DU</literal>. For example, if <literal>U</literal> is defined on a P2 mesh_fem, <literal>DU</literal> should be evaluated on a P1-discontinuous mesh_fem. <literal>mf</literal> and <literal>mf_du</literal> should share the same mesh."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:106
+# 4b5970ff0812422b8a60cb59353844e4
+msgid "<literal>U</literal> may have any number of dimensions (i.e. this function is not restricted to the gradient of scalar fields, but may also be used for tensor fields). However the last dimension of <literal>U</literal> has to be equal to the number of dof of <literal>mf</literal>. For example, if <literal>U</literal> is a [3x3xNmf] array (where Nmf is the number of dof of <literal>mf</literal>), <literal>DU</literal> will be a [Nx3x3[xQ]xNmf_du] array, where N is the dimension of the mesh, Nmf_du is the number of dof of <literal>mf_du</literal>, and the optional Q dimension is inserted if <literal>Qdim_mf != Qdim_mf_du</literal>, where Qdim_mf is the Qdim of <literal>mf</literal> and Qdim_mf_du is the Qdim of <literal>mf_du</literal>."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:117
+# 5f75ae8c3b0c48a0a442069a799053c5
+msgid "``HU = gf_compute(mesh_fem MF, vec U, 'hessian', mesh_fem mf_h)``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:119
+# 01b577f328ac42ce83b4a6fe3f68cdd1
+msgid "Compute the hessian of the field <literal>U</literal> defined on mesh_fem <literal>mf_h</literal>."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:121
+# 21192ce8b2694011810d8092faf49510
+msgid "See also gf_compute('gradient', mesh_fem mf_du)."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:124
+# 13a456feb89145229b5f41599deba273
+msgid "``UP = gf_compute(mesh_fem MF, vec U, 'eval on triangulated surface', int Nrefine, [vec CVLIST])``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:126
+# 9bca130009d14dbdbc958ee35f7bc4d0
+msgid "[OBSOLETE FUNCTION! will be removed in a future release] Utility function designed for 2D triangular meshes : returns a list of triangles coordinates with interpolated U values. This can be used for the accurate visualization of data defined on a discontinous high order element. On output, the six first rows of UP contains the triangle coordinates, and the others rows contain the interpolated values of U (one for each triangle vertex) CVLIST may indicate the list of convex number that should be consider, if not used then all the mesh convexes will be used. U should be a row vector."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:139
+# 3e49cc4cd6ab41e3a85247dc2f6318fb
+msgid "``Ui = gf_compute(mesh_fem MF, vec U, 'interpolate on', {mesh_fem mfi | slice sli | vec pts})``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:141
+# d11b629d26e94f1c8ab5c5ee85d5bde5
+msgid "Interpolate a field on another mesh_fem or a slice or a list of points."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:144
+# 28336d2109a44a0db23c1f101439cf68
+msgid "Interpolation on another mesh_fem <literal>mfi</literal>:"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:144
+# 025f238b29f24238b6b0949a412903e0
+msgid "<literal>mfi</literal> has to be Lagrangian. If <literal>mf</literal> and <literal>mfi</literal> share the same mesh object, the interpolation will be much faster."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:149
+# 37c5d32126be4b498ff6db451e0dff63
+msgid "Interpolation on a slice <literal>sli</literal>:"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:147
+# 442427422350480baa8006f659080999
+msgid "this is similar to interpolation on a refined P1-discontinuous mesh, but it is much faster. This can also be used with gf_slice('points') to obtain field values at a given set of points."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:151
+# cece07bb79f14ae9b2837406fb0a4d82
+msgid "Interpolation on a set of points <literal>pts</literal>"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:153
+# f0462e40977d481c8ef345c24a9b203c
+msgid "See also gf_asm('interpolation matrix')"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:157
+# 062db991b37b4fe2932b0a23bcbbcab1
+msgid "``Ue = gf_compute(mesh_fem MF, vec U, 'extrapolate on', mesh_fem mfe)``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:159
+# 3b402341f2fe47988cab1c0e64e46547
+msgid "Extrapolate a field on another mesh_fem."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:161
+# 46c9e3206ea74e09a130f9f0e60aa368
+msgid "If the mesh of <literal>mfe</literal> is stricly included in the mesh of <literal>mf</literal>, this function does stricly the same job as gf_compute('interpolate_on'). However, if the mesh of <literal>mfe</literal> is not exactly included in <literal>mf</literal> (imagine interpolation between a curved refined mesh and a coarse mesh), then values which are outside <literal>mf</literal> will be extrapolated."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:168
+# 23efeccf7d184590a9971f2c67235ea3
+msgid "See also gf_asm('extrapolation matrix')"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:171
+# db2a26571b724f588382edfd67fb2930
+msgid "``E = gf_compute(mesh_fem MF, vec U, 'error estimate', mesh_im mim)``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:173
+# 7a3398ca8c864c9db3986859e7964c52
+msgid "Compute an a posteriori error estimate."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:175
+#: ../source/scilab/cmdref_gf_compute.rst:183
+# fc6d78f01fd648f19313cbc9481278e4
+# 0d0a3b011cad4fc2a0dfde08aca68703
+msgid "Currently there is only one which is available: for each convex, the jump of the normal derivative is integrated on its faces."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:179
+# 9dfcfc7816f74f72b87f27a16aed1867
+msgid "``E = gf_compute(mesh_fem MF, vec U, 'error estimate nitsche', mesh_im mim, int GAMMAC, int GAMMAN, scalar lambda_, scalar mu_, scalar gamma0, scalar f_coeff, scalar vertical_force)``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:181
+# 25fa13c3416d4d66a41ad6d5834e90f4
+msgid "Compute an a posteriori error estimate in the case of Nitsche method."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:187
+# 9367a57a8c7d4182b8bc5931e07c46df
+msgid "``gf_compute(mesh_fem MF, vec U, 'convect', mesh_fem mf_v, vec V, scalar dt, int nt[, string option[, vec per_min, vec per_max]])``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_compute.rst:189
+# 99a263a51a7e46a58a6a4649c6969632
+msgid "Compute a convection of <literal>U</literal> with regards to a steady state velocity field <literal>V</literal> with a Characteristic-Galerkin method. The result is returned in-place in <literal>U</literal>. This method is restricted to pure Lagrange fems for U. <literal>mf_v</literal> should represent a continuous finite element method. <literal>dt</literal> is the integration time and <literal>nt</literal> is the number of integration step on the caracteristics. <literal>option</literal> is an option for the part of the boundary where there is a re-entrant convection. <literal>option = 'extrapolation'</literal> for an extrapolation on the nearest element, <literal>option = 'unchanged'</literal> for a constant value on that boundary or <literal>option = 'periodicity'</literal> for a peridiodic boundary. For this latter option the two vectors per_min, per_max has to be given and represent the limits of the periodic domain (on components where per_max[k] < per_min[k] no operation is done). This method is rather dissipative, but stable."
+msgstr ""
+

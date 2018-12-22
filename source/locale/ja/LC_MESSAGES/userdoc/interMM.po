@@ -1,10 +1,11 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2004-2018 GetFEM++ project
 # This file is distributed under the same license as the GetFEM++ package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -13,56 +14,58 @@ msgstr ""
 "POT-Creation-Date: 2018-11-15 02:08+0900\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
-"Language: ja\n"
-"Language-Team: Japanese (https://www.transifex.com/getfem-"
-"doc/teams/87607/ja/)\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
+# ad44e64e2c0a4ab6b3c1411cee5212fd
 #: ../source/userdoc/interMM.rst:10
-#, fuzzy
 msgid "Interpolation of arbitrary quantities"
 msgstr "任意の量の補間"
 
+# ed433c3d19be469a9ea0edc7df3a8582
 #: ../source/userdoc/interMM.rst:12
 msgid ""
-"Once a solution has been computed, it is quite easy to extract any "
-"quantity of interest on it with the interpolation functions for instance "
-"for post-treatment."
+"Once a solution has been computed, it is quite easy to extract any quantity "
+"of interest on it with the interpolation functions for instance for post-"
+"treatment."
 msgstr "一旦解が計算されると、例えば後処理のための補間関数を用いて解に対する任意の量を抽出することは簡単にできます。"
 
+# d4c3b5cdcbbd4a80a70b3bf01aa7150c
 #: ../source/userdoc/interMM.rst:15
 msgid "Basic interpolation"
 msgstr "基本補間"
 
+# 236ba7710fbb4896afbbd13a1b8a4854
 #: ../source/userdoc/interMM.rst:17
 msgid ""
 "The file :file:`getfem/getfem_interpolation.h` defines the function "
 "``getfem::interpolation(...)`` to interpolate a solution from a given "
-"mesh/finite element method on another mesh and/or another Lagrange finite"
-" element method::"
+"mesh/finite element method on another mesh and/or another Lagrange finite "
+"element method::"
 msgstr ""
 ":file:`getfem/getfem_interpolation.h` "
 "はあるメッシュ/有限要素法から他のメッシュ/他のLagrange有限要素法上の解を補間する関数 "
 "``getfem::interpolation(...)`` を定義しています。"
 
+# 9e94380942a34d47b78570060e09fdd8
 #: ../source/userdoc/interMM.rst:23
 msgid ""
-"where ``mf1`` is a variable of type |gf_mf| and describes the finite "
-"element method on which the source field ``U`` is defined, ``mf2`` is the"
-" finite element method on which ``U`` will be interpolated. "
-"``extrapolation`` is an optional parameter. The values are ``0`` not to "
-"allow the extrapolation, ``1`` for an extrapolation of the exterior "
-"points near the boundary and ``2`` for the extrapolation of all exterior "
-"points (could be expensive)."
+"where ``mf1`` is a variable of type |gf_mf| and describes the finite element"
+" method on which the source field ``U`` is defined, ``mf2`` is the finite "
+"element method on which ``U`` will be interpolated. ``extrapolation`` is an "
+"optional parameter. The values are ``0`` not to allow the extrapolation, "
+"``1`` for an extrapolation of the exterior points near the boundary and "
+"``2`` for the extrapolation of all exterior points (could be expensive)."
 msgstr ""
 "ここで ``mf1`` は |gf_mf| 型の変数でソースフィールド ``U`` が定義されている有限要素法を記述します。 ``mf2`` は "
 "``U`` が補間される有限要素法です。 ``extrapolation`` はオプションのパラメータです。値は外挿を許さない ``0`` "
 "、境界近くの外点の外挿のための ``1`` 、すべての外点の外挿のための ``2`` （コストがかかるかもしれない）です。"
 
+# 56659b9268c945ce8a325938a149c551
 #: ../source/userdoc/interMM.rst:31
 msgid ""
 "The dimension of ``U`` should be a multiple of ``mf1.nb_dof()``, and the "
@@ -72,59 +75,65 @@ msgstr ""
 "``U`` の次元は ``mf1.nb_dof()`` の倍数でなければならず、補間されたデータ ``V`` は正しいサイズ（ "
 "``mf2.nb_dof()`` の倍数）でなければなりません。"
 
+# dc3757047c2443f895a4b5be25ca8e07
 #: ../source/userdoc/interMM.rst:34
 msgid "... important::"
 msgstr "...重要::"
 
+# d1b15d60373143ea8a2cf5f94ab34aac
 #: ../source/userdoc/interMM.rst:41
 msgid ""
-"If you need to perform more than one interpolation between the same "
-"finite element methods, it might be more efficient to use the function::"
+"If you need to perform more than one interpolation between the same finite "
+"element methods, it might be more efficient to use the function::"
 msgstr "同じ有限要素法の間で複数の補間を実行する必要がある場合は、次の関数を使用する方が効率的です。"
 
+# f21e00b70ec44113a215352be0aaab5b
 #: ../source/userdoc/interMM.rst:46
 msgid ""
 "where ``M`` is a row matrix which will be filled with the linear map "
 "representing the interpolation (i.e. such that ``V = MU``). The matrix "
-"should have the correct dimensions (i.e. "
-"``mf2.nb_dof()``x``mf1.nb_dof()``). Once this matrix is built, the "
-"interpolation is done with a simple matrix multiplication::"
+"should have the correct dimensions (i.e. ``mf2.nb_dof()``x``mf1.nb_dof()``)."
+" Once this matrix is built, the interpolation is done with a simple matrix "
+"multiplication::"
 msgstr ""
-"ここで、 ``M`` は、補間を表す線形写像（すなわち、 ``V = MU`` ）を満たす行列です。行列は正しい次元（ "
-"``mf2.nb_dof()`` x ``mf1.nb_dof()`` "
-"）を持つ必要があります。この行列が構築されると、単純な行列乗算で補間が行われます。"
+"ここで、 ``M`` は、補間を表す線形写像（すなわち、 ``V = MU`` ）を満たす行列です。行列は正しい次元（ ``mf2.nb_dof()``"
+" x ``mf1.nb_dof()`` ）を持つ必要があります。この行列が構築されると、単純な行列乗算で補間が行われます。"
 
+# 40ecdeace41c4158a51c28e0e9ccb61f
 #: ../source/userdoc/interMM.rst:55
 msgid "Interpolation based on the high-level weak form language"
 msgstr "高水準弱形式言語に基づく補間"
 
+# e6b30cdd081647a3a4ad773d58141124
 #: ../source/userdoc/interMM.rst:57
 msgid ""
 "It is possible to extract some arbitrary expressions on possibly several "
 "fields thanks to the weak form language and the interpolation functions."
 msgstr "弱形式言語と補間関数により、いくつかのフィールドで任意の式を抽出することが可能です。"
 
+# 5b5275ef1ba44cacaee8d4bb31a1e0b9
 #: ../source/userdoc/interMM.rst:59
 msgid ""
 "This is specially dedicated to the model object (but it can also be used "
 "with a ga_workspace object). For instance if ``md`` is a valid object "
-"containing some defined variables ``u`` (vectorial) and ``p`` (scalar), "
-"one can interpolate on a Lagrange finite element method an expression "
-"such as ``p*Trace(Grad_u)``. The resulting expression can be scalar, "
-"vectorial or tensorial. The size of the resulting vector is automatically"
-" adapted."
+"containing some defined variables ``u`` (vectorial) and ``p`` (scalar), one "
+"can interpolate on a Lagrange finite element method an expression such as "
+"``p*Trace(Grad_u)``. The resulting expression can be scalar, vectorial or "
+"tensorial. The size of the resulting vector is automatically adapted."
 msgstr ""
 "これは特にmodelオブジェクト専用です（ただし、ga_workspaceオブジェクトでも使用できます）。たとえば、 ``md`` "
 "がいくつかの定義された変数 ``u`` （ベクトル）と ``p`` （スカラー）を含む有効なオブジェクトである場合、 "
 "``p*Trace(Grad_u)`` "
 "のような式をLagrange有限要素法で補間することができます。結果の式は、スカラ、ベクトル、またはテンソルになります。結果のベクトルのサイズは自動的に適合されます。"
 
+# 82cd76b37d2f4a19ac57cfbd9099b20d
 #: ../source/userdoc/interMM.rst:61
 msgid ""
 "The high-level generic interpolation functions are defined in the file "
 ":file:`getfem/getfem_generic_assembly.h`."
 msgstr "高水準の一般補間関数はファイル :file:`getfem/getfem_generic_assembly.h` で定義されています。"
 
+# 72fd76e5d2e34f93bd6791a0bcfc3a37
 #: ../source/userdoc/interMM.rst:63
 msgid ""
 "There is different interpolation functions corresponding to the "
@@ -134,76 +143,79 @@ msgstr ""
 "同じメッシュ上のLagrange有限要素法の補間、点または ``getfem::im_data`` "
 "オブジェクト上の点群の補間に対応する補間関数があります。"
 
+# 11e9181710c1421fb8944406fc4c5b94
 #: ../source/userdoc/interMM.rst:65
 msgid "Interpolation on a Lagrange fem::"
 msgstr "Lagrange有限要素法は次の通りです。"
 
+# 6dc747f798724e24adb1490115463235
 #: ../source/userdoc/interMM.rst:69
 msgid ""
-"where ``workspace`` is a ``getfem::ga_workspace`` object which aims to "
-"store the different variables and data (see  :ref:`ud-gasm-high`), ``mf``"
-" is the ``getfem::mesh_fem`` object reresenting the Lagrange fem on which"
-" the interpolation is to be done and ``result`` is a "
-"``beot::base_vector`` which store the interpolatin. Note that the "
-"workspace should contain the epression to be interpolated. ::"
+"where ``workspace`` is a ``getfem::ga_workspace`` object which aims to store"
+" the different variables and data (see  :ref:`ud-gasm-high`), ``mf`` is the "
+"``getfem::mesh_fem`` object reresenting the Lagrange fem on which the "
+"interpolation is to be done and ``result`` is a ``beot::base_vector`` which "
+"store the interpolatin. Note that the workspace should contain the epression"
+" to be interpolated. ::"
 msgstr ""
-"``workspace`` は異なる変数とデータを格納することを目的とした ``getfem::ga_workspace`` "
-"オブジェクトです（参照 :ref:`ud-gasm-high` ）、 ``mf`` は ``getfem::mesh_fem`` "
+"``workspace`` は異なる変数とデータを格納することを目的とした ``getfem::ga_workspace`` オブジェクトです（参照 "
+":ref:`ud-gasm-high` ）、 ``mf`` は ``getfem::mesh_fem`` "
 "オブジェクトは補間を行うLagrangeの有限要素法を表し、 ``result`` は補間を格納する ``beot::base_vector`` "
 "です。workspaceには、補間される式が含まれている必要があります。 ::"
 
+# 21ab6f3e8a64485989b9087aa8d3eb4c
 #: ../source/userdoc/interMM.rst:73
 msgid ""
 "where ``md`` is a ``getfem::model`` object (containing the variables and "
-"data), ``expr`` (std::string object) is the expression to be "
-"interpolated, ``mf`` is the ``getfem::mesh_fem`` object reresenting the "
-"Lagrange fem on which the interpolation is to be done, ``result`` is the "
-"vector in which the interpolation is stored and ``rg`` is the optional "
-"mesh region."
+"data), ``expr`` (std::string object) is the expression to be interpolated, "
+"``mf`` is the ``getfem::mesh_fem`` object reresenting the Lagrange fem on "
+"which the interpolation is to be done, ``result`` is the vector in which the"
+" interpolation is stored and ``rg`` is the optional mesh region."
 msgstr ""
-"``md`` は ``getfem::model`` オブジェクト（変数とデータを含んでいます）であり、 ``expr`` "
-"（std::string オブジェクト）は補間される式で、 ``mf`` は補間を行うLagrange有限要素法を表す "
-"``getfem::mesh_fem`` オブジェクトです。 ``result`` は補間が格納されるベクトルであり、 ``rg`` "
-"は任意のメッシュ領域です。"
+"``md`` は ``getfem::model`` オブジェクト（変数とデータを含んでいます）であり、 ``expr`` （std::string "
+"オブジェクト）は補間される式で、 ``mf`` は補間を行うLagrange有限要素法を表す ``getfem::mesh_fem`` "
+"オブジェクトです。 ``result`` は補間が格納されるベクトルであり、 ``rg`` は任意のメッシュ領域です。"
 
+# a545d7fea7b64e33a4d201db4e08d5d5
 #: ../source/userdoc/interMM.rst:75
 msgid "Interpolation on a cloud of points::"
 msgstr "点群の補間::"
 
+# a18a5bce2e3945d5b8fd2027180ecefa
 #: ../source/userdoc/interMM.rst:79
 msgid ""
 "where ``md`` is a ``getfem::model`` object (containing the variables and "
-"data), ``expr`` (std::string object) is the expression to be "
-"interpolated, ``mti`` is a ``getfem::mesh_trans_inv`` object which stores"
-" the cloud of points (see :file:`getfem/getfem_interpolation.h`), "
-"``result`` is the vector in which the interpolation is stored, "
-"``extrapolation`` is an option for extrapolating the field outside the "
-"mesh for outside points, ``rg`` is the optional mesh region and "
-"``nbpoints`` is the optional maximal number of points."
+"data), ``expr`` (std::string object) is the expression to be interpolated, "
+"``mti`` is a ``getfem::mesh_trans_inv`` object which stores the cloud of "
+"points (see :file:`getfem/getfem_interpolation.h`), ``result`` is the vector"
+" in which the interpolation is stored, ``extrapolation`` is an option for "
+"extrapolating the field outside the mesh for outside points, ``rg`` is the "
+"optional mesh region and ``nbpoints`` is the optional maximal number of "
+"points."
 msgstr ""
 "``md`` は ``getfem::model`` オブジェクト（変数とデータを含む）で、 ``expr`` （std::string "
 "オブジェクト）は補間される式で、 ``mti`` は点群を格納する ``getfem::mesh_trans_inv`` オブジェクト（ "
 ":file:`getfem/getfem_interpolation.h` 参照）、 ``result`` は補間が格納されているベクトル、 "
-"``extrapolation`` は外側の点の外側のメッシュでフィールドを外挿するオプションです。 ``rg`` はオプションのメッシュ領域で、"
-" ``nbpoints`` はオプションの最大点数です。"
+"``extrapolation`` は外側の点の外側のメッシュでフィールドを外挿するオプションです。 ``rg`` はオプションのメッシュ領域で、 "
+"``nbpoints`` はオプションの最大点数です。"
 
+# c51b273b107349c39dfdcb7acc8ceca0
 #: ../source/userdoc/interMM.rst:81
 msgid ""
-"Interpolation on an im_data object (on the Gauss points of an integration"
-" method)::"
+"Interpolation on an im_data object (on the Gauss points of an integration "
+"method)::"
 msgstr "``im_data`` オブジェクトの（積分法のGauss点での）補間は次の通りです。"
 
+# f4feda51bf154afa81b2e0a89326d7e3
 #: ../source/userdoc/interMM.rst:86
 msgid ""
 "where ``md`` is a ``getfem::model`` object (containing the variables and "
-"data), ``expr`` (std::string object) is the expression to be "
-"interpolated, ``imd`` is a ``getfem::im_data`` object which refers to a "
-"integration method (see :file:`getfem/getfem_im_data.h`), ``result`` is "
-"the vector in which the interpolation is stored and ``rg`` is the "
-"optional mesh region."
+"data), ``expr`` (std::string object) is the expression to be interpolated, "
+"``imd`` is a ``getfem::im_data`` object which refers to a integration method"
+" (see :file:`getfem/getfem_im_data.h`), ``result`` is the vector in which "
+"the interpolation is stored and ``rg`` is the optional mesh region."
 msgstr ""
 "ここで ``md`` は ``getfem::model`` オブジェクト（変数とデータを含んでいます）、（std::stringオブジェクト） "
 "``expr`` は補間される式、 ``imd`` は積分法（ :file:`getfem/getfem_im_data.h` 参照）を参照する "
 "``getfem::im_data`` オブジェクト、 ``result`` は補間が格納されているベクトル、 ``rg`` "
 "オプションのメッシュ領域です。"
-

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 02:08+0900\n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,1383 +17,1383 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/gasm_high.rst:12
-# 443b18c4a7f74c25b867e418dda962ee
+# fe47024244a2413c912319d5d8139ff1
 msgid "Compute arbitrary terms - high-level generic assembly procedures - Weak-form language"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:14
-# 768a278477e84c089d9b5b4dc79e0a44
+# 7716799b24aa4321a0c8cc82794dd9f1
 msgid "This section presents what is now the main generic assembly of |gf|. It is a high-level generic assembly in the sense that it is based on a weak form language to describe the weak formulation of boundary value problems of partial differential equations. It mainly has been developed to circumvent the difficulties with the previous low-level generic assembly (see  :ref:`ud-gasm-low`) for which nonlinear terms were quite difficult to describe. Conversely, a symbolic differentiation algorithm is used with this version. It simplifies a lot the approximation of nonlinear coupled problems since only the weak form is necessary to be described, the tangent system being automatically computed. Moreover, the weak form language is compiled into optimized instructions before the evaluation on each integration point in order to obtain a an optimal computational cost."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:16
-# cb189190bd294b6db599b4818d1c5735
+# 96446f1c210a4f95837593659276b7e2
 msgid "The header file to be included to use the high-level generic assembly procedures in C++ is :file:`getfem/generic\\_assembly.h`."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:19
-# d71fe87053eb4f59bc51f661c65413a5
+# 7dd05757de014ec2aab7ae9d9754c157
 msgid "Differences in execution time between high and low level generic assembly"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:20
-# c2eabc7c61064b2cb1ac45b5d81d85eb
+# bfe4968abd1f4c52b447741d0535bfaf
 msgid "For basic linear assembly terms, the high level generic assembly is most of the time faster than the low-level one. This is due to the fact that the high-level generic assembly incorporates a compilation in basic optimized instructions and operates simplifications. On complexe terms it can be really faster due to the simplifications on repeated terms. On the other hand, the fact that the low-level generic assembly incorporates a mechanism to pre-compute on the reference element the linear term for elements with a linear transformation makes that it can be faster on a few simple linear terms. Of course, a possibility would be to incorporate the ability to pre-compute on the reference element the linear term for linear transformations in the high level generic assembly. However, it would be rather complicated due to the high genericity of the language. A consequence also is that exact integration is not allowed in the high level generic assembly."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:25
-# 2c5cc7a1e28b4c47a705a9ce56505874
+# fc4b662eca694474a1e253a7486503d2
 msgid "Overview of the weak form language syntax"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:27
-# 86aaaca477644cb6a773045111039d88
+# df2ff11fb6bd4053b8c6ad58032ae089
 msgid "A specific weak form language has been developed to describe the weak formulation of boundary value problems. It is intended to be close to the structure of a standard weak formulation and it incorporates the following components:"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:29
-# d3bbbea038904cfea47f6f679ccfbf94
+# 5ec0659d1b34426bbd91005cfb616aae
 msgid "Variable names: A list of variables should be given. The variables are described on a finite element method or can be a simple vector of unknowns. For instance ``u``, ``v``, ``p``, ``pressure``, ``electric_field`` are valid variable names."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:31
-# 316589ef8b8a40d9a87ad9ba3db2de9b
+# f0d0446d5e2848a4930fa6a89f35add6
 msgid "Constant names: A list of constants could be given. The rules are the same as for the variables but no test functions can be associated to constants."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:33
-# 41f1fbbb9a0e48138542227651160ef9
+# 7f7aced4be4b49a7a7aeaf781b3bac81
 msgid "Test functions: Can be used with respect to any of the variables. They are identified by the prefix ``Test_`` followed by the corresponding variable name. For instance  ``Test_u``, ``Test_v``, ``Test_p``, ``Test_pressure``, ``Test_electric_field``. For the tangent system, second order test functions are denoted ``Test2_`` followed by the variable name."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:35
-# dff23dbad5d7475aab0779e79a9dfb7c
+# 6043a5753e05474e93057132157f342a
 msgid "Gradients: Spatial gradients of variables or test functions are identified by the prefix ``Grad_`` followed by the variable name or by ``Test_`` or ``Test2_`` followed itself by the variable name. This is available for FEM variables only. For instance ``Grad_u``, ``Grad_pressure``, ``Grad_electric_field`` and ``Grad_Test_u``, ``Grad_Test2_v``. For vector fields, ``Div_u`` and ``Div_Test_u`` are some shortcuts for ``Trace(Grad_u)`` and ``Trace(Grad_Test_u)``, respectively."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:37
-# 7646d82476b048dda44537a0585cdb16
+# 44ddbb15f78d454b8f19b59e8ccb8bb4
 msgid "Hessians: The Hessian of a variable or test function is identified by the prefix ``Hess_`` followed by the variable name or by ``Test_`` or ``Test2_`` followed itself by the variable name. This is available for FEM variables only. For instance ``Hess_u``, ``Hess_v``, ``Hess_p``, ``Hess_Test2_v``, ``Hess_Test_p``, ``Hess_Test_pressure``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:39
-# 9046732191664297a1ad9102e8916b71
+# 010659e970c84ebb8439a1876df40bd7
 msgid "A certain number of predefined scalar functions (``sin(t)``, ``cos(t)``, ``pow(t,u)``, ``sqrt(t)``, ``sqr(t)``, ``Heaviside(t)``, ...). A scalar function can be applied to scalar or vector/matrix/tensor expressions. It applies componentwise. For functions having two arguments (``pow(t,u)``, ``min(t,u)`` ...) if two non-scalar arguments are passed, the dimension have to be the same. For instance \"max([1;2],[0;3])\" will return \"[1;3]\"."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:41
-# a4fcd5a7255543418287e579f5d5afdc
+# 4c1fbb8596b24893a778b5384ef31501
 msgid "A certain number of operators: ``+``, ``-``, ``*``, ``/``, ``:``, ``.``, ``.*``, ``./``, ``@``, ``'``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:43
-# f488a92921204331a807ed1de4352167
+# e7d2e237f5804147af16159bba47e273
 msgid "Some constants: ``pi``, ``meshdim`` (the dimension of the current mesh), ``qdim(u)`` and ``qdims(u)`` the dimensions of the variable ``u`` (the size for fixed size variables and the dimension of the vector field for FEM variables), ``Id(n)`` the identity :math:`n\\times n` matrix."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:45
-# 306735550736451f8fe2ff4fec6fad30
+# 55ea352b6318452a9697e20cfd8bbf72
 msgid "Parentheses can be used to change the operations order in a standard way. For instance ``(1+2)*4`` or ``(u+v)*Test_u`` are valid expressions."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:47
-# bcc22b35df414cc997f81a665344f9c0
+# e988fe144b7c41c09a6748341754e60b
 msgid "The access to a component of a vector/matrix/tensor can be done by following a term by a left parenthesis, the list of components and a right parenthesis. For instance ``[1,1,2](3)`` is correct and will return ``2``. Note that indices are assumed to begin by 1 (even in C++ and with the python interface). A colon can replace the value of an index in a Matlab like syntax."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:49
-# cd773609da7f4fafaf82a858c11dc4cd
+# 996ec37cacfc4d35b079067f5d8bc0a9
 msgid "Explicit vectors: For instance ``[1;2;3;4]`` is an explicit vector of size four. Each component can be an expression."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:51
-# 42049da629174beeb12a9ea7d7ad1203
+# cf2732140067431182f81e3c95741efb
 msgid "Explicit matrices: For instance ``[1,3;2,4]`` and ``[[1,2],[3,4]]`` denote the same 2x2 matrix. Each component can be an expression."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:53
-# dad818399fa74e4d8bd02e5feeafab7f
+# 56f41f1a25264463bfd00c123b30fd21
 msgid "Explicit fourth order tensors: example of explicit 3x2x2x2 fourth order tensor in the nested format: ``[[[[1,2,3],[1,2,3]],[[1,2,3],[1,2,3]]],[[[1,2,3],[1,2,3]],[[1,2,3],[1,2,3]]]]``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:55
-# e40a81615b704f0fb908c0ac3d009775
+# d5f4a4ed2f80415c882e9ba84aa9e877
 msgid "``X`` is the current coordinate on the real element, ``X(i)`` is its i-th component."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:57
-# 8f3e931cbba0476fb580a2ac4d8802f0
+# d122ef00d54f4bd0acae7f6dabdaa5f3
 msgid "``Normal`` is the outward unit normal vector to a boundary, when integrating on a domain boundary, or the unit normal vector to a level-set when integrating on a level-set with a ``mesh_im_level_set`` method. In the latter case, the normal vector is in the direction of the level-set function gradient."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:59
-# ccff184455ac4a269c7fae09675e5b5e
+# 2370b3ca1153449e9bb59fd682b42f79
 msgid "``Reshape(t, i, j, ...)``: Reshape a vector/matrix/tensor. Note that all tensors in |gf| are stored in the Fortran order."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:61
-# 6ad418c1f6f94ac593524b6ee50ed247
+# 6cb7232fbc02445d8a6f05c1cbc6b64b
 msgid "A certain number of linear and nonlinear operators (``Trace``, ``Norm``, ``Det``, ``Deviator``, ``Contract``, ...). The nonlinear operators cannot be applied to test functions."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:63
-# 7005821b6ad4408aba7fce26417b2cc6
+# 1cd5c4877d784664870fee0c9d537da3
 msgid "``Diff(expression, variable)``: The possibility to explicit differentiate an expression with respect to a variable (symbolic differentiation)."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:65
-# 25d2602b1cd446d6b0a2629ee2ffe5b3
+# 15573241b5bd4bad856d65b20582e940
 msgid "``Diff(expression, variable, direction)``: computes the derivative of ``expression`` with respect to ``variable`` in the direction ``direction``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:67
-# a1f937c86f744cfabf23e0d56f16c505
+# d562b07b58124f5a8c84dda8c36af57b
 msgid "``Grad(expression)``: When possible, symbolically derive the gradient of the given expression."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:69
-# c26955a3a6084564b5b42b4b571be642
+# b11faa63aa9a4d8081e85bccf5a79933
 msgid "Possiblility of macro definition (in the model, the ga_workspace object or directly in the assembly string). The macros should be some valid expressions that are expanded inline at the lexical analysis phase (if they are used several times, the computation is automatically factorized at the compilation stage)."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:71
-# 3a0dc25e11fd43659a76706f12ed8e97
+# 51fb8097bd154c43851e52b41f57eb3c
 msgid "``Interpolate(variable, transformation)``: Powerful operation which allows to interpolate the variables, or test functions either on the same mesh on other elements or on another mesh. ``transformation`` is an object stored by the workspace or model object which describes the map from the current point to the point where to perform the interpolation. This functionality can be used for instance to prescribe periodic conditions or to compute mortar matrices for two finite element spaces defined on different meshes or more generally for fictitious domain methods such as fluid-structure interaction."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:73
-# cc15d9ba99bb41a6b345b091bc67a06d
+# 431b0b84b108434cb20356c2bb2f7531
 msgid "``Elementary_transformation(variable, transformation)``: Allow a linear tranformation defined at the element level (i.e. not possible to define at the gauss point level). This feature has been added mostly for defining a reduction for plate elements (projection onto low-level vector element such as rotated RT0). ``transformation`` is an object stored by the workspace or model object which describes the trasformation for a particular element."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:75
-# 63131af8e8734a64b977f840aae0bb7a
+# 1606698b450e4e0baf1c4f5bda352ee7
 msgid "Possibility of integration on the direct product of two-domains for double integral computation or coupling of two variables with a Kernel / convolution / exchange integral. This allows terms like :math:`\\displaystyle\\int_{\\Omega_1}\\int_{\\Omega_2}k(x,y)u(x)v(y)dydx` with :math:`\\Omega_1` and :math:`\\Omega_2` two domains, different or not, having their own meshes, integration methods and with :math:`u` a variable defined on :math:`\\Omega_1` and :math:`v` a variable defined on :math:`\\Omega_2`. The keyword ``Secondary_domain(variable)`` allows to access to the variables on the second domain of integration."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:78
-# dd83a93485984bdba24e8c35e1031cce
+# 52c9c9b9f1c44fff820607f303df5dbb
 msgid "Some basic examples"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:80
-# eb7ca905d5ba41ae849b8739364f483b
+# 54ef28a3854e4be3ab4650093d07c294
 msgid "The weak formulation for the Poisson problem on a domain :math:`\\Omega`"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:86
-# b82192a46ba04abd8c70c8fb43305689
+# 7bc30715de26409d89722eec372924d0
 msgid "with Dirichlet boundary conditions :math:`u = 0` on :math:`\\partial\\Omega` is classically"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:93
-# 7bc5a14b0b3d463ba40e5b2acdf19462
+# c6bc3e83a8dd4999859f73edf80ebb3c
 msgid "for all test functions :math:`v` vanishing on  :math:`\\partial\\Omega`. The corresponding expression on the assembly string is::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:98
-# 973e3f4f64ce4128a90358e5d8eee178
+# e71ba40cac5d4d1c81c14e160e847353
 msgid "where ``my_f`` is the expression of the source term. If now the equation is"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:104
-# 04821fde97cf4aa7ad9ae68ad5a5e84d
+# bcfeaaba4ae94f528e1f50855e3ea961
 msgid "for ``a`` a scalar coefficient, the corresponding assembly string is::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:108
-# a7da20bb526444c78308eb7c88fd4a42
+# 7e6da24a40fc45968efceda5742127a2
 msgid "where ``a`` has to be declared as a scalar constant or a scalar field. Not that is is also possible to describe it explicitly. For instance the problem"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:114
-# f0bbff75affb489790e71c6f88e9505e
+# 3cbe6a14317a4b3cbdb904dd4f470c32
 msgid "where :math:`x_1, x_2` are the coordinates on the mesh, can be expressed::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:118
-# 3a0208e01b8540acbfcee91487e6c4e6
+# 67810d00c0d146489f07c9023cc56bc1
 msgid "Another classical equation is linear elasticity:"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:124
-# 6d35f43ec4b14d8eb05c735cb2a692e7
+# 7314d3a69eb44c0f8d0c4526a68bde60
 msgid "for :math:`u` a vector field and :math:`\\sigma(u) = \\lambda \\mbox{div } u + \\mu (\\nabla u + (\\nabla u)^T)` when isotropic linear elasticity is considered. The corresponding assembly string to describe the weak formulation can be written::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:128
 #: ../source/userdoc/gasm_high.rst:620
 #: ../source/userdoc/gasm_high.rst:724
-# 5350c274395147b899d832f426ea46e5
-# fd78ef40085a4340852a07f98bc055c6
-# 0bae12bf85034190a7a23f6b109d7d1b
+# 44ba5beee4cc4b5bbad43a479877df3f
+# 99aa74dd9fb849e8b21d7cb554f204bf
+# f62a1b6a1c334ad2a7dceabc4287f2d6
 msgid "or::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:132
-# ad8c7fee7c9a4e4f87e6842ef881982e
+# 7d20b7f5629e4090a10217dcdb85f963
 msgid "Here again, the coefficients ``lambda`` and ``mu`` can be given constants, or scalar field or explicit expression or even expression coming from some other variables in order to couples some problems. For instance, if the coefficients depends on a temperature field one can write::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:137
-# 3665c6a86775404f8dd31691474d9654
+# 9c46c651480f45eaab6246c3281e47a1
 msgid "where ``theta`` is the temperature which can be the solution to a Poisson equation::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:141
-# e38f2dcff22d4145865177827a52acce
+# 350a072d5a1945c2933dc958ba2c8990
 msgid "and ``my_f1`` and ``my_f2`` are some given functions. Note that in that case, the problem is nonlinear due to the coupling, even if the two functions  ``my_f1`` and ``my_f2`` are linear."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:145
-# cb8d2508e37246d3b35a233c70a64113
+# bdb78bab8bfe41beadffc9955e127388
 msgid "Derivation order and symbolic differentiation"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:147
-# 8cfedb6fc7d049389d774f09809ae9dd
+# 2f4a99b3fe10467ab7c716bbd5c73611
 msgid "The derivation order of the assembly string is automatically detected. This means that if no test functions are found, the order will be considered to be 0 (potential energy), if first order test functions are found, the order will be considered to be 1 (weak formulation) and if both first and second order test functions are found, the order will be considered to be 2 (tangent system)."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:149
-# 38413565556d431c8839c6e3e14b0268
+# 8f09d971b61d4bce920fba71ac003aad
 msgid "In order to perform an assembly (see next section), one should specify the order (0, 1 or 2). If an order 1 string is furnished and an order 2 assembly is required, a symbolic differentiation of the expression is performed. The same if an order 0 string is furnished and if an order 1 or 2 assembly is required. Of course, the converse is not true. If an order 1 expression is given and an order 0 assembly is expected, no integration is performed. This should not be generally not possible since an arbitrary weak formulation do not necessary derive from a potential energy."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:151
-# 52f1d982c13d45ef853e654b3d60df6c
+# b239d0677bd74a5f8fa6fb6ca1e8ea33
 msgid "The standard way to use the generic assembly is to furnish order 1 expressions (i.e. a weak formulation). If a potential energy exists, one may furnish it. However, it will be derived twice to obtain the tangent system which could result in complicated expressions. For nonlinear problems, it is not allowed to furnish order 2 expressions directly. The reason is that the weak formulation is necessary to obtain the residual. So nothing could be done with a tangent term without having the corresponding order 1 term."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:153
-# 0247b5c695d14643af1059bfb56cd365
+# 7a916d7ded9a4fe69eccb1b9a8d4ad39
 msgid "IMPORTANT REMARK: Note that for coupled problems, a global potential frequently do not exists. So that the part of problems directly defined with a potential may be difficult to couple. To illustrate this, if you defined a potential with some parameters (elasticity coefficients for instance), and the couplingconsists in a variation of these coefficients with respect to another variable, then the weak formulation do not consist of course in the derivative of the potential with respect to the coefficients which has generally no sense. This is the reason why the definition through a potential should be the exception."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:157
-# c5179333ca214a5296ac8026bd54a134
+# a362ffecc70949bba203eab17d18e3f8
 msgid "C++ Call of the assembly"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:159
-# c5ae06ad09c44036908ca96073111969
+# 5d2f479be0404e7db61316605b194cd3
 msgid "Note that the most natural way to use the generic assembly is by the use of the generic assembly bricks of the model object, see Section :ref:`ud-model-generic-assembly`. It is however also possible to use the high level generic assembly on its own."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:161
-# 710f8e4d05cd4ecdaa53e06d2c8c0c40
+# 0fb21a92c49f4c19bdc1e8be1ff8705b
 msgid "The generic assembly is driven by the object ``getfem::ga_workspace`` defined in :file:`getfem/getfem\\_generic_assembly.h`."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:163
-# 4034e0ce77f742dca3269e31856aedca
+# 087c229400594fc89b131f7e354bd89d
 msgid "There is two ways to define a ``getfem::ga_workspace`` object. It can depend on a model (see :ref:`ud-model`) and should be declared as::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:167
-# 89b06f88921247a496cbcf1527491b34
+# b4bbf9c6b0a84a61b741cfea80a88439
 msgid "with ``model`` a previously define ``getfem::model`` object. In that case the variable and constant considered are the one of the model. The second way it to define an independent ``getfem::ga_workspace`` object by::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:171
-# 9917da09f5ba4924a1f66ac62eff3563
+# 3d57b167adc140c1a6000b6bd5b722a6
 msgid "In that case, the variable and constant have to be added to the workspace. This can be done thanks to the following methods::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:183
-# f76f6b83e58e43f29e0db92278154565
+# 80e3f2f6e1f74a09b71129f2dd4f169f
 msgid "where ``name`` is the variable/constant name (see in the next sections the restriction on possible names), ``mf`` is the ``getfem::mesh_fem`` object describing the finite element method, ``I`` is an object of class ``gmm::sub_interval`` indicating the interval of the variable on the assembled vector/matrix and ``V`` is a ``getfem::base_vector`` being the value of the variable/constant. The last method add a constant defined on an ``im_data`` object ``imd`` which allows to store scalar/vector/tensor field informations on the integration points of an ``mesh_im`` object."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:186
-# ae829ff2ff184b7e98409af60de9b711
+# e1364914267c42a48162236cf0c60f66
 msgid "Once it is declared and once the variables and constant are declared, it is possible to add assembly string to the workspace with::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:190
-# 8adff0bd08744b87ad7abb32186860bc
+# a14f308203374dcc8fd13c5d5c06fd25
 msgid "where ``\"my expression\"`` is the assembly string, ``mim`` is a ``getfem::mesh_im`` object and ``rg`` if an optional valid region of the mesh corresponding to ``mim``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:192
-# 88950f4513c84b3496e78dbb3942ccd6
+# dc5eae59ef4f4659a105600dbd6cabe5
 msgid "As it is explained in the previous section, the order of the string will be automatically detected and a symbolic differentiation will be performed to obtain the corresponding tangent term."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:194
-# 88fecc31500b4c3cbde2d0df0598a83c
+# 4f7bc820b98848ad8ace40067cb0fda5
 msgid "Once assembly strings are added to the workspace, is is possible to call::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:198
-# 7aad45407b47488a8bf976a287970995
+# 1757a180e2234bc48e5488ee90d978af
 msgid "where ``order`` should be equal to 0 (potential energy), 1 (residual vector) or 2 (tangent term, or stiffness matrix for linear problems). The result of the assembly is available as follows::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:206
-# 011640d50b4241958d232efe88fe40d0
+# 70999d3c026b4a1ea606aa94b6aadf52
 msgid "By default, the assembled potential, vector and matrix is initialized to zero at the beginning of the assembly. It is however possible (and recommended) to set the assembly vector and matrix to external ones to perform an incremental assembly. The two methods::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:212
-# 5fb39dd48a674b1b8fd284d121c00c2e
+# ad6de62ec2654826a5409a8607371e1c
 msgid "allows to do so. Be aware to give a vector and a matrix of the right dimension."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:215
-# 0e655e170a8547c08930eb3e34041df4
+# 90087e1efd024b458fab57b411dd9a91
 msgid "Note also that the method::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:219
-# d3aecbb1b0674fa2a70283e1b335a3e1
+# d61ea29bc7fb4bb89ff14cd578c477f1
 msgid "allows to cancel all furnished expressions and allows to re-use the same workspace for another assembly."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:222
-# 8bb66cdaf7754bf9b4941db76e893212
+# 977d89e6bf234fb5a75830937c954a68
 msgid "It is also possible to call the generic assembly from the Python/Scilab/Matlab interface. See ``gf_asm`` command of the interface for more details."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:225
-# cbf65074d3004bb488ae5b9673199f51
+# 3ac303d1b0b44b9b8cbdb9740540ac99
 msgid "C++ assembly examples"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:227
-# 8ca4276b48ef470886d0f194e0295d5a
+# 8264dd6d23be4a628e337c4eca1bf686
 msgid "As a first example, if one needs to perform the assembly of a Poisson problem"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:233
-# 80da3193eeb446ffba1714597bd7082d
+# ca001e898e1844b98827e3412032565a
 msgid "the stiffness matrix is given"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:239
-# 4b27f831d5454c7fb5e96615980ba36c
+# facb1a624d444a6a83f8ce67d0a23722
 msgid "and will be assembled by the following code::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:251
-# 7c9ae8d6bce1435bacccad68d9a0489e
+# 38bc59854b1a4f2d942dc16058ffdedf
 msgid "where of course, ``mf`` is supposed to be an already declared ``getfem::mesh_fem`` object and ``mim`` a already declared ``getfem::mesh_im`` object on the same mesh. Note that the value of the variable do not really intervene because of the linearity of the problem. This allows to pass ``getfem::base_vector(nbdof)`` as the value of the variable which will not be used. Note also that two other possible expressions for exactly the same result for the assembly string are ``\"Grad_Test2_u.Grad_Test_u\"`` (i.e. an order 2 expression) or ``\"Norm_sqr(Grad_u)/2\"`` (i.e. a potential). In fact other possible assembly string will give the same result such as ``\"Grad_u.Grad_u/2\"`` or ``\"[Grad_u(1), Grad_u(2)].[Grad_Test_u(1), Grad_Test_u(2)]\"`` for two-dimensional problems. However, the recommendation is preferably to give an order 1 expression (weak formulation) if there is no particular reason to prefer an order 0 or an order 2 expression."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:253
-# d9944d20bf4b4ae0974e67953b12d0ae
+# 5d27fde6c4bd457c844d8a8a02c5195d
 msgid "As a second example, let us consider a coupled problem, for instance the mixed problem of incompressible elasticity given by the equations"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:261
-# f18d1e3285e54c70bce47bcaaa28ae51
+# b49fb7aefbb64f3087f345bd400a640d
 msgid "where ``u`` is the vector valued displacement and ``p`` the pressure. The assembly of the matrix for the whole coupled system can be performed as follows::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:278
-# df4cd72c394346f3a0386357f5937208
+# fa585d3d42254d979cfa134799e545c7
 msgid "where, here, ``mf_u`` and ``mf_p`` are supposed to be some already declared ``getfem::mesh_fem`` objects defined on the same mesh, ``mim`` a already declared ``getfem::mesh_im`` object and ``mu`` is the Lame coefficient. It is also possible to perform the assembly of the sub-matrix of this system separately."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:281
-# d0bf0239e454400cb11845307f28e3db
+# 35deebe656854f019dc715c5b508e6eb
 msgid "Let us see now how to perform the assembly of a source term. The weak formulation of a volumic source term is"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:286
-# 34edcdb3e0d3429a933220a2bc9e19c9
+# f9057d03a72b475eab63164fa4048feb
 msgid "where :math:`f` is the source term and :math:`v` the test function. The corresponding assembly can be written::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:298
-# 902cd7e5e8a34983a6724a033145e396
+# d6ed60e0ca7f4351b633aeda7b92c41d
 msgid "if the source term is describe on a finite element ``mf_data`` and the corresponding vector of degrees of freedom ``F``. Explicit source terms are also possible. For instance::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:309
-# 56fd93f7fc104fd2824ac6f1469cb95e
+# 32adc6ef5a914b7096d964f4199ec280
 msgid "is also valid. If the source term is a boundary term (in case of a Neumann condition) the only difference is that the mesh region corresponding to the boundary have to be given as follows::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:313
-# 9897c2284d724125b26a13e69d11b2eb
+# f8f87e73c39b45148465c3428e285cbf
 msgid "where ``region`` is the mesh region number."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:315
-# 19bbefb1a03e440a9ab7be8571345b1c
+# afd807c0ed204483b6d4678c772825e0
 msgid "As another example, let us describe a simple nonlinear elasticity problem. Assume that we consider a Saint-Venant Kirchhoff constitutive law which means that we consider the following elastic energy on a body of reference configuration :math:`\\Omega`:"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:320
-# c15ad1ab1a0b47f885aca822e881ad2e
+# e1fdc5211d5d4968a2780e17527461c9
 msgid "where :math:`\\lambda, \\mu` are the |Lame| coefficients and  :math:`E` is the strain tensor given by :math:`E = (\\nabla u + (\\nabla u)^T + (\\nabla u)^T\\nabla u)/2`."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:322
-# 91cdf04a975b4842800f39a221d7e1da
+# 0e7eedf9ec96437daee8ed1de35f5e8f
 msgid "This is possible to perform the assembly of the corresponding tangent problem as follows::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:341
-# 17c6a6b91d0f425bb21f8b5277863468
+# 96091ab3e6a245e08cacc2e79fc5ee30
 msgid "and to adapt a Newton-Raphson algorithm to solve that nonlinear problem. Of course the expression is rather repetitive and it would be preferable to define some intermediate nonlinear operators. However, note that repeated expressions are automatically detected and computed only once in the assembly."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:343
-# f787f55708374ed0972a874118336ffb
+# 2b7c472bc94e4bab87886b5a1e612333
 msgid "The last example is the assembly of the stiffness matrix of an order four problem, the Kirchhoff-Love plate problem::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:358
-# b1fa564262964e70acf5eef0394eff04
+# 1c47729fadd143b4aa39d87cd8399e76
 msgid "with ``D`` the flexion modulus and ``nu`` the Poisson ratio."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:361
-# 2c3168ddef0e4f2bb0243cc923dd3d73
+# 7b52a63947284284a7637ff822bbbc28
 msgid "Script languages call of the assembly"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:363
-# 4f1b5297a2894a638a3c71f21684a5d1
+# 187f9d66a4404a50a9d2d0f656f27435
 msgid "For the use with Python, Scilab or Matlab interfaces, see the respective documentation, in particular the ``gf_asm`` command and the ``model`` object."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:367
-# 7b555b0077de44c4850ad1ed1f4045f8
+# 4f5b5946846042349f21670b603d6e6a
 msgid "The tensors"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:369
-# 70feb4d19092469dad5bed475e3e1eb5
+# 6d2b643966a84de18c3579691409c124
 msgid "Basically, what is manipulated in the weak form language are tensors. This can be order 0 tensors in scalar expressions (for instance in ``3+sin(pi/2)``), order 1 tensors in vector expressions (such as ``X.X`` or ``Grad_u`` if u is a scalar variable), order 2 tensors for matrix expressions and so on. For efficiency reasons, the language manipulates tensors up to order six. The language could be easily extended to support tensors of order greater than six but it may lead to inefficient computations. When an expression contains test functions (as in ``Trace(Grad_Test_u)`` for a vector field ``u``), the computation is done for each test functions, which means that the tensor implicitly have a supplementary component. This means that, implicitly, the maximal order of manipulated tensors are in fact six (in ``Grad_Test_u:Grad_Test2_u`` there are two components implicitly added for first and second order test functions)."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:371
-# 1c90fd4290204c6ba09852ed4ea44271
+# aa1ec20233d248ee9498f7353c543e14
 msgid "Order four tensors are necessary for instance to express elasticity tensors or in general to obtain the tangent term for vector valued unknowns."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:375
-# 4cba1c01785d4493b943eba63d232040
+# 46f59c8f2b2d498bb1c841eb2f2211b9
 msgid "The variables"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:377
-# c82d395d8d40452bb343becfbc2ecef8
+# 222852a182354ad899e43b3488914e41
 msgid "A list of variables should be given to the ``ga_worspace`` object (directly or through a model object). The variables are described on a finite element method or can be a simple vector of unknowns. This means that it is possible also to couple algebraic equations to pde ones on a model. A variable name should begin by a letter (case sensitive) or an underscore followed by a letter, a number or an underscore. Some name are reserved, this is the case of operators names (``Det``, ``Norm``, ``Trace``, ``Deviator``, ...) and thus cannot be used as variable names. The name should not begin by ``Test_``, ``Test2_``, ``Grad_``, ``Div_`` or ``Hess_``. The variable name should not correspond to a predefined function (``sin``, ``cos``, ``acos`` ...) and to constants (``pi``, ``Normal``, ``X``, ``Id`` ...)."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:380
-# 8b914eb0d6b84db19775231c6c754165
+# ecdaa8f903904560935de74e0c1c7b4f
 msgid "The constants or data"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:382
-# 89661f0865e24b5ba2edc7612e9cfcf1
+# 85e1a01131a94a8e949c997f626fd5ad
 msgid "A list of constants could also be given to the ``ga_worspace`` object. The rule are the same as for the variables but no test function can be associated to constants and there is no symbolic differentiation with respect to constants. Scalar constants are often defined to represent the coefficients which intervene in constitutive laws. Additionally, constants can be some scalar/vector/tensor fields defined on integration points via a ``im_data`` object (for instance for some implementation of the approximation of constitutive laws such as plasticity)."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:386
-# 55da5b6d967d44fe9576f00b2e85ab87
+# 30c9d180241243ca8dc1f77ed0a32f68
 msgid "Test functions"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:388
-# 1cf9d1bb239a4e7087714f250d63b91b
+# c8bb759a2baf4eefa1a7d30b3a440ec0
 msgid "Each variable is associated with first order and second order test functions. The first order test function are used in the weak formulation (which derive form the potential equation if it exists) and the second order test functions are used in the tangent system. For a variable ``u`` the associated test functions are ``Test_u`` and ``Test2_u``. The assembly string have to be linear with respect to test functions. As a result of the presence of the term ``Test_u`` on a assembly string, the expression will be evaluated for each shape function of the finite element corresponding to the variable ``u``. On a given element, if the finite element have ``N`` shape functions ans if ``u`` is a scalar field, the value of ``Test_u`` will be the value of each shape function on the current point. So ``Test_u`` return if face a vector of ``N`` values. But of course, this is implicit in the language. So one do not have to care about this."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:393
-# 1ed2828459b44ea8b3162b262b8bedad
+# 9facd6412a3a4fa7bba1a4c0ca1366de
 msgid "Gradient"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:395
-# e854e9d8ff224f238adfa253869cb29d
+# 027b19d2aeb24f388d4d6b212a56748a
 msgid "The gradient of a variable or of test functions are identified by ``Grad_`` followed by the variable name or by ``Test_`` followed itself by the variable name. This is available for FEM variables (or constants) only. For instance ``Grad_u``, ``Grad_v``, ``Grad_p``, ``Grad_pressure``, ``Grad_electric_field`` and ``Grad_Test_u``, ``Grad_Test_v``, ``Grad_Test_p``, ``Grad_Test_pressure``, ``Grad_Test_electric_field``. The gradient is either a vector for scalar variables or a matrix for vector field variables. In the latter case, the first index corresponds to the vector field dimension and the second one to the index of the partial derivative.  ``Div_u`` and ``Div_Test_u`` are some optimized shortcuts for ``Trace(Grad_u)`` and ``Trace(Grad_Test_u)``, respectively."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:398
-# f25c9c020e3744c691bca6aa2df20cbe
+# d9c27b3af0744cb7b7df5ad1cf806a4b
 msgid "Hessian"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:400
-# a24057b027a84847983fc1917ca89d23
+# 65e141b70d8345f4a4653b4e6e75a5af
 msgid "Similarly, the Hessian of a variable or of test functions are identified by ``Hess_`` followed by the variable name or by ``Test_`` followed itself by the variable name. This is available for FEM variables only. For instance ``Hess_u``, ``Hess_v``, ``Hess_p``, ``Hess_pressure``, ``Hess_electric_field`` and ``Hess_Test_u``, ``Hess_Test_v``, ``Hess_Test_p``, ``Hess_Test_pressure``, ``Hess_Test_electric_field``. The Hessian is either a matrix for scalar variables or a third order tensor for vector field variables. In the latter case, the first index corresponds to the vector field dimension and the two remaining to the indices of partial derivatives."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:404
-# 85be2ce1179e44f0aeb859e546dd9d53
+# bcdc2119850a47feaa8e3bfc8342b909
 msgid "Predefined scalar functions"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:406
-# 06b07e3dbe5645a0bd963725edba14b3
+# c9504bc129e541049f06c3c99e55b70e
 msgid "A certain number of predefined scalar functions can be used. The exhaustive list is the following and for most of them are equivalent to the corresponding C function:"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:408
-# 25fa22447f544860b7299de0fd0fea23
+# 6801b97083aa450d9c2c131c47eddb0d
 msgid "``sqr(t)`` (the square of t, equivalent to t*t), ``pow(t, u)`` (t to the power u), ``sqrt(t)`` (square root of t), ``exp(t)``, ``log(t)``, ``log10(t)``"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:411
-# 9fc9827d2b774dd8b08342ce3db07d9d
+# 2e29a79252fb4d4ebdce5083d95fa7f8
 msgid "``sin(t)``, ``cos(t)``, ``tan(t)``, ``asin(t)``, ``acos(t)``, ``atan(t)``, ``atan2(t, u)``"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:413
-# 99c097f668d4451989c9ac06a881c036
+# c7060c6e154f42c4a68ec28e634f2402
 msgid "``sinh(t)``, ``cosh(t)``, ``tanh(t)``, ``asinh(t)``, ``acosh(t)``, ``atanh(t)``"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:415
-# 90a9d5f057da434f91042f70ef3e8a95
+# 6660d637556e4f7eafdfb5d7a8ededb3
 msgid "``erf(t)``, ``erfc(t)``"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:416
-# 7822feac10564cce8ef210942e37124a
+# f3cd87a2121b4a39b43582b0a35f3628
 msgid "``sinc(t)`` (the cardinal sine function sin(t)/t)"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:418
-# 4f2b8ffbd1aa48b6926d6e2f621da56b
+# d2f4b54dbdb8418b9cfc8c9f5ddca241
 msgid "``Heaviside(t)`` (:math:`0 \\mbox{ for } t < 0, 1 \\mbox{ for } t \\ge 0`)"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:419
-# ac7f083cbc1a430e89d358e07bbd3fbd
+# cd1fda7f86994042bdecae1b52c7d818
 msgid "``sign(t)``"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:420
-# b30b84e49caa400f9413b2513244b933
+# 0cf22b3e957a4701821f0d6f5b0f573e
 msgid "``abs(t)``"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:421
-# ff5890b900be408a863b7f27df833c72
+# c8b25076e510492491c37d1748d9ee09
 msgid "``pos_part(t)`` (:math:`tH(t)`)"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:422
-# df0264864f794e72b2bfa9d1c34ea7a4
+# b26f4b20524347fe8e964c0429a993e3
 msgid "``reg_pos_part(t, eps)`` (:math:`(t-eps/2-t^2/(2eps))H(t-eps) + t^2H(t)/(2eps)`)"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:423
-# 7b2c7e1bb13a46c7893e4509e174eaeb
+# 27efed8afd1f4c6aa72128fec310f6ff
 msgid "``neg_part(t)`` (:math:`-tH(-t)`), ``max(t, u)``, ``min(t, u)``"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:425
-# 39acc15c641f47c2adf00ca97f6b256d
+# af4c4fb86c56421fa713b31633b04230
 msgid "A scalar function can be applied to a scalar expression, but also to a tensor one. If is is applied to a tensor expression, is is applied componentwise and the result is a tensor with the same dimensions. For functions having two arguments (pow(t,u), min(t,u) ...) if two non-scalar arguments are passed, the dimension have to be the same. For instance \"max([1;2],[0;3])\" will return \"[0;3]\"."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:430
-# 67183d1e836a4919b4bbabec090e03e9
+# cc38726b7a6a423fac172de62089dd3a
 msgid "User defined scalar functions"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:432
-# e46f18f0032149699a4d0c049f7e9d50
+# cdd24fc545904f6fb5c46bd73829d90e
 msgid "It is possible to add a scalar function to the already predefined ones. Note that the generic assembly consider only scalar function with one or two parameters. In order to add a scalar function to the generic assembly, one has to call::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:440
-# 75c9659829e847ef97d9dabd9e6a955b
+# 8c3cf6c54e8e4dc18ac95147cf8e0bea
 msgid "where ``name`` is the name of the function to be defined, ``nb_args`` is equal to 1 or 2. In the first call, ``expr`` is a string describing the function in the generic weak form language and using ``t`` as the first variable and ``u`` as the second one (if ``nb_args`` is equal to 2). For instance, ``sin(2*t)+sqr(t)`` is a valid expression. Note that it is not possible to refer to constant or data defined in a ``ga_workspace`` object. ``der1`` and ``der2`` are the expression of the derivatives with respect to ``t`` and ``u``. They are optional. If they are not furnished, a symbolic differentiation is used if the derivative is needed. If ``der1`` and ``der2`` are defined to be only a function name, it will be understand that the derivative is the corresponding function. In the second call, ``f1`` should be a C pointer on a scalar C function having one scalar parameter and in the third call, ``f2``  should be a C pointer on a scalar C function having two scalar parameters."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:443
-# 44ed41a23fae45649e1bc82c3d9e999d
+# 4a6a455bc50548cfb5a6d0273389e441
 msgid "Additionally,::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:447
-# f51a7d9fb68f42b0b544b3b988fe75fc
+# 36f255a681c244ad9951b171c024a647
 msgid "return true is a function ``name`` is already defined and::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:451
-# 12c93b6a6fc342ec861e80946a04caf3
+# 00dfbfc58cbd49589329da290bbab496
 msgid "cancel the definition of an already define function (it has no action if the function does not exist) which allow to redefine a function."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:455
-# 77d5b62cfc9a4068a2129614cc7b2fe4
+# 968e50a929314f6bbe3a1459fc15bf39
 msgid "Derivatives of defined scalar functions"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:457
-# 59a7f6dc718e4dda8d8dd4c4089162f5
+# 34e2396034a240dca86085c6a7a52895
 msgid "It is possible to refer directly to the derivative of defined functions by adding the prefix ``Derivative_`` to the function name. For instance, ``Derivative_sin(t)`` will be equivalent to ``cos(t)``. For two arguments functions like ``pow(t,u)`` one can refer to the derivative with respect to the second argument with the prefix  ``Derivative_2_`` before the function name."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:461
-# 1f3530b7faac46a39e549ec7c9b83717
+# b1e1ee7a36724a9496bb073e16af9b37
 msgid "Binary operations"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:463
-# 9ad426d1e5514f38980f0e3b988f21d6
+# 0b8fe6fbeaab48a4977b035a0bf813c0
 msgid "A certain number of binary operations between tensors are available:"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:466
-# aa881211d0c44496bd0383f915b0a4be
+# 8974f7ed47ac4fe68ac89d42ac3666d3
 msgid "``+`` and ``-`` are the standard addition and subtraction of scalar, vector, matrix or tensors."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:468
-# 1f84fcd665f54c17a1ce482e472f9f65
+# 9605709af97240779edd56d69ec64b24
 msgid "``*`` stands for the scalar, matrix-vector, matrix-matrix or (fourth order tensor)-matrix multiplication."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:470
-# 49b35f8b99064ed6bd1b64be6a306248
+# b4089d7a495b4dfaa45d07752badc124
 msgid "``/`` stands for the division by a scalar."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:472
-# 03e19b1fd5514be48726af9bc30e1946
+# a92a661a4045439b8dcb9b8f02002ad7
 msgid "``.`` stands for the scalar product of vectors, or more generally to the contraction of a tensor with respect to its last index with a vector or with the first index of another tensor. Note that ``*`` and ``.`` are equivalent for matrix-vector or matrix-matrix multiplication."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:474
-# 75b92055fd254098a6a3b90d2e76fa55
+# 5b164fe03b6a49e5b88d7116a730cae9
 msgid "``:`` stands for the |Frobenius| product of matrices or more generally to the contraction of a tensor with respect to the two last indices with a matrix or the two first indices of a higher order tensor. Note that ``*`` and ``:`` are equivalent for (fourth order tensor)-matrix multiplication."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:476
-# a932dcc7fd494905b08833476597bf8e
+# d660368d90b542ae960ed5f8553bb87f
 msgid "``.*`` stands for the multiplication of two vectors/matrix/tensor componentwise."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:478
-# 9136ad89c35249ae85d7729b71eaa9fb
+# 23a7c82636b3411ca9f11e1ed79c085e
 msgid "``./`` stands for the division of two vectors/matrix/tensor componentwise."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:480
-# 5fed2958beb1451394fbc8e5129dd23f
+# 05956ae05e31485a859f6153a901667e
 msgid "``@`` stands for the tensor product."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:482
-# 856fa7a45cd642209116e6a95cfe377f
+# e9535407ba8544d3a7045d772e551d42
 msgid "``Contract(A, i, B, j)`` stands for the contraction of tensors A and B with respect to the ith index of A and jth index of B. The first index is numbered 1. For instance ``Contract(V,1,W,1)`` is equivalent to ``V.W`` for two vectors ``V`` and ``W``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:484
-# 8ec0e24f6e7c4dcfa3426f0aa0494c2c
+# 518bd3cc2c4a4c22a8660b7cdd52f529
 msgid "``Contract(A, i, j, B, k, l)`` stands for the double contraction of tensors A and B with respect to indices i,j of A and indices k,l of B. The first index is numbered 1. For instance ``Contract(A,1,2,B,1,2)`` is equivalent to ``A:B`` for two matrices ``A`` and ``B``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:488
-# 60e5436ff04640fe970e1b5e29f56d2e
+# c8a75d936e94498ca7314624f236cf1e
 msgid "Unary operators"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:490
-# b7ddf711fea6453f90e8986bcc2c0bab
+# 54f2ccf6e5bc4e4c92fafd44cb70101e
 msgid "``-`` the unary minus operator: change the sign of an expression."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:492
-# 7508681ded2a4e0fa03fe6fde733b264
+# a696e3b836e643079ce43798180eef56
 msgid "``'`` stands for the transpose of a matrix or line view of a vector. It a tensor ``A`` is of order greater than two,``A'`` denotes the inversion of the two first indices."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:494
-# 3f665b6386914a51afb545ea0c828b61
+# 6fc8002bb422424090a9a5786f5789d2
 msgid "``Contract(A, i, j)`` stands for the contraction of tensor A with respect to its ith and jth indices. The first index is numbered 1. For instance, ``Contract(A, 1, 2)`` is equivalent to ``Trace(A)`` for a matrix ``A``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:496
-# 4643a8173049433f8a71be32324745f3
+# 72b5598e18c4466f92f9860029fb55cf
 msgid "``Swap_indices(A, i, j)`` exchange indices number i and j. The first index is numbered 1. For instance ``Swap_indices(A, 1, 2)`` is equivalent to ``A'`` for a matrix ``A``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:498
-# 6d8fd76273934fac9805c66a770c33ee
+# 461120c25f44486e8bca9dd5c90e93af
 msgid "``Index_move_last(A, i)`` move the index number i in order to be the last one. For instance, if ``A`` is a fourth order tensor :math:`A_{i_1i_2i_3i_4}`, then the result of ``Index_move_last(A, 2)`` will be the tensor :math:`B_{i_1i_3i_4i_2} = A_{i_1i_2i_3i_4}`. For a matrix, ``Index_move_last(A, 1)`` is equivalent to ``A'``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:502
-# 4bfd939df78f4d3388afb1fcff4ea77d
+# e83cf88fa85f4da0b6e16c606c2d88aa
 msgid "Parentheses"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:504
-# ca2ab6802a644e29a61890a0635d8c30
+# 3cc96f4ae6f0421fb147646d03673947
 msgid "Parentheses can be used in a standard way to change the operation order. If no parentheses are indicated, the usually priority order are used. The operations ``+``  and ``-`` have the lower priority (with no distinction), then ``*``, ``/``, ``:``, ``.``, ``.*``, ``./``, ``@`` with no distinction and the higher priority is reserved for the unary operators ``-`` and ``'``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:508
-# 26dca545d07e4b288387f596f68e0b12
+# 8da5a2fa210c4b78b5ec7bcdf04821a9
 msgid "Explicit vectors"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:510
-# 4a7a6db8347b4741ba37adbe2f635cc9
+# b7816cb6ec104d699be446191aadbd80
 msgid "The weak form language allows to define explicit vectors (i.e. order 1 tensors) with the notation ``[a,b,c,d,e]``, i.e. an arbitrary number of components separated by a comma (note the separation with a semicolon ``[a;b;c;d;e]`` is also permitted), the whole vector beginning with a right bracket and ended by a left bracket. The components can be some numeric constants, some valid expressions and may also contain test functions. In the latter case, the vector has to be homogeneous with respect to the test functions. This means that a construction of the type ``[Test_u; Test_v]`` is not allowed. A valid example, with ``u`` as a scalar field variable is ``[5*Grad_Test_u(2), 2*Grad_Test_u(1)]``. Note also that using the quite opertor (transpose), an expression ``[a,b,c,d,e]'`` stands for 'row vector`, i.e. a 1x5 matrix."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:514
-# f587290e1d6d438983eb76a30169960e
+# 93be3190efbc4ecf9e64bd1d220a6cc5
 msgid "Explicit matrices"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:516
-# 6636c7d5a23f4cec8b6c36b30c68737b
+# 4f9d32e03c9949b8a2fd51b396056c5d
 msgid "Similarly to explicit vectors, it is possible to define explicit matrices (i.e. order 2 tensors) with the notation ``[[a,b],[c,d]]``, i.e. an arbitrary number of columns vectors separated by a comma (the syntax ``[a,c;b,d]`` of lines separated by a semicolon is also permitted). For instance ``[[11,21],[12,22],[13,23]]`` and ``[11,12,13;21,22,23]`` both represent the same 2x3 matrix. The components can be some numeric constants, some valid expressions and may also contain test functions."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:520
-# 2ee7029ca08446b9a8941056a8c2387f
+# c2d8597e4da54e3bb5529295b8694c96
 msgid "Explicit tensors"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:522
-# abf4f3fc789b4c649b20bd0fbbd67380
+# a6e44f964f544f789cbb3758fea6a74d
 msgid "Explicit tensors of any order are permitted with the nested format. A tensor of order ``n`` is written as a succession of tensor of order ``n-1`` of equal dimensions and separated by a comma. For instance ``[[[[1,2,3],[1,2,3]],[[1,2,3],[1,2,3]]],[[[1,2,3],[1,2,3]],[[1,2,3],[1,2,3]]]]`` is a fourth order tensor. Another possibility is to use the syntax ``Reshape([1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3], 3, 2, 2, 2)`` where the components have to be given in Fortran order."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:526
-# cb1c5ec409954460b548cef85cd29de9
+# eaf2d14b970d4e0e99b242477c110e60
 msgid "Access to tensor components"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:527
-# ef8e75587b364db7832145843a65d739
+# 1c5351091cd8400fb97467492d0ba632
 msgid "The access to a component of a vector/matrix/tensor can be done by following a term by a left parenthesis, the list of components and a right parenthesis. For instance ``[1,1,2](3)`` is correct and is returning ``2`` as expected. Note that indices are assumed to begin by 1 (even in C++ and with the python interface). The expressions ``[1,1;2,3](2,2)`` and ``Grad_u(2,2)`` are also correct provided that ``u`` is a vector valued declared variable. Note that the components can be the result of a constant computation. For instance ``[1,1;2,3](1+1,a)`` is correct provided that ``a`` is a declared constant but not if it is declared as a variable. A colon can replace the value of an index in a Matlab like syntax for instance to access to a line or a column of a matrix. ``[1,1;2,3](1,:)`` denotes the first line of the matrix ``[1,1;2,3]``. It can also be used for a fourth order tensor."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:530
-# 001fa8ef4bf942d2bc661b02f8c02410
+# 646c599af2e144a7b900facf90732b16
 msgid "Constant expressions"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:532
-# 0900462169334272a4b011fbcdf95f7e
+# f3187fc5b8394499b39f117a4b54c2bc
 msgid "Floating points with standards notations (for instance ``3``, ``1.456``, ``1E-6``)"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:533
-# 191c70f236a146b3af8307f763c0aaf1
+# 757adc74778c4f6e963217bef1ff11bc
 msgid "``pi``: the constant Pi."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:534
-# bbf273a018f84cbabcc16b66f40bbe8d
+# 412719e593af484fb40c893ad8c8682b
 msgid "``meshdim``: the dimension of the current mesh (i.e. size of geometrical nodes)"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:535
-# 61be80d533bf4cc389b514253173fa5a
+# fc238520e93040db858e1ae040d05899
 msgid "``timestep``: the main time step of the model on which this assembly string is evaluated (defined by ``model.set_time_step(dt)``). Do not work on pure workspaces."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:536
-# ac07cb568cce45abb0f100a4dbe72b6e
+# 08d57a6d65554c2498ad270bce97d1fc
 msgid "``Id(n)``: the identity matrix of size :math:`n\\times n`. `n` should be an integer expression. For instance ``Id(meshdim)`` is allowed."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:537
-# 5436f8dc4cac4b02974da8e94d1cd8d2
+# abbbe75fbc9d4c9586e2f722084dbaac
 msgid "``qdim(u)``: the total dimension of the variable ``u`` (i.e. the  size for fixed size variables and the total dimension of the vector/tensor field for FEM variables)"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:538
-# 772f3c8b49fe4930845f80f1c49b431f
+# b7e8f405e9e048f6a664e88368b6f341
 msgid "``qdims(u)``: the dimensions of the variable ``u`` (i.e. the size for fixed size variables and the vector of dimensions of the vector/tensor field for FEM variables)"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:541
-# 3f1d1132a9b04dd090412fa285df94d6
+# e2a21425bbf74879aa1de029f4c0172f
 msgid "Special expressions linked to the current position"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:543
-# 31144abf38b5439c9290091ea2006bfe
+# e52b7700757c433ea43169fdcf7ab40d
 msgid "``X`` is the current coordinate on the real element (i.e. the position on the mesh of the current Gauss point on which the expression is evaluated), ``X(i)`` is its i-th component. For instance ``sin(X(1)+X(2))`` is a valid expression on a mesh of dimension greater or equal to two."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:545
-# 68944d6ae3dd4036ae42a96dbebd4ed2
+# 7d2b7fcadc4346caafd125bcdb4cd4a1
 msgid "``Normal`` the outward unit normal vector to a boundary when integration on a boundary is performed."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:547
-# 5fdc2a749b1643b782806954e9f7a505
+# 41d5a156f34d4fb9b895e2903236dc31
 msgid "``element_size`` gives an estimate of the current element diameter (using getfem::convex_radius_estimate)."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:549
-# 5a0e7088733940f9aa817e9515293998
+# 477d68da4abe48a6a3fff8c66845ff5f
 msgid "``element_K`` gives the gradient of the geometric transformation (see :ref:`dp-transgeo`) from the reference (parent) element. Could be used only if the mesh do not contain elements of mixed dimensions."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:551
-# 1f85d7e03d694159a74a6c0ec066cbca
+# 63da5dbff2d4410597547ba0bc48e3af
 msgid "``element_B`` gives the transpose of the pseudo-inverse of the gradient of the geometric transformation (see :ref:`dp-transgeo`) from the reference (parent) element. Could be used only if the mesh do not contain elements of mixed dimensions."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:556
-# a2d55fc999074f2c9542a7abb4d845b1
+# 2be3c45ed59649988cf907ba0b22f3f8
 msgid "Print command"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:558
-# 33eb38884f0d472f9578cc76d9c566ee
+# c5f0b80c01b94bfe81bd4de707b03969
 msgid "For debugging purpose, the command ``Print(a)`` is printing the tensor ``a`` and pass it unchanged. For instance  ``Grad_u.Print(Grad_Test_u)`` will have the same effect as ``Grad_u.Grad_Test_u`` but printing the tensor ``Grad_Test_u`` for each Gauss point of each element. Note that constant terms are printed only once at the beginning of the assembly. Note also that the expression could be derived so that the derivative of the term may be printed instead of the term itself."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:561
-# 477007969d8c4808a1da69085b236846
+# 58b0203cf36d456d938d1b97bfe02954
 msgid "Reshape a tensor"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:563
-# 2705edb557774d709c6b1de84b56142c
+# 7af123506cf44e869db2d82233860600
 msgid "The command ``Reshape(t, i, j, ...)`` reshapes the tensor ``t`` (which could be an expression). The only constraint is that the number of components should be compatible. For instance  ``Reshape(Grad_u, 1, meshdim)`` is equivalent to ``Grad_u'`` for u a scalar variable. Note that the order of the components remain unchanged and are classically stored in Fortran order for compatibility with Blas/Lapack."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:566
-# c9dd2689a7634765a3861a7bb2385b35
+# fed5a8c8846440d9bcbd5ab78a659640
 msgid "Trace, Deviator, Sym and Skew operators"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:568
-# af5fc406457a4e009c0461d3877073db
+# c064f4b0ca9346698c92d6d2e2fcff21
 msgid "Trace, Deviator, Sym and Skew operators are linear operators acting on square matrices:"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:570
-# 1058f28fdf404fde8a9a5af4334d5b83
+# e69cc93fd90849ba87761e181a15e4d3
 msgid "``Trace(m)`` gives the trace (sum of diagonal components) of a square matrix ``m``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:572
-# e82058f0957944869d1088b82ec7abd5
+# c4c808bebf5145efa97bc86a636dca95
 msgid "``Deviator(m)`` gives the deviator of a square matrix ``m``. It is equivalent to ``m - Trace(m)*Id(m_dim)/m_dim``, where ``m_dim`` is the dimension of ``m``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:574
-# a88fd218eead439c97e8b43782d47675
+# a28b700582b64b11a123cb3a809d8e07
 msgid "``Sym(m)`` gives the symmetric part of a square matrix ``m``, i.e. ``(m + m')/2``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:576
-# 02227cf40b734761b44ea0dc9f4bdaed
+# 456439adb38d476a9b7c24568c92fca0
 msgid "``Skew(m)`` gives the skew-symmetric part of a square matrix ``m``, i.e. ``(m - m')/2``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:578
-# 5d46ca917be9453088b99b37e4117998
+# ffc8d35b280d433ca6bd0d31c21c2657
 msgid "The four operators can be applied on test functions. Which means that for instance both ``Trace(Grad_u)`` and  ``Trace(Grad_Test_u)`` are valid when ``Grad_u`` is a square matrix (i.e. ``u`` a vector field of the same dimension as the mesh)."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:583
-# 90715b2a18a446238c62768fcc55630b
+# f9489047512b4338ab3bff824815fc1a
 msgid "Nonlinear operators"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:585
-# c63a75e16a04429bba22c7777f9092bb
+# b04174ab9aab4557b11ebd0ca9f7fcfa
 msgid "The weak form language provide some predefined nonlinear operator. Each nonlinear operator is available together with its first and second derivatives. Nonlinear operator can be applied to an expression as long as this expression do not contain some test functions."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:587
-# 91bf12bc5198417e821c9a6799287528
+# 2409244668cb40698ec9c0212c13db63
 msgid "``Norm(v)`` for ``v`` a vector or a matrix gives the euclidean norm of a vector or a |Frobenius| norm of a matrix."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:589
-# 5fa952094c354e65a8ea8e216ccef6b0
+# 5cd620143fbf4f0b8b4d74abd47d3dd5
 msgid "``Norm_sqr(v)`` for ``v`` a vector or a matrix gives the square of the euclidean norm of a vector or of the |Frobenius| norm of a matrix. For a vector this is equivalent to ``v.v`` and for a matrix to ``m:m``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:591
-# dd0b16e800aa4253a0b571e055f5ba23
+# d04c10513a614b1da459d4f26105a4ae
 msgid "``Normalized(v)`` for ``v`` a vector or a matrix gives ``v`` divided by its euclidean (for vectors) or |Frobenius| (for matrices) norm. In order to avoid problems when ``v`` is close to 0, it is implemented as ``Normalized_reg(v, 1E-25)``. Use with care. Think that the derivative at the origin of ``Normalized(v)*Norm(v)`` is wrong (it vanishes) and very different from the derivative of ``v``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:593
-# 406bd67cd55149ed9a03205d162004c7
+# 808185cc8f0c422d9148e41e773f66fb
 msgid "``Normalized_reg(v, eps)`` for ``v`` a vector or a matrix gives a regularized version of ``Normalized(v)`` : ``v/sqrt(|v|*|v|+eps*eps)``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:595
-# abe2bcc25b5c4a4d934a777ffddfbad0
+# 81a6d81dd9bd477ab73c4b5a9d89243e
 msgid "``Ball_projection(v, r)`` for ``v`` a vector or a matrix and ``r`` a scalar, gives the projection of ``v`` on the ball of radius ``r`` and center the origin."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:597
-# 54abb7071d3a4cf19cdb0898839b9da3
+# 852619a9c24f4d1d80236ceb58612bd5
 msgid "``Det(m)`` gives the determinant of a square matrix ``m``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:599
-# 9b6a320d362043c7a1ebd748c4705e9f
+# 29686d5c595643058ddc002cc5efca35
 msgid "``Inv(m)`` gives the inverse of a square matrix ``m``. The second derivative is not available since it is an order 6 tensor. This means that ``Inv(m)`` cannot be used in the description of a potential energy."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:601
-# b495602e1d0448a68e53fd742dae5296
+# 1346b7073723423ba9bdb5455efa4999
 msgid "``Expm(m)`` gives the exponential of a square matrix ``m``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:603
-# 05d9358c321b4b5cb94b9e3407b384ca
+# df2512d3023c4bc3986b384fd8f26559
 msgid "``Logm(m)`` gives the logarithm of a square matrix ``m``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:605
-# d62fdeae6e764256936e56f3377f24dd
+# 648c31ab432446f0b2d823b28eddcc18
 msgid "``Matrix_I2(m)`` gives the second invariants of a square matrix ``m`` which is defined by ``(sqr(Trace(m)) - Trace(m*m))/2``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:607
-# 525813c2b8744ade92485cfed0d2e329
+# a92b975700c0446a821ee9fac113af05
 msgid "``Matrix_J1(m)`` gives the modified first invariant of a square matrix defined by ``Trace(m)pow(Det(m),-1/3)``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:609
-# cc3d4d634d844c63a9bb5c5dea0b5d88
+# c3413919d4474c409b7b41cc6164ef19
 msgid "``Matrix_J2(m)`` gives the modified first invariant of a square matrix defined by ``Matrix_I2(m)*pow(Det(m),-2/3)``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:614
-# 57bfac7c005e4230845953fea952a960
+# 130e064ad6ac4d4a84701e8d89910544
 msgid "Macro definition"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:616
-# df4ecf840c9e4a48bbb1faf6cef7f643
+# 4531ca76d64e40b08cf44a885752f19b
 msgid "The weak form language allows the use of macros that are either predefined in the model or ga_workspace object or directly defined at the begining of an assembly string. The definition into a ga_workspace or model object is done as follows::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:624
-# 4a8ebf1b2d3c4bafa54391354b7578c4
+# 96316d5264af4f409a0496684c5779d5
 msgid "The definition of a macro into an assembly string is inserted before any regular expression, separated by a semicolon with the following syntax::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:628
-# d0e2114ae08c42028ad33a5bdb10f865
+# 1b0ab64cd72f43a7aa22f6500f98b557
 msgid "where ``name`` is he macro name which then can be used in the weak form language and contains also the macro parameters, ``expr`` is a valid expression of the weak form language (which may itself contain some macro definitions). For instance, a valid macro with no parameter is::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:632
-# 5ec2e292ac734ae1976e16d602c36e58
+# eccf8d60444843b0acf2300423ca69aa
 msgid "where ``alpha`` should be a valid declared variable or data. A valid macro with two parameters is for instance::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:636
-# f8b75e8fdc2c4042a50b66d9d2d60d03
+# aeb0d7c3a3674fc1852408d87e7fe76d
 msgid "The following assembly string is then valid (if ``u`` is a valid variable)::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:640
-# c3e39c78e4574d2b9ca2bc3ab519673f
+# 6d7a602ea8a44c9081c5d0091be2c34b
 msgid "Parameter are allowed to be post-fixed to ``Grad_``, ``Hess_``, ``Test_`` and ``Test2_`` prefixes, so that the following assembly string is valid::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:644
-# 9be559743fa44d53a6089b94feb3a3ff
+# ab7f08d7edb7446b99a5e57dc55c1b5a
 msgid "or with an imbrication of two macros::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:648
-# e0e6f3baf17940eab9df640cceeef080
+# f70e4fe69799490f9590472ff3ec51f0
 msgid "A macro can be deleted from a ga_workspace or model object as follows::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:653
-# 555b05578eba42ff98fd80f0487429eb
+# 6e03313e4ce84bcdbef8996cc4421bf1
 msgid "Note that a macro defined at the begining of an assembly string is only defined in the assembly string and cannot be used later without being added in a model or ga_workspace object."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:655
-# 9888077082e243eba52c09d917af8543
+# ff91f14ee073412b9c01def2eaf85537
 msgid "The macros are expanded inline at the lexical analysis phase. Note that a the compilation phase, the repeated expressions are automatically factorized and computed only once."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:658
-# 5575a5a4608a4cb2b86c096c4dfc78d7
+# 7e80fc55dbc14b8495052aa5b069eff2
 msgid "Explicit Differentiation"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:659
-# f9632dd30be848d59e7e22f3cdcb5fec
+# 90c0e1f258a9422a82b72dbb5c942b1c
 msgid "The workspace object automatically differentiate terms that are of lower deriation order. However, it is also allowed to explicitely differentiate an expression with respect to a variable. One interest is that the automatic differentiation performs a derivative with respect to all the declared variables of model/workspace but this is not necessarily the expected behavior when using a potential energy, for instance. The syntax is::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:663
-# b915845dfb764cb7b1c05d541509feb7
+# 5e3a1f7c011a43edbe8d5dcd3843fcb1
 msgid "For instance, the following expression::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:667
 #: ../source/userdoc/gasm_high.rst:684
-# 7658afc7ad5d4a1599ea060c5210057c
-# a0242b69c1e54ec8847eaea13d335613
+# 4d217aaa4e0b45348cd9a05e8808e203
+# 2dbede14e4124443bf61b0137dbfb54e
 msgid "will result in::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:671
-# 21e897c64390491a957e4be3abc6d0a2
+# 7f42e4bcb55a4f04a9946641743173be
 msgid "So that::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:675
-# 63ceadd33e5d4cf0bad4e66db8792768
+# d1188eda7ad7494bae8f4146511ae46d
 msgid "is a valid expression. A third argument can be added to the ``Diff`` command to specify the direction::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:679
-# 44d1de75fb824b98a8df39b2b822163d
+# e3568076d8a24f8792a33a365e542949
 msgid "in that case, it replaces the ``Test_variable`` by the expression ``direction`` which has to be of the same dimension as ``variable``. It computes the derivative of ``expression`` with respect to ``variable`` in the direction ``direction``. For instance::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:688
-# 35d777696f6248ad9094912568a25c40
+# 69649b05345c48ea848b76e4c16e1c07
 msgid "if ``v`` is any valid expression of the same dimension than ``u``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:691
-# 5d23e19b137f433393a71deff4e9957c
+# e8eb65ee18524482938665a9088d1bb7
 msgid "Explicit Gradient"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:692
-# d33c369dd41d4701b3273c23bc19a469
+# 0fd4eeaa5e2c428582bc1f6d8f82f5ae
 msgid "It is possible to ask for symbolic computation of the gradient of an expression with::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:696
-# 9bcb182660de4a67893960518518e0a3
+# 1cab17f9def04758ad334c49074f51b3
 msgid "It will be computed as far as it is possible. The limitations come from the fact that |gf| is limited to second order derivative of shape function and nonlinear operators are supposed to provide only first and second order derivatives."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:698
-# 8123be79a56340a08c3f9932220fcd2e
+# b517ed51e1144cf58b05f051297e3570
 msgid "Of course::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:702
-# 29bb640db92a4e249bbfc0b209dfd69f
+# 891e1ac3a46d46ae8026355f0e8d8ed9
 msgid "is equivalent to::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:706
-# 7a710c3489ea413f9e44c238166d1cf9
+# f2a48706d2d447c1a94d485c19cfedb4
 msgid "for a varible ``u``."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:711
-# 4a89e6a25f59484e90332de8419ef548
+# ee0f85ce85ec42f4a1f473e2067680f2
 msgid "Interpolate transformations"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:713
-# cb099f9c295942b8b21187b1ec797ff1
+# addda305a0e9411b9227e48e2373896c
 msgid "The ``Interpolate`` operation allows to compute integrals between quantities which are either defined on different part of a mesh or even on different meshes. It is a powerful operation which allows to compute mortar matrices or take into account periodic conditions. However, one have to remember that it is based on interpolation which may have a non-negligible computational cost."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:715
-# f4393d3138514776b107dc5db04cff67
+# 2ec7bf7086244b1bbde5283b3f75ce3c
 msgid "In order to use this functionality, the user have first to declare to the workspace or to the model object an interpolate transformation which described the map between the current integration point and the point lying on the same mesh or on another mesh."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:717
-# 95cd36c8cef14102bb35e52a82a9b6b2
+# 94e1804036824cb99ff1ad568b7c80e0
 msgid "Different kind of transformations can be described. Several kinds of transformations has been implemented. The first one, described hereafter is a transformation described by an expression. A second one corresponds to the raytracing contact detection (see :ref:`ud-model-contact-friction_raytrace_inter_trans`). Some other transformations (neighbour element and element extrapolation) are describe in the next sections."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:719
-# c74d4b1c5a9843cf9eaf1baef6dddbac
+# 9ebaf0ac4d9e404b96f265b48edb4ca8
 msgid "The transformation defined by an expression can be added to the workspace or the model thanks to the command::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:729
-# b65cae9e591a49ca980467f25e11c6b6
+# 2a7c6b605e754c09a9033d333bdecf8a
 msgid "where ``workspace`` is a workspace object, ``model`` a model object, ``transname`` is the name given to the transformation, ``source_mesh`` the mesh on which the integration occurs, ``target_mesh`` the mesh on which the interpolation is performed and ``expr`` is a regular expression of the high-level generic weak form language which may contains reference to the variables of the workspace/model."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:731
-# 173942a565b54961b88c4cbf06535a79
+# 5b4ec27182b14e518657fafec4c8d129
 msgid "For instance, an expression::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:736
-# 7e9f5920c1a245d899f42f84683756e3
+# 2a5f2b3b980947cc87edc37fe63492c7
 msgid "will allow to integrate some expressions at the current position with a shift of -1 with respect to the first coordinate. This simple kind of transformation can be used to prescribe a periodic condition."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:738
-# 2690053762a54eae9a4ddf760333f858
+# c4bb678c7b914325937d8d8ecf3d0756
 msgid "Of course, one may used more complex expressions such as::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:746
-# 6d548d6df47240878a662892624f2488
+# 0158bbaec6aa404ca2c964cd897d3fcb
 msgid "where ``u`` is a vector variable of the workspace/model."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:748
-# 6a9d67939b324522b77121123eff0c7c
+# 907ae545def54f7cb600f43659807673
 msgid "Once a transformation is defined in the workspace/model, one can interpolate a variable or test functions, the position or the unit normal vector to a boundary thanks to one of these expressions::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:761
-# 12008b2cb7024f24befa6d85ddf2c20c
+# 58a82132905b446aadf7b2bb7e304fcd
 msgid "where ``u`` is the name of the variable to be interpolated."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:763
-# 020a1c813a9e406ab8a5d27c5430ae10
+# f4421475be164a04a2a7dced556feac5
 msgid "For instance, the assembly expression to prescribe the equality of a variable ``u`` with its interpolation (for instance for prescribing a periodic boundary condition) thanks to a multiplier ``lambda`` could be written::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:767
-# df533210f5a546a28dbcd2a8155c50ef
+# 4cdb7cd355c14dd48611425f30fc5475
 msgid "(see :file:`demo\\_periodic\\_laplacian.m` in :file:`interface/tests/matlab` directory)."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:769
-# d9b54c51dae24b18afbfc924967f566e
+# 23846cfab8f5419bb506f839068d65aa
 msgid "In some situations, the interpolation of a point may fail if the transformed point is outside the target mesh. Both in order to treat this case and to allow the transformation to differentiate some other cases (see :ref:`ud-model-contact-friction_raytrace_inter_trans` for the differentiation between rigid bodies and deformable ones in the Raytracing_interpolate_transformation) the tranformation returns an integer identifier to the weak form language. A value 0 of this identifier means that no corresponding location on the target mesh has been found. A value of 1 means that a corresponding point has been found. This identifier can be used thanks to the following special command of the weak form language::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:773
-# b197c315c3364a72973e51167d555f64
+# 0f0278b16503456585445324c8f50bc0
 msgid "where ``transname`` is the name of the transformation, ``expr`` is the expression to be evaluated and ``i`` value of the returned integer identifier for which the expression have to be computed. Note that ``i`` can be ommited, in that case, the expression is evaluated for a nonzero identifier (i.e. when a corresponding point has been found). For instance, the previous assembly expression to prescribe the equality of a variable ``u`` with its interpolation could be writtne::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:778
-# 27cf7446b8a44b75855796d810d330e6
+# e1434d0cd8d84d539f978fa79c6d6a27
 msgid "In that case, the equality will only be prescribed in the part of the domain where the transformation succeed and in the other part, the mulitplier is enforced to vanish."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:781
-# 9b081b4174e54eb59e7a1db53c180814
+# af3853d1cd5b4785a5360800c48adf49
 msgid "**CAUTION**: You have to think that when some variables are used in the transformation, the computation of the tangent system takes into account these dependence. However, the second derivative of a transformation with respect to a variable used has not been implemented. Thus, such a transformation is not allowed in the definition of a potential since it cannot be derived twice."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:784
-# 75a75babd0eb4059a126e927b5b7bed0
+# 7be4738d991242b49b7e503f84ac8ed9
 msgid "Element extrapolation transformation"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:786
-# 052401b8fcb64acabb0adc44a5a6dc2d
+# f08aed8de9634810aa966ca609ef3fc9
 msgid "A specific transformation (see previous section) is defined in order to allows the evaluation of certain quantities by extrapolation with respect to another element (in general a neighbour element). This is not strictly speaking a transformation since the point location remain unchanged, but the evaluation is made on another element extrapolating the shape functions outside it. This transformation is used for stabilization term in fictitious domain applications (with cut elements) where it is more robust to extrapolate some quantities on a neighbour element having a sufficiently large intersection with the real domain than evaluating them on the current element if it has a small intersection with the real domain. The functions allowing to add such a transformation to a model or a workspace are::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:794
-# c2103494af074c48a4dfc6388e7e7553
+# f338b2904b84400d98806b5e3e79a65b
 msgid "The map elt_corr should contain the correspondances between the elements where the transformation is to be applied and the respective elements where the extrapolation has to be made. On the element not listed in the map, no transformation is applied and the evaluation is performed normally on the current element."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:796
-# 33a2ff820860440ebe3026bbabd550e4
+# 70bcaedc4f734a0a9000b8eeb18de357
 msgid "The following functions allow to change the element correspondance of a previously added element extrapolation transformation::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:808
-# 91a67eb3c64c450294a5ef9532fe8b18
+# 3096b2a667be410bad21a6182d0c0696
 msgid "Evaluating discontinuities across inter-element edges/faces"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:810
-# a84debcd41d2440d8a4d5fc8eecc722a
+# d8045376a3c44b8192593bd362729c0c
 msgid "A specific interpolate transformation (see previous sections), called ``neighbour_elt`` is defined by default in all models. This transformation can only be used when a computation is made on an internal edge/face of a mesh, i.e. an element face shared at least by two elements. It aims to compute discontinuity jumps of a variable across inter-element faces. It is particularly suitable to implement Discontinuous Galerkin and interior penalty methods, Ghost penalty terms or a posteriori estimators. The expressions::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:823
-# 670ec6e7d01c48809ebb1184c7703e38
+# df22a0552eaf4ad4b9bb5b7453eb2aff
 msgid "are available (as with any other interpolate transformation) and compute a field on the current point but on the neighbour element. Of course, ``Interpolate(X, neighbour_elt)`` as no specific interest since it returns the same result as ``X``. Similarly, in most cases, ``Interpolate(Normal, neighbour_elt)`` will return the opposite of ``Normal`` except for instance for 2D shell element in a 3D mesh where it has an interest."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:825
-# e8f0ad5845bf429b8e3cddc69749a56f
+# a19c2fd52c5e4c1bb44033674dbf6339
 msgid "The jump on a variable ``u`` can be computed with::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:829
-# b025c182f9464426901f8d0ab282f259
+# 186eafc61e504ddd9751d306474f656e
 msgid "and a penalisation term of the jump can be written::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:833
-# e8e9587493ee4ee4bd0707fb36b2c320
+# f69c42290c254bc49f300e808aabbab8
 msgid "Note that the region representing the set of all internal faces of a mesh can be obtained thanks to the function::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:837
-# 91d47bf9bd874ba4a725f350cf726cd3
+# 93a5a50df6334c6c9e38e3409d3e6254
 msgid "where ``mr`` is an optional mesh region. If ``mr`` is specified only the face internal with respect to this region are returned. An important aspect is that  each face is represented only once and is arbitrarily chosen between the two neighbour elements."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:839
-# 94c9640e7d164ecab8d1201ceb3855de
+# 17a06547211e4a6a9c23e9ec6c373f82
 msgid "See for instance :file:`interface/tests/python/demo_laplacian_DG.py` or :file:`interface/tests/matlab/demo_laplacian_DG.m` for an example of use."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:841
-# 3c4df075b17a4700a97855d5cd0edd4b
+# 2bc39debfcde4605a4b4650c9fda43ea
 msgid "Compared to other interpolate transformations, this transformation is more optimized and benefits from finite element and geometric transformation pre-computations."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:846
-# a4fece86d1384c8f8afd3462d1b07aa3
+# 3cedef69c48741f7a956ab4aab546ae2
 msgid "Double domain integrals or terms (convolution - Kernel - Exchange integrals)"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:848
-# e7890089eb844dc882acebc72a538a48
+# 5991940709044dd29058348baf111e41
 msgid "In some very special cases, it can be interesting to compute an integral on the direct product of two domains, i.e. a double integral such as for instance"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:854
-# aad27288255d42818cdb694d1e138a92
+# 8ee3059e20b140a5b1fd29ba79af3bb9
 msgid "where :math:`k(x,y)` is a given kernel, :math:`u` a quantity defined on :math:`\\Omega_1` and  :math:`v` a quantity defined on :math:`\\Omega_2`, eventually with  :math:`\\Omega_1` and :math:`\\Omega_2` the same domain. This can be interesting either to compute such an integral or to define an interaction term between two variables defined on two different domains."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:856
-# 1b16fed5018b4c93b57a470906f63086
+# 52970edd4f294507b29b298e7e0a3e11
 msgid "CAUTION: Of course, this kind of term have to be used with great care, since it naturally leads to fully populated stiffness or tangent matrices."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:859
-# 567e977fc7664d6dbf3e133531aeceb3
+# 49e071198dab4d34a6f60987186eb4f2
 msgid "The weak form language of |gf| furnishes a mechanism to compute such a term. First, the secondary domain has to be declared in the workspace/model with its integration methods. The addition of a standard secondary domain can be done with one of the two following functions::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:865
-# 1a86ab0937bd47b397068faf270fd750
+# 0e93ac4a36234dc2a7073f114503e3a4
 msgid "where ``model`` or ``workspace`` is the model or workspace where the secondary domain has to be declared, ``domain_name`` is a string for the identification of this domain together with the mesh region and integration method, ``mim`` the integration method and ``region`` a mesh region. Note that with these standard secondary domains, the integration is done on the whole region for each element of the primary domain. It can be interesting to implement specific secondary domains restricting the integration to the necessary elements with respect to the element of the primary domain. A structure is dedicated to this in |gf|."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:871
-# ac99686ab3724d1c9e8ca64612d568d6
+# d095936ba0e84cf788f6de8340164897
 msgid "Once a secondary domain has been declared, it can be specified that a weak form language expression has to be assembled on the direct product of a current domain and a secondary domain, adding the name of the secondary domain to the ``add_expression`` method of the workspace object or using ``add_linear_twodomain_term``, ``add_nonlinear_twodomain_term`` or ``add_twodomain_source_term`` functions::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:868
-# d84ec006059c4a0ea38b41ded5904743
+# 1a952534096042e88b7fe3e43597c13c
 msgid "workspace.add_expression(expr, mim, region, derivative_order, secondary_domain) add_twodomain_source_term(model, mim, expr, region, secondary_domain) add_linear_twodomain_term(model, mim, expr, region, secondary_domain) add_nonlinear_twodomain_term(model, mim, expr, region, secondary_domain)"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:873
-# de8fc71bfaef419e977b496144dd806e
+# 8589c63d2f1b4029b4a4a7b1618dff41
 msgid "For the utilisation with the Python/Scilab/Matlab interface, see the documentation on ``gf_asm`` command and the ``model`` object."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:876
-# 0dd565c2b98b4169b7377ebcaf69671c
+# 2bdf7b59e8c54289a196d5d9fa3b2b29
 msgid "Inside an expression of the weak form language, one can refer to the unit normal vector to a boundary, to the current position or to the value of a variable thanks to the expressions::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:889
-# 88b39456d57f43cb884bf53bd218bed6
+# 6464d11a0ea44f46bd6af2226d53d0df
 msgid "For instance, a term like"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:895
-# 6a91a04f13e04b3ea4a24797b0cdc4b6
+# f1fe0528d77e468a854b7ddc65e5852f
 msgid "would correspond to the following weak for language expression::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:903
-# 25475bef1889494181e0c4c29933f9fb
+# 00bd9983bbeb491f8eaae40abb172893
 msgid "Elementary transformations"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:905
-# 3293346ba5cd436f932ce4e64b2d52c5
+# 10afef3bee86437b99412412e0ce1828
 msgid "An elementary transformation is a linear transformation of the shape functions given by a matrix which may depend on the element which is applied to the local degrees of freedom at the element level. an example of definition of elementary transformation can be found in the file :file:`src/getfem_linearized_plates.cc`. It aims for instance to define a local projection of a finite element on a lower level element to perform a reduction such as the one used in MITC elements."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:913
-# 17e8bc29aa9840bd96cbed91245bd88b
+# d7b304870bab400a832ae188fe34893f
 msgid "Once a transformation is defined, it can be added to the model/workspace with the method::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:918
-# e1055d937ae44610b9a2312600eee9d5
+# 8462ba7f365146c19ccb9e21d7d6f0ba
 msgid "where ``pelementary_transformation`` is a pointer to an object deriving from ``virtual_elementary_transformation``. Once it is added to the model/workspace, it is possible to use the following expressions in the weak form language::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:929
-# 22a9b23f1cab4fd98acd57337fd0a56a
+# 8bcb1d914f9b407394f5bdb200f5909e
 msgid "where ``u`` is one of the FEM variables of the model/workspace. For the moment, the only available elementary transformation is the the one for the projection on rotated RT0 element for two-dimensional elements which can be added thanks to the function (defined in :file:`src/getfem/getfem_linearized_plates.h`)::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:936
-# 4bdfc7e3f9e443f1be891c3fe81177a1
+# 83824259c1f84e60ab46ba88014485bc
 msgid "Xfem discontinuity evaluation (with mesh_fem_level_set)"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:938
-# 636fa1bc972c49399b1165abba4ef6d4
+# f427f96674224bafa376de5b57ddc50d
 msgid "For |gf| 5.1. When using a fem cut by a level-set (using fem_level_set or mesh_fem_level_set objects), it is often interesting to integrate the discontinuity jump of a variable, or the jump in gradient or the average value. For this purpose, the weak form language furnishes the following expressions for ``u`` a FEM variable::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:958
-# 07badfd0110d40e78ddd746249e11df4
+# 4bd77a0a70e84d18a8cbf3b8957a2bc0
 msgid "which are only available when the evaluation (integration) is made on the curve/surface separating two zones of continuity, i.e. on the zero level-set of a considered level-set function (using a ``mesh_im_level_set`` object). For instance, a jump in the variable ``u`` will be given by::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:962
-# 508b76ed016048309ccc85c4ea072b70
+# 7c774e5e3c6344d0a0f9013b4199a879
 msgid "and the average by::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:971
-# 564dfaed64cd426dbaaa3744b0593872
+# b3e22472f78841fdb1f86f3f06814709
 msgid "Storage of sub-expressions in a getfem::im_data object during assembly"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:973
-# e11b4619397f45ba99824198e2c2bb9b
+# 88bec9e589b846a0bb411afaad5ceba2
 msgid "It is possible to store in a vector depending on a getfem::im_data object a part of an assembly computation, for instance in order to use this computation in another assembly. This is an alternative to the interpolation functions which allows not to compute twice the same expression."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:975
-# 4a6b800d0b384ff188baf24205d9ba75
+# 2a03d0a9ea6e4b42a5c781f783c6cfe5
 msgid "The method to add such an assignment in the assembly is the following for a model or a ga_workspace::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:983
-# 9301de092c4d4834accb9fe6500da29e
+# 499a276f589943ab9c6f30581c95ab5c
 msgid "It adds expression `expr` to be evaluated at assembly time and being assigned to the data `dataname` which has to be of im_data type. `order` represents the order of assembly where this assignement has to be done (potential(0), weak form(1) or tangent system(2) or at each order(-1)). The default value is 1. If before = 1, the the assignement is performed before the computation of the other assembly terms, such that the data can be used in the remaining of the assembly as an intermediary result (be careful that it is still considered as a data, no derivation of the expression is performed for the tangent system). If before = 0 (default), the assignement is done after the assembly terms."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:995
-# ee59cba61a3f453da6c955560fdf53ef
+# 972290dbe2ad4da2bd222696d2473054
 msgid "Additionally, In a model, the method::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:999
-# 18ea2ac29d154c248a1b40ba39038019
+# 202688b5c84a4fe893b3de8194be7879
 msgid "allows to cancel all the assembly assignments previously added."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:7
-# dec0f1ac4b0c4da3be4c44a4a10166fd
+# 43aa70e2e5d547f3a71cf91d7966b832
 msgid "asm"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:7
-# dec0f1ac4b0c4da3be4c44a4a10166fd
+# 43aa70e2e5d547f3a71cf91d7966b832
 msgid "generic assembly"
 msgstr ""
 

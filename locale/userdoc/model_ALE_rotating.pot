@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 02:08+0900\n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,211 +17,211 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/model_ALE_rotating.rst:13
-# 2883e133534840509ff1324049026942
+# 2df801a233a24307894ad6e99f2d0e23
 msgid "ALE Support for object having a large rigid body motion"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:16
-# 3775f5df8c8149df807cb62a971c8e16
+# 5d89ee8812af494eb3a519b97a0e60b6
 msgid "ALE terms for rotating objects"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:18
-# d08c29a1970b4d0080fce7a2569d51cb
+# f2ffc7a4718e4a4196b650b935fb80fb
 msgid "This section present a set of bricks facilitating the use of an ALE formulation for rotating bodies having a rotational symmetry (typically a train wheel)."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:21
 #: ../source/userdoc/model_ALE_rotating.rst:173
-# 83cf71c24f6b42769c53f9b190848cd2
-# 480c12b18b9c4dee87b6bfa03ad813c9
+# f7b9bb0bdbac49e787cd54e88fa3a8d3
+# d4b70b5506284c13bafe3fc9d80ab7dc
 msgid "Theoretical background"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:23
-# f6c2797573aa48aeae4424e9be9658b2
+# 2a82392855344174bc7c416497dd48ee
 msgid "This strategy consists in adopting an intermediary description between an Eulerian and a Lagrangian ones for a rotating body having a rotational symmetry. This intermediary description consist in a rotating axes with respect to the reference configuration. See for instance [Dr-La-Ek2014]_ and [Nackenhorst2004]_."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:25
-# 64501dc6958946679c150ad82c8e3027
+# a569306ac21b4e8fa63d0136f960afad
 msgid "It is supposed that the considered body is submitted approximately to a rigid body motion"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:30
-# 8d1feff03b65460497d83ef89c75a083
+# 2d5376c3e840451bbbea393c6bdcf8df
 msgid "and may have additonal deformation (exptected smaller) with respect to this rigid motion, where :math:`R(t)` is a rotation matrix"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:39
-# b14a7124b8e74a5c8d6bfc50cf713cad
+# e013e8be8ebe46cd91a86637e314b953
 msgid "and :math:`Z(t)` is a translation. Note that, in order to be consistent with a positive translation for a positive angle for a rolling contact, the rotation is **clockwise**. This illustrated in the following figure:"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:49
-# 2b65181259534fb484220cecf498e11a
+# 2def2c98231349259dc7cb9de4ea3a87
 msgid "Note that the description is given for a three-dimensional body. For two-dimensional bodies, the third axes is neglected so that :math:`R(t)` is a :math:`2\\times 2` rotation matrix. Let us denote :math:`r(t)` the rotation:"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:59
-# f28f7eea74184a4dbe8fe428aade9dc8
+# f57e7f5da726420fbee44a111eb53740
 msgid "We have then"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:64
-# 74fb90c9929f4baaa31baf013becade4
+# d8cd2e9d781d47a0a707dac87a086543
 msgid "If :math:`\\varphi(t, X)` is the deformation of the body which maps the reference configuration :math:`\\Omega^0` to the deformed configuration :math:`\\Omega_t` at time :math:`t`, the ALE description consists in the decomposition of the deformation of the cylinder in"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:69
-# 3760c790032b44ce8c66bd72e47e7a3a
+# f8e8ce15b0a5422eae4ffc69e5914edf
 msgid "With :math:`\\bar{X} = R(t)X` the new considered deformation is"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:75
-# 15838e248b3d443c883e3372e030d63f
+# 5a0bb33acde441e8bfd81b54f76f716c
 msgid "Thanks to the rotation symmetry of the reference configuration :math:`\\Omega^0:`, we note that :math:`\\bar{\\Omega}^0 = r(t, \\Omega^0)` is independant of :math:`t` and will serve as the new reference configuration. This is illustrated in the following figure:"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:85
-# 5529250f0e0340edad1b478467435af1
+# 38b429bd0dc64931a8b0f1c9462f232e
 msgid "The denomination ALE of the method is justified by the fact that :math:`\\bar{\\Omega}^0` is an intermediate configuration which is of Euler type for the rigid motion and a Lagrangian one for the additional deformation of the solid. If we denote"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:90
-# 2fb7098a5884438aacee940eb91afcf5
+# b2d8d0a446d141c892457fd7911998cb
 msgid "the displacement with respect to this intermediate configuration, the advantage is that if this additional displacement with respect to the rigid body motion is small, it is possible to use a small deformation model (for instance linearized elasticity)."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:92
-# cab3ad66c17d4236954cfb25d7187b47
+# 7234f8b52b13434cb96bace465dd8d6e
 msgid "Due to the objectivity properties of standard consistutive laws, the expression of these laws in the intermediate configuration is most of the time identical to the expression in a standard reference configuration except for the expression of the time derivative which are modified because the change of coordinate is  nonconstant in time :"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:100
-# 0428747947c44e5c8bd6c9e4ce5f1e3f
+# f2ab5be909cc4978a6192eb69a964e84
 msgid "Note that the term :math:`\\dot{\\theta} A \\bar{X} = \\left(\\hspace*{-0.5em}\\begin{array}{c} \\dot{\\theta}\\bar{X}_2 \\\\ -\\dot{\\theta}\\bar{X}_1 \\\\ 0 \\end{array}\\hspace*{-0.5em}\\right)` is the rigid motion velocity vector. Now, If :math:`\\Theta(t,X)` is a quantity attached to the material points (for instance the temperature), then, with :math:`\\bar{\\Theta}(t,\\bar{X}) = \\Theta(t,X)` , one simply has"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:106
-# c73b59950e17416ab530676ce65edf2a
+# b17b9480deff44de9005375a580fc9a3
 msgid "This should not be forgotten that a correction has to be provided for each evolving variable for which the time derivative intervene in the considered model (think for instance to platic flow for plasticity). So that certain model bricks canot be used directly (plastic bricks for instance)."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:108
-# 9b0540fd0c1a40e48c03fe083acaa74d
+# 6e236fa4319648da95daa6c90ae0f987
 msgid "|gf| bricks for structural mechanics are mainly considering the displacement as the amin unknown. The expression for the displacement is the following:"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:120
 #: ../source/userdoc/model_ALE_rotating.rst:219
-# 81d6651f641d4d1f802a4f08f3fcfc1b
-# 40cf7ccc8c4e42bdae0d0a4c23d17aa2
+# 0c517137f2494c9a8e1c0cb0d2f9efee
+# 3dbcf82993d64f11a9452d72a00f8e5f
 msgid "Weak formulation of the transient terms"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:122
-# 96a7136f161947c89c1e05be1a1b64c5
+# d5e7480e8d0c46a98e568fc137b6203f
 msgid "Assuming :math:`\\rho^0` the density in the reference configuration having a rotation symmetry, the term corresponding to acceleration in the weak formulation reads (with :math:`v(X) = \\bar{v}(\\bar{X})` a test function):"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:129
-# 30bf4b5b1b7d4c358da35f630a90a9c2
+# 70b800d9c5344c09afc643d4cfc6b4c5
 msgid "The third term in the right hand side can be integrated by part as follows:"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:137
-# 8dfee654fe41456e9ad4f3092095ff55
+# c01c2d360b254df8899fad93d9158d35
 msgid "Since :math:`\\bar{N}` the outward unit normal vector on :math:`\\partial \\bar{\\Omega}^0` is orthogonal to :math:`A \\bar{X}` the boundary term is zero and :math:`\\nabla (\\rho^0 \\bar{v}) = \\bar{v} \\otimes \\nabla \\rho^0   + \\rho^0 \\nabla \\bar{v}` and since :math:`\\nabla \\rho^0.(A\\bar{X}) = 0` because of the assumption on :math:`\\rho^0` to have a rotation symmetry, we have"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:142
-# 04760d64b5a1441bae6f7948e70e0303
+# f7d45c9a316441278b51f0cfa7bd38d5
 msgid "Thus globally"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:151
-# 34a921753db84bc680d66838ed296f39
+# 0ef3eda6917545328fd64dbf598a3f24
 msgid "Note that two terms can deteriorate the coercivity of the problem and thus its well posedness and the stability of time integration schemes: the second one (convection term) and the fifth one. This may oblige to use additional stabilization techniques for large values of the angular velocity :math:`\\dot{\\theta}`."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:155
-# 6cf51fc8657446a58c8644087ff4cfab
+# d7eb6e72413840129a70281b041486ea
 msgid "The available bricks ..."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:157
-# 597cb34927ba46c098c2049b155b3173
+# 7e94c8e7c4464250a2e332ab83475bf6
 msgid "To be adapted  ::"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:161
-# 632d67542af941099bf81f9f07609fab
+# a6fa7e935e664f1b8437fbf2d6888554
 msgid "where ``parameters`` are the parameters ..."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:168
-# 3cb77d5ae983407db9e6857f4d7ef913
+# 9d003b98cf904b61959057c37a0ab351
 msgid "ALE terms for a uniformly translated part of an object"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:170
-# 10f8f4731f7e46e7bd8bd00f7715087f
+# 8f5694b629e94fb7a2a746732419dd2e
 msgid "This section present a set of bricks facilitating the use of an ALE formulation for an object being potentialy infinite in one direction and which whose part of interests (on which the computation is considered) is translated uniformly in that direction (typically a bar)."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:175
-# 3538287cbcad41ceae6616fec2c44e47
+# 65c654a47bca49e0968c4835a5ac584d
 msgid "Let us consider an object whose reference configuration :math:`\\Omega^0 \\in \\R^{d}` is infinite in the direction :math:`E_1`, i.e. :math:`\\Omega^0 = \\R \\times \\omega^0` where :math:`\\omega^0 \\in \\R^{d-1}`. At a time :math:`t`, only a \"windows\" of this object is considered"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:180
-# 257aa86edf304891bb3477cb3d2f0c48
+# eb08273e046e466292961c360f698c27
 msgid "where :math:`z(t)` represents the translation."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:182
-# 78dc2bd1d2e7414298b9c3e0770a9fcd
+# 1aeec6f6674c4113983468ed0dc96150
 msgid "If :math:`\\varphi(t, X)` is the deformation of the body which maps the reference configuration :math:`\\Omega^0` to the deformed configuration :math:`\\Omega_t` at time :math:`t`, the ALE description consists in considering the intermediary reference configuration"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:187
-# 822e68c024e9427ba5e8c770332e0600
+# 49ec4f6c31b34a1a9d9e3ce32272ec7a
 msgid "and :math:`\\bar{\\varphi}(t, X) : \\R_+ \\times \\bar{\\Omega}^{0} \\rightarrow \\R^d` defined by"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:192
-# 04ccb5993cb94fa29f16e73035429f8e
+# 307d4c8f998f4f7fa83819b8c1c10310
 msgid "where :math:`Z(t) = z(t)E_1`. The interest of :math:`\\bar{\\Omega}^{0}` is of course to be time independant. Of course, some special boundary conditions have to be defined on :math:`\\{\\alpha\\} \\times \\omega^0` and :math:`\\{\\beta\\} \\times \\omega^0` (absorbing or periodic boundary conditions) in order to approximate the fact that the body is infinite."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:203
-# c789c7f6dd2e461aad13ba5ea94f8fb8
+# ee84c4e785d54a5389eb81035e984b8c
 msgid "If we denote"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:208
-# 740c18a2851c44a391623dc8ef88fdbb
+# aabf89637bdc41fd8159457c8e00ec66
 msgid "the displacement on the intermediary configuration, then it is easy to check that"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:221
-# 2d13297152cc4a7c8c891235058bb055
+# 01b993016ab14056ad560d0ccfb0b88b
 msgid "Assuming :math:`\\rho^0` the density in the reference being invariant with the considered translation, the term corresponding to acceleration in the weak formulation reads (with :math:`v(X) = \\bar{v}(\\bar{X})` a test function and after integration by part):"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:228
-# c2b6381866744e5f84268899c0be6707
+# 8ec2f5ef920e42cf894940b06b8b2e2e
 msgid "where :math:`\\bar{N}` is the outward unit normal vector on :math:`\\partial \\bar{\\Omega}^0`. Note that the last term vanishes on :math:`(\\alpha, \\beta) \\times \\partial \\omega^0` but not necessarily on :math:`\\{\\alpha\\} \\times \\omega^0` and :math:`\\{\\beta\\} \\times \\omega^0`."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:7
-# 904b3ac303614ddeab0ab059f15534a7
+# b659f24bd3ed40e288c708ad2f107df4
 msgid "models"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:7
-# 904b3ac303614ddeab0ab059f15534a7
+# b659f24bd3ed40e288c708ad2f107df4
 msgid "model bricks"
 msgstr ""
 

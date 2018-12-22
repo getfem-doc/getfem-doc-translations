@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/install/install_windows.rst:10
+# 8b56d2d30f664cae81e6445e44fe952d
+msgid "How to install |gf| from sources on Windows"
+msgstr ""
+
+#: ../source/install/install_windows.rst:12
+# 26be7bd2e101482c90db67b2686f408c
+msgid "See the `download and install <../download.html>`_ page for general requirements and the download of the last stable version of |gf|."
+msgstr ""
+
+#: ../source/install/install_windows.rst:15
+# c54386673c244d909e799e55497495b3
+msgid "Building |gf| in an environment hostile to open-source like Windows is naturally more painful than on Linux or MacOS X. Several possibilities exist to build |gf| with a commercial C++ compiler (see the ``mscv`` directory on the git version of |gf| for some MSCV project files). However, we describe in the following how to build the sequential version of |gf| with both Python and Matlab interfaces under `Mingw <http://www.mingw.org/>`_ and `Msys <http://www.mingw.org/wiki/MSYSwhich>`_ which provide a minimal GNU environment for Windows. A similar installation should possible with `Cygwin <https://www.cygwin.com/>`_."
+msgstr ""
+
+#: ../source/install/install_windows.rst:26
+# ff4a9bd071d346199c07e0d01aa19830
+msgid "The first step is to install Mingw in 64 bits version (x86_64, posix, sjlj options, see `Mingw-64 web page <https://mingw-w64.org/doku.php/download>`_). For this you can usr an installer or simply download Mingw and copy it in the directory ``C:\\mingw64``"
+msgstr ""
+
+#: ../source/install/install_windows.rst:32
+# 4a0b1265cee145e4afa75a74ba2386cd
+msgid "Install also Msys 64 bits version the same way (either with an installer or directly copy Msys in the directory ``C:\\msys``)"
+msgstr ""
+
+#: ../source/install/install_windows.rst:35
+# b77113d768c54238a1cd33e60e880fc7
+msgid "If it is not done by the installer, add to the Windows path variable the directories ``C:\\mingw64\\bin;C:\\msys;C:\\msys\\bin``. To this aim, go in the start menu of Windows, search ``\"system\"`` and select ``\"edit the system environement variables\"`` then edit the path variable."
+msgstr ""
+
+#: ../source/install/install_windows.rst:40
+# c22be3987c054f4bba1e7bc6bc0b262a
+msgid "Open a Windows command console and enter ``msys``. This should open an Msys shell console. For who is familiar with sh/bash, you normally feel in a more civilized environment. Nothing to be too much happy, this environment is somehow minimalist (it aims to). Normally, Msys creates you a home directory (try the command ``pwd`` to see the Msys path and note that it corresponds to ``C:\\msys\\home\\login`` windows path, where ``login`` is your home directory name). You have first to create a file in that path named ``.profile`` and containing at list the two following lines::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:53
+# 04186a5e3fea4e55bd56f37d5ad70d1a
+msgid "In theory, this should not be necessary, because ``/usr/local/include`` and ``/usr/local/lib`` are default directories, but ok, in my config, it does not work without. Note that you can use any text editor to create this file, for instance ``vim`` of Msys (there is also good versions of emacs for windows or you can use the rudimentary blocnote of Windows)."
+msgstr ""
+
+#: ../source/install/install_windows.rst:59
+# 14b1e7bbc6664deda3e384d0eb9a0ba3
+msgid "You will have to compile and install BLAS and LAPACK versions (it would be possible to avoid that, but it is not a difficult step). Download a version of tar.gz source package of blas and lapack into you home Msys directory. Untar the two archives (for instance with ``tar xvzf blas-?.?.?.tar.gz``,  ``tar xvzf lapack-?.?.?.tar.gz``, ``?.?.?`` being the version numbers) and then enter into the BLAS source directory, compile and install BLAS with::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:72
+# 9854ace0c783445e83931f0fdeb0bf6f
+msgid "Do the same for LAPACK with::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:81
+# 59c510b5f3594baf8fedcaafedcf0ee8
+msgid "You now need an installation of QHULL library in order to have access to the meshing and Xfem tools of |gf| (see `Qhull <http://www.qhull.org>`_ and `Qhull install instructions <http://www.qhull.org/README.txt>`_). Download the sources of Qhull in you Msys home (similarly as what you have done for BLAS and LAPACK), untar them and enter into the Qhull source directory with Msys. You can compile and install Qhull simply with::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:92
+# 91ab5130cb8b4779aa8d90aa0cf56882
+msgid "Similarly, we will compile and install now a sequential version of the sparse linear solver `MUMPS <http://mumps.enseeiht.fr/>`_. Again, it is not strictly necessary since a version of `Superlu <http://crd-legacy.lbl.gov/~xiaoye/SuperLU/>`_ is included with the |gf| sources, but, especially in 3D, MUMPS can solve really larger systems. So, download a MUMPS source package on your Msys home directory, untar it and make the following steps::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:103
+# 911e17cd4ebd4e5cb802ac779d786d01
+msgid "Then, edit the ``Makefile.inc`` file and replace in it ``f90`` by ``gfortran`` and ``cc`` by ``gcc``. Then compile MUMPS and install it with::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:112
+# a38586d155074eafbbcb164cbd1bb376
+msgid "At this stage, you should be able to make a first compilation of |gf| without the interfaces.  Download the last released version of |gf| on `download and install <../download.html>`_ (you can either download the git current version, however, it necessitates the additional installation of m4, autoconf, automake and libtool). Then, untar the package, enter into the source directory of |gf| with Msys and compile with::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:128
+# 9e40538bf2aa4954bfa2658672f86b66
+msgid "the ``make check`` is not necessary, but it is to verify that the compilation is correctly done. Note the separate compilation of the ``superlu`` library is due to some difficulties with Msys command ``ar``."
+msgstr ""
+
+#: ../source/install/install_windows.rst:134
+# 2279d4a684334c0ab28e5e6f08e1763c
+msgid "Build with the Python interface"
+msgstr ""
+
+#: ../source/install/install_windows.rst:136
+# 1c6d2bb3393344dab856bd8d5ce7e797
+msgid "Additionaly to build the Python interface, you will have first to install a 64bits version of Python 2 or 3 on your system together with Numpy and Scipy packages. The simpler way is to install Anaconda2 or 3 (it already contains Numpy and Scipy packages which are necessary). For instance with Anaconda2"
+msgstr ""
+
+#: ../source/install/install_windows.rst:138
+# 1ed590085c0c4548b14a25eaeebf9bc2
+msgid "Install Anaconda2 and add to windows path ``C:\\install_dir\\Anaconda2`` and ``C:\\install_dir\\Anaconda2\\Scripts`` where ``install_dir`` is the installation directory of Anaconda2 (``ProgramData`` by default for a system installation)"
+msgstr ""
+
+#: ../source/install/install_windows.rst:143
+# 1ad9798723fc47ef81b0bd8b1925cb9e
+msgid "close an re-open a windows command shell and msys"
+msgstr ""
+
+#: ../source/install/install_windows.rst:145
+# 5ab7157fdbba4e37be75789a7204367e
+msgid "run again::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:149
+# cabdace0131b44f8bcbd000cb1d1e383
+msgid "Python should be detected and the Python interface prepared to be built."
+msgstr ""
+
+#: ../source/install/install_windows.rst:151
+# 3667a1d70983456290f6ac1c88f36ae0
+msgid "Then just run::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:155
+# cf058699b00e497783353b218a524b69
+msgid "It normally builds the interface correctly. Then just add as a Windows system variable ``PYTHONPATH`` with the value ``c:\\msys\\home\\login\\getfem-5.?\\interface\\src\\python`` where ``login`` and ``5.?`` have tobe adapted. You can either copy the directory ``interface\\src\\python`` where the interface has been built in a Python 2 directory. You can then run the test programs in ``interface/tests/python`` using python."
+msgstr ""
+
+#: ../source/install/install_windows.rst:165
+# eca248a99a2440cfa7ea2337dd8bcda6
+msgid "Build with the Matlab interface"
+msgstr ""
+
+#: ../source/install/install_windows.rst:167
+# 7f7cf2e71f764a46a37a43b3538598c1
+msgid "Here follows the additional step to build the Matlab interface. You have first, of course to have installed a (recent) version of Matlab on your system."
+msgstr ""
+
+#: ../source/install/install_windows.rst:169
+# 65059060a186433da7f8ab6de90c076b
+msgid "You also need a installation of Python, because some Python scripts are used to build the interface. You can follow the steps described in the previous section for Python interface installation. However, for the Matlab interface, Numpy and Scipy are not required."
+msgstr ""
+
+#: ../source/install/install_windows.rst:174
+# f0ea3c8af7974c76bf1c49a3141e3aae
+msgid "Upload `gnumex <http://gnumex.sourceforge.net/>`_ and run it under Matlab (see the indications on gnumex website). Make it generate the ``mexopts.bat`` et ``mexopts.stp`` files in an accessible directory."
+msgstr ""
+
+#: ../source/install/install_windows.rst:178
+# 163cfcb1c4464505b8d61bc8065c53f9
+msgid "In the source top directory of |gf|, add the file ``gnumex.opts`` with the following lines (to be adapted)::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:187
+# 740809931e7341c9a3afa321948985ae
+msgid "Re-run the configure script and compile with::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:192
+# ad0b530ec7b24a6ba4d949689d86c027
+msgid "The Matlab interface should be compiled without error. If there is some linker errors, go to the ``interface\\src\\matlab`` directory and try to adapt the library list in the matlab/mex call by copy/past the command building the interface."
+msgstr ""
+
+#: ../source/install/install_windows.rst:197
+# d76349124e444ba0954386c32ce2272a
+msgid "Once the interface is properly compiled, you can lauch Matlab, add the path of the compiled interface (on the matlab command line) with::"
+msgstr ""
+
+#: ../source/install/install_windows.rst:202
+# a9b905461f5845039aa65d3b3aa475f5
+msgid "and try the demo matlab programs of the interface in ``interface\\tests\\matlab``. In order not to have to call the ``addpath`` command each time you open Matlab, you can add a Windows system variable ``MATLABPATH`` set to ``c:\\msys\\home\\login\\getfem-5.?\\interface/tests/matlab``. You can also move the ``interface\\tests\\matlab`` directory into your Matlab installation directory."
+msgstr ""
+
