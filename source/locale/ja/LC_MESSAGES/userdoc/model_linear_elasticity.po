@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2004-2018 GetFEM++ project
 # This file is distributed under the same license as the GetFEM++ package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
 # Translators:
 # Tetsuo Koyama <tkoyama010@gmail.com>, 2018
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 15:44+0900\n"
+"POT-Creation-Date: 2018-12-23 12:05+0900\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
-"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-"
+"doc/teams/87607/ja/)\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../source/userdoc/model_linear_elasticity.rst:13
 msgid "Isotropic linearized elasticity brick"
@@ -35,11 +36,11 @@ msgstr "と"
 
 #: ../source/userdoc/model_linear_elasticity.rst:28
 msgid ""
-":math:`\\varepsilon(u)` is the small strain tensor, :math:`\\sigma` is the "
-"stress tensor, :math:`\\lambda` and :math:`\\mu` are the |Lame| "
-"coefficients. This represents the system of linearized isotropic elasticity."
-" It can also be used with :math:`\\lambda=0` together with the linear "
-"incompressible brick to build the Stokes problem."
+":math:`\\varepsilon(u)` is the small strain tensor, :math:`\\sigma` is "
+"the stress tensor, :math:`\\lambda` and :math:`\\mu` are the |Lame| "
+"coefficients. This represents the system of linearized isotropic "
+"elasticity. It can also be used with :math:`\\lambda=0` together with the"
+" linear incompressible brick to build the Stokes problem."
 msgstr ""
 "を表します。 :math:`\\varepsilon(u)`  は微小ひずみテンソルです。 :math:`\\sigma` は応力テンソルです。 "
 ":math:`\\lambda` と :math:`\\mu` は |Lame| "
@@ -70,15 +71,16 @@ msgstr "ここで、 ``dataname_lambda`` と ``dataname_mu`` は、 |Lame| 係�
 
 #: ../source/userdoc/model_linear_elasticity.rst:57
 msgid ""
-"The function which adds this brick to a model and parametrized with Young "
-"modulus and Poisson ratio is::"
+"The function which adds this brick to a model and parametrized with Young"
+" modulus and Poisson ratio is::"
 msgstr "このブリック要素をモデルに追加し、Young率とPoisson比でパラメータ化した関数は次の通りです。"
 
 #: ../source/userdoc/model_linear_elasticity.rst:63
+#, fuzzy
 msgid ""
-"This brick represent a plane strain approximation when it is applied to a 2D"
-" mesh (and a standard model on a 3D mesh). in order to obtain a plane stress"
-" approximation for 2D meshes, one can use::"
+"This brick represent a plane strain approximation when it is applied to a"
+" 2D mesh (and a standard model on a 3D mesh). In order to obtain a plane "
+"stress approximation for 2D meshes, one can use::"
 msgstr ""
 "この要素は、2次元メッシュ（および3次元メッシュ上の標準モデル）に適用されるときの平面歪み近似を表します。 "
 "次の関数により2次元メッシュの平面応力近似を得ることができます。"
@@ -95,9 +97,9 @@ msgstr "関数は次の通りです。"
 msgid ""
 "compute the Von Mises criterion (or Tresca if ``tresca_flag`` is set to "
 "true) on the displacement field stored in ``varname``. The stress is "
-"evaluated on the |mf| ``mf_vm`` and stored in the vector ``VM``. It is not "
-"valid for 2D plane stress approximation and is parametrized with |Lame| "
-"coefficients. The functions::"
+"evaluated on the |mf| ``mf_vm`` and stored in the vector ``VM``. It is "
+"not valid for 2D plane stress approximation and is parametrized with "
+"|Lame| coefficients. The functions::"
 msgstr ""
 "``varname`` に格納されている変位フィールド上のVon Mises基準（ ``tresca_flag`` "
 "がtrueに設定されている場合はTresca）を計算します。応力は |mf| ``mf_vm`` を呼び出して ``VM`` "
@@ -105,18 +107,18 @@ msgstr ""
 
 #: ../source/userdoc/model_linear_elasticity.rst:86
 msgid ""
-"compute the Von Mises stress, parametrized with Young modulus and Poisson "
-"ratio, the second one being valid for 2D plane stress approximation when it "
-"is applied on a 2D mesh (the two functions give the same result for 3D "
-"problems)."
+"compute the Von Mises stress, parametrized with Young modulus and Poisson"
+" ratio, the second one being valid for 2D plane stress approximation when"
+" it is applied on a 2D mesh (the two functions give the same result for "
+"3D problems)."
 msgstr ""
 "Young率とPoisson比でパラメータ化されたVon "
 "Mises応力を計算し、2番目の方程式が2次元メッシュに適用されたときに2次元平面応力近似は有効です（2つの関数は3次元問題に対して同じ結果を与えます）。"
 
 #: ../source/userdoc/model_linear_elasticity.rst:91
 msgid ""
-"The program :file:`tests/elastostatic.cc` can be taken as a model of use of "
-"a linearized isotropic elasticity brick."
+"The program :file:`tests/elastostatic.cc` can be taken as a model of use "
+"of a linearized isotropic elasticity brick."
 msgstr "プログラム :file:`tests/elastostatic.cc` は線形化された等方性弾性要素の使用モデルを得ることができます。"
 
 #: ../source/userdoc/model_linear_elasticity.rst:95
@@ -141,11 +143,11 @@ msgstr "この非圧縮性条件を追加する関数は次の通りです。"
 
 #: ../source/userdoc/model_linear_elasticity.rst:113
 msgid ""
-"where ``varname`` is the variable on which the incompressibility condition "
-"is prescribed, ``multname_pressure`` is a variable which should be described"
-" on a scalar fem representing the multiplier (the pressure) and "
-"``dataexpr_penal_coeff`` is an optional penalization coefficient for the "
-"nearly incompressible condition."
+"where ``varname`` is the variable on which the incompressibility "
+"condition is prescribed, ``multname_pressure`` is a variable which should"
+" be described on a scalar fem representing the multiplier (the pressure) "
+"and ``dataexpr_penal_coeff`` is an optional penalization coefficient for "
+"the nearly incompressible condition."
 msgstr ""
 "ここで ``varname`` は非圧縮性条件が規定されている変数であり、 ``multname_pressure`` "
 "は乗数（圧力）を表すスカラー有限要素法で記述される変数であり、 ``dataexpr_penal_coeff`` "
@@ -162,10 +164,11 @@ msgstr ""
 
 #: ../source/userdoc/model_linear_elasticity.rst:122
 msgid ""
-"For instance, the following program defines a Stokes problem with a source "
-"term and an homogeneous Dirichlet condition on boundary 0. ``mf_u``, "
-"``mf_data`` and ``mf_p`` have to be valid finite element description on the "
-"same mesh. ``mim`` should be a valid integration method on the same mesh::"
+"For instance, the following program defines a Stokes problem with a "
+"source term and an homogeneous Dirichlet condition on boundary 0. "
+"``mf_u``, ``mf_data`` and ``mf_p`` have to be valid finite element "
+"description on the same mesh. ``mim`` should be a valid integration "
+"method on the same mesh::"
 msgstr ""
 "例えば、次のプログラムは、境界項0上のソース項と均質なDirichlet条件を持つStokes問題を定義しています。 ``mf_u`` 、 "
 "``mf_data`` 、 ``mf_p`` は同じメッシュ上の有効な有限要素法でなければなりません。 ``mim`` "
@@ -184,3 +187,4 @@ msgstr "モデル"
 #: ../source/userdoc/model_linear_elasticity.rst:7
 msgid "model bricks"
 msgstr "モデル要素"
+

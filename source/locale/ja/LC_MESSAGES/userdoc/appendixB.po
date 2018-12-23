@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2004-2018 GetFEM++ project
 # This file is distributed under the same license as the GetFEM++ package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
 # Translators:
 # Tetsuo Koyama <tkoyama010@gmail.com>, 2018
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 02:08+0900\n"
+"POT-Creation-Date: 2018-12-23 12:05+0900\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
-"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-"
+"doc/teams/87607/ja/)\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../source/userdoc/appendixB.rst:10
 msgid "Appendix B. Cubature method list"
@@ -27,12 +28,11 @@ msgstr "付録B.立体求積法のリスト"
 
 #: ../source/userdoc/appendixB.rst:12
 msgid ""
-"The integration methods are of two kinds. Exact integrations of polynomials "
-"and approximated integrations (cubature formulas) of any function. The exact"
-" integration can only be used if all the elements are polynomial and if the "
-"geometric transformation is linear."
-msgstr ""
-"積分法は2種類あります。任意の関数の多項式と近似された積分（立方体式）の完全積分。完全積分は、すべての要素が多項式であり、幾何変換が線形である場合にのみ使用できます。"
+"The integration methods are of two kinds. Exact integrations of "
+"polynomials and approximated integrations (cubature formulas) of any "
+"function. The exact integration can only be used if all the elements are "
+"polynomial and if the geometric transformation is linear."
+msgstr "積分法は2種類あります。任意の関数の多項式と近似された積分（立方体式）の完全積分。完全積分は、すべての要素が多項式であり、幾何変換が線形である場合にのみ使用できます。"
 
 #: ../source/userdoc/appendixB.rst:17
 msgid "A descriptor on an integration method is given by the function::"
@@ -57,11 +57,11 @@ msgstr "完全積分法"
 #: ../source/userdoc/appendixB.rst:30
 msgid ""
 "|gf| furnishes a set of exact integration methods. This means that "
-"polynomials are integrated exactly. However, their use is (very) limited and"
-" not recommended. The use of exact integration methods is limited to the "
-"low-level generic assembly for polynomial :math:`\\tau`-equivalent elements "
-"with linear transformations and for linear terms. It is not possible to use "
-"them in the high-level generic assembly."
+"polynomials are integrated exactly. However, their use is (very) limited "
+"and not recommended. The use of exact integration methods is limited to "
+"the low-level generic assembly for polynomial :math:`\\tau`-equivalent "
+"elements with linear transformations and for linear terms. It is not "
+"possible to use them in the high-level generic assembly."
 msgstr ""
 "|gf| "
 "の完全積分法のセットを与えます。これは、多項式が完全積分されていることを意味します。しかし、その使用は（非常に）制限されており、推奨されていません。完全積分法の使用は、多項式のための低水準総称構築に限定されています。線形変換を伴う"
@@ -71,7 +71,7 @@ msgstr ""
 msgid "The list of available exact integration methods is the following"
 msgstr "利用可能な完全積分法のリストは以下の通りです"
 
-#: ../source/userdoc/appendixB.rst:0
+#: ../source/userdoc/appendixB.rst
 msgid "Exact Integration Methods"
 msgstr "完全積分法"
 
@@ -109,8 +109,8 @@ msgstr "``\"IM_EXACT_PARALLELEPIPED(n)\"``"
 
 #: ../source/userdoc/appendixB.rst:47
 msgid ""
-"Description of the exact integration of polynomials on the parallelepiped of"
-" reference of dimension ``n``."
+"Description of the exact integration of polynomials on the parallelepiped"
+" of reference of dimension ``n``."
 msgstr "次元 ``n`` を参照する平行6面体上の多項式の完全積分の記述"
 
 #: ../source/userdoc/appendixB.rst:49
@@ -126,10 +126,9 @@ msgstr "次元 ``n`` を参照するプリズムへの多項式の完全積分�
 #: ../source/userdoc/appendixB.rst:53
 msgid ""
 "Even though a description of exact integration method exists on "
-"parallelepipeds or prisms, most of the time the geometric transformations on"
-" such elements are nonlinear and the exact integration cannot be used."
-msgstr ""
-"平行6面体またはプリズムに完全積分法の記述が存在しても、ほとんどの場合、そのような要素の幾何学的変換は非線形であり、完全積分は使用できません。"
+"parallelepipeds or prisms, most of the time the geometric transformations"
+" on such elements are nonlinear and the exact integration cannot be used."
+msgstr "平行6面体またはプリズムに完全積分法の記述が存在しても、ほとんどの場合、そのような要素の幾何学的変換は非線形であり、完全積分は使用できません。"
 
 #: ../source/userdoc/appendixB.rst:61
 msgid "Newton cotes Integration methods"
@@ -137,9 +136,10 @@ msgstr "Newton Cotes積分法"
 
 #: ../source/userdoc/appendixB.rst:63
 msgid ""
-"Newton cotes integration of order ``K`` on simplices, parallelepipeds and "
-"prisms are denoted by ``\"IM_NC(N,K)\"``, ``\"IM_NC_PARALLELEPIPED(N,K)\"`` "
-"and ``\"IM_NC_PRISM(N,K)\"`` respectively."
+"Newton cotes integration of order ``K`` on simplices, parallelepipeds and"
+" prisms are denoted by ``\"IM_NC(N,K)\"``, "
+"``\"IM_NC_PARALLELEPIPED(N,K)\"`` and ``\"IM_NC_PRISM(N,K)\"`` "
+"respectively."
 msgstr ""
 "シンプレックス、平行6面体、およびプリズムの ``K`` 次の Newton Cotes 積分は、 ``\"IM_NC(N,K)\"`` 、 "
 "``\"IM_NC_PARALLELEPIPED(N,K)\"`` 、 ``\"IM_NC_PRISM(N,K)\"`` とします。"
@@ -153,21 +153,22 @@ msgid ""
 "Gauss-Legendre integration on the segment of order ``K`` (with ``K/2+1`` "
 "points) are denoted by ``\"IM_GAUSS1D(K)\"``. Gauss-Lobatto-Legendre "
 "integration on the segment of order ``K`` (with ``K/2+1`` points) are "
-"denoted by ``\"IM_GAUSSLOBATTO1D(K)\"``. It is only available for odd values"
-" of ``K``. The Gauss-Lobatto integration method can be used in conjunction "
-"with ``\"FEM_PK_GAUSSLOBATTO1D(K/2)\"`` to perform mass-lumping."
+"denoted by ``\"IM_GAUSSLOBATTO1D(K)\"``. It is only available for odd "
+"values of ``K``. The Gauss-Lobatto integration method can be used in "
+"conjunction with ``\"FEM_PK_GAUSSLOBATTO1D(K/2)\"`` to perform mass-"
+"lumping."
 msgstr ""
-"``K`` 次（ ``K/2+1`` 点）のGauss-Legendreは、 ``\"IM_GAUSS1D(K)\"`` と表記します。``K`` 次（"
-" ``K/2+1`` 点を持つ）のGauss-Lobatto-Legendre積分は ``\"IM_GAUSSLOBATTO1D(K)\"`` "
-"と表記します。これは ``K`` の奇数値に対してのみ利用可能です。Gauss-Lobatto積分は、集中質量の挙動をするために "
-"``\"FEM_PK_GAUSSLOBATTO1D(K/2)\"`` と一緒に使用して一括処理を実行できます。"
+"``K`` 次（ ``K/2+1`` 点）のGauss-Legendreは、 ``\"IM_GAUSS1D(K)\"`` と表記します。``K``"
+" 次（ ``K/2+1`` 点を持つ）のGauss-Lobatto-Legendre積分は "
+"``\"IM_GAUSSLOBATTO1D(K)\"`` と表記します。これは ``K`` の奇数値に対してのみ利用可能です。Gauss-"
+"Lobatto積分は、集中質量の挙動をするために ``\"FEM_PK_GAUSSLOBATTO1D(K/2)\"`` "
+"と一緒に使用して一括処理を実行できます。"
 
 #: ../source/userdoc/appendixB.rst:82
 msgid "Gauss Integration methods on dimension 2"
 msgstr "2次元のGauss積分法"
 
-#: ../source/userdoc/appendixB.rst:0 ../source/userdoc/appendixB.rst:0
-#: ../source/userdoc/appendixB.rst:0 ../source/userdoc/appendixB.rst:0
+#: ../source/userdoc/appendixB.rst
 msgid "Integration methods on dimension 2"
 msgstr "2次元の積分法"
 
@@ -604,13 +605,13 @@ msgstr "1次元Gaussの積分の直積である ``\"IM_GAUSS_PARALLELEPIPED(n,k)
 #: ../source/userdoc/appendixB.rst:455
 msgid ""
 "**Important note:** do not forget that ``IM_QUAD(k)`` is exact for "
-"polynomials up to degree :math:`k`, and that a :math:`Q_k` polynomial has a "
-"degree of :math:`2*k`. For example, ``IM_QUAD(7)`` cannot integrate exactly "
-"the product of two :math:`Q_{2}` polynomials. On the other hand, "
+"polynomials up to degree :math:`k`, and that a :math:`Q_k` polynomial has"
+" a degree of :math:`2*k`. For example, ``IM_QUAD(7)`` cannot integrate "
+"exactly the product of two :math:`Q_{2}` polynomials. On the other hand, "
 "``IM_GAUSS_PARALLELEPIPED(2,4)`` can integrate exactly that product ..."
 msgstr ""
-"**重要な注記:** ``IM_QUAD(k)`` は多項式の次数 :math:`k` に対して厳密であり、 :math:`Q_k` 多項式の次数 "
-":math:`2*k` を持つことを忘れないでください。例えば、 ``IM_QUAD(7)`` は、2つの :math:`Q_{2}` "
+"**重要な注記:** ``IM_QUAD(k)`` は多項式の次数 :math:`k` に対して厳密であり、 :math:`Q_k` 多項式の次数"
+" :math:`2*k` を持つことを忘れないでください。例えば、 ``IM_QUAD(7)`` は、2つの :math:`Q_{2}` "
 "多項式の積を完全積分することはできません。一方、``IM_GAUSS_PARALLELEPIPED(2,4)`` "
 "は、その積を完全積分することができます..."
 
@@ -618,7 +619,7 @@ msgstr ""
 msgid "Gauss Integration methods on dimension 3"
 msgstr "3次元のGauss積分法"
 
-#: ../source/userdoc/appendixB.rst:0 ../source/userdoc/appendixB.rst:0
+#: ../source/userdoc/appendixB.rst
 msgid "Integration methods on dimension 3"
 msgstr "3次元の積分法"
 
@@ -660,8 +661,9 @@ msgid "``\"IM_TETRAHEDRON(2)\"``"
 msgstr "``\"IM_TETRAHEDRON(2)\"``"
 
 #: ../source/userdoc/appendixB.rst:500
-msgid "4 points, order 2} \\hspace{7em}"
-msgstr "4点、次数 2} \\hspace{7em}"
+#, fuzzy
+msgid "4 points, order 2"
+msgstr "4点、次数3"
 
 #: ../source/userdoc/appendixB.rst:502
 msgid ":math:`a = \\Frac{5 - \\sqrt{5}}{20}`"
@@ -919,16 +921,17 @@ msgstr "積分法の直積"
 
 #: ../source/userdoc/appendixB.rst:665
 msgid ""
-"You can use ``\"IM_PRODUCT(IM1, IM2)\"`` to produce integration methods on "
-"quadrilateral or prisms. It gives the direct product of two integration "
-"methods. For instance ``\"IM_GAUSS_PARALLELEPIPED(2,k)\"`` is an alias for "
-"``\"IM_PRODUCT(IM_GAUSS1D(2,k),IM_GAUSS1D(2,k))\"`` and can be use instead "
-"of the ``\"IM_QUAD\"`` integrations."
+"You can use ``\"IM_PRODUCT(IM1, IM2)\"`` to produce integration methods "
+"on quadrilateral or prisms. It gives the direct product of two "
+"integration methods. For instance ``\"IM_GAUSS_PARALLELEPIPED(2,k)\"`` is"
+" an alias for ``\"IM_PRODUCT(IM_GAUSS1D(2,k),IM_GAUSS1D(2,k))\"`` and can"
+" be use instead of the ``\"IM_QUAD\"`` integrations."
 msgstr ""
-"``\"IM_PRODUCT(IM1, IM2)\"`` を使って、4辺形やプリズムの積分法を作ることができます。これは、2つの積分法の直積を与えます。"
-" 例えば、 ``\"IM_GAUSS_PARALLELEPIPED(2,k)\"`` は "
-"``\"IM_PRODUCT(IM_GAUSS1D(2,k),IM_GAUSS1D(2,k))\"`` の別名であり、 ``\"IM_QUAD\"`` "
-"の積分の代わりに使用することができます。"
+"``\"IM_PRODUCT(IM1, IM2)\"`` "
+"を使って、4辺形やプリズムの積分法を作ることができます。これは、2つの積分法の直積を与えます。 例えば、 "
+"``\"IM_GAUSS_PARALLELEPIPED(2,k)\"`` は "
+"``\"IM_PRODUCT(IM_GAUSS1D(2,k),IM_GAUSS1D(2,k))\"`` の別名であり、 "
+"``\"IM_QUAD\"`` の積分の代わりに使用することができます。"
 
 #: ../source/userdoc/appendixB.rst:672
 msgid "Specific integration methods"
@@ -937,10 +940,10 @@ msgstr "具体的な積分法"
 #: ../source/userdoc/appendixB.rst:674
 msgid ""
 "For pyramidal elements, ``\"IM_PYRAMID(im)\"`` provides an integration "
-"method corresponding to the transformation of an integration ``im`` from a "
-"hexahedron (for instance ``\"IM_GAUSS_PARALLELEPIPED(3,5)\"``) onto a "
-"pyramid. It is a singular integration method specically adapted to rational "
-"fraction shape functions of the pyramidal elements."
+"method corresponding to the transformation of an integration ``im`` from "
+"a hexahedron (for instance ``\"IM_GAUSS_PARALLELEPIPED(3,5)\"``) onto a "
+"pyramid. It is a singular integration method specically adapted to "
+"rational fraction shape functions of the pyramidal elements."
 msgstr ""
 "ピラミッド型要素の場合、 ``\"IM_PYRAMID(im)\"`` は、6面体（例えば "
 "``\"IM_GAUSS_PARALLELEPIPED(3,5)\"`` ）からピラミッドへ積分 ``im`` "
@@ -956,14 +959,14 @@ msgstr "複合メソッド ``\"IM_STRUCTURED_COMPOSITE(IM_TRIANGLE(2), 3)\"``"
 
 #: ../source/userdoc/appendixB.rst:686
 msgid ""
-"Use ``\"IM_STRUCTURED_COMPOSITE(IM1, S)\"`` to copy ``IM1`` on an element "
-"with ``S`` subdivisions. The resulting integration method has the same order"
-" but with more points. It could be more stable to use a composite method "
-"rather than to improve the order of the method. Those methods have to be "
-"used also with composite elements. Most of the time for composite element, "
-"it is preferable to choose the basic method ``IM1`` with no points on the "
-"boundary (because the gradient could be not defined on the boundary of sub-"
-"elements)."
+"Use ``\"IM_STRUCTURED_COMPOSITE(IM1, S)\"`` to copy ``IM1`` on an element"
+" with ``S`` subdivisions. The resulting integration method has the same "
+"order but with more points. It could be more stable to use a composite "
+"method rather than to improve the order of the method. Those methods have"
+" to be used also with composite elements. Most of the time for composite "
+"element, it is preferable to choose the basic method ``IM1`` with no "
+"points on the boundary (because the gradient could be not defined on the "
+"boundary of sub-elements)."
 msgstr ""
 "``\"IM_STRUCTURED_COMPOSITE(IM1, S)\"`` を使って、 ``S`` の細分を持つ要素に ``IM1`` "
 "をコピーしてください。得られた積分法は同じ次数ですが、より多くの点を有します。メソッドの次数を改善するのではなく、複合メソッドを使用する方が安定している可能性があります。それらのメソッドは複合要素でも使用する必要があります。複合要素はほとんどの場合、境界上に点がありません。（勾配がサブ要素の境界上に定義されない可能性があるため）基本メソッド"
@@ -971,9 +974,9 @@ msgstr ""
 
 #: ../source/userdoc/appendixB.rst:694
 msgid ""
-"For the HCT element, it is advised to use the ``\"IM_HCT_COMPOSITE(im)\"`` "
-"composite integration (which split the original triangle into 3 sub-"
-"triangles)."
+"For the HCT element, it is advised to use the "
+"``\"IM_HCT_COMPOSITE(im)\"`` composite integration (which split the "
+"original triangle into 3 sub-triangles)."
 msgstr ""
 "HCT要素については、複合積分 ``\"IM_HCT_COMPOSITE(im)\"`` "
 "（元の3角形を3つの3角形に分割する）を使用することをお勧めします。"
@@ -982,10 +985,14 @@ msgstr ""
 msgid ""
 "For pyramidal elements, ``\"IM_PYRAMID_COMPOSITE(im)\"`` provides an "
 "integration method ase on the decomposition of the pyramid into two "
-"tetrahedrons (``im`` should be an integration method on a tetrahedron). Note"
-" that the integraton method ``\"IM_PYRAMID(im)\"`` where ``im`` is an "
-"integration method on an hexahedron, should be prefered."
+"tetrahedrons (``im`` should be an integration method on a tetrahedron). "
+"Note that the integraton method ``\"IM_PYRAMID(im)\"`` where ``im`` is an"
+" integration method on an hexahedron, should be prefered."
 msgstr ""
-"ピラミッド型要素の場合、 ``\"IM_PYRAMID_COMPOSITE(im)\"`` は、ピラミッドを2つの4面体に分解する積分法を提供します（ "
-"``im`` は4面体の積分法でなければなりません）。ここで、 ``im`` が6面体の積分法である場合 ``\"IM_PYRAMID(im)\"`` "
-"の積分法が望ましいはずです。"
+"ピラミッド型要素の場合、 ``\"IM_PYRAMID_COMPOSITE(im)\"`` "
+"は、ピラミッドを2つの4面体に分解する積分法を提供します（ ``im`` は4面体の積分法でなければなりません）。ここで、 ``im`` "
+"が6面体の積分法である場合 ``\"IM_PYRAMID(im)\"`` の積分法が望ましいはずです。"
+
+#~ msgid "4 points, order 2} \\hspace{7em}"
+#~ msgstr "4点、次数 2} \\hspace{7em}"
+

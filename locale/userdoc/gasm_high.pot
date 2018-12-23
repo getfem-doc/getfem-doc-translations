@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-20 02:56+0900\n"
+"POT-Creation-Date: 2018-12-23 12:05+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1027,87 +1027,83 @@ msgstr ""
 msgid "where ``model`` or ``workspace`` is the model or workspace where the secondary domain has to be declared, ``domain_name`` is a string for the identification of this domain together with the mesh region and integration method, ``mim`` the integration method and ``region`` a mesh region. Note that with these standard secondary domains, the integration is done on the whole region for each element of the primary domain. It can be interesting to implement specific secondary domains restricting the integration to the necessary elements with respect to the element of the primary domain. A structure is dedicated to this in |gf|."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:871
+#: ../source/userdoc/gasm_high.rst:867
 msgid "Once a secondary domain has been declared, it can be specified that a weak form language expression has to be assembled on the direct product of a current domain and a secondary domain, adding the name of the secondary domain to the ``add_expression`` method of the workspace object or using ``add_linear_twodomain_term``, ``add_nonlinear_twodomain_term`` or ``add_twodomain_source_term`` functions::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:868
-msgid "workspace.add_expression(expr, mim, region, derivative_order, secondary_domain) add_twodomain_source_term(model, mim, expr, region, secondary_domain) add_linear_twodomain_term(model, mim, expr, region, secondary_domain) add_nonlinear_twodomain_term(model, mim, expr, region, secondary_domain)"
-msgstr ""
-
-#: ../source/userdoc/gasm_high.rst:873
+#: ../source/userdoc/gasm_high.rst:874
 msgid "For the utilisation with the Python/Scilab/Matlab interface, see the documentation on ``gf_asm`` command and the ``model`` object."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:876
+#: ../source/userdoc/gasm_high.rst:877
 msgid "Inside an expression of the weak form language, one can refer to the unit normal vector to a boundary, to the current position or to the value of a variable thanks to the expressions::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:889
+#: ../source/userdoc/gasm_high.rst:890
 msgid "For instance, a term like"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:895
+#: ../source/userdoc/gasm_high.rst:896
 msgid "would correspond to the following weak for language expression::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:903
+#: ../source/userdoc/gasm_high.rst:904
 msgid "Elementary transformations"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:905
+#: ../source/userdoc/gasm_high.rst:906
 msgid "An elementary transformation is a linear transformation of the shape functions given by a matrix which may depend on the element which is applied to the local degrees of freedom at the element level. an example of definition of elementary transformation can be found in the file :file:`src/getfem_linearized_plates.cc`. It aims for instance to define a local projection of a finite element on a lower level element to perform a reduction such as the one used in MITC elements."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:913
+#: ../source/userdoc/gasm_high.rst:914
 msgid "Once a transformation is defined, it can be added to the model/workspace with the method::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:918
+#: ../source/userdoc/gasm_high.rst:919
 msgid "where ``pelementary_transformation`` is a pointer to an object deriving from ``virtual_elementary_transformation``. Once it is added to the model/workspace, it is possible to use the following expressions in the weak form language::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:929
+#: ../source/userdoc/gasm_high.rst:930
 msgid "where ``u`` is one of the FEM variables of the model/workspace. For the moment, the only available elementary transformation is the the one for the projection on rotated RT0 element for two-dimensional elements which can be added thanks to the function (defined in :file:`src/getfem/getfem_linearized_plates.h`)::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:936
+#: ../source/userdoc/gasm_high.rst:937
 msgid "Xfem discontinuity evaluation (with mesh_fem_level_set)"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:938
+#: ../source/userdoc/gasm_high.rst:939
 msgid "For |gf| 5.1. When using a fem cut by a level-set (using fem_level_set or mesh_fem_level_set objects), it is often interesting to integrate the discontinuity jump of a variable, or the jump in gradient or the average value. For this purpose, the weak form language furnishes the following expressions for ``u`` a FEM variable::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:958
+#: ../source/userdoc/gasm_high.rst:959
 msgid "which are only available when the evaluation (integration) is made on the curve/surface separating two zones of continuity, i.e. on the zero level-set of a considered level-set function (using a ``mesh_im_level_set`` object). For instance, a jump in the variable ``u`` will be given by::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:962
+#: ../source/userdoc/gasm_high.rst:963
 msgid "and the average by::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:971
+#: ../source/userdoc/gasm_high.rst:972
 msgid "Storage of sub-expressions in a getfem::im_data object during assembly"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:973
+#: ../source/userdoc/gasm_high.rst:974
 msgid "It is possible to store in a vector depending on a getfem::im_data object a part of an assembly computation, for instance in order to use this computation in another assembly. This is an alternative to the interpolation functions which allows not to compute twice the same expression."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:975
+#: ../source/userdoc/gasm_high.rst:976
 msgid "The method to add such an assignment in the assembly is the following for a model or a ga_workspace::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:983
+#: ../source/userdoc/gasm_high.rst:984
 msgid "It adds expression `expr` to be evaluated at assembly time and being assigned to the data `dataname` which has to be of im_data type. `order` represents the order of assembly where this assignement has to be done (potential(0), weak form(1) or tangent system(2) or at each order(-1)). The default value is 1. If before = 1, the the assignement is performed before the computation of the other assembly terms, such that the data can be used in the remaining of the assembly as an intermediary result (be careful that it is still considered as a data, no derivation of the expression is performed for the tangent system). If before = 0 (default), the assignement is done after the assembly terms."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:995
+#: ../source/userdoc/gasm_high.rst:996
 msgid "Additionally, In a model, the method::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:999
+#: ../source/userdoc/gasm_high.rst:1000
 msgid "allows to cancel all the assembly assignments previously added."
 msgstr ""
 
