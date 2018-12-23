@@ -17,122 +17,98 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:8
-# d683c5c22c7749879ab7b244e9e76d0b
 msgid "gf_mesher_object"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:10
-# f9c4a5c890f74ba885ab1a52ed1f4b77
 msgid "**Synopsis**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:24
-# 6ac2dd709a2f41f59d0c454ce0b7d41a
 msgid "**Description :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:27
-# 46ec9f7474e34276b69a902bbeaa20bd
 msgid "General constructor for mesher_object objects."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:29
-# a767bbeff10f4ae5895f0ab311da8161
 msgid "This object represents a geometric object to be meshed by the experimental meshing procedure of Getfem."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:33
-# 2463c95b12874f2588a11f229a998550
 msgid "**Command list :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:37
-# 1869294f476a4b4592fc63a3c2568023
 msgid "``MF = gf_mesher_object('ball', vec center, scalar radius)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:39
-# 1978fe871ff24200b16e1fee3c0e5e47
 msgid "Represents a ball of corresponding center and radius."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:43
-# e06190878261405fbb3e5acc1198865d
 msgid "``MF = gf_mesher_object('half space', vec origin, vec normal_vector)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:45
-# 2875b75540bf4544b2f329c03028b798
 msgid "Represents an half space delimited by the plane which contains the origin and normal to `normal_vector`. The selected part is the part in the direction of the normal vector. This allows to cut a geometry with a plane for instance to build a polygon or a polyhedron."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:52
-# efae0495830e41068536fdea0b66e6a6
 msgid "``MF = gf_mesher_object('cylinder', vec origin, vec n, scalar length, scalar radius)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:54
-# 63d9a37cd5964de6a9870f7635a2bd6f
 msgid "Represents a cylinder (in any dimension) of a certain radius whose axis is determined by the origin, a vector `n` and a certain length."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:59
-# 5e1baecb5cde4b01ae98907a7fc69766
 msgid "``MF = gf_mesher_object('cone', vec origin, vec n, scalar length, scalar half_angle)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:61
-# 6b83701a43864832bf08e7409cfa5cd2
 msgid "Represents a cone (in any dimension) of a certain half-angle (in radians) whose axis is determined by the origin, a vector `n` and a certain length."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:66
-# bac337adb36f423a925449446b027bb4
 msgid "``MF = gf_mesher_object('torus', scalar R, scalar r)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:68
-# 9a502b7b1e7544f88e6766ff55b176ad
 msgid "Represents a torus in 3d of axis along the z axis with a great radius equal to `R` and small radius equal to `r`. For the moment, the possibility to change the axis is not given."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:74
-# 3f17acf5cc0b40019780c90fe42d86ff
 msgid "``MF = gf_mesher_object('rectangle', vec rmin, vec rmax)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:76
-# 572d3c41bd824b0c9a6cc04d1824de5a
 msgid "Represents a rectangle (or parallelepiped in 3D) parallel to the axes."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:80
-# 54b615faac0e403bb6bc55b5d5711015
 msgid "``MF = gf_mesher_object('intersect', mesher_object object1 , mesher_object object2, ...)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:82
-# b7993932fa7a44318d47acbeb59f0df7
 msgid "Intersection of several objects."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:86
-# 2cde3fcb4076443685246482fc39cd02
 msgid "``MF = gf_mesher_object('union', mesher_object object1 , mesher_object object2, ...)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:88
-# 0d91a54d46974007af5d352222167ab6
 msgid "Union of several objects."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:92
-# b53f9c068a4c45fcb26c9f425e017d0d
 msgid "``MF = gf_mesher_object('set minus', mesher_object object1 , mesher_object object2)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesher_object.rst:94
-# c451e2e7ca894a14be4288ea5640f452
 msgid "Geometric object being object1 minus object2."
 msgstr ""
 

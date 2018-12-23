@@ -17,57 +17,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/model_generic_assembly.rst:13
-# 5ce56369390a41ba8409d89d925c8b32
 msgid "Generic assembly bricks"
 msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:16
-# 628145bf73d34092a48a1f0be2991b64
 msgid "A mean to add a term either on one variable or on several ones is to directly use the weak form language described in Section :ref:`ud-gasm-high`. The more general way is to use::"
 msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:21
-# 71dec2cf8ce64568bbc5a4cc56043011
 msgid "This adds a brick to the model ``md``, using the integration method ``mim``, the assembly string ``expr`` on the mesh region ``region``. If the result is symmetric, you can specify it on the 5th argument and if it is coercive on the 6th argument. The latter indications of symmetry and coercivness are used to determine the right linear solver. If you are not so sure, it is preferable not to indicate anything."
 msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:23
-# c6cb528de31e401aa4eb883ea4efba71
 msgid "However, this brick consider that the expression is nonlinear. This brick is especially indicated to obtain nonlinear coupled terms between several variables. This means in particular that the assembly of the term is performed at each call of the assembly of the model and that a Newton algorithm will be used to solve the problem. If the term is indeed linear, you should use instead::"
 msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:28
-# e93c3dc6c8224275af64d4deb7009e11
 msgid "with the same arguments. Conversely, this brick alway assume that the term corresponding to ``expr`` is linear and the assembly will be performed only once if the data used do not change. Thus, you have to care that your expression is indeed linear (affine in fact) with respect to each variable. Otherwise, the result is of course not guaranted. Source terms in the expression are taken into account. Still for linear problem, it is possible to perform the assembly of a sole source term thanks to::"
 msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:32
-# 02649fe039e749ccab171259042e8d1f
 msgid "with again the same arguments except the symmetry and coercivness. This brick performs the assembly of the corresponding order 1 term (residual vector) and add it as a right hand side to the problem. The assembly will be performed only once, so the term should not depend on the variables of the model (but could depend of course on the constants)."
 msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:35
-# e20702e7c4a04d02a37ce1030bc1eaee
 msgid "For instance, if one wants to solve a Poisson problem on a predefined variable ``u`` of the model, one may use the corresponding pre-defined bricks (see below) or simply use::"
 msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:39
-# 787eefea988e45c490bc1c2b06607086
 msgid "where ``F`` is a pre-defined constant of the model representing the right hand side. Of course, doing so, Newton's algorithms will be called. So, the more appropriate manner is to use the linear bricks as follows::"
 msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:49
-# d3ffd58c34314b5aa19430cb60da6aad
 msgid "Note that for the moment, the use of the weak form language is not possible for complex valued problems."
 msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:7
-# ae8c628f65b24f60a00609d1a8e12b6b
 msgid "models"
 msgstr ""
 
 #: ../source/userdoc/model_generic_assembly.rst:7
-# ae8c628f65b24f60a00609d1a8e12b6b
 msgid "model bricks"
 msgstr ""
 

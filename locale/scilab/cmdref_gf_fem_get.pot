@@ -17,224 +17,179 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:8
-# 10faa131b27a493399ae9ec4532625b4
 msgid "gf_fem_get"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:10
-# 62310bd2640e4281954d126f0bcd38af
 msgid "**Synopsis**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:30
-# 102595adea3947a4ba95d559d2654347
 msgid "**Description :**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:33
-# 7a8e82bcf54e4808a2a38c1fe1a1f269
 msgid "General function for querying information about FEM objects."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:36
-# 0b735617e5244ebbb7f226048b48c695
 msgid "**Command list :**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:40
-# c808fc08abc947a1b3951c3092099ff5
 msgid "``n = gf_fem_get(fem F, 'nbdof'[, int cv])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:42
-# bbcc346929ec40e4ad4d4b42d8b3c051
 msgid "Return the number of dof for the fem."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:44
-# 3a81e80a3e1e48b69caae7640c4551b4
 msgid "Some specific fem (for example 'interpolated_fem') may require a convex number <literal>cv</literal> to give their result. In most of the case, you can omit this convex number."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:49
-# ba3a8034aacc4ac6897cb561b4be4937
 msgid "``n = gf_fem_get(fem F, 'index of global dof', cv)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:51
-# 8d1c52ee582c403bbcc9b2cf561cf946
 msgid "Return the index of global dof for special fems such as interpolated fem."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:55
-# 27ca47916e6c45c697a5b7bbf977074e
 msgid "``d = gf_fem_get(fem F, 'dim')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:57
-# 38221d87eb204eeb81a09ecdd176524d
 msgid "Return the dimension (dimension of the reference convex) of the fem."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:60
-# 03d336710ced405a8531c11a7d465055
 msgid "``td = gf_fem_get(fem F, 'target_dim')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:62
-# 18f7d6b83b104ff6bb47c06a3cedb767
 msgid "Return the dimension of the target space."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:64
-# 68cc429e9157443ba03836c491beaf24
 msgid "The target space dimension is usually 1, except for vector fem."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:67
-# ebd7c0f8cf654ab39faa8373f807407a
 msgid "``P = gf_fem_get(fem F, 'pts'[, int cv])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:69
-# b1a3fd9d2f8649b3bbaa017ee8c51859
 msgid "Get the location of the dof on the reference element."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:71
-# 6c33aec9ad81437f8c69b8cb07666bd4
 msgid "Some specific fem may require a convex number <literal>cv</literal> to give their result (for example 'interpolated_fem'). In most of the case, you can omit this convex number."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:76
-# d9ea20241033455f99267e16e431d174
 msgid "``b = gf_fem_get(fem F, 'is_equivalent')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:78
-# f5953625be35497ebc547e71124bd5cb
 msgid "Return 0 if the fem is not equivalent."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:80
-# 6e600f967cfe4d98ac4158716c85446b
 msgid "Equivalent fem are evaluated on the reference convex. This is the case of most classical fem's."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:84
-# aef4a3a461c148628399ce3f1d990780
 msgid "``b = gf_fem_get(fem F, 'is_lagrange')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:86
-# 5f8c375a880e45378e4be7006ef568a1
 msgid "Return 0 if the fem is not of Lagrange type."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:89
-# 98d4d237d07b4649acac795867ea5866
 msgid "``b = gf_fem_get(fem F, 'is_polynomial')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:91
-# ab8fef1ad2e24c579b520f26bb58154c
 msgid "Return 0 if the basis functions are not polynomials."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:94
-# 4bcd1a952506416ab0987cfc1f9487c3
 msgid "``d = gf_fem_get(fem F, 'estimated_degree')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:96
-# 5716a895b7354a59b2f91ec76de6f9c4
 msgid "Return an estimation of the polynomial degree of the fem."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:98
-# e832b01c54174d36b0db57acb0ab8065
 msgid "This is an estimation for fem which are not polynomials."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:101
-# fd13a886a7504f78a047965136c06f3b
 msgid "``E = gf_fem_get(fem F, 'base_value',mat p)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:103
-# 5a0d3703329c40af92b730aa276d8d8a
 msgid "Evaluate all basis functions of the FEM at point <literal>p</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:105
 #: ../source/scilab/cmdref_gf_fem_get.rst:112
-# 9794e62c4f0d4870a68f1c62736e8f6e
-# 6844a2c9016246ad9f8ce1ef075fd784
 msgid "<literal>p</literal> is supposed to be in the reference convex!"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:108
-# 2c43e52732434d319cd53232c2c644a0
 msgid "``ED = gf_fem_get(fem F, 'grad_base_value',mat p)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:110
-# 7d3ad93a82d943fa954a8c039021421e
 msgid "Evaluate the gradient of all base functions of the fem at point <literal>p</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:115
-# c03f3048fd7440c5b763322355c30530
 msgid "``EH = gf_fem_get(fem F, 'hess_base_value',mat p)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:117
-# cf9461b996324ba9a5b78cccc2141625
 msgid "Evaluate the Hessian of all base functions of the fem at point <literal>p</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:119
-# 643aa51836334444ba0bbc04bed33646
 msgid "<literal>p</literal> is supposed to be in the reference convex!."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:122
-# 80a3f97ca1d140c4bfc5b193868380b1
 msgid "``gf_fem_get(fem F, 'poly_str')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:124
-# 7656e6ee77034e249b89c8bdb2edcd34
 msgid "Return the polynomial expressions of its basis functions in the reference convex."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:127
-# 5b06629e56df41298c06606ee8cd2bea
 msgid "The result is expressed as a cell array of strings. Of course this will fail on non-polynomial fem's."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:131
-# 04d1211855c74b7395f86a3119f9190f
 msgid "``string = gf_fem_get(fem F, 'char')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:133
-# ce88f0b28a454cd286ec0c551f406833
 msgid "Ouput a (unique) string representation of the fem."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:135
-# c3780e90119c444ca14a29dbceb91ba4
 msgid "This can be used to perform comparisons between two different fem objects."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:139
-# 646b55ccb62a48b7bc89aac6c40529af
 msgid "``gf_fem_get(fem F, 'display')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem_get.rst:141
-# d765ae967a40456490f68dd7f41eb812
 msgid "displays a short summary for a fem object."
 msgstr ""
 

@@ -17,252 +17,202 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/export.rst:10
-# f3e4ccb76e8f4d56aba8af3cb5103ce8
 msgid "Export and view a solution"
 msgstr ""
 
 #: ../source/userdoc/export.rst:12
-# 076a639d016f4e42957e80c8bf8ceb04
 msgid "There are essentially four ways to view the result of getfem computations:"
 msgstr ""
 
 #: ../source/userdoc/export.rst:14
-# af64d556f2c4456db56d437b691baaf4
 msgid "Matlab, with the matlab-interface."
 msgstr ""
 
 #: ../source/userdoc/export.rst:15
-# 1fb925a597724e678b57889b7d836cbd
 msgid "The open-source Mayavi or any other VTK files viewer."
 msgstr ""
 
 #: ../source/userdoc/export.rst:16
-# bb1763b35d084a569eb16811d35ba97f
 msgid "The open-source OpenDX program."
 msgstr ""
 
 #: ../source/userdoc/export.rst:17
-# 524c2aba317f416baf74b8ba345af5b3
 msgid "The open-source Gmsh program."
 msgstr ""
 
 #: ../source/userdoc/export.rst:19
-# 19bb8f4a2575446d9b0ba57ff1cfa06e
 msgid "The objects that can be exported are, |m|, |mf| objects, and |smsl|."
 msgstr ""
 
 #: ../source/userdoc/export.rst:22
-# 509f03dd80b04a6f8ecfe801bd97ced4
 msgid "Saving mesh and mesh_fem objects for the Matlab interface"
 msgstr ""
 
 #: ../source/userdoc/export.rst:24
-# f255990ead8c40b59480977446d0b0e2
 msgid "If you have installed the Matlab interface, you can simply use ``mesh_fem::write_to_file`` and save the solution as a plain text file, and then, load them into Matlab. For example, supposing you have a solution ``U`` on a |mf| ``mf``,::"
 msgstr ""
 
 #: ../source/userdoc/export.rst:36
-# a0f688133f6e4cf9aea1e777eb3dad63
 msgid "and then, under matlab:"
 msgstr ""
 
 #: ../source/userdoc/export.rst:44
-# b526542d27cb4b7387f2764d8078ba22
 msgid "See the getfem-matlab interface documentation for more details."
 msgstr ""
 
 #: ../source/userdoc/export.rst:46
-# 874536fc967d4ad19aaddc65fdea80d6
 msgid "Two other file formats are supported for export: the `VTK`_ file format, the `OpenDX`_ file format and the `Gmsh`_ post-processing file format. Both can export either a |gf_m| or |gf_mf| , but also the more versatile |gf_smsl|."
 msgstr ""
 
 #: ../source/userdoc/export.rst:50
-# dfc01354d3cf473883310584e6ffaeb1
 msgid "Examples of use can be found in the examples of the tests directory."
 msgstr ""
 
 #: ../source/userdoc/export.rst:55
-# 042556ad8cbb4768879c81511fbfa835
 msgid "Producing mesh slices"
 msgstr ""
 
 #: ../source/userdoc/export.rst:57
-# 0afb6a67516c457ba5bd92c7410e4c87
 msgid "|gf| provides \"slicers\" objects which are dedicated to generating post-treatment data from meshes and solutions. These slicers, defined in the file :file:`getfem/getfem_mesh_slicers.h` take a |m| (and sometimes a |mf| with a solution field) on input, and produce a set of simplices after applying some operations such as *intersection with a plane*, *extraction of the mesh boundary*, *refinement of each convex*, *extraction of isosurfaces*, etc. The output of these slicers can be stored in a |gf_smsl| object (see the file :file:`getfem/getfem_mesh_slice.h`). A |smsl| object may be considered as a P1 discontinuous FEM on a non-conformal mesh with fast interpolation ability. Slices are made of segments, triangles and tetrahedrons, so the convexes of the original mesh are always simplexified."
 msgstr ""
 
 #: ../source/userdoc/export.rst:69
-# 7c46f5a662894b27bcb9b362d1f244b5
 msgid "All slicer operation inherit from |gf_sl_a|, it is very easy to create a new slicer. Example of slicers are (some of them use a |gf_sl_ddb| which is just a reference to a |mf| ``mf`` and a field ``U`` on this |mf|)."
 msgstr ""
 
 #: ../source/userdoc/export.rst:75
-# fda9e2d4ac8d460c8325c8b6ffc09b06
 msgid "empty slicer."
 msgstr ""
 
 #: ../source/userdoc/export.rst:79
-# e826ea104362440197c6282a2e4cd578
 msgid "extract the boundary of a mesh."
 msgstr ""
 
 #: ../source/userdoc/export.rst:83
-# 43fab2adcf1841049cd14953cab5ce78
 msgid "apply a deformation to the mesh , the deformation field is defined on a |mf|."
 msgstr ""
 
 #: ../source/userdoc/export.rst:87
-# ee6eb4c818d94a1ebdeee502603265fb
 msgid "cut the mesh with a half space (if ``orient`` = -1 or +1), or a plane (if ``orient`` = 0), ``x0`` being a node of the plane, and ``n`` being a normal of the plane."
 msgstr ""
 
 #: ../source/userdoc/export.rst:93
-# 66cd7d89745d4dcc8623a97ae3fc1a8e
 msgid "cut with the interior (``orient``=-1), boundary (``orient``=0) or exterior (``orient``=+1) or a sphere of center ``x0`` and radius ``R``."
 msgstr ""
 
 #: ../source/userdoc/export.rst:98
-# 5d3c033c234c458cbe60a39af6f8aabb
 msgid "slice with the interior/boundary/exterior of a cylinder of axis ``(x0,x1)`` and radius ``R``."
 msgstr ""
 
 #: ../source/userdoc/export.rst:103
-# 76aaed7ec91b4b94bcdda2cb364cc980
 msgid "cut with the isosurface defined by the scalar field ``mfU`` and ``val``. Keep only simplices where ::math:`u(x)<val` (``orient``=-1), :math:`u(x)=val` (``orient=0`` or :math:`u(x)>val`."
 msgstr ""
 
 #: ../source/userdoc/export.rst:109
-# a4a5e89c4aaa47a2a6f0df973fd8bddc
 msgid "cut the convexes with the convexes of the mesh ``m2``."
 msgstr ""
 
 #: ../source/userdoc/export.rst:113
-# 2157a4d014074777985d324ce503beee
 msgid "merges the output of two slicer operations."
 msgstr ""
 
 #: ../source/userdoc/export.rst:117
-# d3f8dae099734399b44169befd3ad8ce
 msgid "intersect the output of two slicer operations."
 msgstr ""
 
 #: ../source/userdoc/export.rst:121
-# 886e4af84bf0481f8d380a720d06de43
 msgid "return the complementary of a slicer operation."
 msgstr ""
 
 #: ../source/userdoc/export.rst:125
-# 03be8192e1cd4227a33dd4d491cc4a8c
 msgid "slicer whose side-effect is to build the mesh ``edges_m`` with the edges of the sliced mesh."
 msgstr ""
 
 #: ../source/userdoc/export.rst:130
-# 458c66aa782c4f31a4f5f5b18c10a79f
 msgid "in some (rare) occasions , it might be useful to build a mesh from a slice. Note however that there is absolutely no guaranty that the mesh will be conformal (although it is often the case)."
 msgstr ""
 
 #: ../source/userdoc/export.rst:136
-# 5365c29b8a264aab985eac2e57bb72ca
 msgid "record the output of the slicing operation into a |smsl| object. Note that it is often more convenient to use the ``stored_mesh_slice::build(...)`` method to achieve the same result."
 msgstr ""
 
 #: ../source/userdoc/export.rst:142
-# 5661ab3b72f54badbc79d2681b893ce4
 msgid "shrink or expand each convex with respect to its gravity center."
 msgstr ""
 
 #: ../source/userdoc/export.rst:144
-# c04400e3144643a0b9757685e72dbaae
 msgid "In order to apply these slicers, a ``getfem::mesh_slicer(mesh&)`` object should be created, and the |gf_sl_a| are then stacked with ``mesh_slicer::push_back_action(slicer_action&)`` and ``mesh_slicer::push_front_action(slicer_action&)``. The slicing operation is finally executed with ``mesh_slicer::exec(int nrefine)`` (or ``mesh_slicer::exec(int nrefine, const mesh_region &cvlst)`` to apply the operation to a subset of the mesh, or its boundary etc.)."
 msgstr ""
 
 #: ../source/userdoc/export.rst:152
-# 4ffd39c61ebd41c38e3d20badd8f1c14
 msgid "The ``nrefine`` parameter is very important, as the \"precision\" of the final result will depend on it: if the data that is represented on the final slice is just P1 data on convexes with a linear geometric transformation, ``nrefine = 1`` is the right choice, but for P2, P3, non linear transformation etc, it is better to refine each convex of the original mesh during the slicing operation. This allows an accurate representation of any finite element field onto a very simple structure (linear segment/triangles/tetrahedrons with P1 discontinuous data on them) which is what most visualization programs (gmsh, mayavi, opendx, matlab, etc.) expect."
 msgstr ""
 
 #: ../source/userdoc/export.rst:161
-# 95a9674c90bb4dc9aa197b938eccd532
 msgid "Example of use (cut the boundary of a mesh ``m`` with a half-space, and save the result into a |smsl|)::"
 msgstr ""
 
 #: ../source/userdoc/export.rst:174
-# 81c488720a0f4b08a86ab33521e4b364
 msgid "In order to build a |gf_smsl| object during the slicing operation, the ``stored_mesh_slice::build()`` method is often more convenient than using explicitly the ``slicer_build_stored_mesh_slice`` slicer::"
 msgstr ""
 
 #: ../source/userdoc/export.rst:181
-# 82485f0a98bf4690b70030015d04caf4
 msgid "The simplest way to use these slices is to export them to |vtk|, |opendx|, or |gmsh|. The file :file:`getfem/getfem_export.h` contains three classes: |gf_vtk_export|, |gf_dx_export| and |gf_pos_export|."
 msgstr ""
 
 #: ../source/userdoc/export.rst:187
-# 00c4dced33124a3ea9ab1c308bec9ba6
 msgid "Exporting |m|, |mf| or slices to VTK"
 msgstr ""
 
 #: ../source/userdoc/export.rst:189
-# eb98c82d1e99463c9104fe826eb1069e
 msgid "First, it is important to know the limitation of VTK data files: each file can contain only one mesh, with at most one scalar field and one vector field and one tensor field on this mesh (in that order). VTK files can handle data on segment, triangles, quadrangles, tetrahedrons and hexahedrons. Although quadratic triangles, segments etc are said to be supported, it is just equivalent to using ``nrefine=2`` when building a slice. VTK data file do support meshes with more than one type of element (i.e. meshes with triangles and quadrangles, for example)."
 msgstr ""
 
 #: ../source/userdoc/export.rst:198
-# 413c5710aac44bce894c360f5e30ed04
 msgid "For example, supposing that a |smsl| ``sl`` has already been built::"
 msgstr ""
 
 #: ../source/userdoc/export.rst:207
-# 77c0b8f3eb944a84ad3de5d1d1638270
 msgid "In this example, the fields ``P`` and ``U`` are interpolated on the slice nodes, and then written into the VTK field. The vector fields should always be written after the scalar fields (and the tensor fields should be written last)."
 msgstr ""
 
 #: ../source/userdoc/export.rst:211
-# 1db9c77b55064eb1b83ac48d0cf74097
 msgid "It is also possible to export a |mf| without having to build a slice::"
 msgstr ""
 
 #: ../source/userdoc/export.rst:220
-# f5ac852ea89f4394a3f11b20fe31eb9f
 msgid "Note however that with this approach, the ``vtk_export`` will map each convex/fem of ``mfu`` to a VTK element type. As VTK does not handle elements of degree greater than 2, there will be a loss of precision for higher degree FEMs."
 msgstr ""
 
 #: ../source/userdoc/export.rst:225
-# 3e2908b0731442d6b8687a4853022af0
 msgid "Exporting |m|, |mf| or slices to OpenDX"
 msgstr ""
 
 #: ../source/userdoc/export.rst:227
-# 26ed28c6285d488686f8c86ae8f08e9f
 msgid "The OpenDX data file is more versatile than the VTK one. It is able to store more that one mesh, any number of fields on these meshes etc. However, it does only handle elements of degree 1 and 0 (segments, triangles, tetrahedrons, quadrangles etc.). And each mesh can only be made of one type of element, it cannot mix triangles and quadrangles in a same object. For that reason, it is generally preferable to export |gf_smsl| objects (in which non simplex elements are simplexified, and which allows refinement of elements) than |gf_mf| and |gf_m| objects."
 msgstr ""
 
 #: ../source/userdoc/export.rst:236
-# 4fde1013895e43898de65b76bdfae6cc
 msgid "The basic usage is very similar to |gf_vtk_export|::"
 msgstr ""
 
 #: ../source/userdoc/export.rst:242
-# 15beb784787e4aeebdae5736a63a68f9
 msgid "Moreover, |gf_dx_export| is able to reopen a '.dx' file and append new data into it. Hence it is possible, if many time-steps are to be saved, to view intermediate results in OpenDX during the computations. The prototype of the constructor is::"
 msgstr ""
 
 #: ../source/userdoc/export.rst:249
-# 37025b7f32d54484acd33d398a41f1b1
 msgid "An example of use, with multiple time steps (taken from :file:`tests/dynamic_friction.cc`)::"
 msgstr ""
 
 #: ../source/userdoc/export.rst:270
-# 87d6803f08e9495db615a521fe9fe44c
 msgid "In this example, an OpenDX \"time series\" is created, for each time step, two data fields are saved: a vector field called \"deformation\", and a scalar field called \"von_mises_stress\"."
 msgstr ""
 
 #: ../source/userdoc/export.rst:274
-# 2c11e359cc8a4cbcadbcff6af1fb02cb
 msgid "Note also that the ``dx_export::exporting_mesh_edges()`` function has been called. It implies that for each mesh exported, the edges of the original mesh are also exported (into another OpenDX mesh). In this example, you have access in OpenDX to 4 data fields: \"deformation\", \"deformation_edges\", \"von_mises_stress\" and \"von_mises_stress_edges\"."
 msgstr ""
 
 #: ../source/userdoc/export.rst:280
-# 48c15d6b8e8345b595107974714857eb
 msgid "The ``tests/dynamic_friction.net`` is an example of OpenDX program for these data (run it with ``cd tests; dx -edit dynamic_friction.net`` , menu \"Execute/sequencer\")."
 msgstr ""
 

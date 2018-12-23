@@ -17,304 +17,243 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/project/femdesc.rst:10
-# 91b4a964a77341a99ddf888bdc82f70a
 msgid "The FEM description in |gf|"
 msgstr ""
 
 #: ../source/project/femdesc.rst:12
-# 0c7f37e860a845d681968881741b257c
 msgid "The aim of this section is to briefly introduce the FEM description in |gf| mainly in order to fix the notation used in the rest of the document (definition of element, reference element, geometric transformation, gradient of the geometric transformation ...)."
 msgstr ""
 
 #: ../source/project/femdesc.rst:19
-# 2fa3f49797e0471c85adbb269522f4e6
 msgid "Convex structures"
 msgstr ""
 
 #: ../source/project/femdesc.rst:21
-# e04209ef4bb3419ca4d455af9d7f0aeb
 msgid "Finite element methods are defined on small convex domains called elements. The simplest element on which a finite element method can be defined is a segment (simplex of dimension 1), other possibilities are triangles, tetrahedrons (simplices of dimension 2 and 3), prisms, parallelepiped, etc. In |gf|, a type of element (for us, a convex) is described by the object |bg_cs| defined in the file :file:`bgeot_convex_structure.h`."
 msgstr ""
 
 #: ../source/project/femdesc.rst:28
-# 52350c6e4dee4f919b2f432992742baa
 msgid "It describes only the structure of the convex not the coordinates of the vertices. This structure is not to be manipulated by itself, because it is not necessary that more than one structure of this type describe the same type of convex. What will be manipulated is a pointer on such a descriptor which has to be declared with the type |bg_pcs|"
 msgstr ""
 
 #: ../source/project/femdesc.rst:34
-# 004bc419f9654d09b1447ff3859e0c00
 msgid "The following functions give a pointer onto the descriptor of the usual type of elements:"
 msgstr ""
 
 #: ../source/project/femdesc.rst:39
-# a2d6d56642bc4b599359ae0610103889
 msgid "description of a simplex of dimension ``d``."
 msgstr ""
 
 #: ../source/project/femdesc.rst:43
-# 39a7a105f7f84eb9b1b7ac8cb46ba61a
 msgid "description of a parallelepiped of dimension ``d``."
 msgstr ""
 
 #: ../source/project/femdesc.rst:47
-# 6ea175a1121e46b281af97c4235f8266
 msgid "description of the direct product of ``p1`` and ``p2``."
 msgstr ""
 
 #: ../source/project/femdesc.rst:51
-# 33449da07d91457d9b97bf5dbd03fefb
 msgid "description of a prism of dimension ``d``"
 msgstr ""
 
 #: ../source/project/femdesc.rst:53
-# 95e38bcde9ee49afaba81b264fa44106
 msgid "For instance if one needs the description of a square, one can call equivalently::"
 msgstr ""
 
 #: ../source/project/femdesc.rst:58
-# c3d5696c8fa64c28a84957760ef7ab9a
 msgid "or::"
 msgstr ""
 
 #: ../source/project/femdesc.rst:63
-# 51aa84c2deaa4505845ebb2a8c3d8475
 msgid "The descriptor contains in particular the number of faces (``p->nb_faces()``), the dimension of the convex (``p->dim()``), for the number of vertices (``p->nb_points()``). Other information is the number of vertices of each face, the description of a face and the eventual reference to a more basic description (used for the description of geometric transformations)."
 msgstr ""
 
 #: ../source/project/femdesc.rst:74
-# 56d31632ee914c0d98b95bf1004ffb79
 msgid "usual elements"
 msgstr ""
 
 #: ../source/project/femdesc.rst:78
-# 639b51fd45124fbb86e3da487c067089
 msgid "Convexes of reference"
 msgstr ""
 
 #: ../source/project/femdesc.rst:80
-# 451d6423737a46179d63eeacf22df439
 msgid "A convex of reference is a particular real element, i.e. a structure of convex with a list of vertices. It describes the particular element from which a finite element method is defined. In the file :file:`bgeot_convex_ref.h` the object |bg_cr| makes this description. The library keeps only one description for each type of convex. So what will be manipulated is a pointer of type |bg_pcr| on the descriptor."
 msgstr ""
 
 #: ../source/project/femdesc.rst:87
-# c808136ca7a148069173cdb36b5373b4
 msgid "The following functions build the descriptions:"
 msgstr ""
 
 #: ../source/project/femdesc.rst:91
-# 6b1efeb849a1415d83ccd3e5571a59e2
 msgid "description of the simplex of reference of dimension ``d``."
 msgstr ""
 
 #: ../source/project/femdesc.rst:95
-# bd4cd17caed1403da775c780d9308745
 msgid "description of the simplex of reference of dimension ``d`` with degree ``k`` Lagrange grid."
 msgstr ""
 
 #: ../source/project/femdesc.rst:100
-# f921a8e35d4940c2a032ad0712b44f6d
 msgid "description of the direct product of two convexes of reference."
 msgstr ""
 
 #: ../source/project/femdesc.rst:104
-# 6d37f9b408354a26ae683ffc313d5002
 msgid "description of the parallelepiped of reference of dimension ``d``."
 msgstr ""
 
 #: ../source/project/femdesc.rst:106
-# 2d140c7c10554fcb90a638e564cd6dce
 msgid "The vertices correspond to the classical vertices for such reference element. For instance the vertices for the triangle are :math:`(0, 0)`, :math:`(1, 0)` and :math:`(0, 1)`. It corresponds to the configuration shown in Figure :ref:`dp-fig-elem`"
 msgstr ""
 
 #: ../source/project/femdesc.rst:111
-# 51a42cbaa09a4edcbfc15c4997111b25
 msgid "If ``p`` is of type |bg_pcr| then ``p->structure()`` is the corresponding convex structure. Thus for instance ``p->structure()->nb_points()`` gives the number of vertices. The function ``p->points()`` give the array of vertices and ``p->points()[0]`` is the first vertex. The function ``p->is_in(const base_node &pt)`` return a real which is negative or null if the point ``pt`` is in the element. The function ``p->is_in_face(short_type f, const base_node &pt)`` return a real which is null if the point ``pt`` is in the face ``f`` of the element. Other functions can be found in :file:`bgeot_convex_ref.h` and :file:`bgeot_convex.h`."
 msgstr ""
 
 #: ../source/project/femdesc.rst:123
-# c58dee9076474dda9976b421215d9b87
 msgid "Shape function type"
 msgstr ""
 
 #: ../source/project/femdesc.rst:125
-# 2f0a0a44a4114e7c923151704028eda8
 msgid "Most of the time the shape functions of finite element methods are polynomials, at least on the convex of reference. But, the possibility is given to have other types of elements. It is possible to define other kind of base functions such as piecewise polynomials, interpolant wavelets, etc."
 msgstr ""
 
 #: ../source/project/femdesc.rst:130
-# 5067dcee53224e41a3077d2cbf66b920
 msgid "To be used by the finite element description, a shape function type must be able to be evaluated on a point (``a = F.eval(pt)``, where ``pt`` is a ``base_node``) and must have a method to compute the derivtive with respect to the ith variable (``F.derivative(i)``)."
 msgstr ""
 
 #: ../source/project/femdesc.rst:135
-# 93e7a37462a64560b0d951f2fdc75b44
 msgid "For the moment, only polynomials and piecewise polynomials are defined in the files :file:`bgeot_poly.h` and :file:`bgeot_poly_composite.h`."
 msgstr ""
 
 #: ../source/project/femdesc.rst:141
-# 19faf0ee1fc34c65bc90b0fc81f09a89
 msgid "Geometric transformations"
 msgstr ""
 
 #: ../source/project/femdesc.rst:148
-# 136ec6b35643448e88c6cdafbdbaadca
 msgid "geometric transformation"
 msgstr ""
 
 #: ../source/project/femdesc.rst:150
-# 76ccc7e8a82c4fc7a4a119e1091701b9
 msgid "A geometric transformation is a polynomial application:"
 msgstr ""
 
 #: ../source/project/femdesc.rst:156
-# cc9cca0ba5c446f596d23c71c87e5f9a
 msgid "which maps the reference element :math:`\\widehat{T}` to the real element :math:`T`. The geometric nodes are denoted:"
 msgstr ""
 
 #: ../source/project/femdesc.rst:163
-# f5ac278d208e4530ad82200587023653
 msgid "The geometric transformation is described thanks to a :math:`n_g` components polynomial vector (In fact, as an extention, non polynomial geometric transformation can also be supported by |gf|, but this is very rarely used)"
 msgstr ""
 
 #: ../source/project/femdesc.rst:171
-# a482d7c78201492ab7cbe652b66a91d0
 msgid "such that"
 msgstr ""
 
 #: ../source/project/femdesc.rst:177
 #: ../source/project/femdesc.rst:250
-# 6432796d0800403a8f1b7c20f07edeeb
-# d396505c5558401090b281978c1dd8fe
 msgid "Denoting"
 msgstr ""
 
 #: ../source/project/femdesc.rst:183
-# 4a02e967b1554b58909bd28778bcbf53
 msgid "the :math:`N\\times n_g` matrix containing of all the geometric nodes, one has"
 msgstr ""
 
 #: ../source/project/femdesc.rst:189
-# 946bd07d15274a829c449597a52a93d3
 msgid "The derivative of :math:`\\tau` is then"
 msgstr ""
 
 #: ../source/project/femdesc.rst:195
-# 5aa17b63d83c46c1a13570092062d64a
 msgid "where :math:`K(\\widehat{x}) = \\nabla\\tau(\\widehat{x})` is a :math:`N\\times P` matrix and :math:`\\nabla {\\cal N}(\\widehat{x})` a :math:`n_g\\times P` matrix. The (transposed) pseudo-inverse of :math:`\\nabla\\tau(\\widehat{x})` is a :math:`N\\times P` matrix denoted :math:`B(\\widehat{x})`:"
 msgstr ""
 
 #: ../source/project/femdesc.rst:204
-# 7d71082833784afea83f1a693e5f90f7
 msgid "Of course, when :math:`P=N`, one has :math:`B(\\widehat{x})=K(\\widehat{x})^{-T}`."
 msgstr ""
 
 #: ../source/project/femdesc.rst:206
-# b04343419c5c405e9497a5de834c123f
 msgid "Pointers on a descriptor of a geometric transformation can be obtained by the following function defined in the file :file:`bgeot_geometric_trans.h`::"
 msgstr ""
 
 #: ../source/project/femdesc.rst:211
-# 6ea97bdc74eb4a588f9990ec923f32bb
 msgid "where ``\"name of trans\"`` can be chosen among the following list."
 msgstr ""
 
 #: ../source/project/femdesc.rst:213
-# 96fb0fba14d74c9499151eccb9468387
 msgid "``\"GT_PK(n,k)\"``"
 msgstr ""
 
 #: ../source/project/femdesc.rst:215
-# c4950301431d47e7ad20fb9168869c48
 msgid "Description of the simplex transformation of dimension ``n`` and degree ``k`` (Most of the time, the degree 1 is used)."
 msgstr ""
 
 #: ../source/project/femdesc.rst:218
-# 5615d5b0ca1e4646a7c29ce55a9ad043
 msgid "``\"GT_QK(n,k)\"``"
 msgstr ""
 
 #: ../source/project/femdesc.rst:220
-# 769207b159384cb6ba0f64c71b730ccc
 msgid "Description of the parallelepiped transformation of dimension ``n`` and degree ``k``."
 msgstr ""
 
 #: ../source/project/femdesc.rst:223
-# 7b9cf5c3d48c45748619b67c68425ce2
 msgid "``\"GT_PRISM(n,k)\"``"
 msgstr ""
 
 #: ../source/project/femdesc.rst:225
-# f2492763d45145ab836a1dedc14dfb0e
 msgid "Description of the prism transformation of dimension ``n`` and degree ``k``."
 msgstr ""
 
 #: ../source/project/femdesc.rst:227
-# 520e30dd48e5445f9e357d91e9710a23
 msgid "``\"GT_PRODUCT(a,b)\"``"
 msgstr ""
 
 #: ../source/project/femdesc.rst:229
-# b7ba20f3ade946c092219704fc0ca1fe
 msgid "Description of the direct product of the two transformations ``a`` and ``b``."
 msgstr ""
 
 #: ../source/project/femdesc.rst:231
-# a024ac4d19e640958e725d84b3949c13
 msgid "``\"GT_LINEAR_PRODUCT(a,b)\"``"
 msgstr ""
 
 #: ../source/project/femdesc.rst:233
-# 2cab892d0a7c453faae761a7dc603148
 msgid "Description of the direct product of the two transformations ``a`` and ``b`` keeping a linear transformation (this is a restriction of he previous function). This allows, for instance, to use exact integrations on regular meshes with parallelograms."
 msgstr ""
 
 #: ../source/project/femdesc.rst:240
-# 16413af7e7e84b1c97e546f308d43018
 msgid "Finite element methods description"
 msgstr ""
 
 #: ../source/project/femdesc.rst:242
-# 6d4ec6d96a6142ca94ebc9c9afbd35ba
 msgid "A finite element method is defined on a reference element :math:`\\widehat{T}\\subset\\Reel^P` by a set of :math:`n_d` nodes :math:`a^i` and corresponding base functions"
 msgstr ""
 
 #: ../source/project/femdesc.rst:256
-# 1a7a8c462aec4a89bfcb8ff089e91e3f
 msgid "a supplementary linear transformation is allowed for the real base function"
 msgstr ""
 
 #: ../source/project/femdesc.rst:262
-# 0e018b4040eb43b085fbd6e95d84c2c4
 msgid "where :math:`M` is a :math:`n_d \\times n_d` matrix possibly depending on the geometric transformation (i.e. on the real element). For basic elements as Lagrange elements this matrix is the identity matrix (it is simply ignored). In this case, we will say that the element is :math:`\\tau`-equivalent."
 msgstr ""
 
 #: ../source/project/femdesc.rst:267
-# ab0c848b6fb040eab0f4071f83323133
 msgid "This approach allows to define hermite elements (Argyris for instance) in a generic way, even with non linear transformations (i.e. mainly for curved boundaries). We denote :math:`[\\widehat{\\varphi}(\\widehat{x})]` the :math:`n_d \\times Q` matrix whose ith line is :math:`(\\widehat{\\varphi})^i(\\widehat{x})`. Whis this notation, for a function is defined by"
 msgstr ""
 
 #: ../source/project/femdesc.rst:277
-# 6f844cbbcc0e4244b5229de86e42f977
 msgid "one has"
 msgstr ""
 
 #: ../source/project/femdesc.rst:283
-# 1c804c29edff46d1a3db7f549dbbcad2
 msgid "where :math:`\\alpha` is the vector whose ith component is :math:`\\alpha_i`."
 msgstr ""
 
 #: ../source/project/femdesc.rst:285
-# d7e9e576ded44b248fd7c0fbde47412d
 msgid "A certain number of description of classical finite element method are defined in the file :file:`getfem_fem.h`. See :ref:`ud-appendixa` for an exhaustive list of available finite element methods."
 msgstr ""
 
 #: ../source/project/femdesc.rst:289
-# 6936e4e6011c4e7b825a2bd38c665bf0
 msgid "A pointer to the finite element descriptor of a method is obtained using the function::"
 msgstr ""
 
 #: ../source/project/femdesc.rst:294
-# 10d3b81cf19643d7a7c7cf9b50b861c3
 msgid "We refer to the file :file:`getfem_fem.cc` for how to define a new finite element method."
 msgstr ""
 

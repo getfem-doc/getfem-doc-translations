@@ -17,67 +17,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/python/cmdref_Module asm.rst:8
-# 7067af29310d4225a6caa30aa4516963
 msgid "Module asm"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_generic:1
-# 6ed198111f8c452ea55ffdd79e7960c4
 msgid "Synopsis: (...) = asm_generic(MeshIm mim, int order, string expression, int region, [Model model, ['Secondary_domain', 'name',]] [string varname, int is_variable[, {MeshFem mf, MeshImd mimd}], value], ['select_output', 'varname1'[, 'varname2]], ...)"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_generic:3
-# 2c6fc5bfcf0148af89103680d6c5a5d9
 msgid "High-level generic assembly procedure for volumic or boundary assembly."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_generic:5
-# d9c93ad027f142f8bb0668c173a98f26
 msgid "Performs the generic assembly of `expression` with the integration method `mim` on the mesh region of index `region` (-1 means all elements of the mesh). The same mesh should be shared by the integration method and all the finite element methods or mesh_im_data corresponding to the variables."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_generic:11
-# 3b90668ae5e54c97921b3ac6e02d3aba
 msgid "`order` indicates either that the (scalar) potential (order = 0) or the (vector) residual (order = 1) or the tangent (matrix) (order = 2) is to be computed."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_generic:15
-# 635109633e62459ca3661a55d9428c98
 msgid "`model` is an optional parameter allowing to take into account all variables and data of a model. Note that all enabled variables of the model will occupy space in the returned vector/matrix corresponding to their degrees of freedom in the global system, even if they are not present in `expression`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_generic:21
-# ddf0d5a7a6954229bd9c11b8f3160371
 msgid "The variables and constants (data) are listed after the region number (or optionally the model). For each variable/constant, a name must be given first (as it is referred in the assembly string), then an integer equal to 1 or 0 is expected respectively for declaring a variable or a constant, then the finite element method if it is a fem variable/constant or the mesh_im_data if it is data defined on integration points, and the vector representing the value of the variable/constant. It is possible to give an arbitrary number of variable/constant. The difference between a variable and a constant is that test functions are only available for variables, not for constants."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_generic:33
-# 5bd0a0a3e46042f49a84039360fbf0fc
 msgid "`select_output` is an optional parameter which allows to reduce the output vecotr (for `order` equal to 1) or the matrix (for `order` equal to 2) to the degrees of freedom of the specified variables. One variable has to be specified for a vector ouptut and two for a matrix output."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_generic:39
-# 7dec5e7650404b06b1cb3f6d8d7a6ec2
 msgid "Note that if several variables are given, the assembly of the tangent matrix/residual vector will be done considering the order in the call of the function (the degrees of freedom of the first variable, then of the second one, and so on). If a model is provided, all degrees of freedom of the model will be counted first, even if some of the model variables do not appear in `expression`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_generic:46
-# 60c18ee9e19c431193570926ce75cc87
 msgid "For example, the L2 norm of a vector field \"u\" can be computed with::"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_generic:52
-# 1194603e7ef24b3a832b2e68d9e3d469
 msgid "The nonhomogeneous Laplacian stiffness matrix of a scalar field can be evaluated with::"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_mass_matrix:1
-# 67ee913c29ae4f9e888aa72e5665b716
 msgid "Synopsis: M = asm_mass_matrix(MeshIm mim, MeshFem mf1[, MeshFem mf2[, int region]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_mass_matrix:3
-# 81bbfafbff694ec9beb245557a584b9e
 msgid "Assembly of a mass matrix."
 msgstr ""
 
@@ -91,123 +78,91 @@ msgstr ""
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_lsneuman_matrix:3
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nlsgrad_matrix:3
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_stabilization_patch_matrix:3
-# 9a6654a5c1344a6b92a2e4c43fbdfe17
-# 1364475f46664984b67bb6f4eecafa88
-# 5f13174759e447658746363b188e2cab
-# 8957116a0040497dab2178aea696d0b2
-# 91529d5474764987bfad4e417bb96ba9
-# 372a4c2e8f0745b4b518524d847959fd
-# 69d6c2243c124eb0bd42fe0e960586c4
-# 7c276b6d07894a4b8cc7a579d55f5349
-# fcb9749c64f84d45be8815000802b903
-# e0b1fa4f4b2b41b280c926b6f92d2394
 msgid "Return a SpMat object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_laplacian:1
-# 6f3d9044f0774794882f792d42f8555b
 msgid "Assembly of the matrix for the Laplacian problem."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_laplacian:3
-# ff237686407047a693b595a63ab45359
 msgid ":math:`\\nabla\\cdot(a(x)\\nabla u)`  with `a` a scalar."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_linear_elasticity:1
-# aee8a96b2ff749b09bde5c5f5ecfc3e4
 msgid "Assembles of the matrix for the linear (isotropic) elasticity problem."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_linear_elasticity:3
-# dbfa73344024402f8ac5c19fbfcdc24a
 msgid ":math:`\\nabla\\cdot(C(x):\\nabla u)` with :math:`C` defined via `lambda_d` and `mu_d`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nonlinear_elasticity:1
-# fcf97e5175e1486681ebc0f2f08c44cb
 msgid "Synopsis: TRHS = asm_nonlinear_elasticity(MeshIm mim, MeshFem mf_u, vec U, string law, MeshFem mf_d, mat params, {'tangent matrix'|'rhs'|'incompressible tangent matrix', MeshFem mf_p, vec P|'incompressible rhs', MeshFem mf_p, vec P})"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nonlinear_elasticity:3
-# fc10a576623e4ba28107255bc2427121
 msgid "Assembles terms (tangent matrix and right hand side) for nonlinear elasticity."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nonlinear_elasticity:5
-# 04d45bc3b7db41ed8a509b4b0b0725a9
 msgid "The solution `U` is required at the current time-step. The `law` may be choosen among:"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nonlinear_elasticity:8
-# fc82da05e5d74a1080d44ebb788e4bee
 msgid "'SaintVenant Kirchhoff': Linearized law, should be avoided). This law has the two usual Lame coefficients as parameters, called lambda and mu."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nonlinear_elasticity:11
-# 8754d16102774e2393af6533e16f619a
 msgid "'Mooney Rivlin': This law has three parameters, called C1, C2 and D1. Can be preceded with the words 'compressible' or 'incompressible' to force a specific version. By default, the incompressible version is considered which requires only the first two material coefficients."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nonlinear_elasticity:16
-# ac8ddbd5ca7344b1810471cd7cf38704
 msgid "'neo Hookean': A special case of the 'Mooney Rivlin' law that requires one material coefficient less (C2 = 0). By default, its compressible version is used."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nonlinear_elasticity:19
-# 9d8447de29dd4143a67c8f187dd5d419
 msgid "'Ciarlet Geymonat': This law has 3 parameters, called lambda, mu and gamma, with gamma chosen such that gamma is in ]-lambda/2-mu, -mu[."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nonlinear_elasticity:23
-# d5c27fb20d654ccb81b27da71c993522
 msgid "The parameters of the material law are described on the MeshFem `mf_d`. The matrix `params` should have `nbdof(mf_d)` columns, each row correspounds to a parameter."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nonlinear_elasticity:27
-# 8676c63497bf4602b5afc6947f7e2689
 msgid "The last argument selects what is to be built: either the tangent matrix, or the right hand side. If the incompressibility is considered, it should be followed by a MeshFem `mf_p`, for the pression."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nonlinear_elasticity:32
-# 353dddca046e45cdba31697b1c448a09
 msgid "Return a SpMat object (tangent matrix), vec object (right hand side), tuple of SpMat objects (incompressible tangent matrix), or tuple of vec objects (incompressible right hand side)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_helmholtz:1
-# 8d653b32d9ee468cbdf9b294b6e89dd1
 msgid "Assembly of the matrix for the Helmholtz problem."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_helmholtz:3
-# f2603a80e89544019d32180b3bdece5e
 msgid ":math:`\\Delta u + k^2 u` = 0,  with `k` complex scalar."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_bilaplacian:1
-# 27dc2c277af5472dafd0ed3b06686d37
 msgid "Assembly of the matrix for the Bilaplacian problem."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_bilaplacian:3
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_bilaplacian_KL:3
-# 0f4b8211103a453a92fa2171c4bffc35
-# b7e8d16c6aee448089c6128bf037f2f6
 msgid ":math:`\\Delta(a(x)\\Delta u) = 0`   with `a` scalar."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_bilaplacian_KL:1
-# e1d239f3bb2d46199410f9d2b3c2d0e3
 msgid "Assembly of the matrix for the Bilaplacian problem with Kirchhoff-Love formulation."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_volumic_source:1
-# a47207fd272c4213bad23a57a690e1f7
 msgid "Assembly of a volumic source term."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_volumic_source:3
-# 64d4c7437c8c40089a83570c792c1581
 msgid "Output a vector `V`, assembled on the MeshFem `mf_u`, using the data vector `fd` defined on the data MeshFem `mf_d`. `fd` may be real or complex-valued."
 msgstr ""
 
@@ -215,220 +170,174 @@ msgstr ""
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_boundary_source:7
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_integral_contact_Uzawa_projection:7
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_level_set_normal_source_term:6
-# fbf33102be624494bc7b27cd8b12796d
-# 7e7265ae53fe48efacf2790eb24f9776
-# 2bed85d0121a48a5bd1f5dc1259b9645
-# 1162122625104bd29cf4fd4252051715
 msgid "Return a vec object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_boundary_source:1
-# 836bdd18a2324d569d97459ba9820114
 msgid "Assembly of a boundary source term."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_boundary_source:3
-# b1a09f6110ba4062b7f3537524bd8c7b
 msgid "`G` should be a [Qdim x N] matrix, where N is the number of dof of `mf_d`, and Qdim is the dimension of the unkown u (that is set when creating the MeshFem)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_dirichlet:1
-# 378ca4229ca2431f9d674812e7c3ef8b
 msgid "Assembly of Dirichlet conditions of type `h.u = r`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_dirichlet:3
-# a5894aedeaa34f90912f480ae253437b
 msgid "Handle `h.u = r` where h is a square matrix (of any rank) whose size is equal to the dimension of the unkown u. This matrix is stored in `H`, one column per dof in `mf_d`, each column containing the values of the matrix h stored in fortran order:"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_dirichlet:12
-# 9739120586dd433f9a7841e16d2f6fc0
 msgid "if u is a 2D vector field."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_dirichlet:14
-# d2f7352158af41bfb74307abb15d06fd
 msgid "Of course, if the unknown is a scalar field, you just have to set `H = ones(1, N)`, where N is the number of dof of `mf_d`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_dirichlet:17
-# b97a4b86167e40f3a59b06853dd82f5b
 msgid "This is basically the same than calling gf_asm('boundary qu term') for `H` and calling gf_asm('neumann') for `R`, except that this function tries to produce a 'better' (more diagonal) constraints matrix (when possible)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_dirichlet:22
-# 6d3c2210203b4b30ae55a9a47d1e0b9d
 msgid "See also Spmat.Dirichlet_nullspace()."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_boundary_qu_term:1
-# a0acc323b8d542eaa94a6d2dc2f14186
 msgid "Assembly of a boundary qu term."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_boundary_qu_term:3
-# 6859aaf0adfb4252b6c96ea9a08cc817
 msgid "`q` should be be a [Qdim x Qdim x N] array, where N is the number of dof of `mf_d`, and Qdim is the dimension of the unkown u (that is set when creating the MeshFem)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_define_function:1
-# 3c0847ad081d45aab7c684e8db679f73
 msgid "Synopsis: asm_define_function(string name, int nb_args, string expression[, string expression_derivative_t[, string expression_derivative_u]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_define_function:3
-# 795623dac0ff4abeb31f7644a7241efc
 msgid "Define a new function `name` which can be used in high level generic assembly. The function can have one or two parameters. In `expression` all available predefined function or operation of the generic assembly can be used. However, no reference to some variables or data can be specified. The argument of the function is `t` for a one parameter function and `t` and `u` for a two parameter function. For instance 'sin(pi*t)+2*t*t' is a valid expression for a one parameter function and 'sin(max(t,u)*pi)' is a valid expression for a two parameters function. `expression_derivative_t` and `expression_derivative_u` are optional expressions for the derivatives with respect to `t` and `u`. If they are not furnished, a symbolic derivation is used."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_undefine_function:1
-# 2060e9dfe3a6465c9d5a64549da62966
 msgid "Cancel the definition of a previously defined function `name` for the high level generic assembly."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_define_linear_hardening_function:1
-# ecd984953f044805b66e78d608495b4f
 msgid "Synopsis: asm_define_linear_hardening_function(string name, scalar sigma_y0, scalar H, ... [string 'Frobenius'])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_define_linear_hardening_function:3
-# c5c18a3114bf491c928607c9c4bc7aaf
 msgid "Define a new linear hardening function under the name `name`, with initial yield stress `sigma_y0` and hardening modulus H. If an extra string argument with the value 'Frobenius' is provided, the hardening function is expressed in terms of Frobenius norms of its input strain and output stress, instead of their Von-Mises equivalents."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_define_Ramberg_Osgood_hardening_function:1
-# b0c7c7ade22547bd966688a72b9f7ce5
 msgid "Synopsis: asm_define_Ramberg_Osgood_hardening_function(string name, scalar sigma_ref, {scalar eps_ref | scalar E, scalar alpha}, scalar n[, string 'Frobenius'])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_define_Ramberg_Osgood_hardening_function:3
-# 6511fc6146894f03b291f53af8c08a2f
 msgid "Define a new Ramberg Osgood hardening function under the name `name`, with initial yield stress `sigma_y0` and hardening modulus H. If an extra string argument with the value 'Frobenius' is provided, the hardening function is expressed in terms of Frobenius norms of its input strain and output stress, instead of their Von-Mises equivalents."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_expression_analysis:1
-# 58971130b090402da6ee32a19a4cb959
 msgid "Synopsis: asm_expression_analysis(string expression [, {Mesh mesh | MeshIm mim}] [, der_order] [, Model model] [, string varname, int is_variable[, {MeshFem mf | MeshImd mimd}], ...])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_expression_analysis:3
-# 7e610668b21d4dcb902b44c203904853
 msgid "Analyse a high-level generic assembly expression and print information about the provided expression."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_volumic:1
-# 26cea99ac01548aa972b31ea16427292
 msgid "Synopsis: (...) = asm_volumic(,CVLST], expr [, mesh_ims, mesh_fems, data...])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_volumic:3
-# 87ac57ad424a4abcb4ef947dc22294ac
 msgid "Low-level generic assembly procedure for volumic assembly."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_volumic:5
-# 853c73c740314f51b97cc33912ec451a
 msgid "The expression `expr` is evaluated over the MeshFem's listed in the arguments (with optional data) and assigned to the output arguments. For details about the syntax of assembly expressions, please refer to the getfem user manual (or look at the file getfem_assembling.h in the getfem++ sources)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_volumic:11
-# 348eac43e6694d539ef5f8515b531a55
 msgid "For example, the L2 norm of a field can be computed with::"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_volumic:17
-# 59e2d099618c43dc99dad825d830e724
 msgid "The Laplacian stiffness matrix can be evaluated with::"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_boundary:1
-# e2b4c22c2ac2461c9db4bbbb5b236786
 msgid "Synopsis: (...) = asm_boundary(int bnum, string expr [, MeshIm mim, MeshFem mf, data...])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_boundary:3
-# 27638bf46d4a47c4b9ef312176f3d7f4
 msgid "Low-level generic boundary assembly."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_boundary:5
-# ad0079b4301a4d0f89d22bae077deb70
 msgid "See the help for gf_asm('volumic')."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_interpolation_matrix:1
-# 9ada303d7af6465a9096f0c749a70194
 msgid "Synopsis: Mi = asm_interpolation_matrix(MeshFem mf, {MeshFem mfi | vec pts})"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_interpolation_matrix:3
-# 63f3c7d26db94523b4f9fae862c405ba
 msgid "Build the interpolation matrix from a MeshFem onto another MeshFem or a set of points."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_interpolation_matrix:5
-# a740a1179cea4df1836353240a4ec79c
 msgid "Return a matrix `Mi`, such that `V = Mi.U` is equal to gf_compute('interpolate_on',mfi). Useful for repeated interpolations. Note that this is just interpolation, no elementary integrations are involved here, and `mfi` has to be lagrangian. In the more general case, you would have to do a L2 projection via the mass matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_interpolation_matrix:12
-# 836ececdf13f4d79a54fcf5224754721
 msgid "`Mi` is a SpMat object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_extrapolation_matrix:1
-# 9bd8c2e4e4f04c5a81b818078d80f8ba
 msgid "Synopsis: Me = asm_extrapolation_matrix(MeshFem mf,  {MeshFem mfe | vec pts})"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_extrapolation_matrix:3
-# 0508fdaeafcc432e88bc7d8fe033b859
 msgid "Build the extrapolation matrix from a MeshFem onto another MeshFem or a set of points."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_extrapolation_matrix:5
-# e9b58011764148f984557531e7505a98
 msgid "Return a matrix `Me`, such that `V = Me.U` is equal to gf_compute('extrapolate_on',mfe). Useful for repeated extrapolations."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_extrapolation_matrix:9
-# 8b49805e88284a958eec1e8b07043871
 msgid "`Me` is a SpMat object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_integral_contact_Uzawa_projection:1
-# f430c8813d29441d96ee0512c8fe8dea
 msgid "Synopsis: B = asm_integral_contact_Uzawa_projection(int bnum, MeshIm mim, MeshFem mf_u, vec U, MeshFem mf_lambda, vec vec_lambda, MeshFem mf_obstacle, vec obstacle, scalar r [, {scalar coeff | MeshFem mf_coeff, vec coeff} [, int option[, scalar alpha, vec W]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_integral_contact_Uzawa_projection:5
-# 71114f37329f496fbd1f70fb67611bb7
 msgid "Specific assembly procedure for the use of an Uzawa algorithm to solve"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_integral_contact_Uzawa_projection:4
-# 4b846a532ce34418852648d3eb390423
 msgid "contact problems. Projects the term $-(\\lambda - r (u_N-g))_-$ on the finite element space of $\\lambda$."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_level_set_normal_source_term:1
-# bc5174ee539b4ef1afe0bec35863cca4
 msgid "Performs an assembly of the source term represented by `vec_lambda` on `mf_lambda` considered to be a component in the direction of the gradient of a levelset function (normal to the levelset) of a vector field defined on `mf_u` on the boundary `bnum`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_lsneuman_matrix:1
-# 247e99ccef2e473abec5e94629e18315
 msgid "Assembly of a level set Neuman  matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_nlsgrad_matrix:1
-# 4d9dcf63069f4b40a6d3b2f336d0ee10
 msgid "Assembly of a nlsgrad matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.asm_stabilization_patch_matrix:1
-# e0df0d22d11d47d28c453cf71e171102
 msgid "Assembly of stabilization patch matrix ."
 msgstr ""
 

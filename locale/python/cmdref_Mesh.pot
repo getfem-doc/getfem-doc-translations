@@ -17,692 +17,551 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/python/cmdref_Mesh.rst:8
-# cb57dee4596c44768649d84af54ed20b
 msgid "Mesh"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:1
-# 27949e53494349b79d8a316c76fe7f86
 msgid "GeFEM Mesh object"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:3
-# 0612d8c216054ea5a7433362beee11b3
 msgid "This object is able to store any element in any dimension even if you mix elements with different dimensions."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:9
-# faf3b1fc0200442b9d78b7e1f938f21c
 msgid "General constructor for Mesh objects"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:11
-# 7240c187e4a14b0d867fdf97f48a60ff
 msgid "``M = Mesh('empty', int dim)`` Create a new empty mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:14
-# ead8d3f5887e45e69579cf06eb406ffb
 msgid "``M = Mesh('cartesian', vec X[, vec Y[, vec Z,..]])`` Build quickly a regular mesh of quadrangles, cubes, etc."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:17
-# d7acaf180e7b4514b77fdf2a682dfdf1
 msgid "``M = Mesh('pyramidal', vec X[, vec Y[, vec Z,..]])`` Build quickly a regular mesh of pyramids, etc."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:20
-# 34309477806441e4a222d7395fd440ee
 msgid "``M = Mesh('cartesian Q1', vec X, vec Y[, vec Z,..])`` Build quickly a regular mesh of quadrangles, cubes, etc. with Q1 elements."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:24
-# 7352c8bd321e44adbe8f1ee6122f38f1
 msgid "``M = Mesh('triangles grid', vec X, vec Y)`` Build quickly a regular mesh of triangles."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:27
-# 7bafbaa011864e509d26d8cdf806e9da
 msgid "This is a very limited and somehow deprecated function (See also ``Mesh('ptND')``, ``Mesh('regular simplices')`` and ``Mesh('cartesian')``)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:31
-# fafbd1a54a974d3ebc05cfc90bef0e70
 msgid "``M = Mesh('regular simplices', vec X[, vec Y[, vec Z,...]]['degree', int k]['noised'])`` Mesh a n-dimensionnal parallelepipeded with simplices (triangles, tetrahedrons etc) ."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:35
-# 694048b4d3a1400199031e01df8b493d
 msgid "The optional degree may be used to build meshes with non linear geometric transformations."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:38
-# fd3e8c05e1ba433d81bb75ab531dab83
 msgid "``M = Mesh('curved', Mesh m, vec F)`` Build a curved (n+1)-dimensions mesh from a n-dimensions mesh `m`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:41
-# eb4fe7177e1543d3a851d72b9786cc2f
 msgid "The points of the new mesh have one additional coordinate, given by the vector `F`. This can be used to obtain meshes for shells. `m` may be a MeshFem object, in that case its linked mesh will be used."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:45
-# 8966f232af7e4384a9e54dbcfc978db3
 msgid "``M = Mesh('prismatic', Mesh m, int nl[, int degree])`` Extrude a prismatic Mesh `M` from a Mesh `m`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:48
-# 992efe359fef4b72a869b58224aa927e
 msgid "In the additional dimension there are `nl` layers of elements distributed from ``0`` to ``1``. If the optional parameter `degree` is provided with a value greater than the default value of ``1``, a non-linear transformation of corresponding degree is considered in the extrusion direction."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:54
-# 0a8e425a504c43ef86966e12e47d4188
 msgid "``M = Mesh('pt2D', mat P, imat T[, int n])`` Build a mesh from a 2D triangulation."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:57
-# c2b71307321b4adcbfbe80eaab3b4bc3
 msgid "Each column of `P` contains a point coordinate, and each column of `T` contains the point indices of a triangle. `n` is optional and is a zone number. If `n` is specified then only the zone number `n` is converted (in that case, `T` is expected to have 4 rows, the fourth containing these zone numbers)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:65
-# d9685d7b884b4bdeaed96fbbdd41e83f
 msgid "``M = Mesh('ptND', mat P, imat T)`` Build a mesh from a n-dimensional \"triangulation\"."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:68
-# de21265dbabb4b48bf39313103b6a8ef
 msgid "Similar function to 'pt2D', for building simplexes meshes from a triangulation given in `T`, and a list of points given in `P`. The dimension of the mesh will be the number of rows of `P`, and the dimension of the simplexes will be the number of rows of `T`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:73
-# 44a47735f43e416d9886a5ce89ad1cc2
 msgid "``M = Mesh('load', string filename)`` Load a mesh from a getfem++ ascii mesh file."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:76
-# 37d20af73d5f48e48678f28dbc66864b
 msgid "See also ``Mesh.save(string filename)``."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:78
-# 6151520a1b1b48f9917ed31183a54117
 msgid "``M = Mesh('from string', string s)`` Load a mesh from a string description."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:81
-# ea09e718f5ac4062a5b509df2d7561e5
 msgid "For example, a string returned by ``Mesh.char()``."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:83
-# 2eb57c6c30e54f0fa091b44f3c9480d1
 msgid "``M = Mesh('import', string format, string filename)`` Import a mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:86
-# 9a5ed43ba54848ca8d682100dbc03c98
 msgid "`format` may be:"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:88
-# 02ab07d90385435394826853d6edc0ef
 msgid "'gmsh' for a mesh created with `Gmsh`"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:89
-# 6c7f94fefd1d419a8951bb9fd3c62675
 msgid "'gid' for a mesh created with `GiD`"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:90
-# c0115212c9294718b49aa7cec6f1693b
 msgid "'cdb' for a mesh created with `ANSYS`"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:91
-# 5b61f0fa924f4de5b87d25c79e27f847
 msgid "'am_fmt' for a mesh created with `EMC2`"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:93
-# cfb09525b5c7442fa4cd4deea596abeb
 msgid "``M = Mesh('clone', Mesh m2)`` Create a copy of a mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh:96
-# 17db433217c94fd8900b17d4bf9b7c1a
 msgid "``M = Mesh('generate', MesherObject mo, scalar h[, int K = 1[, mat vertices]])`` Call the experimental mesher of Getfem on the geometry represented by `mo`. please control the conformity of the produced mesh. You can help the mesher by adding a priori vertices in the array `vertices` which should be of size ``n x m`` where ``n`` n is the dimension of the mesh and ``m`` the number of points. `h` is approximate diameter of the elements. `K` is the degree of the mesh ( > 1 for curved boundaries).  The mesher try to optimize the quality of the elements. This operation may be time consuming. Note that if the mesh generation fails, because of some random procedure used, it can be run again since it will not give necessarily the same result due to random procedures used. The messages send to the console by the mesh generation can be desactivated using `gf_util('trace level', 2)`. More information can be obtained by `gf_util('trace level', 4)`. See ``MesherObject`` to manipulate geometric primitives in order to desribe the geometry."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.add_convex:1
-# e3d7f1720a504bd0bc9a35db2bf42da2
 msgid "Add a new convex into the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.add_convex:3
-# aac815c93e44435fb75fd6549c6dfb5d
 msgid "The convex structure (triangle, prism,...) is given by `GT` (obtained with GeoTrans('...')), and its points are given by the columns of `PTS`. On return, `CVIDs` contains the convex #ids. `PTS` might be a 3-dimensional array in order to insert more than one convex (or a two dimensional array correctly shaped according to Fortran ordering)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.add_point:1
-# 520ac9adaa524c88920aea4c9e7bbb31
 msgid "Insert new points in the mesh and return their #ids."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.add_point:3
-# 2fa6c67626f84e1aaee48485170fc0e4
 msgid "`PTS` should be an ``nxm`` matrix , where ``n`` is the mesh dimension, and ``m`` is the number of points that will be added to the mesh. On output, `PIDs` contains the point #ids of these new points."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.add_point:8
-# ab5407a9d51f485c806c3264fcca292b
 msgid "Remark: if some points are already part of the mesh (with a small tolerance of approximately ``1e-8``), they won't be inserted again, and `PIDs` will contain the previously assigned #ids of these points."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.adjacent_face:1
-# a2e44a9f574e463d85fbb0fc9112d00c
 msgid "Return convex face of the neighbour element if it exists. If the convex have more than one neighbour relativley to the face ``f`` (think to bar elements in 3D for instance), return the first face found."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.boundaries:1
-# 60e8cb54cb2a41e29b1d5dd2c5890227
 msgid "DEPRECATED FUNCTION. Use 'regions' instead."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.boundary:1
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.set_boundary:1
-# 0a1f0560a3e24b75a5320fd5ab6a97bf
-# ce8c0508d48d4431ba8b030e61f04810
 msgid "DEPRECATED FUNCTION. Use 'region' instead."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.char:1
-# 43189d78a15549e19f8f2a4c59f28fcf
 msgid "Output a string description of the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.convex_area:1
-# 878d2e3b62794726bacf73b7cd2aba79
 msgid "Return an estimate of the area of each convex."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.convex_radius:1
-# c41fa7e3897f4b4bae981ae8ecca81e3
 msgid "Return an estimate of the radius of each convex."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.curved_edges:1
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.edges:3
-# c9a17df2604a4945950468036a10a4aa
-# 2e25242c19b64f309852443afdee25ff
 msgid "[OBSOLETE FUNCTION! will be removed in a future release]"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.curved_edges:3
-# 409801133a7a428789ad8b588a70a74a
 msgid "More sophisticated version of Mesh.edges() designed for curved elements. This one will return N (N>=2) points of the (curved) edges. With N==2, this is equivalent to Mesh.edges(). Since the points are no more always part of the mesh, their coordinates are returned instead of points number, in the array E which is a [ mesh_dim x 2 x nb_edges ] array.  If the optional output argument C is specified, it will contain the convex number associated with each edge."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.cvid:1
-# a28eef865730459897bc7a27911c684d
 msgid "Return the list of all convex #id."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.cvid:3
-# 3748d7f0eeff4d1fb26141160e86c2ed
 msgid "Note that their numbering is not supposed to be contiguous from 0 to Mesh.nbcvs()-1, especially if some points have been removed from the mesh. You can use Mesh.optimize_structure() to enforce a contiguous numbering."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.cvid_from_pid:1
-# cc822849192e4079b45121b379f2ba38
 msgid "Search convex #ids related with the point #ids given in `PIDs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.cvid_from_pid:3
-# f9921b820d164f2ba5d416a310e3eaf2
 msgid "If `share=False`, search convex whose vertex #ids are in `PIDs`. If `share=True`, search convex #ids that share the point #ids given in `PIDs`. `CVIDs` is a  vector (possibly empty)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.cvstruct:1
-# f6a92a383bbb497da7daf7b6579a639e
 msgid "Return an array of the convex structures."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.cvstruct:3
-# 67d7072f753d4793a44fc9036e33d76a
 msgid "If `CVIDs` is not given, all convexes are considered. Each convex structure is listed once in `S`, and `CV2S` maps the convexes indice in `CVIDs` to the indice of its structure in `S`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.del_convex:1
-# c35bf338fb86400e969646e26ef91885
 msgid "Remove one or more convexes from the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.del_convex:3
-# 3a8274976879471ea427f89fd0d078d2
 msgid "`CVIDs` should contain the convexes #ids, such as the ones returned by the 'add convex' command."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.del_convex_of_dim:1
-# c15d4ac393fe4231aa866c4da279aede
 msgid "Remove all convexes of dimension listed in `DIMs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.del_convex_of_dim:3
-# 774d8f94575e49ab876fed97a702eb3e
 msgid "For example; ``Mesh.del_convex_of_dim([1,2])`` remove all line segments, triangles and quadrangles."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.del_point:1
-# c64c3b1d35ff49acb733e9a5df74f7b3
 msgid "Removes one or more points from the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.del_point:3
-# 9e3ee0cd102140f8aba6bf16ecf80d66
 msgid "`PIDs` should contain the point #ids, such as the one returned by the 'add point' command."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.delete_boundary:1
-# 18c19c98bae94ffa848f6bbfe0b58350
 msgid "DEPRECATED FUNCTION. Use 'delete region' instead."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.delete_region:1
-# a046a4fd96ad4b54acf317ce7aaecb74
 msgid "Remove the regions whose #ids are listed in `RIDs`"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.dim:1
-# b3f581fab4c04ee485f28be3eef901e9
 msgid "Get the dimension of the mesh (2 for a 2D mesh, etc)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.display:1
-# eef7de1408294fb390c443fbecd29826
 msgid "displays a short summary for a Mesh object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.edges:1
-# c392f7991cc54314a5e13a9f2ca047a5
 msgid "Synopsis: [E,C] = Mesh.edges(self [, CVLST][, 'merge'])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.edges:5
-# 8157f209ae1d47f8a1a4ba951033b3b8
 msgid "Return the list of edges of mesh M for the convexes listed in the row vector CVLST. E is a 2 x nb_edges matrix containing point indices. If CVLST is omitted, then the edges of all convexes are returned. If CVLST has two rows then the first row is supposed to contain convex numbers, and the second face numbers, of which the edges will be returned.  If 'merge' is indicated, all common edges of convexes are merged in a single edge.  If the optional output argument C is specified, it will contain the convex number associated with each edge."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.export_to_dx:1
-# d22bcb9ebf7349eab55fabc46a0ab7e6
 msgid "Synopsis: Mesh.export_to_dx(self, string filename, ... [,'ascii'][,'append'][,'as',string name,[,'serie',string serie_name]][,'edges'])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.export_to_dx:3
-# ea2c14a4696548fd95f56997cf31d6b3
 msgid "Exports a mesh to an OpenDX file."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.export_to_dx:5
-# fbe3eba53b2641519ec761b83352ff28
 msgid "See also MeshFem.export_to_dx(), Slice.export_to_dx()."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.export_to_pos:1
-# 23821862b9cb4b65b3783080e65907d6
 msgid "Exports a mesh to a POS file ."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.export_to_pos:3
-# 85c71c2967564400bc7924bb463dd0dc
 msgid "See also MeshFem.export_to_pos(), Slice.export_to_pos()."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.export_to_vtk:1
-# 3075b46171444ba8b628816c9e878bf0
 msgid "Synopsis: Mesh.export_to_vtk(self, string filename, ... [,'ascii'][,'quality'])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.export_to_vtk:3
-# 2b9f04d7fe8444cfb26f89bf445d0b1e
 msgid "Exports a mesh to a VTK file ."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.export_to_vtk:5
-# 19bc704cd2934f4494188a4598d47d3d
 msgid "If 'quality' is specified, an estimation of the quality of each convex will be written to the file."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.export_to_vtk:8
-# 5c38ec7b975f4a3f863c5b9a4aa51574
 msgid "See also MeshFem.export_to_vtk(), Slice.export_to_vtk()."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.extend_region:1
-# ec8f66cbe5fd4f3e8547652f40512905
 msgid "Extends the region identified by the region number `rnum` to include the set of convexes or/and convex faces provided in the matrix `CVFIDs`, see also ``Mesh.(set region)``."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.faces_from_cvid:1
-# 86f93dcfe7194de99af242b9442b647b
 msgid "Synopsis: CVFIDs = Mesh.faces_from_cvid(self[, ivec CVIDs][, 'merge'])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.faces_from_cvid:3
-# 625180e075e54747b0f233c405fa59c3
 msgid "Return a list of convex faces from a list of convex #id."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.faces_from_cvid:5
-# b130992302a34d909e802d0bc473ee7d
 msgid "`CVFIDs` is a two-rows matrix, the first row lists convex #ids, and the second lists face numbers (local number in the convex). If `CVIDs` is not given, all convexes are considered. The optional argument 'merge' merges faces shared by the convex of `CVIDs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.faces_from_pid:1
-# 8f70218af700444187107009155816b9
 msgid "Return the convex faces whose vertex #ids are in `PIDs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.faces_from_pid:3
-# ac23d78a02b947a58a1bb3e5776f85b0
 msgid "`CVFIDs` is a two-rows matrix, the first row lists convex #ids, and the second lists face numbers (local number in the convex). For a convex face to be returned, EACH of its points have to be listed in `PIDs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.geotrans:1
-# 5d74abddf03c40bdaafe1ee9f658b7cb
 msgid "Returns an array of the geometric transformations."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.geotrans:3
-# 2470b2f7aa8149dca34dcc6bc6ee2098
 msgid "See also Mesh.cvstruct()."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.inner_faces:1
-# d88c2b7e497f47c196c7812877683b4f
 msgid "Return the set of faces shared at least by two elements in CVIDs. Each face is represented only once and is arbitrarily chosen between the two neighbour elements."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.max_cvid:1
-# cbeda3df7a1b46bca24abd091cda041c
 msgid "Return the maximum #id of all convexes in the mesh (see 'max pid')."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.max_pid:1
-# d5d33a4eb70a449e83c628e984d9358f
 msgid "Return the maximum #id of all points in the mesh (see 'max cvid')."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.memsize:1
-# 7e755fedf0194e31bc83043db9eae0de
 msgid "Return the amount of memory (in bytes) used by the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.merge:1
-# e4ecd61d12ea41a2a12ee1b2db033d38
 msgid "Merge with the Mesh `m2`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.merge:3
-# 160133e19e854656be99e4f12037b268
 msgid "Overlapping points, within a tolerance radius `tol`, will not be duplicated. If `m2` is a MeshFem object, its linked mesh will be used."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.nbcvs:1
-# c7f609b4819744a88d461024355a14ca
 msgid "Get the number of convexes of the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.nbpts:1
-# 08d233f1d1bd4e69b498f8f5c1877cce
 msgid "Get the number of points of the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.normal_of_face:1
-# e5f3868ca08f4db58631f882eb7c92bd
 msgid "Evaluates the normal of convex `cv`, face `f` at the `nfpt` point of the face."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.normal_of_face:3
-# edc672c8c45a49f9817b464ea5bc344e
 msgid "If `nfpt` is not specified, then the normal is evaluated at each geometrical node of the face."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.normal_of_faces:1
-# 56e224788fc24daa91d0e7c54b9d79b3
 msgid "Evaluates (at face centers) the normals of convexes."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.normal_of_faces:3
-# c8356e89d9dd4fe09785713794fba324
 msgid "`CVFIDs` is supposed a two-rows matrix, the first row lists convex #ids, and the second lists face numbers (local number in the convex)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.optimize_structure:1
-# 1f7edb9fca5547e2a9e9cbb1c5c326b0
 msgid "Reset point and convex numbering."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.optimize_structure:3
-# 1a7195f6d80b4ef6953100bbed683633
 msgid "After optimisation, the points (resp. convexes) will be consecutively numbered from ``0`` to ``Mesh.max_pid()-1`` (resp. ``Mesh.max_cvid()-1``)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.orphaned_pid:1
-# 06367c9690634df292d25a397ca3c996
 msgid "Search point #id which are not linked to a convex."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.outer_faces:1
-# 18fbf884542c49058045ebd5a8cada46
 msgid "Return the set of faces not shared by two elements."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.outer_faces:3
-# ea2c909f0fb645b38f429d1531592775
 msgid "The output `CVFIDs` is a two-rows matrix, the first row lists convex #ids, and the second one lists face numbers (local number in the convex). If `CVIDs` is not given, all convexes are considered, and it basically returns the mesh boundary. If `CVIDs` is given, it returns the boundary of the convex set whose #ids are listed in `CVIDs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.outer_faces_in_box:1
-# f8320b2c9b764f5d82e31efd595c0801
 msgid "Return the set of faces not shared by two convexes and lying within the box defined by the corner points `pmin` and `pmax`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.outer_faces_in_box:3
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.outer_faces_with_direction:3
-# f37d4370c41b427aa9f4c1c2d126b0e6
-# ce7a9e368b7645a7b958497e9dd04e41
 msgid "The output `CVFIDs` is a two-rows matrix, the first row lists convex #ids, and the second one lists face numbers (local number in the convex). If `CVIDs` is given, it returns portion of the boundary of the convex set defined by the #ids listed in `CVIDs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.outer_faces_with_direction:1
-# 703735fe00df4aa698be91d36b3bb5b5
 msgid "Return the set of faces not shared by two convexes and with a mean outward vector lying within an angle `angle` (in radians) from vector `v`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid:1
-# 03983ad6ed3f478686cb2ba5d73dd064
 msgid "Return the list of points #id of the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid:3
-# 1fb982af4c9d4573b60222609a45be84
 msgid "Note that their numbering is not supposed to be contiguous from 0 to Mesh.nbpts()-1, especially if some points have been removed from the mesh. You can use Mesh.optimize_structure() to enforce a contiguous numbering."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid_from_coords:1
-# 22e9aa5058044705adbf7baa8df729fb
 msgid "Search point #id whose coordinates are listed in `PTS`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid_from_coords:3
-# 61772ddc91774bf385c7392c24a819e2
 msgid "`PTS` is an array containing a list of point coordinates. On return, `PIDs` is a vector containing points #id for each point found in `eps` range, and -1 for those which where not found in the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid_from_cvid:1
-# 5020723439614affbbb5b47e58d0321e
 msgid "Return the points attached to each convex of the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid_from_cvid:3
-# 6120c862322a4f9c8ace82d9cc381cc7
 msgid "If `CVIDs` is omitted, all the convexes will be considered (equivalent to `CVIDs = Mesh.max_cvid()`). `IDx` is a vector, length(IDx) = length(CVIDs)+1. `Pid` is a vector containing the concatenated list of #id of points of each convex in `CVIDs`. Each entry of `IDx` is the position of the corresponding convex point list in `Pid`. Hence, for example, the list of #id of points of the second convex is Pid[IDx(2):IDx(3)]."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid_from_cvid:12
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pts_from_cvid:12
-# 818088c5ab4943e1b114a9eacabd7f2c
-# e38e1a148b594d3aa2aea28bfb5a3a33
 msgid "If `CVIDs` contains convex #id which do not exist in the mesh, their point list will be empty."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid_in_cvids:1
-# c4bf63644baf41b49b3921761d3cca58
 msgid "Search point #id listed in `CVIDs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid_in_cvids:3
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid_in_regions:3
-# 110860f4cd1a4821b92cc61d397142c4
-# a17898874e0241e9bda039bd180128b7
 msgid "`PIDs` is a vector containing points #id."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid_in_faces:1
-# 880d0b3aa0e84aaf8a64b8c46062a4ce
 msgid "Search point #id listed in `CVFIDs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid_in_faces:3
-# abea7f684b6a4a36ae49da03695787e1
 msgid "`CVFIDs` is a two-rows matrix, the first row lists convex #ids, and the second lists face numbers. On return, `PIDs` is a vector containing points #id."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pid_in_regions:1
-# e4bda2e86f9244f9a9d5503cdb15d845
 msgid "Search point #id listed in `RIDs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pts:1
-# 2f6ba2129df44606806c448e6e2fab63
 msgid "Return the list of point coordinates of the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pts:3
-# 87d8a526622843e6b127fc95a806c9f5
 msgid "Each column of the returned matrix contains the coordinates of one point. If the optional argument `PIDs` was given, only the points whose #id is listed in this vector are returned. Otherwise, the returned matrix will have Mesh.max_pid() columns, which might be greater than Mesh.nbpts() (if some points of the mesh have been destroyed and no call to Mesh.optimize_structure() have been issued). The columns corresponding to deleted points will be filled with NaN. You can use Mesh.pid() to filter such invalid points."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pts_from_cvid:1
-# f5ec7c14898b403b9ff1ffe8827b3688
 msgid "Search point listed in `CVID`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.pts_from_cvid:3
-# f0577e319a494725973559296a036774
 msgid "If `CVIDs` is omitted, all the convexes will be considered (equivalent to `CVIDs = Mesh.max_cvid()`). `IDx` is a vector, length(IDx) = length(CVIDs)+1. `Pts` is a vector containing the concatenated list of points of each convex in `CVIDs`. Each entry of `IDx` is the position of the corresponding convex point list in `Pts`. Hence, for example, the list of points of the second convex is Pts[:,IDx[2]:IDx[3]]."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.quality:1
-# dafc95f892b74ad49d3b14c8433e6438
 msgid "Return an estimation of the quality of each convex (:math:`0 \\leq Q \\leq 1`)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.refine:1
-# 151b16ba373b40fb88fa3314b023ca9f
 msgid "Use a Bank strategy for mesh refinement."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.refine:3
-# e15b07907dc348e3b2e93b7ac365e9da
 msgid "If `CVIDs` is not given, the whole mesh is refined. Note that the regions, and the finite element methods and integration methods of the MeshFem and MeshIm objects linked to this mesh will be automagically refined."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.region:1
-# 878eccea28d04642bac67ea2c836bb0d
 msgid "Return the list of convexes/faces on the regions `RIDs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.region:3
-# ed7ffd4b3c3c4fbb80994c832eb41c94
 msgid "`CVFIDs` is a two-rows matrix, the first row lists convex #ids, and the second lists face numbers (local number in the convex). (and -1 when the whole convex is in the regions)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.region_intersect:1
-# 17705e909d164d9ab6bb32fd5befebc0
 msgid "Replace the region number `r1` with its intersection with region number `r2`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.region_merge:1
-# b2343bda00a84790ae1190243d3baccc
 msgid "Merge region number `r2` into region number `r1`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.region_subtract:1
-# 8f04cc5f67e544f9913d85be4b1b7d2c
 msgid "Replace the region number `r1` with its difference with region number `r2`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.regions:1
-# ff887f47753e4771a37326e16c986efb
 msgid "Return the list of valid regions stored in the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.save:1
-# 8f5e91443a104c6a82e189bc0d489009
 msgid "Save the mesh object to an ascii file."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.save:3
-# 43282f407ffc46bb82b9a8326d1b2776
 msgid "This mesh can be restored with Mesh('load', filename)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.set_pts:1
-# f6251585d64347b8b9da3ca9429b53b1
 msgid "Replace the coordinates of the mesh points with those given in `PTS`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.set_region:1
-# 411fdca55593424eba4e0ff00fe010ff
 msgid "Assigns the region number `rnum` to the set of convexes or/and convex faces provided in the matrix `CVFIDs`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.set_region:4
-# 282550a9307f441a9b5003e58da269f4
 msgid "The first row of `CVFIDs` contains convex #ids, and the second row contains a face number in the convex (or ``-1`` for the whole convex (regions are usually used to store a list of convex faces, but you may also use them to store a list of convexes)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.set_region:9
-# 2a02e10249d54bdf8c72aacf82e42a05
 msgid "If a vector is provided (or a one row matrix) the region will represent the corresponding set of convex."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.transform:1
-# b69207a2b42d42418ae2fad18aabbd5b
 msgid "Applies the matrix `T` to each point of the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.transform:3
-# 8206614229644726be3854f19a4e4203
 msgid "Note that `T` is not required to be a ``NxN`` matrix (with ``N = Mesh.dim()``). Hence it is possible to transform a 2D mesh into a 3D one (and reciprocally)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.translate:1
-# 2448a4d76b774d979856eaa9d4d7d246
 msgid "Translates each point of the mesh from `V`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.triangulated_surface:1
-# 3bfaf3b73ab542929d9d5506c65413c7
 msgid "[DEPRECATED FUNCTION! will be removed in a future release]"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Mesh.triangulated_surface:3
-# 0468198cbd764e7996c1f0f88668378a
 msgid "Similar function to Mesh.curved_edges() : split (if necessary, i.e. if the geometric transformation if non-linear) each face into sub-triangles and return their coordinates in T (see also gf_compute('eval on P1 tri mesh'))"
 msgstr ""
 

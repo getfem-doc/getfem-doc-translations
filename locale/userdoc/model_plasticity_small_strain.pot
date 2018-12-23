@@ -17,757 +17,603 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:14
-# 9aec3e1773944d8c8e18302bfd822e24
 msgid "Small strain plasticity"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:16
-# 1706e2a7fc7542a38135f181df81ae1b
 msgid "A framework for the approximation of plasticity models in |gf|. See in :file:`src/getfem_plasticity.cc` and :file:`interface/src/gf_model_set.cc` for the brick implementation and to extend the implementation to new plasticity models."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:20
-# 4c5dcc4e70ec4851a62beeb5112b89a4
 msgid "Theoretical background"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:22
-# 545798b943c1410a83ff959bb6e989b2
 msgid "We present a short introduction to small strain plasticity. We refer mainly to [SI-HU1998]_ and [SO-PE-OW2008]_ for a more detailed presentation."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:25
-# 3ceffcfdfe404974b8df749e55cd8888
 msgid "Additive decomposition of the small strain tensor"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:27
-# f73f4761e8d54af6963a4c224004c090
 msgid "Let :math:`\\Omega \\subset \\R^3` be the reference configuration of a deformable body and :math:`u : \\Omega \\rightarrow \\R^3` be the displacement field. Small strain plasticity is based on the additive decomposition of the small strain tensor :math:`\\varepsilon(u) = \\Frac{\\nabla u + \\nabla u^T}{2}` in"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:32
-# 837c9eb8607c4414b6047715613ef778
 msgid "where :math:`\\varepsilon^e` is the elastic part of the strain tensor and :math:`\\varepsilon^p` the plastic one."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:35
-# 254999b717834bbcbb9656e827095402
 msgid "Internal variables, free energy potential and elastic law"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:37
-# 6b09825fa87f46e2aae35830709ca7b5
 msgid "We consider"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:42
-# adfa32ef1b6242e386cc1975894c811e
 msgid "a vector field of :math:`d_{\\alpha}` strain type internal variables (:math:`d_{\\alpha} = 0` if no internal variables are considered). We consider also a free energy potential"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:47
-# 62acc83d23b6447c8f55c26d407e29ed
 msgid "such that corresponding stress type variables are determined by"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:52
-# 7986811e2ad5497b87bff046d1dbc6aa
 msgid "where :math:`\\sigma` is the Cauchy stress tensor and :math:`A` the stress type internal variables. The plastic dissipation is given by"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:58
-# cfb346fd1e5345dda67d7830c97943ac
 msgid "In the standard cases, :math:`\\psi(\\varepsilon^e, \\alpha)` is decomposed into"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:62
-# 3dc11f8bd0bb4e0093be501cf898ac57
 msgid "In the case of linearized elasticity, one has :math:`\\psi^e(\\varepsilon^e) = \\frac{1}{2} ({\\cal A}\\varepsilon^e) :\\varepsilon^e` where :math:`{\\cal A}` is the fourth order elasticity tensor. For isotropic linearized elasticity this expression reduces to :math:`\\psi^e(\\varepsilon^e) = \\mu \\mbox{dev}(\\varepsilon^e) : \\mbox{dev}(\\varepsilon^e) + \\frac{1}{2} K (\\mbox{tr}(\\varepsilon^e))^2` where :math:`\\mu` is the shear modulus and :math:`K = \\lambda + 2\\mu/3` is the bulk modulus."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:67
-# 62784c339ad44d2ba210a5b0e76fd602
 msgid "Plastic potential, yield function and plastic flow rule"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:69
-# 406855f0967546b1b9c6379d1bf6a69e
 msgid "Plastic yielding is supposed to occur when the stress attains a critical value. This limit is determined by a yield function :math:`f(\\sigma, A)` and the condition"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:73
-# 36d6fc7b33d74e28b19261acddbab14d
 msgid "The surface :math:`f(\\sigma, A) = 0` is the yield surface where the plastic deformation may occur."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:75
-# 5e9423f718a84ccfa8ac69a70d272624
 msgid "Let us also consider the plastic potential :math:`\\Psi(\\sigma, A)`, (convex with respect to its both variables) which determines the plastic flow direction in the sense that the flow rule is defined as"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:79
-# 7c556008bedb4b7188f628fff3112693
 msgid "with the additional complementarity condition"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:83
-# 2a4a12414c5446aca300b41a2ec0541d
 msgid "The variable :math:`\\gamma` is called the plastic multiplier. Note that when :math:`\\psi(\\varepsilon^e, \\alpha), f(\\sigma, A) \\mbox{ or } \\Psi(\\sigma, A)` are not differentiable, subdifferentials have to be used. Associated plasticity corresponds to the choice :math:`\\Psi(\\sigma, A) = f(\\sigma, A)`."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:86
-# 0ca1b541b0cb4175bb6770a1e168e428
 msgid "Initial boundary value problem"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:88
-# 22ac9b731059463e9fd626d380fbf209
 msgid "The weak formulation of a dynamic elastoplastic problem can be written, for an arbitrary kinematically admissible test function :math:`v`, as follows:"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:98
-# eebb9d73b25943baa793c66c27b73e8e
 msgid "for :math:`u_0, \\mathrm{v}_0, \\varepsilon^p_0, \\alpha_0` being initial values and :math:`f` and :math:`g` being prescribed forces in the interior of domain :math:`\\Omega` and on the part of the boundary :math:`\\Gamma_N`."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:100
-# e418cf9f5a2348f1b6d3e4a18a897204
 msgid "Note that plasticity models are often applied on quasi-static problems which correspond to the term :math:`\\rho \\ddot{u}` being neglected."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:102
-# 799da8abc2c9432ab11e4dddb58a89e6
 msgid "Given a time step :math:`\\Delta t = t_{n+1} -t_n`, from time :math:`t_n` to :math:`t_{n+1}`, we will denote in the sequel :math:`u_n, \\varepsilon^p_n  \\mbox{ and } \\alpha_n` the approximations at time :math:`t_n` of :math:`u(t_n), \\varepsilon^p_n(t_n) \\mbox{ and } \\alpha(t_n)` respectively. These approximations correspond to the chosen time integration scheme (for instance one of the proposed schemes in :ref:`ud-model-time-integration`) which can be different than the time integration scheme used for the integration of the flow rule (see below)."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:106
-# e33d3a4e002143a595ce2f6c42f44194
 msgid "Flow rule integration"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:108
-# 9df42fb209f94b14aee0f4e8b0a38a4f
 msgid "The plastic flow rule has to be integrated with its own time integration scheme. Among standards schemes, the backward Euler scheme, the :math:`\\theta`-scheme (or generalized trapezoidal rule) and the generalized mid-point scheme are the most commonly used in that context. We make here the choice of the :math:`\\theta`-scheme (:math:`\\theta = 1` corresponds to the backward Euler scheme as a special case)."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:111
-# 4d5b0ca0416744b0896015e9d33bd563
 msgid "Let :math:`u_{n+1}` be the displacement at the considered time step and  :math:`u_{n}` at the previous one."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:113
-# 8498d8459c754062a78104f45a8299af
 msgid "The :math:`\\theta`-scheme for the integration of the plastic flow rules reads as"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:121
-# f04b3b01f8514bfe984500474ceef43f
 msgid "with the complementary condition"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:125
-# 0b289ed45a5d4319a403944c026fe110
 msgid "where :math:`0 < \\theta \\le 1` is the parameter of the :math:`\\theta`-scheme. We exclude :math:`\\theta = 0` because we will not consider explicit integration of plasticity. Let us recall that :math:`\\theta = 1` corresponds to the backward Euler scheme and :math:`\\theta = 1/2` to the Crank-Nicolson scheme (or trapezoidal rule) which is a second order consistent scheme. Note that the complementarity condition for the quantities at time step :math:`n` is prescribed at the previous time step (:math:`\\sigma_{n}, \\alpha_n, \\mbox{and } \\gamma_n` are supposed to be already determined)."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:127
-# 939afe71481b4b83b52bb5133463d904
 msgid "A solution would be to solve the whole problem with all the unknows, that is :math:`u_{n+1},  \\gamma_{n+1}, \\varepsilon^p_{n+1} \\mbox{ and } A_{n+1}`. This is of course possible but would be a rather expensive strategy because of the resulting high number of degrees of freedom. A classical strategy (the return mapping one for instance, see [SO-PE-OW2008]_ or the closest point projection one) consist in integrating locally the plastic flow on each Gauss point of the considered integration method separately, or more precisely to consider on each Gauss point the maps"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:136
-# fca4a57088d34e1d9954a5166daa7a8a
 msgid "with :math:`\\eta_n, \\zeta_{n}` the right hand side of equations :eq:`thetascheme1`, :eq:`thetascheme2`, i.e."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:143
-# 157eb95b9c654084bfa1e301bd958387
 msgid "This means in particular that :math:`(\\varepsilon^p_{n+1}, \\alpha_{n+1}) = ({\\mathscr E}^p(u_{n+1},  \\zeta_n, \\eta_n), {\\mathscr A}(u_{n+1}, \\zeta_{n}, \\eta_n))` is the solution to equations :eq:`thetascheme1` and :eq:`thetascheme2`. Both these maps and their tangent moduli (usually called consistent tangent moduli) are then used in the global solve of the problem with a Newton method and for :math:`u_{n+1}` the unique remaining variable. The advantage of the return mapping strategy is that the unique variable of the global solve is the displacement :math:`u_{n+1}`. A nonlinear solve on each Gauss point is often necessary which is usualy performed with a local Newton method."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:145
-# 24f3e4a2a9bb42fd9ca5c439377d8369
 msgid "In |gf| we propose both the return mapping strategy and also an alternative strategy developped below which is mainly inspired from  [PO-NI2016]_,  [SE-PO-WO2015]_ and [HA-WO2009]_ and allow more simple tangent moduli. It consists in keeping (a multiple of) :math:`\\gamma_{n+1}` as an additional unknown with respect to :math:`u_{n+1}`. As we will see, this will allow a more generic treatment of the yield functions, the price for the simplicity being this additional unknown scalar field."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:147
-# 41f989af37ca4efda0d90861ec99159b
 msgid "First, we consider an additional (and optional) given function :math:`\\alpha(\\sigma_{n+1}, A_{n+1}) > 0` whose interest will appear later on (it will allow simple local inverses) and the new unknown scalar field"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:151
-# b5c3faa50d44408cb7bf192840e012ba
 msgid "so that our two main unknows are now :math:`u_{n+1} \\mbox{ and } \\xi_{n+1}`. The discretized plastic flow rule integration now reads:"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:163
-# 207ba3ae49164eecb39a83f81364f8df
 msgid "For :math:`u_{n+1} \\mbox{ and } \\xi_{n+1}` be given, we define the two maps"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:171
-# c50c632bdd1b44bf82bdc3e0ad8e6a57
 msgid "where the pair :math:`(\\varepsilon^p_{n+1}, \\alpha_{n+1}) = (\\tilde{\\mathscr E}^p(u_{n+1}, \\theta \\xi_{n+1}, \\zeta_{n}, \\eta_n), \\tilde{\\mathscr A}(u_{n+1}, \\theta \\xi_{n+1}, \\zeta_{n}, \\eta_n))` is the solution to equations :eq:`flowrule1`, :eq:`flowrule2` (without the consideration of  :eq:`flowrule3`). We will see later, that, at least for simple isotropic plastic flow rules, these maps have a simple expression, even sometimes a linear one with respect to :math:`u_{n+1}`."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:173
-# dd0bff774a944f73ab22d315e702966d
 msgid "Still :math:`u_{n+1} \\mbox{ and } \\xi_{n+1}` be given the stress :math:`\\sigma_{n+1}` reads"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:179
-# d1a967a7d2e846dc92e183d95aac0a60
 msgid "The complementarity equation :eq:`flowrule3` is then prescribed with the use of a well chosen complementarity function, as in [HA-WO2009]_ for :math:`r > 0` such as:"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:183
-# f7d620a58005417499ed6de0c330a6cc
 msgid "or"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:187
-# 555df768bc0d4c12a58121f7d3733d48
 msgid "NOTE : The notation :math:`\\Delta \\xi_{n+1} = \\Delta t \\xi_{n+1}` is often used in the litterature. The choice here is to preserve the distinction between the two quantities, mainly because ot the possible use of adaptative time step : when the time step is changing, the value :math:`\\xi_n` has to be multiplied by the new time step, so that it is preferable to store :math:`\\xi_n` instead of :math:`\\Delta \\xi_{n}` when using the :math:`\\theta`-scheme."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:191
-# 313d868ce82142558b716005aa51c958
 msgid "Plane strain approximation"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:193
-# 7f6127870d06489eb83772506ae8ac9a
 msgid "A plane strain approximation is a 2D problem which corresponds to the deformation of a long cylindrical object where the strain in the length direction (assumed to be along the :math:`z` axis) is considered small compared to the ones in the other directions and is neglected. It result in a plane strain tensor of the form"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:197
-# 947d66cdacff423abd3f121ed6c43256
 msgid "We denote"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:201
-# 3d2ed7d086b4479abaa7d30389543f23
 msgid "the non neglected components of the strain tensor. In the decomposition of plastic and elastic part of the strain tensor, we assume"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:206
-# 3dfbac220e4c4ce7958224e798cd8b0d
 msgid "and"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:210
-# 8dd72c1b819b48a6a0ff37963716afe6
 msgid "The adaptation to the plane strain approximation to plastic model is most of the time an  easy task. An isotropic linearized elastic response reads"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:214
 #: ../source/userdoc/model_plasticity_small_strain.rst:316
-# 91a921c8168b41a6803d7a8cff8e2f9d
-# a88f2005abc8475d9b4acc14477b259e
 msgid "and thus"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:218
-# 1c3747d81ceb4448a5d8f2dc4b328ad8
 msgid "The nonzero :math:`\\sigma_{3,3}` component of the stress tensor is given by"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:222
-# 25e54e6a238c4713a297d38a9aa7e0c2
 msgid "Note that in the common case where isochoric plastic strain is assumed, one has"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:229
-# 125e24d20aac4fc4aa214d87260dde47
 msgid "Plane stress approximation"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:231
-# 66060b72dfff4e87821b68f6240a349c
 msgid "The plane stress approximation describe generally the 2D membrane deformation of a thin plate. It consist in prescribing the stress tensor to have only in-plane nonzero components, i.e."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:235
-# b756d31676f346a0bcdb4ecb99526741
 msgid "We will still denote"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:239
-# 3d72e3b4b5484a5b96f6dbe8b52c2395
 msgid "the in-plane components of the stress tensor. For elastoplasticity, it consists generally to apply the 2D plastic flow rule, prescribing the out-plane components of the stress tensor to be zero with the additionnal variables :math:`\\varepsilon^e_{1,3}`, :math:`\\varepsilon^e_{2,3}`, :math:`\\varepsilon^e_{3,3}` being unknown (see for instance [SO-PE-OW2008]_)."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:241
-# 909d5a72273b458780409e46e5fcb8bb
 msgid "For an isotropic linearized elastic response, one has :math:`\\sigma = \\lambda \\mbox{tr}(\\varepsilon^e) + 2\\mu\\varepsilon^e` such that"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:245
 #: ../source/userdoc/model_plasticity_small_strain.rst:435
-# 97bab53a6dab4209bec9cd0edf0353a9
-# d3edbf55e41f453a9d56c7470124b54f
 msgid "with"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:249
-# 3ebdd575122a4262bd32f6dc5ee0a59e
 msgid "so that"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:254
-# 8759383cb3094783b98542a4c3c5d88c
 msgid "Moreover"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:259
-# f9d0eaad69fe4be19629c8dc431773dc
 msgid "Note that in the case where isochoric plastic strain is assumed, one still has"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:265
-# 2637e2ea07a148e699141556e1d5324e
 msgid "Some classical laws"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:268
-# 281a228d1499453a8055cd6b7072f65f
 msgid "Tresca : :math:`\\rho(\\sigma) \\le \\sigma_y` where :math:`\\rho(\\sigma)` spectral radius of the Cauchy stress tensor and :math:`\\sigma_y` the uniaxial yield stress (which may depend on some hardening internal variables)."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:270
-# 96757cfe0348478f949fadec76dc8599
 msgid "Von Mises :  :math:`\\|\\mbox{Dev}(\\sigma)\\| \\le \\sqrt{\\frac{2}{3}}\\sigma_y` where :math:`\\mbox{Dev}(\\sigma) = \\sigma - \\frac{1}{3}\\mbox{tr}(\\sigma)I` the deviatoric part of :math:`\\sigma` and :math:`\\|\\sigma\\| = \\sqrt{\\sigma:\\sigma}`."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:275
-# 36b2631aa0b24d3787c59f58a638ec6b
 msgid "Perfect isotropic associated elastoplasticity with Von-Mises criterion (Prandl-Reuss model)"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:277
-# f99f85ba6a7a47d299420fe8d4d072f9
 msgid "There is no internal variables and we consider an isotropic elastic response. The flow rule reads"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:281
-# 473bb33b92304ef582acf566bfa607f5
 msgid "This corresponds to :math:`\\Psi(\\sigma) = f(\\sigma) = \\|\\mbox{Dev}(\\sigma)\\| - \\sqrt{\\frac{2}{3}}\\sigma_y`."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:284
-# 530cf6d65a2f47bd9b6c64021f3bc243
 msgid "The :math:`\\theta`-scheme for the integration of the plastic flow rule reads:"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:288
-# c45b0d1649b149e99b86152fac6abdbc
 msgid "Choosing the factor :math:`\\alpha(\\sigma_{n}) = \\|\\mbox{Dev}(\\sigma_{n})\\|` and still with :math:`\\xi_n = \\Frac{\\gamma_n}{\\alpha(\\sigma_{n})}` this gives the equation"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:292
-# b69793d148f44e38a2023433965ad722
 msgid "Since :math:`\\mbox{Dev}(\\sigma_{n+1}) = 2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1})) - 2\\mu\\varepsilon^p_{n+1}` this directly gives:"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:296
-# 0ea2cb764fee4062825439e610e6c14a
 msgid "which is a linear expression with respect to :math:`u_{n+1}` (but not with respect to :math:`\\xi_{n+1}`)."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:298
-# 62432a23a623424283d8e6a7983e8143
 msgid "Moreover, :math:`\\zeta_n` is defined by"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:302
 #: ../source/userdoc/model_plasticity_small_strain.rst:394
-# e907e049e8e541da9e52d0e8bcb1d3c2
-# d9bd06012c5943c6b280498c666cfb62
 msgid "**Elimination of the multiplier (for the return mapping approach)**"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:304
-# 3f740730d173416fbec7d415c8bdb3a5
 msgid "One has"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:308
-# 94c983f71eb6428aa52bc51b7e8dad7c
 msgid "Thus, denoting :math:`B = \\mbox{Dev}(\\varepsilon(u_{n+1})) - \\zeta_n`, either"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:312
-# 4406ce15db414633b3abe12b4d465209
 msgid "and :math:`\\xi_{n+1} = 0`, i.e. we are in the elastic case, or  :math:`\\|\\mbox{Dev}(\\sigma_{n+1})\\| =  \\sqrt{\\frac{2}{3}}` and one obtains"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:320
-# 8b0fd2c178bb4e4c860474bfc8f8f504
 msgid "The two options can be summarized by"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:324
-# 358e706f61ba4a008993b41d9905f876
 msgid "The multiplier :math:`\\xi_{n+1}` (needed for the :math:`\\theta`-scheme for :math:`\\theta \\ne 1`) is given by"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:329
 #: ../source/userdoc/model_plasticity_small_strain.rst:426
-# b670e2a2d796402dad8b8d8570379740
-# fc8cf169f5b640f3a10329ab372aa0d5
 msgid "**Plane strain approximation**"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:331
-# d40b6f9bb8e54396b74cf81ae08bf7c5
 msgid "The plane strain approximation has the same expression replacing the 3D strain tensors by the in-plane ones :math:`\\bar{\\varepsilon}^p` and  :math:`\\bar{\\varepsilon}(u_{n+1})`."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:335
-# 2217f5c8587f4118af4155f2896c5680
 msgid "where :math:`\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}) = \\bar{\\varepsilon} - \\Frac{\\mbox{tr}(\\bar{\\varepsilon})}{3} \\bar{I}` is the 2D restriction of the 3D deviator."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:337
-# d5d2378dab4f434e9aa5838f14a8c816
 msgid "Moreover, for the yield condition,"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:341
-# 6a25022c912d43e1ab061079a807ffb3
 msgid "And for the elimination of the multiplier,"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:345
-# 96184fb086c04639bb7cab384ca9144c
 msgid "with :math:`\\bar{B} = \\overline{\\mbox{Dev}}(\\bar{\\varepsilon}(u_{n+1}))-\\bar{\\zeta}_{n}` and :math:`\\|B\\|^2 = \\|\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}(u_{n+1})) - \\bar{\\zeta}_n\\|^2 + \\left(\\Frac{\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))}{3} -\\mbox{tr}(\\bar{\\zeta}_n) \\right)^2`."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:347
-# c0637a15685048f28eaec8b673ad1eca
 msgid "**Plane stress approximation**"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:349
-# 5cdba85a3fa74c12bdbe635bdb5701f5
 msgid "For plane stress approximation, using :eq:`plane_stress_iso` we deduce from the expression of the 3D case"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:353
-# 74784be1042c439d942071a7a7d0cb75
 msgid "since :math:`\\mbox{Dev}(\\varepsilon(u)) = \\varepsilon(u) - \\Frac{2\\mu}{3(\\lambda+2\\mu)}(\\mbox{tr}(\\bar{\\varepsilon}(u)) - \\mbox{tr}(\\bar{\\varepsilon}^p))`. Of course, this relation still has to be inverted. Denoting :math:`\\alpha = 1+2\\mu\\theta\\Delta \\xi`, :math:`\\beta = \\Frac{4\\mu^2\\theta\\Delta \\xi}{3\\lambda+6\\mu}` and :math:`C = \\bar{\\zeta}_{n} +2\\mu\\theta\\Delta \\xi\\left(\\bar{\\varepsilon}(u_{n+1}) - \\Frac{2\\mu}{3(\\lambda+2\\mu)}(\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))))\\bar{I}\\right)` one obtains"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:357
-# 8485b96db7e8499196fef5ffc5b27664
 msgid "Moreover, for the yield condition, expression :eq:`plane_stress_dev` can be used."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:360
-# 5e4aafd4c5504f6b922151eaa3ae6cc1
 msgid "Isotropic elastoplasticity with linear isotropic and kinematic hardening and Von-Mises criterion"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:362
-# a6d01a9013c34d51949f560c7fade80e
 msgid "We consider an isotropic elastic reponse and the internal variable :math:`\\alpha : \\Omega \\rightarrow \\R` being the accumulated plastic strain which satisfies"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:366
-# 515707d51e5448359624c53822cb7bd0
 msgid "For :math:`H_i` the isotropic hardening modulus, the linear hardening consists in"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:370
-# 69c47f3e9768444f8198599ed51c36da
 msgid "i.e. :math:`A = H_i\\alpha` and a uniaxial yield stress defined by"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:375
-# b5b01627178b4600a11339db21f24031
 msgid "for :math:`\\sigma_{y0}` the initial uniaxial yield stress. The yield function (and plastic potential since this is an associated plastic model) can be defined by"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:379
-# 4b590f6f2a0849cb86737a539fe9bda0
 msgid "where :math:`H_k` is the kinematic hardening modulus. The same computation as in the previous section leads to"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:386
-# 001b7a7bc68e4ca0b45eeae95a0097d0
 msgid "where :math:`\\zeta_n` and :math:`\\eta_n` are defined by"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:392
-# bdbd847703f24aa886b7e7aa6e9e5d63
 msgid "Note that the isotropic hardening modulus do not intervene in :math:`\\tilde{\\mathscr E}^p(u_{n+1}, \\theta \\Delta \\xi, \\varepsilon^p_{n})` but only in :math:`f(\\sigma, A)`."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:396
-# 2fdd2f6dc2324919adfe688e7ed19e6b
 msgid "Denoting :math:`\\delta = \\Frac{1}{1+2(\\mu+H_k/3)\\theta\\Delta t\\xi_{n+1}}`, :math:`\\beta = \\Frac{1-\\delta}{2(\\mu+H_k/3)}` and :math:`B = 2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1}))-2(\\mu+H_k/3)\\zeta_n` the expression for :math:`\\varepsilon^p_{n+1}` and :math:`\\alpha_{n+1}` becomes"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:401
-# 0c8843a1c0d442ed879ec9821ce2faec
 msgid "and the plastic constraint"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:405
-# 0d3caf71931a496dadab73634c01eb5d
 msgid "Thus, either we are in the elastic case, i.e. :math:`\\xi_{n+1} = 0, \\delta = 1` and"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:409
-# 9e69ae2313b94851bfaa26fab9bb8b01
 msgid "or we are in the plastic case and :math:`\\xi_{n+1} > 0, \\delta < 1`, :math:`\\delta \\|B\\| = \\sqrt{\\Frac{2}{3}}(\\sigma_{y0}+H_i \\alpha_{n+1})` and :math:`(1-\\delta)` solves the equation"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:413
-# b7c6344b9fb845d7871bd217ad0eed90
 msgid "which leads to"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:417
-# f02ae2ea91eb46a7a116b2f547d8a9af
 msgid "The two cases can be summarized by"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:421
-# 7cf6af6d3542447ba78671b805791a09
 msgid "which directly gives :math:`{\\mathscr E}^p(u_{n+1}, \\zeta_n, \\eta_n)` and :math:`{\\mathscr A}(u_{n+1}, \\zeta_n, \\eta_n)` thanks to :eq:`hardeningepsalp`. The multiplier :math:`\\xi_{n+1}` being given by"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:428
-# c236992b8037406ea9a47dc18bc2288e
 msgid "Still denoting  :math:`\\delta = \\Frac{1}{1+2(\\mu+H_k/3)\\theta\\Delta t\\xi_{n+1}}`, :math:`\\beta = \\Frac{1-\\delta}{2(\\mu+H_k/3)}`, :math:`B = 2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1}))-2(\\mu+H_k/3)\\zeta_n` and :math:`\\overline{B} = 2\\mu\\overline{Dev}(\\bar{\\varepsilon}(u_{n+1}))-2(\\mu+H_k/3)\\bar{\\zeta}_n` its in-plane part, one has"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:439
-# fbdbf51caffb4916b5970496483ff5ce
 msgid "The yield condition still reads"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:443
-# a014c690824a411783996e21ccc72c74
 msgid "and for the elimination of the multiplier, :math:`\\beta` has the same expression as in the previous section adapting the value of :math:`\\|B\\|`. The expressions of :math:`\\bar{\\zeta}_n` and :math:`\\eta_n` have to be adpated accoringly."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:450
-# 143c02557f264ce1a3da67bd215f7e91
 msgid "Souza-Auricchio elastoplasticity law (for shape memory alloys)"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:452
-# c6921c90f2034da59dbb854e21a182c6
 msgid "See for instance [GR-ST2015]_ for the justification of the construction of this flow rule. A Von-Mises stress criterion together with an isotropic elastic response, no internal variables and a special type of kinematic hardening is considered with a constraint :math:`\\|\\varepsilon^p\\| \\le c_3`. The plastic potential and yield function have the form"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:456
-# 431c061b2e4b45589a704adf9b761b3b
 msgid "with the complementarity condition"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:461
-# 6e227f0b50ec4332aa114faa2bc0bc02
 msgid "where :math:`c_1, c_2 \\mbox{ and } c_3` are some physical parameters. Note that :math:`\\Frac{\\varepsilon^p}{\\|\\varepsilon^p\\|}` has to be understood to be the whole unit ball for :math:`\\varepsilon^p = 0`."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:464
-# 3bfaa0a2af724db8a904b51a0daac769
 msgid "to be done ..."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:472
-# 1fec03f6d77644128f7b7efba9c22a07
 msgid "Elasto-plasticity bricks"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:474
-# bdd2d12920b0426992c64c96c0661a15
 msgid "See the test programs :file:`tests/plasticity.cc`, :file:`interface/tests/matlab/demo_plasticity.m`, :file:`interface/tests/matlab/demo_plasticity.py` and in :file:`contrib/test_plasticity`."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:477
-# 4d4e75d8aa00480ca9ce5405cc1a582f
 msgid "Generic brick"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:479
-# 0a9dbcf1dd134425ac82347a7ea37185
 msgid "There are two versions of the generic brick. A first one when the plastic multiplier is kept as a variable of the problem where the added term is of the form:"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:483
-# 104893bd419446d3a1490f62e2678316
 msgid "with :math:`r > 0` having a specific value chosen by the brick (in terms of the elasticity coefficients), and when the return mapping strategy is selected (plastic multiplier is just a data), just the added term:"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:487
-# 0a0cf2a7eff04972972520724af9c876
 msgid "The function which adds the brick to a model `md` is ::"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:495
-# 1cd729536bda4574b66469ee213e7abc
 msgid "where `lawname` is the name of an implemented plastic law, `unknowns_type` indicates the choice between a discretization where the plastic multiplier is an unknown of the problem or (return mapping approach) just a data of the model stored for the next iteration. Remember that in both cases, a multiplier is stored anyway. `varnames` is a set of variable and data names with length which may depend on the plastic law (at least the displacement, the plastic multiplier and the plastic strain). `params` is a list of expressions for the parameters (at least elastic coefficients and the yield stress). These expressions can be some data names (or even variable names) of the model but can also be any scalar valid expression of the weak form language (such as \"1/2\", \"2+sin(X[0])\", \"1+Norm(v)\" ...). The last two parameters optionally provided in `params` are the `theta` parameter of the `theta`-scheme (generalized trapezoidal rule) used for the plastic strain integration and the time-step`dt`. The default value for `theta` if omitted is 1, which corresponds to the classical Backward Euler scheme which is first order consistent. `theta=1/2` corresponds to the Crank-Nicolson scheme (trapezoidal rule) which is second order consistent. Any value between 1/2 and 1 should be a valid value. The default value of `dt` is 'timestep' which simply indicates the time step defined in the model (by md.set_time_step(dt)). Alternatively it can be any expression (data name, constant value ...). The time step can be altered from one iteration to the next one. `region` is a mesh region."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:519
-# 7ca5cfe2d26747f0a20fa8a6665082a2
 msgid "The available plasticity laws are:"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:521
-# 0c3c26c3953848209544c76ee2c9189e
 msgid "\"Prandtl Reuss\" (or \"isotropic perfect plasticity\"). Isotropic elasto-plasticity with no hardening. The variables are the displacement, the plastic multiplier and the plastic strain. The displacement should be a variable and have a corresponding data having the same name preceded by \"Previous\\_\" corresponding to the displacement at the previous time step (typically \"u\" and \"Previous_u\"). The plastic multiplier should also have two versions (typically \"xi\" and \"Previous_xi\") the first one being defined as data if `unknowns_type = DISPLACEMENT_ONLY` or as a variable if `unknowns_type = DISPLACEMENT_AND_PLASTIC_MULTIPLIER`. The plastic strain should represent a n x n data tensor field stored on mesh_fem or (preferably) on an im_data (corresponding to `mim`). The data are the first Lame coefficient, the second one (shear modulus) and the uniaxial yield stress. IMPORTANT: Note that this law implements the 3D expressions. If it is used in 2D, the expressions are just transposed to the 2D. For the plane strain approximation, see below."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:537
-# 737834f027134fb3ab9a512ab300caf7
 msgid "\"plane strain Prandtl Reuss\" (or \"plane strain isotropic perfect plasticity\") The same law as the previous one but adapted to the plane strain approximation. Can only be used in 2D."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:541
-# f94bc3dcdb1647cb995636d4ebd505b6
 msgid "\"Prandtl Reuss linear hardening\" (or \"isotropic plasticity linear hardening\"). Isotropic elasto-plasticity with linear isotropic and kinematic hardening. An additional variable compared to \"Prandtl Reuss\" law: the accumulated plastic strain. Similarly to the plastic strain, it is only stored at the end of the time step, so a simple data is required (preferably on an im_data). Two additional parameters: the kinematic hardening modulus and the isotropic one. 3D expressions only."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:550
-# 31b432482a1b4911bf52b5ccbe6c4b05
 msgid "\"plane strain Prandtl Reuss linear hardening\" (or \"plane strain isotropic plasticity linear hardening\"). The same law as the previous one but adapted to the plane strain approximation. Can only be used in 2D."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:555
-# 90466adac35642edb64f87791fe961af
 msgid "IMPORTANT : remember that `small_strain_elastoplasticity_next_iter` has to be called at the end of each time step, before the next one (and before any post-treatment : this sets the value of the plastic strain and plastic multiplier)."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:560
-# 385b4603ed9d43589951b0d02d79066c
 msgid "Additionaly, the following function allow to pass from a time step to another for the small strain plastic brick: ::"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:567
-# 870fc4287d5c49ac8aa5bbbf19edb394
 msgid "The parameters have to be exactly the same as the ones of the `add_small_strain_elastoplasticity_brick`,  so see the documentation of this function for any explanations. Basically, this brick computes the plastic strain and the plastic multiplier and stores them for the next step. Additionaly, it copies the computed displacement to the data that stores the displacement of the previous time step (typically \"u\" to \"Previous\\_u\"). It has to be called before any use of `compute_small_strain_elastoplasticity_Von_Mises`."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:577
-# 471172189a8a4d08a767cda902b07b6d
 msgid "The function ::"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:586
-# 9c35ae376e2c45a294468af3e20f9cca
 msgid "computes the Von Mises stress field with respect to a small strain elastoplasticity term, approximated on `mf_vm`, and stores the result into `VM`.  All other parameters have to be exactly the same as for `add_small_strain_elastoplasticity_brick`. Remember that `small_strain_elastoplasticity_next_iter` has to be called before any call of this function."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:595
-# 0cbd6acf7ef24fd9887c66a690b85e7f
 msgid "A specific brick based on the low-level generic assembly for perfect plasticity"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:597
-# 1a43a1ce2ee0446494bd5af5aa74a070
 msgid "This is an previous version of a elastoplasticity brick which is restricted to  isotropic perfect plasticity and is based on the low-level generic assembly. Its specificity which could be interesting for testing is that the flow rule is integrated on  finite element nodes (not on Gauss points)."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:599
-# 92c1a1bd82b44017902b9877264f2caa
 msgid "The function adding this brick to a model is: ::"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:611
-# e019b335961e4e858876d96a6fa40e18
 msgid "where:"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:605
-# 51c5ed3b4d6146878cd88b5d30b5f27e
 msgid "``varname`` represents the main displacement unknown on which the brick is added (u)."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:606
-# c96f53594eab4a91b440da5120300cdf
 msgid "``previous_varname`` is the displacement at the previous time step."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:607
-# 0a384c57e0ea47e69fe7385af33f8fc8
 msgid "``datalambda`` and ``datamu`` are the data corresponding to the Lame coefficients."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:608
-# 58c2829a61314d2ba41ab22218a12a7a
 msgid "``datathreshold`` represents the plastic threshold of the studied material."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:609
-# 8918fb6862c941678d1a7e12d0c93577
 msgid "``datasigma`` represents the stress constraint values supported by the material. It should be composed of 2 iterates for the time scheme needed for the Newton algorithm used. Note that the finite element method on which ``datasigma`` is defined should be able to represent the derivative of ``varname``."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:610
-# 2e68798b5be04669bebb38575f3768ee
 msgid "``ACP`` corresponds to the type of projection to be used. It has an `abstract_constraints_projection` type and for the moment, only exists the `VM_projection` corresponding to the Von Mises one."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:613
-# 7478e462afde4ee798c2beb8f3c0240c
 msgid "Be careful: ``datalambda``, ``datamu`` and ``datathreshold`` could be constants or described on the same finite element method."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:615
-# 59e608ea13d74fcd9382c23a8a0176f8
 msgid "This function assembles the tangent matrix and the right hand side vector which will be solved using a Newton algorithm."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:618
-# 5a98db8deeca448bb7dc8c4b89a90efe
 msgid "Additionaly, The function: ::"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:623
-# 4d02b8ffc269417fbeb98c745c0e9a58
 msgid "computes the new stress constraint values supported by the material after a load or an unload (once a solve has been done earlier) and upload the variables ``varname`` and ``datasigma`` as follows:"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:629
-# 12f38ceec26f4a15a4fbeeb1c00437a0
 msgid "Then, :math:`u^n` and :math:`\\sigma^n` contains the new values computed and one can restart the process."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:632
 #: ../source/userdoc/model_plasticity_small_strain.rst:640
-# 1e2dd1feb7194224beaff8b6fefb5310
-# 1d5bcaee9cbb4ad0ac04dcd433b21763
 msgid "The function: ::"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:637
-# eac89f6b59be45f8900ff2f4ff2189b4
 msgid "computes the Von Mises (or Tresca if ``tresca`` = true) criterion on the stress tensor stored in ``datasigma`` . The stress is evaluated on the `mesh_fem` ``mf_vm`` and stored into the vector ``VM``. Of course, this function can be used if and only if the previous function ``elastoplasticity_next_iter`` has been called earlier."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:645
-# 2fe49e431680431bb8be28bfe480d029
 msgid "computes on ``mf_pl`` the plastic part of the material, that could appear after a load and an unload, into the vector ``Plast``."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:647
-# dc1766ad3839482296d031c8783cdfeb
 msgid "Note that ``datasigma`` should be the vector containing the new stress constraint values, i.e. after a load or an unload of the material."
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:7
-# 14d7ceda7b5d485e8b8c27059f4ef21d
 msgid "models"
 msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:7
-# 14d7ceda7b5d485e8b8c27059f4ef21d
 msgid "model bricks"
 msgstr ""
 

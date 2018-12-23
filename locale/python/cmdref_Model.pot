@@ -17,938 +17,749 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/python/cmdref_Model.rst:8
-# f4161714e82e4efaaef3533756fd6c4b
 msgid "Model"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model:1
-# 21ac7130dd7d4022b0aca82759f1f146
 msgid "GeFEM Model object"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model:3
-# 594cc54b17074154913be754be96b6ca
 msgid "Model variables store the variables and the state data and the description of a model. This includes the global tangent matrix, the right hand side and the constraints. There are two kinds of models, the `real` and the `complex` models."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model:9
-# a8bb6107ecaa43cba67a8340d1e48c65
 msgid "General constructor for Model objects"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model:11
-# a31a4ce9472a44b7b8d82ddf22466859
 msgid "``MD = Model('real')`` Build a model for real unknowns."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model:14
-# 45a3630dfcdc433db1a50d20d27cfe0f
 msgid "``MD = Model('complex')`` Build a model for complex unknowns."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.Neumann_term:1
-# e1c8c7ab888848d5bac837c637dc120c
 msgid "Gives the assembly string corresponding to the Neumann term of the fem variable `varname` on `region`. It is deduced from the assembly string declared by the model bricks. `region` should be the index of a boundary region on the mesh where `varname` is defined. Care to call this function only after all the volumic bricks have been declared. Complains, if a brick omit to declare an assembly string."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Dirichlet_condition_with_Nitsche_method:1
-# bf0805bf629a4b4dba035ac1795a6c7c
 msgid "Synopsis: ind = Model.add_Dirichlet_condition_with_Nitsche_method(self, MeshIm mim, string varname, string Neumannterm, string datagamma0, int region[, scalar theta][, string dataname])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Dirichlet_condition_with_Nitsche_method:3
-# 238810bfe8ab463cac5008486c8a0aba
 msgid "Add a Dirichlet condition on the variable `varname` and the mesh region `region`. This region should be a boundary. `Neumannterm` is the expression of the Neumann term (obtained by the Green formula) described as an expression of the high-level generic assembly language. This term can be obtained by  Model.Neumann_term(varname, region) once all volumic bricks have been added to the model. The Dirichlet condition is prescribed with Nitsche's method. `datag` is the optional right hand side of the Dirichlet condition. `datagamma0` is the Nitsche's method parameter. `theta` is a scalar value which can be positive or negative. `theta = 1` corresponds to the standard symmetric method which is conditionnaly coercive for  `gamma0` small. `theta = -1` corresponds to the skew-symmetric method which is inconditionnaly coercive. `theta = 0` (default) is the simplest method for which the second derivative of the Neumann term is not necessary even for nonlinear problems. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Dirichlet_condition_with_multipliers:1
-# 3d8cdf22fdad49e2a7c400805be1fdeb
 msgid "Add a Dirichlet condition on the variable `varname` and the mesh region `region`. This region should be a boundary. The Dirichlet condition is prescribed with a multiplier variable described by `mult_description`. If `mult_description` is a string this is assumed to be the variable name corresponding to the multiplier (which should be first declared as a multiplier variable on the mesh region in the model). If it is a finite element method (mesh_fem object) then a multiplier variable will be added to the model and build on this finite element method (it will be restricted to the mesh region `region` and eventually some conflicting dofs with some other multiplier variables will be suppressed). If it is an integer, then a  multiplier variable will be added to the model and build on a classical finite element of degree that integer. `dataname` is the optional right hand side of  the Dirichlet condition. It could be constant or described on a fem; scalar or vector valued, depending on the variable on which the Dirichlet condition is prescribed. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Dirichlet_condition_with_penalization:1
-# c218ebf98dc9462fa1ca5f37ea3b34ef
 msgid "Add a Dirichlet condition on the variable `varname` and the mesh region `region`. This region should be a boundary. The Dirichlet condition is prescribed with penalization. The penalization coefficient is initially `coeff` and will be added to the data of the model. `dataname` is the optional right hand side of the Dirichlet condition. It could be constant or described on a fem; scalar or vector valued, depending on the variable on which the Dirichlet condition is prescribed. `mf_mult` is an optional parameter which allows to weaken the Dirichlet condition specifying a multiplier space. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Dirichlet_condition_with_simplification:1
-# 183cab503f8b4692810c5ecef3bd2b74
 msgid "Adds a (simple) Dirichlet condition on the variable `varname` and the mesh region `region`. The Dirichlet condition is prescribed by a simple post-treatment of the final linear system (tangent system for nonlinear problems) consisting of modifying the lines corresponding to the degree of freedom of the variable on `region` (0 outside the diagonal, 1 on the diagonal of the matrix and the expected value on the right hand side). The symmetry of the linear system is kept if all other bricks are symmetric. This brick is to be reserved for simple Dirichlet conditions (only dof declared on the correspodning boundary are prescribed). The application of this brick on reduced dof may be problematic. Intrinsic vectorial finite element method are not supported.  `dataname` is the optional right hand side of  the Dirichlet condition. It could be constant (but in that case, it can only be applied to Lagrange f.e.m.) or (important) described on the same finite element method as `varname`. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Fourier_Robin_brick:1
-# b4f8aa10b6f74b69b041b4b59977e364
 msgid "Add a Fourier-Robin term to the model relatively to the variable `varname`. This corresponds to a weak term of the form :math:`\\int (qu).v`. `dataexpr` is the parameter :math:`q` of the Fourier-Robin condition.  It can be an arbitrary valid expression of the high-level generic assembly language (except for the complex version for which it should be a data of the model). `region` is the mesh region on which the term is added. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Helmholtz_brick:1
-# 784c4f7265734ea3a7778774812c5325
 msgid "Add a Helmholtz term to the model relatively to the variable `varname`. `dataexpr` is the wave number. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Kirchhoff_Love_Neumann_term_brick:1
-# 5b120e8ed8344666a2ba88152323a67e
 msgid "Add a Neumann term brick for Kirchhoff-Love model on the variable `varname` and the mesh region `region`. `dataname_M` represents the bending moment tensor and  `dataname_divM` its divergence. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Kirchhoff_Love_plate_brick:1
-# 17054fdc7d8f44b388500f27deaa5442
 msgid "Add a bilaplacian brick on the variable `varname` and on the mesh region `region`. This represent a term :math:`\\Delta(D \\Delta u)` where :math:`D(x)` is a the flexion modulus determined by `dataname_D`. The term is integrated by part following a Kirchhoff-Love plate model with `dataname_nu` the poisson ratio. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Laplacian_brick:1
-# 978a6f1ca8dc411b988243c0d23100fe
 msgid "Add a Laplacian term to the model relatively to the variable `varname` (in fact with a minus : :math:`-\\text{div}(\\nabla u)`). If this is a vector valued variable, the Laplacian term is added componentwise. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Mindlin_Reissner_plate_brick:1
-# e727e771a60d40ceb8417981a001dda0
 msgid "Synopsis: ind = Model.add_Mindlin_Reissner_plate_brick(self, MeshIm mim, MeshIm mim_reduced, string varname_u3, string varname_theta , string param_E, string param_nu, string param_epsilon, string param_kappa [,int variant [, int region]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Mindlin_Reissner_plate_brick:3
-# e347e9a170da4da5b71cf799e0736165
 msgid "Add a term corresponding to the classical Reissner-Mindlin plate model for which `varname_u3` is the transverse displacement, `varname_theta` the rotation of fibers normal to the midplane, 'param_E' the Young Modulus, `param_nu` the poisson ratio, `param_epsilon` the plate thickness, `param_kappa` the shear correction factor. Note that since this brick uses the high level generic assembly language, the parameter can be regular expression of this language. There are three variants. `variant = 0` corresponds to the an unreduced formulation and in that case only the integration method `mim` is used. Practically this variant is not usable since it is subject to a strong locking phenomenon. `variant = 1` corresponds to a reduced integration where `mim` is used for the rotation term and `mim_reduced` for the transverse shear term. `variant = 2` (default) corresponds to the projection onto a rotated RT0 element of the transverse shear term. For the moment, this is adapted to quadrilateral only (because it is not sufficient to remove the locking phenomenon on triangle elements). Note also that if you use high order elements, the projection on RT0 will reduce the order of the approximation. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Newmark_scheme:1
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_theta_method_for_second_order:1
-# 0a8e75f9a1fe4ea59e386c6270eda3bf
-# 859a8c72d53646ec9607341e5f940ac8
 msgid "Attach a theta method for the time discretization of the variable `varname`. Valid only if there is at most second order time derivative of the variable."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Nitsche_contact_with_rigid_obstacle_brick:1
-# 7b12546fd5ad4ae685a9329599f7366d
 msgid "Synopsis: ind = Model.add_Nitsche_contact_with_rigid_obstacle_brick(self, MeshIm mim, string varname, string Neumannterm, string dataname_obstacle, string gamma0name,  int region[, scalar theta[, string dataname_friction_coeff[, string dataname_alpha, string dataname_wt]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Nitsche_contact_with_rigid_obstacle_brick:3
-# 266b1acd2a6148f2b0523f17bc3f211c
 msgid "Adds a contact condition with or without Coulomb friction on the variable `varname` and the mesh boundary `region`. The contact condition is prescribed with Nitsche's method. The rigid obstacle should be described with the data `dataname_obstacle` being a signed distance to the obstacle (interpolated on a finite element method). `gamma0name` is the Nitsche's method parameter. `theta` is a scalar value which can be positive or negative. `theta = 1` corresponds to the standard symmetric method which is conditionnaly coercive for  `gamma0` small. `theta = -1` corresponds to the skew-symmetric method which is inconditionnaly coercive. `theta = 0` is the simplest method for which the second derivative of the Neumann term is not necessary. The optional parameter `dataname_friction_coeff` is the friction coefficient which could be constant or defined on a finite element method. CAUTION: This brick has to be added in the model after all the bricks corresponding to partial differential terms having a Neumann term. Moreover, This brick can only be applied to bricks declaring their Neumann terms. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Nitsche_fictitious_domain_contact_brick:1
-# d00684c524a34deba0f15300382d7655
 msgid "Synopsis: ind = Model.add_Nitsche_fictitious_domain_contact_brick(self, MeshIm mim, string varname1, string varname2, string dataname_d1, string dataname_d2, string gamma0name [, scalar theta[, string dataname_friction_coeff[, string dataname_alpha, string dataname_wt1,string dataname_wt2]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Nitsche_fictitious_domain_contact_brick:3
-# 5adba2d55cae483eae0a61f90331ad82
 msgid "Adds a contact condition with or without Coulomb friction between two bodies in a fictitious domain. The contact condition is applied on  the variable `varname_u1` corresponds with the first and slave body  with Nitsche's method and on the variable `varname_u2` corresponds  with the second and master body with Nitsche's method.  The contact condition is evaluated on the fictitious slave boundary. The first body should be described by the level-set `dataname_d1`  and the second body should be described by the level-set `dataname_d2`. `gamma0name` is the Nitsche's method parameter.  `theta` is a scalar value which can be positive or negative.  `theta = 1` corresponds to the standard symmetric method which is conditionnaly coercive for  `gamma0` small. `theta = -1` corresponds to the skew-symmetric method which is inconditionnaly coercive. `theta = 0` is the simplest method for which the second derivative of the Neumann term is not necessary. The optional parameter `dataname_friction_coeff` is the friction coefficient which could be constant or defined on a finite element method.  CAUTION: This brick has to be added in the model after all the bricks corresponding to partial differential terms having a Neumann term. Moreover, This brick can only be applied to bricks declaring their Neumann terms. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Nitsche_large_sliding_contact_brick_raytracing:1
-# 1c1a39a3cf8140bc803c743504a5c16b
 msgid "Synopsis: ind = Model.add_Nitsche_large_sliding_contact_brick_raytracing(self, bool unbiased_version, string dataname_r, scalar release_distance[, string dataname_fr[, string dataname_alpha[, int version]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Nitsche_large_sliding_contact_brick_raytracing:3
-# f2a6e670a73445c09a20c0d4eeae05fe
 msgid "Adds a large sliding contact with friction brick to the model based on the Nitsche's method. This brick is able to deal with self-contact, contact between several deformable bodies and contact with rigid obstacles. It uses the high-level generic assembly. It adds to the model a raytracing_interpolate_transformation object. \"unbiased_version\" refers to the version of Nische's method to be used. (unbiased or biased one). For each slave boundary a  material law should be defined as a function of the dispacement variable on this boundary. The release distance should be determined with care (generally a few times a mean element size, and less than the thickness of the body). Initially, the brick is added with no contact boundaries. The contact boundaries and rigid bodies are added with special functions. `version` is 0 (the default value) for the non-symmetric version and 1 for the more symmetric one (not fully symmetric even without friction)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_Nitsche_midpoint_contact_with_rigid_obstacle_brick:1
-# 35f03f5276b9496caba12d50571b4243
 msgid "EXPERIMENTAL BRICK: for midpoint scheme only !! Adds a contact condition with or without Coulomb friction on the variable `varname` and the mesh boundary `region`. The contact condition is prescribed with Nitsche's method. The rigid obstacle should be described with the data `dataname_obstacle` being a signed distance to the obstacle (interpolated on a finite element method). `gamma0name` is the Nitsche's method parameter. `theta` is a scalar value which can be positive or negative. `theta = 1` corresponds to the standard symmetric method which is conditionnaly coercive for  `gamma0` small. `theta = -1` corresponds to the skew-symmetric method which is inconditionnaly coercive. `theta = 0` is the simplest method for which the second derivative of the Neumann term is not necessary. The optional parameter `dataname_friction_coeff` is the friction coefficient which could be constant or defined on a finite element method. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_assembly_assignment:1
-# 52c931f069e4495eb82b221b0b65c128
 msgid "Synopsis: Model.add_assembly_assignment(self, string dataname, string expression[, int region[, int order[, int before]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_assembly_assignment:3
-# 39499c4530334cc380bcf5b728136360
 msgid "Adds expression `expr` to be evaluated at assembly time and being assigned to the data `dataname` which has to be of im_data type. This allows for instance to store a sub-expression of an assembly computation to be used on an other assembly. It can be used for instance to store the plastic strain in plasticity models. `order` represents the order of assembly where this assignement has to be done (potential(0), weak form(1) or tangent system(2) or at each order(-1)). The default value is 1. If before = 1, the the assignement is perfromed before the computation of the other assembly terms, such that the data can be used in the remaining of the assembly as an intermediary result (be careful that it is still considered as a data, no derivation of the expression is performed for the tangent system).      If before = 0 (default), the assignement is done after the assembly terms."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_basic_contact_brick:1
-# 71e04fcfacb94be9bf3373108ee8847e
 msgid "Synopsis: ind = Model.add_basic_contact_brick(self, string varname_u, string multname_n[, string multname_t], string dataname_r, Spmat BN[, Spmat BT, string dataname_friction_coeff][, string dataname_gap[, string dataname_alpha[, int augmented_version[, string dataname_gamma, string dataname_wt]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_basic_contact_brick:3
-# a48cc670579140edbd1617cf41400047
 msgid "Add a contact with or without friction brick to the model. If U is the vector of degrees of freedom on which the unilateral constraint is applied, the matrix `BN` have to be such that this constraint is defined by :math:`B_N U \\le 0`. A friction condition can be considered by adding the three parameters `multname_t`, `BT` and `dataname_friction_coeff`. In this case, the tangential displacement is :math:`B_T U` and the matrix `BT` should have as many rows as `BN` multiplied by :math:`d-1` where :math:`d` is the domain dimension. In this case also, `dataname_friction_coeff` is a data which represents the coefficient of friction. It can be a scalar or a vector representing a value on each contact condition.  The unilateral constraint is prescribed thank to a multiplier `multname_n` whose dimension should be equal to the number of rows of `BN`. If a friction condition is added, it is prescribed with a multiplier `multname_t` whose dimension should be equal to the number of rows of `BT`. The augmentation parameter `r` should be chosen in a range of acceptabe values (see Getfem user documentation). `dataname_gap` is an optional parameter representing the initial gap. It can be a single value or a vector of value. `dataname_alpha` is an optional homogenization parameter for the augmentation parameter (see Getfem user documentation).  The parameter `augmented_version` indicates the augmentation strategy : 1 for the non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one (except for the coupling between contact and Coulomb friction), 3 for the unsymmetric method with augmented multipliers, 4 for the unsymmetric method with augmented multipliers and De Saxce projection."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_basic_contact_brick_two_deformable_bodies:1
-# 17bd9f273cd648468b4f33352904e8f5
 msgid "Synopsis: ind = Model.add_basic_contact_brick_two_deformable_bodies(self, string varname_u1, string varname_u2, string multname_n, string dataname_r, Spmat BN1, Spmat BN2[, string dataname_gap[, string dataname_alpha[, int augmented_version]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_basic_contact_brick_two_deformable_bodies:18
-# 58bcb1f4eb9a4e44a730336b790ec354
 msgid "Add a frictionless contact condition to the model between two deformable"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_basic_contact_brick_two_deformable_bodies:4
-# ca505f5a259a4f3993f486bb00f9fa28
 msgid "bodies. If U1, U2 are the vector of degrees of freedom on which the unilateral constraint is applied, the matrices `BN1` and `BN2` have to be such that this condition is defined by $B_{N1} U_1 B_{N2} U_2 + \\le gap$. The constraint is prescribed thank to a multiplier `multname_n` whose dimension should be equal to the number of lines of `BN`. The augmentation parameter `r` should be chosen in a range of acceptabe values (see Getfem user documentation). `dataname_gap` is an optional parameter representing the initial gap. It can be a single value or a vector of value. `dataname_alpha` is an optional homogenization parameter for the augmentation parameter (see Getfem user documentation). The parameter `aug_version` indicates the augmentation strategy : 1 for the non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for the unsymmetric method with augmented multiplier."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_bilaplacian_brick:1
-# 243950d2d62d4c47aa49cc960b4d313d
 msgid "Add a bilaplacian brick on the variable `varname` and on the mesh region `region`. This represent a term :math:`\\Delta(D \\Delta u)`. where :math:`D(x)` is a coefficient determined by `dataname` which could be constant or described on a f.e.m. The corresponding weak form is :math:`\\int D(x)\\Delta u(x) \\Delta v(x) dx`. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_constraint_with_multipliers:1
-# a86fde2835d546cb8be5eff7ed5df8cc
 msgid "Synopsis: ind = Model.add_constraint_with_multipliers(self, string varname, string multname, Spmat B, {vec L | string dataname})"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_constraint_with_multipliers:3
-# 9a38dcf74bed403a821a319c46d6020b
 msgid "Add an additional explicit constraint on the variable `varname` thank to a multiplier `multname` peviously added to the model (should be a fixed size variable). The constraint is :math:`BU=L` with `B` being a rectangular sparse matrix. It is possible to change the constraint at any time with the methods Model.set_private_matrix() and Model.set_private_rhs(). If `dataname` is specified instead of `L`, the vector `L` is defined in the model as data with the given name. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_constraint_with_penalization:1
-# 44190c00686945f598df4b3e7fca12de
 msgid "Synopsis: ind = Model.add_constraint_with_penalization(self, string varname, scalar coeff, Spmat B, {vec L | string dataname})"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_constraint_with_penalization:3
-# ef6ba58d6770448db37dcf26930b7a11
 msgid "Add an additional explicit penalized constraint on the variable `varname`. The constraint is :math`BU=L` with `B` being a rectangular sparse matrix. Be aware that `B` should not contain a palin row, otherwise the whole tangent matrix will be plain. It is possible to change the constraint at any time with the methods Model.set_private_matrix() and Model.set_private_rhs(). The method Model.change_penalization_coeff() can be used. If `dataname` is specified instead of `L`, the vector `L` is defined in the model as data with the given name. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_contact_boundary_to_unbiased_Nitsche_large_sliding_contact_brick:1
-# 5bff92ad415d401b81e3d8ee96f03b36
 msgid "Adds a contact boundary to an existing unbiased Nitschelarge sliding contact with friction brick which is both master and slave."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_contact_with_rigid_obstacle_brick:1
-# f0af4a7fff67498caa3a63802a29afb9
 msgid "Synopsis: ind = Model.add_contact_with_rigid_obstacle_brick(self,  MeshIm mim, string varname_u, string multname_n[, string multname_t], string dataname_r[, string dataname_friction_coeff], int region, string obstacle[,  int augmented_version])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_contact_with_rigid_obstacle_brick:3
-# 22c8cfe1a47b4e21b34049de7ca89947
 msgid "DEPRECATED FUNCTION. Use 'add nodal contact with rigid obstacle brick' instead."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_data:1
-# ae6eb27c630e4252a07696c0d9bafd38
 msgid "Add a fixed size data to the model.  `sizes` is either a integer (for a scalar or vector data) or a vector of dimensions for a tensor data. `name` is the data name."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_elastoplasticity_brick:1
-# c946b2af25b64f95b64cf8d1011a764f
 msgid "Old (obsolete) brick which do not use the high level generic assembly. Add a nonlinear elastoplastic term to the model relatively to the variable `varname`, in small deformations, for an isotropic material and for a quasistatic model. `projname` is the type of projection that used: only the Von Mises projection is available with 'VM' or 'Von Mises'. `datasigma` is the variable representing the constraints on the material. `previous_dep_name` represents the displacement at the previous time step. Moreover, the finite element method on which `varname` is described is an K ordered mesh_fem, the `datasigma` one have to be at least an K-1 ordered mesh_fem. `datalambda` and `datamu` are the Lame coefficients of the studied material. `datathreshold` is the plasticity threshold of the material. The three last variables could be constants or described on the same finite element method. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_element_extrapolation_transformation:1
-# 8642c1e733a543dd8658ca79162a27e6
 msgid "Add a special interpolation transformation which represents the identity transformation but allows to evaluate the expression on another element than the current element by polynomial extrapolation. It is used for stabilization term in fictitious domain applications. the array elt_cor should be a two entry array whose first line contains the elements concerned by the transformation and the second line the respective elements on which the extrapolation has to be made. If an element is not listed in elt_cor the evaluation is just made on the current element."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_elementary_rotated_RT0_projection:1
-# bd3d3e829a2445cbbb16ff0a719e8ec6
 msgid "Experimental method ..."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_explicit_matrix:1
-# 11f26085674140d2b0c5dee3064b0cf1
 msgid "Synopsis: ind = Model.add_explicit_matrix(self, string varname1, string varname2, Spmat B[, int issymmetric[, int iscoercive]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_explicit_matrix:3
-# 2444ded2d43a4092ab1bf57fe691252b
 msgid "Add a brick representing an explicit matrix to be added to the tangent linear system relatively to the variables `varname1` and `varname2`. The given matrix should have has many rows as the dimension of `varname1` and as many columns as the dimension of `varname2`. If the two variables are different and if `issymmetric` is set to 1 then the transpose of the matrix is also added to the tangent system (default is 0). Set `iscoercive` to 1 if the term does not affect the coercivity of the tangent system (default is 0). The matrix can be changed by the command Model.set_private_matrix(). Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_explicit_rhs:1
-# dc9e57e62652460cbc5017f02e6cfc91
 msgid "Add a brick representing an explicit right hand side to be added to the right hand side of the tangent linear system relatively to the variable `varname`. The given rhs should have the same size than the dimension of `varname`. The rhs can be changed by the command Model.set_private_rhs(). If `dataname` is specified instead of `L`, the vector `L` is defined in the model as data with the given name. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_fem_data:1
-# 96f5f8359c7249fb8a747cfc89948d89
 msgid "Add a data to the model linked to a MeshFem. `name` is the data name, `sizes` an optional parameter which is either an  integer  or a vector of suplementary dimensions with respect to `mf`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_fem_variable:1
-# a8572b48b3ee46a6b886905b2b88576b
 msgid "Add a variable to the model linked to a MeshFem. `name` is the variable name."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_filtered_fem_variable:1
-# 4a303a5ce607405eae1905d5a9fe5dbf
 msgid "Add a variable to the model linked to a MeshFem. The variable is filtered in the sense that only the dof on the region are considered. `name` is the variable name."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elasticity_brick:1
-# 476a292fa6934e79a794c537be72144f
 msgid "Add a nonlinear elasticity term to the model relatively to the variable `varname`. `lawname` is the constitutive law which could be 'SaintVenant Kirchhoff', 'Mooney Rivlin', 'Neo Hookean', 'Ciarlet Geymonat' or 'Generalized Blatz Ko'. 'Mooney Rivlin' and 'Neo Hookean' law names have to be preceeded with the word 'Compressible' or 'Incompressible' to force using the corresponding version. The compressible version of these laws requires one additional material coefficient."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elasticity_brick:11
-# fb9b12dd3ad54a43871769a30b9e674a
 msgid "IMPORTANT : if the variable is defined on a 2D mesh, the plane strain approximation is automatically used. `params` is a vector of parameters for the constitutive law. Its length depends on the law. It could be a short vector of constant values or a vector field described on a finite element method for variable coefficients. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. This brick use the high-level generic assembly. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:1
-# 75ead02c35cd4974983cef25ba709d0e
 msgid "Synopsis: ind = Model.add_finite_strain_elastoplasticity_brick(self, MeshIm mim , string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, int region = -1])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:3
-# 90baff2899274215a9896efb5c5d3279
 msgid "Add a finite strain elastoplasticity brick to the model. For the moment there is only one supported law defined through  `lawname` as \"Simo_Miehe\". This law supports to possibilities of unknown variables to solve for defined by means of `unknowns_type` set to either 'DISPLACEMENT_AND_PLASTIC_MULTIPLIER' (integer value 1) or 'DISPLACEMENT_AND_PLASTIC_MULTIPLIER_AND_PRESSURE' (integer value 3). The  \"Simo_Miehe\" law expects as `varnames` a set of the following names that have to be defined as variables in the model:"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:13
-# d1d64a538caf41ec893254b4c550b6b4
 msgid "the displacement variable which has to be defined as an unknown,"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:14
-# 440355996f50407f86c22e42b7df00aa
 msgid "the plastic multiplier which has also defined as an unknown,"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:15
-# 7e86b9a3983b4ab284794ca2028feed0
 msgid "optionally the pressure variable for a mixed displacement-pressure formulation for 'DISPLACEMENT_AND_PLASTIC_MULTIPLIER_AND_PRESSURE' as `unknowns_type`,"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:18
-# 0acd2c4b0767400cb235a5311b78e68d
 msgid "the name of a (scalar) fem_data or im_data field that holds the plastic strain at the previous time step, and"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:20
-# 15f0371ccb0c475fb16177358c90625e
 msgid "the name of a fem_data or im_data field that holds all non-repeated components of the inverse of the plastic right Cauchy-Green tensor at the previous time step (it has to be a 4 element vector for plane strain 2D problems and a 6 element vector for 3D problems)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:26
-# be662df165b04f81aecec57bf6aca37b
 msgid "The  \"Simo_Miehe\" law also expects as `params` a set of the following three parameters:"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:29
-# ea6fa748a09a40c6a39cbf8f335ca74f
 msgid "an expression for the initial bulk modulus K,"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:30
-# 6d86f6795a6d4550a1212d0501e16f66
 msgid "an expression for the initial shear modulus G,"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:31
-# 73dd7f019d3048e9b6d62dc5b12975d8
 msgid "the name of a user predefined function that decribes the yield limit as a function of the hardening variable (both the yield limit and the hardening variable values are assumed to be Frobenius norms of appropriate stress and strain tensors, respectively)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_elastoplasticity_brick:37
-# f1e2987c0b6448cca92122fc26d538fc
 msgid "As usual, `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_finite_strain_incompressibility_brick:1
-# 61ab1db0677d43c4976ea457c135127b
 msgid "Add a finite strain incompressibility condition on `variable` (for large strain elasticity). `multname_pressure` is a variable which represent the pressure. Be aware that an inf-sup condition between the finite element method describing the pressure and the primal variable has to be satisfied. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. Return the brick index in the model. This brick is equivalent to the ``nonlinear incompressibility brick`` but uses the high-level generic assembly adding the term ``p*(1-Det(Id(meshdim)+Grad_u))`` if ``p`` is the multiplier and ``u`` the variable which represent the displacement."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_generalized_Dirichlet_condition_with_Nitsche_method:1
-# 83d38113d09d48978560b5693119d2fd
 msgid "Add a Dirichlet condition on the variable `varname` and the mesh region `region`. This version is for vector field. It prescribes a condition @f$ Hu = r @f$ where `H` is a matrix field. CAUTION : the matrix H should have all eigenvalues equal to 1 or 0. The region should be a boundary.   `Neumannterm` is the expression of the Neumann term (obtained by the Green formula) described as an expression of the high-level generic assembly language. This term can be obtained by  Model.Neumann_term(varname, region) once all volumic bricks have been added to the model.  The Dirichlet condition is prescribed with Nitsche's method. `dataname` is the optional right hand side of the Dirichlet condition. It could be constant or described on a fem. `gamma0name` is the Nitsche's method parameter. `theta` is a scalar value which can be positive or negative. `theta = 1` corresponds to the standard symmetric method which is conditionnaly coercive for  `gamma0` small. `theta = -1` corresponds to the skew-symmetric method which is inconditionnaly coercive. `theta = 0` is the simplest method for which the second derivative of the Neumann term is not necessary even for nonlinear problems. `Hname` is the data corresponding to the matrix field `H`. It has to be a constant matrix or described on a scalar fem. Returns the brick index in the model. (This brick is not fully tested)"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_generalized_Dirichlet_condition_with_multipliers:1
-# 17bd007a64454b77b0910add04b950cb
 msgid "Add a Dirichlet condition on the variable `varname` and the mesh region `region`.  This version is for vector field. It prescribes a condition :math:`Hu = r` where `H` is a matrix field. The region should be a boundary. The Dirichlet condition is prescribed with a multiplier variable described by `mult_description`. If `mult_description` is a string this is assumed to be the variable name corresponding to the multiplier (which should be first declared as a multiplier variable on the mesh region in the model). If it is a finite element method (mesh_fem object) then a multiplier variable will be added to the model and build on this finite element method (it will be restricted to the mesh region `region` and eventually some conflicting dofs with some other multiplier variables will be suppressed). If it is an integer, then a  multiplier variable will be added to the model and build on a classical finite element of degree that integer. `dataname` is the right hand side of  the Dirichlet condition. It could be constant or described on a fem; scalar or vector valued, depending on the variable on which the Dirichlet condition is prescribed. `Hname` is the data corresponding to the matrix field `H`. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_generalized_Dirichlet_condition_with_penalization:1
-# 508c495e4ad441198ce4834e8d647f0b
 msgid "Add a Dirichlet condition on the variable `varname` and the mesh region `region`. This version is for vector field. It prescribes a condition :math:`Hu = r` where `H` is a matrix field. The region should be a boundary. The Dirichlet condition is prescribed with penalization. The penalization coefficient is intially `coeff` and will be added to the data of the model. `dataname` is the right hand side of the Dirichlet condition. It could be constant or described on a fem; scalar or vector valued, depending on the variable on which the Dirichlet condition is prescribed. `Hname` is the data corresponding to the matrix field `H`. It has to be a constant matrix or described on a scalar fem. `mf_mult` is an optional parameter which allows to weaken the Dirichlet condition specifying a multiplier space. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_generic_elliptic_brick:1
-# ddf8cab0ecc04f8c8344773de985b8d8
 msgid "Add a generic elliptic term to the model relatively to the variable `varname`. The shape of the elliptic term depends both on the variable and the data. This corresponds to a term :math:`-\\text{div}(a\\nabla u)` where :math:`a` is the data and :math:`u` the variable. The data can be a scalar, a matrix or an order four tensor. The variable can be vector valued or not. If the data is a scalar or a matrix and the variable is vector valued then the term is added componentwise. An order four tensor data is allowed for vector valued variable only. The data can be constant or describbed on a fem. Of course, when the data is a tensor describe on a finite element method (a tensor field) the data can be a huge vector. The components of the matrix/tensor have to be stored with the fortran order (columnwise) in the data vector (compatibility with blas). The symmetry of the given matrix/tensor is not verified (but assumed). If this is a vector valued variable, the elliptic term is added componentwise. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. Note that for the real version which uses the high-level generic assembly language, `dataname` can be any regular expression of the high-level generic assembly language (like \"1\", \"sin(X(1))\" or \"Norm(u)\" for instance) even depending on model variables. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_im_data:1
-# 6786b95544914ecba226c1f12046f129
 msgid "Add a data set to the model linked to a MeshImd. `name` is the data name."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_initialized_data:1
-# 9f6193cf620b478a826754a5dca410ca
 msgid "Add an initialized fixed size data to the model. `sizes` an optional parameter which is either an  integer  or a vector dimensions that describes the format of the data. By default, the data is considered to b a vector field. `name` is the data name and `V` is the value of the data."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_initialized_fem_data:1
-# 985c4d2308424ea499eaa4ddb387af8c
 msgid "Add a data to the model linked to a MeshFem. `name` is the data name. The data is initiakized with `V`. The data can be a scalar or vector field. `sizes` an optional parameter which is either an  integer or a vector of suplementary dimensions with respect to `mf`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_integral_contact_between_nonmatching_meshes_brick:1
-# 9355bebbaca54ff59aff1563e2304e10
 msgid "Synopsis: ind = Model.add_integral_contact_between_nonmatching_meshes_brick(self,  MeshIm mim, string varname_u1, string varname_u2, string multname, string dataname_r [, string dataname_friction_coeff], int region1, int region2 [, int option [, string dataname_alpha [, string dataname_wt1 , string dataname_wt2]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_integral_contact_between_nonmatching_meshes_brick:3
-# 3c2a0f764520433c8250b5f53e725bf4
 msgid "Add a contact with or without friction condition between nonmatching meshes to the model. This brick adds a contact which is defined in an integral way. It is the direct approximation of an augmented agrangian formulation (see Getfem user documentation) defined at the continuous level. The advantage should be a better scalability: the number of Newton iterations should be more or less independent of the mesh size. The condition is applied on the variables `varname_u1` and `varname_u2` on the boundaries corresponding to `region1` and `region2`. `multname` should be a fem variable representing the contact stress for the frictionless case and the contact and friction stress for the case with friction. An inf-sup condition between `multname` and `varname_u1` and `varname_u2` is required. The augmentation parameter `dataname_r` should be chosen in a range of acceptable values. The optional parameter `dataname_friction_coeff` is the friction coefficient which could be constant or defined on a finite element method on the same mesh as `varname_u1`. Possible values for `option` is 1 for the non-symmetric Alart-Curnier augmented Lagrangian method, 2 for the symmetric one, 3 for the non-symmetric Alart-Curnier method with an additional augmentation and 4 for a new unsymmetric method. The default value is 1. In case of contact with friction, `dataname_alpha`, `dataname_wt1` and `dataname_wt2` are optional parameters to solve evolutionary friction problems."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_integral_contact_with_rigid_obstacle_brick:1
-# 4e65c816430847889aa9e9fe492a8e46
 msgid "Synopsis: ind = Model.add_integral_contact_with_rigid_obstacle_brick(self,  MeshIm mim, string varname_u, string multname, string dataname_obstacle, string dataname_r [, string dataname_friction_coeff], int region [, int option [, string dataname_alpha [, string dataname_wt [, string dataname_gamma [, string dataname_vt]]]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_integral_contact_with_rigid_obstacle_brick:3
-# 523292773e0a4549985ce8e01044c1b4
 msgid "Add a contact with or without friction condition with a rigid obstacle to the model. This brick adds a contact which is defined in an integral way. It is the direct approximation of an augmented Lagrangian formulation (see Getfem user documentation) defined at the continuous level. The advantage is a better scalability: the number of Newton iterations should be more or less independent of the mesh size. The contact condition is applied on the variable `varname_u` on the boundary corresponding to `region`. The rigid obstacle should be described with the data `dataname_obstacle` being a signed distance to the obstacle (interpolated on a finite element method). `multname` should be a fem variable representing the contact stress. An inf-sup condition beetween `multname` and `varname_u` is required. The augmentation parameter `dataname_r` should be chosen in a range of acceptabe values. The optional parameter `dataname_friction_coeff` is the friction coefficient which could be constant or defined on a finite element method. Possible values for `option` is 1 for the non-symmetric Alart-Curnier augmented Lagrangian method, 2 for the symmetric one, 3 for the non-symmetric Alart-Curnier method with an additional augmentation and 4 for a new unsymmetric method. The default value is 1. In case of contact with friction, `dataname_alpha` and `dataname_wt` are optional parameters to solve evolutionary friction problems. `dataname_gamma` and `dataname_vt` represent optional data for adding a parameter-dependent sliding velocity to the friction condition."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_integral_large_sliding_contact_brick_raytracing:1
-# c63e83bb4f6e488ba3cafda6674a494c
 msgid "Synopsis: ind = Model.add_integral_large_sliding_contact_brick_raytracing(self, string dataname_r, scalar release_distance, [, string dataname_fr[, string dataname_alpha[, int version]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_integral_large_sliding_contact_brick_raytracing:3
-# 4b9ffac124844c728ac8a26db7d28fa8
 msgid "Adds a large sliding contact with friction brick to the model. This brick is able to deal with self-contact, contact between several deformable bodies and contact with rigid obstacles. It uses the high-level generic assembly. It adds to the model a raytracing_interpolate_transformation object. For each slave boundary a multiplier variable should be defined. The release distance should be determined with care (generally a few times a mean element size, and less than the thickness of the body). Initially, the brick is added with no contact boundaries. The contact boundaries and rigid bodies are added with special functions. `version` is 0 (the default value) for the non-symmetric version and 1 for the more symmetric one (not fully symmetric even without friction)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_interpolate_transformation_from_expression:1
-# 9c169e81057a49c6ac62f99666515cd5
 msgid "Add a transformation to the model from mesh `source_mesh` to mesh `target_mesh` given by the expression `expr` which corresponds to a high-level generic assembly expression which may contains some variable of the model. CAUTION: the derivative of the transformation with used variable is taken into account in the computation of the tangen system. However, order two derivative is not implemented, so such tranformation is not allowed in the definition of a potential."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_isotropic_linearized_elasticity_brick:1
-# 88a911483fec4ec496e8140113c6b15c
 msgid "Add an isotropic linearized elasticity term to the model relatively to the variable `varname`. `dataname_lambda` and `dataname_mu` should contain the Lame coefficients. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_isotropic_linearized_elasticity_brick_pstrain:1
-# 2193045d61ac4701a2093a72c9c8219d
 msgid "Add an isotropic linearized elasticity term to the model relatively to the variable `varname`. `data_E` and `data_nu` should contain the Young modulus and Poisson ratio, respectively. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. On two-dimensional meshes, the term will correpsond to a plain strain approximation. On three-dimensional meshes, it will correspond to the standard model.  Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_isotropic_linearized_elasticity_brick_pstress:1
-# 29bbdddf2779460181640fd005041818
 msgid "Add an isotropic linearized elasticity term to the model relatively to the variable `varname`. `data_E` and `data_nu` should contain the Young modulus and Poisson ratio, respectively. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. On two-dimensional meshes, the term will correpsond to a plain stress approximation. On three-dimensional meshes, it will correspond to the standard model.  Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_linear_generic_assembly_brick:1
-# 5d7b3c32bd1846a3a99fa461cf00e900
 msgid "Synopsis: ind = Model.add_linear_generic_assembly_brick(self, MeshIm mim, string expression[, int region[, int is_symmetric[, int is_coercive]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_linear_generic_assembly_brick:3
-# eda3490c07e04474bf82995542db99dd
 msgid "Deprecated. Use Model.add_linear_term() instead."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_linear_incompressibility_brick:1
-# 92dd992b682c46e795c0c3f36e1c92a4
 msgid "Synopsis: ind = Model.add_linear_incompressibility_brick(self, MeshIm mim, string varname, string multname_pressure[, int region[, string dataexpr_coeff]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_linear_incompressibility_brick:3
-# d14e572772184205bdafc5017392c662
 msgid "Add a linear incompressibility condition on `variable`. `multname_pressure` is a variable which represent the pressure. Be aware that an inf-sup condition between the finite element method describing the pressure and the primal variable has to be satisfied. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. `dataexpr_coeff` is an optional penalization coefficient for nearly incompressible elasticity for instance. In this case, it is the inverse of the Lame coefficient :math:`\\lambda`. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_linear_term:1
-# a8d22d7f19a3460f9213e324b9050a6c
 msgid "Synopsis: ind = Model.add_linear_term(self, MeshIm mim, string expression[, int region[, int is_symmetric[, int is_coercive]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_linear_term:3
-# cbe260f25e9946928bdebb58fce38dac
 msgid "Adds a matrix term given by the assembly string `expr` which will be assembled in region `region` and with the integration method `mim`. Only the matrix term will be taken into account, assuming that it is linear. The advantage of declaring a term linear instead of nonlinear is that it will be assembled only once and no assembly is necessary for the residual. Take care that if the expression contains some variables and if the expression is a potential or of first order (i.e. describe the weak form, not the derivative of the weak form), the expression will be derivated with respect to all variables. You can specify if the term is symmetric, coercive or not. If you are not sure, the better is to declare the term not symmetric and not coercive. But some solvers (conjugate gradient for instance) are not allowed for non-coercive problems. `brickname` is an otpional name for the brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_linear_twodomain_term:1
-# 7e7adef03785415ca3b484c6cc1c1c9a
 msgid "Synopsis: ind = Model.add_linear_twodomain_term(self, MeshIm mim, string expression, int region, string secondary_domain[, int is_symmetric[, int is_coercive]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_linear_twodomain_term:3
-# bc3120d77a1c4affb11b7b9912c252ec
 msgid "Adds a linear term given by a weak form language expression like Model.add_linear_term() but for an integration on a direct product of two domains, a first specfied by ``mim`` and ``region`` and a second one by ``secondary_domain`` which has to be declared first into the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_macro:1
-# 66af140a4ae243208328c75f9a9f8cf4
 msgid "Define a new macro for the high generic assembly language. The name include the parameters. For instance name='sp(a,b)', expr='a.b' is a valid definition. Macro without parameter can also be defined. For instance name='x1', expr='X[1]' is valid. Teh form name='grad(u)', expr='Grad_u' is also allowed but in that case, the parameter 'u' will only be allowed to be a variable name when using the macro. Note that macros can be directly defined inside the assembly strings with the keyword 'Def'."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_mass_brick:1
-# a6d265cc5f774834977ad8ba35c261a4
 msgid "Synopsis: ind = Model.add_mass_brick(self, MeshIm mim, string varname[, string dataexpr_rho[, int region]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_mass_brick:3
-# b2f23fa3d9d64dcb8c1de0ecd8c025a1
 msgid "Add mass term to the model relatively to the variable `varname`. If specified, the data `dataexpr_rho` is the density (1 if omitted). `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_master_contact_boundary_to_biased_Nitsche_large_sliding_contact_brick:1
-# 17b6c70f20a3446abd25c0626b6eec90
 msgid "Adds a master contact boundary to an existing biased Nitsche's large sliding contact with friction brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_master_contact_boundary_to_large_sliding_contact_brick:1
-# 7c2e780bbec84497bdc9df67b6d60248
 msgid "Adds a master contact boundary to an existing large sliding contact with friction brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_master_contact_boundary_to_projection_transformation:1
-# b29eba31dede41b496ad80362b0cbee5
 msgid "Add a master contact boundary with corresponding displacement variable `dispname` on a specific boundary `region` to an existing projection interpolate transformation called `transname`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_master_contact_boundary_to_raytracing_transformation:1
-# 5be3aedd624041f1aa27ad0cdc8afe51
 msgid "Add a master contact boundary with corresponding displacement variable `dispname` on a specific boundary `region` to an existing raytracing interpolate transformation called `transname`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_master_slave_contact_boundary_to_large_sliding_contact_brick:1
-# 5ccee7b0f2994546968bbdde299c9495
 msgid "Adds a contact boundary to an existing large sliding contact with friction brick which is both master and slave (allowing the self-contact)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_multiplier:1
-# bcff377adb774a03ac3907925372dea7
 msgid "Add a particular variable linked to a fem being a multiplier with respect to a primal variable. The dof will be filtered with the ``gmm::range_basis`` function applied on the terms of the model which link the multiplier and the primal variable. This in order to retain only linearly independent constraints on the primal variable. Optimized for boundary multipliers."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nodal_contact_between_nonmatching_meshes_brick:1
-# 83fca02c5e8141a9949247bb3d3ca855
 msgid "Synopsis: ind = Model.add_nodal_contact_between_nonmatching_meshes_brick(self,  MeshIm mim1[, MeshIm mim2], string varname_u1[, string varname_u2], string multname_n[, string multname_t], string dataname_r[, string dataname_fr], int rg1, int rg2[, int slave1, int slave2,  int augmented_version])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nodal_contact_between_nonmatching_meshes_brick:3
-# 37f34de976a54e64b89778d559f18c58
 msgid "Add a contact with or without friction condition between two faces of one or two elastic bodies. The condition is applied on the variable `varname_u1` or the variables `varname_u1` and `varname_u2` depending if a single or two distinct displacement fields are given. Integers `rg1` and `rg2` represent the regions expected to come in contact with each other. In the single displacement variable case the regions defined in both `rg1` and `rg2` refer to the variable `varname_u1`. In the case of two displacement variables, `rg1` refers to `varname_u1` and `rg2` refers to `varname_u2`. `multname_n` should be a fixed size variable whose size is the number of degrees of freedom on those regions among the ones defined in `rg1` and `rg2` which are characterized as \"slaves\". It represents the contact equivalent nodal normal forces. `multname_t` should be a fixed size variable whose size corresponds to the size of `multname_n` multiplied by qdim - 1 . It represents the contact equivalent nodal tangent (frictional) forces. The augmentation parameter `r` should be chosen in a range of acceptabe values (close to the Young modulus of the elastic body, see Getfem user documentation). The friction coefficient stored in the parameter `fr` is either a single value or a vector of the same size as `multname_n`. The optional parameters `slave1` and `slave2` declare if the regions defined in `rg1` and `rg2` are correspondingly considered as \"slaves\". By default `slave1` is true and `slave2` is false, i.e. `rg1` contains the slave surfaces, while 'rg2' the master surfaces. Preferrably only one of `slave1` and `slave2` is set to true.  The parameter `augmented_version` indicates the augmentation strategy : 1 for the non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one (except for the coupling between contact and Coulomb friction), 3 for the new unsymmetric method. Basically, this brick computes the matrices BN and BT and the vectors gap and alpha and calls the basic contact brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nodal_contact_with_rigid_obstacle_brick:1
-# 5fd05f253e70431db647ee6c3138cb97
 msgid "Synopsis: ind = Model.add_nodal_contact_with_rigid_obstacle_brick(self,  MeshIm mim, string varname_u, string multname_n[, string multname_t], string dataname_r[, string dataname_friction_coeff], int region, string obstacle[,  int augmented_version])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nodal_contact_with_rigid_obstacle_brick:3
-# b30a8902c7c449a090b9890322e61767
 msgid "Add a contact with or without friction condition with a rigid obstacle to the model. The condition is applied on the variable `varname_u` on the boundary corresponding to `region`. The rigid obstacle should be described with the string `obstacle` being a signed distance to the obstacle. This string should be an expression where the coordinates are 'x', 'y' in 2D and 'x', 'y', 'z' in 3D. For instance, if the rigid obstacle correspond to :math:`z \\le 0`, the corresponding signed distance will be simply \"z\". `multname_n` should be a fixed size variable whose size is the number of degrees of freedom on boundary `region`. It represents the contact equivalent nodal forces. In order to add a friction condition one has to add the `multname_t` and `dataname_friction_coeff` parameters. `multname_t` should be a fixed size variable whose size is the number of degrees of freedom on boundary `region` multiplied by :math:`d-1` where :math:`d` is the domain dimension. It represents the friction equivalent nodal forces. The augmentation parameter `r` should be chosen in a range of acceptabe values (close to the Young modulus of the elastic body, see Getfem user documentation).  `dataname_friction_coeff` is the friction coefficient. It could be a scalar or a vector of values representing the friction coefficient on each contact node.  The parameter `augmented_version` indicates the augmentation strategy : 1 for the non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one (except for the coupling between contact and Coulomb friction), 3 for the new unsymmetric method. Basically, this brick compute the matrix BN and the vectors gap and alpha and calls the basic contact brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nonlinear_elasticity_brick:1
-# f105f43ac44349ef80ef694602358da3
 msgid "Add a nonlinear elasticity term to the model relatively to the variable `varname` (deprecated brick, use add_finite_strain_elaticity instead). `lawname` is the constitutive law which could be 'SaintVenant Kirchhoff', 'Mooney Rivlin', 'neo Hookean', 'Ciarlet Geymonat' or 'generalized Blatz Ko'. 'Mooney Rivlin' and 'neo Hookean' law names can be preceded with the word 'compressible' or 'incompressible' to force using the corresponding version. The compressible version of these laws requires one additional material coefficient. By default, the incompressible version of 'Mooney Rivlin' law and the compressible one of the 'neo Hookean' law are considered. In general, 'neo Hookean' is a special case of the 'Mooney Rivlin' law that requires one coefficient less. IMPORTANT : if the variable is defined on a 2D mesh, the plane strain approximation is automatically used. `dataname` is a vector of parameters for the constitutive law. Its length depends on the law. It could be a short vector of constant values or a vector field described on a finite element method for variable coefficients. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. This brick use the low-level generic assembly. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nonlinear_generic_assembly_brick:1
-# 1fe5397eacf340bba74f10df2bf6c51c
 msgid "Synopsis: ind = Model.add_nonlinear_generic_assembly_brick(self, MeshIm mim, string expression[, int region[, int is_symmetric[, int is_coercive]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nonlinear_generic_assembly_brick:3
-# 11111c72239a4953879c348f742c7b33
 msgid "Deprecated. Use Model.add_nonlinear_term() instead."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nonlinear_incompressibility_brick:1
-# 9a6930c97790462b8998fce9653be049
 msgid "Add a nonlinear incompressibility condition on `variable` (for large strain elasticity). `multname_pressure` is a variable which represent the pressure. Be aware that an inf-sup condition between the finite element method describing the pressure and the primal variable has to be satisfied. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nonlinear_term:1
-# 797a1d44af6a4a0fbd1d375c8145a4b6
 msgid "Synopsis: ind = Model.add_nonlinear_term(self, MeshIm mim, string expression[, int region[, int is_symmetric[, int is_coercive]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nonlinear_term:3
-# ae7b0cfabf10495992c3c2e3033906f4
 msgid "Adds a nonlinear term given by the assembly string `expr` which will be assembled in region `region` and with the integration method `mim`. The expression can describe a potential or a weak form. Second order terms (i.e. containing second order test functions, Test2) are not allowed. You can specify if the term is symmetric, coercive or not. If you are not sure, the better is to declare the term not symmetric and not coercive. But some solvers (conjugate gradient for instance) are not allowed for non-coercive problems. `brickname` is an otpional name for the brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nonlinear_twodomain_term:1
-# 90e418f6f96043d7867a223954f66f92
 msgid "Synopsis: ind = Model.add_nonlinear_twodomain_term(self, MeshIm mim, string expression, int region, string secondary_domain[, int is_symmetric[, int is_coercive]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nonlinear_twodomain_term:3
-# 442239b486ef46589152a27c7b8590c3
 msgid "Adds a nonlinear term given by a weak form language expression like Model.add_nonlinear_term() but for an integration on a direct product of two domains, a first specfied by ``mim`` and ``region`` and a second one by ``secondary_domain`` which has to be declared first into the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nonmatching_meshes_contact_brick:1
-# 1c9d4be8506b45d0abc7c95c10967e9b
 msgid "Synopsis: ind = Model.add_nonmatching_meshes_contact_brick(self,  MeshIm mim1[, MeshIm mim2], string varname_u1[, string varname_u2], string multname_n[, string multname_t], string dataname_r[, string dataname_fr], int rg1, int rg2[, int slave1, int slave2,  int augmented_version])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_nonmatching_meshes_contact_brick:3
-# 4d65410273384ddaa9cfcb25125a8569
 msgid "DEPRECATED FUNCTION. Use 'add nodal contact between nonmatching meshes brick' instead."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_normal_Dirichlet_condition_with_Nitsche_method:1
-# e90af32e6c8c4975826ba871cd261c86
 msgid "Synopsis: ind = Model.add_normal_Dirichlet_condition_with_Nitsche_method(self, MeshIm mim, string varname, string Neumannterm, string gamma0name, int region[, scalar theta][, string dataname])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_normal_Dirichlet_condition_with_Nitsche_method:3
-# 0e48e1f3bd394aaf9de4b7d2fc48ae15
 msgid "Add a Dirichlet condition to the normal component of the vector (or tensor) valued variable `varname` and the mesh region `region`. This region should be a boundary. `Neumannterm` is the expression of the Neumann term (obtained by the Green formula) described as an expression of the high-level generic assembly language. This term can be obtained by  Model.Neumann_term(varname, region) once all volumic bricks have been added to the model. The Dirichlet condition is prescribed with Nitsche's method. `dataname` is the optional right hand side of the Dirichlet condition. It could be constant or described on a fem. `gamma0name` is the Nitsche's method parameter. `theta` is a scalar value which can be positive or negative. `theta = 1` corresponds to the standard symmetric method which is conditionnaly coercive for  `gamma0` small. `theta = -1` corresponds to the skew-symmetric method which is inconditionnaly coercive. `theta = 0` is the simplest method for which the second derivative of the Neumann term is not necessary even for nonlinear problems.  Returns the brick index in the model. (This brick is not fully tested)"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_normal_Dirichlet_condition_with_multipliers:1
-# 30c09048d0374ebb8663f7d1668f92e6
 msgid "Add a Dirichlet condition to the normal component of the vector (or tensor) valued variable `varname` and the mesh region `region`. This region should be a boundary. The Dirichlet condition is prescribed with a multiplier variable described by `mult_description`. If `mult_description` is a string this is assumed to be the variable name corresponding to the multiplier (which should be first declared as a multiplier variable on the mesh region in the model). If it is a finite element method (mesh_fem object) then a multiplier variable will be added to the model and build on this finite element method (it will be restricted to the mesh region `region` and eventually some conflicting dofs with some other multiplier variables will be suppressed). If it is an integer, then a  multiplier variable will be added to the model and build on a classical finite element of degree that integer. `dataname` is the optional right hand side of  the Dirichlet condition. It could be constant or described on a fem; scalar or vector valued, depending on the variable on which the Dirichlet condition is prescribed (scalar if the variable is vector valued, vector if the variable is tensor valued). Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_normal_Dirichlet_condition_with_penalization:1
-# 20b3ed8197d645ee8a06a1f2a4afc46d
 msgid "Add a Dirichlet condition to the normal component of the vector (or tensor) valued variable `varname` and the mesh region `region`. This region should be a boundary. The Dirichlet condition is prescribed with penalization. The penalization coefficient is initially `coeff` and will be added to the data of the model. `dataname` is the optional right hand side of the Dirichlet condition. It could be constant or described on a fem; scalar or vector valued, depending on the variable on which the Dirichlet condition is prescribed (scalar if the variable is vector valued, vector if the variable is tensor valued). `mf_mult` is an optional parameter which allows to weaken the Dirichlet condition specifying a multiplier space. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_normal_derivative_Dirichlet_condition_with_multipliers:1
-# 8982c6410ca144bdb1024fd94036b875
 msgid "Add a Dirichlet condition on the normal derivative of the variable `varname` and on the mesh region `region` (which should be a boundary. The general form is :math:`\\int \\partial_n u(x)v(x) = \\int r(x)v(x) \\forall v` where :math:`r(x)` is the right hand side for the Dirichlet condition (0 for homogeneous conditions) and :math:`v` is in a space of multipliers defined by `mult_description`. If `mult_description` is a string this is assumed to be the variable name corresponding to the multiplier (which should be first declared as a multiplier variable on the mesh region in the model). If it is a finite element method (mesh_fem object) then a multiplier variable will be added to the model and build on this finite element method (it will be restricted to the mesh region `region` and eventually some conflicting dofs with some other multiplier variables will be suppressed). If it is an integer, then a  multiplier variable will be added to the model and build on a classical finite element of degree that integer. `dataname` is an optional parameter which represents the right hand side of the Dirichlet condition. If `R_must_be_derivated` is set to `true` then the normal derivative of `dataname` is considered. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_normal_derivative_Dirichlet_condition_with_penalization:1
-# 0f1b043826274ae3a7c039152f656422
 msgid "Add a Dirichlet condition on the normal derivative of the variable `varname` and on the mesh region `region` (which should be a boundary. The general form is :math:`\\int \\partial_n u(x)v(x) = \\int r(x)v(x) \\forall v` where :math:`r(x)` is the right hand side for the Dirichlet condition (0 for homogeneous conditions). The penalization coefficient is initially `coeff` and will be added to the data of the model. It can be changed with the command Model.change_penalization_coeff(). `dataname` is an optional parameter which represents the right hand side of the Dirichlet condition. If `R_must_be_derivated` is set to `true` then the normal derivative of `dataname` is considered. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_normal_derivative_source_term_brick:1
-# c9b12922300645aaa095f676bf6c5ff4
 msgid "Add a normal derivative source term brick :math:`F = \\int b.\\partial_n v` on the variable `varname` and the mesh region `region`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_normal_derivative_source_term_brick:5
-# d0cdfa834e8c4227961a278dc5d23d53
 msgid "Update the right hand side of the linear system. `dataname` represents `b` and `varname` represents `v`. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_normal_source_term_brick:1
-# a7ab1471286043feb8a97461ff36cdd6
 msgid "Add a source term on the variable `varname` on a boundary `region`. This region should be a boundary. The source term is represented by the data `dataepxpr` which could be any regular expression of the high-level generic assembly language (except for the complex version where it has to be a declared data of the model). A scalar product with the outward normal unit vector to the boundary is performed. The main aim of this brick is to represent a Neumann condition with a vector data without performing the scalar product with the normal as a pre-processing. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_penalized_contact_between_nonmatching_meshes_brick:1
-# 7d71be0eea6c456fafb997386abe179e
 msgid "Synopsis: ind = Model.add_penalized_contact_between_nonmatching_meshes_brick(self,  MeshIm mim, string varname_u1, string varname_u2, string dataname_r [, string dataname_coeff], int region1, int region2 [, int option [, string dataname_lambda, [, string dataname_alpha [, string dataname_wt1, string dataname_wt2]]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_penalized_contact_between_nonmatching_meshes_brick:3
-# 412193b604414638bc12447ae18baba0
 msgid "Add a penalized contact condition with or without friction between nonmatching meshes to the model. The condition is applied on the variables `varname_u1` and  `varname_u2` on the boundaries corresponding to `region1` and `region2`. The penalization parameter `dataname_r` should be chosen large enough to prescribe approximate non-penetration and friction conditions but not too large not to deteriorate too much the conditionning of the tangent system. The optional parameter `dataname_friction_coeff` is the friction coefficient which could be constant or defined on a finite element method on the same mesh as `varname_u1`. `dataname_lambda` is an optional parameter used if option is 2. In that case, the penalization term is shifted by lambda (this allows the use of an Uzawa algorithm on the corresponding augmented Lagrangian formulation) In case of contact with friction, `dataname_alpha`, `dataname_wt1` and `dataname_wt2` are optional parameters to solve evolutionary friction problems."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_penalized_contact_with_rigid_obstacle_brick:1
-# c1f94a6b27ff46ba8e89c1d8b8e0a7cd
 msgid "Synopsis: ind = Model.add_penalized_contact_with_rigid_obstacle_brick(self,  MeshIm mim, string varname_u, string dataname_obstacle, string dataname_r [, string dataname_coeff], int region [, int option, string dataname_lambda, [, string dataname_alpha [, string dataname_wt]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_penalized_contact_with_rigid_obstacle_brick:3
-# eb3652d46d364dfd810f20bbec005949
 msgid "Add a penalized contact with or without friction condition with a rigid obstacle to the model. The condition is applied on the variable `varname_u` on the boundary corresponding to `region`. The rigid obstacle should be described with the data `dataname_obstacle` being a signed distance to the obstacle (interpolated on a finite element method). The penalization parameter `dataname_r` should be chosen large enough to prescribe approximate non-penetration and friction conditions but not too large not to deteriorate too much the conditionning of the tangent system. `dataname_lambda` is an optional parameter used if option is 2. In that case, the penalization term is shifted by lambda (this allows the use of an Uzawa algorithm on the corresponding augmented Lagrangian formulation)"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_pointwise_constraints_with_given_multipliers:1
-# cf72d0dfa14d40e985473011b53a8d70
 msgid "Synopsis: ind = Model.add_pointwise_constraints_with_given_multipliers(self, string varname, string multname, string dataname_pt[, string dataname_unitv] [, string dataname_val])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_pointwise_constraints_with_given_multipliers:3
-# 3ff022cdebf34c64862cee5a768c054c
 msgid "Add some pointwise constraints on the variable `varname` using a given multiplier `multname`. The conditions are prescribed on a set of points given in the data `dataname_pt` whose dimension is the number of points times the dimension of the mesh. The multiplier variable should be a fixed size variable of size the number of points. If the variable represents a vector field, one has to give the data `dataname_unitv` which represents a vector of dimension the number of points times the dimension of the vector field which should store some unit vectors. In that case the prescribed constraint is the scalar product of the variable at the corresponding point with the corresponding unit vector. The optional data `dataname_val` is the vector of values to be prescribed at the different points. This brick is specifically designed to kill rigid displacement in a Neumann problem. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_pointwise_constraints_with_multipliers:1
-# b8c4a2143a284730b894a907543f4378
 msgid "Synopsis: ind = Model.add_pointwise_constraints_with_multipliers(self, string varname, string dataname_pt[, string dataname_unitv] [, string dataname_val])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_pointwise_constraints_with_multipliers:3
-# bdb9e3bd373749859927af76b090f54a
 msgid "Add some pointwise constraints on the variable `varname` using multiplier. The multiplier variable is automatically added to the model. The conditions are prescribed on a set of points given in the data `dataname_pt` whose dimension is the number of points times the dimension of the mesh. If the variable represents a vector field, one has to give the data `dataname_unitv` which represents a vector of dimension the number of points times the dimension of the vector field which should store some unit vectors. In that case the prescribed constraint is the scalar product of the variable at the corresponding point with the corresponding unit vector. The optional data `dataname_val` is the vector of values to be prescribed at the different points. This brick is specifically designed to kill rigid displacement in a Neumann problem. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_pointwise_constraints_with_penalization:1
-# 5e5ee1c3677140569736f1f1c1bf8b9b
 msgid "Synopsis: ind = Model.add_pointwise_constraints_with_penalization(self, string varname, scalar coeff, string dataname_pt[, string dataname_unitv] [, string dataname_val])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_pointwise_constraints_with_penalization:3
-# 80d3277efb6d4535bef6756b42f992f8
 msgid "Add some pointwise constraints on the variable `varname` thanks to a penalization. The penalization coefficient is initially `penalization_coeff` and will be added to the data of the model. The conditions are prescribed on a set of points given in the data `dataname_pt` whose dimension is the number of points times the dimension of the mesh. If the variable represents a vector field, one has to give the data `dataname_unitv` which represents a vector of dimension the number of points times the dimension of the vector field which should store some unit vectors. In that case the prescribed constraint is the scalar product of the variable at the corresponding point with the corresponding unit vector. The optional data `dataname_val` is the vector of values to be prescribed at the different points. This brick is specifically designed to kill rigid displacement in a Neumann problem. Returns the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_projection_transformation:1
-# fafdb4b81b1d46dd95f373e77df6d98f
 msgid "Add a projection interpolate transformation called `transname` to a model to be used by the generic assembly bricks. CAUTION: For the moment, the derivative of the transformation is not taken into account in the model solve."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_raytracing_transformation:1
-# c14b085bd47c473498914ac094678fad
 msgid "Add a raytracing interpolate transformation called `transname` to a model to be used by the generic assembly bricks. CAUTION: For the moment, the derivative of the transformation is not taken into account in the model solve."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_rigid_obstacle_to_Nitsche_large_sliding_contact_brick:1
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_rigid_obstacle_to_large_sliding_contact_brick:1
-# d19abbd0d6274c7988b6b6b177adb355
-# 4f068c231f874e0a9e1df0e3b4c34678
 msgid "Adds a rigid obstacle to an existing large sliding contact with friction brick. `expr` is an expression using the high-level generic assembly language (where `x` is the current point n the mesh) which should be a signed distance to the obstacle. `N` is the mesh dimension."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_rigid_obstacle_to_projection_transformation:1
-# 10fa4c384ab14cedafc968e2b07fa6c8
 msgid "Add a rigid obstacle whose geometry corresponds to the zero level-set of the high-level generic assembly expression `expr` to an existing projection interpolate transformation called `transname`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_rigid_obstacle_to_raytracing_transformation:1
-# 4b19b432d7d644258fbd9e7cee1b919f
 msgid "Add a rigid obstacle whose geometry corresponds to the zero level-set of the high-level generic assembly expression `expr` to an existing raytracing interpolate transformation called `transname`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_slave_contact_boundary_to_biased_Nitsche_large_sliding_contact_brick:1
-# d481d4e624154c2c8b29f559676f3254
 msgid "Adds a slave contact boundary to an existing biased Nitsche's large sliding contact with friction brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_slave_contact_boundary_to_large_sliding_contact_brick:1
-# c25eafdfd87445ac924f6f4e58558e9c
 msgid "Adds a slave contact boundary to an existing large sliding contact with friction brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_slave_contact_boundary_to_projection_transformation:1
-# ec970a66d1a245cf872da62a289bfc7c
 msgid "Add a slave contact boundary with corresponding displacement variable `dispname` on a specific boundary `region` to an existing projection interpolate transformation called `transname`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_slave_contact_boundary_to_raytracing_transformation:1
-# 8b1bdfb1df094fb6a79d442c0ac22df9
 msgid "Add a slave contact boundary with corresponding displacement variable `dispname` on a specific boundary `region` to an existing raytracing interpolate transformation called `transname`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_small_strain_elastoplasticity_brick:1
-# 5986a74b161f48e19a33e49c0c74c631
 msgid "Synopsis: ind = Model.add_small_strain_elastoplasticity_brick(self, MeshIm mim,  string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int region = -1])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_small_strain_elastoplasticity_brick:3
-# 3b898773a7f047a5981c5f38f292045c
 msgid "Adds a small strain plasticity term to the model `M`. This is the main GetFEM++ brick for small strain plasticity. `lawname` is the name of an implemented plastic law, `unknowns_type` indicates the choice between a discretization where the plastic multiplier is an unknown of the problem or (return mapping approach) just a data of the model stored for the next iteration. Remember that in both cases, a multiplier is stored anyway. `varnames` is a set of variable and data names with length which may depend on the plastic law (at least the displacement, the plastic multiplier and the plastic strain). `params` is a list of expressions for the parameters (at least elastic coefficients and the yield stress). These expressions can be some data names (or even variable names) of the model but can also be any scalar valid expression of the high level assembly language (such as '1/2', '2+sin(X[0])', '1+Norm(v)' ...). The last two parameters optionally provided in `params` are the `theta` parameter of the `theta`-scheme (generalized trapezoidal rule) used for the plastic strain integration and the time-step`dt`. The default value for `theta` if omitted is 1, which corresponds to the classical Backward Euler scheme which is first order consistent. `theta=1/2` corresponds to the Crank-Nicolson scheme (trapezoidal rule) which is second order consistent. Any value between 1/2 and 1 should be a valid value. The default value of `dt` is 'timestep' which simply indicates the time step defined in the model (by md.set_time_step(dt)). Alternatively it can be any expression (data name, constant value ...). The time step can be altered from one iteration to the next one. `region` is a mesh region."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_small_strain_elastoplasticity_brick:29
-# 0c9a4483660b42feaef18628ffefa560
 msgid "The available plasticity laws are:"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_small_strain_elastoplasticity_brick:31
-# 4b1b27484e944239a8a6b25b1f94a496
 msgid "'Prandtl Reuss' (or 'isotropic perfect plasticity'). Isotropic elasto-plasticity with no hardening. The variables are the displacement, the plastic multiplier and the plastic strain. The displacement should be a variable and have a corresponding data having the same name preceded by 'Previous\\_' corresponding to the displacement at the previous time step (typically 'u' and 'Previous_u'). The plastic multiplier should also have two versions (typically 'xi' and 'Previous_xi') the first one being defined as data if `unknowns_type ` is 'DISPLACEMENT_ONLY' or the integer value 0, or as a variable if `unknowns_type` is DISPLACEMENT_AND_PLASTIC_MULTIPLIER or the integer value 1. The plastic strain should represent a n x n data tensor field stored on mesh_fem or (preferably) on an im_data (corresponding to `mim`). The data are the first Lame coefficient, the second one (shear modulus) and the uniaxial yield stress. A typical call is Model.add_small_strain_elastoplasticity_brick(mim, 'Prandtl Reuss', 0, 'u', 'xi', 'Previous_Ep', 'lambda', 'mu', 'sigma_y', '1', 'timestep'); IMPORTANT: Note that this law implements the 3D expressions. If it is used in 2D, the expressions are just transposed to the 2D. For the plane strain approximation, see below."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_small_strain_elastoplasticity_brick:50
-# 0ab3871481b049e784d23faeb037e514
 msgid "\"plane strain Prandtl Reuss\" (or \"plane strain isotropic perfect plasticity\") The same law as the previous one but adapted to the plane strain approximation. Can only be used in 2D."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_small_strain_elastoplasticity_brick:54
-# a980e5cab18c4a2e9f06692151bdcb94
 msgid "\"Prandtl Reuss linear hardening\" (or \"isotropic plasticity linear hardening\"). Isotropic elasto-plasticity with linear isotropic and kinematic hardening. An additional variable compared to \"Prandtl Reuss\" law: the accumulated plastic strain. Similarly to the plastic strain, it is only stored at the end of the time step, so a simple data is required (preferably on an im_data). Two additional parameters: the kinematic hardening modulus and the isotropic one. 3D expressions only. A typical call is Model.add_small_strain_elastoplasticity_brick(mim, 'Prandtl Reuss linear hardening', 0, 'u', 'xi', 'Previous_Ep', 'Previous_alpha', 'lambda', 'mu', 'sigma_y', 'H_k', H_i', '1', 'timestep');"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_small_strain_elastoplasticity_brick:64
-# eb8e9b20f5e04aef92d4d005615827bf
 msgid "\"plane strain Prandtl Reuss linear hardening\" (or \"plane strain isotropic plasticity linear hardening\"). The same law as the previous one but adapted to the plane strain approximation. Can only be used in 2D."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_small_strain_elastoplasticity_brick:69
-# d9068535ea4c445a8bda9a74bc9fe91a
 msgid "See GetFEM++ user documentation for further explanations on the discretization of the plastic flow and on the implemented plastic laws. See also GetFEM++ user documentation on time integration strategy (integration of transient problems)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_small_strain_elastoplasticity_brick:74
-# 79efc2b2f7d74228aac1388c2c253485
 msgid "IMPORTANT : remember that `small_strain_elastoplasticity_next_iter` has to be called at the end of each time step, before the next one (and before any post-treatment : this sets the value of the plastic strain and plastic multiplier)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_source_term:1
-# c6f85af5367747638c7c6ca9c204b011
 msgid "Adds a source term given by the assembly string `expr` which will be assembled in region `region` and with the integration method `mim`. Only the residual term will be taken into account. Take care that if the expression contains some variables and if the expression is a potential, the expression will be derivated with respect to all variables. `brickname` is an optional name for the brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_source_term_brick:1
-# 57f2e50fb25b4e9ab24feb5684fc860c
 msgid "Synopsis: ind = Model.add_source_term_brick(self, MeshIm mim, string varname, string dataexpr[, int region[, string directdataname]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_source_term_brick:3
-# 1d021ced738e48998d343e8f569d267a
 msgid "Add a source term to the model relatively to the variable `varname`. The source term is represented by `dataexpr` which could be any regular expression of the high-level generic assembly language (except for the complex version where it has to be a declared data of the model). `region` is an optional mesh region on which the term is added. An additional optional data `directdataname` can be provided. The corresponding data vector will be directly added to the right hand side without assembly. Note that when region is a boundary, this brick allows to prescribe a nonzero Neumann boundary condition. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_source_term_generic_assembly_brick:1
-# 555e0f180ccc477d8164445ba9fbcafc
 msgid "Deprecated. Use Model.add_source_term() instead."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_standard_secondary_domain:1
-# 61963aa7c10742d3aa9393d6a5e7e7a5
 msgid "Add a secondary domain to the model which can be used in a weak-form language expression for integration on the product of two domains. `name` is the name of the secondary domain, `mim` is an integration method on this domain and `region` the region on which the integration is to be performed."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_theta_method_for_first_order:1
-# 824e1627cf1f4e20a10bcaf002505936
 msgid "Attach a theta method for the time discretization of the variable `varname`. Valid only if there is at most first order time derivative of the variable."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_twodomain_source_term:1
-# 57b6a1856be949db9b4fb8264906a42b
 msgid "Adds a source term given by a weak form language expression like Model.add_source_term() but for an integration on a direct product of two domains, a first specfied by ``mim`` and ``region`` and a second one by ``secondary_domain`` which has to be declared first into the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.add_variable:1
-# 537725f478fc404dabec5e8d0d63aab5
 msgid "Add a variable to the model of constant sizes. `sizes` is either a integer (for a scalar or vector variable) or a vector of dimensions for a tensor variable. `name` is the variable name."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.assembly:1
-# 0edf5aa0380f44659520091f53ba8f87
 msgid "Assembly of the tangent system taking into account the terms from all bricks. `option`, if specified, should be 'build_all', 'build_rhs', 'build_matrix'. The default is to build the whole tangent linear system (matrix and rhs). This function is useful to solve your problem with you own solver."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.brick_list:1
-# 294f8ca401894aae88e93235c351fea9
 msgid "print to the output the list of bricks of the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.brick_term_rhs:1
-# 6624cd654c7d41ebb36b0e9506de18e7
 msgid "Gives the access to the part of the right hand side of a term of a particular nonlinear brick. Does not account of the eventual time dispatcher. An assembly of the rhs has to be done first. `ind_brick` is the brick index. `ind_term` is the index of the term inside the brick (default value : 0). `sym` is to access to the second right hand side of for symmetric terms acting on two different variables (default is 0). `ind_iter` is the iteration number when time dispatchers are used (default is 0)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.change_penalization_coeff:1
-# 437a7ccaddc146aa919189fcb27504f1
 msgid "Change the penalization coefficient of a Dirichlet condition with penalization brick. If the brick is not of this kind, this function has an undefined behavior."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.char:1
-# ad868d74d29643659cd1697cf68b377a
 msgid "Output a (unique) string representation of the Model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.char:3
-# 5344781a753047728d62a80d4e3664f8
 msgid "This can be used to perform comparisons between two different Model objects. This function is to be completed."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.clear:1
-# 6813cfe2c5784e6597b1ed806548ff7f
 msgid "Clear the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.clear_assembly_assignment:1
-# 49ced7f0aa2f46e0969c96fa9651af9d
 msgid "Delete all added assembly assignments"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.compute_Von_Mises_or_Tresca:1
-# 36842cd688204d028e08b67ed966605c
 msgid "Compute on `mf_vm` the Von-Mises stress or the Tresca stress of a field for nonlinear elasticity in 3D. `lawname` is the constitutive law which could be 'SaintVenant Kirchhoff', 'Mooney Rivlin', 'neo Hookean' or 'Ciarlet Geymonat'. `dataname` is a vector of parameters for the constitutive law. Its length depends on the law. It could be a short vector of constant values or a vector field described on a finite element method for variable coefficients. `version` should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.compute_elastoplasticity_Von_Mises_or_Tresca:1
-# 56829c36bec1427daf8c8aca04e5477f
 msgid "Compute on `mf_vm` the Von-Mises or the Tresca stress of a field for plasticity and return it into the vector V. `datasigma` is a vector which contains the stress constraints values supported by the mesh. `version` should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.compute_finite_strain_elasticity_Von_Mises:1
-# f5d0f7b9416b4cdeb6effe391e4fa8a5
 msgid "Compute on `mf_vm` the Von-Mises stress of a field `varname` for nonlinear elasticity in 3D. `lawname` is the constitutive law which should be a valid name. `params` are the parameters law. It could be a short vector of constant values or may depend on data or variables of the model. Uses the high-level generic assembly."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.compute_finite_strain_elastoplasticity_Von_Mises:1
-# 61d3642429024a1bbb01978c9a3fa903
 msgid "Synopsis: V = Model.compute_finite_strain_elastoplasticity_Von_Mises(self, MeshIm mim, MeshFem mf_vm, string lawname, string unknowns_type, [, string varnames, ...] [, string params, ...] [, int region = -1])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.compute_finite_strain_elastoplasticity_Von_Mises:3
-# a1d733787c78487d99e7c87621b360c4
 msgid "Compute on `mf_vm` the Von-Mises or the Tresca stress of a field for plasticity and return it into the vector V. The first input parameters ar as in the function 'finite strain elastoplasticity next iter'."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.compute_isotropic_linearized_Von_Mises_or_Tresca:1
-# c7cb3fc110fe4cd3b923033d4546efa2
 msgid "Compute the Von-Mises stress or the Tresca stress of a field (only valid for isotropic linearized elasticity in 3D). `version` should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default). Parametrized by Lame coefficients."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.compute_isotropic_linearized_Von_Mises_pstrain:1
-# 8908f359552e4abf84902ac91c452bad
 msgid "Compute the Von-Mises stress  of a displacement field for isotropic linearized elasticity in 3D or in 2D with plane strain assumption. Parametrized by Young modulus and Poisson ratio."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.compute_isotropic_linearized_Von_Mises_pstress:1
-# dda69613f66641d98f2f9b522667c38d
 msgid "Compute the Von-Mises stress  of a displacement field for isotropic linearized elasticity in 3D or in 2D with plane stress assumption. Parametrized by Young modulus and Poisson ratio."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.compute_plastic_part:1
-# 972a0304563b46a5bbcfdd715e7d6111
 msgid "Compute on `mf_pl` the plastic part and return it into the vector V. `datasigma` is a vector which contains the stress constraints values supported by the mesh."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.compute_second_Piola_Kirchhoff_tensor:1
-# 551662708be648799e6cadffd4ee0959
 msgid "Compute on `mf_sigma` the second Piola Kirchhoff stress tensor of a field for nonlinear elasticity in 3D. `lawname` is the constitutive law which could be 'SaintVenant Kirchhoff', 'Mooney Rivlin', 'neo Hookean' or 'Ciarlet Geymonat'. `dataname` is a vector of parameters for the constitutive law. Its length depends on the law. It could be a short vector of constant values or a vector field described on a finite element method for variable coefficients."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.contact_brick_set_BN:1
-# d2706c6c5ede4487ae13e1ba3d923cb3
 msgid "Can be used to set the BN matrix of a basic contact/friction brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.contact_brick_set_BT:1
-# e1eca81fb07a42609996cdac505b5527
 msgid "Can be used to set the BT matrix of a basic contact with friction brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.define_variable_group:1
-# f6423cd620b844a58c45099d8cd203da
 msgid "Synopsis: Model.define_variable_group(self, string name[, string varname, ...])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.define_variable_group:3
-# 22f96d6458884af8b2bbe85c679b9498
 msgid "Defines a group of variables for the interpolation (mainly for the raytracing interpolation transformation."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.del_macro:1
-# 03db73c161b14b00af8808a28ab348a0
 msgid "Delete a previously defined macro for the high generic assembly language."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.delete_brick:1
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.delete_variable:1
-# 56a91010d4ee40d38ffd5ccf6b5d8874
-# e24dda8548f9489dac7665169624e157
 msgid "Delete a variable or a data from the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.disable_bricks:1
-# 2ece4dbb0400489aa9c026de8f68fda0
 msgid "Disable a brick (the brick will no longer participate to the building of the tangent linear system)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.disable_variable:1
-# d6b91c13556242e4b459c9ef7113b8ab
 msgid "Disable a variable for a solve (and its attached multipliers). The next solve will operate only on the remaining variables. This allows to solve separately different parts of a model. If there is a strong coupling of the variables, a fixed point strategy can the be used."
 msgstr ""
 
@@ -958,327 +769,258 @@ msgstr ""
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.sliding_data_group_name_of_large_sliding_contact_brick:1
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.transformation_name_of_Nitsche_large_sliding_contact_brick:1
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.transformation_name_of_large_sliding_contact_brick:1
-# b7122ae8c3a245439c7448262686fe7b
-# be4005c6c76d477fa61e300667d817e4
-# 7f9e34ac85b046dfae9e7f14ca4ae8aa
-# a9dbd6bfc11a4b2e8c13ba5f2027db67
-# e6374327af1d44db8b9be200926d1a84
-# bd36032bcae64f05bf89f0e4fadf33cf
 msgid "Gives the name of the group of variables corresponding to the sliding data for an existing large sliding contact brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.display:1
-# 199be9bb8d094145a8ea4d354571d71f
 msgid "displays a short summary for a Model object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.elastoplasticity_next_iter:1
-# 26c77b52da9c4a97b3b4578967295ff8
 msgid "Used with the old (obsolete) elastoplasticity brick to pass from an iteration to the next one. Compute and save the stress constraints sigma for the next iterations. 'mim' is the integration method to use for the computation. 'varname' is the main variable of the problem. 'previous_dep_name' represents the displacement at the previous time step. 'projname' is the type of projection to use. For the moment it could only be 'Von Mises' or 'VM'. 'datalambda' and 'datamu' are the Lame coefficients of the material. 'datasigma' is a vector which will contain the new stress constraints values."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.enable_bricks:1
-# d8684a2c80624c9ebae3e39d11bed842
 msgid "Enable a disabled brick."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.enable_variable:1
-# 7c54aaa4a98d4e1e832eb423a320f2b9
 msgid "Enable a disabled variable (and its attached multipliers)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.finite_strain_elastoplasticity_next_iter:1
-# a68bef397b96411b91a3eb1d593ac72b
 msgid "Synopsis: Model.finite_strain_elastoplasticity_next_iter(self, MeshIm mim, string lawname, string unknowns_type, [, string varnames, ...] [, string params, ...] [, int region = -1])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.finite_strain_elastoplasticity_next_iter:3
-# 7dafbb92e1a7400a8a3a7b1e75459550
 msgid "Function that allows to pass from a time step to another for the finite strain plastic brick. The parameters have to be exactly the same than the one of `add_finite_strain_elastoplasticity_brick`, so see the documentation of this function for the explanations. Basically, this brick computes the plastic strain and the plastic multiplier and stores them for the next step. For the Simo-Miehe law which is currently the only one implemented, this function updates the state variables defined in the last two entries of `varnames`, and resets the plastic multiplier field given as the second entry of `varnames`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.first_iter:1
-# 38429ae20b1343f48395f7ac83b8ac6d
 msgid "To be executed before the first iteration of a time integration scheme."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.from_variables:1
-# 7f6f4fbb48d149e7820085714e1b5a04
 msgid "Return the vector of all the degrees of freedom of the model consisting of the concatenation of the variables of the model (useful to solve your problem with you own solver)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.get_time:1
-# 8e10ea294daf428ab4a191c8d927ff88
 msgid "Give the value of the data `t` corresponding to the current time."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.get_time_step:1
-# 5a8cd9fd81c2492c94f05c70856d2f43
 msgid "Gives the value of the time step."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.interpolation:1
-# 124811bc30dc4ef186e452de488f84d0
 msgid "Synopsis: V = Model.interpolation(self, string expr, {MeshFem mf | MeshImd mimd | vec pts,  Mesh m}[, int region[, int extrapolation[, int rg_source]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.interpolation:3
-# fdc5b673c5b5401ea1c2c91df1703eea
 msgid "Interpolate a certain expression with respect to the mesh_fem `mf` or the mesh_im_data `mimd` or the set of points `pts` on mesh `m`. The expression has to be valid according to the high-level generic assembly language possibly including references to the variables and data of the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.interpolation:9
-# ef686402918d46a0a1d2add50f235764
 msgid "The options `extrapolation` and `rg_source` are specific to interpolations with respect to a set of points `pts`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.interval_of_variable:1
-# 58a6e55041d140c6b6d01151dfe4ed8e
 msgid "Gives the interval of the variable `varname` in the linear system of the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.is_complex:1
-# 1c646888a8c74867b74e43e8ff16f406
 msgid "Return 0 is the model is real, 1 if it is complex."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.list_residuals:1
-# 2396a4f3179f438baec22f2bbfd776f1
 msgid "print to the output the residuals corresponding to all terms included in the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.local_projection:1
-# aadfa8a4d642405eabc68ad706d7ba47
 msgid "Make an elementwise L2 projection of an expression with respect to the mesh_fem `mf`. This mesh_fem has to be a discontinuous one. The expression has to be valid according to the high-level generic assembly language possibly including references to the variables and data of the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.matrix_term:1
-# 9f03e8e3909b401f9a3ec96328832838
 msgid "Gives the matrix term ind_term of the brick ind_brick if it exists"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.memsize:1
-# 368f4762f2c343ce884893d79e1d2c22
 msgid "Return a rough approximation of the amount of memory (in bytes) used by the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.mesh_fem_of_variable:1
-# 0d584530b77c4a10a1d6913ee0695b87
 msgid "Gives access to the `mesh_fem` of a variable or data."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.mult_varname_Dirichlet:1
-# 9be19c474b9247ffaadd68a5a33aa3a5
 msgid "Gives the name of the multiplier variable for a Dirichlet brick. If the brick is not a Dirichlet condition with multiplier brick, this function has an undefined behavior"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.nbdof:1
-# f1fa6b8e00854ace982f201f62ef7d96
 msgid "Return the total number of degrees of freedom of the model."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.next_iter:1
-# b18538e4366f4ee3a550df5db622057c
 msgid "To be executed at the end of each iteration of a time integration scheme."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.perform_init_time_derivative:1
-# 46f8e727c7c0458cbac2579a3aa68f5e
 msgid "By calling this function, indicates that the next solve will compute the solution for a (very) small time step `ddt` in order to initalize the data corresponding to the derivatives needed by time integration schemes (mainly the initial time derivative for order one in time problems  and the second order time derivative for second order in time problems). The next solve will not change the value of the variables."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.resize_variable:1
-# a2c4431cf865458a872f27003c769c96
 msgid "Resize a  constant size variable of the model.  `sizes` is either a integer (for a scalar or vector variable) or a vector of dimensions for a tensor variable. `name` is the variable name."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.rhs:1
-# 1cd5019b0f604f5399589ebe2d9b7ee4
 msgid "Return the right hand side of the tangent problem."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.set_element_extrapolation_correspondance:1
-# 7a45bbeac9da47ffbdf90ce2fe104698
 msgid "Change the correspondance map of an element extrapolation interpolate transformation."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.set_private_matrix:1
-# 949657ab5f84491ba3553d6d37d2e493
 msgid "For some specific bricks having an internal sparse matrix (explicit bricks: 'constraint brick' and 'explicit matrix brick'), set this matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.set_private_rhs:1
-# 6f0c089fa77347ee95654ac4deab53a1
 msgid "For some specific bricks having an internal right hand side vector (explicit bricks: 'constraint brick' and 'explicit rhs brick'), set this rhs."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.set_time:1
-# 3d520f63475f41d3be6d674564c95606
 msgid "Set the value of the data `t` corresponding to the current time to `t`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.set_time_step:1
-# c39fdda70bb24659aa4a1379e0d8ca17
 msgid "Set the value of the time step to `dt`. This value can be change from a step to another for all one-step schemes (i.e for the moment to all proposed time integration schemes)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.set_variable:1
-# 301b64d81df343f7bcdf9e472c8a6eec
 msgid "Set the value of a variable or data. `name` is the data name."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.shift_variables_for_time_integration:1
-# 03063ad3ccac42e6b1899bcdae1da34a
 msgid "Function used to shift the variables of a model to the data corresponding of ther value on the previous time step for time integration schemes. For each variable for which a time integration scheme has been declared, the scheme is called to perform the shift. This function has to be called between two time steps."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.small_strain_elastoplasticity_Von_Mises:1
-# e0e978cb29594599981fcc097f2d3bb3
 msgid "Synopsis: V = Model.small_strain_elastoplasticity_Von_Mises(self, MeshIm mim, MeshFem mf_vm, string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int region])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.small_strain_elastoplasticity_Von_Mises:3
-# 25e5f76dd36c406fb03f2eb4e75cf6a5
 msgid "This function computes the Von Mises stress field with respect to a small strain elastoplasticity term, approximated on `mf_vm`, and stores the result into `VM`.  All other parameters have to be exactly the same as for `add_small_strain_elastoplasticity_brick`. Remember that `small_strain_elastoplasticity_next_iter` has to be called before any call of this function."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.small_strain_elastoplasticity_next_iter:1
-# c406eeabcc474561af521cef017e0cb5
 msgid "Synopsis: Model.small_strain_elastoplasticity_next_iter(self, MeshIm mim,  string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int region = -1])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.small_strain_elastoplasticity_next_iter:3
-# f9f8aa7382674a7aa73986aa813809f4
 msgid "Function that allows to pass from a time step to another for the small strain plastic brick. The parameters have to be exactly the same than the one of `add_small_strain_elastoplasticity_brick`, so see the documentation of this function for the explanations. Basically, this brick computes the plastic strain and the plastic multiplier and stores them for the next step. Additionaly, it copies the computed displacement to the data that stores the displacement of the previous time step (typically 'u' to 'Previous_u'). It has to be called before any use of `compute_small_strain_elastoplasticity_Von_Mises`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:1
-# cd6358a107c64335bd7e89696101635d
 msgid "Synopsis: (nbit, converged) = Model.solve(self[, ...])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:3
-# 1fc365fe20e44badbc85e6304999583b
 msgid "Run the standard getfem solver."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:5
-# 555fbfc72f1e43ed837bb853c2f5bb61
 msgid "Note that you should be able to use your own solver if you want (it is possible to obtain the tangent matrix and its right hand side with the Model.tangent_matrix() etc.)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:9
-# 3f2651c607824d14b4dd0b4020978228
 msgid "Various options can be specified:"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:12
-# 98445b32c779444e92128ec45125f5cd
 msgid "'noisy' or 'very_noisy'"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:12
-# d96f1f77317f41c6802f89a8fc27bba8
 msgid "the solver will display some information showing the progress (residual values etc.)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:14
-# 019f768c3953464783804ca245250d8b
 msgid "'max_iter', int NIT"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:15
-# 60784a46689b48b98fae1aa1703452ce
 msgid "set the maximum iterations numbers."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:16
-# abc03314521341a490b4a06dc8ea59ce
 msgid "'max_res', @float RES"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:17
-# 1448345d7586498abecc81e2908d8db7
 msgid "set the target residual value."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:19
-# e34828fa9c4c45df9e852915459cf73d
 msgid "'diverged_res', @float RES"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:19
-# ca8a3ed832f44ab4a8e2f9589c61ea38
 msgid "set the threshold value of the residual beyond which the iterative method is considered to diverge (default is 1e200)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:24
-# 491bc0835a51412998b112cbc299c6df
 msgid "'lsolver', string SOLVER_NAME"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:22
-# ba340cd9e78f47bdabeb7c2db88a4429
 msgid "select explicitely the solver used for the linear systems (the default value is 'auto', which lets getfem choose itself). Possible values are 'superlu', 'mumps' (if supported), 'cg/ildlt', 'gmres/ilu' and 'gmres/ilut'."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:29
-# 42579e72d8064bd6bbf94abf5380f711
 msgid "'lsearch', string LINE_SEARCH_NAME"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:27
-# 4b7ae44d9d9e4a3492376f2071b71dc9
 msgid "select explicitely the line search method used for the linear systems (the default value is 'default'). Possible values are 'simplest', 'systematic', 'quadratic' or 'basic'."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:31
-# 2bf015dec3b140db9184ceb88fad58a7
 msgid "Return the number of iterations, if an iterative method is used."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.solve:33
-# 2b2bf652384e457e9c34520d6bed9952
 msgid "Note that it is possible to disable some variables (see Model.disable_variable() ) in order to solve the problem only with respect to a subset of variables (the disabled variables are then considered as data) for instance to replace the global Newton strategy with a fixed point one."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.tangent_matrix:1
-# 5838b801352a456786c3eebafbbac5cc
 msgid "Return the tangent matrix stored in the model ."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.test_tangent_matrix:1
-# eaa736bb37fb4dbb9fa64771739aaa8f
 msgid "Synopsis: Model.test_tangent_matrix(self[, scalar EPS[, int NB[, scalar scale]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.test_tangent_matrix:3
-# b020fb2db7c049429eed740b5446877b
 msgid "Test the consistency of the tangent matrix in some random positions and random directions (useful to test newly created bricks). `EPS` is the value of the small parameter for the finite difference computation of the derivative is the random direction (default is 1E-6). `NN` is the number of tests (default is 100). `scale` is a parameter for the random position (default is 1, 0 is an acceptable value) around the current position. Each dof of the random position is chosen in the range [current-scale, current+scale]."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.test_tangent_matrix_term:1
-# ce55db0d02cd4d9db6b9d0345cc16297
 msgid "Synopsis: Model.test_tangent_matrix_term(self, string varname1, string varname2[, scalar EPS[, int NB[, scalar scale]]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.test_tangent_matrix_term:3
-# 8760eb6f9ed7400ba896815915544b81
 msgid "Test the consistency of a part of the tangent matrix in some random positions and random directions (useful to test newly created bricks). The increment is only made on variable `varname2` and tested on the part of the residual corresponding to `varname1`. This means that only the term (`varname1`, `varname2`) of the tangent matrix is tested. `EPS` is the value of the small parameter for the finite difference computation of the derivative is the random direction (default is 1E-6). `NN` is the number of tests (default is 100). `scale` is a parameter for the random position (default is 1, 0 is an acceptable value) around the current position. Each dof of the random position is chosen in the range [current-scale, current+scale]."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.to_variables:1
-# 3d85194d37754074973bf8029c90a4d4
 msgid "Set the value of the variables of the model with the vector `V`. Typically, the vector `V` results of the solve of the tangent linear system (useful to solve your problem with you own solver)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.variable:1
-# 34b63ef20d664367a89d3d2ea416a99c
 msgid "Gives the value of a variable or data."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Model.variable_list:1
-# b0abd6e7f87d451cb45f793b19845791
 msgid "print to the output the list of variables and constants of the model."
 msgstr ""
 

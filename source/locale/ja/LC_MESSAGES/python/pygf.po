@@ -17,17 +17,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-# 5cf8111ed4d149c99a545b97f0d77780
 #: ../source/python/pygf.rst:4
 msgid "|py| |gf| interface"
 msgstr ""
 
-# 9d29fbb763df43f6b5c1892d9d4b227b
 #: ../source/python/pygf.rst:7
 msgid "Introduction"
 msgstr ""
 
-# c63f66ebdc694159b9cfe746fc9f09f8
 #: ../source/python/pygf.rst:9
 msgid ""
 "|gf| provides an interface to the |py| scripting language. |py| is a "
@@ -40,19 +37,16 @@ msgid ""
 " provided by the getfem interface."
 msgstr ""
 
-# fd20ec6ac04b4491a82d2adfa59e63e0
 #: ../source/python/pygf.rst:18
 msgid ""
 "The python interface is available via a python module getfem.py. In order"
 " to use the interface you have to load it with::"
 msgstr ""
 
-# c2f748cb6f9d4267b8472a9d704ec1b6
 #: ../source/python/pygf.rst:24
 msgid "or::"
 msgstr ""
 
-# 164b285d996949e6a9ff0ec387c1e862
 #: ../source/python/pygf.rst:29
 msgid ""
 "If the getfem.py (and the internal \\_getfem.so) module is not installed "
@@ -60,24 +54,20 @@ msgid ""
 " environment variable to its location. For example with::"
 msgstr ""
 
-# 55a53ea2177c4ef3b54ff937bef6458a
 #: ../source/python/pygf.rst:38
 msgid "Parallel version"
 msgstr ""
 
-# 360067d795124a84bc71abf43b866117
 #: ../source/python/pygf.rst:40
 msgid ""
 "The python interface is the only one for the moment to interface the mpi "
 "based parallel version of Getfem. See :ref:`ud-parallel`."
 msgstr ""
 
-# e2f898f14a924589bfecb7e727bbc139
 #: ../source/python/pygf.rst:43
 msgid "Memory Management"
 msgstr ""
 
-# df5505f7dba84d5481f8360421eea448
 #: ../source/python/pygf.rst:45
 msgid ""
 "A nice advantage over the Matlab interface is that you do not have to "
@@ -86,12 +76,10 @@ msgid ""
 "workspace with the function ``getfem.memstats()``."
 msgstr ""
 
-# d0f92042f7cd48f29d8573e6e23f9e32
 #: ../source/python/pygf.rst:51
 msgid "Documentation"
 msgstr ""
 
-# c4dacb2dd4e24232a3741d4cebed1db9
 #: ../source/python/pygf.rst:53
 #, python-format
 msgid ""
@@ -101,17 +89,14 @@ msgid ""
 "the exception of the plotting functions, which are specific to matlab)."
 msgstr ""
 
-# 7d5e0762960d444f9e7960ac20402fe1
 #: ../source/python/pygf.rst:59
 msgid "|py| |gf| organization"
 msgstr ""
 
-# 722d3152abac4796a72b7d6eea54c3c8
 #: ../source/python/pygf.rst:61
 msgid "The general organization of the python-interface is the following:"
 msgstr ""
 
-# a47415076fe34e2aa7df4cdd98a9b320
 #: ../source/python/pygf.rst:63
 msgid ""
 "Each class from the matlab interface has a corresponding class in the "
@@ -119,7 +104,6 @@ msgid ""
 "python, the gfSlice becomes the getfem.Slice etc."
 msgstr ""
 
-# 467173aacce84ac7a2c9b732253fdfa4
 #: ../source/python/pygf.rst:66
 msgid ""
 "Each get and set method of the matlab interface has been translated into "
@@ -127,61 +111,50 @@ msgid ""
 "example::"
 msgstr ""
 
-# 0cd6b0f3f7014b83a61d31aa2203d32f
 #: ../source/python/pygf.rst:72
 msgid "becomes::"
 msgstr ""
 
-# 2e42e256ea934204b9b143e0d2051771
 #: ../source/python/pygf.rst:77
 msgid ""
 "Some methods have been renamed when there was ambiguity, for example "
 "``gf_mesh_set(m, 'pts', P)`` is ``m.set_pts(P)``."
 msgstr ""
 
-# 03134e24ded5431dabd60a2d35984746
 #: ../source/python/pygf.rst:79
 msgid ""
 "The other getfem-matlab function have a very simple mapping to their "
 "python equivalent:"
 msgstr ""
 
-# 16b75a71f161486cb820a92773e19fdc
 #: ../source/python/pygf.rst:83
 msgid "gf_compute(mf,U,'foo',...)"
 msgstr ""
 
-# f752228834e24d4990a4a762823904bf
 #: ../source/python/pygf.rst:83
 msgid "getfem.compute_foo(mf,U) or getfem.compute('foo',...)"
 msgstr ""
 
-# 9809fa2503b64b919a9d3964092d2320
 #: ../source/python/pygf.rst:86
 msgid "gf_asm('foobar',...)"
 msgstr ""
 
-# 97f97e38cb1745778470f8cea3deee47
 #: ../source/python/pygf.rst:86
 msgid "getfem.asm_foobar(...) or getfem.asm('foobar',...)"
 msgstr ""
 
-# f69bf80b7d1540a59d3d8ac700423033
 #: ../source/python/pygf.rst:89
 msgid "gf_linsolve('gmres',...)"
 msgstr ""
 
-# 1e9bb25cd22e448890cd16076ca95ee0
 #: ../source/python/pygf.rst:89
 msgid "getfem.linsolve_gmres(...) or getfem.linsolve('gmres',...)"
 msgstr ""
 
-# d07d273db8704fdfb0d649f97df96aa4
 #: ../source/python/pygf.rst:97
 msgid "python-getfem interface main objects hierarchy."
 msgstr ""
 
-# abb60436c00445a79ebf7bb13842a185
 #: ../source/python/pygf.rst:101
 msgid ""
 "Descriptor for a convex structure objects, stores formal information "
@@ -189,28 +162,24 @@ msgid ""
 "convex structures)"
 msgstr ""
 
-# 580fd176a2e74d4dac99345c6ff1ea6a
 #: ../source/python/pygf.rst:107
 msgid ""
 "Descriptor for geometric transformations objects (defines the "
 "shape/position of the convexes)."
 msgstr ""
 
-# ce975659c5734d218d6d9e2b5ddb93c0
 #: ../source/python/pygf.rst:112
 msgid ""
 "Descriptor for mesh structure (nodes, convexes, geometric transformations"
 " for each convex)."
 msgstr ""
 
-# 40f8a76d38a04ff583ba70844889e1b3
 #: ../source/python/pygf.rst:117
 msgid ""
 "Descriptor for FEM (Finite Element Method) objects (one per convex, can "
 "be PK, QK, HERMITE, etc...)."
 msgstr ""
 
-# f0255bb43b02404e87a8137b42921976
 #: ../source/python/pygf.rst:122
 msgid ""
 "Descriptor for Integration Method objects (exact, quadrature "
@@ -218,21 +187,18 @@ msgid ""
 " method is usually specific to a given convex structure."
 msgstr ""
 
-# 8a11df940eb14598a6e91ef10843d6a7
 #: ../source/python/pygf.rst:128
 msgid ""
 "Descriptor for object linked to a mesh, where each convex has been "
 "assigned a FEM."
 msgstr ""
 
-# 285e508bceb04f8599fbfd5ef9993fe6
 #: ../source/python/pygf.rst:133
 msgid ""
 "Descriptor for object linked to a mesh, where each convex has been "
 "assigned an integration method."
 msgstr ""
 
-# 61cd132b18b245b0bdcaa0560c0acefe
 #: ../source/python/pygf.rst:138
 msgid ""
 "Descriptor for *model* object, holds the global data, variables and "

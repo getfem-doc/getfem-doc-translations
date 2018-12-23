@@ -17,296 +17,236 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/python/cmdref_Spmat.rst:8
-# 5ab05b5d4f16431a90ae01ba80180760
 msgid "Spmat"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:1
-# e7228f7d04244ade9923b9eac8657fc2
 msgid "GeFEM Spmat object"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:3
-# 288b6865f991419593b966cef7128729
 msgid "Create a new sparse matrix in getfem++ format. These sparse matrix can be stored as CSC (compressed column sparse), which is the format used by Matlab, or they can be stored as WSC (internal format to getfem). The CSC matrices are not writable (it would be very inefficient), but they are optimized for multiplication with vectors, and memory usage. The WSC are writable, they are very fast with respect to random read/write operation. However their memory overhead is higher than CSC matrices, and they are a little bit slower for matrix-vector multiplications."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:12
-# 391733369a614ef38bb80d95db66bc02
 msgid "By default, all newly created matrices are build as WSC matrices. This can be changed later with ``Spmat.to_csc(...)``, or may be changed automatically by getfem (for example ``gf_linsolve()`` converts the matrices to CSC)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:17
-# 8a7c60e246644936bd4c9276478c104c
 msgid "The matrices may store REAL or COMPLEX values."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:19
-# ae6040f35c7d47f9a5d897f6027fbc91
 msgid "General constructor for Spmat objects"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:21
-# 47108a347b574898bb3855fead6a1e03
 msgid "``SM = Spmat('empty', int m [, int n])`` Create a new empty (i.e. full of zeros) sparse matrix, of dimensions `m x n`. If `n` is omitted, the matrix dimension is `m x m`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:25
-# 538a0547acab4c798b2b72e0b3468f64
 msgid "``SM = Spmat('copy', mat K [, list I [, list J]])`` Duplicate a matrix `K` (which might be a SpMat). If index `I` and/or `J` are given, the matrix will be a submatrix of `K`. For example::"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:33
-# cc9b6d8afee345c98f75703f4fdeac85
 msgid "will return a 40x5 matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:35
-# a6ba8ffe500c427fa767d849a3174f28
 msgid "``SM = Spmat('identity', int n)`` Create a `n x n` identity matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:38
-# 0812db62cd7f4c82b600f50cd43b6c3a
 msgid "``SM = Spmat('mult', Spmat A, Spmat B)`` Create a sparse matrix as the product of the sparse matrices `A` and `B`. It requires that `A` and `B` be both real or both complex, you may have to use ``Spmat.to_complex()``"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:43
-# cd848fd5dd2d48a081087ddf866c8edc
 msgid "``SM = Spmat('add', Spmat A, Spmat B)`` Create a sparse matrix as the sum of the sparse matrices `A` and `B`. Adding a real matrix with a complex matrix is possible."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:47
-# d27d841730c6411e8931da9635002f4a
 msgid "``SM = Spmat('diag', mat D [, ivec E [, int n [,int m]]])`` Create a diagonal matrix. If `E` is given, `D` might be a matrix and each column of `E` will contain the sub-diagonal number that will be filled with the corresponding column of `D`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat:52
-# c7eb43d5c7984d4e8f81405f0b395ca7
 msgid "``SM = Spmat('load','hb'|'harwell-boeing'|'mm'|'matrix-market', string filename)`` Read a sparse matrix from an Harwell-Boeing or a Matrix-Market file ."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.add:1
-# 75ed7128b3ae45be93823973a45d5057
 msgid "Add `V` to the sub-matrix 'M(I,J)'."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.add:3
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.assign:3
-# 6fe5fafd76134b4f9842715d0bb24932
-# 26ffb4cde1a943f9b702e02e075bd189
 msgid "`V` might be a sparse matrix or a full matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.assign:1
-# fe30caedf6b84d8db9a82cc6dc63dadb
 msgid "Copy V into the sub-matrix 'M(I,J)'."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.char:1
-# fba412d665d5483e8a789ad1535c7a28
 msgid "Output a (unique) string representation of the Spmat."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.char:3
-# ae788e2546ae4c6d9645a87b35ebec45
 msgid "This can be used to perform comparisons between two different Spmat objects. This function is to be completed."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.clear:1
-# 3cf70ff83a9641dda98a07e515d9ae64
 msgid "Synopsis: Spmat.clear(self[, list I[, list J]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.clear:3
-# cc7c541b1f31420086ff3dfccdd96590
 msgid "Erase the non-zero entries of the matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.clear:5
-# e8b7b2a63d404c1aaf6d747713f990f6
 msgid "The optional arguments `I` and `J` may be specified to clear a sub-matrix instead of the entire matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.conjugate:1
-# ffa16951527e4e9d8c553044787a2caa
 msgid "Conjugate each element of the matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.csc_ind:1
-# e8b3acb4d117451dbe42e83da19e9d61
 msgid "Return the two usual index arrays of CSC storage."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.csc_ind:3
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.csc_val:3
-# d018849438f74e2787fe5dc133248b8a
-# f5787937fe7b4a5fb590c6b979f9ee00
 msgid "If `M` is not stored as a CSC matrix, it is converted into CSC."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.csc_val:1
-# 3c58875f072e498483e0c3d28b9d3a45
 msgid "Return the array of values of all non-zero entries of `M`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.determinant:1
-# 1d12c6c33c1140d896ac4d605911b00a
 msgid "returns the matrix determinant calculated using MUMPS."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.diag:1
-# 7c6d1ad9764943dfa0d918b82340222b
 msgid "Return the diagonal of `M` as a vector."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.diag:3
-# 5feb79edb5e24a74b7b6a9c692865f11
 msgid "If `E` is used, return the sub-diagonals whose ranks are given in E."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.dirichlet_nullspace:1
-# a0d7b7d31d154127b8d0289671a82c3f
 msgid "Solve the dirichlet conditions `M.U=R`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.dirichlet_nullspace:3
-# 59c35c25dd2e4d9cbcb3c1d5dd8cbf9b
 msgid "A solution `U0` which has a minimum L2-norm is returned, with a sparse matrix `N` containing an orthogonal basis of the kernel of the (assembled) constraints matrix `M` (hence, the PDE linear system should be solved on this subspace): the initial problem"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.dirichlet_nullspace:8
-# 24788cc7861e43d0a5aae21812bb471f
 msgid "`K.U = B` with constraints `M.U = R`"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.dirichlet_nullspace:10
-# 5b8c29cb3e8b497fa838b3569cc12732
 msgid "is replaced by"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.dirichlet_nullspace:12
-# 3e1e36ba7be94c12b25543e1abad8af2
 msgid "`(N'.K.N).UU = N'.B` with `U = N.UU + U0`"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.display:1
-# 731c3c540cb14587afe7d6d22ea000f8
 msgid "displays a short summary for a Spmat object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.full:1
-# 7cab169e6936438b930c5a158cb4b895
 msgid "Synopsis: Sm = Spmat.full(self[, list I[, list J]])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.full:3
-# f3f96ebda23f4fafa256ca0e013dfcd4
 msgid "Return a full (sub-)matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.full:5
-# 6db135a22ca549a79190c744f8807f99
 msgid "The optional arguments `I` and `J`, are the sub-intervals for the rows and columns that are to be extracted."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.is_complex:1
-# 65ec682cdeba40eb906126dfbbd444f5
 msgid "Return 1 if the matrix contains complex values."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.mult:1
-# 73428d9b335342158778917b8421b95e
 msgid "Product of the sparse matrix `M` with a vector `V`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.mult:3
-# a89e5dffa74e4550aef5313cd47c4bc8
 msgid "For matrix-matrix multiplications, see Spmat('mult')."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.nnz:1
-# 49019d04e3144a1a936bf3f55c51b150
 msgid "Return the number of non-null values stored in the sparse matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.save:1
-# 690bb3456dc543429bf736a8cb20fa50
 msgid "Export the sparse matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.save:3
-# a647b1e8ed2d4c309aa416aa1da5c573
 msgid "the format of the file may be 'hb' for Harwell-Boeing, or 'mm' for Matrix-Market."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.scale:1
-# 168b2664eac447eba6b830aaf8a84c61
 msgid "Multiplies the matrix by a scalar value `v`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.set_diag:1
-# ebcd023af5cc4c6c9b1125df49422fd8
 msgid "Change the diagonal (or sub-diagonals) of the matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.set_diag:3
-# 81e0d92b44aa44f59c10558a33c8c303
 msgid "If `E` is given, `D` might be a matrix and each column of `E` will contain the sub-diagonal number that will be filled with the corresponding column of `D`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.size:1
-# a6c458ab085d4f5d90b6353da9ca3d3a
 msgid "Return a vector where `ni` and `nj` are the dimensions of the matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.storage:1
-# 9e637ccfafb347119af707990cf90033
 msgid "Return the storage type currently used for the matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.storage:3
-# 010ef85a509140f6acfeb2b6c497940d
 msgid "The storage is returned as a string, either 'CSC' or 'WSC'."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.tmult:1
-# 9c1227a237ae438fa0aa83e67cd4c787
 msgid "Product of `M` transposed (conjugated if `M` is complex) with the vector `V`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.to_complex:1
-# cb102b20933b481aa23118d8d75b8b8d
 msgid "Store complex numbers."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.to_csc:1
-# 5f7b83485788440aab491bf5a3cf1266
 msgid "Convert the matrix to CSC storage."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.to_csc:3
-# 929de08091fd40fb85df1a41c6a82972
 msgid "CSC storage is recommended for matrix-vector multiplications."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.to_wsc:1
-# 5e708038ceee4e46a0ca0efc9c37503f
 msgid "Convert the matrix to WSC storage."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.to_wsc:3
-# 78491584da814a06949f72e41961d721
 msgid "Read and write operation are quite fast with WSC storage."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.transconj:1
-# 4861da403033402ca1009e8f6781cb6a
 msgid "Transpose and conjugate the matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Spmat.transpose:1
-# 63fc50591d674371974336842079b958
 msgid "Transpose the matrix."
 msgstr ""
 

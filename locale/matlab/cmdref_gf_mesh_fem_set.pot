@@ -17,172 +17,138 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:8
-# 7428f6c0049c4bcb81235ddf90c8cbd4
 msgid "gf_mesh_fem_set"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:10
-# a5249c1176b945b2b1479c5e5e6540b2
 msgid "**Synopsis**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:26
-# b3300329baba4d78a43ebf093942eff0
 msgid "**Description :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:29
-# 241246f5886343e98d3800efe98c24bf
 msgid "General function for modifying mesh_fem objects."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:32
-# 3920499f659d4104a10e5a4b170f3c37
 msgid "**Command list :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:36
-# 17dbf0dc0b6a4fe48d6b5cb4a0662534
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'fem', fem f[, ivec CVids])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:38
-# 4d0ea0dba8bb452daf92011aa05c15a0
 msgid "Set the Finite Element Method."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:40
-# 2604617039d84144ab806db6115f68dd
 msgid "Assign a FEM `f` to all convexes whose #ids are listed in `CVids`. If `CVids` is not given, the integration is assigned to all convexes."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:43
-# fd467461de46474084b9163bb3a1dad4
 msgid "See the help of gf_fem to obtain a list of available FEM methods."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:46
-# bcbfeb887d524ca99a3c44c38b5f4390
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'classical fem', int k[[, 'complete'], ivec CVids])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:48
-# 3e02e9f2474f45adb2823679e9d0f235
 msgid "Assign a classical (Lagrange polynomial) fem of order `k` to the mesh_fem. The option 'complete' requests complete Langrange polynomial elements, even if the element geometric transformation is an incomplete one (e.g. 8-node quadrilateral or 20-node hexahedral)."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:53
-# 6c4c7995c3cd4b899158267978ab68e6
 msgid "Uses FEM_PK for simplexes, FEM_QK for parallelepipeds etc."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:56
-# e324f7eaefee4e488ea2d69abeee4a3b
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'classical discontinuous fem', int k[[, 'complete'], @tscalar alpha[, ivec CVIDX]])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:58
-# 4a34a6a7b78c408998999cb217709c80
 msgid "Assigns a classical (Lagrange polynomial) discontinuous fem of order k."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:60
-# 8ea7bcb06de34d668775bb9ef94fc255
 msgid "Similar to gf_mesh_fem_set(mesh_fem MF, 'set classical fem') except that FEM_PK_DISCONTINUOUS is used. Param `alpha` the node inset, :math:`0 \\leq alpha < 1`, where 0 implies usual dof nodes, greater values move the nodes toward the center of gravity, and 1 means that all degrees of freedom collapse on the center of gravity. The option 'complete' requests complete Langrange polynomial elements, even if the element geometric transformation is an incomplete one (e.g. 8-node quadrilateral or 20-node hexahedral)."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:70
-# 24576c3ce28b49e895c7ea98cee77e67
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'qdim', int Q)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:72
-# 08f8629132204e8e9498152c8c8c1b45
 msgid "Change the `Q` dimension of the field that is interpolated by the mesh_fem."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:74
-# 6c8c9e3484314382ad35d96769514913
 msgid "`Q = 1` means that the mesh_fem describes a scalar field, `Q = N` means that the mesh_fem describes a vector field of dimension N."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:78
-# b22bfc1f1bb24eada7b51a5463b88c60
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'reduction matrices', mat R, mat E)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:80
-# 365d079aabf745ad96f8df693391530a
 msgid "Set the reduction and extension matrices and valid their use."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:83
-# c2b10c70c4e04c97aa2604458a5e2d05
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'reduction', int s)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:85
-# 0c02f275bffc4324ad91f38421cef892
 msgid "Set or unset the use of the reduction/extension matrices."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:88
-# 57363eb854954b4eb5259f2985631438
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'reduce meshfem', mat RM)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:90
-# 21064551019849f8b1bbaaeead568b1d
 msgid "Set reduction mesh fem This function selects the degrees of freedom of the finite element method by selecting a set of independent vectors of the matrix RM. The numer of columns of RM should corresponds to the number of degrees of fredoom of the finite element method."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:97
-# 3fd2499dca174cb2a932f4be225b0857
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'dof partition', ivec DOFP)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:99
-# 8174a12a33bc4f8dbe9e8988847d08e8
 msgid "Change the 'dof_partition' array."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:101
-# 28ce548898fe4695bbfef437232e1ec6
 msgid "`DOFP` is a vector holding a integer value for each convex of the mesh_fem. See gf_mesh_fem_get(mesh_fem MF, 'dof partition') for a description of \"dof partition\"."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:105
-# 7aed49ab4c584a95b12b174013f71533
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'set partial', ivec DOFs[, ivec RCVs])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:107
-# a8808550aaa8414a8f410915c3f6a057
 msgid "Can only be applied to a partial mesh_fem. Change the subset of the degrees of freedom of `mf`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:110
-# 7a4c6310710f4f1ab030dcdded499bb4
 msgid "If `RCVs` is given, no FEM will be put on the convexes listed in `RCVs`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:114
-# d29720f5d4d04e1fafc6a15456736705
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'adapt')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:116
-# 122f42f376024381b32fdc3f55ef7b61
 msgid "For a mesh_fem levelset object only. Adapt the mesh_fem object to a change of the levelset function."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:120
-# 98590c02a38748c49b1c0bb32757765e
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'set enriched dofs', ivec DOFs)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_fem_set.rst:122
-# c0776cf573ec415fa1d9a1749cf994df
 msgid "For a mesh_fem product object only. Set te enriched dofs and adapt the mesh_fem product."
 msgstr ""
 

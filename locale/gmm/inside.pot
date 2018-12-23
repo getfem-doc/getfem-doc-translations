@@ -17,97 +17,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/gmm/inside.rst:11
-# 5933787827fd4e8aadff40732c7a9249
 msgid "Deeper inside |gmm|"
 msgstr ""
 
 #: ../source/gmm/inside.rst:15
-# d70ef36ae97842aeb471c0fad0dcaa1d
 msgid "The linalg_traits structure"
 msgstr ""
 
 #: ../source/gmm/inside.rst:17
-# a3dcf0a8534549038e76e27a8cbbeaea
 msgid "The major principle of |gmm| is that each vector and matrix type has a corresponding structure (which is never instantiated) named ``linalg_traits`` containing all informations on it. For instance, the component ``linalg_type`` of this structure is set to ``abstract_vector`` or ``abstract_matrix`` if the corresponding type represent a vector or a matrix. If ``V`` is an interfaced type of vector and ``M`` an interface type of matrix, it is possible to access to this component with::"
 msgstr ""
 
 #: ../source/gmm/inside.rst:22
-# 5b188fca07f648e28dc74c77c30d8b17
 msgid "The types ``abstract_vector`` and ``abstract_matrix`` are defined in ``gmm/gmm_def.h``. They are void type allowing to specialize generic algorithms."
 msgstr ""
 
 #: ../source/gmm/inside.rst:24
-# b5b3ad56874f463f95b20223c75c9594
 msgid "For a vector type, the following informations are available::"
 msgstr ""
 
 #: ../source/gmm/inside.rst:64
-# e2faa7eb8bdf490a8aa0b594915a326e
 msgid "and for a matrix type::"
 msgstr ""
 
 #: ../source/gmm/inside.rst:115
-# 3a87f8df2d004b218dd289cc37b34be5
 msgid "This is this structure you have to fill in to interface a new vector or matrix type. You can see some examples in ``gmm/gmm_interface.h`` . Most of the generic algorithms are in ``gmm/gmm_blas.h`` ."
 msgstr ""
 
 #: ../source/gmm/inside.rst:119
-# 3b3cb68fcafd42a6a6121ce023ff6661
 msgid "How to iterate on the components of a vector"
 msgstr ""
 
 #: ../source/gmm/inside.rst:121
-# e774c785135f487192c5b4fe2b16ad6a
 msgid "Here is an example which accumulate the components of a vector. It is assumed that ``V`` is a vector type and ``v`` an instantiated vector::"
 msgstr ""
 
 #: ../source/gmm/inside.rst:134
-# e62d552dc3c24eb4800780a2b5075a56
 msgid "This piece of code will work with every kind of interfaced vector."
 msgstr ""
 
 #: ../source/gmm/inside.rst:136
-# 170c3f7b110e493ab238aca7879162ba
 msgid "For sparse or skyline vectors, it is possible to obtain the index of the components pointed by the iterator with ``it.index()``. Here is the example of the scalar product of two sparse or skyline vectors, assuming ``V1`` and ``V2`` are two vector types and ``v1``, ``v2`` two corresponding instantiated vectors::"
 msgstr ""
 
 #: ../source/gmm/inside.rst:157
-# 165423af15124a8293530c0d0dd6376e
 msgid "This algorithm use the fact that indices are increasing in a sparse vector. This code will not work for dense vectors because dense vector iterators do not have the method ``it.index()``."
 msgstr ""
 
 #: ../source/gmm/inside.rst:160
-# f783f982e3454fbb91b64fe581d57d23
 msgid "How to iterate on a matrix"
 msgstr ""
 
 #: ../source/gmm/inside.rst:162
-# 9c864b639d9e46fbbd44a9e433df3020
 msgid "You can iterate on the rows of a matrix if it is not a column major matrix and on the columns of a matrix if it is not a row major matrix (the type ``gmm::dense_matrix<T>`` has is sub orientation type as col_and_rox, so you can iterate on both rows and columns)."
 msgstr ""
 
 #: ../source/gmm/inside.rst:164
-# 3fed6a3360fe4ae681ffc5ea0cc5b4cc
 msgid "If you need not to be optimal, you can use a basic loop like that::"
 msgstr ""
 
 #: ../source/gmm/inside.rst:174
-# 97935c2aa64246398edecf63b0e6adbe
 msgid "But you can also use iterators, like that::"
 msgstr ""
 
 #: ../source/gmm/inside.rst:190
-# 5c9a605a8f5d41f380c9d513848dc3fb
 msgid "How to make your algorithm working on all type of matrices"
 msgstr ""
 
 #: ../source/gmm/inside.rst:192
-# 90e2f7439c7b423b97caa84c5d9b3047
 msgid "For this, you will generally have to specialize it. For instance, let us take a look at the code for ``gmm::nnz`` which count the number of stored components (in fact, the real ``gmm::nnz`` algorithm is specialized in most of the cases so that it does not count the components one by one)::"
 msgstr ""
 
 #: ../source/gmm/inside.rst:226
-# c59d07ba27574d27af4c37bda32115d5
 msgid "The first function dispatch on the second or the third function respectively if the parameter is a vector or a matrix. The third function dispatch again on the fourth and the fifth function respectively if the matrix is row_major or column major. Of course, as the function are declared ``inline``, at least the two dispatcher functions will not be implemented. Which means that this construction is not costly."
 msgstr ""
 

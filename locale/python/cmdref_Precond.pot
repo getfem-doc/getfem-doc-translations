@@ -17,107 +17,86 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/python/cmdref_Precond.rst:8
-# 4026b92561b644c788c261c4e41107e3
 msgid "Precond"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:1
-# 9f4977f588fb471cbd2d4c64388a1eeb
 msgid "GeFEM Precond object"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:3
-# 023245f7fd2d45eba8d612769a1a3f40
 msgid "The preconditioners may store REAL or COMPLEX values. They accept getfem sparse matrices and Matlab sparse matrices."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:7
-# 605258d6a9f8485cb3c19a3ccb7b3605
 msgid "General constructor for Precond objects"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:9
-# 2043e959c0f74967836ad39b9d2c4d53
 msgid "``PC = Precond('identity')`` Create a REAL identity precondioner."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:12
-# d5bc56719cfc4590b8c3e8e53977e11c
 msgid "``PC = Precond('cidentity')`` Create a COMPLEX identity precondioner."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:15
-# 5434057977d04873b3700f28e3e25c97
 msgid "``PC = Precond('diagonal', vec D)`` Create a diagonal precondioner."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:18
-# 4da333de42674c6da5f9c5c4fe394be9
 msgid "``PC = Precond('ildlt', SpMat m)`` Create an ILDLT (Cholesky) preconditioner for the (symmetric) sparse matrix `m`. This preconditioner has the same sparsity pattern than `m` (no fill-in)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:23
-# 801c6485f11844b68eee12e9ddb523c8
 msgid "``PC = Precond('ilu', SpMat m)`` Create an ILU (Incomplete LU) preconditioner for the sparse matrix `m`. This preconditioner has the same sparsity pattern than `m` (no fill-in)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:28
-# d2bdcf526da64e5f92e572d943e11fe9
 msgid "``PC = Precond('ildltt', SpMat m[, int fillin[, scalar threshold]])`` Create an ILDLTT (Cholesky with filling) preconditioner for the (symmetric) sparse matrix `m`. The preconditioner may add at most `fillin` additional non-zero entries on each line. The default value for `fillin` is 10, and the default threshold is1e-7."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:34
-# 1af17cd65f894ac58041e1789207f1c1
 msgid "``PC = Precond('ilut', SpMat m[, int fillin[, scalar threshold]])`` Create an ILUT (Incomplete LU with filling) preconditioner for the sparse matrix `m`. The preconditioner may add at most `fillin` additional non-zero entries on each line. The default value for `fillin` is 10, and the default threshold is 1e-7."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:40
-# a94e11c28c5e4760b9b39b31a3d7d017
 msgid "``PC = Precond('superlu', SpMat m)`` Uses SuperLU to build an exact factorization of the sparse matrix `m`. This preconditioner is only available if the getfem-interface was built with SuperLU support. Note that LU factorization is likely to eat all your memory for 3D problems."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond:46
-# fa11e35faeec4418b3c5bd9846c07669
 msgid "``PC = Precond('spmat', SpMat m)`` Preconditionner given explicitely by a sparse matrix."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond.char:1
-# d1d4354bb2374d1b9ca444dc84308b72
 msgid "Output a (unique) string representation of the Precond."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond.char:3
-# ec47eaa7ecc34b8c9d5d05df73016a34
 msgid "This can be used to perform comparisons between two different Precond objects. This function is to be completed."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond.display:1
-# 681398d6fa5f4f09935abc8e11f5b604
 msgid "displays a short summary for a Precond object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond.is_complex:1
-# 3905e0fddf774e6c8b6c95c4b742ceb2
 msgid "Return 1 if the preconditioner stores complex values."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond.mult:1
-# 9f64838e5ea9488a9d83a42d3c32591d
 msgid "Apply the preconditioner to the supplied vector."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond.size:1
-# 1b21b594caba4080a0e4f9015dd2865d
 msgid "Return the dimensions of the preconditioner."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond.tmult:1
-# 52b6c77b560c46c2994bcd0f4db42eba
 msgid "Apply the transposed preconditioner to the supplied vector."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.Precond.type:1
-# bbf084dfb6f848198ea82294a4cef36c
 msgid "Return a string describing the type of the preconditioner ('ilu', 'ildlt',..)."
 msgstr ""
 

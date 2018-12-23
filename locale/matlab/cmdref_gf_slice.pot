@@ -17,177 +17,142 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/matlab/cmdref_gf_slice.rst:8
-# 9bdf3d5332f74565bb403a348b854be0
 msgid "gf_slice"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:10
-# cbc0c5c06fd748418e8891d785ccacf3
 msgid "**Synopsis**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:19
-# a30065a4d1ef449292d159d61c600330
 msgid "**Description :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:22
-# edef84197747446aa982aedd377b4045
 msgid "General constructor for slice objects."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:24
-# adc79451432a4d04883c1f26d886929c
 msgid "Creation of a mesh slice. Mesh slices are very similar to a P1-discontinuous mesh_fem on which interpolation is very fast. The slice is built from a mesh object, and a description of the slicing operation, for example::"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:31
-# 5d7850e66d7e4c5b96c84bd6b729341b
 msgid "cuts the original mesh with the half space {y>0}. Each convex of the original mesh `m` is simplexified (for example a quadrangle is splitted into 2 triangles), and each simplex is refined 5 times."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:35
-# 49cd5664b4b147e79bcd3c2f0785e42c
 msgid "Slicing operations can be:"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:37
-# 6519bd369a9c4890a822f7ef2776c1b0
 msgid "cutting with a plane, a sphere or a cylinder"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:38
-# bb035cede72b4e6ba70263db411ed3e3
 msgid "intersection or union of slices"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:39
-# ec7ba19e853b4ab3a8cb18b61f4001ec
 msgid "isovalues surfaces/volumes"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:40
-# 57a0142d2f0b4c398c995e1fd1e1bc20
 msgid "\"points\", \"streamlines\" (see below)"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:42
-# 9237937d8f5d4246893d41e4398bbfad
 msgid "If the first argument is a mesh_fem `mf` instead of a mesh, and if it is followed by a `mf`-field `u` (with size(u,1) == gf_mesh_fem_get(mesh_fem MF, 'nbdof')), then the deformation `u` will be applied to the mesh before the slicing operation."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:47
-# 75152434802f430e9fbf845584b60dab
 msgid "The first argument can also be a slice."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:50
-# 4b444c2c4d9b4b139f6aecb094938afd
 msgid "**Command list :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:54
-# f5a25ee70e3346abbbe4c827bb11c7c9
 msgid "``sl = gf_slice(sliceop, {slice sl|{mesh m| mesh_fem mf, vec U}, int refine}[, mat CVfids])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:56
-# 38ee0265ed3a4c1fbc40dfc61b115a00
 msgid "Create a slice using `sliceop` operation."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:58
-# 838ab0f764dd4b009b42b8568a4dd07e
 msgid "`sliceop` operation is specified with Matlab CELL arrays (i.e. with braces) . The first element is the name of the operation, followed the slicing options:"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:62
-# 543d08bcaf5b40f1b6c9a0e3ba444743
 msgid "{'none'} : Does not cut the mesh."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:65
-# 6c01c0e8b9364724bca14de78a62615f
 msgid "{'planar', int orient, vec p, vec n} : Planar cut. `p` and `n` define a half-space, `p` being a point belong to the boundary of the half-space, and `n` being its normal. If `orient` is equal to -1 (resp. 0, +1), then the slicing operation will cut the mesh with the \"interior\" (resp. \"boundary\", \"exterior\") of the half-space. `orient` may also be set to +2 which means that the mesh will be sliced, but both the outer and inner parts will be kept."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:73
-# e0c3876afa324a5fa5ed380564643f14
 msgid "{'ball', int orient, vec c, scalar r} : Cut with a ball of center `c` and radius `r`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:76
-# fe1d102e091c4c33b628bded4c9664b3
 msgid "{'cylinder', int orient, vec p1, vec p2, scalar r} : Cut with a cylinder whose axis is the line `(p1, p2)` and whose radius is `r`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:80
-# bf23faf0f087410cac39965f91875011
 msgid "{'isovalues', int orient, mesh_fem mf, vec U, scalar s} : Cut using the isosurface of the field `U` (defined on the mesh_fem `mf`). The result is the set `{x such that :math:`U(x) \\leq s`}` or `{x such that `U`(x)=`s`}` or `{x such that `U`(x) >= `s`}` depending on the value of `orient`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:86
-# 3eeaab3c96774558a5c1240a75452e03
 msgid "{'boundary'[, SLICEOP]} : Return the boundary of the result of SLICEOP, where SLICEOP is any slicing operation. If SLICEOP is not specified, then the whole mesh is considered (i.e. it is equivalent to {'boundary',{'none'}})."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:91
-# 5c82508cc7da4c72b3633e78b7dc3c21
 msgid "{'explode', mat Coef} : Build an 'exploded' view of the mesh: each convex is shrinked (:math:`0 < \\text{Coef} \\leq 1`). In the case of 3D convexes, only their faces are kept."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:95
-# 6185fa852dde4867b7e7b97e3130d7dd
 msgid "{'union', SLICEOP1, SLICEOP2} : Returns the union of slicing operations."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:98
-# 673584d2fd044c85bd0a80e41edfb294
 msgid "{'intersection', SLICEOP1, SLICEOP2} : Returns the intersection of slicing operations, for example::"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:104
-# 4f2cad400f644837b6ddf30c7b4cf98e
 msgid "{'comp', SLICEOP} : Returns the complementary of slicing operations."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:107
-# 07d00984ccd6432bba2261ad07167197
 msgid "{'diff', SLICEOP1, SLICEOP2} : Returns the difference of slicing operations."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:110
-# 91ced3621b2a477e981e6ef412deca04
 msgid "{'mesh', mesh m} : Build a slice which is the intersection of the sliced mesh with another mesh. The slice is such that all of its simplexes are stricly contained into a convex of each mesh."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:117
-# 1d3e2c5ed26345b9a7cc0652d4cf0633
 msgid "``sl = gf_slice('streamlines', mesh_fem mf, mat U, mat S)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:119
-# 9877e004ca7b4640a7ede328c6ace05a
 msgid "Compute streamlines of the (vector) field `U`, with seed points given by the columns of `S`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:123
-# 22e40012e75e4f04ac8b74ad420f3598
 msgid "``sl = gf_slice('points', mesh m, mat Pts)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:125
-# d97d56ccda1d4fd4abeefd74e48c7607
 msgid "Return the \"slice\" composed of points given by the columns of `Pts` (useful for interpolation on a given set of sparse points, see ``gf_compute('interpolate on',sl)``."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:130
-# c1ef5a956f9f41b5a86ee6a877c7cc30
 msgid "``sl = gf_slice('load', string filename[, mesh m])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_slice.rst:132
-# 74ced137b69c4918abdfceee1cb1548f
 msgid "Load the slice (and its linked mesh if it is not given as an argument) from a text file."
 msgstr ""
 

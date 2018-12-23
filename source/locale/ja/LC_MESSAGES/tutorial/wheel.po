@@ -17,14 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-# 0b6f6a3dbdae462f9ba173fd4bd4bd8f
 #: ../source/tutorial/wheel.rst:8
 msgid ""
 "Example of wheel in contact (Assembly between two meshes, transformations, "
 "use of fixed size variables)"
 msgstr "接触する車輪の例 (2 つのメッシュ間のアセンブリ、変換、固定サイズ変数の使用)"
 
-# 55fa96fb11df4069aa45eafc224e4389
 #: ../source/tutorial/wheel.rst:10
 msgid ""
 "In this example of a deformable ''wheel'' enters in contact with a "
@@ -37,12 +35,10 @@ msgstr ""
 "私たちは、ここで python インターフェイスを使用し、別のインターフェイスまたは C++ でこのプログラムを翻訳するのは簡単です (前の例を参照)。"
 "完全なプログラム `demo_wheel_contact.py` は、ディレクトリ `interface/tests/python` で見つけることができます。"
 
-# 5a7a624e8f1040b09bb47431f1a3c3a3
 #: ../source/tutorial/wheel.rst:13
 msgid "The problem setting"
 msgstr "問題の設定"
 
-# 1832fc2980ba4496883dbca0d27caa73
 #: ../source/tutorial/wheel.rst:15
 msgid ""
 "Let :math:`\\Omega^1 \\subset \\R^2` be the reference configuration of a 2D "
@@ -56,23 +52,19 @@ msgstr ""
 "これら2つの物体の微小変形 (線形化弾性) とそれらの間の接触を考慮します。"
 "また、車輪の周縁は剛であり、車輪に垂直方向の力を適用することを考慮します。"
 
-# 3c0914dfe3284e02baacde12b7789d85
 #: ../source/tutorial/wheel.rst:19
 msgid "Building the program"
 msgstr "プログラムのビルド"
 
-# 237c886899564e3b95187f820b38e622
 #: ../source/tutorial/wheel.rst:22
 msgid ""
 "Let us begin by loading Getfem and fixing the parameters of the problem"
 msgstr "Getfem をロードし、問題のパラメータを修正することから始めましょう"
 
-# 407953ed37634e45a2e366df59a97494
 #: ../source/tutorial/wheel.rst:43
 msgid "Mesh generation"
 msgstr "メッシュ生成"
 
-# ca7e431f189d4df59c32c083afb6036a
 #: ../source/tutorial/wheel.rst:45
 msgid ""
 "We consider that the radius of the wheel is 15cm and the one of the rim 8cm "
@@ -86,17 +78,14 @@ msgstr ""
 "基礎のメッシュに関しては、構造化されたメッシュを構築します "
 "(python インタフェースのメッシュオブジェクトのドキュメントを参照してください)。"
 
-# 15231ab7aa354e62bc6c2f0ac6de1966
 #: ../source/tutorial/wheel.rst:58
 msgid "The result is the following"
 msgstr "結果は以下のとおりです"
 
-# 83b2e4b647dc4c55a73f9a5a7c0d6e41
 #: ../source/tutorial/wheel.rst:66
 msgid "Boundary selection"
 msgstr "境界の選択"
 
-# 24508f1618864a65825b79fe14aaa1e2
 #: ../source/tutorial/wheel.rst:68
 msgid ""
 "We have to select the different parts of the boundary where we will set some"
@@ -108,7 +97,6 @@ msgstr ""
 "車輪の接触境界、およびクランプされたと仮定する基礎の底部境界を設定するために、"
 "異なる名前を選択しなければなりません。"
 
-# 1561e5abe8a34a8f9f8fb9221f416b5e
 #: ../source/tutorial/wheel.rst:83
 msgid ""
 "Note that the command `mesh1.outer_faces_with_direction([0., -1.], n.pi/4)` "
@@ -121,12 +109,10 @@ msgstr ""
 "`n.pi/4` 以下の角度を持つ、外側の法線の単位を持つすべての面を選択することを可能にすることに注意してください。"
 "コマンド`mesh1.region_subtract(CONTACT_BOUND, HOLE_BOUND)` は、接触境界のリムに対応する面を削除することを可能にします。"
 
-# c78aebfd02474b008c6c10d1584395c3
 #: ../source/tutorial/wheel.rst:86
 msgid "Definition of finite elements methods and integration method"
 msgstr "有限要素法の定義と積分法"
 
-# 50c052d6a898491ca30bbd257ccb3b7f
 #: ../source/tutorial/wheel.rst:88
 msgid ""
 "We define `mfu1`, `mfu2` two finite element methods which will approximate "
@@ -143,48 +129,40 @@ msgstr ""
 "を近似するためにあり、 `mfvm1`, `mfvm2` は、 Von Mises 応力を補間するために使用され、後処理の基礎となります。 "
 "`mim1`, `mim2` は、車輪と基礎の2つの積分方法です。"
 
-# e40ffdf1bd8a4452a7e603be076a47b4
 #: ../source/tutorial/wheel.rst:110
 msgid "Model definition"
 msgstr "モデル定義"
 
-# 8dd617b41bb34544bdf4e58324015509
 #: ../source/tutorial/wheel.rst:112
 msgid ""
 "We use a real model and declare the two variables which will represent the "
 "displacements:"
 msgstr "実際のモデルを使用して、変位を表す2つの変数を宣言します。"
 
-# 56a406865d004e4c82e621bec15b286d
 #: ../source/tutorial/wheel.rst:121
 msgid "Linearized elasticity bricks"
 msgstr "線形弾性ブリック"
 
-# 98f5d1b86ab6422f9e5795753f3928a4
 #: ../source/tutorial/wheel.rst:123
 msgid ""
 "We add the |Lame| coefficients as data of the model and add a linearized "
 "elasticity brick for the wheel and the foundation:"
 msgstr "|Lame| 係数をモデルのデータとして追加して使用し、車輪と基礎の線形化された弾性ブリックを追加します。"
 
-# 61a36f9c7cdd40c5b43de22d1bef8f54
 #: ../source/tutorial/wheel.rst:133
 msgid "Clamped condition at the bottom of the foundation"
 msgstr "基礎の下部のクランプ状態"
 
-# 7b61dc169c1749f59996a704ebea7521
 #: ../source/tutorial/wheel.rst:135
 msgid ""
 "We prescribed the displacement at  bottom face of the foundation to vanish, "
 "for instance with a multiplier with the add of the following brick:"
 msgstr "例えば、次のブリックの追加と乗算で、基礎の底面を消去するためにに変位を規定しました。"
 
-# 9b77b9f0bf6f4e76af9cc56c68ec6a51
 #: ../source/tutorial/wheel.rst:142
 msgid "Contact condition (use of interpolate transformations)"
 msgstr "接触条件 (補間変換の使用)"
 
-# 2a42091d806843cca33c4e5ed6d4d330
 #: ../source/tutorial/wheel.rst:144
 msgid ""
 "Now, let us see how to prescribed the contact condition between the two "
@@ -200,7 +178,6 @@ msgstr ""
 "contact-friction` そして大変形/大滑りは :ref:`ud-model-contact-friction-large` を参照してください)。"
 "ただし、ここでは、拡張Lagrangian定式化と補間変換を使用して接触条件を直接規定する方法について説明します。"
 
-# e6a0836a7d4a42d7bd10968ac1798870
 #: ../source/tutorial/wheel.rst:146
 msgid ""
 "For small deformation contact, the correspondence between points of one "
@@ -210,7 +187,6 @@ msgid ""
 msgstr ""
 "微小変形接触では、1つの接触面の点間の対応が参照設定に記述されていて、進展していないため、もちろん単純ですが、近似値です。"
 
-# 7fe7b3fa7f574d70b1866e8d2f8ba5ed
 #: ../source/tutorial/wheel.rst:148
 msgid ""
 "We consider that the contact boundary of the wheel is the slave one and we "
@@ -223,14 +199,12 @@ msgstr ""
 "これは、基礎の接触境界が垂直座標の消失に対応するため、ここでは非常に簡単です。"
 "そこで、変換を定義します。"
 
-# 05686dfdf6cd4303b31f7c03aa46ba61
 #: ../source/tutorial/wheel.rst:154
 msgid ""
 "where :math:`X` is the vector of coordinates of the point. We add this "
 "transformation to the model with the command"
 msgstr "ここで :math:`X` は、点の座標のベクトルです。この変換は、コマンドを使用してモデルに追加します。"
 
-# 123f4966024845319cd1c5e26b61b9f2
 #: ../source/tutorial/wheel.rst:160
 msgid ""
 "As a consequence, it will be possible to use this transformation, from the "
@@ -252,7 +226,6 @@ msgstr ""
 "また、大すべり接触に対応し、接触境界間の対応を自動的に検索する変換が |gf| に存在することにも注意してください。 "
 "( :ref:`ud-model-contact-friction-large-hlgav` を参照)。"
 
-# d4718f565ab54938a481feee2b3706d1
 #: ../source/tutorial/wheel.rst:162
 msgid ""
 "Using the defined transformation, we can write an integral contact condition"
@@ -264,7 +237,6 @@ msgstr ""
 "(詳細については :ref:`ud-model-contact-friction` を参照)。"
 "対応する項 (弱定式化の残りの部分に追加されます) は以下を読み取ります。"
 
-# 93afb2f5759744b48a5227b9688261b8
 #: ../source/tutorial/wheel.rst:169
 msgid ""
 "where :math:`\\Gamma_c` is the slave contact boundary, :math:`\\lambda_N` is"
@@ -286,17 +258,14 @@ msgstr ""
 " :math:`\\delta_{\\lambda_N}, \\delta_{u^1}, \\delta_{u^2}` はそれぞれ :math:`\\lambda_N, "
 "u^1, u^2` に対応する試行関数です。"
 
-# 1137d0382ce64be5affe388123b4dfb3
 #: ../source/tutorial/wheel.rst:171
 msgid "Using the weak form language, the contact condition can be added by:"
 msgstr "弱形式言語を使用すると、次の方法で接触条件を追加できます。"
 
-# 8a3b0a566eb84cd6b3d7466c3241adb5
 #: ../source/tutorial/wheel.rst:184
 msgid "Prescribing the rigidity of the rim and the vertical force"
 msgstr "リムの剛性と垂直力の処理"
 
-# 7ed3657e72a848d0b0d14fae4ae70221
 #: ../source/tutorial/wheel.rst:186
 msgid ""
 "We have now to prescribe the rigidity of the rim. This is a non-standard "
@@ -309,13 +278,11 @@ msgstr ""
 "垂直変位のための追加の未知変数を使用することができます。"
 "サイズ1の固定サイズ変数 `alpha_D` (有限要素フィールドではないことを意味します) を追加します。"
 
-# 0c1ccb0bac024317929e888c7bdca768
 #: ../source/tutorial/wheel.rst:192
 msgid ""
 "We need a multiplier to prescribe the displacement on the rim boundary:"
 msgstr "リム境界上の変位を規定する乗数が必要です。"
 
-# 429fc6a060c74727be135007f774f02f
 #: ../source/tutorial/wheel.rst:198
 msgid ""
 "This multiplier represents the boundary stress that is necessary to "
@@ -328,25 +295,21 @@ msgstr ""
 "この乗数に適用する制約は、リム境界上の積分が、適用したい垂直方向の力であることです。"
 "弱定式の残りの部分に追加される対応する弱定式項を読み取ります。"
 
-# 317ecd9529fa43fb8d7febd1eb45c5ea
 #: ../source/tutorial/wheel.rst:204
 msgid ""
 "where :math:`\\Gamma_D` is the rim boundary, :math:`F` is the applied "
 "density of force."
 msgstr "ここで :math:`\\Gamma_D` は、リムの境界であり、 :math:`F` は、力の適用された密度です。"
 
-# 81439dcb099445a3bd4a01502f443814
 #: ../source/tutorial/wheel.rst:206
 msgid "This could be added to the model with the weak form language:"
 msgstr "これは、弱形式言語でモデルに追加することができます。"
 
-# 4286c0a29f54436cb89c55c3c960e77e
 #: ../source/tutorial/wheel.rst:215
 msgid ""
 "For more robustness, a small penalization on :math:`alpha_D` can be added"
 msgstr "よりロバスト性を向上させるために、 :math:`alpha_D` 上の小さなペナルティを追加することができます"
 
-# 3785626b903641449e1f873e9ed1c304
 #: ../source/tutorial/wheel.rst:222
 msgid ""
 "Note that the fixed size variable `alpha_D` is linked to each points of the "
@@ -358,34 +321,28 @@ msgstr ""
 "これは、 `alpha_D` に対応する接線行列の線は、ゼロ以外の成分を多く持つことができることを意味します。"
 "このため、固定サイズ変数の使用は慎重に行う必要があります。"
 
-# b784cc97dee14f3085776a86a008ac42
 #: ../source/tutorial/wheel.rst:225
 msgid "Model solve"
 msgstr "モデル求解"
 
-# bfc38a8ddecc4808a32d19b4faff721e
 #: ../source/tutorial/wheel.rst:227
 msgid "We can now solve our problem with:"
 msgstr "私たちは今、問題を解くことができます :"
 
-# c272e066eb8b45a7835a27a2ecc80bc7
 #: ../source/tutorial/wheel.rst:233
 msgid ""
 "Note that in some configuration, it is preferable to use a more basic line "
 "search than the default one:"
 msgstr "設定によっては、デフォルトのものよりも基本的な線形探索を使用する方が望ましいことに注意してください :"
 
-# a2a289bad8f148c5841108789d430ea4
 #: ../source/tutorial/wheel.rst:241
 msgid "Export the solution"
 msgstr "解のエクスポート"
 
-# 91c78310d8eb494eac509bd840866c98
 #: ../source/tutorial/wheel.rst:243
 msgid "Now the code to export the solution with the VonMiss stress:"
 msgstr "次に、VonMiss 応力を伴う解をエクスポートするコードを示します:"
 
-# 704e125f2a1f426481a67a4c8702f645
 #: ../source/tutorial/wheel.rst:270
 msgid "Plot of the solution."
 msgstr "解のプロット。"

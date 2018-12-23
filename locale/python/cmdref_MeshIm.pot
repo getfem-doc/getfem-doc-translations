@@ -17,224 +17,179 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/python/cmdref_MeshIm.rst:8
-# 2503102fdc8a44de97e797cb2169e325
 msgid "MeshIm"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:1
-# 54622f4321014f78a29922bdd9777455
 msgid "GeFEM MeshIm object"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:3
-# 539ddcaea7db418f9591f0b098c286e7
 msgid "This object represents an integration method defined on a whole mesh (an  potentialy on its boundaries)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:7
-# 9caf69f75ef343e28ab1f5516d7c226d
 msgid "General constructor for MeshIm objects"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:9
-# 3323a638c2f040ef91447691c05d5855
 msgid "``MIM = MeshIm('load', string fname[, Mesh m])`` Load a MeshIm from a file."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:12
-# cb5cf8c59ded431dabfa2436ef728052
 msgid "If the mesh `m` is not supplied (this kind of file does not store the mesh), then it is read from the file and its descriptor is returned as the second output argument."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:16
-# 223bba18f7b34f73bef8d1df3b7e6167
 msgid "``MIM = MeshIm('from string', string s[, Mesh m])`` Create a MeshIm object from its string description."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:19
-# cfc5d17c5f5540cdbc6561e1c25c4923
 msgid "See also ``MeshIm.char()``"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:21
-# 6630c3027d5645a59a36b10348d1e838
 msgid "``MIM = MeshIm('clone', MeshIm mim)`` Create a copy of a MeshIm."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:24
-# 91d3feb07f2b440cb907eee0a46e7f23
 msgid "``MIM = MeshIm('levelset', MeshLevelSet mls, string where, Integ im[, Integ im_tip[, Integ im_set]])`` Build an integration method conformal to a partition defined implicitely by a levelset."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:28
-# b9b2eb1e24ea407ea14be5d6b0d87762
 msgid "The `where` argument define the domain of integration with respect to the levelset, it has to be chosen among 'ALL', 'INSIDE', 'OUTSIDE' and 'BOUNDARY'."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:32
-# d59c3235b4974dd6af5b6e779c5ce793
 msgid "it can be completed by a string defining the boolean operation to define the integration domain when there is more than one levelset."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:35
-# 4fd38ec3af7d46349b30d557240905ce
 msgid "the syntax is very simple, for example if there are 3 different levelset,"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:38
-# a7c1d85a0d6642c5a4d8b44b82ab9ead
 msgid "\"a*b*c\" is the intersection of the domains defined by each levelset (this is the default behaviour if this function is not called)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:42
-# 47d8f95194fd457aa54618a044d01a31
 msgid "\"a+b+c\" is the union of their domains."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:44
-# 97dc5d164206410f94a8b62c58e14f6a
 msgid "\"c-(a+b)\" is the domain of the third levelset minus the union of the domains of the two others."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:47
-# 1fcf433813454038b02dd615fa4f1a83
 msgid "\"!a\" is the complementary of the domain of a (i.e. it is the domain where a(x)>0)"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:50
-# 773a8cc113d6422eb5251c35a1f79bfd
 msgid "The first levelset is always referred to with \"a\", the second with \"b\", and so on."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:53
-# cae2ace412ba4492831da0a7dcb6a7ae
 msgid "for intance INSIDE(a*b*c)"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:55
-# 70097d0d3fb14f32ad394ed02ae00867
 msgid "CAUTION: this integration method will be defined only on the element cut by the level-set. For the 'ALL', 'INSIDE' and 'OUTSIDE' options it is mandatory to use the method ``MeshIm.set_integ()`` to define the integration method on the remaining elements."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:60
-# 2273f4c7251d46f588747630dc36fee3
 msgid "``MIM = MeshIm(Mesh m, [{Integ im|int im_degree}])`` Build a new MeshIm object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm:63
-# 26554588ca3c48fc85402bc6260fee65
 msgid "For convenience, optional arguments (`im` or `im_degree`) can be provided, in that case a call to ``MeshIm.integ()`` is issued with these arguments."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.adapt:1
-# 7bcb7167cb164f3cbdf9b683312543ac
 msgid "For a MeshIm levelset object only. Adapt the integration methods to a change of the levelset function."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.char:1
-# 26571a4d20454df5906d3bc2adbb6937
 msgid "Output a string description of the MeshIm."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.char:3
-# c6d8aa624b634ef4810230d5a3795b3c
 msgid "By default, it does not include the description of the linked Mesh object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.convex_index:1
-# bb92b0258dc844c0bdce962b51c9fb96
 msgid "Return the list of convexes who have a integration method."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.convex_index:3
-# db22e91709134824b0308e5326107ea9
 msgid "Convexes who have the dummy IM_NONE method are not listed."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.display:1
-# fc9523f8574b4d85801aa41e6328286c
 msgid "displays a short summary for a MeshIm object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.eltm:1
-# 94e2ca36dd7a478e90e1b27982e1292e
 msgid "Return the elementary matrix (or tensor) integrated on the convex `cv`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.eltm:3
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.im_nodes:6
-# 90bb266fc8e64d3fa02506afc36dd36f
-# 06c25026d21c4defbcfc304f10cdfe94
 msgid "**WARNING**"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.eltm:5
-# 732094459ef34f4bb2d061b79a7b2f9f
 msgid "Be sure that the fem used for the construction of `em` is compatible with the fem assigned to element `cv` ! This is not checked by the function ! If the argument `f` is given, then the elementary tensor is integrated on the face `f` of `cv` instead of the whole convex."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.im_nodes:1
-# a6e70b7ead1b4479bb7fbc0aa31286d1
 msgid "Return the coordinates of the integration points, with their weights."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.im_nodes:3
-# be77fbc6c2aa4e249899a7c348fb3eb5
 msgid "`CVids` may be a list of convexes, or a list of convex faces, such as returned by Mesh.region()"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.im_nodes:8
-# 99c54f8ee28f49739fa975b1442b5942
 msgid "Convexes which are not part of the mesh, or convexes which do not have an approximate integration method do not have their corresponding entry (this has no meaning for exact integration methods!)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.integ:1
-# 7b33968391c54171b185bf725d21f589
 msgid "Return a list of integration methods used by the MeshIm."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.integ:3
-# 8704300d1320428d81bac5eb40ba6672
 msgid "`I` is an array of all Integ objects found in the convexes given in `CVids`. If `CV2I` was supplied as an output argument, it contains, for each convex listed in `CVids`, the index of its correspounding integration method in `I`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.integ:8
-# e13ddc90c7834c9eb9586507604956cc
 msgid "Convexes which are not part of the mesh, or convexes which do not have any integration method have their correspounding entry in `CV2I` set to -1."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.linked_mesh:1
-# 38c8991f1a354d92a4ea771148aa5ae5
 msgid "Returns a reference to the Mesh object linked to `mim`."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.memsize:1
-# d0c35452dde645e78e46b9fba58809c6
 msgid "Return the amount of memory (in bytes) used by the MeshIm object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.memsize:3
-# 90f1e7918ee74a8ca7b4642615ab5b2f
 msgid "The result does not take into account the linked Mesh object."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.save:1
-# b96ec8c8b2bf40938f30076fa3ea7f8b
 msgid "Saves a MeshIm in a text file (and optionaly its linked mesh object)."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.set_integ:1
-# 3b3d8697bca3498ca8a045ae2b3881a4
 msgid "Synopsis: MeshIm.set_integ(self,{Integ im|int im_degree}[, ivec CVids])"
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.set_integ:3
-# be9da61071004ad5b2344546ad8e4de5
 msgid "Set the integration method."
 msgstr ""
 
 #: ../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.py:docstring of getfem.MeshIm.set_integ:5
-# 39dd1866936b45ceaff1d186095a1ede
 msgid "Assign an integration method to all convexes whose #ids are listed in `CVids`. If `CVids` is not given, the integration is assigned to all convexes. It is possible to assign a specific integration method with an integration method handle `im` obtained via Integ('IM_SOMETHING'), or to let getfem choose a suitable integration method with `im_degree` (choosen such that polynomials of :math:`\\text{degree} \\leq \\text{im\\_degree}` are exactly integrated. If `im_degree=-1`, then the dummy integration method IM_NONE will  be used.)"
 msgstr ""
 

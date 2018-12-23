@@ -17,217 +17,174 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/tutorial/wheel.rst:8
-# 0b6f6a3dbdae462f9ba173fd4bd4bd8f
 msgid "Example of wheel in contact (Assembly between two meshes, transformations, use of fixed size variables)"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:10
-# 55fa96fb11df4069aa45eafc224e4389
 msgid "In this example of a deformable ''wheel'' enters in contact with a deformable foundation. We use here python interface, translate this program for another interface or in C++ is easy (see the previous example). The complete program  `demo_wheel_contact.py` can be found in the directory `interface/tests/python`."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:13
-# 5a7a624e8f1040b09bb47431f1a3c3a3
 msgid "The problem setting"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:15
-# 1832fc2980ba4496883dbca0d27caa73
 msgid "Let :math:`\\Omega^1 \\subset \\R^2` be the reference configuration of a 2D wheel and :math:`\\Omega^2 \\subset \\R^2` the reference configuration of a deformable foundation. We consider small deformation of these two bodies (linearized elasticity) and the contact between them. We also consider that the rim of the wheel is rigid and apply a vertical force on the wheel."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:19
-# 3c0914dfe3284e02baacde12b7789d85
 msgid "Building the program"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:22
-# 237c886899564e3b95187f820b38e622
 msgid "Let us begin by loading Getfem and fixing the parameters of the problem"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:43
-# 407953ed37634e45a2e366df59a97494
 msgid "Mesh generation"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:45
-# ca7e431f189d4df59c32c083afb6036a
 msgid "We consider that the radius of the wheel is 15cm and the one of the rim 8cm and that the wheel lies on a deformable foundation of thickness 10cm. We generate the mesh of the wheel using the experimental mesher of |gf|. Concerning the mesh of the foundation, we build a structured mesh (see the documentation of the Mesh object in the python interface)."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:58
-# 15231ab7aa354e62bc6c2f0ac6de1966
 msgid "The result is the following"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:66
-# 83b2e4b647dc4c55a73f9a5a7c0d6e41
 msgid "Boundary selection"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:68
-# 24508f1618864a65825b79fe14aaa1e2
 msgid "We have to select the different parts of the boundary where we will set some boundary conditions, namely the boundary of the rim (in order to apply a force and the fact that the rim is rigid), the contact boundary of the wheel and the bottom boundary of the foundation that we will assume clamped."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:83
-# 1561e5abe8a34a8f9f8fb9221f416b5e
 msgid "Note that the command `mesh1.outer_faces_with_direction([0., -1.], n.pi/4)` allows to select all the faces having a unit outward normal having an angle less or equal to `n.pi/4` with the vector `[0., -1.]`. The command `mesh1.region_subtract(CONTACT_BOUND, HOLE_BOUND)` allow to delete the faces corresponding to the rim in the contact boundary."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:86
-# c78aebfd02474b008c6c10d1584395c3
 msgid "Definition of finite elements methods and integration method"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:88
-# 50c052d6a898491ca30bbd257ccb3b7f
 msgid "We define `mfu1`, `mfu2` two finite element methods which will approximate the displacements in the wheel and the foundation respectively. `mflambda` is  finite element method to approximate a multiplier to take into account the rigidity of the rim, `mflambda_C` is to approximate the contact multiplier (contact pressure) and `mfvm1`, `mfvm2` will be used to interpolate the Von Mises stresses of the wheel and the foundation for post-processing. `mim1`, `mim2` are two integration methods on the  wheel and the foundation."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:110
-# e40ffdf1bd8a4452a7e603be076a47b4
 msgid "Model definition"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:112
-# 8dd617b41bb34544bdf4e58324015509
 msgid "We use a real model and declare the two variables which will represent the displacements:"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:121
-# 56a406865d004e4c82e621bec15b286d
 msgid "Linearized elasticity bricks"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:123
-# 98f5d1b86ab6422f9e5795753f3928a4
 msgid "We add the |Lame| coefficients as data of the model and add a linearized elasticity brick for the wheel and the foundation:"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:133
-# 61a36f9c7cdd40c5b43de22d1bef8f54
 msgid "Clamped condition at the bottom of the foundation"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:135
-# 7b61dc169c1749f59996a704ebea7521
 msgid "We prescribed the displacement at  bottom face of the foundation to vanish, for instance with a multiplier with the add of the following brick:"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:142
-# 9b77b9f0bf6f4e76af9cc56c68ec6a51
 msgid "Contact condition (use of interpolate transformations)"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:144
-# 2a42091d806843cca33c4e5ed6d4d330
 msgid "Now, let us see how to prescribed the contact condition between the two structures. It is possible to use predefined bricks (see  :ref:`ud-model-contact-friction` for small deformation/small sliding contact and :ref:`ud-model-contact-friction-large` for large deformation/large sliding contact). However, we will see here how to directly prescribe a contact condition using an augmented Lagrangian formulation and the interpolate transformations."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:146
-# e6a0836a7d4a42d7bd10968ac1798870
 msgid "For small deformation contact, the correspondence between points of one contact surface to the other have to be described on the reference configuration and is not evolving, which is of course simpler but is an approximation."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:148
-# 7fe7b3fa7f574d70b1866e8d2f8ba5ed
 msgid "We consider that the contact boundary of the wheel is the slave one and we have to describe the transformation from the contact boundary of the wheel to the contact boundary of the foundation. This is quite simple here, since the contact boundary of the foundation corresponds to a vanishing vertical coordinate. So we define the transformation"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:154
-# 05686dfdf6cd4303b31f7c03aa46ba61
 msgid "where :math:`X` is the vector of coordinates of the point. We add this transformation to the model with the command"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:160
-# 123f4966024845319cd1c5e26b61b9f2
 msgid "As a consequence, it will be possible to use this transformation, from the mesh of the wheel to the mesh of the foundation, into weak form language expressions. Notes that this is here a very simple constant expression. More complex expressions depending on the data or even the variables of the model can be used. If the expression of a transformation depends on the variable of the model, the tangent linear system will automatically takes into account this dependence (see :ref:`ud-gasm-high-transf` for more details. Note also that transformation corresponding to a large sliding contact and automatically searching for the correspondence between contact boundaries exist in |gf| (see :ref:`ud-model-contact-friction-large-hlgav`)."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:162
-# d4718f565ab54938a481feee2b3706d1
 msgid "Using the defined transformation, we can write an integral contact condition using an augmented Lagrangian formulation (see :ref:`ud-model-contact-friction` for more details). The corresponding term (to be added to the rest of the weak formulation) reads:"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:169
-# 93afb2f5759744b48a5227b9688261b8
 msgid "where :math:`\\Gamma_c` is the slave contact boundary, :math:`\\lambda_N` is the contact multiplier (contact pressure), :math:`h_T` is the radius of the element, :math:`\\Pi` is the transformation, `n` is the outward normal vector to the master contact boundary (here :math:`n = (0,1)`), :math:`\\gamma_0` is an augmentation parameter, :math:`(\\cdot)_-:I\\hspace{-0.2em}R\\rightarrow I\\hspace{-0.2em}R_+` is the negative part and :math:`\\delta_{\\lambda_N}, \\delta_{u^1}, \\delta_{u^2}` are the test  functions corresponding to :math:`\\lambda_N, u^1, u^2`, respectively."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:171
-# 1137d0382ce64be5affe388123b4dfb3
 msgid "Using the weak form language, the contact condition can be added by:"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:184
-# 8a3b0a566eb84cd6b3d7466c3241adb5
 msgid "Prescribing the rigidity of the rim and the vertical force"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:186
-# 7ed3657e72a848d0b0d14fae4ae70221
 msgid "We have now to prescribe the rigidity of the rim. This is a non-standard condition, since we do not know a priori what will be the vertical displacement of the rim. We can use an additional unknown for that vertical displacement. We add an additional fixed size variable `alpha_D` (which mean that it does not a finite element field) of size 1 with"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:192
-# 0c1ccb0bac024317929e888c7bdca768
 msgid "We need a multiplier to prescribe the displacement on the rim boundary:"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:198
-# 429fc6a060c74727be135007f774f02f
 msgid "This multiplier represents the boundary stress that is necessary to prescribe the vertical displacement to be :math`(0, -\\alpha_D)`. The constraint we want to apply on this multiplier is that its integral over the rim boundary is the vertical force we want to apply. The corresponding weak formulation term to be added to the rest of the weak formulation reads"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:204
-# 317ecd9529fa43fb8d7febd1eb45c5ea
 msgid "where :math:`\\Gamma_D` is the rim boundary, :math:`F` is the applied density of force."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:206
-# 81439dcb099445a3bd4a01502f443814
 msgid "This could be added to the model with the weak form language:"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:215
-# 4286c0a29f54436cb89c55c3c960e77e
 msgid "For more robustness, a small penalization on :math:`alpha_D` can be added"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:222
-# 3785626b903641449e1f873e9ed1c304
 msgid "Note that the fixed size variable `alpha_D` is linked to each points of the rim boundary. This means that the line of the tangent matrix corresponding to `alpha_D` may have a lot of nonzero components. This is why such a use of fixed size variable have to be done with care."
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:225
-# b784cc97dee14f3085776a86a008ac42
 msgid "Model solve"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:227
-# bfc38a8ddecc4808a32d19b4faff721e
 msgid "We can now solve our problem with:"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:233
-# c272e066eb8b45a7835a27a2ecc80bc7
 msgid "Note that in some configuration, it is preferable to use a more basic line search than the default one:"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:241
-# a2a289bad8f148c5841108789d430ea4
 msgid "Export the solution"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:243
-# 91c78310d8eb494eac509bd840866c98
 msgid "Now the code to export the solution with the VonMiss stress:"
 msgstr ""
 
 #: ../source/tutorial/wheel.rst:270
-# 704e125f2a1f426481a67a4c8702f645
 msgid "Plot of the solution."
 msgstr ""
 

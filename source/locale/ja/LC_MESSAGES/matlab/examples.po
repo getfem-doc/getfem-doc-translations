@@ -17,17 +17,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-# 5e53a44660e943949ecc81bc94d03a0b
 #: ../source/matlab/examples.rst:10
 msgid "Examples"
 msgstr ""
 
-# e8fe47f7b48d418e8fdd98228e682393
 #: ../source/matlab/examples.rst:15
 msgid "A step-by-step basic example"
 msgstr ""
 
-# 069346f79c11437fa09c24a2f843d358
 #: ../source/matlab/examples.rst:17
 msgid ""
 "This example shows the basic usage of getfem, on the über-canonical "
@@ -38,7 +35,6 @@ msgid ""
 "``interface/tests/matlab/`` of the |gf| distribution."
 msgstr ""
 
-# f39ac0d0ea494a4ca14724cbc129445e
 #: ../source/matlab/examples.rst:23
 msgid ""
 "The first step is to **create a mesh**. It is possible to create simple "
@@ -50,7 +46,6 @@ msgid ""
 ":math:`\\{x_{i=0\\ldots10,j=0..10}=(i/10,j/10)\\}`::"
 msgstr ""
 
-# 275edfcb61e943f3ba925d99fd0dd94c
 #: ../source/matlab/examples.rst:34
 msgid ""
 "If you try to look at the value of ``m``, you'll notice that it appears "
@@ -62,14 +57,12 @@ msgid ""
 " |gf| objects via the command ``gf_workspace('stats')``."
 msgstr ""
 
-# f3b1c3026d0640d688cd8ccddedbb4e7
 #: ../source/matlab/examples.rst:41
 msgid ""
 "Now we can try to have a **look at the mesh**, with its vertices "
 "numbering and the convexes numbering::"
 msgstr ""
 
-# 34e575ebab4f418a863cd091d99dae29
 #: ../source/matlab/examples.rst:47
 msgid ""
 "As you can see, the mesh is regular, and the numbering of its nodes and "
@@ -77,14 +70,12 @@ msgid ""
 " not hope a similar numbering for the degrees of freedom)."
 msgstr ""
 
-# fb3f7127862340a8866994d0342e58b1
 #: ../source/matlab/examples.rst:51
 msgid ""
 "The next step is to **create a mesh_fem object**. This one links a mesh "
 "with a set of FEM::"
 msgstr ""
 
-# c3d40b8cd04541468bc7ff6c9c39095d
 #: ../source/matlab/examples.rst:58
 msgid ""
 "The first instruction builds a new |mlab_mf| object, the second argument "
@@ -97,7 +88,6 @@ msgid ""
 "expression of its basis functions on the reference convex::"
 msgstr ""
 
-# 18b94888c5c8407fb033cbc6673504d3
 #: ../source/matlab/examples.rst:79
 msgid ""
 "It is also possible to make use of the \"object oriented\" features of "
@@ -109,14 +99,12 @@ msgid ""
 "example, the previous steps could have been::"
 msgstr ""
 
-# c7a6bbae4d0641bcaa4d2876b9a45277
 #: ../source/matlab/examples.rst:99
 msgid ""
 "Now, in order to perform numerical integrations on ``mf``, we need to "
 "**build a mesh_im object**::"
 msgstr ""
 
-# 8016aac0c82d466e8f1ba12ab6d62cd1
 #: ../source/matlab/examples.rst:105
 msgid ""
 "The integration method will be used to compute the various integrals on "
@@ -131,14 +119,12 @@ msgid ""
 "integration methods (see :ref:`ud`)."
 msgstr ""
 
-# 0c50d4123d53456d9db248675665eabc
 #: ../source/matlab/examples.rst:115
 msgid ""
 "Note however that in the general case, approximate integration methods "
 "are a better choice than exact integration methods."
 msgstr ""
 
-# 19f6f36d0bb44d43bdbb8a34b28ca5f7
 #: ../source/matlab/examples.rst:118
 msgid ""
 "Now we have to **find the** \":envvar:`boundary`\" **of the domain**, in "
@@ -147,27 +133,22 @@ msgid ""
 "\"regions\") are accessed via an integer #id::"
 msgstr ""
 
-# 5f3fc3dc72f74044a95068d9cd686ebc
 #: ../source/matlab/examples.rst:129
 msgid ""
 "Here we find the faces of the convexes which are on the boundary of the "
 "mesh (i.e. the faces which are not shared by two convexes)."
 msgstr ""
 
-# 9bd620cd7c434209b91b95a25937fb8c
-# 53de0b6fb9844687a07693471ea58c7e
 #: ../source/matlab/examples.rst ../source/matlab/examples.rst:132
 msgid "Remark:"
 msgstr ""
 
-# 182e0c80c2834724a9cd80a73334c23a
 #: ../source/matlab/examples.rst:134
 msgid ""
 "we could have used ``gf_mesh_get(m, 'OuTEr_faCes')``, as the interface is"
 " case-insensitive, and whitespaces can be replaced by underscores."
 msgstr ""
 
-# 4fd921db2d0443b5bb7a7c256e4f4cb9
 #: ../source/matlab/examples.rst:137
 msgid ""
 "The array ``border`` has two rows, on the first row is a convex number, "
@@ -176,7 +157,6 @@ msgid ""
 "the region number 42."
 msgstr ""
 
-# dcfecb2b6cff4de384f06e40825f5bdb
 #: ../source/matlab/examples.rst:141
 msgid ""
 "At this point, we just have to desribe the model and run the solver to "
@@ -191,7 +171,6 @@ msgid ""
 "\":envvar:`model`\" structure."
 msgstr ""
 
-# dd3ea35463ff421ea5e4caed56555e6d
 #: ../source/matlab/examples.rst:151
 msgid ""
 "Let us build a problem with an easy solution: :math:`u=x(x-1)y(y-1)+x^5`,"
@@ -199,19 +178,16 @@ msgid ""
 " able to catch the exact solution since we use a :math:`Q^2` method)."
 msgstr ""
 
-# b74c146888d8420dbfee92aaeec868d7
 #: ../source/matlab/examples.rst:155
 msgid "We start with an empty real model::"
 msgstr ""
 
-# b7961e01034a4d5597174dee7b939684
 #: ../source/matlab/examples.rst:160
 msgid ""
 "(a model is either ``'real'`` or ``'complex'``). And we declare that "
 "``u`` is an unknown of the system on the finite element method `mf` by::"
 msgstr ""
 
-# 5e392719d97f4479b432353c00142519
 #: ../source/matlab/examples.rst:167
 msgid ""
 "Now, we add a \"generic elliptic\" brick, which handles "
@@ -220,12 +196,10 @@ msgid ""
 "default, :math:`A=1`. We add it on our main variable ``u`` with::"
 msgstr ""
 
-# 39da3e924c1542e4ad689d8ae371f990
 #: ../source/matlab/examples.rst:176
 msgid "Next we add a Dirichlet condition on the domain boundary::"
 msgstr ""
 
-# 5f4e98ccd2014d46ad2dd26129361932
 #: ../source/matlab/examples.rst:184
 msgid ""
 "The two first lines defines a data of the model which represents the "
@@ -239,7 +213,6 @@ msgid ""
 "``mf``."
 msgstr ""
 
-# cb638797e6084b05b8d3b18ef22784a8
 #: ../source/matlab/examples.rst:195
 msgid ""
 "the polynomial expression was interpolated on ``mf``. It is possible only"
@@ -250,19 +223,16 @@ msgid ""
 "etc."
 msgstr ""
 
-# 75e768fbdcbc4a2e82c48c9281f3a133
 #: ../source/matlab/examples.rst:201
 msgid "A source term can be added with the following lines::"
 msgstr ""
 
-# ba9f60ca102d4c6f8ee3222dd40fab52
 #: ../source/matlab/examples.rst:208
 msgid ""
 "It only remains now to launch the solver. The linear system is assembled "
 "and solve with the instruction::"
 msgstr ""
 
-# 51135820d80d4fc8b32f0c7739ef5e98
 #: ../source/matlab/examples.rst:214
 msgid ""
 "The model now contains the solution (as well as other things, such as the"
@@ -270,22 +240,18 @@ msgid ""
 "|mlab| figure::"
 msgstr ""
 
-# 5dfe37c8f7994f9690e5e50e300129f1
 #: ../source/matlab/examples.rst:224
 msgid "Another Laplacian with exact solution"
 msgstr ""
 
-# 9af1559eefce47e489e89e3fba0cffbd
 #: ../source/matlab/examples.rst:226
 msgid "This is the :file:`tests/matlab/demo_laplacian.m` example."
 msgstr ""
 
-# 4b9b312155fb4cb7b8c2ee50480fd39c
 #: ../source/matlab/examples.rst:232
 msgid "Linear and non-linear elasticity"
 msgstr ""
 
-# a8d1a9863f7347cb8ec05811cb8869df
 #: ../source/matlab/examples.rst:234
 msgid ""
 "This example uses a mesh that was generated with `GiD`_. The object is "
@@ -294,22 +260,18 @@ msgid ""
 ":file:`tests/matlab` of the toolbox distribution."
 msgstr ""
 
-# 1033c65374604ab09313ab2a526be72e
 #: ../source/matlab/examples.rst:241
 msgid "Here is the final figure, displaying the :envvar:`Von Mises` stress:"
 msgstr ""
 
-# 344851c861894f5c92a4cdced273c838
 #: ../source/matlab/examples.rst:248
 msgid "deformed tripod"
 msgstr ""
 
-# 8dde6b42ee0d495db0ed93590b5225c6
 #: ../source/matlab/examples.rst:252
 msgid "Avoiding the bricks framework"
 msgstr ""
 
-# 09813ec160e04ef6a67ce6afc6ede9a8
 #: ../source/matlab/examples.rst:254
 msgid ""
 "The model bricks are very convenient, as they hide most of the details of"
@@ -320,7 +282,6 @@ msgid ""
 "except that the assembly is explicit::"
 msgstr ""
 
-# 6f6977dc1077441bb494eb46c00b1b59
 #: ../source/matlab/examples.rst:284
 msgid ""
 "In |gfi|, the assembly of vectors, and matrices is done via the "
@@ -334,12 +295,10 @@ msgid ""
 "penalization technique."
 msgstr ""
 
-# 554cd3b5564e478fbe694c25f5381c8b
 #: ../source/matlab/examples.rst:295
 msgid "Other examples"
 msgstr ""
 
-# 7a0123c07b4f4a8690ebb3ab04238aab
 #: ../source/matlab/examples.rst:297
 msgid ""
 "the :file:`demo_refine.m` script shows a simple 2D or 3D bar whose "
@@ -348,7 +307,6 @@ msgid ""
 "between the clamped area and the neumann boundary)."
 msgstr ""
 
-# dee8e89bea94452e9d8a8ba0a0f7ea8d
 #: ../source/matlab/examples.rst:302
 msgid ""
 "the :file:`demo_nonlinear_elasticity.m` script shows a 3D bar which is is"
@@ -357,7 +315,6 @@ msgid ""
 "elasticity problem is solved."
 msgstr ""
 
-# 1d7183c31ebb4bcbb8c0875b012560a4
 #: ../source/matlab/examples.rst:307
 msgid ""
 "the :file:`demo_stokes_3D_tank.m` script shows a Stokes (viscous fluid) "
@@ -367,7 +324,6 @@ msgid ""
 "uses the deprecated ``gf_solve`` function."
 msgstr ""
 
-# f951fd8a087d4462a0cb457ab30aa5f3
 #: ../source/matlab/examples.rst:313
 msgid ""
 "the :file:`demo_bilaplacian.m` script is just an adaption of the |gf| "
@@ -375,7 +331,6 @@ msgid ""
 "Kirchhoff-Love plate model) on a square."
 msgstr ""
 
-# cc95a5e496e044a794f7511cf68a1a92
 #: ../source/matlab/examples.rst:317
 msgid ""
 "the :file:`demo_plasticity.m` script is an adaptation of the |gf| example"
@@ -384,7 +339,6 @@ msgid ""
 "occurs when the material's Von Mises exceeds a given threshold)."
 msgstr ""
 
-# be2f984305604e1d98ecc28863c92632
 #: ../source/matlab/examples.rst:322
 msgid ""
 "the :file:`demo_wave2D.m` is a 2D scalar wave equation example "
@@ -392,12 +346,10 @@ msgid ""
 "transformations and high order FEMs."
 msgstr ""
 
-# a8869b57198841a0b8e266accd8c90f8
 #: ../source/matlab/examples.rst:328
 msgid "Using Matlab Object-Oriented features"
 msgstr ""
 
-# eb544819125544aab8f81c479ed80cbe
 #: ../source/matlab/examples.rst:330
 msgid ""
 "The basic functions of the |gf| toolbox do not use any advanced |mlab| "
@@ -408,12 +360,10 @@ msgid ""
 "integration of the toolbox with |mlab|."
 msgstr ""
 
-# 6baa1d6bc416412db06b0bc1bbcf379c
 #: ../source/matlab/examples.rst:337
 msgid "Here is an example of its use::"
 msgstr ""
 
-# 36d96f5621964b288cf30e4b8207833d
 #: ../source/matlab/examples.rst:358
 msgid "Refer to the OO-commands reference :ref:`mlab-oocmd` for more details."
 msgstr ""

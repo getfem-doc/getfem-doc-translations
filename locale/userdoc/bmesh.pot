@@ -17,502 +17,402 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/bmesh.rst:10
-# fd2130ac350146c98c051ddaa77bd295
 msgid "Build a mesh"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:12
-# dfa233fd0fff4b6aa9f43f75eb48c71c
 msgid "As a preliminary, you may want to read this short introduction to the |gf| `vocabulary`_."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:15
-# e1057e3fda5e4b1ab603c1ab73028c8a
 msgid "|gf| has its own structure to store meshes defined in the files :file:`getfem/bgeot_mesh_structure.h` and :file:`getfem/getfem_mesh.h`. The main structure is defined in :file:`getfem/getfem_mesh.h` by the object |gf_m|."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:19
-# ec39e3684b7c41909db7bda1e4ca627e
 msgid "This object is able to store any element in any dimension even if you mix elements with different dimensions."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:22
-# c42d5396451e43a49dba60e1372674a2
 msgid "There is only a (very) experimental meshing procedure in |gf| to mesh complex geometries. But you can easily load a mesh from any format (some procedures are in :file:`getfem/getfem_import.h` to load meshes from some public domain mesh generators)."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:26
-# 1672f20ee5ab4e0dbcce05f4167973eb
 msgid "The structure |gf_m| may also contain a description about a region of the mesh, such as a boundary or a set of elements. This is handled via a container of convexes and convex faces, |gf_mr|."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:32
-# 6940ebcf75464e05b38596f708b8a86e
 msgid "Add an element to a mesh"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:34
-# 6c7bf0a48ee94c4ea52ffb3e0b8e86c1
 msgid "Suppose the variable ``mymesh`` has been declared by::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:38
-# ff331ec167034f6db1c22185cfa669cc
 msgid "then you have two ways to insert a new element to this mesh: from a list of points or from a list of indexes of already existing points."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:41
-# 36518bed78074864885eb0a064bbf00e
 msgid "To enter a new point on a mesh use the method::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:45
-# fd826cfb5f9744018584041443d2f738
 msgid "where ``pt`` is of type |bg_bn|. The index ``i`` is the index of this point on the mesh. If the point already exists in the mesh, a new point is not inserted and the index of the already existing point is returned. A mesh has a principal dimension, which is the dimension of its points. It is not possible to have points of different dimensions in a same mesh."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:51
-# cf3db6ec95e54b0997285a228d8a77b2
 msgid "The most basic function to add a new element to a mesh is::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:55
-# fc13be527d464ddfb89eb171be257728
 msgid "This is a template function, with ``pgt`` of type |bg_pgt| (basically a pointer to an instance of type |bg_gt|) and ``it`` is an iterator on a list of indexes of already existing points. For instance, if one needs to add a new triangle in a 3D mesh, one needs to define first an array with the indexes of the three points::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:65
-# f265ee42cd6b41e89bd02f9aee331a61
 msgid "then adding the element is done by::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:69
-# a49dd185e49c494596d6914e57231cf8
 msgid "where ``bgeot::simplex_geotrans(N,1);`` denotes the usual linear geometric transformation for simplices of dimension N."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:72
-# e4fa563869b64d1783ff1843e51cf9f9
 msgid "For simplices, a more specialized function exists, which is::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:76
-# 9e5ad7e0576a4ee7bbceab360af0893e
 msgid "It is also possible to give directly the list of points with the function::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:80
-# a4ae3e03c6e943468862860d750637db
 msgid "where now ``itp`` is an iterator on an array of points. For example::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:88
-# cb44780e245945429708a13d0c153f37
 msgid "It is possible to use also::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:92
-# 9f6b1127416e4d7dafa8826559c795cf
 msgid "For other elements than simplices, it is still possible to use ``mymesh.add_convex_by_points`` or ``mymesh.add_convex`` with the appropriate geometric transformation."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:96
-# 0b90a62e29d54076ab735db323f0d7b4
 msgid "``bgeot::parallelepiped_geotrans(N, 1)`` describes the usual transformation for parallelepipeds of dimension ``N`` (quadrilateron for ``N=2``, hexahedron for ``N=3``, ...)"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:100
-# 5cd94ca60fe3481393ed7e1c5cf37b4a
 msgid "``bgeot::prism_geotrans(N, 1)`` describes the usual transformation for prisms of dimension ``N`` (usual prism is for ``N=3``. A generalized prism is the product of a simplex of dimension ``N-1`` with a segment)"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:104
-# b76bc64a148e40d79412285b8ffccdee
 msgid "Specialized functions exist also::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:111
-# 85580a738cfe405892be76c1fd3cebd9
 msgid "The order of the points in the array of points is not important for simplices (except if you care about the orientation of your simplices). For other elements, it is important to respect the vertex order shown in :ref:`ud-fig-elem` (first order elements)."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:119
-# 761fde60a0a94e9e85e6817cf53db417
 msgid "Vertex numeration for usual first order elements"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:121
-# 5a2fe6d4c9b44740997c64dee19bb011
 msgid "Note that a general rule, including for higher order transformations, is that the vertex numeration follows the one of the corresponding Lagrange finite element method (see  :ref:`ud-appendixa`)."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:125
-# 7f67b2a7e5f14c89a620ff36f83a0504
 msgid "Remove an element from a mesh"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:127
-# b4defb3a8dc745c2beef312e0a2e46a4
 msgid "To remove an element from a mesh, simply use::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:131
-# 37dec011d678423a8d65be24fbe11709
 msgid "where ``i`` is the index of the element."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:135
-# 2331aca79a6a44818e9a2dbe0c77cf86
 msgid "Simple structured meshes"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:137
-# c1469891dee54050a22ca3b1d9c3b1f4
 msgid "For parallelepiped domains, it is possible to obtain structured meshes with simplices, parallelepipeds or prisms elements from three functions defined in :file:`getfem/getfem_regular_meshes.h`."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:141
-# 4907a66953ba482ba16cd9a4fa4f2f6f
 msgid "The simplest function to use is::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:146
-# 45878d180d4b41a89f1783123808f45a
 msgid "which fills the mesh ``m`` with a regular mesh of simplices/parallelepipeds/prisms (depending on the value of ``pgt``). The number of cells in each direction is given by ``nsubdiv``. The following example builds a mesh of quadratic triangles on the unit square (the mesh can be scaled and translated afterwards)::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:155
-# defb5ed807c2481cb728cbe664193b5b
 msgid "More specialized regular mesh functions are also available::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:162
-# d6e8382e67084acdb0082d4ec1ed076b
 msgid "where ``mymesh`` is a mesh variable in which the structured mesh will be built, ``N`` is the dimension (limited to 4 for simplices, 5 for prisms, unlimited for parallelepipeds), ``org`` is of type ``bgeot::base_node`` and represents the origin of the mesh, ``ivect`` is an iterator on an array of ``N`` vectors to build the parallelepiped domain, ``iref`` is an iterator on an array of ``N`` integers representing the number of division on each direction."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:169
-# 2ba882d6316f42a488a5da36f32e3c93
 msgid "For instance, to build a mesh with tetrahedrons for a unit cube with :math:`10\\times~10\\times~10` cells one can write::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:184
-# f3519ebb1d5749978270eb1501f8ff22
 msgid "``base_node`` and ``base_small_vector`` are almost identical, they are both ''small'' vector classes (they cannot store more than 16 elements), used to describe geometrical points, and geometrical vectors. Their memory footprint is lower than a ``std::vector``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:192
-# c5f01123c2db4e20ac2bf12c02c66967
 msgid "Mesh regions"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:194
-# 329ea1a583f84f1fadf5dcd6493a263f
 msgid "A mesh object can contain many |gf_mr| objects (declaration in :file:`getfem/getfem_mesh_region.h`). These objects are containers for a set of convexes and convex faces. They are used to define boundaries, or a partition of the mesh for parallel solvers, etc.::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:209
-# e3d5b45e521b4917865d1b75d52340b9
 msgid "Methods of the |gf_m| object"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:211
-# 25703f2efd8641f4a4ad374bbf7d3087
 msgid "The list is not exhaustive."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:215
-# 636476feec7d417a869be8d713d51254
 msgid "main dimension of the mesh."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:219
-# 34ec9b6db2f2426b859aab24b0185f07
 msgid "gives a ``dal::bit_vector`` object which represents all the indexes of valid points of a mesh (see below)."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:224
-# ae7de13218da4099805963d53d5c8554
 msgid "gives the point of index ``i`` (a ``bgeot::base_node``)."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:228
-# ebd4288f79124f74acb0c95e7e41a8ab
 msgid "gives a ``dal::bit_vector`` object which represents all the indexes of valid elements of a mesh (see below)."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:233
-# 179d6c79a590499a846ab058f407c4a5
 msgid "gives the description of the structure of element of index ``i``. The function return a |bg_pcs|."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:238
-# b632c4fa69cb4020ad8c8fff297460e2
 msgid "number of faces of element of index ``i``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:242
-# f6bce782bd48447e85405f170725b1c7
 msgid "number of vertices of element of index ``i``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:246
-# 90236edb0e554a6abb7c25d5f41af605
 msgid "intrinsic dimension of element of index ``i``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:251
-# 4bf8dad82e704081ace926b478a271aa
 msgid "number of vertices of the face of local index ``f`` of element of index ``i``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:256
-# 10092b3fc5324bbab09196ff33af3d6e
 msgid "return a container with the local indexes of all vertices of the face of local index ``f`` of element of index ``i``. For instance ``mesh.structure_of_convex(i)->ind_points_of_face(f)[0]`` is the local index of the first vertex."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:263
-# 5da2dd31052249b89d9ab3f6951a3918
 msgid "gives the structure (a |bg_pcs|) of local index ``f`` of element of index ``i``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:268
-# d32306c5357c419eb3cb76af405ec96d
 msgid "gives a container with the global indexes of vertices of element of index ``i``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:273
-# 5893b01e8a5642fcb296ffeb175aa72c
 msgid "gives a container with the vertices of element of index ``i``. This is an array of ``bgeot::base_node``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:278
-# b2c6ccfe41314399b35bdb3530f90627
 msgid "gives a container with the indexes of all elements attached to the point of global index ``ipt``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:283
-# 4bc4373f6b8447d78b5feb39c23a2969
 msgid "gives a container with the indexes of all elements in ``mesh`` having the common face of local index ``f`` of element ``ic`` except element ``ic``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:289
-# fbb80870f41a49a5859b488870dafa9a
 msgid "gives the index of the first elements in ``mesh`` having the common face of local index ``f`` of element ``ic`` except element ``ic``. return size_type(-1) if none is found."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:295
-# 79771658a6354164b3b1a93119820a03
 msgid "return whether or not the element ``ic`` has a neighbour with respect to its face of local index ``f``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:300
-# 34c32862a334491485240bfdb106403c
 msgid "delete all elements and points from the mesh."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:305
-# f88ca2b1579447e492715adef12a3a5d
 msgid "compact the structure (renumbers points and convexes such that there is no hole in their numbering)."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:310
-# 12af40b5cc01460a850a39d604c1f0f4
 msgid "return the geometric transformation of the element of index ``i`` (in a |bg_pgt|). See :ref:`dp` for more details about geometric transformations."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:315
-# f3d863f9b70744f5b9fe3a24b861e114
 msgid "gives a ``bgeot::base_small_vector`` representing an outward normal to the element at the face of local index ``f`` at the point of local coordinates (coordinates in the element of reference) ``pt``. The point ``pt`` has no influence if the geometric transformation is linear. This is not a unit normal, the norm of the resulting vector is the ratio between the surface of the face of the reference element and the surface of the face of the real element."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:325
-# 88741ab7732b45cd975c04a333ed9f52
 msgid "gives an estimate of the area of convex ``ic``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:329
-# e0808caacc764b4ab159d9d55289b763
 msgid "gives a rough estimate of the quality of element ``ic``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:333
-# 10a2b7b2b0654a16b7cb533c41e5d819
 msgid "gives an estimate of the radius of element ``ic``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:337
-# 0baaaaf615f546258e5884e3fd2e0ea4
 msgid "return a |gf_mr|. The region is stored in the mesh, and can contain a set of convex numbers and or convex faces."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:342
-# b4c759d89df84f9e9d113352dc0fbf31
 msgid "returns true if the region of index ``irg`` has been created."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:344
-# bc1c2ce52c9f475497fa8f497e0c2207
 msgid "The methods of the convexes/convex faces container ``getfem::mesh_region`` are:"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:348
-# 719f43c469d04e1ca2982b7c42dd1a5c
 msgid "add the convex of index ``ic`` to the region."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:352
-# 4b8dfcf3891d4ae388c5262a103f65ed
 msgid "add the face number ``f`` of the convex ``ic``."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:357
-# 03566c5078954206aae2917925638f69
 msgid "remove the convex or the convex face from the region."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:362
-# a7fe6f9e798a49adb725c9b50fddca10
 msgid "return true if the convex (or convex face) is in the region."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:366
-# e59cceba136a4212aedaa2fc50826b79
 msgid "return true if the region does not contain any convex."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:370
-# ce2b2ae89c05412988c541011e5ab5e8
 msgid "return true if the region does not contain any convex face."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:374
-# 3eb7b7fa3b574f0996352e0ef0c3b617
 msgid "return a ``dal::bit_vector`` containing the list of convexes which are stored (or whose faces are stored) in the region."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:377
-# 8469426b6e944e15aba188af4eead5c1
 msgid "Iteration over a |gf_mr| should be done with |gf_mrv|::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:386
-# 6b4bdacc87f142609f252122713e7d24
 msgid "Using |dal_bv|"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:388
-# 2df3bda319c74799be234c9b2326ff1c
 msgid "The object |dal_bv| (declared in :file:`getfem/dal_bit_vector.h`) is a structure heavily used in |gf|. It is very close to ``std::bitset`` and ``std::vector<bool>`` but with additional functionalities to represent a set of non negative integers and iterate over them."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:393
-# a3970c4bc05e433da3eff4eb4d0666a4
 msgid "If ``nn`` is declared to be a |dal_bv|, the two instructions ``nn.add(6)`` or ``nn[6] = true`` are equivalent and means that integer 6 is added to the set."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:397
-# 3f84904b17314f3b80a8c11a0fe2e6b4
 msgid "In a same way ``nn.sup(6)`` or ``nn[6] = false`` remove the integer 6 from the set. The instruction ``nn.add(6, 4)`` adds 6,7,8,9 to the set."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:401
-# e1134b3b4eac4b2e884eb85745f28a5d
 msgid "To iterate on a |dal_bv|, it is possible to use iterators as usual, but, most of the time, as this object represents a set of integers, one just wants to iterate on the integers included into the set. The simplest way to do that is to use the pseudo-iterator |dal_bv_v|."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:407
-# ed8fb586ef0f46e49a55ee125e71e6d7
 msgid "For instance, here is the code to iterate on the points of a mesh and print it to the standard output::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:414
-# e644ecc9ffed4ffeba3c514053ac3506
 msgid "Face numbering"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:416
-# 0dbf71b22fb74fe7bf84a5d1f113ec7e
 msgid "The numeration of faces on usual elements is given in figure :ref:`ud-fig-elemf`."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:423
-# f809257037134a73bd57d23843734fdf
 msgid "faces numeration for usual elements"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:425
-# cae736077c6a4c5e980878ab3be8f421
 msgid "Note that, while the convexes and the points are globally numbered in a |gf_m| object, there is no global numbering of the faces, so the only way to refer to a given face, is to give the convex number, and the local face number in the convex."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:433
-# 11bf35455f75400a84372708457dd58e
 msgid "Save and load meshes"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:436
-# 17871e7469d4461ea559dca07e795315
 msgid "From |gf| file format"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:438
-# 2e602e0ed77a4ad2a4b55eee550600d5
 msgid "In :file:`getfem/getfem_mesh.h`, two methods are defined to load meshes from file and write meshes to a file."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:443
-# d75ce21fbed1488db7ff43abc5018edb
 msgid "save the mesh into a file."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:447
-# 92c2f1c07e8f4c6e855222654098c010
 msgid "load the mesh from a file."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:449
-# 1396724b9bde4afcb852255060f6ecd5
 msgid "The following is an example of how to load a mesh and extract information on it::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:482
-# cbc53ca0c3d7492693e0b22c06751e6d
 msgid "Import a mesh"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:484
-# df93e154cd58414fabe8252fab9c3cc3
 msgid "The file :file:`getfem/getfem_import.h` provides the function::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:488
-# a4daecf1e0f4444387ae2aaeb7309c72
 msgid "Here the string ``fmtfilename`` must contain a descriptor of the file format (\"gid\", \"gmsh\", \"cdb\", \"noboite\", \"am_fmt\", \"emc2_mesh\", or \"structured\"), followed by a colon and the file name (if there is not format descriptor, it is assumed that the file is a native getfem mesh and the ``mesh::read_from_file()`` method is used). Example::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:497
-# a687fd8044594544835350bfa88e7f11
 msgid "Alternatively the function::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:502
-# 7d637a50dca844b38dc64024d3939773
 msgid "can be used in an equivalent manner with the string ``fmt`` being one of the aforementioned format specifiers."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:505
-# 8f46d1d55cba4c9c87658f5cff07284b
 msgid "The \"gid\" format specifier is for meshes generated by `GiD`_ and \"gmsh\" is for meshes generated by the open-source mesh generator `Gmsh`_. The \"cdb\" format specifier is for reading meshes from `ANSYS <http://www.ansys.com>`_ models exported in blocked format with the CDWRITE command. Currently the `ANSYS`_ element types 42,45,73,82,87,89,90,92,95,162,182,183,185,186,187 and 191 can be imported, this however does not include any finite element techology linked to these elements but only their geometry. The \"noboite\" format is for TetMesh-GHS3D, and the \"am_fmt\" and \"emc2_mesh\" are for files built with `EMC2`_ (but 2D only)."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:515
-# f83c3cb333354fce8d87bbfabbf75ef1
 msgid "The \"structured\" format is just a short specification for regular meshes: the rest of ``fmtfilename`` in that case is not a filename, but a string whose format is following::"
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:525
-# 987073627b40442ba70a203c8ff02147
 msgid "where ``GT`` is the name of the geometric transformation, ``NSUBDIV`` a vector of the number of subdivisions in each coordinate (default value 2), ``ORG`` is the origin of the mesh (default value ``[0,0,...]``), ``SIZES`` is a vector of the sizes in each direction (default value ``[1, 1, ...]`` and if ``NOISED=1`` the nodes of the interior of the mesh are randomly \"shaken\" (default value ``NOISED=0``). In that string, all the parameters are optional except ``GT``."
 msgstr ""
 

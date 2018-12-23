@@ -17,12 +17,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-# af5a0062e81b4d9589c2a23cc382e31c
 #: ../source/gmm/iter.rst:10
 msgid "Iterative solvers"
 msgstr ""
 
-# b3a902d0a8e14b53b3352de3d3df7312
 #: ../source/gmm/iter.rst:14
 msgid ""
 "Most of the solvers provided in |gmm| come form ITL with slight "
@@ -30,41 +28,34 @@ msgid ""
 "matrices). Include the file ``gmm/gmm_iter_solvers.h`` to use them."
 msgstr ""
 
-# 2affdf57524249a2ae2513aff33bb98b
 #: ../source/gmm/iter.rst:17
 msgid "iterations"
 msgstr ""
 
-# 83a2286aa4bf4a1e976a8460882bfe5c
 #: ../source/gmm/iter.rst:19
 msgid ""
 "The iteration object of |gmm| is a modification of the one in ITL. This "
 "is not a template type as in ITL."
 msgstr ""
 
-# a25c4a21f252443d9fa8e83da6eecc00
 #: ../source/gmm/iter.rst:21
 msgid "The simplest initialization is::"
 msgstr ""
 
-# 44465150ab8a48ad8496c71d4ea5be20
 #: ../source/gmm/iter.rst:25
 msgid ""
 "where ``2.0E-10`` is the (relative) residual to be obtained to have the "
 "convergence. Some possibilities::"
 msgstr ""
 
-# e223356b705a40bca5f89bf5c819a889
 #: ../source/gmm/iter.rst:42
 msgid "Linear solvers"
 msgstr ""
 
-# 22129de0b4ce418d86921658716d1ccf
 #: ../source/gmm/iter.rst:44
 msgid "Here is the list of available linear solvers::"
 msgstr ""
 
-# 03595cc53d1648f395c02b1eeefe2e10
 #: ../source/gmm/iter.rst:66
 msgid ""
 "The solver ``gmm::constrained_cg(A, C, X, B, PS, PR, iter);`` solve a "
@@ -72,7 +63,6 @@ msgid ""
 "constraints. But it is still experimental."
 msgstr ""
 
-# 4b2138c772b249a5aac805758b1a00dc
 #: ../source/gmm/iter.rst:68
 msgid ""
 "(Version 1.7) The solver ``gmm::bfgs(F, GRAD, X, restart, iter)`` is a "
@@ -82,19 +72,16 @@ msgid ""
 "vectors."
 msgstr ""
 
-# 61d1b4896e7a4efebe4df6939498f667
 #: ../source/gmm/iter.rst:71
 msgid "Preconditioners"
 msgstr ""
 
-# b937c9dbfbb446f1861b5cd32ede83d6
 #: ../source/gmm/iter.rst:73
 msgid ""
 "The following preconditioners, to be used with linear solvers, are "
 "available::"
 msgstr ""
 
-# 7ab97b40b04c40e5a3d389703e5caaec
 #: ../source/gmm/iter.rst:107
 msgid ""
 "Except ``ildltt\\_precond``, all these precontionners come from ITL. "
@@ -107,12 +94,10 @@ msgid ""
 "principaly with cg."
 msgstr ""
 
-# 7cee176e6cb84ef6950381d00e68399b
 #: ../source/gmm/iter.rst:110
 msgid "Additive Schwarz method"
 msgstr ""
 
-# 2af9907d3fbb43d28981273c87afda11
 #: ../source/gmm/iter.rst:112
 msgid ""
 "The additive Schwarz method is a decomposition domain method allowing the"
@@ -120,14 +105,12 @@ msgid ""
 "the method)."
 msgstr ""
 
-# c0f00e8b68884b8585212791dd23e380
 #: ../source/gmm/iter.rst:114
 msgid ""
 "For the moment, the method is not parallelized (this should be done ...)."
 " The call is the following::"
 msgstr ""
 
-# ffbd19aec7244ea7b63d491658dc82a3
 #: ../source/gmm/iter.rst:118
 msgid ""
 "``A`` is the matrix of the linear system. ``u`` is the unknown vector. "
@@ -145,7 +128,6 @@ msgid ""
 "gmm::using_bicgstab(), gmm::using_cg(), gmm::using_qmr()``."
 msgstr ""
 
-# a3867fe340054bdf809d5ce2b724aa95
 #: ../source/gmm/iter.rst:120
 msgid ""
 "The test program ``schwarz_additive.C`` is the directory ``tests`` of "
@@ -155,7 +137,6 @@ msgid ""
 " mesh)."
 msgstr ""
 
-# 93ca69e166ab4189bc486732b30837d1
 #: ../source/gmm/iter.rst:122
 msgid ""
 "In the case of multiple solves with the same linear system, it is "
@@ -163,7 +144,6 @@ msgid ""
 "computation time."
 msgstr ""
 
-# f1ba8aecb1544aad8da3448b639c79b8
 #: ../source/gmm/iter.rst:124
 msgid ""
 "A (too) simple program in ``gmm/gmm_domain_decomp.h`` allows to build a "
@@ -171,12 +151,10 @@ msgid ""
 " produces the vector of matrices ``vB`` for the additive Schwarz method."
 msgstr ""
 
-# acc4d7e9f78b4e65a225d2fbb811e29e
 #: ../source/gmm/iter.rst:127
 msgid "Range basis function"
 msgstr ""
 
-# 3620b70a47784a55a4f4b82d4062adfa
 #: ../source/gmm/iter.rst:129
 msgid ""
 "The function ``gmm\\_range\\_basis(B, columns, EPS=1e-12)`` defined in "
@@ -186,43 +164,36 @@ msgid ""
 "and which contains the indices of the selected columns."
 msgstr ""
 
-# 7e289d04611842b0b25dca30e64d5a24
 #: ../source/gmm/iter.rst:131
 msgid ""
 "The algorithm is specially designed to select independent constraints "
 "from a large matrix with linearly dependent columns."
 msgstr ""
 
-# 85dcff02491442c9b2e05c931653de04
 #: ../source/gmm/iter.rst:133
 msgid "There is four step in the implemented algorithm"
 msgstr ""
 
-# 77505a9519d44ea29f4a597255650f56
 #: ../source/gmm/iter.rst:136
 msgid "Elimination of null columns."
 msgstr ""
 
-# 88cce84db2824b53b161c14d27d48bbc
 #: ../source/gmm/iter.rst:137
 msgid "Selection of a set of already orthogonal columns."
 msgstr ""
 
-# c90a1f71d10040a6974ea9dd85ef4545
 #: ../source/gmm/iter.rst:138
 msgid ""
 "Elimination of locally dependent columns by a blockwise Gram-Schmidt "
 "algorithm."
 msgstr ""
 
-# 7eb70cef38164672b9a7d6747bbdf6d6
 #: ../source/gmm/iter.rst:139
 msgid ""
 "Computation of vectors of the remaining null space by a global restarted "
 "Lanczos algorithm and deduction of some columns to be eliminated."
 msgstr ""
 
-# 17ff7ec2596842a8a98f1a7690a58f74
 #: ../source/gmm/iter.rst:141
 msgid ""
 "The algorithm is efficient if after the local Gram-Schmidt algorithm it "
@@ -230,7 +201,6 @@ msgid ""
 "algorithm find the null space vectors one by one."
 msgstr ""
 
-# 595d43a1e513457ab5436156e5eba76d
 #: ../source/gmm/iter.rst:143
 msgid ""
 "The Global restarted Lanczos algorithm may be improved or replaced by a "

@@ -17,339 +17,265 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/model_time_integration.rst:14
-# ea11c8d62c3d42d5a07f35f4a7e78bb5
 msgid "The model tools for the integration of transient problems"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:16
-# b7719ac3360740f9b7b4f12b2c1fb787
 msgid "Although time integration scheme can be written directly using the model object by describing the problem to be solved at each iteration, the model object furnishes some basic tools to facilitate the writing of such schemes. These tools are based on the following basic principles:"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:18
-# 8eb6f2c58d5249b1a7f27a949a4a41b3
 msgid "The original variables of the model represent the state of the system to be solved at the current time step (say step n). This is the case even for a middle point scheme, mainly because if one needs to apply different schemes to different variables of the system, all variable should describe the system at a unique time step."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:20
-# be201ef8e8044ee58802148e692c9f66
 msgid "Some data are added to the model to represent the state of the system at previous time steps. For classical one-step schemes (for the moment, only one-step schemes are provided), only the previous time step is stored. For instance if `u` is a variable (thus represented at step n), `Previous_u` will be the data representing the state of the variable at the previous time step (step n-1). Eventually, for future extension to multi-step methods, `Previous2_u` may represent the variable at time step n-2."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:22
-# 5b5368d8281f41afbbf2935c6e1c22d6
 msgid "Some intermediate variables are added to the model to represent the time derivative (and the second order time derivative for second order problem). For instance, if `u` is a variable, `Dot_u` will represent the first order time derivative of `u` and `Dot2_u` the second order one. One can refer to these variables in the model to add a brick on it or to use it in the weak form language. However, these are not considered to be independent variables, they will be linked to their corresponding original variable (in an affine way) by the time integration scheme. Most of the schemes need also the time derivative at the previous time step and add the data `Previous_Dot_u` and possibly `Previous_Dot2_u` to the model."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:24
-# b2e79a13aa19484e8e68dbb6ccb0e8d8
 msgid "A different time integration scheme can be applied on each variable of the model. Note that most of the time, multiplier variable and more generally variables for which no time derivative is used do not need a time integration scheme."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:26
-# fbed9bc6f95044db85f1f7164d34163f
 msgid "The data `t` represent the time parameter and can be used (either in the weak form language or as parameter of some bricks). Before the assembly of the system, the data `t` is automatically updated to the time step `n`."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:28
-# 572d950a57374e89b5f17836f979d88d
 msgid "The problem to be solved at each iteration correspond to the formulation of the transient problem in its natural (weak) formulation in which the velocity and the acceleration are expressed by the intermediate variables introduced. For instance, the translation into the weak form language of the problem"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:34
-# 9eee0eccc7474d819f275fdb27cbf456
 msgid "can simply be::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:38
-# 541b585bddeb4a5f86a6803011b11a95
 msgid "(even though, of course, in this situation, the use of linear bricks is preferable for efficiency reasons)"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:40
-# c5fd095330594789bf82ec642b768183
 msgid "For all implemented one-step schemes, the time step can be changed from an iteration to another for both order one and order two in time problems (or even quasi-static problems)."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:42
-# 9195f97310f9472198fb6698b6b4f0ff
 msgid "A scheme for second order in time problem (resp. first order in time) can be applied to a second or first order in time or even to a quasi-static problem (resp. to a first order or quasi-static problem) without any problem except that the initial data corresponding to the velocity/displacement have to be initialized with respect ot the order of the scheme. Conversely, of course, a scheme for first order problem cannot be applied to a second order in time problem."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:46
-# e0c68489653243c7900a4f76c0fe8d45
 msgid "The implicit theta-method for first-order problems"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:48
 #: ../source/userdoc/model_time_integration.rst:124
 #: ../source/userdoc/model_time_integration.rst:178
-# cca7e6e312d2443992b171d2e5a2bd6c
-# b13c0bf1f3264c978ff3fad96fd05195
-# f4eb988cfbfb49438c1aa0abf83604bb
 msgid "For a problem which reads"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:54
-# ccd13a1db6cb419e96ad8c08bb44d5da
 msgid "where :math:`F(U)` might be nonlinear (and may depend on some other variables for coupled problems), for :math:`dt` a time step, :math:`V = \\dot{U}` and :math:`U^n, V^n` the approximation of :math:`U, V` at time :math:`ndt`, theta-method reads"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:63
-# bd6240d8415945aa9b56342e3e816e84
 msgid "for :math:`\\theta \\in (0, 1]` the parameter of the theta-method (for :math:`\\theta = 0`, the method corresponds to the forward Euler method and is not an implicit scheme) and for :math:`U^{n-1}, V^{n-1}` given."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:65
-# 4886c082dccf4bc2ac36447914b0f743
 msgid "Before the first time step, :math:`U^0` should be initialized, however, :math:`V^0` is also needed (except for :math:`\\theta = 1`). In this example, it should correspond to :math:`M^{-1}F(U^0)`. For a general coupled problem where :math:`M` might be singular, a generic precomputation of :math:`V^0` is difficult to obtain. Thus :math:`V^0` have to be furnisded also. Alternatively (see below) the model object (and the standard solve) furnishes a mean to evaluate them thanks to the application of a Backward Euler scheme on a (very) small time step."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:68
 #: ../source/userdoc/model_time_integration.rst:144
 #: ../source/userdoc/model_time_integration.rst:198
-# 24836b918ce6412d84c9b9274174a2bd
-# 7c924f4b9a2a4be490cdbc78e91e492e
-# b006b2b047054873b18fa404233b6414
 msgid "The following formula can be deduced for the time derivative:"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:74
-# 013ca8193e534f60a85fb9437c9be8ac
 msgid "When applying this scheme to a variable \"u\" of the model, the following affine dependent variable is added to the model::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:78
-# 61884e33abf84f74936d6b76c88d570b
 msgid "which represent the time derivative of the variable and can be used in some brick definition."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:80
 #: ../source/userdoc/model_time_integration.rst:158
 #: ../source/userdoc/model_time_integration.rst:212
-# d8da60444cd049e09ae9c5eafdc0d613
-# e09db8caedc94d95b3c26d5c59ee74c5
-# ece4d952f1dd4224b1fba1cbae4b90dd
 msgid "The following data are also added::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:84
-# 902fed11f4e842bca59a819afd54bd13
 msgid "which correspond to the values of \"u\" and \"Dot_u\" at the previous time step."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:86
-# eb522387b78c440a951bcb07c5375853
 msgid "Before the solve, the data  \"Previous_u\" (corresponding to :math:`U^0` in the example) has to be initialized (except for :math:`\\theta = 1`). Again, \"Previous_Dot_u\" has to be either initialized or pre-computed as described in the next section. The affine dependence of \"Dot_u\" is thus given by::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:90
-# 9a9ec29e32894912a6a87095ea309ba6
 msgid "Which means that \"Dot_u\" will be replaced at assembly time by its expression in term of \"u\" (multipied by :math:`1/(\\theta*dt)`) and in term of a constant remaining part depending on the previous time step. The addition of this scheme to a variable is to be done thanks to::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:98
-# ef6bedf0e63d4fbd851f4db9d1ee73d0
 msgid "Precomputation of velocity/acceleration"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:100
-# ed7946560d8c40bfab9a9d7d16de88a0
 msgid "Most of the time integration schemes (except, for instance, the backward Euler scheme) needs the pre-computation of the first or second order time derivative before the initial time step (for instance :math:`V^0` for the theta-method for first order problems, :math:`A^0` for second order problems ...)."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:102
-# 70d95949b63345f989b3730037557d55
 msgid "The choice is let to the user to either initialize these derivative or to ask to the model to automatically approximate them."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:105
-# 2403f7860ca64ad293ea901b89cf7fc1
 msgid "The method used (for the moment) to approximate the supplementary derivatives may be explained in the example of the solve of"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:111
-# bb0570ab4cd145bca2a81937071d1079
 msgid "with a theta-method (see the previous section). In order to approximate :math:`V_0`, the theta-method is applied for :math:`\\theta = 1` (i.e. a backward Euler scheme) on a very small time step. This is possible since the  backward Euler do not need an initial time derivative. Then the time derivative computed thanks to the  backward Euler at the end of the very small time step is simply used as an approximation of the initial time derivative."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:114
-# 874bca9b7f8244f8a82d2304c2d2aad7
 msgid "For a model `md`, the following instructions::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:119
-# 89fd90ff7ff64c76ac2ad036548624b6
 msgid "allows to perform automatically the approximation of the initial time derivative. The parameter `ddt` corresponds to the small time step used to perform the aproximation. Typically, `ddt = dt/20` could be used where  `dt` is the time step used to approximate the transient problem (see the example below)."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:122
-# fd58180698e1481f98f9e0a092f56cea
 msgid "The implicit theta-method for second-order problems"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:130
 #: ../source/userdoc/model_time_integration.rst:184
-# 041fde33ab7b43dcb79c1eaac75ba840
-# a4cea46de0c34d408c08096953526b9b
 msgid "where :math:`F(U)` might be nonlinear (and may depend on some othere variables for coupled problems), for :math:`dt` a time step, :math:`V = \\dot{U}`, :math:`A = \\ddot{U}` and :math:`U^n, V^n, A^n` the approximation of :math:`U, V, A` at time :math:`ndt`, the first oder theta-method reads"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:140
-# e794f78c801144ef945b3a098cebcda6
 msgid "for :math:`\\theta \\in (0, 1]` the parameter of the theta-method (for :math:`\\theta = 0`, the method correspond to the forward Euler method and is not an implicit scheme) and for :math:`U^{n-1}, V^{n-1}, A^{n-1}` given."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:142
-# d6e2c5a6045c4595a402ec9df0bf44ad
 msgid "At the first time step, :math:`U^0, V^0` should be given and :math:`A^0` is to be given or pre-computed (except for :math:`\\theta = 1`)."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:152
 #: ../source/userdoc/model_time_integration.rst:206
-# 4e66f54243674b4b9468ca8e494d4151
-# ee7706ea3a5540fbb0e74020b63cfaa9
 msgid "When aplying this scheme to a variable \"u\" of the model, the following affine dependent variables are added to the model::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:156
 #: ../source/userdoc/model_time_integration.rst:210
-# 57cfd63bc6bb406faf4d3974b69c9134
-# 0036d8c17323471582b436c94d6a3577
 msgid "which represent the first and second order time derivative of the variable and can be used in some brick definition."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:162
 #: ../source/userdoc/model_time_integration.rst:216
-# 86540dc2ccfd4c2bae3c288e151a8e2c
-# e3fdb6c035994f0881665a3d86c6dae2
 msgid "which correspond to the values of \"u\", \"Dot_u\"  and \"Dot2_u\" at the previous time step."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:164
-# 1b48971e0f1648a89af1ebd66c6eee8d
 msgid "Before the solve, the data  \"Previous_u\" and \"Previous_Dot_u\" (corresponding to :math:`U^0` in the example) have to be initialized and \"Previous_Dot2_u\" should be either initialized or precomputed (see the previous section, and except for :math:`\\theta = 1`). The affine dependences are thus given by::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:169
 #: ../source/userdoc/model_time_integration.rst:221
-# 873052864218413095a92f8c9c56e000
-# c5b263d8d8614d418c3b9562b6d7c83e
 msgid "The addition of this scheme to a variable is to be done thanks to::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:176
-# ba6e9a72b25a404fbb53f2d1922f571c
 msgid "The implicit Newmark scheme for second order problems"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:194
-# ef172b7af8b24592bcede647ee87605d
 msgid "for :math:`\\beta \\in (0, 1]` and :math:`\\gamma \\in [1/2, 1]` are the parameters of the Newmark scheme and for :math:`U^{n-1}, V^{n-1}, A^{n-1}` given."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:196
-# c8a547d0bbe64d8bad1dc3d28dd576a2
 msgid "At the first time step, :math:`U^0, V^0` should be given and :math:`A^0` is to be given or pre-computed (except for :math:`\\beta = 1/2, \\gamma = 1`)."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:218
-# 3b9154ce21cf47ba8033e4c5f67d6d78
 msgid "Before the first solve, the data  \"Previous_u\" and \"Previous_Dot_u\" (corresponding to :math:`U^0` in the example) have to be initialized. The data \"Previous_Dot2_u\" is to be given or precomputed (see :ref:`precomp_time_der_section` and except for :math:`\\beta = 1/2, \\gamma = 1`)."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:228
-# 47ef48b35439479a8466e96a7f4dfe9c
 msgid "Transient terms"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:230
-# c549930a264140e596a538ef5635f56b
 msgid "As it has been explained in previous sections, some intermediate variables are added to the model in order to represent the time derivative of the variables on which the scheme is applied. Once again, if \"u\" is such a variable, \"Dot_u\" will represent the time derivative of \"u\" approximated by the used scheme."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:232
-# 484f93641aab4905879f0ae58449c8b1
 msgid "This also mean that \"Dot_u\" (and \"Dot2_u\" in order two in time problems) can be used to express the transient terms. In the weak form language, the term:"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:238
-# cd2e7843f3514747bf6874ac6192564c
 msgid "can be simply expressed by::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:242
-# 3bae2fb967574399bdb98fb355666da2
 msgid "Similarly, every existing model brick of |gf| can be applied to \"Dot_u\". This is the case for instance with::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:246
-# b990ee7ac19f4839a65f18833bf64c7c
 msgid "which adds the same transient term."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:248
-# 0511ec2ab71a46569fad01abb184d06d
 msgid "VERY IMPORTANT: When adding an existing model brick applied to an affine dependent variable such as \"Dot_u\", it is always assumed that the corresponding test function is the one of the corresponding original variable (i.e. \"Test_u\" here). In other words, \"Test_Dot_u\", the test variable corresponding to the velocity, is not used. This corresponds to the choice made to solve the problem in term of the original variable, so that the test function corresponds to the original variable."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:250
-# 88388ec05a7e4fbea100c83b65302607
 msgid "Another example of model brick which can be used to account for a Kelvin-Voigt linearized viscosity term is the linearized elasticity brick::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:254
-# 31f7cb04e73448ce8b961312800d741b
 msgid "when applied to an order two transient elasticity problem."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:257
-# bd71550be9fc463d9067ba703abf00c5
 msgid "Computation on the sequence of time steps"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:259
-# 3d613c02d4724fbb8f5ba3f012be3fb4
 msgid "Typically, the solve on the different time steps will take the following form::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:274
-# 8fc72a974b3c4a7084b47206e9877e21
 msgid "Note that the call of the method::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:278
-# 5b50be6ce47a42fd901210ee5c9ada18
 msgid "is needed between two time step since it will copy the current value of the variables (`u` and `Dot_u` for instance) to the previous ones (`Pevious_u` and `Previous_Dot_u`)."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:281
-# 47ffe3fdd5e141a689ee7158e793faa0
 msgid "Boundary conditions"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:283
-# 795efc5aed2a40f68d5a3e75d1ef008c
 msgid "Standard boundary conditions can of course be applied normally to the different variables of the unknown. By default, applying Dirichlet, Neumann or contact boundary conditions to the unknown simply means that the conditions are prescribed on the variable at the current time step n."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:287
-# 4dc66b0827f349d9aecf2a518e6d1327
 msgid "Small example: heat equation"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:289
-# 30d8696bfaf348dcb8fe5742b2bb4a49
 msgid "The complete compilable program corresponds to the test program :file:`tests/heat_equation.cc` of |gf| distribution. See also :file:`/interface/tests/matlab/demo_wave_equation.m` for an example of order two in time problem with the Matlab interface."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:291
-# 7cb4022d035a46de966b2234abbc8457
 msgid "Assuming that `mf_u` and `mim` are valid finite element and integration methods defined on a valid mesh, the following code will perform the approximation of the evolution of the temperature on the mesh assuming a unitary diffusion coefficient::"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:340
-# 7db12d7b0eac450ab96fd5685b0058e4
 msgid "Implicit/explicit some terms"
 msgstr ""
 
@@ -357,35 +283,26 @@ msgstr ""
 #: ../source/userdoc/model_time_integration.rst:348
 #: ../source/userdoc/model_time_integration.rst:354
 #: ../source/userdoc/model_time_integration.rst:359
-# e011ee6cd23046a398655b2bbac44288
-# 16081015ed1d41f7a691ce2510ce4a69
-# ae2257a241ec4d65a5cafc4c86f97058
-# 386cd2f13cee4f558da317c687160d6e
 msgid "..."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:346
-# 923a60548cd04ec5b58bdd6ae9576949
 msgid "Explicit schemes"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:352
-# 9e3746a6aa44434da6af84132b3cd25e
 msgid "Time step adaptation"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:357
-# e8b9502336e64fdf962d4938190597f4
 msgid "Quasi-static problems"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:7
-# 130a74575ee94e0484ce55bd5a256cd3
 msgid "models"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:7
-# 130a74575ee94e0484ce55bd5a256cd3
 msgid "model bricks"
 msgstr ""
 

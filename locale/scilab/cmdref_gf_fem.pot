@@ -17,192 +17,154 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/scilab/cmdref_gf_fem.rst:8
-# 8d924f814df64e0a976eb061bbc8640a
 msgid "gf_fem"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:10
-# e2a51e5c8a064c2d8bf394fa170be745
 msgid "**Synopsis**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:17
-# 66ae0d4a57f84fd8894b9debd00f827a
 msgid "**Description :**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:20
-# 8e15991ed75f4544ba5dac7deda18a46
 msgid "General constructor for fem objects."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:22
-# 4e0c2b154fd9424389eac78fefa6e19b
 msgid "This object represents a finite element method on a reference element."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:25
-# 84b2118321f8467cacd81c3ca19bb32d
 msgid "**Command list :**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:29
-# 2904dc4e51e943a9827b6000850740b3
 msgid "``F = gf_fem('interpolated_fem', mesh_fem mf, mesh_im mim, [ivec blocked_dof])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:31
-# d7d4c942e01a41c8b8caff2663d9971e
 msgid "Build a special fem which is interpolated from another mesh_fem."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:33
-# 2251060c469e4e30b9fde4e32a3a3a09
 msgid "Using this special finite element, it is possible to interpolate a given mesh_fem <literal>mf</literal> on another mesh, given the integration method <literal>mim</literal> that will be used on this mesh."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:37
-# a22068b0f51c40f0a0572f2ba74e8cf7
 msgid "Note that this finite element may be quite slow, and eats much memory."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:41
-# 3cb04e5265dd4bee893bd20f91121f2b
 msgid "``F = gf_fem(string fem_name)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:43
-# 0d11d24312f5458c90e323265a04c393
 msgid "The <literal>fem_name</literal> should contain a description of the finite element method. Please refer to the getfem++ manual (especially the description of finite element and integration methods) for a complete reference. Here is a list of some of them:"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:48
-# ed6fd6d7d47940e2ad3e63e4b30eee2b
 msgid "FEM_PK(n,k) : classical Lagrange element Pk on a simplex of dimension <literal>n</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:50
-# 0b46b006dd9e47ee86865f1b2f65ae71
 msgid "FEM_PK_DISCONTINUOUS(n,k[,alpha]) : discontinuous Lagrange element Pk on a simplex of dimension <literal>n</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:52
-# 49af7b1ea08641c88de3c612286b3abf
 msgid "FEM_QK(n,k) : classical Lagrange element Qk on quadrangles, hexahedrons etc."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:54
-# e7f7815f5a70498bac907bb4b94ffa1d
 msgid "FEM_QK_DISCONTINUOUS(n,k[,alpha]) : discontinuous Lagrange element Qk on quadrangles, hexahedrons etc."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:56
-# 117fe9fc8a1b46b09763e9a47da64c22
 msgid "FEM_Q2_INCOMPLETE(n) : incomplete Q2 elements with 8 and 20 dof (serendipity Quad 8 and Hexa 20 elements)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:59
-# 75bed0277c0c4cdf853bebb68f7b83f2
 msgid "FEM_PK_PRISM(n,k) : classical Lagrange element Pk on a prism of dimension <literal>n</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:61
-# b500314ad62e480da03e8ca3f62c7eb9
 msgid "FEM_PK_PRISM_DISCONTINUOUS(n,k[,alpha]) : classical discontinuous Lagrange element Pk on a prism."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:63
-# b8a7fc4b63ae48d0a94da592c12d0046
 msgid "FEM_PK_WITH_CUBIC_BUBBLE(n,k) : classical Lagrange element Pk on a simplex with an additional volumic bubble function."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:66
-# 5f88967712dc42478edc53a964baec42
 msgid "FEM_P1_NONCONFORMING : non-conforming P1 method on a triangle."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:68
-# 2b075c991b6e4af08be04728cb94439e
 msgid "FEM_P1_BUBBLE_FACE(n) : P1 method on a simplex with an additional bubble function on face 0."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:70
-# 09b2ede105244baf8703a74514f19f1b
 msgid "FEM_P1_BUBBLE_FACE_LAG : P1 method on a simplex with an additional lagrange dof on face 0."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:72
-# 5c5495a20597416ab34a6a36b16ab595
 msgid "FEM_PK_HIERARCHICAL(n,k) : PK element with a hierarchical basis."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:74
-# 25bdfd984aba401b8d085cd46fd00f73
 msgid "FEM_QK_HIERARCHICAL(n,k) : QK element with a hierarchical basis"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:76
-# cb88acfc0938401cbcc072550e1706be
 msgid "FEM_PK_PRISM_HIERARCHICAL(n,k) : PK element on a prism with a hierarchical basis."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:78
-# fe6084a5dbc44b9da920c80dd87c4c9d
 msgid "FEM_STRUCTURED_COMPOSITE(fem f,k) : Composite fem <literal>f</literal> on a grid with <literal>k</literal> divisions."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:80
-# dd567a3b0d604b3ca49ce511a62e1a61
 msgid "FEM_PK_HIERARCHICAL_COMPOSITE(n,k,s) : Pk composite element on a grid with <literal>s</literal> subdivisions and with a hierarchical basis."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:83
-# 00057a5a11cd46fbb433eb3cdf0b6992
 msgid "FEM_PK_FULL_HIERARCHICAL_COMPOSITE(n,k,s) : Pk composite element with <literal>s</literal> subdivisions and a hierarchical basis on both degree and subdivision."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:86
-# bc4e9018995b424f8d87ab43a36fbddf
 msgid "FEM_PRODUCT(A,B) : tensorial product of two polynomial elements."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:88
-# 48dea1b632b54192a5a2f9ba1f5289ad
 msgid "FEM_HERMITE(n) : Hermite element P3 on a simplex of dimension <literal>n = 1, 2, 3</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:90
-# 36de5971fa6847e89dfe030aaf977603
 msgid "FEM_ARGYRIS : Argyris element P5 on the triangle."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:92
-# 81fdc799b4a24808813bf88441ea4b01
 msgid "FEM_HCT_TRIANGLE : Hsieh-Clough-Tocher element on the triangle (composite P3 element which is C1), should be used with IM_HCT_COMPOSITE() integration method."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:96
-# a7e99a79044543c281b7257329af22b9
 msgid "FEM_QUADC1_COMPOSITE : Quadrilateral element, composite P3 element and C1 (16 dof)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:98
-# ad0ca00574104cafa96960eea2cc4791
 msgid "FEM_REDUCED_QUADC1_COMPOSITE : Quadrilateral element, composite P3 element and C1 (12 dof)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:100
-# cc4201870d1f49358d560ac8b8991b3d
 msgid "FEM_RT0(n) : Raviart-Thomas element of order 0 on a simplex of dimension <literal>n</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:102
-# 8c034820b6c640ea81a88c0e7f8510ec
 msgid "FEM_NEDELEC(n) : Nedelec edge element of order 0 on a simplex of dimension <literal>n</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_fem.rst:105
-# 96ed17e50e844c039fdf9023cfea3b7f
 msgid "Of course, you have to ensure that the selected fem is compatible with the geometric transformation: a Pk fem has no meaning on a quadrangle."
 msgstr ""
 

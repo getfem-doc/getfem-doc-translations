@@ -21,12 +21,10 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-# 25e7b02077064ac6b118bd69b859f42f
 #: ../source/userdoc/parallel.rst:10
 msgid "MPI Parallelization of |gf|"
 msgstr "|gf| のMPI並列化"
 
-# 3dab5d64bbee4ac49569ac8ffb0da7cb
 #: ../source/userdoc/parallel.rst:12
 msgid ""
 "Of course, each different problem should require a different parallelization"
@@ -36,7 +34,6 @@ msgid ""
 msgstr ""
 "当然ながら、各問題は、良好な負荷分散を行うために、それぞれ固有な事情に合わせて異なる並列化を必要となります。このライブラリではメッシュ領域を使用して自身で並列化を構行い、行列の構築手順を並列化することができます。"
 
-# f28533706a734ea190da3f73ba422352
 #: ../source/userdoc/parallel.rst:17
 msgid ""
 "Nevertheless, the brick system offers a generic parallelization based on MPI"
@@ -56,7 +53,6 @@ msgstr ""
 "オプションでコンパイルする必要があります。 |gf| の初期のMPI並列化は、CALMIP大学のNicolas "
 "RenonとToulouseの助けを借りて設計されています。"
 
-# 759d3262bb4b4f9891b450ce713139c6
 #: ../source/userdoc/parallel.rst:28
 msgid ""
 "When the configure script is run with the option ``--enable-paralevel=2``, "
@@ -70,7 +66,6 @@ msgstr ""
 "オプションで実行すると、MPI、METIS、および並列MUMPSライブラリが検索されます。Pythonインタフェースが構築されている場合は、MPI4PYライブラリも検索します。その場合、pythonインタフェースを使用してgetfemの並列版を実行することができます（他のインタフェースは現時点では並列化されていません）。interface/test/python"
 " ディレクトリの demo_parallel_laplacian.py を参照してください。"
 
-# 8a8e59709ed440dea277c27160ac5616
 #: ../source/userdoc/parallel.rst:36
 msgid ""
 "With the option ``-D GETFEM_PARA_LEVEL=2``, each mesh used is implicitely "
@@ -89,7 +84,6 @@ msgstr ""
 " "
 "model_state変数の右手側のベクトルが各プロセッサに伝達されるようになっています（それぞれの計算結果の積分は構築の最後で行われ、各プロセッサは完全なベクトルを持ちます）。ブリック要素により格納された行列はすべて分散されているということに注意してください。"
 
-# 8b827d74a87d4f849d1c2fa84fda680b
 #: ../source/userdoc/parallel.rst:48
 msgid ""
 "A model of C++ parallelized program is :file:`tests/elastostatic.cc`. To run"
@@ -97,12 +91,10 @@ msgid ""
 msgstr ""
 "C++の並列プログラムの雛形は :file:`tests/elastostatic.cc` です。並列で計算するためには次のように実行します。"
 
-# 003812352402449eb924711ce19664d6
 #: ../source/userdoc/parallel.rst:53
 msgid "For a python interfaced program, the call reads::"
 msgstr "Pythonインタフェースのプログラムの場合、呼び出しは次の通りです。"
 
-# bd97fc1b78e64dcf84622ac04c80b749
 #: ../source/userdoc/parallel.rst:57
 msgid ""
 "If you do not perform a `make install`, do not forget to first set the shell"
@@ -111,12 +103,10 @@ msgstr ""
 "`make install` を実行しない場合は、最初にシェル変数 PYTHONPATH を python-getfem "
 "ライブラリに設定することを忘れないでください ::"
 
-# 26cd39623ace422fa57533e177ed90c5
 #: ../source/userdoc/parallel.rst:63
 msgid "State of progress of |gf| MPI parallelization"
 msgstr "|gf| MPIの並列化の進捗状況"
 
-# b9fa449509d3425897809f498393d728
 #: ../source/userdoc/parallel.rst:65
 msgid ""
 "Parallelization of getfem is still considered a \"work in progress\". A "
@@ -127,12 +117,10 @@ msgid ""
 msgstr ""
 "getfemの並列化は引き続き「進行中の作業」になります。一定数のプロセスが依然としてシーケンシャルです。ご存知のとおり、プログラムの並列化が正確かどうかを確認する良いテストは、計算結果がプロセスの数とは無関係であることを検証することです。"
 
-# f5c1aa005afa42d18af8e9e25f9c0495
 #: ../source/userdoc/parallel.rst:67
 msgid "Assembly procedures"
 msgstr "構築手順"
 
-# 86cf4c4b8e01458a89997603bb43153f
 #: ../source/userdoc/parallel.rst:69
 msgid ""
 "Most of assembly procedures (in :file:`getfem/getfem_assembling.h`) have a "
@@ -148,14 +136,12 @@ msgstr ""
 " :file:`getfem/getfem_config.h` には分散疎行列の処理結果を集約するための MPI_SUM_SPARSE_MATRIX "
 "という手順が含まれています。"
 
-# d6a822a581304c6eaa5b02ad7475a7d4
 #: ../source/userdoc/parallel.rst:71
 msgid ""
 "The following assembly procedures are implicitely parallelized using the "
 "option ``-D GETFEM_PARA_LEVEL=2``:"
 msgstr "以下の構築手順は、 ``-D GETFEM_PARA_LEVEL=2`` オプションを使用して暗黙的に並列化されます。"
 
-# 44beb5c045d74ed8b0d8297bacd552e7
 #: ../source/userdoc/parallel.rst:73
 msgid ""
 "computation of norms (``asm_L2_norm``, ``asm_H1_norm``, ``asm_H2_norm`` ...,"
@@ -164,29 +150,24 @@ msgstr ""
 "ノルムの計算（ :file:`getfem/getfem_assembling.h` 内の ``asm_L2_norm``, "
 "``asm_H1_norm``, ``asm_H2_norm`` ）、"
 
-# 7f5544e961a04a4e8d6036c38c2f5d1a
 #: ../source/userdoc/parallel.rst:75
 msgid "``asm_mean_value`` (in :file:`getfem/getfem_assembling.h`),"
 msgstr "``asm_mean_value``  （ :file:`getfem/getfem_assembling.h` を参照）、"
 
-# 12403a7ca90446cc8f7fcdd5c3a83641
 #: ../source/userdoc/parallel.rst:77
 msgid "``error_estimate`` (in :file:`getfem/getfem_error_estimate.h`)."
 msgstr "``error_estimate``  ( :file:`getfem/getfem_error_estimate.h` を参照）。"
 
-# 428c0600a8a94677877569b067dd0f7a
 #: ../source/userdoc/parallel.rst:79
 msgid ""
 "This means in particular that these functions have to be called on each "
 "processor."
 msgstr "つまり、これらの関数を各プロセッサで呼び出す必要があります。"
 
-# faf61bea14bd433aac44b6a93c87ad97
 #: ../source/userdoc/parallel.rst:82
 msgid "Mesh_fem object"
 msgstr "Mesh_femオブジェクト"
 
-# 69331c63497a4fbca4777e56d668a222
 #: ../source/userdoc/parallel.rst:84
 msgid ""
 "The dof numbering of the getfem::mesh_fem object remains sequential and is "
@@ -197,12 +178,10 @@ msgstr ""
 "getfem :: "
 "mesh_femオブジェクトの自由度ナンバリングは連続のまま、各プロセスで実行され、並列化が行われます。これは、非常に大きなメッシュまたは縮閉メッシュの並列化の効率に影響する可能性があります。"
 
-# 04a3b0e12ddc451185b218e5c513db61
 #: ../source/userdoc/parallel.rst:87
 msgid "Model object and bricks"
 msgstr "Modelオブジェクトとブリック要素"
 
-# 17232bc294124393adceea51c9c858db
 #: ../source/userdoc/parallel.rst:89
 msgid ""
 "The model system is globally parallelized, which mainly means that the "
@@ -213,7 +192,6 @@ msgid ""
 msgstr ""
 "モデルシステムは全体的に並列化されています。これは主に、標準ブリック要素の構築手順がメッシュのMETISパーティションを使用して構築を分配しているためです。接線/剛性行列は分散したままであり、標準解法はMUMPS（分散行列を受け入れる）の並列版が呼び出されます。"
 
-# 2674c6d18b4f4a6db1246ebfa19b38da
 #: ../source/userdoc/parallel.rst:95
 msgid ""
 "For the moment, the procedure ``actualize_sizes()`` of the model object "
@@ -223,12 +201,10 @@ msgstr ""
 "現時点では、modelオブジェクトの ``actualize_sizes（）`` "
 "手順はシーケンシャルなままで、各プロセスで実行されます。並列化はこれからです。"
 
-# 9f43fa1e43134ee9a9d37c4e5a2877fd
 #: ../source/userdoc/parallel.rst:99
 msgid "Some specificities:"
 msgstr "いくつかの特異性 :"
 
-# 457a42a92b2546e486874dcc4ec35be1
 #: ../source/userdoc/parallel.rst:101
 msgid ""
 "The explicit matrix brick: the given matrix is considered to be distributed."
@@ -238,7 +214,6 @@ msgstr ""
 "陽な質量行列: "
 "与えられた行列は分配されているものとみなされます。そうでない場合は、マスタープロセスにのみ追加してください（その他の場合は、プロセスの数で寄与分が掛けられます）。"
 
-# 07136bfddfcc491bbe2a2b7dce8b085a
 #: ../source/userdoc/parallel.rst:105
 msgid ""
 "The explicit rhs brick: the given vector is not considered to be "
@@ -247,7 +222,6 @@ msgid ""
 msgstr ""
 "陽な右辺(rhs)ブリック要素: 与えられたベクトルは分布しているとはみなされません。マスタプロセス上に指定されたベクトルのみが考慮されます。"
 
-# 7ac07fbfeec74fef8500a57436e745f6
 #: ../source/userdoc/parallel.rst:109
 msgid ""
 "Constraint brick: The given matrix and rhs are not considered to be "
@@ -256,7 +230,6 @@ msgid ""
 msgstr ""
 "拘束ブリック要素: 与えられた行列と右辺(rhs)は分配されているとはみなされません。マスタプロセス上に指定された行列とベクトルのみが考慮されます。"
 
-# 1ee52985f5c3496680a8d85aac7ebe36
 #: ../source/userdoc/parallel.rst:113
 msgid ""
 "Concerning contact bricks, only integral contact bricks are fully "

@@ -17,112 +17,90 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/gmm/blas.rst:10
-# 5b975bb8698b4260b109f901a4d938a3
 msgid "Basic linear algebra operations"
 msgstr ""
 
 #: ../source/gmm/blas.rst:13
-# 2c0aa1f37b9d4520af044665cee4ef5e
 msgid "The same choice has been made as in MTL to provide basic operations as functions not as operators. The advantages are that it is clearer to see where are the linear algebra operations in the program and the programming of optimized basic linear operations is greatly simplified."
 msgstr ""
 
 #: ../source/gmm/blas.rst:17
-# 37d50f3cd6e9472f800e05125eec2577
 msgid "scale and scaled"
 msgstr ""
 
 #: ../source/gmm/blas.rst:19
-# 2abed11fef144109bd7f1395c7818171
 msgid "``gmm::scale`` is used to multiply a vector or a matrix with a scalar factor::"
 msgstr ""
 
 #: ../source/gmm/blas.rst:23
-# 07a6cb15471649ec84a5ca83e36b0b47
 msgid "If one not needs to multiply the vector but wants to use the multiplied vector in an expression  ``gmm::scaled`` gives a reference to a multiplied vector. This is only a reference, no operation is made until this reference is used somewhere. For instance::"
 msgstr ""
 
 #: ../source/gmm/blas.rst:27
-# 30bff2f60f264de9949520d821e20ac6
 msgid "print to the standard output the vector ``V`` multiplied by ``10.0`` without changing ``V``."
 msgstr ""
 
 #: ../source/gmm/blas.rst:30
-# 62ace62c0b194bf792b7b17dd30821d3
 msgid "transposition"
 msgstr ""
 
 #: ../source/gmm/blas.rst:32
-# 242a77b3c6594b16880979040d8103f8
 msgid "``gmm::transposed(M)`` gives a possibily modifiable reference on the transposed matrix of ``M``."
 msgstr ""
 
 #: ../source/gmm/blas.rst:35
-# ca5fd8e6d02445629367bbcb48f3096a
 msgid "imaginary and real part"
 msgstr ""
 
 #: ../source/gmm/blas.rst:37
-# 5912ec784593486da83a1126398a8a3f
 msgid "For a complex matrix ``M`` or a complex vector ``V``, ``gmm::real_part(M)``, ``gmm::real_part(V)``, ``gmm::imag_part(M)`` or ``gmm::imag_part(V)`` give a possibily modifiable reference on the real or imaginary part of the matrix or vector (for instance ``gmm::clear(gmm::imag_part(M))`` will set to zero the imaginary part of a matrix ``M``). These functions cannot be applied to real matrices or vectors."
 msgstr ""
 
 #: ../source/gmm/blas.rst:41
-# 9429bfbea5c340ae82cf8a3343fcff47
 msgid "conjugate"
 msgstr ""
 
 #: ../source/gmm/blas.rst:43
-# 48f7c8dc12f74387a5686b3750908d30
 msgid "For a matrix ``M`` or a vector ``V``, ``gmm::conjugated(M)`` and ``gmm::conjugated(V)`` give a constant reference on the conjugated vector or matrix. Of course, for a real vectors this has no effect (and no cost at all). Note : ``gmm::conjugated(M)`` transposes the matrix ``M`` so that this is the hermitian conjugate of ``M``. If you need only the conjugate of each component you have to use both transposition and conjugate with ``gmm::conjugated(gmm::transposed(M))`` or equivalently  ``gmm::transposed(gmm::conjugated(M))``."
 msgstr ""
 
 #: ../source/gmm/blas.rst:48
-# 68b57dd2eeb84d10bceb66f894e8c62a
 msgid "add"
 msgstr ""
 
 #: ../source/gmm/blas.rst:50
-# 7e78f80325d5442fbe9d28ac2d56c6ca
 msgid "addition of vectors or matrices. It is alway possible to mix different type of vector or matrices in the operations. The following operations are valid::"
 msgstr ""
 
 #: ../source/gmm/blas.rst:69
-# a25bba37a0c94b6a9b19e85bfa33aae0
 msgid "IMPORTANT : all the vectors have to have the same size, no resize will be automatically done. If a vector has not the good size, an error will be thrown."
 msgstr ""
 
 #: ../source/gmm/blas.rst:72
-# c6c97938fd0a45189f4f292e8d11ceba
 msgid "mult"
 msgstr ""
 
 #: ../source/gmm/blas.rst:74
-# 2c66e51e2b7c4f7ea650b5be708388da
 msgid "Matrix-vector or matrix-matrix multiplication. Again, all the matrices and vectors have to have the good size. The following operations are valid::"
 msgstr ""
 
 #: ../source/gmm/blas.rst:103
-# 390360831dae4c30b111e50a39e28af1
 msgid "norms"
 msgstr ""
 
 #: ../source/gmm/blas.rst:119
-# 68a276fc94d4427783b889a16431c04b
 msgid "trace"
 msgstr ""
 
 #: ../source/gmm/blas.rst:121
-# a6924803d0dd454992ee2740ff1b945f
 msgid "``gmm::mat_trace(M)`` gives the trace of matrix ``M``."
 msgstr ""
 
 #: ../source/gmm/blas.rst:124
-# 21cf2442985443b59105f8a153bba158
 msgid "scalar product"
 msgstr ""
 
 #: ../source/gmm/blas.rst:127
-# 7e8d523dae3a41229cb14fe4278c32b6
 msgid "for vectors only, ``gmm::vect_sp(V1, V2)`` gives the scalar product between ``V1`` and ``V2``. For complex vectors, this do not conjugate ``V1``, you can use ``gmm::vect_sp(V1, gmm::conjugated(V2))`` or ``gmm::vect_hp(V1, V2)`` which is equivalent."
 msgstr ""
 

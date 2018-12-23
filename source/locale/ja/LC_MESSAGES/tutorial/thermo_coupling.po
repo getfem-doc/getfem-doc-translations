@@ -21,14 +21,12 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-# d7b9c471c4804a41b91025b3044dffe0
 #: ../source/tutorial/thermo_coupling.rst:8
 msgid ""
 "Example of Thermo-elastic and electrical coupling (simple nonlinear coupled "
 "problem, model object, generic assembly, solve and visualization)"
 msgstr "熱弾性および電気結合の例 (単純な非線形結合問題、モデルオブジェクト、汎用アセンブリ、解析および可視化)"
 
-# 393236ccdc7a43bcb6857de080062445
 #: ../source/tutorial/thermo_coupling.rst:10
 msgid ""
 "This example aims to present a simple example of a multiphysics problem with"
@@ -43,12 +41,10 @@ msgstr ""
 "`tests/` 、 `interface/tests/python` 、 `interface/scr/scilab/demos` 、  "
 "`interface/tests/matlab` )。"
 
-# cbf3e972db904d278f8dd7698e77c43d
 #: ../source/tutorial/thermo_coupling.rst:13
 msgid "The problem setting"
 msgstr "問題の設定"
 
-# 43e3ca044e9343578cdd37a844955015
 #: ../source/tutorial/thermo_coupling.rst:15
 msgid ""
 "Let :math:`\\Omega \\subset \\R^2` be the reference configuration of a 2D "
@@ -65,14 +61,11 @@ msgstr ""
 "|degreC| 内の)温度フィールド、 :math:`V : \\Omega \\rightarrow \\R` は電位フィールドです。また、 "
 ":math:`u : \\Omega \\rightarrow \\R^2` は膜変位場です。"
 
-# bcb1b09c73f4437d9157d255ff4c98d0
-# cf284ff61bed4dfdab4505dcad1d3501
 #: ../source/tutorial/thermo_coupling.rst:18
 #: ../source/tutorial/thermo_coupling.rst:641
 msgid "Thermal problem"
 msgstr "熱の問題"
 
-# acf07d8ca8cc42a6ab0ae01537ee670d
 #: ../source/tutorial/thermo_coupling.rst:20
 msgid ""
 "The lateral faces of the plates are supposed to be in thermal insulation "
@@ -83,14 +76,12 @@ msgstr ""
 "プレートの表裏面は、熱伝達係数を持つ (20 |degreC| である) "
 "空気と熱交換することになっているので、プレートの側面面は断熱材であることになっています。"
 
-# 4d5c192344204ef899743cfacb3c4479
 #: ../source/tutorial/thermo_coupling.rst:22
 msgid ""
 "The equation on the temperature :math:`\\theta` and boundary condition can "
 "be written as follows:"
 msgstr "温度の方程式 :math:`\\theta` と境界条件は次のように書くことができます。"
 
-# d59f518364fb4f448f95f13bc0a750d9
 #: ../source/tutorial/thermo_coupling.rst:32
 msgid ""
 "where the thermal conductivity is designed by :math:`\\kappa`, :math:`T_0` "
@@ -102,7 +93,6 @@ msgstr ""
 "\\Omega` は、領域 :math:`\\Omega` の境界であり :math:`n` は :math:`\\partial \\Omega` "
 "上の :math:`\\Omega` への外向きの単位法線ベクトルです。"
 
-# 6245044fc5384deebb3be339e31dcf2f
 #: ../source/tutorial/thermo_coupling.rst:34
 msgid ""
 "The term :math:`\\sigma|\\nabla V|^2` is a nonlinear coupling term "
@@ -112,14 +102,11 @@ msgstr ""
 "項 :math:`\\sigma|\\nabla V|^2` は、Joule加熱項に対応する非線形結合項であり、ここで :math:`\\sigma` "
 "は電気伝導率です。"
 
-# 4c32aeb186ee438dbb8bc7636fa5b5d4
-# ba43ecc2c43a4bf7bd30b14b55b20a86
 #: ../source/tutorial/thermo_coupling.rst:37
 #: ../source/tutorial/thermo_coupling.rst:587
 msgid "Electric potential problem"
 msgstr "電位問題"
 
-# 869e2814ba2143f4a6ae4f0cffd67eed
 #: ../source/tutorial/thermo_coupling.rst:39
 msgid ""
 "We consider a potential difference of :math:`0.1V` between the right and "
@@ -128,14 +115,12 @@ msgid ""
 msgstr ""
 "私たちは、プレートの左右の側面の間の :math:`0.1V` の電位差を考慮します。他の面は電気的に絶縁されていると考えます。電位の方程式は、"
 
-# 09581dea33ae416895b2fdc308e6e22c
 #: ../source/tutorial/thermo_coupling.rst:50
 msgid ""
 "where :math:`\\sigma` is still the electrical conductivity. Moreover, we "
 "consider that :math:`\\sigma` depends on the temperature as follows:"
 msgstr "ここで :math:`\\sigma` はまだ電気伝導性です。さらに、 :math:`\\sigma` は、次のように温度に依存すると考えます。"
 
-# e03e3cb34e3449f696f8d33ec434e026
 #: ../source/tutorial/thermo_coupling.rst:56
 msgid ""
 "where :math:`T_0` is a reference temperature (air temperature here), "
@@ -145,12 +130,10 @@ msgstr ""
 "ここで :math:`T_0` は参照温度 (ここでは空気温度) であり、 :math:`\\rho_0` は :math:`T_0` "
 "上の抵抗温度係数であり、:math:`\\alpha` は第2抵抗温度係数です。"
 
-# 08ef4f53e48c44fd87c941f50d983f4a
 #: ../source/tutorial/thermo_coupling.rst:61
 msgid "Deformation problem"
 msgstr "変形問題"
 
-# e2dcedec0702463ca885e48abb6d4d4d
 #: ../source/tutorial/thermo_coupling.rst:63
 msgid ""
 "We consider the membrane small deformation of the plate under a force "
@@ -161,7 +144,6 @@ msgstr ""
 "右側面に加わる力の下でのプレートの微小変形を考慮し, プレートの加熱によって影響を受けます。変位 :math:`u` "
 "は、次の(線形化された弾性)問題の解になります :"
 
-# 45f769305314419db20a460a4cd550f8
 #: ../source/tutorial/thermo_coupling.rst:74
 msgid ""
 "where :math:`F` is the force density applied on the right lateral boundary "
@@ -170,7 +152,6 @@ msgstr ""
 "ここで :math:`F` は、右側の横方向境界に適用される力密度であり、 :math:`\\bar{\\sigma}(u)` "
 "は、次のように定義されたCauchy応力テンソルです。"
 
-# cd0eb9ffb6b64851b59855f73e7e47eb
 #: ../source/tutorial/thermo_coupling.rst:80
 msgid ""
 ":math:`\\bar{\\varepsilon}(u) = (\\nabla u + (\\nabla u)^T)/2` being the "
@@ -181,14 +162,12 @@ msgstr ""
 "は、線形化されたひずみテンソルであり、 :math:`I` は2次単位テンソルで、 :math:`\\lambda^*, \\mu` は、 |Lame|"
 " 係数であり次のように定義されます。"
 
-# a6b2d46683924eb88918fe048c891b6c
 #: ../source/tutorial/thermo_coupling.rst:88
 msgid ""
 "from :math:`E` the Young modulus and :math:`\\nu` the Poisson ratio of the "
 "material."
 msgstr ":math:`E` は材料のヤング係数であり :math:`\\nu` はポアソン比であることから。"
 
-# 3c5894c1fc2449f799909933155d8c50
 #: ../source/tutorial/thermo_coupling.rst:90
 msgid ""
 "The term :math:`\\beta(T_0-\\theta) I` corresponds to the thermal expansion "
@@ -198,12 +177,10 @@ msgstr ""
 "項 :math:`\\beta(T_0-\\theta) I` は、熱膨張の項に対応しています。ここで :math:`\\beta = "
 "\\alpha_{th} E/(1-2\\nu)` 、:math:`\\alpha_{th}` は熱膨張係数です。"
 
-# 6909e6ab5d374272887a01aa9fd97530
 #: ../source/tutorial/thermo_coupling.rst:94
 msgid "The weak formulation"
 msgstr "弱定式化"
 
-# 93fada17ae8543b5a78857df0268a8a2
 #: ../source/tutorial/thermo_coupling.rst:96
 msgid ""
 "An important step is to obtain the weak formulation of the coupled system of"
@@ -215,7 +192,6 @@ msgstr ""
 "重要なステップは、方程式の結合系の弱定式化を得ることです。有限要素定式化は弱定式化 "
 "(Galerkin近似)に基づいており、弱定式化は追加される項の表現を与えることができる唯一のものであるため、これは重要なステップです。"
 
-# 404f32b4a07d4f52b1508734e5c11fc4
 #: ../source/tutorial/thermo_coupling.rst:98
 msgid ""
 "Weak formulation of each partial differential equation is obtained by "
@@ -229,7 +205,6 @@ msgstr ""
 "各偏微分方程式の弱定式化は、主たる未知がDirichlet条件を満たしている主な未知のDirichlet条件に対応する試行関数を用いて式を乗算することにより得られ、その後領域"
 " :math:`\\Omega` 上の積分と(グリーンの数式を使用した)部分上の積分を実行します。偏微分方程式系の弱定式化は :"
 
-# be138ba2a87240da87a6e14b142e9e9d
 #: ../source/tutorial/thermo_coupling.rst:108
 msgid ""
 "where :math:`\\delta_{\\theta}, \\delta_V, \\delta_u` are the test functions"
@@ -242,12 +217,10 @@ msgstr ""
 "V, u` に対応する試行関数です、 :math:`\\Gamma_N` は、力 :math:`F` の密度が適用される右の境界を示します、そして "
 ":math:`\\bar{\\sigma}:\\bar{\\varepsilon}` は、2次テンソル間のFrobeniusスカラー積です。"
 
-# 72c187a6cae24d50bd4d050406569813
 #: ../source/tutorial/thermo_coupling.rst:111
 msgid "Implementation in C++ and with the interface"
 msgstr "C++ での実装とインターフェイス"
 
-# 2ee9705988384558819706e1cf4e937d
 #: ../source/tutorial/thermo_coupling.rst:113
 msgid ""
 "Let us now make a detailed presentation of the use of |gf| to approximate "
@@ -259,12 +232,10 @@ msgstr ""
 "プログラムを同時に構築します。Matlab および Scilab プログラムでは、オブジェクト指向コマンドを使用しません (使用する方法は :ref"
 ":`mlab-oocmd` を参照してください)"
 
-# 1fb33782d7c0429ca346e305bd0b6bca
 #: ../source/tutorial/thermo_coupling.rst:116
 msgid "Initialization"
 msgstr "初期化"
 
-# 62c37da9be044296a35469c26f685fc0
 #: ../source/tutorial/thermo_coupling.rst:118
 msgid ""
 "First, in C++, ones has to include a certain number of headers for the model"
@@ -281,19 +252,6 @@ msgstr ""
 "コンソールに最初にロードされます (ここでは説明しません)、Matlab の場合、すべての |gf| 変数をクリアすることを可能にする "
 "`gf_workspace('clear all')` を除いて、何も必要ありません。"
 
-# fdd2a1a39dc0429d81866fa380a154cf
-# 7e54586117bb4b9881c6f1faec5f20f3
-# 11391a7af19b4322baea8d490fdc5f45
-# b8b6c559853c4733879ce7e1947beae4
-# ad9249fe74464463822de99ac57b2501
-# 5419c3fd9b044d54b95feb1bf77783cd
-# f525c77d47d24e52835484c277ffab34
-# b9078abff13342d98069ae17d0ccb810
-# 36d093c56ee642de9bd5e67c15453f16
-# e1f0146bc90145e3b85c896a005c0ec0
-# 22e20829233e4a228c37d1b02960fd75
-# e78d16ea11ad43f8b692abd599a3cff4
-# 56060256a071464f9402433e0a4231bb
 #: ../source/tutorial/thermo_coupling.rst:122
 #: ../source/tutorial/thermo_coupling.rst:159
 #: ../source/tutorial/thermo_coupling.rst:206
@@ -310,18 +268,6 @@ msgstr ""
 msgid "**C++**"
 msgstr "**C++**"
 
-# d5ffa619b0a84b88bab5c7da9730b843
-# a3ec6d0a200b4fa2a07f921b50604f58
-# 7cf3b92771394e0faee9d59613998801
-# 6af6ce6cfaa845ca824c93bdb3bcbe86
-# 4b7f7dedffb74286944f16f510a8f0aa
-# a8c55c3d123b481298bf68250af9e24c
-# 23aa16de904246a28fa48a000b58709c
-# cf6bfdcd09a549c48b07579fdf9d40e7
-# cd66d6d93d9e490bbca774afd9cf0b0b
-# 47b0a9265b164774a648841d26e0cb6e
-# 312608682ce349a5a233952f0cb2592c
-# bee2a0d834fb400d9d619e7817f5495e
 #: ../source/tutorial/thermo_coupling.rst:137
 #: ../source/tutorial/thermo_coupling.rst:220
 #: ../source/tutorial/thermo_coupling.rst:294
@@ -337,18 +283,6 @@ msgstr "**C++**"
 msgid "**Python**"
 msgstr "**Python**"
 
-# efa761cf414f4add9678b042e6a6aa90
-# 697dc6d79ed34c59834f786b42850659
-# 63b8583c1d884ad08e15a70c8f7d7a3b
-# 4a064ac80ea84c749003070896c06393
-# e1477a78dca54ebd8b78e31bfa58ee0e
-# b374e2d74eae4772a987d280231de1c1
-# f39dd5c14d274e24b693136972c260a4
-# 5e7f6dc64dca4bffa515a75174333c66
-# b5dfbdb1f8594ec683568aeed0a8f372
-# 0f369b6d8664424790971d06b7435a59
-# 2612480bfd4a48b79cecd4dae0b87e6f
-# ec3fa11af29d4effaa9ed8c537183e87
 #: ../source/tutorial/thermo_coupling.rst:142
 #: ../source/tutorial/thermo_coupling.rst:231
 #: ../source/tutorial/thermo_coupling.rst:314
@@ -364,18 +298,6 @@ msgstr "**Python**"
 msgid "**Scilab**"
 msgstr "**Scilab**"
 
-# 6c5dda847254489ba24896132040d60b
-# 09205b0ecb0442258009ba859ef01cc4
-# ede036efa3c143adbbc4c06112d37f9b
-# 7d0e0b4ed6f74e1db5ac934eae6b5e6f
-# 62c432a207894125b9df7ee083df5029
-# afa707ab98ee4a2799aaa7c1b3b9094e
-# 3897601085fc4087a571489e665ce437
-# a1bc9ab2f7b24af48bb4dbe636481365
-# 97c7141aef1c44389d89cca1c372e78d
-# baa3d957c279405b8a21d6782cf2ba94
-# 606509a2fabe42599da63263edc0c6b0
-# 8a850b611a4746efae62009f0769b90b
 #: ../source/tutorial/thermo_coupling.rst:146
 #: ../source/tutorial/thermo_coupling.rst:242
 #: ../source/tutorial/thermo_coupling.rst:333
@@ -391,12 +313,10 @@ msgstr "**Scilab**"
 msgid "**Matlab**"
 msgstr "**Matlab**"
 
-# 0e74a38c17a64df1a7a746d434f74bc5
 #: ../source/tutorial/thermo_coupling.rst:153
 msgid "Parameters of the model"
 msgstr "モデルのパラメータ"
 
-# c1e39dee576d425b9f347c4b296baed7
 #: ../source/tutorial/thermo_coupling.rst:155
 msgid ""
 "Let us now define the different physical and numerical parameters of the "
@@ -405,17 +325,14 @@ msgid ""
 msgstr ""
 "ここで、問題のさまざまな物理的および数値パラメータを定義しましょう。スクリプト言語 (Python、Scilab、Matlab) には違いはありません。"
 
-# a5804dfbe8dd4d91b00a69f5132cfd17
 #: ../source/tutorial/thermo_coupling.rst:179
 msgid "**Scripts**"
 msgstr "**Scripts**"
 
-# 1620878fe37b4bb2a2bd735936f47c01
 #: ../source/tutorial/thermo_coupling.rst:198
 msgid "Mesh generation"
 msgstr "メッシュ生成"
 
-# 89a63888f1db42ac84a1c74bf90f0c56
 #: ../source/tutorial/thermo_coupling.rst:200
 msgid ""
 "|gf| has some limited meshing facilities which are described here. We are "
@@ -429,7 +346,6 @@ msgstr ""
 " |gf| メッシュ作成機能を使用する場合はメッシュを確認することをお勧めします。また、外部メッシャ (GiD または Gmsh) "
 "を使用してインポートすることもできます( :ref:`ud-load_save_mesh` をご覧ください)。"
 
-# 8890e5b05a5e4e718eb0d4ca9678c3ec
 #: ../source/tutorial/thermo_coupling.rst:202
 msgid ""
 "The geometry of the domain is supposed to be a rectangle with three circular"
@@ -444,17 +360,14 @@ msgstr ""
 "(ファイル:file:`src/getfem/getfem)_mesher.h` ファイルを参照してください。以下では、 `h` "
 "はメッシュサイズを表し、 `2` はメッシュの次数です (これは変換が次数2であることを意味し、曲線エッジを使用しています)。"
 
-# 1fc34b67712e4d1d989ece4d4d35d3fc
 #: ../source/tutorial/thermo_coupling.rst:259
 msgid "The obtained mesh."
 msgstr "得られたメッシュ。"
 
-# 307e9b119d7a41a0a12775c8fb6d4642
 #: ../source/tutorial/thermo_coupling.rst:262
 msgid "Boundary selection"
 msgstr "境界の選択"
 
-# 685d0bf1c9bc4763898236b33249238f
 #: ../source/tutorial/thermo_coupling.rst:264
 msgid ""
 "Since we have different boundary conditions on the different parts of the "
@@ -470,19 +383,16 @@ msgstr ""
 ":ref:`ud-mesh_regions` を参照) "
 "1、2、3、4はそれぞれ右境界、左境界、上境界、下境界です。これらの境界番号は、モデルブリックで使用されます。"
 
-# 4ff7baa7a1da41088dfd0cf40fcd40a8
 #: ../source/tutorial/thermo_coupling.rst:355
 msgid "Mesh draw"
 msgstr "メッシュ描画"
 
-# 00f9e99fb2384f47a05e635af9ac48be
 #: ../source/tutorial/thermo_coupling.rst:357
 msgid ""
 "In order to preview the mesh and to control its validity, the following "
 "instructions can be used:"
 msgstr "メッシュをプレビューし、その有効性を制御するために、次の手順を使用できます。"
 
-# eb4c48df33cf4f22b3ac7de3343dab1b
 #: ../source/tutorial/thermo_coupling.rst:391
 msgid ""
 "In C++ and with the Python interface, an external graphical post-processor "
@@ -494,12 +404,10 @@ msgstr ""
 "(たとえば、gmsh、Mayavi2、または Paraview)。Scilab および Matlab "
 "インタフェースでは、内部プロット機能を使用することができます (結果は :ref:`tut-fig-meshthermo` を参照)。"
 
-# 755cc810487346c08792eb30ead054fc
 #: ../source/tutorial/thermo_coupling.rst:395
 msgid "Definition of finite element methods and integration method"
 msgstr "有限要素法の定義と積分法"
 
-# 2b03f4154da64ec5b751cf82cc5fd26c
 #: ../source/tutorial/thermo_coupling.rst:397
 msgid ""
 "We will define three finite element methods. The first one, `mfu` is to "
@@ -509,7 +417,6 @@ msgstr ""
 "3つの有限要素法を定義します。最初の1つは、変位フィールドを近似する `mfu` です。これはベクトルフィールドです。これは C++ "
 "では次のように定義されます。"
 
-# f4ba6c4aaa52437ab9f4c15faddda31c
 #: ../source/tutorial/thermo_coupling.rst:404
 msgid ""
 "where the `2` stands for the dimension of the vector field. The second line "
@@ -521,7 +428,6 @@ msgstr ""
 "は、連続したLagrange要素を意味し、`elements_degree` は `2` に設定されていることを覚えておいてください、これは2次の "
 "(アイソパラメトリック) 要素を使用することを意味します。"
 
-# 4a3958f5035346f58067ffefe8e5c8da
 #: ../source/tutorial/thermo_coupling.rst:406
 msgid ""
 "There is a wide choice of pre-existing finite element methods in |gf|, see "
@@ -531,7 +437,6 @@ msgstr ""
 "|gf| には、既存の有限要素法の幅広い選択肢があります、 :ref:`ud-appendixa` を参照してください。しかし、 Lagrange "
 "有限要素法は、実際に最も使用されています。"
 
-# 88cc00cad509439fa3163984b138c76c
 #: ../source/tutorial/thermo_coupling.rst:408
 msgid ""
 "The second finite element method is a scalar one, `mft` with which we will "
@@ -541,7 +446,6 @@ msgid ""
 msgstr ""
 "第2の有限要素法はスカラー1で、温度場と電位場の両方を近似する `mft` です。単一の有限要素法は、任意の数の有限要素変数を近似するのに役立ちます。"
 
-# 99f5722494a74b3b9e17e0016ecaa2f4
 #: ../source/tutorial/thermo_coupling.rst:410
 msgid ""
 "The third finite element method is a discontinuous scalar Lagrange one which"
@@ -550,7 +454,6 @@ msgid ""
 msgstr ""
 "3番目の有限要素法は不連続なスカラーLagrangeで、1つの変数の導関数を補間することができます (たとえば、Von Mises応力の補間)。"
 
-# 73793878c479405c8fc3bd093c55a8a2
 #: ../source/tutorial/thermo_coupling.rst:412
 msgid ""
 "The last thing to define is an integration method `mim`. There is no default"
@@ -563,12 +466,10 @@ msgstr ""
 "にデフォルトの積分法はありません。したがって、これは積分法を定義するために必須です。もちろん、積分法の次数は、選択された有限要素法の便利な積分を行うために十分に選定しなければなりません。ここでは、"
 " `elements_degree` の2乗で十分です。"
 
-# 5e78144f1ae644248ea3d8916ffa7098
 #: ../source/tutorial/thermo_coupling.rst:463
 msgid "Model definition"
 msgstr "モデル定義"
 
-# 707407b2771b4a8583057691aeb52bf6
 #: ../source/tutorial/thermo_coupling.rst:465
 msgid ""
 "The model object in |gf| gather the variables of the models (the unknowns), "
@@ -581,7 +482,6 @@ msgstr ""
 "(線形または非線形項) の一部であるか、複数の変数をリンクしています。これらは、(接線) 線形システムのアセンブリを作成するために使用されます "
 "(詳細については :ref:`ud-model-object` を参照してください)。"
 
-# 4cb4ec6f11474cb4bab1001244777f8c
 #: ../source/tutorial/thermo_coupling.rst:467
 msgid ""
 "This is not strictly mandatory to use the model object since one may use "
@@ -600,7 +500,6 @@ msgstr ""
 "(ジェネリックアセンブリブリック、明示的なマトリックスブリック) "
 "の可能性を拡張するように設計されています。したがって、モデルオブジェクトのフレームワークを使用することをお勧めします。"
 
-# d457733b61354841b14b1896c73904b1
 #: ../source/tutorial/thermo_coupling.rst:469
 msgid ""
 "There are two versions of the model: the real one and the complex one. "
@@ -611,19 +510,16 @@ msgstr ""
 "モデルの2つのバージョンがあります: 実数と複素数。複素数モデルは複雑な線形システムを解くのに有利である特殊なアプリケーション "
 "(例えば、いくつかの電磁気学の問題) のために予約されています。"
 
-# 25dc51ca9c7d40fab099d8fb2f893bd4
 #: ../source/tutorial/thermo_coupling.rst:471
 msgid ""
 "Let us declare a real model with the three variables corresponding to the "
 "three fields to be computed:"
 msgstr "計算される3つのフィールドに対応する3つの変数を持つ実際のモデルを宣言してみましょう :"
 
-# e55ddc2c91fd43c2927d1ef3acfddcad
 #: ../source/tutorial/thermo_coupling.rst:506
 msgid "Membrane elastic deformation problem"
 msgstr "膜弾性変形問題"
 
-# 5f8262c882f044cea5cf51783aaa0692
 #: ../source/tutorial/thermo_coupling.rst:508
 msgid ""
 "Let us now begin by the elastic deformation problem. We will use the "
@@ -633,7 +529,6 @@ msgstr ""
 "ここで、弾性変形問題から始めましょう。以下の `add_isotropic_linearized_elasticity_brick` "
 "によって追加された定義済みのブリックを使用します。基本的には、それに対応する項を追加します"
 
-# ad2eb9deb20c4e72bb7a161f04691997
 #: ../source/tutorial/thermo_coupling.rst:514
 msgid ""
 "to the tangent linear system. In order to use this model brick, the data "
@@ -650,12 +545,10 @@ msgstr ""
 "`add_linear_term(md mim, \"lambda*(Div_u*Div_Test_u) + mu*((Grad_u + "
 "Grad_u'):Grad_Test_u)\"` を等価的に使用することができることに注意してください。"
 
-# a4d865b420c84c06ae22e8ecf7ec96fd
 #: ../source/tutorial/thermo_coupling.rst:516
 msgid "Concerning the coupling term"
 msgstr "結合項について"
 
-# c89a64da1cba4cf4a43afa9b071187c7
 #: ../source/tutorial/thermo_coupling.rst:522
 msgid ""
 "there is no predefined brick and we use directly a weak form language term "
@@ -668,7 +561,6 @@ msgstr ""
 "を直接使用します。弱形式言語の詳細については、 :ref:`ud-gasm-high` "
 "を参照してください。基本的に、アセンブリ文字列は、各Gauss点で実行される最適化されたアセンブリ命令のリストにコンパイルすることが原則です。"
 
-# 9dbcd781651c45f096ddaf6a71eea90a
 #: ../source/tutorial/thermo_coupling.rst:524
 msgid ""
 "The following program allows to take into account the whole elastic "
@@ -679,7 +571,6 @@ msgstr ""
 "以下のプログラムは、全体の弾性変形方程式を考慮に入れることができます。左側の境界にDirichlet条件を規定するために、特定のブリックの使用に注意してください。Dirichlet条件を規定するいくつかのオプションがあります"
 " ( :ref:`ud-model-Dirichlet` を参照)。"
 
-# a40073f6cc04464c8bc3ecb7873beaef
 #: ../source/tutorial/thermo_coupling.rst:589
 msgid ""
 "Similarly, the following program take into account the electric potential "
@@ -688,22 +579,18 @@ msgid ""
 msgstr ""
 "同様に、以下のプログラムは、電位方程式を考慮に入れます。電気伝導率 :math:`\\sigma` とまた弱形式言語用語の使用の定義に注意してください。"
 
-# fe1a8d7ab1134c7ab576902bfa2571a2
 #: ../source/tutorial/thermo_coupling.rst:643
 msgid "Now, the program to take into account the thermal problem:"
 msgstr "ここで、熱の問題を扱うためのプログラム :"
 
-# f93cef3a53d041618291a01b8f790788
 #: ../source/tutorial/thermo_coupling.rst:694
 msgid "Model solve"
 msgstr "モデル求解"
 
-# 8882691313134f828deea0c0238c268a
 #: ../source/tutorial/thermo_coupling.rst:696
 msgid "Once the model is correctly defined, we can simply solve it by:"
 msgstr "モデルが正しく定義されたら、次のようにして簡単に解けます。"
 
-# 1e28da4691b54ffc941782e727bec69a
 #: ../source/tutorial/thermo_coupling.rst:717
 msgid ""
 "Since the problem is globally nonlinear, a Newton method is used to "
@@ -712,12 +599,10 @@ msgid ""
 msgstr ""
 "問題はグローバルに非線形であるため、Newton法を用いて問題を反復的に解きます。それはいくつかのイテレーションを必要とします (その場合は約 4)。"
 
-# 963c2570dee845d891fe6d9feb88b9af
 #: ../source/tutorial/thermo_coupling.rst:721
 msgid "Model solve with two steps"
 msgstr "モデルは、2つのステップで解きます"
 
-# f1fea082fe5b47dbb371dc63dd4f1510
 #: ../source/tutorial/thermo_coupling.rst:723
 msgid ""
 "Another option to solve the problem is to solve first the thermal and "
@@ -728,12 +613,10 @@ msgid ""
 msgstr ""
 "問題を解決するもう一つの選択肢は、最初に熱と電位の問題を解くことです。実際、我々のモデルでは、熱および電位は変形に依存しません。熱と電位の問題が発生したら、変形の問題を解決します。これは、次のように行うことができます。"
 
-# 34d80b73b3e34d069ed8ea7c76a64ce1
 #: ../source/tutorial/thermo_coupling.rst:768
 msgid "Export/visualization of the solution"
 msgstr "解のエクスポート/可視化"
 
-# aa35c73516964a8ead83bd109fba332e
 #: ../source/tutorial/thermo_coupling.rst:770
 msgid ""
 "The finite element problem is now solved. We can plot the solution as "
@@ -748,7 +631,6 @@ msgstr ""
 " `ga_interpolation_Lagrange_fem` を参照)。また、複雑なエクスポートやスライスを作成することもできます ( :ref"
 ":`ud-export` をご覧ください)。"
 
-# 0dec22c1f9e84086b31726585226fd71
 #: ../source/tutorial/thermo_coupling.rst:883
 msgid "Plot of the solution."
 msgstr "解のプロット。"

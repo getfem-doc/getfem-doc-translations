@@ -17,52 +17,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/convect.rst:10
-# b4d7c1956084497ba5ec1c2fc0df75d8
 msgid "A pure convection method"
 msgstr ""
 
 #: ../source/userdoc/convect.rst:12
-# f3bbc6f0d8504a47928c38d890352a89
 msgid "A method to compute a pure convection is defined in the file :file:`getfem/getfem_convect.h`. The call of the function is::"
 msgstr ""
 
 #: ../source/userdoc/convect.rst:17
-# f169184395e64458a7623417a68c3635
 msgid "where ``mf`` is a variable of type |gf_mf|, ``U`` is a vector which represent the field to be convected, ``mf_v`` is a |gf_mf| for the velocity field, ``V`` is the dof vector for the velocity field, ``dt`` is the pseudo time of convection and ``nt`` the number of iterations for the computation of characteristics. ``option`` is an option for the boundary condition where there is a re-entrant convection. The possibilities are getfem::CONVECT_EXTRAPOLATION (extrapolation of the field on the nearest element) or getfem::CONVECT_UNCHANGED (no change of the value on the boundary)."
 msgstr ""
 
 #: ../source/userdoc/convect.rst:22
-# acd929a3c5ba4e5bbb3023ec31b7c654
 msgid "The method integrate the partial differential equation"
 msgstr ""
 
 #: ../source/userdoc/convect.rst:28
-# 26d124c9d03f4e729395234a627e6add
 msgid "on the time intervall :math:`[0, dt]`."
 msgstr ""
 
 #: ../source/userdoc/convect.rst:30
-# 89ad43539e7b4f278bb73f9529665740
 msgid "The method used is of Galerkin-Characteristic kind. It is a very simple version which is inconditionnally stable but rather dissipative. See [ZT1989]_ and also the Freefem++ documentation on convect command."
 msgstr ""
 
 #: ../source/userdoc/convect.rst:34
-# e3539699b99a4c2baecf639c42bd90c4
 msgid "The defined method works only if ``mf`` is a pure Lagrange finite element method for the moment. The principle is to convect backward the finite element nodes by solving the ordinary differential equation:"
 msgstr ""
 
 #: ../source/userdoc/convect.rst:41
-# a11b10aa35c5488cbd545cc634c5be45
 msgid "with an initial condition corresponding to each node. This convection is made with ``nt`` steps. Then the solution is interploated on the convected nodes."
 msgstr ""
 
 #: ../source/userdoc/convect.rst:44
-# 656eb1595800425a8cad46aaeeb74247
 msgid "In order to make the extrapolation not too expensive, the product :math:`dt\\times V` should not be too large."
 msgstr ""
 
 #: ../source/userdoc/convect.rst:47
-# 973f619091d049c8a7c8148a64aa517d
 msgid "Note that this method can be used to solve convection dominant problems coupling it with a splitting scheme."
 msgstr ""
 

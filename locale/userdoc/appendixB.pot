@@ -17,127 +17,102 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/userdoc/appendixB.rst:10
-# bdf62280107e419d9ad158d822a5dcb9
 msgid "Appendix B. Cubature method list"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:12
-# 996f2805f16f4dd39bbbe46c2b56af03
 msgid "The integration methods are of two kinds. Exact integrations of polynomials and approximated integrations (cubature formulas) of any function. The exact integration can only be used if all the elements are polynomial and if the geometric transformation is linear."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:17
-# 94541e68938d4c0db8915faf0acf6bc0
 msgid "A descriptor on an integration method is given by the function::"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:21
-# 3cdf09682df44cd5bd87cd90ead57fd3
 msgid "where ``\"name of method\"`` is a string to be chosen among the existing methods."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:23
-# ced3424637c14fe0a4a5565ef2a1213d
 msgid "The program ``integration`` located in the ``tests`` directory lists and checks the degree of each integration method."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:28
-# 8b3f0c1f31fb43eb9992d1e13a8a930b
 msgid "Exact Integration methods"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:30
-# da66a3be6fbc41178c4b6398288a5a12
 msgid "|gf| furnishes a set of exact integration methods. This means that polynomials are integrated exactly. However, their use is (very) limited and not recommended. The use of exact integration methods is limited to the low-level generic assembly for polynomial :math:`\\tau`-equivalent elements with linear transformations and for linear terms. It is not possible to use them in the high-level generic assembly."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:32
-# d1bedf189f6b45bf8506ebc045418fc9
 msgid "The list of available exact integration methods is the following"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:0
-# 2b54f6fa682a44379789a7973bbbd32d
 msgid "Exact Integration Methods"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:38
-# eff7293f41304bc78eb36f14d1bb6e9c
 msgid "``\"IM_NONE()\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:39
-# 8547792e73204f719fb07085d9725141
 msgid "Dummy integration method."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:40
-# b21683c6f70e48f29f2f4499210094a6
 msgid "``\"IM_EXACT_SIMPLEX(n)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:41
-# 78fb59d592a64db59d8bb198f915c759
 msgid "Description of the exact integration of polynomials on the simplex of reference of dimension ``n``."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:43
-# 40a2721fef434439867dfa1f807194d8
 msgid "``\"IM_PRODUCT(a, b)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:44
-# 714946d8afee40a1a54d04a67200df62
 msgid "Description of the exact integration on the convex which is the direct product of the convex in ``a`` and in ``b``."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:46
-# 28089ff4b6f94a40a48f018292c21d31
 msgid "``\"IM_EXACT_PARALLELEPIPED(n)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:47
-# 7ab11ec17fbd40c5b9e7871d17ccfd54
 msgid "Description of the exact integration of polynomials on the parallelepiped of reference of dimension ``n``."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:49
-# 127e99b70cde452aa8e04cfa4184b8a0
 msgid "``\"IM_EXACT_PRISM(n)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:50
-# d30e3af7fa2743e9a53d4d1603e44f7e
 msgid "Description of the exact integration of polynomials on the prism of reference of dimension ``n``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:53
-# 9805ea212c98446ead72309c5e72c518
 msgid "Even though a description of exact integration method exists on parallelepipeds or prisms, most of the time the geometric transformations on such elements are nonlinear and the exact integration cannot be used."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:61
-# ec7fe44d8c304dc2830034feaf58eb19
 msgid "Newton cotes Integration methods"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:63
-# b8d0fd476aa64afcae52341e265c81aa
 msgid "Newton cotes integration of order ``K`` on simplices, parallelepipeds and prisms are denoted by ``\"IM_NC(N,K)\"``, ``\"IM_NC_PARALLELEPIPED(N,K)\"`` and ``\"IM_NC_PRISM(N,K)\"`` respectively."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:70
-# bd57505199ac42dfb0f0f578f2be6ee9
 msgid "Gauss Integration methods on dimension 1"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:72
-# e19adcd174bb486fa21af0730ee4ee1e
 msgid "Gauss-Legendre integration on the segment of order ``K`` (with ``K/2+1`` points) are denoted by ``\"IM_GAUSS1D(K)\"``. Gauss-Lobatto-Legendre integration on the segment of order ``K`` (with ``K/2+1`` points) are denoted by ``\"IM_GAUSSLOBATTO1D(K)\"``. It is only available for odd values of ``K``. The Gauss-Lobatto integration method can be used in conjunction with ``\"FEM_PK_GAUSSLOBATTO1D(K/2)\"`` to perform mass-lumping."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:82
-# df8891274f674b8caf2d8492203f1f2c
 msgid "Gauss Integration methods on dimension 2"
 msgstr ""
 
@@ -145,10 +120,6 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:0
 #: ../source/userdoc/appendixB.rst:0
 #: ../source/userdoc/appendixB.rst:0
-# 400bec4517904a79b4c41cf01eb39b13
-# d0f01d1fb5be4943b24092e88fe37a51
-# ac238eb4d48e4a28bc3f196607b5c0f0
-# 1d9b9c742ad84ae5a82b059119686ac5
 msgid "Integration methods on dimension 2"
 msgstr ""
 
@@ -158,12 +129,6 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:398
 #: ../source/userdoc/appendixB.rst:469
 #: ../source/userdoc/appendixB.rst:510
-# e26fb995fd4f46af925d807aa4c7af32
-# b605fc108f1540e5b997130585ea64d6
-# f269bb19220f48fb9815ab83e64817cc
-# 0cbd5b9f239f4c6686b6ab4dec5b3117
-# da9ed9d5c7f94e6ea7d2f2117ff63fc1
-# 31aa3f05d7a24fad863cdfa762086790
 msgid "graphic"
 msgstr ""
 
@@ -173,12 +138,6 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:399
 #: ../source/userdoc/appendixB.rst:470
 #: ../source/userdoc/appendixB.rst:511
-# c1ed174dc45945b8a3ff04d13623094c
-# c119aaa9d2f34a8c8e149a43bef63246
-# a3578af1135941baae78eec78a98ab60
-# c157d1d3b1cb4c0abacd47b8865ab907
-# 2b2c17450bb14ac8a4ce2b61fe4d4f1b
-# 56418d0664974b1dad94c729eb232a8b
 msgid "coordinates (x,  y)"
 msgstr ""
 
@@ -188,12 +147,6 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:400
 #: ../source/userdoc/appendixB.rst:471
 #: ../source/userdoc/appendixB.rst:512
-# 11af89f85b86492d86a65721679d8b9b
-# 02589735e7814eab87ca68c163eb4b1e
-# 338c2f24d9254ac79628947b5c57ab18
-# 6bb4823734e44f2ab040c14f2db7e52c
-# 28b13173b98a4a0e80ede6aba7b6ce1a
-# 685fe94324744c90b644797761854dc0
 msgid "weights"
 msgstr ""
 
@@ -203,12 +156,6 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:401
 #: ../source/userdoc/appendixB.rst:472
 #: ../source/userdoc/appendixB.rst:513
-# 7437af0a0cd34574b7fe5ed90a4de988
-# cbd15ae9ccc8430995d1d380dde6eec4
-# f91b475a4cce4a399ce175ea4d2df338
-# d362f576f3d84cb6abe00b26074fc560
-# 08ba75ff4c1c420ba716be6d60331dc8
-# 126062e49ebb42feb5aa1590667ee77c
 msgid "function to call / order"
 msgstr ""
 
@@ -216,40 +163,30 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:128
 #: ../source/userdoc/appendixB.rst:181
 #: ../source/userdoc/appendixB.rst:311
-# 079150647bc64597a1695e092da1df9d
-# 86a42bfe2e2642a2a6f687323c8f4fd8
-# 51f27cb04e764f54b49cba77cfc491a9
-# 9a752cb29fb54b288c8b86dcceab0669
 msgid "(1/3, 1/3)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:96
-# 737bf5d79f424bed9b50028d9d9ee9d4
 msgid "1/2"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:97
-# 505c965e66ea4d4384d9253fd1f0aaf4
 msgid "``\"IM_TRIANGLE(1)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:99
-# 4d248d7099084767a3d951b5c677edde
 msgid "1 point, order 1."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:103
-# 5b17f3e24a95462881965d13a9a44475
 msgid "(1/6,  1/6)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:105
-# 8170871c5b654528acbce6038db9952a
 msgid "(2/3,  1/6)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:107
-# 6dfe61fd696b4db99b5ca1453e01a774
 msgid "(1/6,  2/3)"
 msgstr ""
 
@@ -257,59 +194,44 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:110
 #: ../source/userdoc/appendixB.rst:112
 #: ../source/userdoc/appendixB.rst:477
-# afae6d537e8d46a09f9d33862d993cc0
-# c3de6a8216a44ceb83692f0ea8b13b0c
-# c5e9b204345043e49005a7d7620f72e1
-# dfe416b1bf16429bb7e76d11e33f9f15
 msgid "1/6"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:113
-# a0d368a5357f47c2b70c57045f5f8f46
 msgid "``\"IM_TRIANGLE(2)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:115
-# 01002a7be3844e999870b37b34325cc5
 msgid "3 points, order 2."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:130
-# 149a3d96aff3426fa2389dc9d5bd5555
 msgid "(1/5, 1/5)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:132
-# 40d102dbc809486d97fbf96602bded30
 msgid "(3/5, 1/5)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:134
-# 1a9879b3435b41928a3bae0b6c5b564d
 msgid "(1/5, 3/5)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:135
-# 87fff2c3e13c482a9dd1ea7c5768dc1f
 msgid "-27/96"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:137
 #: ../source/userdoc/appendixB.rst:139
 #: ../source/userdoc/appendixB.rst:141
-# a77efe3199ac495b84a7548b8d9150d1
-# adec031e44ea4b1f87d97636d731313b
-# 38d6407d95e343d4b8cc1f897f7fbbdc
 msgid "25/96"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:142
-# 064b29594ce44eb0bcb29f749c2367ba
 msgid "``\"IM_TRIANGLE(3)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:144
-# 092c6d4f9999412d8e1a7234f7809bd0
 msgid "4 points, order 3."
 msgstr ""
 
@@ -317,55 +239,36 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:183
 #: ../source/userdoc/appendixB.rst:218
 #: ../source/userdoc/appendixB.rst:287
-# bdb505418b224e19bbe4a23d53da54ec
-# 9b0b2d22094c4f7a8eecfdc0588b169b
-# b72d0bcdf98e47ec932c5b3eaa524dda
-# 23cae6922a1943abaf61d2c9a82b4110
 msgid "(a, a)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:150
 #: ../source/userdoc/appendixB.rst:185
 #: ../source/userdoc/appendixB.rst:220
-# d0b756faf42640fda18ffbe9b77d00ec
-# 11d2efa029144348994c7c56aa4a6e64
-# 61cf5e8f05cf489fb0d2a3d300574e78
 msgid "(1-2a, a)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:152
 #: ../source/userdoc/appendixB.rst:187
 #: ../source/userdoc/appendixB.rst:222
-# 2501ae3049b749b2b43cff9e39a6227f
-# 1a485298a6334a048e9cd4cda94d3bc1
-# 9275417d363b46c39a4084d82b2e86d0
 msgid "(a, 1-2a)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:154
 #: ../source/userdoc/appendixB.rst:189
 #: ../source/userdoc/appendixB.rst:224
-# 5a69d15de35441b29f2513f0ec117ff0
-# 0446631ba28d431a81ab6af2217dd2df
-# 21756b722bb74c579905c8488277a9b6
 msgid "(b, b)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:156
 #: ../source/userdoc/appendixB.rst:191
 #: ../source/userdoc/appendixB.rst:226
-# 73acbfc9a1594d818da1ef0b8eedf35c
-# 5d80ec26121744038ab71a1261aca0ef
-# 73a6fe7462074b078c49ff3c8e3ab9bc
 msgid "(1-2b, b)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:158
 #: ../source/userdoc/appendixB.rst:193
 #: ../source/userdoc/appendixB.rst:228
-# fbf846991e0347e39034e69ca310f24e
-# 0126133c16894d78b16c882fcd46c991
-# 2bb5a7516ad14211b0c30bc581f81e2a
 msgid "(b, 1-2b)"
 msgstr ""
 
@@ -375,12 +278,6 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:196
 #: ../source/userdoc/appendixB.rst:198
 #: ../source/userdoc/appendixB.rst:200
-# 69686c791c9d416598b66d74bfc18bb6
-# d2d20ac97feb4b548df1c3c34f91522e
-# 409b141420604b56b7272a435973e0c5
-# 21ab3ccf8999457f8c48de3c0e01d982
-# 46990249614e4c67929b7e029986520c
-# ea7ec0f9a9d74ee49a628368075e27d5
 msgid "c"
 msgstr ""
 
@@ -390,101 +287,73 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:202
 #: ../source/userdoc/appendixB.rst:204
 #: ../source/userdoc/appendixB.rst:206
-# 66bf985a9735471ead229722b901c49a
-# bbd34b48cdba4d1bb4a9b3530fb865a0
-# e390345b8fd146558b8f65a4bd5a0a4c
-# 1c4f9af6e664453caa5feaadccca6127
-# 8b7cfbe3b6ce4502a021af62c03f9dae
-# ef1a698153544c7d8e9e459388b9658c
 msgid "d"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:170
-# dd73beebeb224b11a17d6cecb520dcef
 msgid "``\"IM_TRIANGLE(4)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:172
-# 1d6da764b5ba4d98a15a698a0a4a6746
 msgid "6 points, order 4"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:174
-# 63099091562149ef9621a31864d8f520
 msgid ":math:`a = 0.445948490915965` :math:`b=0.091576213509771` :math:`c=0.111690794839005` :math:`d=0.054975871827661`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:194
-# 79dc8561bee74793aa33e77d56d45560
 msgid "9/80"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:207
-# 50bf841198f249cd89e0d051285c034d
 msgid "``\"IM_TRIANGLE(5)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:209
 #: ../source/userdoc/appendixB.rst:429
-# 17469cee1fe04558b1684ab897d33aa9
-# 1ceabdede82d4402b8c47d026952e054
 msgid "7 points, order 5"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:211
-# 3298540addf547c4b7c0751f05a4f433
 msgid ":math:`a = \\Frac{6+\\sqrt{15}}{21}` :math:`b = 4/7 - a` :math:`c = \\Frac{155+\\sqrt{15}}{2400}` :math:`d = 31/240 - c`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:230
 #: ../source/userdoc/appendixB.rst:301
-# 5fdcb867c1cf473590e2b61573bfb470
-# d472f8fc506043b1b67a793fe82560c4
 msgid "(c, d)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:232
 #: ../source/userdoc/appendixB.rst:295
-# ee9d90eb45ea4d668d166524aa0e56ba
-# 37ff385ca1e346b69dd749678a49979a
 msgid "(d, c)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:234
-# 2dd228e178db4212b5177c4a2c3010ef
 msgid "(1-c-d, c)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:236
-# e46eb180014c4560b98c2f6fa753bf96
 msgid "(1-c-d, d)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:238
-# ebaf07baa1de49cf8737c83f6c1d5224
 msgid "(c, 1-c-d)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:240
-# 6eb2b5add33e42b28f571e76e5153a97
 msgid "(d, 1-c-d)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:241
 #: ../source/userdoc/appendixB.rst:243
 #: ../source/userdoc/appendixB.rst:245
-# 4f0a718c5e0d431797fcd96748309f8b
-# dae591522a9b4e0884d47055b0c33bc8
-# 914abffff1184af4852ee75753c12654
 msgid "e"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:247
 #: ../source/userdoc/appendixB.rst:249
 #: ../source/userdoc/appendixB.rst:251
-# f6a3275aa8894873899be3e9c311df60
-# 124626c654b7431da74ba8ffc440b14f
-# bb25efc2d8974ab58e4e600dffeb149b
 msgid "f"
 msgstr ""
 
@@ -494,81 +363,60 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:259
 #: ../source/userdoc/appendixB.rst:261
 #: ../source/userdoc/appendixB.rst:263
-# d77bf0eb520041cda0035f48ffa16bcb
-# 15c18c3109d04210b902d9ca4c73ddae
-# b6f9961ef3c94a2b8461087db708bc33
-# d86a3365a92542c4a11f1c32793cabd2
-# b91cd5e855c743da9e2a37ab09a0a61f
-# a170a864ba304032acac75e868acfe04
 msgid "g"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:264
-# 323b9005ab724d339854e883c28cb34d
 msgid "``\"IM_TRIANGLE(6)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:266
-# 4ec297a92c0d423db005d88863fc263b
 msgid "12 points, order 6"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:268
-# f98603f66f5941ad83403dec78b1e7df
 msgid ":math:`a = 0.063089104491502` :math:`b = 0.249286745170910` :math:`c = 0.310352451033785` :math:`d = 0.053145049844816` :math:`e = 0.025422453185103` :math:`f = 0.058393137863189` :math:`g = 0.041425537809187`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:289
-# 63bde093777b48028c71bff7ca1fadca
 msgid "(b, a)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:291
-# 5358c568343b4b1082ecf7ac2031b404
 msgid "(a, b)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:293
-# d66ab2ab07e84f85ab876bda8c335824
 msgid "(c, e)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:297
-# 9bb5a12fd207461fa02a6f7538569385
 msgid "(e, d)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:299
-# 39a6a4c371be414b8a73f90201cf7e56
 msgid "(d, e)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:303
-# 420b4cbf075343f69297a3fd51ee2741
 msgid "(e, c)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:305
-# 5277101c08aa4eeaa2f53df6fafc9a67
 msgid "(f, f)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:307
-# 25660e3117664b2988d460e8e3414b1e
 msgid "(g, f)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:309
-# 8ae769e9656b48d6881014e11522b0c5
 msgid "(f, g)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:312
 #: ../source/userdoc/appendixB.rst:314
 #: ../source/userdoc/appendixB.rst:316
-# 8f52f7a89da94003946095c54018ba28
-# f95484b99fd24d6db616de25fbd325c7
-# e2980c1e05394b78affba7d2b47cafed
 msgid "h"
 msgstr ""
 
@@ -578,46 +426,32 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:324
 #: ../source/userdoc/appendixB.rst:326
 #: ../source/userdoc/appendixB.rst:328
-# ce6e9284ab9b4cfba2219a1932f1d98b
-# eab300c7970a435f9f911d455c0cb0f1
-# 4dd76d28d7214e728ffa1b3bca742eb1
-# 949ec27acf4a486880b6a26efb7ba5b4
-# bc477cb909434bd2aa57e12ae584c498
-# f69840f4b37f45d88e6b1ce672c89bf5
 msgid "i"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:330
 #: ../source/userdoc/appendixB.rst:332
 #: ../source/userdoc/appendixB.rst:334
-# adf17558052f4e668b22c2f860a615cc
-# c48d9a2134c248f9be8f30567dc32173
-# fddcd0b73adc471c8663a0d4054effcc
 msgid "j"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:336
-# 55bade0356ce468ab80a9c50fdecc509
 msgid "k"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:337
-# e10037f40b2e43f88e78d4d41359624e
 msgid "``\"IM_TRIANGLE(7)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:339
-# 60ef6807c82a4e22ba94f4bc695c7d39
 msgid "13 points, order 7"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:341
-# 8bd3a2a128d34a50bffc5d4e37fcdd62
 msgid ":math:`a = 0.0651301029022` :math:`b = 0.8697397941956` :math:`c = 0.3128654960049` :math:`d = 0.6384441885698` :math:`e = 0.0486903154253` :math:`f = 0.2603459660790` :math:`g = 0.4793080678419` :math:`h = 0.0266736178044` :math:`i = 0.0385568804451` :math:`j = 0.0878076287166` :math:`k = -0.0747850222338`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:356
-# a70ba26d439c40d69097c0c2d3e364ca
 msgid "``\"IM_TRIANGLE(8)\"``"
 msgstr ""
 
@@ -625,205 +459,159 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:365
 #: ../source/userdoc/appendixB.rst:372
 #: ../source/userdoc/appendixB.rst:379
-# d1e014c768d3484b8f3f3e26ae6308b6
-# 8a8815ac921e4d3cb137e852684075df
-# 137b5fc2f3474d0caaed9b7d06a86eda
-# 00176c7665344767a02a1c7fcc0a1319
 msgid "(see [EncyclopCubature]_)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:363
-# c5c548c751f04c9492c67fd7ae74e282
 msgid "``\"IM_TRIANGLE(9)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:370
-# c1b1ec2676b7456d8387f4722ce83e13
 msgid "``\"IM_TRIANGLE(10)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:377
-# 9fc49ff10c30496ca8afa5411ec506b8
 msgid "``\"IM_TRIANGLE(13)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:383
-# f93738c8c09248e7bb26c6104b5c57f0
 msgid "(:math:`1/2+\\sqrt{1/6}, 1/2`)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:385
-# 02c5f06897f54636859689eb1341621b
 msgid "(:math:`(1/2-\\sqrt{1/24}, 1/2\\pm\\sqrt{1/8}`)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:386
 #: ../source/userdoc/appendixB.rst:388
-# 7a4a4d8031244af488d083c64c36ce64
-# 051fb49d7b51495f8938a3e3e1657d02
 msgid "1/3"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:390
-# 8f28cc11a7e1479d92e01d5b454ebc58
 msgid "``\"IM_QUAD(2)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:392
-# ee0d88e5f4e8400789586bf5e76224ed
 msgid "3 points, order 2"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:405
-# 35c84099dba845009b989f91b6641496
 msgid "(:math:`1/2\\pm\\sqrt{1/6}, 1/2`)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:407
-# f237466700334be2b64c33c49c2d59e9
 msgid "(:math:`1/2, 1/2\\pm\\sqrt{1/6}`)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:408
 #: ../source/userdoc/appendixB.rst:410
-# 287d929b3dc544fdbe1c18c8dcd00dc7
-# 82c838cfad854230a29cbb0c9fd668e8
 msgid "1/4"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:411
-# 2899398119464aed8a9e2bfc5552ecda
 msgid "``\"IM_QUAD(3)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:413
-# 1ae45a87647a4366ab3d4415bcdf24f6
 msgid "4 points, order 3"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:417
-# 43d03f0d33dd4b75a43b9abf309e736e
 msgid "(:math:`1/2, 1/2`)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:419
-# cea227a807524540ad8e226567c4292e
 msgid "(:math:`1/2 \\pm \\sqrt{7/30}, 1/2`)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:421
-# 23a1a5ab3d364d85aa8d2ff3759b5326
 msgid "(:math:`1/2\\pm\\sqrt{1/12}, 1/2\\pm\\sqrt{3/20}`)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:422
-# a7c896009e644bb1bfd455c1f558b759
 msgid "2/7"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:424
-# 5a27bd51a2ad418e87e669beb0666f49
 msgid "5/63"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:426
-# 6153a00649db4858b5b2b63127ff9b86
 msgid "5/36"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:427
-# 6dc4ea795964454dad9e3b60e8e7e305
 msgid "``\"IM_QUAD(5)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:434
-# 6cf19c5c008c4219b88692c34e11f6bc
 msgid "``\"IM_QUAD(7)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:436
-# e98c1cfb2e7a4b1f8bb9d7dc1c17b480
 msgid "12 points, order 7"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:441
-# 98ec50ae79d343469d254dd61d9a525c
 msgid "``\"IM_QUAD(9)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:443
-# 1aeb2616e7454d268cb72d44b98dec39
 msgid "20 points, order 9"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:448
-# fb2a8b481a554ae4a6fdb78e51444263
 msgid "``\"IM_QUAD(17)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:450
-# d092dd65507a4e939aa6a5e2cfb73a70
 msgid "70 points, order 17"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:452
-# b2cd731787c94526820575349b8703cf
 msgid "There is also the ``\"IM_GAUSS_PARALLELEPIPED(n,k)\"`` which is a direct product of 1D gauss integrations."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:455
-# 5d6d8c520dac4b98922445e51ab59dc9
 msgid "**Important note:** do not forget that ``IM_QUAD(k)`` is exact for polynomials up to degree :math:`k`, and that a :math:`Q_k` polynomial has a degree of :math:`2*k`. For example, ``IM_QUAD(7)`` cannot integrate exactly the product of two :math:`Q_{2}` polynomials. On the other hand, ``IM_GAUSS_PARALLELEPIPED(2,4)`` can integrate exactly that product ..."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:463
-# 2c67d962423044198af9284bf39487cb
 msgid "Gauss Integration methods on dimension 3"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:0
 #: ../source/userdoc/appendixB.rst:0
-# 6560b2be771e4d0c887b27a9e426dee4
-# 20efd0a003d840028b48705536904b35
 msgid "Integration methods on dimension 3"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:476
 #: ../source/userdoc/appendixB.rst:517
-# 3939e36dd31647b79bc073cc12ab9c03
-# 8f60ef2dac9f4407a44ed207b2496791
 msgid "(1/4, 1/4, 1/4)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:478
-# 37093499d52945bf8dea46896d6b1faa
 msgid "``\"IM_TETRAHEDRON(1)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:480
-# 2ee0b68dd8674b5fa7ecf24659bab96b
 msgid "1 point, order 1"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:484
 #: ../source/userdoc/appendixB.rst:543
-# c1e737e38826462f97490cd8e770f8aa
-# ed7c1a85929e4869ae29c1aa6835657b
 msgid ":math:`(a, a, a)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:486
-# df935501c12341898b7b9abda6ded364
 msgid ":math:`(a, b, a)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:488
-# 596caf16e08b40bb8a17590a4525ba05
 msgid ":math:`(a, a, b)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:490
-# ed3946e1cc0343c98f123c081c758e13
 msgid ":math:`(b, a, a)`"
 msgstr ""
 
@@ -831,55 +619,42 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:493
 #: ../source/userdoc/appendixB.rst:495
 #: ../source/userdoc/appendixB.rst:497
-# 824034f5f61c4cbfb9b0c0cd231ff023
-# 9bc2ca21fa154a83baec0dc835d4a16d
-# ddfa7e0e6e0a4d4eaa11627122ea26b4
-# 7229d219a8244a99b7044f7b9827e71f
 msgid "1/24"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:498
-# 2f873c91144a4efabbeba3d3005ce881
 msgid "``\"IM_TETRAHEDRON(2)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:500
-# bff70b5aa72e4bc386768505ee3c657f
 msgid "4 points, order 2} \\hspace{7em}"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:502
-# 1c5f755db5bd42ddb4c1b9fef5859759
 msgid ":math:`a = \\Frac{5 - \\sqrt{5}}{20}`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:504
-# 07398960de3a4676a671aa7e673ede92
 msgid ":math:`b = \\Frac{5 + 3\\sqrt{5}}{20}`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:519
-# 7acbb3d28e6e43f9a945dca9afc006c1
 msgid "(1/6, 1/6, 1/6)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:521
-# 47580429364f49579a61e71c94dd7cb8
 msgid "(1/6, 1/2, 1/6)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:523
-# ba74f598340e4c2f98dc37762978348a
 msgid "(1/6, 1/6, 1/2)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:525
-# a0fa606059474bba9475b375efed37cf
 msgid "(1/2, 1/6, 1/6)"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:526
-# 237fa897f65c41c0856f674fd736e144
 msgid "-2/15"
 msgstr ""
 
@@ -887,95 +662,74 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:530
 #: ../source/userdoc/appendixB.rst:532
 #: ../source/userdoc/appendixB.rst:534
-# c41e1626d2814451a21cb34236877518
-# 8657d9a34ce34f36ad5a193d4c16af9d
-# bdf7480dafc94eec92ddcf4f85395288
-# 2425d0296cf94b6186e511fa550654c7
 msgid "3/40"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:535
-# 98b9121cb9924c89935b1e510a7f6dff
 msgid "``\"IM_TETRAHEDRON(3)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:537
-# ab29b2266b704cb38db9c192a5a5f353
 msgid "5 points, order 3"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:541
-# dfafd57c3d064911aa95e3ef5fe6c64d
 msgid ":math:`(1/4, 1/4, 1/4)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:545
-# 7fd33d5ebcbf45ba828fe697a67fbb54
 msgid ":math:`(a, a, c)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:547
-# 97856b7db905477895f949c35ef2e73a
 msgid ":math:`(a, c, a)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:549
-# 10c77a78aede4053be2dd6719ffc2d67
 msgid ":math:`(c, a, a)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:551
-# 5352b81450ea4289b93def157ba39d1a
 msgid ":math:`(b, b, b)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:553
-# c9c9d0f29695498b9cd78db75bade3f2
 msgid ":math:`(b, b, d)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:555
-# 846852f28c214addb8f72273b53f0a36
 msgid ":math:`(b, d, b)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:557
-# 1fb8e265b8384e4fa3c7cbe99bb307b2
 msgid ":math:`(d, b, b)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:559
-# 14c2280208204b4eb84145eb2261d7c7
 msgid ":math:`(e, e, f)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:561
-# 8e74fda9933f437b9c43489563969ad8
 msgid ":math:`(e, f, e)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:563
-# 40656dc48db14745827fb80f400d3066
 msgid ":math:`(f, e, e)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:565
-# e40a9b9253d64bfda10638ed20fbf51a
 msgid ":math:`(e, f, f)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:567
-# acbe789909b548cea209c47c1fe94fc7
 msgid ":math:`(f, e, f)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:569
-# 3af4e300908b4fa8b816e41c263c46d1
 msgid ":math:`(f, f, e)`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:570
-# c1513e41e4c94c5b953085c932b65bbb
 msgid "8/405"
 msgstr ""
 
@@ -983,10 +737,6 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:574
 #: ../source/userdoc/appendixB.rst:576
 #: ../source/userdoc/appendixB.rst:578
-# 3baa411c6a2541b78746367ba6a8b0f1
-# 86aede0e3e514fae9043f473e5415d02
-# 342ca10bfa3847ac8e645f796dc2cde2
-# 16e6337886de4935a39d809102175e94
 msgid ":math:`h`"
 msgstr ""
 
@@ -994,10 +744,6 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:582
 #: ../source/userdoc/appendixB.rst:584
 #: ../source/userdoc/appendixB.rst:586
-# c36a37530bea468b9bea7398586b76d3
-# 07ebb3a526084dac87f05412e561fdf9
-# af42ed5e336c4b429b8ff99a53cc3762
-# 4d01fe0c23874495a0d55d405fd0ed9c
 msgid ":math:`i`"
 msgstr ""
 
@@ -1007,232 +753,179 @@ msgstr ""
 #: ../source/userdoc/appendixB.rst:594
 #: ../source/userdoc/appendixB.rst:596
 #: ../source/userdoc/appendixB.rst:598
-# 90122eaa847248d1a6eb933e08b3c6c8
-# 864a7933deba4b348624071fd90e8f84
-# b6e0dda24eb24a0c90add49764974076
-# f422dbbdc4e24b00ab7ed177a2e41356
-# 43e8cde418114ea0921fbbdc038bb487
-# adbb86ef84c141bfbb2ccab6f612ae86
 msgid "5/567"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:599
-# c7a15d38d1cf4cb1a0505f5db6f613e6
 msgid "``\"IM_TETRAHEDRON(5)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:601
-# 0a89714db4a0426192e6940ab88b1185
 msgid "15 points, order 5"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:603
-# 4bb51b40c09b4054ba308f41a3cd1752
 msgid ":math:`a = \\Frac{7 + \\sqrt{15}}{34}`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:605
-# 164d134a8f1c4b13827b97b8b813267d
 msgid ":math:`b = \\Frac{7 - \\sqrt{15}}{34}`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:607
-# cbd5d7e5f38e4d6c993002d6ae4bb3ae
 msgid ":math:`c = \\Frac{13 + 3\\sqrt{15}}{34}`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:609
-# ce3b26b1067b40c882261f9a054d3b57
 msgid ":math:`d = \\Frac{13 - 3\\sqrt{15}}{34}`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:611
-# 665d449bc0b84fa090313253e14e463e
 msgid ":math:`e = \\Frac{5 - \\sqrt{15}}{20}`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:613
-# 1062f1a0d6da428b93368ec128ed698f
 msgid ":math:`f = \\Frac{5 + \\sqrt{15}}{20}`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:615
-# f3ac141d219d4e5a9225c20a523875f8
 msgid ":math:`h = \\Frac{2665 - 14\\sqrt{15}}{226800}`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:617
-# 82306a696ede4c81bf3802c341bd1615
 msgid ":math:`i = \\Frac{2665 + 14\\sqrt{15}}{226800}`"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:619
-# a654b88ad0c240ab9c64a39d96c40558
 msgid "Others methods are:"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:625
-# f13d38b6011a4ffa856f2535abfd9543
 msgid "name"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:626
-# 5ac073cfb17c46da9b1666b97f77ab58
 msgid "element type"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:627
-# c8a41a3a9d98480cb99f56a64af81a13
 msgid "number of points"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:629
-# 0dc6d08b579d4120b6d99b90a3109c5f
 msgid "``\"IM_TETRAHEDRON(6)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:630
 #: ../source/userdoc/appendixB.rst:634
-# 0d204b54c1cc41f0bc96961ef640cf03
-# dda0eba0ef024ec1aa87972b723e2304
 msgid "tetrahedron"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:631
 #: ../source/userdoc/appendixB.rst:655
-# 68982e466263436e95ddb8960374e60e
-# fd82aca7b9064667a4e530bb20bd36fc
 msgid "24"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:633
-# a8eb8a1230514e47bad9fda9bbf9fb13
 msgid "``\"IM_TETRAHEDRON(8)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:635
-# d35cd24826a94c02a114422d66ebd7cf
 msgid "43"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:637
-# cdd7d8cf968b47fcbfea4a53bc884dea
 msgid "``\"IM_SIMPLEX4D(3)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:638
-# 3817e2507a71427098aef8956c2ac4d3
 msgid "4D simplex"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:639
-# 639e38bf86ef43b8a843bd9bed0bd53a
 msgid "6"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:641
-# 06ef9b1005014e83953d699535c73ae9
 msgid "``\"IM_HEXAHEDRON(5)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:642
 #: ../source/userdoc/appendixB.rst:646
 #: ../source/userdoc/appendixB.rst:650
-# 4809b3098c644a8d817fece26c180b99
-# f97724dba4fa490a9732f4c4376167f9
-# 0316fecc25d1441cb71fe54145f3e9cc
 msgid "3D hexahedron"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:643
-# a3ad808d399e4066add5ff3020b486e8
 msgid "14"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:645
-# 1793ecb129b0497ea0edd3bf905bb74a
 msgid "``\"IM_HEXAHEDRON(9)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:647
-# 6af0a3d12205414aa07faa005008875d
 msgid "58"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:649
-# 7b7f900d6f0c4d0cb4cfbb80540192a7
 msgid "``\"IM_HEXAHEDRON(11)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:651
-# d262f0dfb077402982cacb27a216ef6d
 msgid "90"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:653
-# d91c21c0d0ad43b4ab466467e8be4d53
 msgid "``\"IM_CUBE4D(5)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:654
 #: ../source/userdoc/appendixB.rst:658
-# 8049b9cb072d43d9b79321769ec4ecdb
-# 6ba721178d7d4840ba6bc6857a40169e
 msgid "4D parallelepipeded"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:657
-# 12b709bd17f743d391493039dd3c6557
 msgid "``\"IM_CUBE4D(9)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:659
-# f30269f56f844f4ea075675ed187c9fc
 msgid "145"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:663
-# 19c6020527c847cb9255be1803d8667f
 msgid "Direct product of integration methods"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:665
-# d1470b307f1f44bf8a9e078635420d18
 msgid "You can use ``\"IM_PRODUCT(IM1, IM2)\"`` to produce integration methods on quadrilateral or prisms. It gives the direct product of two integration methods. For instance ``\"IM_GAUSS_PARALLELEPIPED(2,k)\"`` is an alias for ``\"IM_PRODUCT(IM_GAUSS1D(2,k),IM_GAUSS1D(2,k))\"`` and can be use instead of the ``\"IM_QUAD\"`` integrations."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:672
-# c86e7ee0458b42039adf8b9680ddd3f8
 msgid "Specific integration methods"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:674
-# 6f6d819cf25e40799c382b3f2f6ae8e6
 msgid "For pyramidal elements, ``\"IM_PYRAMID(im)\"`` provides an integration method corresponding to the transformation of an integration ``im`` from a hexahedron (for instance ``\"IM_GAUSS_PARALLELEPIPED(3,5)\"``) onto a pyramid. It is a singular integration method specically adapted to rational fraction shape functions of the pyramidal elements."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:677
-# a8f4a8d9431242d8aab18553267ba94f
 msgid "Composite integration methods"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:684
-# bda947c20d2649a2b6756a380d91b033
 msgid "Composite method ``\"IM_STRUCTURED_COMPOSITE(IM_TRIANGLE(2), 3)\"``"
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:686
-# e5f2ee0788424a6cb1b1b00d3814db66
 msgid "Use ``\"IM_STRUCTURED_COMPOSITE(IM1, S)\"`` to copy ``IM1`` on an element with ``S`` subdivisions. The resulting integration method has the same order but with more points. It could be more stable to use a composite method rather than to improve the order of the method. Those methods have to be used also with composite elements. Most of the time for composite element, it is preferable to choose the basic method ``IM1`` with no points on the boundary (because the gradient could be not defined on the boundary of sub-elements)."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:694
-# 8728691aad6a4185ba1ca277894de974
 msgid "For the HCT element, it is advised to use the ``\"IM_HCT_COMPOSITE(im)\"`` composite integration (which split the original triangle into 3 sub-triangles)."
 msgstr ""
 
 #: ../source/userdoc/appendixB.rst:697
-# 9a0810ad8f5e4bdfa842f9baf10f5eb4
 msgid "For pyramidal elements, ``\"IM_PYRAMID_COMPOSITE(im)\"`` provides an integration method ase on the decomposition of the pyramid into two tetrahedrons (``im`` should be an integration method on a tetrahedron). Note that the integraton method ``\"IM_PYRAMID(im)\"`` where ``im`` is an integration method on an hexahedron, should be prefered."
 msgstr ""
 

@@ -17,122 +17,98 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/scilab/cmdref_gf_workspace.rst:8
-# 91a9345a496d43ebbe5f3e6ea5bef186
 msgid "gf_workspace"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:10
-# 5fd3352351b04a41941eb68a1562e6c1
 msgid "**Synopsis**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:24
-# 23fd8601cb3c480e9cc07f48020ee2f8
 msgid "**Description :**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:27
-# 31530122e68b44ac91b3d6523ad6c8c9
 msgid "Getfem workspace management function."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:29
-# 36df84a47b37468486f29eaa56e50f42
 msgid "Getfem uses its own workspaces in Matlab, independently of the matlab workspaces (this is due to some limitations in the memory management of matlab objects). By default, all getfem variables belong to the root getfem workspace. A function can create its own workspace by invoking gf_workspace('push') at its beginning. When exiting, this function MUST invoke gf_workspace('pop') (you can use matlab exceptions handling to do this cleanly when the function exits on an error)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:40
-# 93e4cfb96f43427aae554d688e067d64
 msgid "**Command list :**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:44
-# 1f8d6dec1ef540b981f56abcf35e686f
 msgid "``gf_workspace('push')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:46
-# 699d0fe47e574701a4fd948f1fbfdaa4
 msgid "Create a new temporary workspace on the workspace stack."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:49
-# d3c7e8d8f04845fc8acdc784fbc91917
 msgid "``gf_workspace('pop',  [,i,j, ...])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:51
-# b918bce6a46a4a2982ce96a71fa7b32a
 msgid "Leave the current workspace, destroying all getfem objects belonging to it, except the one listed after 'pop', and the ones moved to parent workspace by gf_workspace('keep')."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:56
-# b133842bfe5a4d738505a7a94c971430
 msgid "``gf_workspace('stat')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:58
-# c6736abd35ca440d9659c93576c6d84d
 msgid "Print informations about variables in current workspace."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:61
-# 061f5862a3d2490c9ba8bb603f570823
 msgid "``gf_workspace('stats')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:63
-# 18e38574864e47a99b878f45108bd6d6
 msgid "Print informations about all getfem variables."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:66
-# b43d98a5e05640cfadc842a8d1d17ed9
 msgid "``gf_workspace('keep', i[,j,k...])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:68
-# 2ebcb72819d64c03848f41a17c8212bc
 msgid "prevent the listed variables from being deleted when gf_workspace(\"pop\") will be called by moving these variables in the parent workspace."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:73
-# b03b12b9296940fbbe30a39c16fa813c
 msgid "``gf_workspace('keep all')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:75
-# 2964595df8c54ceea72ca22ff159a982
 msgid "prevent all variables from being deleted when gf_workspace(\"pop\") will be called by moving the variables in the parent workspace."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:80
-# 5d1409872e984f96aa7d3b5d34d8dada
 msgid "``gf_workspace('clear')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:82
-# 30429c0fc43043e2a756f4aadf65c8c8
 msgid "Clear the current workspace."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:85
-# 73e98537f8e04d119447a7476152c92f
 msgid "``gf_workspace('clear all')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:87
-# ea600fd158fa40adbedf836bc30f28c8
 msgid "Clear every workspace, and returns to the main workspace (you should not need this command)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:91
-# 8491f479b1c947dd82cde0a7cc6f3e7e
 msgid "``gf_workspace('class name', i)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_workspace.rst:93
-# 71003848b1c04fe68c81eb0e16e3a889
 msgid "Return the class name of object i (if I is a mesh handle, it return gfMesh etc..)"
 msgstr ""
 

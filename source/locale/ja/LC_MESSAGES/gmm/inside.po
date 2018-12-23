@@ -17,17 +17,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-# 5933787827fd4e8aadff40732c7a9249
 #: ../source/gmm/inside.rst:11
 msgid "Deeper inside |gmm|"
 msgstr ""
 
-# d70ef36ae97842aeb471c0fad0dcaa1d
 #: ../source/gmm/inside.rst:15
 msgid "The linalg_traits structure"
 msgstr ""
 
-# a3dcf0a8534549038e76e27a8cbbeaea
 #: ../source/gmm/inside.rst:17
 msgid ""
 "The major principle of |gmm| is that each vector and matrix type has a "
@@ -39,7 +36,6 @@ msgid ""
 "type of matrix, it is possible to access to this component with::"
 msgstr ""
 
-# 5b188fca07f648e28dc74c77c30d8b17
 #: ../source/gmm/inside.rst:22
 msgid ""
 "The types ``abstract_vector`` and ``abstract_matrix`` are defined in "
@@ -47,17 +43,14 @@ msgid ""
 "algorithms."
 msgstr ""
 
-# b5b3ad56874f463f95b20223c75c9594
 #: ../source/gmm/inside.rst:24
 msgid "For a vector type, the following informations are available::"
 msgstr ""
 
-# e2faa7eb8bdf490a8aa0b594915a326e
 #: ../source/gmm/inside.rst:64
 msgid "and for a matrix type::"
 msgstr ""
 
-# 3a87f8df2d004b218dd289cc37b34be5
 #: ../source/gmm/inside.rst:115
 msgid ""
 "This is this structure you have to fill in to interface a new vector or "
@@ -65,24 +58,20 @@ msgid ""
 "of the generic algorithms are in ``gmm/gmm_blas.h`` ."
 msgstr ""
 
-# 3b3cb68fcafd42a6a6121ce023ff6661
 #: ../source/gmm/inside.rst:119
 msgid "How to iterate on the components of a vector"
 msgstr ""
 
-# e774c785135f487192c5b4fe2b16ad6a
 #: ../source/gmm/inside.rst:121
 msgid ""
 "Here is an example which accumulate the components of a vector. It is "
 "assumed that ``V`` is a vector type and ``v`` an instantiated vector::"
 msgstr ""
 
-# e62d552dc3c24eb4800780a2b5075a56
 #: ../source/gmm/inside.rst:134
 msgid "This piece of code will work with every kind of interfaced vector."
 msgstr ""
 
-# 170c3f7b110e493ab238aca7879162ba
 #: ../source/gmm/inside.rst:136
 msgid ""
 "For sparse or skyline vectors, it is possible to obtain the index of the "
@@ -92,7 +81,6 @@ msgid ""
 "corresponding instantiated vectors::"
 msgstr ""
 
-# 165423af15124a8293530c0d0dd6376e
 #: ../source/gmm/inside.rst:157
 msgid ""
 "This algorithm use the fact that indices are increasing in a sparse "
@@ -100,12 +88,10 @@ msgid ""
 "iterators do not have the method ``it.index()``."
 msgstr ""
 
-# f783f982e3454fbb91b64fe581d57d23
 #: ../source/gmm/inside.rst:160
 msgid "How to iterate on a matrix"
 msgstr ""
 
-# 9c864b639d9e46fbbd44a9e433df3020
 #: ../source/gmm/inside.rst:162
 msgid ""
 "You can iterate on the rows of a matrix if it is not a column major "
@@ -114,22 +100,18 @@ msgid ""
 "col_and_rox, so you can iterate on both rows and columns)."
 msgstr ""
 
-# 3fed6a3360fe4ae681ffc5ea0cc5b4cc
 #: ../source/gmm/inside.rst:164
 msgid "If you need not to be optimal, you can use a basic loop like that::"
 msgstr ""
 
-# 97935c2aa64246398edecf63b0e6adbe
 #: ../source/gmm/inside.rst:174
 msgid "But you can also use iterators, like that::"
 msgstr ""
 
-# 5c9a605a8f5d41f380c9d513848dc3fb
 #: ../source/gmm/inside.rst:190
 msgid "How to make your algorithm working on all type of matrices"
 msgstr ""
 
-# 90e2f7439c7b423b97caa84c5d9b3047
 #: ../source/gmm/inside.rst:192
 msgid ""
 "For this, you will generally have to specialize it. For instance, let us "
@@ -138,7 +120,6 @@ msgid ""
 "most of the cases so that it does not count the components one by one)::"
 msgstr ""
 
-# c59d07ba27574d27af4c37bda32115d5
 #: ../source/gmm/inside.rst:226
 msgid ""
 "The first function dispatch on the second or the third function "

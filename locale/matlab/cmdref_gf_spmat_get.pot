@@ -17,229 +17,183 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:8
-# 4eda816fe994476e83cf84a9e5bb7805
 msgid "gf_spmat_get"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:10
-# 672127f5d18b45b8ae77c126e6373864
 msgid "**Synopsis**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:30
-# 37cb994ce65d4db4b4f269c97e2fa1f4
 msgid "**Description :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:35
-# 9188b6414fda4cac94e9051c0a085896
 msgid "**Command list :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:39
-# 30d01004c5104582b41daad30e4c4dc3
 msgid "``n = gf_spmat_get(spmat S, 'nnz')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:41
-# b949710894ec40fcb672cfd984189926
 msgid "Return the number of non-null values stored in the sparse matrix."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:44
-# a41273c849ac40958389b2a11a06694e
 msgid "``Sm = gf_spmat_get(spmat S, 'full'[, list I[, list J]])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:46
-# b304aa4cc7bf44549ff405b90170ac12
 msgid "Return a full (sub-)matrix."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:48
-# f020b6f17e894ec5979288bc0add6b34
 msgid "The optional arguments `I` and `J`, are the sub-intervals for the rows and columns that are to be extracted."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:52
-# ef1513c98a474224969aafa64a908e30
 msgid "``MV = gf_spmat_get(spmat S, 'mult', vec V)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:54
-# 052c18de2bb64e3a818c1745e4c3eb29
 msgid "Product of the sparse matrix `M` with a vector `V`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:56
-# b66bf62dc7db41c1a0b34208e5c81f71
 msgid "For matrix-matrix multiplications, see gf_spmat('mult')."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:59
-# ea0dafcd578b4a6ab168c306f7f178e1
 msgid "``MtV = gf_spmat_get(spmat S, 'tmult', vec V)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:61
-# c28f09d0b5c048b69726e1fadac28a98
 msgid "Product of `M` transposed (conjugated if `M` is complex) with the vector `V`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:65
-# 363609d767194833929c3ed5d0eca413
 msgid "``D = gf_spmat_get(spmat S, 'diag'[, list E])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:67
-# 96fb1172351e4b76a370dd89dfbb0107
 msgid "Return the diagonal of `M` as a vector."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:69
-# f43e17f15d6f4138a55790de6a3efc13
 msgid "If `E` is used, return the sub-diagonals whose ranks are given in E."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:72
-# 883dbc80bf16488980ff904f5bdf561a
 msgid "``s = gf_spmat_get(spmat S, 'storage')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:74
-# 7bc473eaeca849ffba63ea20b5b50349
 msgid "Return the storage type currently used for the matrix."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:76
-# 4523834a34714a0c9ccdc51fe921d7f5
 msgid "The storage is returned as a string, either 'CSC' or 'WSC'."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:79
-# 3fd3e89e646e4ffeb5350788a583e98e
 msgid "``{ni,nj} = gf_spmat_get(spmat S, 'size')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:81
-# 13a1f7ec3a744ece8cc9d6f0b316f95b
 msgid "Return a vector where `ni` and `nj` are the dimensions of the matrix."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:84
-# e750c34d4f884d83bb33e4bad6beed83
 msgid "``b = gf_spmat_get(spmat S, 'is_complex')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:86
-# 01c4bfe1da2b43ae95f19fcb4b1d96ac
 msgid "Return 1 if the matrix contains complex values."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:89
-# e7a7f6e7fbf74f16859e4aea4465a6d2
 msgid "``{JC, IR} = gf_spmat_get(spmat S, 'csc_ind')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:91
-# d5dd3d997aab46feb753b3f65bfa0bcd
 msgid "Return the two usual index arrays of CSC storage."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:93
 #: ../source/matlab/cmdref_gf_spmat_get.rst:100
-# cb7849fd84b8448a891c20ec2e423a69
-# 45d451fc6fb748bc9e49954e5f554246
 msgid "If `M` is not stored as a CSC matrix, it is converted into CSC."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:96
-# c73900bdc9be4a5d8449d7a9fac94b2e
 msgid "``V = gf_spmat_get(spmat S, 'csc_val')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:98
-# 2fd6f6b1380f47b795cc7079cae9b833
 msgid "Return the array of values of all non-zero entries of `M`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:103
-# 5f1f2c5bf44d4411ae314caae73ff1ee
 msgid "``{N, U0} = gf_spmat_get(spmat S, 'dirichlet nullspace', vec R)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:105
-# 891d0fc724904decb18c0ed57ae38720
 msgid "Solve the dirichlet conditions `M.U=R`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:107
-# 2c947a66936d42e58983ac6103146dd4
 msgid "A solution `U0` which has a minimum L2-norm is returned, with a sparse matrix `N` containing an orthogonal basis of the kernel of the (assembled) constraints matrix `M` (hence, the PDE linear system should be solved on this subspace): the initial problem"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:112
-# fb3b26baf1604aba80379313a28a81a8
 msgid "`K.U = B` with constraints `M.U = R`"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:114
-# 580011c9a26a4bfa8582e9d54bed4384
 msgid "is replaced by"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:116
-# 8669aa17a3974656abc137bc9efd4bf0
 msgid "`(N'.K.N).UU = N'.B` with `U = N.UU + U0`"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:119
-# def1bd1962af43a0ab5326b894bc3697
 msgid "``gf_spmat_get(spmat S, 'save', string format, string filename)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:121
-# eb87baa2bead4bd6a8fa6cdb0c472f6e
 msgid "Export the sparse matrix."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:123
-# 77bebb8ed17a499482f0b95465f71688
 msgid "the format of the file may be 'hb' for Harwell-Boeing, or 'mm' for Matrix-Market."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:127
-# ff0a0b25387c49d7b20338fb54926ebe
 msgid "``s = gf_spmat_get(spmat S, 'char')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:129
-# fc55bf34034549938d9a9973b4c08142
 msgid "Output a (unique) string representation of the spmat."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:131
-# 58827b4809f84f6badc775225e107fb4
 msgid "This can be used to perform comparisons between two different spmat objects. This function is to be completed."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:137
-# 9bf3ded0131a4bd3af855a5fe84aacc0
 msgid "``gf_spmat_get(spmat S, 'display')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:139
-# 43d0691dd0a64b70964eb150a01ad4fb
 msgid "displays a short summary for a spmat object."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:142
-# fa942045b2684094ae44d0ce1987487d
 msgid "``{mantissa_r, mantissa_i, exponent} = gf_spmat_get(spmat S, 'determinant')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_spmat_get.rst:144
-# aedb6de477b14e5c8d91c75bc9ad65c9
 msgid "returns the matrix determinant calculated using MUMPS."
 msgstr ""
 

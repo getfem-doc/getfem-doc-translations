@@ -17,477 +17,382 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/scilab/cmdref_gf_model_get.rst:8
-# 3be413339190411e832e2b5e8e17038d
 msgid "gf_model_get"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:10
-# 2d82b76ad95544ecac6437dca45701d7
 msgid "**Synopsis**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:60
-# 3f848ac4aa854f11a53841dbfd497352
 msgid "**Description :**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:63
-# f906e5bd57ac480ca02076b66bf744eb
 msgid "Get information from a model object."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:66
-# fe704ffe2eb149f1bb93b99ca7016d97
 msgid "**Command list :**"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:70
-# c21e64b8409541a4971d0cc94ddb23b5
 msgid "``b = gf_model_get(model M, 'is_complex')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:72
-# eed4c8255bb24b7e9139994cbc396735
 msgid "Return 0 is the model is real, 1 if it is complex."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:75
-# 7b5c54a0698e4cae808d4d6258469f12
 msgid "``T = gf_model_get(model M, 'nbdof')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:77
-# 8d96158fbcea47ff97e0da66f968e055
 msgid "Return the total number of degrees of freedom of the model."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:80
-# 25ea55eb31f64e978deb3f22ef00ce76
 msgid "``dt = gf_model_get(model M, 'get time step')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:82
-# 7200a5f838d3467aa100b076d6564cfa
 msgid "Gives the value of the time step."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:85
-# d97bfda23cd1427da9d49a99b3851293
 msgid "``t = gf_model_get(model M, 'get time')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:87
-# b821e689eff349168b485bb4f5034cf5
 msgid "Give the value of the data <literal>t</literal> corresponding to the current time."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:91
-# 40879944a58147fa9171bc83f1443f10
 msgid "``T = gf_model_get(model M, 'tangent_matrix')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:93
-# e847dad5719b43548954a576bcfcb28e
 msgid "Return the tangent matrix stored in the model ."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:96
-# f10491d81ea64d4e8c7037e74fcf32bc
 msgid "``gf_model_get(model M, 'rhs')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:98
-# 2039c1b9ebbf4659837dc1cb080e2d09
 msgid "Return the right hand side of the tangent problem."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:101
-# 981b0a4e290347b183811eb73c024bdc
 msgid "``gf_model_get(model M, 'brick term rhs', int ind_brick[, int ind_term, int sym, int ind_iter])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:103
-# 1eb7bc27d0484b98a212da21566f11e4
 msgid "Gives the access to the part of the right hand side of a term of a particular nonlinear brick. Does not account of the eventual time dispatcher. An assembly of the rhs has to be done first. <literal>ind_brick</literal> is the brick index. <literal>ind_term</literal> is the index of the term inside the brick (default value : 1). <literal>sym</literal> is to access to the second right hand side of for symmetric terms acting on two different variables (default is 0). <literal>ind_iter</literal> is the iteration number when time dispatchers are used (default is 1)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:115
-# 372161dc24d24096871902398bc3ebe9
 msgid "``z = gf_model_get(model M, 'memsize')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:117
-# 12ebd863d20b411d9caf43d80bce8fc8
 msgid "Return a rough approximation of the amount of memory (in bytes) used by the model."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:121
-# 67f4bd0d4fe640e3a5c4871c8c5337e4
 msgid "``gf_model_get(model M, 'variable list')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:123
-# 69054b2fe5e04a968bb8abc1da992e3e
 msgid "print to the output the list of variables and constants of the model."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:126
-# 444bfd9ba4b64e3fa4ccc5e62a3e7dca
 msgid "``gf_model_get(model M, 'brick list')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:128
-# 465dafaa15f941d98b7315183110485c
 msgid "print to the output the list of bricks of the model."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:131
-# e492c2d2742d4a738d3f91cc47bb1795
 msgid "``gf_model_get(model M, 'list residuals')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:133
-# 4ceefbbc06d84d5a9db5375bd2ca5ae8
 msgid "print to the output the residuals corresponding to all terms included in the model."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:137
-# 0a213f0b5d8049049b28e49d2cbb72b0
 msgid "``V = gf_model_get(model M, 'variable', string name)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:139
-# f5957fefa3b1413a8422da2211eb8b60
 msgid "Gives the value of a variable or data."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:142
-# a756ff0f1c8a4c4f9a726d4189b63d10
 msgid "``V = gf_model_get(model M, 'interpolation', string expr, {mesh_fem mf | mesh_imd mimd | vec pts,  mesh m}[, int region[, int extrapolation[, int rg_source]]])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:144
-# b5fa922750f14d7b98e01f0c588c4670
 msgid "Interpolate a certain expression with respect to the mesh_fem <literal>mf</literal> or the mesh_im_data <literal>mimd</literal> or the set of points <literal>pts</literal> on mesh <literal>m</literal>. The expression has to be valid according to the high-level generic assembly language possibly including references to the variables and data of the model."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:150
-# 12216629c75b444eba3e87a79c4dea41
 msgid "The options <literal>extrapolation</literal> and <literal>rg_source</literal> are specific to interpolations with respect to a set of points <literal>pts</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:154
-# 14d8c7ad23de43bda9f1af315d30b4cb
 msgid "``V = gf_model_get(model M, 'local_projection', mesh_im mim, string expr, mesh_fem mf[, int region])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:156
-# 0ff884a829fe433f944f4389625406f0
 msgid "Make an elementwise L2 projection of an expression with respect to the mesh_fem <literal>mf</literal>. This mesh_fem has to be a discontinuous one. The expression has to be valid according to the high-level generic assembly language possibly including references to the variables and data of the model."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:164
-# 9114c1efe7214705b6e9253c34b86d9a
 msgid "``mf = gf_model_get(model M, 'mesh fem of variable', string name)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:166
-# f6652f78088345eaa02265d389bef429
 msgid "Gives access to the <literal>mesh_fem</literal> of a variable or data."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:169
-# b7555af4aca14b268132257d0ff744c0
 msgid "``name = gf_model_get(model M, 'mult varname Dirichlet', int ind_brick)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:171
-# 98018338c0074c10ab408cececa0ffca
 msgid "Gives the name of the multiplier variable for a Dirichlet brick. If the brick is not a Dirichlet condition with multiplier brick, this function has an undefined behavior"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:176
-# d9805e066db1449abeac6005bd3858a5
 msgid "``I = gf_model_get(model M, 'interval of variable', string varname)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:178
-# 5e63582f824d494eb08a83ffccc590ab
 msgid "Gives the interval of the variable <literal>varname</literal> in the linear system of the model."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:182
-# 00d58f25c31b4b238c1763f1a296761e
 msgid "``V = gf_model_get(model M, 'from variables')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:184
-# 414123d467a94a8abbbe64df855cf33c
 msgid "Return the vector of all the degrees of freedom of the model consisting of the concatenation of the variables of the model (useful to solve your problem with you own solver)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:189
-# 863cbc23869a4b1497204bd4ce308d91
 msgid "``gf_model_get(model M, 'assembly'[, string option])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:191
-# b2c391198497484b94e73e88927c42df
 msgid "Assembly of the tangent system taking into account the terms from all bricks. <literal>option</literal>, if specified, should be 'build_all', 'build_rhs', 'build_matrix'. The default is to build the whole tangent linear system (matrix and rhs). This function is useful to solve your problem with you own solver."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:199
-# b1bf12d4e11c446593976a505d33699f
 msgid "``{nbit, converged} = gf_model_get(model M, 'solve'[, ...])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:201
-# c9419e0630534376a9811cde3f92a685
 msgid "Run the standard getfem solver."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:203
-# 75040e3a931641dd8f15cda2b45e6599
 msgid "Note that you should be able to use your own solver if you want (it is possible to obtain the tangent matrix and its right hand side with the gf_model_get(model M, 'tangent matrix') etc.)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:207
-# 0507a0ae35574070be82accab2fda181
 msgid "Various options can be specified:"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:210
-# 2a500b0e1c3c4f0b9c0a08b283872738
 msgid "'noisy' or 'very_noisy'"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:210
-# 5a96b5f2088d42a3b1a1f6ba4e633849
 msgid "the solver will display some information showing the progress (residual values etc.)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:212
-# 2146d9cc5c924d1d8dff01d9895d120a
 msgid "'max_iter', int NIT"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:213
-# 0138fa815b1745d7ae50c7fd57308222
 msgid "set the maximum iterations numbers."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:214
-# 2b831c519aae471e815d2163bab6ed5b
 msgid "'max_res', @float RES"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:215
-# a568f2ebf4f4407f8d65c105d182329d
 msgid "set the target residual value."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:217
-# d2b0ddd079c24e57b3e474370610543a
 msgid "'diverged_res', @float RES"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:217
-# 2c8235510bfc4eb69331b83e365e8cf3
 msgid "set the threshold value of the residual beyond which the iterative method is considered to diverge (default is 1e200)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:222
-# 636f84712f814340a61c50e956da0a30
 msgid "'lsolver', string SOLVER_NAME"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:220
-# 6efd3dcb1b994306be7c37dad6d34cdf
 msgid "select explicitely the solver used for the linear systems (the default value is 'auto', which lets getfem choose itself). Possible values are 'superlu', 'mumps' (if supported), 'cg/ildlt', 'gmres/ilu' and 'gmres/ilut'."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:227
-# f7e8c660e6f740ba83885b98dedf3c67
 msgid "'lsearch', string LINE_SEARCH_NAME"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:225
-# 81a6a6f57ac0473ba29389672232e768
 msgid "select explicitely the line search method used for the linear systems (the default value is 'default'). Possible values are 'simplest', 'systematic', 'quadratic' or 'basic'."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:229
-# a92b26fd254e4d749ca84facdad6e6dc
 msgid "Return the number of iterations, if an iterative method is used."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:231
-# 67a162650a64445082217a2d14a93251
 msgid "Note that it is possible to disable some variables (see gf_model_set(model M, 'disable variable') ) in order to solve the problem only with respect to a subset of variables (the disabled variables are then considered as data) for instance to replace the global Newton strategy with a fixed point one."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:240
-# 99b3b6e024ba4adf9889a031b793be4f
 msgid "``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar scale]]])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:242
-# 0e93b06c5aac4a5bbd05cdbb7c9ce928
 msgid "Test the consistency of the tangent matrix in some random positions and random directions (useful to test newly created bricks). <literal>EPS</literal> is the value of the small parameter for the finite difference computation of the derivative is the random direction (default is 1E-6). <literal>NN</literal> is the number of tests (default is 100). <literal>scale</literal> is a parameter for the random position (default is 1, 0 is an acceptable value) around the current position. Each dof of the random position is chosen in the range [current-scale, current+scale]."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:254
-# 7647b674e12b4cae8138ffc4d3adcec7
 msgid "``gf_model_get(model M, 'test tangent matrix term', string varname1, string varname2[, scalar EPS[, int NB[, scalar scale]]])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:256
-# d7c7f9a235ac412aa447063527ed6c7c
 msgid "Test the consistency of a part of the tangent matrix in some random positions and random directions (useful to test newly created bricks). The increment is only made on variable <literal>varname2</literal> and tested on the part of the residual corresponding to <literal>varname1</literal>. This means that only the term (<literal>varname1</literal>, <literal>varname2</literal>) of the tangent matrix is tested. <literal>EPS</literal> is the value of the small parameter for the finite difference computation of the derivative is the random direction (default is 1E-6). <literal>NN</literal> is the number of tests (default is 100). <literal>scale</literal> is a parameter for the random position (default is 1, 0 is an acceptable value) around the current position. Each dof of the random position is chosen in the range [current-scale, current+scale]."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:272
-# 88511be2ff4544908ad4ef9df6c1a583
 msgid "``expr = gf_model_get(model M, 'Neumann term', string varname, int region)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:274
-# 1046b83af2f24eb7b02b571d483ac50c
 msgid "Gives the assembly string corresponding to the Neumann term of the fem variable <literal>varname</literal> on <literal>region</literal>. It is deduced from the assembly string declared by the model bricks. <literal>region</literal> should be the index of a boundary region on the mesh where <literal>varname</literal> is defined. Care to call this function only after all the volumic bricks have been declared. Complains, if a brick omit to declare an assembly string."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:284
-# 12e093c8b4704be5b2748f4c51146bad
 msgid "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises or Tresca', string varname, string dataname_lambda, string dataname_mu, mesh_fem mf_vm[, string version])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:286
-# 24ec3ecb0cc940379c996d2da46d5d96
 msgid "Compute the Von-Mises stress or the Tresca stress of a field (only valid for isotropic linearized elasticity in 3D). <literal>version</literal> should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default). Parametrized by Lame coefficients."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:293
-# 64aa4237516843fe840efb462d2ea727
 msgid "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:295
-# 8fb1c28f620f46338d7a4965f11c95a6
 msgid "Compute the Von-Mises stress  of a displacement field for isotropic linearized elasticity in 3D or in 2D with plane strain assumption. Parametrized by Young modulus and Poisson ratio."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:301
-# 033d55a538d543aeb0f88d77a9e05e64
 msgid "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:303
-# 09a082e38ca44b24b1c0b02ecc89d9a1
 msgid "Compute the Von-Mises stress  of a displacement field for isotropic linearized elasticity in 3D or in 2D with plane stress assumption. Parametrized by Young modulus and Poisson ratio."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:309
-# cf99d1d2ed0c4598b71b154b42631565
 msgid "``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, string lawname, string dataname, mesh_fem mf_vm[, string version])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:311
-# cd89880d7b0945aca04258aba803947d
 msgid "Compute on <literal>mf_vm</literal> the Von-Mises stress or the Tresca stress of a field for nonlinear elasticity in 3D. <literal>lawname</literal> is the constitutive law which could be 'SaintVenant Kirchhoff', 'Mooney Rivlin', 'neo Hookean' or 'Ciarlet Geymonat'. <literal>dataname</literal> is a vector of parameters for the constitutive law. Its length depends on the law. It could be a short vector of constant values or a vector field described on a finite element method for variable coefficients. <literal>version</literal> should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:322
-# 5d151f433e3b4250901f1e62bca3ac93
 msgid "``V = gf_model_get(model M, 'compute finite strain elasticity Von Mises',  string lawname, string varname, string params, mesh_fem mf_vm[, int region])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:324
-# f67ed4e13880400c82a3496ac20b0b55
 msgid "Compute on <literal>mf_vm</literal> the Von-Mises stress of a field <literal>varname</literal> for nonlinear elasticity in 3D. <literal>lawname</literal> is the constitutive law which should be a valid name. <literal>params</literal> are the parameters law. It could be a short vector of constant values or may depend on data or variables of the model. Uses the high-level generic assembly."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:333
-# fba0506042944e0581534dac4df271e9
 msgid "``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string varname, string lawname, string dataname, mesh_fem mf_sigma)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:335
-# 0ec9e18a17db4f0287a6c9f2a34e6f2b
 msgid "Compute on <literal>mf_sigma</literal> the second Piola Kirchhoff stress tensor of a field for nonlinear elasticity in 3D. <literal>lawname</literal> is the constitutive law which could be 'SaintVenant Kirchhoff', 'Mooney Rivlin', 'neo Hookean' or 'Ciarlet Geymonat'. <literal>dataname</literal> is a vector of parameters for the constitutive law. Its length depends on the law. It could be a short vector of constant values or a vector field described on a finite element method for variable coefficients."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:346
-# d1f5fe9b99ec44adbae9f63eaaf429d7
 msgid "``gf_model_get(model M, 'elastoplasticity next iter', mesh_im mim, string varname, string previous_dep_name, string projname, string datalambda, string datamu, string datathreshold, string datasigma)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:348
-# 0c9b14cab3f24fd296c25520f795e191
 msgid "Used with the old (obsolete) elastoplasticity brick to pass from an iteration to the next one. Compute and save the stress constraints sigma for the next iterations. 'mim' is the integration method to use for the computation. 'varname' is the main variable of the problem. 'previous_dep_name' represents the displacement at the previous time step. 'projname' is the type of projection to use. For the moment it could only be 'Von Mises' or 'VM'. 'datalambda' and 'datamu' are the Lame coefficients of the material. 'datasigma' is a vector which will contain the new stress constraints values."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:359
-# a36f27cc260f4247891c133443b89e01
 msgid "``gf_model_get(model M, 'small strain elastoplasticity next iter', mesh_im mim,  string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int region = -1])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:361
-# 7e63200fe3204d198ff034288a6aa7ac
 msgid "Function that allows to pass from a time step to another for the small strain plastic brick. The parameters have to be exactly the same than the one of <literal>add_small_strain_elastoplasticity_brick</literal>, so see the documentation of this function for the explanations. Basically, this brick computes the plastic strain and the plastic multiplier and stores them for the next step. Additionaly, it copies the computed displacement to the data that stores the displacement of the previous time step (typically 'u' to 'Previous_u'). It has to be called before any use of <literal>compute_small_strain_elastoplasticity_Von_Mises</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:374
-# 7e9cab8fa0dc444396cfdf525ba52202
 msgid "``V = gf_model_get(model M, 'small strain elastoplasticity Von Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int region])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:376
-# 350887c07ca942f5b0425ab1d0e0eaa6
 msgid "This function computes the Von Mises stress field with respect to a small strain elastoplasticity term, approximated on <literal>mf_vm</literal>, and stores the result into <literal>VM</literal>.  All other parameters have to be exactly the same as for <literal>add_small_strain_elastoplasticity_brick</literal>. Remember that <literal>small_strain_elastoplasticity_next_iter</literal> has to be called before any call of this function."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:385
-# 9281d5b3d2f94a47b0b8a076c10f7058
 msgid "``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', string datasigma, mesh_fem mf_vm[, string version])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:387
-# 5b6bfaac8b90482bb3a487a28a06eb1b
 msgid "Compute on <literal>mf_vm</literal> the Von-Mises or the Tresca stress of a field for plasticity and return it into the vector V. <literal>datasigma</literal> is a vector which contains the stress constraints values supported by the mesh. <literal>version</literal> should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:392
-# d269a5e91fbd4f3aad5ccf37802591be
 msgid "``V = gf_model_get(model M, 'compute plastic part', mesh_im mim, mesh_fem mf_pl, string varname, string previous_dep_name, string projname, string datalambda, string datamu, string datathreshold, string datasigma)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:394
-# 59df9274fe904a189a03cc9eafa4789b
 msgid "Compute on <literal>mf_pl</literal> the plastic part and return it into the vector V. <literal>datasigma</literal> is a vector which contains the stress constraints values supported by the mesh."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:398
-# a51321452c0f483a829c17e4a690099f
 msgid "``gf_model_get(model M, 'finite strain elastoplasticity next iter', mesh_im mim, string lawname, string unknowns_type, [, string varnames, ...] [, string params, ...] [, int region = -1])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:400
-# 265201ef0326456aba3a3592e3e10d90
 msgid "Function that allows to pass from a time step to another for the finite strain plastic brick. The parameters have to be exactly the same than the one of <literal>add_finite_strain_elastoplasticity_brick</literal>, so see the documentation of this function for the explanations. Basically, this brick computes the plastic strain and the plastic multiplier and stores them for the next step. For the Simo-Miehe law which is currently the only one implemented, this function updates the state variables defined in the last two entries of <literal>varnames</literal>, and resets the plastic multiplier field given as the second entry of <literal>varnames</literal>."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:413
-# e1ddafd7db3849b3a08e5d8833411dbe
 msgid "``V = gf_model_get(model M, 'compute finite strain elastoplasticity Von Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, [, string varnames, ...] [, string params, ...] [, int region = -1])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:415
-# 7a7866f14e3f4f8bada97c23186daf73
 msgid "Compute on <literal>mf_vm</literal> the Von-Mises or the Tresca stress of a field for plasticity and return it into the vector V. The first input parameters ar as in the function 'finite strain elastoplasticity next iter'."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:420
-# ac5e540dc9024143a58cae5d44873dcd
 msgid "``V = gf_model_get(model M, 'sliding data group name of large sliding contact brick', int indbrick)``"
 msgstr ""
 
@@ -497,72 +402,54 @@ msgstr ""
 #: ../source/scilab/cmdref_gf_model_get.rst:440
 #: ../source/scilab/cmdref_gf_model_get.rst:446
 #: ../source/scilab/cmdref_gf_model_get.rst:452
-# 88747c1802de4afcbb4eac093341917d
-# 38141f05656e4e8bbdee841a5af97388
-# eda7835576f34a6a863f80055114312f
-# 2eb18b7542144aaebdc3a73ef565506e
-# 3827963c03304d3eb54a972ce6e4788a
-# 4f12fec5a8f94600ab397a44b049b26f
 msgid "Gives the name of the group of variables corresponding to the sliding data for an existing large sliding contact brick."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:426
-# f07153510ab248af8f2406c51f08d9f0
 msgid "``V = gf_model_get(model M, 'displacement group name of large sliding contact brick', int indbrick)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:432
-# 858ad2346bc8445281e3b85e46ab553f
 msgid "``V = gf_model_get(model M, 'transformation name of large sliding contact brick', int indbrick)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:438
-# 7fecd66713b142c2bec58814bc40a62d
 msgid "``V = gf_model_get(model M, 'sliding data group name of Nitsche large sliding contact brick', int indbrick)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:444
-# b7ff45cd29fb48068f03e3595d4954ec
 msgid "``V = gf_model_get(model M, 'displacement group name of Nitsche large sliding contact brick', int indbrick)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:450
-# 9a63a0306da74167bae9038737c8f164
 msgid "``V = gf_model_get(model M, 'transformation name of Nitsche large sliding contact brick', int indbrick)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:456
-# efa470f9b17941d697c2f17fdcaa42c2
 msgid "``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:458
-# f6a8ef2a483a475cb598d6e98f402dad
 msgid "Gives the matrix term ind_term of the brick ind_brick if it exists"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:462
-# 75b55699cc5b4841b330e8f922bc191f
 msgid "``s = gf_model_get(model M, 'char')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:464
-# ff492e11060143f8946131ee8e49eb3a
 msgid "Output a (unique) string representation of the model."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:466
-# be9fe29c2706412d94b52db6ed656eb6
 msgid "This can be used to perform comparisons between two different model objects. This function is to be completed."
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:472
-# 9f423b79d8b2468bbc023a49778d0244
 msgid "``gf_model_get(model M, 'display')``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_model_get.rst:474
-# c8fdb130b8e0472fae7efe48356f353f
 msgid "displays a short summary for a model object."
 msgstr ""
 

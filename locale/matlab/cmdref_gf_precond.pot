@@ -17,122 +17,98 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/matlab/cmdref_gf_precond.rst:8
-# 9fc3c7a607d442dbbac72946c13145b8
 msgid "gf_precond"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:10
-# 0661dda0307c41b6b09292c67fcf839d
 msgid "**Synopsis**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:24
-# d2348dfba1be4413bba2fc73b279f0f4
 msgid "**Description :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:27
-# 3d5a7e05dc1b42e28c1eea9e8b707313
 msgid "General constructor for precond objects."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:29
-# 977548c0a88d4b058eb73eda7d897095
 msgid "The preconditioners may store REAL or COMPLEX values. They accept getfem sparse matrices and Matlab sparse matrices."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:33
-# 55ffad3bdc7941cc9665102815888f04
 msgid "**Command list :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:37
-# 285b477640624806b68345eb3ad40c51
 msgid "``PC = gf_precond('identity')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:39
-# b20f906f975a43f1a05f9d8105afeb10
 msgid "Create a REAL identity precondioner."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:42
-# 1396ec29c6d34784be94ad8c1b295ffe
 msgid "``PC = gf_precond('cidentity')``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:44
-# 7eb13cb2710640edbc45cc5edbaa678c
 msgid "Create a COMPLEX identity precondioner."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:47
-# bbb379722e8248a0b5c9cda2c66a7cff
 msgid "``PC = gf_precond('diagonal', vec D)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:49
-# 73e7bb16c15749c2934d8c580570a7d1
 msgid "Create a diagonal precondioner."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:52
-# 46061e136a014bb6bcf2904e1a37bb04
 msgid "``PC = gf_precond('ildlt', spmat m)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:54
-# 51cc52b8eba340f9b0080ecff74abf77
 msgid "Create an ILDLT (Cholesky) preconditioner for the (symmetric) sparse matrix `m`. This preconditioner has the same sparsity pattern than `m` (no fill-in)."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:59
-# d720ca98a733488989563780c73c768f
 msgid "``PC = gf_precond('ilu', spmat m)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:61
-# a7202e2aa1d149808d03c6a54be8149e
 msgid "Create an ILU (Incomplete LU) preconditioner for the sparse matrix `m`. This preconditioner has the same sparsity pattern than `m` (no fill-in)."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:66
-# d91ef183140b42c3bb6fee0346bba239
 msgid "``PC = gf_precond('ildltt', spmat m[, int fillin[, scalar threshold]])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:68
-# b70cf5aeeea44ac7bd10d0b0302459e8
 msgid "Create an ILDLTT (Cholesky with filling) preconditioner for the (symmetric) sparse matrix `m`. The preconditioner may add at most `fillin` additional non-zero entries on each line. The default value for `fillin` is 10, and the default threshold is1e-7."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:74
-# d260b9b6c5984f19bad4667f6aa516e1
 msgid "``PC = gf_precond('ilut', spmat m[, int fillin[, scalar threshold]])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:76
-# 4da76456b848419d9a6e71be28b70d94
 msgid "Create an ILUT (Incomplete LU with filling) preconditioner for the sparse matrix `m`. The preconditioner may add at most `fillin` additional non-zero entries on each line. The default value for `fillin` is 10, and the default threshold is 1e-7."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:82
-# b5847775c16c425d94c30d39ded63c22
 msgid "``PC = gf_precond('superlu', spmat m)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:84
-# fe9fc0715c5d4861b57e66422eff8c49
 msgid "Uses SuperLU to build an exact factorization of the sparse matrix `m`. This preconditioner is only available if the getfem-interface was built with SuperLU support. Note that LU factorization is likely to eat all your memory for 3D problems."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:90
-# 72ce5610b68b47089b9cdd362e7c1a99
 msgid "``PC = gf_precond('spmat', spmat m)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_precond.rst:92
-# 1971c49d8899461c9a2077e154b7263c
 msgid "Preconditionner given explicitely by a sparse matrix."
 msgstr ""
 

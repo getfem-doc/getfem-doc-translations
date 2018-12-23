@@ -17,92 +17,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/matlab/cmdref_gf_asm.rst:8
-# e7b36a41b1d24ff69b0ad4ea204a3ce5
 msgid "gf_asm"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:10
-# 2655c8e34d414fc7bdc546ee008432e0
 msgid "**Synopsis**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:42
-# 5ffff9a22bf842b9a8a6ea6abdca8b57
 msgid "**Description :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:46
-# 9a8a397d5ec442bb8a282929cba75680
 msgid "General assembly function."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:48
-# 0da3dde8614d407e865b7ef6d881bab6
 msgid "Many of the functions below use more than one mesh_fem: the main mesh_fem (mf_u) used for the main unknown, and data mesh_fem (mf_d) used for the data. It is always assumed that the Qdim of mf_d is equal to 1: if mf_d is used to describe vector or tensor data, you just have to \"stack\" (in fortran ordering) as many scalar fields as necessary."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:56
-# f814a3d4604c43d2a3dca067fec50a22
 msgid "**Command list :**"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:60
-# eed6a8bfeeda4443a8d800f3cab2d02b
 msgid "``{...} = gf_asm('generic', mesh_im mim, int order, string expression, int region, [model model, ['Secondary_domain', 'name',]] [string varname, int is_variable[, {mesh_fem mf, mesh_imd mimd}], value], ['select_output', 'varname1'[, 'varname2]], ...)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:62
-# 49e248690e3c446ea00d68fd516df319
 msgid "High-level generic assembly procedure for volumic or boundary assembly."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:64
-# d0181c12888c451ca2eac5a96e52d0e5
 msgid "Performs the generic assembly of `expression` with the integration method `mim` on the mesh region of index `region` (-1 means all elements of the mesh). The same mesh should be shared by the integration method and all the finite element methods or mesh_im_data corresponding to the variables."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:70
-# 609495850b59417e926060ac13a417ee
 msgid "`order` indicates either that the (scalar) potential (order = 0) or the (vector) residual (order = 1) or the tangent (matrix) (order = 2) is to be computed."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:74
-# f398c374d39b4543b0c05e9fb088e4ef
 msgid "`model` is an optional parameter allowing to take into account all variables and data of a model. Note that all enabled variables of the model will occupy space in the returned vector/matrix corresponding to their degrees of freedom in the global system, even if they are not present in `expression`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:80
-# c22ac96a53494818a3744bb9b0a7400f
 msgid "The variables and constants (data) are listed after the region number (or optionally the model). For each variable/constant, a name must be given first (as it is referred in the assembly string), then an integer equal to 1 or 0 is expected respectively for declaring a variable or a constant, then the finite element method if it is a fem variable/constant or the mesh_im_data if it is data defined on integration points, and the vector representing the value of the variable/constant. It is possible to give an arbitrary number of variable/constant. The difference between a variable and a constant is that test functions are only available for variables, not for constants."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:92
-# d21477b95f054db09371b994aa8d4709
 msgid "`select_output` is an optional parameter which allows to reduce the output vecotr (for `order` equal to 1) or the matrix (for `order` equal to 2) to the degrees of freedom of the specified variables. One variable has to be specified for a vector ouptut and two for a matrix output."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:98
-# 2a48b506940e4bc996427d0482d2a7be
 msgid "Note that if several variables are given, the assembly of the tangent matrix/residual vector will be done considering the order in the call of the function (the degrees of freedom of the first variable, then of the second one, and so on). If a model is provided, all degrees of freedom of the model will be counted first, even if some of the model variables do not appear in `expression`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:105
-# 6876ebd9f3dd4dfb92ee7a3d024a67f5
 msgid "For example, the L2 norm of a vector field \"u\" can be computed with::"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:111
-# eeb33257714d4c00b86d2a6beaf16b3e
 msgid "The nonhomogeneous Laplacian stiffness matrix of a scalar field can be evaluated with::"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:120
-# 4068f4a28c294f8da351766ceac4fe01
 msgid "``M = gf_asm('mass matrix', mesh_im mim, mesh_fem mf1[, mesh_fem mf2[, int region]])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:122
-# 70e906b1df3c4e5ea162c1c8206d2911
 msgid "Assembly of a mass matrix."
 msgstr ""
 
@@ -116,153 +98,115 @@ msgstr ""
 #: ../source/matlab/cmdref_gf_asm.rst:407
 #: ../source/matlab/cmdref_gf_asm.rst:415
 #: ../source/matlab/cmdref_gf_asm.rst:423
-# 7b49b7e248ca4bd2afdc31c89724f554
-# c5d1516728e34bd19e7ca872eb26855f
-# 34b0681e3e2c43398f40cd0aea1733c1
-# d0b23176ca9b4545b0204bb0695f9c3b
-# af12f056aade4ebcb7d0cb879cc0013a
-# 90787ff964ca4682897c2a9a04f745b8
-# 9421e179725644b5a1ed8054bed1b34f
-# 97526ceb9af34c318cec66e0b86da32c
-# 611759664d84400f97da13ea33f4b509
-# 85187b94ac5049888f93b797871624b4
 msgid "Return a spmat object."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:128
-# ade5cd6f13f040c7a58732e2ec5497d1
 msgid "``L = gf_asm('laplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec a[, int region])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:130
-# 286b4af621fc497cad4114ff1f3a87ab
 msgid "Assembly of the matrix for the Laplacian problem."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:132
-# a990c9fed5ba4a8aaeb095818db00db7
 msgid ":math:`\\nabla\\cdot(a(x)\\nabla u)`  with `a` a scalar."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:138
-# 051c8ce4a63d4cdbb73006f8e389ede1
 msgid "``Le = gf_asm('linear elasticity', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec lambda_d, vec mu_d[, int region])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:140
-# da2b3c29ee4a4d559bf8508d90c58e22
 msgid "Assembles of the matrix for the linear (isotropic) elasticity problem."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:142
-# 1f6cfdd8772841538e709516c77f7b77
 msgid ":math:`\\nabla\\cdot(C(x):\\nabla u)` with :math:`C` defined via `lambda_d` and `mu_d`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:149
-# 63ec4ad8f18c419cbe5cd8dc090edf33
 msgid "``TRHS = gf_asm('nonlinear elasticity', mesh_im mim, mesh_fem mf_u, vec U, string law, mesh_fem mf_d, mat params, {'tangent matrix'|'rhs'|'incompressible tangent matrix', mesh_fem mf_p, vec P|'incompressible rhs', mesh_fem mf_p, vec P})``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:151
-# 8d8e396d1844429f83b3f52fa4f2fef5
 msgid "Assembles terms (tangent matrix and right hand side) for nonlinear elasticity."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:153
-# df3fb7121ac04bdbafb37cfe208e2021
 msgid "The solution `U` is required at the current time-step. The `law` may be choosen among:"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:156
-# 457e8bdc9f6d4cc7939ff05686bae5c2
 msgid "'SaintVenant Kirchhoff': Linearized law, should be avoided). This law has the two usual Lame coefficients as parameters, called lambda and mu."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:159
-# f3254568f5dd44d9852ac7b87c7ffd7e
 msgid "'Mooney Rivlin': This law has three parameters, called C1, C2 and D1. Can be preceded with the words 'compressible' or 'incompressible' to force a specific version. By default, the incompressible version is considered which requires only the first two material coefficients."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:164
-# 200b179f9ab440f4ae6cff61c2a4ac0b
 msgid "'neo Hookean': A special case of the 'Mooney Rivlin' law that requires one material coefficient less (C2 = 0). By default, its compressible version is used."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:167
-# 9b058730d82a46e1b0d3c1838da30e0f
 msgid "'Ciarlet Geymonat': This law has 3 parameters, called lambda, mu and gamma, with gamma chosen such that gamma is in ]-lambda/2-mu, -mu[."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:171
-# 8239dafbec1d4ebaac0fa3fc45c46c06
 msgid "The parameters of the material law are described on the mesh_fem `mf_d`. The matrix `params` should have `nbdof(mf_d)` columns, each row correspounds to a parameter."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:175
-# 8b450d8dc8464f23b33480ee50196bb0
 msgid "The last argument selects what is to be built: either the tangent matrix, or the right hand side. If the incompressibility is considered, it should be followed by a mesh_fem `mf_p`, for the pression."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:180
-# 4f19faabe2934d1094ec07d2025c8a31
 msgid "Return a spmat object (tangent matrix), vec object (right hand side), tuple of spmat objects (incompressible tangent matrix), or tuple of vec objects (incompressible right hand side)."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:186
-# cc2c3f2055454c1898e15baae65f9b31
 msgid "``A = gf_asm('helmholtz', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec k[, int region])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:188
-# 854be3e6da934cb99babdc6122c5db20
 msgid "Assembly of the matrix for the Helmholtz problem."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:190
-# 556a06047ac34cb4bde133fef3dc3a43
 msgid ":math:`\\Delta u + k^2 u` = 0,  with `k` complex scalar."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:196
-# 4e041fe98fc44c30bc5670818348ca77
 msgid "``A = gf_asm('bilaplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec a[, int region])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:198
-# 050fbcc9b1bc412ebdc5e29b4fb9974d
 msgid "Assembly of the matrix for the Bilaplacian problem."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:200
 #: ../source/matlab/cmdref_gf_asm.rst:210
-# 85e6739dad4e494894b8555b4fdc5dc4
-# 706272581dd54758945d1ceef0494085
 msgid ":math:`\\Delta(a(x)\\Delta u) = 0`   with `a` scalar."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:206
-# 0de873a94daa4928bcdbb19ef1b3b7c3
 msgid "``A = gf_asm('bilaplacian KL', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec a, vec nu[, int region])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:208
-# f4264b32953e4bf4aec05d9592db5b8d
 msgid "Assembly of the matrix for the Bilaplacian problem with Kirchhoff-Love formulation."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:216
-# f26a102b5eef4a0a9df86f12256c6da9
 msgid "``V = gf_asm('volumic source', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec fd[, int region])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:218
-# 8912dfbdd398423fb23ea58890370299
 msgid "Assembly of a volumic source term."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:220
-# 4b83b626b1c444dba5efe497e4da73f8
 msgid "Output a vector `V`, assembled on the mesh_fem `mf_u`, using the data vector `fd` defined on the data mesh_fem `mf_d`. `fd` may be real or complex-valued."
 msgstr ""
 
@@ -270,275 +214,218 @@ msgstr ""
 #: ../source/matlab/cmdref_gf_asm.rst:236
 #: ../source/matlab/cmdref_gf_asm.rst:388
 #: ../source/matlab/cmdref_gf_asm.rst:399
-# 37e989933b5d441ca69c5cb53675e73d
-# 1bd64a133ca04ea8b5244b54f98cf0de
-# 89c9ede9e31545bfafe411907b938d25
-# 7e82a67e04b94adc9d4ad4561e81dfd7
 msgid "Return a vec object."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:228
-# 98ce0900b52c45d2b737534518dc7f19
 msgid "``B = gf_asm('boundary source', int bnum, mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec G)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:230
-# 37da93d46c15451da5098602673bb710
 msgid "Assembly of a boundary source term."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:232
-# 569dd813219d47c6a3fcd998acc10532
 msgid "`G` should be a [Qdim x N] matrix, where N is the number of dof of `mf_d`, and Qdim is the dimension of the unkown u (that is set when creating the mesh_fem)."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:240
-# e961580b2e594b70a77bcf2b16d13d2e
 msgid "``{HH, RR} = gf_asm('dirichlet', int bnum, mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, mat H, vec R [, scalar threshold])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:242
-# 5f8be3463aff4d5cb7c2a6c6547fc85d
 msgid "Assembly of Dirichlet conditions of type `h.u = r`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:244
-# f171a62efca64131be3d91fb6d54c972
 msgid "Handle `h.u = r` where h is a square matrix (of any rank) whose size is equal to the dimension of the unkown u. This matrix is stored in `H`, one column per dof in `mf_d`, each column containing the values of the matrix h stored in fortran order:"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:253
-# 6aeede3cce774e26abe50a199fa4e637
 msgid "if u is a 2D vector field."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:255
-# d1355ef4110448dbb1c30ae54e955041
 msgid "Of course, if the unknown is a scalar field, you just have to set `H = ones(1, N)`, where N is the number of dof of `mf_d`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:258
-# fc28de851a264f85a0aca544ead8e7d0
 msgid "This is basically the same than calling gf_asm('boundary qu term') for `H` and calling gf_asm('neumann') for `R`, except that this function tries to produce a 'better' (more diagonal) constraints matrix (when possible)."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:263
-# 00a2732134294b05a759216c85300c8b
 msgid "See also gf_spmat_get(spmat S, 'Dirichlet_nullspace')."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:266
-# ee3389a9397f4b1b8a17fef9e29387b1
 msgid "``Q = gf_asm('boundary qu term',int boundary_num, mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, mat q)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:268
-# b8995d4fa864432db4bcf79fa21d2f4f
 msgid "Assembly of a boundary qu term."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:270
-# a288d29e815a40e19fed0bcf3909f904
 msgid "`q` should be be a [Qdim x Qdim x N] array, where N is the number of dof of `mf_d`, and Qdim is the dimension of the unkown u (that is set when creating the mesh_fem)."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:278
-# 900d498e587441be86554747b3139eea
 msgid "``gf_asm('define function', string name, int nb_args, string expression[, string expression_derivative_t[, string expression_derivative_u]])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:280
-# 7169298ee3f841c8ad12357b86b13562
 msgid "Define a new function `name` which can be used in high level generic assembly. The function can have one or two parameters. In `expression` all available predefined function or operation of the generic assembly can be used. However, no reference to some variables or data can be specified. The argument of the function is `t` for a one parameter function and `t` and `u` for a two parameter function. For instance 'sin(pi*t)+2*t*t' is a valid expression for a one parameter function and 'sin(max(t,u)*pi)' is a valid expression for a two parameters function. `expression_derivative_t` and `expression_derivative_u` are optional expressions for the derivatives with respect to `t` and `u`. If they are not furnished, a symbolic derivation is used."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:295
-# bd1e600d851f41ef93f73ed50c3825bd
 msgid "``gf_asm('undefine function', string name)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:297
-# c47afd0c4f934540aca925a5c313a6a5
 msgid "Cancel the definition of a previously defined function `name` for the high level generic assembly."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:301
-# 9e2df5e74b5945c981f527cc36b9881d
 msgid "``gf_asm('define linear hardening function', string name, scalar sigma_y0, scalar H, ... [string 'Frobenius'])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:303
-# 7799e7a4e9b545e588654bb4c9566d27
 msgid "Define a new linear hardening function under the name `name`, with initial yield stress `sigma_y0` and hardening modulus H. If an extra string argument with the value 'Frobenius' is provided, the hardening function is expressed in terms of Frobenius norms of its input strain and output stress, instead of their Von-Mises equivalents."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:310
-# db4b922a423f4bd2aa82916df2ee98cf
 msgid "``gf_asm('define Ramberg Osgood hardening function', string name, scalar sigma_ref, {scalar eps_ref | scalar E, scalar alpha}, scalar n[, string 'Frobenius'])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:312
-# 3b3936fba381412f9f18d215f6e72f9d
 msgid "Define a new Ramberg Osgood hardening function under the name `name`, with initial yield stress `sigma_y0` and hardening modulus H. If an extra string argument with the value 'Frobenius' is provided, the hardening function is expressed in terms of Frobenius norms of its input strain and output stress, instead of their Von-Mises equivalents."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:319
-# a6c70734aec942ca87ca40f65bc398c3
 msgid "``gf_asm('expression analysis', string expression [, {mesh mesh | mesh_im mim}] [, der_order] [, model model] [, string varname, int is_variable[, {mesh_fem mf | mesh_imd mimd}], ...])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:321
-# 3b872c61ca42452c9e1ebe7a30eff0ae
 msgid "Analyse a high-level generic assembly expression and print information about the provided expression."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:325
-# a7074aa12fbd48f1941b6751d4041e7e
 msgid "``{...} = gf_asm('volumic' [,CVLST], expr [, mesh_ims, mesh_fems, data...])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:327
-# 28be2b46f44a4190bff5f85757d82eed
 msgid "Low-level generic assembly procedure for volumic assembly."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:329
-# 78a2374ddb1949a295a2ce1f82ec7584
 msgid "The expression `expr` is evaluated over the mesh_fem's listed in the arguments (with optional data) and assigned to the output arguments. For details about the syntax of assembly expressions, please refer to the getfem user manual (or look at the file getfem_assembling.h in the getfem++ sources)."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:335
-# 684f1b85323f4ebdbb7a0bae941631d7
 msgid "For example, the L2 norm of a field can be computed with::"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:341
-# 713afca8df93401a8706477a5ec2d9f8
 msgid "The Laplacian stiffness matrix can be evaluated with::"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:348
-# 03dc41c71ebf47af9b45352bab35f8c3
 msgid "``{...} = gf_asm('boundary', int bnum, string expr [, mesh_im mim, mesh_fem mf, data...])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:350
-# a0a7ad0510814ed5a9a8dd9aca080afb
 msgid "Low-level generic boundary assembly."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:352
-# 2706c9d3925a4758b474efaac857954e
 msgid "See the help for gf_asm('volumic')."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:355
-# 3bfd18d70d3c44d296d25b64f0affd20
 msgid "``Mi = gf_asm('interpolation matrix', mesh_fem mf, {mesh_fem mfi | vec pts})``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:357
-# 3fc021c98f6b467da7f1827de50d316f
 msgid "Build the interpolation matrix from a mesh_fem onto another mesh_fem or a set of points."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:359
-# 0cd574822d594866bab1255ca74fa5c3
 msgid "Return a matrix `Mi`, such that `V = Mi.U` is equal to gf_compute('interpolate_on',mfi). Useful for repeated interpolations. Note that this is just interpolation, no elementary integrations are involved here, and `mfi` has to be lagrangian. In the more general case, you would have to do a L2 projection via the mass matrix."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:366
-# d19d9f0a0e5b4881a10cd6cd4a4e432e
 msgid "`Mi` is a spmat object."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:370
-# 8b2567a789d04dfca54cd3939f6abf0b
 msgid "``Me = gf_asm('extrapolation matrix',mesh_fem mf,  {mesh_fem mfe | vec pts})``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:372
-# 53eee678654545ef8bc6bab1478c03c9
 msgid "Build the extrapolation matrix from a mesh_fem onto another mesh_fem or a set of points."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:374
-# 908e37e53d634bc59691620b5946215f
 msgid "Return a matrix `Me`, such that `V = Me.U` is equal to gf_compute('extrapolate_on',mfe). Useful for repeated extrapolations."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:378
-# 13a302dbf38044e7a06b26ea2b6e810d
 msgid "`Me` is a spmat object."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:382
-# 982d26b8594b4171a07216bd2fe13967
 msgid "``B = gf_asm('integral contact Uzawa projection', int bnum, mesh_im mim, mesh_fem mf_u, vec U, mesh_fem mf_lambda, vec vec_lambda, mesh_fem mf_obstacle, vec obstacle, scalar r [, {scalar coeff | mesh_fem mf_coeff, vec coeff} [, int option[, scalar alpha, vec W]]])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:386
-# 67188daa40ed490b830f44be55c476f8
 msgid "Specific assembly procedure for the use of an Uzawa algorithm to solve"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:385
-# d0baaccd1251409bbdf266143e720d30
 msgid "contact problems. Projects the term $-(\\lambda - r (u_N-g))_-$ on the finite element space of $\\lambda$."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:392
-# cee6f58f14e1461d9ef0214c7a92c7f8
 msgid "``B = gf_asm('level set normal source term', int bnum, mesh_im mim, mesh_fem mf_u, mesh_fem mf_lambda, vec vec_lambda, mesh_fem mf_levelset, vec levelset)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:394
-# d098048c80d64222a604a2dc2eefbd55
 msgid "Performs an assembly of the source term represented by `vec_lambda` on `mf_lambda` considered to be a component in the direction of the gradient of a levelset function (normal to the levelset) of a vector field defined on `mf_u` on the boundary `bnum`."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:403
-# ce98ddd07f064643b736e876eb9397e8
 msgid "``M = gf_asm('lsneuman matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, levelset ls[, int region])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:405
-# 77f9eda14ce24a85b82a6cc1f285d3f2
 msgid "Assembly of a level set Neuman  matrix."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:411
-# cd052193321044169db89c0f22595cc6
 msgid "``M = gf_asm('nlsgrad matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, levelset ls[, int region])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:413
-# 483dc6b14ee544638fd1794cf97ef040
 msgid "Assembly of a nlsgrad matrix."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:419
-# a42ddc51fcd64d47a4ca61c2147661a1
 msgid "``M = gf_asm('stabilization patch matrix', @tm mesh, mesh_fem mf,  mesh_im mim, real ratio, real h)``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:421
-# d3949868db66488c9a960315e7354c5c
 msgid "Assembly of stabilization patch matrix ."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:427
-# 1067b375eff54743b89e680310d91e03
 msgid "``{Q, G, H, R, F} = gf_asm('pdetool boundary conditions', mf_u, mf_d, b, e[, f_expr])``"
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:429
-# ed063ef123b248e09ee87aee7b52606b
 msgid "Assembly of pdetool boundary conditions."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_asm.rst:431
-# aa7bbe3b69464685b40b8b730f5c1a9a
 msgid "`B` is the boundary matrix exported by pdetool, and `E` is the edges array. `f_expr` is an optionnal expression (or vector) for the volumic term. On return `Q, G, H, R, F` contain the assembled boundary conditions (`Q` and `H` are matrices), similar to the ones returned by the function ASSEMB from PDETOOL."
 msgstr ""
 
