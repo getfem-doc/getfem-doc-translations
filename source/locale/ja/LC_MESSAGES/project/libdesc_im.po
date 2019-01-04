@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 15:44+0900\n"
+"POT-Creation-Date: 2018-12-23 12:05+0900\n"
 "PO-Revision-Date: 2018-07-16 07:03+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 #: ../source/project/libdesc_im.rst:11
 msgid "Integ module"
-msgstr "Integ モジュール\n"
+msgstr "Integ モジュール"
 
 #: ../source/project/libdesc_im.rst:14 ../source/project/libdesc_im.rst:1
 msgid "Description"
-msgstr "説明\n"
+msgstr "説明"
 
 #: ../source/project/libdesc_im.rst:16
 msgid ""
@@ -45,17 +45,17 @@ msgid ""
 "domain, the description should also contains the reference to a method of "
 "same order on each face of the element."
 msgstr ""
-"立体求積法モジュールは、参照要素の数値積分法へのアクセスを提供します。それはまた、いくつかの正確な統合方法へのアクセスを与えるため、実際にはそれだけでいくつかの立体求積法式が含まれていません。ただし、厳密な積分法は多項式要素とアフィン幾何学的変換に対してのみ使用できます。これは厳密な統合方法が広く使用されない理由を説明する。立体求積法式の説明は、ファイル内で直接実行されます:"
-" ファイル: ' getfem_integration ' またはディレクトリ ' ' 立体求積法 ' ' の説明ファイルを介して | gf "
-"|。新しい立体求積法式の追加は非常に単純であり、それはそれが定義されている要素を参照し、ファイル内のガウス点のリストと、このディレクトリに追加するだけで十分です。さらに、ドメインの境界に定義された用語を統合するために、その説明には、要素の各面で同じ順序のメソッドへの参照も含まれている必要があります。\n"
+"立体求積法モジュールは、参照要素の数値積分法へのアクセスを提供します。それはまた、いくつかの正確な積分方法へのアクセスを与えるため、実際にはそれだけでいくつかの立体求積法式が含まれていません。ただし、厳密な積分法は多項式要素とアフィン幾何学的変換に対してのみ使用できます。これは厳密な積分方法が広く使用されない理由の説明となります。立体求積法式の説明は、"
+" :file:`getfem_integration.h` または |gf| のディレクトリ ``cubature`` "
+"の説明ファイルを介してファイル内で直接実行されます。新しい立体求積法式の追加は非常に単純であり、それはそれが定義されている要素を参照し、ファイル内のガウス点のリストと、このディレクトリに追加するだけで十分です。さらに、ドメインの境界に定義された用語を統合するために、その説明には、要素の各面で同じ順序のメソッドへの参照も含まれている必要があります。"
 
 #: ../source/project/libdesc_im.rst:30
 msgid "Files"
-msgstr "ファイル\n"
+msgstr "ファイル"
 
 #: ../source/project/libdesc_im.rst:1
 msgid "File(s)"
-msgstr "ファイル\n"
+msgstr "ファイル"
 
 #: ../source/project/libdesc_im.rst:1
 msgid ""
@@ -63,17 +63,17 @@ msgid ""
 ":file:`getfem_integration_composite.cc`"
 msgstr ""
 ": ファイル: ' getfem_integration ' と: ファイル: ' getfem_integration ' と: ファイル: ' "
-"getfem_integration_composite '\n"
+"getfem_integration_composite '"
 
 #: ../source/project/libdesc_im.rst:1
 msgid ""
 "Structure of integration methods, basic integration methods, product of "
 "integration method and composite methods."
-msgstr "統合方法の構造、基本的な統合方法、統合方法および複合方法のプロダクト。\n"
+msgstr "積分方法の構造、基本的な積分方法、積分方法および複合方法のプロダクト。"
 
 #: ../source/project/libdesc_im.rst:1
 msgid ":file:`getfem_im_list.h`"
-msgstr ": ファイル: ' getfem_im_list '\n"
+msgstr ": ファイル: ' getfem_im_list '"
 
 #: ../source/project/libdesc_im.rst:1
 msgid ""
@@ -82,12 +82,12 @@ msgid ""
 "a new integration method just listing the Gauss points and weigth in a text "
 "file."
 msgstr ""
-"で生成されたファイル: ファイル: ' 立体求積法/make_getfem_list ' "
-"立体求積法ディレクトリで定義されている統合メソッドを使用します。これにより、ガウス点とディファレンシャルムーブメントをテキストファイルにリストするだけで、新しい統合メソッドを定義することができます。\n"
+" :file:`cubature/make_getfem_list` "
+"で生成されたファイル立体求積法ディレクトリで定義されている統合メソッドを使用します。これにより、ガウス点とディファレンシャルムーブメントをテキストファイルにリストするだけで、新しい統合メソッドを定義することができます。"
 
 #: ../source/project/libdesc_im.rst:41
 msgid "State"
-msgstr "状態\n"
+msgstr "状態"
 
 #: ../source/project/libdesc_im.rst:43
 msgid ""
@@ -96,11 +96,11 @@ msgid ""
 "appendixb`."
 msgstr ""
 "このモジュールは、プロジェクトの現在のニーズを満たしており、安定していると考えられています。使用可能な立体求積法式のリストは、ref: ' ud-付録 "
-"b ' で指定されています。\n"
+"b ' で指定されています。"
 
 #: ../source/project/libdesc_im.rst:48
 msgid "Perspectives"
-msgstr "視点\n"
+msgstr "視点"
 
 #: ../source/project/libdesc_im.rst:50
 msgid ""
@@ -109,4 +109,4 @@ msgid ""
 "(format of descritption files)."
 msgstr ""
 "今のところ変更は必要ありません。新しい立体求積法式 (descritption ファイルの形式) "
-"を追加する方法を完全に説明するために、ドキュメントで努力を行うことができます。\n"
+"を追加する方法を完全に説明するために、ドキュメントで努力を行うことができます。"
