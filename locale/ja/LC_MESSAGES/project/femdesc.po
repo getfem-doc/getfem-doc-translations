@@ -1,0 +1,414 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-16 02:50+0900\n"
+"PO-Revision-Date: 2018-07-16 07:02+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:10
+msgid "The FEM description in |gf|"
+msgstr "|gf| のFEM記述"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:12
+msgid ""
+"The aim of this section is to briefly introduce the FEM description in |gf| "
+"mainly in order to fix the notation used in the rest of the document "
+"(definition of element, reference element, geometric transformation, "
+"gradient of the geometric transformation ...)."
+msgstr ""
+"このセクションの目的は、 |gf| "
+"でFEM記述を簡単に紹介することです。主に残りの文書で使用される表記法（要素の定義、参照要素、幾何学的変換、幾何学的変換の勾配...）を修正するためです。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:19
+msgid "Convex structures"
+msgstr "凸包構造"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:21
+msgid ""
+"Finite element methods are defined on small convex domains called elements. "
+"The simplest element on which a finite element method can be defined is a "
+"segment (simplex of dimension 1), other possibilities are triangles, "
+"tetrahedrons (simplices of dimension 2 and 3), prisms, parallelepiped, etc. "
+"In |gf|, a type of element (for us, a convex) is described by the object "
+"|bg_cs| defined in the file :file:`bgeot_convex_structure.h`."
+msgstr ""
+"有限要素法は、要素と呼ばれる小さな凸包領域に定義されています。有限要素法を定義できる最も単純な要素は、セグメント（次元1のシンプレックス）、他には三角形、四面体（次元2と3のシンプル）、プリズム、平行六面体などです。"
+" |gf| では、オブジェクトの |bg_cs| は、 :file:`bgeot_convex_structure.h` ファイルで定義されています。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:28
+msgid ""
+"It describes only the structure of the convex not the coordinates of the "
+"vertices. This structure is not to be manipulated by itself, because it is "
+"not necessary that more than one structure of this type describe the same "
+"type of convex. What will be manipulated is a pointer on such a descriptor "
+"which has to be declared with the type |bg_pcs|"
+msgstr ""
+"それは頂点の座標ではなく凸面の構造だけを記述します。このタイプの構造は同じタイプの凸包部を記述する必要はないので、この構造はそれ自身で操作することはできません。このような記述子上のポインタは、"
+" |bg_pcs| 型で宣言しなければなりません。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:34
+msgid ""
+"The following functions give a pointer onto the descriptor of the usual type"
+" of elements:"
+msgstr "次の関数は、通常の型の要素の記述子にポインタを与えます。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:39
+msgid "description of a simplex of dimension ``d``."
+msgstr "次元 ``d`` のシンプレックスの記述"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:43
+msgid "description of a parallelepiped of dimension ``d``."
+msgstr "次元 ``d`` の平行六面体の記述"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:47
+msgid "description of the direct product of ``p1`` and ``p2``."
+msgstr "``p1`` と ``p2`` の直積の記述"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:51
+msgid "description of a prism of dimension ``d``"
+msgstr "次元 ``d`` のプリズムの記述"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:53
+msgid ""
+"For instance if one needs the description of a square, one can call "
+"equivalently::"
+msgstr "たとえば、正方形の記述が必要な場合、以下のように等価的に表現できます。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:58
+msgid "or::"
+msgstr "または"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:63
+msgid ""
+"The descriptor contains in particular the number of faces "
+"(``p->nb_faces()``), the dimension of the convex (``p->dim()``), for the "
+"number of vertices (``p->nb_points()``). Other information is the number of "
+"vertices of each face, the description of a face and the eventual reference "
+"to a more basic description (used for the description of geometric "
+"transformations)."
+msgstr ""
+"記述子には特に頂点の数( ``nb_points()`` ）のための面の数（ ``p->nb_faces()`` ）と凸部の次元（ "
+"``p->dim()`` "
+"）が含まれます。他の情報は、各面の頂点の数、面の記述、およびより基本的な（幾何学的変換の記述に使用される）記述への最終的な参照です。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:74
+msgid "usual elements"
+msgstr "通常の要素"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:78
+msgid "Convexes of reference"
+msgstr "参照の凸包"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:80
+msgid ""
+"A convex of reference is a particular real element, i.e. a structure of "
+"convex with a list of vertices. It describes the particular element from "
+"which a finite element method is defined. In the file "
+":file:`bgeot_convex_ref.h` the object |bg_cr| makes this description. The "
+"library keeps only one description for each type of convex. So what will be "
+"manipulated is a pointer of type |bg_pcr| on the descriptor."
+msgstr ""
+"参照の凸包は特定の実要素、すなわち頂点のリストを伴う凸の構造です。これは有限要素法が定義されている特定の要素を記述します。ファイル "
+":file:`bgeot_convex_ref.h` 内のオブジェクト |bg_cr| "
+"がそれを記述します。ライブラリは、凸型の各タイプについて1つの記述しか保持しません。したがって、操作されるのは、ディスクリプタ上のタイプ "
+"|bg_pcr| のポインタです。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:87
+msgid "The following functions build the descriptions:"
+msgstr "次の関数は記述を構築します。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:91
+msgid "description of the simplex of reference of dimension ``d``."
+msgstr "次元 ``d`` の参照のシンプレックスの記述。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:95
+msgid ""
+"description of the simplex of reference of dimension ``d`` with degree ``k``"
+" Lagrange grid."
+msgstr "次数 ``k`` の Lagrange グリッドの次元 ``d`` を参照するシンプレックスの記述"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:100
+msgid "description of the direct product of two convexes of reference."
+msgstr "2つの参照凸包の直積の記述。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:104
+msgid "description of the parallelepiped of reference of dimension ``d``."
+msgstr "次元 ``d`` を参照する平行六面体の記述。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:106
+msgid ""
+"The vertices correspond to the classical vertices for such reference "
+"element. For instance the vertices for the triangle are :math:`(0, 0)`, "
+":math:`(1, 0)` and :math:`(0, 1)`. It corresponds to the configuration shown"
+" in Figure :ref:`dp-fig-elem`"
+msgstr ""
+"頂点は、そのような参照要素の古典的頂点に対応します。たとえば、三角形の頂点は、 :math:`(0, 0)` 、 :math:`(1, 0)` 、 "
+":math:`(0, 1)` です。これは、図 :ref:`dp-fig-elem` に示す構成に対応します。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:111
+msgid ""
+"If ``p`` is of type |bg_pcr| then ``p->structure()`` is the corresponding "
+"convex structure. Thus for instance ``p->structure()->nb_points()`` gives "
+"the number of vertices. The function ``p->points()`` give the array of "
+"vertices and ``p->points()[0]`` is the first vertex. The function "
+"``p->is_in(const base_node &pt)`` return a real which is negative or null if"
+" the point ``pt`` is in the element. The function ``p->is_in_face(short_type"
+" f, const base_node &pt)`` return a real which is null if the point ``pt`` "
+"is in the face ``f`` of the element. Other functions can be found in "
+":file:`bgeot_convex_ref.h` and :file:`bgeot_convex.h`."
+msgstr ""
+"``p`` がタイプ |bg_pcr| の場合 ``p->structure()`` は対応する凸包構造です。したがって、例えば "
+"``p->structure()->nb_points()`` は頂点の数を返します。 ``p->points()`` 関数は頂点の配列を与え、 "
+"``p->points()[0]`` は最初の頂点です。関数 ``p->is_in(const base_node &pt)`` "
+"は、点ptが要素内にあれば、負の実数を返します。関数 ``p->is_in_face(short_type f, const base_node "
+"&pt)`` は、点 ``pt`` が要素 ``f`` にある場合はnullを返します。他の関数は :file:`bgeot_convex_ref.h`"
+" と :file:`bgeot_convex.h` にあります。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:123
+msgid "Shape function type"
+msgstr "形状関数型"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:125
+msgid ""
+"Most of the time the shape functions of finite element methods are "
+"polynomials, at least on the convex of reference. But, the possibility is "
+"given to have other types of elements. It is possible to define other kind "
+"of base functions such as piecewise polynomials, interpolant wavelets, etc."
+msgstr ""
+"ほとんどの場合、有限要素法の形状関数は、少なくとも参照の凸包の多項式です。しかし、要素の他のタイプを持って与えられる可能性もあります。他の種類の基底関数"
+" (区分多項式、補間曲線ウェーブレットなど) を定義することができます。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:130
+msgid ""
+"To be used by the finite element description, a shape function type must be "
+"able to be evaluated on a point (``a = F.eval(pt)``, where ``pt`` is a "
+"``base_node``) and must have a method to compute the derivative with respect"
+" to the ith variable (``F.derivative(i)``)."
+msgstr ""
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:135
+msgid ""
+"For the moment, only polynomials and piecewise polynomials are defined in "
+"the files :file:`bgeot_poly.h` and :file:`bgeot_poly_composite.h`."
+msgstr ""
+"現時点では、ファイル :file:`bgeot_poly.h` および :file:`bgeot_poly_composite.h` "
+"では、多項式と区分多項式のみが定義されています。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:141
+msgid "Geometric transformations"
+msgstr "幾何学的変換"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:148
+msgid "geometric transformation"
+msgstr "幾何学的変換"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:150
+msgid "A geometric transformation is a polynomial application:"
+msgstr "幾何学的変換は、多項式アプリケーションです。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:156
+msgid ""
+"which maps the reference element :math:`\\widehat{T}` to the real element "
+":math:`T`. The geometric nodes are denoted:"
+msgstr ""
+"これは、参照要素 :math:`\\widehat{T}` を実際の要素 :math:`T` にマップします。幾何学的節点は次のように表記されます。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:163
+msgid ""
+"The geometric transformation is described thanks to a :math:`n_g` components"
+" polynomial vector (In fact, as an extention, non polynomial geometric "
+"transformation can also be supported by |gf|, but this is very rarely used)"
+msgstr ""
+"幾何学的変換は :math:`n_g` 成分多項式ベクトルのにより記述されています。 (実際には、拡張として、非多項式幾何学的変換はまた、 |gf| "
+"でサポートすることができますが、これが使用されるのは非常にまれです。)"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:171
+msgid "such that"
+msgstr "ような"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:177
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:250
+msgid "Denoting"
+msgstr "示す"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:183
+msgid ""
+"the :math:`N\\times n_g` matrix containing of all the geometric nodes, one "
+"has"
+msgstr ":math:`N\\times n_g` 行列のすべての幾何学的節点を含む, 1 つは"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:189
+msgid "The derivative of :math:`\\tau` is then"
+msgstr "の導関数 :math:`\\tau` は"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:195
+msgid ""
+"where :math:`K(\\widehat{x}) = \\nabla\\tau(\\widehat{x})` is a "
+":math:`N\\times P` matrix and :math:`\\nabla {\\cal N}(\\widehat{x})` a "
+":math:`n_g\\times P` matrix. The (transposed) pseudo-inverse of "
+":math:`\\nabla\\tau(\\widehat{x})` is a :math:`N\\times P` matrix denoted "
+":math:`B(\\widehat{x})`:"
+msgstr ""
+"ここで :math:`K(\\widehat{x}) = \\nabla\\tau(\\widehat{x})` は :math:`N\\times "
+"P` 行列と :math:`\\nabla {\\cal N}(\\widehat{x})` :math:`n_g\\times P` 行列。(転置) "
+"擬似逆 :math:`\\nabla\\tau(\\widehat{x})` は :math:`N\\times P` の行列表記 "
+":math:`B(\\widehat{x})` です。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:204
+msgid ""
+"Of course, when :math:`P=N`, one has "
+":math:`B(\\widehat{x})=K(\\widehat{x})^{-T}`."
+msgstr "もちろん、ここで :math:`P=N` 、1つは :math:`B(\\widehat{x})=K(\\widehat{x})^{-T}` 。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:206
+msgid ""
+"Pointers on a descriptor of a geometric transformation can be obtained by "
+"the following function defined in the file :file:`bgeot_geometric_trans.h`::"
+msgstr ""
+"幾何学的変換の記述子に対するポインタは、ファイル :file:`bgeot_geometric_trans.h` "
+"で定義されている次の関数によって取得できます。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:211
+msgid "where ``\"name of trans\"`` can be chosen among the following list."
+msgstr "ここで、 ``\"name of trans\"`` を次のリストの中から選択することができます。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:213
+msgid "``\"GT_PK(n,k)\"``"
+msgstr "``\"GT_PK(n,k)\"``"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:215
+msgid ""
+"Description of the simplex transformation of dimension ``n`` and degree "
+"``k`` (Most of the time, the degree 1 is used)."
+msgstr "次元 ``n`` および次数 ``k`` のシンプレックス変換の記述 (ほとんどの場合、次数1が使用されます)。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:218
+msgid "``\"GT_QK(n,k)\"``"
+msgstr "``\"GT_QK(n,k)\"``"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:220
+msgid ""
+"Description of the parallelepiped transformation of dimension ``n`` and "
+"degree ``k``."
+msgstr "次元 ``n`` および次数 ``k`` の直方体変換の記述。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:223
+msgid "``\"GT_PRISM(n,k)\"``"
+msgstr "``\"GT_PRISM(n,k)\"``"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:225
+msgid ""
+"Description of the prism transformation of dimension ``n`` and degree ``k``."
+msgstr "次元 ``n`` および次数 ``k`` のプリズム変換の記述。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:227
+msgid "``\"GT_PRODUCT(a,b)\"``"
+msgstr "``\"GT_PRODUCT(a,b)\"``"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:229
+msgid ""
+"Description of the direct product of the two transformations ``a`` and "
+"``b``."
+msgstr "2つの変換 ``a`` と ``b`` の直積の記述。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:231
+msgid "``\"GT_LINEAR_PRODUCT(a,b)\"``"
+msgstr "``\"GT_LINEAR_PRODUCT(a,b)\"``"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:233
+msgid ""
+"Description of the direct product of the two transformations ``a`` and ``b``"
+" keeping a linear transformation (this is a restriction of the previous "
+"function). This allows, for instance, to use exact integrations on regular "
+"meshes with parallelograms."
+msgstr ""
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:240
+msgid "Finite element methods description"
+msgstr "有限要素法記述"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:242
+msgid ""
+"A finite element method is defined on a reference element "
+":math:`\\widehat{T}\\subset\\Reel^P` by a set of :math:`n_d` nodes "
+":math:`a^i` and corresponding base functions"
+msgstr ""
+"有限要素法は、節点 :math:`a^i` と対応する基底関数の集合 :math:`n_d` による参照要素 "
+":math:`\\widehat{T}\\subset\\Reel^P` に対して定義されます。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:256
+msgid ""
+"a supplementary linear transformation is allowed for the real base function"
+msgstr "補助線形変換は、実際の基底関数に対して許可されます。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:262
+msgid ""
+"where :math:`M` is a :math:`n_d \\times n_d` matrix possibly depending on "
+"the geometric transformation (i.e. on the real element). For basic elements "
+"as Lagrange elements this matrix is the identity matrix (it is simply "
+"ignored). In this case, we will say that the element is "
+":math:`\\tau`-equivalent."
+msgstr ""
+"ここで :math:`M` は幾何変換が可能な(すなわち、実数要素の) :math:`n_d \\times n_d` "
+"行列です。Lagrange要素としての基本的な要素については、この行列は恒等行列です(単に無視される)。この場合、要素は次のようになります "
+":math:`\\tau` -等価です。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:267
+msgid ""
+"This approach allows to define hermite elements (Argyris for instance) in a "
+"generic way, even with non linear transformations (i.e. mainly for curved "
+"boundaries). We denote :math:`[\\widehat{\\varphi}(\\widehat{x})]` the "
+":math:`n_d \\times Q` matrix whose ith line is "
+":math:`(\\widehat{\\varphi})^i(\\widehat{x})`. Whis this notation, for a "
+"function is defined by"
+msgstr ""
+"この方法では、非線形変換 (主に曲線境界の場合) を使用しても、Hermite要素 (たとえばArgyris) を汎用的な方法で定義することができます。"
+" :math:`[\\widehat{\\varphi}(\\widehat{x})]` :math:`n_d \\times Q` は、その i "
+"番目の行の行列 :math:`(\\widehat{\\varphi})^i(\\widehat{x})` 。この記法は、次の関数によって定義されます。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:277
+msgid "one has"
+msgstr "1つは"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:283
+msgid ""
+"where :math:`\\alpha` is the vector whose ith component is "
+":math:`\\alpha_i`."
+msgstr "ここで :math:`\\alpha` は、その i 番目の成分 :math:`\\alpha_i` があるベクトルです。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:285
+msgid ""
+"A certain number of description of classical finite element method are "
+"defined in the file :file:`getfem_fem.h`. See :ref:`ud-appendixa` for an "
+"exhaustive list of available finite element methods."
+msgstr ""
+"古典的な有限要素法の記述のある特定の数はファイル :file:`getfem_fem.h` で定義されています。利用可能な有限要素法の完全なリストは "
+":ref:`ud-appendixa` を参照してください。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:289
+msgid ""
+"A pointer to the finite element descriptor of a method is obtained using the"
+" function::"
+msgstr "メソッドの有限要素記述子へのポインタは、次の関数を使用して取得されます。"
+
+#: ../../getfem/doc/sphinx/source/project/femdesc.rst:294
+msgid ""
+"We refer to the file :file:`getfem_fem.cc` for how to define a new finite "
+"element method."
+msgstr "新しい有限要素法を定義する方法については、 :file:`getfem_fem.cc` を参照してください。"
