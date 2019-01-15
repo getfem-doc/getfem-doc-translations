@@ -7,7 +7,7 @@ set -ex
 SPHINXINTL_TRANSIFEX_PROJECT_NAME=getfem-53-1
 # pull po files from transifex
 cd `dirname $0`
-sphinx-build -b gettext ../getfem/doc/sphinx/source pot
+sphinx-build -b gettext -D language=en ../getfem/doc/sphinx/source pot
 sphinx-intl update -p pot -d . -l ja
 cat .tx/config
 tx push -s --skip

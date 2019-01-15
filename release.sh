@@ -13,7 +13,7 @@ git submodule update
 sh ./locale/update.sh
 
 # commit po(t) files
-git add locale sphinx
+git add locale getfem
 git commit -m "[skip ci] update po(t) files"
 
 # push changes
