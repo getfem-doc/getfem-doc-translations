@@ -6,7 +6,7 @@ set -ex
 git checkout master
 git submodule init
 git submodule update
-(cd getfem; git fetch origin; git checkout master; git pull origin master)
+(cd getfem; git fetch origin; git pull origin master)
 
 
 # update transifex pot and local po files
