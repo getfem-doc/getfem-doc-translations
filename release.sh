@@ -3,14 +3,10 @@
 set -ex
 
 # setup environment
-SPHINXINTL_TRANSIFEX_USERNAME=sphinxjp
-SPHINXINTL_TRANSIFEX_PROJECT_NAME=sphinx-doc
-find sphinx -name "*.pyc" -exec rm {} \;
 git checkout master
 git submodule init
 git submodule update
-(cd sphinx; git fetch origin; git checkout -b master origin/master)
-pip install -r requirements.txt
+(cd getfem; git fetch origin; git checkout master; git pull origin master)
 
 
 # update transifex pot and local po files
