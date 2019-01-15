@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-23 12:05+0900\n"
+"POT-Creation-Date: 2019-01-16 04:26+0900\n"
 "PO-Revision-Date: 2018-07-16 07:08+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/matlab/cmdref_gf_spmat.rst:8
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:8
 msgid "gf_spmat"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:10
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:10
 msgid "**Synopsis**"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:22
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:22
 msgid "**Description :**"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:25
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:25
 msgid "General constructor for spmat objects."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:27
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:27
 msgid ""
 "Create a new sparse matrix in getfem++ format(, i.e. sparse matrices which "
 "are stored in the getfem workspace, not the matlab sparse matrices). These "
@@ -46,7 +46,7 @@ msgid ""
 "they are a little bit slower for matrix-vector multiplications."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:38
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:38
 msgid ""
 "By default, all newly created matrices are build as WSC matrices. This can "
 "be changed later with ``gf_spmat_set(spmat S, 'to_csc',...)``, or may be "
@@ -54,86 +54,86 @@ msgid ""
 "matrices to CSC)."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:43
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:43
 msgid "The matrices may store REAL or COMPLEX values."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:46
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:46
 msgid "**Command list :**"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:50
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:50
 msgid "``SM = gf_spmat('empty', int m [, int n])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:52
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:52
 msgid ""
 "Create a new empty (i.e. full of zeros) sparse matrix, of dimensions `m x "
 "n`. If `n` is omitted, the matrix dimension is `m x m`."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:56
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:56
 msgid "``SM = gf_spmat('copy', mat K [,  I [,  J]])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:58
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:58
 msgid ""
 "Duplicate a matrix `K` (which might be a spmat or a native matlab sparse "
 "matrix). If index `I` and/or `J` are given, the matrix will be a submatrix "
 "of `K`. For example::"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:66
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:66
 msgid "will return a 40x5 matrix."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:69
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:69
 msgid "``SM = gf_spmat('identity', int n)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:71
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:71
 msgid "Create a `n x n` identity matrix."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:74
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:74
 msgid "``SM = gf_spmat('mult', spmat A, spmat B)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:76
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:76
 msgid ""
 "Create a sparse matrix as the product of the sparse matrices `A` and `B`. It"
 " requires that `A` and `B` be both real or both complex, you may have to use"
 " ``gf_spmat_set(spmat S, 'to_complex')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:81
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:81
 msgid "``SM = gf_spmat('add', spmat A, spmat B)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:83
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:83
 msgid ""
 "Create a sparse matrix as the sum of the sparse matrices `A` and `B`. Adding"
 " a real matrix with a complex matrix is possible."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:87
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:87
 msgid "``SM = gf_spmat('diag', mat D [, ivec E [, int n [,int m]]])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:89
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:89
 msgid ""
 "Create a diagonal matrix. If `E` is given, `D` might be a matrix and each "
 "column of `E` will contain the sub-diagonal number that will be filled with "
 "the corresponding column of `D`."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:94
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:94
 msgid ""
 "``SM = gf_spmat('load','hb'|'harwell-boeing'|'mm'|'matrix-market', string "
 "filename)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_spmat.rst:96
+#: ../../getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:96
 msgid ""
 "Read a sparse matrix from an Harwell-Boeing or a Matrix-Market file See also"
 " ``gf_util('load matrix')``."
