@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 02:50+0900\n"
+"POT-Creation-Date: 2019-01-16 11:04+0900\n"
 "PO-Revision-Date: 2018-07-16 07:09+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:10
+#: ../source/matlab/pre.rst:10
 msgid "Preliminary"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:12
+#: ../source/matlab/pre.rst:12
 msgid ""
 "This is just a short summary of the terms employed in this manual. If you "
 "are not familiar with finite elements, this should be useful (but in any "
 "case, you should definitively read the :ref:`dp`)."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:16
+#: ../source/matlab/pre.rst:16
 msgid ""
 "The :envvar:`mesh` is composed of :envvar:`convexes`. What we call convexes "
 "can be simple line segments, prisms, tetrahedrons, curved triangles, of even"
@@ -44,7 +44,7 @@ msgid ""
 " transformation maps these nodes to the :envvar:`mesh nodes`."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:28
+#: ../source/matlab/pre.rst:28
 msgid ""
 "On the mesh, one defines a set of basis functions: the :envvar:`FEM`. A FEM "
 "is associated at each convex. The basis functions are also attached to some "
@@ -61,7 +61,7 @@ msgid ""
 ":envvar:`interpolate` an arbitrary function on the finite elements space."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:41
+#: ../source/matlab/pre.rst:41
 msgid ""
 "The finite elements method involves evaluation of integrals of these basis "
 "functions (or product of basis functions etc.) on convexes (and faces of "
@@ -79,25 +79,25 @@ msgid ""
 " linear-system."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:55
+#: ../source/matlab/pre.rst:55
 msgid ""
 "The process of construction of a global linear system from integrals of "
 "basis functions on each convex is the :envvar:`assembly`."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:58
+#: ../source/matlab/pre.rst:58
 msgid ""
 "A mesh, with a set of FEM attached to its convexes is called a "
 ":envvar:`mesh_fem` object in |gf|."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:61
+#: ../source/matlab/pre.rst:61
 msgid ""
 "A mesh, with a set of integration methods attached to its convexes is called"
 " a :envvar:`mesh_im` object in |gf|."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:64
+#: ../source/matlab/pre.rst:64
 msgid ""
 "A |mf| can be used to approximate scalar fields (heat, pression, ...), or "
 "vector fields (displacement, electric field, ...). A |mim| will be used to "
@@ -110,14 +110,14 @@ msgid ""
 "vector field etc.)."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:73
+#: ../source/matlab/pre.rst:73
 msgid ""
 "When solving a PDE, one often has to use more than one FEM. The most "
 "important one will be of course the one on which is defined the solution of "
 "the PDE. But most PDEs involve various coefficients, for example:"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:81
+#: ../source/matlab/pre.rst:81
 msgid ""
 "Hence one has to define a FEM for the main unknown :math:`u`, but also for "
 "the data :math:`\\lambda(x)` and :math:`f(x)` if they are not constant. In "
@@ -125,7 +125,7 @@ msgid ""
 "space, one often choose a Lagrangian FEM."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:86
+#: ../source/matlab/pre.rst:86
 msgid ""
 "The convexes, mesh nodes, and dof are all numbered. We sometimes refer to "
 "the number associated to a convex as its :envvar:`convex id` (contracted to "
@@ -136,7 +136,7 @@ msgid ""
 "one containing convex ids, and the second one containing local face number."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/matlab/pre.rst:94
+#: ../source/matlab/pre.rst:94
 msgid ""
 "While the dof are always numbered consecutively, **this is not always the "
 "case for point ids and convex ids**, especially if you have removed points "

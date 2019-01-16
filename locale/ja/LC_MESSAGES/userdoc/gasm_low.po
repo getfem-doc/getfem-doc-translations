@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 02:50+0900\n"
+"POT-Creation-Date: 2019-01-16 11:04+0900\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:12
+#: ../source/userdoc/gasm_low.rst:12
 msgid "Compute arbitrary terms - low-level generic assembly procedures"
 msgstr "任意の項を計算する - 低水準の汎用的な構築手順"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:14
+#: ../source/userdoc/gasm_low.rst:14
 msgid ""
 "This section present the first version of generic assembly procedure which "
 "has been implemented in |gf|. It allows to easily make the assembly of "
@@ -41,7 +41,7 @@ msgstr ""
 "という非常に低水準の内部ツールを使用する必要があります。高水準汎用構築は、この困難を回避するために開発されました（ :ref:`ud-gasm-"
 "high` 参照）。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:16
+#: ../source/userdoc/gasm_low.rst:16
 msgid ""
 "As it can be seen in the file :file:`getfem/getfem_assembling.h`, all the "
 "previous assembly procedures use a |gf_gasm| object and provide it an "
@@ -52,7 +52,7 @@ msgstr ""
 "ファイル :file:`getfem/getfem_assembling.h` で見ることができるように、以前の構築手順はすべて |gf_gasm| "
 "オブジェクトを使用しています。例えば、スカラーFEMのためのボリュームソース項の構築は、コードの以下の抜粋を用いて行われます。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:31
+#: ../source/userdoc/gasm_low.rst:31
 msgid ""
 "The first instructions declare the object, and set the data that it will "
 "use: a |mim| object which holds the integration methods, two |mf| objects, "
@@ -61,7 +61,7 @@ msgstr ""
 "最初の命令はオブジェクトを宣言し、使用するデータを設定します。積分法を保持する |mim| オブジェクト、2つの |mf| オブジェクト、入力データ "
 "``F`` 、および宛先ベクトル ``B`` を含みます。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:35
+#: ../source/userdoc/gasm_low.rst:35
 msgid ""
 "The input data is the vector :math:`F`, defined on ``mfdata``. One wants to "
 "evaluate :math:`\\sum_{j} f_j (\\int_\\Omega \\phi^i \\psi^j)`. The "
@@ -74,7 +74,7 @@ msgid ""
 " the second (``#2``) |mf| (here, ``Z = F[mfdata.ind_dof_of_element(cv)]``)."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:45
+#: ../source/userdoc/gasm_low.rst:45
 msgid ""
 "The part ``V(#1)+=...`` means that the result of the next expression will be"
 " accumulated into the output vector (provided with ``push_vec``). Here "
@@ -86,7 +86,7 @@ msgstr ""
 "で提供されます）。ここでもまた、 ``#1`` は、最初の（ ``#1`` ） |mf| "
 "に関して、現在の凸の自由度に対応するインデックスに結果を書き込むことを意味します。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:50
+#: ../source/userdoc/gasm_low.rst:50
 msgid ""
 "The right hand side ``comp(Base(#1).Base(#2))(:,j).Z(j)`` contains two "
 "operations. The first one is a computation of a tensor on the convex: "
@@ -102,7 +102,7 @@ msgstr ""
 "と現在の凸面に付けられた ``mfdata`` の :math:`j` 。次の部分はリダクション演算で、 ``C(:,j).Z(j)`` "
 "：それぞれの指数（ここでは :math:`j` ）を合計します。結果は  :math:`\\sum_j c_{i,j} z_j` となります。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:58
+#: ../source/userdoc/gasm_low.rst:58
 msgid ""
 "The integration method used inside ``comp(Base(#1).Base(#2))`` is taken from"
 " ``mim``. If you need to use integration methods from another |mim| object, "
@@ -114,13 +114,13 @@ msgstr ""
 "オブジェクトから積分法を使用する必要がある場合は、``comp`` の最初の引数として指定することができます、例えば、 ``comp(\\%2, "
 "Base(#1).Grad(#2))`` は2番目の |mim| オブジェクトを使用します（getfem++-2.0の新機能）。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:63
+#: ../source/userdoc/gasm_low.rst:63
 msgid ""
 "An other example is the assembly of the stiffness matrix for a vector "
 "Laplacian::"
 msgstr "他の例として、ベクトルLaplacianの剛性行列を構築します。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:75
+#: ../source/userdoc/gasm_low.rst:75
 msgid ""
 "Now the output is written in a sparse matrix, inserted with "
 "``assem.push_mat(SM)``. The ``$1`` in ``M$1(#1,#1)`` just indicates that we "
@@ -136,7 +136,7 @@ msgstr ""
 "関数は、結果が対称であることを保証します（これが行われないと、いくつかの丸め誤差が対称性を取り消し、構築が少し遅くなることに留意してください）。次に、 "
 "``comp`` 部分は7次テンソルを評価し、"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:87
+#: ../source/userdoc/gasm_low.rst:87
 msgid ""
 "where :math:`\\varphi^i_j` is a :math:`jth` component of the :math:`ith` "
 "base function of ``mf`` and :math:`\\psi^p` is a (scalar) base function of "
@@ -145,11 +145,11 @@ msgstr ""
 "ここで、 :math:`\\varphi^i_j` は ``mf`` の :math:`i` 次の基底関数の :math:`j` 次成分で、 "
 ":math:`\\psi^p` は（スカラー） 2番目の |mf| の基底関数を構築したいので"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:97
+#: ../source/userdoc/gasm_low.rst:97
 msgid "the reduction is:"
 msgstr "換算は次のとおりです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:105
+#: ../source/userdoc/gasm_low.rst:105
 msgid ""
 "In the ``comp`` function, ``vGrad`` was used instead of ``Grad`` since we "
 "said that we were assembling a *vector* Laplacian: that is why each "
@@ -164,7 +164,7 @@ msgstr ""
 "``comp(Grad(#1).Grad(#1).Base(#2))(:,k,:,k,p).a(p)`` "
 "を使うことができます。しかし、ベクトル形式はベクトルとスカラーの両方の場合に機能する利点があります。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:112
+#: ../source/userdoc/gasm_low.rst:112
 msgid ""
 "The last instruction, ``assem.assembly()``, does evaluate the expression on "
 "each convex. For an assembly over a boundary just call "
@@ -176,28 +176,28 @@ msgstr ""
 "``assem.assembly(rg)`` を呼び出します。ここで ``rg`` は |gf_mr| オブジェクト。 ``rg`` "
 "も数値であるかもしれません。その場合メッシュ領域は ``mim.linked_mesh().region(rg)`` です。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:117
+#: ../source/userdoc/gasm_low.rst:117
 msgid ""
 "The third example shows how to compute the :math:`L^2` norm of a scalar or "
 "vector field on a mesh boundary::"
 msgstr "3番目の例は、メッシュ境界上のスカラーまたはベクトルフィールドの :math:`L^2` ノルムを計算する方法を示します。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:129
+#: ../source/userdoc/gasm_low.rst:129
 msgid ""
 "This one is easy to read. When ``assembly`` returns, ``v[0]`` will contain"
 msgstr "これは読みやすいです。 ``assembly`` が返ってくるとき、 ``v[0]`` は次の通りです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:135
+#: ../source/userdoc/gasm_low.rst:135
 msgid ""
 "The fourth and last example shows an (sub-optimal) assembly of the linear "
 "elasticity problem with a complete Hooke tensor::"
 msgstr "4番目と最後の例は、完全なHookeテンソルによる線形弾性問題の（準最適な）構築を示しています。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:143
+#: ../source/userdoc/gasm_low.rst:143
 msgid "The original equations are:"
 msgstr "元の方程式は次のとおりです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:151
+#: ../source/userdoc/gasm_low.rst:151
 msgid ""
 "where :math:`h` is the Hooke tensor, and :math:`:` means the scalar product "
 "between matrices. Since we assume it is not constant, :math:`h` is given on "
@@ -219,34 +219,34 @@ msgstr ""
 ":math:`\\varepsilon(\\varphi^i)_{jk}\\varepsilon(\\phi^l)_{mn}\\psi^p` "
 "を評価し最後に表現はHookeテンソルに換算されます。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:164
+#: ../source/userdoc/gasm_low.rst:164
 msgid "available operations inside the ``comp`` command"
 msgstr "``comp`` コマンドの中で利用可能な操作"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:166
+#: ../source/userdoc/gasm_low.rst:166
 msgid ""
 "``Base(#i)``: evaluate the value of the base functions of the *ith* |mf|"
 msgstr "``Base(#i)``: *i* 次 |mf| の基底関数の値を評価します。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:168
+#: ../source/userdoc/gasm_low.rst:168
 msgid ""
 "``Grad(#i)``: evaluate the value of the gradient of the base functions of "
 "the *ith* |mf|"
 msgstr "``Grad(#i)``:  *i* 次 |mf| の基底関数の勾配の値を評価します。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:171
+#: ../source/userdoc/gasm_low.rst:171
 msgid ""
 "``Hess(#i)``: evaluate the value of the Hessian of the base functions of the"
 " *ith* |mf|"
 msgstr "``Hess(#i)``: *i* 次 |mf| の基底関数のHessianの値を評価します。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:174
+#: ../source/userdoc/gasm_low.rst:174
 msgid ""
 "``Normal()``: evaluate the unit normal (should not be used for volumic "
 "integrations !)"
 msgstr "``Normal()``: 単位法線を評価します（体積積分には使用しないでください）。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:177
+#: ../source/userdoc/gasm_low.rst:177
 msgid ""
 "``NonLin$x(#mf1,... #mfn)``: evaluate the *xth* non-linear term (inserted "
 "with ``push_nonlinear_term(pnonlinear_elem_term)``) using the listed |mf| "
@@ -255,13 +255,13 @@ msgstr ""
 "``NonLin$x(#mf1,... #mfn)``： ``push_nonlinear_term(pnonlinear_elem_term)`` "
 "で挿入された、リストされた |mf| オブジェクトを使用した *x* 次非線形項の計算。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:181
+#: ../source/userdoc/gasm_low.rst:181
 msgid ""
 "``GradGT()``, ``GradGTInv()``: evaluate the gradient (and its inverse) of "
 "the geometric transformation of the current convex."
 msgstr "``GradGT()``、 ``GradGTInv()``：現在の凸包の幾何学的変換の勾配（およびその逆数）を評価します。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:186
+#: ../source/userdoc/gasm_low.rst:186
 msgid ""
 "you may reference any data object inside the ``comp`` command, and perform "
 "reductions inside the ``comp()``. This feature is mostly interesting for "
@@ -272,11 +272,11 @@ msgstr ""
 "の中で縮小を実行することができます。この機能は非線形項の構築を高速化するために有用です（ファイル "
 ":file:`getfem/getfem_nonlinear_elasticity.h` の使用例を参照）。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:193
+#: ../source/userdoc/gasm_low.rst:193
 msgid "others operations"
 msgstr "他の操作"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:195
+#: ../source/userdoc/gasm_low.rst:195
 msgid ""
 "Slices may be mixed with reduction operations ``t(:,4,i,i)`` takes a slice "
 "at index 4 of the second dimension, and reduces the diagonal of dimension 3 "
@@ -285,14 +285,14 @@ msgstr ""
 "スライスは縮小演算と混在することがあります。 ``t(:,4,i,i)`` は第2次元のインデックス4でスライスをとり、次元3と4の対角を縮小します。 "
 "*スライスのインデックス番号は1ではなく0で始まることに留意してください!!* "
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:199
+#: ../source/userdoc/gasm_low.rst:199
 msgid ""
 "``mdim(#2)`` is evaluated as the mesh dimension associated to the second "
 "|mf|, while ``qdim(#2)`` is the target dimension of the |mf|."
 msgstr ""
 "``mdim(#2)`` は第2の |mf| に関連するメッシュ次元として評価され、 ``qdim(#2)`` は |mf| の対象次元です。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:202
+#: ../source/userdoc/gasm_low.rst:202
 msgid ""
 "The diagonal of a tensor can be obtained with ``t{:,:,3,3}`` (which is "
 "strictly equivalent to ``t{1,2,3,3}``: the colon is just here to improve the"
@@ -303,7 +303,7 @@ msgstr ""
 "コロンは読みやすさを向上させるためだけです）。これは、並べ替え操作と同じ演算子です。 ``t{:,:,1,1}`` や ``t{:,:,4,4}`` "
 "は有効な操作ではないことに注意してください。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:207
+#: ../source/userdoc/gasm_low.rst:207
 msgid ""
 "The ``print`` command can be used to see the tensor: ``\"print "
 "comp(Base(#1));\"`` will print the integrals of the base functions for each "
@@ -312,7 +312,7 @@ msgstr ""
 "``print`` コマンドは、テンソルを見るために使うことができます： ``\"print comp(Base(#1));\"`` "
 "は各凸包の基底関数の積分を出力します。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/gasm_low.rst:210
+#: ../source/userdoc/gasm_low.rst:210
 msgid ""
 "If there is more than one data array, output array or output sparse matrix, "
 "one can use ``data$2``, ``data$3``, ``V$2``, ``M$2``,..."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 02:50+0900\n"
+"POT-Creation-Date: 2019-01-16 11:04+0900\n"
 "PO-Revision-Date: 2018-07-16 07:18+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:10
+#: ../source/python/examples.rst:10
 msgid "Examples"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:17
+#: ../source/python/examples.rst:17
 msgid "A step-by-step basic example"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:19
+#: ../source/python/examples.rst:19
 msgid ""
 "This example shows the basic usage of getfem, on the über-canonical problem "
 "above all others: solving the :envvar:`Laplacian`, :math:`-\\Delta u = f` on"
@@ -35,7 +35,7 @@ msgid ""
 " |gf| distribution."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:25
+#: ../source/python/examples.rst:25
 msgid ""
 "The first step is to **create a Mesh object**. It is possible to create "
 "simple structured meshes or unstructured meshes for simple geometries (see "
@@ -46,13 +46,13 @@ msgid ""
 ":math:`\\{x_{i=0\\ldots10,j=0..10}=(i/10,j/10)\\}`"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:34
+#: ../source/python/examples.rst:34
 msgid ""
 "The next step is to **create a MeshFem object**. This one links a mesh with "
 "a set of FEM"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:41
+#: ../source/python/examples.rst:41
 msgid ""
 "The first instruction builds a new |py_mf| object, the second argument "
 "specifies that this object will be used to interpolate scalar fields (since "
@@ -64,13 +64,13 @@ msgid ""
 " functions on the reference convex:"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:54
+#: ../source/python/examples.rst:54
 msgid ""
 "Now, in order to perform numerical integrations on ``mf``, we need to "
 "**build a MeshIm object**"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:61
+#: ../source/python/examples.rst:61
 msgid ""
 "The integration method will be used to compute the various integrals on each"
 " element: here we choose to perform exact computations (no "
@@ -83,13 +83,13 @@ msgid ""
 "many alternative FEM methods and integration methods (see :ref:`ud`)."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:71
+#: ../source/python/examples.rst:71
 msgid ""
 "Note however that in the general case, approximate integration methods are a"
 " better choice than exact integration methods."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:74
+#: ../source/python/examples.rst:74
 msgid ""
 "Now we have to **find the** <:envvar:`boundary`> **of the domain**, in order"
 " to set a Dirichlet condition. A mesh object has the ability to store some "
@@ -97,13 +97,13 @@ msgid ""
 "accessed via an integer *#id*"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:83
+#: ../source/python/examples.rst:83
 msgid ""
 "Here we find the faces of the convexes which are on the boundary of the mesh"
 " (i.e. the faces which are not shared by two convexes)."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:86
+#: ../source/python/examples.rst:86
 msgid ""
 "The array ``border`` has two rows, on the first row is a convex number, on "
 "the second row is a face number (which is local to the convex, there is no "
@@ -111,7 +111,7 @@ msgid ""
 " number 42."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:90
+#: ../source/python/examples.rst:90
 msgid ""
 "At this point, we just have to describe the model and run the solver to get "
 "the solution! The \":envvar:`model`\" is created with the |py_md| "
@@ -124,24 +124,24 @@ msgid ""
 "stored in the \":envvar:`model`\" structure."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:99
+#: ../source/python/examples.rst:99
 msgid ""
 "Let us build a problem with an easy solution: :math:`u = x(x-1)-y(y-1)`, "
 "then we have :math:`-\\Delta u = 0` (the FEM won't be able to catch the "
 "exact solution since we use a :math:`Q^2` method)."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:103
+#: ../source/python/examples.rst:103
 msgid "We start with an empty real model"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:109
+#: ../source/python/examples.rst:109
 msgid ""
 "(a model is either ``'real'`` or ``'complex'``). And we declare that ``u`` "
 "is an unknown of the system on the finite element method `mf` by"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:116
+#: ../source/python/examples.rst:116
 msgid ""
 "Now, we add a `generic elliptic` brick, which handles "
 ":math:`-\\nabla\\cdot(A:\\nabla u) = \\ldots` problems, where :math:`A` can "
@@ -149,11 +149,11 @@ msgid ""
 ":math:`A=1`. We add it on our main variable ``u`` with"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:125
+#: ../source/python/examples.rst:125
 msgid "Next we add a Dirichlet condition on the domain boundary"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:131
+#: ../source/python/examples.rst:131
 msgid ""
 "The two first lines defines a data of the model which represents the value "
 "of the Dirichlet condition. The third one add a Dirichlet condition to the "
@@ -165,7 +165,7 @@ msgid ""
 "the space of multipliers given by here by ``mf``."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:141
+#: ../source/python/examples.rst:141
 msgid ""
 "the polynomial expression was interpolated on ``mf``. It is possible only if"
 " ``mf`` is of Lagrange type. In this first example we use the same |py_mf| "
@@ -174,39 +174,39 @@ msgid ""
 " the description of Dirichlet conditions, source terms etc."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:147
+#: ../source/python/examples.rst:147
 msgid "A source term can be added with (uncommented) the following lines"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:153
+#: ../source/python/examples.rst:153
 msgid ""
 "It only remains now to launch the solver. The linear system is assembled and"
 " solve with the instruction"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:160
+#: ../source/python/examples.rst:160
 msgid ""
 "The model now contains the solution (as well as other things, such as the "
 "linear system which was solved). It is extracted"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:167
+#: ../source/python/examples.rst:167
 msgid "Then export solution"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:173
+#: ../source/python/examples.rst:173
 msgid "and view with ``gmsh u.pos``, see figure :ref:`py-fig-sbs`."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:180
+#: ../source/python/examples.rst:180
 msgid "Computed solution"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:184
+#: ../source/python/examples.rst:184
 msgid "Another Laplacian with exact solution (source term)"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:186
+#: ../source/python/examples.rst:186
 msgid ""
 "This example shows the basic usage of getfem, on the canonical problem: "
 "solving the Laplacian, :math:`-\\Delta u = f` on a square, with the "
@@ -217,39 +217,39 @@ msgid ""
 "in the directory ``interface/tests/python/`` of the |gf| distribution."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:194
+#: ../source/python/examples.rst:194
 msgid ""
 "We create Mesh, MeshFem, MeshIm object and find the boundary of the domain "
 "in the same way as the previous example"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:201
+#: ../source/python/examples.rst:201
 msgid "then, we interpolate the exact solution and source terms"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:207
+#: ../source/python/examples.rst:207
 msgid "and we bricked the problem as in the previous example"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:213
+#: ../source/python/examples.rst:213
 msgid ""
 "the only change is the add of `source term` bricks. Finally the solution of "
 "the problem is extracted and exported"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:220
+#: ../source/python/examples.rst:220
 msgid "view with ``gmsh sol.pos``:"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:226
+#: ../source/python/examples.rst:226
 msgid "Differences"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:230
+#: ../source/python/examples.rst:230
 msgid "Linear and non-linear elasticity"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:232
+#: ../source/python/examples.rst:232
 msgid ""
 "This example uses a mesh that was generated with `GiD`_. The object is "
 "meshed with quadratic tetrahedrons. You can find the **py-file** of this "
@@ -257,21 +257,21 @@ msgid ""
 ":file:`interface/tests/python/` of the |gf| distribution."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:241
+#: ../source/python/examples.rst:241
 msgid ""
 "Here is the final figure, displaying the :envvar:`Von Mises` stress and "
 "displacements norms:"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:248
+#: ../source/python/examples.rst:248
 msgid "\\(a\\) Tripod Von Mises, \\(b\\) Tripod displacements norms."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:252
+#: ../source/python/examples.rst:252
 msgid "Avoiding the model framework"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:254
+#: ../source/python/examples.rst:254
 msgid ""
 "The model bricks are very convenient, as they hide most of the details of "
 "the assembly of the final linear systems. However it is also possible to "
@@ -281,7 +281,7 @@ msgid ""
 "except that the assembly is explicit"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:263
+#: ../source/python/examples.rst:263
 msgid ""
 "In |gfi|, the assembly of vectors, and matrices is done via the ``gf.asm_*``"
 " functions. The Dirichlet condition :math:`h(x)u(x) = r(x)` is handled in "
@@ -293,11 +293,11 @@ msgid ""
 "Dirichlet condition via a penalization technique."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:273
+#: ../source/python/examples.rst:273
 msgid "Other examples"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:275
+#: ../source/python/examples.rst:275
 msgid ""
 "the :file:`demo_refine.py` script shows a simple 2D or 3D bar whose "
 "extremity is clamped. An adaptative refinement is used to obtain a better "
@@ -305,7 +305,7 @@ msgid ""
 "between the clamped area and the neumann boundary)."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:280
+#: ../source/python/examples.rst:280
 msgid ""
 "the :file:`demo_nonlinear_elasticity.py` script shows a 3D bar which is is "
 "bended and twisted. This is a quasi-static problem as the deformation is "
@@ -313,7 +313,7 @@ msgid ""
 "elasticity problem is solved."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:285
+#: ../source/python/examples.rst:285
 msgid ""
 "the :file:`demo_stokes_3D_tank.py` script shows a Stokes (viscous fluid) "
 "problem in a tank. The :file:`demo_stokes_3D_tank_draw.py` shows how to draw"
@@ -322,14 +322,14 @@ msgid ""
 "deprecated ``gf_solve`` function."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:291
+#: ../source/python/examples.rst:291
 msgid ""
 "the :file:`demo_bilaplacian.py` script is just an adaption of the |gf| "
 "example :file:`tests/bilaplacian.cc`. Solve the bilaplacian (or a Kirchhoff-"
 "Love plate model) on a square."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:295
+#: ../source/python/examples.rst:295
 msgid ""
 "the :file:`demo_plasticity.py` script is an adaptation of the |gf| example "
 ":file:`tests/plasticity.cc`: a 2D or 3D bar is bended in many steps, and the"
@@ -337,7 +337,7 @@ msgid ""
 "when the material's Von Mises exceeds a given threshold)."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/python/examples.rst:300
+#: ../source/python/examples.rst:300
 msgid ""
 "the :file:`demo_wave2D.py` is a 2D scalar wave equation example (diffraction"
 " of a plane wave by a cylinder), with high order geometric transformations "

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 02:50+0900\n"
+"POT-Creation-Date: 2019-01-16 11:04+0900\n"
 "PO-Revision-Date: 2018-07-16 07:06+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:13
+#: ../source/userdoc/model_dirichlet.rst:13
 msgid "Dirichlet condition brick"
 msgstr "Dirichlet条件ブリック要素"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:15
+#: ../source/userdoc/model_dirichlet.rst:15
 msgid ""
 "The aim of the Dirichlet condition brick is to prescribe a Dirichlet "
 "condition on a part of the boundary of the domain for a variable of the "
@@ -38,7 +38,7 @@ msgstr ""
 " :ref:`ud-model-Nitsche` "
 "の節も参照してください）。最初のバージョンはDirichlet乗数を定めます。関連する弱形式の項は次のとおりです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:25
+#: ../source/userdoc/model_dirichlet.rst:25
 msgid ""
 "where :math:`u` is the variable, :math:`M` is the space of multipliers, "
 ":math:`u_D` is the variable and :math:`\\Gamma` the Dirichlet boundary. For "
@@ -48,7 +48,7 @@ msgid ""
 "prescribed with a multiplier. The first one is::"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:36
+#: ../source/userdoc/model_dirichlet.rst:36
 msgid ""
 "adding a Dirichlet condition on ``varname`` thanks to a multiplier variable "
 "``multname`` on the mesh region ``region`` (which should be a boundary). The"
@@ -67,7 +67,7 @@ msgstr ""
 " ``multname`` はメソッド ``add_multiplier`` "
 "でモデルに追加する必要があります。この関数は、モデル内のブリック要素のインデックスを返します。2番目の関数は以下の通りです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:50
+#: ../source/userdoc/model_dirichlet.rst:50
 msgid ""
 "The only difference is that ``multname`` is replaced by ``mf_mult`` which "
 "means that only the finite element on which the multiplier will be built is "
@@ -78,7 +78,7 @@ msgstr ""
 "に置き換えられます。つまり、乗算器が構築される有限要素のみが与えられます。この関数は、乗数変数をモデルに追加します。 "
 "3番目の関数は2番目の関数と非常に似ています。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:59
+#: ../source/userdoc/model_dirichlet.rst:59
 msgid ""
 "The parameter ``mf_mult`` is replaced by an integer ``degree`` indicating "
 "that the multiplier will be built on a classical finite element method of "
@@ -86,7 +86,7 @@ msgid ""
 msgstr ""
 "パラメータ ``mf_mult`` は乗数がその次数の古典的な有限要素法に基づいて構築されることを示す整数の ``degree`` に置き換えられます。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:62
+#: ../source/userdoc/model_dirichlet.rst:62
 msgid ""
 "Note, that in all the cases, when a variable is added by the method "
 "``add_multiplier`` of the model object, the |mf| will be filtered (thank to "
@@ -96,26 +96,26 @@ msgstr ""
 "全ての場合において、変数がmodelオブジェクトの ``add_multiplier`` メソッドによって追加されたとき |mf| は（ "
 "``partial_mesh_fem_object`` により）考慮されている境界に寄与していない自由度しか保持しないようにフィルタリングされます。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:67
+#: ../source/userdoc/model_dirichlet.rst:67
 msgid ""
 "Finally, the variable name of the multiplier can be obtained thank to the "
 "function::"
 msgstr "最後に、乗算器の変数名は以下の関数により得られます。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:72
+#: ../source/userdoc/model_dirichlet.rst:72
 msgid ""
 "where ``ind_brick`` is the brick index in the model. This function has an "
 "undefined behavior if it applied to another kind of brick."
 msgstr ""
 "ここで ``ind_brick`` はモデルのブリック要素のインデックスです。この関数は別の種類のブリック要素に適用された場合、未定義の動作をします。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:75
+#: ../source/userdoc/model_dirichlet.rst:75
 msgid ""
 "The second version of the Dirichlet condition brick is the one with "
 "penalization. The function allowing to add this brick is::"
 msgstr "Dirichlet条件のブリック要素の第2のバージョンは、ペナルティを伴うものです。このブリック要素を追加できる関数は以下の通りです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:83
+#: ../source/userdoc/model_dirichlet.rst:83
 msgid ""
 "The penalization consists in computing the mass matrix of the variable and "
 "add it multiplied by the penalization coefficient to the stiffness matrix. "
@@ -133,7 +133,7 @@ msgstr ""
 "のような形式になります。ここで、 :math:`B` は、変数 `varname` "
 "の試行関数と乗数空間ペナルティ係数はモデルのデータとして追加され、次の関数によって変更することができます。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:91
+#: ../source/userdoc/model_dirichlet.rst:91
 msgid ""
 "The third version of the Dirichlet condition brick use a simplification of "
 "the linear system (tangent linear system for nonlinear problems). Basically,"
@@ -150,7 +150,7 @@ msgid ""
 msgstr ""
 "Dirichlet条件ブリック要素の第3バージョンは、線形システム（非線形問題のための接線系）の簡略化を使用します。基本的には、規定された自由度に対応する線の対角成分に1を強制し、それに応じていくつかのゼロを有する線を完成させます（対称問題については、いくつかのゼロで列を完成させます）。これは、Dirichlet条件を処理するための、単純で効率的な方法です。ただし、Dirichlet条件で規定されている自由度を特定できる場合にのみ適用できます。したがって、簡略化したHermite要素法の使用は慎重に使用しなければならず、ベクトル問題に関する通常の（または一般化された）Dirichlet条件には適用できません。このブリック要素を追加できる関数は次の通りです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:97
+#: ../source/userdoc/model_dirichlet.rst:97
 msgid ""
 "If `dataname` is ommited, an homogeneous Dirichlet condition is applied. If "
 "`dataname` is given, the constraint is that it has to be constant or "
@@ -163,17 +163,17 @@ msgstr ""
 "と同じ有限要素法で定数または記述されなければならないという制約があります。加えて、 `dataname` "
 "が定数の場合、Lagrange有限要素法にしか適用できません。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:100
+#: ../source/userdoc/model_dirichlet.rst:100
 msgid "Generalized Dirichlet condition brick"
 msgstr "一般化Dirichlet状態ブリック要素"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:102
+#: ../source/userdoc/model_dirichlet.rst:102
 msgid ""
 "The generalized Dirichlet condition is a boundary condition of a vector "
 "field u of the type"
 msgstr "一般化されたDirichlet条件は、タイプのベクトル場uの境界条件です。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:109
+#: ../source/userdoc/model_dirichlet.rst:109
 msgid ""
 "where :math:`H` is a matrix field. The functions adding the corresponding "
 "bricks are similar to the ones of the standard Dirichlet condition except "
@@ -186,11 +186,11 @@ msgstr ""
 "を必要とします。これは、 :math:`H` "
 "に対応するデータの名前を与えます。このデータは、スカラーの有限要素法または定数行列に記述された行列フィールドにすることができます。 "
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:137
+#: ../source/userdoc/model_dirichlet.rst:137
 msgid "Pointwise constraints brick"
 msgstr "点列制約ブリック要素"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:139
+#: ../source/userdoc/model_dirichlet.rst:139
 msgid ""
 "The pointwise constraints brick is a Dirichlet condition like brick which "
 "allows to prescribe the value of an unknown on given points of the domain. "
@@ -200,7 +200,7 @@ msgid ""
 msgstr ""
 "点列制約ブリック要素は、ブリック要素のようなDirichlet条件であり、領域の所与の点に未知の値を処方することを可能にします。これらの点は、必ずしもメッシュの頂点である必要はなく、未知数が記述されている有限要素法の自由度に対応する点列である必要もありません。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:142
+#: ../source/userdoc/model_dirichlet.rst:142
 msgid ""
 "For scalar field variables, given a set of :math:`N_p` points :math:`x_i, i "
 "= 1\\cdots N_p`, the brick allows to prescribe the value of the variable on "
@@ -209,13 +209,13 @@ msgstr ""
 "スカラー場変数については、 :math:`N_p` 点  :math:`x_i, i = 1\\cdots N_p` "
 "の集合が与えられ、ブリック要素にこれらの点で変数の値を指定すると、次のようになります。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:148
+#: ../source/userdoc/model_dirichlet.rst:148
 msgid ""
 "where :math:`u` is the scalar field and :math:`l_i` the value to be "
 "prescribed on the point :math:`x_i`."
 msgstr "ここで、 :math:`u` はスカラーフィールドで、 :math:`l_i` はポイント :math:`x_i` に指定する値です。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:150
+#: ../source/userdoc/model_dirichlet.rst:150
 msgid ""
 "For vector field variables, given a set of :math:`N_p` points :math:`x_i, i "
 "= 1\\cdots N_p`, the brick allows to prescribe the value of one component of"
@@ -224,20 +224,20 @@ msgstr ""
 "ベクトルフィールド変数の場合、 :math:`N_p` 点数 :math:`x_i, i = 1\\cdots N_p` "
 "の集合が与えられた場合、ブリック要素は変数の1つのブリック要素の値をこれらの点で処理することを可能にします、すなわち、条件を強制します。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:156
+#: ../source/userdoc/model_dirichlet.rst:156
 msgid ""
 "where :math:`n_i` is the vector such that :math:`u(x_i)\\cdot n_i` represent"
 " the component to be prescribed."
 msgstr ""
 "ここで、 :math:`n_i` は次のようなベクトルです。例えば :math:`u(x_i)\\cdot n_i` は指定する成分を表します。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:158
+#: ../source/userdoc/model_dirichlet.rst:158
 msgid ""
 "The brick has two versions: a penalized version and a version with "
 "multipliers. The call is the following::"
 msgstr "ブリック要素には2つのバージョンがあります: ペナルティバージョンと乗算機能付きバージョンです。呼び出しは次のとおりです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:171
+#: ../source/userdoc/model_dirichlet.rst:171
 msgid ""
 "respectively for the penalized version, the one with a given multiplier "
 "fixed size variable and the one which automatically adds a multiplier "
@@ -261,7 +261,7 @@ msgstr ""
 "はオプションで右辺を表します。これは、 :math:`l_i` という成分を含んでいなければなりません。 :math:`l_i` "
 "のデフォルト値は0です。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_dirichlet.rst:173
+#: ../source/userdoc/model_dirichlet.rst:173
 msgid ""
 "This brick is mainly designed to prescribe the rigid displacements for pure "
 "Neumann problems."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 02:50+0900\n"
+"POT-Creation-Date: 2019-01-16 11:04+0900\n"
 "PO-Revision-Date: 2018-07-16 07:16+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:10
+#: ../source/tutorial/intro.rst:10
 msgid "Introduction"
 msgstr "導入"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:12
+#: ../source/tutorial/intro.rst:12
 msgid ""
 "This tutorial is intended to present the main aspects of the |gf| library  "
 "on commented simple examples. |gf| allows numerical modeling of complex "
@@ -37,34 +37,34 @@ msgstr ""
 "このチュートリアルでは、コメント付きの簡単な例のライブラリで |gf| の主な特徴を示すことを目的としています。 |gf| "
 "は連成されたものを含む複雑な問題の数値モデリングを可能にします。弱形式記述言語のおかげで、任意の結合項を追加するのは比較的簡単です。弱形式の式はアセンブリ中に実行される最適化された命令のリストの形式でコンパイルされます。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:14
+#: ../source/tutorial/intro.rst:14
 msgid "The main presented functionalities are the following"
 msgstr "提供されている主な機能は次のとおりです"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:16
+#: ../source/tutorial/intro.rst:16
 msgid ""
 "Approximation of multiphysics problems and the use of the generic assembly."
 msgstr "マルチフィジックス問題の近似と汎用構築の使用。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:17
+#: ../source/tutorial/intro.rst:17
 msgid "The use of fixed-size variables."
 msgstr "固定サイズ変数の使用。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:18
+#: ../source/tutorial/intro.rst:18
 msgid "Contact problems."
 msgstr "接触問題。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:19
+#: ../source/tutorial/intro.rst:19
 msgid ""
 "Fictitious domain functionalities and transformations allowing inter-mesh or"
 " inter-region assembly."
 msgstr "架空領域の機能性と変換により、メッシュ間または領域間のアセンブリが可能になります。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:20
+#: ../source/tutorial/intro.rst:20
 msgid "Continuation / bifurcation problems."
 msgstr "継続/分岐の問題。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:22
+#: ../source/tutorial/intro.rst:22
 msgid ""
 "This tutorial does not of course takes the place of the various "
 "documentations. The user documentation (that of the C++ library) is the "
@@ -78,7 +78,7 @@ msgstr ""
 "ライブラリの)ユーザードキュメント "
 "を参考ににしてください。インターフェイスのドキュメンテーションはインターフェイスからのさまざまな機能の使用法を記述しますが、メソッドの記述は繰り返しません。「開発者の手引き」には、ライブラリの構造に関する内部情報が記載されています。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:24
+#: ../source/tutorial/intro.rst:24
 msgid ""
 "|Gf| is a free collaborative project hosted by the `Savannah "
 "<http://savannah.gnu.org>`_ site (see "
@@ -89,11 +89,11 @@ msgstr ""
 "サイトによってホストされている自由な共同プロジェクトです(https://savannah.nongnu.org/projects/getfem "
 "を参照してください)。新しい貢献者は、プロジェクトのすべての面で歓迎されます。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:29
+#: ../source/tutorial/intro.rst:29
 msgid "C++, Python, Scilab or Matlab ?"
 msgstr "C++、Python、Scilab、または Matlab?"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:33
+#: ../source/tutorial/intro.rst:33
 msgid ""
 "|gf| is basically a library written in C++. However, it has an interface "
 "that is available in Python, Scilab and Matlab  versions and allows to use "
@@ -112,7 +112,7 @@ msgstr ""
 "などの専用ソフトウェアを使用する必要がある一方で、Scilab および Matlab "
 "インターフェイスを使用する場合は統合された後処理も可能です)。Python インターフェイスは、C++ ライブラリと共にデフォルトでコンパイルされます。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:35
+#: ../source/tutorial/intro.rst:35
 msgid ""
 "Use |gf| interface is a good strategy even for complex applications, the "
 "performance is comparable to the direct use of the C++ library and it is "
@@ -124,33 +124,33 @@ msgstr ""
 "ライブラリの直接使用に匹敵し、より柔軟に使用できます。しかし、(MPI で) 並列化が可能なのはPython "
 "インタフェースだけです。インターフェイスへの機能の追加は比較的簡単な作業です。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:37
+#: ../source/tutorial/intro.rst:37
 msgid ""
 "The first example of the tutorial (thermo-electric coupling elastico) allows"
 " to see the difference in the use of the C++ library and one of the versions"
 " of the interface."
 msgstr "チュートリアルの最初の例 (熱-電気弾性連成) では、C++ ライブラリとインターフェイスバージョンの使用の違いを確認することができます。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:41
+#: ../source/tutorial/intro.rst:41
 msgid "Where are demo files ?"
 msgstr "デモファイルはどこにありますか?"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:43
+#: ../source/tutorial/intro.rst:43
 msgid "A large number of demonstration programs can be found"
 msgstr "多数のデモンストレーションプログラムを以下で見つけることができます。"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:45
+#: ../source/tutorial/intro.rst:45
 msgid "for the C++ examples in directory::"
 msgstr "C++ の例は以下のディレクトリ内にあります ::"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:49
+#: ../source/tutorial/intro.rst:49
 msgid "for the Python interface in the directory::"
 msgstr "Python インターフェイスは以下のディレクトリ内にあります  ::"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:53
+#: ../source/tutorial/intro.rst:53
 msgid "for the Scilab interface in the directory::"
 msgstr "Scilab インターフェイスは以下のディレクトリ内にあります  ::"
 
-#: ../../getfem/doc/sphinx/source/tutorial/intro.rst:57
+#: ../source/tutorial/intro.rst:57
 msgid "and for the Matlab interface in the directory::"
 msgstr "そして、 Matlab インターフェイスは以下のディレクトリ内にあります  ::"

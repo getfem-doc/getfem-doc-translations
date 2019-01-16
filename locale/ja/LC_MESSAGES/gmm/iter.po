@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 02:50+0900\n"
+"POT-Creation-Date: 2019-01-16 11:04+0900\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,53 +17,53 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:10
+#: ../source/gmm/iter.rst:10
 msgid "Iterative solvers"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:14
+#: ../source/gmm/iter.rst:14
 msgid ""
 "Most of the solvers provided in |gmm| come form ITL with slight "
 "modifications (gmres has been optimized and adapted for complex matrices). "
 "Include the file ``gmm/gmm_iter_solvers.h`` to use them."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:17
+#: ../source/gmm/iter.rst:17
 msgid "iterations"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:19
+#: ../source/gmm/iter.rst:19
 msgid ""
 "The iteration object of |gmm| is a modification of the one in ITL. This is "
 "not a template type as in ITL."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:21
+#: ../source/gmm/iter.rst:21
 msgid "The simplest initialization is::"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:25
+#: ../source/gmm/iter.rst:25
 msgid ""
 "where ``2.0E-10`` is the (relative) residual to be obtained to have the "
 "convergence. Some possibilities::"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:42
+#: ../source/gmm/iter.rst:42
 msgid "Linear solvers"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:44
+#: ../source/gmm/iter.rst:44
 msgid "Here is the list of available linear solvers::"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:66
+#: ../source/gmm/iter.rst:66
 msgid ""
 "The solver ``gmm::constrained_cg(A, C, X, B, PS, PR, iter);`` solve a system"
 " with linear constaints, ``C`` is a matrix which represents the constraints."
 " But it is still experimental."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:68
+#: ../source/gmm/iter.rst:68
 msgid ""
 "(Version 1.7) The solver ``gmm::bfgs(F, GRAD, X, restart, iter)`` is a BFGS "
 "quasi-Newton algorithm with a Wolfe line search for large scale problems. It"
@@ -71,17 +71,17 @@ msgid ""
 "``GRAD``. ``restart`` is the max number of stored update vectors."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:71
+#: ../source/gmm/iter.rst:71
 msgid "Preconditioners"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:73
+#: ../source/gmm/iter.rst:73
 msgid ""
 "The following preconditioners, to be used with linear solvers, are "
 "available::"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:107
+#: ../source/gmm/iter.rst:107
 msgid ""
 "Except ``ildltt\\_precond``, all these precontionners come from ITL. "
 "``ilut_precond`` has been optimized and simplified and ``cholesky_precond`` "
@@ -92,24 +92,24 @@ msgid ""
 "or hermitian complex matrices to be use principaly with cg."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:110
+#: ../source/gmm/iter.rst:110
 msgid "Additive Schwarz method"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:112
+#: ../source/gmm/iter.rst:112
 msgid ""
 "The additive Schwarz method is a decomposition domain method allowing the "
 "resolution of huge linear systems (see [SCHADD]_ for the principle of the "
 "method)."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:114
+#: ../source/gmm/iter.rst:114
 msgid ""
 "For the moment, the method is not parallelized (this should be done ...). "
 "The call is the following::"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:118
+#: ../source/gmm/iter.rst:118
 msgid ""
 "``A`` is the matrix of the linear system. ``u`` is the unknown vector. ``f``"
 " is the right hand side. ``P`` is an eventual preconditioner for the local "
@@ -126,7 +126,7 @@ msgid ""
 "gmm::using_cg(), gmm::using_qmr()``."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:120
+#: ../source/gmm/iter.rst:120
 msgid ""
 "The test program ``schwarz_additive.C`` is the directory ``tests`` of "
 "GetFEM++ is an example of the resolution with the additive Schwarz method of"
@@ -135,25 +135,25 @@ msgid ""
 "mesh)."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:122
+#: ../source/gmm/iter.rst:122
 msgid ""
 "In the case of multiple solves with the same linear system, it is possible "
 "to store the preconditioners or the LU factorisations to save computation "
 "time."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:124
+#: ../source/gmm/iter.rst:124
 msgid ""
 "A (too) simple program in ``gmm/gmm_domain_decomp.h`` allows to build a "
 "regular domain decomposition with a certain ratio of overlap. It directly "
 "produces the vector of matrices ``vB`` for the additive Schwarz method."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:127
+#: ../source/gmm/iter.rst:127
 msgid "Range basis function"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:129
+#: ../source/gmm/iter.rst:129
 msgid ""
 "The function ``gmm\\_range\\_basis(B, columns, EPS=1e-12)`` defined in "
 "``gmm/gmm\\_range\\_basis.h`` allows to select from the columns of a sparse "
@@ -162,44 +162,44 @@ msgid ""
 "contains the indices of the selected columns."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:131
+#: ../source/gmm/iter.rst:131
 msgid ""
 "The algorithm is specially designed to select independent constraints from a"
 " large matrix with linearly dependent columns."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:133
+#: ../source/gmm/iter.rst:133
 msgid "There is four step in the implemented algorithm"
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:136
+#: ../source/gmm/iter.rst:136
 msgid "Elimination of null columns."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:137
+#: ../source/gmm/iter.rst:137
 msgid "Selection of a set of already orthogonal columns."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:138
+#: ../source/gmm/iter.rst:138
 msgid ""
 "Elimination of locally dependent columns by a blockwise Gram-Schmidt "
 "algorithm."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:139
+#: ../source/gmm/iter.rst:139
 msgid ""
 "Computation of vectors of the remaining null space by a global restarted "
 "Lanczos algorithm and deduction of some columns to be eliminated."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:141
+#: ../source/gmm/iter.rst:141
 msgid ""
 "The algorithm is efficient if after the local Gram-Schmidt algorithm it "
 "remains a low dimension null space. The implemented restarted Lanczos "
 "algorithm find the null space vectors one by one."
 msgstr ""
 
-#: ../../getfem/doc/sphinx/source/gmm/iter.rst:143
+#: ../source/gmm/iter.rst:143
 msgid ""
 "The Global restarted Lanczos algorithm may be improved or replaced by a "
 "block Lanczos method (see [ca-re-so1994]_ for instance), a block Wiedelann "

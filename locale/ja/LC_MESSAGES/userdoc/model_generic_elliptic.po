@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 02:50+0900\n"
+"POT-Creation-Date: 2019-01-16 11:04+0900\n"
 "PO-Revision-Date: 2018-07-16 07:06+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,18 +21,18 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_generic_elliptic.rst:13
+#: ../source/userdoc/model_generic_elliptic.rst:13
 msgid "Generic elliptic brick"
 msgstr "汎用的な楕円ブリック要素"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_generic_elliptic.rst:15
+#: ../source/userdoc/model_generic_elliptic.rst:15
 msgid ""
 "This brick adds an elliptic term on a variable of a model.  The shape of the"
 " elliptic term depends both on the variable and a given coefficient. This "
 "corresponds to a term:"
 msgstr "この要素は、モデルの変数に楕円形の項を追加します。楕円項の形状は、変数と与えられた係数の両方に依存します。これは次の項に対応します。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_generic_elliptic.rst:23
+#: ../source/userdoc/model_generic_elliptic.rst:23
 msgid ""
 "where :math:`a` is the coefficient and :math:`u` the variable. The "
 "coefficient can be a scalar, a matrix or an order four tensor. The variable "
@@ -51,13 +51,13 @@ msgstr ""
 "ここで、 :math:`a` は係数であり、 :math:`u` "
 "は変数です。係数は、スカラー、行列またはテンソル4次のオーダです。変数はベクトル値でも、そうでなくてもかまいません。これは、ブリック要素がいくつかの異なる状況を扱うことを意味します。係数がスカラーまたは行列で、変数がベクトル値の場合、その項は成分ごとに加算されます。4つのテンソル係数はベクトル値の変数にのみ使用できます。係数は一定であってもFEMで記述されてもよいです。もちろん、係数が有限要素法（テンソル場）上に記述されたテンソルである場合、対応するデータは巨大ベクトルとなり得ます。行列/テンソルの成分は、係数（BLASとの適合性）に対応するデータベクトルにFortran次数（列方向）で格納しなければなりません。与えられた行列/テンソルの対称性と保磁力は検証されません（しかし仮定されます）。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_generic_elliptic.rst:36
+#: ../source/userdoc/model_generic_elliptic.rst:36
 msgid ""
 "This brick can be added to a model ``md`` thanks to two functions. The first"
 " one is::"
 msgstr "この要素は、2つの関数によりモデル ``md`` に追加することができます。最初のものは次の通りです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_generic_elliptic.rst:41
+#: ../source/userdoc/model_generic_elliptic.rst:41
 msgid ""
 "that adds an elliptic term relatively to the variable ``varname`` of the "
 "model with a constant coefficient equal to :math:`1` (a Laplacian term). "
@@ -71,11 +71,11 @@ msgstr ""
 "``region`` "
 "はオプションの領域番号です。省略されている場合、項はメッシュ全体で計算されるものとみなされます。関数の結果は、モデルのブリック要素のインデックスです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_generic_elliptic.rst:48
+#: ../source/userdoc/model_generic_elliptic.rst:48
 msgid "The second function is::"
 msgstr "2番目の関数は次の通りです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_generic_elliptic.rst:52
+#: ../source/userdoc/model_generic_elliptic.rst:52
 msgid ""
 "It adds a term with an arbitrary coefficient given by the expression "
 "``dataexpr`` which has to be a regular expression of the weak form language "
@@ -87,7 +87,7 @@ msgstr ""
 "のような)弱形式言語の正規表現でなければならない式 ``dataexpr`` "
 "によって与えられた任意の係数が加えられます。（モデルの宣言されたデータでなければならない複素数バージョンを除く）。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_generic_elliptic.rst:54
+#: ../source/userdoc/model_generic_elliptic.rst:54
 msgid ""
 "Note that very general equations can be obtained with this brick. For "
 "instance, linear anisotropic elasticity can be obtained with a tensor data. "
@@ -96,7 +96,7 @@ msgid ""
 msgstr ""
 "このブリック要素では非常に汎用的な方程式が得られることに注意してください。例えば、テンソルデータを用いて線形異方性弾性を得ることができます。テンソル4次を使用する場合、対応する弱定式化項は次のようになります。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_generic_elliptic.rst:62
+#: ../source/userdoc/model_generic_elliptic.rst:62
 msgid ""
 "where :math:`a_{i,j,k,l}` is the order four tensor and :math:`\\partial_i "
 "u_j` is the partial derivative with respect to the :math:`i^{th}` variable "
@@ -108,6 +108,6 @@ msgstr ""
 "成分の :math:`\\partial_i u_j` は次の :math:`i` 次変数の偏微分です。  :math:`v` "
 "は試行関数です。しかし、線形等方性弾性の場合、より適合したブリック要素が利用可能です（下記参照）。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/model_generic_elliptic.rst:68
+#: ../source/userdoc/model_generic_elliptic.rst:68
 msgid "The brick has a working complex version."
 msgstr "ブリック要素は作業する複素数バージョンを持っています。"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 02:50+0900\n"
+"POT-Creation-Date: 2019-01-16 11:04+0900\n"
 "PO-Revision-Date: 2018-07-16 07:06+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../getfem/doc/sphinx/source/userdoc/iinteg.rst:10
+#: ../source/userdoc/iinteg.rst:10
 msgid "Incorporate new approximated integration methods in |gf|"
 msgstr "|gf| に新しい近似積分法を組み込む"
 
-#: ../../getfem/doc/sphinx/source/userdoc/iinteg.rst:12
+#: ../source/userdoc/iinteg.rst:12
 msgid ""
 "A perl script automatically incorporates new cubature methods from a "
 "description file. You can see in the directory ``cubature`` such description"
@@ -35,7 +35,7 @@ msgstr ""
 "perlスクリプトは記述ファイルから新しい立方体法を自動的に組み込みます。このような記述ファイル（拡張子は ``.IM`` ）はディレクトリ "
 "``cubature`` にあります。たとえば、 ``IM_TETRAHEDRON(5)`` の場合、次のファイルは積分法を記述しています。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/iinteg.rst:30
+#: ../source/userdoc/iinteg.rst:30
 msgid ""
 "where ``NAME`` is the name of the method in |gf| (constant integer parameter"
 " are allowed), ``N`` is the dimension, ``GEOTRANS`` describes a valid "
@@ -49,25 +49,25 @@ msgstr ""
 "の有効な幾何変換を記述します。この幾何学変換は、積分法が記述されている基準要素を定義するだけです。 ``NBPT`` "
 "は積分節点定義の数です。積分節点定義には積分節点の総数が ``NBPT`` より大きい対称定義が含まれています。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/iinteg.rst:38
+#: ../source/userdoc/iinteg.rst:38
 msgid "Composition of the integration node definition:"
 msgstr "積分節点定義の構成は次の通りです。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/iinteg.rst:40
+#: ../source/userdoc/iinteg.rst:40
 msgid ""
 "an integer: 0 = no symmetry, 1 = full symmetric (x6 for a triangle, x4 for a"
 " quadrangle, x24 for a tetrahedron ...),"
 msgstr "整数：0 = 対称性なし、1 = 完全対称（3角形の場合はx6、4角形の場合はx4、4面体の場合はx24 ...）、"
 
-#: ../../getfem/doc/sphinx/source/userdoc/iinteg.rst:43
+#: ../source/userdoc/iinteg.rst:43
 msgid "the ``N`` coordinates of the integration node,"
 msgstr "積分節点の ``N`` 座標、"
 
-#: ../../getfem/doc/sphinx/source/userdoc/iinteg.rst:45
+#: ../source/userdoc/iinteg.rst:45
 msgid "the load."
 msgstr "荷重。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/iinteg.rst:47
+#: ../source/userdoc/iinteg.rst:47
 msgid ""
 "``NBF`` is the number of faces of the reference element (should correspond "
 "to ``GEOTRANS``). Then follows an already existing integration method for "
@@ -77,6 +77,6 @@ msgstr ""
 "``NBF`` は参照要素の面の数です（ ``GEOTRANS`` "
 "に対応する必要があります）。次に、既存の積分法を各面（各面に1つずつ）に設定します。これは、境界を積分するために必要です。"
 
-#: ../../getfem/doc/sphinx/source/userdoc/iinteg.rst:52
+#: ../source/userdoc/iinteg.rst:52
 msgid "The file format is inspired from [EncyclopCubature]_."
 msgstr "ファイルフォーマットは [EncyclopCubature]_ からインスピレーションを受けています。"
