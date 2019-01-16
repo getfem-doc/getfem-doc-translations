@@ -5,7 +5,8 @@ set -ex
 
 # pull po files from transifex
 cd `dirname $0`
-(cd ../getfem;
+(
+ cd ../getfem;
  bash autogen.sh;
  ./configure;
  cd doc/sphinx;
