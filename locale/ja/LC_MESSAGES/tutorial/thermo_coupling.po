@@ -89,9 +89,9 @@ msgid ""
 " domain :math:`\\Omega` and :math:`n` the outward unit normal vector to "
 ":math:`\\Omega` on :math:`\\partial \\Omega`."
 msgstr ""
-"熱伝導率は :math:`\\kappa` により設計されています、 :math:`T_0` は空気の温度、 :math:`\\partial "
-"\\Omega` は、領域 :math:`\\Omega` の境界であり :math:`n` は :math:`\\partial \\Omega` "
-"上の :math:`\\Omega` への外向きの単位法線ベクトルです。"
+":math:`\\kappa` は熱電導率、 :math:`T_0` は空気の温度、 :math:`\\partial \\Omega` は、領域 "
+":math:`\\Omega` の境界であり :math:`n` は :math:`\\partial \\Omega` 上の "
+":math:`\\Omega` への外向きの単位法線ベクトルです。"
 
 #: ../source/tutorial/thermo_coupling.rst:34
 msgid ""
@@ -190,8 +190,8 @@ msgid ""
 "formulation is the only one which can give us the expression of the terms to"
 " be added."
 msgstr ""
-"重要なステップは、方程式の結合系の弱定式化を得ることです。有限要素定式化は弱定式化 "
-"(Galerkin近似)に基づいており、弱定式化は追加される項の表現を与えることができる唯一のものであるため、これは重要なステップです。"
+"重要なステップは、方程式の連成系方程式の弱定式化を得ることです。有限要素定式化は弱定式化 "
+"(Galerkin近似)に基づいており、弱定式化は追加される項の表現を与えることができる唯一のものであるため、これはきわめて重要なステップです。"
 
 #: ../source/tutorial/thermo_coupling.rst:98
 msgid ""
@@ -204,7 +204,7 @@ msgid ""
 "equations reads:"
 msgstr ""
 "各偏微分方程式の弱定式化は、主な未知数はDirichlet条件を満たしている主な未知数のDirichlet条件に対応する試行関数を用いて式を乗算することにより得られ、その後領域"
-" :math:`\\Omega` 上の積分と(Greenの式を使用した)部分の積分を実行します。偏微分方程式系の弱定式化は次の通りです。"
+" :math:`\\Omega` 上の積分と(Greenの式を使用した)部分のいくつかの積分を実行します。偏微分方程式系の弱定式化は次の通りです。"
 
 #: ../source/tutorial/thermo_coupling.rst:108
 msgid ""
@@ -248,7 +248,7 @@ msgid ""
 "`gf_workspace('clear all')` which allows to clear all |gf| variables."
 msgstr ""
 "まず、C++ では、モデルオブジェクト、ジェネリックアセンブリ、線形代数インターフェイス (Gmm++) "
-"、実験用メッシュ、およびエクスポート機能に対して、特定の数のヘッダーを含めることができます。Python の場合、これは簡単です。 |gf| "
+"、実験用メッシュ、およびエクスポート機能に対して、特定の数のヘッダーを含めなければなりません。Python の場合、これは簡単です。 |gf| "
 "をグローバルにインポートすることができます (numpy もインポートする必要があります)。Scilab の場合、ライブラリは Scilab "
 "コンソールに最初にロードされます (ここでは説明しません)、Matlab の場合、すべての |gf| 変数をクリアする "
 "`gf_workspace('clear all')` を除けば、何も必要ありません。"
@@ -324,7 +324,8 @@ msgid ""
 "problem. For script languages (Python, Scilab and Matlab) there is no "
 "differences."
 msgstr ""
-"ここで、問題のさまざまな物理的および数値パラメータを定義しましょう。スクリプト言語 (Python、Scilab、Matlab) には違いはありません。"
+"ここで、問題のさまざまな物理的および数値パラメータを定義しましょう。スクリプト言語 (Python、Scilab と Matlab) "
+"には違いはありません。"
 
 #: ../source/tutorial/thermo_coupling.rst:181
 msgid "**Scripts**"
@@ -357,9 +358,9 @@ msgid ""
 "transformation is of degree two, we used curved edges)."
 msgstr ""
 "領域のジオメトリは、3つの円形の穴がある長方形であることが想定されています ( :ref:`tut-fig-meshthermo` "
-"を参照)。ジオメトリは、いくつかの原始的な幾何とunion/setminus 操作によって説明されています ( "
+"を参照)。ジオメトリは、いくつかの原始的な幾何と union/setminus 操作によって説明されています ( "
 ":file:`src/getfem/getfem_mesher.h` ファイルを参照してください)。以下では、 `h` はメッシュサイズを表し、 `2`"
-" はメッシュの次数を表します (これは変換が次数2であることを意味し、曲線エッジを使用しています)。"
+" はメッシュの次数を表します (これは変換が次数2であることを意味し、曲線エッジを使用します)。"
 
 #: ../source/tutorial/thermo_coupling.rst:262
 msgid "The obtained mesh."
@@ -407,7 +408,7 @@ msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:409
 msgid "Definition of finite element methods and integration method"
-msgstr "有限要素法の定義と積分法"
+msgstr "有限要素法と積分法の定義"
 
 #: ../source/tutorial/thermo_coupling.rst:411
 msgid ""
@@ -436,7 +437,7 @@ msgid ""
 "used in practice."
 msgstr ""
 "|gf| には、既存の有限要素法の幅広い選択肢があります、 :ref:`ud-appendixa` を参照してください。しかし、 Lagrange "
-"有限要素法は、実際に最も使用されています。"
+"有限要素法が実際に最も使用されています。"
 
 #: ../source/tutorial/thermo_coupling.rst:422
 msgid ""
@@ -479,9 +480,9 @@ msgid ""
 "or linking several variables. They are used to make the assembly of the "
 "(tangent) linear system (see :ref:`ud-model-object` for more details)."
 msgstr ""
-"|gf| のモデルオブジェクトの変数(未知数)、データ、およびモデルブリックと呼ばれるものを収集します。モデルブリックは、単一の変数に適用されるモデル "
-"(線形または非線形項) の一部であるか、複数の変数をリンクしています。これらは、(接線) 線形システムの組み立てのために使用されます (詳細については "
-":ref:`ud-model-object` を参照してください)。"
+"|gf| のモデルオブジェクトの(未知)変数、データ、およびモデルブリックと呼ばれるものを収集します。モデルブリックは、単一の変数に適用される "
+"(線形または非線形項) モデルの一部であるか、複数の変数をリンクしています。これらは、(接線) 線形システムの組み立てのために使用されます "
+"(詳細については :ref:`ud-model-object` を参照してください)。"
 
 #: ../source/tutorial/thermo_coupling.rst:482
 msgid ""
@@ -496,7 +497,7 @@ msgid ""
 " object."
 msgstr ""
 "これは、構築手順を直接使用し、(接線) "
-"線形システムを所有することによって構築されるため、モデルオブジェクトを使用することは厳密には必須ではありません。モデルオブジェクトは、モデルのほとんどの古典的な部分が事前にプログラムされているので、モデルの素早い構築を可能にします。"
+"線形システムを有することによって構築されるため、モデルオブジェクトを使用することは厳密には必須ではありません。モデルオブジェクトは、モデルのほとんどの古典的な部分が事前にプログラムされているので、モデルの素早い構築を可能にします。"
 " 標準境界条件、標準偏微分方程式、制約を処理するための乗数の使用...さらに、いくつかのブリックは、標準ブリック "
 "(ジェネリックアセンブリブリック、明示的なマトリックスブリック) "
 "の拡張が可能なように設計されています。そのため、モデルオブジェクトのフレームワークを使用することをお勧めします。"
@@ -508,14 +509,14 @@ msgid ""
 "electromagnetism problems for instance) where it is advantageous to solve a "
 "complex linear system."
 msgstr ""
-"モデルには2つのバージョンがあります: 実数と複素数。複素数モデルは複雑な線形システムを解くのに有利な特殊なアプリケーション "
+"モデルには実数と複素数の2つのバージョンがあります。複素数モデルは複雑な線形システムを解くのに有利な特殊なアプリケーション "
 "(例えば、いくつかの電磁気学の問題) のために予約されています。"
 
 #: ../source/tutorial/thermo_coupling.rst:486
 msgid ""
 "Let us declare a real model with the three variables corresponding to the "
 "three fields to be computed:"
-msgstr "計算される3つのフィールドに対応する3つの変数を持つ実際のモデルを宣言してみましょう :"
+msgstr "計算される3つのフィールドに対応する3つの変数を持つ実際のモデルを宣言してみましょう 。"
 
 #: ../source/tutorial/thermo_coupling.rst:522
 msgid "Membrane elastic deformation problem"
@@ -528,7 +529,7 @@ msgid ""
 " Basically it adds the term corresponding to"
 msgstr ""
 "ここでは、弾性変形問題から始めましょう。以下の `add_isotropic_linearized_elasticity_brick` "
-"によって追加されている定義済みのブリックを使用します。基本的には、それに対応する項"
+"によって追加されている定義済みのブリックを使用します。基本的には、それは以下に対応する項を追加します。"
 
 #: ../source/tutorial/thermo_coupling.rst:530
 msgid ""
@@ -540,15 +541,15 @@ msgid ""
 " term `add_linear_term(md mim, \"lambda*(Div_u*Div_Test_u) + mu*((Grad_u + "
 "Grad_u'):Grad_Test_u)\"`."
 msgstr ""
-"の追加を接線線形システムに対して行います。このモデルブリックを使用するために、対応するデータ |Lame| "
-"係数は、最初にモデルに追加する必要があります。ここでは、 |Lame| "
+"の追加を接線線形システムに対して行います。このモデルブリックを使用するために、 |Lame| "
+"係数に対応するデータは、最初にモデルに追加する必要があります。ここでは、 |Lame| "
 "係数は、領域に対して一定です。ただし、一部の非定数データを定義することもできます。また、この定義済みのブリックを使用する代わりに、弱形式言語項 "
 "`add_linear_term(md mim, \"lambda*(Div_u*Div_Test_u) + mu*((Grad_u + "
 "Grad_u'):Grad_Test_u)\"` を等価に使用することができることに注意してください。"
 
 #: ../source/tutorial/thermo_coupling.rst:532
 msgid "Concerning the coupling term"
-msgstr "結合項"
+msgstr "連成項に関して"
 
 #: ../source/tutorial/thermo_coupling.rst:538
 msgid ""
@@ -560,7 +561,7 @@ msgid ""
 msgstr ""
 "は定義済みのブリックはなく、弱形式言語項 `add_linear_term(md mim, \"beta*theta*Div_Test_u)\"` "
 "を直接使用します。弱形式言語の詳細については、 :ref:`ud-gasm-high` "
-"を参照してください。基本的に、アセンブリ文字列は、各Gauss点で実行される最適化されたアセンブリ命令のリストに編集することが原則です。"
+"を参照してください。基本的に、アセンブリ文字列は、各Gauss点で実行される最適化されたアセンブリ命令のリストで編集することが原則です。"
 
 #: ../source/tutorial/thermo_coupling.rst:540
 msgid ""
@@ -588,7 +589,7 @@ msgstr "ここで、熱問題を考慮するプログラムは次の通りです
 
 #: ../source/tutorial/thermo_coupling.rst:723
 msgid "Model solve"
-msgstr "モデル求解"
+msgstr "モデルを解きます"
 
 #: ../source/tutorial/thermo_coupling.rst:725
 msgid "Once the model is correctly defined, we can simply solve it by:"
@@ -599,11 +600,11 @@ msgid ""
 "Since the problem is globally nonlinear, a Newton method is used to "
 "iteratively solve the problem. It needs a few iterations (about 4 in that "
 "case)."
-msgstr "問題は全体的に非線形であるため、Newton法を用いて問題を反復的に解きます。数回のイテレーションが必要です (この場合は約4です)。"
+msgstr "問題は大域的に非線形であるため、Newton法を用いて問題を反復的に解きます。数回のイテレーションが必要です (この場合は約4です)。"
 
 #: ../source/tutorial/thermo_coupling.rst:752
 msgid "Model solve with two steps"
-msgstr "モデルは2つのステップで解きます"
+msgstr "モデルを2つのステップで解きます"
 
 #: ../source/tutorial/thermo_coupling.rst:754
 msgid ""
@@ -629,7 +630,7 @@ msgid ""
 "exports and slices (see :ref:`ud-export`)."
 msgstr ""
 "有限要素問題が解かれました。次のように解をプロットすることができます。C++ および Python "
-"プログラムでは、外部の外部グラフィカルポストプロセッサを使用する必要があることに注意してください。また、汎用補間を使用して任意の数量を後処理できることにも注意してください(後述の"
+"プログラムでは、外部のグラフィカルポストプロセッサを使用する必要があることに注意してください。また、汎用補間を使用して任意の数量を後処理できることにも注意してください(後述の"
 " `ga_interpolation_Lagrange_fem` を参照)。また、複雑なエクスポートやスライスを作成することもできます ( :ref"
 ":`ud-export` をご覧ください)。"
 
