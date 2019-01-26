@@ -10,6 +10,7 @@ cd `dirname $0`
  bash autogen.sh;
  ./configure;
  cd doc/sphinx;
+ make html;
  sphinx-build -T -b gettext ./source locale;
  cat .tx/config;
  tx push -s --skip
