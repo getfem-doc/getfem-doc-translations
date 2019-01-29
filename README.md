@@ -5,6 +5,8 @@ This is a project to provide Getfem official documentation with multiple version
 Current procedure is bit tricky because Read The Docs doesn't have a way to specify options for getfem-build command.
 conf.py files for each languages have 'language' and 'locale_dirs' values without having full copy of conf.py of getfem doc. If we want to specify conf.py file that is out of source directory, we will use '-c' option for getfem-build command. Unfortunately Read the Docs can't. If there are any better way, please let me know.
 
+This repository is inspired by sphinx-doc/sphinx-doc-translations.
+
 ## URLs
 
 * RTD project pages for Getfem:
