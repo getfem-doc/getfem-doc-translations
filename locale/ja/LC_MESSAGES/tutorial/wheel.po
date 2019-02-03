@@ -25,7 +25,7 @@ msgstr ""
 msgid ""
 "Example of wheel in contact (Assembly between two meshes, transformations, "
 "use of fixed size variables)"
-msgstr "接触する車輪の例 (2つのメッシュ間のアセンブリ、変換、固定サイズ変数の使用)"
+msgstr "接触する車輪の例 (2つのメッシュ間の組み立て、変換、固定サイズ変数の使用)"
 
 #: ../source/tutorial/wheel.rst:10
 msgid ""
@@ -36,8 +36,8 @@ msgid ""
 "`interface/tests/python`."
 msgstr ""
 "この例では、変形可能な「車輪」が変形可能な基礎と接触します。ここでは python インターフェイスを使用しますが、別のインターフェイスまたは C++ "
-"にこのプログラムを翻訳するのは簡単です (前の例を参照)。完全なプログラム `demo_wheel_contact.py` は、ディレクトリ "
-"`interface/tests/python` にあります。"
+"にこのプログラムを翻訳するのは簡単です (前の例を参照してください)。完全なプログラム `demo_wheel_contact.py` は、ディレクトリ"
+" `interface/tests/python` にあります。"
 
 #: ../source/tutorial/wheel.rst:13
 msgid "The problem setting"
@@ -51,18 +51,18 @@ msgid ""
 "(linearized elasticity) and the contact between them. We also consider that "
 "the rim of the wheel is rigid and apply a vertical force on the wheel."
 msgstr ""
-":math:`\\Omega^1 \\subset \\R^2` は2D車輪の参照設定であり、 :math:`\\Omega^2 \\subset "
-"\\R^2` は変形可能な基礎の参照設定です。これら2つの (線形化弾性) "
-"物体の微小変形とそれらの間の接触を考慮します。また、車輪の周縁は剛であり、車輪に垂直方向の力を適用することを考慮します。"
+":math:`\\Omega^1 \\subset \\R^2` は2次元の車輪の参照設定であり、 :math:`\\Omega^2 \\subset "
+"\\R^2` は変形可能な基礎の参照設定です。これら2つの (線形弾性) "
+"体の微小変形とそれらの間の接触を考慮します。また、車輪の周縁は剛であり、車輪に垂直方向の力がはたらくことを考慮します。"
 
 #: ../source/tutorial/wheel.rst:19
 msgid "Building the program"
-msgstr "プログラムのビルド"
+msgstr "プログラムの作成"
 
 #: ../source/tutorial/wheel.rst:22
 msgid ""
 "Let us begin by loading Getfem and fixing the parameters of the problem"
-msgstr "Getfem をロードし、問題のパラメータを修正することから始めましょう"
+msgstr "Getfem をロードし、問題のパラメータを設定することから始めましょう"
 
 #: ../source/tutorial/wheel.rst:43
 msgid "Mesh generation"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../source/tutorial/wheel.rst:58
 msgid "The result is the following"
-msgstr "結果は以下のとおりです"
+msgstr "結果は以下のとおりです。"
 
 #: ../source/tutorial/wheel.rst:66
 msgid "Boundary selection"
@@ -95,8 +95,8 @@ msgid ""
 "force and the fact that the rim is rigid), the contact boundary of the wheel"
 " and the bottom boundary of the foundation that we will assume clamped."
 msgstr ""
-"境界条件、すなわち周縁の境界 "
-"(周縁が剛体であるということを適用するために)、車輪の接触境界、およびクランプされたと仮定する基礎の底部境界を設定するために、異なる名前を選択しなければなりません。"
+"(荷重と剛体であることを仮定するための)周縁の境界 "
+"、車輪の接触境界、およびクランプされたと仮定する基礎の底部境界などの境界条件を設定するために、境界のさまざまな部分を選択する必要があります。"
 
 #: ../source/tutorial/wheel.rst:83
 msgid ""
@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../source/tutorial/wheel.rst:86
 msgid "Definition of finite elements methods and integration method"
-msgstr "有限要素法の定義と積分法"
+msgstr "有限要素法と積分法の定義"
 
 #: ../source/tutorial/wheel.rst:88
 msgid ""
@@ -132,7 +132,7 @@ msgstr ""
 
 #: ../source/tutorial/wheel.rst:110
 msgid "Model definition"
-msgstr "モデル定義"
+msgstr "モデルの定義"
 
 #: ../source/tutorial/wheel.rst:112
 msgid ""
@@ -148,7 +148,7 @@ msgstr "線形弾性ブリック"
 msgid ""
 "We add the |Lame| coefficients as data of the model and add a linearized "
 "elasticity brick for the wheel and the foundation:"
-msgstr "|Lame| 係数をモデルのデータとして追加して使用し、車輪と基礎の線形化弾性ブリックを追加します。"
+msgstr "|Lame| 係数をモデルのデータとして追加し、車輪と基礎に線形弾性ブリックを追加します。"
 
 #: ../source/tutorial/wheel.rst:133
 msgid "Clamped condition at the bottom of the foundation"
@@ -158,7 +158,7 @@ msgstr "基礎の下部の固定条件"
 msgid ""
 "We prescribed the displacement at  bottom face of the foundation to vanish, "
 "for instance with a multiplier with the add of the following brick:"
-msgstr "例えば、次のブリックの追加と乗算で、基礎の底面の変位をなくすための処置ができます。"
+msgstr "例えば、次のブリックの追加と乗算で、基礎の底面の変位をなくすように規定ができます。"
 
 #: ../source/tutorial/wheel.rst:142
 msgid "Contact condition (use of interpolate transformations)"
@@ -200,7 +200,7 @@ msgstr ""
 msgid ""
 "where :math:`X` is the vector of coordinates of the point. We add this "
 "transformation to the model with the command"
-msgstr "ここで :math:`X` は点の座標のベクトルです。この変換をコマンドを使用してモデルに追加します。"
+msgstr "ここで :math:`X` は点の座標ベクトルです。この変換をコマンドを使用してモデルに追加します。"
 
 #: ../source/tutorial/wheel.rst:160
 msgid ""
@@ -297,7 +297,7 @@ msgstr "これは弱形式言語でモデルに追加することができます
 #: ../source/tutorial/wheel.rst:215
 msgid ""
 "For more robustness, a small penalization on :math:`alpha_D` can be added"
-msgstr "よりロバスト性を向上させるために :math:`alpha_D` 上の小さなペナルティを追加することができます"
+msgstr "よりロバスト性を向上させるために :math:`alpha_D` 上に小さなペナルティを追加することができます"
 
 #: ../source/tutorial/wheel.rst:222
 msgid ""
@@ -321,7 +321,7 @@ msgstr "次のコードで問題を解くことができます。"
 msgid ""
 "Note that in some configuration, it is preferable to use a more basic line "
 "search than the default one:"
-msgstr "設定によっては、デフォルトのものよりも基本的な線形探索を使用する方が望ましいことに注意してください。"
+msgstr "設定によっては、デフォルトのものよりもより基本的な線形探索を使用する方が望ましいことに注意してください。"
 
 #: ../source/tutorial/wheel.rst:241
 msgid "Export the solution"
@@ -329,7 +329,7 @@ msgstr "解のエクスポート"
 
 #: ../source/tutorial/wheel.rst:243
 msgid "Now the code to export the solution with the VonMiss stress:"
-msgstr "次に、VonMiss 応力を伴う解をエクスポートするコードを示します。"
+msgstr "次に、VonMiss 応力の解をエクスポートするコードを示します。"
 
 #: ../source/tutorial/wheel.rst:270
 msgid "Plot of the solution."

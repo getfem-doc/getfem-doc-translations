@@ -16,6 +16,6 @@ cd `dirname $0`
  tx push -s --skip
 )
 
-rm -R pot ja
+rm -Rf pot ja
 tx pull -l ja
 
