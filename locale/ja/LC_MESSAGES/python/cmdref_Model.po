@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-20 17:34+0900\n"
+"POT-Creation-Date: 2019-01-16 11:04+0900\n"
 "PO-Revision-Date: 2018-07-16 07:17+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,12 +23,12 @@ msgstr ""
 
 #: ../source/python/cmdref_Model.rst:8
 msgid "Model"
-msgstr ""
+msgstr "Model"
 
 #: ../../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.pydocstring
 #: of getfem.Model:1
 msgid "GeFEM Model object"
-msgstr ""
+msgstr "GeFEM Model オブジェクト"
 
 #: ../../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.pydocstring
 #: of getfem.Model:3
@@ -68,6 +72,9 @@ msgid ""
 "MeshIm mim, string varname, string Neumannterm, string datagamma0, int "
 "region[, scalar theta][, string dataname])"
 msgstr ""
+"概要:  ind = Model.add_Dirichlet_condition_with_Nitsche_method(self, MeshIm "
+"mim, string varname, string Neumannterm, string datagamma0, int region[, "
+"scalar theta][, string dataname])"
 
 #: ../../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.pydocstring
 #: of getfem.Model.add_Dirichlet_condition_with_Nitsche_method:3
@@ -199,6 +206,10 @@ msgid ""
 "param_E, string param_nu, string param_epsilon, string param_kappa [,int "
 "variant [, int region]])"
 msgstr ""
+"概要: ind = Model.add_Mindlin_Reissner_plate_brick(self, MeshIm mim, MeshIm "
+"mim_reduced, string varname_u3, string varname_theta , string param_E, "
+"string param_nu, string param_epsilon, string param_kappa [,int variant [, "
+"int region]])"
 
 #: ../../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.pydocstring
 #: of getfem.Model.add_Mindlin_Reissner_plate_brick:3
@@ -241,6 +252,10 @@ msgid ""
 "string gamma0name,  int region[, scalar theta[, string "
 "dataname_friction_coeff[, string dataname_alpha, string dataname_wt]]])"
 msgstr ""
+"概要: ind = Model.add_Nitsche_contact_with_rigid_obstacle_brick(self, MeshIm "
+"mim, string varname, string Neumannterm, string dataname_obstacle, string "
+"gamma0name, int region[, scalar theta[, string dataname_friction_coeff[, "
+"string dataname_alpha, string dataname_wt]]])"
 
 #: ../../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.pydocstring
 #: of getfem.Model.add_Nitsche_contact_with_rigid_obstacle_brick:3
@@ -272,6 +287,11 @@ msgid ""
 "dataname_friction_coeff[, string dataname_alpha, string dataname_wt1,string "
 "dataname_wt2]]])"
 msgstr ""
+"概要: ind = Model.add_Nitsche_fictitious_domain_contact_brick(self, MeshIm "
+"mim, string varname1, string varname2, string dataname_d1, string "
+"dataname_d2, string gamma0name [, scalar theta[, string "
+"dataname_friction_coeff[, string dataname_alpha, string dataname_wt1,string "
+"dataname_wt2]]])"
 
 #: ../../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.pydocstring
 #: of getfem.Model.add_Nitsche_fictitious_domain_contact_brick:3
@@ -305,6 +325,9 @@ msgid ""
 "unbiased_version, string dataname_r, scalar release_distance[, string "
 "dataname_fr[, string dataname_alpha[, int version]]])"
 msgstr ""
+"概要: ind = Model.add_Nitsche_large_sliding_contact_brick_raytracing(self, "
+"bool unbiased_version, string dataname_r, scalar release_distance[, string "
+"dataname_fr[, string dataname_alpha[, int version]]])"
 
 #: ../../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.pydocstring
 #: of getfem.Model.add_Nitsche_large_sliding_contact_brick_raytracing:3
@@ -350,6 +373,8 @@ msgid ""
 "Synopsis: Model.add_assembly_assignment(self, string dataname, string "
 "expression[, int region[, int order[, int before]]])"
 msgstr ""
+"概要: Model.add_assembly_assignment(self, string dataname, string expression[,"
+" int region[, int order[, int before]]])"
 
 #: ../../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.pydocstring
 #: of getfem.Model.add_assembly_assignment:3
@@ -1824,11 +1849,15 @@ msgid ""
 "that when region is a boundary, this brick allows to prescribe a nonzero "
 "Neumann boundary condition. Return the brick index in the model."
 msgstr ""
+"モデルに変数 `varname` に比例したソース項を追加します。ソース項は `dataexpr` "
+"で表現します。これは高水準汎用アセンブリ言語の任意の正規表現です（ただし複素数モデルの場合は、宣言されたデータでなければりません）。`region`はオプションで項を追加するメッシュ領域です。追加のオプションデータ"
+" `directdataname` "
+"を設定することもできます。対応するデータベクトルは、アセンブリなしで右側に直接追加されます。regionが境界である場合、このブリックでNeumann境界条件を設定することができます。"
 
 #: ../../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.pydocstring
 #: of getfem.Model.add_source_term_generic_assembly_brick:1
 msgid "Deprecated. Use Model.add_source_term() instead."
-msgstr ""
+msgstr "廃止予定です。 Model.add_source_term() を代わりに使用してください。"
 
 #: ../../../../../../../usr/local/lib/python2.7/dist-packages/getfem/getfem.pydocstring
 #: of getfem.Model.add_standard_secondary_domain:1
