@@ -39,7 +39,7 @@ msgid ""
 "algebra library by several other projects."
 msgstr ""
 "|gmm| は |gf| の線形代数が必要な手順と既存のフリーの線形代数ライブラリ(もともとは "
-"MTL、Superlu、Blas、Lapack)との間のインターフェイスを作るために最初に設計されていた線形代数のテンプレートライブラリです。それは、独自のベクトルと行列型を持つ独立した自己一貫性のあるライブラリに急速に進化しています。これは、他のいくつかのプロジェクトで基礎線形代数ライブラリとして使用されるようになりました。"
+"MTL、Superlu、Blas、Lapack)との間のインターフェイスを作るために設計されていた線形代数のテンプレートライブラリです。独自のベクトルと行列型を持つ独立した自己一貫性のあるライブラリに急速に進化しています。このライブラリは、他のいくつかのプロジェクトで基礎の線形代数ライブラリとして使用されるようになりました。"
 
 #: ../source/project/libdesc_gmm.rst:21
 msgid ""
@@ -48,8 +48,8 @@ msgid ""
 "compatibility can be used by generic algorithms of |gmm| writing a "
 "``linalg_traits`` structure."
 msgstr ""
-"ただし、その特性は、より特定のパッケージのための潜在的なインターフェイスとして保持されます。最小限の互換性を持つベクトルまたは行列型で、 "
-"``linalg_traits`` 構造による |gmm| の汎用アルゴリズムで使用できます。"
+"ただし、このライブラリは特定のパッケージのためのインターフェースとすることも可能です。最小限の互換性を持つベクトルまたは行列型で、 "
+"``linalg_traits`` 構造で記述された |gmm| の汎用アルゴリズムを使用できます。"
 
 #: ../source/project/libdesc_gmm.rst:25
 msgid ""
@@ -57,26 +57,26 @@ msgid ""
 "however developed inside the |gf| project even though since release 3.0 it "
 "is completely independent of any |gf| file."
 msgstr ""
-"|gmm| スタンドアロンバージョンは、 |gf| のリリース1.5 以降に配布されています。しかし、リリース3.0 以来、完全に任意の |gf| "
-"ファイルから独立しているにもかかわらず、それは |gf| プロジェクト内部で開発されています。"
+"|gmm| スタンドアロンバージョンは、 |gf| のリリース1.5 以降に配布されています。しかし、リリース3.0以降は、完全に |gf| "
+"ファイルから独立しつつも、 |gf| プロジェクト内部で開発されています。"
 
 #: ../source/project/libdesc_gmm.rst:29
 msgid ""
 "In addition to the linear algebra procedures, it furnishes also the "
 "following utilities to |gf|."
-msgstr "線形代数手順に加えて、それはまた次のユーティリティを |gf| に供給します。"
+msgstr "線形代数の処理に加えて、このライブラリは次のユーティリティを |gf| に提供しています。"
 
 #: ../source/project/libdesc_gmm.rst:32
 msgid "Fix some eventual compatibility problems in :file:`gmm_std.h`."
-msgstr ":file:`gmm_std.h` のいくつかの最終的な互換性の問題を修正します。"
+msgstr "いくつかの最終的な互換性の問題の修正は :file:`gmm_std.h` で行われます。"
 
 #: ../source/project/libdesc_gmm.rst:34
 msgid "Error, warning and trace management in :file:`gmm_except.h`."
-msgstr "エラー、警告、およびトレース管理は :file:`gmm_except.h` です。"
+msgstr "エラー、警告、およびトレース管理は :file:`gmm_except.h` で行われます。"
 
 #: ../source/project/libdesc_gmm.rst:36
 msgid "Some extended math definitions in :file:`gmm_def.h`."
-msgstr "いくつかの拡張された数学の定義は :file:`gmm_def.h` です。"
+msgstr "いくつかの拡張された数学の定義は :file:`gmm_def.h` で行われます。"
 
 #: ../source/project/libdesc_gmm.rst:38
 msgid "See :ref:`gmm` documenation for more details."
@@ -98,7 +98,7 @@ msgstr "状態"
 msgid ""
 "For the moment, |gmm| cover the needs of |gf| concerning the basic linear "
 "algebra procedures."
-msgstr "とりあえず |gmm| は基本的な線形代数の手順について |gf| のニーズをカバーします。"
+msgstr "今のところ |gmm| は基本的な線形代数の手順について |gf| のニーズをカバーしています。"
 
 #: ../source/project/libdesc_gmm.rst:54
 msgid "Perspectives"
@@ -116,10 +116,10 @@ msgid ""
 "unnecessary. This part is considered to be stabilized."
 msgstr ""
 "|gmm| では改善すべき点がいくつかあります。 "
-"（いくつかの基本型の行列とベクトルのための表現テンプレートの部分的な紹介、疎な部分ベクトルと部分行列をよりコヒーレントな方法で表現する方法、C++の概念の導入など）。ただし、"
-" |gmm| は |gf| のニーズをグローバルにカバーしており、線形代数のためのC++の参照ライブラリを構築するための `Glas "
+"（いくつかの基本型の行列とベクトルの式テンプレートの部分的な導入、疎な部分ベクトルと部分行列をよりコヒーレントな方法で表現する方法、C++のコンセプトの導入など）。ただし、"
+" |gmm| は |gf| のニーズを全体的にカバーしており、線形代数のためのC++の参照ライブラリを構築する `Glas "
 "<http://glas.sourceforge.net/>`_ "
-"のような他のプロジェクトがあるので、大域的な変更は必要ないようです。この部分は安定しています。"
+"のような他のプロジェクトがあるので、大規模な変更は必要ないようです。この部分の開発は安定しています。"
 
 #: ../source/project/libdesc_gmm.rst:65
 msgid ""
@@ -129,5 +129,6 @@ msgid ""
 "a separate package and has also the vocation to collect the contribution of "
 "any person who propose some improvements, new algorithms or new interfaces."
 msgstr ""
-"現在の |gmm| の使命は、プロジェクト全体の新しいニーズをカバーするために、他のいくつかのパッケージ (たとえば DIFFPACK) "
-"の汎用アルゴリズムとインターフェイスを揃え続けることです。ライブラリは、現在頻繁に別のパッケージとして使用され、また、いくつかの改善、新しいアルゴリズムや新しいインターフェイスを提案するすべての人の貢献を収集する使命を持っています。"
+"現在の |gmm| の使命は、プロジェクト全体の新しいニーズをカバーするために、他のいくつかの汎用アルゴリズムのパッケージ (たとえば "
+"DIFFPACK) "
+"のインターフェイスを揃え続けることです。ライブラリは、現在頻繁に個別のパッケージとして使用されており、いくつかの改善、新しいアルゴリズムや新しいインターフェイスを提案するすべての人の貢献を集約する使命を持っています。"

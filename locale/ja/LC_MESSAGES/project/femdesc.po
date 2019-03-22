@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../source/project/femdesc.rst:10
 msgid "The FEM description in |gf|"
-msgstr "|gf| のFEMの記述"
+msgstr "|gf| の有限要素法の記述"
 
 #: ../source/project/femdesc.rst:12
 msgid ""
@@ -60,14 +60,14 @@ msgid ""
 "type of convex. What will be manipulated is a pointer on such a descriptor "
 "which has to be declared with the type |bg_pcs|"
 msgstr ""
-"それは頂点の座標ではなく凸面の構造だけを記述します。このタイプの構造は同じタイプの凸包部を記述する必要はないので、この構造はそれ自身で操作することはできません。このような記述子上のポインタは、"
-" |bg_pcs| 型で宣言しなければなりません。"
+"ここでは頂点の座標ではなく凸の構造だけを記述します。このタイプの構造は同じタイプの凸を記述する必要はないので、この構造は自分自身を操作することはできません。このような記述子上のポインタは"
+" |bg_pcs| 型で宣言する必要があります。"
 
 #: ../source/project/femdesc.rst:34
 msgid ""
 "The following functions give a pointer onto the descriptor of the usual type"
 " of elements:"
-msgstr "次の関数は、通常の型の要素の記述子にポインタを与えます。"
+msgstr "次の関数で通常の要素タイプの記述子に対するポインタを得ることができます。"
 
 #: ../source/project/femdesc.rst:39
 msgid "description of a simplex of dimension ``d``."
@@ -104,9 +104,9 @@ msgid ""
 "to a more basic description (used for the description of geometric "
 "transformations)."
 msgstr ""
-"記述子には特に頂点の数( ``nb_points()`` ）のための面の数（ ``p->nb_faces()`` ）と凸部の次元（ "
+"記述子には特に頂点の数( ``nb_points()`` ）のために面の数（ ``p->nb_faces()`` ）と凸包の次元（ "
 "``p->dim()`` "
-"）が含まれます。他の情報は、各面の頂点の数、面の記述、およびより基本的な（幾何学的変換の記述に使用される）記述への最終的な参照です。"
+"）が含まれています。他には、各面の頂点の数、面の記述、および（幾何学的変換の記述に使用される）より基本的な記述への最終的な参照先が情報として含まれます。"
 
 #: ../source/project/femdesc.rst:74
 msgid "usual elements"
@@ -125,10 +125,10 @@ msgid ""
 "library keeps only one description for each type of convex. So what will be "
 "manipulated is a pointer of type |bg_pcr| on the descriptor."
 msgstr ""
-"参照の凸包は特定の実要素、すなわち頂点のリストを伴う凸の構造です。これは有限要素法が定義されている特定の要素を記述します。ファイル "
+"参照している凸包は特定の実数要素、すなわち頂点のリストを持つ凸包の構造です。これは有限要素法が定義されている特定の要素を記述しています。ファイル "
 ":file:`bgeot_convex_ref.h` 内のオブジェクト |bg_cr| "
-"がそれを記述します。ライブラリは、凸型の各タイプについて1つの記述しか保持しません。したがって、操作されるのは、ディスクリプタ上のタイプ "
-"|bg_pcr| のポインタです。"
+"によって記述されています。ライブラリは、凸包のそれぞれの種類に対して1つの記述のみ保持します。したがって、操作するのは、記述子上の |bg_pcr| "
+"型のポインタです。"
 
 #: ../source/project/femdesc.rst:87
 msgid "The following functions build the descriptions:"
@@ -159,8 +159,8 @@ msgid ""
 ":math:`(1, 0)` and :math:`(0, 1)`. It corresponds to the configuration shown"
 " in Figure :ref:`dp-fig-elem`"
 msgstr ""
-"頂点は、そのような参照要素の古典的頂点に対応します。たとえば、三角形の頂点は、 :math:`(0, 0)` 、 :math:`(1, 0)` 、 "
-":math:`(0, 1)` です。これは、図 :ref:`dp-fig-elem` に示す構成に対応します。"
+"頂点は、そのような参照要素の古典的な頂点に対応しています。たとえば、三角形の頂点は、 :math:`(0, 0)` 、 :math:`(1, 0)` 、"
+" :math:`(0, 1)` です。これは、図 :ref:`dp-fig-elem` に示す構成に対応します。"
 
 #: ../source/project/femdesc.rst:111
 msgid ""
@@ -174,12 +174,12 @@ msgid ""
 "is in the face ``f`` of the element. Other functions can be found in "
 ":file:`bgeot_convex_ref.h` and :file:`bgeot_convex.h`."
 msgstr ""
-"``p`` がタイプ |bg_pcr| の場合 ``p->structure()`` は対応する凸包構造です。したがって、例えば "
+"``p`` が |bg_pcr| 型の場合 ``p->structure()`` は対応する凸包構造です。したがって、例えば "
 "``p->structure()->nb_points()`` は頂点の数を返します。 ``p->points()`` 関数は頂点の配列を与え、 "
 "``p->points()[0]`` は最初の頂点です。関数 ``p->is_in(const base_node &pt)`` "
 "は、点ptが要素内にあれば、負の実数を返します。関数 ``p->is_in_face(short_type f, const base_node "
-"&pt)`` は、点 ``pt`` が要素 ``f`` にある場合はnullを返します。他の関数は :file:`bgeot_convex_ref.h`"
-" と :file:`bgeot_convex.h` にあります。"
+"&pt)`` は、点 ``pt`` が面 ``f`` にある場合はnullを返します。他の関数は :file:`bgeot_convex_ref.h` "
+"と :file:`bgeot_convex.h` にあります。"
 
 #: ../source/project/femdesc.rst:123
 msgid "Shape function type"
@@ -192,8 +192,7 @@ msgid ""
 "given to have other types of elements. It is possible to define other kind "
 "of base functions such as piecewise polynomials, interpolant wavelets, etc."
 msgstr ""
-"ほとんどの場合、有限要素法の形状関数は、少なくとも参照の凸包の多項式です。しかし、要素の他のタイプを持って与えられる可能性もあります。他の種類の基底関数"
-" (区分多項式、補間曲線ウェーブレットなど) を定義することができます。"
+"ほとんどの場合、有限要素法の形状関数は、少なくとも参照している凸包においては多項式です。しかし、それ以外の種類の要素を与えることも可能性です。区分多項式、補間曲線ウェーブレットなどの他の種類の基底関数を定義することもできます。"
 
 #: ../source/project/femdesc.rst:130
 msgid ""
@@ -211,7 +210,7 @@ msgid ""
 "For the moment, only polynomials and piecewise polynomials are defined in "
 "the files :file:`bgeot_poly.h` and :file:`bgeot_poly_composite.h`."
 msgstr ""
-"現時点では、ファイル :file:`bgeot_poly.h` および :file:`bgeot_poly_composite.h` "
+"現時点では、ファイル :file:`bgeot_poly.h` と :file:`bgeot_poly_composite.h` "
 "では、多項式と区分多項式のみが定義されています。"
 
 #: ../source/project/femdesc.rst:141
@@ -230,8 +229,7 @@ msgstr "幾何変換は多項式を利用します。"
 msgid ""
 "which maps the reference element :math:`\\widehat{T}` to the real element "
 ":math:`T`. The geometric nodes are denoted:"
-msgstr ""
-"これは、参照要素 :math:`\\widehat{T}` を実際の要素 :math:`T` にマップします。幾何学的節点は次のように表記されます。"
+msgstr "これは、参照要素 :math:`\\widehat{T}` を実数要素 :math:`T` にマップします。幾何節点は次のように表記されます。"
 
 #: ../source/project/femdesc.rst:163
 msgid ""
@@ -239,8 +237,8 @@ msgid ""
 " polynomial vector (In fact, as an extention, non polynomial geometric "
 "transformation can also be supported by |gf|, but this is very rarely used)"
 msgstr ""
-"幾何学的変換は :math:`n_g` 成分多項式ベクトルのにより記述されています。 (実際には、拡張として、非多項式幾何学的変換はまた、 |gf| "
-"でサポートすることができますが、これが使用されるのは非常にまれです。)"
+"幾何変換は :math:`n_g` 成分多項式ベクトルにより記述されています。 (実際には、非多項式幾何学的変換を |gf| "
+"の拡張でサポートすることができますが、これが使用されるのは非常にまれです。)"
 
 #: ../source/project/femdesc.rst:171
 msgid "such that"
@@ -248,17 +246,17 @@ msgstr "ただし"
 
 #: ../source/project/femdesc.rst:177 ../source/project/femdesc.rst:250
 msgid "Denoting"
-msgstr "以下のように表される"
+msgstr "ここで"
 
 #: ../source/project/femdesc.rst:183
 msgid ""
 "the :math:`N\\times n_g` matrix containing of all the geometric nodes, one "
 "has"
-msgstr ":math:`N\\times n_g` 行列のすべての幾何学的節点を含む, 1 つは"
+msgstr "は :math:`N\\times n_g` の行列でありすべての幾何節点を含みます, ゆえに次式が成り立ちます。"
 
 #: ../source/project/femdesc.rst:189
 msgid "The derivative of :math:`\\tau` is then"
-msgstr "の導関数 :math:`\\tau` は"
+msgstr ":math:`\\tau` の微分は次式で表されます。"
 
 #: ../source/project/femdesc.rst:195
 msgid ""
@@ -269,27 +267,29 @@ msgid ""
 ":math:`B(\\widehat{x})`:"
 msgstr ""
 "ここで :math:`K(\\widehat{x}) = \\nabla\\tau(\\widehat{x})` は :math:`N\\times "
-"P` 行列と :math:`\\nabla {\\cal N}(\\widehat{x})` :math:`n_g\\times P` 行列。(転置) "
-"擬似逆 :math:`\\nabla\\tau(\\widehat{x})` は :math:`N\\times P` の行列表記 "
-":math:`B(\\widehat{x})` です。"
+"P` 行列で :math:`\\nabla {\\cal N}(\\widehat{x})` は :math:`n_g\\times P` "
+"行列です。行列 :math:`B(\\widehat{x})` は :math:`N\\times P` の行列であり、 "
+":math:`\\nabla\\tau(\\widehat{x})`  の(転置) 擬似逆行列です。"
 
 #: ../source/project/femdesc.rst:204
 msgid ""
 "Of course, when :math:`P=N`, one has "
 ":math:`B(\\widehat{x})=K(\\widehat{x})^{-T}`."
-msgstr "もちろん、ここで :math:`P=N` 、1つは :math:`B(\\widehat{x})=K(\\widehat{x})^{-T}` 。"
+msgstr ""
+"もちろん :math:`P=N` の場合、次の式が成り立ちます :math:`B(\\widehat{x})=K(\\widehat{x})^{-T}`"
+" 。"
 
 #: ../source/project/femdesc.rst:206
 msgid ""
 "Pointers on a descriptor of a geometric transformation can be obtained by "
 "the following function defined in the file :file:`bgeot_geometric_trans.h`::"
 msgstr ""
-"幾何学的変換の記述子に対するポインタは、ファイル :file:`bgeot_geometric_trans.h` "
+"幾何変換の記述子に対するポインタは、ファイル :file:`bgeot_geometric_trans.h` "
 "で定義されている次の関数によって取得できます。"
 
 #: ../source/project/femdesc.rst:211
 msgid "where ``\"name of trans\"`` can be chosen among the following list."
-msgstr "ここで、 ``\"name of trans\"`` を次のリストの中から選択することができます。"
+msgstr "ここで、 ``\"name of trans\"`` は次のリストの中から選択します。"
 
 #: ../source/project/femdesc.rst:213
 msgid "``\"GT_PK(n,k)\"``"
@@ -299,7 +299,7 @@ msgstr "``\"GT_PK(n,k)\"``"
 msgid ""
 "Description of the simplex transformation of dimension ``n`` and degree "
 "``k`` (Most of the time, the degree 1 is used)."
-msgstr "次元 ``n`` および次数 ``k`` のシンプレックス変換の記述 (ほとんどの場合、次数1が使用されます)。"
+msgstr "``n`` 次元 ``k`` 次のシンプレックス変換の記述子(ほとんどの場合、次数1が使用されます)。"
 
 #: ../source/project/femdesc.rst:218
 msgid "``\"GT_QK(n,k)\"``"
@@ -341,8 +341,8 @@ msgid ""
 "function). This allows, for instance, to use exact integrations on regular "
 "meshes with parallelograms."
 msgstr ""
-"``a`` と ``b`` の2つの直積を記述する際には線形変換である必要があります（これは前の関数の制限です）。 "
-"これにより、たとえば、平行四辺形を含む通常のメッシュ上で正確な積分を使用することができます。"
+"線形変換（これは前の関数の制限です）である ``a`` と ``b`` "
+"の2つの直積の記述子。これにより、たとえば、平行四辺形を含む通常のメッシュ上で正確な積分を使用することができます。"
 
 #: ../source/project/femdesc.rst:240
 msgid "Finite element methods description"
@@ -354,13 +354,13 @@ msgid ""
 ":math:`\\widehat{T}\\subset\\Reel^P` by a set of :math:`n_d` nodes "
 ":math:`a^i` and corresponding base functions"
 msgstr ""
-"有限要素法は、節点 :math:`a^i` と対応する基底関数の集合 :math:`n_d` による参照要素 "
+"有限要素法は節点 :math:`a^i` と対応する基底関数の集合 :math:`n_d` による参照要素 "
 ":math:`\\widehat{T}\\subset\\Reel^P` に対して定義されます。"
 
 #: ../source/project/femdesc.rst:256
 msgid ""
 "a supplementary linear transformation is allowed for the real base function"
-msgstr "補助線形変換は、実際の基底関数に対して許可されます。"
+msgstr "補助線形変換が実基底関数の場合に成り立ちます。"
 
 #: ../source/project/femdesc.rst:262
 msgid ""
@@ -371,8 +371,8 @@ msgid ""
 ":math:`\\tau`-equivalent."
 msgstr ""
 "ここで :math:`M` は幾何変換が可能な(すなわち、実数要素の) :math:`n_d \\times n_d` "
-"行列です。Lagrange要素としての基本的な要素については、この行列は恒等行列です(単に無視される)。この場合、要素は次のようになります "
-":math:`\\tau` -等価です。"
+"行列です。基本的なLagrange要素では、この行列は恒等行列です(単純に無視されます)。この場合、要素は次のように :math:`\\tau` "
+"-等価になります。"
 
 #: ../source/project/femdesc.rst:267
 msgid ""
@@ -383,19 +383,20 @@ msgid ""
 ":math:`(\\widehat{\\varphi})^i(\\widehat{x})`. Whis this notation, for a "
 "function is defined by"
 msgstr ""
-"この方法では、非線形変換 (主に曲線境界の場合) を使用しても、Hermite要素 (たとえばArgyris) を汎用的な方法で定義することができます。"
-" :math:`[\\widehat{\\varphi}(\\widehat{x})]` :math:`n_d \\times Q` は、その i "
-"番目の行の行列 :math:`(\\widehat{\\varphi})^i(\\widehat{x})` 。この記法は、次の関数によって定義されます。"
+"この方法では非線形変換 (主に曲線境界の場合) を使用しても、Hermite要素 (たとえばArgyris) を汎用的な方法で定義することができます。 "
+":math:`[\\widehat{\\varphi}(\\widehat{x})]` は i 番目の行が "
+":math:`(\\widehat{\\varphi})^i(\\widehat{x})` である :math:`n_d \\times Q` "
+"の行列です。この表現を使用して、関数は次のように定義されます。"
 
 #: ../source/project/femdesc.rst:277
 msgid "one has"
-msgstr "1つは"
+msgstr "ゆえに"
 
 #: ../source/project/femdesc.rst:283
 msgid ""
 "where :math:`\\alpha` is the vector whose ith component is "
 ":math:`\\alpha_i`."
-msgstr "ここで :math:`\\alpha` は、その i 番目の成分 :math:`\\alpha_i` があるベクトルです。"
+msgstr "ここで :math:`\\alpha` は、 i 番目の成分 :math:`\\alpha_i` を持つベクトルです。"
 
 #: ../source/project/femdesc.rst:285
 msgid ""
@@ -403,17 +404,17 @@ msgid ""
 "defined in the file :file:`getfem_fem.h`. See :ref:`ud-appendixa` for an "
 "exhaustive list of available finite element methods."
 msgstr ""
-"古典的な有限要素法の記述のある特定の数はファイル :file:`getfem_fem.h` で定義されています。利用可能な有限要素法の完全なリストは "
-":ref:`ud-appendixa` を参照してください。"
+"特定の古典的な有限要素法の記述子はファイル :file:`getfem_fem.h` で定義されています。利用可能な有限要素法全体のリストは :ref"
+":`ud-appendixa` を参照してください。"
 
 #: ../source/project/femdesc.rst:289
 msgid ""
 "A pointer to the finite element descriptor of a method is obtained using the"
 " function::"
-msgstr "メソッドの有限要素記述子へのポインタは、次の関数を使用して取得されます。"
+msgstr "有限要素記述子の手法へのポインタは、次の関数を使用することで取得できます。"
 
 #: ../source/project/femdesc.rst:294
 msgid ""
 "We refer to the file :file:`getfem_fem.cc` for how to define a new finite "
 "element method."
-msgstr "新しい有限要素法を定義する方法については、 :file:`getfem_fem.cc` を参照してください。"
+msgstr "新しい有限要素法を定義する方法は :file:`getfem_fem.cc` を参照してください。"

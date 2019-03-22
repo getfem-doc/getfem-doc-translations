@@ -45,9 +45,11 @@ msgid ""
 "domain, the description should also contains the reference to a method of "
 "same order on each face of the element."
 msgstr ""
-"立体求積法モジュールは、参照要素の数値積分法へのアクセスを提供します。それはまた、いくつかの正確な積分方法へのアクセスを与えるため、実際にはそれだけでいくつかの立体求積法式が含まれていません。ただし、厳密な積分法は多項式要素とアフィン幾何学的変換に対してのみ使用できます。これは厳密な積分方法が広く使用されない理由の説明となります。立体求積法式の説明は、"
+"立体求積法モジュールでは、参照要素の数値積分法へのアクセスが可能です。また、いくつかの完全積分法へのアクセスを与えるため、実際にはそれだけでいくつかの立体求積法式が含まれていません。ただし、完全積分法は多項式要素とアフィン幾何変換に対してのみ使用できます。これが完全積分法が広く使用されない理由です。立体求積法式の記述は、"
 " :file:`getfem_integration.h` または |gf| のディレクトリ ``cubature`` "
-"の説明ファイルを介してファイル内で直接実行されます。新しい立体求積法式の追加は非常に単純であり、それはそれが定義されている要素を参照し、ファイル内のガウス点のリストと、このディレクトリに追加するだけで十分です。さらに、ドメインの境界に定義された用語を統合するために、その説明には、要素の各面で同じ順序のメソッドへの参照も含まれている必要があります。"
+"の説明ファイルを介してファイル内で直接実行されます。新しい立体求積法式の追加は非常に簡単であり、すでに定義されている要素を参照し、ファイル内の "
+"Gauss "
+"点のリストをこのディレクトリに追加するだけです。さらに、領域の境界に定義された項を積分するために、記述には要素の各面における同じ次数の手法への参照も含む必要があります。"
 
 #: ../source/project/libdesc_im.rst:30
 msgid "Files"
@@ -62,18 +64,18 @@ msgid ""
 ":file:`getfem_integration.h` and :file:`getfem_integration.cc` and "
 ":file:`getfem_integration_composite.cc`"
 msgstr ""
-": ファイル: ' getfem_integration ' と: ファイル: ' getfem_integration ' と: ファイル: ' "
-"getfem_integration_composite '"
+":file:' getfem_integration.h' と :file:'getfem_integration.cc' と :file:' "
+"getfem_integration_composite.cc'"
 
 #: ../source/project/libdesc_im.rst:1
 msgid ""
 "Structure of integration methods, basic integration methods, product of "
 "integration method and composite methods."
-msgstr "積分方法の構造、基本的な積分方法、積分方法および複合方法のプロダクト。"
+msgstr "積分法の構造、基本的な積分法、積分法および複合法の積。"
 
 #: ../source/project/libdesc_im.rst:1
 msgid ":file:`getfem_im_list.h`"
-msgstr ": ファイル: ' getfem_im_list '"
+msgstr ":file:`getfem_im_list.h`"
 
 #: ../source/project/libdesc_im.rst:1
 msgid ""
@@ -83,7 +85,7 @@ msgid ""
 "file."
 msgstr ""
 " :file:`cubature/make_getfem_list` "
-"で生成されたファイル立体求積法ディレクトリで定義されている統合メソッドを使用します。これにより、ガウス点とディファレンシャルムーブメントをテキストファイルにリストするだけで、新しい統合メソッドを定義することができます。"
+"で生成されたファイル立体求積法ディレクトリで定義されている積分法を使用します。これにより、Gauss点と重みをテキストファイルにリスト入力するだけで、新しい積分法を定義することができます。"
 
 #: ../source/project/libdesc_im.rst:41
 msgid "State"
@@ -95,12 +97,12 @@ msgid ""
 "stabilized. The list of available cubature formulas is given in :ref:`ud-"
 "appendixb`."
 msgstr ""
-"このモジュールは、プロジェクトの現在のニーズを満たしており、安定していると考えられています。使用可能な立体求積法式のリストは、ref: ' ud-付録 "
-"b ' で指定されています。"
+"このモジュールは、プロジェクトの現在のニーズを満たしており、安定しています。使用可能な立体求積法式のリストは :ref:`ud-appendixb` "
+"を参照してください。"
 
 #: ../source/project/libdesc_im.rst:48
 msgid "Perspectives"
-msgstr "視点"
+msgstr "展望"
 
 #: ../source/project/libdesc_im.rst:50
 msgid ""
@@ -108,5 +110,4 @@ msgid ""
 "documentation to describe completely how to add a new cubature formula "
 "(format of descritption files)."
 msgstr ""
-"今のところ変更は必要ありません。新しい立体求積法式 (descritption ファイルの形式) "
-"を追加する方法を完全に説明するために、ドキュメントで努力を行うことができます。"
+"今のところ変更は必要ありません。新しい立体求積法の式を追加する方法 (記述子ファイル形式) に関するドキュメンテーションを完成させる必要があります。"

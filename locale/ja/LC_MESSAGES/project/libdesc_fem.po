@@ -40,9 +40,9 @@ msgid ""
 "neighbour elements in a generic way (for instance connecting a Lagrange 2D "
 "element to another Lagrange 1D element)."
 msgstr ""
-"Fem モジュールは |gf| "
-"これは、要素レベルと自由度の有限要素を記述します。有限要素法は異なったタイプである場合もあります。それらは幾何学的変形によって同等であるスカラーかベクトル、多項式、区分多項式または非多項式となります。また、自由度の記述は、一般的な方法で2つの隣接要素間の互換性のある自由度を収集することができるようにする必要があります"
-" (例えばLagrange 2D 要素が別のLagrange 1D 要素に接続する場合)。"
+"|gf| の Fem "
+"モジュールは要素レベル有限要素と自由度を記述します。有限要素法は異なった異なった種類も可能です。それらは幾何学的変形のあるなしで等価なスカラーかベクトル、多項式、区分多項式または非多項式です。また、自由度は一般的に2つの隣接要素間で互換性のある自由度となるように記述する必要があります"
+" (例えば Lagrange 2次要素を別の Lagrange 1次要素に接続する場合)。"
 
 #: ../source/project/libdesc_fem.rst:26
 msgid "Files"
@@ -65,7 +65,7 @@ msgid ""
 "Some classes to represent polynomials and piecewise polynomials in order to "
 "describe shape functions of a finite element method on the reference "
 "element."
-msgstr "いくつかのクラスは、参照要素の有限要素法の形状関数を記述するために、多項式と区分的な多項式を表現します。"
+msgstr "いくつかのクラスは、参照要素の有限要素法の形状関数を記述するために、多項式と区分的多項式を表現します。"
 
 #: ../source/project/libdesc_fem.rst:1
 msgid ""
@@ -82,7 +82,7 @@ msgid ""
 "finite elements in :file:`getfem_fem_composite.cc`"
 msgstr ""
 "有限要素と自由度の記述子。 :file:`getfem_fem.cc` で定義される多項式有限要素と "
-":file:`getfem_fem_composite.cc` の区分多項式有限要素"
+":file:`getfem_fem_composite.cc` の区分多項式有限要素。"
 
 #: ../source/project/libdesc_fem.rst:1
 msgid ""
@@ -96,7 +96,7 @@ msgid ""
 "Defines a fem with base functions defined as global functions given by the "
 "user. Useful for enrichment with singular functions and for implementation "
 "of meshless methods."
-msgstr "ユーザーが指定したグローバル関数として定義された基本関数を持つ有限要素法を定義します。特異関数による凝縮やメッシュレス法の実装に有用です。"
+msgstr "ユーザーが指定したグローバル関数として定義された基底関数を持つ有限要素法を定義します。特異関数による強化やメッシュレス法の実装に有用です。"
 
 #: ../source/project/libdesc_fem.rst:1
 msgid ":file:`getfem_projected_fem.h` and :file:`getfem_projected_fem.cc`"
@@ -110,7 +110,7 @@ msgid ""
 "transformations."
 msgstr ""
 "(mesh_fem で表される) "
-"別のメッシュ上の有限要素空間の射影である有限要素法を定義します。高汎用アセンブリ言語では、補間変換によってこの機能も提供されていることに注意してください。"
+"別のメッシュ上の有限要素空間の射影である有限要素法を定義します。高水準汎用構築言語では、補間変換でもこの機能が提供されていることに注意してください。"
 
 #: ../source/project/libdesc_fem.rst:1
 msgid ""
@@ -126,7 +126,7 @@ msgid ""
 "interpolated transformations."
 msgstr ""
 "別のメッシュ上の有限要素空間 (mesh_fem で表される) "
-"の補間である有限要素法を定義します。高ジェネリックアセンブリ言語では、補間変換によってこの機能も提供されていることに注意してください。"
+"の補間である有限要素法を定義します。高水準汎用構築言語では、補間変換によってこの機能も提供されていることに注意してください。"
 
 #: ../source/project/libdesc_fem.rst:42
 msgid "State"
@@ -140,7 +140,8 @@ msgid ""
 "appendixa`."
 msgstr ""
 "2つのファイル :file:`getfem_fem.cc` と :file:`getfem_fem_composite.cc` "
-"は主に基本的な要素のすべての有限要素の説明が含まれています。定義された有限要素の完全なリストは :ref:`ud-appendixa` で与えられます。"
+"には主に基本的な有限要素要素のすべての記述が含まれています。定義された有限要素の詳細なリストは :ref:`ud-appendixa` "
+"を参照してください。"
 
 #: ../source/project/libdesc_fem.rst:50
 msgid ""
@@ -148,8 +149,8 @@ msgid ""
 ":file:`getfem_fem_level_set.h` which is a complex construction which allows "
 "to \"cut\" a existing element by one or several level sets."
 msgstr ""
-"いくつかの他のファイルのようないくつかの特定の有限要素を定義する :file:`getfem_fem_level_set.h` は1 "
-"つまたは複数のレベルセットで既存の要素を \"切断\" することができる複雑な構造です。"
+"他の :file:`getfem_fem_level_set.h` ファイルのようにいくつかの特定の有限要素を定義する複雑な構造は1 "
+"つまたは複数のレベル集合で既存の要素を \"切断\" することが可能です。"
 
 #: ../source/project/libdesc_fem.rst:54
 msgid ""
@@ -157,7 +158,7 @@ msgid ""
 " (connecting dof from an element to another in a generic way) but is a "
 "little bit obscure and too much complicated."
 msgstr ""
-"自由度を記述する方法は、グローバルに必要事項を満たしますが (一般的な方法で別の要素から接続された自由度) が、少しあいまいで、あまりにも複雑です。"
+"自由度を記述する方法は、グローバルに必要事項 (汎用的な方法で別の要素から接続された自由度) を満たしますが、少しあいまいで、あまりにも複雑です。"
 
 #: ../source/project/libdesc_fem.rst:58
 msgid ""
@@ -165,7 +166,7 @@ msgid ""
 "supplementary matrix ``M`` has proven its efficiency on several elements "
 "(Hermites elements, Argyris, etc.)."
 msgstr ""
-"逆に、補助行列 ``M`` で非等価要素を表現する方法は、いくつかの要素 (Hermites 要素、Argyrisなど) "
+"逆に、補助行列 ``M`` で非等価要素を表現する方法は、いくつかの要素 (Hermites 要素、 Argyris など) "
 "でその効率性が証明されています。"
 
 #: ../source/project/libdesc_fem.rst:63
@@ -185,5 +186,4 @@ msgid ""
 "methods , at least for the simplest finite elements (equivalent and "
 "polynomial finite elements)."
 msgstr ""
-"このモジュールの主な不満は、自由度の説明について完全に満足していないということです。自由度の記述が一時的であるために考案されたので、A から Z "
-"までの要素を構築する方法についての1つのドキュメンテーションが今のところ作られなかった主な理由です。設計の努力はこうして完全に自由度の記述に関してこのモジュールを主として安定させるために提供されるべきであるまた多分立体求積法に同様の方法で部分的に外部化であることができる有限要素の記述メソッドは、少なくとも最も単純な有限要素(等価および多項式有限要素)です。"
+"このモジュールの主な不満は、自由度の説明を完全に記述できていないということです。自由度の記述が一時的な考案であるために、全ての要素を構築する方法についてのドキュメンテーションを1つにまとめられていません。このモジュールを安定させるためには自由度の記述に関ての設計を完全なものにしなければなりません。また、立体求積法と同様の方法で部分的に外部化できる有限要素の記述メソッドは多分、少なくとも最も単純な有限要素(等価および多項式有限要素)です。"

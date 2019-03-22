@@ -39,11 +39,11 @@ msgid ""
 " aim of the |gf| project to developp new container concept. So, the use of "
 "the ``dal`` containers has to be as much as possible reduced."
 msgstr ""
-"|gf|の最初期(最初のファイルは1995で書かれていました)には S.T.L. は使用できず、 ``dal`` "
-"名前空間で定義されているコンテナはどこでも使用されていました。今、 |gf| では、S.T.L. コンテナは主に使用されます。 ``dal`` "
-"コンテナの残りの用途は、より歴史的またはこれらのコンテナの特異性によるものです。しかし、 |gf| "
+"|gf| の最初期(最初のファイルは1995で書かれていました)には S.T.L. は使用できず、 ``dal`` "
+"名前空間で定義されているコンテナが使用されていました。現在、 |gf| では、S.T.L. コンテナが主に使用されています。 ``dal`` "
+"コンテナを使用する理由は、歴史的なものまたはこのコンテナの特有の仕様によるものです。しかし、 |gf| "
 "が新しいコンセプトのコンテナを開発することが目的のプロジェクトではないことは明らかです。したがって、 ``dal`` "
-"コンテナの使用は可能な限り削減することがあります。"
+"コンテナの使用は可能な限りなくす方針です。"
 
 #: ../source/project/libdesc_dal.rst:25
 msgid ""
@@ -51,8 +51,8 @@ msgid ""
 "with static stored objects (description of finite element methods, "
 "intermediary structures for auxiliary computations ...)."
 msgstr ""
-"さらに、 ``dal`` には、静的格納されたオブジェクト (有限要素法の記述、補助計算のための中間構造物) "
-"を扱うための基本的なアルゴリズムがいくつか含まれています。"
+"さらに、 ``dal`` には静的に格納された (有限要素法の記述子、補助計算のための中間構造などの) "
+"オブジェクトを扱うための基本的なアルゴリズムがいくつか含まれています。"
 
 #: ../source/project/libdesc_dal.rst:28
 msgid "Files"
@@ -68,7 +68,7 @@ msgstr ":file:`dal_config.h`"
 
 #: ../source/project/libdesc_dal.rst:1
 msgid "Mainly load |gmm| header files"
-msgstr "主にヘッダーファイルとしてロードされます"
+msgstr "主に |gmm| のヘッダーファイルとしてロードされます"
 
 #: ../source/project/libdesc_dal.rst:1
 msgid ":file:`dal_basic.h`"
@@ -92,7 +92,7 @@ msgstr ":file:`dal_tas.h`"
 
 #: ../source/project/libdesc_dal.rst:1
 msgid "A heap container based on dal::dynamic_array<T>."
-msgstr "dal::dynamic_array<T> に基づくヒープコンテナー。"
+msgstr "dal::dynamic_array<T> に基づくヒープコンテナ。"
 
 #: ../source/project/libdesc_dal.rst:1
 msgid ":file:`dal_tree_sorted.h`"
@@ -100,7 +100,7 @@ msgstr ":file:`dal_tree_sorted.h`"
 
 #: ../source/project/libdesc_dal.rst:1
 msgid "A balanced tree stored array based on dal::dynamic_array<T>."
-msgstr "dal::dynamic_array<T> に基づくバランスのとれたツリー格納された配列。"
+msgstr "dal::dynamic_array<T> に基づく平衡二分探索木に格納された配列。"
 
 #: ../source/project/libdesc_dal.rst:1
 msgid ""
@@ -114,8 +114,7 @@ msgid ""
 "store many things in |gf| (finite element methods, integration methods, pre-"
 "computations, ...)."
 msgstr ""
-"いくつかのオブジェクトと依存関係を格納することができます。 |gf| で多くのもの(有限要素法, 積分法, "
-"事前計算,...)を保存するために使用します。"
+"いくつかのオブジェクトとの依存関係を格納することができます。 |gf| で(有限要素法, 積分法, プリ処理など)を保存するために使用します。"
 
 #: ../source/project/libdesc_dal.rst:1
 msgid ":file:`dal_naming_system.h`"
@@ -127,7 +126,7 @@ msgid ""
 "method descriptor. Used for finite element methods, integration methods and "
 "geometric transformations. Uses dal::static_stored_object."
 msgstr ""
-"メソッド記述子に名前を関連付け、メソッド記述子を格納する汎用オブジェクト。有限要素法、積分法および幾何学的変換に使用されます。 "
+"手法記述子に名前を関連付け手法記述子を格納する汎用オブジェクト。有限要素法、積分法および幾何学的変換に使用されます。 "
 "dal::static_stored_object を使用しています。"
 
 #: ../source/project/libdesc_dal.rst:1
@@ -136,7 +135,7 @@ msgstr ":file:`dal_shared_ptr.h`"
 
 #: ../source/project/libdesc_dal.rst:1
 msgid "A simplified version of boost::shared_ptr."
-msgstr "boost::shared_ptr の簡略化されたバージョンです。"
+msgstr "boost::shared_ptr を簡略化したバージョンです。"
 
 #: ../source/project/libdesc_dal.rst:1
 msgid ":file:`dal_singleton.h` and :file:`dal_singleton.cc`"
@@ -146,7 +145,7 @@ msgstr ":file:`dal_singleton.h` と :file:`dal_singleton.cc`"
 msgid ""
 "A simple singleton implementation which has been made thread safe for OpenMP"
 " (singletons are replicated n each thread)."
-msgstr "OpenMP に対してスレッドセーフにされた単純なシングルトン実装 (シングルトンは、各スレッドが n 個複製されます)。"
+msgstr "OpenMP に対してスレッドセーフに作られた単純なSingleton実装 (Singletonでは、各スレッドが n 個複製されます)。"
 
 #: ../source/project/libdesc_dal.rst:1
 msgid ":file:`dal_backtrace.h` and :file:`dal_backtrace.cc`"
@@ -154,7 +153,7 @@ msgstr ":file:`dal_backtrace.h` と :file:`dal_backtrace.cc`"
 
 #: ../source/project/libdesc_dal.rst:1
 msgid "For debugging, dump glibc backtrace."
-msgstr "デバッグのために、glibc トレースをダンプします。"
+msgstr "デバッグのために、 glibc の backtrace をダンプします。"
 
 #: ../source/project/libdesc_dal.rst:48
 msgid "State"
@@ -162,7 +161,7 @@ msgstr "状態"
 
 #: ../source/project/libdesc_dal.rst:50
 msgid "Stable, not evolving too much."
-msgstr "安定して、あまり進化していません。"
+msgstr "安定しており、あまり開発されていません。"
 
 #: ../source/project/libdesc_dal.rst:54
 msgid "Perspectives"
@@ -170,4 +169,4 @@ msgstr "展望"
 
 #: ../source/project/libdesc_dal.rst:56
 msgid "No plan."
-msgstr "計画はありません"
+msgstr "計画はありません。"

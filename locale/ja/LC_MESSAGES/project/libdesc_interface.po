@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-16 11:04+0900\n"
 "PO-Revision-Date: 2018-07-16 07:02+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,14 +23,15 @@ msgstr ""
 
 #: ../source/project/libdesc_interface.rst:11
 msgid "Interface with scripts languages (Python, Scilab and Matlab)"
-msgstr "スクリプト言語 (Python、Scilab、Matlab) とのインタフェース"
+msgstr "スクリプト言語 (Python、Scilab、Matlab) のインタフェース"
 
 #: ../source/project/libdesc_interface.rst:13
 msgid ""
 "A simplified (but rather complete) interface of |gf| is provided, so that it"
 " is possible to use getfem in some script languages."
 msgstr ""
-"|gf| の簡略化された (むしろ完全な) インターフェイスは、いくつかのスクリプト言語で getfem を使用することができるように提供されています。"
+"|gf| の簡略化された (しかしかなり完全な) インターフェイスが提供されています。それによりいくつかのスクリプト言語で getfem "
+"を使用することができます。"
 
 #: ../source/project/libdesc_interface.rst:16
 msgid "Description"
@@ -44,8 +45,8 @@ msgid ""
 "used by the python, matlab and scilab interfaces."
 msgstr ""
 "すべてのソースは :file:`interface/src` ディレクトリにあります。インターフェイスは、1つの大規模なライブラリ "
-"``getfemint`` (getfem 相互作用の略) で構成され、その上の層として機能する |gf| ライブラリ、および "
-"python、matlab と scilab のインターフェイスによって使用されます。"
+"``getfemint`` (getfem interactionの略) で構成され、 |gf| ライブラリの上のレイヤーとして機能します。 "
+"python 、 matlab と scilab のインターフェイスに使用されています。"
 
 #: ../source/project/libdesc_interface.rst:23
 msgid ""
@@ -55,9 +56,9 @@ msgid ""
 "Adding a new language should be quite easy (assuming the language provides "
 "some structures for dense arrays manipulations)."
 msgstr ""
-"このインターフェイスは、c++ ソースから自動的に生成されるものではありません (ガブガブなどのツールの場合もあります)。それは getfem "
-"に簡素化され、一貫性のあるインターフェイスとして設計されているものです。新しい言語を追加することは非常に簡単です "
-"(言語が密な配列操作のための構造を提供すると仮定して)。"
+"(swigなどのツールを使用することも可能ですが、)このインターフェイスは、c++ "
+"ソースから自動的に生成されているものではありません。このインターフェースは getfem "
+"のために簡素化され、一貫性のあるインターフェイスとして設計されています。(言語が密な配列操作の構造を提供しているのならば)新しい言語を追加することはとても簡単です。"
 
 #: ../source/project/libdesc_interface.rst:30
 msgid "Files"
@@ -67,7 +68,7 @@ msgstr "ファイル"
 msgid ""
 "All the files in the directory :file:`interface\\src`. A short description "
 "of main files:"
-msgstr "ディレクトリ :file:`interface\\src` 内のすべてのファイル。メインファイルの簡単な説明:"
+msgstr "ディレクトリ :file:`interface/src` 内のすべてのファイル。主なファアイルについて簡単に説明します。"
 
 #: ../source/project/libdesc_interface.rst:34
 msgid ":file:`getfem_interface.cc`."
@@ -80,9 +81,9 @@ msgid ""
 " so this is a sort of c++ barrier between the script language and the getfem"
 " interface (exporting only a C interface avoids many compilation problems)."
 msgstr ""
-"これは、スクリプト言語と getfem インターフェイスの間のブリッジです。関数 getfem_interface_main は  ``extern "
-"\"C\"`` 関数としてエクスポートされるため、これはスクリプト言語と getfem インターフェイスの間の c++ 障害の一種となります "
-"(Cインターフェイスのみをエクスポートすると、多くの複雑なの問題が回避されます)。"
+"これは、スクリプト言語と getfem インターフェイスの間のBridgeです。関数 getfem_interface_main は  ``extern"
+" \"C\"`` 関数としてエクスポートされます。これはスクリプト言語と getfem インターフェイスの間の c++ が起こす障害です "
+"(Cインターフェイスのみをエクスポートすると、多くの複雑な問題が回避されます)。"
 
 #: ../source/project/libdesc_interface.rst:41
 msgid ":file:`matlab/gfm_mex.c`."
@@ -93,7 +94,7 @@ msgid ""
 "The matlab interface. The only thing it knows about getfem is in "
 ":file:`getfem_interface.h`."
 msgstr ""
-"matlab インターフェイス。 getfem のインターフェースに関する唯一のファイルは :file:`getfem_interface.h` です。"
+"matlab インターフェイス。 getfem のインターフェースに関連するファイルは :file:`getfem_interface.h` のみです。"
 
 #: ../source/project/libdesc_interface.rst:46
 msgid ":file:`python/getfem_python.c`."
@@ -104,7 +105,7 @@ msgid ""
 "The python interface. The only thing it knows about getfem is in "
 ":file:`getfem_interface.h`."
 msgstr ""
-"python インターフェイス。 getfem のインターフェースに関する唯一のファイルは :file:`getfem_interface.h` です。"
+"python インターフェイス。 getfem のインターフェースに関連するファイルは :file:`getfem_interface.h` のみです。"
 
 #: ../source/project/libdesc_interface.rst:51
 msgid ":file:`gfi_array.h`, :file:`gfi_array.c`."
@@ -116,13 +117,13 @@ msgid ""
 "on how to send and receive arrays, and object handles, from "
 "``getfem_interface_main()``. This file provide such functionnality."
 msgstr ""
-"どちらも :file:`gfm_mex.c` と :file:`getfem_python.c` は "
+":file:`gfm_mex.c` と :file:`getfem_python.c` はどちらも "
 "``getfem_interface_main()`` "
-"から配列とオブジェクトハンドルを送受信する方法に関する簡単な規則を必要とします。このファイルはこのような機能を提供します。"
+"から配列とオブジェクトハンドルを送受信する方法に簡単な規則が必要です。このファイルはそのような機能を提供します。"
 
 #: ../source/project/libdesc_interface.rst:57
 msgid ":file:`getfemint_gsparse.h`, :file:`getfemint_precond.h`, etc."
-msgstr ":file:`getfemint_gsparse.h`, :file:`getfemint_precond.h`, など."
+msgstr ":file:`getfemint_gsparse.h`, :file:`getfemint_precond.h`, など。"
 
 #: ../source/project/libdesc_interface.rst:59
 msgid ""
@@ -130,8 +131,8 @@ msgid ""
 "export some kind of mutable sparse matrix that can switch between different "
 "storage types, and real of complex elements)."
 msgstr ""
-"必要に応じて、インタフェースオブジェクトに固有のファイル。(getfemint_gsparse "
-"は、異なる種類のストレージを切り替えることができるいくつかの種類の可変疎行列をエクスポートし、複雑な要素の実数) を出力します。"
+"必要に応じて、インタフェースオブジェクトに固有のファイルを出力します。(getfemint_gsparse "
+"は、異なる種類のストレージの切り替えが可能ないくつかの種類の可変疎行列と複素要素の実数部分をエクスポートします) 。"
 
 #: ../source/project/libdesc_interface.rst:63
 msgid ":file:`gf_workspace.cc`, :file:`gf_delete.cc`."
@@ -146,10 +147,10 @@ msgid ""
 "able to crash getfem (and the host program, matlab, scilab or python) by "
 "passing incorrect argument to the getfem interface."
 msgstr ""
-"getfem オブジェクトのメモリ管理。たとえば ``mesh`` と ``mesh_fem`` "
-"の間の依存関係を処理するレイヤがあります。それを使用して別の getfem_object "
-"がまだある間、オブジェクトが破棄されることを確認します。目的は、ユーザーが getfem インターフェイスに不正な引数を渡すことによって getfem "
-"(およびホストプログラム、matlab、scilab または python) をクラッシュさせることができない状況下であることを確認することです。"
+"getfem オブジェクトのメモリ管理を行います。たとえば ``mesh`` と ``mesh_fem`` "
+"の間の依存関係を処理するレイヤがあります。これを使用して別の getfem_object "
+"がまだある間、そのオブジェクトが破壊されていないことを監視します。その目的は、ユーザーが getfem インターフェイスに不正な引数を渡すことによって "
+"getfem (およびホストプログラム、matlab、scilab または python) をクラッシュさせることができないようにすることです。"
 
 #: ../source/project/libdesc_interface.rst:74
 msgid ""
@@ -157,8 +158,8 @@ msgid ""
 "handling and cleaning of many getfem objects in matlab (since matlab does "
 "not have \"object destructors\")."
 msgstr ""
-"また、(matlab は \"object destructors\" を持っていないので) matlab で多くの getfem "
-"オブジェクトの処理とクリーニングを簡素化するように設計されたワークスペースのスタックのようなものを提供しています。"
+"また、(matlab は \"object destructors\" を持っていないので) matlab では多数の getfem "
+"オブジェクトのハンドリングとクリーニングを簡素化するように設計されたworkspaceのスタックのようなものを提供しています。"
 
 #: ../source/project/libdesc_interface.rst:78
 msgid ":file:`getfemint.h`, :file:`getfemint.cc`."
@@ -171,8 +172,8 @@ msgid ""
 "The name  is not adequate anymore since any reference to \"mex\" has been "
 "moved into :file:`gfm_mex.c`."
 msgstr ""
-"入力と出力の引数のリストを getfem インターフェイス関数に解析するために使用される ``mexarg_in``, ``mexarg_out`` "
-"クラスを定義します。 \"mex\" への参照が :file:`gfm_mex.c` に移されたので、名前空間はもう十分ではありません。"
+"入力と出力の引数のリストを getfem インターフェイス関数でパースするための ``mexarg_in``, ``mexarg_out`` "
+"クラスを定義します。 \"mex\" への参照が :file:`gfm_mex.c` に移されたので、名前空間はもう必要ありません。"
 
 #: ../source/project/libdesc_interface.rst:86
 msgid ""
@@ -194,11 +195,10 @@ msgid ""
 " matlab, or ``Mesh.nbpts()`` in python)."
 msgstr ""
 "エクスポートされるすべての関数は、オブジェクトの種類 (``gf_mesh*``, ``gf_mesh_fem*``, ``gf_fem*``) "
-"で並べ替えられた getfem インターフェイスになります。オブジェクトの構築 (``gf_mesh``) 、オブジェクトの変更 "
-"(``gf_mesh_set``) の1つとして編成され、オブジェクトの参照 (``gf_mesh_get``) 。これらの各ファイルには、引数の "
-"``mexargs_in`` と ``mexargs_out`` スタックを受け取る1つの main "
-"関数が含まれています。その後解析し、通常最初の引数を subfunction の名前として解釈します (matlab で "
-"``gf_mesh_get('nbpts')`` 、または python で ``Mesh.nbpts()`` )。"
+"で並べ替えられた getfem インターフェイスになります。オブジェクトのコンストラクト (``gf_mesh``) 、オブジェクトの変更 "
+"(``gf_mesh_set``) 、オブジェクトの参照 (``gf_mesh_get``) 。これらの各ファイルには、 ``mexargs_in`` "
+"と ``mexargs_out`` の引数スタックを受け取る main 関数が1つ含まれています。解析の後、通常最初の引数をサブ関数 (matlab で"
+" ``gf_mesh_get('nbpts')`` 、または python で ``Mesh.nbpts()`` ) の名前として解釈します。"
 
 #: ../source/project/libdesc_interface.rst:98
 msgid ":file:`matlab/gfm_rpx_mexint.c`."
@@ -214,9 +214,9 @@ msgid ""
 "without having to mess with matlab (it is pain to debug)."
 msgstr ""
 "``--enable-matlab-rpc`` が ``./configure`` スクリプトに渡されるときに使用される "
-":file:`gfm_mex.c` の代替です。主な用途は、その場合には、matlab のインターフェイスは、\"getfem_server\" "
-"プログラムでソケットを介して通信するので、そのサーバープログラムをデバッグすることが可能であり、メモリリークまたは matlab "
-"の何かを混乱させることなく識別するインターフェイスをデバッグします (デバッグするのは苦痛です)。"
+":file:`gfm_mex.c` の代替ファイルです。その場合、 matlab インターフェイスは \"getfem_server\" "
+"プログラムでソケットを介して通信するので、そのサーバープログラムをデバッグすることが可能です。メモリリークまたは matlab "
+"の何かを混乱させず識別するインターフェイスをデバッグするのがこのファイルの主な用途です(デバッグは苦痛です)。"
 
 #: ../source/project/libdesc_interface.rst:107
 msgid ":file:`python/getfem.py`."
@@ -229,7 +229,7 @@ msgid ""
 "\":file:`bin/extract_doc.py`\"."
 msgstr ""
 "python インタフェースは、python スクリプト \":file:`bin/extract_doc.py`\" によってコンパイル中に生成される"
-" \":file:`getfem.py`\" ファイルとして利用可能です。"
+" \":file:`getfem.py`\" ファイルで利用可能です。"
 
 #: ../source/project/libdesc_interface.rst:116
 msgid "Objects, methods and functions of the interface"
@@ -241,8 +241,8 @@ msgid ""
 "objects (Fem, Mesh, MeshFem, Model ...), the associated methods and some "
 "functions defined on these objects."
 msgstr ""
-"インターフェイスによって操作される主な概念は、オブジェクトの限られた数 (Fem, Mesh, MeshFem, Model "
-"...)、関連するメソッド、およびこれらのオブジェクトで定義されている関数です。"
+"インターフェイスによって操作される主なものは、 (Fem, Mesh, MeshFem, Model "
+"...などの)いくつかのオブジェクト、関連するメソッド、およびこれらのオブジェクトで定義されている関数です。"
 
 #: ../source/project/libdesc_interface.rst:121
 msgid ""
@@ -250,8 +250,8 @@ msgid ""
 "methods and functions to the interface without doing it separetaly for each "
 "partsupported script language (Python, Scilab, Matlab)."
 msgstr ""
-"特別な努力は、各部分サポートスクリプト言語 (Python、Scilab、Matlab) "
-"を別々に行うことなく、インターフェイスに新しいオブジェクト、メソッド、および関数の追加を容易にするために行われています。"
+"サポートしている各スクリプト言語 (Python、Scilab、Matlab) "
+"で別々に対応することなく、インターフェイスに新しいオブジェクト、メソッド、および関数を容易に追加できるようにするために工夫をしています。"
 
 #: ../source/project/libdesc_interface.rst:124
 msgid ""
@@ -265,18 +265,18 @@ msgid ""
 msgstr ""
 "さまざまなオブジェクト、メソッド、および関数のインターフェイスを構築するために必要なすべての情報は、ファイル "
 "`interface/src/gf*.cc` に含まれています。python スクリプト (`bin/extract_doc`) "
-"は、必要なすべてのファイルをそこで取得する情報から生成します。特に、それは python ファイル getfem.py を生成する、matlab の "
-"m-ファイルの異なる関数やオブジェクト (サブディレクトリを含む) と、自動ドキュメンテーションを生成します。"
+"は、そこから全ての必要な情報を取得しファイルを生成します。生成されるのは python ファイル getfem.py と、 matlab の "
+"m-ファイルによる個別の関数やオブジェクト (サブディレクトリを含む) と、自動ドキュメンテーションの出力ファイルです。"
 
 #: ../source/project/libdesc_interface.rst:126
 msgid ""
 "To make all the things work automatically, a certain number of rules have to"
 " be respected:"
-msgstr "すべてのものを自動的に動作させるには、一定数のルールを尊重する必要があります。"
+msgstr "すべてを自動で動作させるには、一定のルールを尊重する必要があります。"
 
 #: ../source/project/libdesc_interface.rst:129
 msgid "An object have to be defined by three files on the interface"
-msgstr "オブジェクトは、インターフェイス上の3つのファイルで定義する必要があります。"
+msgstr "オブジェクトはインターフェイス上の3つのファイルで定義する必要があります。"
 
 #: ../source/project/libdesc_interface.rst:131
 msgid ":file:`gf_objectname.cc` : contains the constructors of the object"
@@ -287,19 +287,20 @@ msgid ""
 ":file:`gf_objectname_get.cc` : contains the methods which only get some "
 "information about the object (if any)."
 msgstr ""
-":file:`gf_objectname_get.cc` : オブジェクトに関する情報を取得するメソッドが含まれています (存在する場合)。"
+":file:`gf_objectname_get.cc` : (存在する場合) オブジェクトに関する情報を取得するメソッドが含まれています。"
 
 #: ../source/project/libdesc_interface.rst:135
 msgid ""
 ":file:`gf_objectname_set.cc` : contains the methods which transform the "
 "object (if any)."
-msgstr ":file:`gf_objectname_set.cc` : オブジェクトを変換するメソッドが含まれています (存在する場合)。"
+msgstr ":file:`gf_objectname_set.cc` : (存在する場合) オブジェクトを変換するメソッドが含まれています。"
 
 #: ../source/project/libdesc_interface.rst:137
 msgid ""
 "A list of function is defined by only one file :file:`gf_commandname.cc` it "
 "contains a list of sub-comands."
-msgstr "関数のリストは1つのファイル :file:`gf_commandname.cc` によって定義されるサブコマンドのリストが含まれています。"
+msgstr ""
+"関数のリストは全て :file:`gf_commandname.cc` で定義されています。このファイルにはサブコマンドのリストが含まれています。"
 
 #: ../source/project/libdesc_interface.rst:141
 msgid ""
@@ -308,8 +309,8 @@ msgid ""
 "constructors of an object, the commentary should correspond to the "
 "description of the object."
 msgstr ""
-"各ファイルについて、関数またはメソッドのリストに関する主な解説は、タグ '/*@GFDOC' および '@*/' "
-"で区切られています。オブジェクトのコンストラクタに対応するファイルの場合、注釈はオブジェクトの説明に対応している必要があります。"
+"各ファイルについて、関数またはメソッドのリストに関する主な解説は、タグ '/*@GFDOC' と '@*/' "
+"で区切られています。オブジェクトのコンストラクタに対応するファイルの場合、注釈はオブジェクトの説明としてください。"
 
 #: ../source/project/libdesc_interface.rst:144
 msgid ""
@@ -318,7 +319,7 @@ msgid ""
 " to have a efficient search of the called method/function. This macro allows"
 " to declare a new method/function with the following syntax::"
 msgstr ""
-"各非自明ファイル gf_*.cc "
+"それぞれの重要なファイル gf_*.cc "
 "には、オブジェクトまたはサブコマンドのメソッドを定義できるマクロが含まれています。特に、このシステムは、呼び出されたメソッド/関数の効率的な検索をすることができます。このマクロでは、次の構文を使用して新しいメソッド/関数を宣言できます。"
 
 #: ../source/project/libdesc_interface.rst:160
@@ -329,8 +330,8 @@ msgid ""
 " of this commentary is important since it will be analyzed to produce the "
 "right interface for Python, Matlab and Scilab."
 msgstr ""
-"最初の3行は、特別な構文を持つメソッド/関数の呼び出しを記述し、また、ドキュメントに含まれるメソッド/関数の説明を与える c++ の解説です。それは "
-"Python、Matlab と Scilab のための適切なインターフェイスを生成するために解析されるため、この解説の最初の行は重要です。"
+"最初の3行は、特別な構文を持つメソッド/関数の呼び出しを記述し、また、ドキュメントに含まれるメソッド/関数の c++ に関する解説です。これは "
+"Python、Matlab と Scilab のための適切なインターフェイスを生成するために使用されるため、この解説の最初の行は重要です。"
 
 #: ../source/project/libdesc_interface.rst:166
 msgid ""
@@ -343,18 +344,17 @@ msgid ""
 "which modifies an object and ``FUNC`` is for the sub-command of a function "
 "list."
 msgstr ""
-"メソッド/関数の呼び出しの説明の構文は次のとおりです。 ``/*@`` の後には、特別なキーワードが存在する必要があります。これは、``INIT``, "
+"メソッド/関数の呼び出しの説明の構文は次のとおりです。 ``/*@`` の後には、特別なキーワードを記入する必要があります。これは、``INIT``, "
 "``GET``, ``SET``, ``RDATTR`` または ``FUNC`` のいずれかです。キーワード ``INIT`` "
 "は、これがオブジェクトのコンストラクタの記述であることを意味します。``RDATTR`` "
-"は、オブジェクト属性を得ることを可能にする短いメソッドのためのものです。' ' GET ' ' "
-"は、それを変更しないオブジェクトのメソッドのためのものです。 ``SET`` は、オブジェクトを変更するメソッドのためのもので、 ``FUNC`` "
-"は関数リストのサブコマンドのためのものです。"
+"は、オブジェクト属性を得ることを可能にする短いメソッドのためのものです。 ``GET`` は、それを変更しないオブジェクトのメソッドのためのものです。 "
+"``SET`` はオブジェクトを変更するメソッドのためのもので、 ``FUNC`` は関数リストのサブコマンドのためのものです。"
 
 #: ../source/project/libdesc_interface.rst:175
 msgid ""
 "If the method/function returns a value, then a name for the return value is "
 "given (which is arbitrary) followed by ``=``."
-msgstr "メソッド/関数が値を返す場合は、戻り値の名前 (任意です) に続いて ``=`` が返されます。"
+msgstr "メソッド/関数が値を返す場合は、 ``=`` に続いて(任意の)戻り値の名前が返されます。"
 
 #: ../source/project/libdesc_interface.rst:178
 msgid ""
@@ -364,8 +364,8 @@ msgid ""
 "begins with a dot; this means that it corresponds to a method/function where"
 " the command name is not required)."
 msgstr ""
-"メソッド/関数のパラメータについて説明します。メソッドの場合、オブジェクト自体は言及されていません。最初のパラメーターは、単一引用符の間のメソッドまたはサブコマンド名である必要があります"
-" (特別な場合は、この名前がドットで始まる場合です。これは、コマンド名が不要なメソッド/関数に対応することを意味します)。"
+"メソッド/関数のパラメータについて説明します。メソッドの場合、オブジェクト自体についての言及は行いません。最初のパラメーターはメソッドまたは単一引用符で示すサブコマンド名である必要があります"
+" (この名前がドットで始まる特別な場合もあります。これは、コマンド名が不要なメソッド/関数であることを意味します)。"
 
 #: ../source/project/libdesc_interface.rst:184
 msgid ""
@@ -375,7 +375,7 @@ msgstr "その他のパラメーターがある場合は、型を使用して宣
 
 #: ../source/project/libdesc_interface.rst:187
 msgid "``@CELL``   : a cell array,"
-msgstr "``@CELL``   : セル配列、"
+msgstr "``@CELL``   : セルの配列、"
 
 #: ../source/project/libdesc_interface.rst:188
 msgid "``@imat``   : matrix of integers,"
@@ -383,23 +383,23 @@ msgstr "``@imat``   : 整数の行列、"
 
 #: ../source/project/libdesc_interface.rst:189
 msgid "``@ivec``   : vector of integers,"
-msgstr "``@ivec``   : 整数のベクトル,"
+msgstr "``@ivec``   : 整数のベクトル、"
 
 #: ../source/project/libdesc_interface.rst:190
 msgid "``@cvec``   : vector of complex values,"
-msgstr "``@cvec``   : 複素値のベクトル,"
+msgstr "``@cvec``   : 複素数値のベクトル,"
 
 #: ../source/project/libdesc_interface.rst:191
 msgid "``@dcvec``  : vector of complex values,"
-msgstr "``@dcvec``  : 複素値のベクトル,"
+msgstr "``@dcvec``  : 複素数値のベクトル、"
 
 #: ../source/project/libdesc_interface.rst:192
 msgid "``@dvec``   : vector of real values,"
-msgstr "``@dvec``   : 実数値のベクトル,"
+msgstr "``@dvec``   : 実数値のベクトル、"
 
 #: ../source/project/libdesc_interface.rst:193
 msgid "``@vec``    : vector of real or complex values,"
-msgstr "``@vec``    : 実数または複素数のベクトル,"
+msgstr "``@vec``    : 実数または複素数値のベクトル、"
 
 #: ../source/project/libdesc_interface.rst:194
 msgid "``@dmat``   : matrix of real values,"
@@ -407,27 +407,27 @@ msgstr "``@dmat``   : 実数値の行列,"
 
 #: ../source/project/libdesc_interface.rst:195
 msgid "``@mat``    : matrix of real or complex values,"
-msgstr "``@mat``    : 実数または複素数の行列,"
+msgstr "``@mat``    : 実数または複素数値の行列,"
 
 #: ../source/project/libdesc_interface.rst:196
 msgid "``@str``    : a string,"
-msgstr "``@str``    : 文字列、"
+msgstr "``@str``    : 文字列,"
 
 #: ../source/project/libdesc_interface.rst:197
 msgid "``@int``    : an integer,"
-msgstr "``@int``    : 整数、"
+msgstr "``@int``    : 整数,"
 
 #: ../source/project/libdesc_interface.rst:198
 msgid "``@bool``   : a boolean,"
-msgstr "``@bool``   : ブール型 (boolean)、"
+msgstr "``@bool``   : boolean型,"
 
 #: ../source/project/libdesc_interface.rst:199
 msgid "``@real``   : a real value,"
-msgstr "``@real``   : 実際の値、"
+msgstr "``@real``   : 実数値,"
 
 #: ../source/project/libdesc_interface.rst:200
 msgid "``@scalar`` : a real or complex value,"
-msgstr "``@scalar`` : 実数または複素数を指定します。"
+msgstr "``@scalar`` : 実数または複素数値,"
 
 #: ../source/project/libdesc_interface.rst:201
 msgid "``@list``   : a list."
@@ -439,52 +439,52 @@ msgid ""
 "instance, ou can refer to ``@tmesh``, ``@tmesh_fem``, ``@tfem``, etc. There "
 "are some authorized abreviations:"
 msgstr ""
-"さらに、 ``@tobj`` はインタフェースによって定義されたオブジェクトを参照します。たとえば、ou は ``@tmesh``, "
-"``@tmesh_fem``, ``@tfem``, などを参照できます。いくつかの承認された略語があります:"
+"さらに、 ``@tobj`` はインタフェースによって定義されたオブジェクトを参照します。たとえば、 ``@tmesh``, "
+"``@tmesh_fem``, ``@tfem``, などを参照できます。いくつかの略語が使用可能です。"
 
 #: ../source/project/libdesc_interface.rst:207
 msgid "``@tcs``  for  ``@tcont_struct``"
-msgstr "``@tcont_struct`` の ``@tcs``"
+msgstr "``@tcont_struct`` は ``@tcs``"
 
 #: ../source/project/libdesc_interface.rst:208
 msgid "``@tmf``  for  ``@tmesh_fem``"
-msgstr "``@tmesh_fem`` の ``@tmf``"
+msgstr "``@tmesh_fem`` は ``@tmf``"
 
 #: ../source/project/libdesc_interface.rst:209
 msgid "``@tgt``  for  ``@tgeotrans``"
-msgstr "``@tgeotrans`` の ``@tgt``"
+msgstr "``@tgeotrans`` は ``@tgt``"
 
 #: ../source/project/libdesc_interface.rst:210
 msgid "``@tgf``  for  ``@tglobal_function``"
-msgstr "``@tglobal_function`` の ``@tgf``"
+msgstr "``@tglobal_function`` は ``@tgf``"
 
 #: ../source/project/libdesc_interface.rst:211
 msgid "``@tmo``  for  ``@tmesher_object``"
-msgstr "``@tmesher_object`` の ``@tmo``"
+msgstr "``@tmesher_object`` は ``@tmo``"
 
 #: ../source/project/libdesc_interface.rst:212
 msgid "``@tmls``  for  ``@tmesh_levelset``"
-msgstr "``@tmesh_levelset`` の ``@tmls``"
+msgstr "``@tmesh_levelset`` は ``@tmls``"
 
 #: ../source/project/libdesc_interface.rst:213
 msgid "``@tmim``  for  ``@tmesh_im``"
-msgstr "``@tmesh_im`` の ``@tmim``"
+msgstr "``@tmesh_im`` は ``@tmim``"
 
 #: ../source/project/libdesc_interface.rst:214
 msgid "``@tls``  for  ``@tlevelset``"
-msgstr "``@tlevelset`` の ``@tls``"
+msgstr "``@tlevelset`` は ``@tls``"
 
 #: ../source/project/libdesc_interface.rst:215
 msgid "``@tsl``  for  ``@tslice``"
-msgstr "``@tslice`` の ``@tsl``"
+msgstr "``@tslice`` は ``@tsl``"
 
 #: ../source/project/libdesc_interface.rst:216
 msgid "``@tsp``  for  ``@tspmat``"
-msgstr "``@tspmat`` の ``@tsp``"
+msgstr "``@tspmat`` は ``@tsp``"
 
 #: ../source/project/libdesc_interface.rst:217
 msgid "``@tpre``  for  ``@tprecond``"
-msgstr "``@tprecond`` の ``@tpre``"
+msgstr "``@tprecond`` は ``@tpre``"
 
 #: ../source/project/libdesc_interface.rst:220
 msgid ""
@@ -495,7 +495,7 @@ msgid ""
 msgstr ""
 "パラメータリスト (``...``) "
 "の末尾にある3つの点は、追加のパラメータが可能であることを意味します。省略可能なパラメーターは、角かっこで記述します。たとえば、  ``/*@SET v"
-" = ('name'[, @int i])`` です。しかし、python インターフェイスを構築するには、 :file:`extract_doc` "
+" = ('name'[, @int i])`` です。しかし、python インターフェイスを構築する際には、 :file:`extract_doc` "
 "スクリプトによってどのように解釈されるかに注意してください。"
 
 #: ../source/project/libdesc_interface.rst:226
@@ -505,11 +505,11 @@ msgid ""
 "output arguments and the maximum number of output arguments. It is "
 "dynamically verified."
 msgstr ""
-"マクロの2から5番目のパラメーターは、入力引数の最小数、最大値、出力引数の最小数、および出力引数の最大数にそれぞれ対応しています。動的に検証されます。"
+"マクロの2から5番目のパラメーターは、入力引数の最小数、最大値、出力引数の最小数、および出力引数の最大数にそれぞれ対応しています。これらは動的に検証されています。"
 
 #: ../source/project/libdesc_interface.rst:231
 msgid "Additional parameters for the function lists ...."
-msgstr "関数リストの追加パラメータ...。"
+msgstr "関数リストの追加パラメータ..."
 
 #: ../source/project/libdesc_interface.rst:233
 msgid ""
@@ -517,8 +517,8 @@ msgid ""
 "declarations such as ``int a, b;`` (c++ believes that it is an additional "
 "parameter of the macro)."
 msgstr ""
-"不明な理由から、関数の本体には、 ``int a, b;`` などの複数の宣言を含めることはできません(c++ "
-"のマクロは追加パラメーターであると解釈します)。"
+"原因不明の理由により、関数の本体には ``int a, b;`` などの複数の宣言を含めることができません(c++ "
+"でマクロの追加パラメーターであると解釈されます)。"
 
 #: ../source/project/libdesc_interface.rst:239
 msgid ""
@@ -527,7 +527,7 @@ msgid ""
 "with \\:math\\:\\`f(x) = 3x^2+2x+4\\` or with::"
 msgstr ""
 "c++ の解説に含まれているドキュメントの部分は、 `reStructuredText`_ 形式である必要があります。特に、数式は "
-"\\:math\\:\\`f(x) = 3x^2+2x+4\\` か次の式に含めることができます::"
+"\\:math\\:\\`f(x) = 3x^2+2x+4\\` のように含めることができます。"
 
 #: ../source/project/libdesc_interface.rst:247
 msgid ""
@@ -553,10 +553,10 @@ msgid ""
 "``/*@SCILABEXT``, ``/*@PYTHONEXT``. See for instance the file "
 ":file:`gf_mesh_fem_get.cc`."
 msgstr ""
-"まだドキュメンテーションでは、特定の言語のための部品は ``@MATLAB{specific part ...}``, "
-"``@SCILAB{specific part ...}`` および ``@PYTHON{specific part ...}`` "
-"です。メソッド/サブコマンドがインタフェースに固有である場合、例えば Matlab のために、 `GET` を `MATLABFUNC` で "
-"`MATLABGET`, `FUNC` などで置き換えることができます。この追加機能に特定のコードが必要な場合は、タグ "
+"ドキュメンテーションでは、特定の言語に応じて ``@MATLAB{specific part ...}``, ``@SCILAB{specific "
+"part ...}`` および ``@PYTHON{specific part ...}`` "
+"を追加します。メソッド/サブコマンドがインタフェースに固有である場合、例えば `MATLABFUNC` を使うことで Matlab のために、 "
+"`GET` を `MATLABGET`, `FUNC` などで置き換えることができます。この追加機能に特定のコードが必要な場合は、タグ "
 "``/*@MATLABEXT``, ``/*@SCILABEXT``, ``/*@PYTHONEXT`` で追加することができます。たとえば、 "
 ":file:`gf_mesh_fem_get.cc` を参照してください。"
 
@@ -565,8 +565,8 @@ msgid ""
 "For Python and the Matlab object, if a `SET` method has the same name as a "
 "`GET` method, the `SET` method is prefixed by `set_`."
 msgstr ""
-"Python と Matlab オブジェクトの場合、 `SET` メソッドの名前は `GET` メソッドと同じである場合、 `SET` メソッドの先頭に"
-" `set_` が付きます。"
+"Python と Matlab オブジェクトの場合、 `SET` メソッドの名前が `GET` メソッドと同じならば、 `SET` メソッドの先頭に "
+"`set_` が付けられます。"
 
 #: ../source/project/libdesc_interface.rst:273
 msgid "Adding a new function or object method to the getfem interface"
@@ -582,7 +582,7 @@ msgid ""
 msgstr ""
 "新しい関数 ``gf_mesh_get(m, \"foobar\", .)``, を追加したい場合、 変更するメインファイルは "
 ":file:`gf_mesh_get.cc` です。ユーザーがその関数を使用するときに scilab、matlab または python "
-"をクラッシュさせることができないようにするために、関数に渡されるすべての引数をチェックしてください。関数を追加するには、 "
+"をクラッシュさせないようにするために、関数に渡されるすべての引数をチェックしてください。関数を追加するには、 "
 ":file:`gf_mesh_get.cc` で定義されているマクロを使用します。"
 
 #: ../source/project/libdesc_interface.rst:279
@@ -593,16 +593,17 @@ msgid ""
 "gf_mesh_get``\" at the matlab prompt), and in the getfem_python "
 "autogenerated documentation."
 msgstr ""
-":file:`gf_mesh_get.cc` 内の関数のドキュメントを追加することを忘れないでください、これは、matlab/scilab/python"
-" のヘルプファイル(matlab のプロンプトで \"``help gf_mesh_get``\" "
-"型であるときにヘルプファイルに表示されるドキュメントです)、 そして getfem_python 自動生成ドキュメントです。"
+":file:`gf_mesh_get.cc` 内の関数のドキュメントを忘れずに追加してください。これは、 matlab/scilab/python "
+"のヘルプファイル(matlab のプロンプトで \"``help gf_mesh_get``\" "
+"とタイプしたときにヘルプファイルに表示されるドキュメントです)、 そして getfem_python の自動生成ドキュメントに反映されます。"
 
 #: ../source/project/libdesc_interface.rst:284
 msgid ""
 "IMPORTANT. Note that the array indices start at 0 in Python and 1 in Matlab "
 "and Scilab. A specific function::"
 msgstr ""
-"重要。配列のインデックスは、Python では0から始まり、Matlab と Scilab では1であることに注意してください。特定の関数::"
+"重要。配列のインデックスは、Python では0から始まり、Matlab と Scilab "
+"では1から始まることに注意してください。次のような特定の関数の場合、"
 
 #: ../source/project/libdesc_interface.rst:288
 msgid ""
@@ -610,8 +611,8 @@ msgid ""
 "exchange indices and array of indices. Take care not to make the correction "
 "twice. Some Array of indices are automatically shifted."
 msgstr ""
-"値が python では0、Matlab では1、Scilab "
-"はインデックスとインデックスの配列を交換するために使用されなければなりません。2度と修正をしないように気をつけてください。インデックスのいくつかの配列は自動的にシフトされます。"
+"インデックスとインデックスの配列を交換する際には python では0、 Matlab と Scilab "
+"では1を使用しなければなりません。補正を2回しないように気をつけてください。インデックスのいくつかの配列は自動的にシフトされています。"
 
 #: ../source/project/libdesc_interface.rst:291
 msgid "Adding a new object to the getfem interface"
@@ -623,9 +624,9 @@ msgid ""
 "corresponding sources :file:`gf_obj.cc`, :file:`gf_obj_get.cc` and "
 ":file:`gf_obj_set.cc`. Of course you can take the existing ones as a model."
 msgstr ""
-"インターフェイスに新しいオブジェクトを追加するには、新しい対応するソース :file:`gf_obj.cc`, "
+"インターフェイスに新しいオブジェクトを追加するには、それに対応する新しいソース :file:`gf_obj.cc`, "
 ":file:`gf_obj_get.cc` と :file:`gf_obj_set.cc` "
-"を構築する必要があります。もちろん、モデルとして、既存のものを取ることができます。"
+"を作成する必要があります。もちろん、モデルとして既存のものを使うこともできます。"
 
 #: ../source/project/libdesc_interface.rst:295
 msgid ""
@@ -633,8 +634,8 @@ msgid ""
 "begining of :file:`getfemint.h` (with respect to the alphabetic order), and "
 "declare three functions::"
 msgstr ""
-"オブジェクトの管理については、次のように :file:`getfemint.h` "
-"の最初にクラスを宣言する必要があります(アルファベット順に関して)、そして3つの関数を宣言します::"
+"オブジェクトを管理するために、 :file:`getfemint.h` "
+"の最初にクラスを宣言する必要があります(アルファベット順なるように注意してください)。そして3つの関数を宣言します。"
 
 #: ../source/project/libdesc_interface.rst:301
 msgid ""
@@ -644,8 +645,8 @@ msgid ""
 " a shared pointer in |gf|, the third function can return a shared pointer."
 msgstr ""
 "ここで、 \"name\" はインターフェイス内のオブジェクトの名前であり、 ``object_class`` は getfem "
-"のクラス名です(たとえば、メッシュオブジェクトの場合は ``getfem::mesh`` )。または、 |gf| "
-"で共有ポインタによって操作されるオブジェクトの場合、3番目の関数は共有ポインタを返すことができます。"
+"のクラス名です(たとえば、メッシュオブジェクトの場合は ``getfem::mesh`` )。また、 |gf| "
+"で共有ポインタによって操作されるオブジェクトの場合、3番目の関数は共有ポインタを返します。"
 
 #: ../source/project/libdesc_interface.rst:303
 msgid ""
@@ -654,8 +655,8 @@ msgid ""
 "class can be defined such as the one for ``bgeot::base_poly`` (see the end "
 "of :file:`getfemint.h`)."
 msgstr ""
-"重要: インタフェースするために、 |gf| オブジェクトは ``dal::static_stored_object`` "
-"から派生しなければなりません。ただし、そうでない場合は、ラッパークラスを ``bgeot::base_poly`` のように定義できます "
+"重要: インタフェースを作成するためには、 |gf| オブジェクトは ``dal::static_stored_object`` "
+"を使用しなければなりません。一方、そのようにしない場合には、ラッパークラスを ``bgeot::base_poly`` のように定義します "
 "(:file:`getfemint.h` の末尾を参照してください)。"
 
 #: ../source/project/libdesc_interface.rst:305
@@ -666,8 +667,8 @@ msgid ""
 " one for an object which is manipulated in |gf| with a shared pointer."
 msgstr ""
 "前の3つの関数は、 :file:`getfemint.cc` の末尾に実装する必要があります。 :file:`getfemint.cc` "
-"で定義されている2つのマクロのいずれかを使用することができます。最初のマクロは標準的な目的のためであり、共有ポインタの |gf| "
-"で操作する目的のために二番目のオブジェクトを使用します。"
+"で定義されている2つのマクロのいずれかを使用することができます。最初のマクロは標準的な目的のためであり、 |gf| "
+"の共有ポインタで操作するために2番目のオブジェクトを使用します。"
 
 #: ../source/project/libdesc_interface.rst:307
 msgid ""
@@ -675,7 +676,7 @@ msgid ""
 "``class_id_of_object`` at the end of :file:`getfemint.cc`."
 msgstr ""
 ":file:`getfemint.cc` の最後に ``name_of_getfemint_class_id`` と "
-"``class_id_of_object`` という関数も完成させる必要があります。"
+"``class_id_of_object`` という関数も追加する必要があります。"
 
 #: ../source/project/libdesc_interface.rst:310
 msgid ""
@@ -683,8 +684,8 @@ msgid ""
 ":file:`getfem_interface.cc` and modifiy the file :file:`bin/extract_doc` and"
 " run the configure file."
 msgstr ""
-":file:`getfem_interface.cc` のインターフェイス関数の呼び出しを追加する必要があります そしてファイル "
-":file:`bin/extract_doc` を変更し構成ファイルを実行します。"
+":file:`getfem_interface.cc` にインターフェイス関数の呼び出しを追加する必要があります。そしてファイル "
+":file:`bin/extract_doc` を変更し設定ファイルを実行します。"
 
 #: ../source/project/libdesc_interface.rst:312
 msgid ""
@@ -694,6 +695,8 @@ msgid ""
 "object. Additionaly, a constructor from a string is necessary to load the "
 "object from a file."
 msgstr ""
+"メソッド ``get('char')`` と ``get('display')`` "
+"は、各オブジェクトに対して定義する必要があります。最初のメソッドでは、文字列によりオブジェクトをファイルに保存するできるようにし、2番目のメソッドでは文字列によりオブジェクトに関するいくつかの情報を与えるようにします。さらに、文字列による構築では、ファイルからオブジェクトを読み込む必要があります。"
 
 #: ../source/project/libdesc_interface.rst:314
 msgid ""
@@ -702,11 +705,11 @@ msgid ""
 "files in the directory :file:`macros/overload`."
 msgstr ""
 "Scilab インターフェイスのためにファイル :file:`sci_gateway/c/builder_gateway_c.sce.in` "
-"は、ディレクトリ :file:`macros/overload` 内のファイルを変更することがあります。"
+"とディレクトリ :file:`macros/overload` 内のファイルを変更する必要があります。"
 
 #: ../source/project/libdesc_interface.rst:318
 msgid "State"
-msgstr "状況"
+msgstr "状態"
 
 #: ../source/project/libdesc_interface.rst:322
 msgid "Perspectives"
@@ -716,4 +719,4 @@ msgstr "展望"
 msgid ""
 "The interface grows in conjunction with |gf|. The main |gf| functionalities "
 "are interfaced."
-msgstr "インターフェイスは |gf| と連動して成長します。 |gf| のメイン機能はインタフェースされています。"
+msgstr "インターフェイスは |gf| と連動して成長しています。 |gf| の主な関数群のインタフェースは実装されています。"
