@@ -36,7 +36,7 @@ msgid ""
 "`interface/tests/python`."
 msgstr ""
 "この例では、変形可能な「車輪」が変形可能な基礎と接触します。ここでは python インターフェイスを使用しますが、別のインターフェイスまたは C++ "
-"にこのプログラムを訳すのは簡単です (前の例を参照してください)。完全なプログラム `demo_wheel_contact.py` は、ディレクトリ "
+"にこのプログラムを訳すのは簡単です (前の例を参照してください)。完全なプログラム `demo_wheel_contact.py` がディレクトリ "
 "`interface/tests/python` にあります。"
 
 #: ../source/tutorial/wheel.rst:13
@@ -51,9 +51,9 @@ msgid ""
 "(linearized elasticity) and the contact between them. We also consider that "
 "the rim of the wheel is rigid and apply a vertical force on the wheel."
 msgstr ""
-":math:`\\Omega^1 \\subset \\R^2` は2次元の車輪の参照設定であり、 :math:`\\Omega^2 \\subset "
-"\\R^2` は変形可能な基礎の参照設定です。これら2つの (線形弾性) "
-"体の微小変形とそれらの間の接触を考慮します。また、車輪の周縁は剛であり、車輪に垂直方向の力がはたらくことを考慮します。"
+":math:`\\Omega^1 \\subset \\R^2` は2次元の車輪の基準配置であり、 :math:`\\Omega^2 \\subset "
+"\\R^2` は変形可能な基礎の基準配置です。これら2つの (線形弾性) "
+"体の微小変形とそれらの間の接触を考慮します。また、車輪の周縁は剛であり、車輪に垂直方向の力がはたらくとします。"
 
 #: ../source/tutorial/wheel.rst:19
 msgid "Building the program"
@@ -62,7 +62,7 @@ msgstr "プログラムの作成"
 #: ../source/tutorial/wheel.rst:22
 msgid ""
 "Let us begin by loading Getfem and fixing the parameters of the problem"
-msgstr "Getfem をロードし、問題のパラメータを設定することから始めましょう"
+msgstr "Getfem をロードし、問題のパラメータを設定することから始めましょう。"
 
 #: ../source/tutorial/wheel.rst:43
 msgid "Mesh generation"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../source/tutorial/wheel.rst:58
 msgid "The result is the following"
-msgstr "結果は以下のとおりです。"
+msgstr "結果は図のとおりです。"
 
 #: ../source/tutorial/wheel.rst:66
 msgid "Boundary selection"
@@ -95,8 +95,8 @@ msgid ""
 "force and the fact that the rim is rigid), the contact boundary of the wheel"
 " and the bottom boundary of the foundation that we will assume clamped."
 msgstr ""
-"(荷重と剛体であることを仮定するための)周縁の境界 "
-"、車輪の接触境界、およびクランプされたと仮定する基礎の底部境界などの境界条件を設定するために、境界のさまざまな部分を選択する必要があります。"
+"(荷重や剛体であることを仮定する)周縁の境界 "
+"、車輪の接触境界、およびクランプしたと仮定する基礎の底部境界などの境界条件を設定するために、さまざまな境界を選択する必要があります。"
 
 #: ../source/tutorial/wheel.rst:83
 msgid ""
@@ -106,8 +106,8 @@ msgid ""
 "`mesh1.region_subtract(CONTACT_BOUND, HOLE_BOUND)` allow to delete the faces"
 " corresponding to the rim in the contact boundary."
 msgstr ""
-"コマンド `mesh1.outer_faces_with_direction([0., -1.], n.pi/4)` は、ベクトル `[0., "
-"-1.]` に対して角度 `n.pi/4` 以下の外向きの単位法線を持つすべての面を選択します。コマンド "
+"コマンド `mesh1.outer_faces_with_direction([0., -1.], np.pi/4)` は、ベクトル `[0., "
+"-1.]` に対して角度 `np.pi/4` 以下の外向きの単位法線を持つすべての面を選択します。コマンド "
 "`mesh1.region_subtract(CONTACT_BOUND, HOLE_BOUND)` は接触境界のリムの面を削除します。"
 
 #: ../source/tutorial/wheel.rst:86
@@ -137,7 +137,7 @@ msgstr "モデルの定義"
 msgid ""
 "We use a real model and declare the two variables which will represent the "
 "displacements:"
-msgstr "実際のモデルを使用して、変位を表す2つの変数を宣言します。"
+msgstr "実数モデルを使用して、変位を表す2つの変数を宣言します。"
 
 #: ../source/tutorial/wheel.rst:121
 msgid "Linearized elasticity bricks"
@@ -157,7 +157,7 @@ msgstr "基礎の下部の固定条件"
 msgid ""
 "We prescribed the displacement at  bottom face of the foundation to vanish, "
 "for instance with a multiplier with the add of the following brick:"
-msgstr "例えば、次のブリックの追加と乗算で、基礎の底面の変位をなくすように規定ができます。"
+msgstr "例えば、次のブリックを追加し乗算することで、基礎の底面の変位をなくすように設定できます。"
 
 #: ../source/tutorial/wheel.rst:142
 msgid "Contact condition (use of interpolate transformations)"
@@ -183,7 +183,7 @@ msgid ""
 "contact surface to the other have to be described on the reference "
 "configuration and is not evolving, which is of course simpler but is an "
 "approximation."
-msgstr "微小変形接触では、1つの接触面の点の対応を参照設定に記述する必要があります。この点については開発が進んでおらず、単純な近似値となります。"
+msgstr "微小変形接触では、接触面の点の対応を基準配置に記述する必要があります。この点については開発が進んでおらず、単純な近似値を使用します。"
 
 #: ../source/tutorial/wheel.rst:148
 msgid ""
@@ -214,9 +214,9 @@ msgid ""
 "contact and automatically searching for the correspondence between contact "
 "boundaries exist in |gf| (see :ref:`ud-model-contact-friction-large-hlgav`)."
 msgstr ""
-"これにより、車輪のメッシュから基礎のメッシュへの変換を弱形式の言語で表現することができます。これは非常に単純な定数式です。データまたはモデルの変数に応じて、より複雑な式を使用できます。変換の式がモデルの変数に依存する場合、接線線形システムでは、この依存関係が自動的に考慮されます"
+"これにより、車輪のメッシュから基礎のメッシュへの変換を弱形式言語で表現することができます。これは非常に単純な定数式ですが、データまたはモデルの変数に応じて、より複雑な式を使用できます。変換の式がモデルの変数に依存する場合、接線線形システムでは、この依存関係が自動的に考慮されます"
 " (詳細については :ref:`ud-gasm-high-transf` "
-"を参照してください。また、大すべり接触に対応し接触境界間の対応を自動的に検索する変換も |gf| にあります。 ( :ref:`ud-model-"
+"を参照してください。また、有限すべり接触に対応し接触境界間の対応を自動的に検索する変換も |gf| にあります。 ( :ref:`ud-model-"
 "contact-friction-large-hlgav` を参照)。"
 
 #: ../source/tutorial/wheel.rst:162
@@ -243,7 +243,7 @@ msgid ""
 msgstr ""
 "ここで :math:`\\Gamma_c` はスレーブ接触境界です。 :math:`\\lambda_N` は接触乗数 (接触圧) です。 "
 ":math:`h_T` は要素の半径です。 :math:`\\Pi` は変換です。 `n` ( :math:`n = (0,1)` "
-")はマスター接触境界への外向きの法線ベクトルです。 :math:`\\gamma_0` は拡張パラメータです。 "
+")はマスター接触境界への外向き法線ベクトルです。 :math:`\\gamma_0` は拡張パラメータです。 "
 ":math:`(\\cdot)_-:I\\hspace{-0.2em}R\\rightarrow I\\hspace{-0.2em}R_+` "
 "は負の部分です。 :math:`\\delta_{\\lambda_N}, \\delta_{u^1}, \\delta_{u^2}` はそれぞれ "
 ":math:`\\lambda_N, u^1, u^2` に対応する試行関数です。"
@@ -287,16 +287,16 @@ msgstr ""
 msgid ""
 "where :math:`\\Gamma_D` is the rim boundary, :math:`F` is the applied "
 "density of force."
-msgstr "ここで :math:`\\Gamma_D` はリムの境界であり、 :math:`F` は適用された力の密度です。"
+msgstr "ここで :math:`\\Gamma_D` はリムの境界であり、 :math:`F` は力の密度です。"
 
 #: ../source/tutorial/wheel.rst:206
 msgid "This could be added to the model with the weak form language:"
-msgstr "これは弱形式言語でモデルに追加することができます。"
+msgstr "これを弱形式言語でモデルに追加します。"
 
 #: ../source/tutorial/wheel.rst:215
 msgid ""
 "For more robustness, a small penalization on :math:`alpha_D` can be added"
-msgstr "よりロバスト性を向上させるために :math:`alpha_D` 上に小さなペナルティを追加することができます"
+msgstr "よりロバスト性を向上させるために :math:`alpha_D` 上に微小のペナルティを追加することもできます。"
 
 #: ../source/tutorial/wheel.rst:222
 msgid ""
@@ -320,15 +320,15 @@ msgstr "次のコードで問題を解くことができます。"
 msgid ""
 "Note that in some configuration, it is preferable to use a more basic line "
 "search than the default one:"
-msgstr "設定によっては、デフォルトのものよりもより基本的な線形探索を使用する方が望ましいことに注意してください。"
+msgstr "設定によっては、デフォルトのものよりも基本的な線形探索を使用する方が望ましい場合もあります。"
 
 #: ../source/tutorial/wheel.rst:241
 msgid "Export the solution"
-msgstr "解のエクスポート"
+msgstr "解の出力"
 
 #: ../source/tutorial/wheel.rst:243
 msgid "Now the code to export the solution with the VonMiss stress:"
-msgstr "次に、VonMiss 応力の解をエクスポートするコードを示します。"
+msgstr "最後に、VonMises 応力の解を出力するコードを示します。"
 
 #: ../source/tutorial/wheel.rst:270
 msgid "Plot of the solution."

@@ -33,7 +33,7 @@ msgid ""
 "gradient of the geometric transformation ...)."
 msgstr ""
 "このセクションの目的は |gf| "
-"でのFEMの記述方法を簡単に紹介することです。これは主に文書の他の部分（要素の定義、参照要素、幾何学的変換、幾何学的変換の勾配...）で使用される表記法を固定するためです。"
+"でのFEMの記述方法を簡単に紹介することです。文書の他の部分（要素の定義、参照要素、幾何学的変換、幾何学的変換の勾配...）で使用される表記法を固定化することが主な目的です。"
 
 #: ../source/project/femdesc.rst:19
 msgid "Convex structures"
@@ -48,7 +48,7 @@ msgid ""
 "In |gf|, a type of element (for us, a convex) is described by the object "
 "|bg_cs| defined in the file :file:`bgeot_convex_structure.h`."
 msgstr ""
-"有限要素法は、要素と呼ばれる小さな凸包領域で定義されます。有限要素法を定義できる最も単純な要素は、セグメント（1次元のシンプレックス）、他には三角形、四面体（2次元と3次元の単体）、プリズム、直方体などです。"
+"有限要素法は、要素と呼ばれる小さな凸包領域で定義されます。有限要素法を定義できる最も単純な要素は、（1次元のシンプレックス）セグメント、他には三角形、（2次元と3次元の単体）四面体、プリズム、直方体などです。"
 " |gf| では、要素の種類(凸包)は :file:`bgeot_convex_structure.h` ファイルで定義されているオブジェクト "
 "|bg_cs| で記述されています。"
 
@@ -60,8 +60,8 @@ msgid ""
 "type of convex. What will be manipulated is a pointer on such a descriptor "
 "which has to be declared with the type |bg_pcs|"
 msgstr ""
-"ここでは頂点の座標ではなく凸の構造だけを記述します。このタイプの構造は同じタイプの凸を記述する必要はないので、この構造は自分自身を操作することはできません。このような記述子上のポインタは"
-" |bg_pcs| 型で宣言する必要があります。"
+"ここでは頂点の座標ではなく凸包の構造だけを記述します。この種類の構造は同じタイプの凸包を記述する必要はないので、この構造は自分自身を操作することはできません。このような記述子上のポインタは"
+" |bg_pcs| 型で宣言します。"
 
 #: ../source/project/femdesc.rst:34
 msgid ""
@@ -71,11 +71,11 @@ msgstr "次の関数で通常の要素タイプの記述子に対するポイン
 
 #: ../source/project/femdesc.rst:39
 msgid "description of a simplex of dimension ``d``."
-msgstr "``d`` 次のシンプレックスの記述。"
+msgstr "``d`` 次元のシンプレックスの記述。"
 
 #: ../source/project/femdesc.rst:43
 msgid "description of a parallelepiped of dimension ``d``."
-msgstr "``d`` 次の直方体の記述。"
+msgstr "``d`` 次元の直方体の記述。"
 
 #: ../source/project/femdesc.rst:47
 msgid "description of the direct product of ``p1`` and ``p2``."
@@ -83,13 +83,13 @@ msgstr "``p1`` と ``p2`` の直積の記述。"
 
 #: ../source/project/femdesc.rst:51
 msgid "description of a prism of dimension ``d``"
-msgstr "``d`` 次元のプリズムの記述"
+msgstr "``d`` 次元のプリズムの記述。"
 
 #: ../source/project/femdesc.rst:53
 msgid ""
 "For instance if one needs the description of a square, one can call "
 "equivalently::"
-msgstr "たとえば、正方形の記述が必要な場合、以下のように等価に表現できます。"
+msgstr "たとえば、正方形を記述する場合、以下のような表現ができます。"
 
 #: ../source/project/femdesc.rst:58
 msgid "or::"
@@ -104,9 +104,9 @@ msgid ""
 "to a more basic description (used for the description of geometric "
 "transformations)."
 msgstr ""
-"記述子には特に頂点の数( ``nb_points()`` ）のために面の数（ ``p->nb_faces()`` ）と凸包の次元（ "
+"記述子には特に頂点の数( ``nb_points()`` ）の計算のために面の数（ ``p->nb_faces()`` ）と凸包の次元（ "
 "``p->dim()`` "
-"）が含まれています。他には、各面の頂点の数、面の記述、および（幾何学的変換の記述に使用される）より基本的な記述への最終的な参照先が情報として含まれます。"
+"）が含まれています。他には、各面の頂点の数、面の記述、および（幾何変換の記述に使用される）より基本的な記述への最終的な参照先が情報として含まれます。"
 
 #: ../source/project/femdesc.rst:74
 msgid "usual elements"
@@ -127,22 +127,22 @@ msgid ""
 msgstr ""
 "参照している凸包は特定の実数要素、すなわち頂点のリストを持つ凸包の構造です。これは有限要素法が定義されている特定の要素を記述しています。ファイル "
 ":file:`bgeot_convex_ref.h` 内のオブジェクト |bg_cr| "
-"によって記述されています。ライブラリは、凸包のそれぞれの種類に対して1つの記述のみ保持します。したがって、操作するのは、記述子上の |bg_pcr| "
+"によって記述されています。ライブラリは、凸包のそれぞれの種類に対して1つの記述のみ保持します。したがって、操作するのは記述子上の |bg_pcr| "
 "型のポインタです。"
 
 #: ../source/project/femdesc.rst:87
 msgid "The following functions build the descriptions:"
-msgstr "次の関数は構築を記述します。"
+msgstr "次の関数は記述を構築します。"
 
 #: ../source/project/femdesc.rst:91
 msgid "description of the simplex of reference of dimension ``d``."
-msgstr "``d`` 次元の参照のシンプレックスの記述。"
+msgstr "``d`` 次元の参照シンプレックスの記述。"
 
 #: ../source/project/femdesc.rst:95
 msgid ""
 "description of the simplex of reference of dimension ``d`` with degree ``k``"
 " Lagrange grid."
-msgstr "``k`` 次元の Lagrange グリッドの次元 ``d`` を参照するシンプレックスの記述。"
+msgstr "``k`` 次 ``d`` 次元の Lagrange 格子を参照するシンプレックスの記述。"
 
 #: ../source/project/femdesc.rst:100
 msgid "description of the direct product of two convexes of reference."
@@ -177,9 +177,9 @@ msgstr ""
 "``p`` が |bg_pcr| 型の場合 ``p->structure()`` は対応する凸包構造です。したがって、例えば "
 "``p->structure()->nb_points()`` は頂点の数を返します。 ``p->points()`` 関数は頂点の配列を与え、 "
 "``p->points()[0]`` は最初の頂点です。関数 ``p->is_in(const base_node &pt)`` "
-"は、点ptが要素内にあれば、負の実数を返します。関数 ``p->is_in_face(short_type f, const base_node "
-"&pt)`` は、点 ``pt`` が面 ``f`` にある場合はnullを返します。他の関数は :file:`bgeot_convex_ref.h` "
-"と :file:`bgeot_convex.h` にあります。"
+"は、点ptが要素内にあれば負の実数を返します。関数 ``p->is_in_face(short_type f, const base_node "
+"&pt)`` は点 ``pt`` が面 ``f`` にある場合はnullを返します。他の関数は :file:`bgeot_convex_ref.h` と"
+" :file:`bgeot_convex.h` にあります。"
 
 #: ../source/project/femdesc.rst:123
 msgid "Shape function type"
@@ -201,7 +201,7 @@ msgid ""
 "``base_node``) and must have a method to compute the derivative with respect"
 " to the ith variable (``F.derivative(i)``)."
 msgstr ""
-"有限要素を記述して使用するためには、形状関数は点で値が設定できなければなりません（ ``a = F.eval(pt)`` ここで ``pt`` は "
+"有限要素の記述を使用するためには、形状関数は点で値が設定できなければなりません（ ``a = F.eval(pt)`` ここで ``pt`` は "
 "``base_node`` です）。そして、i次の変数に関する導関数を計算するメソッド（ ``F.derivative(i)`` "
 "）を持たなければなりません。"
 
@@ -237,8 +237,8 @@ msgid ""
 " polynomial vector (In fact, as an extention, non polynomial geometric "
 "transformation can also be supported by |gf|, but this is very rarely used)"
 msgstr ""
-"幾何変換は :math:`n_g` 成分多項式ベクトルにより記述されています。 (実際には、非多項式幾何学的変換を |gf| "
-"の拡張でサポートすることができますが、これが使用されるのは非常にまれです。)"
+"幾何変換は :math:`n_g` 成分多項式ベクトルにより記述されています。 (実際には、非多項式幾何変換を |gf| "
+"の拡張でサポートすることはできますが、これが使用されるのは非常にまれです。)"
 
 #: ../source/project/femdesc.rst:171
 msgid "such that"
@@ -309,7 +309,7 @@ msgstr "``\"GT_QK(n,k)\"``"
 msgid ""
 "Description of the parallelepiped transformation of dimension ``n`` and "
 "degree ``k``."
-msgstr "``n`` 次元および次数 ``k`` の直方体変換の記述。"
+msgstr "``n`` 次元および次数 ``k`` の直方体変換の記述子。"
 
 #: ../source/project/femdesc.rst:223
 msgid "``\"GT_PRISM(n,k)\"``"
@@ -318,7 +318,7 @@ msgstr "``\"GT_PRISM(n,k)\"``"
 #: ../source/project/femdesc.rst:225
 msgid ""
 "Description of the prism transformation of dimension ``n`` and degree ``k``."
-msgstr "``n`` 次元および次数 ``k`` のプリズム変換の記述。"
+msgstr "``n`` 次元および次数 ``k`` のプリズム変換の記述子。"
 
 #: ../source/project/femdesc.rst:227
 msgid "``\"GT_PRODUCT(a,b)\"``"
@@ -328,7 +328,7 @@ msgstr "``\"GT_PRODUCT(a,b)\"``"
 msgid ""
 "Description of the direct product of the two transformations ``a`` and "
 "``b``."
-msgstr "2つの変換 ``a`` と ``b`` の直積の記述。"
+msgstr "2つの変換 ``a`` と ``b`` の直積の記述子。"
 
 #: ../source/project/femdesc.rst:231
 msgid "``\"GT_LINEAR_PRODUCT(a,b)\"``"
@@ -341,7 +341,7 @@ msgid ""
 "function). This allows, for instance, to use exact integrations on regular "
 "meshes with parallelograms."
 msgstr ""
-"線形変換（これは前の関数の制限です）である ``a`` と ``b`` "
+"線形変換（これは前の関数による制約です）である ``a`` と ``b`` "
 "の2つの直積の記述子。これにより、たとえば、平行四辺形を含む通常のメッシュ上で正確な積分を使用することができます。"
 
 #: ../source/project/femdesc.rst:240
@@ -354,13 +354,13 @@ msgid ""
 ":math:`\\widehat{T}\\subset\\Reel^P` by a set of :math:`n_d` nodes "
 ":math:`a^i` and corresponding base functions"
 msgstr ""
-"有限要素法は節点 :math:`a^i` と対応する基底関数の集合 :math:`n_d` による参照要素 "
+"有限要素法は節点 :math:`a^i` と対応する基底関数の集合 :math:`n_d` により参照要素 "
 ":math:`\\widehat{T}\\subset\\Reel^P` に対して定義されます。"
 
 #: ../source/project/femdesc.rst:256
 msgid ""
 "a supplementary linear transformation is allowed for the real base function"
-msgstr "補助線形変換が実基底関数の場合に成り立ちます。"
+msgstr "補足する線形変換は実基底関数の場合に成り立ちます。"
 
 #: ../source/project/femdesc.rst:262
 msgid ""

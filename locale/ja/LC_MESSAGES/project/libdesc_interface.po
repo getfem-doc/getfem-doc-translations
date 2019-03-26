@@ -30,7 +30,7 @@ msgid ""
 "A simplified (but rather complete) interface of |gf| is provided, so that it"
 " is possible to use getfem in some script languages."
 msgstr ""
-"|gf| の簡略化された (しかしかなり完全な) インターフェイスが提供されています。それによりいくつかのスクリプト言語で getfem "
+"|gf| の簡略化された (しかしかなり完全な) インターフェイスが提供されています。これによりいくつかのスクリプト言語で getfem "
 "を使用することができます。"
 
 #: ../source/project/libdesc_interface.rst:16
@@ -45,8 +45,8 @@ msgid ""
 "used by the python, matlab and scilab interfaces."
 msgstr ""
 "すべてのソースは :file:`interface/src` ディレクトリにあります。インターフェイスは、1つの大規模なライブラリ "
-"``getfemint`` (getfem interactionの略) で構成され、 |gf| ライブラリの上のレイヤーとして機能します。 "
-"python 、 matlab と scilab のインターフェイスに使用されています。"
+"``getfemint`` (getfem interactionの略) で構成され、 |gf| ライブラリ上のレイヤーとして機能します。 python"
+" 、 matlab と scilab のインターフェイスに使用されています。"
 
 #: ../source/project/libdesc_interface.rst:23
 msgid ""
@@ -228,7 +228,7 @@ msgid ""
 "produced during compilation by the python script "
 "\":file:`bin/extract_doc.py`\"."
 msgstr ""
-"python インタフェースは、python スクリプト \":file:`bin/extract_doc.py`\" によってコンパイル中に生成される"
+"python インタフェースは python スクリプト \":file:`bin/extract_doc.py`\" によってコンパイル中に生成される"
 " \":file:`getfem.py`\" ファイルで利用可能です。"
 
 #: ../source/project/libdesc_interface.rst:116
@@ -330,7 +330,7 @@ msgid ""
 " of this commentary is important since it will be analyzed to produce the "
 "right interface for Python, Matlab and Scilab."
 msgstr ""
-"最初の3行は、特別な構文を持つメソッド/関数の呼び出しを記述し、また、ドキュメントに含まれるメソッド/関数の c++ に関する解説です。これは "
+"最初の3行は、特別な構文でメソッド/関数の呼び出しを記述し、また、ドキュメントに含まれるメソッド/関数の c++ に関する解説です。これは "
 "Python、Matlab と Scilab のための適切なインターフェイスを生成するために使用されるため、この解説の最初の行は重要です。"
 
 #: ../source/project/libdesc_interface.rst:166
@@ -346,9 +346,9 @@ msgid ""
 msgstr ""
 "メソッド/関数の呼び出しの説明の構文は次のとおりです。 ``/*@`` の後には、特別なキーワードを記入する必要があります。これは、``INIT``, "
 "``GET``, ``SET``, ``RDATTR`` または ``FUNC`` のいずれかです。キーワード ``INIT`` "
-"は、これがオブジェクトのコンストラクタの記述であることを意味します。``RDATTR`` "
-"は、オブジェクト属性を得ることを可能にする短いメソッドのためのものです。 ``GET`` は、それを変更しないオブジェクトのメソッドのためのものです。 "
-"``SET`` はオブジェクトを変更するメソッドのためのもので、 ``FUNC`` は関数リストのサブコマンドのためのものです。"
+"は、これがオブジェクトのコンストラクタの記述であることを意味します。``RDATTR`` は、オブジェクト属性を得る短いメソッドです。 ``GET`` "
+"は、変更をしないオブジェクトのメソッドです。 ``SET`` はオブジェクトを変更するメソッドのためのもので、 ``FUNC`` "
+"は関数リストのサブコマンドです。"
 
 #: ../source/project/libdesc_interface.rst:175
 msgid ""
@@ -371,7 +371,7 @@ msgstr ""
 msgid ""
 "The other parameters, if any, should be declared with a type. Predefined "
 "types are the following:"
-msgstr "その他のパラメーターがある場合は、型を使用して宣言する必要があります。定義済みの型は次のとおりです。"
+msgstr "その他のパラメーターがある場合は、型を使用して宣言します。定義済みの型は次のとおりです。"
 
 #: ../source/project/libdesc_interface.rst:187
 msgid "``@CELL``   : a cell array,"
@@ -403,31 +403,31 @@ msgstr "``@vec``    : 実数または複素数値のベクトル、"
 
 #: ../source/project/libdesc_interface.rst:194
 msgid "``@dmat``   : matrix of real values,"
-msgstr "``@dmat``   : 実数値の行列,"
+msgstr "``@dmat``   : 実数値の行列、"
 
 #: ../source/project/libdesc_interface.rst:195
 msgid "``@mat``    : matrix of real or complex values,"
-msgstr "``@mat``    : 実数または複素数値の行列,"
+msgstr "``@mat``    : 実数または複素数値の行列、"
 
 #: ../source/project/libdesc_interface.rst:196
 msgid "``@str``    : a string,"
-msgstr "``@str``    : 文字列,"
+msgstr "``@str``    : 文字列、"
 
 #: ../source/project/libdesc_interface.rst:197
 msgid "``@int``    : an integer,"
-msgstr "``@int``    : 整数,"
+msgstr "``@int``    : 整数、"
 
 #: ../source/project/libdesc_interface.rst:198
 msgid "``@bool``   : a boolean,"
-msgstr "``@bool``   : boolean型,"
+msgstr "``@bool``   : boolean型、"
 
 #: ../source/project/libdesc_interface.rst:199
 msgid "``@real``   : a real value,"
-msgstr "``@real``   : 実数値,"
+msgstr "``@real``   : 実数値、"
 
 #: ../source/project/libdesc_interface.rst:200
 msgid "``@scalar`` : a real or complex value,"
-msgstr "``@scalar`` : 実数または複素数値,"
+msgstr "``@scalar`` : 実数または複素数値、"
 
 #: ../source/project/libdesc_interface.rst:201
 msgid "``@list``   : a list."
@@ -439,7 +439,7 @@ msgid ""
 "instance, ou can refer to ``@tmesh``, ``@tmesh_fem``, ``@tfem``, etc. There "
 "are some authorized abreviations:"
 msgstr ""
-"さらに、 ``@tobj`` はインタフェースによって定義されたオブジェクトを参照します。たとえば、 ``@tmesh``, "
+"さらに、 ``@tobj`` はインタフェースによって定義されているオブジェクトを参照します。たとえば、 ``@tmesh``, "
 "``@tmesh_fem``, ``@tfem``, などを参照できます。いくつかの略語が使用可能です。"
 
 #: ../source/project/libdesc_interface.rst:207
@@ -496,7 +496,7 @@ msgstr ""
 "パラメータリスト (``...``) "
 "の末尾にある3つの点は、追加のパラメータが可能であることを意味します。省略可能なパラメーターは、角かっこで記述します。たとえば、  ``/*@SET v"
 " = ('name'[, @int i])`` です。しかし、python インターフェイスを構築する際には、 :file:`extract_doc` "
-"スクリプトによってどのように解釈されるかに注意してください。"
+"スクリプトによってどのように解釈されるか注意してください。"
 
 #: ../source/project/libdesc_interface.rst:226
 msgid ""
@@ -518,7 +518,7 @@ msgid ""
 "parameter of the macro)."
 msgstr ""
 "原因不明の理由により、関数の本体には ``int a, b;`` などの複数の宣言を含めることができません(c++ "
-"でマクロの追加パラメーターであると解釈されます)。"
+"でマクロの追加パラメーターであると解釈されてしまいます)。"
 
 #: ../source/project/libdesc_interface.rst:239
 msgid ""
@@ -527,7 +527,7 @@ msgid ""
 "with \\:math\\:\\`f(x) = 3x^2+2x+4\\` or with::"
 msgstr ""
 "c++ の解説に含まれているドキュメントの部分は、 `reStructuredText`_ 形式である必要があります。特に、数式は "
-"\\:math\\:\\`f(x) = 3x^2+2x+4\\` のように含めることができます。"
+"\\:math\\:\\`f(x) = 3x^2+2x+4\\` かもしくは次のように含めることができます。"
 
 #: ../source/project/libdesc_interface.rst:247
 msgid ""
@@ -540,7 +540,7 @@ msgstr ""
 "記号 ``INIT::OBJNAME('method-name', ...)``, ``GET::OBJNAME('method-name', "
 "...)``, ``SET::OBJNAME('method-name', ...)``, ``FUNC::FUNCNAME('subcommand-"
 "name', ...)`` を使用して、インターフェイスの別のメソッドまたは関数を参照することができます。これは言語 (Matlab、Scilab "
-"または Python) に応じて正しい構文に置き換えられます。"
+"または Python) に応じて正しく置き換えられます。"
 
 #: ../source/project/libdesc_interface.rst:253
 msgid ""
@@ -555,8 +555,8 @@ msgid ""
 msgstr ""
 "ドキュメンテーションでは、特定の言語に応じて ``@MATLAB{specific part ...}``, ``@SCILAB{specific "
 "part ...}`` および ``@PYTHON{specific part ...}`` "
-"を追加します。メソッド/サブコマンドがインタフェースに固有である場合、例えば `MATLABFUNC` を使うことで Matlab のために、 "
-"`GET` を `MATLABGET`, `FUNC` などで置き換えることができます。この追加機能に特定のコードが必要な場合は、タグ "
+"を追加します。メソッド/サブコマンドがインタフェースに固有である場合、例えば Matlab の場合、 `MATLABFUNC` を使うことで `GET`"
+" を `MATLABGET`, `FUNC` などで置き換えることができます。この追加機能に特定のコードが必要な場合は、タグ "
 "``/*@MATLABEXT``, ``/*@SCILABEXT``, ``/*@PYTHONEXT`` で追加することができます。たとえば、 "
 ":file:`gf_mesh_fem_get.cc` を参照してください。"
 
@@ -635,7 +635,7 @@ msgid ""
 "declare three functions::"
 msgstr ""
 "オブジェクトを管理するために、 :file:`getfemint.h` "
-"の最初にクラスを宣言する必要があります(アルファベット順なるように注意してください)。そして3つの関数を宣言します。"
+"の最初にクラスを宣言する必要があります(アルファベット順になるように注意してください)。そして3つの関数を宣言します。"
 
 #: ../source/project/libdesc_interface.rst:301
 msgid ""

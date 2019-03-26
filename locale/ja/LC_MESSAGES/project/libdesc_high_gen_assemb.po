@@ -37,7 +37,7 @@ msgid ""
 "differential equation problems. See the description of the language in the "
 "user documentation section :ref:`ud-gasm-high`."
 msgstr ""
-"|gf| の高レベルの汎用構築モジュールと弱形式言語は、偏微分方程式の問題の弱定式化を記述することができるキーモジュールです。ユーザードキュメント "
+"|gf| の高水準の汎用構築モジュールと弱形式言語は、偏微分方程式の問題の弱定式化を記述することができるキーモジュールです。ユーザードキュメント "
 ":ref:`ud-gasm-high` の説明を参照してください。"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:21
@@ -127,7 +127,7 @@ msgid ""
 "Definition of the optimized instructions, compilation into a sequel of "
 "optimize instructions and execution of the instructions on Gauss "
 "point/interpolation points."
-msgstr "最適化された命令の定義、コンパイルしによる最適化された命令の作成とGauss点/補間点で命令の実行を行います。"
+msgstr "最適化された命令の定義、コンパイルによる最適化された命令の作成とGauss点/補間点での命令の実行を行います。"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:1
 msgid ":file:`getfem_generic_assembly_interpolation.cc`"
@@ -151,7 +151,7 @@ msgstr ""
 
 #: ../source/project/libdesc_high_gen_assemb.rst:41
 msgid "Lexical analysis with the procedure ``ga_get_token(...)``."
-msgstr "手順 ``ga_get_token(...)`` を使用した字句解析。"
+msgstr "``ga_get_token(...)`` を使用した字句解析。"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:43
 msgid ""
@@ -169,19 +169,19 @@ msgstr "``ga_semantic_analysis(...)`` による定数式の意味解析, 単純�
 msgid ""
 "Symbolic (automatic) differentiation of an assembly tree by "
 "``ga_derivative(...)``"
-msgstr "``ga_derivative(...)`` によりアセンブリツリーの(自動) 微分を表現"
+msgstr "``ga_derivative(...)`` によるアセンブリツリーの(自動) 微分の表現"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:49
 msgid ""
 "Symbolic (automatic) gradient computation of an assembly tree by "
 "``ga_gradient(...)``"
-msgstr "``ga_gradient(...)`` によりアセンブリツリーの(自動)勾配計算を表現"
+msgstr "``ga_gradient(...)`` によるアセンブリツリーの(自動)勾配計算の表現"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:51
 msgid ""
 "Compilation in a sequence of instructions with optimizations by "
 "``ga_compile(...)``."
-msgstr "``ga_compile(...)`` によって最適化された一連の命令をコンパイル。"
+msgstr "``ga_compile(...)`` による最適化された一連の命令のコンパイル。"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:53
 msgid ""
@@ -197,7 +197,7 @@ msgid ""
 "only once, simplifications if the mesh has uniform type of elements, "
 "simplifications for vectorized fnite element methods."
 msgstr ""
-"これらの手順は、アセンブリのはじめに1回だけ実行されます。最終的なツリーは、各要素の各Gauss点で実行される最適化された命令の手順でコンパイルします。コンパイルではいくつかの最適化が実行されます。繰り返しの項は自動的に検出され、1回だけ実行されます。メッシュの簡略化はベクトル有限要素法の要素が均一な型を持っている場合に行われます。"
+"これらの手順は、アセンブリのはじめに1回だけ実行されます。最終的なツリーは、各要素の各Gauss点で実行される最適化された命令でコンパイルします。コンパイルではいくつかの最適化が実行されます。繰り返しの項は自動的に検出され、1回だけ実行されます。メッシュの簡略化はベクトル有限要素法の要素が均一な型を持っている場合に行われます。"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:57
 msgid ""
@@ -292,8 +292,8 @@ msgid ""
 "there is several format of assembly tensors :"
 msgstr ""
 "アセンブリテンソルは、各ノードで ``bgeot::tensor<double>`` "
-"オブジェクトによって表されています。ただし、アセンブリテンソルには複数の形式があるため、 "
-":file:`src/getfem\\_generic\\_assembly.cc` にはアセンブリテンソルのための詳しい構造があります。"
+"オブジェクトによって表されています。ただし、アセンブリテンソルには複数の形式があり、 "
+":file:`src/getfem\\_generic\\_assembly.cc` にはアセンブリテンソルのための詳細構造を実装しています。"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:89
 msgid ""
@@ -303,9 +303,9 @@ msgid ""
 "for instance a for a :math:`N\\times P\\times Q` tensor one has ``t(i, j, k)"
 " = t[i + j*N + k*N*P]``."
 msgstr ""
-"通常のテンソル。1番目と2番目のインデックスは、ノードが1次または2次の項を表す場合、試行関数のローカルインデックスを表すことができます。 |gf| "
-"ではすべてのテンソルは Fortran の次数で保存されます。これは例えば :math:`N\\times P\\times Q` である a "
-"テンソルは ``t(i, j, k) = t[i + j*N + k*N*P]`` となるということです。"
+"通常のテンソル。1番目と2番目のインデックスは、ノードが1次または2次の項を表す場合、試行関数のローカルインデックスを表します。 |gf| "
+"ではすべてのテンソルは Fortran の次数で保存されます。これは例えば :math:`N\\times P\\times Q` であるテンソルは "
+"``t(i, j, k) = t[i + j*N + k*N*P]`` となるということです。"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:91
 msgid ""
@@ -330,10 +330,10 @@ msgid ""
 "applied on vectorized tensors). This results in a certain number of sparsity"
 " formats that are listed below:"
 msgstr ""
-"スパースにリストされた疎テンソル。ベクトルフィールドを使用する場合、有限要素法は各成分に適用されます。その結果、ベクトル基底関数が0以外の成分を1つだけ持ち、一部の成分が複製されます。テンソルは、その種の小さな疎テンソル形式で効率化のために複製されるので、完全に表現されます。ただし、一部の操作は、特定のスパース"
+"スパースにリストされた疎テンソル。ベクトルフィールドを使用する場合、有限要素法は各成分に適用されます。その結果、ベクトの基底関数が0以外の成分を1つだけ持ち、一部の成分が複製されます。テンソルは、その種の小さな疎テンソル形式で効率化のために複製されるので、完全に表現されます。ただし、一部の操作は、特定のスパース"
 " (および複製) "
-"の知見を使用して最適化できます。これにより、縮約の複雑さの度合いを変更することができます。効率の利得を可能にするためにテンソルはいくつかの知られていたスパースフォーマットでラベル付けされています"
-" (ベクトルテンソルで適用される操作から来るベクトル化およびフォーマット) 。これにより、以下に示すように、一定数のスパース形式が得られます。"
+"の知見を使用して最適化できます。これにより、縮約の複雑さの度合いを変更することができます。効率的な使用を可能にするためにテンソルはいくつかのスパースフォーマットでラベル付けがされています"
+" (ベクトルテンソルで適用される操作から来るベクトル化とフォーマット) 。これにより、以下に示すようなスパース形式が得られます。"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:95
 msgid ""
@@ -349,8 +349,8 @@ msgid ""
 "following table"
 msgstr ""
 "1：ベクトル化ベースのスパース形式：テンソルはベクトル化値を表します。 縮約テンソルの各値は、ベクトル化テンソルの `Q` "
-"成分に対して繰り返されます。メッシュ寸法は `N` で示されます。たとえば、 :math:`\\varphi_i` が要素上の :math:`M` "
-"ローカル基底関数で、評価がGauss点 :math:`x` の場合、ベクトル化されていないテンソルは :math:`\\bar{t}(i) = "
+"成分に対して繰り返されます。メッシュ寸法は `N` で示されます。たとえば、 :math:`\\varphi_i` が要素 :math:`M` "
+"上のローカル基底関数で評価がGauss点 :math:`x` の場合、ベクトル化されていないテンソルは :math:`\\bar{t}(i) = "
 "\\varphi_i(x)` であり、ベクトル化されたものは :math:`t(j,k) = \\varphi_{j/Q}(x) \\delta_{k,"
 " j \\mbox{ mod } Q}` となります。ここで :math:`j/M` は整数の除算です。 :math:`M=2` 、 "
 ":math:`Q=2` 、:math:`N=3` の場合、2つのテンソルの成分は次の表のように表されます。"
@@ -434,7 +434,7 @@ msgstr "最適化された命令"
 msgid ""
 "Optimized instructions for variable evaluation, operations, vector and "
 "matrix assembly ... to be described."
-msgstr "変数の評価、操作、ベクトルと行列のアセンブリのための最適化された命令... 準備中。"
+msgstr "変数の評価、操作、ベクトルと行列のアセンブリのための最適化された命令など。説明を準備中。"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:140
 msgid "Predefined functions"
@@ -476,7 +476,7 @@ msgid ""
 "derivative ..."
 msgstr ""
 "新しい定義済み関数は簡単に追加できます。ファイル :file:`src/getfem_generic_assembly.cc` の "
-"init_predefined_functions() を参照してください。+ 微分を与える方法についての説明を準備中 ..."
+"init_predefined_functions() を参照してください。微分を与える方法についての説明を準備中。"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:152
 msgid "Predefined nonlinear operators"
@@ -484,7 +484,7 @@ msgstr "定義済み非線形演算子"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:154
 msgid "to be described ..."
-msgstr "準備中..."
+msgstr "説明を準備中。"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:157
 msgid "State"
@@ -500,10 +500,10 @@ msgstr "展望"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:163
 msgid "Is a certain extension to complex data possible ?"
-msgstr "複雑なデータへの拡張は可能だろうか?"
+msgstr "複雑なデータへの拡張は可能でしょうか?"
 
 #: ../source/project/libdesc_high_gen_assemb.rst:165
 msgid ""
 "More simplifications : study the possibility to automatically factorize some"
 " terms (for instance scalar ones) to reduce the number of operations."
-msgstr "さらなる簡素化: 操作数を減らすために、いくつかの項 (例えばスカラー項) を自動的に因数分解するとよいかもしれません。"
+msgstr "さらなる簡素化: 処理数を減らすために、いくつかの項 (例えばスカラー項) を自動的に因数分解するとよいかもしれません。"

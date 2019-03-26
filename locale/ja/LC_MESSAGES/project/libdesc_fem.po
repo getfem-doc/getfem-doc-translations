@@ -41,7 +41,7 @@ msgid ""
 "element to another Lagrange 1D element)."
 msgstr ""
 "|gf| の Fem "
-"モジュールは要素レベル有限要素と自由度を記述します。有限要素法は異なった異なった種類も可能です。それらは幾何学的変形のあるなしで等価なスカラーかベクトル、多項式、区分多項式または非多項式です。また、自由度は一般的に2つの隣接要素間で互換性のある自由度となるように記述する必要があります"
+"モジュールは要素レベル有限要素と自由度を記述します。有限要素法はさまざまな種類を使用することが可能です。幾何変換のあるなしか、等価なスカラーかベクトルか、多項式、区分多項式または非多項式かなどです。また、自由度は一般的に2つの隣接要素間で互換性のある自由度となるように記述する必要があります"
 " (例えば Lagrange 2次要素を別の Lagrange 1次要素に接続する場合)。"
 
 #: ../source/project/libdesc_fem.rst:26
@@ -65,7 +65,7 @@ msgid ""
 "Some classes to represent polynomials and piecewise polynomials in order to "
 "describe shape functions of a finite element method on the reference "
 "element."
-msgstr "いくつかのクラスは、参照要素の有限要素法の形状関数を記述するために、多項式と区分的多項式を表現します。"
+msgstr "いくつかのクラスでは、参照要素の有限要素法の形状関数を記述するために、多項式と区分的多項式を表現します。"
 
 #: ../source/project/libdesc_fem.rst:1
 msgid ""
@@ -110,7 +110,7 @@ msgid ""
 "transformations."
 msgstr ""
 "(mesh_fem で表される) "
-"別のメッシュ上の有限要素空間の射影である有限要素法を定義します。高水準汎用構築言語では、補間変換でもこの機能が提供されていることに注意してください。"
+"別のメッシュ上の有限要素空間の射影である有限要素法を定義します。高水準汎用構築言語では、補間変換でもこの機能が提供されます。"
 
 #: ../source/project/libdesc_fem.rst:1
 msgid ""
@@ -126,7 +126,7 @@ msgid ""
 "interpolated transformations."
 msgstr ""
 "別のメッシュ上の有限要素空間 (mesh_fem で表される) "
-"の補間である有限要素法を定義します。高水準汎用構築言語では、補間変換によってこの機能も提供されていることに注意してください。"
+"の補間である有限要素法を定義します。高水準汎用構築言語では、補間変換によってこの機能も提供されます。"
 
 #: ../source/project/libdesc_fem.rst:42
 msgid "State"
@@ -140,7 +140,7 @@ msgid ""
 "appendixa`."
 msgstr ""
 "2つのファイル :file:`getfem_fem.cc` と :file:`getfem_fem_composite.cc` "
-"には主に基本的な有限要素要素のすべての記述が含まれています。定義された有限要素の詳細なリストは :ref:`ud-appendixa` "
+"には主な基本的有限要素要素のすべての記述が含まれています。定義された有限要素の詳細なリストは :ref:`ud-appendixa` "
 "を参照してください。"
 
 #: ../source/project/libdesc_fem.rst:50
@@ -149,8 +149,8 @@ msgid ""
 ":file:`getfem_fem_level_set.h` which is a complex construction which allows "
 "to \"cut\" a existing element by one or several level sets."
 msgstr ""
-"他の :file:`getfem_fem_level_set.h` ファイルのようにいくつかの特定の有限要素を定義する複雑な構造は1 "
-"つまたは複数のレベル集合で既存の要素を \"切断\" することが可能です。"
+"他には :file:`getfem_fem_level_set.h` ファイルのように複数の有限要素を定義する複雑な構造は1 "
+"つまたは複数のレベル集合で要素を \"切断\" することが可能です。"
 
 #: ../source/project/libdesc_fem.rst:54
 msgid ""
@@ -158,7 +158,7 @@ msgid ""
 " (connecting dof from an element to another in a generic way) but is a "
 "little bit obscure and too much complicated."
 msgstr ""
-"自由度を記述する方法は、グローバルに必要事項 (汎用的な方法で別の要素から接続された自由度) を満たしますが、少しあいまいで、あまりにも複雑です。"
+"自由度を記述する方法は、おおむね必要事項 (汎用的な方法で別の要素から接続された自由度) を満たしますが、少しあいまいで、あまりにも複雑です。"
 
 #: ../source/project/libdesc_fem.rst:58
 msgid ""
@@ -186,4 +186,4 @@ msgid ""
 "methods , at least for the simplest finite elements (equivalent and "
 "polynomial finite elements)."
 msgstr ""
-"このモジュールの主な不満は、自由度の説明を完全に記述できていないということです。自由度の記述が一時的な考案であるために、全ての要素を構築する方法についてのドキュメンテーションを1つにまとめられていません。このモジュールを安定させるためには自由度の記述に関ての設計を完全なものにしなければなりません。また、立体求積法と同様の方法で部分的に外部化できる有限要素の記述メソッドは多分、少なくとも最も単純な有限要素(等価および多項式有限要素)です。"
+"このモジュールの主な不満は、自由度を完全に記述できていないということです。自由度の記述が一時的な設計であるために、全ての要素を構築する方法についてのドキュメンテーションを1つにまとめられていません。このモジュールを安定させるためには自由度の記述に関するの設計を完全なものにしなければなりません。また、立体求積法と同様の方法で部分的に外部化できる有限要素の記述法は最も単純な有限要素(等価および多項式有限要素)のみと思われます。"
