@@ -17,7 +17,23 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_a10c131499f7_key -iv $encrypted_a10c131499f7_iv -in .secrets/key.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-- sudo apt-get install -y --no-install-recommends python-setuptools python-numpy python-scipy python-getfem++ automake libtool make g++ libqd-dev libqhull-dev libmumps-seq-dev liblapack-dev libopenblas-dev libpython3-dev sphinx-doc imagemagick fig2dev texlive
+- sudo apt-get install -y --no-install-recommends python-setuptools
+- sudo apt-get install -y --no-install-recommends python-numpy
+- sudo apt-get install -y --no-install-recommends python-scipy
+- sudo apt-get install -y --no-install-recommends automake
+- sudo apt-get install -y --no-install-recommends libtool
+- sudo apt-get install -y --no-install-recommends make
+- sudo apt-get install -y --no-install-recommends g++
+- sudo apt-get install -y --no-install-recommends libqd-dev
+- sudo apt-get install -y --no-install-recommends libqhull-dev
+- sudo apt-get install -y --no-install-recommends libmumps-seq-dev
+- sudo apt-get install -y --no-install-recommends liblapack-dev
+- sudo apt-get install -y --no-install-recommends libopenblas-dev
+- sudo apt-get install -y --no-install-recommends libpython-dev
+- sudo apt-get install -y --no-install-recommends sphinx-doc
+- sudo apt-get install -y --no-install-recommends imagemagick
+- sudo apt-get install -y --no-install-recommends fig2dev
+- sudo apt-get install -y --no-install-recommends texlive
 - sudo perl -p -i -e 's/rights="none"/rights="yes"/g' /etc/ImageMagick-*/policy.xml
 addons:
   apt:
