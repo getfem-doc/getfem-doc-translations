@@ -33,6 +33,7 @@ script:
 - make -j8
 - make -j8 check
 - make -j8 latex
+- sudo make install
 - rm -rf ../doc
 - cp -r ./doc/sphinx/source ../doc
 - cd ../
