@@ -22,12 +22,10 @@ addons:
     update: true
 install:
 - git branch -a
-- git checkout master  # attach this repo
 - git submodule init
 - git submodule update
 - pip install -U pip setuptools
 - pip install -r ./requirements.txt
-- (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
 script:
 - cd getfem
 - bash autogen.sh
@@ -41,8 +39,6 @@ script:
 - git add doc
 - sh ./locale/update.sh
 after_success:
-- git branch -a
-- git checkout master  # attach this repo
 - git config --global user.email "getfem-auto-update"
 - git config --global user.name "getfem-auto-update"
 - git add .
