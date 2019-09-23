@@ -1,0 +1,54 @@
+language: python
+sudo: false
+dist: bionic
+cache:
+  directories:
+  - $HOME/.cache/pip
+python:
+- '3.6'
+env:
+  global:
+  - SPHINXINTL_TRANSIFEX_USERNAME=api
+  - SPHINXINTL_TRANSIFEX_PROJECT_NAME=getfem
+  - secure: CdrUc2Sk9i654YzuONFrbil8TKnF0tiijzdPr3EHwp2rfNKM3h6AVdlyeMYvw/z4Z3alWNBG3nkXYzrLAz3d8ldU/20RfqKwXw6bsN9PThXuzWi/O9h+WgxRemLg2Pz8yq84e8KG+O0Paqdt/Kan6vCayzSflPWD9GpdqbXbiiYGQSDqtW81wco5gfRdZApaqZ3iAYhkdQe8tsl9ekc7mzgo+DPrA93sGYrooXW9rHiwueFZXC4ZlFCwnkwrlJB00MRTdznrSqRa30ccYin+Cg8Ovjf9Urs2hiDNGjzfX9/U1QF30ksjdvnSZeFvToxilAO86jOTWtmtSdPfTS7qNLT3WimiHTivrn+qAHhgRWGeQesgSsZAhA/Juyy12XksFLnBEVBpHU7/6QHTOv3k0lOUfO3KcXRW6SQvjXKICGRF1R2n8/EsQQshtVW397y50nFKQSeEvREAKY4+HqfPHh6uhwOvSNwlWHCr5mH4umSscr+4yFiTolNINlUUsGMGuDv7ZRV6C8nNvwgDvLqBhJkKVkKGG5Y7picERabMNsXKzYGJA334Zw0xJrL8W7A17ppOsuz38IDltr/p5QR4XfDZz4FkxgiTeJuOOivv7kfYo7pHTEGFRwmLcsZKUBRGZxgwNJFBb+j75a1dhcqJv05k8FVGTZRtjwL+8f24lZ0=
+before_install:
+- openssl aes-256-cbc -K $encrypted_a10c131499f7_key -iv $encrypted_a10c131499f7_iv -in .secrets/key.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- sudo apt-get install -y --no-install-recommends automake libtool make g++ libqd-dev libqhull-dev libmumps-seq-dev liblapack-dev libopenblas-dev libpython3-dev imagemagick fig2dev texlive
+- sudo perl -p -i -e 's/rights="none"/rights="yes"/g' /etc/ImageMagick-*/policy.xml
+addons:
+  apt:
+    update: true
+install:
+- git branch -a
+- git checkout master  # attach this repo
+- git submodule init
+- git submodule update
+- pip install -U pip setuptools
+- pip install -r ./requirements.txt
+- (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
+script:
+- cd getfem
+- bash autogen.sh
+- ./configure --with-pic --enable-python3=yes
+- make -j8
+- make -j8 check
+- make -j8 latex
+- rm -rf ../doc
+- cp -r ./doc/sphinx/source ../doc
+- cd ../
+- git add doc
+- sh ./locale/update.sh
+after_success:
+- git branch -a
+- git checkout master  # attach this repo
+- git config --global user.email "getfem-auto-update"
+- git config --global user.name "getfem-auto-update"
+- git add .
+- |
+  git commit -m "[skip ci] by Travis CI (JOB $TRAVIS_JOB_NUMBER)
+  https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
+- git remote -v
+- git remote add github git@github.com:getfem-doc/getfem-doc-translations.git
+- git push github master
