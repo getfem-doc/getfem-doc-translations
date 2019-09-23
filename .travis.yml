@@ -6,6 +6,8 @@ cache:
   - $HOME/.cache/pip
 python:
 - '2.7'
+virtualenv:
+  system_site_packages: true
 env:
   global:
   - SPHINXINTL_TRANSIFEX_USERNAME=api
@@ -15,7 +17,7 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_a10c131499f7_key -iv $encrypted_a10c131499f7_iv -in .secrets/key.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-- sudo apt-get install -y --no-install-recommends python-getfem++ automake libtool make g++ libqd-dev libqhull-dev libmumps-seq-dev liblapack-dev libopenblas-dev libpython3-dev imagemagick fig2dev texlive
+- sudo apt-get install -y --no-install-recommends python-setuptools python-numpy python-scipy python-getfem++ automake libtool make g++ libqd-dev libqhull-dev libmumps-seq-dev liblapack-dev libopenblas-dev libpython3-dev sphinx-doc imagemagick fig2dev texlive
 - sudo perl -p -i -e 's/rights="none"/rights="yes"/g' /etc/ImageMagick-*/policy.xml
 addons:
   apt:
@@ -24,8 +26,6 @@ install:
 - git branch -a
 - git submodule init
 - git submodule update
-- pip install -U pip setuptools
-- pip install -r ./requirements.txt
 script:
 - cd getfem
 - bash autogen.sh
