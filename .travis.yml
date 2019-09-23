@@ -33,7 +33,7 @@ before_install:
 - sudo apt-get install -y --no-install-recommends imagemagick
 - sudo apt-get install -y --no-install-recommends fig2dev
 - sudo apt-get install -y --no-install-recommends texlive
-- sudo perl -p -i -e 's/rights="none"/rights="yes"/g' /etc/ImageMagick-*/policy.xml
+- sudo perl -p -i -e 's/rights="none"/rights="read|write"/g' /etc/ImageMagick-*/policy.xml
 addons:
   apt:
     update: true
