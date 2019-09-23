@@ -3,10 +3,14 @@
 set -ex
 
 # setup environment
+SPHINXINTL_TRANSIFEX_USERNAME=api
+SPHINXINTL_TRANSIFEX_PROJECT_NAME=getfem
+find getfem -name "*.pyc" -exec rm {} \;
 git checkout master
 git submodule init
 git submodule update
 (cd getfem; git fetch origin; git pull origin master)
+pip install -r requirements.txt
 
 
 # update transifex pot and local po files
