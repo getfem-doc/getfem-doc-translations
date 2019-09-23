@@ -48,8 +48,8 @@ script:
 - ./configure --with-pic --enable-python3=yes
 - make -j8
 - make -j8 check
-- make -j8 html
 - sudo make install
+- make html
 - rm -rf ../doc
 - cp -r ./doc/sphinx/source ../doc
 - cd ../
