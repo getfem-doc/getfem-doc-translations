@@ -16,8 +16,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - sudo apt-get install -y --no-install-recommends python3-setuptools
-- sudo apt-get install -y --no-install-recommends python3-numpy
-- sudo apt-get install -y --no-install-recommends python3-scipy
+- sudo apt-get install -y --no-install-recommends python3-pip
 - sudo apt-get install -y --no-install-recommends automake
 - sudo apt-get install -y --no-install-recommends libtool
 - sudo apt-get install -y --no-install-recommends make
@@ -30,10 +29,12 @@ before_install:
 - sudo apt-get install -y --no-install-recommends libpython3-dev
 - sudo apt-get install -y --no-install-recommends sphinx-doc
 - sudo apt-get install -y --no-install-recommends sphinx-intl
+- sudo apt-get install -y --no-install-recommends ufraw
 - sudo apt-get install -y --no-install-recommends imagemagick
 - sudo apt-get install -y --no-install-recommends fig2dev
 - sudo apt-get install -y --no-install-recommends texlive
 - sudo perl -p -i -e 's/rights="none"/rights="read|write"/g' /etc/ImageMagick-*/policy.xml
+- sudo pip3 install -r requirements.txt
 addons:
   apt:
     update: true
@@ -51,7 +52,9 @@ script:
 - sudo make install
 - make html
 - rm -rf ../doc
-- cp -r ./doc/sphinx/source ../doc
+- rm -rf ../interface
+- cp -r doc ../doc
+- cp -r interface ../interface
 - cd ../
 - git add doc
 - sh ./locale/update.sh
