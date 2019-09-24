@@ -33,11 +33,14 @@ before_install:
 - sudo apt-get install -y --no-install-recommends imagemagick
 - sudo apt-get install -y --no-install-recommends fig2dev
 - sudo apt-get install -y --no-install-recommends texlive-full
+- sudo apt-get install -y --no-install-recommends xzdec
 - sudo perl -p -i -e 's/rights="none"/rights="read|write"/g' /etc/ImageMagick-*/policy.xml
 - sudo pip3 install -r requirements.txt
-- sudo tlmgr install ucs
-- sudo tlmgr install anyfontsize
-- sudo tlmgr install dvipng
+- mkdir texmf
+- tlmgr init-usertree
+- tlmgr install ucs
+- tlmgr install anyfontsize
+- tlmgr install dvipng
 addons:
   apt:
     update: true
