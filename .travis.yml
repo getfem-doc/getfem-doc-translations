@@ -4,8 +4,6 @@ dist: bionic
 cache:
   directories:
   - $HOME/.cache/pip
-virtualenv:
-  system_site_packages: true
 env:
   global:
   - SPHINXINTL_TRANSIFEX_USERNAME=api
@@ -15,8 +13,6 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_a10c131499f7_key -iv $encrypted_a10c131499f7_iv -in .secrets/key.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-- sudo apt-get install -y --no-install-recommends python3-setuptools
-- sudo apt-get install -y --no-install-recommends python3-pip
 - sudo apt-get install -y --no-install-recommends automake
 - sudo apt-get install -y --no-install-recommends libtool
 - sudo apt-get install -y --no-install-recommends make
@@ -27,15 +23,13 @@ before_install:
 - sudo apt-get install -y --no-install-recommends liblapack-dev
 - sudo apt-get install -y --no-install-recommends libopenblas-dev
 - sudo apt-get install -y --no-install-recommends libpython3-dev
-- sudo apt-get install -y --no-install-recommends sphinx-doc
-- sudo apt-get install -y --no-install-recommends sphinx-intl
 - sudo apt-get install -y --no-install-recommends ufraw
 - sudo apt-get install -y --no-install-recommends imagemagick
 - sudo apt-get install -y --no-install-recommends fig2dev
 - sudo apt-get install -y --no-install-recommends texlive-full
 - sudo apt-get install -y --no-install-recommends xzdec
 - sudo perl -p -i -e 's/rights="none"/rights="read|write"/g' /etc/ImageMagick-*/policy.xml
-- sudo pip3 install -r requirements.txt
+- pip install -r requirements.txt
 addons:
   apt:
     update: true
