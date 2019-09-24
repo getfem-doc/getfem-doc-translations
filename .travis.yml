@@ -32,7 +32,7 @@ before_install:
 - sudo apt-get install -y --no-install-recommends ufraw
 - sudo apt-get install -y --no-install-recommends imagemagick
 - sudo apt-get install -y --no-install-recommends fig2dev
-- sudo apt-get install -y --no-install-recommends texlive
+- sudo apt-get install -y --no-install-recommends texlive-full
 - sudo perl -p -i -e 's/rights="none"/rights="read|write"/g' /etc/ImageMagick-*/policy.xml
 - sudo pip3 install -r requirements.txt
 addons:
@@ -56,6 +56,8 @@ script:
 - cp -r doc ../doc
 - cp -r interface ../interface
 - cd ../
+- rm -rf doc/sphinx/loca- rm -rf doc/sphinx/localele
+- rm -rf doc/sphinx/build
 - git add doc
 - sh ./locale/update.sh
 after_success:
