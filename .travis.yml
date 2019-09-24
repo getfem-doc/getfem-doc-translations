@@ -36,11 +36,6 @@ before_install:
 - sudo apt-get install -y --no-install-recommends xzdec
 - sudo perl -p -i -e 's/rights="none"/rights="read|write"/g' /etc/ImageMagick-*/policy.xml
 - sudo pip3 install -r requirements.txt
-- mkdir texmf
-- tlmgr init-usertree
-- tlmgr install ucs
-- tlmgr install anyfontsize
-- tlmgr install dvipng
 addons:
   apt:
     update: true
