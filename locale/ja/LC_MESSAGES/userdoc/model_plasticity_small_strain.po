@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -66,7 +66,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:29
 msgid "\\varepsilon(u) = \\varepsilon^e + \\varepsilon^p"
-msgstr ""
+msgstr "\\varepsilon(u) = \\varepsilon^e + \\varepsilon^p"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:32
 msgid ""
@@ -86,7 +86,7 @@ msgstr "以下を考慮します"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:39
 msgid "\\alpha : \\Omega \\rightarrow \\R^{d_{\\alpha}},"
-msgstr ""
+msgstr "\\alpha : \\Omega \\rightarrow \\R^{d_{\\alpha}},"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:42
 msgid ""
@@ -100,7 +100,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:44
 msgid "\\psi(\\varepsilon^e, \\alpha),"
-msgstr ""
+msgstr "\\psi(\\varepsilon^e, \\alpha),"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:47
 msgid "such that corresponding stress type variables are determined by"
@@ -112,6 +112,9 @@ msgid ""
 "\\alpha), ~~~~ A =  \\Frac{\\partial \\psi}{\\partial "
 "\\alpha}(\\varepsilon^e, \\alpha),"
 msgstr ""
+"\\sigma = \\Frac{\\partial \\psi}{\\partial \\varepsilon^e}(\\varepsilon^e, "
+"\\alpha), ~~~~ A =  \\Frac{\\partial \\psi}{\\partial "
+"\\alpha}(\\varepsilon^e, \\alpha),"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:52
 msgid ""
@@ -121,7 +124,7 @@ msgstr "ここで、 :math:`\\sigma` はCauchyの応力テンソルであり、 
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:54
 msgid "\\sigma:\\dot{\\varepsilon}^p - A.\\dot{\\alpha} \\ge 0."
-msgstr ""
+msgstr "\\sigma:\\dot{\\varepsilon}^p - A.\\dot{\\alpha} \\ge 0."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:58
 msgid ""
@@ -131,7 +134,7 @@ msgstr "通常、 :math:`\\psi(\\varepsilon^e, \\alpha)` は次のように分�
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:60
 msgid "\\psi(\\varepsilon^e, \\alpha) = \\psi^e(\\varepsilon^e) + \\psi^p(\\alpha)."
-msgstr ""
+msgstr "\\psi(\\varepsilon^e, \\alpha) = \\psi^e(\\varepsilon^e) + \\psi^p(\\alpha)."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:62
 msgid ""
@@ -165,7 +168,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:71
 msgid "f(\\sigma, A) \\le 0."
-msgstr ""
+msgstr "f(\\sigma, A) \\le 0."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:73
 msgid ""
@@ -188,6 +191,9 @@ msgid ""
 "\\sigma}(\\sigma, A), ~~~~~~ \\dot{\\alpha} = -\\gamma \\Frac{\\partial "
 "\\Psi}{\\partial A}(\\sigma, A),"
 msgstr ""
+"\\dot{\\varepsilon}^p = \\gamma \\Frac{\\partial \\Psi}{\\partial "
+"\\sigma}(\\sigma, A), ~~~~~~ \\dot{\\alpha} = -\\gamma \\Frac{\\partial "
+"\\Psi}{\\partial A}(\\sigma, A),"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:79
 msgid "with the additional complementarity condition"
@@ -195,7 +201,7 @@ msgstr "付加的な相補性条件として以下が成り立ちます。"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:81
 msgid "f(\\sigma, A) \\le 0, ~~~ \\gamma \\ge 0, ~~~ f(\\sigma, A) \\gamma = 0."
-msgstr ""
+msgstr "f(\\sigma, A) \\le 0, ~~~ \\gamma \\ge 0, ~~~ f(\\sigma, A) \\gamma = 0."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:83
 msgid ""
@@ -228,6 +234,11 @@ msgid ""
 "\\varepsilon^p(0,x) = \\varepsilon^p_0, ~~~ \\alpha(0,x) = \\alpha_0, "
 "\\end{array} \\right."
 msgstr ""
+"\\left| \\begin{array}{l} \\ds \\int_{\\Omega} \\rho \\ddot{u}\\cdot v + "
+"\\sigma : \\nabla v dx =  \\int_{\\Omega} f\\dot v dx + \\int_{\\Gamma_N} "
+"g\\dot v dx, \\\\ u(0,x) = u_0(x), ~~~\\dot{u}(0) = \\mathrm{v}_0(x), \\\\ "
+"\\varepsilon^p(0,x) = \\varepsilon^p_0, ~~~ \\alpha(0,x) = \\alpha_0, "
+"\\end{array} \\right."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:98
 msgid ""
@@ -297,6 +308,10 @@ msgid ""
 "\\Delta t \\gamma_{n+1} \\Frac{\\partial \\Psi}{\\partial "
 "\\sigma}(\\sigma_{n+1}, A_{n+1}),"
 msgstr ""
+"\\varepsilon^p_{n+1} - \\varepsilon^p_{n} = (1-\\theta)\\Delta t \\gamma_n "
+"\\Frac{\\partial \\Psi}{\\partial \\sigma}(\\sigma_{n}, A_{n}) + \\theta "
+"\\Delta t \\gamma_{n+1} \\Frac{\\partial \\Psi}{\\partial "
+"\\sigma}(\\sigma_{n+1}, A_{n+1}),"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:118
 msgid ""
@@ -304,6 +319,9 @@ msgid ""
 " \\Psi}{\\partial A}(\\sigma_{n}, A_{n}) - \\theta\\Delta t \\gamma_{n+1} "
 "\\Frac{\\partial \\Psi}{\\partial A}(\\sigma_{n+1}, A_{n+1}),"
 msgstr ""
+"\\alpha_{n+1} - \\alpha_n = -(1-\\theta)\\Delta t \\gamma_n \\Frac{\\partial"
+" \\Psi}{\\partial A}(\\sigma_{n}, A_{n}) - \\theta\\Delta t \\gamma_{n+1} "
+"\\Frac{\\partial \\Psi}{\\partial A}(\\sigma_{n+1}, A_{n+1}),"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:121
 msgid "with the complementary condition"
@@ -314,6 +332,8 @@ msgid ""
 "f(\\sigma_{n+1}, A_{n+1}) \\le 0, ~~~ \\gamma_{n+1} \\ge 0, ~~~ "
 "f(\\sigma_{n+1}, A_{n+1}) \\gamma_{n+1} = 0."
 msgstr ""
+"f(\\sigma_{n+1}, A_{n+1}) \\le 0, ~~~ \\gamma_{n+1} \\ge 0, ~~~ "
+"f(\\sigma_{n+1}, A_{n+1}) \\gamma_{n+1} = 0."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:125
 msgid ""
@@ -354,6 +374,8 @@ msgid ""
 "{\\mathscr E}^p : (u_{n+1}, \\zeta_n, \\eta_n) \\mapsto \\varepsilon^p_{n+1}"
 "  {\\mathscr A} : (u_{n+1}, \\zeta_{n}, \\eta_n) \\mapsto \\alpha_{n+1}"
 msgstr ""
+"{\\mathscr E}^p : (u_{n+1}, \\zeta_n, \\eta_n) \\mapsto \\varepsilon^p_{n+1}"
+"  {\\mathscr A} : (u_{n+1}, \\zeta_{n}, \\eta_n) \\mapsto \\alpha_{n+1}"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:136
 msgid ""
@@ -370,6 +392,10 @@ msgid ""
 "\\alpha_n - (1-\\theta)\\Delta t \\gamma_n \\Frac{\\partial \\Psi}{\\partial"
 " A}(\\sigma_{n}, A_{n})"
 msgstr ""
+"\\zeta_n = \\varepsilon^p_{n} + (1-\\theta)\\Delta t \\gamma_n "
+"\\Frac{\\partial \\Psi}{\\partial \\sigma}(\\sigma_{n}, A_{n}) ,  \\eta_n = "
+"\\alpha_n - (1-\\theta)\\Delta t \\gamma_n \\Frac{\\partial \\Psi}{\\partial"
+" A}(\\sigma_{n}, A_{n})"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:143
 msgid ""
@@ -401,6 +427,10 @@ msgid ""
 "more generic treatment of the yield functions, the price for the simplicity "
 "being this additional unknown scalar field."
 msgstr ""
+"|gf| では我々はReturn Mapping法と、主に [PO-NI2016]_ 、 [SE-PO-WO2015]_ および [HA-"
+"WO2009]_ に触発された、より簡単な接線モジュラスを可能にする以下に展開される代替戦略の両方を提案します。それは :math:`u_{n+1}` "
+"に関して、さらに未知数なものとして、 :math:`\\gamma_{n+1}` "
+"（倍の数）の値を保存する必要があります。それからわかるように、これは、降伏関数のより汎用的な処理を可能にします。これは、この追加の未知数のスカラー場の単純さと引き換えとなっています。"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:147
 msgid ""
@@ -413,7 +443,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:149
 msgid "\\xi_{n+1} = \\Frac{\\gamma_{n+1}}{\\alpha(\\sigma_{n+1}, A_{n+1})} ,"
-msgstr ""
+msgstr "\\xi_{n+1} = \\Frac{\\gamma_{n+1}}{\\alpha(\\sigma_{n+1}, A_{n+1})} ,"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:151
 msgid ""
@@ -431,6 +461,11 @@ msgid ""
 "\\alpha(\\sigma_{n+1},A_{n+1}) \\Delta t \\xi_{n+1} \\Frac{\\partial "
 "\\Psi}{\\partial \\sigma}(\\sigma_{n+1}, A_{n+1}),"
 msgstr ""
+"\\varepsilon^p_{n+1} - \\varepsilon^p_{n} = "
+"(1-\\theta)\\alpha(\\sigma_n,A_n)\\Delta t \\xi_n \\Frac{\\partial "
+"\\Psi}{\\partial \\sigma}(\\sigma_{n}, A_{n}) + \\theta "
+"\\alpha(\\sigma_{n+1},A_{n+1}) \\Delta t \\xi_{n+1} \\Frac{\\partial "
+"\\Psi}{\\partial \\sigma}(\\sigma_{n+1}, A_{n+1}),"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:156
 msgid ""
@@ -439,12 +474,18 @@ msgid ""
 "\\alpha(\\sigma_{n+1},A_{n+1}) \\Delta t \\xi_{n+1} \\Frac{\\partial "
 "\\Psi}{\\partial A}(\\sigma_{n+1}, A_{n+1}),"
 msgstr ""
+"\\alpha_{n+1} - \\alpha_n = (1-\\theta) \\alpha(\\sigma_n,A_n)\\Delta t "
+"\\xi_n \\Frac{\\partial \\Psi}{\\partial A}(\\sigma_{n}, A_{n}) + \\theta "
+"\\alpha(\\sigma_{n+1},A_{n+1}) \\Delta t \\xi_{n+1} \\Frac{\\partial "
+"\\Psi}{\\partial A}(\\sigma_{n+1}, A_{n+1}),"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:159
 msgid ""
 "f(\\sigma_{n+1}, A_{n+1}) \\le 0, ~~~ \\xi_{n+1} \\ge 0, ~~~ "
 "f(\\sigma_{n+1}, A_{n+1}) \\xi_{n+1} = 0."
 msgstr ""
+"f(\\sigma_{n+1}, A_{n+1}) \\le 0, ~~~ \\xi_{n+1} \\ge 0, ~~~ "
+"f(\\sigma_{n+1}, A_{n+1}) \\xi_{n+1} = 0."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:163
 msgid ""
@@ -458,6 +499,9 @@ msgid ""
 " \\eta_n) \\mapsto \\varepsilon^p_{n+1}  \\tilde{\\mathscr A} : (u_{n+1}, "
 "\\theta \\Delta t \\xi_{n+1}, \\zeta_{n}, \\eta_n) \\mapsto \\alpha_{n+1}"
 msgstr ""
+"\\tilde{\\mathscr E}^p : (u_{n+1}, \\theta \\Delta t \\xi_{n+1}, \\zeta_{n},"
+" \\eta_n) \\mapsto \\varepsilon^p_{n+1}  \\tilde{\\mathscr A} : (u_{n+1}, "
+"\\theta \\Delta t \\xi_{n+1}, \\zeta_{n}, \\eta_n) \\mapsto \\alpha_{n+1}"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:171
 msgid ""
@@ -489,10 +533,12 @@ msgid ""
 "\\sigma_{n+1} = \\Frac{\\partial \\psi^e}{\\partial "
 "\\varepsilon^e}(\\varepsilon(u_{n+1}) -\\varepsilon^p_{n+1})."
 msgstr ""
+"\\sigma_{n+1} = \\Frac{\\partial \\psi^e}{\\partial "
+"\\varepsilon^e}(\\varepsilon(u_{n+1}) -\\varepsilon^p_{n+1})."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:177
 msgid "A_{n+1} = \\Frac{\\partial \\psi^p}{\\partial \\alpha}(\\alpha_{n+1})."
-msgstr ""
+msgstr "A_{n+1} = \\Frac{\\partial \\psi^p}{\\partial \\alpha}(\\alpha_{n+1})."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:179
 msgid ""
@@ -508,6 +554,8 @@ msgid ""
 "\\ds \\int_{\\Omega} (\\xi_{n+1} - (\\xi_{n+1} + r f(\\sigma_{n+1}, "
 "A_{n+1}))_+) \\lambda dx = 0,   \\forall \\lambda"
 msgstr ""
+"\\ds \\int_{\\Omega} (\\xi_{n+1} - (\\xi_{n+1} + r f(\\sigma_{n+1}, "
+"A_{n+1}))_+) \\lambda dx = 0,   \\forall \\lambda"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:183
 msgid "or"
@@ -518,6 +566,8 @@ msgid ""
 "\\ds \\int_{\\Omega} (f(\\sigma_{n+1} + (-f(\\sigma_{n+1}, A_{n+1}) - "
 "\\xi_{n+1}/r)_+ , A_{n+1}) ) \\lambda dx = 0,   \\forall \\lambda"
 msgstr ""
+"\\ds \\int_{\\Omega} (f(\\sigma_{n+1} + (-f(\\sigma_{n+1}, A_{n+1}) - "
+"\\xi_{n+1}/r)_+ , A_{n+1}) ) \\lambda dx = 0,   \\forall \\lambda"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:187
 msgid ""
@@ -555,6 +605,9 @@ msgid ""
 "\\varepsilon_{1,1} & \\varepsilon_{1,2} & 0 \\\\ \\varepsilon_{1,2} & "
 "\\varepsilon_{2,2} & 0 \\\\ 0 & 0 & 0 \\end{array}\\hspace{-0.5em}\\right)."
 msgstr ""
+"\\varepsilon(u) = \\left(\\hspace{-0.5em}\\begin{array}{ccc} "
+"\\varepsilon_{1,1} & \\varepsilon_{1,2} & 0 \\\\ \\varepsilon_{1,2} & "
+"\\varepsilon_{2,2} & 0 \\\\ 0 & 0 & 0 \\end{array}\\hspace{-0.5em}\\right)."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:197
 msgid "We denote"
@@ -566,6 +619,9 @@ msgid ""
 "\\varepsilon_{1,1} & \\varepsilon_{1,2} \\\\ \\varepsilon_{1,2} & "
 "\\varepsilon_{2,2} \\end{array}\\hspace{-0.5em}\\right)"
 msgstr ""
+"\\bar{\\varepsilon}(u) =  \\left(\\hspace{-0.5em}\\begin{array}{cc} "
+"\\varepsilon_{1,1} & \\varepsilon_{1,2} \\\\ \\varepsilon_{1,2} & "
+"\\varepsilon_{2,2} \\end{array}\\hspace{-0.5em}\\right)"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:201
 msgid ""
@@ -578,6 +634,8 @@ msgid ""
 "\\varepsilon^p_{1,3} = \\varepsilon^p_{2,3} = \\varepsilon^e_{1,3} = "
 "\\varepsilon^e_{2,3} = 0"
 msgstr ""
+"\\varepsilon^p_{1,3} = \\varepsilon^p_{2,3} = \\varepsilon^e_{1,3} = "
+"\\varepsilon^e_{2,3} = 0"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:206
 msgid "and"
@@ -585,7 +643,7 @@ msgstr "と次式となります。"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:208
 msgid "\\varepsilon^e_{3,3} + \\varepsilon^p_{3,3} = \\varepsilon_{3,3} = 0."
-msgstr ""
+msgstr "\\varepsilon^e_{3,3} + \\varepsilon^p_{3,3} = \\varepsilon_{3,3} = 0."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:210
 msgid ""
@@ -598,6 +656,8 @@ msgid ""
 "\\sigma = \\lambda \\mbox{tr}(\\varepsilon(u)) I + 2\\mu(\\varepsilon(u) - "
 "\\varepsilon^p),"
 msgstr ""
+"\\sigma = \\lambda \\mbox{tr}(\\varepsilon(u)) I + 2\\mu(\\varepsilon(u) - "
+"\\varepsilon^p),"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:214
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:316
@@ -609,6 +669,8 @@ msgid ""
 "\\bar{\\sigma} = \\lambda \\mbox{tr}(\\bar{\\varepsilon}(u)) \\bar{I} + "
 "2\\mu(\\bar{\\varepsilon}(u) -\\bar{\\varepsilon}^p),"
 msgstr ""
+"\\bar{\\sigma} = \\lambda \\mbox{tr}(\\bar{\\varepsilon}(u)) \\bar{I} + "
+"2\\mu(\\bar{\\varepsilon}(u) -\\bar{\\varepsilon}^p),"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:218
 msgid ""
@@ -620,6 +682,8 @@ msgid ""
 "\\sigma_{3,3} = \\lambda \\mbox{tr}(\\bar{\\varepsilon}(u)) - 2\\mu "
 "\\varepsilon^p_{3,3}"
 msgstr ""
+"\\sigma_{3,3} = \\lambda \\mbox{tr}(\\bar{\\varepsilon}(u)) - 2\\mu "
+"\\varepsilon^p_{3,3}"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:222
 msgid ""
@@ -633,6 +697,8 @@ msgid ""
 "\\mbox{ tr}(\\varepsilon^p) = 0 ~~~~ \\Rightarrow  ~~~ \\varepsilon^p_{3,3} "
 "= - (\\varepsilon^p_{1,1} + \\varepsilon^p_{2,2})."
 msgstr ""
+"\\mbox{ tr}(\\varepsilon^p) = 0 ~~~~ \\Rightarrow  ~~~ \\varepsilon^p_{3,3} "
+"= - (\\varepsilon^p_{1,1} + \\varepsilon^p_{2,2})."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:229
 msgid "Plane stress approximation"
@@ -651,6 +717,9 @@ msgid ""
 "\\sigma_{1,2} & 0 \\\\ \\sigma_{1,2} & \\sigma_{2,2} & 0 \\\\ 0 & 0 & 0 "
 "\\end{array}\\hspace{-0.5em}\\right)."
 msgstr ""
+"\\sigma = \\left(\\hspace{-0.5em}\\begin{array}{ccc} \\sigma_{1,1} & "
+"\\sigma_{1,2} & 0 \\\\ \\sigma_{1,2} & \\sigma_{2,2} & 0 \\\\ 0 & 0 & 0 "
+"\\end{array}\\hspace{-0.5em}\\right)."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:235
 msgid "We will still denote"
@@ -662,6 +731,9 @@ msgid ""
 "\\sigma_{1,2} \\\\ \\sigma_{1,2} & \\sigma_{2,2} "
 "\\end{array}\\hspace{-0.5em}\\right)"
 msgstr ""
+"\\bar{\\sigma} =  \\left(\\hspace{-0.5em}\\begin{array}{cc} \\sigma_{1,1} & "
+"\\sigma_{1,2} \\\\ \\sigma_{1,2} & \\sigma_{2,2} "
+"\\end{array}\\hspace{-0.5em}\\right)"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:239
 msgid ""
@@ -691,6 +763,10 @@ msgid ""
 "\\varepsilon^e_{2,2} & 0 \\\\ 0 & 0 & \\varepsilon^e_{3,3} "
 "\\end{array}\\hspace{-0.5em}\\right)."
 msgstr ""
+"\\varepsilon^e = \\left(\\hspace{-0.5em}\\begin{array}{ccc} "
+"\\varepsilon^e_{1,1} & \\varepsilon^e_{1,2} & 0 \\\\ \\varepsilon^e_{1,2} & "
+"\\varepsilon^e_{2,2} & 0 \\\\ 0 & 0 & \\varepsilon^e_{3,3} "
+"\\end{array}\\hspace{-0.5em}\\right)."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:245
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:435
@@ -703,6 +779,9 @@ msgid ""
 "-\\Frac{\\lambda}{\\lambda+2\\mu}(\\varepsilon^e_{1,1} + "
 "\\varepsilon^e_{2,2})"
 msgstr ""
+"\\varepsilon^e_{3,3} = "
+"-\\Frac{\\lambda}{\\lambda+2\\mu}(\\varepsilon^e_{1,1} + "
+"\\varepsilon^e_{2,2})"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:249
 msgid "so that"
@@ -714,6 +793,9 @@ msgid ""
 "2\\mu\\bar{\\varepsilon}^e ~~~\\mbox{ with } \\lambda^* = "
 "\\Frac{2\\mu\\lambda}{\\lambda+2\\mu}"
 msgstr ""
+"\\bar{\\sigma} = \\lambda^* \\mbox{tr}(\\bar{\\varepsilon}^e) + "
+"2\\mu\\bar{\\varepsilon}^e ~~~\\mbox{ with } \\lambda^* = "
+"\\Frac{2\\mu\\lambda}{\\lambda+2\\mu}"
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:254
 msgid "Moreover"
@@ -724,6 +806,8 @@ msgid ""
 "\\|\\mbox{Dev}(\\sigma)\\| = \\left(\\|\\bar{\\sigma}\\|^2 - "
 "\\Frac{1}{3}(\\mbox{tr}(\\bar{\\sigma}))^2\\right)^{1/2}."
 msgstr ""
+"\\|\\mbox{Dev}(\\sigma)\\| = \\left(\\|\\bar{\\sigma}\\|^2 - "
+"\\Frac{1}{3}(\\mbox{tr}(\\bar{\\sigma}))^2\\right)^{1/2}."
 
 #: ../../doc/sphinx/source/userdoc/model_plasticity_small_strain.rst:259
 msgid ""

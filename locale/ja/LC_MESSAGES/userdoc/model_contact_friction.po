@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,6 +91,8 @@ msgid ""
 "u_N(a_i)-\\text{gap}_i \\le 0, ~~ \\lambda_N^i \\le 0,  ~~ "
 "(u_N(a_i)-\\text{gap}_i) \\lambda_N^i = 0,"
 msgstr ""
+"u_N(a_i)-\\text{gap}_i \\le 0, ~~ \\lambda_N^i \\le 0, ~~ "
+"(u_N(a_i)-\\text{gap}_i) \\lambda_N^i = 0,"
 
 #: ../../doc/sphinx/source/userdoc/model_contact_friction.rst:37
 msgid ""
@@ -946,6 +948,18 @@ msgid ""
 "master surfaces. Preferably only one of `slave1` and `slave2` is set to "
 "true."
 msgstr ""
+"この関数は、1つまたは2つの弾性体の2つの面の間に摩擦のない接触状態を追加します。条件は、変数 ``varname_u`` または変数 "
+"``varname_u1`` と ``varname_u2`` "
+"に1つまたは2つの異なる変位フィールドが与えられているかどうかに応じて適用されます。ベクトル `rg1` および `rg2` "
+"は、互いに接触することが予想される領域の対を含みます。一面あたり単一の領域の場合、 `rg1` と `rg2` "
+"は通常の整数として与えられます。単一変位変数の場合、 `rg1` と `rg2` の両方で定義された領域は変数 ``varname_u`` "
+"を参照します。2つの変位変数の場合、 `rg1` は ``varname_u1`` を、 `rg2` は ``varname_u2`` を参照します。 "
+"``multname_n`` は、サイズが `rg1` と `rg2` "
+"で定義されたもののうち、スレーブの領域の自由度の数である固定サイズの変数でなければなりません。接触等価節力を表す、増大パラメータ `r` "
+"は、受容可能な値の範囲で選択されるべきです（弾性体のYoung率に近く、Getfemのユーザ文書を参照）。オプションパラメータ `slave1` と "
+"`slave2` は、 `rg1` と `rg2` で定義された領域が対応して \"スレーブ\" とみなされた場合に宣言します。デフォルトで "
+"`slave1` は真で、`slave2` はfalseです。すなわち `rg1` はスレーブ面を含み、 `rg2` はマスター面です。 "
+"`slave1` と `slave2` のうちの1つだけがtrueに設定されるのが望ましいです。"
 
 #: ../../doc/sphinx/source/userdoc/model_contact_friction.rst:441
 msgid ""
@@ -1006,6 +1020,22 @@ msgid ""
 "contains the slave surfaces, while `rg2` the master surfaces. Preferably "
 "only one of `slave1` and `slave2` is set to true."
 msgstr ""
+"この関数は、1つまたは2つの弾性体の2つの面の間に摩擦状態の接触を追加します。条件は、変数 ``varname_u`` または変数 "
+"``varname_u1`` と ``varname_u2`` "
+"に1つまたは2つの異なる変位フィールドが与えられているかどうかに応じて適用されます。ベクトル `rg1` および `rg2` "
+"は、互いに接触することが予想される領域の対を含みます。一面あたり単一の領域の場合、 `rg1` と `rg2` "
+"は通常の整数として与えられます。単一変位変数の場合、 `rg1` と `rg2` の両方で定義された領域は変数 `varname_u` を参照します。 "
+"2つの変位変数の場合、 `rg1` は ``varname_u1`` を、 `rg2` は `varname_u2` を参照します。 "
+"`multname_n` は、サイズが `rg1` と `rg2` "
+"で定義されたもののうち、スレーブとして特徴づけられるもののうち、それらの領域の自由度の数である固定サイズの変数でなければなりません。接触等価節点法線力を表します。"
+" `multname_t` は、 `multname_n` のサイズにqdim-"
+"1を掛けたサイズに対応する固定サイズの変数でなければなりません。これは接触等価節点接線（摩擦）力を表します。増大パラメータ ``r`` "
+"は、受容可能な値の範囲で選択されるべきです（弾性体のYoung率に近くなります、Getfemのユーザ文書を参照してください）。 "
+"`friction_coeff` パラメータに格納された摩擦係数は、単一値または `multname_n` "
+"と同じサイズのベクトルです。オプションパラメータ `slave1` と `slave2` は、 `rg1` と `rg2` で定義された領域が対応して "
+"\"スレーブ\" とみなされた場合に宣言します。デフォルトで `slave1` は真で、`slave2` はfalseです。すなわち `rg1` "
+"はスレーブ面を含み、 `rg2` はマスター面を含みます。`slave1` と `slave2` "
+"のうちの1つだけがtrueに設定されるのが望ましいです。"
 
 #: ../../doc/sphinx/source/userdoc/model_contact_friction.rst:484
 msgid ""
