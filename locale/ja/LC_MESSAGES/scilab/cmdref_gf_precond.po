@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 11:04+0900\n"
+"POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,84 +17,84 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/scilab/cmdref_gf_precond.rst:8
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:8
 msgid "gf_precond"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:10
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:10
 msgid "**Synopsis**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:24
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:24
 msgid "**Description :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:27
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:27
 msgid "General constructor for precond objects."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:29
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:29
 msgid ""
 "The preconditioners may store REAL or COMPLEX values. They accept getfem "
 "sparse matrices and Matlab sparse matrices."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:33
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:33
 msgid "**Command list :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:37
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:37
 msgid "``PC = gf_precond('identity')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:39
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:39
 msgid "Create a REAL identity precondioner."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:42
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:42
 msgid "``PC = gf_precond('cidentity')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:44
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:44
 msgid "Create a COMPLEX identity precondioner."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:47
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:47
 msgid "``PC = gf_precond('diagonal', vec D)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:49
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:49
 msgid "Create a diagonal precondioner."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:52
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:52
 msgid "``PC = gf_precond('ildlt', spmat m)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:54
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:54
 msgid ""
 "Create an ILDLT (Cholesky) preconditioner for the (symmetric) sparse matrix "
 "<literal>m</literal>. This preconditioner has the same sparsity pattern than"
 " <literal>m</literal> (no fill-in)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:59
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:59
 msgid "``PC = gf_precond('ilu', spmat m)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:61
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:61
 msgid ""
 "Create an ILU (Incomplete LU) preconditioner for the sparse matrix "
 "<literal>m</literal>. This preconditioner has the same sparsity pattern than"
 " <literal>m</literal> (no fill-in)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:66
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:66
 msgid ""
 "``PC = gf_precond('ildltt', spmat m[, int fillin[, scalar threshold]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:68
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:68
 msgid ""
 "Create an ILDLTT (Cholesky with filling) preconditioner for the (symmetric) "
 "sparse matrix <literal>m</literal>. The preconditioner may add at most "
@@ -103,11 +103,11 @@ msgid ""
 " is1e-7."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:74
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:74
 msgid "``PC = gf_precond('ilut', spmat m[, int fillin[, scalar threshold]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:76
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:76
 msgid ""
 "Create an ILUT (Incomplete LU with filling) preconditioner for the sparse "
 "matrix <literal>m</literal>. The preconditioner may add at most "
@@ -116,11 +116,11 @@ msgid ""
 " is 1e-7."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:82
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:82
 msgid "``PC = gf_precond('superlu', spmat m)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:84
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:84
 msgid ""
 "Uses SuperLU to build an exact factorization of the sparse matrix "
 "<literal>m</literal>. This preconditioner is only available if the getfem-"
@@ -128,10 +128,10 @@ msgid ""
 "likely to eat all your memory for 3D problems."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:90
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:90
 msgid "``PC = gf_precond('spmat', spmat m)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_precond.rst:92
+#: ../../doc/sphinx/source/scilab/cmdref_gf_precond.rst:92
 msgid "Preconditionner given explicitely by a sparse matrix."
 msgstr ""

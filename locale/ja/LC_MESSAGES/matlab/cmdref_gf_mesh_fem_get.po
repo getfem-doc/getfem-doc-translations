@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 11:04+0900\n"
+"POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:11+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,61 +17,61 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:8
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:8
 msgid "gf_mesh_fem_get"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:10
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:10
 msgid "**Synopsis**"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:53
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:53
 msgid "**Description :**"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:56
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:56
 msgid "General function for inquiry about mesh_fem objects."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:59
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:59
 msgid "**Command list :**"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:63
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:63
 msgid "``n = gf_mesh_fem_get(mesh_fem MF, 'nbdof')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:65
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:65
 msgid "Return the number of degrees of freedom (dof) of the mesh_fem."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:68
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:68
 msgid "``n = gf_mesh_fem_get(mesh_fem MF, 'nb basic dof')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:70
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:70
 msgid "Return the number of basic degrees of freedom (dof) of the mesh_fem."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:73
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:73
 msgid "``DOF = gf_mesh_fem_get(mesh_fem MF, 'dof from cv',mat CVids)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:75
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:75
 msgid ""
 "Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof from cv') "
 "instead."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:78
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:78
 msgid "``DOF = gf_mesh_fem_get(mesh_fem MF, 'basic dof from cv',mat CVids)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:80
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:80
 msgid "Return the dof of the convexes listed in `CVids`."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:82
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:82
 msgid ""
 "WARNING: the Degree of Freedom might be returned in ANY order, do not use "
 "this function in your assembly routines. Use 'basic dof from cvid' instead, "
@@ -79,41 +79,41 @@ msgid ""
 " freedom."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:87
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:87
 msgid ""
 "One can also get the list of basic dof on a set on convex faces, by "
 "indicating on the second row of `CVids` the faces numbers (with respect to "
 "the convex number on the first row)."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:92
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:92
 msgid ""
 "``{DOFs, IDx} = gf_mesh_fem_get(mesh_fem MF, 'dof from cvid'[, mat CVids])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:94
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:94
 msgid ""
 "Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof from cvid')"
 " instead."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:98
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:98
 msgid ""
 "``{DOFs, IDx} = gf_mesh_fem_get(mesh_fem MF, 'basic dof from cvid'[, mat "
 "CVids])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:100
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:100
 msgid "Return the degrees of freedom attached to each convex of the mesh."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:102
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:102
 msgid ""
 "If `CVids` is omitted, all the convexes will be considered (equivalent to "
 "`CVids = 1 ... gf_mesh_get(mesh M, 'max cvid')`)."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:105
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:105
 msgid ""
 "`IDx` is a row vector, `length(IDx) = length(CVids)+1`. `DOFs` is a row "
 "vector containing the concatenated list of dof of each convex in `CVids`. "
@@ -122,32 +122,32 @@ msgid ""
 "DOFs(IDx(2):IDx(3)-1)."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:111
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:111
 msgid ""
 "If `CVids` contains convex #id which do not exist in the mesh, their point "
 "list will be empty."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:115
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:115
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'non conformal dof'[, mat CVids])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:117
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:117
 msgid ""
 "Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'non conformal basic "
 "dof') instead."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:121
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:121
 msgid ""
 "``gf_mesh_fem_get(mesh_fem MF, 'non conformal basic dof'[, mat CVids])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:123
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:123
 msgid "Return partially linked degrees of freedom."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:125
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:125
 msgid ""
 "Return the basic dof located on the border of a convex and which belong to "
 "only one convex, except the ones which are located on the border of the "
@@ -157,149 +157,149 @@ msgid ""
 "interfaces between classical FEM and hierarchical FEM)."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:134
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:134
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'qdim')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:136
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:136
 msgid "Return the dimension Q of the field interpolated by the mesh_fem."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:138
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:138
 msgid ""
 "By default, Q=1 (scalar field). This has an impact on the dof numbering."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:141
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:141
 msgid "``{FEMs, CV2F} = gf_mesh_fem_get(mesh_fem MF, 'fem'[, mat CVids])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:143
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:143
 msgid "Return a list of FEM used by the mesh_fem."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:145
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:145
 msgid ""
 "`FEMs` is an array of all fem objects found in the convexes given in "
 "`CVids`. If `CV2F` was supplied as an output argument, it contains, for each"
 " convex listed in `CVids`, the index of its correspounding FEM in `FEMs`."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:150
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:150
 msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have any "
 "FEM have their correspounding entry in `CV2F` set to -1."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:153
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:153
 msgid "Example::"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:165
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:165
 msgid "``CVs = gf_mesh_fem_get(mesh_fem MF, 'convex_index')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:167
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:167
 msgid "Return the list of convexes who have a FEM."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:170
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:170
 msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_lagrangian'[, mat CVids])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:172
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:172
 msgid "Test if the mesh_fem is Lagrangian."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:174
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:174
 msgid ""
 "Lagrangian means that each base function Phi[i] is such that Phi[i](P[j]) = "
 "delta(i,j), where P[j] is the dof location of the jth base function, and "
 "delta(i,j) = 1 if i==j, else 0."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:178
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:178
 msgid ""
 "If `CVids` is omitted, it returns 1 if all convexes in the mesh are "
 "Lagrangian. If `CVids` is used, it returns the convex indices (with respect "
 "to `CVids`) which are Lagrangian."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:183
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:183
 msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_equivalent'[, mat CVids])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:185
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:185
 msgid "Test if the mesh_fem is equivalent."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:187
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:194
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:187
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:194
 msgid "See gf_mesh_fem_get(mesh_fem MF, 'is_lagrangian')"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:190
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:190
 msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_polynomial'[, mat CVids])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:192
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:192
 msgid "Test if all base functions are polynomials."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:197
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:197
 msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_reduced')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:199
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:199
 msgid "Return 1 if the optional reduction matrix is applied to the dofs."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:202
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:202
 msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'reduction matrix')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:204
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:204
 msgid "Return the optional reduction matrix."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:207
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:207
 msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'extension matrix')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:209
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:209
 msgid "Return the optional extension matrix."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:212
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:212
 msgid "``Vr = gf_mesh_fem_get(mesh_fem MF, 'reduce vector', vec V)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:214
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:214
 msgid ""
 "Multiply the provided vector V with the extension matrix of the mesh_fem."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:217
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:217
 msgid "``Ve = gf_mesh_fem_get(mesh_fem MF, 'extend vector', vec V)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:219
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:219
 msgid ""
 "Multiply the provided vector V with the reduction matrix of the mesh_fem."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:222
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:222
 msgid "``DOFs = gf_mesh_fem_get(mesh_fem MF, 'basic dof on region',mat Rs)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:224
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:224
 msgid ""
 "Return the list of basic dof (before the optional reduction) lying on one of"
 " the mesh regions listed in `Rs`."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:227
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:240
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:227
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:240
 msgid ""
 "More precisely, this function returns the basic dof whose support is non-"
 "null on one of regions whose #ids are listed in `Rs` (note that for boundary"
@@ -308,57 +308,57 @@ msgid ""
 "in not null on the convex border)."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:235
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:235
 msgid "``DOFs = gf_mesh_fem_get(mesh_fem MF, 'dof on region',mat Rs)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:237
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:237
 msgid ""
 "Return the list of dof (after the optional reduction) lying on one of the "
 "mesh regions listed in `Rs`."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:247
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:247
 msgid ""
 "For a reduced mesh_fem a dof is lying on a region if its potential "
 "corresponding shape function is nonzero on this region. The extension matrix"
-" is used to make the correspondance between basic and reduced dofs."
+" is used to make the correspondence between basic and reduced dofs."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:253
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:253
 msgid "``DOFpts = gf_mesh_fem_get(mesh_fem MF, 'dof nodes'[, mat DOFids])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:255
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:255
 msgid ""
 "Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof nodes') "
 "instead."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:258
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:258
 msgid ""
 "``DOFpts = gf_mesh_fem_get(mesh_fem MF, 'basic dof nodes'[, mat DOFids])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:260
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:260
 msgid "Get location of basic degrees of freedom."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:262
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:262
 msgid ""
 "Return the list of interpolation points for the specified dof #IDs in "
 "`DOFids` (if `DOFids` is omitted, all basic dof are considered)."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:267
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:267
 msgid "``DOFP = gf_mesh_fem_get(mesh_fem MF, 'dof partition')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:269
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:269
 msgid "Get the 'dof_partition' array."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:271
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:271
 msgid ""
 "Return the array which associates an integer (the partition number) to each "
 "convex of the mesh_fem. By default, it is an all-zero array. The degrees of "
@@ -367,67 +367,67 @@ msgid ""
 "possible to create partially discontinuous mesh_fem very easily."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:279
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:279
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'save',string filename[, string opt])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:281
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:281
 msgid ""
-"Save a mesh_fem in a text file (and optionaly its linked mesh object if "
+"Save a mesh_fem in a text file (and optionally its linked mesh object if "
 "`opt` is the string 'with_mesh')."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:285
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:285
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'char'[, string opt])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:287
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:287
 msgid "Output a string description of the mesh_fem."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:289
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:289
 msgid ""
 "By default, it does not include the description of the linked mesh object, "
 "except if `opt` is 'with_mesh'."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:293
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:293
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'display')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:295
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:295
 msgid "displays a short summary for a mesh_fem object."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:298
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:298
 msgid "``m = gf_mesh_fem_get(mesh_fem MF, 'linked mesh')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:300
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:300
 msgid "Return a reference to the mesh object linked to `mf`."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:303
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:303
 msgid "``m = gf_mesh_fem_get(mesh_fem MF, 'mesh')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:305
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:305
 msgid ""
 "Return a reference to the mesh object linked to `mf`. (identical to "
 "gf_mesh_get(mesh M, 'linked mesh'))"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:309
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:309
 msgid ""
 "``gf_mesh_fem_get(mesh_fem MF, 'export to vtk',string filename, ... "
 "['ascii'], U, 'name'...)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:311
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:311
 msgid "Export a mesh_fem and some fields to a vtk file."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:313
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:313
 msgid ""
 "The FEM and geometric transformations will be mapped to order 1 or 2 "
 "isoparametric Pk (or Qk) FEMs (as VTK does not handle higher order "
@@ -435,128 +435,128 @@ msgid ""
 "transformations, you should consider gf_slice_get(slice S, 'export to vtk')."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:320
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:320
 msgid ""
 "``gf_mesh_fem_get(mesh_fem MF, 'export to dx',string filename, ...['as', "
 "string mesh_name][,'edges']['serie',string serie_name][,'ascii'][,'append'],"
 " U, 'name'...)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:322
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:322
 msgid "Export a mesh_fem and some fields to an OpenDX file."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:324
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:324
 msgid ""
 "This function will fail if the mesh_fem mixes different convex types (i.e. "
 "quads and triangles), or if OpenDX does not handle a specific element type "
 "(i.e. prism connections are not known by OpenDX)."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:328
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:328
 msgid ""
 "The FEM will be mapped to order 1 Pk (or Qk) FEMs. If you need to represent "
 "high-order FEMs or high-order geometric transformations, you should consider"
 " gf_slice_get(slice S, 'export to dx')."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:333
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:333
 msgid ""
 "``gf_mesh_fem_get(mesh_fem MF, 'export to pos',string filename[, string "
 "name][[,mesh_fem mf1], mat U1, string nameU1[[,mesh_fem mf2], mat U2, string"
 " nameU2,...]])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:335
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:335
 msgid "Export a mesh_fem and some fields to a pos file."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:337
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:337
 msgid ""
 "The FEM and geometric transformations will be mapped to order 1 "
 "isoparametric Pk (or Qk) FEMs (as GMSH does not handle higher order "
 "elements)."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:342
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:342
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'dof_from_im',mesh_im mim[, int p])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:344
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:344
 msgid ""
 "Return a selection of dof who contribute significantly to the mass-matrix "
 "that would be computed with `mf` and the integration method `mim`."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:348
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:348
 msgid ""
 "`p` represents the dimension on what the integration method operates "
 "(default `p = mesh dimension`)."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:351
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:351
 msgid ""
 "IMPORTANT: you still have to set a valid integration method on the convexes "
 "which are not crosses by the levelset!"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:355
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:355
 msgid ""
 "``U = gf_mesh_fem_get(mesh_fem MF, 'interpolate_convex_data',mat Ucv)``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:357
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:357
 msgid ""
 "Interpolate data given on each convex of the mesh to the mesh_fem dof. The "
 "mesh_fem has to be lagrangian, and should be discontinuous (typically a "
 "FEM_PK(N,0) or FEM_QK(N,0) should be used)."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:361
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:361
 msgid ""
 "The last dimension of the input vector Ucv should have gf_mesh_get(mesh M, "
 "'max cvid') elements."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:364
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:364
 msgid ""
 "Example of use: gf_mesh_fem_get(mesh_fem MF, 'interpolate_convex_data', "
 "gf_mesh_get(mesh M, 'quality'))"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:367
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:367
 msgid "``z = gf_mesh_fem_get(mesh_fem MF, 'memsize')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:369
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:369
 msgid "Return the amount of memory (in bytes) used by the mesh_fem object."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:371
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:371
 msgid "The result does not take into account the linked mesh object."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:374
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:374
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'has_linked_mesh_levelset')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:376
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:376
 msgid "Is a mesh_fem_level_set or not."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:379
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:379
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'linked_mesh_levelset')``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:381
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:381
 msgid "if it is a mesh_fem_level_set gives the linked mesh_level_set."
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:384
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:384
 msgid "``U = gf_mesh_fem_get(mesh_fem MF, 'eval', expr [, DOFLST])``"
 msgstr ""
 
-#: ../source/matlab/cmdref_gf_mesh_fem_get.rst:386
+#: ../../doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:386
 msgid ""
 "Call gf_mesh_fem_get_eval. This function interpolates an expression on a "
 "lagrangian mesh_fem (for all dof except if DOFLST is specified). The "

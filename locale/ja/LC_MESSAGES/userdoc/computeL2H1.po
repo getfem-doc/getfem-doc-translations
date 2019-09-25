@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 11:04+0900\n"
+"POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/userdoc/computeL2H1.rst:10
+#: ../../doc/sphinx/source/userdoc/computeL2H1.rst:10
 msgid "Compute :math:`L^2` and :math:`H^1` norms"
 msgstr ":math:`L^2` と :math:`H^1` ノルムの計算"
 
-#: ../source/userdoc/computeL2H1.rst:12
+#: ../../doc/sphinx/source/userdoc/computeL2H1.rst:12
 msgid ""
 "The file :file:`getfem/getfem_assembling.h` defines the functions to compute"
 " :math:`L^2` and :math:`H^1` norms of a solution. The following functions "
@@ -34,7 +34,7 @@ msgstr ""
 ":file:`getfem/getfem_assembling.h` は、 :math:`L^2` と :math:`H^1` "
 "ノルムを計算するため関数を定義します。以下の関数は、異なるノルムを計算します。"
 
-#: ../source/userdoc/computeL2H1.rst:20
+#: ../../doc/sphinx/source/userdoc/computeL2H1.rst:20
 msgid ""
 "where ``mim`` is a |gf_mim| used for the integration, ``mf`` is a |gf_mf| "
 "and describes the finite element method on which the solution is defined, "
@@ -46,13 +46,13 @@ msgstr ""
 "``U`` は ``mf`` の自由度の解のベクトルであり、 ``region`` "
 "はノルムが計算されるメッシュ領域を指定する任意のパラメータです。``U`` のサイズは ``mf.nb_dof()`` でなければなりません。"
 
-#: ../source/userdoc/computeL2H1.rst:25
+#: ../../doc/sphinx/source/userdoc/computeL2H1.rst:25
 msgid ""
 "In order to compare two solutions, it is often simpler and faster to use the"
 " following function than to interpolate one |mf| on another::"
 msgstr "2つの解を比較するには、1つの |mf| を補間するよりも、次の関数を使用する方が簡単で速くなることがよくあります。"
 
-#: ../source/userdoc/computeL2H1.rst:31
+#: ../../doc/sphinx/source/userdoc/computeL2H1.rst:31
 msgid ""
 "These functions return the :math:`L^2` and :math:`H^1` norms of "
 ":math:`u_1-u_2`."

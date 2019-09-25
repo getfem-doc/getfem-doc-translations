@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 11:04+0900\n"
+"POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,57 +17,57 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/scilab/cmdref_gf_slice.rst:8
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:8
 msgid "gf_slice"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:10
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:10
 msgid "**Synopsis**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:19
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:19
 msgid "**Description :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:22
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:22
 msgid "General constructor for slice objects."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:24
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:24
 msgid ""
 "Creation of a mesh slice. Mesh slices are very similar to a P1-discontinuous"
 " mesh_fem on which interpolation is very fast. The slice is built from a "
 "mesh object, and a description of the slicing operation, for example::"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:31
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:31
 msgid ""
 "cuts the original mesh with the half space {y>0}. Each convex of the "
 "original mesh <literal>m</literal> is simplexified (for example a quadrangle"
 " is splitted into 2 triangles), and each simplex is refined 5 times."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:35
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:35
 msgid "Slicing operations can be:"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:37
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:37
 msgid "cutting with a plane, a sphere or a cylinder"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:38
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:38
 msgid "intersection or union of slices"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:39
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:39
 msgid "isovalues surfaces/volumes"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:40
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:40
 msgid "\"points\", \"streamlines\" (see below)"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:42
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:42
 msgid ""
 "If the first argument is a mesh_fem <literal>mf</literal> instead of a mesh,"
 " and if it is followed by a <literal>mf</literal>-field "
@@ -75,36 +75,36 @@ msgid ""
 "applied to the mesh before the slicing operation."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:46
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:46
 msgid "The first argument can also be a slice."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:49
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:49
 msgid "**Command list :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:53
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:53
 msgid ""
 "``sl = gf_slice(sliceop, {slice sl|{mesh m| mesh_fem mf, vec U}, int "
 "refine}[, mat CVfids])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:55
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:55
 msgid "Create a slice using <literal>sliceop</literal> operation."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:57
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:57
 msgid ""
 "<literal>sliceop</literal> operation is specified with Scilab CELL arrays "
 "(i.e. with braces) . The first element is the name of the operation, "
 "followed the slicing options:"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:60
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:60
 msgid "{'none'} : Does not cut the mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:63
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:63
 msgid ""
 "{'planar', int orient, vec p, vec n} : Planar cut. <literal>p</literal> and "
 "<literal>n</literal> define a half-space, <literal>p</literal> being a point"
@@ -116,20 +116,20 @@ msgid ""
 "outer and inner parts will be kept."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:71
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:71
 msgid ""
 "{'ball', int orient, vec c, scalar r} : Cut with a ball of center "
 "<literal>c</literal> and radius <literal>r</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:74
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:74
 msgid ""
 "{'cylinder', int orient, vec p1, vec p2, scalar r} : Cut with a cylinder "
 "whose axis is the line <literal>(p1, p2)</literal> and whose radius is "
 "<literal>r</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:78
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:78
 msgid ""
 "{'isovalues', int orient, mesh_fem mf, vec U, scalar s} : Cut using the "
 "isosurface of the field <literal>U</literal> (defined on the mesh_fem "
@@ -141,7 +141,7 @@ msgid ""
 "<literal>orient</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:84
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:84
 msgid ""
 "{'boundary'[, SLICEOP]} : Return the boundary of the result of SLICEOP, "
 "where SLICEOP is any slicing operation. If SLICEOP is not specified, then "
@@ -149,55 +149,55 @@ msgid ""
 "{'boundary',{'none'}})."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:89
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:89
 msgid ""
 "{'explode', mat Coef} : Build an 'exploded' view of the mesh: each convex is"
 " shrinked (<latex style=\"text\"><![CDATA[0 < \\text{Coef} \\leq "
 "1]]></latex>). In the case of 3D convexes, only their faces are kept."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:93
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:93
 msgid ""
 "{'union', SLICEOP1, SLICEOP2} : Returns the union of slicing operations."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:96
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:96
 msgid ""
 "{'intersection', SLICEOP1, SLICEOP2} : Returns the intersection of slicing "
 "operations, for example::"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:102
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:102
 msgid "{'comp', SLICEOP} : Returns the complementary of slicing operations."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:105
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:105
 msgid ""
 "{'diff', SLICEOP1, SLICEOP2} : Returns the difference of slicing operations."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:108
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:108
 msgid ""
 "{'mesh', mesh m} : Build a slice which is the intersection of the sliced "
 "mesh with another mesh. The slice is such that all of its simplexes are "
 "stricly contained into a convex of each mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:115
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:115
 msgid "``sl = gf_slice('streamlines', mesh_fem mf, mat U, mat S)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:117
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:117
 msgid ""
 "Compute streamlines of the (vector) field <literal>U</literal>, with seed "
 "points given by the columns of <literal>S</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:121
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:121
 msgid "``sl = gf_slice('points', mesh m, mat Pts)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:123
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:123
 msgid ""
 "Return the \"slice\" composed of points given by the columns of "
 "<literal>Pts</literal> (useful for interpolation on a given set of sparse "
@@ -205,11 +205,11 @@ msgid ""
 "on',sl)<literal></literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:128
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:128
 msgid "``sl = gf_slice('load', string filename[, mesh m])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_slice.rst:130
+#: ../../doc/sphinx/source/scilab/cmdref_gf_slice.rst:130
 msgid ""
 "Load the slice (and its linked mesh if it is not given as an argument) from "
 "a text file."

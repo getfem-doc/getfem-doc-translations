@@ -1,0 +1,294 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-25 10:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:12
+msgid "Build a finite element method on a mesh"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:15
+msgid "The object |gf_mf| defined in :file:`getfem/getfem_mesh_fem.h` is designed to describe a finite element method on a whole mesh, i.e. to describe the finite element space on which some variables will be described. This is a rather complex object which is central in |gf|. Basically, this structure describes the finite element method on each element of the mesh and some additional optional transformations. It is possible to have an arbitrary number of finite element descriptions for a single mesh. This is particularly necessary for mixed methods, but also to describe different data on the same mesh. One can instantiate a |gf_mf| object as follows::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:27
+msgid "where ``mymesh`` is an already existing mesh. The structure will be linked to this mesh and will react when modifications will be done on it."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:30
+msgid "It is possible to specify element by element the finite element method, so that element of mixed types can be treated, even if the dimensions are different. For usual elements, the connection between two elements is done when the two elements are compatibles (same degrees of freedom on the common face). A numeration of the degrees of freedom is automatically done with a Cuthill Mc Kee like algorithm. You have to keep in mind that there is absolutely no connection between the numeration of vertices of the mesh and the numeration of the degrees of freedom. Every |gf_mf| object has its own numeration."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:39
+msgid "There are three levels in the |gf_mf| object:"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:41
+msgid "The element level: one finite element method per element. It is possible to mix the dimensions of the elements and the property to be vectorial or scalar."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:44
+msgid "The optional vectorization/tensorization (the qdim in getfem jargon, see `vocabulary`_). For instance to represent a displacement or a tensor field in continuum mechanics. Scalar elements are used componentwise. Note that you can mix some intrinsic vectorial elements (Raviart-Thomas element for instance) which will not be vectorized and scalar elements which will be."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:52
+msgid "(|gf| version 4.0) The optional additional linear transformation (reduction) of the degrees of freedom. It will consist in giving two matrices, the reduction matrix and the extension matrix. The reduction matrix should transform the basic dofs into the reduced dofs (the number of reduced dofs should be less or equal than the number of basic dofs). The extension matrix should describe the inverse transformation. The product of the reduction matrix with the extension matrix should be the identity matrix (ensuring in particular that the two matrices are of maximal rank). This optional transformation can be used to reduce the finite element space to a certain region (tipically a boundary) or to prescribe some matching conditions between non naturally compatible fems (for instance fems with different degrees)."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:64
+msgid "One has to keep in mind this construction manipulating the degrees of freedom of a |gf_mf| object."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:69
+msgid "First level: manipulating fems on each elements"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:71
+msgid "To select a particular finite element method on a given element, use the method::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:75
+msgid "where ``i`` is the index of the element and ``pf`` is the descriptor (of type |gf_pfem|, basically a pointer to an object which inherits from |gf_vfem|) of the finite element method. Alternative forms of this member function are::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:83
+msgid "which set the finite elements for either the convexes listed in the ``bit_vector cvs``, or all the convexes of the mesh. Note that the last method makes a call to the method::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:89
+msgid "which defines the default finite element method which will be automatically added on new elements of the mesh (this is very useful, for instance, when a refinement of the mesh is performed)."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:93
+msgid "Descriptors for finite element methods and integration methods are available thanks to the following function::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:98
+msgid "where ``\"name of method\"`` is to be chosen among the existing methods. A name of a method can be retrieved thanks to the following functions::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:103
+msgid "A non exhaustive list (see :ref:`ud-appendixa` or :file:`getfem/getfem_fem.h` for exhaustive lists) of finite element methods is given by:"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:106
+msgid "``\"FEM_PK(n,k)\"``: Classical :math:`P_K` methods on simplexes of dimension ``n`` with degree ``k`` polynomials."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:109
+msgid "``\"FEM_QK(n,k)\"``: Classical :math:`Q_K` methods on parallelepiped of dimension ``n``. Tensorial product of degree ``k`` :math:`P_K` method on the segment."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:112
+msgid "``\"FEM_PK_PRISM(n,k)\"``: Classical methods on prism of dimension ``n``. Tensorial product of two degree ``k`` :math:`P_K` method."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:115
+msgid "``\"FEM_PRODUCT(a,b)\"``: Tensorial product of the two polynomial finite element method ``a`` and ``b``."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:118
+msgid "``\"FEM_PK_DISCONTINUOUS(n,k)\"``: discontinuous :math:`P_K` methods on simplexes of dimension ``n`` with degree ``k`` polynomials."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:121
+msgid "An alternative way to obtain a Lagrange polynomial fem suitable for a given geometric transformation is to use::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:129
+msgid "The |mf| can call directly these functions via::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:138
+msgid "Some other methods:"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:142
+msgid "Set of indexes (a |dal_bv|) on which a finite element method is defined."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:146
+msgid "gives a reference to the linked mesh."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:150
+msgid "gives a descriptor on the finite element method defined on element of index ``i`` (does not take into account the qdim nor the optional reduction)."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:155
+msgid "Clears the structure, no finite element method is still defined."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:159
+msgid "Examples"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:161
+msgid "For instance if one needs to have a description of a :math:`P_1` finite element method on a triangle, the way to set it is::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:166
+msgid "where ``i`` is still the index of the triangle. It is also possible to select a particular method directly on a set of element, passing to ``mf.set_finite_element`` a |dal_bv| instead of a single index. For instance::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:173
+msgid "selects the method on all the elements of the mesh."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:177
+msgid "Second level: the optional \"vectorization/tensorization\""
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:179
+msgid "If the finite element represents an unknown which is a vector field, the method ``mf.set_qdim(Q)`` allows set the target dimension for the definition of the target dimension :math:`Q`."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:182
+msgid "If the target dimension :math:`Q` is set to a value different of :math:`1`, the scalar FEMs (such as :math:`P_k` fems etc.) are automatically \"vectorized\" from the |mf| object point of view, i.e. each scalar degree of freedom appears :math:`Q` times in order to represent the :math:`Q` components of the vector field. If an intrinsically vectorial element is used, the target dimension of the ``fem`` and the one of the |mf| object have to match. To sum it up,"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:189
+msgid "if the fem of the :math:`ith` element is intrinsically a vector FEM, then::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:195
+msgid "if the fem has a ``target_dim`` equal to :math:`1`, then::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:199
+msgid "Additionally, if the field to be represented is a tensor field instead of a vector field (for instance the stress or strain tensor field in elasticity), it is possible to specify the tensor dimensions with the methods::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:205
+msgid "respectively for a tensor field of order two, four and arbitrary (but limited to 6). For most of the operations, this is equivalent to declare a vector field of the size the product of the dimensions. However, the declared tensor dimensions are taken into account into the high level generic assembly. Remember that the components inside a tensor are stored in Fortran order."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:209
+msgid "At this level are defined the basic degrees of freedom. Some methods of the |gf_mf| allows to obtain information on the basic dofs:"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:214
+msgid "gives the number of basic degrees of freedom on the element of index ``i``."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:218
+msgid "gives a container (an array) with all the global indexes of the basic degrees of freedom of element of index ``i``."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:223
+msgid "gives a ``bgeot::base_node`` which represents the point associated with the basic dof of local index ``j`` on element of index ``i``."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:228
+msgid "gives a ``bgeot::base_node`` which represents the point associated with the basic dof of global index ``j``."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:233
+msgid "gives a ``bgeot::base_node`` which represents the point associated with the basic dof of local index ``j`` on element of index ``i`` in the coordinates of the reference element."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:239
+msgid "gives the index of the first element on which the basic degree of freedom of global index ``j`` is defined."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:244
+msgid "gives the total number of different basic degrees of freedom."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:248
+msgid "gives the target dimension ``Q``."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:252
+msgid "Return a |dal_bv| which represents the indices of basic dof which are in the set of convexes or the set of faces of index ``i`` (see the |gf_m| object)."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:257
+msgid "Return a |dal_bv| which represents the indices of dof which are in the set of convexes or the set of faces of index ``i`` (see the |gf_m| object). For a reduced mesh_fem, a dof is lying on a region if its potential corresponding shape function is nonzero on this region. The extension matrix is used to make the correspondence between basic and reduced dofs."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:265
+msgid "Third level: the optional linear transformation (or reduction)"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:267
+msgid "As described above, it is possible to provide two matrices, a reduction matrix :math:`R` and an extension matrix :math:`E` which will describe a linear transformation of the degrees of freedom. If :math:`V` is the vector of basic degrees of freedom, then :math:`U=RV` will be the vector of reduced degrees of freedom. Contrarily, given a vector :math:`U` of reduced dof, :math:`V=EU` will correspond to a vector of basic dof. In simple cases, :math:`E` will be simply the transpose of :math:`R`. NOTE that every line of the extension matrix should be sparse. Otherwise, each assembled matrix will be plain !"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:276
+msgid "A natural condition is that :math:`RE = I` where :math:`I` is the identity matrix."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:280
+msgid "gives the total number of different degrees of freedom. If the optional reduction is used, this will be the number of columns of the reduction matrix. Otherwise it will return the number of basic degrees of freedom."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:286
+msgid "return a boolean. True if the reduction is used."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:290
+msgid "return a const reference to the reduction matrix :math:`R`."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:294
+msgid "return a const reference to the extension matrix :math:`E`."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:298
+msgid "Set the reduction and extension matrices to ``R`` and ``E`` and validate their use."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:303
+msgid "Where :math:`b` is a boolean. Cancel the reduction if :math:`b` is false and validate it if ``b`` is true. If ``b`` is true, the extension and reduction matrices have to be set previously."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:309
+msgid "Set the reduction and extension matrices corresponding to keep only the basic dofs present in ``idof``. The parameter ``idof`` is either a |dal_bv| or a ``std::set<size_type>``. This is equivalent to the use of a ``getfem::partial_mesh_fem`` object."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:316
+msgid "Obtaining generic |mf|'s"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:318
+msgid "It is possible to use the function::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:322
+msgid "to get a classical polynomial |mf| of order :math:`K` on the given ``mymesh``. The returned |mf| will be destroyed automatically when its linked mesh is destroyed. All the |mf| built by this function are stored in a cache, which means that calling this function twice with the same arguments will return the same |mf| object. A consequence is that you should NEVER modify this |mf|!"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:330
+msgid "The partial_mesh_fem object"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:332
+msgid "The ``getfem::partial_mesh_fem`` object defined in the file ``getfem_partial_mesh_fem.h`` allows to reduce a |gf_mf| object to a set of dofs. The interest is this is not a complete description of a finite element method, it refers to the original |gf_mf| and just add reduction and extension matrices. For instance, you can reduce a |mf| obtained by the function ``getfem::classical_mesh_fem(mesh, K)`` to obtain a finite element method on a mesh region (which can be a boundary). The ``getfem::partial_mesh_fem`` is in particular used to obtain multiplier description to prescribed boundary conditions."
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:342
+msgid "The declaration of a ``getfem::partial_mesh_fem`` object is the following::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:346
+msgid "Then, one has to call the adapt method as follows::"
+msgstr ""
+
+#: ../../doc/sphinx/source/userdoc/bfem.rst:350
+msgid "where ``kept_dof`` and ``rejected_elt`` are some |dal_bv|. ``kept_dof`` is the list of dof indices of the original |mf| ``mf`` to be kept. ``rejected_elt`` is an optional parameter that contains a list of element indices on which the ``getfem::partial_mesh_fem`` states that there is no finite element method. This is to avoid unnecessary computations during assembly procedures."
+msgstr ""
+

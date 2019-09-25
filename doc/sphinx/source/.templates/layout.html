@@ -1,0 +1,38 @@
+{% extends "!layout.html" %}
+{% set customsidebar = 'indexsidebar.html' %}
+
+{% block rootrellink %}
+        <li><a href="https://savannah.nongnu.org/projects/getfem" <img src="{{ pathto('_static/icon.png', 1) }}" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li></a>
+        <li><a href="{{ pathto('index') }}">{{ shorttitle }}</a>{{ reldelim1 }}</li>
+{% endblock %}
+
+{% block extrahead %}
+    <link rel="shortcut icon" type="image/png" href="{{ pathto('_static/icon.png', 1) }}" />
+{{ super() }}
+{% endblock %}
+
+
+{%- block footer %}
+    <div class="footer">
+    {%- if hasdoc('copyright') %}
+      {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+    {%- else %}
+      {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+    {%- endif %}
+    {%- if last_updated %}
+      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+    {%- endif %}
+    {%- if show_sphinx %}
+      {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+    {%- endif %}
+    </div>
+{%- endblock %}
+
+{%- block sidebarlogo %}
+{%- if logo %}
+  <p class="logo"><a href="{{ pathto('index') }}">
+    <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
+  </a></p>
+{%- endif %}
+{%- endblock %}

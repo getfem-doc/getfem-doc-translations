@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 11:04+0900\n"
+"POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,35 +17,35 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:8
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:8
 msgid "gf_mesh_im_get"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:10
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:10
 msgid "**Synopsis**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:24
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:24
 msgid "**Description :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:27
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:27
 msgid "General function extracting information from mesh_im objects."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:30
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:30
 msgid "**Command list :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:34
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:34
 msgid "``{I, CV2I} = gf_mesh_im_get(mesh_im MI, 'integ'[, mat CVids])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:36
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:36
 msgid "Return a list of integration methods used by the mesh_im."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:38
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:38
 msgid ""
 "<literal>I</literal> is an array of all integ objects found in the convexes "
 "given in <literal>CVids</literal>. If <literal>CV2I</literal> was supplied "
@@ -54,41 +54,41 @@ msgid ""
 " in <literal>I</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:43
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:43
 msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have any "
 "integration method have their correspounding entry in "
 "<literal>CV2I</literal> set to -1."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:50
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:50
 msgid "``CVids = gf_mesh_im_get(mesh_im MI, 'convex_index')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:52
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:52
 msgid "Return the list of convexes who have a integration method."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:54
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:54
 msgid "Convexes who have the dummy IM_NONE method are not listed."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:57
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:57
 msgid "``M = gf_mesh_im_get(mesh_im MI, 'eltm', eltm em, int cv [, int f])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:59
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:59
 msgid ""
 "Return the elementary matrix (or tensor) integrated on the convex "
 "<literal>cv</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:61
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:76
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:61
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:76
 msgid "**WARNING**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:63
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:63
 msgid ""
 "Be sure that the fem used for the construction of <literal>em</literal> is "
 "compatible with the fem assigned to element <literal>cv</literal> ! This is "
@@ -97,73 +97,74 @@ msgid ""
 "of <literal>cv</literal> instead of the whole convex."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:69
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:69
 msgid "``Ip = gf_mesh_im_get(mesh_im MI, 'im_nodes'[, mat CVids])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:71
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:71
 msgid "Return the coordinates of the integration points, with their weights."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:73
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:73
 msgid ""
 "<literal>CVids</literal> may be a list of convexes, or a list of convex "
 "faces, such as returned by gf_mesh_get(mesh M, 'region')"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:78
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:78
 msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have an "
 "approximate integration method do not have their corresponding entry (this "
 "has no meaning for exact integration methods!)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:84
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:84
 msgid "``gf_mesh_im_get(mesh_im MI, 'save',string filename[, 'with mesh'])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:86
-msgid "Saves a mesh_im in a text file (and optionaly its linked mesh object)."
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:86
+msgid ""
+"Saves a mesh_im in a text file (and optionally its linked mesh object)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:89
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:89
 msgid "``gf_mesh_im_get(mesh_im MI, 'char'[,'with mesh'])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:91
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:91
 msgid "Output a string description of the mesh_im."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:93
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:93
 msgid ""
 "By default, it does not include the description of the linked mesh object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:97
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:97
 msgid "``gf_mesh_im_get(mesh_im MI, 'display')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:99
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:99
 msgid "displays a short summary for a mesh_im object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:102
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:102
 msgid "``m = gf_mesh_im_get(mesh_im MI, 'linked mesh')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:104
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:104
 msgid ""
 "Returns a reference to the mesh object linked to <literal>mim</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:107
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:107
 msgid "``z = gf_mesh_im_get(mesh_im MI, 'memsize')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:109
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:109
 msgid "Return the amount of memory (in bytes) used by the mesh_im object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_im_get.rst:111
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_im_get.rst:111
 msgid "The result does not take into account the linked mesh object."
 msgstr ""

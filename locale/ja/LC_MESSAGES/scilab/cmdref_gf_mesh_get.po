@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 17:45+0900\n"
+"POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:00+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,62 +17,62 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:8
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:8
 msgid "gf_mesh_get"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:10
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:10
 msgid "**Synopsis**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:60
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:61
 msgid "**Description :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:63
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:64
 msgid ""
 "General mesh inquiry function. All these functions accept also a mesh_fem "
 "argument instead of a mesh M (in that case, the mesh_fem linked mesh will be"
 " used)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:68
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:69
 msgid "**Command list :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:72
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:73
 msgid "``d = gf_mesh_get(mesh M, 'dim')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:74
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:75
 msgid "Get the dimension of the mesh (2 for a 2D mesh, etc)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:77
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:78
 msgid "``np = gf_mesh_get(mesh M, 'nbpts')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:79
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:80
 msgid "Get the number of points of the mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:82
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:83
 msgid "``nc = gf_mesh_get(mesh M, 'nbcvs')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:84
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:85
 msgid "Get the number of convexes of the mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:87
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:88
 msgid "``P = gf_mesh_get(mesh M, 'pts'[, ivec PIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:89
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:90
 msgid "Return the list of point coordinates of the mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:91
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:92
 msgid ""
 "Each column of the returned matrix contains the coordinates of one point. If"
 " the optional argument <literal>PIDs</literal> was given, only the points "
@@ -85,15 +85,15 @@ msgid ""
 "points."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:102
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:103
 msgid "``Pid = gf_mesh_get(mesh M, 'pid')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:104
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:105
 msgid "Return the list of points #id of the mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:106
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:107
 msgid ""
 "Note that their numbering is not supposed to be contiguous from 1 to "
 "gf_mesh_get(mesh M, 'nbpts'), especially if some points have been removed "
@@ -101,54 +101,54 @@ msgid ""
 "enforce a contiguous numbering."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:113
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:114
 msgid "``PIDs = gf_mesh_get(mesh M, 'pid in faces', imat CVFIDs)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:115
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:116
 msgid "Search point #id listed in <literal>CVFIDs</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:117
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:118
 msgid ""
 "<literal>CVFIDs</literal> is a two-rows matrix, the first row lists convex "
 "#ids, and the second lists face numbers. On return, <literal>PIDs</literal> "
 "is a vector containing points #id."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:122
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:123
 msgid "``PIDs = gf_mesh_get(mesh M, 'pid in cvids', imat CVIDs)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:124
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:125
 msgid "Search point #id listed in <literal>CVIDs</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:126
-#: ../source/scilab/cmdref_gf_mesh_get.rst:133
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:127
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:134
 msgid "<literal>PIDs</literal> is a vector containing points #id."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:129
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:130
 msgid "``PIDs = gf_mesh_get(mesh M, 'pid in regions', imat RIDs)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:131
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:132
 msgid "Search point #id listed in <literal>RIDs</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:136
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:137
 msgid ""
 "``PIDs = gf_mesh_get(mesh M, 'pid from coords', mat PTS[, scalar "
 "radius=0])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:138
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:139
 msgid ""
 "Search point #id whose coordinates are listed in <literal>PTS</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:140
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:141
 msgid ""
 "<literal>PTS</literal> is an array containing a list of point coordinates. "
 "On return, <literal>PIDs</literal> is a vector containing points #id for "
@@ -156,15 +156,15 @@ msgid ""
 "where not found in the mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:146
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:147
 msgid "``{Pid, IDx} = gf_mesh_get(mesh M, 'pid from cvid'[, imat CVIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:148
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:149
 msgid "Return the points attached to each convex of the mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:150
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:151
 msgid ""
 "If <literal>CVIDs</literal> is omitted, all the convexes will be considered "
 "(equivalent to <literal>CVIDs = gf_mesh_get(mesh M, 'max cvid')</literal>). "
@@ -176,22 +176,22 @@ msgid ""
 "points of the second convex is Pid(IDx(2):IDx(3)-1)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:159
-#: ../source/scilab/cmdref_gf_mesh_get.rst:176
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:160
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:177
 msgid ""
 "If <literal>CVIDs</literal> contains convex #id which do not exist in the "
 "mesh, their point list will be empty."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:163
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:164
 msgid "``{Pts, IDx} = gf_mesh_get(mesh M, 'pts from cvid'[, imat CVIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:165
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:166
 msgid "Search point listed in <literal>CVID</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:167
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:168
 msgid ""
 "If <literal>CVIDs</literal> is omitted, all the convexes will be considered "
 "(equivalent to <literal>CVIDs = gf_mesh_get(mesh M, 'max cvid')</literal>). "
@@ -203,15 +203,15 @@ msgid ""
 "the second convex is Pts(:,IDx(2):IDx(3)-1)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:180
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:181
 msgid "``CVid = gf_mesh_get(mesh M, 'cvid')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:182
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:183
 msgid "Return the list of all convex #id."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:184
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:185
 msgid ""
 "Note that their numbering is not supposed to be contiguous from 1 to "
 "gf_mesh_get(mesh M, 'nbcvs'), especially if some points have been removed "
@@ -219,32 +219,32 @@ msgid ""
 "enforce a contiguous numbering."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:191
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:192
 msgid "``m = gf_mesh_get(mesh M, 'max pid')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:193
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:194
 msgid "Return the maximum #id of all points in the mesh (see 'max cvid')."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:196
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:197
 msgid "``m = gf_mesh_get(mesh M, 'max cvid')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:198
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:199
 msgid "Return the maximum #id of all convexes in the mesh (see 'max pid')."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:201
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:202
 msgid "``[E,C] = gf_mesh_get(mesh M, 'edges' [, CVLST][, 'merge'])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:203
-#: ../source/scilab/cmdref_gf_mesh_get.rst:218
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:204
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:219
 msgid "[OBSOLETE FUNCTION! will be removed in a future release]"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:205
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:206
 msgid ""
 "Return the list of edges of mesh M for the convexes listed in the row vector"
 " CVLST. E is a 2 x nb_edges matrix containing point indices. If CVLST is "
@@ -256,11 +256,11 @@ msgid ""
 " with each edge."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:216
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:217
 msgid "``[E,C] = gf_mesh_get(mesh M, 'curved edges', int N [, CVLST])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:220
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:221
 msgid ""
 "More sophisticated version of gf_mesh_get(mesh M, 'edges') designed for "
 "curved elements. This one will return N (N>=2) points of the (curved) edges."
@@ -271,27 +271,27 @@ msgid ""
 "contain the convex number associated with each edge."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:230
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:231
 msgid "``PIDs = gf_mesh_get(mesh M, 'orphaned pid')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:232
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:233
 msgid "Search point #id which are not linked to a convex."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:235
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:236
 msgid ""
 "``CVIDs = gf_mesh_get(mesh M, 'cvid from pid', ivec PIDs[, bool "
 "share=False])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:237
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:238
 msgid ""
 "Search convex #ids related with the point #ids given in "
 "<literal>PIDs</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:239
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:240
 msgid ""
 "If <literal>share=False</literal>, search convex whose vertex #ids are in "
 "<literal>PIDs</literal>. If <literal>share=True</literal>, search convex "
@@ -299,16 +299,16 @@ msgid ""
 "<literal>CVIDs</literal> is a  vector (possibly empty)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:245
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:246
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'faces from pid', ivec PIDs)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:247
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:248
 msgid ""
 "Return the convex faces whose vertex #ids are in <literal>PIDs</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:249
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:250
 msgid ""
 "<literal>CVFIDs</literal> is a two-rows matrix, the first row lists convex "
 "#ids, and the second lists face numbers (local number in the convex). For a "
@@ -316,15 +316,15 @@ msgid ""
 "<literal>PIDs</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:255
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:256
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'outer faces'[, CVIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:257
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:258
 msgid "Return the set of faces not shared by two elements."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:259
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:260
 msgid ""
 "The output <literal>CVFIDs</literal> is a two-rows matrix, the first row "
 "lists convex #ids, and the second one lists face numbers (local number in "
@@ -334,32 +334,43 @@ msgid ""
 " whose #ids are listed in <literal>CVIDs</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:267
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:268
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'inner faces'[, CVIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:269
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:270
 msgid ""
 "Return the set of faces shared at least by two elements in CVIDs. Each face "
 "is represented only once and is arbitrarily chosen between the two neighbour"
 " elements."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:274
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:275
+msgid "``CVFIDs = gf_mesh_get(mesh M, 'all faces'[, CVIDs])``"
+msgstr ""
+
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:277
+msgid ""
+"Return the set of faces of the in CVIDs (in all the mesh if CVIDs is "
+"omitted). Note that the face shared by two neighbour elements will be "
+"represented twice."
+msgstr ""
+
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:282
 msgid ""
 "``CVFIDs = gf_mesh_get(mesh M, 'outer faces with direction', vec v, scalar "
 "angle [, CVIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:276
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:284
 msgid ""
 "Return the set of faces not shared by two convexes and with a mean outward "
 "vector lying within an angle <literal>angle</literal> (in radians) from "
 "vector <literal>v</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:278
-#: ../source/scilab/cmdref_gf_mesh_get.rst:288
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:286
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:296
 msgid ""
 "The output <literal>CVFIDs</literal> is a two-rows matrix, the first row "
 "lists convex #ids, and the second one lists face numbers (local number in "
@@ -368,41 +379,41 @@ msgid ""
 "<literal>CVIDs</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:284
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:292
 msgid ""
 "``CVFIDs = gf_mesh_get(mesh M, 'outer faces in box', vec pmin, vec pmax [, "
 "CVIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:286
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:294
 msgid ""
 "Return the set of faces not shared by two convexes and lying within the box "
 "defined by the corner points <literal>pmin</literal> and "
 "<literal>pmax</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:294
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:302
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'adjacent face', int cvid, int fid)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:296
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:304
 msgid ""
 "Return convex face of the neighbour element if it exists. If the convex have"
-" more than one neighbour relativley to the face "
+" more than one neighbour relatively to the face "
 "<literal></literal>f<literal></literal> (think to bar elements in 3D for "
 "instance), return the first face found."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:302
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:310
 msgid ""
 "``CVFIDs = gf_mesh_get(mesh M, 'faces from cvid'[, ivec CVIDs][, 'merge'])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:304
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:312
 msgid "Return a list of convex faces from a list of convex #id."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:306
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:314
 msgid ""
 "<literal>CVFIDs</literal> is a two-rows matrix, the first row lists convex "
 "#ids, and the second lists face numbers (local number in the convex). If "
@@ -411,17 +422,17 @@ msgid ""
 "<literal>CVIDs</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:312
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:320
 msgid ""
 "``[mat T] = gf_mesh_get(mesh M, 'triangulated surface', int Nrefine "
 "[,CVLIST])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:314
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:322
 msgid "[DEPRECATED FUNCTION! will be removed in a future release]"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:316
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:324
 msgid ""
 "Similar function to gf_mesh_get(mesh M, 'curved edges') : split (if "
 "necessary, i.e. if the geometric transformation if non-linear) each face "
@@ -429,49 +440,49 @@ msgid ""
 "gf_compute('eval on P1 tri mesh'))"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:322
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:330
 msgid ""
 "``N = gf_mesh_get(mesh M, 'normal of face', int cv, int f[, int nfpt])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:324
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:332
 msgid ""
 "Evaluates the normal of convex <literal>cv</literal>, face "
 "<literal>f</literal> at the <literal>nfpt</literal> point of the face."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:326
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:334
 msgid ""
 "If <literal>nfpt</literal> is not specified, then the normal is evaluated at"
 " each geometrical node of the face."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:330
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:338
 msgid "``N = gf_mesh_get(mesh M, 'normal of faces', imat CVFIDs)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:332
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:340
 msgid "Evaluates (at face centers) the normals of convexes."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:334
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:342
 msgid ""
 "<literal>CVFIDs</literal> is supposed a two-rows matrix, the first row lists"
 " convex #ids, and the second lists face numbers (local number in the "
 "convex)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:338
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:346
 msgid "``CVIDs = gf_mesh_get(mesh M, 'convexes in box', vec pmin, vec pmax)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:340
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:348
 msgid ""
 "Return the set of convexes lying entirely within the box defined by the "
 "corner points <literal>pmin</literal> and <literal>pmax</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:342
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:350
 msgid ""
 "The output <literal>CVIDs</literal> is a two-rows matrix, the first row "
 "lists convex #ids, and the second one lists face numbers (local number in "
@@ -480,41 +491,41 @@ msgid ""
 "<literal>CVIDs</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:348
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:356
 msgid "``Q = gf_mesh_get(mesh M, 'quality'[, ivec CVIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:350
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:358
 msgid ""
 "Return an estimation of the quality of each convex (<latex "
 "style=\"text\"><![CDATA[0 \\leq Q \\leq 1]]></latex>)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:353
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:361
 msgid "``A = gf_mesh_get(mesh M, 'convex area'[, ivec CVIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:355
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:363
 msgid "Return an estimate of the area of each convex."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:358
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:366
 msgid "``A = gf_mesh_get(mesh M, 'convex radius'[, ivec CVIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:360
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:368
 msgid "Return an estimate of the radius of each convex."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:363
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:371
 msgid "``{S, CV2S} = gf_mesh_get(mesh M, 'cvstruct'[, ivec CVIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:365
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:373
 msgid "Return an array of the convex structures."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:367
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:375
 msgid ""
 "If <literal>CVIDs</literal> is not given, all convexes are considered. Each "
 "convex structure is listed once in <literal>S</literal>, and "
@@ -522,144 +533,144 @@ msgid ""
 " to the indice of its structure in <literal>S</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:372
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:380
 msgid "``{GT, CV2GT} = gf_mesh_get(mesh M, 'geotrans'[, ivec CVIDs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:374
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:382
 msgid "Returns an array of the geometric transformations."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:376
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:384
 msgid "See also gf_mesh_get(mesh M, 'cvstruct')."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:379
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:387
 msgid "``RIDs = gf_mesh_get(mesh M, 'boundaries')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:381
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:389
 msgid "DEPRECATED FUNCTION. Use 'regions' instead."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:384
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:392
 msgid "``RIDs = gf_mesh_get(mesh M, 'regions')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:386
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:394
 msgid "Return the list of valid regions stored in the mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:389
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:397
 msgid "``RIDs = gf_mesh_get(mesh M, 'boundary')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:391
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:399
 msgid "DEPRECATED FUNCTION. Use 'region' instead."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:394
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:402
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'region', ivec RIDs)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:396
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:404
 msgid ""
 "Return the list of convexes/faces on the regions <literal>RIDs</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:398
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:406
 msgid ""
 "<literal>CVFIDs</literal> is a two-rows matrix, the first row lists convex "
 "#ids, and the second lists face numbers (local number in the convex). (and 0"
 " when the whole convex is in the regions)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:404
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:412
 msgid "``gf_mesh_get(mesh M, 'save', string filename)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:406
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:414
 msgid "Save the mesh object to an ascii file."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:408
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:416
 msgid "This mesh can be restored with gf_mesh('load', filename)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:411
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:419
 msgid "``s = gf_mesh_get(mesh M, 'char')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:413
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:421
 msgid "Output a string description of the mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:416
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:424
 msgid ""
 "``gf_mesh_get(mesh M, 'export to vtk', string filename, ... "
 "[,'ascii'][,'quality'])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:418
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:426
 msgid "Exports a mesh to a VTK file ."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:420
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:428
 msgid ""
 "If 'quality' is specified, an estimation of the quality of each convex will "
 "be written to the file."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:423
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:431
 msgid ""
 "See also gf_mesh_fem_get(mesh_fem MF, 'export to vtk'), gf_slice_get(slice "
 "S, 'export to vtk')."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:426
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:434
 msgid ""
 "``gf_mesh_get(mesh M, 'export to dx', string filename, ... "
 "[,'ascii'][,'append'][,'as',string name,[,'serie',string "
 "serie_name]][,'edges'])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:428
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:436
 msgid "Exports a mesh to an OpenDX file."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:430
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:438
 msgid ""
 "See also gf_mesh_fem_get(mesh_fem MF, 'export to dx'), gf_slice_get(slice S,"
 " 'export to dx')."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:433
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:441
 msgid ""
 "``gf_mesh_get(mesh M, 'export to pos', string filename[, string name])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:435
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:443
 msgid "Exports a mesh to a POS file ."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:437
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:445
 msgid ""
 "See also gf_mesh_fem_get(mesh_fem MF, 'export to pos'), gf_slice_get(slice "
 "S, 'export to pos')."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:440
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:448
 msgid "``z = gf_mesh_get(mesh M, 'memsize')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:442
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:450
 msgid "Return the amount of memory (in bytes) used by the mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:445
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:453
 msgid "``gf_mesh_get(mesh M, 'display')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_get.rst:447
+#: ../../doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:455
 msgid "displays a short summary for a mesh object."
 msgstr ""

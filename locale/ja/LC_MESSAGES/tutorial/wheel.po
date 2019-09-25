@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 11:04+0900\n"
+"POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,13 +21,13 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/tutorial/wheel.rst:8
+#: ../../doc/sphinx/source/tutorial/wheel.rst:8
 msgid ""
 "Example of wheel in contact (Assembly between two meshes, transformations, "
 "use of fixed size variables)"
 msgstr "接触する車輪の例 (2つのメッシュ間の組み立て、変換、固定サイズ変数の使用)"
 
-#: ../source/tutorial/wheel.rst:10
+#: ../../doc/sphinx/source/tutorial/wheel.rst:10
 msgid ""
 "In this example of a deformable ''wheel'' enters in contact with a "
 "deformable foundation. We use here python interface, translate this program "
@@ -39,11 +39,11 @@ msgstr ""
 "にこのプログラムを訳すのは簡単です (前の例を参照してください)。完全なプログラム `demo_wheel_contact.py` がディレクトリ "
 "`interface/tests/python` にあります。"
 
-#: ../source/tutorial/wheel.rst:13
+#: ../../doc/sphinx/source/tutorial/wheel.rst:13
 msgid "The problem setting"
 msgstr "問題の設定"
 
-#: ../source/tutorial/wheel.rst:15
+#: ../../doc/sphinx/source/tutorial/wheel.rst:15
 msgid ""
 "Let :math:`\\Omega^1 \\subset \\R^2` be the reference configuration of a 2D "
 "wheel and :math:`\\Omega^2 \\subset \\R^2` the reference configuration of a "
@@ -55,20 +55,20 @@ msgstr ""
 "\\R^2` は変形可能な基礎の基準配置です。これら2つの (線形弾性) "
 "体の微小変形とそれらの間の接触を考慮します。また、車輪の周縁は剛であり、車輪に垂直方向の力がはたらくとします。"
 
-#: ../source/tutorial/wheel.rst:19
+#: ../../doc/sphinx/source/tutorial/wheel.rst:19
 msgid "Building the program"
 msgstr "プログラムの作成"
 
-#: ../source/tutorial/wheel.rst:22
+#: ../../doc/sphinx/source/tutorial/wheel.rst:22
 msgid ""
 "Let us begin by loading Getfem and fixing the parameters of the problem"
 msgstr "Getfem をロードし、問題のパラメータを設定することから始めましょう。"
 
-#: ../source/tutorial/wheel.rst:43
+#: ../../doc/sphinx/source/tutorial/wheel.rst:43
 msgid "Mesh generation"
 msgstr "メッシュ生成"
 
-#: ../source/tutorial/wheel.rst:45
+#: ../../doc/sphinx/source/tutorial/wheel.rst:45
 msgid ""
 "We consider that the radius of the wheel is 15cm and the one of the rim 8cm "
 "and that the wheel lies on a deformable foundation of thickness 10cm. We "
@@ -80,15 +80,15 @@ msgstr ""
 "の実験的なメッシャーを使用して、車輪のメッシュを生成します。基礎のメッシュに関しては、構造化されたメッシュを構築します (python "
 "インタフェースのメッシュオブジェクトのドキュメントを参照してください)。"
 
-#: ../source/tutorial/wheel.rst:58
+#: ../../doc/sphinx/source/tutorial/wheel.rst:58
 msgid "The result is the following"
 msgstr "結果は図のとおりです。"
 
-#: ../source/tutorial/wheel.rst:66
+#: ../../doc/sphinx/source/tutorial/wheel.rst:66
 msgid "Boundary selection"
 msgstr "境界の選択"
 
-#: ../source/tutorial/wheel.rst:68
+#: ../../doc/sphinx/source/tutorial/wheel.rst:68
 msgid ""
 "We have to select the different parts of the boundary where we will set some"
 " boundary conditions, namely the boundary of the rim (in order to apply a "
@@ -98,23 +98,20 @@ msgstr ""
 "(荷重や剛体であることを仮定する)周縁の境界 "
 "、車輪の接触境界、およびクランプしたと仮定する基礎の底部境界などの境界条件を設定するために、さまざまな境界を選択する必要があります。"
 
-#: ../source/tutorial/wheel.rst:83
+#: ../../doc/sphinx/source/tutorial/wheel.rst:83
 msgid ""
-"Note that the command `mesh1.outer_faces_with_direction([0., -1.], n.pi/4)` "
-"allows to select all the faces having a unit outward normal having an angle "
-"less or equal to `n.pi/4` with the vector `[0., -1.]`. The command "
+"Note that the command `mesh1.outer_faces_with_direction([0., -1.], np.pi/4)`"
+" allows to select all the faces having a unit outward normal having an angle"
+" less or equal to `np.pi/4` with the vector `[0., -1.]`. The command "
 "`mesh1.region_subtract(CONTACT_BOUND, HOLE_BOUND)` allow to delete the faces"
 " corresponding to the rim in the contact boundary."
 msgstr ""
-"コマンド `mesh1.outer_faces_with_direction([0., -1.], np.pi/4)` は、ベクトル `[0., "
-"-1.]` に対して角度 `np.pi/4` 以下の外向きの単位法線を持つすべての面を選択します。コマンド "
-"`mesh1.region_subtract(CONTACT_BOUND, HOLE_BOUND)` は接触境界のリムの面を削除します。"
 
-#: ../source/tutorial/wheel.rst:86
+#: ../../doc/sphinx/source/tutorial/wheel.rst:86
 msgid "Definition of finite elements methods and integration method"
 msgstr "有限要素法と積分法の定義"
 
-#: ../source/tutorial/wheel.rst:88
+#: ../../doc/sphinx/source/tutorial/wheel.rst:88
 msgid ""
 "We define `mfu1`, `mfu2` two finite element methods which will approximate "
 "the displacements in the wheel and the foundation respectively. `mflambda` "
@@ -129,41 +126,41 @@ msgstr ""
 "はリムの剛性を考慮した乗数を近似する有限要素法で、 `mflambda_C` は接触乗数(接触圧力)を近似するための有限要素法です、 `mfvm1`, "
 "`mfvm2` は車輪と基礎のVon Mises 応力を補間し後処理に使用されます。 `mim1`, `mim2` は車輪と基礎のそれぞれの積分法です。"
 
-#: ../source/tutorial/wheel.rst:110
+#: ../../doc/sphinx/source/tutorial/wheel.rst:110
 msgid "Model definition"
 msgstr "モデルの定義"
 
-#: ../source/tutorial/wheel.rst:112
+#: ../../doc/sphinx/source/tutorial/wheel.rst:112
 msgid ""
 "We use a real model and declare the two variables which will represent the "
 "displacements:"
 msgstr "実数モデルを使用して、変位を表す2つの変数を宣言します。"
 
-#: ../source/tutorial/wheel.rst:121
+#: ../../doc/sphinx/source/tutorial/wheel.rst:121
 msgid "Linearized elasticity bricks"
 msgstr "線形弾性ブリック"
 
-#: ../source/tutorial/wheel.rst:123
+#: ../../doc/sphinx/source/tutorial/wheel.rst:123
 msgid ""
 "We add the |Lame| coefficients as data of the model and add a linearized "
 "elasticity brick for the wheel and the foundation:"
 msgstr "|Lame| 係数をモデルのデータとして追加し、車輪と基礎に線形弾性ブリックを追加します。"
 
-#: ../source/tutorial/wheel.rst:133
+#: ../../doc/sphinx/source/tutorial/wheel.rst:133
 msgid "Clamped condition at the bottom of the foundation"
 msgstr "基礎の下部の固定条件"
 
-#: ../source/tutorial/wheel.rst:135
+#: ../../doc/sphinx/source/tutorial/wheel.rst:135
 msgid ""
 "We prescribed the displacement at  bottom face of the foundation to vanish, "
 "for instance with a multiplier with the add of the following brick:"
 msgstr "例えば、次のブリックを追加し乗算することで、基礎の底面の変位をなくすように設定できます。"
 
-#: ../source/tutorial/wheel.rst:142
+#: ../../doc/sphinx/source/tutorial/wheel.rst:142
 msgid "Contact condition (use of interpolate transformations)"
 msgstr "接触条件 (補間変換の使用)"
 
-#: ../source/tutorial/wheel.rst:144
+#: ../../doc/sphinx/source/tutorial/wheel.rst:144
 msgid ""
 "Now, let us see how to prescribed the contact condition between the two "
 "structures. It is possible to use predefined bricks (see  :ref:`ud-model-"
@@ -177,7 +174,7 @@ msgstr ""
 "model-contact-friction` そして大変形/大滑りは :ref:`ud-model-contact-friction-large` "
 "を参照してください)、ここでは拡張Lagrangian式と変換の補間を使用して接触条件を直接規定する方法について解説します。"
 
-#: ../source/tutorial/wheel.rst:146
+#: ../../doc/sphinx/source/tutorial/wheel.rst:146
 msgid ""
 "For small deformation contact, the correspondence between points of one "
 "contact surface to the other have to be described on the reference "
@@ -185,7 +182,7 @@ msgid ""
 "approximation."
 msgstr "微小変形接触では、接触面の点の対応を基準配置に記述する必要があります。この点については開発が進んでおらず、単純な近似値を使用します。"
 
-#: ../source/tutorial/wheel.rst:148
+#: ../../doc/sphinx/source/tutorial/wheel.rst:148
 msgid ""
 "We consider that the contact boundary of the wheel is the slave one and we "
 "have to describe the transformation from the contact boundary of the wheel "
@@ -195,13 +192,17 @@ msgid ""
 msgstr ""
 "車輪の接触境界がスレーブ1であることを考慮して、車輪の接触境界から基礎の接触境界へのの変換を記述しなければなりません。これは、基礎の接触境界が垂直座標の消去に対応するため非常に簡単です。そこで、変換を定義します。"
 
-#: ../source/tutorial/wheel.rst:154
+#: ../../doc/sphinx/source/tutorial/wheel.rst:150
+msgid "X \\longmapsto (X(1), 0)"
+msgstr ""
+
+#: ../../doc/sphinx/source/tutorial/wheel.rst:154
 msgid ""
 "where :math:`X` is the vector of coordinates of the point. We add this "
 "transformation to the model with the command"
 msgstr "ここで :math:`X` は点の座標ベクトルです。この変換をコマンドを使用してモデルに追加します。"
 
-#: ../source/tutorial/wheel.rst:160
+#: ../../doc/sphinx/source/tutorial/wheel.rst:160
 msgid ""
 "As a consequence, it will be possible to use this transformation, from the "
 "mesh of the wheel to the mesh of the foundation, into weak form language "
@@ -219,7 +220,7 @@ msgstr ""
 "を参照してください。また、有限すべり接触に対応し接触境界間の対応を自動的に検索する変換も |gf| にあります。 ( :ref:`ud-model-"
 "contact-friction-large-hlgav` を参照)。"
 
-#: ../source/tutorial/wheel.rst:162
+#: ../../doc/sphinx/source/tutorial/wheel.rst:162
 msgid ""
 "Using the defined transformation, we can write an integral contact condition"
 " using an augmented Lagrangian formulation (see :ref:`ud-model-contact-"
@@ -229,7 +230,18 @@ msgstr ""
 "定義された変換を使用し、拡張 Lagrangian 式を使用した積分接触条件を記述することができます (詳細については :ref:`ud-model-"
 "contact-friction` を参照)。対応する項 (弱定式化の残りの部分に追加されます) は以下になります。"
 
-#: ../source/tutorial/wheel.rst:169
+#: ../../doc/sphinx/source/tutorial/wheel.rst:164
+msgid ""
+"& \\cdots + \\ds \\int_{\\Gamma_c} \\lambda_N(X) "
+"(\\delta_{u^1}(X)-\\delta_{u^2}(\\Pi(X)))\\cdot n d\\Gamma \\\\ & -  \\ds "
+"\\int_{\\Gamma_c} \\left(\\lambda_N(X) + \\left(\\lambda_N(X) + "
+"\\Frac{1}{h_T\\gamma_0}((X + u^1(X))\\cdot n - (\\Pi(X) - "
+"u^2(\\Pi(X)))\\cdot n\\right)_-\\right)\\delta_{\\lambda_N}(X) d\\Gamma = 0 "
+"~~~~ \\forall \\delta_{\\lambda_N}, \\forall \\delta_{u^1}, \\forall "
+"\\delta_{u^2},"
+msgstr ""
+
+#: ../../doc/sphinx/source/tutorial/wheel.rst:169
 msgid ""
 "where :math:`\\Gamma_c` is the slave contact boundary, :math:`\\lambda_N` is"
 " the contact multiplier (contact pressure), :math:`h_T` is the radius of the"
@@ -248,15 +260,15 @@ msgstr ""
 "は負の部分です。 :math:`\\delta_{\\lambda_N}, \\delta_{u^1}, \\delta_{u^2}` はそれぞれ "
 ":math:`\\lambda_N, u^1, u^2` に対応する試行関数です。"
 
-#: ../source/tutorial/wheel.rst:171
+#: ../../doc/sphinx/source/tutorial/wheel.rst:171
 msgid "Using the weak form language, the contact condition can be added by:"
 msgstr "弱形式言語を使用すると、次の方法で接触条件を追加できます。"
 
-#: ../source/tutorial/wheel.rst:184
+#: ../../doc/sphinx/source/tutorial/wheel.rst:184
 msgid "Prescribing the rigidity of the rim and the vertical force"
 msgstr "リムの剛性と垂直力の処理"
 
-#: ../source/tutorial/wheel.rst:186
+#: ../../doc/sphinx/source/tutorial/wheel.rst:186
 msgid ""
 "We have now to prescribe the rigidity of the rim. This is a non-standard "
 "condition, since we do not know a priori what will be the vertical "
@@ -267,38 +279,43 @@ msgstr ""
 "次にリムの剛性を設定する必要があります。リムの垂直方向の変位が何になるかは未知のため、剛性は非標準の状態です。そこで、垂直変位のための未知変数を追加します。サイズ1の(つまり有限要素フィールドではない)固定サイズの変数"
 " `alpha_D` を追加します。"
 
-#: ../source/tutorial/wheel.rst:192
+#: ../../doc/sphinx/source/tutorial/wheel.rst:192
 msgid ""
 "We need a multiplier to prescribe the displacement on the rim boundary:"
 msgstr "リム境界上の変位を規定する乗数も必要です。"
 
-#: ../source/tutorial/wheel.rst:198
+#: ../../doc/sphinx/source/tutorial/wheel.rst:198
 msgid ""
 "This multiplier represents the boundary stress that is necessary to "
-"prescribe the vertical displacement to be :math`(0, -\\alpha_D)`. The "
+"prescribe the vertical displacement to be :math:`(0, -\\alpha_D)`. The "
 "constraint we want to apply on this multiplier is that its integral over the"
 " rim boundary is the vertical force we want to apply. The corresponding weak"
 " formulation term to be added to the rest of the weak formulation reads"
 msgstr ""
-"この乗数は垂直方向の変位を :math:`(0, -\\alpha_D)` "
-"とするために必要な境界応力を表します。乗数をリムの境界上で積分すると適用したい垂直方向の力になるように設定をします。追加される弱定式項の残りの対応部分の項についても見てみましょう。"
 
-#: ../source/tutorial/wheel.rst:204
+#: ../../doc/sphinx/source/tutorial/wheel.rst:200
+msgid ""
+"\\cdots + \\int_{\\Gamma_D} -\\lambda_D.\\delta_{u^1} + ((0, \\alpha_D) - "
+"u^1).\\delta_{\\lambda_D} + (\\lambda_D.(0,1) + F)\\delta_{\\alpha_D} "
+"d\\Gamma = 0,"
+msgstr ""
+
+#: ../../doc/sphinx/source/tutorial/wheel.rst:204
 msgid ""
 "where :math:`\\Gamma_D` is the rim boundary, :math:`F` is the applied "
 "density of force."
 msgstr "ここで :math:`\\Gamma_D` はリムの境界であり、 :math:`F` は力の密度です。"
 
-#: ../source/tutorial/wheel.rst:206
+#: ../../doc/sphinx/source/tutorial/wheel.rst:206
 msgid "This could be added to the model with the weak form language:"
 msgstr "これを弱形式言語でモデルに追加します。"
 
-#: ../source/tutorial/wheel.rst:215
+#: ../../doc/sphinx/source/tutorial/wheel.rst:215
 msgid ""
 "For more robustness, a small penalization on :math:`alpha_D` can be added"
 msgstr "よりロバスト性を向上させるために :math:`alpha_D` 上に微小のペナルティを追加することもできます。"
 
-#: ../source/tutorial/wheel.rst:222
+#: ../../doc/sphinx/source/tutorial/wheel.rst:222
 msgid ""
 "Note that the fixed size variable `alpha_D` is linked to each points of the "
 "rim boundary. This means that the line of the tangent matrix corresponding "
@@ -308,28 +325,28 @@ msgstr ""
 "固定サイズ変数 `alpha_D` は、リム境界の各点にリンクされていることに注意してください。そのため `alpha_D` "
 "に対応する接線行列の行は、ゼロ以外の成分を多く含む可能性があります。ゆえに、固定サイズ変数の使用は慎重に行う必要があります。"
 
-#: ../source/tutorial/wheel.rst:225
+#: ../../doc/sphinx/source/tutorial/wheel.rst:225
 msgid "Model solve"
 msgstr "モデルを解く"
 
-#: ../source/tutorial/wheel.rst:227
+#: ../../doc/sphinx/source/tutorial/wheel.rst:227
 msgid "We can now solve our problem with:"
 msgstr "次のコードで問題を解くことができます。"
 
-#: ../source/tutorial/wheel.rst:233
+#: ../../doc/sphinx/source/tutorial/wheel.rst:233
 msgid ""
 "Note that in some configuration, it is preferable to use a more basic line "
 "search than the default one:"
 msgstr "設定によっては、デフォルトのものよりも基本的な線形探索を使用する方が望ましい場合もあります。"
 
-#: ../source/tutorial/wheel.rst:241
+#: ../../doc/sphinx/source/tutorial/wheel.rst:241
 msgid "Export the solution"
 msgstr "解の出力"
 
-#: ../source/tutorial/wheel.rst:243
-msgid "Now the code to export the solution with the VonMiss stress:"
-msgstr "最後に、VonMises 応力の解を出力するコードを示します。"
+#: ../../doc/sphinx/source/tutorial/wheel.rst:243
+msgid "Now the code to export the solution with the VonMises stress:"
+msgstr ""
 
-#: ../source/tutorial/wheel.rst:270
+#: ../../doc/sphinx/source/tutorial/wheel.rst:270
 msgid "Plot of the solution."
 msgstr "解のプロット。"

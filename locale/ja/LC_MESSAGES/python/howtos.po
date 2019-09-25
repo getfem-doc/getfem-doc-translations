@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 11:04+0900\n"
+"POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:17+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,35 +21,37 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/python/howtos.rst:6
+#: ../../doc/sphinx/source/python/howtos.rst:6
 msgid "How-tos"
-msgstr ""
+msgstr "ハウツー"
 
-#: ../source/python/howtos.rst:9
+#: ../../doc/sphinx/source/python/howtos.rst:9
 msgid "Import gmsh mesh"
-msgstr ""
+msgstr "gmshのメッシュをインポート"
 
-#: ../source/python/howtos.rst:11
+#: ../../doc/sphinx/source/python/howtos.rst:11
 msgid "If we have in the file `quad.geo` a parameterized mesh, as this:"
-msgstr ""
+msgstr "次のようにファイル `quad.geo` にパラメータ化されたメッシュがある場合"
 
-#: ../source/python/howtos.rst:17
+#: ../../doc/sphinx/source/python/howtos.rst:17
 msgid "then, when we run::"
-msgstr ""
+msgstr "次のように実行します。"
 
-#: ../source/python/howtos.rst:21
+#: ../../doc/sphinx/source/python/howtos.rst:21
 msgid ""
 "the file `quad.msh` is created and contains the encoding of the mesh and its"
 " regions. We can import that file (*quad.msh*) to getfem::"
 msgstr ""
+"ファイル `quad.msh` が作成され、メッシュとその領域のエンコーディングが格納されます。このファイル (*quad.msh*) "
+"をgetfemにインポートできます。"
 
-#: ../source/python/howtos.rst:29
+#: ../../doc/sphinx/source/python/howtos.rst:29
 msgid ""
 "with the second command we can see the *regions ids*. When we import the "
 "mesh, we might be warned with the following::"
-msgstr ""
+msgstr "2番目のコマンドでは、 *regions ids* が表示されます。メッシュをインポートすると、次のような警告が表示される場合があります。"
 
-#: ../source/python/howtos.rst:35
+#: ../../doc/sphinx/source/python/howtos.rst:35
 msgid ""
 "this means that the parametrization of the mesh in |gmsh| *.geo file* must "
 "assign a **different** number to each region, the problem exists because in "
@@ -53,3 +59,6 @@ msgid ""
 "Line (200)\", as they are different \"types of regions\" in |gmsh|, that "
 "which does not occur in |gf| since there is only one \"type of region\"."
 msgstr ""
+"これは、 |gmsh| *.geo file* で行われるメッシュのパラメータ化で、各領域に **異なる** 番号を割り当ててくださいという意味です。 "
+"問題が発生するのは、 |gmsh| では \"領域の種類\" が異なるためです。例えば |gmsh| では \"物理面 (200)\" と \"物理線 "
+"(200)\" が共存できます。 |gf| には \"領域の種類\" が1つしかないため、この状態にはなりません。"

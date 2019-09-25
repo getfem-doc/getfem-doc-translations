@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# 林 佑樹 <hayashi407@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-16 11:04+0900\n"
+"POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:14+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: 林 佑樹 <hayashi407@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,30 +22,29 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/gmm/blas.rst:10
+#: ../../doc/sphinx/source/gmm/blas.rst:10
 msgid "Basic linear algebra operations"
-msgstr "基本線形代数演算\n"
+msgstr "基本線形代数演算"
 
-#: ../source/gmm/blas.rst:13
+#: ../../doc/sphinx/source/gmm/blas.rst:13
 msgid ""
 "The same choice has been made as in MTL to provide basic operations as "
 "functions not as operators. The advantages are that it is clearer to see "
 "where are the linear algebra operations in the program and the programming "
-"of optimized basic linear operations is greatly simplified."
+"of optimized basic linear algebra operations is greatly simplified."
 msgstr ""
-"基本的な操作を演算子としてではなく関数として提供するために、MTLと同じ選択が行われています。利点は、プログラム内の線形代数演算がどこにあるのかが分かりやすくなり、最適化された基本線形演算のプログラミングが大幅に簡素化されます。\n"
 
-#: ../source/gmm/blas.rst:17
+#: ../../doc/sphinx/source/gmm/blas.rst:17
 msgid "scale and scaled"
 msgstr "スケールとスケール\n"
 
-#: ../source/gmm/blas.rst:19
+#: ../../doc/sphinx/source/gmm/blas.rst:19
 msgid ""
 "``gmm::scale`` is used to multiply a vector or a matrix with a scalar "
 "factor::"
 msgstr "`` gmm :: scale``は、ベクトルまたは行列にスカラー因子を掛けるために使われます::\n"
 
-#: ../source/gmm/blas.rst:23
+#: ../../doc/sphinx/source/gmm/blas.rst:23
 msgid ""
 "If one not needs to multiply the vector but wants to use the multiplied "
 "vector in an expression  ``gmm::scaled`` gives a reference to a multiplied "
@@ -54,27 +54,27 @@ msgstr ""
 "ベクトルを乗算する必要がなく、乗算されたベクトルを式 `` gmm :: "
 "scaled``で使用したい場合は、乗算されたベクトルへの参照を与えます。これは参照のみです。この参照がどこかで使用されるまで操作は行われません。例えば：：\n"
 
-#: ../source/gmm/blas.rst:27
+#: ../../doc/sphinx/source/gmm/blas.rst:27
 msgid ""
 "print to the standard output the vector ``V`` multiplied by ``10.0`` without"
 " changing ``V``."
 msgstr "`` V``を変更せずにベクトル `` V``を `` 10.0``で標準出力に出力します。\n"
 
-#: ../source/gmm/blas.rst:30
+#: ../../doc/sphinx/source/gmm/blas.rst:30
 msgid "transposition"
 msgstr "転位\n"
 
-#: ../source/gmm/blas.rst:32
+#: ../../doc/sphinx/source/gmm/blas.rst:32
 msgid ""
 "``gmm::transposed(M)`` gives a possibily modifiable reference on the "
 "transposed matrix of ``M``."
 msgstr "`` gmm :: transposed（M） ``は、 `` M``の転置された行列上に可能な修正可能な参照を与えます。\n"
 
-#: ../source/gmm/blas.rst:35
+#: ../../doc/sphinx/source/gmm/blas.rst:35
 msgid "imaginary and real part"
 msgstr "虚数部と実数部\n"
 
-#: ../source/gmm/blas.rst:37
+#: ../../doc/sphinx/source/gmm/blas.rst:37
 msgid ""
 "For a complex matrix ``M`` or a complex vector ``V``, ``gmm::real_part(M)``,"
 " ``gmm::real_part(V)``, ``gmm::imag_part(M)`` or ``gmm::imag_part(V)`` give "
@@ -88,11 +88,11 @@ msgstr ""
 "``は、行列やベクトルの実数部または虚数部に変更可能な参照を与える（例えば `` gmm :: clear（gmm :: imag_part（M）） "
 "``は `` M``の行列の虚数部分をゼロに設定します）。これらの関数は、実行列やベクトルには適用できません。\n"
 
-#: ../source/gmm/blas.rst:41
+#: ../../doc/sphinx/source/gmm/blas.rst:41
 msgid "conjugate"
 msgstr "コンジュゲート\n"
 
-#: ../source/gmm/blas.rst:43
+#: ../../doc/sphinx/source/gmm/blas.rst:43
 msgid ""
 "For a matrix ``M`` or a vector ``V``, ``gmm::conjugated(M)`` and "
 "``gmm::conjugated(V)`` give a constant reference on the conjugated vector or"
@@ -110,18 +110,18 @@ msgstr ""
 "M``のエルミート共役であるように転置します。各コンポーネントのコンジュゲートだけが必要な場合は、gmm :: conjugated（gmm :: "
 "transposed（M）） `またはそれに相当する` `gmm :: transposed（gmm :: conjugated（M） ）） ``。\n"
 
-#: ../source/gmm/blas.rst:48
+#: ../../doc/sphinx/source/gmm/blas.rst:48
 msgid "add"
 msgstr "追加する\n"
 
-#: ../source/gmm/blas.rst:50
+#: ../../doc/sphinx/source/gmm/blas.rst:50
 msgid ""
 "addition of vectors or matrices. It is alway possible to mix different type "
 "of vector or matrices in the operations. The following operations are "
 "valid::"
 msgstr "ベクトルまたは行列の加算。操作では、常に異なるタイプのベクトルまたは行列を混在させることができます。次の操作は有効です::\n"
 
-#: ../source/gmm/blas.rst:69
+#: ../../doc/sphinx/source/gmm/blas.rst:69
 msgid ""
 "IMPORTANT : all the vectors have to have the same size, no resize will be "
 "automatically done. If a vector has not the good size, an error will be "
@@ -129,33 +129,33 @@ msgid ""
 msgstr ""
 "重要：すべてのベクトルは同じサイズでなければなりません。サイズ変更は自動的に行われません。ベクトルのサイズが適切でない場合、エラーがスローされます。\n"
 
-#: ../source/gmm/blas.rst:72
+#: ../../doc/sphinx/source/gmm/blas.rst:72
 msgid "mult"
 msgstr "マルチ\n"
 
-#: ../source/gmm/blas.rst:74
+#: ../../doc/sphinx/source/gmm/blas.rst:74
 msgid ""
 "Matrix-vector or matrix-matrix multiplication. Again, all the matrices and "
 "vectors have to have the good size. The following operations are valid::"
 msgstr "行列ベクトルまたは行列と行列の乗算。この場合も、すべての行列とベクトルが適切なサイズでなければなりません。次の操作は有効です::\n"
 
-#: ../source/gmm/blas.rst:103
+#: ../../doc/sphinx/source/gmm/blas.rst:103
 msgid "norms"
 msgstr "規範\n"
 
-#: ../source/gmm/blas.rst:119
+#: ../../doc/sphinx/source/gmm/blas.rst:119
 msgid "trace"
 msgstr "トレース\n"
 
-#: ../source/gmm/blas.rst:121
+#: ../../doc/sphinx/source/gmm/blas.rst:121
 msgid "``gmm::mat_trace(M)`` gives the trace of matrix ``M``."
 msgstr "`` gmm :: mat_trace（M） ``は行列 `` M``のトレースを返します。\n"
 
-#: ../source/gmm/blas.rst:124
+#: ../../doc/sphinx/source/gmm/blas.rst:124
 msgid "scalar product"
 msgstr "スカラー積\n"
 
-#: ../source/gmm/blas.rst:127
+#: ../../doc/sphinx/source/gmm/blas.rst:127
 msgid ""
 "for vectors only, ``gmm::vect_sp(V1, V2)`` gives the scalar product between "
 "``V1`` and ``V2``. For complex vectors, this do not conjugate ``V1``, you "
