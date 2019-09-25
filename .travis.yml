@@ -44,7 +44,7 @@ script:
 - bash autogen.sh
 - ./configure --with-pic --enable-python3=yes
 - make -j8  >  make.log
-- sudo perl -p -i -e 's/rights="none"/rights="read|write"/g' /etc/ImageMagick-*/policy.xml
+- sudo perl -p -i -e 's/^.*EPS.*\n//g' /etc/ImageMagick-*/policy.xml
 - (cd doc/sphinx; make latex; make images)
 - rm -rf ../doc
 - rm -rf ../interface
