@@ -29,15 +29,17 @@ before_install:
 - sudo apt-get install -y --no-install-recommends texlive
 - sudo apt-get install -y --no-install-recommends xzdec
 - sudo perl -p -i -e 's/rights="none"/rights="read|write"/g' /etc/ImageMagick-*/policy.xml
-- pip install -r requirements.txt
 addons:
   apt:
     update: true
 install:
 - git branch -a
+- git checkout master  # attach this repo
 - git submodule init
 - git submodule update
 - (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
+- pip install -U pip setuptools
+- pip install -r ./requirements.txt
 script:
 - cd getfem
 - bash autogen.sh
@@ -49,13 +51,14 @@ script:
 - cp -r doc ../doc
 - cp -r interface ../interface
 - cd ../
-- rm -rf doc/sphinx/locale
-- rm -rf doc/sphinx/build
-- git add doc
 - sh ./locale/update.sh
 after_success:
+- git branch -a
+- git checkout master  # attach this repo
 - git config --global user.email "getfem-auto-update"
 - git config --global user.name "getfem-auto-update"
+- rm -rf doc/sphinx/locale
+- rm -rf doc/sphinx/build
 - rm -rf interface
 - git add .
 - |
