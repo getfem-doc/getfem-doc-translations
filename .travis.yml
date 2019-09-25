@@ -56,6 +56,7 @@ script:
 after_success:
 - git config --global user.email "getfem-auto-update"
 - git config --global user.name "getfem-auto-update"
+- rm -rf interface
 - git add .
 - |
   git commit -m "[skip ci] by Travis CI (JOB $TRAVIS_JOB_NUMBER)
