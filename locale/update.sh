@@ -4,8 +4,8 @@
 set -ex
 
 # required environment variables
-# SPHINXINTL_TRANSIFEX_USERNAME
-# SPHINXINTL_TRANSIFEX_PROJECT_NAME
+# SPHINXINTL_TRANSIFEX_USERNAME=tkoyama010
+# SPHINXINTL_TRANSIFEX_PROJECT_NAME=getfem
 
 
 # pull po files from transifex
@@ -20,11 +20,3 @@ rm -Rf ja
 tx pull -l ja
 git checkout .tx/config
 
-# update png file
-figs=`find ../doc/sphinx/source -type f -name *.fig`
-for fig in $figs;
-do
-  echo $fig
-  fig2eps $fig "${fig%.*}.eps"
-  convert -density 200 "${fig%.*}.eps" "${fig%.*}.png"
-done
