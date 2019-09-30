@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,6 +35,11 @@ msgid ""
 "level generic assembly has been developed to circumvent these difficulties "
 "(see :ref:`ud-gasm-high`)."
 msgstr ""
+"このセクションでは、 |gf| "
+"で実装された汎用構築手順の最初のバージョンを説明します。これにより、線形の場合に任意の行列の集合を容易に作成可能になります。非線形の場合、特殊な "
+"\"non_linear_term\" オブジェクトを実装する必要があります。これは複雑で、 |gf| "
+"という非常に低水準の内部ツールを使用する必要があります。高水準汎用構築は、この困難を回避するために開発されました（ :ref:`ud-gasm-"
+"high` 参照）。"
 
 #: ../../doc/sphinx/source/userdoc/gasm_low.rst:16
 msgid ""
@@ -133,7 +138,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/gasm_low.rst:83
 msgid "\\int\\partial_k\\varphi^{i}_{j}\\partial_n\\varphi^l_m\\psi^p,"
-msgstr ""
+msgstr "\\int\\partial_k\\varphi^{i}_{j}\\partial_n\\varphi^l_m\\psi^p,"
 
 #: ../../doc/sphinx/source/userdoc/gasm_low.rst:87
 msgid ""
@@ -149,6 +154,8 @@ msgid ""
 "\\int a(x).\\nabla\\phi^i.\\nabla\\phi^j, \\quad\\text{with}\\quad "
 "a(x)=\\sum_p a^p \\psi^p(x),"
 msgstr ""
+"\\int a(x).\\nabla\\phi^i.\\nabla\\phi^j, \\quad\\text{with}\\quad "
+"a(x)=\\sum_p a^p \\psi^p(x),"
 
 #: ../../doc/sphinx/source/userdoc/gasm_low.rst:97
 msgid "the reduction is:"
@@ -159,6 +166,8 @@ msgid ""
 "\\sum_{j,k,p}\\left( \\int \\partial_k\\varphi^{i}_{j} "
 "\\partial_k\\varphi^m_j \\psi^p \\right)a^p"
 msgstr ""
+"\\sum_{j,k,p}\\left( \\int \\partial_k\\varphi^{i}_{j} "
+"\\partial_k\\varphi^m_j \\psi^p \\right)a^p"
 
 #: ../../doc/sphinx/source/userdoc/gasm_low.rst:105
 msgid ""
@@ -203,6 +212,8 @@ msgid ""
 "\\sum_{i,j,k}\\left(\\int_{boundary} u_i \\varphi^{i}_{k} u_j \\varphi^j_k "
 "\\right)"
 msgstr ""
+"\\sum_{i,j,k}\\left(\\int_{boundary} u_i \\varphi^{i}_{k} u_j \\varphi^j_k "
+"\\right)"
 
 #: ../../doc/sphinx/source/userdoc/gasm_low.rst:135
 msgid ""
@@ -219,6 +230,8 @@ msgid ""
 "\\int\\varepsilon(\\varphi^i):\\sigma(\\phi^j), \\quad\\text{with}\\quad "
 "\\sigma(u)_{ij}=\\sum_{kl} h_{ijkl}(x) \\varepsilon_{kl}(u)"
 msgstr ""
+"\\int\\varepsilon(\\varphi^i):\\sigma(\\phi^j), \\quad\\text{with}\\quad "
+"\\sigma(u)_{ij}=\\sum_{kl} h_{ijkl}(x) \\varepsilon_{kl}(u)"
 
 #: ../../doc/sphinx/source/userdoc/gasm_low.rst:151
 msgid ""
@@ -340,3 +353,5 @@ msgid ""
 "If there is more than one data array, output array or output sparse matrix, "
 "one can use ``data$2``, ``data$3``, ``V$2``, ``M$2``,..."
 msgstr ""
+"If there is more than one data array, output array or output sparse matrix, "
+"one can use ``data$2``, ``data$3``, ``V$2``, ``M$2``,..."

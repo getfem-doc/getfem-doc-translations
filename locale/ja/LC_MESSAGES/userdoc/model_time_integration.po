@@ -53,6 +53,9 @@ msgid ""
 "`Previous2_u`, `Previous3_u` will be the data representing the state of the "
 "variable at the previous time step (step n-1, n-2 and n-3)."
 msgstr ""
+"前のタイムステップにおけるシステムの状態を表すために、一部のデータがモデルに追加されます。従来のワンステップ方式(現時点では、1ステップのスキームのみが提供されています)では、直前のタイムステップのみが保存されます。例えば、"
+" `u` が変数である場合(このようにステップnで表される)、 `Previous_u` 、 `Previous2_u` 、 `Previous3_u`"
+" は、前の時間ステップ(ステップn-1、n-2およびn-3)における変数の状態を表すデータとなります。"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:22
 msgid ""
@@ -102,7 +105,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:30
 msgid "\\dot{u}(t,x) - \\Delta u(t,x) = \\sin(t)"
-msgstr ""
+msgstr "\\dot{u}(t,x) - \\Delta u(t,x) = \\sin(t)"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:34
 msgid "can simply be::"
@@ -147,7 +150,7 @@ msgstr "次の問題を見てください。"
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:50
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:107
 msgid "M\\dot{U} = F(U)"
-msgstr ""
+msgstr "M\\dot{U} = F(U)"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:54
 msgid ""
@@ -165,6 +168,8 @@ msgid ""
 "\\left\\{ \\begin{array}{l} U^n = U^{n-1} + dt(\\theta V^n + (1-\\theta) "
 "V^{n-1}), \\\\ MV^n = F(U^n), \\end{array}\\right."
 msgstr ""
+"\\left\\{ \\begin{array}{l} U^n = U^{n-1} + dt(\\theta V^n + (1-\\theta) "
+"V^{n-1}), \\\\ MV^n = F(U^n), \\end{array}\\right."
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:63
 msgid ""
@@ -200,7 +205,7 @@ msgstr "次の式は時間微分により導き出すことができます："
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:70
 msgid "V^n = \\frac{U^n - U^{n-1}}{\\theta dt} - \\frac{1-\\theta}{\\theta}V^{n-1}"
-msgstr ""
+msgstr "V^n = \\frac{U^n - U^{n-1}}{\\theta dt} - \\frac{1-\\theta}{\\theta}V^{n-1}"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:74
 msgid ""
@@ -312,7 +317,7 @@ msgstr "2次問題の陰的Theta法"
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:126
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:180
 msgid "M\\ddot{U} = F(U)"
-msgstr ""
+msgstr "M\\ddot{U} = F(U)"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:130
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:184
@@ -332,6 +337,9 @@ msgid ""
 "V^{n-1}), \\\\ V^n = V^{n-1} + dt(\\theta A^n + (1-\\theta) A^{n-1}), \\\\ "
 "MA^n = F(U^n), \\end{array}\\right."
 msgstr ""
+"\\left\\{ \\begin{array}{l} U^n = U^{n-1} + dt(\\theta V^n + (1-\\theta) "
+"V^{n-1}), \\\\ V^n = V^{n-1} + dt(\\theta A^n + (1-\\theta) A^{n-1}), \\\\ "
+"MA^n = F(U^n), \\end{array}\\right."
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:140
 msgid ""
@@ -356,6 +364,9 @@ msgid ""
 "  A^n = \\frac{U^n - U^{n-1}}{\\theta^2 dt^2} - "
 "\\frac{1}{\\theta^2dt}V^{n-1} - \\frac{1-\\theta}{\\theta}A^{n-1}"
 msgstr ""
+"V^n = \\frac{U^n - U^{n-1}}{\\theta dt} - \\frac{1-\\theta}{\\theta}V^{n-1}"
+"  A^n = \\frac{U^n - U^{n-1}}{\\theta^2 dt^2} - "
+"\\frac{1}{\\theta^2dt}V^{n-1} - \\frac{1-\\theta}{\\theta}A^{n-1}"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:152
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:206
@@ -408,6 +419,9 @@ msgid ""
 "V^n + (1-2\\beta) V^{n-1}), \\\\ V^n = V^{n-1} + dt(\\gamma A^n + "
 "(1-\\gamma) A^{n-1}), \\\\ MA^n = F(U^n), \\end{array}\\right."
 msgstr ""
+"\\left\\{ \\begin{array}{l} U^n = U^{n-1} + dtV^n + \\frac{dt^2}{2}(2\\beta "
+"V^n + (1-2\\beta) V^{n-1}), \\\\ V^n = V^{n-1} + dt(\\gamma A^n + "
+"(1-\\gamma) A^{n-1}), \\\\ MA^n = F(U^n), \\end{array}\\right."
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:194
 msgid ""
@@ -433,6 +447,10 @@ msgid ""
 "dt(1-\\frac{\\gamma}{2\\beta})A^{n-1}  A^n = \\frac{U^n - U^{n-1}}{\\beta "
 "dt^2} - \\frac{1}{\\beta dt}V^{n-1} - (1/2-\\beta)A^{n-1}"
 msgstr ""
+"V^n = \\frac{\\gamma}{\\beta dt}(U^n - U^{n-1}) + "
+"\\frac{\\beta-\\gamma}{\\beta}V^{n-1} + "
+"dt(1-\\frac{\\gamma}{2\\beta})A^{n-1}  A^n = \\frac{U^n - U^{n-1}}{\\beta "
+"dt^2} - \\frac{1}{\\beta dt}V^{n-1} - (1/2-\\beta)A^{n-1}"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:218
 msgid ""
@@ -449,7 +467,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:227
 msgid "The implicit Houbolt scheme"
-msgstr ""
+msgstr "Houbol陰解法"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:231
 msgid ""
@@ -460,6 +478,12 @@ msgid ""
 "                                                    + (\\frac{1}{dt^2} M + "
 "\\frac{1}{3 dt} C) u_{n-3}"
 msgstr ""
+"(K+\\frac{11}{6 dt}C+\\frac{2}{dt^2}M) u_{n} = F_{n} + (\\frac{5}{dt^2} M + "
+"\\frac{3}{  dt} C) u_{n-1}"
+"                                                    - (\\frac{4}{dt^2} M + "
+"\\frac{3}{2 dt} C) u_{n-2}"
+"                                                    + (\\frac{1}{dt^2} M + "
+"\\frac{1}{3 dt} C) u_{n-3}"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:237
 msgid ""
@@ -467,10 +491,12 @@ msgid ""
 "\"Dot2_u\", :math:`C` the matrix in term of \"Dot_u\" and :math:`K` the "
 "matrix in term of \"u\". The affine dependences are thus given by::"
 msgstr ""
+"ここで、 :math:`dt` は時間ステップを意味し、 :math:`M` は \"Dot2_u\" の項の行列、 :math:`C` は "
+"\"Dot_u\" の項の行列、 :math:`K` は \"u\" の項の行列を意味します。したがって、affine 依存関係は次のようになります。"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:253
 msgid "which correspond to the values of \"u\" at the time step n-1, n-2 n-3."
-msgstr ""
+msgstr "これは、時間ステップ n-1, n-2 n-3 における \"u\" の値に対応します。"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:255
 msgid ""
@@ -478,6 +504,8 @@ msgid ""
 "\"Previous3_u\" (corresponding to :math:`U^0` in the example) have to be "
 "initialized."
 msgstr ""
+"ソルバを実行する前に、(例では :math:`U^0` に対応する)データ \"Previous_u\" 、 \"Previous2_u\" 、 "
+"\"Previous3_u\" を初期化する必要があります。"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:262
 msgid "Transient terms"
@@ -505,7 +533,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:268
 msgid "\\int_{\\Omega} \\dot{u} v dx"
-msgstr ""
+msgstr "\\int_{\\Omega} \\dot{u} v dx"
 
 #: ../../doc/sphinx/source/userdoc/model_time_integration.rst:272
 msgid "can be simply expressed by::"
