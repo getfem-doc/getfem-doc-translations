@@ -26,5 +26,6 @@ for fig in $figs;
 do
   echo $fig
   ../getfem/bin/fig2eps $fig
+  mv `basename "${fig%.*}.eps"` "${fig%.*}.eps"
   convert -density 200 "${fig%.*}.eps" "${fig%.*}.png"
 done
