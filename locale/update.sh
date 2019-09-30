@@ -25,6 +25,6 @@ figs=`find ../doc/sphinx/source -type f -name *.fig`
 for fig in $figs;
 do
   echo $fig
-  ../getfem/bin/fig2eps $fig "${fig%.*}.eps"
+  ../getfem/bin/fig2eps $fig
   convert -density 200 "${fig%.*}.eps" "${fig%.*}.png"
 done
