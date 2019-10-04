@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +60,7 @@ msgstr "検討対象の物体は、ほぼ剛体運動であると考えます。
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:27
 msgid "\\tau(X) = R(t)X + Z(t)"
-msgstr ""
+msgstr "\\tau(X) = R(t)X + Z(t)"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:30
 msgid ""
@@ -74,6 +74,9 @@ msgid ""
 "\\\\ -\\sin(\\theta(t)) & \\cos(\\theta(t)) & 0 \\\\ 0 & 0 & 1 \\end{array} "
 "\\right),"
 msgstr ""
+"R(t) = \\left(\\begin{array}{ccc} \\cos(\\theta(t)) & \\sin(\\theta(t)) & 0 "
+"\\\\ -\\sin(\\theta(t)) & \\cos(\\theta(t)) & 0 \\\\ 0 & 0 & 1 \\end{array} "
+"\\right),"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:39
 msgid ""
@@ -98,6 +101,8 @@ msgid ""
 "r(t,X) = R(t)X, ~~~~~~~~~ \\mbox{ and } A = \\left(\\begin{array}{ccc} 0 & 1"
 " & 0 \\\\ -1 & 0 & 0 \\\\ 0 & 0 & 0 \\end{array} \\right)."
 msgstr ""
+"r(t,X) = R(t)X, ~~~~~~~~~ \\mbox{ and } A = \\left(\\begin{array}{ccc} 0 & 1"
+" & 0 \\\\ -1 & 0 & 0 \\\\ 0 & 0 & 0 \\end{array} \\right)."
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:59
 msgid "We have then"
@@ -105,7 +110,7 @@ msgstr "すると"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:61
 msgid "\\dot{r}(t,X) = \\dot{\\theta}AR(t)X"
-msgstr ""
+msgstr "\\dot{r}(t,X) = \\dot{\\theta}AR(t)X"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:64
 msgid ""
@@ -122,6 +127,8 @@ msgid ""
 "\\varphi(t, X) = (\\tau(t) \\circ \\bar{\\varphi}(t) \\circ r(t))(X) = "
 "\\bar{\\varphi}(t, r(t, X)) + Z(t)"
 msgstr ""
+"\\varphi(t, X) = (\\tau(t) \\circ \\bar{\\varphi}(t) \\circ r(t))(X) = "
+"\\bar{\\varphi}(t, r(t, X)) + Z(t)"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:69
 msgid "With :math:`\\bar{X} = R(t)X` the new considered deformation is"
@@ -129,7 +136,7 @@ msgstr ":math:`\\bar{X} = R(t)X` とすると、新しく考える変形は"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:71
 msgid "\\bar{\\varphi}(t,\\bar{X}) = \\varphi(X) - Z(t)"
-msgstr ""
+msgstr "\\bar{\\varphi}(t,\\bar{X}) = \\varphi(X) - Z(t)"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:75
 msgid ""
@@ -153,7 +160,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:87
 msgid "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - \\bar{X}"
-msgstr ""
+msgstr "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - \\bar{X}"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:90
 msgid ""
@@ -171,6 +178,7 @@ msgid ""
 "except for the expression of the time derivative which are modified because "
 "the change of coordinate is  nonconstant in time :"
 msgstr ""
+"標準的な手法のオブジェクト化は、これらの手法の中間構成は時間的に不変であるため、変更された時間の導関数を表現することを除いて、基準配置の表現とほとんど同じです。"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:94
 msgid ""

@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,7 +52,7 @@ msgstr "Cauchy-Greenテンソルは次のように定義されます。"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:23
 msgid "C = \\nabla\\Phi^T\\nabla\\Phi"
-msgstr ""
+msgstr "C = \\nabla\\Phi^T\\nabla\\Phi"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:27
 msgid "The deformation tensor (Green-Lagrange)"
@@ -64,6 +64,9 @@ msgid ""
 "\\frac{1}{2}\\left({\\nabla u^T}{\\nabla u} + {\\nabla u^T} + {\\nabla "
 "u}\\right)"
 msgstr ""
+"E = \\frac{1}{2}\\left(\\nabla\\Phi^T\\nabla\\Phi - I)\\right)   = "
+"\\frac{1}{2}\\left({\\nabla u^T}{\\nabla u} + {\\nabla u^T} + {\\nabla "
+"u}\\right)"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:35
 msgid ""
@@ -77,7 +80,7 @@ msgstr "ここで次の通りであり"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:39
 msgid "C = \\nabla\\Phi^T\\nabla\\Phi = 2 E + I."
-msgstr ""
+msgstr "C = \\nabla\\Phi^T\\nabla\\Phi = 2 E + I."
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:43
 msgid ""
@@ -107,6 +110,10 @@ msgid ""
 "i_2( C)=4i_2( E)+4i_1( E)+3\\\\ i_3( E) = \\det E \\hspace{5cm} &i_3( C) = "
 "8i_3( E) + 4i_2( E) + 2i_1( E) + 1"
 msgstr ""
+"i_1( E) = \\mbox{tr } E \\hspace{5cm} &i_1( C) = 2\\mbox{tr } E + 3\\\\ i_2("
+" E) = \\frac{(\\mbox{tr } E)^2 - \\mbox{tr } E^2}{2}\\quad\\hspace{3cm}& "
+"i_2( C)=4i_2( E)+4i_1( E)+3\\\\ i_3( E) = \\det E \\hspace{5cm} &i_3( C) = "
+"8i_3( E) + 4i_2( E) + 2i_1( E) + 1"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:58
 msgid ""
@@ -121,6 +128,10 @@ msgid ""
 "}  E)(\\mbox{tr } H) -  E^T:H\\\\ &\\frac{\\partial i_3}{\\partial E}(E;H) ="
 " i_3( E)(E^{-T}):H  = (i_2( E)I - i_1( E) E +  E^2):H \\mbox{ in 3D}."
 msgstr ""
+"&\\frac{\\partial i_1}{\\partial E}(E;H) = I:H = \\mbox{tr } H\\\\ "
+"&\\frac{\\partial i_2}{\\partial E}(E;H) = (i_1( E)I -  E^T):H = (\\mbox{tr "
+"}  E)(\\mbox{tr } H) -  E^T:H\\\\ &\\frac{\\partial i_3}{\\partial E}(E;H) ="
+" i_3( E)(E^{-T}):H  = (i_2( E)I - i_1( E) E +  E^2):H \\mbox{ in 3D}."
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:66
 msgid "We will write"
@@ -132,6 +143,9 @@ msgid ""
 "i_2}{\\partial E}(E) = i_1( E)I -  E^T\\\\ &\\frac{\\partial i_3}{\\partial "
 "E}(E) = i_3( E)E^{-T}."
 msgstr ""
+"&\\frac{\\partial i_1}{\\partial E}(E) = I\\\\ &\\frac{\\partial "
+"i_2}{\\partial E}(E) = i_1( E)I -  E^T\\\\ &\\frac{\\partial i_3}{\\partial "
+"E}(E) = i_3( E)E^{-T}."
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:74
 msgid "Let us also recall that"
@@ -139,7 +153,7 @@ msgstr "また再喝すると"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:76
 msgid "\\frac{\\partial (M^{-1})}{\\partial M}(M;H) = -M^{-1}HM^{-1}"
-msgstr ""
+msgstr "\\frac{\\partial (M^{-1})}{\\partial M}(M;H) = -M^{-1}HM^{-1}"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:81
 msgid ""
@@ -153,6 +167,10 @@ msgid ""
 "\\delta_{il}\\delta_{jk} \\\\ &\\frac{\\partial^2 i_3}{\\partial "
 "E^2}(E)_{ijkl} = i_3(E) (E^{-1}_{ji}E^{-1}_{lk} - E^{-1}_{jk}E^{-1}_{li})."
 msgstr ""
+"&\\frac{\\partial^2 i_1}{\\partial E^2}(E) = 0\\\\ &\\frac{\\partial^2 "
+"i_2}{\\partial E^2}(E)_{ijkl} = \\delta_{ij}\\delta_{kl} - "
+"\\delta_{il}\\delta_{jk} \\\\ &\\frac{\\partial^2 i_3}{\\partial "
+"E^2}(E)_{ijkl} = i_3(E) (E^{-1}_{ji}E^{-1}_{lk} - E^{-1}_{jk}E^{-1}_{li})."
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:90
 msgid ""
@@ -169,6 +187,9 @@ msgid ""
 " }(B^TA),\\\\ A:BC &= B^TA:C,\\\\ A:BC &= AC^T:B,\\\\ \\mbox{tr }(ABC) &= "
 "\\mbox{tr }(B^TA^TC^T)"
 msgstr ""
+"A:B &= \\mbox{tr }(A^TB) = \\mbox{tr }(AB^T) = \\mbox{tr }(BA^T) = \\mbox{tr"
+" }(B^TA),\\\\ A:BC &= B^TA:C,\\\\ A:BC &= AC^T:B,\\\\ \\mbox{tr }(ABC) &= "
+"\\mbox{tr }(B^TA^TC^T)"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:100
 msgid "Note also that"
@@ -179,6 +200,8 @@ msgid ""
 "\\frac{\\partial i_j}{\\partial E}(C;H) = 2 \\frac{\\partial i_j}{\\partial "
 "C}(C;H)."
 msgstr ""
+"\\frac{\\partial i_j}{\\partial E}(C;H) = 2 \\frac{\\partial i_j}{\\partial "
+"C}(C;H)."
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:106
 msgid ""
@@ -211,6 +234,8 @@ msgid ""
 "{\\hat{\\hat{\\sigma}}} &= \\frac{\\partial}{\\partial E} {W}(E) = "
 "2\\frac{\\partial}{\\partial C} {W}(C)"
 msgstr ""
+"{\\hat{\\hat{\\sigma}}} &= \\frac{\\partial}{\\partial E} {W}(E) = "
+"2\\frac{\\partial}{\\partial C} {W}(C)"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:118
 msgid ""
@@ -220,7 +245,7 @@ msgstr "ここで、 :math:`{W}` は材料のひずみエネルギーの密度�
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:120
 msgid "\\mathcal{I}(u) = \\int_{\\Omega} W( E(u)) dX"
-msgstr ""
+msgstr "\\mathcal{I}(u) = \\int_{\\Omega} W( E(u)) dX"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:124
 msgid ""
@@ -232,6 +257,8 @@ msgid ""
 "D\\mathcal{I}(u;v) = \\int_{\\Omega} \\frac{\\partial W}{\\partial E}( "
 "E(u)):(I+{\\nabla u^T}){\\nabla v}  dX"
 msgstr ""
+"D\\mathcal{I}(u;v) = \\int_{\\Omega} \\frac{\\partial W}{\\partial E}( "
+"E(u)):(I+{\\nabla u^T}){\\nabla v}  dX"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:130
 msgid "because in particular"
@@ -243,6 +270,9 @@ msgid ""
 " + {\\nabla v^T} + {\\nabla v})\\\\ &= \\frac{1}{2}({\\nabla v^T}(I+{\\nabla"
 " u}) + (I+{\\nabla u^T}){\\nabla v})"
 msgstr ""
+"D E(u;v) &= \\frac{1}{2}({\\nabla u^T}{\\nabla v} + {\\nabla v^T}{\\nabla u}"
+" + {\\nabla v^T} + {\\nabla v})\\\\ &= \\frac{1}{2}({\\nabla v^T}(I+{\\nabla"
+" u}) + (I+{\\nabla u^T}){\\nabla v})"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:137
 msgid ""
@@ -260,7 +290,7 @@ msgstr "別の方法として、静的平衡を考慮するものがあり、こ
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:141
 msgid "-\\mbox{div } \\left((I+{\\nabla u}){\\hat{\\hat{\\sigma}}}\\right) = f."
-msgstr ""
+msgstr "-\\mbox{div } \\left((I+{\\nabla u}){\\hat{\\hat{\\sigma}}}\\right) = f."
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:145
 msgid "Integrating by parts, one obtains:"
@@ -268,7 +298,7 @@ msgstr "部分積分により、次のようになります。"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:147
 msgid "\\int_{\\Omega}(I + {\\nabla u}){\\hat{\\hat{\\sigma}}} : {\\nabla v}  dX = l(v)."
-msgstr ""
+msgstr "\\int_{\\Omega}(I + {\\nabla u}){\\hat{\\hat{\\sigma}}} : {\\nabla v}  dX = l(v)."
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:153
 msgid "Tangent matrix"
@@ -286,6 +316,9 @@ msgid ""
 "E(h) + \\frac{1}{2}({\\nabla h^T}{\\nabla u}+{\\nabla u^T}{\\nabla h})) : "
 "{\\nabla v}  dX = l(v)"
 msgstr ""
+"\\int_\\Omega(I + {\\nabla u} + {\\nabla h}){\\hat{\\hat{\\sigma}}}( E(u)+ "
+"E(h) + \\frac{1}{2}({\\nabla h^T}{\\nabla u}+{\\nabla u^T}{\\nabla h})) : "
+"{\\nabla v}  dX = l(v)"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:161
 msgid "and considers the linear part w.r.t. :math:`h`, which is"
@@ -298,6 +331,10 @@ msgid ""
 "E^2}\\left(\\frac{{\\nabla h}+{\\nabla h^T}+{\\nabla h^T}{\\nabla "
 "u}+{\\nabla u^T}{\\nabla h}}{2}\\right) : (I+{\\nabla u}^T){\\nabla v}  dX"
 msgstr ""
+"\\int_\\Omega{\\nabla h}~{\\hat{\\hat{\\sigma}}}( E(u)) : {\\nabla v}  dX "
+"+\\\\ \\int_\\Omega \\frac{\\partial^2 W}{\\partial "
+"E^2}\\left(\\frac{{\\nabla h}+{\\nabla h^T}+{\\nabla h^T}{\\nabla "
+"u}+{\\nabla u^T}{\\nabla h}}{2}\\right) : (I+{\\nabla u}^T){\\nabla v}  dX"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:169
 msgid ""
@@ -309,6 +346,8 @@ msgid ""
 "\\int_\\Omega {\\nabla h}~{\\hat{\\hat{\\sigma}}}( E(u)) : {\\nabla v}  + "
 "\\mathcal{A}((I+{\\nabla u^T}){\\nabla h}):(I+{\\nabla u}^T){\\nabla v}~ dX"
 msgstr ""
+"\\int_\\Omega {\\nabla h}~{\\hat{\\hat{\\sigma}}}( E(u)) : {\\nabla v}  + "
+"\\mathcal{A}((I+{\\nabla u^T}){\\nabla h}):(I+{\\nabla u}^T){\\nabla v}~ dX"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:175
 msgid ""
@@ -335,6 +374,9 @@ msgid ""
 "{\\hat{\\hat{\\sigma}}}   &= \\lambda i_1( E)I + 2\\mu E\\\\ \\mathcal{A} &="
 " \\lambda i_1(H)I + \\mu (H + H^T)"
 msgstr ""
+"{W} &= \\frac{\\lambda}{2}i_1( E)^2 + \\mu i_1( E^2)\\\\ "
+"{\\hat{\\hat{\\sigma}}}   &= \\lambda i_1( E)I + 2\\mu E\\\\ \\mathcal{A} &="
+" \\lambda i_1(H)I + \\mu (H + H^T)"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:191
 msgid "``Three parameters Mooney-Rivlin law``"
@@ -346,7 +388,7 @@ msgstr "圧縮可能な材料です。"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:195
 msgid "{W} = c_1(j_1( C) - 3) + c_2(j_2( C)-3) + d_1(i_3( C)^{1/2}-1)^2"
-msgstr ""
+msgstr "{W} = c_1(j_1( C) - 3) + c_2(j_2( C)-3) + d_1(i_3( C)^{1/2}-1)^2"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:199
 msgid ""
@@ -379,6 +421,29 @@ msgid ""
 "i_2}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C)) - "
 "\\frac{2i_2(C)}{3i_3(C)} \\frac{\\partial^2 i_3}{\\partial C^2}(C)\\right)"
 msgstr ""
+"j_1(C) &= i_1(C) i_3(C)^{-1/3}\\\\ j_2(C) &= i_2(C) i_3(C)^{-2/3}\\\\ "
+"\\frac{\\partial j_1}{\\partial C}(C) &= "
+"i_3(C)^{-1/3}\\left(\\frac{\\partial i_1}{\\partial C}(C) - "
+"\\frac{i_1(C)}{3i_3(C)} \\frac{\\partial i_3}{\\partial C}(C)\\right)\\\\ "
+"\\frac{\\partial j_2}{\\partial C}(C) &= "
+"i_3(C)^{-2/3}\\left(\\frac{\\partial i_2}{\\partial C}(C) - "
+"\\frac{2i_2(C)}{3i_3(C)} \\frac{\\partial i_3}{\\partial C}(C)\\right)\\\\ "
+"\\frac{\\partial^2 j_1}{\\partial C^2}(C) &= "
+"i_3(C)^{-1/3}\\left(\\frac{4i_1(C)}{9i_3(C)^2} \\frac{\\partial "
+"i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C) - "
+"\\frac{1}{3i_3(C)}\\left(\\frac{\\partial i_3}{\\partial C}(C) \\otimes "
+"\\frac{\\partial i_1}{\\partial C}(C)\\right.\\right. \\\\ & "
+"~~~~~~~~~~~~~~~~\\left.\\left. + \\frac{\\partial i_1}{\\partial C}(C) "
+"\\otimes \\frac{\\partial i_3}{\\partial C}(C)\\right) - "
+"\\frac{i_1(C)}{3i_3(C)} \\frac{\\partial^2 i_3}{\\partial "
+"C^2}(C)\\right)\\\\ \\frac{\\partial^2 j_2}{\\partial C^2}(C) &= "
+"i_3(C)^{-2/3}\\left(\\frac{\\partial^2 i_2}{\\partial C^2}(C) + "
+"\\frac{10i_2(C)}{9i_3(C)^2} \\frac{\\partial i_3}{\\partial C}(C) \\otimes "
+"\\frac{\\partial i_3}{\\partial C}(C) \\right. \\\\ & "
+"~~~~~~~~~~~~~~~~\\left. - \\frac{2}{3i_3(C)}(\\frac{\\partial i_3}{\\partial"
+" C}(C) \\otimes \\frac{\\partial i_2}{\\partial C}(C) + \\frac{\\partial "
+"i_2}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C)) - "
+"\\frac{2i_2(C)}{3i_3(C)} \\frac{\\partial^2 i_3}{\\partial C^2}(C)\\right)"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:212
 msgid "and then"
@@ -396,6 +461,15 @@ msgid ""
 "\\otimes \\frac{\\partial i_3}{\\partial C}(C)\\right) \\\\ "
 "\\mathcal{A}_{ijkl} &= (\\mathcal{B}_{ijkl} + \\mathcal{B}_{jikl})/2"
 msgstr ""
+"{\\hat{\\hat{\\sigma}}}   &= 2c_1 \\frac{\\partial j_1}{\\partial C}(C) + "
+"2c_2 \\frac{\\partial j_2}{\\partial C}(C)  + "
+"2d_1\\left(1-i_3(C)^{-1/2}\\right)\\frac{\\partial i_3}{\\partial C}(C) \\\\"
+" \\mathcal{B} &= 4 c_1 \\frac{\\partial^2 j_1}{\\partial C^2}(C) + 4c_2 "
+"\\frac{\\partial^2 j_2}{\\partial C^2}(C) + "
+"4d_1\\left(\\left(1-i_3(C)^{-1/2}\\right)\\frac{\\partial^2 i_3}{\\partial "
+"C^2}(C) + \\frac{1}{2}i_3(C)^{-3/2} \\frac{\\partial i_3}{\\partial C}(C) "
+"\\otimes \\frac{\\partial i_3}{\\partial C}(C)\\right) \\\\ "
+"\\mathcal{A}_{ijkl} &= (\\mathcal{B}_{ijkl} + \\mathcal{B}_{jikl})/2"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:220
 msgid "Incompressible material."
@@ -403,7 +477,7 @@ msgstr "非圧縮性の材料です。"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:222
 msgid "{d_1} = 0 \\intertext{with the additional constraint:} i_3( C) = 1"
-msgstr ""
+msgstr "{d_1} = 0 \\intertext{with the additional constraint:} i_3( C) = 1"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:228
 msgid ""
@@ -424,6 +498,8 @@ msgid ""
 "1 - i_3(\\nabla\\Phi) &= 0 \\\\ -\\int_{\\Omega_0} (\\det\\nabla\\Phi  -1) q"
 "  dX &= 0 ~~~ \\forall q"
 msgstr ""
+"1 - i_3(\\nabla\\Phi) &= 0 \\\\ -\\int_{\\Omega_0} (\\det\\nabla\\Phi  -1) q"
+"  dX &= 0 ~~~ \\forall q"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:238
 msgid ""
@@ -436,6 +512,14 @@ msgid ""
 "\\int_{\\Omega_0} p(\\nabla\\Phi^{-T}:\\nabla h)(\\nabla\\Phi^{-T}:\\nabla "
 "v)\\det\\nabla\\Phi dX"
 msgstr ""
+"B &= -\\int_{\\Omega_0} p(\\nabla\\Phi)^{-T} \\det \\nabla\\Phi : \\nabla v"
+"  dX \\\\ K &= \\int_{\\Omega_0} \\left( p(\\nabla\\Phi)^{-T}(\\nabla "
+"h)^{T}(\\nabla\\Phi)^{-T}\\det\\nabla\\Phi : \\nabla v  dX - "
+"p(\\nabla\\Phi)^{-T}(\\det \\nabla\\Phi(\\nabla\\Phi)^{-T}:\\nabla h) : "
+"\\nabla v \\right)  dX\\\\ &= \\int_{\\Omega_0} p(\\nabla "
+"h^T\\nabla\\Phi^{-T}):(\\nabla\\Phi^{-1}\\nabla v)\\det\\nabla\\Phi dX - "
+"\\int_{\\Omega_0} p(\\nabla\\Phi^{-T}:\\nabla h)(\\nabla\\Phi^{-T}:\\nabla "
+"v)\\det\\nabla\\Phi dX"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:247
 msgid "``Ciarlet-Geymonat law``"
@@ -447,6 +531,9 @@ msgid ""
 "\\frac{\\mu}{2} + a)i_3(C) - (\\frac{\\mu}{2}+\\frac{\\lambda}{4})\\log "
 "\\det(C)"
 msgstr ""
+"{W} &= a\\; i_1(C) + (\\frac{\\mu}{2} - a)i_2(C) + (\\frac{\\lambda}{4} - "
+"\\frac{\\mu}{2} + a)i_3(C) - (\\frac{\\mu}{2}+\\frac{\\lambda}{4})\\log "
+"\\det(C)"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:253
 msgid ""
@@ -464,7 +551,7 @@ msgstr "``一般化されたBlatz-Ko法``"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:259
 msgid "{W} &= (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)^n"
-msgstr ""
+msgstr "{W} &= (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)^n"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:263
 msgid ""
@@ -513,6 +600,23 @@ msgid ""
 "= n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})^2Z^{n-2} + "
 "n(-\\frac{b}{4i_3(C)^{3/2}}+2\\frac{ci_2(C)}{i_3(C)^4})Z^{n-1} \\end{array}"
 msgstr ""
+"\\begin{array}{l} \\frac{\\partial W}{\\partial i_1(C)} = naZ^{n-1} "
+"~~~~\\mbox{with } Z = (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)}"
+" + d)\\\\ \\frac{\\partial W}{\\partial i_2(C)} = "
+"n\\frac{c}{i_3(C)}Z^{n-1}\\\\ \\frac{\\partial W}{\\partial i_3(C)} = "
+"n(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-1}\\\\ "
+"\\frac{\\partial W^2}{\\partial^2 i_1(C)} = n(n-1)A^2Z^{n-2}\\\\ "
+"\\frac{\\partial W^2}{\\partial i_1(C) \\partial i_2(C)} = "
+"n(n-1)A\\frac{c}{i_3(C)}Z^{n-2}\\\\ \\frac{\\partial W^2}{\\partial i_1(C) "
+"\\partial i_3(C)} = "
+"n(n-1)A(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2}\\\\ "
+"\\frac{\\partial W^2}{\\partial^2 i_2(C)} = "
+"n(n-1)\\frac{c^2}{i_3(C)^2}Z^{n-2}\\\\ \\frac{\\partial W^2}{\\partial "
+"i_2(C) \\partial i_3(C)} = "
+"n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2} - "
+"n\\frac{c^2}{i_3(C)^2}Z^{n-1}\\\\ \\frac{\\partial W^2}{\\partial i_3(C)^2} "
+"= n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})^2Z^{n-2} + "
+"n(-\\frac{b}{4i_3(C)^{3/2}}+2\\frac{ci_2(C)}{i_3(C)^4})Z^{n-1} \\end{array}"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:280
 msgid "``Plane strain hyper-elasticity``"
@@ -647,7 +751,7 @@ msgstr "このブリック要素は、大きなひずみ問題で非圧縮性条
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:332
 msgid "\\mbox{det}(I+\\nabla u) = 1,"
-msgstr ""
+msgstr "\\mbox{det}(I+\\nabla u) = 1,"
 
 #: ../../doc/sphinx/source/userdoc/model_nonlinear_elasticity.rst:336
 msgid ""

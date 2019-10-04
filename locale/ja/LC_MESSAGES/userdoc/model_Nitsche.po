@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-25 10:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:21
 msgid "G"
-msgstr ""
+msgstr "G"
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:24
 msgid ""
@@ -118,7 +118,7 @@ msgstr "変数 :math:`u` が考慮され、条件を規定したいとします�
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:52
 msgid "Hu = g"
-msgstr ""
+msgstr "Hu = g"
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:55
 msgid ""
@@ -146,6 +146,8 @@ msgid ""
 "\\int_{\\Gamma_D} \\Frac{1}{\\gamma}(Hu-g-\\gamma HG).(Hv) - "
 "\\theta(Hu-g).(HD_uG[v])d\\Gamma,"
 msgstr ""
+"\\int_{\\Gamma_D} \\Frac{1}{\\gamma}(Hu-g-\\gamma HG).(Hv) - "
+"\\theta(Hu-g).(HD_uG[v])d\\Gamma,"
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:65
 msgid ""
@@ -201,6 +203,22 @@ msgid ""
 "Neumann term is not necessary even for nonlinear problems. Returns the brick"
 " index in the model. ::"
 msgstr ""
+"This function adds a Dirichlet condition on the variable `varname` and the "
+"mesh region `region`. This region should be a boundary. `Neumannterm` is the"
+" expression of the Neumann term (obtained by the Green formula) described as"
+" an expression of the weak form language. This term can be obtained with "
+"md.Neumann_term(varname, region) once all volumic bricks have been added to "
+"the model. The Dirichlet condition is prescribed with Nitsche's method. "
+"`dataname` is the optional right hand side of the Dirichlet condition. It "
+"could be constant or described on a fem; scalar or vector valued, depending "
+"on the variable on which the Dirichlet condition is prescribed. `gamma0name`"
+" is the Nitsche's method parameter. `theta` is a scalar value which can be "
+"positive or negative. `theta = 1` corresponds to the standard symmetric "
+"method which is conditionally coercive for  `gamma0` small. `theta = -1` "
+"corresponds to the skew-symmetric method which is inconditionally coercive. "
+"`theta = 0` is the simplest method for which the second derivative of the "
+"Neumann term is not necessary even for nonlinear problems. Returns the brick"
+" index in the model. ::"
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:108
 msgid ""
@@ -221,6 +239,22 @@ msgid ""
 "necessary even for nonlinear problems. Returns the brick index in the model."
 " (This brick is not fully tested) ::"
 msgstr ""
+"This function adds a Dirichlet condition to the normal component of the "
+"vector (or tensor) valued variable `varname` and the mesh region `region`. "
+"This region should be a boundary. `Neumannterm` is the expression of the "
+"Neumann term (obtained by the Green formula) described as an expression of "
+"the weak form language. This term can be obtained with "
+"md.Neumann_term(varname, region) once all volumic bricks have been added to "
+"the model. The Dirichlet condition is prescribed with Nitsche's method. "
+"`dataname` is the optional right hand side of the Dirichlet condition. It "
+"could be constant or described on a fem. `gamma0name` is the Nitsche's "
+"method parameter. `theta` is a scalar value which can be positive or "
+"negative. `theta = 1` corresponds to the standard symmetric method which is "
+"conditionally coercive for  `gamma0` small. `theta = -1` corresponds to the "
+"skew-symmetric method which is inconditionally coercive. `theta = 0` is the "
+"simplest method for which the second derivative of the Neumann term is not "
+"necessary even for nonlinear problems. Returns the brick index in the model."
+" (This brick is not fully tested) ::"
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:136
 msgid ""
@@ -245,6 +279,26 @@ msgid ""
 "scalar fem. Returns the brick index in the model. (This brick is not fully "
 "tested)"
 msgstr ""
+"This function adds a Dirichlet condition on the variable `varname` and the "
+"mesh region `region`. This version is for vector field. It prescribes a "
+"condition :math:`Hu = r` where :math:`H` is a matrix field. The region "
+"should be a boundary. This region should be a boundary. `Neumannterm` is the"
+" expression of the Neumann term (obtained by the Green formula) described as"
+" an expression of the weak form language. This term can be obtained with "
+"md.Neumann_term(varname, region) once all volumic bricks have been added to "
+"the model. The Dirichlet condition is prescribed with Nitsche's method. "
+"CAUTION : the matrix H should have all eigenvalues equal to 1 or 0. "
+"`dataname` is the optional right hand side of the Dirichlet condition. It "
+"could be constant or described on a fem. `gamma0name` is the Nitsche's "
+"method parameter. `theta` is a scalar value which can be positive or "
+"negative. `theta = 1` corresponds to the standard symmetric method which is "
+"conditionally coercive for  `gamma0` small. `theta = -1` corresponds to the "
+"skew-symmetric method which is inconditionally coercive. `theta = 0` is the "
+"simplest method for which the second derivative of the Neumann term is not "
+"necessary even for nonlinear problems. `Hname` is the data corresponding to "
+"the matrix field `H`. It has to be a constant matrix or described on a "
+"scalar fem. Returns the brick index in the model. (This brick is not fully "
+"tested)"
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:164
 msgid "Generic Nitsche's method for contact with friction condition"
@@ -271,6 +325,8 @@ msgid ""
 "P_{n,\\mathscr{F}}(x) = -(x.n)_- n + P_{B(0,\\mathscr{F}(x.n)_-)}(x - "
 "(x.n)n)"
 msgstr ""
+"P_{n,\\mathscr{F}}(x) = -(x.n)_- n + P_{B(0,\\mathscr{F}(x.n)_-)}(x - "
+"(x.n)n)"
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:173
 msgid ""
@@ -302,6 +358,10 @@ msgid ""
 "\\Frac{gap}{\\gamma}n + \\Frac{\\alpha w_{_T}}{\\gamma})\\cdot(\\theta D_u "
 "G[v] - \\Frac{v}{\\gamma}) d\\Gamma."
 msgstr ""
+"&-\\int_{\\Gamma_C} \\theta \\gamma G\\cdot D_u G[v] d\\Gamma \\\\ "
+"&+\\int_{\\Gamma_C} \\gamma P_{n,\\mathscr{F}}(G - \\Frac{Au}{\\gamma} + "
+"\\Frac{gap}{\\gamma}n + \\Frac{\\alpha w_{_T}}{\\gamma})\\cdot(\\theta D_u "
+"G[v] - \\Frac{v}{\\gamma}) d\\Gamma."
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:181
 msgid ""
@@ -314,7 +374,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:183
 msgid "A = \\alpha I_d + (1-\\alpha)n n^T"
-msgstr ""
+msgstr "A = \\alpha I_d + (1-\\alpha)n n^T"
 
 #: ../../doc/sphinx/source/userdoc/model_Nitsche.rst:186
 msgid ""
