@@ -50,15 +50,15 @@ script:
 - sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
 - sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
 - sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
-- (cd doc/sphinx; \
-   make latex;    \
-   make images;   \
-   sphinx-build -T -b gettext source locale ; \
-   sphinx-intl create-transifexrc; \
-   make gettext; \
-   cat .tx/config; \
-   tx push -s --skip; \
-   rm -rf locale/ja; \
+- (cd doc/sphinx;
+   make latex;
+   make images;
+   sphinx-build -T -b gettext source locale ;
+   sphinx-intl create-transifexrc;
+   make gettext;
+   cat .tx/config;
+   tx push -s --skip;
+   rm -rf locale/ja;
    tx pull -l ja)
 - rm -rf ../doc
 - rm -rf ../interface
