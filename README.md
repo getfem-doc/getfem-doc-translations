@@ -1,6 +1,8 @@
 # getfem-doc.org on the Read The Docs.
 
 [![Build Status](https://travis-ci.com/getfem-doc/getfem-doc-translations.svg?branch=master)](https://travis-ci.com/getfem-doc/getfem-doc-translations)
+[![Documentation Status](https://readthedocs.org/projects/getfem/badge/?version=latest)](https://getfem.readthedocs.io/en/latest/?badge=latest)
+
 
 This is a project to provide Getfem official documentation with multiple versions and multiple languages on Read The Docs site.
 
