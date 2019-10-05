@@ -53,9 +53,9 @@ script:
 - (cd doc/sphinx;
    make latex;
    make images;
-   sphinx-build -T -b gettext source locale ;
    sphinx-intl create-transifexrc;
-   make gettext;
+   sphinx-build -T -b gettext source locale ;
+   sphinx-intl update-txconfig-resources -p locale -d .;
    cat .tx/config;
    tx push -s --skip;
    rm -rf locale/ja;
