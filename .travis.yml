@@ -50,7 +50,7 @@ script:
 - sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
 - sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
 - sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
-- (cd doc/sphinx; make gettext; cat .tx/config; tx push -s --skip; rm -rf locale/ja; tx pull -l ja; make latex; make images)
+- (cd doc/sphinx; make latex; make images; make gettext; cat .tx/config; tx push -s --skip; rm -rf locale/ja; tx pull -l ja)
 - rm -rf ../doc
 - rm -rf ../interface
 - cp -r doc ../doc
