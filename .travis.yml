@@ -50,7 +50,16 @@ script:
 - sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
 - sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
 - sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
-- (cd doc/sphinx; make latex; make images; make gettext; cat .tx/config; tx push -s --skip; rm -rf locale/ja; tx pull -l ja)
+- (cd doc/sphinx; \
+   make latex;    \
+   make images;   \
+   sphinx-build -T -b gettext source locale ; \
+   sphinx-intl create-transifexrc; \
+   make gettext; \
+   cat .tx/config; \
+   tx push -s --skip; \
+   rm -rf locale/ja; \
+   tx pull -l ja)
 - rm -rf ../doc
 - rm -rf ../interface
 - cp -r doc ../doc
@@ -61,7 +70,6 @@ after_success:
 - git checkout master  # attach this repo
 - git config --global user.email "getfem-auto-update"
 - git config --global user.name "getfem-auto-update"
-- rm -rf doc/sphinx/locale
 - rm -rf doc/sphinx/build
 - rm -rf interface
 - git add .
