@@ -55,10 +55,10 @@ script:
    make images;
    sphinx-intl create-transifexrc;
    sphinx-build -T -b gettext source locale ;
-   sphinx-intl update-txconfig-resources -p locale -d .;
+   sphinx-intl update-txconfig-resources -p locale -d source/locale;
    cat .tx/config;
    tx push -s --skip;
-   rm -rf locale/ja;
+   rm -rf source/locale/ja;
    tx pull -l ja)
 - rm -rf ../doc
 - rm -rf ../interface
