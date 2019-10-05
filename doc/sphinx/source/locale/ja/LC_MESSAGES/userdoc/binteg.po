@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 06:48+0000\n"
+"PO-Revision-Date: 2018-07-16 07:05+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/userdoc/binteg.rst:10
+msgid "Selecting integration methods"
+msgstr "積分法の選択"
+
+#: ../source/userdoc/binteg.rst:12
+msgid ""
+"The description of an integration method on a whole mesh is done thanks to "
+"the structure |gf_mim|, defined in the file :file:`getfem/getfem_mesh_im.h`."
+" Basically, this structure describes the integration method on each element "
+"of the mesh. One can instantiate a |gf_mim| object as follows::"
+msgstr ""
+"メッシュ全体に対する積分法の設定は、ファイル :file:`getfem/getfem_mesh_im.h` で定義されている構造体 |gf_mim| "
+"により行います。基本的に、この構造はメッシュの各要素に対する積分法を記述します。次のように |gf_mim| オブジェクトをインスタンス化できます。"
+
+#: ../source/userdoc/binteg.rst:19
+msgid ""
+"where ``mymesh`` is an already existing mesh. The structure will be linked "
+"to this mesh and will react when modifications will be done on it (for "
+"example when the mesh is refined, the integration method will be also "
+"refined)."
+msgstr ""
+"``mymesh`` "
+"は既に存在するメッシュです。構造はこのメッシュにリンクされ、メッシュが修正されたときに追随します（たとえば、メッシュが洗練された場合、積分法も洗練されます）。"
+
+#: ../source/userdoc/binteg.rst:23
+msgid ""
+"It is possible to specify element by element the integration method, so that"
+" element of mixed types can be treated, even if the dimensions are "
+"different."
+msgstr "要素ごとに積分法を指定することができますので、たとえ次元が異なっていても混合型の要素を扱うことができます。"
+
+#: ../source/userdoc/binteg.rst:26
+msgid ""
+"To select a particular integration method on a given element, one can use::"
+msgstr "特定の要素に対して特定の積分法を選択するには、以下を使用できます。"
+
+#: ../source/userdoc/binteg.rst:30
+msgid ""
+"where ``i`` is the index of the element and ``ppi`` is the descriptor of the"
+" integration method. Alternative forms of this member function are::"
+msgstr "ここで、 ``i`` は要素のインデックスであり ``ppi`` は積分法の記述子です。 このメンバ関数の別の表現は次の通りです。"
+
+#: ../source/userdoc/binteg.rst:37
+msgid ""
+"which set the integration method for either the convexes listed in the |bv| "
+"cvs, or all the convexes of the mesh."
+msgstr "これは |bv| cvs にリストされた凸包、またはメッシュのすべての凸包のいずれかの積分法を設定します。"
+
+#: ../source/userdoc/binteg.rst:40
+msgid ""
+"The list of all available descriptors of integration methods is in the file "
+":file:`getfem/getfem_integration.h`. Descriptors for integration methods are"
+" available thanks to the following function::"
+msgstr ""
+"積分法のすべての利用可能な記述子のリストはファイル :file:`getfem/getfem_integration.h` にあります。 "
+"積分法の記述子は次の関数によって利用可能です。"
+
+#: ../source/userdoc/binteg.rst:46
+msgid ""
+"where ``\"name of method\"`` is to be chosen among the existing methods. A "
+"name of a method can be retrieved with::"
+msgstr "既存の手法の中で ``\"name of method\"`` を選択する場所です。 手法の名前は次のように取り出すことができます。"
+
+#: ../source/userdoc/binteg.rst:51
+msgid ""
+"A non exhaustive list (see :ref:`ud-appendixb` or "
+":file:`getfem/getfem_integration.h` for exhaustive lists) of integration "
+"methods is given below."
+msgstr ""
+"積分法の部分的なリスト（ :ref:`ud-appendixb` または :file:`getfem/getfem_integration.h`  "
+"を参照）を以下に示します。"
+
+#: ../source/userdoc/binteg.rst:55
+msgid "Examples of exact integration methods:"
+msgstr "完全積分法の例："
+
+#: ../source/userdoc/binteg.rst:57
+msgid "``\"IM_NONE()\"``: Dummy integration method (new in getfem++-1.7)."
+msgstr "``\"IM_NONE（）\"`` ：ダミー積分法（getfem ++-1.7の新機能）。"
+
+#: ../source/userdoc/binteg.rst:60
+msgid ""
+"``\"IM_EXACT_SIMPLEX(n)\"``: Description of the exact integration of "
+"polynomials on the simplex of reference of dimension ``n``."
+msgstr "``\"IM_EXACT_SIMPLEX(n)\"`` ： ``n`` 次元の参照のシンプレックス上の多項式の完全積分の描述。"
+
+#: ../source/userdoc/binteg.rst:64
+msgid ""
+"``\"IM_PRODUCT(a, b)\"``: Description of the exact integration on the convex"
+" which is the direct product of the convex in ``a`` and in ``b``."
+msgstr "``\"IM_PRODUCT(a, b)\"``：``a``と``b``の凸包の直接の積である凸包の完全積分の叙述。"
+
+#: ../source/userdoc/binteg.rst:68
+msgid ""
+"``\"IM_EXACT_PARALLELEPIPED(n)\"``: Description of the exact integration of "
+"polynomials on the parallelepiped of reference of dimension ``n``"
+msgstr "``\"IM_EXACT_PARALLELEPIPED(n)\"`` ： 次元nの平行6面体の多項式の完全積分の記述です。"
+
+#: ../source/userdoc/binteg.rst:72
+msgid ""
+"``\"IM_EXACT_PRISM(n)\"``: Description of the exact integration of "
+"polynomials on the prism of reference of dimension ``n``"
+msgstr "``\"IM_EXACT_PRISM(n)\"``:  次元nの参照のプリズム上の多項式の完全積分の記述です。"
+
+#: ../source/userdoc/binteg.rst:76
+msgid "Examples of approximated integration methods:"
+msgstr "近似された積分法の例："
+
+#: ../source/userdoc/binteg.rst:78
+msgid ""
+"``\"IM_GAUSS1D(k)\"``: Description of the Gauss integration on a segment of "
+"order ``k``. Available for all odd values of ``k <= 99``."
+msgstr "``\"IM_GAUSS1D(k)\"``: \"k\"の次数分のGauss積分の記述です。 ``99``以下のすべての奇数値\" k\"に対して利用可能です。 "
+
+#: ../source/userdoc/binteg.rst:82
+msgid ""
+"``\"IM_NC(n,k)\"``: Description of the integration on a simplex of reference"
+" of dimension ``n`` for polynomials of degree ``k`` with the Newton Cotes "
+"method (based on Lagrange interpolation)."
+msgstr ""
+"``\"IM_NC(n,k)\"``: （Lagrange補間に基づく）Newton Cotes法を用いて次数 ``k`` の多項式の次元 ``n`` "
+"の単純な積分の記述。"
+
+#: ../source/userdoc/binteg.rst:87
+msgid ""
+"``\"IM_PRODUCT(a,b)\"``: Build a method doing the direct product of methods "
+"``a`` and ``b``."
+msgstr "``\"IM_PRODUCT(a,b)\"``: 積分法 ``a`` と積分法 ``b`` を直積した積分法を構築します。"
+
+#: ../source/userdoc/binteg.rst:90
+msgid ""
+"``\"IM_TRIANGLE(2)\"``: Integration on a triangle of order 2 with 3 points."
+msgstr "``\"IM_TRIANGLE(2)\"``: 2次の3角形に3点で積分します。"
+
+#: ../source/userdoc/binteg.rst:93
+msgid ""
+"``\"IM_TRIANGLE(7)\"``: Integration on a triangle of order 7 with 13 points."
+msgstr "``\"IM_TRIANGLE(7)\"``: 7次の3角形に13点で積分します。"
+
+#: ../source/userdoc/binteg.rst:96
+msgid ""
+"``\"IM_TRIANGLE(19)\"``: Integration on a triangle of order 19 with 73 "
+"points."
+msgstr "``\"IM_TRIANGLE(19)\"``: 19次の3角形に73点で積分します。"
+
+#: ../source/userdoc/binteg.rst:99
+msgid ""
+"``\"IM_QUAD(2)\"``: Integration on quadrilaterals of order 2 with 3 points."
+msgstr "``\"IM_QUAD(2)\"``: 2次の3角形に3点で積分します。"
+
+#: ../source/userdoc/binteg.rst:102
+msgid ""
+"``\"IM_GAUSS_PARALLELEPIPED(2,3)\"``: Integration on quadrilaterals of order"
+" 3 with 4 points (shortcut for "
+"``\"IM_PRODUCT(IM_GAUSS1D(3),IM_GAUSS1D(3))\"``)."
+msgstr ""
+"``\"IM_GAUSS_PARALLELEPIPED(2,3)\"``: 4点で3次の4辺形を積分します( "
+"``\"IM_PRODUCT(IM_GAUSS1D(3),IM_GAUSS1D(3))\"`` のショートカット）。"
+
+#: ../source/userdoc/binteg.rst:106
+msgid ""
+"``\"IM_TETRAHEDRON(5)\"``: Integration on a tetrahedron of order 5 with 15 "
+"points."
+msgstr "``\"IM_TETRAHEDRON(5)\"``: 15点で5次の4面体を積分します。"
+
+#: ../source/userdoc/binteg.rst:111
+msgid ""
+"Note that ``\"IM_QUAD(3)\"`` is not able to integrate exactly the base "
+"functions of the ``\"FEM_QK(2,3)\"`` finite element! Since its base function"
+" are tensorial product of 1D polynomials of degree 3, one would need to use "
+"``\"IM_QUAD(7)\"`` (6 is not available). Hence "
+"``\"IM_GAUSS_PARALLELEPIPED(2,k)\"`` should always be preferred over "
+"``\"IM_QUAD(2*k)\"`` since it has less integration points."
+msgstr ""
+"``\"IM_QUAD(3)\"`` は、 ``\"FEM_QK(2,3)\"`` 有限要素の基本関数を正確に積分できないことに注意してください。 "
+"この場合、基本関数は次数3の1次元多項式のテンソル積であるため、 ``\"IM_QUAD(7)\"`` を使用する必要があります(6は使用できません)。"
+" したがって、 ``\"IM_GAUSS_PARALLELEPIPED(2,k)\"`` "
+"は、積分点が少ないので、``\"IM_QUAD(2*k)\"`` より常に優先して使用するべきです。"
+
+#: ../source/userdoc/binteg.rst:117
+msgid "An alternative way to obtain integration methods::"
+msgstr "積分法を得る別の方法::"
+
+#: ../source/userdoc/binteg.rst:125
+msgid ""
+"These functions return an exact (i.e. analytical) integration method, or "
+"select an approximate integration method which is able to integrate exactly "
+"polynomials of degree <= ``d`` (at least) for convexes defined with the "
+"specified geometric transformation."
+msgstr ""
+"これらの関数は、正確な（すなわち解析的な）積分法を返すか、または指定された幾何学的変換で定義された凸包について、 （少なくとも） ``d`` "
+"以下の次数の多項式を正確に積分することができる近似積分法を選択します。"
+
+#: ../source/userdoc/binteg.rst:132
+msgid "Methods of the |mim| object"
+msgstr "|mim| オブジェクトのメソッド"
+
+#: ../source/userdoc/binteg.rst:134
+msgid ""
+"Once an integration method is defined on a mesh, it is possible to obtain "
+"information on it with the following methods (the list is not exhaustive)."
+msgstr "積分法がメッシュに定義されると、以下の方法で情報を取得することができます（リストは網羅的ではありません）。"
+
+#: ../source/userdoc/binteg.rst:139
+msgid "Set of indexes (a |dal_bv|) on which an integration method is defined."
+msgstr "積分法が定義されているインデックスの集合（ |dal_bv| ）。"
+
+#: ../source/userdoc/binteg.rst:143
+msgid "Gives a reference to the linked mesh."
+msgstr "リンクされたメッシュへの参照を与えます。"
+
+#: ../source/userdoc/binteg.rst:147
+msgid ""
+"Gives a descriptor on the integration method defined on element of index "
+"``i``."
+msgstr "インデックスiの要素に定義された積分法に関する記述子を与えます。"
+
+#: ../source/userdoc/binteg.rst:151
+msgid ""
+"Clear the structure. There are no further integration method defined on the "
+"mesh."
+msgstr "構造をクリアします。 メッシュに定義された積分法はなくなります。"

@@ -1,0 +1,903 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 06:48+0000\n"
+"PO-Revision-Date: 2018-07-16 07:04+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:12
+msgid "Finite strain Elasticity bricks"
+msgstr "有限歪弾性ブリック要素"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:14
+msgid ""
+"This brick implements some classical hyperelastic constitutive law for large"
+" deformation elasticity."
+msgstr "このブリック要素は、大きな変形弾性のためのいくつかの古典的な超弾性構成則を実装します。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:17
+msgid "Some recalls on finite strain elasticity"
+msgstr "有限歪み弾性に関するいくつかの復習"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:19
+msgid ""
+"Let :math:`\\Omega` be the reference configuration and :math:`\\Omega_t` the"
+" deformed configuration of an elastic media. Then for :math:`X \\in \\Omega`"
+" we will denote by :math:`\\Phi(x) = u(X) + X` the deformation. the vector "
+"field :math:`u` is the displacement with respect to the initial position."
+msgstr ""
+":math:`\\Omega` を参照構成とし、 :math:`\\Omega_t` を弾性体の変形構成とします。そして、 :math:`X \\in "
+"\\Omega` に対して次のように変形を表します :math:`\\Phi(x) = u(X) + X` 。ベクトルフィールド :math:`u` "
+"は、初期位置に対する変位です。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:21
+msgid "The Cauchy-Green tensor is defined by"
+msgstr "Cauchy-Greenテンソルは次のように定義されます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:23
+msgid "C = \\nabla\\Phi^T\\nabla\\Phi"
+msgstr "C = \\nabla\\Phi^T\\nabla\\Phi"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:27
+msgid "The deformation tensor (Green-Lagrange)"
+msgstr "変形勾配テンソル（Green-Lagrange）は次の通りです。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:29
+msgid ""
+"E = \\frac{1}{2}\\left(\\nabla\\Phi^T\\nabla\\Phi - I)\\right)   = "
+"\\frac{1}{2}\\left({\\nabla u^T}{\\nabla u} + {\\nabla u^T} + {\\nabla "
+"u}\\right)"
+msgstr ""
+"E = \\frac{1}{2}\\left(\\nabla\\Phi^T\\nabla\\Phi - I)\\right)   = "
+"\\frac{1}{2}\\left({\\nabla u^T}{\\nabla u} + {\\nabla u^T} + {\\nabla "
+"u}\\right)"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:35
+msgid ""
+"(In the case of linear elasticity, :math:`{\\nabla u^T}{\\nabla u}` is "
+"neglected)."
+msgstr "（線形弾性の場合、 :math:`{\\nabla u^T}{\\nabla u}` は無視されます）。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:37
+msgid "One has"
+msgstr "ここで次の通りであり"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:39
+msgid "C = \\nabla\\Phi^T\\nabla\\Phi = 2 E + I."
+msgstr "C = \\nabla\\Phi^T\\nabla\\Phi = 2 E + I."
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:43
+msgid ""
+"Both tensors :math:`E` and :math:`C` are used to describe finite strain "
+"elasticity constitutive laws."
+msgstr "2つのテンソル :math:`E` と :math:`C` は、有限ひずみ弾性構成則を記述するために使用されます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:46
+msgid "Main invariants and derivatives"
+msgstr "主要な不変量および導関数"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:48
+msgid ""
+"The description of finite strain elasticity constitutive laws often requires"
+" the principal invariants of the deformation tensors:"
+msgstr "有限ひずみ弾性構成則の記述は、しばしば、変形テンソルの主要な不変量を必要とします。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:50
+msgid ""
+":math:`i_1,i_2,i_3` are the invariants of orders :math:`1,2` and :math:`3`:"
+msgstr ":math:`i_1,i_2,i_3` は次数 :math:`1,2` と :math:`3` の不変量です。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:52
+msgid ""
+"i_1( E) = \\mbox{tr } E \\hspace{5cm} &i_1( C) = 2\\mbox{tr } E + 3\\\\ i_2("
+" E) = \\frac{(\\mbox{tr } E)^2 - \\mbox{tr } E^2}{2}\\quad\\hspace{3cm}& "
+"i_2( C)=4i_2( E)+4i_1( E)+3\\\\ i_3( E) = \\det E \\hspace{5cm} &i_3( C) = "
+"8i_3( E) + 4i_2( E) + 2i_1( E) + 1"
+msgstr ""
+"i_1( E) = \\mbox{tr } E \\hspace{5cm} &i_1( C) = 2\\mbox{tr } E + 3\\\\ i_2("
+" E) = \\frac{(\\mbox{tr } E)^2 - \\mbox{tr } E^2}{2}\\quad\\hspace{3cm}& "
+"i_2( C)=4i_2( E)+4i_1( E)+3\\\\ i_3( E) = \\det E \\hspace{5cm} &i_3( C) = "
+"8i_3( E) + 4i_2( E) + 2i_1( E) + 1"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:58
+msgid ""
+"The derivatives of the invariants with respect to the tensor :math:`E` in "
+"the direction :math:`H` are:"
+msgstr ":math:`H` 方向のテンソル :math:`E` の不変量の導関数 :math:`H` は次のとおりです。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:60
+msgid ""
+"&\\frac{\\partial i_1}{\\partial E}(E;H) = I:H = \\mbox{tr } H\\\\ "
+"&\\frac{\\partial i_2}{\\partial E}(E;H) = (i_1( E)I -  E^T):H = (\\mbox{tr "
+"}  E)(\\mbox{tr } H) -  E^T:H\\\\ &\\frac{\\partial i_3}{\\partial E}(E;H) ="
+" i_3( E)(E^{-T}):H  = (i_2( E)I - i_1( E) E +  E^2):H \\mbox{ in 3D}."
+msgstr ""
+"&\\frac{\\partial i_1}{\\partial E}(E;H) = I:H = \\mbox{tr } H\\\\ "
+"&\\frac{\\partial i_2}{\\partial E}(E;H) = (i_1( E)I -  E^T):H = (\\mbox{tr "
+"}  E)(\\mbox{tr } H) -  E^T:H\\\\ &\\frac{\\partial i_3}{\\partial E}(E;H) ="
+" i_3( E)(E^{-T}):H  = (i_2( E)I - i_1( E) E +  E^2):H \\mbox{ in 3D}."
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:66
+msgid "We will write"
+msgstr "ゆえに"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:68
+msgid ""
+"&\\frac{\\partial i_1}{\\partial E}(E) = I\\\\ &\\frac{\\partial "
+"i_2}{\\partial E}(E) = i_1( E)I -  E^T\\\\ &\\frac{\\partial i_3}{\\partial "
+"E}(E) = i_3( E)E^{-T}."
+msgstr ""
+"&\\frac{\\partial i_1}{\\partial E}(E) = I\\\\ &\\frac{\\partial "
+"i_2}{\\partial E}(E) = i_1( E)I -  E^T\\\\ &\\frac{\\partial i_3}{\\partial "
+"E}(E) = i_3( E)E^{-T}."
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:74
+msgid "Let us also recall that"
+msgstr "また再喝すると"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:76
+msgid "\\frac{\\partial (M^{-1})}{\\partial M}(M;H) = -M^{-1}HM^{-1}"
+msgstr "\\frac{\\partial (M^{-1})}{\\partial M}(M;H) = -M^{-1}HM^{-1}"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:81
+msgid ""
+"The second derivatives of the invariants are fourth order tensors defined by"
+msgstr "不変量の2次導関数は、次の式によって定義される4次テンソルとなります。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:83
+msgid ""
+"&\\frac{\\partial^2 i_1}{\\partial E^2}(E) = 0\\\\ &\\frac{\\partial^2 "
+"i_2}{\\partial E^2}(E)_{ijkl} = \\delta_{ij}\\delta_{kl} - "
+"\\delta_{il}\\delta_{jk} \\\\ &\\frac{\\partial^2 i_3}{\\partial "
+"E^2}(E)_{ijkl} = i_3(E) (E^{-1}_{ji}E^{-1}_{lk} - E^{-1}_{jk}E^{-1}_{li})."
+msgstr ""
+"&\\frac{\\partial^2 i_1}{\\partial E^2}(E) = 0\\\\ &\\frac{\\partial^2 "
+"i_2}{\\partial E^2}(E)_{ijkl} = \\delta_{ij}\\delta_{kl} - "
+"\\delta_{il}\\delta_{jk} \\\\ &\\frac{\\partial^2 i_3}{\\partial "
+"E^2}(E)_{ijkl} = i_3(E) (E^{-1}_{ji}E^{-1}_{lk} - E^{-1}_{jk}E^{-1}_{li})."
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:90
+msgid ""
+"The notation :math:`A:B` denotes the Frobenius product :math:`A:B = "
+"\\displaystyle\\sum_{ij}A_{ij}B_{ij}`. This product has the following "
+"properties:"
+msgstr ""
+"表記法 :math:`A:B` は Frobenius 積を表します。 この積 :math:`A:B = "
+"\\displaystyle\\sum_{ij}A_{ij}B_{ij}` には以下の特性があります。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:92
+msgid ""
+"A:B &= \\mbox{tr }(A^TB) = \\mbox{tr }(AB^T) = \\mbox{tr }(BA^T) = \\mbox{tr"
+" }(B^TA),\\\\ A:BC &= B^TA:C,\\\\ A:BC &= AC^T:B,\\\\ \\mbox{tr }(ABC) &= "
+"\\mbox{tr }(B^TA^TC^T)"
+msgstr ""
+"A:B &= \\mbox{tr }(A^TB) = \\mbox{tr }(AB^T) = \\mbox{tr }(BA^T) = \\mbox{tr"
+" }(B^TA),\\\\ A:BC &= B^TA:C,\\\\ A:BC &= AC^T:B,\\\\ \\mbox{tr }(ABC) &= "
+"\\mbox{tr }(B^TA^TC^T)"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:100
+msgid "Note also that"
+msgstr "また、"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:102
+msgid ""
+"\\frac{\\partial i_j}{\\partial E}(C;H) = 2 \\frac{\\partial i_j}{\\partial "
+"C}(C;H)."
+msgstr ""
+"\\frac{\\partial i_j}{\\partial E}(C;H) = 2 \\frac{\\partial i_j}{\\partial "
+"C}(C;H)."
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:106
+msgid ""
+"This property enables us to write the constitutive laws as a function of the"
+" Cauchy-Green tensor invariants, especially for the case of the generalized "
+"Blatz-Ko strain energy."
+msgstr ""
+"この性質により、Cauchy-Greenテンソル不変量の関数として、特に汎用化されたBlatz-"
+"Koひずみエネルギーの場合は、構成的規則を表現することが可能になります。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:110
+msgid "Potential elastic energy and its derivative"
+msgstr "弾性ポテンシャルエネルギーとその導関数"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:112
+msgid ""
+"The stress in the reference configuration can be describe by the second "
+"Piola-Kirchhoff stress tensor :math:`{\\hat{\\hat{\\sigma}}} = "
+"\\nabla\\Phi^{-1}\\sigma\\nabla\\Phi^{-t}~\\det \\nabla\\Phi` where "
+":math:`\\sigma` is the Cauchy stress tensor in the deformed configuration "
+":math:`\\Omega_t`. An hyper-elastic constitutive law is given by"
+msgstr ""
+"基準構成における応力は、第2種Piola-Kirchhoff応力テンソル :math:`{\\hat{\\hat{\\sigma}}} = "
+"\\nabla\\Phi^{-1}\\sigma\\nabla\\Phi^{-t}~\\det \\nabla\\Phi` "
+"によって記述することができます。 ここで、:math:`\\sigma` は、変形された構成 :math:`\\Omega_t` "
+"のCauchy応力テンソルです。超弾性の構成則は次のように与えられます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:114
+msgid ""
+"{\\hat{\\hat{\\sigma}}} &= \\frac{\\partial}{\\partial E} {W}(E) = "
+"2\\frac{\\partial}{\\partial C} {W}(C)"
+msgstr ""
+"{\\hat{\\hat{\\sigma}}} &= \\frac{\\partial}{\\partial E} {W}(E) = "
+"2\\frac{\\partial}{\\partial C} {W}(C)"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:118
+msgid ""
+"where :math:`{W}` is the density of strain energy of the material. The total"
+" strain energy is given by"
+msgstr "ここで、 :math:`{W}` は材料のひずみエネルギーの密度です。全ひずみエネルギーは次式となります。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:120
+msgid "\\mathcal{I}(u) = \\int_{\\Omega} W( E(u)) dX"
+msgstr "\\mathcal{I}(u) = \\int_{\\Omega} W( E(u)) dX"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:124
+msgid ""
+"and the derivative of the energy in a direction :math:`v` can be writen"
+msgstr "また、 :math:`v` 方向のエネルギーの導関数は次のように書くことができます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:126
+msgid ""
+"D\\mathcal{I}(u;v) = \\int_{\\Omega} \\frac{\\partial W}{\\partial E}( "
+"E(u)):(I+{\\nabla u^T}){\\nabla v}  dX"
+msgstr ""
+"D\\mathcal{I}(u;v) = \\int_{\\Omega} \\frac{\\partial W}{\\partial E}( "
+"E(u)):(I+{\\nabla u^T}){\\nabla v}  dX"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:130
+msgid "because in particular"
+msgstr "これは次式によります。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:132
+msgid ""
+"D E(u;v) &= \\frac{1}{2}({\\nabla u^T}{\\nabla v} + {\\nabla v^T}{\\nabla u}"
+" + {\\nabla v^T} + {\\nabla v})\\\\ &= \\frac{1}{2}({\\nabla v^T}(I+{\\nabla"
+" u}) + (I+{\\nabla u^T}){\\nabla v})"
+msgstr ""
+"D E(u;v) &= \\frac{1}{2}({\\nabla u^T}{\\nabla v} + {\\nabla v^T}{\\nabla u}"
+" + {\\nabla v^T} + {\\nabla v})\\\\ &= \\frac{1}{2}({\\nabla v^T}(I+{\\nabla"
+" u}) + (I+{\\nabla u^T}){\\nabla v})"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:137
+msgid ""
+"and :math:`A:B = A:(B+B^T)/2` when A is symmetric which is the case for "
+":math:`{\\hat{\\hat{\\sigma}}}`."
+msgstr ""
+"Aが対称であるとき、 :math:`{\\hat{\\hat{\\sigma}}}` の場合には、 :math:`A:B = A:(B+B^T)/2` "
+"となります。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:139
+msgid ""
+"Another way is to consider the static equilibrium which can be written as "
+"follows in the reference configuration:"
+msgstr "別の方法として、静的平衡を考慮するものがあり、これは参照構成において以下のように書くことができます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:141
+msgid "-\\mbox{div } \\left((I+{\\nabla u}){\\hat{\\hat{\\sigma}}}\\right) = f."
+msgstr "-\\mbox{div } \\left((I+{\\nabla u}){\\hat{\\hat{\\sigma}}}\\right) = f."
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:145
+msgid "Integrating by parts, one obtains:"
+msgstr "部分積分により、次のようになります。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:147
+msgid "\\int_{\\Omega}(I + {\\nabla u}){\\hat{\\hat{\\sigma}}} : {\\nabla v}  dX = l(v)."
+msgstr "\\int_{\\Omega}(I + {\\nabla u}){\\hat{\\hat{\\sigma}}} : {\\nabla v}  dX = l(v)."
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:153
+msgid "Tangent matrix"
+msgstr "接線行列"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:155
+msgid ""
+"The displacement :math:`u` is fixed. In order to obtain the tangent matrix, "
+"one subsitutes :math:`u` with :math:`u+h`"
+msgstr "変位 :math:`u` は固定されています。接線行列を得るためには、 :math:`u` を :math:`u+h` に置き換えます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:157
+msgid ""
+"\\int_\\Omega(I + {\\nabla u} + {\\nabla h}){\\hat{\\hat{\\sigma}}}( E(u)+ "
+"E(h) + \\frac{1}{2}({\\nabla h^T}{\\nabla u}+{\\nabla u^T}{\\nabla h})) : "
+"{\\nabla v}  dX = l(v)"
+msgstr ""
+"\\int_\\Omega(I + {\\nabla u} + {\\nabla h}){\\hat{\\hat{\\sigma}}}( E(u)+ "
+"E(h) + \\frac{1}{2}({\\nabla h^T}{\\nabla u}+{\\nabla u^T}{\\nabla h})) : "
+"{\\nabla v}  dX = l(v)"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:161
+msgid "and considers the linear part w.r.t. :math:`h`, which is"
+msgstr "線形部分に関して :math:`h` を考慮します。ここで"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:163
+msgid ""
+"\\int_\\Omega{\\nabla h}~{\\hat{\\hat{\\sigma}}}( E(u)) : {\\nabla v}  dX "
+"+\\\\ \\int_\\Omega \\frac{\\partial^2 W}{\\partial "
+"E^2}\\left(\\frac{{\\nabla h}+{\\nabla h^T}+{\\nabla h^T}{\\nabla "
+"u}+{\\nabla u^T}{\\nabla h}}{2}\\right) : (I+{\\nabla u}^T){\\nabla v}  dX"
+msgstr ""
+"\\int_\\Omega{\\nabla h}~{\\hat{\\hat{\\sigma}}}( E(u)) : {\\nabla v}  dX "
+"+\\\\ \\int_\\Omega \\frac{\\partial^2 W}{\\partial "
+"E^2}\\left(\\frac{{\\nabla h}+{\\nabla h^T}+{\\nabla h^T}{\\nabla "
+"u}+{\\nabla u^T}{\\nabla h}}{2}\\right) : (I+{\\nabla u}^T){\\nabla v}  dX"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:169
+msgid ""
+"which is symmetric w.r.t. :math:`v` and :math:`h`. It can be rewritten as"
+msgstr "それは :math:`v` と :math:`h` に関して対称であり。これは次のように書き換えることができます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:171
+msgid ""
+"\\int_\\Omega {\\nabla h}~{\\hat{\\hat{\\sigma}}}( E(u)) : {\\nabla v}  + "
+"\\mathcal{A}((I+{\\nabla u^T}){\\nabla h}):(I+{\\nabla u}^T){\\nabla v}~ dX"
+msgstr ""
+"\\int_\\Omega {\\nabla h}~{\\hat{\\hat{\\sigma}}}( E(u)) : {\\nabla v}  + "
+"\\mathcal{A}((I+{\\nabla u^T}){\\nabla h}):(I+{\\nabla u}^T){\\nabla v}~ dX"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:175
+msgid ""
+"where :math:`\\mathcal{A}` is the symmetric "
+":math:`3\\times3\\times3\\times3` tensor given by :math:`\\mathcal{A}_{ijkl}"
+" = ((\\frac{\\partial^2 W}{\\partial E^2})_{ijkl} + (\\frac{\\partial^2 "
+"W}{\\partial E^2})_{ijlk})/2`."
+msgstr ""
+"ここで :math:`\\mathcal{A}` は対称であり :math:`3\\times3\\times3\\times3` テンソルは "
+":math:`\\mathcal{A}_{ijkl} = ((\\frac{\\partial^2 W}{\\partial E^2})_{ijkl} "
+"+ (\\frac{\\partial^2 W}{\\partial E^2})_{ijlk})/2` により与えられます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:178
+msgid "Some classical constitutive laws"
+msgstr "いくつかの古典的な構成則"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:182
+msgid "``Linearized: Saint-Venant Kirchhoff  law (small deformations)``"
+msgstr "``線形化された：Saint-Venant Kirchhoff則（微小変形）``"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:184
+msgid ""
+"{W} &= \\frac{\\lambda}{2}i_1( E)^2 + \\mu i_1( E^2)\\\\ "
+"{\\hat{\\hat{\\sigma}}}   &= \\lambda i_1( E)I + 2\\mu E\\\\ \\mathcal{A} &="
+" \\lambda i_1(H)I + \\mu (H + H^T)"
+msgstr ""
+"{W} &= \\frac{\\lambda}{2}i_1( E)^2 + \\mu i_1( E^2)\\\\ "
+"{\\hat{\\hat{\\sigma}}}   &= \\lambda i_1( E)I + 2\\mu E\\\\ \\mathcal{A} &="
+" \\lambda i_1(H)I + \\mu (H + H^T)"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:191
+msgid "``Three parameters Mooney-Rivlin law``"
+msgstr "``3つのパラメータ Mooney-Rivlin法``"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:193
+msgid "Compressible material."
+msgstr "圧縮可能な材料です。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:195
+msgid "{W} = c_1(j_1( C) - 3) + c_2(j_2( C)-3) + d_1(i_3( C)^{1/2}-1)^2"
+msgstr "{W} = c_1(j_1( C) - 3) + c_2(j_2( C)-3) + d_1(i_3( C)^{1/2}-1)^2"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:199
+msgid ""
+"where :math:`c_1`, :math:`c_2` and :math:`d_1` are given coefficients and"
+msgstr "ここで :math:`c_1`, :math:`c_2` と :math:`d_1` は係数が与えられ、次の式になります。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:201
+msgid ""
+"j_1(C) &= i_1(C) i_3(C)^{-1/3}\\\\ j_2(C) &= i_2(C) i_3(C)^{-2/3}\\\\ "
+"\\frac{\\partial j_1}{\\partial C}(C) &= "
+"i_3(C)^{-1/3}\\left(\\frac{\\partial i_1}{\\partial C}(C) - "
+"\\frac{i_1(C)}{3i_3(C)} \\frac{\\partial i_3}{\\partial C}(C)\\right)\\\\ "
+"\\frac{\\partial j_2}{\\partial C}(C) &= "
+"i_3(C)^{-2/3}\\left(\\frac{\\partial i_2}{\\partial C}(C) - "
+"\\frac{2i_2(C)}{3i_3(C)} \\frac{\\partial i_3}{\\partial C}(C)\\right)\\\\ "
+"\\frac{\\partial^2 j_1}{\\partial C^2}(C) &= "
+"i_3(C)^{-1/3}\\left(\\frac{4i_1(C)}{9i_3(C)^2} \\frac{\\partial "
+"i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C) - "
+"\\frac{1}{3i_3(C)}\\left(\\frac{\\partial i_3}{\\partial C}(C) \\otimes "
+"\\frac{\\partial i_1}{\\partial C}(C)\\right.\\right. \\\\ & "
+"~~~~~~~~~~~~~~~~\\left.\\left. + \\frac{\\partial i_1}{\\partial C}(C) "
+"\\otimes \\frac{\\partial i_3}{\\partial C}(C)\\right) - "
+"\\frac{i_1(C)}{3i_3(C)} \\frac{\\partial^2 i_3}{\\partial "
+"C^2}(C)\\right)\\\\ \\frac{\\partial^2 j_2}{\\partial C^2}(C) &= "
+"i_3(C)^{-2/3}\\left(\\frac{\\partial^2 i_2}{\\partial C^2}(C) + "
+"\\frac{10i_2(C)}{9i_3(C)^2} \\frac{\\partial i_3}{\\partial C}(C) \\otimes "
+"\\frac{\\partial i_3}{\\partial C}(C) \\right. \\\\ & "
+"~~~~~~~~~~~~~~~~\\left. - \\frac{2}{3i_3(C)}(\\frac{\\partial i_3}{\\partial"
+" C}(C) \\otimes \\frac{\\partial i_2}{\\partial C}(C) + \\frac{\\partial "
+"i_2}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C)) - "
+"\\frac{2i_2(C)}{3i_3(C)} \\frac{\\partial^2 i_3}{\\partial C^2}(C)\\right)"
+msgstr ""
+"j_1(C) &= i_1(C) i_3(C)^{-1/3}\\\\ j_2(C) &= i_2(C) i_3(C)^{-2/3}\\\\ "
+"\\frac{\\partial j_1}{\\partial C}(C) &= "
+"i_3(C)^{-1/3}\\left(\\frac{\\partial i_1}{\\partial C}(C) - "
+"\\frac{i_1(C)}{3i_3(C)} \\frac{\\partial i_3}{\\partial C}(C)\\right)\\\\ "
+"\\frac{\\partial j_2}{\\partial C}(C) &= "
+"i_3(C)^{-2/3}\\left(\\frac{\\partial i_2}{\\partial C}(C) - "
+"\\frac{2i_2(C)}{3i_3(C)} \\frac{\\partial i_3}{\\partial C}(C)\\right)\\\\ "
+"\\frac{\\partial^2 j_1}{\\partial C^2}(C) &= "
+"i_3(C)^{-1/3}\\left(\\frac{4i_1(C)}{9i_3(C)^2} \\frac{\\partial "
+"i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C) - "
+"\\frac{1}{3i_3(C)}\\left(\\frac{\\partial i_3}{\\partial C}(C) \\otimes "
+"\\frac{\\partial i_1}{\\partial C}(C)\\right.\\right. \\\\ & "
+"~~~~~~~~~~~~~~~~\\left.\\left. + \\frac{\\partial i_1}{\\partial C}(C) "
+"\\otimes \\frac{\\partial i_3}{\\partial C}(C)\\right) - "
+"\\frac{i_1(C)}{3i_3(C)} \\frac{\\partial^2 i_3}{\\partial "
+"C^2}(C)\\right)\\\\ \\frac{\\partial^2 j_2}{\\partial C^2}(C) &= "
+"i_3(C)^{-2/3}\\left(\\frac{\\partial^2 i_2}{\\partial C^2}(C) + "
+"\\frac{10i_2(C)}{9i_3(C)^2} \\frac{\\partial i_3}{\\partial C}(C) \\otimes "
+"\\frac{\\partial i_3}{\\partial C}(C) \\right. \\\\ & "
+"~~~~~~~~~~~~~~~~\\left. - \\frac{2}{3i_3(C)}(\\frac{\\partial i_3}{\\partial"
+" C}(C) \\otimes \\frac{\\partial i_2}{\\partial C}(C) + \\frac{\\partial "
+"i_2}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C)) - "
+"\\frac{2i_2(C)}{3i_3(C)} \\frac{\\partial^2 i_3}{\\partial C^2}(C)\\right)"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:212
+msgid "and then"
+msgstr "その後"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:214
+msgid ""
+"{\\hat{\\hat{\\sigma}}}   &= 2c_1 \\frac{\\partial j_1}{\\partial C}(C) + "
+"2c_2 \\frac{\\partial j_2}{\\partial C}(C)  + "
+"2d_1\\left(1-i_3(C)^{-1/2}\\right)\\frac{\\partial i_3}{\\partial C}(C) \\\\"
+" \\mathcal{B} &= 4 c_1 \\frac{\\partial^2 j_1}{\\partial C^2}(C) + 4c_2 "
+"\\frac{\\partial^2 j_2}{\\partial C^2}(C) + "
+"4d_1\\left(\\left(1-i_3(C)^{-1/2}\\right)\\frac{\\partial^2 i_3}{\\partial "
+"C^2}(C) + \\frac{1}{2}i_3(C)^{-3/2} \\frac{\\partial i_3}{\\partial C}(C) "
+"\\otimes \\frac{\\partial i_3}{\\partial C}(C)\\right) \\\\ "
+"\\mathcal{A}_{ijkl} &= (\\mathcal{B}_{ijkl} + \\mathcal{B}_{jikl})/2"
+msgstr ""
+"{\\hat{\\hat{\\sigma}}}   &= 2c_1 \\frac{\\partial j_1}{\\partial C}(C) + "
+"2c_2 \\frac{\\partial j_2}{\\partial C}(C)  + "
+"2d_1\\left(1-i_3(C)^{-1/2}\\right)\\frac{\\partial i_3}{\\partial C}(C) \\\\"
+" \\mathcal{B} &= 4 c_1 \\frac{\\partial^2 j_1}{\\partial C^2}(C) + 4c_2 "
+"\\frac{\\partial^2 j_2}{\\partial C^2}(C) + "
+"4d_1\\left(\\left(1-i_3(C)^{-1/2}\\right)\\frac{\\partial^2 i_3}{\\partial "
+"C^2}(C) + \\frac{1}{2}i_3(C)^{-3/2} \\frac{\\partial i_3}{\\partial C}(C) "
+"\\otimes \\frac{\\partial i_3}{\\partial C}(C)\\right) \\\\ "
+"\\mathcal{A}_{ijkl} &= (\\mathcal{B}_{ijkl} + \\mathcal{B}_{jikl})/2"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:220
+msgid "Incompressible material."
+msgstr "非圧縮性の材料です。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:222
+msgid "{d_1} = 0 \\intertext{with the additional constraint:} i_3( C) = 1"
+msgstr "{d_1} = 0 \\intertext{with the additional constraint:} i_3( C) = 1"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:228
+msgid ""
+"The incompressibility constraint :math:`i_3( C) = 1` is handled with a "
+"Lagrange multiplier :math:`p` (the pressure)"
+msgstr "非圧縮性制約 :math:`i_3( C) = 1` はLagrange乗数 :math:`p` （圧力）で扱われます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:230
+msgid ""
+"constraint: :math:`\\sigma = -pI \\Rightarrow {\\hat{\\hat{\\sigma}}} = "
+"-p\\nabla\\Phi\\nabla\\Phi^{-T}\\det\\nabla\\Phi`"
+msgstr ""
+"拘束: :math:`\\sigma = -pI \\Rightarrow {\\hat{\\hat{\\sigma}}} = "
+"-p\\nabla\\Phi\\nabla\\Phi^{-T}\\det\\nabla\\Phi`"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:232
+msgid ""
+"1 - i_3(\\nabla\\Phi) &= 0 \\\\ -\\int_{\\Omega_0} (\\det\\nabla\\Phi  -1) q"
+"  dX &= 0 ~~~ \\forall q"
+msgstr ""
+"1 - i_3(\\nabla\\Phi) &= 0 \\\\ -\\int_{\\Omega_0} (\\det\\nabla\\Phi  -1) q"
+"  dX &= 0 ~~~ \\forall q"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:238
+msgid ""
+"B &= -\\int_{\\Omega_0} p(\\nabla\\Phi)^{-T} \\det \\nabla\\Phi : \\nabla v"
+"  dX \\\\ K &= \\int_{\\Omega_0} \\left( p(\\nabla\\Phi)^{-T}(\\nabla "
+"h)^{T}(\\nabla\\Phi)^{-T}\\det\\nabla\\Phi : \\nabla v  dX - "
+"p(\\nabla\\Phi)^{-T}(\\det \\nabla\\Phi(\\nabla\\Phi)^{-T}:\\nabla h) : "
+"\\nabla v \\right)  dX\\\\ &= \\int_{\\Omega_0} p(\\nabla "
+"h^T\\nabla\\Phi^{-T}):(\\nabla\\Phi^{-1}\\nabla v)\\det\\nabla\\Phi dX - "
+"\\int_{\\Omega_0} p(\\nabla\\Phi^{-T}:\\nabla h)(\\nabla\\Phi^{-T}:\\nabla "
+"v)\\det\\nabla\\Phi dX"
+msgstr ""
+"B &= -\\int_{\\Omega_0} p(\\nabla\\Phi)^{-T} \\det \\nabla\\Phi : \\nabla v"
+"  dX \\\\ K &= \\int_{\\Omega_0} \\left( p(\\nabla\\Phi)^{-T}(\\nabla "
+"h)^{T}(\\nabla\\Phi)^{-T}\\det\\nabla\\Phi : \\nabla v  dX - "
+"p(\\nabla\\Phi)^{-T}(\\det \\nabla\\Phi(\\nabla\\Phi)^{-T}:\\nabla h) : "
+"\\nabla v \\right)  dX\\\\ &= \\int_{\\Omega_0} p(\\nabla "
+"h^T\\nabla\\Phi^{-T}):(\\nabla\\Phi^{-1}\\nabla v)\\det\\nabla\\Phi dX - "
+"\\int_{\\Omega_0} p(\\nabla\\Phi^{-T}:\\nabla h)(\\nabla\\Phi^{-T}:\\nabla "
+"v)\\det\\nabla\\Phi dX"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:247
+msgid "``Ciarlet-Geymonat law``"
+msgstr "``Ciarlet-Geymonat 法``"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:249
+msgid ""
+"{W} &= a\\; i_1(C) + (\\frac{\\mu}{2} - a)i_2(C) + (\\frac{\\lambda}{4} - "
+"\\frac{\\mu}{2} + a)i_3(C) - (\\frac{\\mu}{2}+\\frac{\\lambda}{4})\\log "
+"\\det(C)"
+msgstr ""
+"{W} &= a\\; i_1(C) + (\\frac{\\mu}{2} - a)i_2(C) + (\\frac{\\lambda}{4} - "
+"\\frac{\\mu}{2} + a)i_3(C) - (\\frac{\\mu}{2}+\\frac{\\lambda}{4})\\log "
+"\\det(C)"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:253
+msgid ""
+"with  :math:`\\lambda, \\mu` the Lame coefficients and "
+":math:`\\max(0,\\frac{\\mu}{2}-\\frac{\\lambda}{4})<a<\\frac{\\mu}{2}` (see "
+"[ciarlet1988]_)."
+msgstr ""
+"Lame 係数 :math:`\\lambda, \\mu` は "
+":math:`\\max(0,\\frac{\\mu}{2}-\\frac{\\lambda}{4})<a<\\frac{\\mu}{2}` "
+"のようになります。（[ciarlet1988]_ を参照してください）。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:257
+msgid "``Generalized Blatz-Ko law``"
+msgstr "``一般化されたBlatz-Ko法``"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:259
+msgid "{W} &= (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)^n"
+msgstr "{W} &= (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)^n"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:263
+msgid ""
+"Since :math:`\\frac{\\partial}{\\partial C} {W}(C) = "
+"\\displaystyle\\sum_{j}\\frac{\\partial W}{\\partial i_j(C)} "
+"\\frac{\\partial i_j(C)}{\\partial C}`, and "
+":math:`\\frac{\\partial^2}{\\partial C^2} {W}(C) = \\displaystyle\\sum_{j} "
+"\\displaystyle\\sum_{k} \\frac{\\partial^2 W}{\\partial i_j(C) \\partial "
+"i_k(C)} \\frac{\\partial i_k(C)}{\\partial C} \\otimes \\frac{\\partial "
+"i_j(C)}{\\partial C} + \\displaystyle\\sum_{j} \\frac{\\partial W}{\\partial"
+" i_j(C)} \\frac{\\partial^2 i_j(C)}{\\partial C^2}` we must compute the "
+"derivatives of the strain energy function with respect to the Cauchy-Green "
+"tensor invariants (we don't need to compute the invariants derivatives with "
+"respect to :math:`E` since :math:`\\frac{\\partial i_j}{\\partial E}(C;H) = "
+"2 \\frac{\\partial i_j}{\\partial C}(C;H)`) :"
+msgstr ""
+":math:`\\frac{\\partial}{\\partial C} {W}(C) = "
+"\\displaystyle\\sum_{j}\\frac{\\partial W}{\\partial i_j(C)} "
+"\\frac{\\partial i_j(C)}{\\partial C}` と "
+":math:`\\frac{\\partial^2}{\\partial C^2} {W}(C) = \\displaystyle\\sum_{j} "
+"\\displaystyle\\sum_{k} \\frac{\\partial^2 W}{\\partial i_j(C) \\partial "
+"i_k(C)} \\frac{\\partial i_k(C)}{\\partial C} \\otimes \\frac{\\partial "
+"i_j(C)}{\\partial C} + \\displaystyle\\sum_{j} \\frac{\\partial W}{\\partial"
+" i_j(C)} \\frac{\\partial^2 i_j(C)}{\\partial C^2}` であるため、Cauchy-"
+"Greenテンソル不変量に対して歪エネルギー関数の導関数を計算しなければなりません（ :math:`\\frac{\\partial "
+"i_j}{\\partial E}(C;H) = 2 \\frac{\\partial i_j}{\\partial C}(C;H)` "
+"であるため、以下の点 :math:`E` に関して不変量導関数を計算する必要はありません。)"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:265
+msgid ""
+"\\begin{array}{l} \\frac{\\partial W}{\\partial i_1(C)} = naZ^{n-1} "
+"~~~~\\mbox{with } Z = (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)}"
+" + d)\\\\ \\frac{\\partial W}{\\partial i_2(C)} = "
+"n\\frac{c}{i_3(C)}Z^{n-1}\\\\ \\frac{\\partial W}{\\partial i_3(C)} = "
+"n(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-1}\\\\ "
+"\\frac{\\partial W^2}{\\partial^2 i_1(C)} = n(n-1)A^2Z^{n-2}\\\\ "
+"\\frac{\\partial W^2}{\\partial i_1(C) \\partial i_2(C)} = "
+"n(n-1)A\\frac{c}{i_3(C)}Z^{n-2}\\\\ \\frac{\\partial W^2}{\\partial i_1(C) "
+"\\partial i_3(C)} = "
+"n(n-1)A(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2}\\\\ "
+"\\frac{\\partial W^2}{\\partial^2 i_2(C)} = "
+"n(n-1)\\frac{c^2}{i_3(C)^2}Z^{n-2}\\\\ \\frac{\\partial W^2}{\\partial "
+"i_2(C) \\partial i_3(C)} = "
+"n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2} - "
+"n\\frac{c^2}{i_3(C)^2}Z^{n-1}\\\\ \\frac{\\partial W^2}{\\partial i_3(C)^2} "
+"= n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})^2Z^{n-2} + "
+"n(-\\frac{b}{4i_3(C)^{3/2}}+2\\frac{ci_2(C)}{i_3(C)^4})Z^{n-1} \\end{array}"
+msgstr ""
+"\\begin{array}{l} \\frac{\\partial W}{\\partial i_1(C)} = naZ^{n-1} "
+"~~~~\\mbox{with } Z = (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)}"
+" + d)\\\\ \\frac{\\partial W}{\\partial i_2(C)} = "
+"n\\frac{c}{i_3(C)}Z^{n-1}\\\\ \\frac{\\partial W}{\\partial i_3(C)} = "
+"n(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-1}\\\\ "
+"\\frac{\\partial W^2}{\\partial^2 i_1(C)} = n(n-1)A^2Z^{n-2}\\\\ "
+"\\frac{\\partial W^2}{\\partial i_1(C) \\partial i_2(C)} = "
+"n(n-1)A\\frac{c}{i_3(C)}Z^{n-2}\\\\ \\frac{\\partial W^2}{\\partial i_1(C) "
+"\\partial i_3(C)} = "
+"n(n-1)A(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2}\\\\ "
+"\\frac{\\partial W^2}{\\partial^2 i_2(C)} = "
+"n(n-1)\\frac{c^2}{i_3(C)^2}Z^{n-2}\\\\ \\frac{\\partial W^2}{\\partial "
+"i_2(C) \\partial i_3(C)} = "
+"n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2} - "
+"n\\frac{c^2}{i_3(C)^2}Z^{n-1}\\\\ \\frac{\\partial W^2}{\\partial i_3(C)^2} "
+"= n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})^2Z^{n-2} + "
+"n(-\\frac{b}{4i_3(C)^{3/2}}+2\\frac{ci_2(C)}{i_3(C)^4})Z^{n-1} \\end{array}"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:280
+msgid "``Plane strain hyper-elasticity``"
+msgstr "``平面ひずみ超弾性``"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:282
+msgid ""
+"All previous models are valid in volumic domains. Corresponding plane strain"
+" 2D models can be obtained by restricting the stress tensor and the fourth "
+"order tensor :math:`\\mathcal{A}` to their plane components."
+msgstr ""
+"以上のすべてのモデルは、ボリューム領域で有効です。対応する平面歪み2次元モデルは、応力テンソルと4次テンソル :math:`\\mathcal{A}` "
+"をその平面成分に制限することで得られます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:287
+msgid "Add an nonlinear elasticity brick to a model"
+msgstr "モデルに非線形弾性ブリック要素を追加する"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:289
+msgid ""
+"This brick represents a large strain elasticity problem. It is defined in "
+"the files :file:`getfem/getfem_nonlinear_elasticity.h` and "
+":file:`getfem/getfem_nonlinear_elasticity.cc`. The function adding this "
+"brick to a model is ::"
+msgstr ""
+"この要素は大ひずみ弾性問題を表しています。ファイル :file:`getfem/getfem_nonlinear_elasticity.h` と "
+":file:`getfem/getfem_nonlinear_elasticity.cc` "
+"で定義されています。このブリック要素をモデルに追加する関数は以下の通りです。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:294
+msgid ""
+"where ``AHL`` is an object of type ``getfem::abstract_hyperelastic_law`` "
+"which represents the considered hyperelastic law. It has to be chosen "
+"between: ::"
+msgstr ""
+"``AHL`` は、考えられる超弾性法則を表す ``getfem::abstract_hyperelastic_law`` "
+"型のオブジェクトです。次の中から選択する必要があります。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:302
+msgid ""
+"The Saint-Venant Kirchhoff law is a linearized law defined with the two Lame"
+" coefficients, Ciarlet Geymonat law is defined with the two Lame "
+"coefficients and an additional coefficient (:math:`\\lambda, \\mu, a`)."
+msgstr ""
+"Saint-Venant Kirchhoff則は、2つのラメ係数で定義された線形化された法則であり、Ciarlet "
+"Geymonat則は2つのラメ係数と追加の係数（:math:`\\lambda, \\mu, a`）で定義されます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:304
+msgid ""
+"The Mooney-Rivlin law accepts two optional flags, the first one determines "
+"if the material will be compressible (:math:`d_1 \\neq 0`) and the second "
+"one determines if the material is neo Hookean (:math:`c_2 = 0`). Depending "
+"on these flags one to three coefficients may be necessary. By default it is "
+"defined as incompressible and non neo Hookean, thus it needs two material "
+"coefficients (:math:`c_1`, :math:`c_2`). In this case, it is to be used with"
+" the large strain incompressibility condition."
+msgstr ""
+"Mooney-Rivlin則は、2つのオプションのフラグを受け取ります。最初のものは、材料が圧縮可能かどうかを判定し（:math:`d_1 \\neq "
+"0`）、2番目のフラグは材料がNeo-Hookean（:math:`c_2 = "
+"0`）かどうかを判定します。これらのフラグに応じて、1〜3個の係数が必要な場合があります。デフォルトでは、それは非圧縮性かつNeo-"
+"Hookeanでないと定義されているため、2つの物質係数（:math:`c_1`, "
+":math:`c_2`）が必要です。この場合、大きなひずみの非圧縮条件で使用する必要があります。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:306
+msgid ""
+"The plane strain hyperelastic law takes a pointer on a hyperelastic law as a"
+" parameter and performs a 2D plane strain approximation."
+msgstr "平面ひずみ超弾性則は、パラメータとして超弾性則の指針をとり、2D平面ひずみ近似を実行します。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:308
+msgid ""
+"``md`` is the model variable, ``mim`` the integration method, ``varname`` "
+"the string being the name of the variable on which the term is added, "
+"``dataname`` the string being the name of the data in the model representing"
+" the coefficients of the law (can be constant or describe on a finite "
+"element method) and ``region`` is the region on which the term is considered"
+" (by default, all the mesh)."
+msgstr ""
+"``md`` はモデル変数、 ``mim`` は積分法、 ``varname`` は文字列に変数が追加される変数の名前、 ``dataname`` "
+"は法則の係数を表すモデル内のデータの名前です（定数または有限要素法を記述することができる）また ``region`` "
+"はその項が考慮される領域です（デフォルトではすべてのメッシュ）。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:311
+msgid ""
+"The program :file:`nonlinear_elastostatic.cc` in :file:`tests` directory and"
+" :file:`demo_nonlinear_elasticity.m` in :file:`interface/tests/matlab` "
+"directory are some examples of use of this brick with or without an "
+"incompressibility condition."
+msgstr ""
+":file:`tests` ディレクトリ内のプログラム :file:`nonlinear_elastostatic.cc` と "
+":file:`interface/tests/matlab` ディレクトリ内のプログラム "
+":file:`demo_nonlinear_elasticity.m` はこの要素の非圧縮性条件での使用の例です。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:314
+msgid ""
+"Note that the addition of a new hyperelastic constitutive law consists in "
+"furnishing the expression of the strain energy, the stress tensor and the "
+"derivative of the stress tensor. See the file  "
+":file:`getfem/getfem_nonlinear_elasticity.cc` for more details. In "
+"particular, expression of the invariants and their derivatives are "
+"available."
+msgstr ""
+"新しい超弾性構成則の追加は、歪エネルギー、応力テンソルおよび応力テンソルの導関数の表現を与えることにあることに留意してください。詳細は、ファイル "
+":file:`getfem/getfem_nonlinear_elasticity.cc` "
+"を参照してください。特に、不変量およびそれらの導関数の表現が利用可能です。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:317
+msgid ""
+"A function which computes the Von Mises or Tresca stresses is also "
+"available: ::"
+msgstr "Von MisesまたはTrescaの応力を計算する関数も利用できます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:322
+msgid ""
+"It returns a vector of the degrees of freedom of the Von Mises or Tresca "
+"stress on the finite element method mf_vm. ``tresca`` is a boolean whose "
+"value should be ``true`` for Tresca stress and ``false`` for Von Mises "
+"stress."
+msgstr ""
+"これは、有限要素法 mf_vm 上のVon MisesまたはTresca応力の自由度のベクトルを返します。 ``tresca`` "
+"はブール値で、Tresca応力に対しては ``true`` 、Von Mises応力には ``false`` となります。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:327
+msgid "Add a large strain incompressibility brick to a model"
+msgstr "モデルに大ひずみの非圧縮性ブリック要素を追加する"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:330
+msgid ""
+"This brick adds an incompressibility condition in a large strain problem of "
+"type"
+msgstr "このブリック要素は、大きなひずみ問題で非圧縮性条件を追加します"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:332
+msgid "\\mbox{det}(I+\\nabla u) = 1,"
+msgstr "\\mbox{det}(I+\\nabla u) = 1,"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:336
+msgid ""
+"A Lagrange multiplier representing the pressure is introduced in a mixed "
+"formulation. The function adding this brick to a model is ::"
+msgstr "圧力を表すLagrange乗数が混合式で導入されます。このブリック要素をモデルに追加する関数は次の通りです。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:342
+msgid ""
+"where ``md`` is the model, ``mim`` the integration method, ``varname`` the "
+"variable of the model on which the incompressibility condition is added, "
+"``multanme`` the multiplier variable corresponding to the pressure (be aware"
+" that at least a linear Ladyzhenskaja-Babuska-Brezzi inf-sup condition is "
+"satisfied between the f.e.m. of the variable and the one of the multiplier)."
+" ``region`` is an optional parameter correponding to the mesh region on "
+"which the term is considered (by default, all the mesh)."
+msgstr ""
+"ここで、 ``md`` はモデル、 ``mim`` は積分法、 ``varname`` は非圧縮性条件が追加されたモデルの変数、 "
+"``multanme`` は圧力に対応する乗数変数（変数の有限要素法と乗数の間で少なくとも線形のLadyzhenskaja-Babuska-"
+"Brezzi極限条件が満たされていることに注意してください。) ``region`` "
+"は、項が考慮されるメッシュ領域に対応するオプションのパラメータです（デフォルトではすべてのメッシュ）。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:346
+msgid "High-level generic assembly versions"
+msgstr "高水準汎用構築バージョン"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:348
+msgid ""
+"The weak form language gives access to the hyperelastic potential and "
+"constitutive laws implemented in |gf|. This allows to directly use them in "
+"the language, for instance using a generic assembly brick in a model or for "
+"interpolation of certain quantities (the stress for instance)."
+msgstr ""
+"弱形式言葉は、 |gf| "
+"で実装された超弾性ポテンシャルおよび構成規則にアクセスできるようにします。これにより、言語で直接使用することができます。たとえば、モデル内の汎用的な構築ブリック要素を使用するか、または特定の数量の補間（応力など）が可能です。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:350
+msgid ""
+"Here is the list of nonlinear operators in the language which can be useful "
+"for nonlinear elasticity::"
+msgstr "非線形弾性に役立つ非線形演算子の言語のリストです。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:362
+msgid "The potentials::"
+msgstr "ポテンシャルのリストです。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:384
+msgid "The second Piola-Kirchhoff stress tensors::"
+msgstr "第2種Piola-Kirchhoff応力テンソルのリストです。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:406
+msgid ""
+"Note that the derivatives with respect to the material parameters have not "
+"been implemented apart for the Saint Venant Kirchhoff hyperelastic law. "
+"Therefore, it is not possible to make the parameter depend on other "
+"variables of a model (derivatives are not necessary complicated to implement"
+" but for the moment, only a wrapper with old implementations has been "
+"written)."
+msgstr ""
+"材料パラメータに関する導関数は、Saint Venant "
+"Kirchhoff超弾性法のためには個別に実装されていないことに注意してください。したがって、パラメータをモデルの他の変数に依存させることはできません（導関数は実装するのはそれほど複雑ではありませんが、現時点では古い実装のラッパーのみが記述されています）。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:408
+msgid ""
+"Note that the coupling of models is to be done at the weak formulation "
+"level. In a general way, it is recommended not to use the potential to "
+"define a problem. Main couplings cannot be obtained at the potential level. "
+"Thus the use of potential should be restricted to the actual computation of "
+"the potential."
+msgstr ""
+"モデルの結合は、弱形式レベルで行われることに注意してください。汎用的な方法では、ポテンシャルで問題を定義しないことをお勧めします。第1に、ポテンシャルの2次導関数（接線系を得るために必要）が非常に複雑で最適化不可能であり、第2に、ポテンシャルレベルで主結合を得ることができないという2つの理由があります。従って、ポテンシャルの使用は、ポテンシャルの実際の計算に限定されるべきです。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:410
+msgid ""
+"An example of use to add a Saint Venant-Kirchhoff hyperelastic term to a "
+"variable ``u`` in a model or a ga_workspace is given by the addition of the "
+"following assembly string::"
+msgstr ""
+"モデルまたはga_workspaceの変数 ``u`` にSaint Venant-"
+"Kirchhoff超弾性項を追加するには、次の構築文字列を使用します。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:414
+msgid ""
+"Note that in that case, ``lambda`` and ``mu`` have to be declared data of "
+"the model/ga_workspace. It is of course possible to replace them by explicit"
+" constants or expressions depending on several data."
+msgstr ""
+"その場合、データ ``lambda`` と ``mu`` を model/ga_workspace "
+"で宣言する必要があることに注意してください。もちろん、いくつかのデータに応じて陽な定数や式で置き換えることも可能です。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:416
+msgid ""
+"Concerning the incompressible Mooney-Rivlin law, it has to be completed by "
+"an incompressibility term. For instance by adding the following "
+"incompressibility brick::"
+msgstr "非圧縮性のMooney-Rivlin則に関しては、非圧縮性の項を完成されなければなりません。たとえば、次の非圧縮ブリック要素について、"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:420
+msgid ""
+"This brick just adds the term ``p*(1-Det(Id(meshdim)+Grad_u))`` if ``p`` is "
+"the multiplier and ``u`` the variable which represents the displacement."
+msgstr ""
+"このブリック要素は、 ``p`` が乗数で ``u`` 変位を表す変数であれば項 ``p*(1-Det(Id(meshdim)+Grad_u))`` "
+"を与える単純なものです。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:422
+msgid ""
+"The addition of an hyperelastic term to a model can also be done thanks to "
+"the following function::"
+msgstr "モデルに超弾性項を加えることは、次の関数によっても行うことができます。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:427
+msgid ""
+"where ``md`` is the model, ``mim`` the integration method, ``varname`` the "
+"variable of the model representing the large strain displacement, "
+"``lawname`` is the constitutive law name which could be "
+"``Saint_Venant_Kirchhoff``, ``Generalized_Blatz_Ko``, ``Ciarlet_Geymonat``, "
+"``Incompressible_Mooney_Rivlin``, ``Compressible_Mooney_Rivlin``, "
+"``Incompressible_Neo_Hookean``, ``Compressible_Neo_Hookean``, "
+"``Compressible_Neo_Hookean_Bonet`` or ``Compressible_Neo_Hookean_Ciarlet``. "
+"``params`` is a string representing the parameters of the law defined as a "
+"small vector or a vector field."
+msgstr ""
+"ここで、 ``md`` はモデル、 ``mim`` は積分法、 ``varname`` は大きなひずみ変位を表すモデルの変数、 ``lawname`` "
+"は構成則名で ``Saint_Venant_Kirchhoff``、 ``Generalized_Blatz_Ko``、 "
+"``Ciarlet_Geymonat``、 ``Incompressible_Mooney_Rivlin``、 "
+"``Compressible_Mooney_Rivlin``、 ``Incompressible_Neo_Hookean``、 "
+"``Compressible_Neo_Hookean``、 ``Compressible_Neo_Hookean_Bonet`` または "
+"``Compressible_Neo_Hookean_Ciarlet`` のうちのどれかです。``params`` "
+"は小ベクトルまたはベクトルフィールドとして定義された構成則のパラメータを表す文字列です。"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:429
+msgid "The Von Mises stress can be interpolated with the following function::"
+msgstr "Von Mises応力は次の関数で補間することができます ::"
+
+#: ../source/userdoc/model_nonlinear_elasticity.rst:434
+msgid ""
+"where ``md`` is the model, ``varname`` the variable of the model "
+"representing the large strain displacement, ``lawname`` is the constitutive "
+"law name (see previou brick), ``params`` is a string representing the "
+"parameters of the law, ``mf_vm`` a (preferably discontinuous) Lagrange  "
+"finite element method on which the interpolation will be done and ``VM`` a "
+"vector of type ``model_real_plain_vector`` in which the interpolation will "
+"be stored."
+msgstr ""
+"ここで、 ``md`` はモデル、 ``varname`` は大ひずみ変位を表すモデルの変数、 ``lawname`` "
+"は構成則名（前述のブリック要素を参照）、 ``params`` は文字列補間が行われる法則のパラメータ 、``mf_vm`` "
+"は（不連続なのが好ましい）Lagrange有限要素法を表現し、 ``VM`` は補間された値が格納される "
+"``model_real_plain_vector`` 型のベクトルを表します。"

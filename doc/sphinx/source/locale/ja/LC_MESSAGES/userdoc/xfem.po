@@ -1,0 +1,549 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 06:48+0000\n"
+"PO-Revision-Date: 2018-07-16 07:06+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/userdoc/xfem.rst:10
+msgid "Level-sets, Xfem, fictitious domains, Cut-fem"
+msgstr "レベル集合法、拡張有限要素法(Xfem)、仮想領域有限要素法、切断有限要素法"
+
+#: ../source/userdoc/xfem.rst:12
+msgid ""
+"Since v2.0, |gf| offers a certain number of facilities to support Xfem and "
+"fictitious domain methods with a cut-fem strategy. Most of these tools have "
+"been initially mainly developed by Julien Pommier for the study published in"
+" [LA-PO-RE-SA2005]_."
+msgstr ""
+"v2.0以降、 |gf| "
+"は拡張有限要素法(Xfem)と仮想領域有限要素法を切断有限要素法でサポートするために、いくつかの機能を提供しています。これらのツールのほとんどは、当初、Julien"
+" Pommier によって [LA-PO-RE-SA2005]_ に発表された研究をもとにして主に開発されました。"
+
+#: ../source/userdoc/xfem.rst:17
+msgid ""
+"The implementation is a fairly large generality, based on the use of level-"
+"sets, as suggested in [SU-CH-MO-BE2001]_ and allows simultaneous use of a "
+"large number of level-sets which can cross."
+msgstr ""
+"[SU-CH-MO-BE2001]_ "
+"で提案されているように、レベル集合法の使用に基づいて、実装はかなり大きな汎用性を持ち、多数のレベル集合法を同時に使用できます。"
+
+#: ../source/userdoc/xfem.rst:21
+msgid ""
+"The Xfem implementation for the discretization of the jump follows the "
+"strategy of [HA-HA2004]_ although we had no knowledge of this work during "
+"implementation. This means that there is no degree of freedom representing "
+"the jump across the level-set. Instead, the degrees of freedom represent the"
+" displacement of each side of the level-set. This is essential in any way in"
+" the presence of level-set that intersect each other because it may exist "
+"more than two different zones of continuity inside a single element."
+msgstr ""
+"基底の離散化のための拡張有限要素法(Xfem)の実装は、 [HA-HA2004]_ "
+"の手法に従いますが、実装中にこの作業についての知識はありませんでした。ゆえに、レベル集合法全体の基底を表す自由度がありません。代わりに、自由度は、レベル集合法の各側の変位を表します。これは、1つの要素の中に連続な2つ以上の異なるゾーンが存在する可能性があるため、互いに交差するレベル集合法の存在下ではどのような場合にも不可欠です。"
+
+#: ../source/userdoc/xfem.rst:30
+msgid ""
+"The cut fem strategy for fictitious domain method has been used for the "
+"first time with |gf| for the study published in [HA-RE2009]_ where a quite "
+"simple stabilization strategy is proposed. Here also, before knowing the "
+"existence of the Work of E. Burman and P. Hanbo [bu-ha2010]_ on that topic."
+msgstr ""
+"仮想領域法の切断有限要素法は、 |gf| で初めて使用されています。かなり単純な安定化戦略が提案されている [HA-RE2009]_ "
+"に掲載された研究を使用しています。ここでも、話題の E. Burman and P. Hanbo [bu-ha2010]_ "
+"の存在を知る前に実装が行われています。"
+
+#: ../source/userdoc/xfem.rst:36
+msgid ""
+"The tools for Xfem have been then enriched by the PhD works of J. Larsy (see"
+" for instance [LA-RE-SA2010]_) the one of E. Chahine (see for instance [CH-"
+"LA-RE2011]_, [NI-RE-CH2011]_), of S. Amdouni  (see for instance [AM-MO-"
+"RE2014]_, [AM-MO-RE2014b]_) and of M. Fabre (see for instance  [Fa-Po-"
+"Re2015]_)."
+msgstr ""
+"拡張有限要素法(Xfem)は、J. Larsyの PhD研究（例えば、 [LA-RE-SA2010]_ を参照）とE. Chahine （例えば、 "
+"[CH-LA-RE2011]_, [NI-RE-CH2011]_ を参照）とS. Amdouni （例えば、 [AM-MO-RE2014]_, [AM-"
+"MO-RE2014b]_ を参照）とM. Fabre （例えば、 [Fa-Po-Re2015]_ を参照）によってツールを充実させています。"
+
+#: ../source/userdoc/xfem.rst:45
+msgid ""
+"All the tools listed below needs the package `qhull <http://www.qhull.org>`_"
+" installed on your system. This package is widely available. It computes "
+"convex hull and Delaunay triangulations in arbitrary dimension."
+msgstr ""
+"下記のすべてのツールは、システムに `qhull <http://www.qhull.org>`_ "
+"パッケージがインストールされている必要があります。このパッケージは広く入手可能です。このライブラリは、任意の次元の凸包とDelaunay3角形分割を計算します。"
+
+#: ../source/userdoc/xfem.rst:49
+msgid ""
+"The programs :file:`tests/crack.cc`, :file:`interface/tests/matlab/crack.m` "
+"and :file:`interface/tests/python/crack.py` are some good examples of use of"
+" these tools."
+msgstr ""
+"プログラム :file:`tests/crack.cc` 、 :file:`interface/tests/matlab/crack.m` と "
+":file:`interface/tests/python/crack.py` はこれらのツールの使用例です。"
+
+#: ../source/userdoc/xfem.rst:53
+msgid "Representation of level-sets"
+msgstr "レベル集合法の表現"
+
+#: ../source/userdoc/xfem.rst:55
+msgid ""
+"Some structure are defined to manipulate level-set functions defined by "
+"piecewise polynomial function on a mesh. In the file "
+":file:`getfem/getfem_levelset.h` a level-set is represented by a function "
+"defined on a Lagrange fem of a certain degree on a mesh. The constructor to "
+"define a new |gf_ls| is the following::"
+msgstr ""
+"いくつかの構造は、メッシュ上の区分的多項式関数によって定義されたレベル集合法関数を操作するために定義されています。ファイル "
+":file:`getfem/getfem_levelset.h` "
+"レベル集合法は、メッシュ上のある次元のLagrange有限要素法に定義された関数で表されます。新しい |gf_ls| "
+"を定義するコンストラクタは次の通りです。"
+
+#: ../source/userdoc/xfem.rst:63
+msgid ""
+"where ``mesh`` is a valid mesh of type |gf_m|, ``degree`` is the degree of "
+"the polynomials (1 is the default value), and ``with_secondary`` is a "
+"boolean whose default value is false. The secondary level-set is used to "
+"represent fractures (if :math:`p(x)` is the primary level-set function and "
+":math:`s(x)` is the secondary level-set function, the crack is defined by "
+":math:`p(x) = 0` and :math:`s(x) \\leq 0`: the role of the secondary is to "
+"delimit the crack)."
+msgstr ""
+"ここで、 ``mesh`` は有効な |gf_m| メッシュ型です、 ``degree`` は多項式の次数（1はデフォルト値）です、 また "
+"``with_secondary`` はデフォルト値がfalseのブール値です。次レベル集合法が、降伏を表すために使用されます（ "
+":math:`p(x)` がプライマリレベル集合法関数であり、 :math:`s(x)` がセカンダリレベル集合法関数である場合、:math:`p(x)"
+" = 0` と :math:`s(x) \\leq 0` ：2次的役割はクラックを区切ることです。）"
+
+#: ../source/userdoc/xfem.rst:71
+msgid ""
+"Each level-set function is defined by a |mf| ``mf`` and the dof values over "
+"this |mf|, in a vector. The object |gf_ls| contains a |mf| and the vectors "
+"of dof for the corresponding function(s). The method ``ls.value(0)`` returns"
+" the vector of dof for the primary level-set function, so that these values "
+"can be set. The method ``ls.value(1)`` returns the dof vector for the "
+"secondary level-set function if any. The method ``ls.get_mesh_fem()`` "
+"returns a reference on the |gf_mf| object."
+msgstr ""
+"各レベル集合法関数は、 |mf| ``mf`` とこれ以上の自由度値はベクトル内にあります。オブジェクト |gf_ls| は |mf| "
+"と対応する関数のための自由度のベクトルを含みます。 ``ls.value(0)`` "
+"メソッドは、プライマリレベル集合法関数の自由度のベクトルを返します。これにより、これらの値を設定することができます。 ``ls.value(1)`` "
+"メソッドは、セカンダリレベル集合法関数の自由度のベクトルを返します。メソッド ``ls.get_mesh_fem()`` は、 |gf_mf| "
+"オブジェクトです。"
+
+#: ../source/userdoc/xfem.rst:79
+msgid ""
+"Note that, in applications, the level-set function often evolves thanks to "
+"an Hamilton-Jacobi equation (for its re-initialization for instance). See "
+"the :ref:`ud-convect` which can be used in the approximation of a Hamilton-"
+"Jacobi equation."
+msgstr ""
+"アプリケーションでは、（例えば、再初期化のため）Hamilton-Jacobi方程式により、レベル集合法関数がしばしば進展することに注意してください。 "
+"Hamilton-Jacobi方程式の近似に使用できる :ref:`ud-convect` を参照してください。"
+
+#: ../source/userdoc/xfem.rst:86
+msgid "Mesh cut by level-sets"
+msgstr "レベル集合法によるメッシュ切断"
+
+#: ../source/userdoc/xfem.rst:88
+msgid ""
+"In order to compute adapted integration methods and finite element methods "
+"to represent a field which is discontinuous across one or several level-"
+"sets, a certain number of pre-computations have to be done at the mesh "
+"level. In :file:`getfem/getfem_mesh_level_set.h` is defined the object "
+"|gf_mls| which handles these pre-computations. The constructor of this "
+"object is the following::"
+msgstr ""
+"1つまたは複数のレベル集合法にわたって不連続であるフィールドを表現するための適合化された積分法および有限要素法を計算するために、適切な数の事前計算をメッシュレベルで行わなければなりません。:file:`getfem/getfem_mesh_level_set.h`"
+" では、これらの事前計算を処理するオブジェクト |gf_mls| が定義されています。このオブジェクトのコンストラクタは次のとおりです。"
+
+#: ../source/userdoc/xfem.rst:97
+msgid ""
+"where ``mesh`` is a valid mesh of type |gf_m|. In order to indicate that the"
+" mesh is cut by a level-set, one has to call the method "
+"``mls.add_level_set(ls)``, where ``ls`` is an object of type |gf_ls|. An "
+"arbitrary number of level-sets can be added. To initialize the object or to "
+"actualize it when the value of the level-set function is modified, one has "
+"to call the method ``mls.adapt()``."
+msgstr ""
+"ここで ``mesh`` は |gf_m| 型の有効なメッシュです。メッシュがレベル集合法で切断されていることを示すためには、メソッド "
+"``mls.add_level_set(ls)`` を呼び出さなければなりません。ここで、 ``ls`` は |gf_ls| "
+"型のオブジェクトです。任意の数のレベル集合法を追加することができます。オブジェクトを初期化するか、レベル集合法関数の値が変更されたときにオブジェクトを実現するには、"
+" ``mls.adapt()`` メソッドを呼び出さなければなりません。"
+
+#: ../source/userdoc/xfem.rst:104
+msgid ""
+"In particular a subdivision of each element cut by the level-set is made "
+"with simplices. Note that the whole cut-mesh is generally not conformal."
+msgstr ""
+"特に、レベル集合法によって切断された各要素の細分化は、単純化によって行われます。切断メッシュ全体は一般に等角ではないことに注意してください。"
+
+#: ../source/userdoc/xfem.rst:107
+msgid ""
+"The cut-mesh can be obtained for instance for post-treatment thanks to "
+"``mls.global_cut_mesh(m)`` which fill ``m`` with the cut-mesh."
+msgstr ""
+"切断メッシュは例えば後処理のために取得できます、切断メッシュで満たされている ``m`` により ``mls.global_cut_mesh(m)`` "
+"を呼び出します。"
+
+#: ../source/userdoc/xfem.rst:113
+msgid "Adapted integration methods"
+msgstr "統合された積分法"
+
+#: ../source/userdoc/xfem.rst:115
+msgid ""
+"For fields which are discontinuous across a level-set, integration methods "
+"have to be adapted. The object |gf_mimls| defined in the file "
+":file:`getfem/getfem_mesh_im_level_set.h` defines a composite integration "
+"method for the elements cut by the level-set. The constructor of this object"
+" is the following::"
+msgstr ""
+"レベル集合にわたる不連続なフィールドの場合、積分法を適合させる必要があります。オブジェクト |gf_mimls| は "
+":file:`getfem/getfem_mesh_im_level_set.h` "
+"ファイル内で定義されており、レベル集合法で切り取られた要素の合成積分法が定義されています。このオブジェクトのコンストラクタは次のとおりです。"
+
+#: ../source/userdoc/xfem.rst:123
+msgid ""
+"where ``mls`` is an object of type |gf_mls|, ``where`` is an enum for which "
+"possible values are"
+msgstr "ここで、 ``mls`` は |gf_mls| 型のオブジェクトです、 ``where`` には以下の値が入力可能です。"
+
+#: ../source/userdoc/xfem.rst:126
+msgid ""
+"``getfem::mesh_im_level_set::INTEGRATE_INSIDE`` (integrate over "
+":math:`p(x)<0`),"
+msgstr ""
+"``getfem::mesh_im_level_set::INTEGRATE_INSIDE`` （:math:`p(x)<0` 上で積分）、"
+
+#: ../source/userdoc/xfem.rst:128
+msgid ""
+"``getfem::mesh_im_level_set::INTEGRATE_OUTSIDE`` (integrate over "
+":math:`p(x)>0`),"
+msgstr ""
+"``getfem::mesh_im_level_set::INTEGRATE_OUTSIDE`` （:math:`p(x)>0` 上で積分）、"
+
+#: ../source/userdoc/xfem.rst:130
+msgid "``getfem::mesh_im_level_set::INTEGRATE_ALL``,"
+msgstr "``getfem::mesh_im_level_set::INTEGRATE_ALL`` 、"
+
+#: ../source/userdoc/xfem.rst:132
+msgid ""
+"``getfem::mesh_im_level_set::INTEGRATE_BOUNDARY`` (integrate over "
+":math:`p(x)=0` and :math:`s(x)\\leq 0`)"
+msgstr ""
+"``getfem::mesh_im_level_set::INTEGRATE_BOUNDARY`` （:math:`p(x)=0` と "
+":math:`s(x)\\leq 0` 上で積分）"
+
+#: ../source/userdoc/xfem.rst:135
+msgid ""
+"The argument ``regular_im`` should be of type ``pintegration_method``, and "
+"will be the integration method applied on each sub-simplex of the composite "
+"integration for elements cut by the level-set. The optional ``singular_im`` "
+"should be also of type ``pintegration_method`` and is used for crack "
+"singular functions: it is applied to sub-simplices which share a vertex with"
+" the crack tip (the specific integration method ``IM_QUASI_POLAR(..)`` is "
+"well suited for this purpose)."
+msgstr ""
+"引数 ``regular_im`` は、 ``pintegration_method`` 型でなければなりません。また、 "
+"レベル集合法で切断された要素の複合積分の各サブシンプレックスに適用される積分法になります。オプションの ``singular_im`` は "
+"``pintegration_method`` "
+"型でなければならず、クラックの特異関数に使われます。クラックチップとの頂点を共有するサブシンプレックスに適用されます（特定の積分法 "
+"``IM_QUASI_POLAR(..)`` がこの目的に適しています）。"
+
+#: ../source/userdoc/xfem.rst:142
+msgid ""
+"The object |gf_mimls| can be used as a classical |gf_mim| object (for "
+"instance the method ``mim.set_integration_method(...)`` allows to set the "
+"integration methods for the elements which are not cut by the level-set)."
+msgstr ""
+"オブジェクト |gf_mimls| は古典的な |gf_mim| として使うことができます。オブジェクト（例えば、 "
+"``mim.set_integration_method(...)`` "
+"メソッドは、レベル集合法によって切断されていない要素の積分法を設定することができます）。"
+
+#: ../source/userdoc/xfem.rst:146
+msgid ""
+"To initialize the object or to actualize it when the value of the level-set "
+"function is modified, one has to call the method ``mim.adapt()``."
+msgstr ""
+"オブジェクトを初期化するか、レベル集合法関数の値が変更されたときにそれを実現するには、 ``mim.adapt()`` "
+"メソッドを呼び出さなければなりません。"
+
+#: ../source/userdoc/xfem.rst:150
+msgid ""
+"When more than one level-set is declared on the |gf_mls| object, it is "
+"possible to set more precisely the integration domain using the method::"
+msgstr ""
+"|gf_mls| で複数のレベル集合法が宣言されている場合、オブジェクトを使用すると、メソッドを使用してより正確に積分領域を設定することができます。"
+
+#: ../source/userdoc/xfem.rst:154
+msgid ""
+"where \"desc\" is a string containing the description of the boolean "
+"operation which defines the integration domain. The syntax is simple, for "
+"example if there are 3 different level-set,"
+msgstr "\"desc\" は、積分領域を定義するブール演算の記述を含む文字列です。構文は単純です。たとえば、3つの異なるレベル集合法がある場合、"
+
+#: ../source/userdoc/xfem.rst:156
+msgid ""
+"\"a*b*c\" is the intersection of the domains defined by each level-set (this"
+" is the default behavior if this function is not called)."
+msgstr "\"a*b*c\" は、各レベル集合法で定義された領域の共通部分です（この関数が呼び出されない場合のデフォルト動作です）。"
+
+#: ../source/userdoc/xfem.rst:160
+msgid "\"a+b+c\" is the union of their domains."
+msgstr "\"a+b+c\" は、その領域の和集合です。"
+
+#: ../source/userdoc/xfem.rst:162
+msgid ""
+"\"c-(a+b)\" is the domain of the third level-set minus the union of the "
+"domains of the two others."
+msgstr "\"c-(a+b)\" は、他の2つの和集合との第3レベル集合法の差の領域です。"
+
+#: ../source/userdoc/xfem.rst:165
+msgid ""
+"\"!a\" is the complementary of the domain of a (i.e. it is the domain where "
+"a(x)>0)"
+msgstr "\"!a\" はaの領域の補集合（すなわち、 a(x)>0 の部分の領域）です"
+
+#: ../source/userdoc/xfem.rst:168
+msgid ""
+"The first level-set is always referred to with \"a\", the second with \"b\","
+" and so on."
+msgstr "第1のレベル集合法は常に \"a\" と呼ばれ、第2のレベル集合法は \"b\" などと呼ばます。"
+
+#: ../source/userdoc/xfem.rst:173
+msgid "Cut-fem"
+msgstr "切断有限要素法"
+
+#: ../source/userdoc/xfem.rst:175
+msgid ""
+"The implementation of a cut finite element method such as described in [bu-"
+"ha2010]_, i.e. a finite element on a fictitious domain restricted to a "
+"smaller real domain, is possible just using the previous tools and mainly "
+"the adapted integration method. Several examples are available on |gf| test "
+"programs. See for instance "
+":file:`interface/tests/python/demo_fictitious_domain.py` or "
+":file:`interface/tests/matlab/demo_fictitious_domain.m`."
+msgstr ""
+"[bu-ha2010]_ "
+"に記載されているような切断有限要素法、すなわち、より小さな実領域に限定された架空の領域上の有限要素の実施は、これまでのツールおよび主として適応された積分法を使用することによって可能です。"
+" |gf| にいくつかのテストプログラムの例があります。たとえば "
+":file:`interface/tests/python/demo_fictitious_domain.py` または "
+":file:`interface/tests/matlab/demo_fictitious_domain.m` を参照してください。"
+
+#: ../source/userdoc/xfem.rst:177
+msgid ""
+"In this context, one often needs to restrict the unknown finite element "
+"field to the degrees of freedom whose corresponding shape function supports "
+"have an intersection with the real domain. This can be done using the "
+"``partial_mesh_fem`` object. See for instance "
+":file:`interface/tests/matlab/demo_structural_optimization.m`."
+msgstr ""
+"この文脈においては、未知の有限要素フィールドを、対応する形状関数サポートが実領域との交差を有する自由度に制限するのが普通です。これは、 "
+"``partial_mesh_fem`` オブジェクトを使って行うことができます。たとえば、 "
+":file:`interface/tests/matlab/demo_structural_optimization.m` を参照してください。"
+
+#: ../source/userdoc/xfem.rst:179
+msgid ""
+"Note that often, a stabilization technique have to be considered in order to"
+" treat eventual locking phenomena due to element with very small "
+"intersection with the real domain for example when applying a Dirichlet "
+"condition. See for instance [bu-ha2010]_,  [HA-RE2009]_ and [Fa-Po-Re2015]_."
+msgstr ""
+"Dirichlet状態を適用する場合など、実際の領域との交差が非常に小さい要素による最終的なロック現象を処理するために、しばしば安定化技術を考慮する必要があることに注意してください。たとえば、"
+" [bu-ha2010]_ 、 [HA-RE2009]_ 、 [Fa-Po-Re2015]_ を参照してください。"
+
+#: ../source/userdoc/xfem.rst:183
+msgid "Discontinuous field across some level-sets"
+msgstr "いくつかのレベル集合法にわたる不連続なフィールド"
+
+#: ../source/userdoc/xfem.rst:185
+msgid ""
+"The object |gf_mfls| is defined in the file "
+":file:`getfem/getfem_mesh_fem_level_set.h`. It is derived from |gf_mf| "
+"object and can be used in the same way. It defines a finite element method "
+"with discontinuity across the level-sets (it can deal with an arbitrary "
+"number of level-sets). The constructor is the following::"
+msgstr ""
+"|gf_mfls| オブジェクトはファイル :file:`getfem/getfem_mesh_fem_level_set.h` "
+"で定義されています。それは |gf_mf| "
+"オブジェクトから派生しており、同じ方法で使用できます。これは、レベル集合法全体に(レベル集合法の任意の数を扱うことができる)不連続の有限要素法を定義します。コンストラクタは次のとおりです。"
+
+#: ../source/userdoc/xfem.rst:193
+msgid ""
+"where ``mls`` is a valid mesh of type ``getfem::mesh_level_set`` and ``mf`` "
+"is the an object of type |gf_mf| which defines the finite element method "
+"used for elements which are not cut by the level-sets."
+msgstr ""
+"``mls`` は ``getfem::mesh_level_set`` 型の有効なメッシュで、 ``mf`` は |gf_mf| "
+"型のオブジェクトです。これは、レベル集合法によって切断されない要素に使用される有限要素法を定義します。"
+
+#: ../source/userdoc/xfem.rst:197
+msgid ""
+"To initialize the object or to actualize it when the value of the level-set "
+"function is modified, one has to call the method ``mfls.adapt()``."
+msgstr ""
+"オブジェクトを初期化するか、レベル集合法関数の値が変更されたときにオブジェクトを実現するには、 ``mfls.adapt()`` "
+"メソッドを呼び出さなければなりません。"
+
+#: ../source/userdoc/xfem.rst:200
+msgid ""
+"To represent discontinuous fields, the finite element method is enriched "
+"with discontinuous functions which are the product of some Heaviside "
+"functions by the shape functions of the finite element method represented by"
+" ``mf`` (see [HA-HA2004]_ and [Xfem]_ for more details)."
+msgstr ""
+"非連続的なフィールドを表現するために、有限要素法は、いくつかのHeaviside関数と、 ``mf`` "
+"で表される有限要素法の形状関数の積である不連続関数で強化されています（詳細については [HA-HA2004]_ および [Xfem]_ を参照）。"
+
+#: ../source/userdoc/xfem.rst:207
+msgid "Xfem"
+msgstr "拡張有限要素法(Xfem)"
+
+#: ../source/userdoc/xfem.rst:209
+msgid ""
+"The Xfem (see [Xfem]_) consists not only in the enrichment with some "
+"Heaviside functions (which is done by the object "
+"``getfem::mesh_fem_level_set``) but also the enrichment with asymptotic "
+"displacement at the crack tip. There is several manner to enrich with an "
+"asymptotic displacement: enrichment only on the element containing the crack"
+" tip as in [Xfem]_, enrichment in a fixed size zone as in [LA-PO-RE-SA2005]_"
+" or [Be-Mi-Mo-Bu2005]_, enrichment with a cut-off function as in [CH-LA-"
+"RE2008]_ or [NI-RE-CH2011]_ or with an integral matching condition between "
+"the enriched and non-enriched zones as in [CH-LA-RE2011]_. The choice in "
+"Getfem fell on maximum flexibility to easily implement all possibilities. As"
+" it is mainly a transformation of the finite element method itself, two "
+"tools have been defined to produce some enriched finite elements::"
+msgstr ""
+"拡張有限要素法(Xfem)（[Xfem]_ を参照）は、いくつかのHeaviside関数（オブジェクト ``getfem :: "
+"mesh_fem_level_set`` によって行われている）だけでなく、クラック先端での漸近的な変位による豊かさでも構成されています。 "
+"[Xfem]_ のような亀裂先端を含む要素のみの高度化、 [LA-PO-RE-SA2005]_ または [Be-Mi-Mo-Bu2005]_ "
+"のような固定されたサイズの領域の高度化は、 [CH-LA-RE2008]_ または [NI-RE-CH2011]_ "
+"のような切断関数を用いた高度化または高度化領域と非高度化領域との間の完全一致条件を漸近変位で高度化させるいくつかの方法が [CH-LA-RE2011]_"
+" などのようにあります。 "
+"Getfemは、すべての可能性を簡単に実装するための最大限の柔軟性に欠けていました。主に有限要素法自体の変換であるため、いくつかの豊富な有限要素を生成するための2つのツールが定義されています。"
+
+#: ../source/userdoc/xfem.rst:214
+msgid ""
+"where ``mf_sing`` should be a global 'finite element method', in fact just a"
+" collection of global functions (with or without a cut-off function) defined"
+" thanks to the object ``getfem::mesh_fem_global_function`` (see the file "
+":file:`src/getfem/getfem_mesh_fem_global_function.h`) and ``mf_part_unity`` "
+"a basic scalar finite element method. The resulting `` "
+"getfem::mesh_fem_product`` is the linear combination of all the product of "
+"the shape function of the two given finite element methods, possibly "
+"restricted to a sub-set of degrees of freedom of the first finite element "
+"method given by the method ``mf_asympt.set_enrichment(enriched_dofs)``."
+msgstr ""
+"``getfem::mesh_fem_global_function`` "
+"オブジェクト(:file:`src/getfem/getfem_mesh_fem_global_function.h` を参照）のために、 "
+"``mf_sing`` はグローバルな '有限要素法' でなければなりません。実際にグローバル関数の集合（切断関数の有無にかかわらず） と "
+"``mf_part_unity`` は基本的なスカラー有限要素法です。結果として得られる ``getfem::mesh_fem_product`` "
+"は、与えられた2つの有限要素法の形状関数のすべての積の線形結合であり、メソッド "
+"``mf_asympt.set_enrichment(enriched_dofs)`` により与えられる有限要素法の自由度の部分集合に制限されます。 "
+
+#: ../source/userdoc/xfem.rst:216
+msgid ""
+"Once the asymptotic enrichment is defined, the object "
+"``getfem::mesh_fem_sum`` allows to produce the direct sum of two finite "
+"element methods. For instance of the one enriched by the Heaviside functions"
+" (``getfem::mesh_fem_level_set`` object) and the asymptotic enrichment."
+msgstr ""
+"漸近的エンリッチが定義されると、オブジェクト ``getfem::mesh_fem_sum`` "
+"は2つの有限要素法の直和を生成することを可能にします。たとえば、Heaviside関数（ ``getfem::mesh_fem_level_set`` "
+"オブジェクト）は漸近的な高度化によって充実したものの例です。"
+
+#: ../source/userdoc/xfem.rst:218
+msgid ""
+"See :file:`interface/tests/matlab/demo_crack.m`, "
+":file:`interface/tests/python/demo_crack.py` or :file:`tests/crack.cc` for "
+"some examples of use of these tools."
+msgstr ""
+"これらのツールの使用例については、 :file:`interface/tests/matlab/demo_crack.m` 、 "
+":file:`interface/tests/python/demo_crack.py` または :file:`tests/crack.cc` "
+"を参照してください。"
+
+#: ../source/userdoc/xfem.rst:220
+msgid ""
+"Additionally, the weak form language defines the two commands ``Xfem_plus`` "
+"and ``Xfem_minus`` allowing to take into account the jump of any field or "
+"derivative of any field across a level-set (see :ref:`ud-gasm-high_xfem`). "
+"This a priori allows to write any interface law easily."
+msgstr ""
+"さらに、弱形式言語は、レベル集合法全体の任意のフィールドまたは任意のフィールドの基底を考慮に入れることを可能にする2つのコマンド "
+"``Xfem_plus`` および ``Xfem_minus`` を定義します（ :ref:`ud-gasm-high_xfem` "
+"を参照）。この先験的な部分は、任意のインタフェース則を容易に書くことを可能にしていることです。"
+
+#: ../source/userdoc/xfem.rst:223
+msgid ""
+"Note also that some procedures are available in the file "
+":file:`src/getfem/getfem_crack_sif.h` to compute the stress intensity "
+"factors in 2D (restricted to homogeneous isotropic linearized elasticity)."
+msgstr ""
+"また、 :file:`src/getfem/getfem_crack_sif.h` "
+"の中には、2Dの応力拡大係数を計算するためのいくつかの手順があります（均一な等方線形弾性に制限されています）。"
+
+#: ../source/userdoc/xfem.rst:228
+msgid "Post treatment"
+msgstr "ポスト処理"
+
+#: ../source/userdoc/xfem.rst:230
+msgid ""
+"Several tools are available to represent the solution only on a side of a "
+"levels-set or on both taking into account the discontinuity (for Xfem "
+"approximation)."
+msgstr "レベル集合法の側でのみ解を表現するツールや、（Xfem近似のための）不連続性も考慮した両方のツールがあります。"
+
+#: ../source/userdoc/xfem.rst:232
+msgid ""
+"When a cut-mesh ``mls`` is used (i.e. a ``getfem::mesh_level_set`` object), "
+"is is possible to obtain the set of all sub-elements with the command::"
+msgstr ""
+"切断メッシュ ``mls`` （すなわち、 ``getfem::mesh_level_set`` "
+"オブジェクト）が使われているとき、コマンドで全てのサブ要素の集合を得ることができます。"
+
+#: ../source/userdoc/xfem.rst:236
+msgid ""
+"where ``mcut`` has to be an empty mesh which will be fill by the sub-"
+"elements. Note that the resulting mesh is a non-regular one in the sense "
+"that the sub-mesh of all elements are not conformal at the element "
+"edges/faces. It is however possible to interolate on a Lagrange fem on this "
+"mesh and make a post-treatment with it to correctly represent a "
+"discontinuous field."
+msgstr ""
+"``mcut`` "
+"は、サブ要素で塗りつぶされる空のメッシュでなければなりません。生成されたメッシュは、すべての要素のサブメッシュが要素のエッジ/面で等角でないという意味で、非正規のメッシュであることに注意してください。しかしながら、このメッシュ上のLagrange有限要素法を相互に連結し、不連続なフィールドを正しく表現するために後処理を行うことが可能です。"
+
+#: ../source/userdoc/xfem.rst:238
+msgid ""
+"Another mean to represent only the interesting part of the solution when a "
+"fictitious domain method is used is to use the mesh slices defined by an "
+"isovalue level-set (see :ref:`ud-export_slices`)."
+msgstr ""
+"仮想領域有限要素法が使用されているときに、解の着目部分だけを表す別の手段は、等値レベル集合法（ :ref:`ud-export_slices` "
+"参照）で定義されたメッシュスライスを使用することです。"
+
+#: ../source/userdoc/xfem.rst:240
+msgid ""
+"see for instance files :file:`interface/tests/matlab/demo_crack.m`, "
+":file:`interface/tests/python/demo_fictitious_domain.py` and "
+":file:`interface/tests/matlab/demo_structural_optimization.m`."
+msgstr ""
+":file:`interface/tests/matlab/demo_crack.m` "
+"、:file:`interface/tests/python/demo_fictitious_domain.py` と "
+":file:`interface/tests/matlab/demo_structural_optimization.m` を参照してください。"
