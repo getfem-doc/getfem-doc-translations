@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 04:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/project/libdesc_high_gen_assemb.rst:12
+msgid "The high-level generic assembly module in |gf|"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:16
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:18
+msgid "The high level generic assembly module of |gf| and its weak form language is a key module which allows to describe weak formulation of partial differential equation problems. See the description of the language in the user documentation section :ref:`ud-gasm-high`."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:21
+msgid "Files"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid "File(s)"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":file:`getfem_generic_assembly.h`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid "Main header for exported definitions. Only this header has to be included to use the generic assembly. Other headers of the module are for internal use only."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":file:`getfem_generic_assembly_tree.h` and :file:`getfem_generic_assembly_tree.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid "Definition of the tree structure and basic operations on it, including reading an assembly string and transform it in a syntax tree and make the invert transformation of a tree into a string."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":file:`getfem_generic_assembly_function_and_operators.h` and :file:`getfem_generic_assembly_function_and_operators.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid "Definition of redefined function and nonlinear operator of the weak form language."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":file:`getfem_generic_assembly_semantic.h` and :file:`getfem_generic_assembly_semantic.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid "Semantic analysis and enrichment of the syntax tree. Include some operations such as making the derivation of a tree with respect to a variable or computing the tree corresponding to the gradient of an expression."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":file:`getfem_generic_assembly_workspace.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid "Methodes of the workspace object (defined in :file:`getfem_generic_assembly.h`)."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":file:`getfem_generic_assembly_compile_and_exec.h` and :file:`getfem_generic_assembly_compile_and_exec.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid "Definition of the optimized instructions, compilation into a sequel of optimize instructions and execution of the instructions on Gauss point/interpolation points."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":file:`getfem_generic_assembly_interpolation.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid "Interpolation operations and interpolate transformations."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:37
+msgid "A few implementation details"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:39
+msgid "The assembly string is transformed in an assembly tree by a set of function in :file:`src/getfem\\_generic\\_assembly.cc`. The process has 6 steps:"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:41
+msgid "Lexical analysis with the procedure ``ga_get_token(...)``."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:43
+msgid "Syntax analysis and transformation into a syntax tree by ``ga_read_string(...)``."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:45
+msgid "Semantic analysis, simplification (pre-computation) of constant expressions and enrichment of the tree by ``ga_semantic_analysis(...)``."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:47
+msgid "Symbolic (automatic) differentiation of an assembly tree by ``ga_derivative(...)``"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:49
+msgid "Symbolic (automatic) gradient computation of an assembly tree by ``ga_gradient(...)``"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:51
+msgid "Compilation in a sequence of instructions with optimizations by ``ga_compile(...)``."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:53
+msgid "Execution of the sequence of instructions and assembly by ``ga_exec(...)``."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:55
+msgid "These steps are performed only once at the beginning of the assembly. The final tree is compiled in a sequence of optimized instructions which are executed on each Gauss point of each element. The compilation performed some optimizations : repeated terms are automatically detected and evaluated only once, simplifications if the mesh has uniform type of elements, simplifications for vectorized fnite element methods."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:57
+msgid "Moreover, there is specifics function for interpolation operations (ga_interpolation(...), ga_interpolation_exec(...), ga_interpolation_Lagrange_fem, ga_interpolation_mti, ga_interpolation_im_data, ...)"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:60
+msgid "Assembly tree"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:62
+msgid "Assembly strings are transformed into assembly trees by ``ga_read_string(...)``. Assembly trees are syntax trees that are progressively enriched in information in the differents steps (semantic analysis, derivation, compilation)."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:64
+msgid "The object ``ga_tree`` represents an assembly tree. It is a copyable object that only contains a pointer to the root of the tree. Each tree node is an object ``ga_tree_node`` that contains the main following information:"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:66
+msgid "node_type (function, variable value, variable gradient, operation ...)"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:67
+msgid "operation type for operation nodes."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:68
+msgid "assembly tensor: used at execution time by optimized instructions to compute the intermediary results. The final result is in the assembly string of the root node at the end of the execution (for each Gauss point)."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:69
+msgid "term type: value, order one term (ith order one test functions), order two term (with order two test functions) or with both order one and order two test functions (tangent term)."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:72
+msgid "variable name of tests functions for order 1 or 2 terms."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:73
+msgid "pointer to the parent node."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:74
+msgid "pointers to the children nodes."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:76
+msgid "For example, the assembly tree for the assembly string \"a*Grad_Test2_u.Grad_Test_u\" for the stiffness matrix of a Laplacian problem can be represented as follows with its assembly tensors at each node:"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:85
+msgid "Assembly tensors"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:87
+msgid "Assembly tensors are represented on each node by a ``bgeot::tensor<double>`` object. However, there is a specific structure in :file:`src/getfem\\_generic\\_assembly.cc` for assembly tensors because there is several format of assembly tensors :"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:89
+msgid "Normal tensor. The first and second indices may represent the test function local indices if the node represent a first or second order term. Remember that in |gf| all tensors are stored with a Fortran order. This means that for instance t for a :math:`N\\times P\\times Q` tensor one has ``t(i, j, k) = t[i + j*N + k*N*P]``."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:91
+msgid "Copied tensor. When a node is detected to have exactly the same expression compared to an already compiled one, the assembly tensor will contain a pointer to the assembly tensor of the already compiled node. The consequence is that no unnecessary copy is made."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:93
+msgid "Sparse tensor with a listed sparsity. When working with a vector field, the finite element method is applied on each component. This results on vector base functions having only one nonzero component and some components are duplicated. The tensor are fully represented because it would be difficul to gain in efficiency with that kind of small sparse tensor format. However, some operation can be optimized with the knoledge of a certain sparsity (and duplication). This can change the order of complexity of a reduction. In order to allows this gain in efficiency, the tensor are labellised with some known sparsity format (vectorisation and format coming from operation applied on vectorized tensors). This results in a certain number of sparsity formats that are listed below:"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:95
+msgid "1: Vectorized base sparsity format: The tensor represent a vectorized value. Each value of the condensed tensor is repeated on :math:`Q` components of the vectorized tensor. The mesh dimensions is denoted :math:`N`. For instance if :math:`\\varphi_i` are the :math:`M` local base functions on an element and the evaluation is on a Gauss point :math:`x`, then the non vectorized tensor is :math:`\\bar{t}(i) = \\varphi_i(x)` and the vectorized one is :math:`t(j,k) = \\varphi_{j/Q}(x) \\delta_{k, j \\mbox{ mod } Q}` where :math:`j/M` is the integer division. For :math:`M=2`, :math:`Q=2` and :math:`N=3` the components of the two tensors are represented in the following table"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid "Scalar tensor"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid "Vectorized tensor"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":math:`\\bar{t}(i) = \\varphi_i(x)`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":math:`t(j,k) = \\varphi_{j/Q}(x) \\delta_{k, (j \\mbox{ mod } Q)}`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":math:`[\\varphi_0(x), \\varphi_1(x)]`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":math:`[\\varphi_0(x), 0, \\varphi_1(x), 0, 0, \\varphi_0(x), 0, \\varphi_1(x)]`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:114
+msgid "2: Grad condensed format"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":math:`\\bar{t}(i,j) = \\partial_j\\varphi_i(x)`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":math:`t(k,l,m) = \\partial_m\\varphi_{k/Q}(x) \\delta_{l, (m \\mbox{ mod } Q)}`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:1
+msgid ":math:`[\\partial_0\\varphi_0(x), \\partial_0\\varphi_1(x),` :math:`\\partial_1\\varphi_0(x), \\partial_1\\varphi_1(x),` :math:`\\partial_2\\varphi_0(x), \\partial_2\\varphi_1(x)]`"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:123
+msgid "3: Hessian condensed format"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:126
+msgid "10: Vectorized mass: the tensor represent a scalar product of two vectorised base functions. This means a tensor :math:`t(\\cdot,\\cdot)` where :math:`t(i*Q+k, j*Q+l) = 0` for :math:`k \\ne l` and :math:`t(i*Q+k, j*Q+k)` are equals for :math:`0 \\le k < Q`."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:135
+msgid "Optimized instructions"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:137
+msgid "Optimized instructions for variable evaluation, operations, vector and matrix assembly ... to be described."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:140
+msgid "Predefined functions"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:147
+msgid "Some predefined scalar functions are available in |gf| weak form language in order to describe a weak formulation (or also to make basic algebraic computations). This is limited to scalar functions of one or two arguments. Due to the automatic differentiation used to obtain the tangent system of described problems, the derivative each function have to be available. The principle retained is the following: For each predefined function is available:"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:143
+msgid "A C++ function which computes the value given the argument(s)."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:144
+msgid "The support of the function in the first each argument in term of a (possibly infinite) interval (this is for simplification of expressions)."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:146
+msgid "The string corresponding of the derivative in terms of already known functions"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:149
+msgid "A new predefined function is easy to add. See init_predefined_functions() in file :file:`src/getfem_generic_assembly.cc`. + describe how to give the derivative ..."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:152
+msgid "Predefined nonlinear operators"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:154
+msgid "to be described ..."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:157
+msgid "State"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:158
+msgid "Stable."
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:161
+msgid "Perspectives"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:163
+msgid "Is a certain extension to complex data possible ?"
+msgstr ""
+
+#: ../source/project/libdesc_high_gen_assemb.rst:165
+msgid "More simplifications : study the possibility to automatically factorize some terms (for instance scalar ones) to reduce the number of operations."
+msgstr ""
+
