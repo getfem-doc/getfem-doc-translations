@@ -50,12 +50,12 @@ script:
 - sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
 - sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
 - sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
+- (cd doc/sphinx; make gettext; cat .tx/config; tx push -s --skip; rm -rf locale/ja; tx pull -l ja; make latex; make images)
 - rm -rf ../doc
 - rm -rf ../interface
 - cp -r doc ../doc
 - cp -r interface ../interface
 - cd ../
-- (cd doc/sphinx; make gettext; make latex; make images)
 after_success:
 - git branch -a
 - git checkout master  # attach this repo
