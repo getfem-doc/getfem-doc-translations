@@ -1,5 +1,7 @@
 # getfem-doc.org on the Read The Docs.
 
+[![Build Status](https://travis-ci.com/getfem-doc/getfem-doc-translations.svg?branch=master)](https://travis-ci.com/getfem-doc/getfem-doc-translations)
+
 This is a project to provide Getfem official documentation with multiple versions and multiple languages on Read The Docs site.
 
 Current procedure is bit tricky because Read The Docs doesn't have a way to specify options for getfem-build command.
