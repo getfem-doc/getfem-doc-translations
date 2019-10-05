@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 05:14+0000\n"
+"PO-Revision-Date: 2018-07-16 07:04+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/userdoc/model_linear_elasticity.rst:13
+msgid "Isotropic linearized elasticity brick"
+msgstr "等方性線形弾性ブリック要素"
+
+#: ../source/userdoc/model_linear_elasticity.rst:15
+msgid "This brick represents a term"
+msgstr "このブリック要素は項"
+
+#: ../source/userdoc/model_linear_elasticity.rst:17
+msgid "-div(\\sigma) = \\ldots"
+msgstr ""
+
+#: ../source/userdoc/model_linear_elasticity.rst:21
+msgid "with"
+msgstr "と"
+
+#: ../source/userdoc/model_linear_elasticity.rst:23
+msgid ""
+"\\sigma &= \\lambda\\mbox{tr}(\\varepsilon(u))I + 2\\mu\\varepsilon(u) \\\\ "
+"\\varepsilon(u) &= (\\nabla u + \\nabla u^T)/2"
+msgstr ""
+
+#: ../source/userdoc/model_linear_elasticity.rst:28
+msgid ""
+":math:`\\varepsilon(u)` is the small strain tensor, :math:`\\sigma` is the "
+"stress tensor, :math:`\\lambda` and :math:`\\mu` are the |Lame| "
+"coefficients. This represents the system of linearized isotropic elasticity."
+" It can also be used with :math:`\\lambda=0` together with the linear "
+"incompressible brick to build the Stokes problem."
+msgstr ""
+"を表します。 :math:`\\varepsilon(u)`  は微小ひずみテンソルです。 :math:`\\sigma` は応力テンソルです。 "
+":math:`\\lambda` と :math:`\\mu` は |Lame| "
+"係数です。これは線形等方性弾性の系を表します。Stokes問題を構築するために線形非圧縮要素と一緒に :math:`\\lambda = 0` "
+"で使うこともできます。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:35
+msgid ""
+"Let us recall that the relation between the |Lame| coefficients an Young "
+"modulus :math:`E` and Poisson ratio :math:`\\nu` is"
+msgstr "|Lame| 係数とYoung係数 :math:`E` とPoisson比 :math:`\\nu` は"
+
+#: ../source/userdoc/model_linear_elasticity.rst:37
+msgid "\\lambda = \\Frac{E\\nu}{(1+\\nu)(1-2\\nu)}, ~~~ \\mu = \\Frac{E}{2(1+\\nu)},"
+msgstr ""
+
+#: ../source/userdoc/model_linear_elasticity.rst:41
+msgid "except for the plane stress approximation (2D model) where"
+msgstr "平面応力近似（2次元モデル）を除き、"
+
+#: ../source/userdoc/model_linear_elasticity.rst:43
+msgid "\\lambda^* = \\Frac{E\\nu}{(1-\\nu^2)}, ~~~ \\mu = \\Frac{E}{2(1+\\nu)},"
+msgstr ""
+
+#: ../source/userdoc/model_linear_elasticity.rst:48
+msgid ""
+"The function which adds this brick to a model and parametrized with the "
+"|Lame| coefficients is::"
+msgstr "このブリック要素をモデルに追加し |Lame| 係数をパラメータとするモデルの関数は次の通りです。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:54
+msgid ""
+"where ``dataname_lambda`` and ``dataname_mu`` are the data of the model "
+"representing the |Lame| coefficients."
+msgstr "ここで、 ``dataname_lambda`` と ``dataname_mu`` は、 |Lame| 係数を表すモデルのデータです。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:57
+msgid ""
+"The function which adds this brick to a model and parametrized with Young "
+"modulus and Poisson ratio is::"
+msgstr "このブリック要素をモデルに追加し、Young率とPoisson比でパラメータ化した関数は次の通りです。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:63
+msgid ""
+"This brick represent a plane strain approximation when it is applied to a 2D"
+" mesh (and a standard model on a 3D mesh). In order to obtain a plane stress"
+" approximation for 2D meshes, one can use::"
+msgstr ""
+
+#: ../source/userdoc/model_linear_elasticity.rst:68
+msgid "For 3D meshes, the two previous bricks give the same result."
+msgstr "3次元メッシュの場合、前の2つの要素で同じ結果が得られます。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:71
+msgid "The function::"
+msgstr "関数は次の通りです。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:76
+msgid ""
+"compute the Von Mises criterion (or Tresca if ``tresca_flag`` is set to "
+"true) on the displacement field stored in ``varname``. The stress is "
+"evaluated on the |mf| ``mf_vm`` and stored in the vector ``VM``. It is not "
+"valid for 2D plane stress approximation and is parametrized with |Lame| "
+"coefficients. The functions::"
+msgstr ""
+"``varname`` に格納されている変位フィールド上のVon Mises基準（ ``tresca_flag`` "
+"がtrueに設定されている場合はTresca）を計算します。応力は |mf| ``mf_vm`` を呼び出して ``VM`` "
+"というベクトルに格納します。 2次元平面応力近似には有効ではなく、 |Lame| 係数でパラメータ化されています。関数は次の通りです。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:86
+msgid ""
+"compute the Von Mises stress, parametrized with Young modulus and Poisson "
+"ratio, the second one being valid for 2D plane stress approximation when it "
+"is applied on a 2D mesh (the two functions give the same result for 3D "
+"problems)."
+msgstr ""
+"Young率とPoisson比でパラメータ化されたVon "
+"Mises応力を計算し、2番目の方程式が2次元メッシュに適用されたときに2次元平面応力近似は有効です（2つの関数は3次元問題に対して同じ結果を与えます）。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:91
+msgid ""
+"The program :file:`tests/elastostatic.cc` can be taken as a model of use of "
+"a linearized isotropic elasticity brick."
+msgstr "プログラム :file:`tests/elastostatic.cc` は線形化された等方性弾性要素の使用モデルを得ることができます。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:95
+msgid "Linear incompressibility (or nearly incompressibility) brick"
+msgstr "線形非圧縮性（またはほぼ非圧縮性）ブリック要素"
+
+#: ../source/userdoc/model_linear_elasticity.rst:97
+msgid ""
+"This brick adds a linear incompressibility condition (or a nearly "
+"incompressible condition) in a problem of type:"
+msgstr "このブリック要素は次のような種類の問題で線形非圧縮性条件（またはほぼ非圧縮性の条件）を追加します。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:100
+msgid "\\mbox{div}(u) = 0,\\quad (\\mbox{ or } \\mbox{div}(u) = \\varepsilon p)"
+msgstr ""
+
+#: ../source/userdoc/model_linear_elasticity.rst:104
+msgid ""
+"This constraint is enforced with Lagrange multipliers representing the "
+"pressure, introduced in a mixed formulation."
+msgstr "この制約は混合式で導入された圧力を表すLagrange乗数によって強制されます。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:107
+msgid "The function adding this incompressibility condition is::"
+msgstr "この非圧縮性条件を追加する関数は次の通りです。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:113
+msgid ""
+"where ``varname`` is the variable on which the incompressibility condition "
+"is prescribed, ``multname_pressure`` is a variable which should be described"
+" on a scalar fem representing the multiplier (the pressure) and "
+"``dataexpr_penal_coeff`` is an optional penalization coefficient for the "
+"nearly incompressible condition."
+msgstr ""
+"ここで ``varname`` は非圧縮性条件が規定されている変数であり、 ``multname_pressure`` "
+"は乗数（圧力）を表すスカラー有限要素法で記述される変数であり、 ``dataexpr_penal_coeff`` "
+"はほぼ非圧縮状態のオプションのペナルティ係数です。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:118
+msgid ""
+"In nearly incompressible homogeneous linearized elasticity, one has "
+":math:`\\varepsilon = 1 / \\lambda` where :math:`\\lambda` is one of the "
+"Lamé coefficient and :math:`\\varepsilon` the penalization coefficient."
+msgstr ""
+"ほぼ非圧縮性の均質線形弾性では、 :math:`\\varepsilon = 1 / \\lambda` のようになります。ここで、 "
+":math:`\\lambda` はLamé係数の1つであり、:math:`\\varepsilon` はペナルティ係数です。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:122
+msgid ""
+"For instance, the following program defines a Stokes problem with a source "
+"term and an homogeneous Dirichlet condition on boundary 0. ``mf_u``, "
+"``mf_data`` and ``mf_p`` have to be valid finite element description on the "
+"same mesh. ``mim`` should be a valid integration method on the same mesh::"
+msgstr ""
+"例えば、次のプログラムは、境界項0上のソース項と均質なDirichlet条件を持つStokes問題を定義しています。 ``mf_u`` 、 "
+"``mf_data`` 、 ``mf_p`` は同じメッシュ上の有効な有限要素法でなければなりません。 ``mim`` "
+"は同じメッシュ上で有効な積分法でなければなりません。"
+
+#: ../source/userdoc/model_linear_elasticity.rst:158
+msgid ""
+"An example for a nearly incompressibility condition can be found in the "
+"program :file:`tests/elastostatic.cc`."
+msgstr "ほぼ非圧縮性条件の例は、プログラム :file:`tests/elastostatic.cc` にあります。"

@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 05:14+0000\n"
+"PO-Revision-Date: 2018-07-16 07:17+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/python/cmdref_Eltm.rst:8
+msgid "Eltm"
+msgstr "Eltm"
+
+#: ../docstring of getfem.Eltm:1
+msgid "GeFEM Eltm object"
+msgstr "GeFEM Eltmオブジェクト"
+
+#: ../docstring of getfem.Eltm:4
+msgid ""
+"This object represents a type of elementary matrix. In order to obtain a "
+"numerical value of these matrices, see MeshIm.eltm()."
+msgstr "このオブジェクトは、基本行列のタイプを表します。これらの行列の数値を取得するには、 MeshIm.eltm() を参照してください。"
+
+#: ../docstring of getfem.Eltm:7
+msgid ""
+"If you have very particular assembling needs, or if you just want to check "
+"the content of an elementary matrix, this function might be useful. But the "
+"generic assembly abilities of gf_asm(...) should suit most needs."
+msgstr ""
+"非常に特殊なアセンブリが必要な場合や、基本的な行列の内容をチェックしたい場合には、この関数が便利です。しかし、汎用アセンブリ関数 gf_asm(...)"
+" がほとんどのニーズに適合するはずです。"
+
+#: ../docstring of getfem.Eltm:11
+msgid "General constructor for Eltm objects"
+msgstr "Eltmオブジェクトの汎用的なコンストラクタ"
+
+#: ../docstring of getfem.Eltm:13
+msgid ""
+"``E = Eltm('base', Fem FEM)`` return a descriptor for the integration of "
+"shape functions on elements, using the Fem `FEM`."
+msgstr "``E = Eltm('base', Fem FEM)`` は有限要素法 `FEM` を使って要素の形状関数を積分する記述子を返します。"
+
+#: ../docstring of getfem.Eltm:17
+msgid ""
+"``E = Eltm('grad', Fem FEM)`` return a descriptor for the integration of the"
+" gradient of shape functions on elements, using the Fem `FEM`."
+msgstr ""
+"``E = Eltm('grad', Fem FEM)`` は有限要素法 `FEM` を使って要素上の形状関数の勾配を積分するための記述子を返します。"
+
+#: ../docstring of getfem.Eltm:21
+msgid ""
+"``E = Eltm('hessian', Fem FEM)`` return a descriptor for the integration of "
+"the hessian of shape functions on elements, using the Fem `FEM`."
+msgstr ""
+"``E = Eltm('hessian', Fem FEM)`` は有限要素法を使って要素上の形状関数のHessian積分を表す記述子を返します。"
+
+#: ../docstring of getfem.Eltm:25
+msgid ""
+"``E = Eltm('normal')`` return a descriptor for the unit normal of convex "
+"faces."
+msgstr "``E = Eltm('normal')`` は凸包面の単位法線の記述子を返します。"
+
+#: ../docstring of getfem.Eltm:28
+msgid ""
+"``E = Eltm('grad_geotrans')`` return a descriptor to the gradient matrix of "
+"the geometric transformation."
+msgstr "``E = Eltm('grad_geotrans')`` は幾何変換の勾配行列への記述子を返します。"
+
+#: ../docstring of getfem.Eltm:32
+msgid ""
+"``E = Eltm('grad_geotrans_inv')`` return a descriptor to the inverse of the "
+"gradient matrix of the geometric transformation (this is rarely used)."
+msgstr ""
+"``E = Eltm('grad_geotrans_inv')`` は幾何変換の勾配行列の逆行列の記述子を返します(これはめったに使用されません)。"
+
+#: ../docstring of getfem.Eltm:36
+msgid ""
+"``E = Eltm('product', Eltm A, Eltm B)`` return a descriptor for the "
+"integration of the tensorial product of elementary matrices `A` and `B`."
+msgstr ""
+"``E = Eltm('product', Eltm A, Eltm B)`` は基本行列AとBのテンソル積を積分するための記述子を返します。"

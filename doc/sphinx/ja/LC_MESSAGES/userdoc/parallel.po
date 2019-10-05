@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 05:14+0000\n"
+"PO-Revision-Date: 2018-07-16 07:05+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/userdoc/parallel.rst:10
+msgid "MPI Parallelization of |gf|"
+msgstr "|gf| のMPI並列化"
+
+#: ../source/userdoc/parallel.rst:12
+msgid ""
+"Of course, each different problem should require a different parallelization"
+" adapted to its specificities in order to obtain a good load balancing. You "
+"may build your own parallelization using the mesh regions to parallelize "
+"assembly procedures."
+msgstr ""
+"当然ながら、各問題は、良好な負荷分散を行うために、それぞれ固有な事情に合わせて異なる並列化を必要となります。このライブラリではメッシュ領域を使用して自身で並列化を構行い、行列の構築手順を並列化することができます。"
+
+#: ../source/userdoc/parallel.rst:17
+msgid ""
+"Nevertheless, the brick system offers a generic parallelization based on MPI"
+" (communication between processes), `METIS "
+"<http://glaros.dtc.umn.edu/gkhome/metis/metis/overview>`_ (partition of the "
+"mesh) and `MUMPS <http://graal.ens-lyon.fr/MUMPS>`_ (parallel sparse direct "
+"solver). It is available with the compiler option ``-D GETFEM_PARA_LEVEL=2``"
+" and the library itself has to be compiled with the option ``--enable-"
+"paralevel=2`` of the configure script. Initial MPI parallelization of |gf| "
+"has been designed with the help of Nicolas Renon from CALMIP, Toulouse."
+msgstr ""
+"併せて、ブリック要素系はMPI(プロセス間の通信)、 `METIS "
+"<http://glaros.dtc.umn.edu/gkhome/metis/metis/overview>`_ (メッシュの分割)および "
+"`MUMPS <http://graal.ens-lyon.fr/MUMPS>`_ "
+"(並列化された疎行列直接解法)に基づく汎用的な並列化を提供しています。この機能はコンパイラオプション ``-D GETFEM_PARA_LEVEL = "
+"2`` で利用でき、ライブラリ自体はconfigureスクリプトの ``--enable-paralevel=2`` "
+"オプションでコンパイルする必要があります。 |gf| の初期のMPI並列化は、CALMIP大学のNicolas "
+"RenonとToulouseの助けを借りて設計されています。"
+
+#: ../source/userdoc/parallel.rst:28
+msgid ""
+"When the configure script is run with the option ``--enable-paralevel=2``, "
+"it searches for MPI, METIS and parallel MUMPS libraries. If the python "
+"interface is built, it searches also for MPI4PY library. In that case, the "
+"python interface can be used to drive the parallel version of getfem (the "
+"other interfaces has not been parallelized for the moment). See "
+"demo_parallel_laplacian.py in the interface/test/python directory."
+msgstr ""
+"configureスクリプトを ``--enable-paralevel=2`` "
+"オプションで実行すると、MPI、METIS、および並列MUMPSライブラリが検索されます。Pythonインタフェースが構築されている場合は、MPI4PYライブラリも検索します。その場合、pythonインタフェースを使用してgetfemの並列版を実行することができます（他のインタフェースは現時点では並列化されていません）。interface/test/python"
+" ディレクトリの demo_parallel_laplacian.py を参照してください。"
+
+#: ../source/userdoc/parallel.rst:36
+msgid ""
+"With the option ``-D GETFEM_PARA_LEVEL=2``, each mesh used is implicitly "
+"partitionned (using METIS) into a number of regions corresponding to the "
+"number of processors and the assembly procedures are parallelized. This "
+"means that the tangent matrix and the constraint matrix assembled in the "
+"model_state variable are distributed. The choice made (for the moment) is "
+"not to distribute the vectors. So that the right hand side vectors in the "
+"model_state variable are communicated to each processor (the sum of each "
+"contribution is made at the end of the assembly and each processor has the "
+"complete vector). Note that you have to think to the fact that the matrices "
+"stored by the bricks are all distributed."
+msgstr ""
+
+#: ../source/userdoc/parallel.rst:48
+msgid ""
+"A model of C++ parallelized program is :file:`tests/elastostatic.cc`. To run"
+" it in parallel you have to launch for instance::"
+msgstr ""
+"C++の並列プログラムの雛形は :file:`tests/elastostatic.cc` です。並列で計算するためには次のように実行します。"
+
+#: ../source/userdoc/parallel.rst:53
+msgid "For a python interfaced program, the call reads::"
+msgstr "Pythonインタフェースのプログラムの場合、呼び出しは次の通りです。"
+
+#: ../source/userdoc/parallel.rst:57
+msgid ""
+"If you do not perform a `make install`, do not forget to first set the shell"
+" variable PYTHONPATH to the python-getfem library with for instance::"
+msgstr ""
+"`make install` を実行しない場合は、最初にシェル変数 PYTHONPATH を python-getfem "
+"ライブラリに設定することを忘れないでください ::"
+
+#: ../source/userdoc/parallel.rst:63
+msgid "State of progress of |gf| MPI parallelization"
+msgstr "|gf| MPIの並列化の進捗状況"
+
+#: ../source/userdoc/parallel.rst:65
+msgid ""
+"Parallelization of getfem is still considered a \"work in progress\". A "
+"certain number of procedure are still remaining sequential. Of course, a "
+"good test to see if the parallelization of your program is correct is to "
+"verify that the result of the computation is indeed independent of the "
+"number of process."
+msgstr ""
+"getfemの並列化は引き続き「進行中の作業」になります。一定数のプロセスが依然としてシーケンシャルです。ご存知のとおり、プログラムの並列化が正確かどうかを確認する良いテストは、計算結果がプロセスの数とは無関係であることを検証することです。"
+
+#: ../source/userdoc/parallel.rst:67
+msgid "Assembly procedures"
+msgstr "構築手順"
+
+#: ../source/userdoc/parallel.rst:69
+msgid ""
+"Most of assembly procedures (in :file:`getfem/getfem_assembling.h`) have a "
+"parameter corresponding to the region in which the assembly is to be "
+"computed. They are not parallelized themselves but aimed to be called with a"
+" different region in each process to distribute the job. Note that the file "
+":file:`getfem/getfem_config.h` contains a procedures called "
+"MPI_SUM_SPARSE_MATRIX allowing to gather the contributions of a distributed "
+"sparse matrix."
+msgstr ""
+"構築手順の大部分は（ :file:`getfem/getfem_assembling.h` "
+"を参照）構築が計算される領域に対応するパラメータを持っています。それらは並列化されていませんが、ジョブを分配するために各プロセスで異なる領域を呼ぶことが望ましいです。ファイル"
+" :file:`getfem/getfem_config.h` には分散疎行列の処理結果を集約するための MPI_SUM_SPARSE_MATRIX "
+"という手順が含まれています。"
+
+#: ../source/userdoc/parallel.rst:71
+msgid ""
+"The following assembly procedures are implicitly parallelized using the "
+"option ``-D GETFEM_PARA_LEVEL=2``:"
+msgstr "以下の構築手順は、 ``-D GETFEM_PARA_LEVEL=2`` オプションを使用して暗黙的に並列化されます。"
+
+#: ../source/userdoc/parallel.rst:73
+msgid ""
+"computation of norms (``asm_L2_norm``, ``asm_H1_norm``, ``asm_H2_norm`` ...,"
+" in :file:`getfem/getfem_assembling.h`),"
+msgstr ""
+"ノルムの計算（ :file:`getfem/getfem_assembling.h` 内の ``asm_L2_norm``, "
+"``asm_H1_norm``, ``asm_H2_norm`` ）、"
+
+#: ../source/userdoc/parallel.rst:75
+msgid "``asm_mean_value`` (in :file:`getfem/getfem_assembling.h`),"
+msgstr "``asm_mean_value``  （ :file:`getfem/getfem_assembling.h` を参照）、"
+
+#: ../source/userdoc/parallel.rst:77
+msgid "``error_estimate`` (in :file:`getfem/getfem_error_estimate.h`)."
+msgstr "``error_estimate``  ( :file:`getfem/getfem_error_estimate.h` を参照）。"
+
+#: ../source/userdoc/parallel.rst:79
+msgid ""
+"This means in particular that these functions have to be called on each "
+"processor."
+msgstr "つまり、これらの関数を各プロセッサで呼び出す必要があります。"
+
+#: ../source/userdoc/parallel.rst:82
+msgid "Mesh_fem object"
+msgstr "Mesh_femオブジェクト"
+
+#: ../source/userdoc/parallel.rst:84
+msgid ""
+"The dof numbering of the getfem::mesh_fem object remains sequential and is "
+"executed on each process.  The parallelization is to be done. This could "
+"affect the efficiency of the parallelization for very large and/or evoluting"
+" meshes."
+msgstr ""
+"getfem :: "
+"mesh_femオブジェクトの自由度ナンバリングは連続のまま、各プロセスで実行され、並列化が行われます。これは、非常に大きなメッシュまたは縮閉メッシュの並列化の効率に影響する可能性があります。"
+
+#: ../source/userdoc/parallel.rst:87
+msgid "Model object and bricks"
+msgstr "Modelオブジェクトとブリック要素"
+
+#: ../source/userdoc/parallel.rst:89
+msgid ""
+"The model system is globally parallelized, which mainly means that the "
+"assembly procedures of standard bricks use a METIS partition of the meshes "
+"to distribute the assembly. The tangent/stiffness matrices remain distibuted"
+" and the standard solve call the parallel version of MUMPS (which accept "
+"distributed matrices)."
+msgstr ""
+"モデルシステムは全体的に並列化されています。これは主に、標準ブリック要素の構築手順がメッシュのMETISパーティションを使用して構築を分配しているためです。接線/剛性行列は分散したままであり、標準解法はMUMPS（分散行列を受け入れる）の並列版が呼び出されます。"
+
+#: ../source/userdoc/parallel.rst:95
+msgid ""
+"For the moment, the procedure ``actualize_sizes()`` of the model object "
+"remains sequential and is executed on each process. The parallelization is "
+"to be done."
+msgstr ""
+"現時点では、modelオブジェクトの ``actualize_sizes（）`` "
+"手順はシーケンシャルなままで、各プロセスで実行されます。並列化はこれからです。"
+
+#: ../source/userdoc/parallel.rst:99
+msgid "Some specificities:"
+msgstr "いくつかの特異性 :"
+
+#: ../source/userdoc/parallel.rst:101
+msgid ""
+"The explicit matrix brick: the given matrix is considered to be distributed."
+" If it is not, only add it on the master process (otherwise, the "
+"contribution will be multiplied by the number of processes)."
+msgstr ""
+"陽な質量行列: "
+"与えられた行列は分配されているものとみなされます。そうでない場合は、マスタープロセスにのみ追加してください（その他の場合は、プロセスの数で寄与分が掛けられます）。"
+
+#: ../source/userdoc/parallel.rst:105
+msgid ""
+"The explicit rhs brick: the given vector is not considered to be "
+"distributed. Only the given vector on the master process is taken into "
+"account."
+msgstr ""
+"陽な右辺(rhs)ブリック要素: 与えられたベクトルは分布しているとはみなされません。マスタプロセス上に指定されたベクトルのみが考慮されます。"
+
+#: ../source/userdoc/parallel.rst:109
+msgid ""
+"Constraint brick: The given matrix and rhs are not considered to be "
+"distributed. Only the given matrix and vector on the master process are "
+"taken into account."
+msgstr ""
+"拘束ブリック要素: 与えられた行列と右辺(rhs)は分配されているとはみなされません。マスタプロセス上に指定された行列とベクトルのみが考慮されます。"
+
+#: ../source/userdoc/parallel.rst:113
+msgid ""
+"Concerning contact bricks, only integral contact bricks are fully "
+"parallelized for the moment. Nodal contact bricks work in parallel but all "
+"the computation is done on the master process."
+msgstr ""
+"接触ブリック要素に関しては、一体型接触ブリック要素のみが完全に並列化されています。節点接触ブリック要素は並行で動作しますが、すべての計算はマスタープロセスで実行されています。"

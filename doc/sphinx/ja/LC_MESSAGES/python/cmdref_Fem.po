@@ -1,0 +1,349 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 05:14+0000\n"
+"PO-Revision-Date: 2018-07-16 07:16+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/python/cmdref_Fem.rst:8
+msgid "Fem"
+msgstr "Fem"
+
+#: ../docstring of getfem.Fem:1
+msgid "GeFEM Fem object"
+msgstr "GeFEM Femオブジェクト"
+
+#: ../docstring of getfem.Fem:3
+msgid "This object represents a finite element method on a reference element."
+msgstr "このオブジェクトは、参照要素の有限要素法を表します。"
+
+#: ../docstring of getfem.Fem:6
+msgid "General constructor for Fem objects"
+msgstr "Femオブジェクトの汎用的なコンストラクタです。"
+
+#: ../docstring of getfem.Fem:8
+msgid ""
+"``F = Fem('interpolated_fem', MeshFem mf_source, MeshIm mim_target, [ivec "
+"blocked_dofs[, bool caching]])`` Build a special Fem which is interpolated "
+"from another MeshFem."
+msgstr ""
+"``F = Fem('interpolated_fem', MeshFem mf_source, MeshIm mim_target, [ivec "
+"blocked_dofs[, bool caching]])`` 別のMeshFemから補間された特別なFemを構築します。"
+
+#: ../docstring of getfem.Fem:11 ../docstring of getfem.Fem:22
+msgid ""
+"Using this special finite element, it is possible to interpolate a given "
+"MeshFem `mf_source` on another mesh, given the integration method "
+"`mim_target` that will be used on this mesh."
+msgstr ""
+"この特殊な有限要素を使用すると、このメッシュで使用される積分法 `mim_target` が指定されている場合に、別のメッシュ上の所定のMeshFem "
+"`mf_source` を補間できます。"
+
+#: ../docstring of getfem.Fem:15 ../docstring of getfem.Fem:26
+msgid ""
+"Note that this finite element may be quite slow or consume much memory "
+"depending if caching is used or not. By default `caching` is True"
+msgstr ""
+"この有限要素は、キャッシュが使用されているかどうかに応じて、非常に低速であったり、大量のメモリを消費したりする可能性があることに注意してください。デフォルトでは"
+" `caching` はTrueです。"
+
+#: ../docstring of getfem.Fem:19
+msgid ""
+"``F = Fem('projected_fem', MeshFem mf_source, MeshIm mim_target, int "
+"rg_source, int rg_target[, ivec blocked_dofs[, bool caching]])`` Build a "
+"special Fem which is interpolated from another MeshFem."
+msgstr ""
+"``F = Fem('projected_fem', MeshFem mf_source, MeshIm mim_target, int "
+"rg_source, int rg_target[, ivec blocked_dofs[, bool caching]])``  "
+"別のMeshFemから補間された特別なFemを構築します。"
+
+#: ../docstring of getfem.Fem:30
+msgid ""
+"``F = Fem(string fem_name)`` The `fem_name` should contain a description of "
+"the finite element method. Please refer to the getfem++ manual (especially "
+"the description of finite element and integration methods) for a complete "
+"reference. Here is a list of some of them:"
+msgstr ""
+"``F = Fem(string fem_name)``   `fem_name` "
+"には、有限要素法の記述を入力する必要があります。詳細はgetfem++のマニュアル(特に有限要素法と積分法の記述)を参照してください。その一部を次に示します。"
+
+#: ../docstring of getfem.Fem:36
+msgid ""
+"FEM_PK(n,k) : classical Lagrange element Pk on a simplex of dimension `n`."
+msgstr "FEM_PK(n,k) : 次元 `n` のシンプレックス上の古典的Lagrange要素Pk。"
+
+#: ../docstring of getfem.Fem:38
+msgid ""
+"FEM_PK_DISCONTINUOUS(n,k[,alpha]) : discontinuous Lagrange element Pk on a "
+"simplex of dimension `n`."
+msgstr ""
+"FEM_PK_DISCONTINUOUS(n,k[,alpha]) : 次元 `n` のシンプレックス上の不連続 Lagrange 要素Pk。"
+
+#: ../docstring of getfem.Fem:40
+msgid ""
+"FEM_QK(n,k) : classical Lagrange element Qk on quadrangles, hexahedrons etc."
+msgstr "FEM_QK(n,k) : 四辺形、六面体などの古典的な Lagrange 要素Qk。"
+
+#: ../docstring of getfem.Fem:42
+msgid ""
+"FEM_QK_DISCONTINUOUS(n,k[,alpha]) : discontinuous Lagrange element Qk on "
+"quadrangles, hexahedrons etc."
+msgstr "FEM_QK_DISCONTINUOUS(n,k[,alpha]) : 四辺形、六面体などの不適合Lagrange 要素Qk。"
+
+#: ../docstring of getfem.Fem:44
+msgid ""
+"FEM_Q2_INCOMPLETE(n) : incomplete Q2 elements with 8 and 20 dof (serendipity"
+" Quad 8 and Hexa 20 elements)."
+msgstr "FEM_Q2_INCOMPLETE (n): 8および20自由度(セレンディピティQuad8とHexa20の要素)の不完全Q2要素。"
+
+#: ../docstring of getfem.Fem:47
+msgid ""
+"FEM_PK_PRISM(n,k) : classical Lagrange element Pk on a prism of dimension "
+"`n`."
+msgstr "FEM_PK_PRISM(n,k) : 次元 `n` のプリズム上の古典的 Lagrange 要素Pk。"
+
+#: ../docstring of getfem.Fem:49
+msgid ""
+"FEM_PK_PRISM_DISCONTINUOUS(n,k[,alpha]) : classical discontinuous Lagrange "
+"element Pk on a prism."
+msgstr ""
+"FEM_PK_PRISM_DISCONTINUOUS(n,k[,alpha]) : プリズム上の古典的な不連続 Lagrange 要素Pk。"
+
+#: ../docstring of getfem.Fem:51
+msgid ""
+"FEM_PK_WITH_CUBIC_BUBBLE(n,k) : classical Lagrange element Pk on a simplex "
+"with an additional volumic bubble function."
+msgstr "FEM_PK_WITH_CUBIC_BUBBLE(n,k) : 追加の体積気泡関数を持つシンプレックス上の従来のLagrange要素Pk。"
+
+#: ../docstring of getfem.Fem:54
+msgid "FEM_P1_NONCONFORMING : non-conforming P1 method on a triangle."
+msgstr "FEM_P1_NONCONFORMING : 三角形の不適合P1法。"
+
+#: ../docstring of getfem.Fem:56
+msgid ""
+"FEM_P1_BUBBLE_FACE(n) : P1 method on a simplex with an additional bubble "
+"function on face 0."
+msgstr "FEM_P1_BUBBLE_FACE (n):面0に追加の気泡関数を持つシンプレックス上のP1法。"
+
+#: ../docstring of getfem.Fem:58
+msgid ""
+"FEM_P1_BUBBLE_FACE_LAG : P1 method on a simplex with an additional lagrange "
+"dof on face 0."
+msgstr "FEM_P1_BUBBLE_FACE_LAG : 面0に追加の Lagrange 自由度を持つシンプレックス上のP1法。"
+
+#: ../docstring of getfem.Fem:60
+msgid "FEM_PK_HIERARCHICAL(n,k) : PK element with a hierarchical basis."
+msgstr "FEM_PK_HIERARCHICAL(n,k) : 階層基準のPK要素。"
+
+#: ../docstring of getfem.Fem:62
+msgid "FEM_QK_HIERARCHICAL(n,k) : QK element with a hierarchical basis"
+msgstr "FEM_QK_HIERARCHICAL(n,k) : 階層基準のQK要素"
+
+#: ../docstring of getfem.Fem:64
+msgid ""
+"FEM_PK_PRISM_HIERARCHICAL(n,k) : PK element on a prism with a hierarchical "
+"basis."
+msgstr "FEM_PK_PRISM_HIERARCHICAL(n,k) : 階層基準のプリズム上のPK要素。"
+
+#: ../docstring of getfem.Fem:66
+msgid ""
+"FEM_STRUCTURED_COMPOSITE(Fem f,k) : Composite Fem `f` on a grid with `k` "
+"divisions."
+msgstr "FEM_STRUCTURED_COMPOSITE(Fem f,k) :  `k` 分割されたグリッド上の複合Fem `f` 。"
+
+#: ../docstring of getfem.Fem:68
+msgid ""
+"FEM_PK_HIERARCHICAL_COMPOSITE(n,k,s) : Pk composite element on a grid with "
+"`s` subdivisions and with a hierarchical basis."
+msgstr "FEM_PK_HIERARCHICAL_COMPOSITE(n,k,s) : 細分割および階層ベースを使用したグリッド上のPk複合要素。"
+
+#: ../docstring of getfem.Fem:71
+msgid ""
+"FEM_PK_FULL_HIERARCHICAL_COMPOSITE(n,k,s) : Pk composite element with `s` "
+"subdivisions and a hierarchical basis on both degree and subdivision."
+msgstr ""
+"FEM_PK_FULL_HIERARCHICAL_COMPOSITE(n,k,s) : `s` "
+"サブ分割および次数とサブ分割の両方に基づく階層ベースのPk複合要素。"
+
+#: ../docstring of getfem.Fem:74
+msgid "FEM_PRODUCT(A,B) : tensorial product of two polynomial elements."
+msgstr "FEM_PRODUCT(A,B) : 2つの多項式要素のテンソル積。"
+
+#: ../docstring of getfem.Fem:76
+msgid ""
+"FEM_HERMITE(n) : Hermite element P3 on a simplex of dimension `n = 1, 2, 3`."
+msgstr "FEM_HERMITE(n) : 次元 `n = 1, 2, 3` の単体上のHermite要素P3。"
+
+#: ../docstring of getfem.Fem:78
+msgid "FEM_ARGYRIS : Argyris element P5 on the triangle."
+msgstr "FEM_ARGYRIS : 三角形のArgyris要素P5。"
+
+#: ../docstring of getfem.Fem:80
+msgid ""
+"FEM_HCT_TRIANGLE : Hsieh-Clough-Tocher element on the triangle (composite P3"
+" element which is C1), should be used with IM_HCT_COMPOSITE() integration "
+"method."
+msgstr ""
+"FEM_HCT_TRIANGLE : 三角形のHsieh-Clouh-Tocher要素(C1の複合P3要素)は IM_HCT_COMPOSITE() "
+"積分法で使用します。"
+
+#: ../docstring of getfem.Fem:84
+msgid ""
+"FEM_QUADC1_COMPOSITE : Quadrilateral element, composite P3 element and C1 "
+"(16 dof)."
+msgstr "FEM_QUADC1_COMPOSITE : 四角形要素、複合P3要素およびC1(16自由度)。"
+
+#: ../docstring of getfem.Fem:86
+msgid ""
+"FEM_REDUCED_QUADC1_COMPOSITE : Quadrilateral element, composite P3 element "
+"and C1 (12 dof)."
+msgstr "FEM_REDUCED_QUADC1_COMPOSITE : 四辺形要素、複合P3要素およびC1(12自由度)。"
+
+#: ../docstring of getfem.Fem:88
+msgid ""
+"FEM_RT0(n) : Raviart-Thomas element of order 0 on a simplex of dimension "
+"`n`."
+msgstr "FEM_RT0(n) : 次元 `n` のシンプレックス上の次数0のRaviart-Thomas要素。"
+
+#: ../docstring of getfem.Fem:90
+msgid ""
+"FEM_NEDELEC(n) : Nedelec edge element of order 0 on a simplex of dimension "
+"`n`."
+msgstr "FEM_NEDELEC(n) : 次元 `n` のシンプレックス上の次数0のNedelecエッジ要素。"
+
+#: ../docstring of getfem.Fem:93
+msgid ""
+"Of course, you have to ensure that the selected fem is compatible with the "
+"geometric transformation: a Pk fem has no meaning on a quadrangle."
+msgstr "もちろん、選択した有限要素法が幾何変換と互換性があることを確認する必要があります。つまり、四角形ではPk 有限要素法は意味を持ちません。"
+
+#: ../docstring of getfem.Fem.base_value:1
+msgid "Evaluate all basis functions of the FEM at point `p`."
+msgstr "点 `p` におけるFEMのすべての基底関数を評価します。"
+
+#: ../docstring of getfem.Fem.base_value:3 ../docstring of
+#: getfem.Fem.grad_base_value:3
+msgid "`p` is supposed to be in the reference convex!"
+msgstr "`p` は参照凸包の中にあるはずです!"
+
+#: ../docstring of getfem.Fem.char:1
+msgid "Ouput a (unique) string representation of the Fem."
+msgstr "Femの(ユニークな)文字列表現を出力します。"
+
+#: ../docstring of getfem.Fem.char:3
+msgid ""
+"This can be used to perform comparisons between two different Fem objects."
+msgstr "これを使用して、2つの異なるFemオブジェクトの比較ができます。"
+
+#: ../docstring of getfem.Fem.dim:1
+msgid "Return the dimension (dimension of the reference convex) of the Fem."
+msgstr "Femの次数(参照凸包の次数)を返します。"
+
+#: ../docstring of getfem.Fem.display:1
+msgid "displays a short summary for a Fem object."
+msgstr "Femオブジェクトの概要が表示されます。"
+
+#: ../docstring of getfem.Fem.estimated_degree:1
+msgid "Return an estimation of the polynomial degree of the Fem."
+msgstr "Femの多項式次数の推定値を返します。"
+
+#: ../docstring of getfem.Fem.estimated_degree:3
+msgid "This is an estimation for fem which are not polynomials."
+msgstr "これは多項式ではない有限要素法に対する推定です。"
+
+#: ../docstring of getfem.Fem.grad_base_value:1
+msgid "Evaluate the gradient of all base functions of the Fem at point `p`."
+msgstr "点pにおけるFemのすべての基本関数の勾配を評価します。"
+
+#: ../docstring of getfem.Fem.hess_base_value:1
+msgid "Evaluate the Hessian of all base functions of the Fem at point `p`."
+msgstr "点pにおけるFemのすべての基底関数のHessianを評価します。"
+
+#: ../docstring of getfem.Fem.hess_base_value:3
+msgid "`p` is supposed to be in the reference convex!."
+msgstr "`p` は参照凸包の中にあるはずです!"
+
+#: ../docstring of getfem.Fem.index_of_global_dof:1
+msgid ""
+"Return the index of global dof for special fems such as interpolated fem."
+msgstr "補間された有限要素法など、特殊な有限要素法の全体自由度のインデックスを返します。"
+
+#: ../docstring of getfem.Fem.is_equivalent:1
+msgid "Return 0 if the Fem is not equivalent."
+msgstr "Femが等価でない場合は0を返します。"
+
+#: ../docstring of getfem.Fem.is_equivalent:3
+msgid ""
+"Equivalent Fem are evaluated on the reference convex. This is the case of "
+"most classical Fem's."
+msgstr "等価Femは参照凸包上で評価されます。これはほとんどの古典的なFemの場合でそうです。"
+
+#: ../docstring of getfem.Fem.is_lagrange:1
+msgid "Return 0 if the Fem is not of Lagrange type."
+msgstr "FemがLagrange型でない場合は0を返します。"
+
+#: ../docstring of getfem.Fem.is_polynomial:1
+msgid "Return 0 if the basis functions are not polynomials."
+msgstr "基底関数が多項式でない場合は0を返します。"
+
+#: ../docstring of getfem.Fem.nbdof:1
+msgid "Return the number of dof for the Fem."
+msgstr "Femの自由度を返します。"
+
+#: ../docstring of getfem.Fem.nbdof:3
+msgid ""
+"Some specific Fem (for example 'interpolated_fem') may require a convex "
+"number `cv` to give their result. In most of the case, you can omit this "
+"convex number."
+msgstr ""
+"特定のFem(例えば 'interpolated_fem' )の中には、その結果を得るために凸包番号 `cv` "
+"を必要とするものがあります。ほとんどの場合、この凸包番号は省略できます。"
+
+#: ../docstring of getfem.Fem.poly_str:1
+msgid ""
+"Return the polynomial expressions of its basis functions in the reference "
+"convex."
+msgstr "参照凸包の基底関数の多項式を返します。"
+
+#: ../docstring of getfem.Fem.poly_str:4
+msgid ""
+"The result is expressed as a tuple of strings. Of course this will fail on "
+"non-polynomial Fem's."
+msgstr "結果は文字列のタプルとして表現されます。もちろん、これは多項式でないFemでは失敗します。"
+
+#: ../docstring of getfem.Fem.pts:1
+msgid "Get the location of the dof on the reference element."
+msgstr "基準エレメント上の自由度の位置を取得します。"
+
+#: ../docstring of getfem.Fem.pts:3
+msgid ""
+"Some specific Fem may require a convex number `cv` to give their result (for"
+" example 'interpolated_fem'). In most of the case, you can omit this convex "
+"number."
+msgstr ""
+"ある特定のFemは、その結果を与えるために凸の数 `cv` を必要とします(例えば 'interpolated_fem' "
+")。ほとんどの場合、この凸の数は省略できます。"
+
+#: ../docstring of getfem.Fem.target_dim:1
+msgid "Return the dimension of the target space."
+msgstr "ターゲット空間の次元を返します。"
+
+#: ../docstring of getfem.Fem.target_dim:3
+msgid "The target space dimension is usually 1, except for vector Fem."
+msgstr "ベクトルFemを除き、ターゲット空間の次元は通常1です。"

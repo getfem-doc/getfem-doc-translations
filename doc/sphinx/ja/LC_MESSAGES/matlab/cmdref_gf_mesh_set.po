@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 05:14+0000\n"
+"PO-Revision-Date: 2018-07-16 07:09+0000\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:8
+msgid "gf_mesh_set"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:10
+msgid "**Synopsis**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:34
+msgid "**Description :**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:37
+msgid "General function for modification of a mesh object."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:40
+msgid "**Command list :**"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:44
+msgid "``PIDs = gf_mesh_set(mesh M, 'pts', mat PTS)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:46
+msgid "Replace the coordinates of the mesh points with those given in `PTS`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:49
+msgid "``PIDs = gf_mesh_set(mesh M, 'add point', mat PTS)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:51
+msgid "Insert new points in the mesh and return their #ids."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:53
+msgid ""
+"`PTS` should be an ``nxm`` matrix , where ``n`` is the mesh dimension, and "
+"``m`` is the number of points that will be added to the mesh. On output, "
+"`PIDs` contains the point #ids of these new points."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:58
+msgid ""
+"Remark: if some points are already part of the mesh (with a small tolerance "
+"of approximately ``1e-8``), they won't be inserted again, and `PIDs` will "
+"contain the previously assigned #ids of these points."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:64
+msgid "``gf_mesh_set(mesh M, 'del point', ivec PIDs)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:66
+msgid "Removes one or more points from the mesh."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:68
+msgid ""
+"`PIDs` should contain the point #ids, such as the one returned by the 'add "
+"point' command."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:72
+msgid "``CVIDs = gf_mesh_set(mesh M, 'add convex', geotrans GT, mat PTS)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:74
+msgid "Add a new convex into the mesh."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:76
+msgid ""
+"The convex structure (triangle, prism,...) is given by `GT` (obtained with "
+"gf_geotrans('...')), and its points are given by the columns of `PTS`. On "
+"return, `CVIDs` contains the convex #ids. `PTS` might be a 3-dimensional "
+"array in order to insert more than one convex (or a two dimensional array "
+"correctly shaped according to Fortran ordering)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:84
+msgid "``gf_mesh_set(mesh M, 'del convex', mat CVIDs)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:86
+msgid "Remove one or more convexes from the mesh."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:88
+msgid ""
+"`CVIDs` should contain the convexes #ids, such as the ones returned by the "
+"'add convex' command."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:92
+msgid "``gf_mesh_set(mesh M, 'del convex of dim', ivec DIMs)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:94
+msgid "Remove all convexes of dimension listed in `DIMs`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:96
+msgid ""
+"For example; ``gf_mesh_set(mesh M, 'del convex of dim', [1,2])`` remove all "
+"line segments, triangles and quadrangles."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:100
+msgid "``gf_mesh_set(mesh M, 'translate', vec V)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:102
+msgid "Translates each point of the mesh from `V`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:105
+msgid "``gf_mesh_set(mesh M, 'transform', mat T)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:107
+msgid "Applies the matrix `T` to each point of the mesh."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:109
+msgid ""
+"Note that `T` is not required to be a ``NxN`` matrix (with ``N = "
+"gf_mesh_get(mesh M, 'dim')``). Hence it is possible to transform a 2D mesh "
+"into a 3D one (and reciprocally)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:114
+msgid "``gf_mesh_set(mesh M, 'boundary', int rnum, mat CVFIDs)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:116
+msgid "DEPRECATED FUNCTION. Use 'region' instead."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:119
+msgid "``gf_mesh_set(mesh M, 'region', int rnum, mat CVFIDs)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:121
+msgid ""
+"Assigns the region number `rnum` to the set of convexes or/and convex faces "
+"provided in the matrix `CVFIDs`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:124
+msgid ""
+"The first row of `CVFIDs` contains convex #ids, and the second row contains "
+"a face number in the convex (or 0 for the whole convex (regions are usually "
+"used to store a list of convex faces, but you may also use them to store a "
+"list of convexes)."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:129
+msgid ""
+"If a vector is provided (or a one row matrix) the region will represent the "
+"corresponding set of convex."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:133
+msgid "``gf_mesh_set(mesh M, 'extend region', int rnum, mat CVFIDs)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:135
+msgid ""
+"Extends the region identified by the region number `rnum` to include the set"
+" of convexes or/and convex faces provided in the matrix `CVFIDs`, see also "
+"``gf_mesh_set(mesh M, 'set region)``."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:140
+msgid "``gf_mesh_set(mesh M, 'region intersect', int r1, int r2)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:142
+msgid ""
+"Replace the region number `r1` with its intersection with region number "
+"`r2`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:145
+msgid "``gf_mesh_set(mesh M, 'region merge', int r1, int r2)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:147
+msgid "Merge region number `r2` into region number `r1`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:150
+msgid "``gf_mesh_set(mesh M, 'region subtract', int r1, int r2)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:152
+msgid ""
+"Replace the region number `r1` with its difference with region number `r2`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:156
+msgid "``gf_mesh_set(mesh M, 'delete boundary', int rnum, mat CVFIDs)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:158
+msgid "DEPRECATED FUNCTION. Use 'delete region' instead."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:161
+msgid "``gf_mesh_set(mesh M, 'delete region', ivec RIDs)``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:163
+msgid "Remove the regions whose #ids are listed in `RIDs`"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:166
+msgid "``gf_mesh_set(mesh M, 'merge', mesh m2[, scalar  tol])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:168
+msgid "Merge with the mesh `m2`."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:170
+msgid ""
+"Overlapping points, within a tolerance radius `tol`, will not be duplicated."
+" If `m2` is a mesh_fem object, its linked mesh will be used."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:174
+msgid "``gf_mesh_set(mesh M, 'optimize structure'[, int with_renumbering])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:176
+msgid "Reset point and convex numbering."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:178
+msgid ""
+"After optimisation, the points (resp. convexes) will be consecutively "
+"numbered from 1 to gf_mesh_get(mesh M, 'max pid') (resp. gf_mesh_get(mesh M,"
+" 'max cvid'))."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:183
+msgid "``gf_mesh_set(mesh M, 'refine'[, ivec CVIDs])``"
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:185
+msgid "Use a Bank strategy for mesh refinement."
+msgstr ""
+
+#: ../source/matlab/cmdref_gf_mesh_set.rst:187
+msgid ""
+"If `CVIDs` is not given, the whole mesh is refined. Note that the regions, "
+"and the finite element methods and integration methods of the mesh_fem and "
+"mesh_im objects linked to this mesh will be automagically refined."
+msgstr ""
