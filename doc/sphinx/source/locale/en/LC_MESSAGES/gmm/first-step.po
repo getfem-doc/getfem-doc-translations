@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 01:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../source/gmm/first-step.rst:11
+msgid "First steps with |gmm|"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:15
+msgid "How can I invert a matrix ?"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:17
+msgid ""
+"It is not possible in |gmm| to invert all kind of matrices. For the "
+"moment, the only mean to invert a matrix is to use the dense LU "
+"decomposition (thus, only for dense matrices). An example::"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:32
+msgid ""
+"see the section corresponding to dense LU decomposition for more details."
+" The type ``gmm::dense_matrix<double>`` can be replaced by "
+"``gmm::row_matrix< std::vector<double> >`` or ``gmm::col_matrix< "
+"std::vector<double> >``."
+msgstr ""
+
+#: ../source/gmm/first-step.rst:35
+msgid "How can I solve a linear system ?"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:37
+msgid ""
+"You have more than one possibility to solve a linear system. If you have "
+"a dense matrix, the best may be to use the LU decomposition. An example::"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:54
+msgid ""
+"If, now, you have a sparse system coming for example from a pde "
+"discretization, you have various iterative solvers, with or without "
+"preconditioners. This is an example with a precontionned GMRES::"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:75
+msgid "How can I transform a vector into a matrix and reshape it ?"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:77
+msgid ""
+"In |gmm|, a vector is not considered as a matrix. If you need to use a "
+"vector as a (1 by n) row matrix or (n by 1) column matrix in a "
+"computation, you have to use::"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:84
+msgid "for instance, you can transform a vector into a dense matrix with::"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:94
+msgid "Then you can also reshape matrix ``M`` with::"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:100
+msgid "What is the better way to resize a matrix ?"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:102
+msgid ""
+"You can change the dimensions of a matrix, if it is not a reference, "
+"using::"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:106
+msgid ""
+"This function respects the intersection between the original matrix and "
+"the resized matrix, and new components are set to zero. An important "
+"thing is that it is based on the resize method of ``std::vector``, thus "
+"no memory free is done when the size of the new matrix is smaller than "
+"the original one."
+msgstr ""
+
+#: ../source/gmm/first-step.rst:108
+msgid ""
+"If you do not need to keep old values of the components, or if you want "
+"to really free the surplus of memory, you can resize a matrix using "
+"``std::swap`` as follows::"
+msgstr ""
+
+#: ../source/gmm/first-step.rst:116
+msgid "Of course, this works also for a vector."
+msgstr ""
+

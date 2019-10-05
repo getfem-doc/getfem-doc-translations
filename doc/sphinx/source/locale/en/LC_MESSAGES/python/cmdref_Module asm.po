@@ -1,0 +1,503 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 01:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../source/python/cmdref_Module asm.rst:8
+msgid "Module asm"
+msgstr ""
+
+#: ../docstring getfem.asm_generic:1 of
+msgid ""
+"Synopsis: (...) = asm_generic(MeshIm mim, int order, string expression, "
+"int region, [Model model, ['Secondary_domain', 'name',]] [string varname,"
+" int is_variable[, {MeshFem mf, MeshImd mimd}], value], ['select_output',"
+" 'varname1'[, 'varname2]], ...)"
+msgstr ""
+
+#: ../docstring getfem.asm_generic:3 of
+msgid "High-level generic assembly procedure for volumic or boundary assembly."
+msgstr ""
+
+#: ../docstring getfem.asm_generic:5 of
+msgid ""
+"Performs the generic assembly of `expression` with the integration method"
+" `mim` on the mesh region of index `region` (-1 means all elements of the"
+" mesh). The same mesh should be shared by the integration method and all "
+"the finite element methods or mesh_im_data corresponding to the "
+"variables."
+msgstr ""
+
+#: ../docstring getfem.asm_generic:11 of
+msgid ""
+"`order` indicates either that the (scalar) potential (order = 0) or the "
+"(vector) residual (order = 1) or the tangent (matrix) (order = 2) is to "
+"be computed."
+msgstr ""
+
+#: ../docstring getfem.asm_generic:15 of
+msgid ""
+"`model` is an optional parameter allowing to take into account all "
+"variables and data of a model. Note that all enabled variables of the "
+"model will occupy space in the returned vector/matrix corresponding to "
+"their degrees of freedom in the global system, even if they are not "
+"present in `expression`."
+msgstr ""
+
+#: ../docstring getfem.asm_generic:21 of
+msgid ""
+"The variables and constants (data) are listed after the region number (or"
+" optionally the model). For each variable/constant, a name must be given "
+"first (as it is referred in the assembly string), then an integer equal "
+"to 1 or 0 is expected respectively for declaring a variable or a "
+"constant, then the finite element method if it is a fem variable/constant"
+" or the mesh_im_data if it is data defined on integration points, and the"
+" vector representing the value of the variable/constant. It is possible "
+"to give an arbitrary number of variable/constant. The difference between "
+"a variable and a constant is that test functions are only available for "
+"variables, not for constants."
+msgstr ""
+
+#: ../docstring getfem.asm_generic:33 of
+msgid ""
+"`select_output` is an optional parameter which allows to reduce the "
+"output vector (for `order` equal to 1) or the matrix (for `order` equal "
+"to 2) to the degrees of freedom of the specified variables. One variable "
+"has to be specified for a vector output and two for a matrix output."
+msgstr ""
+
+#: ../docstring getfem.asm_generic:39 of
+msgid ""
+"Note that if several variables are given, the assembly of the tangent "
+"matrix/residual vector will be done considering the order in the call of "
+"the function (the degrees of freedom of the first variable, then of the "
+"second one, and so on). If a model is provided, all degrees of freedom of"
+" the model will be counted first, even if some of the model variables do "
+"not appear in `expression`."
+msgstr ""
+
+#: ../docstring getfem.asm_generic:46 of
+msgid "For example, the L2 norm of a vector field \"u\" can be computed with::"
+msgstr ""
+
+#: ../docstring getfem.asm_generic:52 of
+msgid ""
+"The nonhomogeneous Laplacian stiffness matrix of a scalar field can be "
+"evaluated with::"
+msgstr ""
+
+#: ../docstring getfem.asm_mass_matrix:1 of
+msgid ""
+"Synopsis: M = asm_mass_matrix(MeshIm mim, MeshFem mf1[, MeshFem mf2[, int"
+" region]])"
+msgstr ""
+
+#: ../docstring getfem.asm_mass_matrix:3 of
+msgid "Assembly of a mass matrix."
+msgstr ""
+
+#: ../docstring getfem.asm_bilaplacian:5 getfem.asm_bilaplacian_KL:5
+#: getfem.asm_boundary_qu_term:7 getfem.asm_helmholtz:5 getfem.asm_laplacian:5
+#: getfem.asm_linear_elasticity:6 getfem.asm_lsneuman_matrix:3
+#: getfem.asm_mass_matrix:5 getfem.asm_nlsgrad_matrix:3
+#: getfem.asm_stabilization_patch_matrix:3 of
+msgid "Return a SpMat object."
+msgstr ""
+
+#: ../docstring getfem.asm_laplacian:1 of
+msgid "Assembly of the matrix for the Laplacian problem."
+msgstr ""
+
+#: ../docstring getfem.asm_laplacian:3 of
+msgid ":math:`\\nabla\\cdot(a(x)\\nabla u)`  with `a` a scalar."
+msgstr ""
+
+#: ../docstring getfem.asm_linear_elasticity:1 of
+msgid "Assembles of the matrix for the linear (isotropic) elasticity problem."
+msgstr ""
+
+#: ../docstring getfem.asm_linear_elasticity:3 of
+msgid ""
+":math:`\\nabla\\cdot(C(x):\\nabla u)` with :math:`C` defined via "
+"`lambda_d` and `mu_d`."
+msgstr ""
+
+#: ../docstring getfem.asm_nonlinear_elasticity:1 of
+msgid ""
+"Synopsis: TRHS = asm_nonlinear_elasticity(MeshIm mim, MeshFem mf_u, vec "
+"U, string law, MeshFem mf_d, mat params, {'tangent "
+"matrix'|'rhs'|'incompressible tangent matrix', MeshFem mf_p, vec "
+"P|'incompressible rhs', MeshFem mf_p, vec P})"
+msgstr ""
+
+#: ../docstring getfem.asm_nonlinear_elasticity:3 of
+msgid ""
+"Assembles terms (tangent matrix and right hand side) for nonlinear "
+"elasticity."
+msgstr ""
+
+#: ../docstring getfem.asm_nonlinear_elasticity:5 of
+msgid ""
+"The solution `U` is required at the current time-step. The `law` may be "
+"choosen among:"
+msgstr ""
+
+#: ../docstring getfem.asm_nonlinear_elasticity:8 of
+msgid ""
+"'SaintVenant Kirchhoff': Linearized law, should be avoided). This law has"
+" the two usual Lame coefficients as parameters, called lambda and mu."
+msgstr ""
+
+#: ../docstring getfem.asm_nonlinear_elasticity:11 of
+msgid ""
+"'Mooney Rivlin': This law has three parameters, called C1, C2 and D1. Can"
+" be preceded with the words 'compressible' or 'incompressible' to force a"
+" specific version. By default, the incompressible version is considered "
+"which requires only the first two material coefficients."
+msgstr ""
+
+#: ../docstring getfem.asm_nonlinear_elasticity:16 of
+msgid ""
+"'neo Hookean': A special case of the 'Mooney Rivlin' law that requires "
+"one material coefficient less (C2 = 0). By default, its compressible "
+"version is used."
+msgstr ""
+
+#: ../docstring getfem.asm_nonlinear_elasticity:19 of
+msgid ""
+"'Ciarlet Geymonat': This law has 3 parameters, called lambda, mu and "
+"gamma, with gamma chosen such that gamma is in ]-lambda/2-mu, -mu[."
+msgstr ""
+
+#: ../docstring getfem.asm_nonlinear_elasticity:23 of
+msgid ""
+"The parameters of the material law are described on the MeshFem `mf_d`. "
+"The matrix `params` should have `nbdof(mf_d)` columns, each row "
+"correspounds to a parameter."
+msgstr ""
+
+#: ../docstring getfem.asm_nonlinear_elasticity:27 of
+msgid ""
+"The last argument selects what is to be built: either the tangent matrix,"
+" or the right hand side. If the incompressibility is considered, it "
+"should be followed by a MeshFem `mf_p`, for the pression."
+msgstr ""
+
+#: ../docstring getfem.asm_nonlinear_elasticity:32 of
+msgid ""
+"Return a SpMat object (tangent matrix), vec object (right hand side), "
+"tuple of SpMat objects (incompressible tangent matrix), or tuple of vec "
+"objects (incompressible right hand side)."
+msgstr ""
+
+#: ../docstring getfem.asm_helmholtz:1 of
+msgid "Assembly of the matrix for the Helmholtz problem."
+msgstr ""
+
+#: ../docstring getfem.asm_helmholtz:3 of
+msgid ":math:`\\Delta u + k^2 u` = 0,  with `k` complex scalar."
+msgstr ""
+
+#: ../docstring getfem.asm_bilaplacian:1 of
+msgid "Assembly of the matrix for the Bilaplacian problem."
+msgstr ""
+
+#: ../docstring getfem.asm_bilaplacian:3 getfem.asm_bilaplacian_KL:3 of
+msgid ":math:`\\Delta(a(x)\\Delta u) = 0`   with `a` scalar."
+msgstr ""
+
+#: ../docstring getfem.asm_bilaplacian_KL:1 of
+msgid ""
+"Assembly of the matrix for the Bilaplacian problem with Kirchhoff-Love "
+"formulation."
+msgstr ""
+
+#: ../docstring getfem.asm_volumic_source:1 of
+msgid "Assembly of a volumic source term."
+msgstr ""
+
+#: ../docstring getfem.asm_volumic_source:3 of
+msgid ""
+"Output a vector `V`, assembled on the MeshFem `mf_u`, using the data "
+"vector `fd` defined on the data MeshFem `mf_d`. `fd` may be real or "
+"complex-valued."
+msgstr ""
+
+#: ../docstring getfem.asm_boundary_source:7
+#: getfem.asm_integral_contact_Uzawa_projection:7
+#: getfem.asm_level_set_normal_source_term:6 getfem.asm_volumic_source:7 of
+msgid "Return a vec object."
+msgstr ""
+
+#: ../docstring getfem.asm_boundary_source:1 of
+msgid "Assembly of a boundary source term."
+msgstr ""
+
+#: ../docstring getfem.asm_boundary_source:3 of
+msgid ""
+"`G` should be a [Qdim x N] matrix, where N is the number of dof of "
+"`mf_d`, and Qdim is the dimension of the unkown u (that is set when "
+"creating the MeshFem)."
+msgstr ""
+
+#: ../docstring getfem.asm_dirichlet:1 of
+msgid "Assembly of Dirichlet conditions of type `h.u = r`."
+msgstr ""
+
+#: ../docstring getfem.asm_dirichlet:3 of
+msgid ""
+"Handle `h.u = r` where h is a square matrix (of any rank) whose size is "
+"equal to the dimension of the unkown u. This matrix is stored in `H`, one"
+" column per dof in `mf_d`, each column containing the values of the "
+"matrix h stored in fortran order:"
+msgstr ""
+
+#: ../docstring getfem.asm_dirichlet:8 of
+msgid "`H(:,j) = [h11(x_j) h21(x_j) h12(x_j) h22(x_j)]`"
+msgstr ""
+
+#: ../docstring getfem.asm_dirichlet:12 of
+msgid "if u is a 2D vector field."
+msgstr ""
+
+#: ../docstring getfem.asm_dirichlet:14 of
+msgid ""
+"Of course, if the unknown is a scalar field, you just have to set `H = "
+"ones(1, N)`, where N is the number of dof of `mf_d`."
+msgstr ""
+
+#: ../docstring getfem.asm_dirichlet:17 of
+msgid ""
+"This is basically the same than calling gf_asm('boundary qu term') for "
+"`H` and calling gf_asm('neumann') for `R`, except that this function "
+"tries to produce a 'better' (more diagonal) constraints matrix (when "
+"possible)."
+msgstr ""
+
+#: ../docstring getfem.asm_dirichlet:22 of
+msgid "See also Spmat.Dirichlet_nullspace()."
+msgstr ""
+
+#: ../docstring getfem.asm_boundary_qu_term:1 of
+msgid "Assembly of a boundary qu term."
+msgstr ""
+
+#: ../docstring getfem.asm_boundary_qu_term:3 of
+msgid ""
+"`q` should be be a [Qdim x Qdim x N] array, where N is the number of dof "
+"of `mf_d`, and Qdim is the dimension of the unkown u (that is set when "
+"creating the MeshFem)."
+msgstr ""
+
+#: ../docstring getfem.asm_define_function:1 of
+msgid ""
+"Synopsis: asm_define_function(string name, int nb_args, string "
+"expression[, string expression_derivative_t[, string "
+"expression_derivative_u]])"
+msgstr ""
+
+#: ../docstring getfem.asm_define_function:3 of
+msgid ""
+"Define a new function `name` which can be used in high level generic "
+"assembly. The function can have one or two parameters. In `expression` "
+"all available predefined function or operation of the generic assembly "
+"can be used. However, no reference to some variables or data can be "
+"specified. The argument of the function is `t` for a one parameter "
+"function and `t` and `u` for a two parameter function. For instance "
+"'sin(pi*t)+2*t*t' is a valid expression for a one parameter function and "
+"'sin(max(t,u)*pi)' is a valid expression for a two parameters function. "
+"`expression_derivative_t` and `expression_derivative_u` are optional "
+"expressions for the derivatives with respect to `t` and `u`. If they are "
+"not furnished, a symbolic derivation is used."
+msgstr ""
+
+#: ../docstring getfem.asm_undefine_function:1 of
+msgid ""
+"Cancel the definition of a previously defined function `name` for the "
+"high level generic assembly."
+msgstr ""
+
+#: ../docstring getfem.asm_define_linear_hardening_function:1 of
+msgid ""
+"Synopsis: asm_define_linear_hardening_function(string name, scalar "
+"sigma_y0, scalar H, ... [string 'Frobenius'])"
+msgstr ""
+
+#: ../docstring getfem.asm_define_linear_hardening_function:3 of
+msgid ""
+"Define a new linear hardening function under the name `name`, with "
+"initial yield stress `sigma_y0` and hardening modulus H. If an extra "
+"string argument with the value 'Frobenius' is provided, the hardening "
+"function is expressed in terms of Frobenius norms of its input strain and"
+" output stress, instead of their Von-Mises equivalents."
+msgstr ""
+
+#: ../docstring getfem.asm_define_Ramberg_Osgood_hardening_function:1 of
+msgid ""
+"Synopsis: asm_define_Ramberg_Osgood_hardening_function(string name, "
+"scalar sigma_ref, {scalar eps_ref | scalar E, scalar alpha}, scalar n[, "
+"string 'Frobenius'])"
+msgstr ""
+
+#: ../docstring getfem.asm_define_Ramberg_Osgood_hardening_function:3 of
+msgid ""
+"Define a new Ramberg Osgood hardening function under the name `name`, "
+"with initial yield stress `sigma_y0` and hardening modulus H. If an extra"
+" string argument with the value 'Frobenius' is provided, the hardening "
+"function is expressed in terms of Frobenius norms of its input strain and"
+" output stress, instead of their Von-Mises equivalents."
+msgstr ""
+
+#: ../docstring getfem.asm_expression_analysis:1 of
+msgid ""
+"Synopsis: asm_expression_analysis(string expression [, {Mesh mesh | "
+"MeshIm mim}] [, der_order] [, Model model] [, string varname, int "
+"is_variable[, {MeshFem mf | MeshImd mimd}], ...])"
+msgstr ""
+
+#: ../docstring getfem.asm_expression_analysis:3 of
+msgid ""
+"Analyse a high-level generic assembly expression and print information "
+"about the provided expression."
+msgstr ""
+
+#: ../docstring getfem.asm_volumic:1 of
+msgid ""
+"Synopsis: (...) = asm_volumic(,CVLST], expr [, mesh_ims, mesh_fems, "
+"data...])"
+msgstr ""
+
+#: ../docstring getfem.asm_volumic:3 of
+msgid "Low-level generic assembly procedure for volumic assembly."
+msgstr ""
+
+#: ../docstring getfem.asm_volumic:5 of
+msgid ""
+"The expression `expr` is evaluated over the MeshFem's listed in the "
+"arguments (with optional data) and assigned to the output arguments. For "
+"details about the syntax of assembly expressions, please refer to the "
+"getfem user manual (or look at the file getfem_assembling.h in the "
+"getfem++ sources)."
+msgstr ""
+
+#: ../docstring getfem.asm_volumic:11 of
+msgid "For example, the L2 norm of a field can be computed with::"
+msgstr ""
+
+#: ../docstring getfem.asm_volumic:17 of
+msgid "The Laplacian stiffness matrix can be evaluated with::"
+msgstr ""
+
+#: ../docstring getfem.asm_boundary:1 of
+msgid ""
+"Synopsis: (...) = asm_boundary(int bnum, string expr [, MeshIm mim, "
+"MeshFem mf, data...])"
+msgstr ""
+
+#: ../docstring getfem.asm_boundary:3 of
+msgid "Low-level generic boundary assembly."
+msgstr ""
+
+#: ../docstring getfem.asm_boundary:5 of
+msgid "See the help for gf_asm('volumic')."
+msgstr ""
+
+#: ../docstring getfem.asm_interpolation_matrix:1 of
+msgid ""
+"Synopsis: Mi = asm_interpolation_matrix(MeshFem mf, {MeshFem mfi | vec "
+"pts})"
+msgstr ""
+
+#: ../docstring getfem.asm_interpolation_matrix:3 of
+msgid ""
+"Build the interpolation matrix from a MeshFem onto another MeshFem or a "
+"set of points."
+msgstr ""
+
+#: ../docstring getfem.asm_interpolation_matrix:5 of
+msgid ""
+"Return a matrix `Mi`, such that `V = Mi.U` is equal to "
+"gf_compute('interpolate_on',mfi). Useful for repeated interpolations. "
+"Note that this is just interpolation, no elementary integrations are "
+"involved here, and `mfi` has to be lagrangian. In the more general case, "
+"you would have to do a L2 projection via the mass matrix."
+msgstr ""
+
+#: ../docstring getfem.asm_interpolation_matrix:12 of
+msgid "`Mi` is a SpMat object."
+msgstr ""
+
+#: ../docstring getfem.asm_extrapolation_matrix:1 of
+msgid ""
+"Synopsis: Me = asm_extrapolation_matrix(MeshFem mf,  {MeshFem mfe | vec "
+"pts})"
+msgstr ""
+
+#: ../docstring getfem.asm_extrapolation_matrix:3 of
+msgid ""
+"Build the extrapolation matrix from a MeshFem onto another MeshFem or a "
+"set of points."
+msgstr ""
+
+#: ../docstring getfem.asm_extrapolation_matrix:5 of
+msgid ""
+"Return a matrix `Me`, such that `V = Me.U` is equal to "
+"gf_compute('extrapolate_on',mfe). Useful for repeated extrapolations."
+msgstr ""
+
+#: ../docstring getfem.asm_extrapolation_matrix:9 of
+msgid "`Me` is a SpMat object."
+msgstr ""
+
+#: ../docstring getfem.asm_integral_contact_Uzawa_projection:1 of
+msgid ""
+"Synopsis: B = asm_integral_contact_Uzawa_projection(int bnum, MeshIm mim,"
+" MeshFem mf_u, vec U, MeshFem mf_lambda, vec vec_lambda, MeshFem "
+"mf_obstacle, vec obstacle, scalar r [, {scalar coeff | MeshFem mf_coeff, "
+"vec coeff} [, int option[, scalar alpha, vec W]]])"
+msgstr ""
+
+#: ../docstring getfem.asm_integral_contact_Uzawa_projection:5 of
+msgid "Specific assembly procedure for the use of an Uzawa algorithm to solve"
+msgstr ""
+
+#: ../docstring getfem.asm_integral_contact_Uzawa_projection:4 of
+msgid ""
+"contact problems. Projects the term $-(\\lambda - r (u_N-g))_-$ on the "
+"finite element space of $\\lambda$."
+msgstr ""
+
+#: ../docstring getfem.asm_level_set_normal_source_term:1 of
+msgid ""
+"Performs an assembly of the source term represented by `vec_lambda` on "
+"`mf_lambda` considered to be a component in the direction of the gradient"
+" of a levelset function (normal to the levelset) of a vector field "
+"defined on `mf_u` on the boundary `bnum`."
+msgstr ""
+
+#: ../docstring getfem.asm_lsneuman_matrix:1 of
+msgid "Assembly of a level set Neuman  matrix."
+msgstr ""
+
+#: ../docstring getfem.asm_nlsgrad_matrix:1 of
+msgid "Assembly of a nlsgrad matrix."
+msgstr ""
+
+#: ../docstring getfem.asm_stabilization_patch_matrix:1 of
+msgid "Assembly of stabilization patch matrix ."
+msgstr ""
+

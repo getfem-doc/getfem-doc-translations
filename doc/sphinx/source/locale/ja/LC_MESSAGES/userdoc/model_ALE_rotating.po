@@ -1,0 +1,541 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 01:53+0000\n"
+"PO-Revision-Date: 2018-07-16 07:04+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/userdoc/model_ALE_rotating.rst:13
+msgid "ALE Support for object having a large rigid body motion"
+msgstr "剛体運動が大きい物体のALEサポート"
+
+#: ../source/userdoc/model_ALE_rotating.rst:16
+msgid "ALE terms for rotating objects"
+msgstr "物体を回転させるためのALE項"
+
+#: ../source/userdoc/model_ALE_rotating.rst:18
+msgid ""
+"This section present a set of bricks facilitating the use of an ALE "
+"formulation for rotating bodies having a rotational symmetry (typically a "
+"train wheel)."
+msgstr "このセクションでは、回転対称性（電車の車輪が典型）を有する回転体のためのALE定式化の使用を容易にするブリック要素の一覧を紹介します。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:21
+#: ../source/userdoc/model_ALE_rotating.rst:173
+msgid "Theoretical background"
+msgstr "理論的背景"
+
+#: ../source/userdoc/model_ALE_rotating.rst:23
+msgid ""
+"This strategy consists in adopting an intermediary description between an "
+"Eulerian and a Lagrangian ones for a rotating body having a rotational "
+"symmetry. This intermediary description consist in a rotating axes with "
+"respect to the reference configuration. See for instance [Dr-La-Ek2014]_ and"
+" [Nackenhorst2004]_."
+msgstr ""
+"この手法の戦略は、回転対称性を有する回転体のためのEulerとLagrangianの間の中間的な方法を採用することにあります。この中間的な方法は、参照構成に対して回転する軸で構成されています。たとえば、"
+" [Dr-La-Ek2014]_ と [Nackenhorst2004]_ を参照してください。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:25
+msgid ""
+"It is supposed that the considered body is submitted approximately to a "
+"rigid body motion"
+msgstr "検討対象の物体は、ほぼ剛体運動であると考えます。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:27
+msgid "\\tau(X) = R(t)X + Z(t)"
+msgstr "\\tau(X) = R(t)X + Z(t)"
+
+#: ../source/userdoc/model_ALE_rotating.rst:30
+msgid ""
+"and may have additonal deformation (exptected smaller) with respect to this "
+"rigid motion, where :math:`R(t)` is a rotation matrix"
+msgstr "この剛体運動に対して追加の（より小さいと予想される）変形を有することができます。ここで、 :math:`R(t)` は回転行列です。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:32
+msgid ""
+"R(t) = \\left(\\begin{array}{ccc} \\cos(\\theta(t)) & \\sin(\\theta(t)) & 0 "
+"\\\\ -\\sin(\\theta(t)) & \\cos(\\theta(t)) & 0 \\\\ 0 & 0 & 1 \\end{array} "
+"\\right),"
+msgstr ""
+"R(t) = \\left(\\begin{array}{ccc} \\cos(\\theta(t)) & \\sin(\\theta(t)) & 0 "
+"\\\\ -\\sin(\\theta(t)) & \\cos(\\theta(t)) & 0 \\\\ 0 & 0 & 1 \\end{array} "
+"\\right),"
+
+#: ../source/userdoc/model_ALE_rotating.rst:39
+msgid ""
+"and :math:`Z(t)` is a translation. Note that, in order to be consistent with"
+" a positive translation for a positive angle for a rolling contact, the "
+"rotation is **clockwise**. This illustrated in the following figure:"
+msgstr ""
+"そして :math:`Z(t)` は変形です。転がり接触の正の角度に対する正の平行移動と一致するためには、回転は **時計回り** "
+"であることに留意してください。これを次の図に示します。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:49
+msgid ""
+"Note that the description is given for a three-dimensional body. For two-"
+"dimensional bodies, the third axes is neglected so that :math:`R(t)` is a "
+":math:`2\\times 2` rotation matrix. Let us denote :math:`r(t)` the rotation:"
+msgstr ""
+"なお、説明は3次元体についての説明です。2次元の物体の場合、第3軸は無視されます。 :math:`R(t)` は :math:`2\\times 2` "
+"回転行列です。:math:`r(t)` 回転が以下のような場合について考えます。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:51
+msgid ""
+"r(t,X) = R(t)X, ~~~~~~~~~ \\mbox{ and } A = \\left(\\begin{array}{ccc} 0 & 1"
+" & 0 \\\\ -1 & 0 & 0 \\\\ 0 & 0 & 0 \\end{array} \\right)."
+msgstr ""
+"r(t,X) = R(t)X, ~~~~~~~~~ \\mbox{ and } A = \\left(\\begin{array}{ccc} 0 & 1"
+" & 0 \\\\ -1 & 0 & 0 \\\\ 0 & 0 & 0 \\end{array} \\right)."
+
+#: ../source/userdoc/model_ALE_rotating.rst:59
+msgid "We have then"
+msgstr "すると"
+
+#: ../source/userdoc/model_ALE_rotating.rst:61
+msgid "\\dot{r}(t,X) = \\dot{\\theta}AR(t)X"
+msgstr "\\dot{r}(t,X) = \\dot{\\theta}AR(t)X"
+
+#: ../source/userdoc/model_ALE_rotating.rst:64
+msgid ""
+"If :math:`\\varphi(t, X)` is the deformation of the body which maps the "
+"reference configuration :math:`\\Omega^0` to the deformed configuration "
+":math:`\\Omega_t` at time :math:`t`, the ALE description consists in the "
+"decomposition of the deformation of the cylinder in"
+msgstr ""
+"もし :math:`\\varphi(t, X)` が :math:`\\Omega^0` の参照構成から時刻 :math:`t` の変形設定 "
+":math:`\\Omega_t` へマップしている物体の変形である場合、ALE記述は、円筒の変形の分解に帰着されます。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:66
+msgid ""
+"\\varphi(t, X) = (\\tau(t) \\circ \\bar{\\varphi}(t) \\circ r(t))(X) = "
+"\\bar{\\varphi}(t, r(t, X)) + Z(t)"
+msgstr ""
+"\\varphi(t, X) = (\\tau(t) \\circ \\bar{\\varphi}(t) \\circ r(t))(X) = "
+"\\bar{\\varphi}(t, r(t, X)) + Z(t)"
+
+#: ../source/userdoc/model_ALE_rotating.rst:69
+msgid "With :math:`\\bar{X} = R(t)X` the new considered deformation is"
+msgstr ":math:`\\bar{X} = R(t)X` とすると、新しく考える変形は"
+
+#: ../source/userdoc/model_ALE_rotating.rst:71
+msgid "\\bar{\\varphi}(t,\\bar{X}) = \\varphi(X) - Z(t)"
+msgstr "\\bar{\\varphi}(t,\\bar{X}) = \\varphi(X) - Z(t)"
+
+#: ../source/userdoc/model_ALE_rotating.rst:75
+msgid ""
+"Thanks to the rotation symmetry of the reference configuration "
+":math:`\\Omega^0:`, we note that :math:`\\bar{\\Omega}^0 = r(t, \\Omega^0)` "
+"is independant of :math:`t` and will serve as the new reference "
+"configuration. This is illustrated in the following figure:"
+msgstr ""
+"参照構成 :math:`\\Omega^0` の回転対称性により、:math:`\\bar{\\Omega}^0 = r(t, \\Omega^0)` "
+"は :math:`t` が独立であり、新しい参照構成として機能します。これを次の図に示します。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:85
+msgid ""
+"The denomination ALE of the method is justified by the fact that "
+":math:`\\bar{\\Omega}^0` is an intermediate configuration which is of Euler "
+"type for the rigid motion and a Lagrangian one for the additional "
+"deformation of the solid. If we denote"
+msgstr ""
+"この方法のALEの名称は、次の事実によって正当化されます。 :math:`\\bar{\\Omega}^0` "
+"は、剛体運動のためのEuler型の中間構成であり、固体の追加の変形のためのLagrangian型です。この場合、"
+
+#: ../source/userdoc/model_ALE_rotating.rst:87
+msgid "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - \\bar{X}"
+msgstr "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - \\bar{X}"
+
+#: ../source/userdoc/model_ALE_rotating.rst:90
+msgid ""
+"the displacement with respect to this intermediate configuration, the "
+"advantage is that if this additional displacement with respect to the rigid "
+"body motion is small, it is possible to use a small deformation model (for "
+"instance linearized elasticity)."
+msgstr "剛性体の動きに対するこの追加の変位が小さい場合、微小変形モデル（例えば線形弾性）を使用することができるという利点があります。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:92
+msgid ""
+"Due to the objectivity properties of standard constitutive laws, the "
+"expression of these laws in the intermediate configuration is most of the "
+"time identical to the expression in a standard reference configuration "
+"except for the expression of the time derivative which are modified because "
+"the change of coordinate is  nonconstant in time :"
+msgstr ""
+"標準的な手法のオブジェクト化は、これらの手法の中間構成は時間的に不変であるため、変更された時間の導関数を表現することを除いて、基準配置の表現とほとんど同じです。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:94
+msgid ""
+"\\Frac{\\partial \\varphi}{\\partial t} = \\Frac{\\partial "
+"\\bar{\\varphi}}{\\partial t} + \\dot{\\theta} \\nabla \\bar{\\varphi} A "
+"\\bar{X} + \\dot{Z}(t),  \\Frac{\\partial^2 \\varphi}{\\partial t^2} = "
+"\\Frac{\\partial^2 \\bar{\\varphi}}{\\partial t^2} + 2\\dot{\\theta} "
+"\\nabla\\Frac{\\partial \\bar{\\varphi}}{\\partial t}A \\bar{X} + "
+"\\dot{\\theta}^2\\mbox{div}((\\nabla\\bar{\\varphi}A \\bar{X}) \\otimes (A "
+"\\bar{X}) )  + \\ddot{\\theta}\\nabla\\bar{\\varphi}A \\bar{X} + "
+"\\ddot{Z}(t)."
+msgstr ""
+"\\Frac{\\partial \\varphi}{\\partial t} = \\Frac{\\partial "
+"\\bar{\\varphi}}{\\partial t} + \\dot{\\theta} \\nabla \\bar{\\varphi} A "
+"\\bar{X} + \\dot{Z}(t),  \\Frac{\\partial^2 \\varphi}{\\partial t^2} = "
+"\\Frac{\\partial^2 \\bar{\\varphi}}{\\partial t^2} + 2\\dot{\\theta} "
+"\\nabla\\Frac{\\partial \\bar{\\varphi}}{\\partial t}A \\bar{X} + "
+"\\dot{\\theta}^2\\mbox{div}((\\nabla\\bar{\\varphi}A \\bar{X}) \\otimes (A "
+"\\bar{X}) )  + \\ddot{\\theta}\\nabla\\bar{\\varphi}A \\bar{X} + "
+"\\ddot{Z}(t)."
+
+#: ../source/userdoc/model_ALE_rotating.rst:100
+msgid ""
+"Note that the term :math:`\\dot{\\theta} A \\bar{X} = "
+"\\left(\\hspace*{-0.5em}\\begin{array}{c} \\dot{\\theta}\\bar{X}_2 \\\\ "
+"-\\dot{\\theta}\\bar{X}_1 \\\\ 0 \\end{array}\\hspace*{-0.5em}\\right)` is "
+"the rigid motion velocity vector. Now, If :math:`\\Theta(t,X)` is a quantity"
+" attached to the material points (for instance the temperature), then, with "
+":math:`\\bar{\\Theta}(t,\\bar{X}) = \\Theta(t,X)` , one simply has"
+msgstr ""
+"項 :math:`\\dot{\\theta} A \\bar{X} = "
+"\\left(\\hspace*{-0.5em}\\begin{array}{c} \\dot{\\theta}\\bar{X}_2 \\\\ "
+"-\\dot{\\theta}\\bar{X}_1 \\\\ 0 \\end{array}\\hspace*{-0.5em}\\right)` "
+"が剛体運動速度ベクトルであることに注意してください。今、 :math:`\\Theta(t,X)` が物質点（例えば温度）に接続された量であり、次に "
+":math:`\\bar{\\Theta}(t,\\bar{X}) = \\Theta(t,X)` の場合、単純に次の式になります。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:102
+msgid ""
+"\\Frac{\\partial \\Theta}{\\partial t} = \\Frac{\\partial "
+"\\bar{\\Theta}}{\\partial t} + \\dot{\\theta} \\nabla \\bar{\\Theta} A "
+"\\bar{X}"
+msgstr ""
+"\\Frac{\\partial \\Theta}{\\partial t} = \\Frac{\\partial "
+"\\bar{\\Theta}}{\\partial t} + \\dot{\\theta} \\nabla \\bar{\\Theta} A "
+"\\bar{X}"
+
+#: ../source/userdoc/model_ALE_rotating.rst:106
+msgid ""
+"This should not be forgotten that a correction has to be provided for each "
+"evolving variable for which the time derivative intervene in the considered "
+"model (think for instance to platic flow for plasticity). So that certain "
+"model bricks canot be used directly (plastic bricks for instance)."
+msgstr ""
+"これは、時間微分が考慮されたモデルに介入し進展する変数ごとに補正が行われなければならないことに注意してください（例えば、可塑性のために板状の流れを考える）。そのため、特定のモデルの要素を直接使用することはできません（たとえば、可塑ブリック要素など）。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:108
+msgid ""
+"|gf| bricks for structural mechanics are mainly considering the displacement"
+" as the amin unknown. The expression for the displacement is the following:"
+msgstr "|gf| 構造的力学モデルのためのブリック要素は、主に、未知変数として変位を考慮しています。変位の式は次のとおりです。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:110
+msgid ""
+"\\Frac{\\partial u}{\\partial t} = \\Frac{\\partial \\bar{u}}{\\partial t} +"
+" \\dot{\\theta} (I_d + \\nabla \\bar{u}) A \\bar{X} + \\dot{Z}(t),  "
+"\\Frac{\\partial^2 u}{\\partial t^2} = \\Frac{\\partial^2 "
+"\\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\Frac{\\partial "
+"\\bar{u}}{\\partial t}A \\bar{X} +  \\dot{\\theta}^2\\mbox{div}(((I_d + "
+"\\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta} (I_d "
+"+ \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t)."
+msgstr ""
+"\\Frac{\\partial u}{\\partial t} = \\Frac{\\partial \\bar{u}}{\\partial t} +"
+" \\dot{\\theta} (I_d + \\nabla \\bar{u}) A \\bar{X} + \\dot{Z}(t),  "
+"\\Frac{\\partial^2 u}{\\partial t^2} = \\Frac{\\partial^2 "
+"\\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\Frac{\\partial "
+"\\bar{u}}{\\partial t}A \\bar{X} +  \\dot{\\theta}^2\\mbox{div}(((I_d + "
+"\\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta} (I_d "
+"+ \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t)."
+
+#: ../source/userdoc/model_ALE_rotating.rst:120
+#: ../source/userdoc/model_ALE_rotating.rst:219
+msgid "Weak formulation of the transient terms"
+msgstr "過渡項の弱定式化"
+
+#: ../source/userdoc/model_ALE_rotating.rst:122
+msgid ""
+"Assuming :math:`\\rho^0` the density in the reference configuration having a"
+" rotation symmetry, the term corresponding to acceleration in the weak "
+"formulation reads (with :math:`v(X) = \\bar{v}(\\bar{X})` a test function):"
+msgstr ""
+":math:`\\rho^0` を、回転対称性を有する基準構成における密度と仮定すると、加速度に対応する弱定式項は（ :math:`v(X) = "
+"\\bar{v}(\\bar{X})` は試行関数）次の通りになります。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:124
+msgid ""
+"\\int_{\\Omega^0} \\rho^0 \\Frac{\\partial^2 u}{\\partial t^2}\\cdot vdX =  "
+"\\int_{\\bar{\\Omega}^0} \\rho^0 \\left[\\Frac{\\partial^2 "
+"\\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\Frac{\\partial "
+"\\bar{u}}{\\partial t}A \\bar{X} +  \\dot{\\theta}^2\\mbox{div}(((I_d + "
+"\\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta} (I_d "
+"+ \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t) \\right] \\cdot \\bar{v} "
+"d\\bar{X}."
+msgstr ""
+"\\int_{\\Omega^0} \\rho^0 \\Frac{\\partial^2 u}{\\partial t^2}\\cdot vdX =  "
+"\\int_{\\bar{\\Omega}^0} \\rho^0 \\left[\\Frac{\\partial^2 "
+"\\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\Frac{\\partial "
+"\\bar{u}}{\\partial t}A \\bar{X} +  \\dot{\\theta}^2\\mbox{div}(((I_d + "
+"\\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta} (I_d "
+"+ \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t) \\right] \\cdot \\bar{v} "
+"d\\bar{X}."
+
+#: ../source/userdoc/model_ALE_rotating.rst:129
+msgid ""
+"The third term in the right hand side can be integrated by part as follows:"
+msgstr "右辺の第3項は、以下のように部分積分することができます。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:131
+msgid ""
+"\\begin{array}{rcl}  \\ds \\int_{\\bar{\\Omega}^0} \\rho^0 "
+"\\dot{\\theta}^2\\mbox{div}(((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A "
+"\\bar{X}) ) \\cdot \\bar{v} d\\bar{X} &=& - \\ds \\int_{\\bar{\\Omega}^0} "
+"(\\dot{\\theta}^2 (I_d + \\nabla\\bar{u})A \\bar{X})) \\cdot (\\nabla "
+"(\\rho^0 \\bar{v}) A \\bar{X}) d\\bar{X} \\\\  &&\\ds + \\int_{\\partial "
+"\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2 (((I_d + \\nabla\\bar{u})A "
+"\\bar{X}) \\otimes (A \\bar{X}) ) \\bar{N} \\cdot \\bar{v} d\\bar{\\Gamma}. "
+"\\end{array}"
+msgstr ""
+"\\begin{array}{rcl}  \\ds \\int_{\\bar{\\Omega}^0} \\rho^0 "
+"\\dot{\\theta}^2\\mbox{div}(((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A "
+"\\bar{X}) ) \\cdot \\bar{v} d\\bar{X} &=& - \\ds \\int_{\\bar{\\Omega}^0} "
+"(\\dot{\\theta}^2 (I_d + \\nabla\\bar{u})A \\bar{X})) \\cdot (\\nabla "
+"(\\rho^0 \\bar{v}) A \\bar{X}) d\\bar{X} \\\\  &&\\ds + \\int_{\\partial "
+"\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2 (((I_d + \\nabla\\bar{u})A "
+"\\bar{X}) \\otimes (A \\bar{X}) ) \\bar{N} \\cdot \\bar{v} d\\bar{\\Gamma}. "
+"\\end{array}"
+
+#: ../source/userdoc/model_ALE_rotating.rst:137
+msgid ""
+"Since :math:`\\bar{N}` the outward unit normal vector on :math:`\\partial "
+"\\bar{\\Omega}^0` is orthogonal to :math:`A \\bar{X}` the boundary term is "
+"zero and :math:`\\nabla (\\rho^0 \\bar{v}) = \\bar{v} \\otimes \\nabla "
+"\\rho^0   + \\rho^0 \\nabla \\bar{v}` and since :math:`\\nabla "
+"\\rho^0.(A\\bar{X}) = 0` because of the assumption on :math:`\\rho^0` to "
+"have a rotation symmetry, we have"
+msgstr ""
+":math:`\\partial \\bar{\\Omega}^0` 上の外向きの単位法線ベクトル :math:`\\bar{N}` は "
+":math:`A \\bar{X}` に直交し境界項はゼロであり :math:`\\nabla (\\rho^0 \\bar{v}) = "
+"\\bar{v} \\otimes \\nabla \\rho^0   + \\rho^0 \\nabla \\bar{v}` であり "
+":math:`\\nabla \\rho^0.(A\\bar{X}) = 0` であり :math:`\\rho^0` は回転対称性を持つ仮定のため、"
+
+#: ../source/userdoc/model_ALE_rotating.rst:139
+msgid ""
+"\\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2\\mbox{div}(((I_d + "
+"\\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) ) \\cdot \\bar{v} "
+"d\\bar{X} = - \\int_{\\bar{\\Omega}^0} \\rho^0 "
+"\\dot{\\theta}^2(\\nabla\\bar{u}A \\bar{X}) \\cdot (\\nabla \\bar{v} A "
+"\\bar{X}) d\\bar{X} - \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2 (A^2"
+" \\bar{X})\\cdot \\bar{v} d\\bar{X}."
+msgstr ""
+"\\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2\\mbox{div}(((I_d + "
+"\\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) ) \\cdot \\bar{v} "
+"d\\bar{X} = - \\int_{\\bar{\\Omega}^0} \\rho^0 "
+"\\dot{\\theta}^2(\\nabla\\bar{u}A \\bar{X}) \\cdot (\\nabla \\bar{v} A "
+"\\bar{X}) d\\bar{X} - \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2 (A^2"
+" \\bar{X})\\cdot \\bar{v} d\\bar{X}."
+
+#: ../source/userdoc/model_ALE_rotating.rst:142
+msgid "Thus globally"
+msgstr "したがって、全体では次式となります"
+
+#: ../source/userdoc/model_ALE_rotating.rst:144
+msgid ""
+"\\begin{array}{rcl} \\ds \\int_{\\Omega^0} \\rho^0 \\Frac{\\partial^2 "
+"u}{\\partial t^2}\\cdot vdX &=& \\ds \\int_{\\bar{\\Omega}^0} \\rho^0 "
+"\\left[\\Frac{\\partial^2 \\bar{u}}{\\partial t^2} + 2\\dot{\\theta} "
+"\\nabla\\Frac{\\partial \\bar{u}}{\\partial t}A \\bar{X} + \\ddot{\\theta} "
+"\\nabla\\bar{u} A \\bar{X}   \\right] \\cdot \\bar{v} d\\bar{X}\\\\ &&\\ds -"
+" \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2(\\nabla\\bar{u}A "
+"\\bar{X}) \\cdot (\\nabla \\bar{v} A \\bar{X}) d\\bar{X} - "
+"\\int_{\\bar{\\Omega}^0} \\rho^0 (\\dot{\\theta}^2 A^2 \\bar{X} + "
+"\\ddot{\\theta} A\\bar{X} + \\ddot{Z}(t))\\cdot \\bar{v} d\\bar{X}. "
+"\\end{array}"
+msgstr ""
+"\\begin{array}{rcl} \\ds \\int_{\\Omega^0} \\rho^0 \\Frac{\\partial^2 "
+"u}{\\partial t^2}\\cdot vdX &=& \\ds \\int_{\\bar{\\Omega}^0} \\rho^0 "
+"\\left[\\Frac{\\partial^2 \\bar{u}}{\\partial t^2} + 2\\dot{\\theta} "
+"\\nabla\\Frac{\\partial \\bar{u}}{\\partial t}A \\bar{X} + \\ddot{\\theta} "
+"\\nabla\\bar{u} A \\bar{X}   \\right] \\cdot \\bar{v} d\\bar{X}\\\\ &&\\ds -"
+" \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2(\\nabla\\bar{u}A "
+"\\bar{X}) \\cdot (\\nabla \\bar{v} A \\bar{X}) d\\bar{X} - "
+"\\int_{\\bar{\\Omega}^0} \\rho^0 (\\dot{\\theta}^2 A^2 \\bar{X} + "
+"\\ddot{\\theta} A\\bar{X} + \\ddot{Z}(t))\\cdot \\bar{v} d\\bar{X}. "
+"\\end{array}"
+
+#: ../source/userdoc/model_ALE_rotating.rst:151
+msgid ""
+"Note that two terms can deteriorate the coercivity of the problem and thus "
+"its well posedness and the stability of time integration schemes: the second"
+" one (convection term) and the fifth one. This may oblige to use additional "
+"stabilization techniques for large values of the angular velocity "
+":math:`\\dot{\\theta}`."
+msgstr ""
+"2つの項が問題の保磁力を悪化させることがあり、したがってその適切な負担と時間積分スキームの安定性を低下させる可能性があることに注意してください。第2項（対流項）と第5項。これらの項は、角速度"
+" :math:`\\dot{\\theta}` の大きな値に対して追加の安定化技法を使用することを必要とするかもしれません。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:155
+msgid "The available bricks ..."
+msgstr "利用可能なブリック要素..."
+
+#: ../source/userdoc/model_ALE_rotating.rst:157
+msgid "To be adapted  ::"
+msgstr "次のように使用します。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:161
+msgid "where ``parameters`` are the parameters ..."
+msgstr "ここで ``parameters`` はパラメータです..."
+
+#: ../source/userdoc/model_ALE_rotating.rst:168
+msgid "ALE terms for a uniformly translated part of an object"
+msgstr "一様変形物体の一部のALE項"
+
+#: ../source/userdoc/model_ALE_rotating.rst:170
+msgid ""
+"This section present a set of bricks facilitating the use of an ALE "
+"formulation for an object being potentially infinite in one direction and "
+"which whose part of interests (on which the computation is considered) is "
+"translated uniformly in that direction (typically a bar)."
+msgstr ""
+
+#: ../source/userdoc/model_ALE_rotating.rst:175
+msgid ""
+"Let us consider an object whose reference configuration :math:`\\Omega^0 "
+"\\in \\R^{d}` is infinite in the direction :math:`E_1`, i.e. "
+":math:`\\Omega^0 = \\R \\times \\omega^0` where :math:`\\omega^0 \\in "
+"\\R^{d-1}`. At a time :math:`t`, only a \"windows\" of this object is "
+"considered"
+msgstr ""
+"参照構成 :math:`\\Omega^0 \\in \\R^{d}` が :math:`E_1` の方向で無限境界の物体を考えてみます、 "
+":math:`\\Omega^0 = \\R \\times \\omega^0` ただし、  :math:`\\omega^0 \\in "
+"\\R^{d-1}` になります。時刻 :math:`t` において、この物体の \"窓\" だけが考慮されます。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:177
+msgid "\\Omega^{0t} = (\\alpha + z(t), \\beta + z(t)) \\times \\omega^0"
+msgstr "\\Omega^{0t} = (\\alpha + z(t), \\beta + z(t)) \\times \\omega^0"
+
+#: ../source/userdoc/model_ALE_rotating.rst:180
+msgid "where :math:`z(t)` represents the translation."
+msgstr "ここで、 :math:`z(t)` は変形を表します。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:182
+msgid ""
+"If :math:`\\varphi(t, X)` is the deformation of the body which maps the "
+"reference configuration :math:`\\Omega^0` to the deformed configuration "
+":math:`\\Omega_t` at time :math:`t`, the ALE description consists in "
+"considering the intermediary reference configuration"
+msgstr ""
+":math:`\\varphi(t, X)` が時刻 :math:`t` における参照構成 :math:`\\Omega^0` を変形された構成 "
+":math:`\\Omega_t` に写像する物体の変形である場合、ALEの記述は、中間参照構成を考慮したもので構成されます。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:184
+msgid "\\bar{\\Omega}^{0} = (\\alpha, \\beta) \\times \\omega^0"
+msgstr "\\bar{\\Omega}^{0} = (\\alpha, \\beta) \\times \\omega^0"
+
+#: ../source/userdoc/model_ALE_rotating.rst:187
+msgid ""
+"and :math:`\\bar{\\varphi}(t, X) : \\R_+ \\times \\bar{\\Omega}^{0} "
+"\\rightarrow \\R^d` defined by"
+msgstr ""
+"そして :math:`\\bar{\\varphi}(t, X) : \\R_+ \\times \\bar{\\Omega}^{0} "
+"\\rightarrow \\R^d` は次で定義されています。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:189
+msgid ""
+"\\bar{\\varphi}(t,\\bar{X}) = \\varphi(t,X), ~~~\\mbox{ with } \\bar{X} = X "
+"- Z(t),"
+msgstr ""
+"\\bar{\\varphi}(t,\\bar{X}) = \\varphi(t,X), ~~~\\mbox{ with } \\bar{X} = X "
+"- Z(t),"
+
+#: ../source/userdoc/model_ALE_rotating.rst:192
+msgid ""
+"where :math:`Z(t) = z(t)E_1`. The interest of :math:`\\bar{\\Omega}^{0}` is "
+"of course to be time independant. Of course, some special boundary "
+"conditions have to be defined on :math:`\\{\\alpha\\} \\times \\omega^0` and"
+" :math:`\\{\\beta\\} \\times \\omega^0` (absorbing or periodic boundary "
+"conditions) in order to approximate the fact that the body is infinite."
+msgstr ""
+"ここで、 :math:`Z(t) = z(t)E_1`。 :math:`\\bar{\\Omega}^{0}` "
+"の着目点は時間に依存しないことです。いくつかの特別な境界条件（吸収周期的な境界条件）は、 :math:`\\{\\alpha\\} \\times "
+"\\omega^0` と  :math:`\\{\\beta\\} \\times \\omega^0` "
+"上で定義され、物体の無限であるという条件を近似します。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:203
+msgid "If we denote"
+msgstr "以下の式が示されます。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:205
+msgid "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - X = u(t, X),"
+msgstr "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - X = u(t, X),"
+
+#: ../source/userdoc/model_ALE_rotating.rst:208
+msgid ""
+"the displacement on the intermediary configuration, then it is easy to check"
+" that"
+msgstr "中間構成上の変位を確認するのは簡単です。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:210
+msgid ""
+"\\Frac{\\partial \\varphi}{\\partial t} = \\Frac{\\partial "
+"\\bar{u}}{\\partial t} - \\nabla \\bar{u} \\dot{Z}  \\Frac{\\partial^2 "
+"\\varphi}{\\partial t^2} = \\Frac{\\partial^2 \\bar{u}}{\\partial t^2} - "
+"\\nabla\\Frac{\\partial \\bar{u}}{\\partial t}\\dot{Z} + \\Frac{\\partial^2 "
+"\\bar{u}}{\\partial \\dot{Z}^2} - \\nabla\\bar{u}\\ddot{Z}."
+msgstr ""
+"\\Frac{\\partial \\varphi}{\\partial t} = \\Frac{\\partial "
+"\\bar{u}}{\\partial t} - \\nabla \\bar{u} \\dot{Z}  \\Frac{\\partial^2 "
+"\\varphi}{\\partial t^2} = \\Frac{\\partial^2 \\bar{u}}{\\partial t^2} - "
+"\\nabla\\Frac{\\partial \\bar{u}}{\\partial t}\\dot{Z} + \\Frac{\\partial^2 "
+"\\bar{u}}{\\partial \\dot{Z}^2} - \\nabla\\bar{u}\\ddot{Z}."
+
+#: ../source/userdoc/model_ALE_rotating.rst:221
+msgid ""
+"Assuming :math:`\\rho^0` the density in the reference being invariant with "
+"the considered translation, the term corresponding to acceleration in the "
+"weak formulation reads (with :math:`v(X) = \\bar{v}(\\bar{X})` a test "
+"function and after integration by part):"
+msgstr ""
+"参照の :math:`\\rho^0` の密度は、考慮された変換で不変であると仮定すると、弱定式化における加速度に対応する項の、試行関数( "
+":math:`v(X) = \\bar{v}(\\bar{X})` )と部分積分済みのものは次の通りです。"
+
+#: ../source/userdoc/model_ALE_rotating.rst:223
+msgid ""
+"\\int_{\\Omega^0} \\rho^0 \\Frac{\\partial^2 u}{\\partial t^2}\\cdot vdX =  "
+"\\int_{\\bar{\\Omega}^{0}} \\rho^0 \\left[\\Frac{\\partial^2 "
+"\\bar{u}}{\\partial t^2} - 2\\nabla\\Frac{\\partial \\bar{u}}{\\partial "
+"t}\\dot{Z} - \\nabla\\bar{u}\\ddot{Z}\\right]\\cdot \\bar{v}  - \\rho^0 "
+"(\\nabla\\bar{u}\\dot{Z}).(\\nabla\\bar{v}\\dot{Z}) d\\bar{X} + "
+"\\int_{\\partial \\bar{\\Omega}^0} \\rho^0 "
+"(\\nabla\\bar{u}\\dot{Z}).\\bar{v}(\\dot{Z}.\\bar{N}) d\\bar{\\Gamma},"
+msgstr ""
+"\\int_{\\Omega^0} \\rho^0 \\Frac{\\partial^2 u}{\\partial t^2}\\cdot vdX =  "
+"\\int_{\\bar{\\Omega}^{0}} \\rho^0 \\left[\\Frac{\\partial^2 "
+"\\bar{u}}{\\partial t^2} - 2\\nabla\\Frac{\\partial \\bar{u}}{\\partial "
+"t}\\dot{Z} - \\nabla\\bar{u}\\ddot{Z}\\right]\\cdot \\bar{v}  - \\rho^0 "
+"(\\nabla\\bar{u}\\dot{Z}).(\\nabla\\bar{v}\\dot{Z}) d\\bar{X} + "
+"\\int_{\\partial \\bar{\\Omega}^0} \\rho^0 "
+"(\\nabla\\bar{u}\\dot{Z}).\\bar{v}(\\dot{Z}.\\bar{N}) d\\bar{\\Gamma},"
+
+#: ../source/userdoc/model_ALE_rotating.rst:228
+msgid ""
+"where :math:`\\bar{N}` is the outward unit normal vector on :math:`\\partial"
+" \\bar{\\Omega}^0`. Note that the last term vanishes on :math:`(\\alpha, "
+"\\beta) \\times \\partial \\omega^0` but not necessarily on "
+":math:`\\{\\alpha\\} \\times \\omega^0` and :math:`\\{\\beta\\} \\times "
+"\\omega^0`."
+msgstr ""
+"ここで、 :math:`\\bar{N}` は :math:`\\partial \\bar{\\Omega}^0` "
+"の外向きの単位法線ベクトルです。最後の項は :math:`(\\alpha, \\beta) \\times \\partial \\omega^0` "
+"のように消えます。しかし :math:`\\{\\alpha\\} \\times \\omega^0` と :math:`\\{\\beta\\} "
+"\\times \\omega^0` 上では必要ありません。"

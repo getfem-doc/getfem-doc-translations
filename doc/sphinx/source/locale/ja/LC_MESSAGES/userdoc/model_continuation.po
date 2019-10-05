@@ -1,0 +1,866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 01:53+0000\n"
+"PO-Revision-Date: 2018-07-16 07:07+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/userdoc/model_continuation.rst:14
+msgid "Numerical continuation and bifurcation"
+msgstr "数値連続法と分岐"
+
+#: ../source/userdoc/model_continuation.rst:16
+msgid ""
+"Let an algebraic problem coming from discretisation of a FEM-model can be "
+"written in the form"
+msgstr "FEMモデルの離散化から生じる代数的問題を、以下の形式で書くことができます。"
+
+#: ../source/userdoc/model_continuation.rst:19
+msgid "F(U) = 0."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:23
+msgid ""
+"In what follows, we shall suppose that the model depends on an additional "
+"scalar parameter :math:`\\lambda` so that :math:`F(U) = F(U, \\lambda)`."
+msgstr ""
+"以下の説明では、モデルが追加のスカラーパラメータ :math:`\\lambda` に依存していると仮定します。そのため :math:`F(U) = "
+"F(U, \\lambda)` です。"
+
+#: ../source/userdoc/model_continuation.rst:27
+msgid "Numerical continuation"
+msgstr "数値連続法"
+
+#: ../source/userdoc/model_continuation.rst:29
+msgid ""
+"Methods of numerical continuation serve for tracing solutions of the system"
+msgstr "数値連続法は、システムの解を追跡するために役立ちます"
+
+#: ../source/userdoc/model_continuation.rst:31
+msgid ""
+"F(U, \\lambda) = 0, \\quad F\\colon \\mathbb{R}^{N} \\times \\mathbb{R} \\to"
+" \\mathbb{R}^{N}."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:35
+msgid ""
+"In |gf|, a continuation technique for piecewise :math:`C^{1}` "
+"(:math:`PC^{1}`) solution curves is implemented (see [Li-Re2014]_ for more "
+"details). Since it does not make an explicit difference between the state "
+"variable :math:`U` and the parameter :math:`\\lambda`, we shall denote "
+":math:`Y := (U, \\lambda)` for brevity. Nevertheless, to avoid bad scaling "
+"when calculating tangents, for example, we shall use the following weighted "
+"scalar product and norm:"
+msgstr ""
+"|gf| には、区分的 :math:`C^{1}` (:math:`PC^{1}`) の解曲線の連続手法が実装されています（詳細は [Li-"
+"Re2014]_ を参照）。状態変数 :math:`U` とパラメータ :math:`\\lambda` との間に陽な違いがないので、簡潔にするため、 "
+":math:`Y := (U, \\lambda)` "
+"と表記します。併せて、例えば、接線を計算する際のスケーリングが悪くなるのを避けるために、以下の加重スカラ積とノルムを使用します。"
+
+#: ../source/userdoc/model_continuation.rst:42
+msgid ""
+"\\langle Y, \\tilde{Y} \\rangle_{w} := \\kappa \\langle U, \\tilde{U} "
+"\\rangle + \\lambda \\tilde{\\lambda},\\quad \\lVert Y \\rVert_{w} := "
+"\\sqrt{\\kappa \\lVert U \\rVert^{2} + \\lambda^{2}},\\qquad Y = (U, "
+"\\lambda),\\, \\tilde{Y} = (\\tilde{U}, \\tilde{\\lambda})."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:46
+msgid ""
+"Here, :math:`\\kappa` should be chosen so that :math:`\\kappa \\langle U, "
+"\\tilde{U} \\rangle` is proportional to the scalar product of the "
+"corresponding space variables, usually in :math:`L^{2}`. One can take, for "
+"example, :math:`\\kappa = h^{d}`, where :math:`h` is the mesh size and "
+":math:`d` stands for the dimension of the underlying problem. Alternatively,"
+" :math:`\\kappa` can be chosen as :math:`1/N` for simplicity."
+msgstr ""
+"ここで、 :math:`\\kappa` は :math:`\\kappa \\langle U, \\tilde{U} \\rangle` "
+"が対応する空間変数のスカラー積に比例するように選ぶ必要があり、通常 :math:`L^{2}` です。たとえば、 :math:`\\kappa = "
+"h^{d}` 次のようにすることができます、ここで、 :math:`h` はメッシュサイズで、 :math:`d` "
+"は対称の問題の次元を表します。あるいは、 :math:`\\kappa` は、簡単にするために :math:`1/N` として設定することもできます。"
+
+#: ../source/userdoc/model_continuation.rst:53
+msgid ""
+"The idea of the continuation strategy is to continue smooth pieces of "
+"solution curves by a classical predictor-corrector method and to join the "
+"smooth pieces continuously."
+msgstr "連続法の考え方は、古典的な予測子修正子法によって滑らかな解曲線を追跡し、滑らかな部分を連続的に結合することです。"
+
+#: ../source/userdoc/model_continuation.rst:57
+msgid ""
+"The particular predictor-corrector method employed is a slight modification "
+"of the *inexact Moore-Penrose* continuation implemented in MATCONT [Dh-Go-"
+"Ku2003]_. It computes a sequence of consecutive points :math:`Y_{j}` lying "
+"approximately on a solution curve and a sequence of the corresponding unit "
+"tangent vectors :math:`T_{j}`:"
+msgstr ""
+"使用される特定の予測子修正子法は、MATCONT [Dh-Go-Ku2003]_ に実装されている *不正確なMoore-Penrose* "
+"連続をわずかに変更して使用します。これは、解曲線上におおよそ対応する単位接線ベクトル :math:`T_{j}` のシーケンスである連続する点 "
+":math:`Y_{j}` の連続を計算します。"
+
+#: ../source/userdoc/model_continuation.rst:63
+msgid ""
+"\\lVert F(Y_{j}) \\rVert \\leq \\varepsilon,\\quad F'(Y_{j}; T_{j}) = "
+"0,\\quad \\lVert T_{j} \\rVert_{w} = 1,\\quad j = 0, 1,\\dotsc."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:67
+msgid ""
+"To describe it, let us suppose that we have a couple :math:`(Y_{j}, T_{j})` "
+"satisfying the relations above at our disposal. In the *prediction*, an "
+"initial approximation of :math:`(Y_{j+1}, T_{j+1})` is taken as"
+msgstr ""
+"それを説明するために、上記の処理の関係を満たすカップル :math:`(Y_{j}, T_{j})` を考えます。 *予測* では、次のような "
+":math:`(Y_{j+1}, T_{j+1})` の初期近似が成り立ちます。"
+
+#: ../source/userdoc/model_continuation.rst:71
+msgid "Y_{j+1}^{0} := Y_{j} + h_{j} T_{j},\\quad T_{j+1}^{0} := T_{j},"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:75
+msgid ""
+"where :math:`h_{j}` is a step size. Its choice will be discussed later on."
+msgstr "ここで、 :math:`h_{j}` はステップサイズです。その選択については後で説明します。"
+
+#: ../source/userdoc/model_continuation.rst:77
+msgid ""
+"In the *correction*, one computes a sequence :math:`\\{(Y_{j+1}^{l}, "
+"T_{j+1}^{l})\\}`, where :math:`T_{j+1}^{l} := \\tilde{T}_{j+1}^{l} / \\lVert"
+" \\tilde{T}_{j+1}^{l} \\rVert_{w}` and the couple :math:`(Y_{j+1}^{l}, "
+"\\tilde{T}_{j+1}^{l})` is given by one iteration of the Newton method "
+"applied to the equation :math:`F^{l}(Y, T) = 0` with"
+msgstr ""
+"*補正* では、次のようなシーケンスが計算されます :math:`\\{(Y_{j+1}^{l}, T_{j+1}^{l})\\}`, ここで  "
+":math:`T_{j+1}^{l} := \\tilde{T}_{j+1}^{l} / \\lVert \\tilde{T}_{j+1}^{l} "
+"\\rVert_{w}` とカップル :math:`(Y_{j+1}^{l}, \\tilde{T}_{j+1}^{l})` は方程式 "
+":math:`F^{l}(Y, T) = 0` に適用されるNewton法のイテレーションにより与えられます。"
+
+#: ../source/userdoc/model_continuation.rst:84
+msgid ""
+"F^{l}(Y, T) := \\begin{pmatrix}F(Y)\\\\ (T_{j+1}^{l-1})^{\\top}(Y - "
+"Y_{j+1}^{l-1})\\\\ \\nabla F(Y_{j+1}^{l-1})T\\\\ \\langle T_{j+1}^{l-1}, T "
+"\\rangle_{w} - \\langle T_{j+1}^{l-1}, T_{j+1}^{l-1} "
+"\\rangle_{w}\\end{pmatrix}"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:88
+msgid ""
+"and the initial approximation :math:`(Y_{j+1}^{l-1}, T_{j+1}^{l-1})`. Due to"
+" the potential non-differentiability of :math:`F`, a piecewise-smooth "
+"variant of the Newton method is used (Algorithm 7.2.14 in [Fa-Pa2003]_)."
+msgstr ""
+"初期近似 :math:`(Y_{j+1}^{l-1}, T_{j+1}^{l-1})` は次のようになります。:math:`F` "
+"のポテンシャルの非微分可能性により、Newton法の微分的に滑らかな変形が使用されます（ [Fa-Pa2003]_ のアルゴリズム7.2.14）。"
+
+#: ../source/userdoc/model_continuation.rst:96
+msgid "Correction."
+msgstr "補正。"
+
+#: ../source/userdoc/model_continuation.rst:98
+msgid ""
+"A couple :math:`(Y_{j+1}^{l}, T_{j+1}^{l})` is accepted for :math:`(Y_{j+1},"
+" T_{j+1})` if :math:`\\lVert F(Y_{j+1}^{l})\\rVert \\leq \\varepsilon`, "
+":math:`\\lVert Y_{j+1}^{l} - Y_{j+1}^{l-1}\\rVert_{w} \\leq \\varepsilon'`, "
+"and the cosine of the angle between :math:`T_{j+1}^{l}` and :math:`T_{j}` is"
+" greater or equal to :math:`c_{\\mathrm{min}}`. Let us note that the partial"
+" gradient of :math:`F` (or of one of its selection functions in the case of "
+"the non-differentiability) with respect to :math:`U` is assembled "
+"analytically whereas the partial gradient with respect to :math:`\\lambda` "
+"is evaluated by forward finite differences with an increment equal to 1e-8."
+msgstr ""
+"カップル :math:`(Y_{j+1}^{l}, T_{j+1}^{l})` は :math:`(Y_{j+1}, T_{j+1})` を満たす、もし"
+" :math:`\\lVert F(Y_{j+1}^{l})\\rVert \\leq \\varepsilon` :math:`\\lVert "
+"Y_{j+1}^{l} - Y_{j+1}^{l-1}\\rVert_{w} \\leq \\varepsilon'`, と "
+":math:`T_{j+1}^{l}` と :math:`T_{j}` の間の角度の余弦は :math:`c_{\\mathrm{min}}` "
+"のものより大きいか等しい（または、非微分可能性の場合にはその選択関数の1つ）の部分勾配 :math:`F` が、解析的に構築られているのに対して、 "
+":math:`\\ lambda` は1e-8に等しい増分で前方有限差分法によって評価されます。"
+
+#: ../source/userdoc/model_continuation.rst:109
+msgid ""
+"The step size :math:`h_{j+1}` in the next prediction depends on how the "
+"Newton correction has been successful. Denoting the number of iterations "
+"needed by :math:`l_{\\mathrm{it}}`, it is selected as"
+msgstr ""
+"次の予測におけるステップサイズ :math:`h_{j+1}` は、Newton補正がどのように成功したかに依存します。次の式で必要な反復回数 "
+":math:`l_{\\mathrm{it}}` を示します。"
+
+#: ../source/userdoc/model_continuation.rst:113
+msgid ""
+"h_{j+1} := \\begin{cases}\\max\\{h_{\\mathrm{dec}} h_{j}, "
+"h_{\\mathrm{min}}\\}& \\text{if no new couple has been accepted},\\\\ "
+"\\min\\{h_{\\mathrm{inc}} h_{j}, h_{\\mathrm{max}}\\}& \\text{if a new "
+"couple has been accepted and } l_{\\mathrm{it}} < l_{\\mathrm{thr}},\\\\ "
+"h_{j}& \\text{otherwise},\\end{cases}"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:117
+msgid ""
+"where :math:`0 < h_{\\mathrm{dec}} < 1 < h_{\\mathrm{inc}}`, :math:`0 < "
+"l_{\\mathrm{thr}}` and :math:`0 < h_{\\mathrm{min}} < h_{\\mathrm{max}}` are"
+" given constants. At the beginning, one sets :math:`h_{1} := "
+"h_{\\mathrm{init}}` for some :math:`h_{\\mathrm{min}} \\leq "
+"h_{\\mathrm{init}} \\leq h_{\\mathrm{max}}`."
+msgstr ""
+"ここで、 :math:`0 < h_{\\mathrm{dec}} < 1 < h_{\\mathrm{inc}}`, :math:`0 < "
+"l_{\\mathrm{thr}}` と :math:`0 < h_{\\mathrm{min}} < h_{\\mathrm{max}}` "
+"は定数となります。最初は、いくつかの :math:`h_{\\mathrm{min}} \\leq h_{\\mathrm{init}} \\leq "
+"h_{\\mathrm{max}}` に対して :math:`h_{1} := h_{\\mathrm{init}}` のように設定します。 "
+
+#: ../source/userdoc/model_continuation.rst:123
+msgid ""
+"Now, let us suppose that we have approximated a piece of a solution curve "
+"corresponding to one sub-domain of smooth behaviour of :math:`F` and we want"
+" to recover a piece corresponding to another sub-domain of smooth behaviour."
+" Let :math:`(Y_{j},T_{j})` be the last computed couple."
+msgstr ""
+"ここで、滑らかな振る舞いの1つのサブ領域に対応する解曲線の一部を近似したとします。 :math:`F` "
+"の滑らかな振る舞いの別のサブ領域に対応する部分を回復したいと考えます。:math:`(Y_{j},T_{j})` は最後に計算されたカップルとします。"
+
+#: ../source/userdoc/model_continuation.rst:132
+msgid "Transition between smooth pieces of a solution curve."
+msgstr "解曲線の滑らかな区分間の遷移。"
+
+#: ../source/userdoc/model_continuation.rst:134
+msgid ""
+"To approximate the tangent to the other smooth piece, we first take a point "
+":math:`Y_{j} + h T_{j}` with :math:`h` a bit greater than "
+":math:`h_{\\mathrm{min}}` so that this point belongs to the interior of the "
+"other sub-domain of smooth behaviour. Then we find :math:`\\tilde{T}` such "
+"that"
+msgstr ""
+"他の滑らかな区分の接線を近似するには、まず、次のような点 :math:`Y_{j} + h T_{j}` をとります。ここで、 :math:`h` は "
+":math:`h_{\\mathrm{min}}` よりも少し大きいです、そのためこの点が円滑な動作の他のサブ領域の内部に属するようにします。それから、"
+" :math:`\\tilde{T}` は以下となります"
+
+#: ../source/userdoc/model_continuation.rst:139
+msgid ""
+"\\nabla F(Y_{j} + h T_{j}) \\tilde{T} = 0,\\quad \\lVert \\tilde{T} "
+"\\rVert_{w} = 1,"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:143
+msgid ""
+"and it remains to determine an appropriate direction of this vector. This "
+"can be done on the basis of the following observations:  First, there exists"
+" :math:`r \\in \\{\\pm 1\\}` such that :math:`Y_{j} - r \\tilde{h} "
+"\\tilde{T}` remains in the same sub-domain as :math:`Y_{j}` for any "
+":math:`\\tilde{h}` positive. This is characterised by the fact that "
+":math:`\\frac{\\lvert T_{-}^{\\top} \\tilde{T}\\rvert}{\\lVert T_{-} \\rVert"
+" \\lVert \\tilde{T} \\rVert}` is significantly smaller than 1 for "
+":math:`T_{-}` with :math:`\\nabla F(Y_{j} - r \\tilde{h} \\tilde{T}) T_{-} ="
+" 0`. Second, :math:`Y_{j} + r \\tilde{h} \\tilde{T}` appears in the other "
+"sub-domain for :math:`\\tilde{h}` larger than some positive threshold, and, "
+"for such values, :math:`\\frac{\\lvert T_{+}^{\\top} "
+"\\tilde{T}\\rvert}{\\lVert T_{+} \\rVert \\lVert \\tilde{T} \\rVert}` is "
+"close to 1 for :math:`T_{+}` with :math:`\\nabla F(Y_{j} + r \\tilde{h} "
+"\\tilde{T}) T_{+} = 0`."
+msgstr ""
+"そしてこれはこのベクトルの適切な方向を決定するために残っています。これは、以下の観察に基づいて行うことができます。第1に、 :math:`Y_{j} -"
+" r \\tilde{h} \\tilde{T}` が :math:`Y_{j}` の任意の正の :math:`\\tilde{h}` "
+"と同じサブ領域内にあるような :math:`r \\in \\{\\pm 1\\}` が存在します。これは、 :math:`\\nabla "
+"F(Y_{j} - r \\tilde{h} \\tilde{T}) T_{-} = 0` が :math:`\\frac{\\lvert "
+"T_{-}^{\\top} \\tilde{T}\\rvert}{\\lVert T_{-} \\rVert \\lVert \\tilde{T} "
+"\\rVert}` が1よりもかなり小さいという事実によって特徴づけられます。第2に、 :math:`Y_{j} + r \\tilde{h} "
+"\\tilde{T}` は、ある正の閾値よりも大きい :math:`\\tilde{h}` のために、他のサブ領域に現れ、このような値の場合、 "
+":math:`\\frac{\\lvert T_{+}^{\\top} \\tilde{T}\\rvert}{\\lVert T_{+} \\rVert"
+" \\lVert \\tilde{T} \\rVert}` は :math:`T_{+}` が :math:`\\nabla F(Y_{j} + r "
+"\\tilde{h} \\tilde{T}) T_{+} = 0` の場合に1に近いです。"
+
+#: ../source/userdoc/model_continuation.rst:157
+msgid ""
+"This suggests the following procedure for selecting the desired direction of"
+" :math:`\\tilde{T}`: Increase the values of :math:`\\tilde{h}` successively "
+"from :math:`h_{\\mathrm{min}}`, and when you arrive at :math:`\\tilde{h}` "
+"and :math:`r \\in \\{\\pm 1\\}` such that"
+msgstr ""
+"これは、 :math:`\\tilde{T}`: の所望の方向を選択するための以下の手順を提案します。 :math:`\\tilde{h}` の値を "
+":math:`h_{\\mathrm{min}}` から連続的に増加させ、 :math:`\\tilde{h}` と :math:`r \\in "
+"\\{\\pm 1\\}` に到着したときに"
+
+#: ../source/userdoc/model_continuation.rst:162
+msgid ""
+"\\frac{\\lvert T^{\\top} \\tilde{T}\\rvert}{\\lVert T \\rVert \\lVert "
+"\\tilde{T} \\rVert} \\approx 1\\quad \\text{if}\\ \\nabla F(Y_{j} + r "
+"\\tilde{h} \\tilde{T}) T = 0,"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:166
+msgid ""
+"take :math:`r \\tilde{T}` as the approximation of the tangent to the other "
+"smooth piece."
+msgstr "他の滑らかな区分の接線の近似値として :math:`r \\tilde{T}` を取ります。"
+
+#: ../source/userdoc/model_continuation.rst:169
+msgid ""
+"Having this approximation at our disposal, we restart the predictor-"
+"corrector with :math:`(Y_{j}, r \\tilde{T})`."
+msgstr "この近似を使って、予測子修正子を :math:`(Y_{j}, r \\tilde{T})` のように再始動します。"
+
+#: ../source/userdoc/model_continuation.rst:172
+msgid ""
+"In |gf|, the continuation is implemented for two ways of parameterization of"
+" the model:"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:175
+msgid ""
+"The parameter :math:`\\lambda` is directly a scalar datum, which the model "
+"depends on."
+msgstr "パラメータ :math:`\\lambda` は、モデルが依存するスカラーデータです。"
+
+#: ../source/userdoc/model_continuation.rst:178
+msgid ""
+"The model is parametrised by the scalar parameter :math:`\\lambda` *via* a "
+"vector datum :math:`P`, which the model depends on. In this case, one takes "
+"the linear path"
+msgstr ""
+"このモデルはモデルが依存するベクトルデータ :math:`P` *によって* スカラーパラメータ :math:`\\lambda` "
+"によりパラメータ化されます。この場合、線形経路を使用します"
+
+#: ../source/userdoc/model_continuation.rst:182
+msgid "\\lambda \\mapsto P(\\lambda) := (1 - \\lambda)P^{0} + \\lambda P^{1},"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:186
+msgid ""
+"where :math:`P^{0}` and :math:`P^{1}` are given values of :math:`P`, and one"
+" traces the solution set of the problem"
+msgstr ""
+"ここで、 :math:`P^{0}` と :math:`P^{1}` には、 :math:`P` の値が与えられ、問題の解の集合をトレースします。"
+
+#: ../source/userdoc/model_continuation.rst:189
+msgid "F(U, P(\\lambda)) = 0."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:194
+msgid "Detection of limit points"
+msgstr "限界点の検出"
+
+#: ../source/userdoc/model_continuation.rst:196
+msgid ""
+"When tracing solutions of the system :math:`F(U,\\lambda) = 0`, one may be "
+"interested in *limit points* (also called fold or turning points), where the"
+" number of solutions with the same value of :math:`\\lambda` changes. These "
+"points can be detected by a sign change of a test function "
+":math:`\\tau_{\\mathrm{LP}}`:"
+msgstr ""
+"システム :math:`F(U,\\lambda) = 0` の解を追跡する場合、 *限界点* "
+"（折り返し点または折り返し点とも呼ばれます）に注目します、これにより同じ値に対する解の数 :math:`\\lambda` "
+"は変わります。これらの点は、試行関数 :math:`\\tau_{\\mathrm{LP}}` の符号変化によって検出することができます。"
+
+#: ../source/userdoc/model_continuation.rst:201
+msgid "\\tau_{\\mathrm{LP}}(T_{j}) \\tau_{\\mathrm{LP}}(T_{j+1}) < 0,"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:205
+msgid "where :math:`\\tau_{\\mathrm{LP}}` is defined by"
+msgstr "ここで、 :math:`\\tau_{\\mathrm{LP}}` は次のように定義されます。"
+
+#: ../source/userdoc/model_continuation.rst:207
+msgid ""
+"\\tau_{\\mathrm{LP}}(T) := T_{\\lambda},\\quad T = (T_{U},T_{\\lambda}) \\in"
+" \\mathbb{R}^{N} \\times \\mathbb{R}."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:215
+msgid "Limit point."
+msgstr "限界点。"
+
+#: ../source/userdoc/model_continuation.rst:218
+msgid "Numerical bifurcation"
+msgstr "数値分岐"
+
+#: ../source/userdoc/model_continuation.rst:220
+msgid ""
+"A point :math:`\\bar{Y}` is called a *bifurcation point* of the system "
+":math:`F(Y) = 0` if :math:`F(\\bar{Y}) = 0` and two or more distinct "
+"solution curves pass through it. The following result gives a test for "
+"*smooth* bifurcation points (see, e.g., [Georg2001]_):"
+msgstr ""
+"点 :math:`\\bar{Y}` はシステム :math:`F(Y) = 0` の *分岐点* と呼ばれます :math:`F(\\bar{Y}) "
+"= 0` ならば、 2つ以上の異なる解曲線がそれを通過します。次の結果は、 *滑らかな* 分岐点のテストを与えます（例えば、 [Georg2001]_ "
+"を参照）。"
+
+#: ../source/userdoc/model_continuation.rst:225
+msgid ""
+"Let :math:`s \\mapsto Y(s)` be a parameterization of a solution curve and "
+":math:`\\bar{Y} := Y(\\bar{s})` be a bifurcation point. Moreover, let "
+":math:`T^{\\top} \\dot{Y}(\\bar{s}) > 0`, :math:`B \\notin "
+"\\mathrm{Im}(J(\\bar{Y}))`, :math:`C \\notin "
+"\\mathrm{Im}(J(\\bar{Y})^{\\top})`, :math:`d \\in \\mathbb{R}` and"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:231
+msgid "J(Y) := \\begin{pmatrix}\\nabla F(Y)\\\\ T^{\\top}\\end{pmatrix}."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:235
+msgid "Define :math:`\\tau_{\\mathrm{BP}}(Y)` via"
+msgstr "以下で :math:`\\tau_{\\mathrm{BP}}(Y)` を定義します。"
+
+#: ../source/userdoc/model_continuation.rst:237
+msgid ""
+"\\begin{pmatrix}J(Y)& B\\\\ C^{\\top}& d\\end{pmatrix} "
+"\\begin{pmatrix}V(Y)\\\\ \\tau_{\\mathrm{BP}}(Y)\\end{pmatrix} = "
+"\\begin{pmatrix}0\\\\ 1\\end{pmatrix}."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:241
+msgid ""
+"Then :math:`\\tau_{\\mathrm{BP}}(Y(s))` changes its sign at :math:`s = "
+"\\bar{s}`."
+msgstr "次に :math:`\\tau_{\\mathrm{BP}}(Y(s))` は、 :math:`s = \\bar{s}` で記号を変換します。"
+
+#: ../source/userdoc/model_continuation.rst:243
+msgid ""
+"Obviously, if one takes :math:`B`, :math:`C` and :math:`d` randomly, it is "
+"highly possible that they satisfy the requirements above. Consequently, the "
+"numerical continuation method is able to detect bifurcation points by taking"
+" the vectors :math:`Y` and :math:`T` supplied by the correction at each "
+"continuation step and monitoring the signs of :math:`\\tau_{\\mathrm{BP}}`."
+msgstr ""
+"自明ですが、 :math:`B` 、 :math:`C` 、 :math:`d` "
+"をランダムに取る場合、それらが上記の要件を満たす可能性が高くなります。したがって、数値連続法は、各連続ステップでの補正によって提供されたベクトル "
+":math:`Y` と :math:`T` を取り、次の :math:`\\tau_{\\mathrm{BP}}` "
+"の符号を監視することによって分岐点を検出することができます。"
+
+#: ../source/userdoc/model_continuation.rst:249
+msgid ""
+"Once a bifurcation point :math:`\\bar{Y}` is detected by a sign change "
+":math:`\\tau_{\\mathrm{BP}}(Y_{j}) \\tau_{\\mathrm{BP}}(Y_{j+1}) < 0`, it "
+"can be approximated more precisely by the predictor-corrector steps "
+"described above with a special step-length adaptation (see Section 8.1 in "
+"[Al-Ge1997]_). Namely, one can take the subsequent step lengths as"
+msgstr ""
+"分岐点 :math:`\\bar{Y}` が :math:`\\tau_{\\mathrm{BP}}(Y_{j}) "
+"\\tau_{\\mathrm{BP}}(Y_{j+1}) < 0` の符号の変化によって検出されると、これは、特別なステップ長適応（[Al-"
+"Ge1997]_ の8.1節を参照）を用いて上記の予測子修正子のステップによってより正確に近似することができます。すなわち、次のステップ長を"
+
+#: ../source/userdoc/model_continuation.rst:255
+msgid ""
+"h_{j+1} := "
+"-\\frac{\\tau_{\\mathrm{BP}}(Y_{j+1})}{\\tau_{\\mathrm{BP}}(Y_{j+1}) - "
+"\\tau_{\\mathrm{BP}}(Y_{j})}h_{j}"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:259
+msgid ""
+"until :math:`\\lvert h_{j+1} \\rvert < h_{\\mathrm{min}}`, which corresponds"
+" to the secant method for finding a zero of the function :math:`s \\mapsto "
+"\\tau_{\\mathrm{BP}}(Y(s))`."
+msgstr ""
+":math:`\\lvert h_{j+1} \\rvert < h_{\\mathrm{min}}` のようになるまで、関数 :math:`s "
+"\\mapsto \\tau_{\\mathrm{BP}}(Y(s))` のゼロを見つけるための割線のメソッドに対応させます。"
+
+#: ../source/userdoc/model_continuation.rst:263
+msgid ""
+"Finally, it would be desirable to switch solution branches. To this end, we "
+"shall consider the case of the so-called *simple bifurcation point*, where "
+"only two distinct solution curves intersect."
+msgstr ""
+"最後に、解の分岐を切り替えたいとしましょう。この目的のために、我々は、2つの異なる解曲線が交差する、いわゆる *単純な分岐点* の場合を考えます。"
+
+#: ../source/userdoc/model_continuation.rst:267
+msgid ""
+"Let :math:`\\tilde{Y}` be an approximation of :math:`\\bar{Y}` that we are "
+"given and :math:`V(\\tilde{Y})` be the first part of the solution of the "
+"augmented system for computing the test function "
+":math:`\\tau_{\\mathrm{BP}}(\\tilde{Y})`. As proposed in [Georg2001]_, one "
+"can take :math:`V(\\tilde{Y})` as a predictor direction and do one "
+"continuation step starting with :math:`(\\tilde{Y}, V(\\tilde{Y}))` to "
+"obtain a point on a new branch. After this continuation step has been "
+"performed successfully and a point on the new branch has been recovered, one"
+" can proceed with usual predictor-corrector steps to trace this branch."
+msgstr ""
+":math:`\\tilde{Y}` は、与えられた :math:`\\bar{Y}` の近似であり、 :math:`V(\\tilde{Y})` "
+"は、試行関数 :math:`\\tau_{\\mathrm{BP}}(\\tilde{Y})` を計算するための拡張システムの解の最初の部分です。 "
+"[Georg2001]_ で提案されているように、 :math:`V(\\tilde{Y})` を予測変数として使用し、 "
+":math:`(\\tilde{Y}, V(\\tilde{Y}))` "
+"から始まる1つの連続ステップを実行して、新しい分岐上の点を取得できます。この連続ステップが正常に実行され、新しい分岐上の点がリカバリされた後、通常の予測子修正子ステップを続行して、この分岐をトレースすることができます。"
+
+#: ../source/userdoc/model_continuation.rst:277
+msgid ""
+"Recently, tools for numerical :math:`PC^{1}`-bifurcation have been developed"
+" in |gf|. Let :math:`J` be a matrix function of a real parameter now defined"
+" by"
+msgstr ""
+"最近では、 :math:`PC^{1}` -分岐のための数値計算ツールが |gf| で開発されました。:math:`J` "
+"は、次の式で定義される実数パラメータの行列関数となります。"
+
+#: ../source/userdoc/model_continuation.rst:280
+msgid ""
+"J(\\alpha) := (1-\\alpha)\\begin{pmatrix}\\nabla F(Y_{j})\\\\ "
+"T_{j}^{\\top}\\end{pmatrix} + \\alpha\\begin{pmatrix}\\nabla F(Y_{j+1})\\\\ "
+"T_{j+1}^{\\top}\\end{pmatrix}."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:284
+msgid ""
+"As proposed in [Li-Re2014hal]_, the following test can be used for detection"
+" of a :math:`PC^{1}` bifurcation point between :math:`Y_{j}` and "
+":math:`Y_{j+1}`:"
+msgstr ""
+"[Li-Re2014hal]_ で提案されているように、以下のテストは、 :math:`Y_{j}` と :math:`Y_{j+1}` の間の分岐点 "
+":math:`PC^{1}` の検出に使用できます。"
+
+#: ../source/userdoc/model_continuation.rst:287
+msgid "\\det J(0) \\det J(1) < 0."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:291
+msgid "To perform this test numerically, introduce"
+msgstr "このテストを数値的に実行するために、以下を導入します。"
+
+#: ../source/userdoc/model_continuation.rst:293
+msgid "M(\\alpha) := \\begin{pmatrix}J(\\alpha)& B\\\\ C^{\\top}& d\\end{pmatrix}"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:297
+msgid "and :math:`\\tau_{\\mathrm{BP}}(\\alpha)` analogously as above via"
+msgstr "と :math:`\\tau_{\\mathrm{BP}}(\\alpha)` で上記と同様に"
+
+#: ../source/userdoc/model_continuation.rst:299
+msgid ""
+"M(\\alpha) \\begin{pmatrix}V(\\alpha)\\\\ "
+"\\tau_{\\mathrm{BP}}(\\alpha)\\end{pmatrix} = \\begin{pmatrix}0\\\\ "
+"1\\end{pmatrix}."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:303
+msgid "It follows from Cramer's rule that"
+msgstr "これは、Cramer法から、次の通りとなります。"
+
+#: ../source/userdoc/model_continuation.rst:305
+msgid "\\tau_{\\mathrm{BP}}(\\alpha) = \\frac{\\det J(\\alpha)}{\\det M(\\alpha)}"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:309
+msgid ""
+"provided that :math:`\\det M(\\alpha)` is non-zero. Hence if :math:`B`, "
+":math:`C` and :math:`d` are chosen so that :math:`\\det M(\\alpha)` is non-"
+"zero whenever :math:`\\det J(\\alpha)` is zero, then the sign changes of "
+":math:`\\det J(\\alpha)` are characterised by passings of "
+":math:`\\tau_{\\mathrm{BP}}(\\alpha)` through 0 whereas the sign changes of "
+":math:`\\det M(\\alpha)` by sign changes of "
+":math:`\\tau_{\\mathrm{BP}}(\\alpha)` caused by singularities. To conclude, "
+"the sign of :math:`\\det J(0)\\det J(1)` is determined by following the "
+"behaviour of :math:`\\tau_{\\mathrm{BP}}(\\alpha)` and monitoring the sign "
+"changes of :math:`\\det J(\\alpha)` when :math:`\\alpha` passes through "
+":math:`[0,1]`."
+msgstr ""
+"ただし、 :math:`\\det M(\\alpha)` はゼロではありません。したがって、 :math:`\\det J(\\alpha)` "
+"がゼロのときに :math:`\\det M(\\alpha)` が0でないように :math:`B` 、 :math:`C` および "
+":math:`d` が選択された場合、 :math:`\\det J(\\alpha)` の符号変更は "
+":math:`\\tau_{\\mathrm{BP}}(\\alpha)` から0の通過によって特徴付けられ、:math:`\\det "
+"M(\\alpha)` の符号は :math:`\\tau_{\\mathrm{BP}}(\\alpha)` の符号変化によります。 "
+":math:`\\det M(\\alpha)` の符号変化が特異点に起因して変化することによります。結論として、 :math:`\\det "
+"J(0)\\det J(1)` の符号は :math:`\\alpha` が :math:`[0,1]` を通過するときの "
+":math:`\\tau_{\\mathrm{BP}}(\\alpha)` の挙動を追跡し、 :math:`\\det J(\\alpha)` "
+"の符号変化を監視することによって決定されます。"
+
+#: ../source/userdoc/model_continuation.rst:319
+msgid ""
+"As justified in [Li-Re2014hal]_, :math:`B`, :math:`C` and :math:`d` can be "
+"chosen randomly again. The increments :math:`\\delta` of the current values "
+"of :math:`\\alpha` are changed adaptively so that singularities of "
+":math:`\\tau_{\\mathrm{BP}}` are treated effectively. After each calculation"
+" of :math:`\\tau_{\\mathrm{BP}}(\\alpha)`, :math:`\\delta` is set as "
+"follows:"
+msgstr ""
+"[Li-Re2014hal]_ で示されているように、 :math:`B` 、 :math:`C` 、 :math:`d` "
+"はランダムに選択することができます。現在の値 :math:`\\alpha` のインクリメント :math:`\\delta` "
+"は適宜変更され、:math:`\\tau_{\\mathrm{BP}}` の特異点が有効に扱われます。 "
+":math:`\\tau_{\\mathrm{BP}}(\\alpha)` のそれぞれの計算の後、 :math:`\\delta` "
+"は次のように設定されます。"
+
+#: ../source/userdoc/model_continuation.rst:325
+msgid ""
+"\\delta := \\begin{cases}\\min\\{2\\delta, \\delta_{\\mathrm{max}}\\}& "
+"\\text{if $\\lvert \\tau_{\\mathrm{BP}}(\\alpha) - "
+"\\tau_{\\mathrm{BP}}(\\alpha - \\delta) \\rvert < 0.5 \\tau_{\\mathrm{fac}} "
+"\\tau_{\\mathrm{ref}}$,}\\\\ \\max\\{0.1\\delta, \\delta_{\\mathrm{min}}\\}&"
+" \\text{if $\\lvert \\tau_{\\mathrm{BP}}(\\alpha) - "
+"\\tau_{\\mathrm{BP}}(\\alpha - \\delta) \\rvert > \\tau_{\\mathrm{fac}} "
+"\\tau_{\\mathrm{ref}}$,}\\\\ \\delta& \\text{otherwise},\\end{cases}"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:329
+msgid ""
+"where :math:`\\delta_{\\mathrm{max}} > \\delta_{\\mathrm{min}} > 0` and "
+":math:`\\tau_{\\mathrm{fac}} > 0` are given constants and "
+":math:`\\tau_{\\mathrm{ref}} := \\max\\{\\lvert \\tau_{\\mathrm{BP}}(1) - "
+"\\tau_{\\mathrm{BP}}(0) \\rvert, 10^{-8}\\}`."
+msgstr ""
+"ここで、 :math:`\\delta_{\\mathrm{max}} > \\delta_{\\mathrm{min}} > 0` で、 "
+":math:`\\tau_{\\mathrm{fac}} > 0` は既定の定数で、 :math:`\\tau_{\\mathrm{ref}} := "
+"\\max\\{\\lvert \\tau_{\\mathrm{BP}}(1) - \\tau_{\\mathrm{BP}}(0) \\rvert, "
+"10^{-8}\\}` です。"
+
+#: ../source/userdoc/model_continuation.rst:333
+msgid ""
+"When a :math:`PC^{1}` bifurcation point is detected between :math:`Y_{j}` "
+"and :math:`Y_{j+1}`, it is approximated more precisely by a bisection-like "
+"procedure. The obtained approximation lies on the same smooth branch as "
+":math:`Y_{j},` and the corresponding unit tangent that points out from the "
+"corresponding region of smoothness is calculated too."
+msgstr ""
+":math:`Y_{j}` と :math:`Y_{j+1}` の間で分岐点 :math:`PC^{1}` "
+"が検出されると、それは二分法のような手順でより正確に近似されます。得られた近似は、 :math:`Y_{j},` "
+"と同じ滑らかな枝上にあり、滑らかさの対応する領域から対応する単位接線も計算されます。"
+
+#: ../source/userdoc/model_continuation.rst:339
+msgid ""
+"Contrary to the smooth case, it is not clear how many branches can emanate "
+"from the :math:`PC^{1}` bifurcation point and in which directions they could"
+" be sought. For this reason, continuation steps for a whole sequence of "
+"predictor directions are tried out for finding points on new branches."
+msgstr ""
+"連続な場合とは対照的に、 :math:`PC^{1}` "
+"分岐点からどれくらいの分岐があるのか、またそれらが求められる方向は明確ではありません。このため、新しい分岐上の点を見つけるために、予測方向のシーケンス全体の連続ステップが試されます。"
+
+#: ../source/userdoc/model_continuation.rst:344
+msgid ""
+"Denoting :math:`\\tilde{Y}`, :math:`\\tilde{T}` the approximation of the "
+"bifurcation point and the corresponding tangent, respectively, the predictor"
+" directions are taken as follows: For a couple of reference vectors "
+":math:`\\tilde{V}_{1}` and :math:`\\tilde{V}_{2}`, one takes :math:`\\pm V` "
+"with :math:`V` satisfying"
+msgstr ""
+"分岐点の近似値を表す :math:`\\tilde{Y}`, :math:`\\tilde{T}` "
+"と対応する接線はそれぞれ次のようになります。いくつかの参照ベクトル :math:`\\tilde{V}_{1}` と  "
+":math:`\\tilde{V}_{2}` は :math:`\\pm V` となり :math:`V` は次を満たします。"
+
+#: ../source/userdoc/model_continuation.rst:350
+msgid ""
+"\\nabla F(\\tilde{Y}+h_{\\mathrm{min}}\\tilde{V}) V = 0, \\quad \\lVert V "
+"\\rVert_{w} = 1,"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:354
+msgid ""
+"where :math:`\\tilde{V}` passes through a set of linear combinations of "
+":math:`\\tilde{V}_{1}` and :math:`\\tilde{V}_{2}`. The total number of the "
+"linear combinations is given by :math:`n_{\\mathrm{dir}},` and the reference"
+" vectors are chosen successively according to the following strategy:"
+msgstr ""
+":math:`\\tilde {V}` は、:math:`\\tilde{V}_{1}` と :math:`\\tilde{V}_{2}` "
+"のような線形結合で表されます。線形結合の総数は、 :math:`n_{\\mathrm{dir}},` "
+"で与えられ、参照ベクトルは次の方針に従って連続して選択されます。"
+
+#: ../source/userdoc/model_continuation.rst:359
+msgid ""
+"One takes :math:`\\tilde{V}_{1} := -\\tilde{T}` and :math:`\\tilde{V}_{2}` "
+"such that"
+msgstr "次のように計算します :math:`\\tilde{V}_{1} := -\\tilde{T}` と :math:`\\tilde{V}_{2}` "
+
+#: ../source/userdoc/model_continuation.rst:362
+msgid ""
+"\\nabla F(\\tilde{Y}+h_{\\mathrm{min}}\\tilde{T}) \\tilde{V}_{2} = 0, \\quad"
+" \\lVert \\tilde{V}_{2} \\rVert_{w} = 1."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:366
+msgid ""
+"Let :math:`\\{\\tilde{T}_{1},\\dotsc\\tilde{T}_{n_{\\mathrm{br}}}\\}` denote"
+" the set of unit tangents that correspond to the points from the branches "
+"found so far and that are oriented in the directions of branching from the "
+"bifurcation point. Then :math:`\\tilde{V}_{1}` and :math:`\\tilde{V}_{2}` "
+"are taken successively as different combinations from "
+":math:`\\{\\tilde{T}_{1},\\dotsc\\tilde{T}_{n_{\\mathrm{br}}}\\}`."
+msgstr ""
+"次の点に対応する単位接線の集合を表します。 "
+":math:`\\{\\tilde{T}_{1},\\dotsc\\tilde{T}_{n_{\\mathrm{br}}}\\}`  "
+"分岐点から枝分かれする方向に向いている。それから :math:`\\tilde{V}_{2}` は、 "
+":math:`\\{\\tilde{T}_{1},\\dotsc\\tilde{T}_{n_{\\mathrm{br}}}\\}` "
+"から異なる組み合わせとして逐次取られます。"
+
+#: ../source/userdoc/model_continuation.rst:373
+msgid ""
+"If all combinations that are available so far have already been used, let "
+":math:`\\tilde{V}_{1}` be unchanged and take :math:`\\tilde{V}_{2} := "
+"\\tilde{V}_{2}^{+}` with :math:`\\tilde{V}_{2}^{+}` satisfying"
+msgstr ""
+"これまで利用可能だったすべての組み合わせがすでに使用されている場合、 :math:`\\tilde{V}_{1}` は変更せずに "
+":math:`\\tilde{V}_{2} := \\tilde{V}_{2}^{+}` を :math:`\\tilde{V}_{2}^{+}` "
+"が満たすようにしてください。"
+
+#: ../source/userdoc/model_continuation.rst:378
+msgid ""
+"\\nabla F\\Bigl(\\tilde{Y}+h_{\\mathrm{min}}\\Bigl(\\tilde{V}_{2}^{-} + "
+"0.1\\frac{\\tilde{V}_{3}}{\\lVert \\tilde{V}_{3} \\rVert_{w}}\\Bigr)\\Bigr) "
+"\\tilde{V}_{2}^{+} = 0, \\quad \\lVert \\tilde{V}_{2}^{+} \\rVert_{w} = 1."
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:382
+msgid ""
+"Here, :math:`\\tilde{V}_{2}^{-}` equals the vector :math:`\\tilde{V}_{2}` "
+"employed previously and :math:`\\tilde{V}_{3}` is chosen randomly."
+msgstr ""
+"ここで、 :math:`\\tilde{V}_{2}^{-}` は以前に採用されたベクトル :math:`\\tilde{V}_{2}` と、 "
+":math:`\\tilde{V}_{3}` がランダムに選択されます。"
+
+#: ../source/userdoc/model_continuation.rst:385
+msgid ""
+"The total number of selections of :math:`\\tilde{V}_{1}` and "
+":math:`\\tilde{V}_{2}` is given by :math:`n_{\\mathrm{span}}`."
+msgstr ""
+":math:`\\tilde{V}_{1}` と :math:`\\tilde{V}_{2}` の合計数は、式 "
+":math:`n_{\\mathrm{span}}` で与えられます。"
+
+#: ../source/userdoc/model_continuation.rst:389
+msgid ""
+"More details on :math:`PC^1` numerical branching can be found in [Li-"
+"Re2015hal]_."
+msgstr ":math:`PC^1` 数値分岐のより詳細な情報は、 [Li-Re2015hal]_ にあります。"
+
+#: ../source/userdoc/model_continuation.rst:393
+msgid "Approximation of solution curves of a model"
+msgstr "モデルの解曲線の近似"
+
+#: ../source/userdoc/model_continuation.rst:395
+msgid ""
+"The numerical continuation is defined in ``getfem/getfem_continuation.h``. "
+"In order to use it, one has to set it up via the corresponding object "
+"first::"
+msgstr ""
+"数値連続法は ``getfem/getfem_continuation.h`` "
+"で定義されています。それを使用するには、最初に対応するオブジェクトを介してそれを設定する必要があります ::"
+
+#: ../source/userdoc/model_continuation.rst:402
+msgid ""
+"where ``parameter_name`` is the name of the model datum representing "
+":math:`\\lambda`, ``sfac`` represents the scale factor :math:`\\kappa`, and "
+"``ls`` is the name of the solver to be used for the linear systems "
+"incorporated in the process (e.g., "
+"``getfem::default_linear_solver<getfem::model_real_sparse_matrix, "
+"getfem::model_real_plain_vector>(model)``). The real numbers ``h_init``, "
+"``h_max``, ``h_min``, ``h_inc``, ``h_dec`` denote "
+":math:`h_{\\mathrm{init}}`, :math:`h_{\\mathrm{max}}`, "
+":math:`h_{\\mathrm{min}}`, :math:`h_{\\mathrm{inc}}`, and "
+":math:`h_{\\mathrm{dec}}`, the integer ``maxit`` is the maximum number of "
+"iterations allowed in the correction and ``thrit``, ``maxres``, ``maxdiff``,"
+" ``mincos``, and ``maxres_solve`` denote :math:`l_{\\mathrm{thr}}`, "
+":math:`\\varepsilon`, :math:`\\varepsilon'`, :math:`c_{\\mathrm{min}}`, and "
+"the target residual value for the linear systems to be solved, respectively."
+" The non-negative integer ``noisy`` determines how detailed information has "
+"to be displayed in the course of the continuation process (the larger value "
+"the more details), the integer ``singularities`` determines whether the "
+"tools for detection and treatment of singular points have to be used (0 for "
+"ignoring them completely, 1 for detecting limit points, and 2 for detecting "
+"and treating bifurcation points, as well), and the boolean value of ``non-"
+"smooth`` determines whether only tools for smooth continuation and "
+"bifurcation have to be used or even tools for non-smooth ones do. The real "
+"numbers ``delta_max``, ``delta_min`` and ``thrvar`` represent "
+":math:`\\delta_{\\mathrm{max}}`, :math:`\\delta_{\\mathrm{min}}` and "
+":math:`\\tau_{\\mathrm{fac}}`, and the integers ``ndir`` and ``nspan`` stand"
+" for :math:`n_{\\mathrm{dir}}` and :math:`n_{\\mathrm{span}}`, respectively."
+msgstr ""
+"ここで ``parameter_name`` は :math:`\\lambda` を表すモデルデータの名前で、 ``sfac`` はスケールファクタ "
+":math:`\\kappa` を表し、 ``ls`` "
+"はプロセスに組み込まれた線形システムに使用されるソルバの名前です（例えば、``getfem::default_linear_solver<getfem::model_real_sparse_matrix,"
+" getfem::model_real_plain_vector>(model)``)。実数 "
+"``h_init``、``h_max``、``h_min``、``h_inc``、``h_dec`` は "
+":math:`h_{\\mathrm{init}}` 、 :math:`h_{\\mathrm{max}}` 、 "
+":math:`h_{\\mathrm{min}}` 、 :math:`h_{\\mathrm{inc}}` 、および "
+":math:`h_{\\mathrm{dec}}` を表し、整数 ``maxit``、 ``thrit`` 、``maxres`` 、 "
+"``maxdiff`` 、 ``mincos`` 、 ``maxres_solve`` は :math:`l_{\\mathrm{thr}}` 、 "
+":math:`\\varepsilon` 、 :math:`\\varepsilon'` 、 :math:`c_{\\mathrm{min}}` "
+"であり、線形システムの目標残差値をそれぞれ求めるために設定されます。非負の整数 ``noisy`` "
+"は、連続プロセスの過程でどの程度詳細な情報を表示するかを決定します（詳細なほど値が大きくなります）。整数 ``singularities`` "
+"は、特異点を指定する必要があります（完全に無視する場合は0、限界点を検出する場合は1、分岐点を検出して処理する場合は2）。ブール値 "
+"``nosmooth`` は、滑らかな連続法か分岐かを指定する必要があります。また、滑らかでないツールでも手法を指定する必要があります。実数 "
+"``delta_max`` 、 ``delta_min`` 、および ``thrvar`` "
+"は、:math:`\\delta_{\\mathrm{max}}`, :math:`\\delta_{\\mathrm{min}}` と "
+":math:`\\tau_{\\mathrm{fac}}`, を表します。 ``ndir`` と ``nspan``  は "
+":math:`n_{\\mathrm{dir}}` と :math:`n_{\\mathrm{span}}` をそれぞれ示します。"
+
+#: ../source/userdoc/model_continuation.rst:426
+msgid "Optionally, parameterization by a vector datum is then declared by::"
+msgstr ""
+
+#: ../source/userdoc/model_continuation.rst:430
+msgid ""
+"Here, the data names ``initdata_name`` and ``finaldata_name`` should "
+"represent :math:`P^{0}` and :math:`P^{1}`, respectively. Under "
+"``currentdata_name``, the values of :math:`P(\\lambda)` have to be stored, "
+"that is, actual values of the datum the model depends on."
+msgstr ""
+"ここで、データ名 ``initdata_name`` と ``finaldata_name`` は、それぞれ、 :math:`P^{0}` と "
+":math:`P^{1}` を表す必要があります。 ``currentdata_name`` の下には、 :math:`P(\\lambda)` "
+"の値が格納されていなければなりません。すなわち、モデルが依存するデータの実際の値です。"
+
+#: ../source/userdoc/model_continuation.rst:435
+msgid "Next, the continuation is initialised by::"
+msgstr "次に、連続法は次の式で初期化されます ::"
+
+#: ../source/userdoc/model_continuation.rst:439
+msgid ""
+"where ``U`` should be a solution for the value of the parameter "
+":math:`\\lambda` equal to ``lambda`` so that :math:`Y_{0}=` (\\ ``U``\\ ,\\ "
+"``lambda``\\ ). During this initialisation, an initial unit tangent "
+":math:`T_{0}` corresponding to :math:`Y_{0}` is computed in accordance with "
+"the sign of the initial value ``T_lambda``, and it is returned in ``T_U``, "
+"``T_lambda``. Moreover, ``h`` is set to the initial step size ``h_init``."
+msgstr ""
+"ここで、 ``U`` は :math:`Y_{0}=` (\\ ``U``\\ ,\\ ``lambda``\\ ) "
+"におけるパラメータの値の解でなければなりません。この初期化の間、初期値は ``T_lambda`` の符号に従って計算され、 :math:`Y_{0}`"
+" に対応する初期単位接線 :math:`T_{0}`  が返され、 ``T_U`` 、 ``T_lambda`` が返されます。さらに、 ``h`` "
+"は初期ステップサイズ ``h_init`` に設定されます。"
+
+#: ../source/userdoc/model_continuation.rst:446
+msgid "Subsequently, one step of the continuation is called by ::"
+msgstr "その後、連続の際の1ステップは次のように呼び出されます ::"
+
+#: ../source/userdoc/model_continuation.rst:450
+msgid ""
+"After each call, a new point on a solution curve and the corresponding "
+"tangent are returned in the variables ``U``, ``lambda`` and ``T_U``, "
+"``T_lambda``. The step size for the next prediction is returned in ``h``. "
+"The size of the current step is returned in the optional argument ``h0``. "
+"According to the chosen value of ``singularities``, the test functions for "
+"limit and bifurcation points are evaluated at the end of each continuation "
+"step. Furthermore, if a smooth bifurcation point is detected, the procedure "
+"for numerical bifurcation is performed and an approximation of the branching"
+" point as well as tangents to both bifurcating curves are saved in the "
+"continuation object ``S``. From there, they can easily be recovered with "
+"member functions of ``S`` so that one can initialise the continuation to "
+"trace either of the curves next time."
+msgstr ""
+"各呼び出しの後、解曲線上の新しい点および対応する接線が、変数 ``U`` 、 ``lambda`` および ``T_U`` 、 ``T_lambda``"
+" で返されます。次の予測のステップサイズは ``h`` で返されます。現在のステップのサイズはオプションの引数 ``h0`` に返されます。選択された "
+"``特異点`` "
+"の値によれば、各連続ステップの終わりに、限界点および分岐点の試行関数が評価されます。さらに、滑らかな分岐点が検出されれば、数値分岐の手順が実行され、分岐点の近似および両方の分岐曲線に対する接線が連続オブジェクト"
+" ``S`` に保存されます。そこから、次のいずれかのカーブを連続的にトレースするため初期化できるように、``S`` "
+"のメンバ関数で簡単に回復することができます。"
+
+#: ../source/userdoc/model_continuation.rst:462
+msgid ""
+"Complete examples of use on a smooth problem are shown in the test programs "
+"``tests/test_continuation.cc``, "
+"``interface/tests/matlab/demo_continuation.m`` and "
+"``interface/src/scilab/demos/demo_continuation.sce``, whereas "
+"``interface/src/scilab/demos/demo_continuation_vee.sce`` and "
+"``interface/src/scilab/demos/demo_continuation_block.sce`` employ also non-"
+"smooth tools."
+msgstr ""
+"平滑問題を使用するテストプログラムの例全体は ``tests/test_continuation.cc``, "
+"``interface/tests/matlab/demo_continuation.m`` と "
+"``interface/src/scilab/demos/demo_continuation.sce`` にあります, 一方 "
+"``interface/src/scilab/demos/demo_continuation_vee.sce`` と "
+"``interface/src/scilab/demos/demo_continuation_block.sce`` は平滑でない例になります。"
