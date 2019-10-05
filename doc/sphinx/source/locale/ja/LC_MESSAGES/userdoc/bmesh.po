@@ -1,0 +1,669 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 12:26+0000\n"
+"PO-Revision-Date: 2018-07-16 07:05+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/userdoc/bmesh.rst:10
+msgid "Build a mesh"
+msgstr "メッシュ生成"
+
+#: ../source/userdoc/bmesh.rst:12
+msgid ""
+"As a preliminary, you may want to read this short introduction to the |gf| "
+"`vocabulary`_."
+msgstr "前置きとして、 |gf| `用語`_ に関する簡単な説明をします。"
+
+#: ../source/userdoc/bmesh.rst:15
+msgid ""
+"|gf| has its own structure to store meshes defined in the files "
+":file:`getfem/bgeot_mesh_structure.h` and :file:`getfem/getfem_mesh.h`. The "
+"main structure is defined in :file:`getfem/getfem_mesh.h` by the object "
+"|gf_m|."
+msgstr ""
+"|gf| はファイル :file:`getfem/bgeot_mesh_structure.h` と "
+":file:`getfem/getfem_mesh.h` で定義されるメッシュを格納する固有の構造を持っています。"
+
+#: ../source/userdoc/bmesh.rst:19
+msgid ""
+"This object is able to store any element in any dimension even if you mix "
+"elements with different dimensions."
+msgstr "このオブジェクトは、異なる次元の要素を混合しても、任意の次元に任意の要素を格納できます。"
+
+#: ../source/userdoc/bmesh.rst:22
+msgid ""
+"There is only a (very) experimental meshing procedure in |gf| to mesh "
+"complex geometries. But you can easily load a mesh from any format (some "
+"procedures are in :file:`getfem/getfem_import.h` to load meshes from some "
+"public domain mesh generators)."
+msgstr ""
+"複雑なジオメトリをメッシュ化するには、 |gf| "
+"には（非常に）実験的なメッシング手順しかありません。しかし、どんなフォーマットからでもメッシュを簡単に読み込むことができます（いくつかの手順は、 "
+":file:`getfem/getfem_import.h` にあり、いくつかのパブリックドメインメッシュジェネレータからメッシュをロードします）。"
+
+#: ../source/userdoc/bmesh.rst:26
+msgid ""
+"The structure |gf_m| may also contain a description about a region of the "
+"mesh, such as a boundary or a set of elements. This is handled via a "
+"container of convexes and convex faces, |gf_mr|. We refer to [remacle2002]_ "
+"for a discussion on mesh representation."
+msgstr ""
+"構造体 |gf_m| は、境界や要素の集合など、メッシュの領域に関する記述を含むこともできます。 これは、凸面と凸面のコンテナ |gf_mr| "
+"を介して処理されます。メッシュの表現については、 [remacle2002]_ を参照してください。"
+
+#: ../source/userdoc/bmesh.rst:32
+msgid "Add an element to a mesh"
+msgstr "メッシュに要素を追加する"
+
+#: ../source/userdoc/bmesh.rst:34
+msgid "Suppose the variable ``mymesh`` has been declared by::"
+msgstr "変数 ``mymesh`` が次のように定義されているとします。"
+
+#: ../source/userdoc/bmesh.rst:38
+msgid ""
+"then you have two ways to insert a new element to this mesh: from a list of "
+"points or from a list of indexes of already existing points."
+msgstr ""
+"このメッシュに新しい要素を挿入するには、ポイントのリストから追加する方法と既存のポイントのインデックスのリストから追加する2つの方法があります。"
+
+#: ../source/userdoc/bmesh.rst:41
+msgid "To enter a new point on a mesh use the method::"
+msgstr "メッシュ上に新しい点を入力するには、次のメソッドを使用してください。"
+
+#: ../source/userdoc/bmesh.rst:45
+msgid ""
+"where ``pt`` is of type |bg_bn|. The index ``i`` is the index of this point "
+"on the mesh. If the point already exists in the mesh, a new point is not "
+"inserted and the index of the already existing point is returned. A mesh has"
+" a principal dimension, which is the dimension of its points. It is not "
+"possible to have points of different dimensions in a same mesh."
+msgstr ""
+"ここで、 ``pt`` は |bg_bn| 型です。 インデックス ``i`` は、メッシュ上のこのポイントのインデックスです。 "
+"すでにメッシュ内にポイントが存在する場合、新しいポイントは挿入されず、既存のポイントのインデックスが返されます。 "
+"メッシュには、その点の次元である主次元があります。 同じメッシュ内に異なる次元の点を持つことはできません。"
+
+#: ../source/userdoc/bmesh.rst:51
+msgid "The most basic function to add a new element to a mesh is::"
+msgstr "新しい要素をメッシュに追加する最も基本的な関数は次の通りです。"
+
+#: ../source/userdoc/bmesh.rst:55
+msgid ""
+"This is a template function, with ``pgt`` of type |bg_pgt| (basically a "
+"pointer to an instance of type |bg_gt|) and ``it`` is an iterator on a list "
+"of indexes of already existing points. For instance, if one needs to add a "
+"new triangle in a 3D mesh, one needs to define first an array with the "
+"indexes of the three points::"
+msgstr ""
+"これは、 |bg_pgt| 型の ``pgt`` "
+"（基本的にはbg_gt型のインスタンスへのポインタ）を持つテンプレート関数であり、既に存在する点のインデックスのリスト上の反復子です。 "
+"たとえば、3次元メッシュに新しい3角形を追加する必要がある場合、最初に3つの点のインデックスを持つ配列を定義する必要があります ::"
+
+#: ../source/userdoc/bmesh.rst:65
+msgid "then adding the element is done by::"
+msgstr "要素の追加は次のように行います。"
+
+#: ../source/userdoc/bmesh.rst:69
+msgid ""
+"where ``bgeot::simplex_geotrans(N,1);`` denotes the usual linear geometric "
+"transformation for simplices of dimension N."
+msgstr "ここで ``bgeot::simplex_geotrans(N,1);`` は次元Nのシンプレックスのための通常の線形幾何変換を示します。"
+
+#: ../source/userdoc/bmesh.rst:72
+msgid "For simplices, a more specialized function exists, which is::"
+msgstr "シンプレックスのために、以下のようにより特殊化された関数が存在します。"
+
+#: ../source/userdoc/bmesh.rst:76
+msgid ""
+"It is also possible to give directly the list of points with the function::"
+msgstr "次の関数を使ってポイントのリストを直接与えることも可能です。"
+
+#: ../source/userdoc/bmesh.rst:80
+msgid "where now ``itp`` is an iterator on an array of points. For example::"
+msgstr "ここで ``itp`` は点の配列のイテレータです。 例えば、次のような場合、"
+
+#: ../source/userdoc/bmesh.rst:88
+msgid "It is possible to use also::"
+msgstr "このように使用することも可能です。"
+
+#: ../source/userdoc/bmesh.rst:92
+msgid ""
+"For other elements than simplices, it is still possible to use "
+"``mymesh.add_convex_by_points`` or ``mymesh.add_convex`` with the "
+"appropriate geometric transformation."
+msgstr ""
+"シンプレックス以外の要素についても、 ``mymesh.add_convex_by_points`` や ``mymesh.add_convex`` "
+"で適切な幾何学的変換と共に使用することが可能です。"
+
+#: ../source/userdoc/bmesh.rst:96
+msgid ""
+"``bgeot::parallelepiped_geotrans(N, 1)`` describes the usual transformation "
+"for parallelepipeds of dimension ``N`` (quadrilateron for ``N=2``, "
+"hexahedron for ``N=3``, ...)"
+msgstr ""
+"``bgeot::parallelepiped_geotrans(N, 1)`` は次元 ``N`` の平行6面体（ ``N = 2`` "
+"の場合は4辺形、 ``N = 3`` の場合は6面体、...）"
+
+#: ../source/userdoc/bmesh.rst:100
+msgid ""
+"``bgeot::prism_geotrans(N, 1)`` describes the usual transformation for "
+"prisms of dimension ``N`` (usual prism is for ``N=3``. A generalized prism "
+"is the product of a simplex of dimension ``N-1`` with a segment)"
+msgstr ""
+"``bgeot::prism_geotrans(N, 1)`` は次元 ``N`` のプリズムの通常の変換を表しています（通常のプリズムは ``N = "
+"3`` です。一般化されたプリズムは、次元 ``N-1`` のシンプレックスとセグメント）"
+
+#: ../source/userdoc/bmesh.rst:104
+msgid "Specialized functions exist also::"
+msgstr "特殊化された関数も存在します ::"
+
+#: ../source/userdoc/bmesh.rst:111
+msgid ""
+"The order of the points in the array of points is not important for "
+"simplices (except if you care about the orientation of your simplices). For "
+"other elements, it is important to respect the vertex order shown in :ref"
+":`ud-fig-elem` (first order elements)."
+msgstr ""
+"点の配列における点の順序は、シンプレックス要素にとっては重要ではありません(あなたがシンプレックスの向きを気にする場合を除いては)。他の要素については、"
+"  :ref:`ud-fig-elem`  (1次要素) で示される頂点の順序を守ることが重要です。"
+
+#: ../source/userdoc/bmesh.rst:119
+msgid "Vertex numeration for usual first order elements"
+msgstr "通常の1次要素の頂点数"
+
+#: ../source/userdoc/bmesh.rst:121
+msgid ""
+"Note that a general rule, including for higher order transformations, is "
+"that the vertex numeration follows the one of the corresponding Lagrange "
+"finite element method (see  :ref:`ud-appendixa`)."
+msgstr ""
+"より高次の変換を含む汎用的な規則は、頂点数が対応するLagrange有限要素法(  :ref:`ud-appendixa` "
+"を参照)の1つに従うことであることに注意してください。"
+
+#: ../source/userdoc/bmesh.rst:125
+msgid "Remove an element from a mesh"
+msgstr "メッシュから要素を削除する"
+
+#: ../source/userdoc/bmesh.rst:127
+msgid "To remove an element from a mesh, simply use::"
+msgstr "メッシュから要素を削除するには、単純に ::"
+
+#: ../source/userdoc/bmesh.rst:131
+msgid "where ``i`` is the index of the element."
+msgstr "ここで、 ``i`` は要素のインデックスです。"
+
+#: ../source/userdoc/bmesh.rst:135
+msgid "Simple structured meshes"
+msgstr "シンプルな構造化メッシュ"
+
+#: ../source/userdoc/bmesh.rst:137
+msgid ""
+"For parallelepiped domains, it is possible to obtain structured meshes with "
+"simplices, parallelepipeds or prisms elements from three functions defined "
+"in :file:`getfem/getfem_regular_meshes.h`."
+msgstr ""
+"平行6面体の領域の場合、 :file:`getfem/getfem_regular_meshes.h` "
+"で定義されている3つの関数からシンプレックス、平行6面体、またはプリズム要素を持つ構造化メッシュを得ることができます。"
+
+#: ../source/userdoc/bmesh.rst:141
+msgid "The simplest function to use is::"
+msgstr "最も単純な関数は ::"
+
+#: ../source/userdoc/bmesh.rst:146
+msgid ""
+"which fills the mesh ``m`` with a regular mesh of "
+"simplices/parallelepipeds/prisms (depending on the value of ``pgt``). The "
+"number of cells in each direction is given by ``nsubdiv``. The following "
+"example builds a mesh of quadratic triangles on the unit square (the mesh "
+"can be scaled and translated afterwards)::"
+msgstr ""
+"メッシュ ``m`` をシンプル/平行6面体/プリズムの規則的なメッシュで塗りつぶします（ ``pgt`` の値に応じて）。 各方向のセル数は "
+"``nsubdiv`` で与えられます。 次の例では、単位正方形に2次3角形のメッシュを作成します（メッシュは後でスケーリングして変換できます） ::"
+
+#: ../source/userdoc/bmesh.rst:155
+msgid "More specialized regular mesh functions are also available::"
+msgstr "もっと特殊な規則的なメッシュ関数も利用できます ::"
+
+#: ../source/userdoc/bmesh.rst:162
+msgid ""
+"where ``mymesh`` is a mesh variable in which the structured mesh will be "
+"built, ``N`` is the dimension (limited to 4 for simplices, 5 for prisms, "
+"unlimited for parallelepipeds), ``org`` is of type ``bgeot::base_node`` and "
+"represents the origin of the mesh, ``ivect`` is an iterator on an array of "
+"``N`` vectors to build the parallelepiped domain, ``iref`` is an iterator on"
+" an array of ``N`` integers representing the number of division on each "
+"direction."
+msgstr ""
+"ここで ``mymesh`` は構造化されたメッシュが構築されるメッシュ変数で、 ``N`` "
+"は次元です（シンプレックスの場合は4、プリズムの場合は5、平行6面体の場合は無制限です）。 ``org`` を ``bgeot::base_node``"
+" と設定し、メッシュの起点を表します。  ``ivect`` は平行四辺形の領域を構築するための ``N`` ベクトルの配列上のイテレータです。 "
+"``iref`` は、 各方向の分割数を表す ``N`` の自然数の配列です。"
+
+#: ../source/userdoc/bmesh.rst:169
+msgid ""
+"For instance, to build a mesh with tetrahedrons for a unit cube with "
+":math:`10\\times~10\\times~10` cells one can write::"
+msgstr "例えば、 :math:`10\\times~10\\times~10` の単位立方体の4面体を持つメッシュを作成するには、次のように記述します"
+
+#: ../source/userdoc/bmesh.rst:184
+msgid ""
+"``base_node`` and ``base_small_vector`` are almost identical, they are both "
+"''small'' vector classes (they cannot store more than 16 elements), used to "
+"describe geometrical points, and geometrical vectors. Their memory footprint"
+" is lower than a ``std::vector``."
+msgstr ""
+"``base_node`` と ``base_small_vector`` "
+"はどちらも小さなベクトルクラス（16個以上の要素を格納できません）で、幾何用の点や幾何用のベクトルを記述するために使われます。 "
+"それらのメモリフットプリントは ``std::vector`` よりも小さくなっています。"
+
+#: ../source/userdoc/bmesh.rst:192
+msgid "Mesh regions"
+msgstr "メッシュ領域"
+
+#: ../source/userdoc/bmesh.rst:194
+msgid ""
+"A mesh object can contain many |gf_mr| objects (declaration in "
+":file:`getfem/getfem_mesh_region.h`). These objects are containers for a set"
+" of convexes and convex faces. They are used to define boundaries, or a "
+"partition of the mesh for parallel solvers, etc.::"
+msgstr ""
+"メッシュオブジェクトには、多くの |gf_mr| オブジェクト（ :file:`getfem/getfem_mesh_region.h` "
+"で宣言）を含めることができます。 これらのオブジェクトは、凸と凸面のセットのコンテナです。 "
+"それらは、境界を定義するため、または並列ソルバーのメッシュの区画などに使用されます。 ::"
+
+#: ../source/userdoc/bmesh.rst:209
+msgid "Methods of the |gf_m| object"
+msgstr "|gf_m| オブジェクトのメソッド"
+
+#: ../source/userdoc/bmesh.rst:211
+msgid "The list is not exhaustive."
+msgstr "リストは網羅的ではありません。"
+
+#: ../source/userdoc/bmesh.rst:215
+msgid "main dimension of the mesh."
+msgstr "メッシュの主次元。"
+
+#: ../source/userdoc/bmesh.rst:219
+msgid ""
+"gives a ``dal::bit_vector`` object which represents all the indexes of valid"
+" points of a mesh (see below)."
+msgstr "メッシュの有効なポイントのすべてのインデックスを表す ``dal::bit_vector`` オブジェクトを返します（下記参照）。"
+
+#: ../source/userdoc/bmesh.rst:224
+msgid "gives the point of index ``i`` (a ``bgeot::base_node``)."
+msgstr "インデックス ``i`` のポイントを与えます（``bgeot::base_node``）。"
+
+#: ../source/userdoc/bmesh.rst:228
+msgid ""
+"gives a ``dal::bit_vector`` object which represents all the indexes of valid"
+" elements of a mesh (see below)."
+msgstr "メッシュの有効な要素のすべてのインデックスを表す ``dal::bit_vector`` オブジェクトを返します（下記参照）。"
+
+#: ../source/userdoc/bmesh.rst:233
+msgid ""
+"gives the description of the structure of element of index ``i``. The "
+"function return a |bg_pcs|."
+msgstr "インデックス ``i`` の要素の構造の記述を与えます。この関数は |bg_pcs| を返します。"
+
+#: ../source/userdoc/bmesh.rst:238
+msgid "number of faces of element of index ``i``."
+msgstr "インデックス ``i`` の要素の面の数。"
+
+#: ../source/userdoc/bmesh.rst:242
+msgid "number of vertices of element of index ``i``."
+msgstr "インデックス ``i`` の要素の頂点の数。"
+
+#: ../source/userdoc/bmesh.rst:246
+msgid "intrinsic dimension of element of index ``i``."
+msgstr "インデックス ``i`` の要素の内在次元。"
+
+#: ../source/userdoc/bmesh.rst:251
+msgid ""
+"number of vertices of the face of local index ``f`` of element of index "
+"``i``."
+msgstr "インデックス ``i`` の要素のローカルインデックス ``f`` の面の頂点の数。"
+
+#: ../source/userdoc/bmesh.rst:256
+msgid ""
+"return a container with the local indexes of all vertices of the face of "
+"local index ``f`` of element of index ``i``. For instance "
+"``mesh.structure_of_convex(i)->ind_points_of_face(f)[0]`` is the local index"
+" of the first vertex."
+msgstr ""
+"インデックス ``i`` の要素のローカルインデックス ``f`` の面のすべての頂点のローカルインデックスを持つコンテナを返します。 例えば、 "
+"``mesh.structure_of_convex(i)->ind_points_of_face(f)[0]`` "
+"は最初の頂点のローカルインデックスです。"
+
+#: ../source/userdoc/bmesh.rst:263
+msgid ""
+"gives the structure (a |bg_pcs|) of local index ``f`` of element of index "
+"``i``."
+msgstr "インデックス ``i`` の要素のローカルインデックス ``f`` の構造（ |bg_pcs| ）を与えます。"
+
+#: ../source/userdoc/bmesh.rst:268
+msgid ""
+"gives a container with the global indexes of vertices of element of index "
+"``i``."
+msgstr "インデックス ``i`` の要素の頂点のグローバルインデックスを持つコンテナを返します。"
+
+#: ../source/userdoc/bmesh.rst:273
+msgid ""
+"gives a container with the vertices of element of index ``i``. This is an "
+"array of ``bgeot::base_node``."
+msgstr "インデックス ``i`` の要素の頂点を持つコンテナを返します。 これは ``bgeot::base_node`` の配列です。"
+
+#: ../source/userdoc/bmesh.rst:278
+msgid ""
+"gives a container with the indexes of all elements attached to the point of "
+"global index ``ipt``."
+msgstr "グローバルインデックス ``ipt`` のポイントにアタッチされたすべての要素のインデックスを持つコンテナを返します。"
+
+#: ../source/userdoc/bmesh.rst:283
+msgid ""
+"gives a container with the indexes of all elements in ``mesh`` having the "
+"common face of local index ``f`` of element ``ic`` except element ``ic``."
+msgstr ""
+"要素 ``ic`` 以外の要素 ``ic`` のローカルインデックス ``f`` に共通面を持つ ``mesh`` "
+"内のすべての要素のインデックスを持つコンテナを返します。"
+
+#: ../source/userdoc/bmesh.rst:289
+msgid ""
+"gives the index of the first elements in ``mesh`` having the common face of "
+"local index ``f`` of element ``ic`` except element ``ic``. return "
+"size_type(-1) if none is found."
+msgstr ""
+"要素 ``ic`` 以外の要素 ``ic`` のローカルインデックスfの共通面を持つ ``mesh`` "
+"の最初の要素のインデックスを返します。見つからなければsize_type（-1）を返します。"
+
+#: ../source/userdoc/bmesh.rst:295
+msgid ""
+"return whether or not the element ``ic`` has a neighbour with respect to its"
+" face of local index ``f``."
+msgstr "要素 ``ic`` がローカルインデックス ``f`` の面に対して隣接要素を持っているかどうかを返します。"
+
+#: ../source/userdoc/bmesh.rst:300
+msgid "delete all elements and points from the mesh."
+msgstr "メッシュからすべての要素とポイントを削除します。"
+
+#: ../source/userdoc/bmesh.rst:305
+msgid ""
+"compact the structure (renumbers points and convexes such that there is no "
+"hole in their numbering)."
+msgstr "構造体をコンパクトにします（番号付けに穴がないようにポイントと凸包の番号を付け直します）。"
+
+#: ../source/userdoc/bmesh.rst:310
+msgid ""
+"return the geometric transformation of the element of index ``i`` (in a "
+"|bg_pgt|). See :ref:`dp` for more details about geometric transformations."
+msgstr ""
+"インデックス ``i`` の要素（ |bg_pgt| ）の幾何学的変換を返します。 幾何学的変換の詳細については、 :ref:`dp` "
+"を参照してください。"
+
+#: ../source/userdoc/bmesh.rst:315
+msgid ""
+"gives a ``bgeot::base_small_vector`` representing an outward normal to the "
+"element at the face of local index ``f`` at the point of local coordinates "
+"(coordinates in the element of reference) ``pt``. The point ``pt`` has no "
+"influence if the geometric transformation is linear. This is not a unit "
+"normal, the norm of the resulting vector is the ratio between the surface of"
+" the face of the reference element and the surface of the face of the real "
+"element."
+msgstr ""
+"ローカル座標（参照要素内の座標）のポイントでローカルインデックス ``f`` の面で要素の外向き法線を表す "
+"``bgeot::base_small_vector`` を返します。 幾何変換が線形の場合、点 ``pt`` は影響を与えません。 "
+"これは単位法線ではなく、結果として生じるベクトルのノルムは、基準要素の面の表面と実要素の面の表面との間の比です。"
+
+#: ../source/userdoc/bmesh.rst:325
+msgid "gives an estimate of the area of convex ``ic``."
+msgstr "``ic`` 凸面の面積の推定値を与えます。"
+
+#: ../source/userdoc/bmesh.rst:329
+msgid "gives a rough estimate of the quality of element ``ic``."
+msgstr "要素 ``ic`` の品質の概算を与えます。"
+
+#: ../source/userdoc/bmesh.rst:333
+msgid "gives an estimate of the radius of element ``ic``."
+msgstr "要素 ``ic`` の半径の推定値を与えます。"
+
+#: ../source/userdoc/bmesh.rst:337
+msgid ""
+"return a |gf_mr|. The region is stored in the mesh, and can contain a set of"
+" convex numbers and or convex faces."
+msgstr "|gf_mr| を返します。 領域はメッシュに格納され、一連の凸包の番号と凸包の面を含むことができます。"
+
+#: ../source/userdoc/bmesh.rst:342
+msgid "returns true if the region of index ``irg`` has been created."
+msgstr "インデックス ``irg`` が作成されている場合はtrueを返します。"
+
+#: ../source/userdoc/bmesh.rst:344
+msgid ""
+"The methods of the convexes/convex faces container ``getfem::mesh_region`` "
+"are:"
+msgstr "凸/凸面コンテナ ``getfem::mesh_region`` のメソッドは次のとおりです："
+
+#: ../source/userdoc/bmesh.rst:348
+msgid "add the convex of index ``ic`` to the region."
+msgstr "その領域にインデックス `` ic``の凸包を追加します。"
+
+#: ../source/userdoc/bmesh.rst:352
+msgid "add the face number ``f`` of the convex ``ic``."
+msgstr "`` ic`` 番目の凸の面番号 ``f`` を追加してください。"
+
+#: ../source/userdoc/bmesh.rst:357
+msgid "remove the convex or the convex face from the region."
+msgstr "その領域から凸または凸面を除去します。"
+
+#: ../source/userdoc/bmesh.rst:362
+msgid "return true if the convex (or convex face) is in the region."
+msgstr "凸（または凸面）が領域内にある場合はtrueを返します。"
+
+#: ../source/userdoc/bmesh.rst:366
+msgid "return true if the region does not contain any convex."
+msgstr "領域に凸が含まれていない場合はtrueを返します。"
+
+#: ../source/userdoc/bmesh.rst:370
+msgid "return true if the region does not contain any convex face."
+msgstr "領域に凸面が含まれていない場合はtrueを返します。"
+
+#: ../source/userdoc/bmesh.rst:374
+msgid ""
+"return a ``dal::bit_vector`` containing the list of convexes which are "
+"stored (or whose faces are stored) in the region."
+msgstr "領域に格納されている（または面が格納されている）凸のリストを含む ``dal::bit_vector`` を返します。"
+
+#: ../source/userdoc/bmesh.rst:377
+msgid "Iteration over a |gf_mr| should be done with |gf_mrv|::"
+msgstr "|gf_mr| に対する反復は、 |gf_mrv| で行う必要があります ::"
+
+#: ../source/userdoc/bmesh.rst:386
+msgid "Using |dal_bv|"
+msgstr "|dal_bv| を使います"
+
+#: ../source/userdoc/bmesh.rst:388
+msgid ""
+"The object |dal_bv| (declared in :file:`getfem/dal_bit_vector.h`) is a "
+"structure heavily used in |gf|. It is very close to ``std::bitset`` and "
+"``std::vector<bool>`` but with additional functionalities to represent a set"
+" of non negative integers and iterate over them."
+msgstr ""
+"オブジェクト |dal_bv| （ :file:`getfem/dal_bit_vector.h` で宣言されています）は、 |gf| "
+"で頻繁に使用される構造体です。 これは ``std::bitset`` と ``std::vector<bool>`` "
+"に非常に近いものですが、非負の整数の集合を表現する追加の機能を持ち、それらを繰り返し処理します。"
+
+#: ../source/userdoc/bmesh.rst:393
+msgid ""
+"If ``nn`` is declared to be a |dal_bv|, the two instructions ``nn.add(6)`` "
+"or ``nn[6] = true`` are equivalent and means that integer 6 is added to the "
+"set."
+msgstr ""
+"``nn`` が |dal_bv| であると宣言されている場合、2つの命令 ``nn.add(6)`` または ``nn[6] = true`` "
+"は等価であり、整数6がその集合に追加されることを意味します。"
+
+#: ../source/userdoc/bmesh.rst:397
+msgid ""
+"In a same way ``nn.sup(6)`` or ``nn[6] = false`` remove the integer 6 from "
+"the set. The instruction ``nn.add(6, 4)`` adds 6,7,8,9 to the set."
+msgstr ""
+"同様に ``nn.sup(6)`` または ``nn[6] = false`` で整数6を集合から削除します。 "
+"命令nn.add（6,4）は集合に6,7,8,9を追加します。"
+
+#: ../source/userdoc/bmesh.rst:401
+msgid ""
+"To iterate on a |dal_bv|, it is possible to use iterators as usual, but, "
+"most of the time, as this object represents a set of integers, one just "
+"wants to iterate on the integers included into the set. The simplest way to "
+"do that is to use the pseudo-iterator |dal_bv_v|."
+msgstr ""
+"|dal_bv| "
+"を反復するにはイテレーターを通常どおり使用することができますが、ほとんどの場合、このオブジェクトは整数の集合を表しているため、集合に含まれる整数を反復したいだけです。"
+" これを行う最も簡単な方法は、疑似反復子 |dal_bv_v| を使用することです。"
+
+#: ../source/userdoc/bmesh.rst:407
+msgid ""
+"For instance, here is the code to iterate on the points of a mesh and print "
+"it to the standard output::"
+msgstr "例えば、メッシュ上の点を標準出力に出力するコードを次に示します ::"
+
+#: ../source/userdoc/bmesh.rst:414
+msgid "Face numbering"
+msgstr "面番号"
+
+#: ../source/userdoc/bmesh.rst:416
+msgid ""
+"The numeration of faces on usual elements is given in figure :ref:`ud-fig-"
+"elemf`."
+msgstr "通常の要素の面数を図 :ref:`ud-fig-elemf` に示します。"
+
+#: ../source/userdoc/bmesh.rst:423
+msgid "faces numeration for usual elements"
+msgstr "通常の要素の面に対しての記数"
+
+#: ../source/userdoc/bmesh.rst:425
+msgid ""
+"Note that, while the convexes and the points are globally numbered in a "
+"|gf_m| object, there is no global numbering of the faces, so the only way to"
+" refer to a given face, is to give the convex number, and the local face "
+"number in the convex."
+msgstr ""
+"凸と点はgf_mオブジェクト内でグローバルに番号が付けられていますが、面のグローバルな番号付けはありません。そのため、与えられた面を参照する唯一の方法は凸面の番号と凸面の局所面番号を与えますことです。"
+
+#: ../source/userdoc/bmesh.rst:433
+msgid "Save and load meshes"
+msgstr "メッシュの保存とロード"
+
+#: ../source/userdoc/bmesh.rst:436
+msgid "From |gf| file format"
+msgstr "|gf| ファイル形式から"
+
+#: ../source/userdoc/bmesh.rst:438
+msgid ""
+"In :file:`getfem/getfem_mesh.h`, two methods are defined to load meshes from"
+" file and write meshes to a file."
+msgstr ""
+":file:`getfem / getfem_mesh.h` "
+"には、ファイルからメッシュをロードし、メッシュをファイルに書き込むための2つのメソッドが定義されています。"
+
+#: ../source/userdoc/bmesh.rst:443
+msgid "save the mesh into a file."
+msgstr "メッシュをファイルに保存します。"
+
+#: ../source/userdoc/bmesh.rst:447
+msgid "load the mesh from a file."
+msgstr "ファイルからメッシュを読み込みます。"
+
+#: ../source/userdoc/bmesh.rst:449
+msgid ""
+"The following is an example of how to load a mesh and extract information on"
+" it::"
+msgstr "メッシュを読み込んで情報を抽出する方法の例を以下に示します ::"
+
+#: ../source/userdoc/bmesh.rst:482
+msgid "Import a mesh"
+msgstr "メッシュをインポートする"
+
+#: ../source/userdoc/bmesh.rst:484
+msgid "The file :file:`getfem/getfem_import.h` provides the function::"
+msgstr ":file:`getfem/getfem_import.h` は次の関数を提供します::"
+
+#: ../source/userdoc/bmesh.rst:488
+msgid ""
+"Here the string ``fmtfilename`` must contain a descriptor of the file format"
+" (\"gid\", \"gmsh\", \"cdb\", \"noboite\", \"am_fmt\", \"emc2_mesh\", or "
+"\"structured\"), followed by a colon and the file name (if there is not "
+"format descriptor, it is assumed that the file is a native getfem mesh and "
+"the ``mesh::read_from_file()`` method is used). Example::"
+msgstr ""
+"ここで、文字列 ``fmtfilename`` には、ファイル形式(\"gid\", \"gmsh\", \"cdb\", \"noboite\", "
+"\"am_fmt\", \"emc2_mesh\", "
+"または\"structured\")の記述子と、その後にコロンとファイル名が含まれていなければなりません(書式記述子がない場合、そのファイルはネイティブのgetfemメッシュであり、"
+" ``mesh::read_from_file()`` メソッドが使用されているものとみなされます)。 例えば::"
+
+#: ../source/userdoc/bmesh.rst:497
+msgid "Alternatively the function::"
+msgstr "あるいは、関数"
+
+#: ../source/userdoc/bmesh.rst:502
+msgid ""
+"can be used in an equivalent manner with the string ``fmt`` being one of the"
+" aforementioned format specifiers."
+msgstr "前述の書式指定子の1つである文字列 ``fmt`` と同等の方法で使用できます。"
+
+#: ../source/userdoc/bmesh.rst:505
+msgid ""
+"The \"gid\" format specifier is for meshes generated by `GiD`_ and \"gmsh\" "
+"is for meshes generated by the open-source mesh generator `Gmsh`_. The "
+"\"cdb\" format specifier is for reading meshes from `ANSYS "
+"<http://www.ansys.com>`_ models exported in blocked format with the CDWRITE "
+"command. Currently the `ANSYS`_ element types "
+"42,45,73,82,87,89,90,92,95,162,182,183,185,186,187 and 191 can be imported, "
+"this however does not include any finite element techology linked to these "
+"elements but only their geometry. The \"noboite\" format is for TetMesh-"
+"GHS3D, and the \"am_fmt\" and \"emc2_mesh\" are for files built with `EMC2`_"
+" (but 2D only)."
+msgstr ""
+"\"gid\"フォーマット指定子は、 `GiD`_ によって生成されるメッシュ用であり、 ``gmsh`` は、オープンソースメッシュ生成プログラム "
+"`Gmsh` によって生成されるメッシュ用です。 \"cdb\" 書式指定子はCDWRITEコマンドでブロック形式で出力された `ANSYS "
+"<http://www.ansys.com>`_ モデルからメッシュを読み込むためのものです。 現在、 `ANSYS` "
+"要素タイプ42,45,73,82,87,89,90,92,95,162,182,183,185,186,187、および191をインポートすることができますが、これらの要素にリンクされた有限要素技術は含まず、そのジオメトリのみが含まれます。"
+" \"noboite\"形式はTetMesh-GHS3D用で、 \"am_fmt\"と \"emc2_mesh\"は "
+"\"EMC2\"（ただし2Dのみ）で構築されたファイル用です。"
+
+#: ../source/userdoc/bmesh.rst:515
+msgid ""
+"The \"structured\" format is just a short specification for regular meshes: "
+"the rest of ``fmtfilename`` in that case is not a filename, but a string "
+"whose format is following::"
+msgstr ""
+"``構造化`` 形式は通常のメッシュの短い仕様です。その場合の ``fmtfilename`` の残りの部分はファイル名ではなく、次の形式の文字列です "
+"::"
+
+#: ../source/userdoc/bmesh.rst:525
+msgid ""
+"where ``GT`` is the name of the geometric transformation, ``NSUBDIV`` a "
+"vector of the number of subdivisions in each coordinate (default value 2), "
+"``ORG`` is the origin of the mesh (default value ``[0,0,...]``), ``SIZES`` "
+"is a vector of the sizes in each direction (default value ``[1, 1, ...]`` "
+"and if ``NOISED=1`` the nodes of the interior of the mesh are randomly "
+"\"shaken\" (default value ``NOISED=0``). In that string, all the parameters "
+"are optional except ``GT``."
+msgstr ""
+"ここで ``GT`` は幾何変換の名前、 ``NSUBDIV`` は各座標（デフォルト値2）の細分数のベクトル、 ``ORG`` "
+"はメッシュの原点（デフォルト値 ``[0,0、...]`` ）、 ``SIZES`` は 各方向のサイズのベクトル（デフォルト値 ``[1, 1, "
+"...]`` 、 ``NOISED = 1`` の場合は、メッシュ内部の節点がランダムに振られます（デフォルト値 ``NOISED = 0`` ）。  "
+"``GT`` 以外のパラメータはオプションです。"

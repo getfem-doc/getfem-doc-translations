@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-05 12:26+0000\n"
+"PO-Revision-Date: 2018-07-16 07:17+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/python/cmdref_GlobalFunction.rst:8
+msgid "GlobalFunction"
+msgstr "GlobalFunction"
+
+#: ../docstring of getfem.GlobalFunction:1
+msgid "GeFEM GlobalFunction object"
+msgstr "GeFEM GlobalFunction オブジェクト"
+
+#: ../docstring of getfem.GlobalFunction:3
+msgid "Global function object is represented by three functions:"
+msgstr "Global functionオブジェクトは次の3つの関数で表されます。"
+
+#: ../docstring of getfem.GlobalFunction:5
+msgid "The function `val`."
+msgstr "関数 `val` 。"
+
+#: ../docstring of getfem.GlobalFunction:6
+msgid "The function gradient `grad`."
+msgstr "勾配関数 `grad` 。"
+
+#: ../docstring of getfem.GlobalFunction:7
+msgid "The function Hessian `hess`."
+msgstr "Hessian関数 `hess` 。"
+
+#: ../docstring of getfem.GlobalFunction:9
+msgid ""
+"this type of function is used as local and global enrichment function. The "
+"global function Hessian is an optional parameter (only for fourth order "
+"derivative problems)."
+msgstr ""
+"このタイプの関数は、ローカルおよびグローバルなenrichment関数として使用されます。グローバル関数Hessianは(4次微分問題のみの)オプションのパラメータです。"
+
+#: ../docstring of getfem.GlobalFunction:13
+msgid "General constructor for GlobalFunction objects"
+msgstr "GlobalFunctionオブジェクトの汎用的なコンストラクタ"
+
+#: ../docstring of getfem.GlobalFunction:15
+msgid ""
+"``GF = GlobalFunction('cutoff', int fn, scalar r, scalar r1, scalar r0)`` "
+"Create a cutoff global function."
+msgstr ""
+"``GF = GlobalFunction('cutoff', int fn, scalar r, scalar r1, scalar r0)`` "
+"はグローバルなカットオフ関数を作成します。"
+
+#: ../docstring of getfem.GlobalFunction:18
+msgid ""
+"``GF = GlobalFunction('crack', int fn)`` Create a near-tip asymptotic global"
+" function for modelling cracks."
+msgstr ""
+"``GF = GlobalFunction('crack', int fn)`` 亀裂をモデル化するためのグローバルな近端漸近関数を作成します。"
+
+#: ../docstring of getfem.GlobalFunction:21
+msgid ""
+"``GF = GlobalFunction('parser', string val[, string grad[, string hess]])`` "
+"Create a global function from strings `val`, `grad` and `hess`. This "
+"function could be improved by using the derivation of the generic assembly "
+"language ... to be done."
+msgstr ""
+"``GF = GlobalFunction('parser', string val[, string grad[, string hess]])`` "
+"文字列 `val`, `grad` および `hess` "
+"からグローバル関数を作成します。この関数は、汎用アセンブリ言語の微分を使用することができます...完成予定です。"
+
+#: ../docstring of getfem.GlobalFunction:26
+msgid ""
+"``GF = GlobalFunction('product', GlobalFunction F, GlobalFunction G)`` "
+"Create a product of two global functions."
+msgstr ""
+"``GF = GlobalFunction('product', GlobalFunction F, GlobalFunction G)`` "
+"2つのグローバル関数の積を作成します。"
+
+#: ../docstring of getfem.GlobalFunction:29
+msgid ""
+"``GF = GlobalFunction('add', GlobalFunction gf1, GlobalFunction gf2)`` "
+"Create a add of two global functions."
+msgstr ""
+"``GF = GlobalFunction('add', GlobalFunction gf1, GlobalFunction gf2)`` "
+"2つのグローバル関数を加算します。"
+
+#: ../docstring of getfem.GlobalFunction.char:1
+msgid "Output a (unique) string representation of the GlobalFunction."
+msgstr "GlobalFunctionの(ユニークな)文字列表示を出力します。"
+
+#: ../docstring of getfem.GlobalFunction.char:3
+msgid ""
+"This can be used to perform comparisons between two different GlobalFunction"
+" objects. This function is to be completed."
+msgstr "これを使用して、2つの異なるGlobalFunctionオブジェクト間の比較を実行できます。この機能は完成予定です。"
+
+#: ../docstring of getfem.GlobalFunction.display:1
+msgid "displays a short summary for a GlobalFunction object."
+msgstr "GlobalFunctionオブジェクトの簡単な概要を表示します。"
+
+#: ../docstring of getfem.GlobalFunction.grad:1
+msgid "Return `grad` function evaluation in `PTs` (column points)."
+msgstr " `PT` 内の `grad` 関数評価を返します(ポイント列)。"
+
+#: ../docstring of getfem.GlobalFunction.grad:3
+msgid "On return, each column of `GRADs` is of the form [Gx,Gy]."
+msgstr "返される `GRADs` の各列は [Gx,Gy] の形式になっています。"
+
+#: ../docstring of getfem.GlobalFunction.hess:1
+msgid "Return `hess` function evaluation in `PTs` (column points)."
+msgstr " `PTs` 内の `hess` 関数の評価を返します(ポイント列)。"
+
+#: ../docstring of getfem.GlobalFunction.hess:3
+msgid "On return, each column of `HESSs` is of the form [Hxx,Hxy,Hyx,Hyy]."
+msgstr "返される `HESSs` の各列は [Hxx,Hxy,Hyx,Hyy] という形式になっています。"
+
+#: ../docstring of getfem.GlobalFunction.val:1
+msgid "Return `val` function evaluation in `PTs` (column points)."
+msgstr " `PT` 内の `val` 関数の評価を返します(列はポイント)。"
