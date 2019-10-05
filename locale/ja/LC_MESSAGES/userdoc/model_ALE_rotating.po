@@ -191,6 +191,14 @@ msgid ""
 "\\bar{X}) )  + \\ddot{\\theta}\\nabla\\bar{\\varphi}A \\bar{X} + "
 "\\ddot{Z}(t)."
 msgstr ""
+"\\Frac{\\partial \\varphi}{\\partial t} = \\Frac{\\partial "
+"\\bar{\\varphi}}{\\partial t} + \\dot{\\theta} \\nabla \\bar{\\varphi} A "
+"\\bar{X} + \\dot{Z}(t),  \\Frac{\\partial^2 \\varphi}{\\partial t^2} = "
+"\\Frac{\\partial^2 \\bar{\\varphi}}{\\partial t^2} + 2\\dot{\\theta} "
+"\\nabla\\Frac{\\partial \\bar{\\varphi}}{\\partial t}A \\bar{X} + "
+"\\dot{\\theta}^2\\mbox{div}((\\nabla\\bar{\\varphi}A \\bar{X}) \\otimes (A "
+"\\bar{X}) )  + \\ddot{\\theta}\\nabla\\bar{\\varphi}A \\bar{X} + "
+"\\ddot{Z}(t)."
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:100
 msgid ""
@@ -213,6 +221,9 @@ msgid ""
 "\\bar{\\Theta}}{\\partial t} + \\dot{\\theta} \\nabla \\bar{\\Theta} A "
 "\\bar{X}"
 msgstr ""
+"\\Frac{\\partial \\Theta}{\\partial t} = \\Frac{\\partial "
+"\\bar{\\Theta}}{\\partial t} + \\dot{\\theta} \\nabla \\bar{\\Theta} A "
+"\\bar{X}"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:106
 msgid ""
@@ -239,6 +250,13 @@ msgid ""
 "\\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta} (I_d "
 "+ \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t)."
 msgstr ""
+"\\Frac{\\partial u}{\\partial t} = \\Frac{\\partial \\bar{u}}{\\partial t} +"
+" \\dot{\\theta} (I_d + \\nabla \\bar{u}) A \\bar{X} + \\dot{Z}(t),  "
+"\\Frac{\\partial^2 u}{\\partial t^2} = \\Frac{\\partial^2 "
+"\\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\Frac{\\partial "
+"\\bar{u}}{\\partial t}A \\bar{X} +  \\dot{\\theta}^2\\mbox{div}(((I_d + "
+"\\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta} (I_d "
+"+ \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t)."
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:120
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:219
@@ -264,6 +282,13 @@ msgid ""
 "+ \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t) \\right] \\cdot \\bar{v} "
 "d\\bar{X}."
 msgstr ""
+"\\int_{\\Omega^0} \\rho^0 \\Frac{\\partial^2 u}{\\partial t^2}\\cdot vdX =  "
+"\\int_{\\bar{\\Omega}^0} \\rho^0 \\left[\\Frac{\\partial^2 "
+"\\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\Frac{\\partial "
+"\\bar{u}}{\\partial t}A \\bar{X} +  \\dot{\\theta}^2\\mbox{div}(((I_d + "
+"\\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta} (I_d "
+"+ \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t) \\right] \\cdot \\bar{v} "
+"d\\bar{X}."
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:129
 msgid ""
@@ -281,6 +306,14 @@ msgid ""
 "\\bar{X}) \\otimes (A \\bar{X}) ) \\bar{N} \\cdot \\bar{v} d\\bar{\\Gamma}. "
 "\\end{array}"
 msgstr ""
+"\\begin{array}{rcl}  \\ds \\int_{\\bar{\\Omega}^0} \\rho^0 "
+"\\dot{\\theta}^2\\mbox{div}(((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A "
+"\\bar{X}) ) \\cdot \\bar{v} d\\bar{X} &=& - \\ds \\int_{\\bar{\\Omega}^0} "
+"(\\dot{\\theta}^2 (I_d + \\nabla\\bar{u})A \\bar{X})) \\cdot (\\nabla "
+"(\\rho^0 \\bar{v}) A \\bar{X}) d\\bar{X} \\\\  &&\\ds + \\int_{\\partial "
+"\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2 (((I_d + \\nabla\\bar{u})A "
+"\\bar{X}) \\otimes (A \\bar{X}) ) \\bar{N} \\cdot \\bar{v} d\\bar{\\Gamma}. "
+"\\end{array}"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:137
 msgid ""
@@ -305,6 +338,12 @@ msgid ""
 "\\bar{X}) d\\bar{X} - \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2 (A^2"
 " \\bar{X})\\cdot \\bar{v} d\\bar{X}."
 msgstr ""
+"\\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2\\mbox{div}(((I_d + "
+"\\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) ) \\cdot \\bar{v} "
+"d\\bar{X} = - \\int_{\\bar{\\Omega}^0} \\rho^0 "
+"\\dot{\\theta}^2(\\nabla\\bar{u}A \\bar{X}) \\cdot (\\nabla \\bar{v} A "
+"\\bar{X}) d\\bar{X} - \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2 (A^2"
+" \\bar{X})\\cdot \\bar{v} d\\bar{X}."
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:142
 msgid "Thus globally"
@@ -323,6 +362,16 @@ msgid ""
 "\\ddot{\\theta} A\\bar{X} + \\ddot{Z}(t))\\cdot \\bar{v} d\\bar{X}. "
 "\\end{array}"
 msgstr ""
+"\\begin{array}{rcl} \\ds \\int_{\\Omega^0} \\rho^0 \\Frac{\\partial^2 "
+"u}{\\partial t^2}\\cdot vdX &=& \\ds \\int_{\\bar{\\Omega}^0} \\rho^0 "
+"\\left[\\Frac{\\partial^2 \\bar{u}}{\\partial t^2} + 2\\dot{\\theta} "
+"\\nabla\\Frac{\\partial \\bar{u}}{\\partial t}A \\bar{X} + \\ddot{\\theta} "
+"\\nabla\\bar{u} A \\bar{X}   \\right] \\cdot \\bar{v} d\\bar{X}\\\\ &&\\ds -"
+" \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2(\\nabla\\bar{u}A "
+"\\bar{X}) \\cdot (\\nabla \\bar{v} A \\bar{X}) d\\bar{X} - "
+"\\int_{\\bar{\\Omega}^0} \\rho^0 (\\dot{\\theta}^2 A^2 \\bar{X} + "
+"\\ddot{\\theta} A\\bar{X} + \\ddot{Z}(t))\\cdot \\bar{v} d\\bar{X}. "
+"\\end{array}"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:151
 msgid ""
@@ -373,7 +422,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:177
 msgid "\\Omega^{0t} = (\\alpha + z(t), \\beta + z(t)) \\times \\omega^0"
-msgstr ""
+msgstr "\\Omega^{0t} = (\\alpha + z(t), \\beta + z(t)) \\times \\omega^0"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:180
 msgid "where :math:`z(t)` represents the translation."
@@ -391,7 +440,7 @@ msgstr ""
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:184
 msgid "\\bar{\\Omega}^{0} = (\\alpha, \\beta) \\times \\omega^0"
-msgstr ""
+msgstr "\\bar{\\Omega}^{0} = (\\alpha, \\beta) \\times \\omega^0"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:187
 msgid ""
@@ -406,6 +455,8 @@ msgid ""
 "\\bar{\\varphi}(t,\\bar{X}) = \\varphi(t,X), ~~~\\mbox{ with } \\bar{X} = X "
 "- Z(t),"
 msgstr ""
+"\\bar{\\varphi}(t,\\bar{X}) = \\varphi(t,X), ~~~\\mbox{ with } \\bar{X} = X "
+"- Z(t),"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:192
 msgid ""
@@ -426,7 +477,7 @@ msgstr "以下の式が示されます。"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:205
 msgid "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - X = u(t, X),"
-msgstr ""
+msgstr "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - X = u(t, X),"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:208
 msgid ""
@@ -442,6 +493,11 @@ msgid ""
 "\\nabla\\Frac{\\partial \\bar{u}}{\\partial t}\\dot{Z} + \\Frac{\\partial^2 "
 "\\bar{u}}{\\partial \\dot{Z}^2} - \\nabla\\bar{u}\\ddot{Z}."
 msgstr ""
+"\\Frac{\\partial \\varphi}{\\partial t} = \\Frac{\\partial "
+"\\bar{u}}{\\partial t} - \\nabla \\bar{u} \\dot{Z}  \\Frac{\\partial^2 "
+"\\varphi}{\\partial t^2} = \\Frac{\\partial^2 \\bar{u}}{\\partial t^2} - "
+"\\nabla\\Frac{\\partial \\bar{u}}{\\partial t}\\dot{Z} + \\Frac{\\partial^2 "
+"\\bar{u}}{\\partial \\dot{Z}^2} - \\nabla\\bar{u}\\ddot{Z}."
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:221
 msgid ""
@@ -463,6 +519,13 @@ msgid ""
 "\\int_{\\partial \\bar{\\Omega}^0} \\rho^0 "
 "(\\nabla\\bar{u}\\dot{Z}).\\bar{v}(\\dot{Z}.\\bar{N}) d\\bar{\\Gamma},"
 msgstr ""
+"\\int_{\\Omega^0} \\rho^0 \\Frac{\\partial^2 u}{\\partial t^2}\\cdot vdX =  "
+"\\int_{\\bar{\\Omega}^{0}} \\rho^0 \\left[\\Frac{\\partial^2 "
+"\\bar{u}}{\\partial t^2} - 2\\nabla\\Frac{\\partial \\bar{u}}{\\partial "
+"t}\\dot{Z} - \\nabla\\bar{u}\\ddot{Z}\\right]\\cdot \\bar{v}  - \\rho^0 "
+"(\\nabla\\bar{u}\\dot{Z}).(\\nabla\\bar{v}\\dot{Z}) d\\bar{X} + "
+"\\int_{\\partial \\bar{\\Omega}^0} \\rho^0 "
+"(\\nabla\\bar{u}\\dot{Z}).\\bar{v}(\\dot{Z}.\\bar{N}) d\\bar{\\Gamma},"
 
 #: ../../doc/sphinx/source/userdoc/model_ALE_rotating.rst:228
 msgid ""
