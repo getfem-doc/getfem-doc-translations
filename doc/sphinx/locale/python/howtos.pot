@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-06 12:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/python/howtos.rst:6
+msgid "How-tos"
+msgstr ""
+
+#: ../source/python/howtos.rst:9
+msgid "Import gmsh mesh"
+msgstr ""
+
+#: ../source/python/howtos.rst:11
+msgid "If we have in the file `quad.geo` a parameterized mesh, as this:"
+msgstr ""
+
+#: ../source/python/howtos.rst:17
+msgid "then, when we run::"
+msgstr ""
+
+#: ../source/python/howtos.rst:21
+msgid "the file `quad.msh` is created and contains the encoding of the mesh and its regions. We can import that file (*quad.msh*) to getfem::"
+msgstr ""
+
+#: ../source/python/howtos.rst:29
+msgid "with the second command we can see the *regions ids*. When we import the mesh, we might be warned with the following::"
+msgstr ""
+
+#: ../source/python/howtos.rst:35
+msgid "this means that the parametrization of the mesh in |gmsh| *.geo file* must assign a **different** number to each region, the problem exists because in |gmsh| can coexist, for example, \"Physical Surface (200)\" and \"Physical Line (200)\", as they are different \"types of regions\" in |gmsh|, that which does not occur in |gf| since there is only one \"type of region\"."
+msgstr ""
+
