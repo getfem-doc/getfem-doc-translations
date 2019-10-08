@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-07 12:27+0000\n"
+"POT-Creation-Date: 2019-10-08 12:27+0000\n"
 "PO-Revision-Date: 2018-07-16 07:07+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgstr "FEMモデルの離散化から生じる代数的問題を、以下の形
 
 #: ../source/userdoc/model_continuation.rst:19
 msgid "F(U) = 0."
-msgstr ""
+msgstr "F(U) = 0."
 
 #: ../source/userdoc/model_continuation.rst:23
 msgid ""
@@ -57,6 +57,8 @@ msgid ""
 "F(U, \\lambda) = 0, \\quad F\\colon \\mathbb{R}^{N} \\times \\mathbb{R} \\to"
 " \\mathbb{R}^{N}."
 msgstr ""
+"F(U, \\lambda) = 0, \\quad F\\colon \\mathbb{R}^{N} \\times \\mathbb{R} \\to"
+" \\mathbb{R}^{N}."
 
 #: ../source/userdoc/model_continuation.rst:35
 msgid ""
@@ -80,6 +82,10 @@ msgid ""
 "\\sqrt{\\kappa \\lVert U \\rVert^{2} + \\lambda^{2}},\\qquad Y = (U, "
 "\\lambda),\\, \\tilde{Y} = (\\tilde{U}, \\tilde{\\lambda})."
 msgstr ""
+"\\langle Y, \\tilde{Y} \\rangle_{w} := \\kappa \\langle U, \\tilde{U} "
+"\\rangle + \\lambda \\tilde{\\lambda},\\quad \\lVert Y \\rVert_{w} := "
+"\\sqrt{\\kappa \\lVert U \\rVert^{2} + \\lambda^{2}},\\qquad Y = (U, "
+"\\lambda),\\, \\tilde{Y} = (\\tilde{U}, \\tilde{\\lambda})."
 
 #: ../source/userdoc/model_continuation.rst:46
 msgid ""
@@ -119,6 +125,8 @@ msgid ""
 "\\lVert F(Y_{j}) \\rVert \\leq \\varepsilon,\\quad F'(Y_{j}; T_{j}) = "
 "0,\\quad \\lVert T_{j} \\rVert_{w} = 1,\\quad j = 0, 1,\\dotsc."
 msgstr ""
+"\\lVert F(Y_{j}) \\rVert \\leq \\varepsilon,\\quad F'(Y_{j}; T_{j}) = "
+"0,\\quad \\lVert T_{j} \\rVert_{w} = 1,\\quad j = 0, 1,\\dotsc."
 
 #: ../source/userdoc/model_continuation.rst:67
 msgid ""
@@ -131,7 +139,7 @@ msgstr ""
 
 #: ../source/userdoc/model_continuation.rst:71
 msgid "Y_{j+1}^{0} := Y_{j} + h_{j} T_{j},\\quad T_{j+1}^{0} := T_{j},"
-msgstr ""
+msgstr "Y_{j+1}^{0} := Y_{j} + h_{j} T_{j},\\quad T_{j+1}^{0} := T_{j},"
 
 #: ../source/userdoc/model_continuation.rst:75
 msgid ""
@@ -158,6 +166,10 @@ msgid ""
 "\\rangle_{w} - \\langle T_{j+1}^{l-1}, T_{j+1}^{l-1} "
 "\\rangle_{w}\\end{pmatrix}"
 msgstr ""
+"F^{l}(Y, T) := \\begin{pmatrix}F(Y)\\\\ (T_{j+1}^{l-1})^{\\top}(Y - "
+"Y_{j+1}^{l-1})\\\\ \\nabla F(Y_{j+1}^{l-1})T\\\\ \\langle T_{j+1}^{l-1}, T "
+"\\rangle_{w} - \\langle T_{j+1}^{l-1}, T_{j+1}^{l-1} "
+"\\rangle_{w}\\end{pmatrix}"
 
 #: ../source/userdoc/model_continuation.rst:88
 msgid ""
@@ -208,6 +220,11 @@ msgid ""
 "couple has been accepted and } l_{\\mathrm{it}} < l_{\\mathrm{thr}},\\\\ "
 "h_{j}& \\text{otherwise},\\end{cases}"
 msgstr ""
+"h_{j+1} := \\begin{cases}\\max\\{h_{\\mathrm{dec}} h_{j}, "
+"h_{\\mathrm{min}}\\}& \\text{if no new couple has been accepted},\\\\ "
+"\\min\\{h_{\\mathrm{inc}} h_{j}, h_{\\mathrm{max}}\\}& \\text{if a new "
+"couple has been accepted and } l_{\\mathrm{it}} < l_{\\mathrm{thr}},\\\\ "
+"h_{j}& \\text{otherwise},\\end{cases}"
 
 #: ../source/userdoc/model_continuation.rst:117
 msgid ""
@@ -253,6 +270,8 @@ msgid ""
 "\\nabla F(Y_{j} + h T_{j}) \\tilde{T} = 0,\\quad \\lVert \\tilde{T} "
 "\\rVert_{w} = 1,"
 msgstr ""
+"\\nabla F(Y_{j} + h T_{j}) \\tilde{T} = 0,\\quad \\lVert \\tilde{T} "
+"\\rVert_{w} = 1,"
 
 #: ../source/userdoc/model_continuation.rst:143
 msgid ""
@@ -299,6 +318,9 @@ msgid ""
 "\\tilde{T} \\rVert} \\approx 1\\quad \\text{if}\\ \\nabla F(Y_{j} + r "
 "\\tilde{h} \\tilde{T}) T = 0,"
 msgstr ""
+"\\frac{\\lvert T^{\\top} \\tilde{T}\\rvert}{\\lVert T \\rVert \\lVert "
+"\\tilde{T} \\rVert} \\approx 1\\quad \\text{if}\\ \\nabla F(Y_{j} + r "
+"\\tilde{h} \\tilde{T}) T = 0,"
 
 #: ../source/userdoc/model_continuation.rst:166
 msgid ""
@@ -335,7 +357,7 @@ msgstr ""
 
 #: ../source/userdoc/model_continuation.rst:182
 msgid "\\lambda \\mapsto P(\\lambda) := (1 - \\lambda)P^{0} + \\lambda P^{1},"
-msgstr ""
+msgstr "\\lambda \\mapsto P(\\lambda) := (1 - \\lambda)P^{0} + \\lambda P^{1},"
 
 #: ../source/userdoc/model_continuation.rst:186
 msgid ""
@@ -346,7 +368,7 @@ msgstr ""
 
 #: ../source/userdoc/model_continuation.rst:189
 msgid "F(U, P(\\lambda)) = 0."
-msgstr ""
+msgstr "F(U, P(\\lambda)) = 0."
 
 #: ../source/userdoc/model_continuation.rst:194
 msgid "Detection of limit points"
@@ -366,7 +388,7 @@ msgstr ""
 
 #: ../source/userdoc/model_continuation.rst:201
 msgid "\\tau_{\\mathrm{LP}}(T_{j}) \\tau_{\\mathrm{LP}}(T_{j+1}) < 0,"
-msgstr ""
+msgstr "\\tau_{\\mathrm{LP}}(T_{j}) \\tau_{\\mathrm{LP}}(T_{j+1}) < 0,"
 
 #: ../source/userdoc/model_continuation.rst:205
 msgid "where :math:`\\tau_{\\mathrm{LP}}` is defined by"
@@ -377,6 +399,8 @@ msgid ""
 "\\tau_{\\mathrm{LP}}(T) := T_{\\lambda},\\quad T = (T_{U},T_{\\lambda}) \\in"
 " \\mathbb{R}^{N} \\times \\mathbb{R}."
 msgstr ""
+"\\tau_{\\mathrm{LP}}(T) := T_{\\lambda},\\quad T = (T_{U},T_{\\lambda}) \\in"
+" \\mathbb{R}^{N} \\times \\mathbb{R}."
 
 #: ../source/userdoc/model_continuation.rst:215
 msgid "Limit point."
@@ -405,10 +429,15 @@ msgid ""
 "\\mathrm{Im}(J(\\bar{Y}))`, :math:`C \\notin "
 "\\mathrm{Im}(J(\\bar{Y})^{\\top})`, :math:`d \\in \\mathbb{R}` and"
 msgstr ""
+"Let :math:`s \\mapsto Y(s)` be a parameterization of a solution curve and "
+":math:`\\bar{Y} := Y(\\bar{s})` be a bifurcation point. Moreover, let "
+":math:`T^{\\top} \\dot{Y}(\\bar{s}) > 0`, :math:`B \\notin "
+"\\mathrm{Im}(J(\\bar{Y}))`, :math:`C \\notin "
+"\\mathrm{Im}(J(\\bar{Y})^{\\top})`, :math:`d \\in \\mathbb{R}` and"
 
 #: ../source/userdoc/model_continuation.rst:231
 msgid "J(Y) := \\begin{pmatrix}\\nabla F(Y)\\\\ T^{\\top}\\end{pmatrix}."
-msgstr ""
+msgstr "J(Y) := \\begin{pmatrix}\\nabla F(Y)\\\\ T^{\\top}\\end{pmatrix}."
 
 #: ../source/userdoc/model_continuation.rst:235
 msgid "Define :math:`\\tau_{\\mathrm{BP}}(Y)` via"
@@ -420,6 +449,9 @@ msgid ""
 "\\begin{pmatrix}V(Y)\\\\ \\tau_{\\mathrm{BP}}(Y)\\end{pmatrix} = "
 "\\begin{pmatrix}0\\\\ 1\\end{pmatrix}."
 msgstr ""
+"\\begin{pmatrix}J(Y)& B\\\\ C^{\\top}& d\\end{pmatrix} "
+"\\begin{pmatrix}V(Y)\\\\ \\tau_{\\mathrm{BP}}(Y)\\end{pmatrix} = "
+"\\begin{pmatrix}0\\\\ 1\\end{pmatrix}."
 
 #: ../source/userdoc/model_continuation.rst:241
 msgid ""
@@ -458,6 +490,9 @@ msgid ""
 "-\\frac{\\tau_{\\mathrm{BP}}(Y_{j+1})}{\\tau_{\\mathrm{BP}}(Y_{j+1}) - "
 "\\tau_{\\mathrm{BP}}(Y_{j})}h_{j}"
 msgstr ""
+"h_{j+1} := "
+"-\\frac{\\tau_{\\mathrm{BP}}(Y_{j+1})}{\\tau_{\\mathrm{BP}}(Y_{j+1}) - "
+"\\tau_{\\mathrm{BP}}(Y_{j})}h_{j}"
 
 #: ../source/userdoc/model_continuation.rst:259
 msgid ""

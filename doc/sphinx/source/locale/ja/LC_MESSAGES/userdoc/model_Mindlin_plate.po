@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-07 12:27+0000\n"
+"POT-Creation-Date: 2019-10-08 12:27+0000\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,6 +57,10 @@ msgid ""
 "~~~~~~~~~~~~~~ + \\int_{\\Omega}G\\epsilon (\\nabla u_3 - "
 "\\theta)\\cdot(\\nabla v_3 - \\psi)dx = \\int_{\\Omega} F_3v_3 + M.\\psi dx,"
 msgstr ""
+"& \\int_{\\Omega} D \\epsilon^3\\left((1-v)\\gamma(\\theta):\\gamma(\\psi) +"
+" \\nu \\mbox{div}(\\theta)\\mbox{div}(\\psi)\\right) dx \\\\ & "
+"~~~~~~~~~~~~~~ + \\int_{\\Omega}G\\epsilon (\\nabla u_3 - "
+"\\theta)\\cdot(\\nabla v_3 - \\psi)dx = \\int_{\\Omega} F_3v_3 + M.\\psi dx,"
 
 #: ../source/userdoc/model_Mindlin_plate.rst:28
 msgid ""
@@ -75,6 +79,12 @@ msgid ""
 "\\int_{-\\epsilon/2}^{\\epsilon/2} x_3 f_{\\alpha}dx_3, \\alpha \\in \\{1, "
 "2\\},"
 msgstr ""
+"& D = \\Frac{E}{12(1-\\nu^2)}, ~~ G = \\Frac{E\\kappa}{2(1+\\nu)}, \\\\ & "
+"\\gamma(\\theta) = (\\nabla \\theta + \\nabla \\theta^T)/2, \\\\ & F_3 = "
+"\\int_{-\\epsilon/2}^{\\epsilon/2} f_3dx_3 + g_3^+ + g_3^-, \\\\ & "
+"M_{\\alpha} = \\epsilon(g^+_{\\alpha} - g^-_{\\alpha})/2 +  "
+"\\int_{-\\epsilon/2}^{\\epsilon/2} x_3 f_{\\alpha}dx_3, \\alpha \\in \\{1, "
+"2\\},"
 
 #: ../source/userdoc/model_Mindlin_plate.rst:36
 msgid ""
@@ -131,7 +141,7 @@ msgstr "この方法では単に下位の積分法を使用して数値的に計
 
 #: ../source/userdoc/model_Mindlin_plate.rst:57
 msgid "\\int_{\\Omega}G\\epsilon (\\nabla u_3 - \\theta)\\cdot(\\nabla v_3 - \\psi)dx"
-msgstr ""
+msgstr "\\int_{\\Omega}G\\epsilon (\\nabla u_3 - \\theta)\\cdot(\\nabla v_3 - \\psi)dx"
 
 #: ../source/userdoc/model_Mindlin_plate.rst:61
 msgid ""
@@ -162,7 +172,7 @@ msgstr ""
 
 #: ../source/userdoc/model_Mindlin_plate.rst:68
 msgid "\\int_{\\Omega}G\\epsilon P^h(\\nabla u_3 - \\theta)\\cdot P^h(\\nabla v_3 - \\psi)dx"
-msgstr ""
+msgstr "\\int_{\\Omega}G\\epsilon P^h(\\nabla u_3 - \\theta)\\cdot P^h(\\nabla v_3 - \\psi)dx"
 
 #: ../source/userdoc/model_Mindlin_plate.rst:72
 msgid ""
@@ -184,6 +194,8 @@ msgid ""
 "\\int_{\\Omega}G\\epsilon (\\nabla u_3 - P^h(\\theta))\\cdot(\\nabla v_3 - "
 "P^h(\\psi))dx"
 msgstr ""
+"\\int_{\\Omega}G\\epsilon (\\nabla u_3 - P^h(\\theta))\\cdot(\\nabla v_3 - "
+"P^h(\\psi))dx"
 
 #: ../source/userdoc/model_Mindlin_plate.rst:78
 msgid ""
@@ -230,6 +242,13 @@ msgid ""
 "RT0 will reduce the order of the approximation. Returns the brick index in "
 "the model."
 msgstr ""
+"`name_u3` は横変位を表す変数の名前、 `name_theta` は回転を表す変数、 `param_E` はヤング係数、 `param_nu` "
+"はPoisson比、 `param_epsilon` は板厚、 `param_kappa` "
+"はせん断補正係数です。このブリック要素は弱形式言語を使用するため、パラメータはこの言語の正規表現にすることができます。 3つの変数があります。 "
+"`variant = 0` は非還元式に対応し、その場合には積分法 `mim` "
+"のみが使用されます。実際にはこの変形は強力なロッキング現象の影響を受けやすいので使用できません。 `variant = 1` は回転項に `mim` "
+"が使用され、横断せん断項に `mim_reduced` が使用される縮小積分に対応します。 `variant = 2` "
+"（デフォルト）は横せん断項の回転RT0要素への投影に対応します。現時点では、4辺形のみに適用されています（3角形要素のロッキング現象を除去するには不十分であるため）。高次の要素を使用すると、RT0の投影によって近似の次数が減少することにも注意してください。モデル内の要素のインデックスを返します。"
 
 #: ../source/userdoc/model_Mindlin_plate.rst:112
 msgid ""

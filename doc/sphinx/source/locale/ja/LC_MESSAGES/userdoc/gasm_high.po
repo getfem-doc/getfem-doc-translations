@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-07 12:27+0000\n"
+"POT-Creation-Date: 2019-10-08 12:27+0000\n"
 "PO-Revision-Date: 2018-07-16 07:03+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -1746,6 +1746,8 @@ msgid ""
 "variables of model/workspace but this is not necessarily the expected "
 "behavior when using a potential energy, for instance. The syntax is::"
 msgstr ""
+"workspaceオブジェクトは、より低い次数の微分を自動的に微分します。しかしながら、変数に対して式を陽に微分することもできます。 "
+"注目すべきは、自動微分はmodel/workspaceの宣言されたすべての変数に関して微分を実行しますが、これは例えばポテンシャルエネルギーを使用する場合に必ずしも期待される挙動ではありません。構文は次の通りです。"
 
 #: ../source/userdoc/gasm_high.rst:661
 msgid "For instance, the following expression::"
@@ -1931,6 +1933,10 @@ msgid ""
 " 1 means that a corresponding point has been found. This identifier can be "
 "used thanks to the following special command of the weak form language::"
 msgstr ""
+"場合によっては、変換された点がターゲットメッシュの外側にある場合、点の補間が失敗することがあります。両方とも、このケースを処理し、変換が他のいくつかの場合を微分できるようにするために（両方とも、剛体とRaytracing_interpolate_transformationの変形可能なものとの間の差異については。"
+" :ref:`ud-model-contact-friction_raytrace_inter_trans` "
+"を参照）、変換は整数識別子が弱形式言語に返されます。この識別子の値0は、ターゲットメッシュ上の対応する位置が見つからなかったことを意味します。 "
+"1の値は、対応する点が見つかったことを意味します。この識別子は、弱形式言語の次の特別なコマンドにより使用できます。"
 
 #: ../source/userdoc/gasm_high.rst:771
 msgid ""
@@ -1993,12 +1999,13 @@ msgid ""
 "transformation is applied and the evaluation is performed normally on the "
 "current element."
 msgstr ""
+"マップelt_corrには、変換が適用される要素と、補外が行われる必要があります。それぞれの要素との間の対応関係が含まれている必要があります。マップにリストされていない要素では、変換は適用されず、評価は現在の要素に対して正常に実行されます。"
 
 #: ../source/userdoc/gasm_high.rst:794
 msgid ""
 "The following functions allow to change the element correspondence of a "
 "previously added element extrapolation transformation::"
-msgstr ""
+msgstr "以下の関数は、以前に追加された要素補間変換の要素対応を変更することを可能にします。"
 
 #: ../source/userdoc/gasm_high.rst:806
 msgid "Evaluating discontinuities across inter-element edges/faces"
@@ -2251,6 +2258,9 @@ msgid ""
 "value. For this purpose, the weak form language furnishes the following "
 "expressions for ``u`` a FEM variable::"
 msgstr ""
+"レベル集合（ fem_level_set または mesh_fem_level_set "
+"オブジェクトを使用）によって有限要素法を切断する場合、変数の不連続ジャンプ、または勾配または平均値のジャンプを組み込むのが面白いことがよくあります。そのために、弱形式言語は、"
+" ``u`` のFEM変数を定義しています。"
 
 #: ../source/userdoc/gasm_high.rst:971
 msgid ""

@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-07 12:27+0000\n"
+"POT-Creation-Date: 2019-10-08 12:27+0000\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,6 +62,10 @@ msgid ""
 "categories: master and slave surface (see  :ref:`figure<ud-fig-"
 "masterslave>`)."
 msgstr ""
+"高水準汎用構築に接触検出を組み込むために、特定の補間変換が定義されています（内挿変換の詳細については :ref:`ud-gasm-high-"
+"transf` を参照してください）。 [KO-RE2014]_ "
+"に記載されているレイトレーシング接触検出に基づいており、以下で説明する基準を使用します。補間変換は、異なる可能性のある接触面を記憶します。ほとんどの方法で、潜在的接触面はマスターとスレーブの2つのカテゴリに分類されます（"
+" :ref:`図 <ud-fig-masterslave>` を参照）。"
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:31
 msgid ""
@@ -433,6 +437,8 @@ msgid ""
 "g_i = n_y . (\\varphi^h(X_i) - \\varphi^h(Y_i)) = \\|\\varphi^h(X_i) - "
 "\\varphi^h(Y_i)\\| \\text{Sign}(n_y . (\\varphi^h(X_i) - \\varphi^h(Y_i))),"
 msgstr ""
+"g_i = n_y . (\\varphi^h(X_i) - \\varphi^h(Y_i)) = \\|\\varphi^h(X_i) - "
+"\\varphi^h(Y_i)\\| \\text{Sign}(n_y . (\\varphi^h(X_i) - \\varphi^h(Y_i))),"
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:210
 msgid ""
@@ -465,6 +471,18 @@ msgid ""
 "W_T(X_i)))\\right)\\right]= 0  ~~\\forall i \\in I_{\\text{rig}}, "
 "\\end{array}\\right."
 msgstr ""
+"\\left\\{\\begin{array}{l} \\mbox{Find } \\varphi^h \\in V^h \\mbox{ such "
+"that } \\\\ \\displaystyle \\delta J(\\varphi^h)[\\delta u^h] - \\sum_{i "
+"\\in I_{\\text{def}}} \\lambda_i \\cdot (\\delta u^h(X_i) - \\delta "
+"u^h(Y_i)) - \\sum_{i \\in I_{\\text{rig}}} \\lambda_i \\delta u^h(X_i) = 0 "
+"~~~ \\forall \\delta u^h \\in V^h, \\\\ \\displaystyle \\Frac{1}{r} "
+"\\left[\\lambda_i + P_{n_y, {\\mathscr F}}(\\lambda_i + r\\left(g_i n_y - "
+"\\alpha(\\varphi^h(X_i) - \\varphi^h(Y_i) - "
+"W_T(X_i)+W_T(Y_i)))\\right)\\right]= 0  ~~\\forall i \\in I_{\\text{def}}, "
+"\\\\[1em] \\displaystyle \\Frac{1}{r} \\left[\\lambda_i + P_{n_y, {\\mathscr"
+" F}}(\\lambda_i + r\\left(g_i n_y - \\alpha(\\varphi^h(X_i) - "
+"W_T(X_i)))\\right)\\right]= 0  ~~\\forall i \\in I_{\\text{rig}}, "
+"\\end{array}\\right."
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:223
 msgid "where :math:`W_T, \\alpha, P_{n_y, {\\mathscr F}}` ... + tangent system"
@@ -495,7 +513,7 @@ msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:240
 msgid "n_{trans} = \\Frac{(I+ \\nabla u)^{-T} n}{\\|(I+\\nabla u)^{-T} n\\|}"
-msgstr ""
+msgstr "n_{trans} = \\Frac{(I+ \\nabla u)^{-T} n}{\\|(I+\\nabla u)^{-T} n\\|}"
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:244
 msgid "with the following partial derivatives"
@@ -508,6 +526,10 @@ msgid ""
 "n_{trans}[\\delta n] = \\Frac{(I+ \\nabla u)^{-T}\\delta n - "
 "n_{trans}(n_{trans}\\cdot \\delta n)}{\\|(I+\\nabla u)^{-T} n\\|}"
 msgstr ""
+"\\partial_{u} n_{trans}[\\delta u] = -(I - n_{trans}\\otimes n_{trans})(I+ "
+"\\nabla u)^{-T}(\\nabla \\delta u)^T n_{trans}  \\partial_{n} "
+"n_{trans}[\\delta n] = \\Frac{(I+ \\nabla u)^{-T}\\delta n - "
+"n_{trans}(n_{trans}\\cdot \\delta n)}{\\|(I+\\nabla u)^{-T} n\\|}"
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:252
 msgid ""
@@ -526,6 +548,9 @@ msgid ""
 "P_{B(n,\\tau)}(\\lambda - rV_s)  \\mbox{with } \\tau = \\mbox{min}(f_3 + "
 "f_1(\\lambda\\cdot n + rg)_-, f_2)"
 msgstr ""
+"P(\\lambda, n, V_s, g, f, r) = -(\\lambda\\cdot n + rg)_- n + "
+"P_{B(n,\\tau)}(\\lambda - rV_s)  \\mbox{with } \\tau = \\mbox{min}(f_3 + "
+"f_1(\\lambda\\cdot n + rg)_-, f_2)"
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:263
 msgid ""
@@ -591,6 +616,33 @@ msgid ""
 "r) =  H(-\\lambda\\cdot n - r\\,g)gn + \\partial_q P_{B(n,\\tau)}V_s  "
 "+\\partial_{\\tau} P_{B(n,\\tau)} \\partial_r \\tau"
 msgstr ""
+"\\partial_q P_{B(n,\\tau)}(q) = \\left\\{\\begin{array}{cl} 0 & \\mbox{for }"
+" \\tau \\le 0 \\\\ \\mathbf{T}_n & \\mbox{for } \\|q_{_T}\\| \\le \\tau \\\\"
+" \\Frac{\\tau}{\\|q_{_T}\\|} \\left(\\mathbf{T}_n - "
+"\\Frac{q_{_T}}{\\|q_{_T}\\|}\\otimes \\Frac{q_{_T}}{\\|q_{_T}\\|} \\right) &"
+" \\mbox{otherwise } \\end{array} \\right.  \\partial_{\\tau} "
+"P_{B(n,\\tau)}(q) = \\left\\{\\begin{array}{cl} 0 & \\mbox{for } \\tau \\le "
+"0 \\mbox{ or } \\|q_{_T}\\| \\le \\tau \\\\ \\Frac{q_{_T}}{\\|q_{_T}\\|} & "
+"\\mbox{otherwise} \\end{array} \\right.  \\partial_n P_{B(n,\\tau)}(q) = "
+"\\left\\{ \\begin{array}{cl} 0 & \\mbox{for } \\tau \\le 0 \\\\ -q \\cdot "
+"n~\\mathbf{T}_n - n \\otimes q_{_T} & \\mbox{for } \\|q_{_T}\\| \\le \\tau "
+"\\\\ -\\Frac{\\tau}{\\|q_{_T}\\|} \\left( q \\cdot n \\left(\\mathbf{T}_n - "
+"\\Frac{q_{_T}}{\\|q_{_T}\\|}\\otimes \\Frac{q_{_T}}{\\|q_{_T}\\|} \\right) +"
+" n \\otimes q_{_T} \\right) & \\mbox{otherwise.} \\end{array} \\right.  "
+"\\partial_{\\lambda} P(\\lambda, n, V_s, g, f, r) = \\partial_q "
+"P_{B(n,\\tau)} +\\partial_{\\tau}P_{B(n,\\tau)} \\otimes  "
+"\\partial_{\\lambda} \\tau +H(-\\lambda\\cdot n - r\\,g)~n \\otimes n,  "
+"\\partial_{n} P(\\lambda, n, V_s, g, f, r) = \\left|\\begin{array}{l} "
+"\\partial_n P_{B(n,\\tau)} +\\partial_{\\tau} P_{B(n,\\tau)} \\otimes "
+"\\partial_n \\tau \\\\ \\hspace*{3em}+H(-\\lambda\\cdot n - r\\,g) ~ "
+"\\left(n \\otimes \\lambda - (2~\\lambda\\cdot n + r\\,g)~n \\otimes n + "
+"(\\lambda\\cdot n + r\\,g)~\\mathbf{I}\\right), \\end{array}\\right.  "
+"\\partial_{g} P(\\lambda, n, V_s, g, f, r) = \\partial_{\\tau} "
+"P_{B(n,\\tau)} ~ \\partial_g \\tau +H(-\\lambda\\cdot n - r\\,g)~r~n  "
+"\\partial_{f} P(\\lambda, n, V_s, g, f, r) = \\partial_{\\tau} "
+"P_{B(n,\\tau)} \\partial_{f} \\tau  \\partial_{r} P(\\lambda, n, V_s, g, f, "
+"r) =  H(-\\lambda\\cdot n - r\\,g)gn + \\partial_q P_{B(n,\\tau)}V_s  "
+"+\\partial_{\\tau} P_{B(n,\\tau)} \\partial_r \\tau"
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:330
 msgid "Integral contact brick with raytrace"
