@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-23 12:44+0000\n"
+"POT-Creation-Date: 2019-10-24 12:36+0000\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -106,6 +106,11 @@ msgid ""
 "`mesh1.region_subtract(CONTACT_BOUND, HOLE_BOUND)` allow to delete the faces"
 " corresponding to the rim in the contact boundary."
 msgstr ""
+"Note that the command `mesh1.outer_faces_with_direction([0., -1.], np.pi/4)`"
+" allows to select all the faces having a unit outward normal having an angle"
+" less or equal to `np.pi/4` with the vector `[0., -1.]`. The command "
+"`mesh1.region_subtract(CONTACT_BOUND, HOLE_BOUND)` allow to delete the faces"
+" corresponding to the rim in the contact boundary."
 
 #: ../source/tutorial/wheel.rst:86
 msgid "Definition of finite elements methods and integration method"
@@ -194,7 +199,7 @@ msgstr ""
 
 #: ../source/tutorial/wheel.rst:150
 msgid "X \\longmapsto (X(1), 0)"
-msgstr ""
+msgstr "X \\longmapsto (X(1), 0)"
 
 #: ../source/tutorial/wheel.rst:154
 msgid ""
@@ -240,6 +245,13 @@ msgid ""
 "~~~~ \\forall \\delta_{\\lambda_N}, \\forall \\delta_{u^1}, \\forall "
 "\\delta_{u^2},"
 msgstr ""
+"& \\cdots + \\ds \\int_{\\Gamma_c} \\lambda_N(X) "
+"(\\delta_{u^1}(X)-\\delta_{u^2}(\\Pi(X)))\\cdot n d\\Gamma \\\\ & -  \\ds "
+"\\int_{\\Gamma_c} \\left(\\lambda_N(X) + \\left(\\lambda_N(X) + "
+"\\Frac{1}{h_T\\gamma_0}((X + u^1(X))\\cdot n - (\\Pi(X) - "
+"u^2(\\Pi(X)))\\cdot n\\right)_-\\right)\\delta_{\\lambda_N}(X) d\\Gamma = 0 "
+"~~~~ \\forall \\delta_{\\lambda_N}, \\forall \\delta_{u^1}, \\forall "
+"\\delta_{u^2},"
 
 #: ../source/tutorial/wheel.rst:169
 msgid ""
@@ -292,6 +304,8 @@ msgid ""
 " rim boundary is the vertical force we want to apply. The corresponding weak"
 " formulation term to be added to the rest of the weak formulation reads"
 msgstr ""
+"この乗数は垂直方向の変位を :math:`(0, -\\alpha_D)` "
+"とするために必要な境界応力を表します。乗数をリムの境界上で積分すると適用したい垂直方向の力になるように設定をします。追加される弱定式項の残りの対応部分の項についても見てみましょう。"
 
 #: ../source/tutorial/wheel.rst:200
 msgid ""
@@ -299,6 +313,9 @@ msgid ""
 "u^1).\\delta_{\\lambda_D} + (\\lambda_D.(0,1) + F)\\delta_{\\alpha_D} "
 "d\\Gamma = 0,"
 msgstr ""
+"\\cdots + \\int_{\\Gamma_D} -\\lambda_D.\\delta_{u^1} + ((0, \\alpha_D) - "
+"u^1).\\delta_{\\lambda_D} + (\\lambda_D.(0,1) + F)\\delta_{\\alpha_D} "
+"d\\Gamma = 0,"
 
 #: ../source/tutorial/wheel.rst:204
 msgid ""
@@ -345,7 +362,7 @@ msgstr "解の出力"
 
 #: ../source/tutorial/wheel.rst:243
 msgid "Now the code to export the solution with the VonMises stress:"
-msgstr ""
+msgstr "最後に、VonMises 応力の解を出力するコードを示します。"
 
 #: ../source/tutorial/wheel.rst:270
 msgid "Plot of the solution."
