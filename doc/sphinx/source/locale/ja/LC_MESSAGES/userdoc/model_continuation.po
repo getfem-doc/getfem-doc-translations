@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-24 12:36+0000\n"
+"POT-Creation-Date: 2019-10-25 12:39+0000\n"
 "PO-Revision-Date: 2018-07-16 07:07+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -338,7 +338,7 @@ msgstr "この近似を使って、予測子修正子を :math:`(Y_{j}, r \\tild
 msgid ""
 "In |gf|, the continuation is implemented for two ways of parameterization of"
 " the model:"
-msgstr ""
+msgstr "|gf| では、モデルパラメータ化の2つの連続の方法が実装されています。"
 
 #: ../source/userdoc/model_continuation.rst:175
 msgid ""
@@ -559,7 +559,7 @@ msgstr ""
 
 #: ../source/userdoc/model_continuation.rst:287
 msgid "\\det J(0) \\det J(1) < 0."
-msgstr ""
+msgstr "\\det J(0) \\det J(1) < 0."
 
 #: ../source/userdoc/model_continuation.rst:291
 msgid "To perform this test numerically, introduce"
@@ -567,7 +567,7 @@ msgstr "このテストを数値的に実行するために、以下を導入し
 
 #: ../source/userdoc/model_continuation.rst:293
 msgid "M(\\alpha) := \\begin{pmatrix}J(\\alpha)& B\\\\ C^{\\top}& d\\end{pmatrix}"
-msgstr ""
+msgstr "M(\\alpha) := \\begin{pmatrix}J(\\alpha)& B\\\\ C^{\\top}& d\\end{pmatrix}"
 
 #: ../source/userdoc/model_continuation.rst:297
 msgid "and :math:`\\tau_{\\mathrm{BP}}(\\alpha)` analogously as above via"
@@ -579,6 +579,9 @@ msgid ""
 "\\tau_{\\mathrm{BP}}(\\alpha)\\end{pmatrix} = \\begin{pmatrix}0\\\\ "
 "1\\end{pmatrix}."
 msgstr ""
+"M(\\alpha) \\begin{pmatrix}V(\\alpha)\\\\ "
+"\\tau_{\\mathrm{BP}}(\\alpha)\\end{pmatrix} = \\begin{pmatrix}0\\\\ "
+"1\\end{pmatrix}."
 
 #: ../source/userdoc/model_continuation.rst:303
 msgid "It follows from Cramer's rule that"
@@ -586,7 +589,7 @@ msgstr "これは、Cramer法から、次の通りとなります。"
 
 #: ../source/userdoc/model_continuation.rst:305
 msgid "\\tau_{\\mathrm{BP}}(\\alpha) = \\frac{\\det J(\\alpha)}{\\det M(\\alpha)}"
-msgstr ""
+msgstr "\\tau_{\\mathrm{BP}}(\\alpha) = \\frac{\\det J(\\alpha)}{\\det M(\\alpha)}"
 
 #: ../source/userdoc/model_continuation.rst:309
 msgid ""
@@ -637,6 +640,13 @@ msgid ""
 "\\tau_{\\mathrm{BP}}(\\alpha - \\delta) \\rvert > \\tau_{\\mathrm{fac}} "
 "\\tau_{\\mathrm{ref}}$,}\\\\ \\delta& \\text{otherwise},\\end{cases}"
 msgstr ""
+"\\delta := \\begin{cases}\\min\\{2\\delta, \\delta_{\\mathrm{max}}\\}& "
+"\\text{if $\\lvert \\tau_{\\mathrm{BP}}(\\alpha) - "
+"\\tau_{\\mathrm{BP}}(\\alpha - \\delta) \\rvert < 0.5 \\tau_{\\mathrm{fac}} "
+"\\tau_{\\mathrm{ref}}$,}\\\\ \\max\\{0.1\\delta, \\delta_{\\mathrm{min}}\\}&"
+" \\text{if $\\lvert \\tau_{\\mathrm{BP}}(\\alpha) - "
+"\\tau_{\\mathrm{BP}}(\\alpha - \\delta) \\rvert > \\tau_{\\mathrm{fac}} "
+"\\tau_{\\mathrm{ref}}$,}\\\\ \\delta& \\text{otherwise},\\end{cases}"
 
 #: ../source/userdoc/model_continuation.rst:329
 msgid ""
@@ -689,6 +699,8 @@ msgid ""
 "\\nabla F(\\tilde{Y}+h_{\\mathrm{min}}\\tilde{V}) V = 0, \\quad \\lVert V "
 "\\rVert_{w} = 1,"
 msgstr ""
+"\\nabla F(\\tilde{Y}+h_{\\mathrm{min}}\\tilde{V}) V = 0, \\quad \\lVert V "
+"\\rVert_{w} = 1,"
 
 #: ../source/userdoc/model_continuation.rst:354
 msgid ""
@@ -712,6 +724,8 @@ msgid ""
 "\\nabla F(\\tilde{Y}+h_{\\mathrm{min}}\\tilde{T}) \\tilde{V}_{2} = 0, \\quad"
 " \\lVert \\tilde{V}_{2} \\rVert_{w} = 1."
 msgstr ""
+"\\nabla F(\\tilde{Y}+h_{\\mathrm{min}}\\tilde{T}) \\tilde{V}_{2} = 0, \\quad"
+" \\lVert \\tilde{V}_{2} \\rVert_{w} = 1."
 
 #: ../source/userdoc/model_continuation.rst:366
 msgid ""
@@ -744,6 +758,9 @@ msgid ""
 "0.1\\frac{\\tilde{V}_{3}}{\\lVert \\tilde{V}_{3} \\rVert_{w}}\\Bigr)\\Bigr) "
 "\\tilde{V}_{2}^{+} = 0, \\quad \\lVert \\tilde{V}_{2}^{+} \\rVert_{w} = 1."
 msgstr ""
+"\\nabla F\\Bigl(\\tilde{Y}+h_{\\mathrm{min}}\\Bigl(\\tilde{V}_{2}^{-} + "
+"0.1\\frac{\\tilde{V}_{3}}{\\lVert \\tilde{V}_{3} \\rVert_{w}}\\Bigr)\\Bigr) "
+"\\tilde{V}_{2}^{+} = 0, \\quad \\lVert \\tilde{V}_{2}^{+} \\rVert_{w} = 1."
 
 #: ../source/userdoc/model_continuation.rst:382
 msgid ""
@@ -830,7 +847,7 @@ msgstr ""
 
 #: ../source/userdoc/model_continuation.rst:426
 msgid "Optionally, parameterization by a vector datum is then declared by::"
-msgstr ""
+msgstr "必要に応じて、ベクトルデータによるパラメータ化は、次のように宣言されます。"
 
 #: ../source/userdoc/model_continuation.rst:430
 msgid ""
