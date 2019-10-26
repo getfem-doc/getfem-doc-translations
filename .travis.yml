@@ -41,7 +41,7 @@ install:
 - git submodule update
 - (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
 - pip install -U pip setuptools
-- pip install -r ./requirements.txt
+- pip install -r ./requirements2.txt
 script:
 - cd getfem
 - bash autogen.sh
