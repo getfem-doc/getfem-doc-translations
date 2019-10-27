@@ -19,8 +19,10 @@ install:
 - pip install -r ./requirements.txt
 script:
 - cd doc/sphinx
-- (cat .tx/config;
-   tx push -s --skip --token=$TX_TOKEN;
+- (sphinx-intl create-transifexrc;
+   sphinx-build -T -b gettext source locale ;
+   sphinx-intl update-txconfig-resources -p locale -d source/locale;
+   cat .tx/config;
+   tx push -s --skip;
    rm -rf source/locale/ja;
-   tx pull -l ja --token=$TX_TOKEN)
-- cat .tx/config
+   tx pull -l ja)
