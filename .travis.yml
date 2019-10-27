@@ -23,7 +23,7 @@ install:
 script:
 - cd doc/sphinx
 - (cat .tx/config;
-   sudo TX_TOKEN=$TX_TOKEN tx init
+   tx init;
    tx push -s --skip;
    rm -rf source/locale/ja;
    tx pull -l ja)
