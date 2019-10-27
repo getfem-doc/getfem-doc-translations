@@ -13,23 +13,6 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_a10c131499f7_key -iv $encrypted_a10c131499f7_iv -in .secrets/key.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-- sudo apt-get install -y --no-install-recommends automake
-- sudo apt-get install -y --no-install-recommends libtool
-- sudo apt-get install -y --no-install-recommends make
-- sudo apt-get install -y --no-install-recommends g++
-- sudo apt-get install -y --no-install-recommends libqd-dev
-- sudo apt-get install -y --no-install-recommends libqhull-dev
-- sudo apt-get install -y --no-install-recommends libmumps-seq-dev
-- sudo apt-get install -y --no-install-recommends liblapack-dev
-- sudo apt-get install -y --no-install-recommends libopenblas-dev
-- sudo apt-get install -y --no-install-recommends libpython3-dev
-- sudo apt-get install -y --no-install-recommends ufraw
-- sudo apt-get install -y --no-install-recommends imagemagick
-- sudo apt-get install -y --no-install-recommends fig2dev
-- sudo apt-get install -y --no-install-recommends texlive
-- sudo apt-get install -y --no-install-recommends xzdec
-- sudo apt-get install -y --no-install-recommends fig2ps
-- sudo apt-get install -y --no-install-recommends gv
 - sudo apt-get install -y --no-install-recommends transifex-client
 addons:
   apt:
@@ -40,6 +23,7 @@ install:
 script:
 - cd doc/sphinx
 - (cat .tx/config;
+   sudo TX_TOKEN=$TX_TOKEN tx init
    tx push -s --skip;
    rm -rf source/locale/ja;
    tx pull -l ja)
