@@ -50,6 +50,7 @@ script:
 - sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
 - sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
 - sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
+- pip install sphinx-intl[transifex]
 - (cd doc/sphinx;
    make latex;
    make images;
