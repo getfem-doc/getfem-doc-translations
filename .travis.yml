@@ -20,8 +20,7 @@ install:
 script:
 - cd doc/sphinx
 - (cat .tx/config;
-   tx init --token=$TX_TOKEN --force --no-interactive;
-   tx push -s --skip;
+   tx push -s --skip --token=$TX_TOKEN;
    rm -rf source/locale/ja;
-   tx pull -l ja)
+   tx pull -l ja --token=$TX_TOKEN)
 - cat .tx/config
