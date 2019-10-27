@@ -30,52 +30,16 @@ before_install:
 - sudo apt-get install -y --no-install-recommends xzdec
 - sudo apt-get install -y --no-install-recommends fig2ps
 - sudo apt-get install -y --no-install-recommends gv
+- sudo apt-get install -y --no-intalll-recommends transifex-client
 addons:
   apt:
     update: true
 install:
-- git branch -a
-- git checkout master  # attach this repo
-- git submodule init
-- git submodule update
-- (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
 - pip install -U pip setuptools
 - pip install -r ./requirements.txt
 script:
-- cd getfem
-- bash autogen.sh
-- ./configure --with-pic --enable-python3=yes
-- make -j8  >  make.log
-- sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
-- sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
-- sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
-- sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
-- (cd doc/sphinx;
-   make latex;
-   make images;
-   sphinx-intl create-transifexrc;
-   sphinx-build -T -b gettext source locale ;
-   sphinx-intl update-txconfig-resources -p locale -d source/locale;
-   cat .tx/config;
+- (cat .tx/config;
    tx push -s --skip;
    rm -rf source/locale/ja;
    tx pull -l ja)
-- rm -rf ../doc
-- rm -rf ../interface
-- cp -r doc ../doc
-- cp -r interface ../interface
-- cd ../
 after_success:
-- git branch -a
-- git checkout master  # attach this repo
-- git config --global user.email "getfem-auto-update"
-- git config --global user.name "getfem-auto-update"
-- rm -rf doc/sphinx/build
-- rm -rf interface
-- git add .
-- |
-  git commit -m "[skip ci] by Travis CI (JOB $TRAVIS_JOB_NUMBER)
-  https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
-- git remote -v
-- git remote add github git@github.com:getfem-doc/getfem-doc-translations.git
-- git push github master
