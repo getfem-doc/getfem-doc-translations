@@ -53,6 +53,7 @@ script:
 - (cd doc/sphinx;
    make latex;
    make images;
+   tx init --token=$TX_TOKEN --force --no-interactive;
    sphinx-intl create-transifexrc;
    sphinx-build -T -b gettext source locale ;
    sphinx-intl update-txconfig-resources -p locale -d source/locale;
