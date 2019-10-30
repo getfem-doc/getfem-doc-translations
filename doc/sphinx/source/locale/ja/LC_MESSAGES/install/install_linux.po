@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-29 12:42+0000\n"
+"POT-Creation-Date: 2019-10-30 12:43+0000\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -157,36 +157,28 @@ msgstr ""
 
 #: ../source/install/install_linux.rst:104
 msgid ""
-"By default, the python interface is built and for python 2 version. You can "
+"By default, the python interface is built and for python 3 version. You can "
 "disable the built of the python interface with::"
 msgstr ""
 
 #: ../source/install/install_linux.rst:108
-msgid "or either build the interface for python 3 version with"
-msgstr ""
-
-#: ../source/install/install_linux.rst:110
-msgid "$ ./configure --enable-python3"
-msgstr "$ ./configure --enable-python3"
-
-#: ../source/install/install_linux.rst:113
 msgid ""
 "Note that there are other options to the configure script. A ``./configure "
 "--help`` will list them."
 msgstr ""
 
-#: ../source/install/install_linux.rst:119
+#: ../source/install/install_linux.rst:114
 msgid ""
 "On linux/x86_64 platforms, a mandatory option when building |gf| (and any "
 "static library linked to them) is the ``--with-pic`` option of their "
 "``./configure`` script."
 msgstr ""
 
-#: ../source/install/install_linux.rst:126
+#: ../source/install/install_linux.rst:121
 msgid "Scilab interface"
 msgstr ""
 
-#: ../source/install/install_linux.rst:128
+#: ../source/install/install_linux.rst:123
 msgid ""
 "The installation of the |sci| |gf| toolbox can be somewhat tricky, since it "
 "combines a C++ compiler, libraries and |sci| interaction. In case of "
@@ -194,11 +186,11 @@ msgid ""
 "solution."
 msgstr ""
 
-#: ../source/install/install_linux.rst:134
+#: ../source/install/install_linux.rst:129
 msgid "The minimal |sci| release is the 5.2.2."
 msgstr ""
 
-#: ../source/install/install_linux.rst:136
+#: ../source/install/install_linux.rst:131
 msgid ""
 "you should have built the |gf| static library (i.e. do not use ``./configure"
 " --disable-static`` when building |gf|). On linux/x86_64 platforms, a "
@@ -207,67 +199,67 @@ msgid ""
 "``./configure`` script."
 msgstr ""
 
-#: ../source/install/install_linux.rst:141
+#: ../source/install/install_linux.rst:136
 msgid ""
 "you should have use the ``--enable-scilab`` option to configure the |gf| "
 "sources (i.e. ``./configure --enable-scilab`` ...)"
 msgstr ""
 
-#: ../source/install/install_linux.rst:143
+#: ../source/install/install_linux.rst:138
 msgid ""
 "You may also use ``--with-scilab-toolbox-dir=toolbox_dir`` to change the "
 "default toolbox installation directory (``gfdest_dir/getfem_toolbox``). Use "
 "``./configure --help`` for more options."
 msgstr ""
 
-#: ../source/install/install_linux.rst:146
+#: ../source/install/install_linux.rst:141
 msgid ""
 "With this, since the Scilab interface is contained into the |gf| sources (in"
 " the directory interface/src) you can compile both the |gf| library and the "
 "Scilab interface by ::"
 msgstr ""
 
-#: ../source/install/install_linux.rst:150
+#: ../source/install/install_linux.rst:145
 msgid "Optionally, you can install it with ::"
 msgstr ""
 
-#: ../source/install/install_linux.rst:154
-#: ../source/install/install_linux.rst:202
+#: ../source/install/install_linux.rst:149
+#: ../source/install/install_linux.rst:197
 msgid ""
 "If you want to use a different compiler than the one chosen automatically by"
 " the ``./configure`` script, just specify its name on the command line: "
 "``./configure CXX=mycompiler``."
 msgstr ""
 
-#: ../source/install/install_linux.rst:157
+#: ../source/install/install_linux.rst:152
 msgid "Once getfem is compiled:"
 msgstr ""
 
-#: ../source/install/install_linux.rst:159
+#: ../source/install/install_linux.rst:154
 msgid ""
 "Go to the scilab getfem++ interface install directory (interface/src/scilab "
 "if the installation is not done)"
 msgstr ""
 
-#: ../source/install/install_linux.rst:161
+#: ../source/install/install_linux.rst:156
 msgid "launch scilab"
 msgstr ""
 
-#: ../source/install/install_linux.rst:163
+#: ../source/install/install_linux.rst:158
 msgid "load the getfem++ toolbox with: ``exec loader.sce;``"
 msgstr ""
 
-#: ../source/install/install_linux.rst:166
+#: ../source/install/install_linux.rst:161
 msgid ""
 "You can try to launch a demo with: ``cd demos;`` ``exec "
 "demo_static_contact.sce;``"
 msgstr ""
 
-#: ../source/install/install_linux.rst:172
+#: ../source/install/install_linux.rst:167
 msgid "Matlab interface"
 msgstr ""
 
-#: ../source/install/install_linux.rst:174
+#: ../source/install/install_linux.rst:169
 msgid ""
 "The installation of the |gfi| toolbox can be somewhat tricky, since it "
 "combines a C++ compiler, libraries and |Mlab| interaction... In case of "
@@ -275,7 +267,7 @@ msgid ""
 "solution."
 msgstr ""
 
-#: ../source/install/install_linux.rst:181
+#: ../source/install/install_linux.rst:176
 msgid ""
 "you should have built the |gf| static library (i.e. do not use ``./configure"
 " --disable-static`` when building |gf|). On linux/x86_64 platforms, a "
@@ -283,27 +275,27 @@ msgid ""
 " to them) is the ``--with-pic`` option of their ``./configure`` script."
 msgstr ""
 
-#: ../source/install/install_linux.rst:186
+#: ../source/install/install_linux.rst:181
 msgid ""
 "you should have use the --enable-matlab option to configure the |gf| sources"
 " (i.e. ./configure --enable-matlab ...)"
 msgstr ""
 
-#: ../source/install/install_linux.rst:188
+#: ../source/install/install_linux.rst:183
 msgid ""
 "You may also use ``--with-matlab-toolbox-dir=toolbox_dir`` to change the "
 "default toolbox installation directory (``gfdest_dir/getfem_toolbox``). Use "
 "``./configure --help`` for more options."
 msgstr ""
 
-#: ../source/install/install_linux.rst:191
+#: ../source/install/install_linux.rst:186
 msgid ""
 "With this, since the Matlab interface is contained into the |gf| sources (in"
 " the directory interface/src) you can compile both the |gf| library and the "
 "Matlab interface by ::"
 msgstr ""
 
-#: ../source/install/install_linux.rst:195
+#: ../source/install/install_linux.rst:190
 msgid ""
 "An optional step is ``make check`` in order to check the matlab interface "
 "(this sets some environment variables and runs the ``check_all.m`` script "
@@ -312,29 +304,29 @@ msgid ""
 "M-Files will be copied in ``toolbox_dir``)::"
 msgstr ""
 
-#: ../source/install/install_linux.rst:204
+#: ../source/install/install_linux.rst:199
 msgid ""
 "When the library is installed, you may have to set the ``LD_LIBRARY_PATH`` "
 "environment variable to the directory containing the ``libgetfem.so`` and "
 "``libgetfemint.so``, which is ``gfdest_dir/lib``::"
 msgstr ""
 
-#: ../source/install/install_linux.rst:210
+#: ../source/install/install_linux.rst:205
 msgid "The last step is to add the path to the toolbox in the matlab path:"
 msgstr ""
 
-#: ../source/install/install_linux.rst:212
+#: ../source/install/install_linux.rst:207
 msgid ""
 "you can set the environment variable ``MATLABPATH`` to ``toolbox_dir`` "
 "(``export MATLABPATH=toolbox_dir`` for example)."
 msgstr ""
 
-#: ../source/install/install_linux.rst:214
+#: ../source/install/install_linux.rst:209
 msgid ""
 "you can put ``addpath('toolbox_dir')`` to your ``$HOME/matlab/startup.m``"
 msgstr ""
 
-#: ../source/install/install_linux.rst:216
+#: ../source/install/install_linux.rst:211
 msgid ""
 "A very classical problem at this step is the incompatibility of the C and "
 "C++ libraries used by Matlab. Matlab is distributed with its own libc and "
@@ -342,7 +334,7 @@ msgid ""
 "tries to use a command of the interface::"
 msgstr ""
 
-#: ../source/install/install_linux.rst:221
+#: ../source/install/install_linux.rst:216
 msgid ""
 "In order to fix this problem one has to enforce Matlab to load the C and C++"
 " libraries of the system. There is two possibilities to do this. The most "
@@ -350,25 +342,25 @@ msgid ""
 "(if you have administrator privileges ...!) for instance with::"
 msgstr ""
 
-#: ../source/install/install_linux.rst:227
+#: ../source/install/install_linux.rst:222
 msgid ""
 "The second possibility is to set the variable LDPRELOAD before launching "
 "Matlab for instance with (depending on the system)::"
 msgstr ""
 
-#: ../source/install/install_linux.rst:231
+#: ../source/install/install_linux.rst:226
 msgid ""
 "More specific instructions can be found in the ``README*`` files of the "
 "distribution."
 msgstr ""
 
-#: ../source/install/install_linux.rst:234
+#: ../source/install/install_linux.rst:229
 msgid ""
 "A few precompiled versions of the Matlab interface are available on the "
 "`download and install <../download.html>`_ page of |gf|."
 msgstr ""
 
-#: ../source/install/install_linux.rst:237
+#: ../source/install/install_linux.rst:232
 msgid ""
 "A second problem arising with recent distribution of Matlab (2016a), is the "
 "incompatibility of some libraries with ILP64 version of MKL loaded by MATLAB"
