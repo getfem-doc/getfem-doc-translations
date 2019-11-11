@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-10 12:44+0000\n"
+"POT-Creation-Date: 2019-11-11 12:45+0000\n"
 "PO-Revision-Date: 2019-09-25 04:03+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +23,7 @@ msgstr ""
 
 #: ../source/userdoc/hho.rst:10
 msgid "Tools for HHO (Hybrid High-Order) methods"
-msgstr ""
+msgstr "HHO (Hybrid High-Order) 法用ツール"
 
 #: ../source/userdoc/hho.rst:14
 msgid ""
@@ -48,7 +52,7 @@ msgstr ""
 
 #: ../source/userdoc/hho.rst:19
 msgid "HHO elements"
-msgstr ""
+msgstr "HHO要素"
 
 #: ../source/userdoc/hho.rst:21
 msgid ""
@@ -96,7 +100,7 @@ msgstr ""
 
 #: ../source/userdoc/hho.rst:35
 msgid "Reconstruction operators"
-msgstr ""
+msgstr "再構築演算子"
 
 #: ../source/userdoc/hho.rst:37
 msgid ""
@@ -109,7 +113,7 @@ msgstr ""
 
 #: ../source/userdoc/hho.rst:40
 msgid "Reconstructed gradient"
-msgstr ""
+msgstr "再構築された勾配"
 
 #: ../source/userdoc/hho.rst:42
 msgid ""
@@ -123,6 +127,8 @@ msgid ""
 "\\int_T G(u):\\tau dx = \\int_T \\nabla u_T : \\tau dx + \\int_{\\partial T}"
 " (u_{\\partial T} - u_{T}).(\\tau n_T) d\\Gamma, ~~~ \\forall \\tau \\in V_G"
 msgstr ""
+"\\int_T G(u):\\tau dx = \\int_T \\nabla u_T : \\tau dx + \\int_{\\partial T}"
+" (u_{\\partial T} - u_{T}).(\\tau n_T) d\\Gamma, ~~~ \\forall \\tau \\in V_G"
 
 #: ../source/userdoc/hho.rst:47
 msgid ""
@@ -190,12 +196,17 @@ msgid ""
 "\\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\tau^s n_T) d\\Gamma, ~~~ "
 "\\forall \\tau \\in V_G"
 msgstr ""
+"\\int_T G^s(u):\\tau dx = \\int_T \\nabla^s u_T : \\tau dx + "
+"\\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\tau^s n_T) d\\Gamma, ~~~ "
+"\\forall \\tau \\in V_G"
 
 #: ../source/userdoc/hho.rst:84
 msgid ""
 "where :math:`\\nabla^s u_T = (\\nabla u_T + (\\nabla u_T)^T)/2` and "
 ":math:`\\tau^s = (\\tau + \\tau^T)/2`."
 msgstr ""
+"where :math:`\\nabla^s u_T = (\\nabla u_T + (\\nabla u_T)^T)/2` and "
+":math:`\\tau^s = (\\tau + \\tau^T)/2`."
 
 #: ../source/userdoc/hho.rst:86
 msgid ""
@@ -229,6 +240,9 @@ msgid ""
 "\\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\nabla v n_T) d\\Gamma, ~~~ "
 "\\forall v \\in V_D"
 msgstr ""
+"\\int_T \\nabla D(u). \\nabla v dx = \\int_T \\nabla u_T . \\nabla v dx + "
+"\\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\nabla v n_T) d\\Gamma, ~~~ "
+"\\forall v \\in V_D"
 
 #: ../source/userdoc/hho.rst:100
 msgid "with the additional constraint"
@@ -236,7 +250,7 @@ msgstr ""
 
 #: ../source/userdoc/hho.rst:102
 msgid "\\int_T D(u) dx = \\int_T u_T dx"
-msgstr ""
+msgstr "\\int_T D(u) dx = \\int_T u_T dx"
 
 #: ../source/userdoc/hho.rst:106 ../source/userdoc/hho.rst:130
 msgid ""
@@ -270,6 +284,9 @@ msgid ""
 " dx + \\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\nabla^s v n_T) "
 "d\\Gamma, ~~~ \\forall v \\in V_D"
 msgstr ""
+"\\int_T \\nabla^s D(u). \\nabla^s v dx = \\int_T \\nabla^s u_T . \\nabla^s v"
+" dx + \\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\nabla^s v n_T) "
+"d\\Gamma, ~~~ \\forall v \\in V_D"
 
 #: ../source/userdoc/hho.rst:120
 msgid "with the additional constraints"
@@ -281,6 +298,9 @@ msgid ""
 "= \\int_{\\partial T} (n_T \\otimes u_{\\partial T} - u_{\\partial T} "
 "\\otimes n_T)/2 d\\Gamma"
 msgstr ""
+"& \\int_T D(u) dx = \\int_T u_T dx   &\\int_T \\mbox{Skew}(\\nabla D(u)) dx "
+"= \\int_{\\partial T} (n_T \\otimes u_{\\partial T} - u_{\\partial T} "
+"\\otimes n_T)/2 d\\Gamma"
 
 #: ../source/userdoc/hho.rst:128
 msgid ""
