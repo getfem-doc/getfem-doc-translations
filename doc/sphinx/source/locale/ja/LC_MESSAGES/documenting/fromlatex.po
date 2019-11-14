@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# 今井俊介 <imai.shunsuke@ark-info-sys.co.jp>, 2019
 # Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 今井俊介 <imai.shunsuke@ark-info-sys.co.jp>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-13 12:50+0000\n"
+"POT-Creation-Date: 2019-11-14 04:20+0000\n"
 "PO-Revision-Date: 2018-07-16 07:12+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Last-Translator: 今井俊介 <imai.shunsuke@ark-info-sys.co.jp>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,7 +110,7 @@ msgstr "*cmacro* (以前の *csimplemacro*)"
 
 #: ../source/documenting/fromlatex.rst:0
 msgid "*ctype*"
-msgstr ""
+msgstr "*ctype*"
 
 #: ../source/documenting/fromlatex.rst:39
 msgid ""
@@ -124,45 +124,48 @@ msgstr ""
 #: ../source/documenting/fromlatex.rst:45
 msgid "**Inline commands implemented as directives**"
 msgstr ""
+"また、* func *と* meth *の処理も異なります。以前は呼び出し可能な名前に括弧が追加されていました（ `` \\ func {str（）} "
+"``など）が、ビルドシステムによって追加されるようになりました。ソースでは二重括弧になります。これは、 ``：func： `str（object）` "
+"``が期待通りに動作しないことも意味します-代わりに `` `` str（object） `` ``を使用してください"
 
 #: ../source/documenting/fromlatex.rst:47
 msgid "These were inline commands in LaTeX, but are now directives in reST:"
-msgstr ""
+msgstr "これらはLaTeXのインラインコマンドでしたが、現在はreSTのディレクティブです。"
 
 #: ../source/documenting/fromlatex.rst:0
 msgid "*deprecated*"
-msgstr ""
+msgstr "*廃止*"
 
 #: ../source/documenting/fromlatex.rst:0
 msgid "*versionadded*"
-msgstr ""
+msgstr "*バージョン追加*"
 
 #: ../source/documenting/fromlatex.rst:0
 msgid "*versionchanged*"
-msgstr ""
+msgstr "*バージョン変更*"
 
 #: ../source/documenting/fromlatex.rst:53
 #: ../source/documenting/fromlatex.rst:64
 msgid "These are used like so::"
-msgstr ""
+msgstr "これらは次のように使用されます。"
 
 #: ../source/documenting/fromlatex.rst:58
 msgid ""
 "Also, no period is appended to the text for *versionadded* and "
 "*versionchanged*."
-msgstr ""
+msgstr "また、* versionadded *および* versionchanged *のテキストにピリオドは追加されません。"
 
 #: ../source/documenting/fromlatex.rst:0
 msgid "*note*"
-msgstr ""
+msgstr "*注意*"
 
 #: ../source/documenting/fromlatex.rst:0
 msgid "*warning*"
-msgstr ""
+msgstr "*警告*"
 
 #: ../source/documenting/fromlatex.rst:70
 msgid "**Otherwise changed commands**"
-msgstr ""
+msgstr "**その他の変更されたコマンド**"
 
 #: ../source/documenting/fromlatex.rst:72
 msgid ""
@@ -170,20 +173,24 @@ msgid ""
 "around it.  The *samp* role, however, features a new highlighting system "
 "just like *file* does:"
 msgstr ""
+"* samp *コマンドは、以前はコードをフォーマットし、その周りに引用符を追加しました。ただし、* samp *ロールは、* file "
+"*と同じように新しい強調表示システムを備えています。"
 
 #: ../source/documenting/fromlatex.rst:76
 msgid ""
 "``:samp:`open({filename}, {mode})``` results in :samp:`open({filename}, "
 "{mode})`"
 msgstr ""
+"``：samp： `open（{filename}、{mode}）` ``の結果は：samp： "
+"`open（{filename}、{mode}）`になります"
 
 #: ../source/documenting/fromlatex.rst:78
 msgid "**Dropped commands**"
-msgstr ""
+msgstr "**ドロップされたコマンド**"
 
 #: ../source/documenting/fromlatex.rst:80
 msgid "These were commands in LaTeX, but are not available as roles:"
-msgstr ""
+msgstr "これらはLaTeXのコマンドでしたが、ロールとしては使用できません。"
 
 #: ../source/documenting/fromlatex.rst:0
 msgid "*bfcode*"
