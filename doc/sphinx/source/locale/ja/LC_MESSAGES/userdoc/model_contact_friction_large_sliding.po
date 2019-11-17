@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-16 12:51+0000\n"
+"POT-Creation-Date: 2019-11-17 12:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:12
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:12
 msgid "Large sliding/large deformation contact with friction bricks"
 msgstr "摩擦ブリック要素との有限すべり/有限変形接触"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:14
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:14
 msgid ""
 "The basic tools to deal with large sliding/large deformation contact of "
 "deformable structures are accessible in the weak form language. Some "
@@ -40,17 +40,17 @@ msgstr ""
 "high-transf` "
 "を参照）は接触検出を実行し、反対側の境界境界にある接触境界から積分できるように定義されています。実際の構成における単位法線ベクトルやCoulomb摩擦との接触を考慮する投影などの他の有用なツールも弱形式言語の演算子として定義されています。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:16
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:16
 msgid ""
 "Of course, the computational cost of large sliding/large deformation contact"
 " algorithms is greatly higher than small sliding-small deformation ones."
 msgstr "もちろん、大スライド/有限変形接触アルゴリズムの計算コストは小スライド-小変形よりも大幅に高くなります。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:21
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:21
 msgid "Raytracing interpolate transformation"
 msgstr "レイトレーシング補間変換"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:23
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:23
 msgid ""
 "In order to incorporate the contact detection in the high-level generic "
 "assembly, a specific interpolate transformation has been defined (see :ref"
@@ -67,7 +67,7 @@ msgstr ""
 "に記載されているレイトレーシング接触検出に基づいており、以下で説明する基準を使用します。補間変換は、異なる可能性のある接触面を記憶します。ほとんどの方法で、潜在的接触面はマスターとスレーブの2つのカテゴリに分類されます（"
 " :ref:`図 <ud-fig-masterslave>` を参照）。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:31
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:31
 msgid ""
 "The slave surface is the \"contactor\" and the master one the \"target\". "
 "Rigid obstacle are also considered. They are always master surfaces.  The "
@@ -81,7 +81,7 @@ msgstr ""
 "です。剛支障も考慮されます。それらは常にマスター表面です。基本的な規則は、スレーブ表面とマスタ面の間で接触が考慮されることです。しかし、マルチコンタクトフレームオブジェクトと"
 " |gf| 要素は2つのマスター表面間の接触、マスター表面と任意の数のスレーブ表面とマスター表面の自己接触を含む複数接触の状況を可能にします。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:33
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:33
 msgid ""
 "Basically, in order to detect the contact pairs, Gauss points or f.e.m. "
 "nodes of slave surfaces are projected on master surfaces (see  :ref:`figure"
@@ -91,25 +91,25 @@ msgstr ""
 "基本的には、接触対を検出するために、Gauss点またはスレーブ表面の有限要素法節点はマスター表面に投影されます（ :ref:`図 <ud-fig-"
 "masterslave>` を参照）。自己接触が考慮される場合、Gauss点またはマスター表面の有限要素法節点もマスター表面に投影されます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:36
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:36
 msgid "The addition of a raytracing transformation to a model::"
 msgstr "レイトレーシング変換のモデルへの追加は次の通りです。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:41
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:41
 msgid ""
 "where ``transname`` is a name given to the transformation which allows to "
 "refer to it in the weak form language and ``d`` is the release distance (see"
 " above)."
 msgstr "ここで ``transname`` は弱形式言語でそれを参照できる変換に与えられた名前で、 ``d`` は解放距離です（上記参照）。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:43
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:43
 msgid ""
 "The raytracing transformation is added without any slave or master contact "
 "boundary. The following functions allows to add some boundaries to the "
 "transformation::"
 msgstr "レイトレーシング変換はスレーブまたはマスターの接触境界なしで追加されます。次の関数は変換にいくつかの境界を追加することを可能にします。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:53
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:53
 msgid ""
 "where ``dispname`` is the variable name which represent the displacement on "
 "that contact boundary. The difference between master and slave contact "
@@ -121,13 +121,13 @@ msgstr ""
 "ここで、 ``dispname`` "
 "はその接触境界上の変位を表す変数名です。マスタとスレーブの接触境界の違いは、スレーブまたはマスタ境界からマスタ境界に向かって接触検出を実行することです。接触検出はスレーブ境界に向かって行われません。その結果、マスター表面の要素の影響ボックスのみが計算され格納されます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:56
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:56
 msgid ""
 "It is also possible to add a rigid obstacle (considered as a master surface)"
 " thanks to the function::"
 msgstr "次の関数で剛支障（マスター表面とみなされる）を追加することも可能です。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:62
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:62
 msgid ""
 "where ``expr`` is the expression of a signed distance to the obstacle using "
 "the syntax of the weak form language (``X`` being the current position, "
@@ -141,7 +141,7 @@ msgstr ""
 "``X(1)`` ...対応する成分）。たとえば、式 ``X(0) + 5`` は最初の座標の位置 ``-5`` "
 "の右側にある平坦な障害物に対応します。式は符号付き距離に近いものでなければならないことに注意してください。特に、勾配ノルムは1に近づく必要があります。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:64
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:64
 msgid ""
 "In order to distinguish between non-contact situations and the occurence of "
 "a contact with another deformable body or with a rigid obstacle, the "
@@ -152,25 +152,25 @@ msgstr ""
 "非接触の状況と他の変形可能な物体との接触、または堅い障害物との接触を微分するために、変換は、弱形式言語の `Interpolate_filter` "
 "コマンドによって使用される整数識別を返します（ :ref:`ud-gasm-high-transf` を参照）。戻り値は次の通りです。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:66
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:66
 msgid "0 : no contact found on this Gauss point"
 msgstr "0：このGauss点で接点が見つかりません"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:68
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:68
 msgid "1 : contact occurs on this Gauss point with a deformable body"
 msgstr "1：このGauss点で変形可能な物体と接触します"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:70
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:70
 msgid "2 : contact occurs on this Gauss point with a rigid obstacle."
 msgstr "2：このGauss点で剛体の障害物と接触します"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:72
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:72
 msgid ""
 "such that it is possible to differentiate the treatment of these three cases"
 " using::"
 msgstr "これらの3つの場合、次のように微分することが可能です。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:78
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:78
 msgid ""
 "in the weak form language, where ``expr1``, ``expr2`` and ``expr3`` "
 "correspond to the different terms to be computed. The matlab interface demo "
@@ -181,7 +181,7 @@ msgstr ""
 "matlabインタフェースのデモプログラム "
 ":file:`/interface/tests/matlab/demo_large_sliding_contact.m` は、使用例を示しています。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:80
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:80
 msgid ""
 "Note that the transformation could also be directly used with a "
 "`ga_workspace` object if model object are not used. See "
@@ -193,11 +193,11 @@ msgstr ""
 ":file:`getfem/getfem_contact_and_friction_common.h` "
 "を参照してください。また、modelオブジェクトのフレームワークでは、この変換のインターフェース使用が、以下に説明するモデルブリック要素によって許可されることにも注意してください。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:84
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:84
 msgid "The contact pair detection algorithm"
 msgstr "接触対検出アルゴリズム"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:86
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:86
 msgid ""
 "A contact pair is formed by a point of a slave (or master in case of self-"
 "contact) surface and a projected point on the nearest master surface (or "
@@ -207,7 +207,7 @@ msgstr ""
 "接触対は、スレーブ（または自己接触の場合はマスター）の点と、最も近いマスター表面（または剛性の障害物）の投影点とによって形成されます。使用されたアルゴリズムは"
 " :ref:`図 <ud-fig-algodetect>` のように整理されます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:95
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:95
 msgid ""
 "It is impossible to distinguish without fail between valid and invalid "
 "contact situations without a global topological criterion (such as in "
@@ -224,11 +224,11 @@ msgstr ""
 " :ref:`図 <ud-fig-invalidcontact>` "
 "では、条件を微分しなければならない有効なまたは無効な接触先の数の状況を見ることができます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:109
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:109
 msgid "Some details on the algorithm:"
 msgstr "アルゴリズムの詳細は次の通りです。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:111
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:111
 msgid ""
 "**Computation of influence boxes.** The influence box of an element is just "
 "an offset to its bounding box at a distance equal to the release distance. "
@@ -243,7 +243,7 @@ msgstr ""
 "要素の影響ボックスは、放出距離に等しい距離でその境界ボックスのオフセットだけです。この戦略を使用する場合、リリース距離は要素サイズに比べて大きすぎるべきではありません。さもなければ、ポイントは接触対の検索をかなり減速させる多数の影響ボックスに対応します。インフルエンスボックスは、領域ツリーオブジェクトに格納され、平均複雑度を有するアルゴリズムを有する点を含むボックスを、"
 " :math:`O(log(N))` で見つけます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:120
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:120
 msgid ""
 "**What is a potential contact pair.** A potential contact pair is a pair "
 "slave point - master element face which will be investigated. The projection"
@@ -253,7 +253,7 @@ msgstr ""
 "**潜在的な接触対とは何か。** 潜在的な接触対は調査されるスレーブポイント - "
 "マスターエレメント面のペアです。マスタ表面上のスレーブポイントの投影が行われ、基準が適用されます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:125
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:125
 msgid ""
 "**Projection algorithm.** The projection of the slave point onto a master "
 "element face is done by a parametrization of the surface on the reference "
@@ -272,11 +272,11 @@ msgstr ""
 " ``raytrace`` "
 "がtrueに設定されている場合、投影は計算されません。その代わりに、点xからの単位法線ベクトルの方向にyを見つけるためにレイトレーシングします。これは、通常の状況の逆を意味します（xはyの投影です）。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:137
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:137
 msgid "The list of criteria:"
 msgstr "基準のリストは"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:139
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:139
 msgid ""
 "**Criterion 1: the unit normal cone/vector should be compatible, and the two"
 " points do not share the same element.** Two unit normal vector are "
@@ -296,7 +296,7 @@ msgstr ""
 " ``cut_angle`` "
 "よりも小さい場合、ノーマルコーンは平均法線ベクトルに縮小されます。この基準は、問題（B）および（K1）に対応することを可能にします。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:151
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:151
 msgid ""
 "**Criterion 2: the contact pair is eliminated when the search of the "
 "projection/raytrace point do not converge.** When Newton's algorithms (and "
@@ -307,7 +307,7 @@ msgstr ""
 "**基準2：投影/レイトレースポイントの検索が収束しない場合、接触対は削除されます。** "
 "マスターエレメント上のスレーブポイントの投影/レイトレースを計算するために使用されたNewton法（および投影用のBFGS）表面が収束しない場合、対は考慮されず警告が生成されます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:157
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:157
 msgid ""
 "**Criterion 3 : the projected point should be inside the element.** The "
 "slave point is projected on the surface of the master element without the "
@@ -322,7 +322,7 @@ msgstr ""
 "スレーブポイントは、面の内側に留まるという制約なしにマスター要素の表面に投影されます（つまり、面が長くなることを意味します）。正射影が顔の外側にある場合、ペアは考慮されません。しかし、現状では、問題（J3）に対応するためには、随意の対応が考慮されなければなりません（この点では拘束を受けて顔に投影し、この時点で正常な円錐を試験する）。この基準は、"
 " （F2）、（K2）、（M1）、（M2）のケースに対応できます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:168
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:168
 msgid ""
 "**Criterion 4 : the release distance is applied.** If the distance between "
 "the slave point and its projection on the master surface is greater than the"
@@ -333,7 +333,7 @@ msgstr ""
 "**基準4：リリース距離が適用されます。** "
 "スレーブポイントとマスター表面上の投影間の距離がリリース距離より大きい場合、接触対は考慮されません。リリース距離が適応され、変形がそれほど重要でない場合、（C）、（E）、（F1）、（G）、（H）の場合を処理できます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:174
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:174
 msgid ""
 "**Criterion 5 : comparison with rigid obstacles.** If the signed distance "
 "between the slave point and its projection on the master surface is greater "
@@ -344,7 +344,7 @@ msgstr ""
 "**判定基準5：堅い障害物との比較** "
 "スレーブポイントとマスタ表面上の投影との間の符号付き距離が、堅い障害物を有するものより大きい場合（リリース距離が剛性障害物にも最初に適用されることを考慮して）接触対は考慮されません。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:180
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:180
 msgid ""
 "**Criterion 6 : for self-contact only : apply a test on unit normals in "
 "reference configuration.** In case of self contact, a contact pair is "
@@ -356,18 +356,18 @@ msgstr ""
 "**基準6：自己接触のみ：基準構成における単位法線の試験を適用します。** "
 "自己接触の場合、スレーブ点とマスター要素が同じメッシュに属し、スレーブポイントはマスタ面の背後にあり（ユニットの外向きの法線ベクトルに対して）、リリース距離の4倍も離れていません。これは、問題（A）、（C）、（D）、（H）に対応することができます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:188
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:188
 msgid ""
 "**Criterion 7 : smallest signed distance on contact pairs.** Between the "
 "retained contact pairs (or rigid obstacle) the one corresponding to the "
 "smallest signed distance is retained."
 msgstr "**基準7：接触対の最小符号付距離** 保持された接触対（または剛性障害物）の間で、符号付き最小距離に対応するものが保持されます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:196
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:196
 msgid "Nodal contact brick with projection"
 msgstr "投影による節点接触要素"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:198
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:198
 msgid ""
 "Notations: :math:`\\Omega \\subset \\Reel^d` denotes the reference "
 "configuration of a deformable body, possibly constituted by several "
@@ -401,7 +401,7 @@ msgstr ""
 "は変形に関する量 :math:`A` と方向 :math:`B` の指向性導関数を表す。同様に、表記 :math:`\\delta^2 A[B,C]` "
 "は方向 :math:`B` と方向 :math:`C` の2階導関数を示す。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:202
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:202
 msgid ""
 "Let :math:`J(\\varphi^h)` be the potential energy of the system, without "
 "taking into account contact and friction contributions. Typically, it "
@@ -420,7 +420,7 @@ msgstr ""
 ":math:`X_i` は次のようにします。 :math:`i \\in I_{\\text{rig}}` "
 "は、堅い障害物と接触する可能性のある接触節点です。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:204
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:204
 msgid ""
 "We denote by :math:`x_i = \\varphi^h(X_i)` the corresponding node on the "
 "deformed configuration and :math:`y_i` the projection on the master surface "
@@ -432,7 +432,7 @@ msgstr ""
 "は変形された構成のマスター表面（または剛体の障害物）の投影です。 :math:`Y_i` はマスター表面上点を確認する :math:`y_i = "
 "\\varphi^h(Y_i)` です。これにより、通常のギャップを次のように定義できます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:206
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:206
 msgid ""
 "g_i = n_y . (\\varphi^h(X_i) - \\varphi^h(Y_i)) = \\|\\varphi^h(X_i) - "
 "\\varphi^h(Y_i)\\| \\text{Sign}(n_y . (\\varphi^h(X_i) - \\varphi^h(Y_i))),"
@@ -440,13 +440,13 @@ msgstr ""
 "g_i = n_y . (\\varphi^h(X_i) - \\varphi^h(Y_i)) = \\|\\varphi^h(X_i) - "
 "\\varphi^h(Y_i)\\| \\text{Sign}(n_y . (\\varphi^h(X_i) - \\varphi^h(Y_i))),"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:210
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:210
 msgid ""
 "where :math:`n_y` is the outward unit normal vector of the master surface at"
 " :math:`y`."
 msgstr "ここで、 :math:`n_y` は、 :math:`y` のマスター表面の外向きの単位法線ベクトルです。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:212
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:212
 msgid ""
 "Considering only stationnary rigid obstacles and applying the principle of "
 "Alart-Curnier augmented Lagrangian [AL-CU1991]_, the problem with nodal "
@@ -456,7 +456,7 @@ msgstr ""
 "定常剛性障害物のみを考慮し、Alart-Curnier Lagrangian [AL-CU1991]_ "
 "の原理を適用すると、摩擦条件との節点接触の問題は非対称バージョンで次のように表すことができる（線形弾性のケース）。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:214
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:214
 msgid ""
 "\\left\\{\\begin{array}{l} \\mbox{Find } \\varphi^h \\in V^h \\mbox{ such "
 "that } \\\\ \\displaystyle \\delta J(\\varphi^h)[\\delta u^h] - \\sum_{i "
@@ -484,25 +484,25 @@ msgstr ""
 "W_T(X_i)))\\right)\\right]= 0  ~~\\forall i \\in I_{\\text{rig}}, "
 "\\end{array}\\right."
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:223
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:223
 msgid "where :math:`W_T, \\alpha, P_{n_y, {\\mathscr F}}` ... + tangent system"
 msgstr "ここで、 :math:`W_T, \\alpha, P_{n_y, {\\mathscr F}}` ... + 接線系"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:227
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:227
 msgid "Sorry, for the moment the brick is not working."
 msgstr "申し訳ありませんが、このブリック要素は動作していません。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:232
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:232
 msgid "Tools of the high-level generic assembly for contact with friction"
 msgstr "摩擦接触のための高水準汎用構築のツール"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:234
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:234
 msgid ""
 "The following nonlinear operators are defined in the weak form language (see"
 " :ref:`ud-gasm-high`):"
 msgstr "次の非線形演算子は、弱形式言語で定義されています（ :ref:`ud-gasm-high` 参照）。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:236
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:236
 msgid ""
 "``Transformed_unit_vector(Grad_u, n)`` where ``Grad_u`` is the gradient of a"
 " displacement field and ``n`` a unit vector in the reference configuration. "
@@ -511,15 +511,15 @@ msgstr ""
 "``Transformed_unit_vector(Grad_u, n)`` ここで ``Grad_u`` は変位フィールドの勾配であり、 ``n`` "
 "は参照構成の単位ベクトルです。この非線形演算子は、以下の通りです。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:240
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:240
 msgid "n_{trans} = \\Frac{(I+ \\nabla u)^{-T} n}{\\|(I+\\nabla u)^{-T} n\\|}"
 msgstr "n_{trans} = \\Frac{(I+ \\nabla u)^{-T} n}{\\|(I+\\nabla u)^{-T} n\\|}"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:244
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:244
 msgid "with the following partial derivatives"
 msgstr "偏微分は以下の通りです。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:246
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:246
 msgid ""
 "\\partial_{u} n_{trans}[\\delta u] = -(I - n_{trans}\\otimes n_{trans})(I+ "
 "\\nabla u)^{-T}(\\nabla \\delta u)^T n_{trans}  \\partial_{n} "
@@ -531,7 +531,7 @@ msgstr ""
 "n_{trans}[\\delta n] = \\Frac{(I+ \\nabla u)^{-T}\\delta n - "
 "n_{trans}(n_{trans}\\cdot \\delta n)}{\\|(I+\\nabla u)^{-T} n\\|}"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:252
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:252
 msgid ""
 "``Coulomb_friction_coupled_projection(lambda, n, Vs, g, f, r)`` where "
 "``lambda`` is the contact force, ``n`` is a unit normal vector, ``Vs`` is "
@@ -542,7 +542,7 @@ msgstr ""
 "``lambda`` は接触力であり、 ``n`` は単位法線ベクトルであり、 ``Vs`` はすべり速度であり、 ``g`` はギャップ、 ``f``"
 " は摩擦係数、 ``r`` は正の増強パラメータです。演算子の式は次のとおりです。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:257
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:257
 msgid ""
 "P(\\lambda, n, V_s, g, f, r) = -(\\lambda\\cdot n + rg)_- n + "
 "P_{B(n,\\tau)}(\\lambda - rV_s)  \\mbox{with } \\tau = \\mbox{min}(f_3 + "
@@ -552,7 +552,7 @@ msgstr ""
 "P_{B(n,\\tau)}(\\lambda - rV_s)  \\mbox{with } \\tau = \\mbox{min}(f_3 + "
 "f_1(\\lambda\\cdot n + rg)_-, f_2)"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:263
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:263
 msgid ""
 "where :math:`(\\cdot)_-` is the negative part (:math:`(x)_- = (-x)_+`) and "
 ":math:`f_1, f_2, f_3` are the three components of the friction coefficient. "
@@ -569,7 +569,7 @@ msgstr ""
 "のみ）ベクトルが与えられている場合、これは与えられた閾値とのCoulomb摩擦に対応します。最後に、3つの成分からなるベクトルが与えられた場合、摩擦法則は、上で与えられた"
 " :math:`\\tau` の式に対応します。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:265
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:265
 msgid ""
 "The expression :math:`P_{B(n,\\tau)}(q)` refers to the orthogonal projection"
 " (this is link to the return mapping algorithm) on the tangential ball (with"
@@ -578,7 +578,7 @@ msgstr ""
 "式 :math:`P_{B(n,\\tau)}(q)` は半径 :math:`\\tau` の :math:`n` "
 "に関して接線ボール上の直交射影（これはReturn Mapping法へのリンクです）を指します。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:267
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:267
 msgid ""
 "The derivatives can be expressed as follows with :math:`T_n = (I - n "
 "\\otimes n)` and :math:`q_{_T} = T_n q`:"
@@ -586,7 +586,7 @@ msgstr ""
 "微分は :math:`T_n = (I - n \\otimes n)` および :math:`q_{_T} = T_n q` "
 "のように表すことができます。 "
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:269
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:269
 msgid ""
 "\\partial_q P_{B(n,\\tau)}(q) = \\left\\{\\begin{array}{cl} 0 & \\mbox{for }"
 " \\tau \\le 0 \\\\ \\mathbf{T}_n & \\mbox{for } \\|q_{_T}\\| \\le \\tau \\\\"
@@ -644,15 +644,15 @@ msgstr ""
 "r) =  H(-\\lambda\\cdot n - r\\,g)gn + \\partial_q P_{B(n,\\tau)}V_s  "
 "+\\partial_{\\tau} P_{B(n,\\tau)} \\partial_r \\tau"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:330
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:330
 msgid "Integral contact brick with raytrace"
 msgstr "レイトレース付き積分接触要素"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:333
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:333
 msgid "Add of the brick::"
 msgstr "ブリック要素を追加します。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:341
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:341
 msgid ""
 "This brick allows to deal with a multi-contact situation. It adds to the "
 "model a raytracing interpolate transformation as described in a previous "
@@ -660,13 +660,13 @@ msgid ""
 msgstr ""
 "このブリック要素は、複数の接触先の状況に対処できます。前のセクションで説明したように、モデルにレイトレーシング補間変換を追加します。その名前はコマンドによって取得できます。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:346
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:346
 msgid ""
 "Once the brick is added to the model, the master and slave contact "
 "boundaries have to be added with the following function::"
 msgstr "ブリック要素がモデルに追加されると、マスターとスレーブの接触境界を次の関数で追加する必要があります。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:354
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:354
 msgid ""
 "where ``region`` should be a valid mesh region number representing a "
 "boundary, ``is_master`` should be set to ``true`` if the contact detection "
@@ -690,11 +690,11 @@ msgstr ""
 "メソッドでモデルに追加されます）。純粋なマスター接触境界は、乗数の定義を必要としません。さらに、 ``w`` "
 "は進展する場合であり、前の時間ステップにおける変位を表します。"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:356
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:356
 msgid "A rigid obstacle can be added to the brick with::"
 msgstr "剛性の障害物を要素に加えることができます::"
 
-#: ../source/userdoc/model_contact_friction_large_sliding.rst:361
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction_large_sliding.rst:361
 msgid ""
 "where `expr` is an expression using the weak form language (with `X` is the "
 "current position) which should be a signed distance to the obstacle. `N` is "

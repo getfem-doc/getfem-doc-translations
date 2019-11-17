@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-16 12:51+0000\n"
+"POT-Creation-Date: 2019-11-17 12:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,15 +21,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/userdoc/model_bilaplacian.rst:13
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:13
 msgid "Bilaplacian and Kirchhoff-Love plate bricks"
 msgstr "BilaplacianとKirchhoff-Loveプレートブリック要素"
 
-#: ../source/userdoc/model_bilaplacian.rst:15
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:15
 msgid "The following function ::"
 msgstr "以下の関数となります。"
 
-#: ../source/userdoc/model_bilaplacian.rst:20
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:20
 msgid ""
 "adds a bilaplacian brick on the variable `varname` and on the mesh region "
 "`region`. This represent a term :math:`\\Delta(D \\Delta u)`. where "
@@ -42,13 +42,13 @@ msgstr ""
 "によって決定される係数であり、定数または有限要素法上で記述されます。対応する弱形式は :math:`\\int D(x)\\Delta u(x) "
 "\\Delta v(x) dx` です。"
 
-#: ../source/userdoc/model_bilaplacian.rst:23
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:23
 msgid ""
 "For the Kirchhoff-Love plate model, the weak form is a bit different (and "
 "more stable than the previous one). the function to add that term is ::"
 msgstr "Kirchhoff-Love板モデルの場合、弱形式は少し異なります（前の形よりも安定しています）。その項を追加する関数は次の通りです。"
 
-#: ../source/userdoc/model_bilaplacian.rst:28
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:28
 msgid ""
 "It adds a bilaplacian brick on the variable `varname` and on the mesh region"
 " `region`. This represent a term :math:`\\Delta(D \\Delta u)` where "
@@ -61,13 +61,13 @@ msgstr ""
 "によって決定される屈曲率です。この項は、Poisson比 `dataname2` を有するKirchhoff-"
 "Love板モデルに続く部分によって積分さます。"
 
-#: ../source/userdoc/model_bilaplacian.rst:34
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:34
 msgid ""
 "There is specific bricks to add appropriate boundary conditions for fourth "
 "order partial differential equations. The first one is ::"
 msgstr "4次の偏微分方程式に適切な境界条件を追加するための特定の要素があります。最初のものは次の通りです。"
 
-#: ../source/userdoc/model_bilaplacian.rst:39
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:39
 msgid ""
 "which adds a normal derivative source term brick :math:`F = \\int "
 "b.\\partial_n v` on the variable `varname` and on the mesh region `region`. "
@@ -78,11 +78,11 @@ msgstr ""
 "b.\\partial_n v` を追加します。これは線形システムの右側を更新します。 `dataname` は `b` を表し、 `varname` "
 "は `v` を表します。"
 
-#: ../source/userdoc/model_bilaplacian.rst:45
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:45
 msgid "A Neumann term can be added thanks to the following bricks ::"
 msgstr "Neumann項は以下の要素により追加することができます。"
 
-#: ../source/userdoc/model_bilaplacian.rst:50
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:50
 msgid ""
 "which adds a Neumann term brick for Kirchhoff-Love model on the variable "
 "`varname` and the mesh region `region`. `dataname1` represents the bending "
@@ -91,13 +91,13 @@ msgstr ""
 "変数 `varname` とメッシュ領域 `region` にKirchhoff-LoveモデルのNeumann項ブリック要素を追加しました。 "
 "`dataname1` は曲げモーメントテンソルを表し `dataname2` はその逆テンソルを表します。"
 
-#: ../source/userdoc/model_bilaplacian.rst:55
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:55
 msgid ""
 "And a Dirichlet condition on the normal derivative can be prescribed thanks "
 "to the following bricks ::"
 msgstr "そして、次の要素で正規DirichletのDirichlet条件を規定することができます。"
 
-#: ../source/userdoc/model_bilaplacian.rst:69
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:69
 msgid ""
 "These bricks add a Dirichlet condition on the normal derivative of the "
 "variable `varname` and on the mesh region `region` (which should be a "
@@ -121,7 +121,7 @@ msgstr ""
 "は、Dirichlet条件の右辺を表すオプションのパラメータです。 `R_must_be_derivated` が `true` に設定されている場合、"
 " `dataname` の標準偏差が考慮されます。"
 
-#: ../source/userdoc/model_bilaplacian.rst:81
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_bilaplacian.rst:81
 msgid ""
 "The test program :file:`bilaplacian.cc` is a good example of the use of the "
 "previous bricks."

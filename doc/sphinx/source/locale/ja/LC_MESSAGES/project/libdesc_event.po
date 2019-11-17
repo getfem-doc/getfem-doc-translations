@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-16 12:51+0000\n"
+"POT-Creation-Date: 2019-11-17 12:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:02+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,16 +21,16 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/project/libdesc_event.rst:11
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:11
 msgid "Events management"
 msgstr "イベント管理"
 
-#: ../source/project/libdesc_event.rst:14
-#: ../source/project/libdesc_event.rst:1
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:14
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:1
 msgid "Description"
 msgstr "説明"
 
-#: ../source/project/libdesc_event.rst:16
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:16
 msgid ""
 "The ``mesh``, |mf|, |mim| and |mo| description are linked together in the "
 "sense that there is some dependencies between them. For instance, when an "
@@ -39,29 +39,29 @@ msgstr ""
 "``mesh``, |mf|, |mim| と |mo| は相互に依存関係があります。たとえば要素がメッシュに対応していない場合、 |mf| "
 "オブジェクトは反応する必要があります。"
 
-#: ../source/project/libdesc_event.rst:21
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:21
 msgid "Files"
 msgstr "ファイル"
 
-#: ../source/project/libdesc_event.rst:1
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:1
 msgid "File(s)"
 msgstr "ファイル"
 
-#: ../source/project/libdesc_event.rst:1
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:1
 msgid ":file:`getfem_context.h` and :file:`getfem_context.cc`"
 msgstr ":file:`getfem_context.h` と :file:`getfem_context.cc`"
 
-#: ../source/project/libdesc_event.rst:1
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:1
 msgid ""
 "Define a class `context_dependencies` from which all object has to derive in"
 " order to manage events."
 msgstr "イベントを管理するすべてのオブジェクトの派生元となるクラス `context_dependencies` を定義します。"
 
-#: ../source/project/libdesc_event.rst:31
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:31
 msgid "State"
 msgstr "状態"
 
-#: ../source/project/libdesc_event.rst:33
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:33
 msgid ""
 "The main tool to deal with simple dependence of object is in "
 ":file:`getfem_context.h`. An object ``context_dependencies`` is defined "
@@ -73,7 +73,7 @@ msgstr ""
 "``context_dependencies`` はここで定義されています。オブジェクトの依存関係を処理するために、オブジェクト "
 "``context_dependencies`` はオブジェクトの親クラスである必要があります。オブジェクトには次のメソッドが追加されています。"
 
-#: ../source/project/libdesc_event.rst:41
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:41
 msgid ""
 "Add an object (which has to have ``context_dependencies`` as a parent class)"
 " to the list of objects from which the current object depend."
@@ -81,12 +81,12 @@ msgstr ""
 "オブジェクト (親クラスとして ``context_dependencies`` を持つ必要があります) "
 "を、現在のオブジェクトが依存するオブジェクトのリストに追加します。"
 
-#: ../source/project/libdesc_event.rst:46
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:46
 msgid ""
 "Indicates to the dependent objects that something has change in the object."
 msgstr "オブジェクトに何か変化があったことを従属オブジェクトに知らせます。"
 
-#: ../source/project/libdesc_event.rst:50
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:50
 msgid ""
 "Check if the object has to be updated. if it is the case it makes first a "
 "check to the dependency list and call the update function of the object. "
@@ -95,22 +95,22 @@ msgid ""
 msgstr ""
 "オブジェクトを更新するかどうかを確認します。更新する場合は、最初に依存関係リストにチェックを行い、オブジェクトの更新関数を呼び出します。(依存関係の更新関数は、現在のオブジェクトの更新関数の前に呼び出されます)。"
 
-#: ../source/project/libdesc_event.rst:57
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:57
 msgid ""
 "Says if the object has still a valid context, i.e. if the object in the "
 "dependency list still exist."
 msgstr "オブジェクトがまだ有効なコンテキストを持っているかどうか、つまり、依存関係リスト内のオブジェクトがまだ存在するかを表示します。"
 
-#: ../source/project/libdesc_event.rst:60
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:60
 msgid "Moreover, the object has to define a method::"
 msgstr "さらに、オブジェクトは次のメソッドを定義する必要があります。"
 
-#: ../source/project/libdesc_event.rst:64
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:64
 msgid ""
 "which is called after a ``context_check()`` if the context has changed."
 msgstr "このメソッドはコンテキストが変更された際に ``context_check()`` の後に呼び出されます。"
 
-#: ../source/project/libdesc_event.rst:66
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:66
 msgid ""
 "An additional system is present in the object |m|. Each individual element "
 "has a version number in order for the objects |mf| and |mim| to detect which"
@@ -119,18 +119,18 @@ msgstr ""
 "オブジェクト |m| には追加のシステムが提供されています。 |mf| と |mim| "
 "の2つの呼び出しの間で変更された要素を検出するために個々の要素はオブジェクトのバージョン番号を所持しています。"
 
-#: ../source/project/libdesc_event.rst:71
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:71
 msgid "Perspectives"
 msgstr "展望"
 
-#: ../source/project/libdesc_event.rst:73
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:73
 msgid ""
 "The event management of some objects should be analysed with care. This is "
 "the case for instance of |mls|, |mfls|, |pmf|, etc."
 msgstr ""
 "いくつかのオブジェクトのイベント管理は、注意して分析する必要があります。 |mls| 、 |mfls| 、 |pmf| などのインスタンスの場合です。"
 
-#: ../source/project/libdesc_event.rst:75
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/libdesc_event.rst:75
 msgid ""
 "The event management still have to be improved to be a fully reactive "
 "system."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-16 12:51+0000\n"
+"POT-Creation-Date: 2019-11-17 12:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/userdoc/model_generic_assembly.rst:13
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_generic_assembly.rst:13
 msgid "Generic assembly bricks"
 msgstr "汎用的な構築ブリック要素"
 
-#: ../source/userdoc/model_generic_assembly.rst:16
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_generic_assembly.rst:16
 msgid ""
 "A mean to add a term either on one variable or on several ones is to "
 "directly use the weak form language described in Section :ref:`ud-gasm-"
@@ -34,7 +34,7 @@ msgstr ""
 "1つの変数または複数の変数に項を追加することは、セクション :ref:`ud-gasm-high` "
 "で説明されている弱形式言語を直接使用することです。より汎用的な方法は次の関数を使用することです。"
 
-#: ../source/userdoc/model_generic_assembly.rst:21
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_generic_assembly.rst:21
 msgid ""
 "This adds a brick to the model ``md``, using the integration method ``mim``,"
 " the assembly string ``expr`` on the mesh region ``region``. If the result "
@@ -46,7 +46,7 @@ msgstr ""
 "これは、メッシュ領域 ``region`` に積分法 ``mim`` と、構築文字列 ``expr`` を使用して、モデル ``md`` "
 "に要素を追加します。結果が対称であれば、5番目の引数で指定し、6番目の引数で強制的に指定できます。後者の対称性と強制性は、正しい線形ソルバを決定するために使用されます。理解していない場合は、何も示さないことを推奨します。"
 
-#: ../source/userdoc/model_generic_assembly.rst:23
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_generic_assembly.rst:23
 msgid ""
 "However, this brick consider that the expression is nonlinear. This brick is"
 " especially indicated to obtain nonlinear coupled terms between several "
@@ -57,7 +57,7 @@ msgid ""
 msgstr ""
 "しかしながら、このブリック要素は、式が非線形であるとみなします。このブリック要素は、特に、いくつかの変数間の非線形結合項を得るために示されています。これは、特に項の構築がモデルの構築の各呼び出しで実行され、Newton法が問題を解決するために使用されることを意味します。項が実際に線形の場合は、代わりに次の関数を使用します。"
 
-#: ../source/userdoc/model_generic_assembly.rst:28
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_generic_assembly.rst:28
 msgid ""
 "with the same arguments. Conversely, this brick alway assume that the term "
 "corresponding to ``expr`` is linear and the assembly will be performed only "
@@ -70,7 +70,7 @@ msgstr ""
 "同じ議論で。逆に、この要素は常に ``expr`` "
 "に対応する項は線形であると仮定し、使用されたデータが変更されない場合、構築は1回だけ実行されます。したがって、あなたの表現は実際には各変数に関して線形（アファイン）であることに注意しなければなりません。それ以外の場合、結果は保証されません。表現のソース項は考慮されますが、それでも線形の問題では、次のような理由で単一のソース項を構築することは可能です。"
 
-#: ../source/userdoc/model_generic_assembly.rst:32
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_generic_assembly.rst:32
 msgid ""
 "with again the same arguments except the symmetry and coercivness. This "
 "brick performs the assembly of the corresponding order 1 term (residual "
@@ -80,7 +80,7 @@ msgid ""
 msgstr ""
 "再び対称性と強制性を除いて同じ議論をします。このブリック要素は、対応する次数1項（残差ベクトル）の集合を実行しそれを右辺として問題に追加します。構築は1回だけ実行されるため、この項はモデルの変数に依存してはいけません（ただし定数に当てはまる可能性があります）。"
 
-#: ../source/userdoc/model_generic_assembly.rst:35
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_generic_assembly.rst:35
 msgid ""
 "For instance, if one wants to solve a Poisson problem on a predefined "
 "variable ``u`` of the model, one may use the corresponding pre-defined "
@@ -88,7 +88,7 @@ msgid ""
 msgstr ""
 "例えば、モデルの定義済み変数 ``u`` でPoisson問題を解きたい場合は、対応する事前定義された要素を使用するか（下記参照）、単純に::"
 
-#: ../source/userdoc/model_generic_assembly.rst:39
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_generic_assembly.rst:39
 msgid ""
 "where ``F`` is a pre-defined constant of the model representing the right "
 "hand side. Of course, doing so, Newton's algorithms will be called. So, the "
@@ -97,7 +97,7 @@ msgstr ""
 "ここで ``F`` "
 "は右辺を表すモデルのあらかじめ定義された定数です。もちろん、そうすることで、Newton法が呼び出されます。そのため、より適切な方法は次のように線形要素を使用することです。"
 
-#: ../source/userdoc/model_generic_assembly.rst:49
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_generic_assembly.rst:49
 msgid ""
 "Note that for the moment, the use of the weak form language is not possible "
 "for complex valued problems."

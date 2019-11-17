@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-16 12:51+0000\n"
+"POT-Creation-Date: 2019-11-17 12:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:14+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,88 +17,88 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/gmm/sub-matrix.rst:11
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:11
 msgid "sub-vectors and sub-matrices"
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:13
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:13
 msgid ""
 "It is possible to obtain any sub-vector or sub-matrix of a fully interfaced "
 "object. There are four types of sub indices::"
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:17
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:17
 msgid ""
 "represents an interval whose first index is ``first`` and length is "
 "``length`` ( for instance ``gmm::sub_interval(10, 3);`` represents the "
 "indices ``{10, 11, 12}``)."
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:23
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:23
 msgid ""
 "represents also an interval in which one index over ``step`` is taken. ( for"
 " instance ``gmm::sub_slice(10, 3, 2);`` represents the indices ``{10, 12, "
 "14}``)"
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:29
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:29
 msgid ""
 "represents the sub-index which is the collection of index contained in the "
 "container ``c``. For instance::"
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:36
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:36
 msgid "represents the indices ``{1, 3, 16}``."
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:38
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:38
 msgid ""
 "`VERY IMPORTANT` : the container ``c`` has to be `sorted` from the smaller "
 "index to the greater one (i.e. with increasing order) and no repetition is "
 "allowed."
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:41
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:41
 msgid ""
 "For unsorted index such as permutation, a special type of sub index is "
 "defined::"
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:45
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:45
 msgid "Some algorithms are a little bit slower with unsorted sub indices."
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:47
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:47
 msgid "Now ``gmm::sub_vector(V, subi)`` gives a reference to a sub-vector::"
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:53
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:53
 msgid "prints to the standard output ``V[2], V[3]`` and ``V[4]``."
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:55
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:55
 msgid ""
 "``gmm::sub_matrix(V, subi1, subi2)`` gives a reference to a sub-matrix. For "
 "instance::"
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:62
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:62
 msgid ""
 "prints to the output a sub-matrix. If the two sub-indices are equal, it is "
 "possible to omit the second. For instance::"
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:68
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:68
 msgid ""
 "The reference on sub_matrix is writable if the corresponding matrix is "
 "writable (so you can copy on a sub_matrix, add sub-matrices ...)."
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:71
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:71
 msgid "row and column of a matrix"
 msgstr ""
 
-#: ../source/gmm/sub-matrix.rst:73
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/sub-matrix.rst:73
 msgid ""
 "``gmm::mat_row(M, i)`` gives a (possibly writable) reference to the row "
 "``i`` of matrix ``M``, and ``gmm::mat_col(M, i)``  gives a (possibly "

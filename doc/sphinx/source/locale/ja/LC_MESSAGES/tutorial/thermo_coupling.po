@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-16 12:51+0000\n"
+"POT-Creation-Date: 2019-11-17 12:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:16+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,13 +21,13 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/tutorial/thermo_coupling.rst:8
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:8
 msgid ""
 "Example of Thermo-elastic and electrical coupling (simple nonlinear coupled "
 "problem, model object, generic assembly, solve and visualization)"
 msgstr "熱および電気弾性連成の例 (単純な非線形連成問題、モデルオブジェクト、汎用アセンブリ、解析および可視化)"
 
-#: ../source/tutorial/thermo_coupling.rst:10
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:10
 msgid ""
 "This example aims to present a simple example of a multiphysics problem with"
 " a nonlinear coupling of a displacement field, a temperature field and an "
@@ -41,11 +41,11 @@ msgstr ""
 "`tests/` 、 `interface/tests/python` 、 `interface/scr/scilab/demos` 、  "
 "`interface/tests/matlab` )。"
 
-#: ../source/tutorial/thermo_coupling.rst:13
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:13
 msgid "The problem setting"
 msgstr "問題の設定"
 
-#: ../source/tutorial/thermo_coupling.rst:15
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:15
 msgid ""
 "Let :math:`\\Omega \\subset \\R^2` be the reference configuration of a 2D "
 "plate (see the geometry :ref:`here <tut-fig-meshthermo>`) of thickness "
@@ -61,12 +61,12 @@ msgstr ""
 ": \\Omega \\rightarrow \\R` は電位フィールドです。また、 :math:`u : \\Omega \\rightarrow "
 "\\R^2` は膜変位場です。"
 
-#: ../source/tutorial/thermo_coupling.rst:18
-#: ../source/tutorial/thermo_coupling.rst:668
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:18
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:668
 msgid "Thermal problem"
 msgstr "熱問題"
 
-#: ../source/tutorial/thermo_coupling.rst:20
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:20
 msgid ""
 "The lateral faces of the plates are supposed to be in thermal insulation "
 "since the front and back faces of the plate are supposed to be in thermal "
@@ -76,13 +76,13 @@ msgstr ""
 "プレートの表裏面は、熱伝達係数 :math:`D` の (20 |degreC| の) "
 "空気と熱交換しており、プレートの側面は断熱であると想定されています。"
 
-#: ../source/tutorial/thermo_coupling.rst:22
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:22
 msgid ""
 "The equation on the temperature :math:`\\theta` and boundary condition can "
 "be written as follows:"
 msgstr "熱方程式 :math:`\\theta` と境界条件は次のように書くことができます。"
 
-#: ../source/tutorial/thermo_coupling.rst:24
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:24
 msgid ""
 "\\left\\{\\begin{array}{l} -\\mbox{div}(\\varepsilon\\kappa(\\nabla "
 "\\theta)) + 2D(\\theta - T_0) - \\varepsilon\\sigma|\\nabla V|^2 = 0 ~~ "
@@ -94,7 +94,7 @@ msgstr ""
 "\\mbox{ in } \\Omega, \\\\ \\kappa\\nabla \\theta \\cdot n = 0 ~~ \\mbox{ on"
 " } \\partial \\Omega, \\end{array} \\right."
 
-#: ../source/tutorial/thermo_coupling.rst:32
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:32
 msgid ""
 "where the thermal conductivity is designed by :math:`\\kappa`, :math:`T_0` "
 "is the temperature of the air, :math:`\\partial \\Omega` the boundary of the"
@@ -105,7 +105,7 @@ msgstr ""
 ":math:`\\Omega` の境界であり :math:`n` は :math:`\\partial \\Omega` 上の "
 ":math:`\\Omega` への外向きの単位法線ベクトルです。"
 
-#: ../source/tutorial/thermo_coupling.rst:34
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:34
 msgid ""
 "The term :math:`\\sigma|\\nabla V|^2` is a nonlinear coupling term "
 "corresponding to the Joule heating term, where :math:`\\sigma` is the "
@@ -114,12 +114,12 @@ msgstr ""
 "項 :math:`\\sigma|\\nabla V|^2` は、Joule加熱項に対応する非線形連成項であり、 :math:`\\sigma` "
 "は電気伝導率です。"
 
-#: ../source/tutorial/thermo_coupling.rst:37
-#: ../source/tutorial/thermo_coupling.rst:612
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:37
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:612
 msgid "Electric potential problem"
 msgstr "電位問題"
 
-#: ../source/tutorial/thermo_coupling.rst:39
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:39
 msgid ""
 "We consider a potential difference of :math:`0.1V` between the right and "
 "left lateral face of the plate. The other faces are considered electrically "
@@ -127,7 +127,7 @@ msgid ""
 msgstr ""
 "プレートの左右の側面の間には :math:`0.1V` の電位差があるとします。他の面は電気的に絶縁されていると考えます。電位の方程式は次の通りです。"
 
-#: ../source/tutorial/thermo_coupling.rst:41
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:41
 msgid ""
 "\\left\\{\\begin{array}{l} -\\mbox{div}(\\varepsilon\\sigma(\\nabla V)) = 0 "
 "~~ \\mbox{ in } \\Omega, \\\\ \\sigma\\nabla V \\cdot n = 0 ~~ \\mbox{ on "
@@ -141,17 +141,17 @@ msgstr ""
 " face}, \\\\ V = 0.1 ~~ \\mbox{ on the left lateral face}, \\\\ \\end{array}"
 " \\right."
 
-#: ../source/tutorial/thermo_coupling.rst:50
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:50
 msgid ""
 "where :math:`\\sigma` is still the electrical conductivity. Moreover, we "
 "consider that :math:`\\sigma` depends on the temperature as follows:"
 msgstr "ここでも :math:`\\sigma` は電気伝導率です。さらに、 :math:`\\sigma` は次のように温度に依存すると考えます。"
 
-#: ../source/tutorial/thermo_coupling.rst:52
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:52
 msgid "\\sigma = \\Frac{1}{\\rho_0(1+\\alpha(\\theta - T_0))},"
 msgstr "\\sigma = \\Frac{1}{\\rho_0(1+\\alpha(\\theta - T_0))},"
 
-#: ../source/tutorial/thermo_coupling.rst:56
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:56
 msgid ""
 "where :math:`T_0` is a reference temperature (air temperature here), "
 ":math:`\\rho_0` the resistance temperature coefficient at :math:`T_0` and "
@@ -160,11 +160,11 @@ msgstr ""
 "ここで :math:`T_0` は参照温度 (ここでは空気温度) であり、 :math:`\\rho_0` は :math:`T_0` "
 "上の抵抗温度係数であり、:math:`\\alpha` は第2抵抗温度係数です。"
 
-#: ../source/tutorial/thermo_coupling.rst:61
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:61
 msgid "Deformation problem"
 msgstr "変形問題"
 
-#: ../source/tutorial/thermo_coupling.rst:63
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:63
 msgid ""
 "We consider the membrane small deformation of the plate under a force "
 "applied on the right lateral face and influenced by the heating of the "
@@ -174,7 +174,7 @@ msgstr ""
 "右側面に加わる力の下でプレートの微小変形を考慮し, プレートの加熱によって影響を受けるとします。変位 :math:`u` "
 "は、次の(線形化された弾性)問題の解になります。"
 
-#: ../source/tutorial/thermo_coupling.rst:65
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:65
 msgid ""
 "\\left\\{\\begin{array}{l} -\\mbox{div}(\\bar{\\sigma}(u)) = 0 ~~ \\mbox{ in"
 " } \\Omega, \\\\ \\bar{\\sigma}\\ n = 0 ~~ \\mbox{ on the top an bottom "
@@ -188,7 +188,7 @@ msgstr ""
 "face}, \\\\ u = 0 ~~ \\mbox{ on the left lateral face}, \\end{array} "
 "\\right."
 
-#: ../source/tutorial/thermo_coupling.rst:74
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:74
 msgid ""
 "where :math:`F` is the force density applied on the right lateral boundary "
 "and :math:`\\bar{\\sigma}(u)` is the Cauchy stress tensor defined by"
@@ -196,7 +196,7 @@ msgstr ""
 "ここで :math:`F` は右横方向の境界に加えられる力密度であり、 :math:`\\bar{\\sigma}(u)` "
 "は次のように定義されたCauchy応力テンソルです。"
 
-#: ../source/tutorial/thermo_coupling.rst:76
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:76
 msgid ""
 "\\bar{\\sigma}(u) = \\lambda^* \\mbox{div}(u) I + 2\\mu "
 "\\bar{\\varepsilon}(u) + \\beta(T_0-\\theta) I,"
@@ -204,7 +204,7 @@ msgstr ""
 "\\bar{\\sigma}(u) = \\lambda^* \\mbox{div}(u) I + 2\\mu "
 "\\bar{\\varepsilon}(u) + \\beta(T_0-\\theta) I,"
 
-#: ../source/tutorial/thermo_coupling.rst:80
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:80
 msgid ""
 ":math:`\\bar{\\varepsilon}(u) = (\\nabla u + (\\nabla u)^T)/2` being the "
 "linearized strain tensor, :math:`I` the identity second order tensor and "
@@ -214,7 +214,7 @@ msgstr ""
 "は、線形化されたひずみテンソルであり、 :math:`I` は2次単位テンソルで、 :math:`\\lambda^*, \\mu` は |Lame| "
 "係数であり次のように定義されます。"
 
-#: ../source/tutorial/thermo_coupling.rst:82
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:82
 msgid ""
 "&\\lambda = \\Frac{E\\nu}{(1+\\nu)(1-2\\nu)}, \\\\ &\\mu = "
 "\\Frac{E}{2(1+\\nu)}, \\\\ &\\lambda^* = "
@@ -224,13 +224,13 @@ msgstr ""
 "\\Frac{E}{2(1+\\nu)}, \\\\ &\\lambda^* = "
 "\\Frac{2\\lambda\\mu}{\\lambda+2*\\mu},"
 
-#: ../source/tutorial/thermo_coupling.rst:88
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:88
 msgid ""
 "from :math:`E` the Young modulus and :math:`\\nu` the Poisson ratio of the "
 "material."
 msgstr ":math:`E` は材料のヤング係数であり :math:`\\nu` はポアソン比です。"
 
-#: ../source/tutorial/thermo_coupling.rst:90
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:90
 msgid ""
 "The term :math:`\\beta(T_0-\\theta) I` corresponds to the thermal expansion "
 "term, where :math:`\\beta = \\alpha_{th} E/(1-2\\nu)`, :math:`\\alpha_{th}` "
@@ -239,11 +239,11 @@ msgstr ""
 "項 :math:`\\beta(T_0-\\theta) I` は、熱膨張の項に対応しています。ここで :math:`\\beta = "
 "\\alpha_{th} E/(1-2\\nu)` で、 :math:`\\alpha_{th}` は熱膨張係数です。"
 
-#: ../source/tutorial/thermo_coupling.rst:94
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:94
 msgid "The weak formulation"
 msgstr "弱定式化"
 
-#: ../source/tutorial/thermo_coupling.rst:96
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:96
 msgid ""
 "An important step is to obtain the weak formulation of the coupled system of"
 " equations. This is a crucial step since the finite element formulation is "
@@ -254,7 +254,7 @@ msgstr ""
 "方程式の連成系方程式の弱定式化は重要なステップです。有限要素の定式化は弱定式化 (Galerkin近似) "
 "に基づいており、弱定式化は追加される項を表現する唯一の方法であるため、これはきわめて重要なステップです。"
 
-#: ../source/tutorial/thermo_coupling.rst:98
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:98
 msgid ""
 "Weak formulation of each partial differential equation is obtained by "
 "multiplying the equation with a test function corresponding to the main "
@@ -267,7 +267,7 @@ msgstr ""
 "各偏微分方程式の弱定式化は、未知数に対応する試行関数を式に掛けることにより得られます。未知数はDirichlet条件を満たし条件は均質であるとします。その後"
 " :math:`\\Omega` 領域上の積分と(Greenの式を使用した)部分のいくつかの積分を実行します。偏微分方程式系の弱定式化は次の通りです。"
 
-#: ../source/tutorial/thermo_coupling.rst:100
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:100
 msgid ""
 "&\\mbox{Find } \\theta, V, u \\mbox{ with } V = 0.1, u = 0 \\mbox{ on the "
 "left face}, V = 0 \\mbox{ on the right face}, \\\\ &\\ds \\int_{\\Omega} "
@@ -293,7 +293,7 @@ msgstr ""
 "\\int_{\\Gamma_N} F\\cdot \\delta_u d\\Gamma ~~~ \\mbox{ for all } "
 "\\delta_{u} \\mbox{ satisfying } \\delta_u = 0 \\mbox{ on the left face},"
 
-#: ../source/tutorial/thermo_coupling.rst:108
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:108
 msgid ""
 "where :math:`\\delta_{\\theta}, \\delta_V, \\delta_u` are the test functions"
 " corresponding to :math:`\\theta, V, u`, respectively, :math:`\\Gamma_N` "
@@ -305,11 +305,11 @@ msgstr ""
 "V, u` に対応する試行関数です、 :math:`\\Gamma_N` は力密度 :math:`F` がかかる右の境界を示します。そして "
 ":math:`\\bar{\\sigma}:\\bar{\\varepsilon}` は2次テンソル同士のFrobeniusスカラー積です。"
 
-#: ../source/tutorial/thermo_coupling.rst:111
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:111
 msgid "Implementation in C++ and with the interface"
 msgstr "C++ での実装とインターフェイス"
 
-#: ../source/tutorial/thermo_coupling.rst:113
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:113
 msgid ""
 "Let us now make a detailed presentation of the use of |gf| to approximate "
 "the problem. We build simultaneously a C++, Python, Scilab and Matlab "
@@ -320,11 +320,11 @@ msgstr ""
 "プログラムを同時に構築します。Matlab および Scilab プログラムでは、オブジェクト指向コマンドを使用しません (使用する方法は :ref"
 ":`mlab-oocmd` を参照してください)"
 
-#: ../source/tutorial/thermo_coupling.rst:116
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:116
 msgid "Initialization"
 msgstr "初期化"
 
-#: ../source/tutorial/thermo_coupling.rst:118
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:118
 msgid ""
 "First, in C++, ones has to include a certain number of headers for the model"
 " object, the generic assembly, the linear algebra interface (Gmm++), the "
@@ -340,72 +340,72 @@ msgstr ""
 "コンソールにロードします (ここでは説明しません)、Matlab の場合、すべての |gf| 変数をクリアする `gf_workspace('clear"
 " all')` 以外、何も必要ありません。"
 
-#: ../source/tutorial/thermo_coupling.rst:123
-#: ../source/tutorial/thermo_coupling.rst:161
-#: ../source/tutorial/thermo_coupling.rst:209
-#: ../source/tutorial/thermo_coupling.rst:276
-#: ../source/tutorial/thermo_coupling.rst:374
-#: ../source/tutorial/thermo_coupling.rst:431
-#: ../source/tutorial/thermo_coupling.rst:491
-#: ../source/tutorial/thermo_coupling.rst:545
-#: ../source/tutorial/thermo_coupling.rst:619
-#: ../source/tutorial/thermo_coupling.rst:675
-#: ../source/tutorial/thermo_coupling.rst:730
-#: ../source/tutorial/thermo_coupling.rst:759
-#: ../source/tutorial/thermo_coupling.rst:808
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:123
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:161
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:209
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:276
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:374
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:431
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:491
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:545
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:619
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:675
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:730
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:759
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:808
 msgid "**C++**"
 msgstr "**C++**"
 
-#: ../source/tutorial/thermo_coupling.rst:138
-#: ../source/tutorial/thermo_coupling.rst:223
-#: ../source/tutorial/thermo_coupling.rst:302
-#: ../source/tutorial/thermo_coupling.rst:382
-#: ../source/tutorial/thermo_coupling.rst:443
-#: ../source/tutorial/thermo_coupling.rst:498
-#: ../source/tutorial/thermo_coupling.rst:560
-#: ../source/tutorial/thermo_coupling.rst:633
-#: ../source/tutorial/thermo_coupling.rst:687
-#: ../source/tutorial/thermo_coupling.rst:735
-#: ../source/tutorial/thermo_coupling.rst:770
-#: ../source/tutorial/thermo_coupling.rst:838
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:138
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:223
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:302
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:382
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:443
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:498
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:560
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:633
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:687
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:735
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:770
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:838
 msgid "**Python**"
 msgstr "**Python**"
 
-#: ../source/tutorial/thermo_coupling.rst:143
-#: ../source/tutorial/thermo_coupling.rst:234
-#: ../source/tutorial/thermo_coupling.rst:326
-#: ../source/tutorial/thermo_coupling.rst:388
-#: ../source/tutorial/thermo_coupling.rst:453
-#: ../source/tutorial/thermo_coupling.rst:505
-#: ../source/tutorial/thermo_coupling.rst:574
-#: ../source/tutorial/thermo_coupling.rst:644
-#: ../source/tutorial/thermo_coupling.rst:698
-#: ../source/tutorial/thermo_coupling.rst:739
-#: ../source/tutorial/thermo_coupling.rst:779
-#: ../source/tutorial/thermo_coupling.rst:859
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:143
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:234
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:326
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:388
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:453
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:505
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:574
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:644
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:698
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:739
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:779
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:859
 msgid "**Scilab**"
 msgstr "**Scilab**"
 
-#: ../source/tutorial/thermo_coupling.rst:147
-#: ../source/tutorial/thermo_coupling.rst:245
-#: ../source/tutorial/thermo_coupling.rst:345
-#: ../source/tutorial/thermo_coupling.rst:396
-#: ../source/tutorial/thermo_coupling.rst:463
-#: ../source/tutorial/thermo_coupling.rst:512
-#: ../source/tutorial/thermo_coupling.rst:592
-#: ../source/tutorial/thermo_coupling.rst:655
-#: ../source/tutorial/thermo_coupling.rst:709
-#: ../source/tutorial/thermo_coupling.rst:743
-#: ../source/tutorial/thermo_coupling.rst:788
-#: ../source/tutorial/thermo_coupling.rst:891
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:147
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:245
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:345
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:396
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:463
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:512
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:592
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:655
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:709
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:743
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:788
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:891
 msgid "**Matlab**"
 msgstr "**Matlab**"
 
-#: ../source/tutorial/thermo_coupling.rst:154
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:154
 msgid "Parameters of the model"
 msgstr "モデルのパラメータ"
 
-#: ../source/tutorial/thermo_coupling.rst:156
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:156
 msgid ""
 "Let us now define the different physical and numerical parameters of the "
 "problem. For script languages (Python, Scilab and Matlab) there is no "
@@ -414,15 +414,15 @@ msgstr ""
 "ここで、問題のさまざまな物理パラメータおよび数値パラメータを定義しましょう。スクリプト言語 (Python、Scilab と Matlab) "
 "には違いはありません。"
 
-#: ../source/tutorial/thermo_coupling.rst:181
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:181
 msgid "**Scripts**"
 msgstr "**Scripts**"
 
-#: ../source/tutorial/thermo_coupling.rst:200
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:200
 msgid "Mesh generation"
 msgstr "メッシュ生成"
 
-#: ../source/tutorial/thermo_coupling.rst:202
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:202
 msgid ""
 "|gf| has some limited meshing facilities which are described here. We are "
 "going to use them. However, there is no guaranty of the quality and "
@@ -435,7 +435,7 @@ msgstr ""
 " |gf| のメッシュ作成機能を使用する場合はメッシュを確認することをお勧めします。また、外部メッシャ (例えばGiD または Gmsh) "
 "を使用してインポートすることもできます( :ref:`ud-load_save_mesh` をご覧ください)。"
 
-#: ../source/tutorial/thermo_coupling.rst:204
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:204
 msgid ""
 "The geometry of the domain is supposed to be a rectangle with three circular"
 " holes (see :ref:`tut-fig-meshthermo`). The geometry is described thanks to "
@@ -449,15 +449,15 @@ msgstr ""
 ":file:`src/getfem/getfem_mesher.h` ファイルを参照してください)。以下では、 `h` はメッシュサイズを表し、 `2`"
 " はメッシュの次数を表します (これは変換が次数2であり、曲線エッジを使用することを意味します)。"
 
-#: ../source/tutorial/thermo_coupling.rst:262
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:262
 msgid "The obtained mesh."
 msgstr "得られたメッシュ。"
 
-#: ../source/tutorial/thermo_coupling.rst:269
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:269
 msgid "Boundary selection"
 msgstr "境界の選択"
 
-#: ../source/tutorial/thermo_coupling.rst:271
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:271
 msgid ""
 "Since we have different boundary conditions on the different parts of the "
 "boundary, we have to number the different parts of the boundary (in the "
@@ -472,17 +472,17 @@ msgstr ""
 ":`ud-mesh_regions` "
 "を参照)、1、2、3、4はそれぞれ右境界、左境界、上境界、下境界です。これらの境界番号は、モデルのブリックで使用されます。"
 
-#: ../source/tutorial/thermo_coupling.rst:367
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:367
 msgid "Mesh draw"
 msgstr "メッシュの描画"
 
-#: ../source/tutorial/thermo_coupling.rst:369
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:369
 msgid ""
 "In order to preview the mesh and to control its validity, the following "
 "instructions can be used:"
 msgstr "メッシュをプレビューし、その妥当性を制御するために、次の手順を使用します。"
 
-#: ../source/tutorial/thermo_coupling.rst:405
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:405
 msgid ""
 "In C++ and with the Python interface, an external graphical post-processor "
 "has to be used (for instance, gmsh, Mayavi2 or Paraview). With Scilab and "
@@ -493,11 +493,11 @@ msgstr ""
 "(たとえば、gmsh、Mayavi2、または Paraview)。Scilab および Matlab "
 "インタフェースでは、内部プロット機能を使用することができます (結果は :ref:`tut-fig-meshthermo` を参照)。"
 
-#: ../source/tutorial/thermo_coupling.rst:409
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:409
 msgid "Definition of finite element methods and integration method"
 msgstr "有限要素法と積分法の定義"
 
-#: ../source/tutorial/thermo_coupling.rst:411
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:411
 msgid ""
 "We will define three finite element methods. The first one, `mfu` is to "
 "approximate the displacement field. This is a vector field. This is defined "
@@ -505,7 +505,7 @@ msgid ""
 msgstr ""
 "3つの有限要素法を定義します。最初の1つは、変位フィールドを近似する `mfu` です。これはベクトルフィールドで C++ では次のように定義されます。"
 
-#: ../source/tutorial/thermo_coupling.rst:418
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:418
 msgid ""
 "where the `2` stands for the dimension of the vector field. The second line "
 "sets the finite element used. `classical_finite_element` means a continuous "
@@ -516,7 +516,7 @@ msgstr ""
 "は、連続したLagrange要素を意味し、`elements_degree` は `2` に設定されています。これは2次の (アイソパラメトリック) "
 "要素を使用することを意味します。"
 
-#: ../source/tutorial/thermo_coupling.rst:420
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:420
 msgid ""
 "There is a wide choice of pre-existing finite element methods in |gf|, see "
 ":ref:`ud-appendixa`. However, Lagrange finite element methods are the most "
@@ -525,7 +525,7 @@ msgstr ""
 "|gf| では、既存の有限要素法を幅広く選択肢できます。 :ref:`ud-appendixa` を参照してください。しかし、実際には Lagrange"
 " 有限要素法が最も使用されています。"
 
-#: ../source/tutorial/thermo_coupling.rst:422
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:422
 msgid ""
 "The second finite element method is a scalar one, `mft` with which we will "
 "approximate both the temperature field and the electric potential field. A "
@@ -534,7 +534,7 @@ msgid ""
 msgstr ""
 "第2の有限要素法はスカラーで、温度場と電位場の両方を近似する `mft` です。単一の有限要素法で任意の数の有限要素変数を近似すると便利です。"
 
-#: ../source/tutorial/thermo_coupling.rst:424
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:424
 msgid ""
 "The third finite element method is a discontinuous scalar Lagrange one which"
 " will allow us to interpolate the derivative of one of the variables (for "
@@ -542,7 +542,7 @@ msgid ""
 msgstr ""
 "3番目の有限要素法は不連続なスカラーLagrangeで、1変数の導関数を補間することができます (たとえば、Von Mises応力の補間)。"
 
-#: ../source/tutorial/thermo_coupling.rst:426
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:426
 msgid ""
 "The last thing to define is an integration method `mim`. There is no default"
 " integration method in |gf| so this is mandatory to define an integration "
@@ -554,11 +554,11 @@ msgstr ""
 "にデフォルトの積分法はありません。したがって、これは積分法を定義するためには必須です。もちろん、積分法の次数は、選択された有限要素法に好都合な積分を行うため、十分に選定しなければなりません。ここでは、"
 " `elements_degree` の2乗で十分です。"
 
-#: ../source/tutorial/thermo_coupling.rst:478
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:478
 msgid "Model definition"
 msgstr "モデルの定義"
 
-#: ../source/tutorial/thermo_coupling.rst:480
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:480
 msgid ""
 "The model object in |gf| gather the variables of the models (the unknowns), "
 "the data and what is called the model bricks. The model bricks are some "
@@ -571,7 +571,7 @@ msgstr ""
 " (線形または非線形項) です。これらは、(接線) 線形システムの構築のために使用されます (詳細については :ref:`ud-model-"
 "object` を参照してください)。"
 
-#: ../source/tutorial/thermo_coupling.rst:482
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:482
 msgid ""
 "This is not strictly mandatory to use the model object since one may use "
 "directly the assembly procedures and build by it own the (tangent) linear "
@@ -589,7 +589,7 @@ msgstr ""
 "(ジェネリックアセンブリブリック、陽なマトリックスブリックなど) "
 "の拡張が可能なように設計されています。そのため、モデルオブジェクトのフレームワークを使用することをお勧めします。"
 
-#: ../source/tutorial/thermo_coupling.rst:484
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:484
 msgid ""
 "There are two versions of the model: the real one and the complex one. "
 "Complex models have to be reserved for special applications (some "
@@ -599,17 +599,17 @@ msgstr ""
 "モデルには実数と複素数の2つのバージョンがあります。複素数モデルは複雑な線形システムを解くのに有利な特殊なアプリケーション "
 "(例えば、いくつかの電磁気学の問題など) のために予約されています。"
 
-#: ../source/tutorial/thermo_coupling.rst:486
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:486
 msgid ""
 "Let us declare a real model with the three variables corresponding to the "
 "three fields to be computed:"
 msgstr "計算される3つのフィールドに対応する3つの変数を持つ実際のモデルを宣言してみましょう 。"
 
-#: ../source/tutorial/thermo_coupling.rst:522
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:522
 msgid "Membrane elastic deformation problem"
 msgstr "弾性膜変形問題"
 
-#: ../source/tutorial/thermo_coupling.rst:524
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:524
 msgid ""
 "Let us now begin by the elastic deformation problem. We will use the "
 "predefined brick added by `add_isotropic_linearized_elasticity_brick` below."
@@ -618,7 +618,7 @@ msgstr ""
 "ここでは、弾性変形問題から始めましょう。以下の `add_isotropic_linearized_elasticity_brick` "
 "によって追加されている定義済みのブリックを使用します。対応する項は以下の通りです。"
 
-#: ../source/tutorial/thermo_coupling.rst:526
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:526
 msgid ""
 "\\int_{\\Omega} (\\lambda^* \\mbox{div}(u) I + 2\\mu "
 "\\bar{\\varepsilon}(u)):\\bar{\\varepsilon}(\\delta_u)dx,"
@@ -626,7 +626,7 @@ msgstr ""
 "\\int_{\\Omega} (\\lambda^* \\mbox{div}(u) I + 2\\mu "
 "\\bar{\\varepsilon}(u)):\\bar{\\varepsilon}(\\delta_u)dx,"
 
-#: ../source/tutorial/thermo_coupling.rst:530
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:530
 msgid ""
 "to the tangent linear system. In order to use this model brick, the data "
 "corresponding to the |Lame| coefficient have to be added to the model first."
@@ -642,15 +642,15 @@ msgstr ""
 "`add_linear_term(md mim, \"lambda*(Div_u*Div_Test_u) + mu*((Grad_u + "
 "Grad_u'):Grad_Test_u)\"` を使用することもできます。"
 
-#: ../source/tutorial/thermo_coupling.rst:532
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:532
 msgid "Concerning the coupling term"
 msgstr "連成項"
 
-#: ../source/tutorial/thermo_coupling.rst:534
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:534
 msgid "\\int_{\\Omega} (\\beta\\theta I) :\\bar{\\varepsilon}(\\delta_u)dx,"
 msgstr "\\int_{\\Omega} (\\beta\\theta I) :\\bar{\\varepsilon}(\\delta_u)dx,"
 
-#: ../source/tutorial/thermo_coupling.rst:538
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:538
 msgid ""
 "there is no predefined brick and we use directly a weak form language term "
 "`add_linear_term(md mim, \"beta*theta*Div_Test_u)\"`. See :ref:`ud-gasm-"
@@ -662,7 +662,7 @@ msgstr ""
 "を直接使用します。弱形式言語の詳細については、 :ref:`ud-gasm-high` "
 "を参照してください。基本的に、アセンブリ文字列は、各Gauss点で実行される最適化されたアセンブリ命令のリストでコンパイルされます。"
 
-#: ../source/tutorial/thermo_coupling.rst:540
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:540
 msgid ""
 "The following program allows to take into account the whole elastic "
 "deformation equation. Note the use of specific brick to prescribe the "
@@ -673,7 +673,7 @@ msgstr ""
 "条件を規定するために、既定のブリックを使用します。Dirichlet条件を定義するいくつかのオプションがあります( :ref:`ud-model-"
 "Dirichlet` を参照)。"
 
-#: ../source/tutorial/thermo_coupling.rst:614
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:614
 msgid ""
 "Similarly, the following program take into account the electric potential "
 "equation. Note the definition of the  electrical conductivity "
@@ -681,30 +681,30 @@ msgid ""
 msgstr ""
 "同様に、以下のプログラムは、電位方程式を記述しています。電気伝導率 :math:`\\sigma` と弱形式言語の項の定義方法に注意してください。"
 
-#: ../source/tutorial/thermo_coupling.rst:670
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:670
 msgid "Now, the program to take into account the thermal problem:"
 msgstr "ここで、熱問題を記述するプログラムは次の通りです。"
 
-#: ../source/tutorial/thermo_coupling.rst:723
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:723
 msgid "Model solve"
 msgstr "モデルの求解"
 
-#: ../source/tutorial/thermo_coupling.rst:725
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:725
 msgid "Once the model is correctly defined, we can simply solve it by:"
 msgstr "モデルを正しく定義したら、次のようにして簡単に解くことができます。"
 
-#: ../source/tutorial/thermo_coupling.rst:748
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:748
 msgid ""
 "Since the problem is globally nonlinear, a Newton method is used to "
 "iteratively solve the problem. It needs a few iterations (about 4 in that "
 "case)."
 msgstr "問題は大域的に非線形であるため、Newton法を用いて問題を反復的に解きます。数回のイテレーションが必要です (この場合は約4です)。"
 
-#: ../source/tutorial/thermo_coupling.rst:752
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:752
 msgid "Model solve with two steps"
 msgstr "2ステップでのモデルの求解"
 
-#: ../source/tutorial/thermo_coupling.rst:754
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:754
 msgid ""
 "Another option to solve the problem is to solve first the thermal and "
 "electric potential problems. Indeed, in our model, the thermal and  electric"
@@ -714,11 +714,11 @@ msgid ""
 msgstr ""
 "別の解き方として、最初に熱と電位の問題を解くこともできます。今回のモデルでは、熱および電位は変形に依存しません。熱と電位の問題を解いてから変形の問題を解くには、次のように実行します。"
 
-#: ../source/tutorial/thermo_coupling.rst:801
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:801
 msgid "Export/visualization of the solution"
 msgstr "解のエクスポート/可視化"
 
-#: ../source/tutorial/thermo_coupling.rst:803
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:803
 msgid ""
 "The finite element problem is now solved. We can plot the solution as "
 "follows. Note that for the C++ and Python programs, it is necessary to use "
@@ -732,6 +732,6 @@ msgstr ""
 " `ga_interpolation_Lagrange_fem` を参照)。また、複雑なエクスポートやスライスの作成も可能です ( :ref:`ud-"
 "export` をご覧ください)。"
 
-#: ../source/tutorial/thermo_coupling.rst:926
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/tutorial/thermo_coupling.rst:926
 msgid "Plot of the solution."
 msgstr "解のプロット。"

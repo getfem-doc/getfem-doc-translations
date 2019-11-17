@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-16 12:51+0000\n"
+"POT-Creation-Date: 2019-11-17 12:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/gmm/inside.rst:11
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:11
 msgid "Deeper inside |gmm|"
 msgstr ""
 
-#: ../source/gmm/inside.rst:15
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:15
 msgid "The linalg_traits structure"
 msgstr ""
 
-#: ../source/gmm/inside.rst:17
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:17
 msgid ""
 "The major principle of |gmm| is that each vector and matrix type has a "
 "corresponding structure (which is never instantiated) named "
@@ -36,43 +36,43 @@ msgid ""
 " of matrix, it is possible to access to this component with::"
 msgstr ""
 
-#: ../source/gmm/inside.rst:22
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:22
 msgid ""
 "The types ``abstract_vector`` and ``abstract_matrix`` are defined in "
 "``gmm/gmm_def.h``. They are void type allowing to specialize generic "
 "algorithms."
 msgstr ""
 
-#: ../source/gmm/inside.rst:24
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:24
 msgid "For a vector type, the following informations are available::"
 msgstr ""
 
-#: ../source/gmm/inside.rst:64
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:64
 msgid "and for a matrix type::"
 msgstr ""
 
-#: ../source/gmm/inside.rst:115
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:115
 msgid ""
 "This is this structure you have to fill in to interface a new vector or "
 "matrix type. You can see some examples in ``gmm/gmm_interface.h`` . Most of "
 "the generic algorithms are in ``gmm/gmm_blas.h`` ."
 msgstr ""
 
-#: ../source/gmm/inside.rst:119
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:119
 msgid "How to iterate on the components of a vector"
 msgstr ""
 
-#: ../source/gmm/inside.rst:121
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:121
 msgid ""
 "Here is an example which accumulate the components of a vector. It is "
 "assumed that ``V`` is a vector type and ``v`` an instantiated vector::"
 msgstr ""
 
-#: ../source/gmm/inside.rst:130
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:130
 msgid "This piece of code will work with every kind of interfaced vector."
 msgstr ""
 
-#: ../source/gmm/inside.rst:132
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:132
 msgid ""
 "For sparse or skyline vectors, it is possible to obtain the index of the "
 "components pointed by the iterator with ``it.index()``. Here is the example "
@@ -81,18 +81,18 @@ msgid ""
 "instantiated vectors::"
 msgstr ""
 
-#: ../source/gmm/inside.rst:153
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:153
 msgid ""
 "This algorithm use the fact that indices are increasing in a sparse vector. "
 "This code will not work for dense vectors because dense vector iterators do "
 "not have the method ``it.index()``."
 msgstr ""
 
-#: ../source/gmm/inside.rst:156
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:156
 msgid "How to iterate on a matrix"
 msgstr ""
 
-#: ../source/gmm/inside.rst:158
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:158
 msgid ""
 "You can iterate on the rows of a matrix if it is not a column major matrix "
 "and on the columns of a matrix if it is not a row major matrix (the type "
@@ -100,19 +100,19 @@ msgid ""
 "can iterate on both rows and columns)."
 msgstr ""
 
-#: ../source/gmm/inside.rst:160
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:160
 msgid "If you need not to be optimal, you can use a basic loop like that::"
 msgstr ""
 
-#: ../source/gmm/inside.rst:170
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:170
 msgid "But you can also use iterators, like that::"
 msgstr ""
 
-#: ../source/gmm/inside.rst:186
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:186
 msgid "How to make your algorithm working on all type of matrices"
 msgstr ""
 
-#: ../source/gmm/inside.rst:188
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:188
 msgid ""
 "For this, you will generally have to specialize it. For instance, let us "
 "take a look at the code for ``gmm::nnz`` which count the number of stored "
@@ -120,7 +120,7 @@ msgid ""
 "of the cases so that it does not count the components one by one)::"
 msgstr ""
 
-#: ../source/gmm/inside.rst:222
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/inside.rst:222
 msgid ""
 "The first function dispatch on the second or the third function respectively"
 " if the parameter is a vector or a matrix. The third function dispatch again"

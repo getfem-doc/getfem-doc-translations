@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-16 12:51+0000\n"
+"POT-Creation-Date: 2019-11-17 12:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:11+0000\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/matlab/examples.rst:10
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:10
 msgid "Examples"
 msgstr ""
 
-#: ../source/matlab/examples.rst:15
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:15
 msgid "A step-by-step basic example"
 msgstr ""
 
-#: ../source/matlab/examples.rst:17
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:17
 msgid ""
 "This example shows the basic usage of getfem, on the über-canonical problem "
 "above all others: solving the :envvar:`Laplacian`, :math:`-\\Delta u = f` on"
@@ -35,7 +35,7 @@ msgid ""
 "|gf| distribution."
 msgstr ""
 
-#: ../source/matlab/examples.rst:23
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:23
 msgid ""
 "The first step is to **create a mesh**. It is possible to create simple "
 "structured meshes or unstructured meshes for simple geometries (see "
@@ -45,7 +45,7 @@ msgid ""
 "mesh** whose nodes are :math:`\\{x_{i=0\\ldots10,j=0..10}=(i/10,j/10)\\}`::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:34
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:34
 msgid ""
 "If you try to look at the value of ``m``, you'll notice that it appears to "
 "be a structure containing two integers. The first one is its identifier, the"
@@ -56,26 +56,26 @@ msgid ""
 "``gf_workspace('stats')``."
 msgstr ""
 
-#: ../source/matlab/examples.rst:41
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:41
 msgid ""
 "Now we can try to have a **look at the mesh**, with its vertices numbering "
 "and the convexes numbering::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:47
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:47
 msgid ""
 "As you can see, the mesh is regular, and the numbering of its nodes and "
 "convexes is also regular (this is guaranteed for cartesian meshes, but do "
 "not hope a similar numbering for the degrees of freedom)."
 msgstr ""
 
-#: ../source/matlab/examples.rst:51
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:51
 msgid ""
 "The next step is to **create a mesh_fem object**. This one links a mesh with"
 " a set of FEM::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:58
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:58
 msgid ""
 "The first instruction builds a new |mlab_mf| object, the second argument "
 "specifies that this object will be used to interpolate scalar fields (since "
@@ -87,7 +87,7 @@ msgid ""
 " functions on the reference convex::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:79
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:79
 msgid ""
 "It is also possible to make use of the \"object oriented\" features of "
 "|mlab|. As you may have noticed, when a class \"foo\" is provided by the "
@@ -98,13 +98,13 @@ msgid ""
 "previous steps could have been::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:99
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:99
 msgid ""
 "Now, in order to perform numerical integrations on ``mf``, we need to "
 "**build a mesh_im object**::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:105
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:105
 msgid ""
 "The integration method will be used to compute the various integrals on each"
 " element: here we choose to perform exact computations (no "
@@ -117,13 +117,13 @@ msgid ""
 "many alternative FEM methods and integration methods (see :ref:`ud`)."
 msgstr ""
 
-#: ../source/matlab/examples.rst:115
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:115
 msgid ""
 "Note however that in the general case, approximate integration methods are a"
 " better choice than exact integration methods."
 msgstr ""
 
-#: ../source/matlab/examples.rst:118
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:118
 msgid ""
 "Now we have to **find the** \":envvar:`boundary`\" **of the domain**, in "
 "order to set a Dirichlet condition. A mesh object has the ability to store "
@@ -131,23 +131,24 @@ msgid ""
 "accessed via an integer #id::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:129
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:129
 msgid ""
 "Here we find the faces of the convexes which are on the boundary of the mesh"
 " (i.e. the faces which are not shared by two convexes)."
 msgstr ""
 
-#: ../source/matlab/examples.rst:132 ../source/matlab/examples.rstNone
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:132
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rstNone
 msgid "Remark:"
 msgstr ""
 
-#: ../source/matlab/examples.rst:134
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:134
 msgid ""
 "we could have used ``gf_mesh_get(m, 'OuTEr_faCes')``, as the interface is "
 "case-insensitive, and whitespaces can be replaced by underscores."
 msgstr ""
 
-#: ../source/matlab/examples.rst:137
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:137
 msgid ""
 "The array ``border`` has two rows, on the first row is a convex number, on "
 "the second row is a face number (which is local to the convex, there is no "
@@ -155,7 +156,7 @@ msgid ""
 " number 42."
 msgstr ""
 
-#: ../source/matlab/examples.rst:141
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:141
 msgid ""
 "At this point, we just have to describe the model and run the solver to get "
 "the solution! The \":envvar:`model`\" is created with the ``gf_model`` (or "
@@ -168,24 +169,24 @@ msgid ""
 "right hand side are stored in the \":envvar:`model`\" structure."
 msgstr ""
 
-#: ../source/matlab/examples.rst:151
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:151
 msgid ""
 "Let us build a problem with an easy solution: :math:`u=x(x-1)y(y-1)+x^5`, "
 "then we have :math:`\\Delta u=2(x^2+y^2)-2(x+y)+20x^3` (the FEM won't be "
 "able to catch the exact solution since we use a :math:`Q^2` method)."
 msgstr ""
 
-#: ../source/matlab/examples.rst:155
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:155
 msgid "We start with an empty real model::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:160
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:160
 msgid ""
 "(a model is either ``'real'`` or ``'complex'``). And we declare that ``u`` "
 "is an unknown of the system on the finite element method `mf` by::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:167
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:167
 msgid ""
 "Now, we add a \"generic elliptic\" brick, which handles "
 ":math:`-\\nabla\\cdot(A:\\nabla u) = \\ldots` problems, where :math:`A` can "
@@ -193,11 +194,11 @@ msgid ""
 ":math:`A=1`. We add it on our main variable ``u`` with::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:176
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:176
 msgid "Next we add a Dirichlet condition on the domain boundary::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:184
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:184
 msgid ""
 "The two first lines defines a data of the model which represents the value "
 "of the Dirichlet condition. The third one add a Dirichlet condition to the "
@@ -209,7 +210,7 @@ msgid ""
 "the space of multipliers given by here by ``mf``."
 msgstr ""
 
-#: ../source/matlab/examples.rst:195
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:195
 msgid ""
 "the polynomial expression was interpolated on ``mf``. It is possible only if"
 " ``mf`` is of Lagrange type. In this first example we use the same |mlab_mf|"
@@ -218,36 +219,36 @@ msgid ""
 "the description of Dirichlet conditions, source terms etc."
 msgstr ""
 
-#: ../source/matlab/examples.rst:201
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:201
 msgid "A source term can be added with the following lines::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:208
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:208
 msgid ""
 "It only remains now to launch the solver. The linear system is assembled and"
 " solve with the instruction::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:214
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:214
 msgid ""
 "The model now contains the solution (as well as other things, such as the "
 "linear system which was solved). It is extracted, a display into a |mlab| "
 "figure::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:224
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:224
 msgid "Another Laplacian with exact solution"
 msgstr ""
 
-#: ../source/matlab/examples.rst:226
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:226
 msgid "This is the :file:`tests/matlab/demo_laplacian.m` example."
 msgstr ""
 
-#: ../source/matlab/examples.rst:232
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:232
 msgid "Linear and non-linear elasticity"
 msgstr ""
 
-#: ../source/matlab/examples.rst:234
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:234
 msgid ""
 "This example uses a mesh that was generated with `GiD`_. The object is "
 "meshed with quadratic tetrahedrons. You can find the ``m-file`` of this "
@@ -255,19 +256,19 @@ msgid ""
 ":file:`tests/matlab` of the toolbox distribution."
 msgstr ""
 
-#: ../source/matlab/examples.rst:241
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:241
 msgid "Here is the final figure, displaying the :envvar:`Von Mises` stress:"
 msgstr ""
 
-#: ../source/matlab/examples.rst:248
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:248
 msgid "deformed tripod"
 msgstr ""
 
-#: ../source/matlab/examples.rst:252
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:252
 msgid "Avoiding the bricks framework"
 msgstr ""
 
-#: ../source/matlab/examples.rst:254
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:254
 msgid ""
 "The model bricks are very convenient, as they hide most of the details of "
 "the assembly of the final linear systems. However it is also possible to "
@@ -277,7 +278,7 @@ msgid ""
 "except that the assembly is explicit::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:284
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:284
 msgid ""
 "In |gfi|, the assembly of vectors, and matrices is done via the ``gf_asm`` "
 "function. The Dirichlet condition :math:`u(x) = r(x)` is handled in the weak"
@@ -289,11 +290,11 @@ msgid ""
 "Dirichlet condition via a penalization technique."
 msgstr ""
 
-#: ../source/matlab/examples.rst:295
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:295
 msgid "Other examples"
 msgstr ""
 
-#: ../source/matlab/examples.rst:297
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:297
 msgid ""
 "the :file:`demo_refine.m` script shows a simple 2D or 3D bar whose extremity"
 " is clamped. An adaptative refinement is used to obtain a better "
@@ -301,7 +302,7 @@ msgid ""
 "between the clamped area and the neumann boundary)."
 msgstr ""
 
-#: ../source/matlab/examples.rst:302
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:302
 msgid ""
 "the :file:`demo_nonlinear_elasticity.m` script shows a 3D bar which is is "
 "bended and twisted. This is a quasi-static problem as the deformation is "
@@ -309,7 +310,7 @@ msgid ""
 "elasticity problem is solved."
 msgstr ""
 
-#: ../source/matlab/examples.rst:307
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:307
 msgid ""
 "the :file:`demo_stokes_3D_tank.m` script shows a Stokes (viscous fluid) "
 "problem in a tank. The :file:`demo_stokes_3D_tank_draw.m` shows how to draw "
@@ -318,14 +319,14 @@ msgid ""
 "deprecated ``gf_solve`` function."
 msgstr ""
 
-#: ../source/matlab/examples.rst:313
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:313
 msgid ""
 "the :file:`demo_bilaplacian.m` script is just an adaption of the |gf| "
 "example :file:`tests/bilaplacian.cc`. Solve the bilaplacian (or a Kirchhoff-"
 "Love plate model) on a square."
 msgstr ""
 
-#: ../source/matlab/examples.rst:317
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:317
 msgid ""
 "the :file:`demo_plasticity.m` script is an adaptation of the |gf| example "
 ":file:`tests/plasticity.cc`: a 2D or 3D bar is bended in many steps, and the"
@@ -333,18 +334,18 @@ msgid ""
 "when the material's Von Mises exceeds a given threshold)."
 msgstr ""
 
-#: ../source/matlab/examples.rst:322
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:322
 msgid ""
 "the :file:`demo_wave2D.m` is a 2D scalar wave equation example (diffraction "
 "of a plane wave by a cylinder), with high order geometric transformations "
 "and high order FEMs."
 msgstr ""
 
-#: ../source/matlab/examples.rst:328
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:328
 msgid "Using Matlab Object-Oriented features"
 msgstr ""
 
-#: ../source/matlab/examples.rst:330
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:330
 msgid ""
 "The basic functions of the |gf| toolbox do not use any advanced |mlab| "
 "features (except that the handles to getfem objects are stored in a small "
@@ -354,10 +355,10 @@ msgid ""
 " the toolbox with |mlab|."
 msgstr ""
 
-#: ../source/matlab/examples.rst:337
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:337
 msgid "Here is an example of its use::"
 msgstr ""
 
-#: ../source/matlab/examples.rst:358
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:358
 msgid "Refer to the OO-commands reference :ref:`mlab-oocmd` for more details."
 msgstr ""

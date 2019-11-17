@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-16 12:51+0000\n"
+"POT-Creation-Date: 2019-11-17 12:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,43 +16,42 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../source/userdoc/model_source_term.rst:13
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_source_term.rst:13
 msgid "Source term bricks (and Neumann condition)"
 msgstr ""
 
-#: ../source/userdoc/model_source_term.rst:15
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_source_term.rst:15
 msgid "This brick adds a source term, i.e. a term which occurs only in the right hand side of the linear (tangent) system build by the model. If :math:`f` denotes the value of the source term, the weak form of such a term is"
 msgstr ""
 
-#: ../source/userdoc/model_source_term.rst:19
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_source_term.rst:19
 msgid "\\int_{\\Omega} f v\\ dx"
 msgstr ""
 
-#: ../source/userdoc/model_source_term.rst:23
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_source_term.rst:23
 msgid "where :math:`v` is the test function. The value :math:`f` can be constant or described on a finite element method."
 msgstr ""
 
-#: ../source/userdoc/model_source_term.rst:26
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_source_term.rst:26
 msgid "It can also represent a Neumann condition if it is applied on a boundary of the domain."
 msgstr ""
 
-#: ../source/userdoc/model_source_term.rst:29
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_source_term.rst:29
 msgid "The function to add a source term to a model is::"
 msgstr ""
 
-#: ../source/userdoc/model_source_term.rst:35
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_source_term.rst:35
 msgid "where ``md``is the model object, ``mim`` is the integration method, ``varname`` is the variable of the model for which the source term is added, ``dataexpr`` has to be  a regular expression of the weak form language (except for the complex version where it has to be a declared data of the model). It has to be scalar or vector valued depending on the fact that the variable is scalar or vector valued itself. ``region`` is a mesh region on which the term is added. If the region corresponds to a boundary, the source term will represent a Neumann condition. ``directdataname`` is an optional additional data which will directly be added to the right hand side without assembly."
 msgstr ""
 
-#: ../source/userdoc/model_source_term.rst:43
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_source_term.rst:43
 msgid "The brick has a working complex version."
 msgstr ""
 
-#: ../source/userdoc/model_source_term.rst:45
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_source_term.rst:45
 msgid "A slightly different brick, especially dedicated to deal with a Neumann condition, is added by the following function::"
 msgstr ""
 
-#: ../source/userdoc/model_source_term.rst:51
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_source_term.rst:51
 msgid "The difference compared to the basic source term brick is that the data should be a vector field (a matrix field if the variable ``varname`` is itself vector valued) and a scalar product with the outward unit normal is performed on it."
 msgstr ""
-

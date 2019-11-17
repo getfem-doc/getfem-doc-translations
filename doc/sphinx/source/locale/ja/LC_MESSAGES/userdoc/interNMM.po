@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-16 12:51+0000\n"
+"POT-Creation-Date: 2019-11-17 12:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,12 +21,12 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/userdoc/interNMM.rst:10
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/interNMM.rst:10
 msgid ""
 "Interpolation/projection of a finite element method on non-matching meshes"
 msgstr "非適合メッシュ上の有限要素法の補間"
 
-#: ../source/userdoc/interNMM.rst:12
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/interNMM.rst:12
 msgid ""
 "A special finite element method is defined in "
 ":file:`getfem/getfem_interpolated_fem.h` which is not a real finite element "
@@ -39,7 +39,7 @@ msgstr ""
 "で定義されています。これは実際の有限要素法ではありませんが、別のメッシュで定義された有限要素法を補間する擬似有限要素法です。異なるメッシュで定義された有限要素法を使用して行列をアセンブルする必要がある場合は、\"interpolated"
 " fem\" か \"projected fem\" を使用することができます。"
 
-#: ../source/userdoc/interNMM.rst:24
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/interNMM.rst:24
 msgid ""
 "Because each base function of the finite element method has to be "
 "interpolated, such a computation can be a heavy procedure. By default, the "
@@ -47,13 +47,13 @@ msgid ""
 msgstr ""
 "有限要素法の各基底関数は補間されなければならないので、そのような計算は重い手順である可能性があります。デフォルトでは、補間された有限要素法オブジェクトは補間データを格納します。"
 
-#: ../source/userdoc/interNMM.rst:28
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/interNMM.rst:28
 msgid ""
 "The interpolation is made on each Gauss point of the integration methods of "
 "``mim``, so only this integration method can be used in assembly procedures."
 msgstr "補間は ``mim`` の積分法の各Gauss点で行われるため、アセンブリ手順ではこの積分法しか使用できません。"
 
-#: ../source/userdoc/interNMM.rst:32
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/interNMM.rst:32
 msgid ""
 "For instance if you need to compute the mass matrix between two different "
 "finite element methods defined on two different meshes, this is an example "
@@ -64,7 +64,7 @@ msgstr ""
 "たとえば、2つの異なるメッシュで定義された2つの異なる有限要素法の間の質量行列を計算する必要がある場合、これは2番目の有限要素法を補間するコードの例です。"
 " ``mf`` が有限要素法を記述し、 ``mim`` が選択された積分法であると仮定して、最初の有限要素法メッシュ上で次の関数を実行します。"
 
-#: ../source/userdoc/interNMM.rst:44
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/interNMM.rst:44
 msgid ""
 "The object pointed by ``ifem`` contains all the information concerning the "
 "interpolation. It could use a lot of memory. As pfem is a shared_ptr, the "
@@ -77,11 +77,11 @@ msgstr ""
 "pfemはshared_ptrであるため、補間された有限要素法は、最後のポインタが破棄されると自動的に破棄されます。より正確な精度を得るには、その次数を増やすのではなく、積分法を（たとえば、"
 " ``IM_STRUCTURED_COMPOSITE`` を使って）改良する方が良いでしょう。"
 
-#: ../source/userdoc/interNMM.rst:53
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/interNMM.rst:53
 msgid "mixed methods with different meshes"
 msgstr "異なるメッシュの混合法"
 
-#: ../source/userdoc/interNMM.rst:54
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/interNMM.rst:54
 msgid ""
 "Instead of using the previous tools (interpolated and projected fems), it is"
 " possible to use a finite element variable defined on an another mesh than "
@@ -99,11 +99,11 @@ msgstr ""
 "ツールを使用してアセンブリを計算するメッシュ以外のメッシュ上で定義された有限要素変数を使用することもできます。この場合、有限要素変数は各Gauss "
 "点で補間されます。使用されるメッシュの次元に制限はなく、特に、2次元のfem変数を一次元メッシュ上で補間することができます(たとえば、シェル要素とビーム要素の結合を可能にします)。極座標からユークリッド座標への変換など、いくつかの変換を使用することもできます。"
 
-#: ../source/userdoc/interNMM.rst:67
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/interNMM.rst:67
 msgid "mortar methods"
 msgstr "モルタル法"
 
-#: ../source/userdoc/interNMM.rst:68
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/interNMM.rst:68
 msgid ""
 "Mortar methods are supported by |gf|. The coupling term between non matching"
 " meshes can in particular be computed using the interpolate transformations "

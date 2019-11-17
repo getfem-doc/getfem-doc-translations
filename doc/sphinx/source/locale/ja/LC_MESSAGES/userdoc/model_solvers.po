@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-16 12:51+0000\n"
+"POT-Creation-Date: 2019-11-17 12:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../source/userdoc/model_solvers.rst:12
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_solvers.rst:12
 msgid "Predefined solvers"
 msgstr "あらかじめ定義されたソルバー"
 
-#: ../source/userdoc/model_solvers.rst:14
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_solvers.rst:14
 msgid ""
 "Although it will be more convenient to build a specific solver for some "
 "problems, a generic solver is available to test your models quickly. It can "
@@ -37,7 +37,7 @@ msgstr ""
 " :file:`src/getfem/getfem_model_solvers.h` と "
 ":file:`src/getfem_model_solvers.cc` で定義され、呼び出しは次の通りです。"
 
-#: ../source/userdoc/model_solvers.rst:21
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_solvers.rst:21
 msgid ""
 "where ``md`` is the model object and ``iter`` is an iteration object from "
 "|gmm|. See also the next section for an example of use."
@@ -45,7 +45,7 @@ msgstr ""
 "ここで ``md`` はmodelオブジェクトで、 ``iter`` は |gmm| "
 "の反復オブジェクトです。使用例については、次のセクションも参照してください。"
 
-#: ../source/userdoc/model_solvers.rst:24
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_solvers.rst:24
 msgid ""
 "Note that |sLU| is used as a default linear solver on \"small\" problems. "
 "You can also link |mumps| with |gf| (see section :ref:`ud-linalg`) and use "
@@ -56,7 +56,7 @@ msgstr ""
 "（セクション :ref:`ud-linalg` を参照）をリンクさせ並列バージョンを使用することができます。非線形問題に対しては、Newton法"
 "（Newton-Raphson法とも呼ばれる）が用いられます。"
 
-#: ../source/userdoc/model_solvers.rst:26
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_solvers.rst:26
 msgid ""
 "Note also that it is possible to disable some variables (with the method "
 "md.disable_variable(varname) of the model object) in order to solve the "
@@ -68,7 +68,7 @@ msgstr ""
 "md.disable_variable(varname) "
 "を使用）を無効にすることができます（無効な変数はデータと見なされます）。例えばグローバルNewton法を固定点1で置き換えます。"
 
-#: ../source/userdoc/model_solvers.rst:32
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_solvers.rst:32
 msgid ""
 "Let us recall that a standard initialization for the iter object is the "
 "folowwing (see Gmm++ documentation on :ref:`gmm-iter`)::"
@@ -76,7 +76,7 @@ msgstr ""
 "iterオブジェクトの標準的な初期化は次のとおりであることを思い出してください（ :ref:`gmm-iter` に関する Gmm++ "
 "のドキュメントを参照）。"
 
-#: ../source/userdoc/model_solvers.rst:36
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_solvers.rst:36
 msgid ""
 "where ``1E-7`` is the relative tolerance for the stopping criterion, `1` is "
 "the noisy option and `200` is the maximum number of iterations. The stopping"
@@ -87,7 +87,7 @@ msgstr ""
 "は最大反復回数です。Newton法の停止基準は、以下のように構築されます。相対許容誤差の場合 :math:`\\varepsilon` "
 "、アルゴリズムは次のときに停止します。"
 
-#: ../source/userdoc/model_solvers.rst:38
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_solvers.rst:38
 msgid ""
 "\\min\\left( \\|F(u)\\|_1 / \\max(L, 10^{-25}) ~, ~~ \\|h\\|_1 / "
 "\\max(\\|u\\|_1, 10^{-25})\\right) < \\varepsilon"
@@ -95,7 +95,7 @@ msgstr ""
 "\\min\\left( \\|F(u)\\|_1 / \\max(L, 10^{-25}) ~, ~~ \\|h\\|_1 / "
 "\\max(\\|u\\|_1, 10^{-25})\\right) < \\varepsilon"
 
-#: ../source/userdoc/model_solvers.rst:42
+#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_solvers.rst:42
 msgid ""
 "where :math:`F(u)` is the residual vector, :math:`\\|\\cdot\\|_1` is the "
 "classical 1-norm in :math:`\\R^n`, :math:`h` is the search direction given "
