@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-19 12:52+0000\n"
+"POT-Creation-Date: 2019-11-21 06:36+0000\n"
 "PO-Revision-Date: 2018-07-16 06:59+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,34 +23,35 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:8
 msgid "gf_compute"
-msgstr ""
+msgstr "gf_compute"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:10
 msgid "**Synopsis**"
-msgstr ""
+msgstr "**概要**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:30
 msgid "**Description :**"
-msgstr ""
+msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:34
 msgid ""
 "Various computations involving the solution U to a finite element problem."
-msgstr ""
+msgstr "有限要素問題に対する解Uを含む種々の計算。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:37
 msgid "**Command list :**"
-msgstr ""
+msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:41
 msgid ""
 "``n = gf_compute(mesh_fem MF, vec U, 'L2 norm', mesh_im mim[, mat CVids])``"
 msgstr ""
+"``n = gf_compute(mesh_fem MF, vec U, 'L2 norm', mesh_im mim[, mat CVids])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:43
 msgid ""
 "Compute the L2 norm of the (real or complex) field <literal>U</literal>."
-msgstr ""
+msgstr "(実数または複素数の)フィールド <literal>U</literal> のL2ノルムを計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:45
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:53
@@ -58,79 +63,91 @@ msgstr ""
 msgid ""
 "If <literal>CVids</literal> is given, the norm will be computed only on the "
 "listed elements."
-msgstr ""
+msgstr "<literal>CVids</literal> が指定されている場合、ノルムはリストされた要素でのみ計算されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:49
 msgid ""
 "``n = gf_compute(mesh_fem MF, vec U, 'L2 dist', mesh_im mim, mesh_fem mf2, "
 "vec U2[, mat CVids])``"
 msgstr ""
+"``n = gf_compute(mesh_fem MF, vec U, 'L2 dist', mesh_im mim, mesh_fem mf2, "
+"vec U2[, mat CVids])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:51
 msgid ""
 "Compute the L2 distance between <literal>U</literal> and "
 "<literal>U2</literal>."
-msgstr ""
+msgstr "<literal>U</literal> と <literal>U2</literal> の間のL2距離を計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:57
 msgid ""
 "``n = gf_compute(mesh_fem MF, vec U, 'H1 semi norm', mesh_im mim[, mat "
 "CVids])``"
 msgstr ""
+"``n = gf_compute(mesh_fem MF, vec U, 'H1 semi norm', mesh_im mim[, mat "
+"CVids])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:59
 msgid "Compute the L2 norm of grad(<literal>U</literal>)."
-msgstr ""
+msgstr "grad(<literal>U</literal>) のL2ノルムを計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:65
 msgid ""
 "``n = gf_compute(mesh_fem MF, vec U, 'H1 semi dist', mesh_im mim, mesh_fem "
 "mf2, vec U2[, mat CVids])``"
 msgstr ""
+"``n = gf_compute(mesh_fem MF, vec U, 'H1 semi dist', mesh_im mim, mesh_fem "
+"mf2, vec U2[, mat CVids])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:67
 msgid ""
 "Compute the semi H1 distance between <literal>U</literal> and "
 "<literal>U2</literal>."
-msgstr ""
+msgstr "<literal>U</literal> と <literal>U2</literal> の間の準H1距離を計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:73
 msgid ""
 "``n = gf_compute(mesh_fem MF, vec U, 'H1 norm', mesh_im mim[, mat CVids])``"
 msgstr ""
+"``n = gf_compute(mesh_fem MF, vec U, 'H1 norm', mesh_im mim[, mat CVids])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:75
 msgid "Compute the H1 norm of <literal>U</literal>."
-msgstr ""
+msgstr "<literal>U</literal> のH1ノルムを計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:81
 msgid ""
 "``n = gf_compute(mesh_fem MF, vec U, 'H2 semi norm', mesh_im mim[, mat "
 "CVids])``"
 msgstr ""
+"``n = gf_compute(mesh_fem MF, vec U, 'H2 semi norm', mesh_im mim[, mat "
+"CVids])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:83
 msgid "Compute the L2 norm of D^2(<literal>U</literal>)."
-msgstr ""
+msgstr "D^2(<literal>U</literal>) のL2ノルムを計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:89
 msgid ""
 "``n = gf_compute(mesh_fem MF, vec U, 'H2 norm', mesh_im mim[, mat CVids])``"
 msgstr ""
+"``n = gf_compute(mesh_fem MF, vec U, 'H2 norm', mesh_im mim[, mat CVids])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:91
 msgid "Compute the H2 norm of <literal>U</literal>."
-msgstr ""
+msgstr "<literal>U</literal> のH2ノルムを計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:97
 msgid "``DU = gf_compute(mesh_fem MF, vec U, 'gradient', mesh_fem mf_du)``"
-msgstr ""
+msgstr "``DU = gf_compute(mesh_fem MF, vec U, 'gradient', mesh_fem mf_du)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:99
 msgid ""
 "Compute the gradient of the field <literal>U</literal> defined on mesh_fem "
 "<literal>mf_du</literal>."
 msgstr ""
+"mesh_fem <literal>mf_du</literal>上で定義されたフィールド <literal>U</literal> "
+"の勾配を計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:101
 msgid ""
