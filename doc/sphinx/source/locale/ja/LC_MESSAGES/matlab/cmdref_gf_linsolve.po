@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-05 12:59+0000\n"
+"POT-Creation-Date: 2019-12-07 13:00+0000\n"
 "PO-Revision-Date: 2018-07-16 07:10+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,93 +23,99 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:8
 msgid "gf_linsolve"
-msgstr ""
+msgstr "gf_linsolve"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:10
 msgid "**Synopsis**"
-msgstr ""
+msgstr "**概要**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:21
 msgid "**Description :**"
-msgstr ""
+msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:24
 msgid "Various linear system solvers."
-msgstr ""
+msgstr "各種線形システムソルバー。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:27
 msgid "**Command list :**"
-msgstr ""
+msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:31
 msgid ""
 "``X = gf_linsolve('gmres', spmat M, vec b[, int restart][, precond "
 "P][,'noisy'][,'res', r][,'maxiter', n])``"
 msgstr ""
+"``X = gf_linsolve('gmres', spmat M, vec b[, int restart][, precond "
+"P][,'noisy'][,'res', r][,'maxiter', n])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:33
 msgid "Solve `M.X = b` with the generalized minimum residuals method."
-msgstr ""
+msgstr "GMRES法で `M.X = b` を解く。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:35
 msgid ""
 "Optionally using `P` as preconditioner. The default value of the restart "
 "parameter is 50."
-msgstr ""
+msgstr "任意で前処理として `P` を使用します。restartパラメーターのデフォルト値は50です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:39
 msgid ""
 "``X = gf_linsolve('cg', spmat M, vec b [, precond P][,'noisy'][,'res', "
 "r][,'maxiter', n])``"
 msgstr ""
+"``X = gf_linsolve('cg', spmat M, vec b [, precond P][,'noisy'][,'res', "
+"r][,'maxiter', n])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:41
 msgid "Solve `M.X = b` with the conjugated gradient method."
-msgstr ""
+msgstr "共役勾配法で `M.X = b` を解きます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:43
 msgid "Optionally using `P` as preconditioner."
-msgstr ""
+msgstr "オプションで前処理 `P` を使用します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:46
 msgid ""
 "``X = gf_linsolve('bicgstab', spmat M, vec b [, precond P][,'noisy'][,'res',"
 " r][,'maxiter', n])``"
 msgstr ""
+"``X = gf_linsolve('bicgstab', spmat M, vec b [, precond P][,'noisy'][,'res',"
+" r][,'maxiter', n])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:48
 msgid "Solve `M.X = b` with the bi-conjugated gradient stabilized method."
-msgstr ""
+msgstr "双共役勾配安定化法で `M.X = b` を解く。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:50
 msgid "Optionally using `P` as a preconditioner."
-msgstr ""
+msgstr "オプションで前処理 `P` を使用します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:53
 msgid "``{U, cond} = gf_linsolve('lu', spmat M, vec b)``"
-msgstr ""
+msgstr "``{U, cond} = gf_linsolve('lu', spmat M, vec b)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:55
 msgid "Alias for gf_linsolve('superlu',...)"
-msgstr ""
+msgstr "gf_linsolve('superlu',...) のエイリアス"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:58
 msgid "``{U, cond} = gf_linsolve('superlu', spmat M, vec b)``"
-msgstr ""
+msgstr "``{U, cond} = gf_linsolve('superlu', spmat M, vec b)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:60
 msgid "Solve `M.U = b` apply the SuperLU solver (sparse LU factorization)."
-msgstr ""
+msgstr "`M.U = b` を解くには、SuperLUソルバ(疎LU分解)を適用します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:62
 msgid ""
 "The condition number estimate `cond` is returned with the solution `U`."
-msgstr ""
+msgstr "条件数推定値 `cond` は、解 `U` とともに返されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:65
 msgid "``{U, cond} = gf_linsolve('mumps', spmat M, vec b)``"
-msgstr ""
+msgstr "``{U, cond} = gf_linsolve('mumps', spmat M, vec b)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_linsolve.rst:67
 msgid "Solve `M.U = b` using the MUMPS solver."
-msgstr ""
+msgstr "MUMPSソルバーを使用して、 `M.U = b` を解きます。"
