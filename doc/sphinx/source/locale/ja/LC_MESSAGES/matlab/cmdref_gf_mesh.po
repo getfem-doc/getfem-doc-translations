@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-07 13:00+0000\n"
+"POT-Creation-Date: 2019-12-08 12:57+0000\n"
 "PO-Revision-Date: 2018-07-16 07:09+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -50,51 +50,53 @@ msgid ""
 "getfem mesh as a regular matlab object that can be manipulated with get() "
 "and set() methods)."
 msgstr ""
+"matlabの最近の (> 6.0) バージョンでは、 'gf_mesh' の呼び出しを 'gfMesh' "
+"(これは、getfemメッシュをget()およびset()メソッドで操作できる通常のmatlabオブジェクトと見なすようにMatlabに指示します)に置き換える必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:44
 msgid "**Command list :**"
-msgstr ""
+msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:48
 msgid "``M = gf_mesh('empty', int dim)``"
-msgstr ""
+msgstr "``M = gf_mesh('empty', int dim)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:50
 msgid "Create a new empty mesh."
-msgstr ""
+msgstr "新しい空のメッシュを作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:53
 msgid "``M = gf_mesh('cartesian', vec X[, vec Y[, vec Z,..]])``"
-msgstr ""
+msgstr "``M = gf_mesh('cartesian', vec X[, vec Y[, vec Z,..]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:55
 msgid "Build quickly a regular mesh of quadrangles, cubes, etc."
-msgstr ""
+msgstr "四角形や立方体などの規則的なメッシュを素早く作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:58
 msgid "``M = gf_mesh('pyramidal', vec X[, vec Y[, vec Z,..]])``"
-msgstr ""
+msgstr "``M = gf_mesh('pyramidal', vec X[, vec Y[, vec Z,..]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:60
 msgid "Build quickly a regular mesh of pyramids, etc."
-msgstr ""
+msgstr "角錐などの規則的なメッシュを素早く作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:63
 msgid "``M = gf_mesh('cartesian Q1', vec X, vec Y[, vec Z,..])``"
-msgstr ""
+msgstr "``M = gf_mesh('cartesian Q1', vec X, vec Y[, vec Z,..])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:65
 msgid ""
 "Build quickly a regular mesh of quadrangles, cubes, etc. with Q1 elements."
-msgstr ""
+msgstr "四角形や立方体などの規則的なメッシュを Q1 要素で素早く作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:69
 msgid "``M = gf_mesh('triangles grid', vec X, vec Y)``"
-msgstr ""
+msgstr "``M = gf_mesh('triangles grid', vec X, vec Y)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:71
 msgid "Build quickly a regular mesh of triangles."
-msgstr ""
+msgstr "三角形などの規則的なメッシュを素早く作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:73
 msgid ""
@@ -102,32 +104,36 @@ msgid ""
 "``gf_mesh('ptND')``, ``gf_mesh('regular simplices')`` and "
 "``gf_mesh('cartesian')``)."
 msgstr ""
+"これは非常に限定された関数であり、何らかの理由で廃止された関数です( ``gf_mesh('ptND')``, ``gf_mesh('regular "
+"simplices')`` と ``gf_mesh('cartesian')`` も参照)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:78
 msgid ""
 "``M = gf_mesh('regular simplices', vec X[, vec Y[, vec Z,...]]['degree', int"
 " k]['noised'])``"
 msgstr ""
+"``M = gf_mesh('regular simplices', vec X[, vec Y[, vec Z,...]]['degree', int"
+" k]['noised'])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:80
 msgid ""
 "Mesh a n-dimensional parallelepiped with simplices (triangles, tetrahedrons "
 "etc) ."
-msgstr ""
+msgstr "単体(三角形、四面体など)メッシュによるn次元の方体を作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:83
 msgid ""
 "The optional degree may be used to build meshes with non linear geometric "
 "transformations."
-msgstr ""
+msgstr "オプションの次数を使用して、非線形幾何変換でメッシュを構築できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:87
 msgid "``M = gf_mesh('curved', mesh m, vec F)``"
-msgstr ""
+msgstr "``M = gf_mesh('curved', mesh m, vec F)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:89
 msgid "Build a curved (n+1)-dimensions mesh from a n-dimensions mesh `m`."
-msgstr ""
+msgstr "n次元のメッシュ `m` から曲 (n+1)次元のメッシュを構築します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:91
 msgid ""
@@ -135,14 +141,16 @@ msgid ""
 "vector `F`. This can be used to obtain meshes for shells. `m` may be a "
 "mesh_fem object, in that case its linked mesh will be used."
 msgstr ""
+"新しいメッシュの点には、ベクトル `F` によって与えられる追加の座標が1つあります。これを使用して、シェルのメッシュを取得できます。 `m` "
+"はmesh_femオブジェクトも指定可能です。その場合はリンクされたメッシュが使用されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:96
 msgid "``M = gf_mesh('prismatic', mesh m, int nl[, int degree])``"
-msgstr ""
+msgstr "``M = gf_mesh('prismatic', mesh m, int nl[, int degree])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:98
 msgid "Extrude a prismatic mesh `M` from a mesh `m`."
-msgstr ""
+msgstr "メッシュ `m` から角柱状メッシュ `M` を押し出します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:100
 msgid ""
@@ -151,14 +159,16 @@ msgid ""
 "value greater than the default value of ``1``, a non-linear transformation "
 "of corresponding degree is considered in the extrusion direction."
 msgstr ""
+"付加次元には、 ``0`` から ``1`` に分布する要素の `nl` 層があります。オプションのパラメータ `degree` にデフォルト値 "
+"``1`` より大きい値を指定すると、対応する次数の非線形変換が押し出し方向で考慮されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:107
 msgid "``M = gf_mesh('pt2D', mat P, imat T[, int n])``"
-msgstr ""
+msgstr "``M = gf_mesh('pt2D', mat P, imat T[, int n])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:109
 msgid "Build a mesh from a 2D triangulation."
-msgstr ""
+msgstr "2次元三角形分割からメッシュを構築します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:111
 msgid ""
@@ -168,20 +178,22 @@ msgid ""
 "that case, `T` is expected to have 4 rows, the fourth containing these zone "
 "numbers)."
 msgstr ""
+"`P` の各列は点座標を含み、 `T` の各列は三角形の点インデックスを含みます。 `n` はオプションであり、領域番号です。 `n` "
+"が指定された場合、領域番号 `n` のみが変換されます(この場合、 `T` には4つの行があり、4行目には領域番号が入ります)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:117
 msgid ""
 "Can be used to Convert a \"pdetool\" triangulation exported in variables P "
 "and T into a GETFEM mesh."
-msgstr ""
+msgstr "変数PおよびTに書き出された \"pdetool\" 三角形分割をGETFEMメッシュに変換するために使用できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:121
 msgid "``M = gf_mesh('ptND', mat P, imat T)``"
-msgstr ""
+msgstr "``M = gf_mesh('ptND', mat P, imat T)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:123
 msgid "Build a mesh from a n-dimensional \"triangulation\"."
-msgstr ""
+msgstr "n次元 \"三角形\" 分割からメッシュを構築します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:125
 msgid ""
@@ -190,72 +202,76 @@ msgid ""
 " of the mesh will be the number of rows of `P`, and the dimension of the "
 "simplexes will be the number of rows of `T`."
 msgstr ""
+"`T` で与えられた三角形分割と `P` で与えられた点のリストからシンプレックスメッシュを構築する 'pt2D' と同様の関数。メッシュの次元は "
+"`P` の行数であり、シンプレックスの次元は `T` の行数です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:131
 msgid "``M = gf_mesh('load', string filename)``"
-msgstr ""
+msgstr "``M = gf_mesh('load', string filename)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:133
 msgid "Load a mesh from a getfem++ ascii mesh file."
-msgstr ""
+msgstr "getfem++ ASCIIメッシュファイルからメッシュをロードします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:135
 msgid "See also ``gf_mesh_get(mesh M, 'save', string filename)``."
-msgstr ""
+msgstr "``gf_mesh_get(mesh M, 'save', string filename)`` も参照してください。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:138
 msgid "``M = gf_mesh('from string', string s)``"
-msgstr ""
+msgstr "``M = gf_mesh('from string', string s)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:140
 msgid "Load a mesh from a string description."
-msgstr ""
+msgstr "文字列の記述からメッシュをロードします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:142
 msgid "For example, a string returned by ``gf_mesh_get(mesh M, 'char')``."
-msgstr ""
+msgstr "例えば、 ``gf_mesh_get(mesh M, 'char')`` が返す文字列。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:145
 msgid "``M = gf_mesh('import', string format, string filename)``"
-msgstr ""
+msgstr "``M = gf_mesh('import', string format, string filename)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:147
 msgid "Import a mesh."
-msgstr ""
+msgstr "メッシュをインポートする。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:149
 msgid "`format` may be:"
-msgstr ""
+msgstr "`format` には次のいずれかを指定できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:151
 msgid "'gmsh' for a mesh created with `Gmsh`"
-msgstr ""
+msgstr "'gmsh' は `Gmsh` で作成されたメッシュを表します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:152
 msgid "'gid' for a mesh created with `GiD`"
-msgstr ""
+msgstr "'gid' は `GiD` で作成されたメッシュを表します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:153
 msgid "'cdb' for a mesh created with `ANSYS`"
-msgstr ""
+msgstr "'cdb' は `ANSYS` で作成されたメッシュを表します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:154
 msgid "'am_fmt' for a mesh created with `EMC2`"
-msgstr ""
+msgstr "'am_fmt' は `EMC2` で作成されたメッシュを表します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:157
 msgid "``M = gf_mesh('clone', mesh m2)``"
-msgstr ""
+msgstr "``M = gf_mesh('clone', mesh m2)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:159
 msgid "Create a copy of a mesh."
-msgstr ""
+msgstr "メッシュのコピーを作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:162
 msgid ""
 "``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat "
 "vertices]])``"
 msgstr ""
+"``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat "
+"vertices]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh.rst:164
 msgid ""
@@ -273,3 +289,10 @@ msgid ""
 "obtained by `gf_util('trace level', 4)`. See ``gf_mesher_object`` to "
 "manipulate geometric primitives in order to describe the geometry."
 msgstr ""
+"`mo` はGetfemの実験的幾何メッシャーを指します。作成したメッシュの整合性は制御してください。配列  `vertices` "
+"にアプリオリに頂点を追加して、メッシュの次元nを ``n`` 、点の数を ``m`` として、サイズを ``n x m`` "
+"とすることで、メッシャーを支援できます。 `h` は要素のおおよその直径です。 `K` はメッシュの次数(>1 "
+"曲線境界の場合)です。メッシャは要素の品質を最適化しようとします。この操作には時間がかかる場合があります。メッシュの生成が失敗した場合は、使用されたランダムプロシージャのために必ずしも同じ結果が得られないため、再度実行できます。メッシュ生成によってコンソールに送信されるメッセージは、"
+"  `gf_util('trace level', 2)` を使って非アクティブにすることができる。より詳しい情報は  `gf_util('trace "
+"level', 4)` で得ることができる。ジオメトリを記述するためにジオメトリプリミティブを操作するには、 ``gf_mesher_object`` "
+"を参照してください。"

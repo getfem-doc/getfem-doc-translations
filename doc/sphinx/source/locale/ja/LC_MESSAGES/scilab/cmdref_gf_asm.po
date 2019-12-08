@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-07 13:00+0000\n"
+"POT-Creation-Date: 2019-12-08 12:57+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,19 +23,19 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:8
 msgid "gf_asm"
-msgstr ""
+msgstr "gf_asm"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:10
 msgid "**Synopsis**"
-msgstr ""
+msgstr "**概要**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:41
 msgid "**Description :**"
-msgstr ""
+msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:45
 msgid "General assembly function."
-msgstr ""
+msgstr "一般的なアセンブリ機能。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:47
 msgid ""
@@ -41,10 +45,14 @@ msgid ""
 "used to describe vector or tensor data, you just have to \"stack\" (in "
 "fortran ordering) as many scalar fields as necessary."
 msgstr ""
+"以下の関数の多くは、複数のmesh_femを使用します。メインのunknownに使用されるメインのmesh_fem(mf_u)と、データに使用されるdata"
+" "
+"mesh_fem(mf_d)です。mf_dのQdimは常に1とみなされます。mf_dを使用してベクトルまたはテンソルデータを記述する場合は、必要な数のスカラーフィールドを(fortranの次数で)"
+" \"stack\" するだけです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:55
 msgid "**Command list :**"
-msgstr ""
+msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:59
 msgid ""
@@ -53,11 +61,15 @@ msgid ""
 "is_variable[, {mesh_fem mf, mesh_imd mimd}], value], ['select_output', "
 "'varname1'[, 'varname2]], ...)``"
 msgstr ""
+"``{...} = gf_asm('generic', mesh_im mim, int order, string expression, int "
+"region, [model model, ['Secondary_domain', 'name',]] [string varname, int "
+"is_variable[, {mesh_fem mf, mesh_imd mimd}], value], ['select_output', "
+"'varname1'[, 'varname2]], ...)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:61
 msgid ""
 "High-level generic assembly procedure for volumic or boundary assembly."
-msgstr ""
+msgstr "ボリュームアセンブリまたは境界アセンブリの高水準の汎用アセンブリ手順。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:63
 msgid ""
@@ -97,6 +109,7 @@ msgid ""
 " a constant is that test functions are only available for variables, not for"
 " constants."
 msgstr ""
+"変数と定数(データ)は、領域番号(またはオプションでモデル)の後にリストされます。変数/定数ごとに、最初に名前を指定する必要があります(アセンブリ文字列で参照されるとおり)。次に、変数または定数を宣言するために、それぞれ1または0に等しい整数が必要です。次に、fem変数/定数の場合は有限要素法、積分点で定義されたデータの場合はmesh_im_data、および変数/定数の値を表すベクトルが必要です。任意の数の変数/定数を指定できます。変数と定数の違いは、試験関数は変数に対してのみ使用でき、定数に対しては使用できないことです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:91
 msgid ""
@@ -119,23 +132,25 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:104
 msgid "For example, the L2 norm of a vector field \"u\" can be computed with::"
-msgstr ""
+msgstr "例えば、ベクトルフィールド \"u\" のL2ノルムは"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:110
 msgid ""
 "The nonhomogeneous Laplacian stiffness matrix of a scalar field can be "
 "evaluated with::"
-msgstr ""
+msgstr "スカラー場の不均質Laplacian剛性行列は以下で評価できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:119
 msgid ""
 "``M = gf_asm('mass matrix', mesh_im mim, mesh_fem mf1[, mesh_fem mf2[, int "
 "region]])``"
 msgstr ""
+"``M = gf_asm('mass matrix', mesh_im mim, mesh_fem mf1[, mesh_fem mf2[, int "
+"region]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:121
 msgid "Assembly of a mass matrix."
-msgstr ""
+msgstr "質量行列のアセンブリ。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:123
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:133
@@ -148,17 +163,19 @@ msgstr ""
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:414
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:422
 msgid "Return a spmat object."
-msgstr ""
+msgstr "spmatオブジェクトを返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:127
 msgid ""
 "``L = gf_asm('laplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec a[,"
 " int region])``"
 msgstr ""
+"``L = gf_asm('laplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec a[,"
+" int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:129
 msgid "Assembly of the matrix for the Laplacian problem."
-msgstr ""
+msgstr "Laplacian問題の行列の組み立て。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:131
 msgid ""
@@ -171,10 +188,12 @@ msgid ""
 "``Le = gf_asm('linear elasticity', mesh_im mim, mesh_fem mf_u, mesh_fem "
 "mf_d, vec lambda_d, vec mu_d[, int region])``"
 msgstr ""
+"``Le = gf_asm('linear elasticity', mesh_im mim, mesh_fem mf_u, mesh_fem "
+"mf_d, vec lambda_d, vec mu_d[, int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:139
 msgid "Assembles of the matrix for the linear (isotropic) elasticity problem."
-msgstr ""
+msgstr "線形(等方性)弾性問題のためのマトリックスの集合。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:141
 msgid ""
@@ -190,12 +209,16 @@ msgid ""
 "matrix'|'rhs'|'incompressible tangent matrix', mesh_fem mf_p, vec "
 "P|'incompressible rhs', mesh_fem mf_p, vec P})``"
 msgstr ""
+"``TRHS = gf_asm('nonlinear elasticity', mesh_im mim, mesh_fem mf_u, vec U, "
+"string law, mesh_fem mf_d, mat params, {'tangent "
+"matrix'|'rhs'|'incompressible tangent matrix', mesh_fem mf_p, vec "
+"P|'incompressible rhs', mesh_fem mf_p, vec P})``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:150
 msgid ""
 "Assembles terms (tangent matrix and right hand side) for nonlinear "
 "elasticity."
-msgstr ""
+msgstr "非線形弾性の項(接線行列と右辺)をアセンブルします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:152
 msgid ""
@@ -208,6 +231,8 @@ msgid ""
 "'SaintVenant Kirchhoff': Linearized law, should be avoided). This law has "
 "the two usual Lame coefficients as parameters, called lambda and mu."
 msgstr ""
+"'SaintVenant Kirchhoff': "
+"線形は避けるべきです)。この法則には、パラメータとして、lambdaおよびmuと呼ばれる2つの通常のLame係数があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:158
 msgid ""
@@ -216,6 +241,9 @@ msgid ""
 "specific version. By default, the incompressible version is considered which"
 " requires only the first two material coefficients."
 msgstr ""
+"'Mooney Rivlin': この法則にはC1、C2、D1という3つのパラメータがあります。前に 'compressible' または "
+"'incompressible' "
+"を付けることで、特定のバージョンを強制するころができます。デフォルトでは、最初の2つの材料係数のみを必要とする非圧縮性バージョンが考慮されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:163
 msgid ""
@@ -223,12 +251,16 @@ msgid ""
 "material coefficient less (C2 = 0). By default, its compressible version is "
 "used."
 msgstr ""
+"'neo Hookean':  'Mooney Rivlin' 法の特殊なケースです。材料係数がひとつ少なくなります (C2 = "
+"0)。デフォルトでは圧縮性のバージョンが使用されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:166
 msgid ""
 "'Ciarlet Geymonat': This law has 3 parameters, called lambda, mu and gamma, "
 "with gamma chosen such that gamma is in ]-lambda/2-mu, -mu[."
 msgstr ""
+"'Ciarlet Geymonat': この法則にはlambda、mu と gammaと呼ばれる3つのパラメータがあります。ここでgammaは "
+"]-lambda/2-mu, -mu[ になるように選択されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:170
 msgid ""
@@ -251,16 +283,19 @@ msgid ""
 "of spmat objects (incompressible tangent matrix), or tuple of vec objects "
 "(incompressible right hand side)."
 msgstr ""
+"spmatオブジェクト(接線行列)、vecオブジェクト(右辺)、spmatオブジェクトのタプル(非圧縮接線行列)、またはvecオブジェクトのタプル(非圧縮性右辺)を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:185
 msgid ""
 "``A = gf_asm('helmholtz', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec k[,"
 " int region])``"
 msgstr ""
+"``A = gf_asm('helmholtz', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec k[,"
+" int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:187
 msgid "Assembly of the matrix for the Helmholtz problem."
-msgstr ""
+msgstr "Helmholtz問題の行列の組み立て。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:189
 msgid ""
@@ -273,10 +308,12 @@ msgid ""
 "``A = gf_asm('bilaplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec "
 "a[, int region])``"
 msgstr ""
+"``A = gf_asm('bilaplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec "
+"a[, int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:197
 msgid "Assembly of the matrix for the Bilaplacian problem."
-msgstr ""
+msgstr "Bilaplacian問題のための行列の組み立てです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:199
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:209
@@ -290,22 +327,26 @@ msgid ""
 "``A = gf_asm('bilaplacian KL', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, "
 "vec a, vec nu[, int region])``"
 msgstr ""
+"``A = gf_asm('bilaplacian KL', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, "
+"vec a, vec nu[, int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:207
 msgid ""
 "Assembly of the matrix for the Bilaplacian problem with Kirchhoff-Love "
 "formulation."
-msgstr ""
+msgstr "Kirchhoff-Love 定式化を用いたBilaplacian問題に対する行列の組み立て。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:215
 msgid ""
 "``V = gf_asm('volumic source', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, "
 "vec fd[, int region])``"
 msgstr ""
+"``V = gf_asm('volumic source', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, "
+"vec fd[, int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:217
 msgid "Assembly of a volumic source term."
-msgstr ""
+msgstr "体積ソース項のアセンブリ。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:219
 msgid ""
@@ -320,17 +361,19 @@ msgstr ""
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:387
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:398
 msgid "Return a vec object."
-msgstr ""
+msgstr "vecオブジェクトを返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:227
 msgid ""
 "``B = gf_asm('boundary source', int bnum, mesh_im mim, mesh_fem mf_u, "
 "mesh_fem mf_d, vec G)``"
 msgstr ""
+"``B = gf_asm('boundary source', int bnum, mesh_im mim, mesh_fem mf_u, "
+"mesh_fem mf_d, vec G)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:229
 msgid "Assembly of a boundary source term."
-msgstr ""
+msgstr "境界ソース項の構築。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:231
 msgid ""
@@ -344,6 +387,8 @@ msgid ""
 "``{HH, RR} = gf_asm('dirichlet', int bnum, mesh_im mim, mesh_fem mf_u, "
 "mesh_fem mf_d, mat H, vec R [, scalar threshold])``"
 msgstr ""
+"``{HH, RR} = gf_asm('dirichlet', int bnum, mesh_im mim, mesh_fem mf_u, "
+"mesh_fem mf_d, mat H, vec R [, scalar threshold])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:241
 msgid "Assembly of Dirichlet conditions of type <literal>h.u = r</literal>."
@@ -363,7 +408,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:252
 msgid "if u is a 2D vector field."
-msgstr ""
+msgstr "uが2次元ベクトルフィールドの場合。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:254
 msgid ""
@@ -382,17 +427,19 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:262
 msgid "See also gf_spmat_get(spmat S, 'Dirichlet_nullspace')."
-msgstr ""
+msgstr "gf_spmat_get(spmat S, 'Dirichlet_nullspace') も参照してください。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:265
 msgid ""
 "``Q = gf_asm('boundary qu term',int boundary_num, mesh_im mim, mesh_fem "
 "mf_u, mesh_fem mf_d, mat q)``"
 msgstr ""
+"``Q = gf_asm('boundary qu term',int boundary_num, mesh_im mim, mesh_fem "
+"mf_u, mesh_fem mf_d, mat q)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:267
 msgid "Assembly of a boundary qu term."
-msgstr ""
+msgstr "境界qu項のアセンブリです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:269
 msgid ""
@@ -406,6 +453,8 @@ msgid ""
 "``gf_asm('define function', string name, int nb_args, string expression[, "
 "string expression_derivative_t[, string expression_derivative_u]])``"
 msgstr ""
+"``gf_asm('define function', string name, int nb_args, string expression[, "
+"string expression_derivative_t[, string expression_derivative_u]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:279
 msgid ""
@@ -426,7 +475,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:294
 msgid "``gf_asm('undefine function', string name)``"
-msgstr ""
+msgstr "``gf_asm('undefine function', string name)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:296
 msgid ""
@@ -439,6 +488,8 @@ msgid ""
 "``gf_asm('define linear hardening function', string name, scalar sigma_y0, "
 "scalar H, ... [string 'Frobenius'])``"
 msgstr ""
+"``gf_asm('define linear hardening function', string name, scalar sigma_y0, "
+"scalar H, ... [string 'Frobenius'])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:302
 msgid ""
@@ -456,6 +507,9 @@ msgid ""
 "sigma_ref, {scalar eps_ref | scalar E, scalar alpha}, scalar n[, string "
 "'Frobenius'])``"
 msgstr ""
+"``gf_asm('define Ramberg Osgood hardening function', string name, scalar "
+"sigma_ref, {scalar eps_ref | scalar E, scalar alpha}, scalar n[, string "
+"'Frobenius'])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:311
 msgid ""
@@ -473,22 +527,27 @@ msgid ""
 "mim}] [, der_order] [, model model] [, string varname, int is_variable[, "
 "{mesh_fem mf | mesh_imd mimd}], ...])``"
 msgstr ""
+"``gf_asm('expression analysis', string expression [, {mesh mesh | mesh_im "
+"mim}] [, der_order] [, model model] [, string varname, int is_variable[, "
+"{mesh_fem mf | mesh_imd mimd}], ...])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:320
 msgid ""
 "Analyse a high-level generic assembly expression and print information about"
 " the provided expression."
-msgstr ""
+msgstr "高水準汎用アセンブリ表現を解析し、指定された表現に関する情報を出力します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:324
 msgid ""
 "``{...} = gf_asm('volumic' [,CVLST], expr [, mesh_ims, mesh_fems, "
 "data...])``"
 msgstr ""
+"``{...} = gf_asm('volumic' [,CVLST], expr [, mesh_ims, mesh_fems, "
+"data...])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:326
 msgid "Low-level generic assembly procedure for volumic assembly."
-msgstr ""
+msgstr "体積構築の低水準汎用アセンブリ手順。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:328
 msgid ""
@@ -501,37 +560,41 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:334
 msgid "For example, the L2 norm of a field can be computed with::"
-msgstr ""
+msgstr "たとえば、フィールドのL2ノルムは次のように計算できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:340
 msgid "The Laplacian stiffness matrix can be evaluated with::"
-msgstr ""
+msgstr "Laplacian剛性マトリックスは、次の式で評価できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:347
 msgid ""
 "``{...} = gf_asm('boundary', int bnum, string expr [, mesh_im mim, mesh_fem "
 "mf, data...])``"
 msgstr ""
+"``{...} = gf_asm('boundary', int bnum, string expr [, mesh_im mim, mesh_fem "
+"mf, data...])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:349
 msgid "Low-level generic boundary assembly."
-msgstr ""
+msgstr "低水準の汎用境界のアセンブリです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:351
 msgid "See the help for gf_asm('volumic')."
-msgstr ""
+msgstr "gf_asm('volumic') のヘルプを参照してください。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:354
 msgid ""
 "``Mi = gf_asm('interpolation matrix', mesh_fem mf, {mesh_fem mfi | vec "
 "pts})``"
 msgstr ""
+"``Mi = gf_asm('interpolation matrix', mesh_fem mf, {mesh_fem mfi | vec "
+"pts})``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:356
 msgid ""
 "Build the interpolation matrix from a mesh_fem onto another mesh_fem or a "
 "set of points."
-msgstr ""
+msgstr "mesh_femから別のmesh_femまたはポイント集合の補間行列を構築します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:358
 msgid ""
@@ -552,12 +615,14 @@ msgid ""
 "``Me = gf_asm('extrapolation matrix',mesh_fem mf,  {mesh_fem mfe | vec "
 "pts})``"
 msgstr ""
+"``Me = gf_asm('extrapolation matrix',mesh_fem mf,  {mesh_fem mfe | vec "
+"pts})``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:371
 msgid ""
 "Build the extrapolation matrix from a mesh_fem onto another mesh_fem or a "
 "set of points."
-msgstr ""
+msgstr "mesh_femから別のmesh_femまたはポイント集合の外挿行列を構築します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:373
 msgid ""
@@ -577,16 +642,20 @@ msgid ""
 "mf_obstacle, vec obstacle, scalar r [, {scalar coeff | mesh_fem mf_coeff, "
 "vec coeff} [, int option[, scalar alpha, vec W]]])``"
 msgstr ""
+"``B = gf_asm('integral contact Uzawa projection', int bnum, mesh_im mim, "
+"mesh_fem mf_u, vec U, mesh_fem mf_lambda, vec vec_lambda, mesh_fem "
+"mf_obstacle, vec obstacle, scalar r [, {scalar coeff | mesh_fem mf_coeff, "
+"vec coeff} [, int option[, scalar alpha, vec W]]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:385
 msgid "Specific assembly procedure for the use of an Uzawa algorithm to solve"
-msgstr ""
+msgstr "Uzawaアルゴリズムを用いて解くための具体的な構築手順です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:384
 msgid ""
 "contact problems. Projects the term $-(\\lambda - r (u_N-g))_-$ on the "
 "finite element space of $\\lambda$."
-msgstr ""
+msgstr "接触問題。 $-(\\lambda - r (u_N-g))_-$ の項を $\\lambda$ の有限要素空間に投影します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:391
 msgid ""
@@ -594,6 +663,9 @@ msgid ""
 " mf_u, mesh_fem mf_lambda, vec vec_lambda, mesh_fem mf_levelset, vec "
 "levelset)``"
 msgstr ""
+"``B = gf_asm('level set normal source term', int bnum, mesh_im mim, mesh_fem"
+" mf_u, mesh_fem mf_lambda, vec vec_lambda, mesh_fem mf_levelset, vec "
+"levelset)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:393
 msgid ""
@@ -609,27 +681,33 @@ msgid ""
 "``M = gf_asm('lsneuman matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, "
 "levelset ls[, int region])``"
 msgstr ""
+"``M = gf_asm('lsneuman matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, "
+"levelset ls[, int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:404
 msgid "Assembly of a level set Neuman  matrix."
-msgstr ""
+msgstr "levelset行列のアセンブリ。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:410
 msgid ""
 "``M = gf_asm('nlsgrad matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, "
 "levelset ls[, int region])``"
 msgstr ""
+"``M = gf_asm('nlsgrad matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, "
+"levelset ls[, int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:412
 msgid "Assembly of a nlsgrad matrix."
-msgstr ""
+msgstr "nlsgrad行列のアセンブリ。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:418
 msgid ""
 "``M = gf_asm('stabilization patch matrix', @tm mesh, mesh_fem mf,  mesh_im "
 "mim, real ratio, real h)``"
 msgstr ""
+"``M = gf_asm('stabilization patch matrix', @tm mesh, mesh_fem mf,  mesh_im "
+"mim, real ratio, real h)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:420
 msgid "Assembly of stabilization patch matrix ."
-msgstr ""
+msgstr "安定化パッチ行列のアセンブリ。"

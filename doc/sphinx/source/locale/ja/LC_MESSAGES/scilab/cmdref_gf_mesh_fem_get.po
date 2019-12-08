@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-07 13:00+0000\n"
+"POT-Creation-Date: 2019-12-08 12:57+0000\n"
 "PO-Revision-Date: 2018-07-16 07:02+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -23,15 +23,15 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:8
 msgid "gf_mesh_fem_get"
-msgstr ""
+msgstr "gf_mesh_fem_get"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:10
 msgid "**Synopsis**"
-msgstr ""
+msgstr "**概要**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:52
 msgid "**Description :**"
-msgstr ""
+msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:55
 msgid "General function for inquiry about mesh_fem objects."
@@ -39,7 +39,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:58
 msgid "**Command list :**"
-msgstr ""
+msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:62
 msgid "``n = gf_mesh_fem_get(mesh_fem MF, 'nbdof')``"
@@ -82,6 +82,9 @@ msgid ""
 "if you want to be able to map a convex number with its associated degrees of"
 " freedom."
 msgstr ""
+"警告: "
+"自由度は任意の順序で返される可能性があります。アセンブリルーチンではこの関数を使用しないでください。凸包値に関連する自由度をマップする場合は、代わりに "
+"'basic dof from cvid' を使用します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:86
 msgid ""
@@ -109,7 +112,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:99
 msgid "Return the degrees of freedom attached to each convex of the mesh."
-msgstr ""
+msgstr "メッシュの各凸包にアタッチされた自由度を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:101
 msgid ""
@@ -151,7 +154,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:122
 msgid "Return partially linked degrees of freedom."
-msgstr ""
+msgstr "部分的にリンクされた自由度を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:124
 msgid ""
@@ -162,6 +165,9 @@ msgid ""
 "will be returned by this function (this can be useful when searching the "
 "interfaces between classical FEM and hierarchical FEM)."
 msgstr ""
+"メッシュの境界上にあるものを除き、1つの凸包にのみ属する凸包の境界上にある基本自由度を返します。たとえば、凸包の 'a' と 'b' "
+"が共通の面を共有し、 'a' にP1 FEMがあり、 'b' にP2 "
+"FEMがある場合、面の中央の基本自由度がこの関数によって返されます(これは、古典的FEMと階層的FEMの間のインターフェースを探索するときに有用です)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:133
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'qdim')``"
@@ -174,7 +180,7 @@ msgstr ""
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:137
 msgid ""
 "By default, Q=1 (scalar field). This has an impact on the dof numbering."
-msgstr ""
+msgstr "デフォルトでは、Q=1(スカラー場)です。これは、自由度の番号付けに影響します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:140
 msgid "``{FEMs, CV2F} = gf_mesh_fem_get(mesh_fem MF, 'fem'[, mat CVids])``"
@@ -205,7 +211,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:157
 msgid "Return the list of convexes who have a FEM."
-msgstr ""
+msgstr "FEMを持つ凸包のリストを返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:160
 msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_lagrangian'[, mat CVids])``"
@@ -221,6 +227,8 @@ msgid ""
 "delta(i,j), where P[j] is the dof location of the jth base function, and "
 "delta(i,j) = 1 if i==j, else 0."
 msgstr ""
+"Lagrangianとは、各基底関数 Phi[i] が、 Phi[i](P[j]) = delta(i,j) となることを意味します。ここで P[j] "
+"は、j番目の基底関数の自由度位置であり、i==jなら delta(i,j) = 1 であり、そうでなければ0です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:168
 msgid ""
@@ -257,7 +265,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:189
 msgid "Return 1 if the optional reduction matrix is applied to the dofs."
-msgstr ""
+msgstr "オプションの縮退マトリックスが自由度に適用される場合は1を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:192
 msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'reduction matrix')``"
@@ -265,7 +273,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:194
 msgid "Return the optional reduction matrix."
-msgstr ""
+msgstr "オプションの縮退行列を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:197
 msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'extension matrix')``"
@@ -273,7 +281,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:199
 msgid "Return the optional extension matrix."
-msgstr ""
+msgstr "オプションの拡張行列を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:202
 msgid "``Vr = gf_mesh_fem_get(mesh_fem MF, 'reduce vector', vec V)``"
@@ -329,6 +337,7 @@ msgid ""
 "corresponding shape function is nonzero on this region. The extension matrix"
 " is used to make the correspondence between basic and reduced dofs."
 msgstr ""
+"縮退されたmesh_femの場合、自由度は対応する形状関数のポテンシャルがこの領域でゼロでない場合に領域上にあります。拡張行列を使用して、基本自由度と縮退自由度間の対応を作ります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:243
 msgid "``DOFpts = gf_mesh_fem_get(mesh_fem MF, 'dof nodes'[, mat DOFids])``"
@@ -347,7 +356,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:250
 msgid "Get location of basic degrees of freedom."
-msgstr ""
+msgstr "基本自由度の位置を取得します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:252
 msgid ""
@@ -362,7 +371,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:259
 msgid "Get the 'dof_partition' array."
-msgstr ""
+msgstr "'dof_partition' 配列を取得します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:261
 msgid ""
@@ -483,6 +492,7 @@ msgid ""
 "isoparametric Pk (or Qk) FEMs (as GMSH does not handle higher order "
 "elements)."
 msgstr ""
+"FEMおよび幾何学的変換は、1次アイソパラメトリックPk(またはQk)FEM(GMSHはより高次の要素を処理しないため)にマッピングされます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:332
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'dof_from_im',mesh_im mim[, int p])``"
@@ -505,7 +515,7 @@ msgstr ""
 msgid ""
 "IMPORTANT: you still have to set a valid integration method on the convexes "
 "which are not crosses by the levelset!"
-msgstr ""
+msgstr "重要:levelsetと交差しない凸包には、有効な積分法を設定する必要があります!"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:345
 msgid ""
@@ -537,11 +547,11 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:359
 msgid "Return the amount of memory (in bytes) used by the mesh_fem object."
-msgstr ""
+msgstr "mesh_fem オブジェクトが使用するメモリ量(バイト単位)を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:361
 msgid "The result does not take into account the linked mesh object."
-msgstr ""
+msgstr "この結果では、リンクされたメッシュオブジェクトは考慮されません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:364
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'has_linked_mesh_levelset')``"
@@ -549,7 +559,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:366
 msgid "Is a mesh_fem_level_set or not."
-msgstr ""
+msgstr "mesh_fem_level_setかどうかを確認します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:369
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'linked_mesh_levelset')``"
@@ -557,4 +567,4 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_get.rst:371
 msgid "if it is a mesh_fem_level_set gives the linked mesh_level_set."
-msgstr ""
+msgstr "mesh_fem_level_set の場合はリンクされた mesh_level_set を返します。"

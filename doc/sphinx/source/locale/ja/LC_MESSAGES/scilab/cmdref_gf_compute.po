@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-07 13:00+0000\n"
+"POT-Creation-Date: 2019-12-08 12:57+0000\n"
 "PO-Revision-Date: 2018-07-16 06:59+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -175,7 +175,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:117
 msgid "``HU = gf_compute(mesh_fem MF, vec U, 'hessian', mesh_fem mf_h)``"
-msgstr ""
+msgstr "``HU = gf_compute(mesh_fem MF, vec U, 'hessian', mesh_fem mf_h)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:119
 msgid ""
@@ -185,13 +185,15 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:121
 msgid "See also gf_compute('gradient', mesh_fem mf_du)."
-msgstr ""
+msgstr "gf_compute('gradient', mesh_fem mf_du) も参照してください。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:124
 msgid ""
 "``UP = gf_compute(mesh_fem MF, vec U, 'eval on triangulated surface', int "
 "Nrefine, [vec CVLIST])``"
 msgstr ""
+"``UP = gf_compute(mesh_fem MF, vec U, 'eval on triangulated surface', int "
+"Nrefine, [vec CVLIST])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:126
 msgid ""
@@ -204,17 +206,21 @@ msgid ""
 "may indicate the list of convex number that should be consider, if not used "
 "then all the mesh convexes will be used. U should be a row vector."
 msgstr ""
+"[廃止された機能! 将来のリリースで削除される予定です] "
+"2次元三角形メッシュ用に設計されたユーティリティ関数は補間されたU値を持つ三角形座標のリストを返します。これは、不連続な高次要素上で定義されたデータを正確に視覚化するために使用できます。出力では、UPの6つの最初の行は三角形座標を含み、他の行はU(三角形の頂点ごとに1つ)のCVLISTの補間された値を含み、考慮されるべき凸包数のリストを示すことができ、もし使用されなければ、全てのメッシュ凸包が使用されます。Uは行ベクトルでなければなりません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:139
 msgid ""
 "``Ui = gf_compute(mesh_fem MF, vec U, 'interpolate on', {mesh_fem mfi | "
 "slice sli | vec pts})``"
 msgstr ""
+"``Ui = gf_compute(mesh_fem MF, vec U, 'interpolate on', {mesh_fem mfi | "
+"slice sli | vec pts})``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:141
 msgid ""
 "Interpolate a field on another mesh_fem or a slice or a list of points."
-msgstr ""
+msgstr "別のmesh_fem、slice、またはポイントのリストのフィールドを補間します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:144
 msgid "Interpolation on another mesh_fem <literal>mfi</literal>:"
@@ -237,6 +243,8 @@ msgid ""
 "is much faster. This can also be used with gf_slice('points') to obtain "
 "field values at a given set of points."
 msgstr ""
+"これは、洗練されたP1-不連続メッシュの補間に似ていますが、はるかに高速です。また、 gf_slice('points') "
+"と組み合わせて使用し、特定のポイント集合におけるフィールド値を取得することもできます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:151
 msgid "Interpolation on a set of points <literal>pts</literal>"
@@ -244,16 +252,17 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:153
 msgid "See also gf_asm('interpolation matrix')"
-msgstr ""
+msgstr "gf_asm('interpolation matrix') も参照"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:157
 msgid ""
 "``Ue = gf_compute(mesh_fem MF, vec U, 'extrapolate on', mesh_fem mfe)``"
 msgstr ""
+"``Ue = gf_compute(mesh_fem MF, vec U, 'extrapolate on', mesh_fem mfe)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:159
 msgid "Extrapolate a field on another mesh_fem."
-msgstr ""
+msgstr "フィールドを別のmesh_femに外挿します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:161
 msgid ""
@@ -267,22 +276,22 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:168
 msgid "See also gf_asm('extrapolation matrix')"
-msgstr ""
+msgstr "gf_asm('extrapolation matrix') も参照"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:171
 msgid "``E = gf_compute(mesh_fem MF, vec U, 'error estimate', mesh_im mim)``"
-msgstr ""
+msgstr "``E = gf_compute(mesh_fem MF, vec U, 'error estimate', mesh_im mim)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:173
 msgid "Compute an a posteriori error estimate."
-msgstr ""
+msgstr "事後誤差推定値を計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:175
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:183
 msgid ""
 "Currently there is only one which is available: for each convex, the jump of"
 " the normal derivative is integrated on its faces."
-msgstr ""
+msgstr "現在、使用できるのは1つだけです。各凸包に対して、法線導関数のジャンプが面に対して積分されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:179
 msgid ""
@@ -290,16 +299,21 @@ msgid ""
 "int GAMMAC, int GAMMAN, scalar lambda_, scalar mu_, scalar gamma0, scalar "
 "f_coeff, scalar vertical_force)``"
 msgstr ""
+"``E = gf_compute(mesh_fem MF, vec U, 'error estimate nitsche', mesh_im mim, "
+"int GAMMAC, int GAMMAN, scalar lambda_, scalar mu_, scalar gamma0, scalar "
+"f_coeff, scalar vertical_force)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:181
 msgid "Compute an a posteriori error estimate in the case of Nitsche method."
-msgstr ""
+msgstr "Nitsche法の場合、事後誤差推定値を計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:187
 msgid ""
 "``gf_compute(mesh_fem MF, vec U, 'convect', mesh_fem mf_v, vec V, scalar dt,"
 " int nt[, string option[, vec per_min, vec per_max]])``"
 msgstr ""
+"``gf_compute(mesh_fem MF, vec U, 'convect', mesh_fem mf_v, vec V, scalar dt,"
+" int nt[, string option[, vec per_min, vec per_max]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:189
 msgid ""

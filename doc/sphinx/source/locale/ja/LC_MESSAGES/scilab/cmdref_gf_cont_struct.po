@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-07 13:00+0000\n"
+"POT-Creation-Date: 2019-12-08 12:57+0000\n"
 "PO-Revision-Date: 2018-07-16 07:00+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -23,19 +23,19 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:8
 msgid "gf_cont_struct"
-msgstr ""
+msgstr "gf_cont_struct"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:10
 msgid "**Synopsis**"
-msgstr ""
+msgstr "**概要**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:16
 msgid "**Description :**"
-msgstr ""
+msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:19
 msgid "General constructor for cont_struct objects."
-msgstr ""
+msgstr "cont_structオブジェクトの汎用的なコンストラクタ"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:21
 msgid ""
@@ -43,10 +43,12 @@ msgid ""
 "continuation of solution branches of models (for more details about "
 "continuation see the GetFEM++ user documentation)."
 msgstr ""
+"このオブジェクトは、モデルの解の分岐のnumerical "
+"continuation(continuationの詳細については、GetFEM++ユーザーマニュアルを参照)で使用されるパラメータとデータを格納するために使用されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:26
 msgid "**Command list :**"
-msgstr ""
+msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:30
 msgid ""
@@ -54,6 +56,9 @@ msgid ""
 "dataname_init, string dataname_final, string dataname_current], scalar "
 "sc_fac[, ...])``"
 msgstr ""
+"``S = gf_cont_struct(model md, string dataname_parameter[,string "
+"dataname_init, string dataname_final, string dataname_current], scalar "
+"sc_fac[, ...])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:32
 msgid ""
@@ -66,14 +71,20 @@ msgid ""
 "<literal>sc_fac</literal> is a scale factor involved in the weighted norm "
 "used in the continuation."
 msgstr ""
+"変数 <literal>dataname_parameter</literal> は <literal>md</literal> "
+"で与えられるモデルをパラメータ化します。ベクタデータムを介してパラメータ化が行われる場合、 "
+"<literal>dataname_init</literal> および <literal>dataname_final</literal> "
+"は、パラメータ化を決定するこのデータムの2つの与えられた値を格納する必要があり、 <literal>dataname_current</literal>"
+" は、このデータムの実際の値を提供します。 <literal>sc_fac</literal> "
+"は、continuationで使用される加重ノルムに含まれるスケール係数です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:39
 msgid "Additional options:"
-msgstr ""
+msgstr "その他のオプション"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:44
 msgid "'lsolver', string SOLVER_NAME"
-msgstr ""
+msgstr "'lsolver', string SOLVER_NAME"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:42
 msgid ""
@@ -82,130 +93,133 @@ msgid ""
 "are 'superlu', 'mumps' (if supported), 'cg/ildlt', 'gmres/ilu' and "
 "'gmres/ilut';"
 msgstr ""
+"組み込まれた線形システムに使用するソルバーの名前(デフォルト値は 'auto' で、getfemが自分で選択できるようになっています)です。有効な値は "
+"'superlu', 'mumps' (サポートされている場合), 'cg/ildlt', 'gmres/ilu' および 'gmres/ilut' "
+"です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:46
 msgid "'h_init', scalar HIN"
-msgstr ""
+msgstr "'h_init', scalar HIN"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:47
 msgid "initial step size (the default value is 1e-2);"
-msgstr ""
+msgstr "初期ステップサイズ(デフォルト値は1e-2です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:48
 msgid "'h_max', scalar HMAX"
-msgstr ""
+msgstr "'h_max', scalar HMAX"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:49
 msgid "maximum step size (the default value is 1e-1);"
-msgstr ""
+msgstr "最大ステップサイズ(デフォルト値は1e-1です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:50
 msgid "'h_min', scalar HMIN"
-msgstr ""
+msgstr "'h_min', scalar HMIN"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:51
 msgid "minimum step size (the default value is 1e-5);"
-msgstr ""
+msgstr "最小ステップサイズ(デフォルト値は1e-5です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:52
 msgid "'h_inc', scalar HINC"
-msgstr ""
+msgstr "'h_inc', scalar HINC"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:53
 msgid "factor for enlarging the step size (the default value is 1.3);"
-msgstr ""
+msgstr "ステップサイズを拡大する係数(デフォルト値は1.3です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:54
 msgid "'h_dec', scalar HDEC"
-msgstr ""
+msgstr "'h_dec', scalar HDEC"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:55
 msgid "factor for diminishing the step size (the default value is 0.5);"
-msgstr ""
+msgstr "ステップサイズを減少させる係数(デフォルト値は0.5です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:57
 msgid "'max_iter', int MIT"
-msgstr ""
+msgstr "'max_iter', int MIT"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:57
 msgid ""
 "maximum number of iterations allowed in the correction (the default value is"
 " 10);"
-msgstr ""
+msgstr "修正で許容される最大反復回数(デフォルト値は10です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:60
 msgid "'thr_iter', int TIT"
-msgstr ""
+msgstr "'thr_iter', int TIT"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:60
 msgid ""
 "threshold number of iterations of the correction for enlarging the step size"
 " (the default value is 4);"
-msgstr ""
+msgstr "ステップサイズ拡大補正の繰り返し回数閾値(デフォルト値は4です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:63
 msgid "'max_res', scalar RES"
-msgstr ""
+msgstr "'max_res', scalar RES"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:63
 msgid ""
 "target residual value of a new point on the solution curve (the default "
 "value is 1e-6);"
-msgstr ""
+msgstr "解析曲線上の新しい点の目標残差値(デフォルト値は1e-6です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:66
 msgid "'max_diff', scalar DIFF"
-msgstr ""
+msgstr "'max_diff', scalar DIFF"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:66
 msgid ""
 "determines a convergence criterion for two consecutive points (the default "
 "value is 1e-6);"
-msgstr ""
+msgstr "連続する2点の収束判定基準(デフォルト値は1e-6です)を決定します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:70
 msgid "'min_cos', scalar MCOS"
-msgstr ""
+msgstr "'min_cos', scalar MCOS"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:69
 msgid ""
 "minimal value of the cosine of the angle between tangents to the solution "
 "curve at an old point and a new one (the default value is 0.9);"
-msgstr ""
+msgstr "古い点と新しい点の解曲線までの接線間の角度の余弦の最小値(デフォルト値は0.9です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:73
 msgid "'max_res_solve', scalar RES_SOLVE"
-msgstr ""
+msgstr "'max_res_solve', scalar RES_SOLVE"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:73
 msgid ""
 "target residual value for the linear systems to be solved (the default value"
 " is 1e-8);"
-msgstr ""
+msgstr "解くべき線形系の目標残差値(デフォルト値は1e-8です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:77
 msgid "'singularities', int SING"
-msgstr ""
+msgstr "'singularities', int SING"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:76
 msgid ""
 "activates tools for detection and treatment of singular points (1 for limit "
 "points, 2 for bifurcation points and points requiring special branching "
 "techniques);"
-msgstr ""
+msgstr "特異点(1は極限点、2は分岐点、2は特殊な分岐技術が必要な点)の検出と処理のためのツールをアクティブにします"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:80
 msgid "'non-smooth'"
-msgstr ""
+msgstr "'non-smooth'"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:80
 msgid ""
 "determines that some special methods for non-smooth problems can be used;"
-msgstr ""
+msgstr "平滑化されていない問題に特殊な方法を使用できるかどうかを判定します"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:84
 msgid "'delta_max', scalar DMAX"
-msgstr ""
+msgstr "'delta_max', scalar DMAX"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:83
 msgid ""
@@ -216,7 +230,7 @@ msgstr "異なる平滑部(デフォルト値は0.005です)に属する二つ�
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:87
 msgid "'delta_min', scalar DMIN"
-msgstr ""
+msgstr "'delta_min', scalar DMIN"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:87
 msgid ""
@@ -226,40 +240,40 @@ msgstr "凸包結合の試験関数を評価するための最小分割サイズ
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:90
 msgid "'thr_var', scalar TVAR"
-msgstr ""
+msgstr "'thr_var', scalar TVAR"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:90
 msgid ""
 "threshold variation for refining the division (the default value is 0.02);"
-msgstr ""
+msgstr "分割をリファインするための閾値ばらつき(デフォルト値は0.02です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:94
 msgid "'nb_dir', int NDIR"
-msgstr ""
+msgstr "'nb_dir', int NDIR"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:93
 msgid ""
 "total number of the linear combinations of one couple of reference vectors "
 "when searching for new tangent predictions during location of new one-sided "
 "branches (the default value is 40);"
-msgstr ""
+msgstr "新しい片側分岐の位置(デフォルト値は40です)で新しい正接予測を検索する際の、一対の参照ベクトルの線形結合の総数"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:97
 msgid "'nb_span', int NSPAN"
-msgstr ""
+msgstr "'nb_span', int NSPAN"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:97
 msgid ""
 "total number of the couples of the reference vectors forming the linear "
 "combinations (the default value is 1);"
-msgstr ""
+msgstr "線形結合を形成する基準ベクトルの結合の総数(デフォルト値は1です)"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:101
 msgid "'noisy' or 'very_noisy'"
-msgstr ""
+msgstr "'noisy' または 'very_noisy'"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_cont_struct.rst:100
 msgid ""
 "determines how detailed information has to be displayed during the "
 "continuation process (residual values etc.)."
-msgstr ""
+msgstr "continuationプロセス中に(残差値等の)詳細情報をどのように表示するかを決定します。"

@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the GetFEM++ package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-07 13:00+0000\n"
+"POT-Creation-Date: 2019-12-08 12:57+0000\n"
 "PO-Revision-Date: 2018-07-16 07:09+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,36 +23,36 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:8
 msgid "gf_mesh_fem"
-msgstr ""
+msgstr "gf_mesh_fem"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:10
 msgid "**Synopsis**"
-msgstr ""
+msgstr "**概要**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:24
 msgid "**Description :**"
-msgstr ""
+msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:27
 msgid "General constructor for mesh_fem objects."
-msgstr ""
+msgstr "mesh_femオブジェクトの汎用的なコンストラクタ"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:29
 msgid ""
 "This object represents a finite element method defined on a whole mesh."
-msgstr ""
+msgstr "このオブジェクトは、メッシュ全体で定義された有限要素法を表します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:32
 msgid "**Command list :**"
-msgstr ""
+msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:36
 msgid "``MF = gf_mesh_fem(mesh m[, int Qdim1=1[, int Qdim2=1, ...]])``"
-msgstr ""
+msgstr "``MF = gf_mesh_fem(mesh m[, int Qdim1=1[, int Qdim2=1, ...]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:38
 msgid "Build a new mesh_fem object."
-msgstr ""
+msgstr "新しいmesh_femオブジェクトを構築します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:40
 msgid ""
@@ -57,10 +61,13 @@ msgid ""
 "vector field off size n, Qdim1=m, Qdim2=n for a matrix field of size mxn ..."
 " Returns the handle of the created object."
 msgstr ""
+"`Qdim` パラメータは、有限要素法によって表されるフィールドの次元を指定します。スカラー場の場合はQdim1 = "
+"1、サイズn以外のベクトル場の場合は Qdim1 = n 、サイズ mxn の行列場の場合はQdim1=m、Qdim2=n ... "
+"作成されたオブジェクトのハンドルを返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:47
 msgid "``MF = gf_mesh_fem('load', string fname[, mesh m])``"
-msgstr ""
+msgstr "``MF = gf_mesh_fem('load', string fname[, mesh m])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:49
 msgid "Load a mesh_fem from a file."
@@ -72,6 +79,8 @@ msgid ""
 " then it is read from the file `fname` and its descriptor is returned as the"
 " second output argument."
 msgstr ""
+"メッシュ `m` が与えられない場合(この種類のファイルにはメッシュは保存されません)、ファイル `fname` "
+"から読み込まれ、そのディスクリプタが第2の出力引数として返されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:56
 msgid "``MF = gf_mesh_fem('from string', string s[, mesh m])``"
@@ -109,7 +118,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:74
 msgid "After that, you should not modify the FEM of `mf1`, `mf2` etc."
-msgstr ""
+msgstr "使用後は、  `mf1`, `mf2` のFEMを修正しないでください。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:77
 msgid "``MF = gf_mesh_fem('product', mesh_fem mf1, mesh_fem mf2)``"
@@ -124,11 +133,11 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:83
 msgid "`mf1` and `mf2` must share the same mesh."
-msgstr ""
+msgstr "`mf1` と `mf2` は同じメッシュを共有しなければなりません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:85
 msgid "After that, you should not modify the FEM of `mf1`, `mf2`."
-msgstr ""
+msgstr "使用後は、 `mf1`, `mf2` のFEMを修正しないでください。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:88
 msgid "``MF = gf_mesh_fem('levelset', mesh_levelset mls, mesh_fem mf)``"
@@ -166,4 +175,4 @@ msgstr ""
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem.rst:106
 msgid ""
 "If `RCVs` is given, no FEM will be put on the convexes listed in `RCVs`."
-msgstr ""
+msgstr "`RCVs` が与えられた場合、 `RCVs` に列挙されている凸包にはFEMは適用されません。"
