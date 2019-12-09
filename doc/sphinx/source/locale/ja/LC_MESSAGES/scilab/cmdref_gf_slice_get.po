@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-08 12:57+0000\n"
+"POT-Creation-Date: 2019-12-09 13:06+0000\n"
 "PO-Revision-Date: 2018-07-16 07:01+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -89,6 +89,9 @@ msgid ""
 "gf_slice_get(slice S, 'dim')+1, except if the optional argument "
 "<literal>dim</literal> is used."
 msgstr ""
+"スライスには、ポイント(dim0の単体)、セグメント(次元1の単体)、三角形などが含まれる場合があるため、オプションの引数 "
+"<literal>dim</literal> が使用されている場合を除いて、結果はサイズ  gf_slice_get(slice S, 'dim')+1"
+" のベクトルになります 。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_slice_get.rst:73
 msgid "``P = gf_slice_get(slice S, 'pts')``"
@@ -104,7 +107,7 @@ msgstr "``{S, CV2S} = gf_slice_get(slice S, 'splxs',int dim)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_slice_get.rst:80
 msgid "Return the list of simplexes of dimension <literal>dim</literal>."
-msgstr ""
+msgstr "次元 <literal>dim</literal> の単体のリストを返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_slice_get.rst:82
 msgid ""
@@ -113,6 +116,9 @@ msgid ""
 " simplexes for any convex stored in the slice. For example "
 "'S(:,CV2S(4):CV2S(5)-1)' gives the list of simplexes for the fourth convex."
 msgstr ""
+"出力では、Sには 'dim+1' 行があり、各列には単体のポイント番号が含まれています。ベクトル <literal>CV2S</literal> "
+"を使用して、スライス内に格納されている任意の凸包の単体のリストを見つけることができます。たとえば、 'S(:,CV2S(4):CV2S(5)-1)' "
+"とすると、第4の凸包の単体のリストが得られます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_slice_get.rst:89
 msgid "``{P, E1, E2} = gf_slice_get(slice S, 'edges')``"
@@ -130,6 +136,9 @@ msgid ""
 " \"edges\" which is on the border of the slice. This function is useless "
 "except for post-processing purposes."
 msgstr ""
+"<literal>P</literal> はすべてのエッジ頂点のリストを含み、 <literal>E1</literal> は "
+"<literal>P</literal> における各メッシュエッジのインデックスを含み、 <literal>E2</literal> "
+"はスライスの境界上にある各 \"エッジ\" のインデックスを含みます。この機能は、ポスト処理の目的以外には使用できません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_slice_get.rst:99
 msgid "``Usl = gf_slice_get(slice S, 'interpolate_convex_data', mat Ucv)``"
@@ -144,6 +153,8 @@ msgid ""
 "The input array <literal>Ucv</literal> may have any number of dimensions, "
 "but its last dimension should be equal to gf_mesh_get(mesh M, 'max cvid')."
 msgstr ""
+"入力配列 <literal>Ucv</literal> は任意の数の次元を持つことができますが、その最後の次元は gf_mesh_get(mesh M,"
+" 'max cvid') に等しくなければなりません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_slice_get.rst:106
 msgid ""
@@ -191,7 +202,7 @@ msgstr "スライスをVTKにエクスポートします。"
 msgid ""
 "Following the <literal>filename</literal>, you may use any of the following "
 "options:"
-msgstr ""
+msgstr "<literal>filename</literal> の後には、以下のオプションを使うことができます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_slice_get.rst:131
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_slice_get.rst:163

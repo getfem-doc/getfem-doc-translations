@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-08 12:57+0000\n"
+"POT-Creation-Date: 2019-12-09 13:06+0000\n"
 "PO-Revision-Date: 2018-07-16 06:59+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -157,6 +157,10 @@ msgid ""
 "P1-discontinuous mesh_fem. <literal>mf</literal> and "
 "<literal>mf_du</literal> should share the same mesh."
 msgstr ""
+"勾配はmesh_femの <literal>mf_du</literal> で補間され <literal>DU</literal> "
+"に返されます。例えば、 <literal>U</literal> がP2 mesh_femで定義されている場合、 "
+"<literal>DU</literal> はP1不連続mesh_femで評価されます。 <literal>mf</literal> と "
+"<literal>mf_du</literal> は同じメッシュを共有する必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:106
 msgid ""
@@ -172,6 +176,14 @@ msgid ""
 "<literal>mf</literal> and Qdim_mf_du is the Qdim of "
 "<literal>mf_du</literal>."
 msgstr ""
+"<literal>U</literal> "
+"は任意の数の次元を持つことができます(すなわち、この関数はスカラー場の勾配に限定されず、テンソル場にも使用できます)。ただし、 "
+"<literal>U</literal> の最後の次元は <literal>mf</literal> の自由度の数に等しくなければなりません。たとえば、"
+" <literal>U</literal> が [3x3xNmf] 配列(ここで、Nmfは <literal>mf</literal> "
+"の自由度の数です)の場合、 <literal>DU</literal> は [Nx3x3[xQ]xNmf_du] 配列となり、 N はメッシュの次元、 "
+"Nmf_du は <literal>mf_du</literal> の自由度の数であり、 <literal>Qdim_mf != "
+"Qdim_mf_du</literal> の場合、オプションのQ次が挿入されます、ここで、 Qdim_mf は "
+"<literal>mf</literal> のQdimであり、Qdim_mf_duは <literal>mf_du</literal> のQdimです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:117
 msgid "``HU = gf_compute(mesh_fem MF, vec U, 'hessian', mesh_fem mf_h)``"
@@ -182,6 +194,8 @@ msgid ""
 "Compute the hessian of the field <literal>U</literal> defined on mesh_fem "
 "<literal>mf_h</literal>."
 msgstr ""
+"mesh_fem <literal>mf_h</literal> に定義されているフィールド <literal>U</literal> "
+"のHessianを計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:121
 msgid "See also gf_compute('gradient', mesh_fem mf_du)."
@@ -224,7 +238,7 @@ msgstr "別のmesh_fem、slice、またはポイントのリストのフィー�
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:144
 msgid "Interpolation on another mesh_fem <literal>mfi</literal>:"
-msgstr ""
+msgstr "別のmesh_fem <literal>mfi</literal> 上の補間"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:144
 msgid ""
@@ -232,10 +246,12 @@ msgid ""
 "<literal>mfi</literal> share the same mesh object, the interpolation will be"
 " much faster."
 msgstr ""
+"<literal>mfi</literal> はLagrangianでなければなりません。 <literal>mf</literal> と "
+"<literal>mfi</literal> が同じメッシュオブジェクトを共有する場合、補間は非常に高速になります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:149
 msgid "Interpolation on a slice <literal>sli</literal>:"
-msgstr ""
+msgstr "slice  <literal>sli</literal> の補間。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:147
 msgid ""
@@ -248,7 +264,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:151
 msgid "Interpolation on a set of points <literal>pts</literal>"
-msgstr ""
+msgstr "点 <literal>pts</literal> の集合の補間"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:153
 msgid "See also gf_asm('interpolation matrix')"
@@ -273,6 +289,11 @@ msgid ""
 "between a curved refined mesh and a coarse mesh), then values which are "
 "outside <literal>mf</literal> will be extrapolated."
 msgstr ""
+"<literal>mfe</literal> のメッシュが <literal>mf</literal> "
+"のメッシュに厳密に含まれている場合、この関数はgf_compute('interpolate_on')と厳密に同じ処理を行います。しかし、 "
+"<literal>mfe</literal> のメッシュが <literal>mf</literal> "
+"に正確に含まれていない場合(曲線状のリファインされたメッシュと粗いメッシュの間の補間を想像してください)、 <literal>mf</literal> "
+"外の値が外挿されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_compute.rst:168
 msgid "See also gf_asm('extrapolation matrix')"
@@ -333,3 +354,13 @@ msgid ""
 "per_max[k] < per_min[k] no operation is done). This method is rather "
 "dissipative, but stable."
 msgstr ""
+"Characteristic-"
+"Galerkin法を用いて定常状態の速度場<literal>V</literal>に関する<literal>U</literal>の対流を計算します。結果は、そのまま"
+" <literal>U</literal> で返されます。この方法は、 Uの純粋なLagrange関数に限定されます。 "
+"<literal>mf_v</literal> は連続有限要素法を表現します。 <literal>dt</literal> は積分時間、  "
+"<literal>nt</literal> は特性上の積分ステップ数です。 <literal>option</literal>  は、re-"
+"entrant対流がある境界部分のオプションです。最も近い要素への外挿の場合は <literal>option = "
+"'extrapolation'</literal> で、その境界上の定数値の場合は <literal>option = "
+"'unchanged'</literal> です、周期境界の場合は <literal>option = 'periodicity'</literal> "
+"となります。後者のオプションでは、per_min、per_maxの二つのベクトルが与えられ、周期領域(per_max[k] < "
+"per_min[k]が設定されているコンポーネントに対しては、何も実行されません)の限界を表現しなければなりません。この方法はかなり散逸的ですが、安定しています。"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-08 12:57+0000\n"
+"POT-Creation-Date: 2019-12-09 13:06+0000\n"
 "PO-Revision-Date: 2018-07-16 07:10+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:8
 msgid "gf_fem"
-msgstr ""
+msgstr "gf_fem"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:10
 msgid "**Synopsis**"
@@ -35,7 +35,7 @@ msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:21
 msgid "General constructor for fem objects."
-msgstr ""
+msgstr "femオブジェクトの汎用的なコンストラクタです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:23
 msgid "This object represents a finite element method on a reference element."
@@ -50,11 +50,13 @@ msgid ""
 "``F = gf_fem('interpolated_fem', mesh_fem mf_source, mesh_im mim_target, "
 "[ivec blocked_dofs[, bool caching]])``"
 msgstr ""
+"``F = gf_fem('interpolated_fem', mesh_fem mf_source, mesh_im mim_target, "
+"[ivec blocked_dofs[, bool caching]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:32
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:45
 msgid "Build a special fem which is interpolated from another mesh_fem."
-msgstr ""
+msgstr "別のmesh_femから補間される特別なfemを作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:34
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:47
@@ -63,6 +65,8 @@ msgid ""
 "mesh_fem `mf_source` on another mesh, given the integration method "
 "`mim_target` that will be used on this mesh."
 msgstr ""
+"この特殊な有限要素を使用すると、このメッシュで使用される積分法 `mim_target` が指定されている場合に、別のメッシュ上の所定のmesh_fem"
+" `mf_source` を補間できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:38
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:51
@@ -78,10 +82,12 @@ msgid ""
 "``F = gf_fem('projected_fem', mesh_fem mf_source, mesh_im mim_target, int "
 "rg_source, int rg_target[, ivec blocked_dofs[, bool caching]])``"
 msgstr ""
+"``F = gf_fem('projected_fem', mesh_fem mf_source, mesh_im mim_target, int "
+"rg_source, int rg_target[, ivec blocked_dofs[, bool caching]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:56
 msgid "``F = gf_fem(string fem_name)``"
-msgstr ""
+msgstr "``F = gf_fem(string fem_name)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:58
 msgid ""
@@ -90,6 +96,8 @@ msgid ""
 "element and integration methods) for a complete reference. Here is a list of"
 " some of them:"
 msgstr ""
+"`fem_name` "
+"には、有限要素法の記述を入力する必要があります。詳細はgetfem++のマニュアル(特に有限要素法と積分法の記述)を参照してください。その一部を次に示します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:63
 msgid ""
@@ -173,7 +181,7 @@ msgstr "FEM_PK_PRISM_HIERARCHICAL(n,k) : 階層基準のプリズム上のPK要�
 msgid ""
 "FEM_STRUCTURED_COMPOSITE(fem f,k) : Composite fem `f` on a grid with `k` "
 "divisions."
-msgstr ""
+msgstr "FEM_STRUCTURED_COMPOSITE(fem f,k) :  `k` 分割されたグリッド上の複合fem `f` 。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_fem.rst:95
 msgid ""

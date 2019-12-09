@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-08 12:57+0000\n"
+"POT-Creation-Date: 2019-12-09 13:06+0000\n"
 "PO-Revision-Date: 2018-07-16 07:08+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:8
 msgid "gf_spmat"
-msgstr ""
+msgstr "gf_spmat"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:10
 msgid "**Synopsis**"
@@ -35,7 +35,7 @@ msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:25
 msgid "General constructor for spmat objects."
-msgstr ""
+msgstr "spmat オブジェクトの汎用的なコンストラクタ"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:27
 msgid ""
@@ -49,6 +49,7 @@ msgid ""
 "operation. However their memory overhead is higher than CSC matrices, and "
 "they are a little bit slower for matrix-vector multiplications."
 msgstr ""
+"getfem++形式で新しい疎行列を作成します(つまり、matlab疎行列ではなく、getfemワークスペースに保存される疎行列)。これらの疎行列は、Matlabで使用される形式であるCSC(圧縮された疎の列)として保存することも、WSC(getfemの内部形式)として保存することもできます。CSC行列は書き込み可能ではありませんが(これは非常に非効率的です)、ベクトルとの乗算とメモリ使用量のために最適化されています。WSCは書き込み可能であり、ランダムな読み取り/書き込み操作に関して非常に高速です。しかし、メモリオーバヘッドはCSC行列よりも高く、行列ベクトル乗算では若干遅いです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:38
 msgid ""
@@ -57,6 +58,9 @@ msgid ""
 "changed automatically by getfem (for example ``gf_linsolve()`` converts the "
 "matrices to CSC)."
 msgstr ""
+"デフォルトでは、新しく作成されたマトリックスはすべてWSCマトリックスとして構築されます。これは後で ``gf_spmat_set(spmat S, "
+"'to_csc',...)``か、あるいはgetfem(例えば ``gf_linsolve()`` "
+"は行列をCSCに変換します)によって自動的に変更できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:43
 msgid "The matrices may store REAL or COMPLEX values."
@@ -68,17 +72,18 @@ msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:50
 msgid "``SM = gf_spmat('empty', int m [, int n])``"
-msgstr ""
+msgstr "``SM = gf_spmat('empty', int m [, int n])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:52
 msgid ""
 "Create a new empty (i.e. full of zeros) sparse matrix, of dimensions `m x "
 "n`. If `n` is omitted, the matrix dimension is `m x m`."
 msgstr ""
+"新しい空の(すなわち、ゼロで満たされた)次元 `m x n` 疎行列を作成します。 `n` を省略すると、行列の次元は `m x m` になります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:56
 msgid "``SM = gf_spmat('copy', mat K [,  I [,  J]])``"
-msgstr ""
+msgstr "``SM = gf_spmat('copy', mat K [,  I [,  J]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:58
 msgid ""
@@ -93,15 +98,15 @@ msgstr "は 40x5 の行列を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:69
 msgid "``SM = gf_spmat('identity', int n)``"
-msgstr ""
+msgstr "``SM = gf_spmat('identity', int n)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:71
 msgid "Create a `n x n` identity matrix."
-msgstr ""
+msgstr "`n x n` 次の単位行列を作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:74
 msgid "``SM = gf_spmat('mult', spmat A, spmat B)``"
-msgstr ""
+msgstr "``SM = gf_spmat('mult', spmat A, spmat B)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:76
 msgid ""
@@ -112,7 +117,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:81
 msgid "``SM = gf_spmat('add', spmat A, spmat B)``"
-msgstr ""
+msgstr "``SM = gf_spmat('add', spmat A, spmat B)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:83
 msgid ""
@@ -122,7 +127,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:87
 msgid "``SM = gf_spmat('diag', mat D [, ivec E [, int n [,int m]]])``"
-msgstr ""
+msgstr "``SM = gf_spmat('diag', mat D [, ivec E [, int n [,int m]]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:89
 msgid ""
@@ -136,6 +141,8 @@ msgid ""
 "``SM = gf_spmat('load','hb'|'harwell-boeing'|'mm'|'matrix-market', string "
 "filename)``"
 msgstr ""
+"``SM = gf_spmat('load','hb'|'harwell-boeing'|'mm'|'matrix-market', string "
+"filename)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_spmat.rst:96
 msgid ""

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-08 12:57+0000\n"
+"POT-Creation-Date: 2019-12-09 13:06+0000\n"
 "PO-Revision-Date: 2018-07-16 06:59+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:8
 msgid "gf_mesh_levelset_set"
-msgstr ""
+msgstr "gf_mesh_levelset_set"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:10
 msgid "**Synopsis**"
@@ -35,7 +35,7 @@ msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:21
 msgid "General function for modification of mesh_levelset objects."
-msgstr ""
+msgstr "mesh_levelset オブジェクトを変更するための汎用的な関数です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:24
 msgid "**Command list :**"
@@ -43,11 +43,11 @@ msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:28
 msgid "``gf_mesh_levelset_set(mesh_levelset MLS, 'add', levelset ls)``"
-msgstr ""
+msgstr "``gf_mesh_levelset_set(mesh_levelset MLS, 'add', levelset ls)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:30
 msgid "Add a link to the levelset <literal>ls</literal>."
-msgstr ""
+msgstr "levelset  `ls` へのリンクを追加します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:32
 msgid ""
@@ -56,6 +56,9 @@ msgid ""
 "<literal>ls</literal> is an levelset object. An arbitrary number of levelset"
 " can be added."
 msgstr ""
+"参照のみが保持され、コピーは行われません。リンクされたメッシュがlevelsetによってカットされていることを示すには、  "
+"<literal>ls</literal> "
+"がlevelsetオブジェクトであるこのメソッドを呼び出す必要があります。任意の数のlevelsetを追加できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:37
 msgid "**WARNING**"
@@ -64,19 +67,19 @@ msgstr "**警告**"
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:39
 msgid ""
 "The mesh of <literal>ls</literal> and the linked mesh must be the same."
-msgstr ""
+msgstr "<literal>ls</literal> のメッシュとリンクされたメッシュは同じでなければなりません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:42
 msgid "``gf_mesh_levelset_set(mesh_levelset MLS, 'sup', levelset ls)``"
-msgstr ""
+msgstr "``gf_mesh_levelset_set(mesh_levelset MLS, 'sup', levelset ls)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:44
 msgid "Remove a link to the levelset <literal>ls</literal>."
-msgstr ""
+msgstr "レベルセット <literal>ls</literal> へのリンクを削除します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:47
 msgid "``gf_mesh_levelset_set(mesh_levelset MLS, 'adapt')``"
-msgstr ""
+msgstr "``gf_mesh_levelset_set(mesh_levelset MLS, 'adapt')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_levelset_set.rst:49
 msgid "Do all the work (cut the convexes with the levelsets)."
@@ -87,3 +90,4 @@ msgid ""
 "To initialice the mesh_levelset object or to actualize it when the value of "
 "any levelset function is modified, one has to call this method."
 msgstr ""
+"mesh_levelsetオブジェクトを初期化したり、任意のlevelset関数の値が変更されたときにそれを実現するには、このメソッドを呼び出す必要があります。"
