@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-09 13:06+0000\n"
+"POT-Creation-Date: 2019-12-10 12:39+0000\n"
 "PO-Revision-Date: 2018-07-16 07:07+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -93,6 +93,8 @@ msgid ""
 "Create an ILU (Incomplete LU) preconditioner for the sparse matrix `m`. This"
 " preconditioner has the same sparsity pattern than `m` (no fill-in)."
 msgstr ""
+"疎行列 `m` に対するILU(不完全なLU)前処理行列を作成します。この前処理行列は、(fill-in無し) `m` "
+"と同じじ非ゼロパターンを有します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_precond.rst:66
 msgid ""
@@ -107,6 +109,8 @@ msgid ""
 "non-zero entries on each line. The default value for `fillin` is 10, and the"
 " default threshold is1e-7."
 msgstr ""
+"(対称の)疎行列 `m` のILDLTT( 密なCholesky )前処理行列を作成します。前処理行列は、各行上に追加の非ゼロのエントリを最大 "
+"`fillin` 個追加することができます。 `fillin` のデフォルト値は10で、デフォルトの閾値は1e-7です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_precond.rst:74
 msgid "``PC = gf_precond('ilut', spmat m[, int fillin[, scalar threshold]])``"
@@ -120,6 +124,8 @@ msgid ""
 "entries on each line. The default value for `fillin` is 10, and the default "
 "threshold is 1e-7."
 msgstr ""
+"疎行列 `m` に対するILUT(フィルされている不完全なLU)前処理行列を作成します。前処理行列は、各行上に追加の非ゼロのエントリを多くとも "
+"`fillin` 個追加することができます。 `fillin`のデフォルト値は10で、デフォルトの閾値は1e-7です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_precond.rst:82
 msgid "``PC = gf_precond('superlu', spmat m)``"
@@ -132,6 +138,8 @@ msgid ""
 "SuperLU support. Note that LU factorization is likely to eat all your memory"
 " for 3D problems."
 msgstr ""
+"SuperLUを使用して、疎行列 `m` の正確な因数分解を構築します。この前処理行列は、SuperLU をサポートするgetfem-"
+"interfaceが構築されている場合にのみ使用できます。LU分解は、3次元問題の場合、メモリをすべて消費する可能性が高いことに注意してください。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_precond.rst:90
 msgid "``PC = gf_precond('spmat', spmat m)``"
@@ -139,4 +147,4 @@ msgstr "``PC = gf_precond('spmat', spmat m)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_precond.rst:92
 msgid "Preconditionner given explicitely by a sparse matrix."
-msgstr ""
+msgstr "疎行列によって明示的に与えられる前処理行列です。"

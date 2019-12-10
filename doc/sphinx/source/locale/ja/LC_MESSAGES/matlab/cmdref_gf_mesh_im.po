@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-09 13:06+0000\n"
+"POT-Creation-Date: 2019-12-10 12:39+0000\n"
 "PO-Revision-Date: 2018-07-16 07:09+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:8
 msgid "gf_mesh_im"
-msgstr ""
+msgstr "gf_mesh_im"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:10
 msgid "**Synopsis**"
@@ -35,13 +35,13 @@ msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:23
 msgid "General constructor for mesh_im objects."
-msgstr ""
+msgstr "mesh_imオブジェクトの汎用的なコンストラクタ"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:25
 msgid ""
 "This object represents an integration method defined on a whole mesh (an "
 "potentially on its boundaries)."
-msgstr ""
+msgstr "このオブジェクトは、メッシュ全体で定義された積分法を表します(潜在的に境界にあります)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:29
 msgid "**Command list :**"
@@ -49,11 +49,11 @@ msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:33
 msgid "``MIM = gf_mesh_im('load', string fname[, mesh m])``"
-msgstr ""
+msgstr "``MIM = gf_mesh_im('load', string fname[, mesh m])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:35
 msgid "Load a mesh_im from a file."
-msgstr ""
+msgstr "ファイルからmesh_imを読み込みます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:37
 msgid ""
@@ -66,35 +66,37 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:42
 msgid "``MIM = gf_mesh_im('from string', string s[, mesh m])``"
-msgstr ""
+msgstr "``MIM = gf_mesh_im('from string', string s[, mesh m])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:44
 msgid "Create a mesh_im object from its string description."
-msgstr ""
+msgstr "文字列からmesh_imオブジェクトを作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:46
 msgid "See also ``gf_mesh_im_get(mesh_im MI, 'char')``"
-msgstr ""
+msgstr "``gf_mesh_im_get(mesh_im MI, 'char')`` も参照してください。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:49
 msgid "``MIM = gf_mesh_im('clone', mesh_im mim)``"
-msgstr ""
+msgstr "``MIM = gf_mesh_im('clone', mesh_im mim)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:51
 msgid "Create a copy of a mesh_im."
-msgstr ""
+msgstr "mesh_imのコピーを作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:54
 msgid ""
 "``MIM = gf_mesh_im('levelset', mesh_levelset mls, string where, integ im[, "
 "integ im_tip[, integ im_set]])``"
 msgstr ""
+"``MIM = gf_mesh_im('levelset', mesh_levelset mls, string where, integ im[, "
+"integ im_tip[, integ im_set]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:56
 msgid ""
 "Build an integration method conformal to a partition defined implicitly by a"
 " levelset."
-msgstr ""
+msgstr "levelsetによって暗黙的に定義されたパーティションに準拠する積分法を構築します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:59
 msgid ""
@@ -155,14 +157,17 @@ msgid ""
 " to use the method ``gf_mesh_im_set(mesh_im MI, 'integ')`` to define the "
 "integration method on the remaining elements."
 msgstr ""
+"注意：この積分法は level-set で切り取られた要素にのみ定義されます。 'ALL' 、 'INSIDE' と  'OUTSIDE' "
+"オプションの場合は、必ず ``gf_mesh_im_set(mesh_im MI, 'integ')`` "
+"メソッドを使って残りの要素の積分法を定義する必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:93
 msgid "``MIM = gf_mesh_im(mesh m, [{integ im|int im_degree}])``"
-msgstr ""
+msgstr "``MIM = gf_mesh_im(mesh m, [{integ im|int im_degree}])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:95
 msgid "Build a new mesh_im object."
-msgstr ""
+msgstr "新しいmesh_imオブジェクトを構築します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_im.rst:97
 msgid ""
@@ -170,3 +175,5 @@ msgid ""
 "in that case a call to ``gf_mesh_im_get(mesh_im MI, 'integ')`` is issued "
 "with these arguments."
 msgstr ""
+"便宜上、オプションの引数( `im` または `im_degree` )を指定することもできます。 ``gf_mesh_im_get(mesh_im "
+"MI, 'integ')`` への呼び出しがこれらの引数とともに出力されます。"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-09 13:06+0000\n"
+"POT-Creation-Date: 2019-12-10 12:39+0000\n"
 "PO-Revision-Date: 2018-07-16 07:01+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -88,6 +88,8 @@ msgid ""
 "either a integer (for a scalar or vector variable) or a vector of dimensions"
 " for a tensor variable. <literal>name</literal> is the variable name."
 msgstr ""
+"一定サイズのモデルに変数を追加します。 <literal>sizes</literal> "
+"は整数(スカラー変数またはベクトル変数の場合)かテンソル変数の次元のベクトルです。 <literal>name</literal> は変数名です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:184
 msgid "``gf_model_set(model M, 'delete variable', string name)``"
@@ -108,6 +110,8 @@ msgid ""
 "either a integer (for a scalar or vector variable) or a vector of dimensions"
 " for a tensor variable. <literal>name</literal> is the variable name."
 msgstr ""
+"モデルの一定サイズ変数のサイズを変更します。 <literal>sizes</literal> "
+"は(スカラー変数またはベクトル変数の場合)整数かテンソル変数の次元のベクトルです。 <literal>name</literal> は変数名です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:196
 msgid ""
@@ -138,7 +142,7 @@ msgstr "``gf_model_set(model M, 'add im data', string name, mesh_imd mimd)``"
 msgid ""
 "Add a data set to the model linked to a mesh_imd. <literal>name</literal> is"
 " the data name."
-msgstr ""
+msgstr "mesh_imdにリンクされたモデルにデータセットを追加します。 <literal>name</literal> はデータ名です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:212
 msgid ""
@@ -153,6 +157,9 @@ msgid ""
 "an integer  or a vector of suplementary dimensions with respect to "
 "<literal>mf</literal>."
 msgstr ""
+"mesh_femにリンクされたモデルにデータを追加します。 <literal>name</literal> はデータ名であり、 "
+"<literal>sizes</literal> はオプションのパラメータであり、 <literal>mf</literal> "
+"に関して補間的な次元の整数またはベクトルです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:219
 msgid ""
@@ -170,6 +177,10 @@ msgid ""
 "which is either an integer or a vector of suplementary dimensions with "
 "respect to <literal>mf</literal>."
 msgstr ""
+"mesh_femにリンクされたモデルにデータを追加します。 <literal>name</literal> はデータ名です。データは "
+"<literal>V</literal> で初期化されます。データはスカラーまたはベクトルフィールドです。 "
+"<literal>sizes</literal> はオプションのパラメータであり、 "
+"<literal>mf</literal>に対する補完次元の整数またはベクトルです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:227
 msgid "``gf_model_set(model M, 'add data', string name, int size)``"
@@ -181,6 +192,8 @@ msgid ""
 "integer (for a scalar or vector data) or a vector of dimensions for a tensor"
 " data. <literal>name</literal> is the data name."
 msgstr ""
+"固定サイズのデータをモデルに追加します。 <literal>sizes</literal> "
+"は整数(スカラーまたはベクトルデータ用)かテンソルデータの次元のベクトルです。 <literal>name</literal> はデータ名です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:234
 msgid "``gf_model_set(model M, 'add macro', string name, string expr)``"
@@ -226,6 +239,9 @@ msgid ""
 "vector field. <literal>name</literal> is the data name and "
 "<literal>V</literal> is the value of the data."
 msgstr ""
+"初期化された固定サイズデータをモデルに追加します。 <literal>sizes</literal> "
+"はオプションのパラメータで、データのフォーマットを記述する整数またはベクトルの次元です。デフォルトでは、データはベクトルフィールドbとみなされます。 "
+"<literal>name</literal> はデータ名で、 <literal>V</literal> はデータの値です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:262
 msgid "``gf_model_set(model M, 'variable', string name, vec V)``"
@@ -235,7 +251,7 @@ msgstr "``gf_model_set(model M, 'variable', string name, vec V)``"
 msgid ""
 "Set the value of a variable or data. <literal>name</literal> is the data "
 "name."
-msgstr ""
+msgstr "変数またはデータの値を設定します。 <literal>name</literal> はデータ名です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:267
 msgid "``gf_model_set(model M, 'to variables', vec V)``"
@@ -248,6 +264,8 @@ msgid ""
 "the solve of the tangent linear system (useful to solve your problem with "
 "you own solver)."
 msgstr ""
+"ベクトル <literal>V</literal> でモデルの変数の値を設定します。通常、ベクトル <literal>V</literal> "
+"は接線線形システム(独自のソルバを使用して問題を解決するのに便利)のソルバの結果です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:274
 msgid "``gf_model_set(model M, 'delete brick', int ind_brick)``"
@@ -397,6 +415,9 @@ msgid ""
 "implemented, so such tranformation is not allowed in the definition of a "
 "potential."
 msgstr ""
+"メッシュ <literal>source_mesh</literal> から式 <literal>expr</literal> で指定されるメッシュ "
+"`target_mesh` "
+"への変換をモデルに追加します。この式は、モデルの変数を含む高水準汎用アセンブリ式に対応します。注意：接線システムの計算では、使用した変数による変換の導関数が考慮されます。ただし、2次微分は実装されていないため、ポテンシャルの定義ではこのような変換は許されていません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:354
 msgid ""
@@ -436,6 +457,9 @@ msgid ""
 "<literal>region</literal> the region on which the integration is to be "
 "performed."
 msgstr ""
+"2つのドメインの積を統合するために、弱形式言語の表現で使用できるセカンダリドメインをモデルに追加します。 <literal>name</literal>"
+" はセカンダリドメインの名前であり、 <literal>mim</literal> はこのドメイン上の積分法であり、 "
+"<literal>region</literal> は積分が実行される領域です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:374
 msgid ""
@@ -466,6 +490,8 @@ msgid ""
 "bricks. CAUTION: For the moment, the derivative of the transformation is not"
 " taken into account in the model solve."
 msgstr ""
+"汎用アセンブリブリックで使用されるモデルに  <literal>transname</literal> "
+"というレイトレーシング補間変換を追加します。注意: 現時点ではモデルの計算で変換の導関数は考慮されません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:388
 msgid ""
@@ -482,6 +508,8 @@ msgid ""
 " to an existing raytracing interpolate transformation called "
 "<literal>transname</literal>."
 msgstr ""
+"特定の境界 <literal>region</literal> 上の対応する変位変数 <literal>dispname</literal> "
+"を持つマスター接触境界を <literal>transname</literal> という既存のレイトレーシング補間変換に追加します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:395
 msgid ""
@@ -498,6 +526,8 @@ msgid ""
 " to an existing raytracing interpolate transformation called "
 "<literal>transname</literal>."
 msgstr ""
+"特定の境界 <literal>region</literal> 上の対応する変位変数 <literal>dispname</literal> "
+"を持つスレーブ接触境界を <literal>transname</literal> という既存のレイトレーシング補間変換に追加します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:402
 msgid ""
@@ -514,6 +544,8 @@ msgid ""
 "existing raytracing interpolate transformation called "
 "<literal>transname</literal>."
 msgstr ""
+"ジオメトリが上位レベルの汎用アセンブリ式 <literal>expr</literal> の0レベルセットに対応する剛体な障害物を "
+"<literal>transname</literal>という既存のレイトレーシング補間変換に追加します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:410
 msgid ""
@@ -530,6 +562,8 @@ msgid ""
 "bricks. CAUTION: For the moment, the derivative of the transformation is not"
 " taken into account in the model solve."
 msgstr ""
+"<literal>transname</literal> という名前の投影補間変換を、汎用アセンブリブリックで使用するモデルに追加します。注意: "
+"現時点では、モデルの計算で変換の導関数は考慮されません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:418
 msgid ""
@@ -546,6 +580,8 @@ msgid ""
 " to an existing projection interpolate transformation called "
 "<literal>transname</literal>."
 msgstr ""
+"特定の境界 <literal>region</literal> 上に対応する変位変数 <literal>dispname</literal> "
+"を持つマスター接触境界を、<literal>transname</literal>という既存の投影補間変換に追加します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:425
 msgid ""
@@ -562,6 +598,8 @@ msgid ""
 " to an existing projection interpolate transformation called "
 "<literal>transname</literal>."
 msgstr ""
+"特定の境界 <literal>region</literal> 上の対応する変位変数 <literal>dispname</literal> "
+"を持つスレーブ接触境界を <literal>transname</literal>という既存の投影補間変換に追加します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:432
 msgid ""
@@ -578,6 +616,8 @@ msgid ""
 "existing projection interpolate transformation called "
 "<literal>transname</literal>."
 msgstr ""
+"ジオメトリが高水準汎用アセンブリ式 <literal>expr</literal> の0レベルセットに対応する剛体障害を "
+"<literal>transname</literal> という既存の投影補間変換に追加します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:440
 msgid ""
@@ -603,6 +643,10 @@ msgid ""
 "solvers (conjugate gradient for instance) are not allowed for non-coercive "
 "problems. <literal>brickname</literal> is an otpional name for the brick."
 msgstr ""
+"アセンブリ文字列  <literal>expr</literal> で指定された行列項を追加します。この行列は、領域  "
+"<literal>region</literal> で積分法 <literal>mim</literal> "
+"を使用して組み立てられます。線形であると仮定すると、行列項のみが考慮されます。項を非線形ではなく線形と宣言する利点は、項が1回だけ組み立てられ、残差にアセンブリが必要ないことです。式にいくつかの変数が含まれ、式がポテンシャルまたは一次(すなわち、弱形式の微分ではなく、弱形式を記述する)場合、式はすべての変数に関して微分することに注意してください。項が対称か、強制でないかどうかを指定できます。よくわからない場合は、対称ではなく、強制的ではないと宣言した方がよいでしょう。しかし、一部のソルバー(例えば共役勾配)は非強制問題には使用できません。"
+" <literal>brickname</literal> はブリックのオプション名です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:460
 msgid ""
@@ -624,6 +668,8 @@ msgid ""
 "<literal></literal>secondary_domain<literal></literal> which has to be "
 "declared first into the model."
 msgstr ""
+"Modelのような弱形式言語式で与えられる線形項を追加します。 gf_model_set(model M, 'add linear term') "
+"ではなく、二つのドメインの直積上での積分の場合には、最初に<literal></literal>mim<literal></literal>と<literal></literal>region<literal></literal>で指定されたものと<literal></literal>secondary_domain<literal></literal>で指定されたものを最初にモデルに宣言しなければなりません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:469
 msgid ""
@@ -659,6 +705,10 @@ msgid ""
 "gradient for instance) are not allowed for non-coercive problems. "
 "<literal>brickname</literal> is an otpional name for the brick."
 msgstr ""
+"アセンブリ文字列  <literal>expr</literal> で指定された非線形項を追加します。この非線形項は、領域 "
+"<literal>region</literal> と積分法 <literal>mim</literal> "
+"で組み立てられます。この表現は、ポテンシャルまたは弱形式を表すことができます。2次項(すなわち、2次試験関数Test2を含みます)は使用できません。項が対称か、強制かどうかを指定できます。よくわからない場合は、対称ではなく、強制ではないと宣言した方がよいでしょう。しかし、一部のソルバー(例えば共役勾配)は非強制問題には使用できません。"
+" <literal>brickname</literal> はブリックのオプション名です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:488
 msgid ""
@@ -680,6 +730,11 @@ msgid ""
 "<literal></literal>secondary_domain<literal></literal> which has to be "
 "declared first into the model."
 msgstr ""
+"弱形式言語の式で与えられる非線形項を追加します。  gf_model_set(model M, 'add nonlinear term') "
+"のようではなく、二つのドメインの直積上での積分の場合には、最初に <literal></literal>mim<literal></literal> と"
+" <literal></literal>region<literal></literal> で指定されたものと "
+"<literal></literal>secondary_domain<literal></literal> "
+"で指定されたものを最初にモデルに宣言しなければなりません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:497
 msgid ""
@@ -713,6 +768,10 @@ msgid ""
 " respect to all variables. <literal>brickname</literal> is an optional name "
 "for the brick."
 msgstr ""
+"アセンブリ文字列 <literal>expr</literal> で指定されたソースタームを追加します。これは、領域  "
+"<literal>region</literal> で積分法 <literal>mim</literal> "
+"を使用してアセンブルされます。残差項のみが考慮されます。式にいくつかの変数が含まれていて、式がポテンシャルである場合、式はすべての変数に関して微分されることに注意してください。"
+" <literal>brickname</literal> はブリックのオプション名です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:513
 msgid ""
