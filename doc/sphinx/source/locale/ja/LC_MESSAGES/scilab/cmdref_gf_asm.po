@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 12:39+0000\n"
+"POT-Creation-Date: 2019-12-10 13:25+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -241,6 +241,8 @@ msgid ""
 "The solution <literal>U</literal> is required at the current time-step. The "
 "<literal>law</literal> may be choosen among:"
 msgstr ""
+"現在の時間ステップでは解 <literal>U</literal> が必要です。 <literal>law</literal> "
+"は次の中から選択することができます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:155
 msgid ""
@@ -285,6 +287,9 @@ msgid ""
 "<literal>nbdof(mf_d)</literal> columns, each row correspounds to a "
 "parameter."
 msgstr ""
+"材料法則のパラメータは、mesh_fem <literal>mf_d</literal> で記述します。行列 "
+"<literal>params</literal> では、行はパラメータに対応し列は <literal>nbdof(mf_d)</literal> "
+"に対応します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:174
 msgid ""
@@ -292,6 +297,8 @@ msgid ""
 " the right hand side. If the incompressibility is considered, it should be "
 "followed by a mesh_fem <literal>mf_p</literal>, for the pression."
 msgstr ""
+"最後の引数は作成するもの、接線行列またはRHS、を選択します。非圧縮性を考慮する場合、圧縮にはmesh_fem "
+"<literal>mf_p</literal> が必要です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:179
 msgid ""
@@ -337,6 +344,8 @@ msgid ""
 "<latex style=\"text\"><![CDATA[\\Delta(a(x)\\Delta u) = 0]]></latex>   with "
 "<literal>a</literal> scalar."
 msgstr ""
+"<latex style=\"text\"><![CDATA[\\Delta(a(x)\\Delta u) = "
+"0]]></latex>の<literal>a</literal>はスカラーです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:205
 msgid ""
@@ -420,7 +429,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:248
 msgid "<literal>H(:,j) = [h11(x_j) h21(x_j) h12(x_j) h22(x_j)]</literal>"
-msgstr ""
+msgstr "<literal>H(:,j) = [h11(x_j) h21(x_j) h12(x_j) h22(x_j)]</literal>"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:252
 msgid "if u is a 2D vector field."
@@ -536,6 +545,9 @@ msgid ""
 "expressed in terms of Frobenius norms of its input strain and output stress,"
 " instead of their Von-Mises equivalents."
 msgstr ""
+"新しいRamberg Osgood硬化関数を、初期降伏応力を <literal>sigma_y0</literal> 、硬化係数をHとして名前 "
+"<literal>name</literal> で定義します。値が 'Frobenius' の特別な文字列引数が指定されている場合、硬化関数は、Von-"
+"Mises相当ではなく、入力ひずみと出力応力のFrobeniusノルムで表されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:318
 msgid ""
@@ -573,6 +585,9 @@ msgid ""
 "refer to the getfem user manual (or look at the file getfem_assembling.h in "
 "the getfem++ sources)."
 msgstr ""
+"式 <literal>expr</literal> "
+"は引数(オプションのデータ)にリストされたmesh_femに対して評価され、出力引数に割り当てられます。アセンブリ式の構文の詳細については、getfemユーザマニュアル(か"
+" getfem++ のソースファイル getfem_assembling.h )を参照してください。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:334
 msgid "For example, the L2 norm of a field can be computed with::"
@@ -621,10 +636,14 @@ msgid ""
 "lagrangian. In the more general case, you would have to do a L2 projection "
 "via the mass matrix."
 msgstr ""
+"行列 <literal>Mi</literal> を返します。<literal>V = Mi.U</literal> は "
+"gf_compute('interpolate_on',mfi) "
+"と等しいです。反復補間に便利です。これは単なる補間であり、ここでは基本的な積分は行われず、 <literal>mfi</literal> "
+"はlagrangianでなければならないことに注意してください。より汎用的なケースでは、質量行列を介してL2投影を行う必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:365
 msgid "<literal>Mi</literal> is a spmat object."
-msgstr ""
+msgstr "<literal>Mi</literal> はspmatオブジェクトです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:369
 msgid ""
@@ -646,10 +665,12 @@ msgid ""
 " is equal to gf_compute('extrapolate_on',mfe). Useful for repeated "
 "extrapolations."
 msgstr ""
+"行列<literal>Me</literal>を返します。 <literal>V = Me.U</literal> は "
+"gf_compute('extrapolate_on',mfe) と等しいです。反復外挿に便利です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:377
 msgid "<literal>Me</literal> is a spmat object."
-msgstr ""
+msgstr "<literal>Me</literal> はspmatオブジェクトです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:381
 msgid ""

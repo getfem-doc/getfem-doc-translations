@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 12:39+0000\n"
+"POT-Creation-Date: 2019-12-10 13:25+0000\n"
 "PO-Revision-Date: 2018-07-16 07:00+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:8
 msgid "gf_mesh_set"
-msgstr ""
+msgstr "gf_mesh_set"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:10
 msgid "**Synopsis**"
@@ -35,7 +35,7 @@ msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:37
 msgid "General function for modification of a mesh object."
-msgstr ""
+msgstr "mesh オブジェクトを変更するための汎用的な関数です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:40
 msgid "**Command list :**"
@@ -43,17 +43,17 @@ msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:44
 msgid "``PIDs = gf_mesh_set(mesh M, 'pts', mat PTS)``"
-msgstr ""
+msgstr "``PIDs = gf_mesh_set(mesh M, 'pts', mat PTS)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:46
 msgid ""
 "Replace the coordinates of the mesh points with those given in "
 "<literal>PTS</literal>."
-msgstr ""
+msgstr "メッシュ点の座標を <literal>PTS</literal> で指定された座標に置き換えます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:49
 msgid "``PIDs = gf_mesh_set(mesh M, 'add point', mat PTS)``"
-msgstr ""
+msgstr "``PIDs = gf_mesh_set(mesh M, 'add point', mat PTS)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:51
 msgid "Insert new points in the mesh and return their #ids."
@@ -68,6 +68,7 @@ msgid ""
 " added to the mesh. On output, <literal>PIDs</literal> contains the point "
 "#ids of these new points."
 msgstr ""
+"<literal>PTS</literal>は<literal></literal>nxm<literal></literal>マトリックスでなければなりません。ここで、<literal></literal>n<literal></literal>はメッシュ寸法、<literal></literal>m<literal></literal>はメッシュに追加される点の数です。出力では、<literal>PID</literal>にこれらの新しいポイントのポイント番号IDが含まれます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:58
 msgid ""
@@ -76,10 +77,13 @@ msgid ""
 "inserted again, and <literal>PIDs</literal> will contain the previously "
 "assigned #ids of these points."
 msgstr ""
+"注: ( <literal></literal>1e-8<literal></literal> "
+"程度の小さな許容範囲で)既にメッシュの一部になっているポイントがある場合、それらのポイントは再挿入されず、 "
+"<literal>PIDs</literal> には以前に割り当てられた #id のポイントが含まれます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:64
 msgid "``gf_mesh_set(mesh M, 'del point', ivec PIDs)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'del point', ivec PIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:66
 msgid "Removes one or more points from the mesh."
@@ -90,10 +94,11 @@ msgid ""
 "<literal>PIDs</literal> should contain the point #ids, such as the one "
 "returned by the 'add point' command."
 msgstr ""
+"<literal>PIDs</literal> は 'add point' コマンドで返されるポイントである #ids などを指定する必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:72
 msgid "``CVIDs = gf_mesh_set(mesh M, 'add convex', geotrans GT, mat PTS)``"
-msgstr ""
+msgstr "``CVIDs = gf_mesh_set(mesh M, 'add convex', geotrans GT, mat PTS)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:74
 msgid "Add a new convex into the mesh."
@@ -108,10 +113,14 @@ msgid ""
 " to insert more than one convex (or a two dimensional array correctly shaped"
 " according to Fortran ordering)."
 msgstr ""
+"凸包(三角形、プリズム、...)は <literal>GT</literal> (  gf_geotrans('...') "
+"で取得されます)によって与えられ、その点は <literal>PTS</literal> の列によって与えられます。返される "
+"<literal>CVID</literal> には凸包の #idが含まれます。 <literal>PTS</literal> "
+"は複数の凸包(またはFortranの次数に従って正しく形成された2次元配列)を挿入するための3次元配列の場合もあります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:84
 msgid "``gf_mesh_set(mesh M, 'del convex', mat CVIDs)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'del convex', mat CVIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:86
 msgid "Remove one or more convexes from the mesh."
@@ -122,14 +131,15 @@ msgid ""
 "<literal>CVIDs</literal> should contain the convexes #ids, such as the ones "
 "returned by the 'add convex' command."
 msgstr ""
+"<literal>CVIDs</literal> には 'add convex' コマンドで返されるような凸包 #id を含める必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:92
 msgid "``gf_mesh_set(mesh M, 'del convex of dim', ivec DIMs)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'del convex of dim', ivec DIMs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:94
 msgid "Remove all convexes of dimension listed in <literal>DIMs</literal>."
-msgstr ""
+msgstr "<literal>DIMs</literal> に表示されている次元の凸包をすべて削除します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:96
 msgid ""
@@ -137,22 +147,24 @@ msgid ""
 "[1,2])<literal></literal> remove all line segments, triangles and "
 "quadrangles."
 msgstr ""
+"例えば <literal></literal>gf_mesh_set(mesh M, 'del convex of dim', "
+"[1,2])<literal></literal> はすべての線区分、三角形、四角形を削除します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:100
 msgid "``gf_mesh_set(mesh M, 'translate', vec V)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'translate', vec V)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:102
 msgid "Translates each point of the mesh from <literal>V</literal>."
-msgstr ""
+msgstr "メッシュの各点を <literal>V</literal> から移動します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:105
 msgid "``gf_mesh_set(mesh M, 'transform', mat T)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'transform', mat T)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:107
 msgid "Applies the matrix <literal>T</literal> to each point of the mesh."
-msgstr ""
+msgstr "メッシュの各点にマトリックス <literal>T</literal> を適用します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:109
 msgid ""
@@ -161,10 +173,13 @@ msgid ""
 "= gf_mesh_get(mesh M, 'dim')<literal></literal>). Hence it is possible to "
 "transform a 2D mesh into a 3D one (and reciprocally)."
 msgstr ""
+"なお、 <literal>T</literal> は <literal></literal>NxN<literal></literal> ( "
+"<literal></literal>N = gf_mesh_get(mesh M, 'dim')<literal></literal> "
+")行列である必要はありません。したがって、2次元メッシュを3次元メッシュに(相互に)変換できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:114
 msgid "``gf_mesh_set(mesh M, 'boundary', int rnum, mat CVFIDs)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'boundary', int rnum, mat CVFIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:116
 msgid "DEPRECATED FUNCTION. Use 'region' instead."
@@ -172,13 +187,15 @@ msgstr "非推奨関数です。代わりに 'regions' を使用してくださ�
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:119
 msgid "``gf_mesh_set(mesh M, 'region', int rnum, mat CVFIDs)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'region', int rnum, mat CVFIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:121
 msgid ""
 "Assigns the region number <literal>rnum</literal> to the set of convexes "
 "or/and convex faces provided in the matrix <literal>CVFIDs</literal>."
 msgstr ""
+"領域番号 <literal>rnum</literal> を、行列 <literal>CVFIDs</literal> "
+"に提供されている凸包または凸包面、あるいはその両方、の集合に割り当てます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:124
 msgid ""
@@ -187,6 +204,8 @@ msgid ""
 "(regions are usually used to store a list of convex faces, but you may also "
 "use them to store a list of convexes)."
 msgstr ""
+"<literal>CVFIDs</literal> の最初の行は凸包の #id を含み、二番目の行は凸包の中に面番号を含みます (または凸包全体として "
+"0 (領域は通常、凸包面のリストを格納するために使用されますが、凸包面のリストを格納するために使用することもできます)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:129
 msgid ""
@@ -196,7 +215,7 @@ msgstr "ベクトル(または1行の行列)が与えられる場合、領域は
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:133
 msgid "``gf_mesh_set(mesh M, 'extend region', int rnum, mat CVFIDs)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'extend region', int rnum, mat CVFIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:135
 msgid ""
@@ -205,40 +224,44 @@ msgid ""
 "<literal>CVFIDs</literal>, see also <literal></literal>gf_mesh_set(mesh M, "
 "'set region)<literal></literal>."
 msgstr ""
+"領域番号 <literal>rnum</literal> で識別される領域を拡張して、マトリックス <literal>CVFIDs</literal> "
+"に与えられた凸包または凸包面あるいはその両方の集合を含めます。 <literal></literal>gf_mesh_set(mesh M, 'set "
+"region)<literal></literal> も参照。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:140
 msgid "``gf_mesh_set(mesh M, 'region intersect', int r1, int r2)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'region intersect', int r1, int r2)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:142
 msgid ""
 "Replace the region number <literal>r1</literal> with its intersection with "
 "region number <literal>r2</literal>."
 msgstr ""
+"領域番号  <literal>r1</literal> を領域番号 <literal>r2</literal> との交差部分に置き換えます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:145
 msgid "``gf_mesh_set(mesh M, 'region merge', int r1, int r2)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'region merge', int r1, int r2)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:147
 msgid ""
 "Merge region number <literal>r2</literal> into region number "
 "<literal>r1</literal>."
-msgstr ""
+msgstr "領域番号 <literal>r2</literal> を領域番号 <literal>r1</literal> にマージします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:150
 msgid "``gf_mesh_set(mesh M, 'region subtract', int r1, int r2)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'region subtract', int r1, int r2)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:152
 msgid ""
 "Replace the region number <literal>r1</literal> with its difference with "
 "region number <literal>r2</literal>."
-msgstr ""
+msgstr "領域番号 <literal>r1</literal> を領域番号 <literal>r2</literal> との差分に置き換えます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:156
 msgid "``gf_mesh_set(mesh M, 'delete boundary', int rnum, mat CVFIDs)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'delete boundary', int rnum, mat CVFIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:158
 msgid "DEPRECATED FUNCTION. Use 'delete region' instead."
@@ -246,19 +269,19 @@ msgstr "非推奨関数です。代わりに 'delete region' を使用してく�
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:161
 msgid "``gf_mesh_set(mesh M, 'delete region', ivec RIDs)``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'delete region', ivec RIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:163
 msgid "Remove the regions whose #ids are listed in <literal>RIDs</literal>"
-msgstr ""
+msgstr "<literal>RIDs</literal> にリストされている領域 #id を削除します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:166
 msgid "``gf_mesh_set(mesh M, 'merge', mesh m2[, scalar  tol])``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'merge', mesh m2[, scalar  tol])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:168
 msgid "Merge with the mesh <literal>m2</literal>."
-msgstr ""
+msgstr "mesh <literal>m2</literal> とマージします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:170
 msgid ""
@@ -266,10 +289,12 @@ msgid ""
 "not be duplicated. If <literal>m2</literal> is a mesh_fem object, its linked"
 " mesh will be used."
 msgstr ""
+"許容半径 <literal>tol</literal> 内の重複ポイントは複製されません。 <literal>m2</literal> "
+"がmesh_femオブジェクトの場合は、そのリンクされたメッシュが使用されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:174
 msgid "``gf_mesh_set(mesh M, 'optimize structure'[, int with_renumbering])``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'optimize structure'[, int with_renumbering])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:176
 msgid "Reset point and convex numbering."
@@ -281,10 +306,12 @@ msgid ""
 "numbered from 1 to gf_mesh_get(mesh M, 'max pid') (resp. gf_mesh_get(mesh M,"
 " 'max cvid'))."
 msgstr ""
+"最適化後、ポイント (resp. convexes) には連続して 1 から gf_mesh_get(mesh M, 'max pid') (resp."
+" gf_mesh_get(mesh M, 'max cvid')) まで番号が付けられます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:183
 msgid "``gf_mesh_set(mesh M, 'refine'[, ivec CVIDs])``"
-msgstr ""
+msgstr "``gf_mesh_set(mesh M, 'refine'[, ivec CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_set.rst:185
 msgid "Use a Bank strategy for mesh refinement."
@@ -297,3 +324,5 @@ msgid ""
 "the mesh_fem and mesh_im objects linked to this mesh will be automagically "
 "refined."
 msgstr ""
+"<literal>CVIDs</literal> "
+"が指定されていない場合、メッシュ全体が洗練されます。このメッシュにリンクされたmesh_femオブジェクトとmesh_imオブジェクトの領域、有限要素法、および積分法は、自動的に洗練されます。"
