@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 13:25+0000\n"
+"POT-Creation-Date: 2019-12-11 13:03+0000\n"
 "PO-Revision-Date: 2018-07-16 07:00+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:8
 msgid "gf_workspace"
-msgstr ""
+msgstr "gf_workspace"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:10
 msgid "**Synopsis**"
@@ -35,7 +35,7 @@ msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:27
 msgid "Getfem workspace management function."
-msgstr ""
+msgstr "Getfem workspace管理関数。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:29
 msgid ""
@@ -47,6 +47,9 @@ msgid ""
 "invoke gf_workspace('pop') (you can use matlab exceptions handling to do "
 "this cleanly when the function exits on an error)."
 msgstr ""
+"Getfemは、matlabワークスペースから独立して、Matlab内の独自のワークスペースを使用します(これは、matlabオブジェクトのメモリー管理にいくつかの制限があるためです。)。デフォルトでは、すべてのgetfem変数はrootのgetfemワークスペースに属します。関数は、最初に"
+" gf_workspace('push') を呼び出すことで、独自のワークスペースを作成できます。終了時に、関数 gf_workspace('pop')"
+" を呼び出さなければなりません(関数がエラーで終了したときに、matlab例外処理を使用してこれを適切に行うことができます。)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:40
 msgid "**Command list :**"
@@ -54,15 +57,15 @@ msgstr "**コマンドリスト**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:44
 msgid "``gf_workspace('push')``"
-msgstr ""
+msgstr "``gf_workspace('push')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:46
 msgid "Create a new temporary workspace on the workspace stack."
-msgstr ""
+msgstr "workspaceスタックに新しい一時workspaceを作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:49
 msgid "``gf_workspace('pop',  [,i,j, ...])``"
-msgstr ""
+msgstr "``gf_workspace('pop',  [,i,j, ...])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:51
 msgid ""
@@ -70,67 +73,71 @@ msgid ""
 "except the one listed after 'pop', and the ones moved to parent workspace by"
 " gf_workspace('keep')."
 msgstr ""
+"現在のワークスペースをそのままにして、それに属するすべてのgetfemオブジェクトを破棄します。ただし、 'pop' "
+"の後にリストされているオブジェクトと、 gf_workspace('keep')によって親ワークスペースに移動されたオブジェクトは除きます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:56
 msgid "``gf_workspace('stat')``"
-msgstr ""
+msgstr "``gf_workspace('stat')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:58
 msgid "Print informations about variables in current workspace."
-msgstr ""
+msgstr "現在のワークスペースの変数に関する情報を表示します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:61
 msgid "``gf_workspace('stats')``"
-msgstr ""
+msgstr "``gf_workspace('stats')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:63
 msgid "Print informations about all getfem variables."
-msgstr ""
+msgstr "すべてのgetfem変数に関する情報を出力します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:66
 msgid "``gf_workspace('keep', i[,j,k...])``"
-msgstr ""
+msgstr "``gf_workspace('keep', i[,j,k...])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:68
 msgid ""
 "prevent the listed variables from being deleted when gf_workspace(\"pop\") "
 "will be called by moving these variables in the parent workspace."
 msgstr ""
+"これらの変数を親ワークスペースに移動して gf_workspace(\"pop\") "
+"を呼び出したときに、リストされている変数が削除されないようにします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:73
 msgid "``gf_workspace('keep all')``"
-msgstr ""
+msgstr "``gf_workspace('keep all')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:75
 msgid ""
 "prevent all variables from being deleted when gf_workspace(\"pop\") will be "
 "called by moving the variables in the parent workspace."
-msgstr ""
+msgstr "親作業領域の変数を移動してgf_workspace(\"pop\") が呼び出されるときに、すべての変数が削除されないようにします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:80
 msgid "``gf_workspace('clear')``"
-msgstr ""
+msgstr "``gf_workspace('clear')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:82
 msgid "Clear the current workspace."
-msgstr ""
+msgstr "現在のworkspaceをクリアします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:85
 msgid "``gf_workspace('clear all')``"
-msgstr ""
+msgstr "``gf_workspace('clear all')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:87
 msgid ""
 "Clear every workspace, and returns to the main workspace (you should not "
 "need this command)."
-msgstr ""
+msgstr "すべてのworkspaceをクリアし、メインのworkspaceに戻ります(このコマンドは不要です)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:91
 msgid "``gf_workspace('class name', i)``"
-msgstr ""
+msgstr "``gf_workspace('class name', i)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_workspace.rst:93
 msgid ""
 "Return the class name of object i (if I is a mesh handle, it return gfMesh "
 "etc..)"
-msgstr ""
+msgstr "オブジェクトiのクラス名を返します(Iがメッシュハンドルの場合は、gfMeshなどを返します)。"

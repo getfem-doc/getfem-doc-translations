@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 13:25+0000\n"
+"POT-Creation-Date: 2019-12-11 13:03+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -84,6 +84,8 @@ msgid ""
 "Product of <literal>M</literal> transposed (conjugated if "
 "<literal>M</literal> is complex) with the vector <literal>V</literal>."
 msgstr ""
+"ベクトル <literal>V</literal> と転置された <literal>M</literal> は( "
+"<literal>M</literal> が複素数の場合は共役)の積。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat_get.rst:65
 msgid "``D = gf_spmat_get(spmat S, 'diag'[, list E])``"
@@ -97,7 +99,7 @@ msgstr "<literal>M</literal> の対角をベクトルとして返します。"
 msgid ""
 "If <literal>E</literal> is used, return the sub-diagonals whose ranks are "
 "given in E."
-msgstr ""
+msgstr "<literal>E</literal> が使用されている場合、rankがEで与えられている部分対角を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat_get.rst:72
 msgid "``s = gf_spmat_get(spmat S, 'storage')``"
@@ -119,7 +121,7 @@ msgstr "``{ni,nj} = gf_spmat_get(spmat S, 'size')``"
 msgid ""
 "Return a vector where <literal>ni</literal> and <literal>nj</literal> are "
 "the dimensions of the matrix."
-msgstr ""
+msgstr "<literal>ni</literal> と <literal>nj</literal> が行列の次元であるベクトルを返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat_get.rst:84
 msgid "``b = gf_spmat_get(spmat S, 'is_complex')``"
@@ -151,7 +153,7 @@ msgstr "``V = gf_spmat_get(spmat S, 'csc_val')``"
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat_get.rst:98
 msgid ""
 "Return the array of values of all non-zero entries of <literal>M</literal>."
-msgstr ""
+msgstr "<literal>M</literal> の0以外のすべての要素の値の配列を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat_get.rst:103
 msgid "``{N, U0} = gf_spmat_get(spmat S, 'dirichlet nullspace', vec R)``"
@@ -159,7 +161,7 @@ msgstr "``{N, U0} = gf_spmat_get(spmat S, 'dirichlet nullspace', vec R)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat_get.rst:105
 msgid "Solve the dirichlet conditions <literal>M.U=R</literal>."
-msgstr ""
+msgstr "Dirichlet条件 <literal>M.U=R</literal> を解きます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat_get.rst:107
 msgid ""
@@ -174,7 +176,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat_get.rst:112
 msgid "<literal>K.U = B</literal> with constraints <literal>M.U = R</literal>"
-msgstr ""
+msgstr "<literal>M.U=R</literal> の制約がある <literal>K.U = B</literal>"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat_get.rst:114
 msgid "is replaced by"
@@ -184,6 +186,7 @@ msgstr "は次のように変わります"
 msgid ""
 "<literal>(N'.K.N).UU = N'.B</literal> with <literal>U = N.UU + U0</literal>"
 msgstr ""
+"<literal>(N'.K.N).UU = N'.B</literal> ただし <literal>U = N.UU + U0</literal>"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat_get.rst:119
 msgid "``gf_spmat_get(spmat S, 'save', string format, string filename)``"

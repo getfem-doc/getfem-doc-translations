@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 13:25+0000\n"
+"POT-Creation-Date: 2019-12-11 13:03+0000\n"
 "PO-Revision-Date: 2018-07-16 07:08+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -81,6 +81,8 @@ msgid ""
 " 'nbdof')), then the deformation `u` will be applied to the mesh before the "
 "slicing operation."
 msgstr ""
+"最初の引数がmeshではなくmesh_fem `mf` で、その後に `mf` フィールド `u` が続く場合、変形 `u`  (ただし "
+"size(u,1) == gf_mesh_fem_get(mesh_fem MF, 'nbdof'))はスライス操作の前にメッシュに適用されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:47
 msgid "The first argument can also be a slice."
@@ -100,7 +102,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:56
 msgid "Create a slice using `sliceop` operation."
-msgstr ""
+msgstr "`sliceop`操作を使用してスライスを作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:58
 msgid ""
@@ -108,10 +110,12 @@ msgid ""
 ". The first element is the name of the operation, followed the slicing "
 "options:"
 msgstr ""
+"`sliceop`オペレーションはMatlab "
+"CELL配列で指定されます(例:中括弧)。最初の要素はオペレーションの名前で、その後にスライシングオプションが続きます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:62
 msgid "{'none'} : Does not cut the mesh."
-msgstr ""
+msgstr "{'none'} : メッシュをカットしません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:65
 msgid ""
@@ -123,18 +127,24 @@ msgid ""
 "+2 which means that the mesh will be sliced, but both the outer and inner "
 "parts will be kept."
 msgstr ""
+"{'planar', int orient, vec p, vec n} : 平面カット。 `p` と `n` は半空間を定義し、 `p` "
+"は半空間の境界に属する点であり、 `n` はその法線です。 `orient` が -1 (または 0, +1) に等しい場合、スライス操作は半空間の "
+"\"内側\" (または \"境界\", \"外側\") でメッシュを切断します。 `orient` "
+"を+2に設定すると、メッシュはスライスされますが、外側と内側の両方の部分は保持されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:73
 msgid ""
 "{'ball', int orient, vec c, scalar r} : Cut with a ball of center `c` and "
 "radius `r`."
-msgstr ""
+msgstr "{'ball', int orient, vec c, scalar r} : 中心 `c` と半径 `r` の球でカットします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:76
 msgid ""
 "{'cylinder', int orient, vec p1, vec p2, scalar r} : Cut with a cylinder "
 "whose axis is the line `(p1, p2)` and whose radius is `r`."
 msgstr ""
+"{'cylinder', int orient, vec p1, vec p2, scalar r} : 軸が `(p1, p2)` 線で半径が `r`"
+" の円柱で切断します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:80
 msgid ""
@@ -143,6 +153,10 @@ msgid ""
 "the set `{x such that :math:`U(x) \\leq s`}` or `{x such that `U`(x)=`s`}` "
 "or `{x such that `U`(x) >= `s`}` depending on the value of `orient`."
 msgstr ""
+"{'isovalues', int orient, mesh_fem mf, vec U, scalar s} : (mesh_fem `mf` "
+"で定義された)フィールド `U` の等値面を使用して切断します。結果は `orient` の値に応じて `{x such that "
+":math:`U(x) \\leq s`}` または `{x such that `U`(x)=`s`}` または `{x such that "
+"`U`(x) >= `s`}` になります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:86
 msgid ""
@@ -151,6 +165,9 @@ msgid ""
 "the whole mesh is considered (i.e. it is equivalent to "
 "{'boundary',{'none'}})."
 msgstr ""
+"{'boundary'[, SLICEOP]} : "
+"SLICEOPの結果の境界を返します。ここで、SLICEOPはスライシング操作です。SLICEOPが指定されていない場合は、メッシュ全体(つまり、 "
+"{'boundary',{'none'}}) と見なされます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:91
 msgid ""
@@ -158,26 +175,28 @@ msgid ""
 " shrinked (:math:`0 < \\text{Coef} \\leq 1`). In the case of 3D convexes, "
 "only their faces are kept."
 msgstr ""
+"{'explode', mat Coef} : メッシュの 'exploded' 表示を構築します。各凸包が (:math:`0 < "
+"\\text{Coef} \\leq 1`) 収縮されます。3次元凸包の場合、面のみが保持されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:95
 msgid ""
 "{'union', SLICEOP1, SLICEOP2} : Returns the union of slicing operations."
-msgstr ""
+msgstr "{'union', SLICEOP1, SLICEOP2} : スライス操作の和集合を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:98
 msgid ""
 "{'intersection', SLICEOP1, SLICEOP2} : Returns the intersection of slicing "
 "operations, for example::"
-msgstr ""
+msgstr "{'intersection', SLICEOP1, SLICEOP2} : スライスの交差操作を返します。例えば"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:104
 msgid "{'comp', SLICEOP} : Returns the complementary of slicing operations."
-msgstr ""
+msgstr "{'comp', SLICEOP} : スライス操作の補完を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:107
 msgid ""
 "{'diff', SLICEOP1, SLICEOP2} : Returns the difference of slicing operations."
-msgstr ""
+msgstr "{'diff', SLICEOP1, SLICEOP2} : スライス操作の差を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:110
 msgid ""
@@ -185,6 +204,8 @@ msgid ""
 "mesh with another mesh. The slice is such that all of its simplexes are "
 "stricly contained into a convex of each mesh."
 msgstr ""
+"{'mesh', mesh m} : "
+"スライスされたメッシュと別のメッシュの交差部分のスライスを作成します。このスライスは、すべての単項が各メッシュの凸包に厳密に含まれるものです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:117
 msgid "``sl = gf_slice('streamlines', mesh_fem mf, mat U, mat S)``"
@@ -194,7 +215,7 @@ msgstr "``sl = gf_slice('streamlines', mesh_fem mf, mat U, mat S)``"
 msgid ""
 "Compute streamlines of the (vector) field `U`, with seed points given by the"
 " columns of `S`."
-msgstr ""
+msgstr "`S` の列で与えられるシード点を使って、(ベクトル)フィールド `U` の流線を計算します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:123
 msgid "``sl = gf_slice('points', mesh m, mat Pts)``"
@@ -206,6 +227,8 @@ msgid ""
 "(useful for interpolation on a given set of sparse points, see "
 "``gf_compute('interpolate on',sl)``."
 msgstr ""
+"Ptsのカラムで指定された点で構成される \"スライス\" を返します。( 指定されたスパース点の集合上の補間に役立ちます。 "
+"``gf_compute('interpolate on',sl)`` を参照してください。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_slice.rst:130
 msgid "``sl = gf_slice('load', string filename[, mesh m])``"
@@ -215,4 +238,4 @@ msgstr "``sl = gf_slice('load', string filename[, mesh m])``"
 msgid ""
 "Load the slice (and its linked mesh if it is not given as an argument) from "
 "a text file."
-msgstr ""
+msgstr "テキストファイルからスライス(および、引数として指定されていない場合、リンクされたメッシュ)を読み込みます。"

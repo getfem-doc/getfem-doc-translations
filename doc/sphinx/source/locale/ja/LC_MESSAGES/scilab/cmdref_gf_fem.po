@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 13:25+0000\n"
+"POT-Creation-Date: 2019-12-11 13:03+0000\n"
 "PO-Revision-Date: 2018-07-16 07:00+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -65,6 +65,8 @@ msgid ""
 "mesh_fem <literal>mf_source</literal> on another mesh, given the integration"
 " method <literal>mim_target</literal> that will be used on this mesh."
 msgstr ""
+"この特殊な有限要素を使用すると、このメッシュで使用される積分法 <literal>mim_target</literal> "
+"が指定されている場合に、別のメッシュ上の所定のmesh_fem <literal>mf_source</literal> を補間できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:38
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:51
@@ -73,6 +75,8 @@ msgid ""
 "depending if caching is used or not. By default <literal>caching</literal> "
 "is True"
 msgstr ""
+"この有限要素は、キャッシュが使用されているかどうかに応じて、非常に低速であったり、大量のメモリを消費したりする可能性があることに注意してください。デフォルトでは"
+" <literal>caching</literal> はTrueです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:43
 msgid ""
@@ -93,18 +97,22 @@ msgid ""
 "description of finite element and integration methods) for a complete "
 "reference. Here is a list of some of them:"
 msgstr ""
+"<literal>fem_name</literal> "
+"には、有限要素法の記述を入力する必要があります。詳細はgetfem++のマニュアル(特に有限要素法と積分法の記述)を参照してください。その一部を次に示します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:63
 msgid ""
 "FEM_PK(n,k) : classical Lagrange element Pk on a simplex of dimension "
 "<literal>n</literal>."
-msgstr ""
+msgstr "FEM_PK(n,k) : 次元 <literal>n</literal> の単体上の古典的Lagrange要素Pk。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:65
 msgid ""
 "FEM_PK_DISCONTINUOUS(n,k[,alpha]) : discontinuous Lagrange element Pk on a "
 "simplex of dimension <literal>n</literal>."
 msgstr ""
+"FEM_PK_DISCONTINUOUS(n,k[,alpha]) : 次元 <literal>n</literal> の単体上の不連続 "
+"Lagrange 要素Pk。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:67
 msgid ""
@@ -127,7 +135,7 @@ msgstr "FEM_Q2_INCOMPLETE (n): 8および20自由度(セレンディピティQua
 msgid ""
 "FEM_PK_PRISM(n,k) : classical Lagrange element Pk on a prism of dimension "
 "<literal>n</literal>."
-msgstr ""
+msgstr "FEM_PK_PRISM(n,k) : 次元 <literal>n</literal> のプリズム上の古典的 Lagrange 要素Pk。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:76
 msgid ""
@@ -177,12 +185,16 @@ msgid ""
 "FEM_STRUCTURED_COMPOSITE(fem f,k) : Composite fem <literal>f</literal> on a "
 "grid with <literal>k</literal> divisions."
 msgstr ""
+"FEM_STRUCTURED_COMPOSITE(fem f,k) :  <literal>k</literal> 分割されたグリッド上の複合fem "
+"<literal>f</literal> 。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:95
 msgid ""
 "FEM_PK_HIERARCHICAL_COMPOSITE(n,k,s) : Pk composite element on a grid with "
 "<literal>s</literal> subdivisions and with a hierarchical basis."
 msgstr ""
+"FEM_PK_HIERARCHICAL_COMPOSITE(n,k,s) : "
+"<literal>s</literal>細分割および階層ベースを使用したグリッド上のPk複合要素。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:98
 msgid ""
@@ -190,6 +202,8 @@ msgid ""
 "<literal>s</literal> subdivisions and a hierarchical basis on both degree "
 "and subdivision."
 msgstr ""
+"FEM_PK_FULL_HIERARCHICAL_COMPOSITE(n,k,s) : <literal>s</literal> "
+"サブ分割および次数とサブ分割の両方に基づく階層ベースのPk複合要素。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:101
 msgid "FEM_PRODUCT(A,B) : tensorial product of two polynomial elements."
@@ -199,7 +213,7 @@ msgstr "FEM_PRODUCT(A,B) : 2つの多項式要素のテンソル積。"
 msgid ""
 "FEM_HERMITE(n) : Hermite element P3 on a simplex of dimension <literal>n = "
 "1, 2, 3</literal>."
-msgstr ""
+msgstr "FEM_HERMITE(n) : 次元 <literal>n = 1, 2, 3</literal> の単体上のHermite要素P3。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:105
 msgid "FEM_ARGYRIS : Argyris element P5 on the triangle."
@@ -230,13 +244,13 @@ msgstr "FEM_REDUCED_QUADC1_COMPOSITE : 四辺形要素、複合P3要素および
 msgid ""
 "FEM_RT0(n) : Raviart-Thomas element of order 0 on a simplex of dimension "
 "<literal>n</literal>."
-msgstr ""
+msgstr "FEM_RT0(n) : 次元 <literal>n</literal> の単体上の次数0のRaviart-Thomas要素。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:117
 msgid ""
 "FEM_NEDELEC(n) : Nedelec edge element of order 0 on a simplex of dimension "
 "<literal>n</literal>."
-msgstr ""
+msgstr "FEM_NEDELEC(n) : 次元 <literal>n</literal> の単体上の次数0のNedelecエッジ要素。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_fem.rst:120
 msgid ""

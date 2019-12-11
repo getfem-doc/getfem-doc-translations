@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 13:25+0000\n"
+"POT-Creation-Date: 2019-12-11 13:03+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -217,6 +217,9 @@ msgid ""
 " <latex style=\"text\"><![CDATA[C]]></latex> defined via "
 "<literal>lambda_d</literal> and <literal>mu_d</literal>."
 msgstr ""
+"<latex style=\"text\"><![CDATA[\\nabla\\cdot(C(x):\\nabla "
+"u)]]></latex>と<latex "
+"style=\"text\"><![CDATA[C]]></latex>が<literal>lambda_d</literal>と<literal>mu_d</literal>で定義されています。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:148
 msgid ""
@@ -325,6 +328,8 @@ msgid ""
 "<latex style=\"text\"><![CDATA[\\Delta u + k^2 u]]></latex> = 0,  with "
 "<literal>k</literal> complex scalar."
 msgstr ""
+"<latex style=\"text\"><![CDATA[\\Delta u + k^2 u]]></latex> = "
+"0、<literal>k</literal>は複素スカラー。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:195
 msgid ""
@@ -380,6 +385,9 @@ msgid ""
 " on the data mesh_fem <literal>mf_d</literal>. <literal>fd</literal> may be "
 "real or complex-valued."
 msgstr ""
+"データmesh_fem <literal>mf_d</literal> で定義されたデータベクトル <literal>fd</literal> "
+"を使用して、mesh_fem <literal>mf_u</literal> 上で組み立てられたベクトル <literal>V</literal> "
+"を出力します。 <literal>fd</literal> は実数値でも複素数値でもよいです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:223
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:235
@@ -406,6 +414,8 @@ msgid ""
 " dof of <literal>mf_d</literal>, and Qdim is the dimension of the unkown u "
 "(that is set when creating the mesh_fem)."
 msgstr ""
+"<literal>G</literal> は [Qdim x N] 行列でなければなりません。ここでNは <literal>mf_d</literal>"
+" の自由度数であり、(mesh_femの作成時に設定される)Qdimは未知のuの次元です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:239
 msgid ""
@@ -417,7 +427,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:241
 msgid "Assembly of Dirichlet conditions of type <literal>h.u = r</literal>."
-msgstr ""
+msgstr "<literal>h.u = r</literal> 型のDirichlet条件の集合です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:243
 msgid ""
@@ -426,6 +436,9 @@ msgid ""
 "in <literal>H</literal>, one column per dof in <literal>mf_d</literal>, each"
 " column containing the values of the matrix h stored in fortran order:"
 msgstr ""
+"ハンドル <literal>h.u = r</literal> "
+"ここでhは(あらゆるrankの)正方行列で、その大きさは未知のuの次元と等しいです。この行列は <literal>H</literal> 、 "
+"<literal>mf_d</literal> の自由度ごとに1列ずつ格納され、各列には行列hの値がFortranの次数で格納されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:248
 msgid "<literal>H(:,j) = [h11(x_j) h21(x_j) h12(x_j) h22(x_j)]</literal>"
@@ -441,6 +454,8 @@ msgid ""
 " = ones(1, N)</literal>, where N is the number of dof of "
 "<literal>mf_d</literal>."
 msgstr ""
+"もちろん、未知のスカラーフィールドである場合、単に <literal>H = ones(1, N)</literal> "
+"を設定する必要があります。ここでNは <literal>mf_d</literal> の自由度数です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:257
 msgid ""
@@ -449,6 +464,9 @@ msgid ""
 " except that this function tries to produce a 'better' (more diagonal) "
 "constraints matrix (when possible)."
 msgstr ""
+"これは基本的に、 gf_asm('boundary qu term') を <literal>H</literal> に対して呼び出し、 "
+"gf_asm('neumann') を <literal>R</literal> に対して呼び出すのと同じですが、この関数は(可能な場合) 'より良い "
+"' (より多くの対角線)制約行列を生成しようとします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:262
 msgid "See also gf_spmat_get(spmat S, 'Dirichlet_nullspace')."
@@ -472,6 +490,8 @@ msgid ""
 "number of dof of <literal>mf_d</literal>, and Qdim is the dimension of the "
 "unkown u (that is set when creating the mesh_fem)."
 msgstr ""
+"<literal>q</literal> は [Qdim x Qdim x N] 配列でなければなりません。ここでNは "
+"<literal>mf_d</literal> の自由度数であり、Qdimは(mesh_femの作成時に設定される)未知変数uの次元です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:277
 msgid ""
@@ -497,6 +517,15 @@ msgid ""
 "derivatives with respect to <literal>t</literal> and <literal>u</literal>. "
 "If they are not furnished, a symbolic derivation is used."
 msgstr ""
+"高水準汎用アセンブリで使用できる新しい関数 <literal>name</literal> "
+"を定義します。関数には、1つまたは2つのパラメータを指定できます。 <literal>expression</literal> "
+"では、汎用アセンブリの使用可能なすべての定義済み関数またはオペレーションを使用できます。ただし、一部の変数またはデータへの参照は指定できません。関数の引数は、1つのパラメータ関数の場合は"
+" <literal>t</literal> 、2つのパラメータ関数の場合は <literal>t</literal> と "
+"<literal>u</literal> です。例えば、 'sin(pi*t)+2*t*t' は1つのパラメータ関数のための有効な式であり、 "
+"'sin(max(t,u)*pi)' は2つのパラメータ関数のための有効な式です。 "
+"<literal>expression_derivative_t</literal> と "
+"<literal>expression_derivative_u</literal> は <literal>t</literal> と "
+"<literal>u</literal> に関する導関数のオプション式です。指定されていない場合は、記号による微分が使用されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:294
 msgid "``gf_asm('undefine function', string name)``"
@@ -506,7 +535,7 @@ msgstr "``gf_asm('undefine function', string name)``"
 msgid ""
 "Cancel the definition of a previously defined function "
 "<literal>name</literal> for the high level generic assembly."
-msgstr ""
+msgstr "高水準の汎用アセンブリに対して以前に定義された関数 <literal>name</literal> の定義をキャンセルします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:300
 msgid ""
@@ -525,6 +554,9 @@ msgid ""
 "expressed in terms of Frobenius norms of its input strain and output stress,"
 " instead of their Von-Mises equivalents."
 msgstr ""
+"初期降伏応力が <literal>sigma_y0</literal> "
+"で硬化係数がHの新しい線形硬化関数を<literal>name</literal>という名前で定義します。値が 'Frobenius' "
+"の特別な文字列引数が指定された場合、硬化関数はVon-Mises相当ではなく、入力ひずみと出力応力のFrobeniusノルムで表されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_asm.rst:309
 msgid ""

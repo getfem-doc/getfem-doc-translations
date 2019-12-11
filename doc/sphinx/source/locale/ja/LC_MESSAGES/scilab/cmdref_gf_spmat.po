@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 13:25+0000\n"
+"POT-Creation-Date: 2019-12-11 13:03+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -58,6 +58,11 @@ msgid ""
 "(for example <literal></literal>gf_linsolve()<literal></literal> converts "
 "the matrices to CSC)."
 msgstr ""
+"デフォルトでは、新しく作成されたマトリックスはすべてWSCマトリックスとして構築されます。これは後で "
+"<literal></literal>gf_spmat_set(spmat S, "
+"'to_csc',...)<literal></literal>か、あるいはgetfem(例えば "
+"<literal></literal>gf_linsolve()<literal></literal> "
+"は行列をCSCに変換します)によって自動的に変更できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:41
 msgid "The matrices may store REAL or COMPLEX values."
@@ -77,6 +82,8 @@ msgid ""
 "<literal>m x n</literal>. If <literal>n</literal> is omitted, the matrix "
 "dimension is <literal>m x m</literal>."
 msgstr ""
+"新しい空の(すなわち、ゼロで満たされた)次元 <literal>m x n</literal> 疎行列を作成します。 "
+"<literal>n</literal> を省略すると、行列の次元は <literal>m x m</literal> になります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:54
 msgid "``SM = gf_spmat('copy', mat K [,  I [,  J]])``"
@@ -88,6 +95,8 @@ msgid ""
 "<literal>I</literal> and/or <literal>J</literal> are given, the matrix will "
 "be a submatrix of <literal>K</literal>. For example::"
 msgstr ""
+"(spmatかもしれない)マトリックス<literal>K</literal>を複製します。インデックス <literal>I</literal> "
+"及び/又は <literal>J</literal> が与えられる場合、行列は <literal>K</literal> の部分行列となります。例えば"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:63
 msgid "will return a 40x5 matrix."
@@ -99,7 +108,7 @@ msgstr "``SM = gf_spmat('identity', int n)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:68
 msgid "Create a <literal>n x n</literal> identity matrix."
-msgstr ""
+msgstr "<literal>n x n</literal> 次の単位行列を作成します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:71
 msgid "``SM = gf_spmat('mult', spmat A, spmat B)``"
@@ -113,6 +122,10 @@ msgid ""
 "you may have to use <literal></literal>gf_spmat_set(spmat S, "
 "'to_complex')<literal></literal>"
 msgstr ""
+"疎行列<literal>A</literal>と<literal>B</literal>の積の疎行列を作成します。<literal>A</literal>"
+" と<literal>B</literal>が両方とも実数であるか、両方とも複素数である必要があります。 "
+"<literal></literal>gf_spmat_set(spmat S, 'to_complex')<literal></literal> "
+"を使う必要があるかもしれません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:78
 msgid "``SM = gf_spmat('add', spmat A, spmat B)``"
@@ -137,6 +150,8 @@ msgid ""
 "<literal>E</literal> will contain the sub-diagonal number that will be "
 "filled with the corresponding column of <literal>D</literal>."
 msgstr ""
+"対角行列を作成します。<literal>E</literal> が与えられる場合、 <literal>D</literal> は行列であり、 "
+"<literal>E</literal> の各列は <literal>D</literal> の対応する列の部分対角の番号を含みます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:91
 msgid ""
