@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-14 13:07+0000\n"
+"POT-Creation-Date: 2019-12-15 13:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:09+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -105,6 +105,9 @@ msgid ""
 "array in order to insert more than one convex (or a two dimensional array "
 "correctly shaped according to Fortran ordering)."
 msgstr ""
+"凸包(三角形、プリズム、...)は `GT` (  gf_geotrans('...') で取得されます)によって与えられ、その点は `PTS` "
+"の列によって与えられます。返される `CVID` には凸包の #idが含まれます。 `PTS` "
+"は複数の凸包(またはFortranの次数に従って正しく形成された2次元配列)を挿入するための3次元配列の場合もあります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_set.rst:84
 msgid "``gf_mesh_set(mesh M, 'del convex', mat CVIDs)``"
@@ -133,6 +136,8 @@ msgid ""
 "For example; ``gf_mesh_set(mesh M, 'del convex of dim', [1,2])`` remove all "
 "line segments, triangles and quadrangles."
 msgstr ""
+"例えば ``gf_mesh_set(mesh M, 'del convex of dim', [1,2])`` "
+"はすべての線区分、三角形、四角形を削除します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_set.rst:100
 msgid "``gf_mesh_set(mesh M, 'translate', vec V)``"
@@ -156,6 +161,8 @@ msgid ""
 "gf_mesh_get(mesh M, 'dim')``). Hence it is possible to transform a 2D mesh "
 "into a 3D one (and reciprocally)."
 msgstr ""
+"なお、 `T` は ``NxN`` (  ``N = gf_mesh_get(mesh M, 'dim')`` "
+")行列である必要はありません。したがって、2次元メッシュを3次元メッシュに(相互に)変換できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_set.rst:114
 msgid "``gf_mesh_set(mesh M, 'boundary', int rnum, mat CVFIDs)``"
@@ -182,6 +189,8 @@ msgid ""
 "used to store a list of convex faces, but you may also use them to store a "
 "list of convexes)."
 msgstr ""
+"`CVFIDs` の最初の行は凸包の #id を含み、二番目の行は凸包の中に面番号を含みます "
+"(または凸包全体として0(領域は通常、凸包面のリストを格納するために使用されますが、凸包面のリストを格納するために使用することもできます)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_set.rst:129
 msgid ""
@@ -199,6 +208,8 @@ msgid ""
 " of convexes or/and convex faces provided in the matrix `CVFIDs`, see also "
 "``gf_mesh_set(mesh M, 'set region)``."
 msgstr ""
+"領域番号 `rnum` で識別される領域を拡張して、マトリックス `CVFIDs` に与えられた凸包または凸包面あるいはその両方の集合を含めます。 "
+"``gf_mesh_set(mesh M, 'set region)`` も参照。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_set.rst:140
 msgid "``gf_mesh_set(mesh M, 'region intersect', int r1, int r2)``"
@@ -249,13 +260,14 @@ msgstr "``gf_mesh_set(mesh M, 'merge', mesh m2[, scalar  tol])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_set.rst:168
 msgid "Merge with the mesh `m2`."
-msgstr ""
+msgstr "mesh `m2` とマージします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_set.rst:170
 msgid ""
 "Overlapping points, within a tolerance radius `tol`, will not be duplicated."
 " If `m2` is a mesh_fem object, its linked mesh will be used."
 msgstr ""
+"許容半径 `tol` 内の重複ポイントは複製されません。 `m2` がmesh_femオブジェクトの場合は、そのリンクされたメッシュが使用されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_set.rst:174
 msgid "``gf_mesh_set(mesh M, 'optimize structure'[, int with_renumbering])``"
@@ -288,3 +300,5 @@ msgid ""
 "and the finite element methods and integration methods of the mesh_fem and "
 "mesh_im objects linked to this mesh will be automagically refined."
 msgstr ""
+"`CVIDs` "
+"が指定されていない場合、メッシュ全体が洗練されます。このメッシュにリンクされたmesh_femオブジェクトとmesh_imオブジェクトの領域、有限要素法、および積分法は、自動的に洗練されます。"

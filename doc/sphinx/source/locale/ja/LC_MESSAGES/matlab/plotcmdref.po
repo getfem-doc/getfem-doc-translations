@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-14 13:07+0000\n"
+"POT-Creation-Date: 2019-12-15 13:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:08+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -64,6 +64,9 @@ msgid ""
 "values of ``U``. If ``U`` is a vector field, then the default behavior of "
 "``gf_plot`` is to draw vectors representing the values of ``U``."
 msgstr ""
+"関数は ``U`` が行ベクトルであることを期待する。 ``U`` がスカラーフィールドの場合、 ``gf\\_plot(mf,U)`` "
+"はUの値を表すカラーでメッシュを塗りつぶします。 ``U`` がベクトルフィールドの場合、  ``gf_plot`` のデフォルトの動作は ``U`` "
+"の値を表すベクトルを描画することです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/plotcmdref.rst:76
 msgid ""
@@ -73,12 +76,15 @@ msgid ""
 "patch objects of faces, ``hvert`` (resp ``hconv``, ``hdof``) is the handles "
 "of the vertices (resp. convexes, dof) labels."
 msgstr ""
+"出力時に、この関数は作成されたさまざまなグラフィカルオブジェクトのハンドルを返します。  ``hmesh`` はメッシュ線のハンドル、  "
+"``hbound`` は境界のエッジのハンドル、``hvert`` は面のパッチオブジェクトのハンドル、( ``hconv`` 、  ``hdof`` "
+"と答えてください)は頂点(resp. convexes, dof)ラベルのハンドルです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/plotcmdref.rst:83
 msgid ""
 "For example, plotting a scalar field on the border of a 3D mesh can be done "
 "with ::"
-msgstr ""
+msgstr "たとえば、3次元メッシュの境界にスカラーフィールドをプロットするには、次のようにします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/plotcmdref.rst:94
 msgid "gf_plot_1D"
@@ -94,21 +100,22 @@ msgstr "gf_plot_mesh"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/plotcmdref.rst:144
 msgid "This function is used to display a mesh."
-msgstr ""
+msgstr "この関数は、メッシュを表示するために使用します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/plotcmdref.rst:146
 msgid "Example ::"
-msgstr ""
+msgstr "例"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/plotcmdref.rst:156
 msgid "gf_plot_slice"
-msgstr ""
+msgstr "gf_plot_slice"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/plotcmdref.rst:192
 msgid ""
 "This function can be used to plot mesh slices. It is also used by the "
 "``gf_plot_mesh`` and ``gf_plot`` functions."
 msgstr ""
+"この関数は、メッシュスライスのプロットに使用できます。 ``gf_plot_mesh`` と ``gf_plot`` 関数でも使用されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/plotcmdref.rst:195
 msgid ""
@@ -116,3 +123,6 @@ msgid ""
 "``U`` defined on this mesh_fem, solution of the Stokes problem in a tank "
 "(see the demo ``demo_stokes_3D_tank_draw.m`` in the tests directory). ::"
 msgstr ""
+"例: 3D mesh_fem ``mf`` "
+"と、このmesh_femに定義されたベクトルフィールドUがあり、タンク内のStokes問題を解決します(testsディレクトリのデモ "
+"``demo_stokes_3D_tank_draw.m`` を参照してください。)。:"

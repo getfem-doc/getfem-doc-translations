@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-14 13:07+0000\n"
+"POT-Creation-Date: 2019-12-15 13:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:00+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -39,6 +39,8 @@ msgid ""
 "argument instead of a mesh M (in that case, the mesh_fem linked mesh will be"
 " used)."
 msgstr ""
+"一般的なメッシュ参照機能。これらの関数はすべて、mesh "
+"M(この場合、mesh_femリンクメッシュが使用されます)の代わりにmesh_fem引数も受け入れます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:69
 msgid "**Command list :**"
@@ -88,6 +90,12 @@ msgid ""
 "with NaN. You can use gf_mesh_get(mesh M, 'pid') to filter such invalid "
 "points."
 msgstr ""
+"返されるマトリックスの各列には、各点の座標が含まれます。オプションの引数 <literal>PIDs</literal> "
+"が指定された場合、このベクトルに #id がリストされているポイントのみが返されます。それ以外の場合、返されるマトリックスは "
+"gf_mesh_get(mesh M, 'max_pid') 列になります。(メッシュの一部のポイントが破棄され、 gf_mesh_set(mesh "
+"M, 'optimize structure')  が呼び出されていない場合)  gf_mesh_get(mesh M, 'nbpts')  "
+"より大きい可能性があります。削除された点に対応する列はNaNで埋められます。そのような空のポイントを取り除くには gf_mesh_get(mesh M,"
+" 'pid') を使用します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:103
 msgid "``Pid = gf_mesh_get(mesh M, 'pid')``"
@@ -104,6 +112,8 @@ msgid ""
 "from the mesh. You can use gf_mesh_set(mesh M, 'optimize_structure') to "
 "enforce a contiguous numbering."
 msgstr ""
+"番号付けは、0から gf_mesh_get(mesh M, 'nbpts') まで連続していないことに注意してください。  "
+"gf_mesh_set(mesh M, 'optimize_structure')  を使用すると、連続した番号付けが行われます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:114
 msgid "``PIDs = gf_mesh_get(mesh M, 'pid in faces', imat CVFIDs)``"
@@ -111,7 +121,7 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in faces', imat CVFIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:116
 msgid "Search point #id listed in <literal>CVFIDs</literal>."
-msgstr ""
+msgstr "<literal>CVFIDs</literal> にリストされているポイント #id の検索。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:118
 msgid ""
@@ -119,6 +129,8 @@ msgid ""
 "#ids, and the second lists face numbers. On return, <literal>PIDs</literal> "
 "is a vector containing points #id."
 msgstr ""
+"<literal>CVFIDs</literal> は2行の行列で、最初の行には凸包の #id "
+"がリストされ、2番目の行には面の番号がリストされます。返される  <literal>PIDs</literal> は、点#idを含むベクトルです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:123
 msgid "``PIDs = gf_mesh_get(mesh M, 'pid in cvids', imat CVIDs)``"
@@ -126,31 +138,33 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in cvids', imat CVIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:125
 msgid "Search point #id listed in <literal>CVIDs</literal>."
-msgstr ""
+msgstr "<literal>CVIDs</literal> にリストされているポイント #id の検索。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:127
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:134
 msgid "<literal>PIDs</literal> is a vector containing points #id."
-msgstr ""
+msgstr "<literal>PIDs</literal> はポイント #id を含むベクトルです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:130
 msgid "``PIDs = gf_mesh_get(mesh M, 'pid in regions', imat RIDs)``"
-msgstr ""
+msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in regions', imat RIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:132
 msgid "Search point #id listed in <literal>RIDs</literal>."
-msgstr ""
+msgstr "<literal>RIDs</literal> にリストされているポイント #id の検索。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:137
 msgid ""
 "``PIDs = gf_mesh_get(mesh M, 'pid from coords', mat PTS[, scalar "
 "radius=0])``"
 msgstr ""
+"``PIDs = gf_mesh_get(mesh M, 'pid from coords', mat PTS[, scalar "
+"radius=0])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:139
 msgid ""
 "Search point #id whose coordinates are listed in <literal>PTS</literal>."
-msgstr ""
+msgstr "座標が <literal>PTS</literal> にリストされている検索ポイント #id 。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:141
 msgid ""
@@ -159,10 +173,13 @@ msgid ""
 "each point found in <literal>eps</literal> range, and -1 for those which "
 "where not found in the mesh."
 msgstr ""
+"<literal>PTS</literal> は、点の座標のリストを含む配列です。返される <literal>PIDs</literal> は、 "
+"<literal>eps</literal> の範囲内で見つかった各ポイントのポイント #id です。メッシュ内で見つからなかった場合には -1 "
+"が返されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:147
 msgid "``{Pid, IDx} = gf_mesh_get(mesh M, 'pid from cvid'[, imat CVIDs])``"
-msgstr ""
+msgstr "``{Pid, IDx} = gf_mesh_get(mesh M, 'pid from cvid'[, imat CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:149
 msgid "Return the points attached to each convex of the mesh."
@@ -179,21 +196,27 @@ msgid ""
 "list in <literal>Pid</literal>. Hence, for example, the list of #id of "
 "points of the second convex is Pid(IDx(2):IDx(3)-1)."
 msgstr ""
+"<literal>CVIDs</literal> ( <literal>CVIDs = Mesh.max_cvid()</literal> "
+"と同じです)を省略すると、すべての凸包が対象となります。 <literal>IDx</literal> はベクトルであり、 length(IDx) = "
+"length(CVIDs)+1 です。 <literal>Pid</literal> は <literal>CVIDs</literal> "
+"における各凸包の点の #id の連結リストを含むベクトルです。 <literal>IDx</literal> の各エントリは、 "
+"<literal>Pid</literal> の対応する凸包点リストの位置です。したがって、例えば、第2凸包の点の #id のリストは "
+"Pid(IDx(2):IDx(3)-1) です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:160
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:177
 msgid ""
 "If <literal>CVIDs</literal> contains convex #id which do not exist in the "
 "mesh, their point list will be empty."
-msgstr ""
+msgstr "<literal>CVIDs</literal> にメッシュに存在しない凸包の #id が含まれている場合、点リストは空になります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:164
 msgid "``{Pts, IDx} = gf_mesh_get(mesh M, 'pts from cvid'[, imat CVIDs])``"
-msgstr ""
+msgstr "``{Pts, IDx} = gf_mesh_get(mesh M, 'pts from cvid'[, imat CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:166
 msgid "Search point listed in <literal>CVID</literal>."
-msgstr ""
+msgstr "<literal>CVID</literal> にリストされているポイント #id の検索。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:168
 msgid ""
@@ -209,7 +232,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:181
 msgid "``CVid = gf_mesh_get(mesh M, 'cvid')``"
-msgstr ""
+msgstr "``CVid = gf_mesh_get(mesh M, 'cvid')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:183
 msgid "Return the list of all convex #id."
@@ -225,7 +248,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:192
 msgid "``m = gf_mesh_get(mesh M, 'max pid')``"
-msgstr ""
+msgstr "``m = gf_mesh_get(mesh M, 'max pid')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:194
 msgid "Return the maximum #id of all points in the mesh (see 'max cvid')."
@@ -233,7 +256,7 @@ msgstr "メッシュ内のすべてのポイントの最大 #id を返します(
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:197
 msgid "``m = gf_mesh_get(mesh M, 'max cvid')``"
-msgstr ""
+msgstr "``m = gf_mesh_get(mesh M, 'max cvid')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:199
 msgid "Return the maximum #id of all convexes in the mesh (see 'max pid')."
@@ -241,7 +264,7 @@ msgstr "メッシュ内のすべての凸包の最大#idを返します( 'max pi
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:202
 msgid "``[E,C] = gf_mesh_get(mesh M, 'edges' [, CVLST][, 'merge'])``"
-msgstr ""
+msgstr "``[E,C] = gf_mesh_get(mesh M, 'edges' [, CVLST][, 'merge'])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:204
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:219
@@ -266,7 +289,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:217
 msgid "``[E,C] = gf_mesh_get(mesh M, 'curved edges', int N [, CVLST])``"
-msgstr ""
+msgstr "``[E,C] = gf_mesh_get(mesh M, 'curved edges', int N [, CVLST])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:221
 msgid ""
@@ -281,7 +304,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:231
 msgid "``PIDs = gf_mesh_get(mesh M, 'orphaned pid')``"
-msgstr ""
+msgstr "``PIDs = gf_mesh_get(mesh M, 'orphaned pid')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:233
 msgid "Search point #id which are not linked to a convex."
@@ -292,6 +315,8 @@ msgid ""
 "``CVIDs = gf_mesh_get(mesh M, 'cvid from pid', ivec PIDs[, bool "
 "share=False])``"
 msgstr ""
+"``CVIDs = gf_mesh_get(mesh M, 'cvid from pid', ivec PIDs[, bool "
+"share=False])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:238
 msgid ""
@@ -309,7 +334,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:246
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'faces from pid', ivec PIDs)``"
-msgstr ""
+msgstr "``CVFIDs = gf_mesh_get(mesh M, 'faces from pid', ivec PIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:248
 msgid ""
@@ -326,7 +351,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:256
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'outer faces'[, CVIDs])``"
-msgstr ""
+msgstr "``CVFIDs = gf_mesh_get(mesh M, 'outer faces'[, CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:258
 msgid "Return the set of faces not shared by two elements."
@@ -344,7 +369,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:268
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'inner faces'[, CVIDs])``"
-msgstr ""
+msgstr "``CVFIDs = gf_mesh_get(mesh M, 'inner faces'[, CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:270
 msgid ""
@@ -355,7 +380,7 @@ msgstr "CVIDの2つ以上の要素が共有する面の集合を返します。�
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:275
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'all faces'[, CVIDs])``"
-msgstr ""
+msgstr "``CVFIDs = gf_mesh_get(mesh M, 'all faces'[, CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:277
 msgid ""
@@ -370,6 +395,8 @@ msgid ""
 "``CVFIDs = gf_mesh_get(mesh M, 'outer faces with direction', vec v, scalar "
 "angle [, CVIDs])``"
 msgstr ""
+"``CVFIDs = gf_mesh_get(mesh M, 'outer faces with direction', vec v, scalar "
+"angle [, CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:284
 msgid ""
@@ -393,6 +420,8 @@ msgid ""
 "``CVFIDs = gf_mesh_get(mesh M, 'outer faces in box', vec pmin, vec pmax [, "
 "CVIDs])``"
 msgstr ""
+"``CVFIDs = gf_mesh_get(mesh M, 'outer faces in box', vec pmin, vec pmax [, "
+"CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:294
 msgid ""
@@ -403,7 +432,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:302
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'adjacent face', int cvid, int fid)``"
-msgstr ""
+msgstr "``CVFIDs = gf_mesh_get(mesh M, 'adjacent face', int cvid, int fid)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:304
 msgid ""
@@ -417,6 +446,7 @@ msgstr ""
 msgid ""
 "``CVFIDs = gf_mesh_get(mesh M, 'faces from cvid'[, ivec CVIDs][, 'merge'])``"
 msgstr ""
+"``CVFIDs = gf_mesh_get(mesh M, 'faces from cvid'[, ivec CVIDs][, 'merge'])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:312
 msgid "Return a list of convex faces from a list of convex #id."
@@ -436,6 +466,8 @@ msgid ""
 "``[mat T] = gf_mesh_get(mesh M, 'triangulated surface', int Nrefine "
 "[,CVLIST])``"
 msgstr ""
+"``[mat T] = gf_mesh_get(mesh M, 'triangulated surface', int Nrefine "
+"[,CVLIST])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:322
 msgid "[DEPRECATED FUNCTION! will be removed in a future release]"
@@ -453,6 +485,7 @@ msgstr ""
 msgid ""
 "``N = gf_mesh_get(mesh M, 'normal of face', int cv, int f[, int nfpt])``"
 msgstr ""
+"``N = gf_mesh_get(mesh M, 'normal of face', int cv, int f[, int nfpt])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:332
 msgid ""
@@ -468,7 +501,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:338
 msgid "``N = gf_mesh_get(mesh M, 'normal of faces', imat CVFIDs)``"
-msgstr ""
+msgstr "``N = gf_mesh_get(mesh M, 'normal of faces', imat CVFIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:340
 msgid "Evaluates (at face centers) the normals of convexes."
@@ -484,6 +517,7 @@ msgstr ""
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:346
 msgid "``CVIDs = gf_mesh_get(mesh M, 'convexes in box', vec pmin, vec pmax)``"
 msgstr ""
+"``CVIDs = gf_mesh_get(mesh M, 'convexes in box', vec pmin, vec pmax)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:348
 msgid ""
@@ -502,7 +536,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:356
 msgid "``Q = gf_mesh_get(mesh M, 'quality'[, ivec CVIDs])``"
-msgstr ""
+msgstr "``Q = gf_mesh_get(mesh M, 'quality'[, ivec CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:358
 msgid ""
@@ -512,7 +546,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:361
 msgid "``A = gf_mesh_get(mesh M, 'convex area'[, ivec CVIDs])``"
-msgstr ""
+msgstr "``A = gf_mesh_get(mesh M, 'convex area'[, ivec CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:363
 msgid "Return an estimate of the area of each convex."
@@ -520,7 +554,7 @@ msgstr "各凸包の面積の推定値を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:366
 msgid "``A = gf_mesh_get(mesh M, 'convex radius'[, ivec CVIDs])``"
-msgstr ""
+msgstr "``A = gf_mesh_get(mesh M, 'convex radius'[, ivec CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:368
 msgid "Return an estimate of the radius of each convex."
@@ -528,7 +562,7 @@ msgstr "各凸包の半径の推定値を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:371
 msgid "``{S, CV2S} = gf_mesh_get(mesh M, 'cvstruct'[, ivec CVIDs])``"
-msgstr ""
+msgstr "``{S, CV2S} = gf_mesh_get(mesh M, 'cvstruct'[, ivec CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:373
 msgid "Return an array of the convex structures."
@@ -544,7 +578,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:380
 msgid "``{GT, CV2GT} = gf_mesh_get(mesh M, 'geotrans'[, ivec CVIDs])``"
-msgstr ""
+msgstr "``{GT, CV2GT} = gf_mesh_get(mesh M, 'geotrans'[, ivec CVIDs])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:382
 msgid "Returns an array of the geometric transformations."
@@ -556,7 +590,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:387
 msgid "``RIDs = gf_mesh_get(mesh M, 'boundaries')``"
-msgstr ""
+msgstr "``RIDs = gf_mesh_get(mesh M, 'boundaries')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:389
 msgid "DEPRECATED FUNCTION. Use 'regions' instead."
@@ -564,7 +598,7 @@ msgstr "非推奨関数です。代わりに 'regions' を使用してくださ�
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:392
 msgid "``RIDs = gf_mesh_get(mesh M, 'regions')``"
-msgstr ""
+msgstr "``RIDs = gf_mesh_get(mesh M, 'regions')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:394
 msgid "Return the list of valid regions stored in the mesh."
@@ -572,7 +606,7 @@ msgstr "メッシュに保存されている有効な領域のリストを返し
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:397
 msgid "``RIDs = gf_mesh_get(mesh M, 'boundary')``"
-msgstr ""
+msgstr "``RIDs = gf_mesh_get(mesh M, 'boundary')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:399
 msgid "DEPRECATED FUNCTION. Use 'region' instead."
@@ -580,7 +614,7 @@ msgstr "非推奨関数です。代わりに 'regions' を使用してくださ�
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:402
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'region', ivec RIDs)``"
-msgstr ""
+msgstr "``CVFIDs = gf_mesh_get(mesh M, 'region', ivec RIDs)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:404
 msgid ""
@@ -596,7 +630,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:412
 msgid "``gf_mesh_get(mesh M, 'save', string filename)``"
-msgstr ""
+msgstr "``gf_mesh_get(mesh M, 'save', string filename)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:414
 msgid "Save the mesh object to an ascii file."
@@ -608,7 +642,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:419
 msgid "``s = gf_mesh_get(mesh M, 'char')``"
-msgstr ""
+msgstr "``s = gf_mesh_get(mesh M, 'char')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:421
 msgid "Output a string description of the mesh."
@@ -619,6 +653,8 @@ msgid ""
 "``gf_mesh_get(mesh M, 'export to vtk', string filename, ... "
 "[,'ascii'][,'quality'])``"
 msgstr ""
+"``gf_mesh_get(mesh M, 'export to vtk', string filename, ... "
+"[,'ascii'][,'quality'])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:426
 msgid "Exports a mesh to a VTK file ."
@@ -642,6 +678,9 @@ msgid ""
 "[,'ascii'][,'append'][,'as',string name,[,'serie',string "
 "serie_name]][,'edges'])``"
 msgstr ""
+"``gf_mesh_get(mesh M, 'export to dx', string filename, ... "
+"[,'ascii'][,'append'][,'as',string name,[,'serie',string "
+"serie_name]][,'edges'])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:436
 msgid "Exports a mesh to an OpenDX file."
@@ -657,6 +696,7 @@ msgstr ""
 msgid ""
 "``gf_mesh_get(mesh M, 'export to pos', string filename[, string name])``"
 msgstr ""
+"``gf_mesh_get(mesh M, 'export to pos', string filename[, string name])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:443
 msgid "Exports a mesh to a POS file ."
@@ -670,7 +710,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:448
 msgid "``z = gf_mesh_get(mesh M, 'memsize')``"
-msgstr ""
+msgstr "``z = gf_mesh_get(mesh M, 'memsize')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:450
 msgid "Return the amount of memory (in bytes) used by the mesh."
@@ -678,7 +718,7 @@ msgstr "メッシュが使用するメモリの量(バイト単位)を返しま�
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:453
 msgid "``gf_mesh_get(mesh M, 'display')``"
-msgstr ""
+msgstr "``gf_mesh_get(mesh M, 'display')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_get.rst:455
 msgid "displays a short summary for a mesh object."
