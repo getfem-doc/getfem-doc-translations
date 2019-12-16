@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-15 13:04+0000\n"
+"POT-Creation-Date: 2019-12-16 13:08+0000\n"
 "PO-Revision-Date: 2018-07-16 07:11+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -135,6 +135,9 @@ msgid ""
 "in `DOFs`. Hence, for example, the list of points of the second convex is "
 "DOFs(IDx(2):IDx(3)-1)."
 msgstr ""
+"`IDx` は行ベクトルであり、 `length(IDx) = length(CVids)+1` です。 `DOFs`  は `CVids` "
+"の各凸包の自由度の連結リストを含む行ベクトルです。 `IDx` の各エントリは `DOFs` "
+"における対応する凸包点リストの位置です。従って、例えば、第2凸包の点のリストは DOFs(IDx(2):IDx(3)-1)です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:111
 msgid ""
@@ -204,6 +207,8 @@ msgid ""
 "`CVids`. If `CV2F` was supplied as an output argument, it contains, for each"
 " convex listed in `CVids`, the index of its correspounding FEM in `FEMs`."
 msgstr ""
+"`FEMs` は `CVids` で与えられた凸包にあるすべてのfemオブジェクトの配列です。 `CV2F` が出力引数として指定された場合  "
+"`CVids` にリストされている各凸包に対し、 `FEMs` 内の対応するFEMのインデックスが含まれます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:150
 msgid ""
@@ -213,7 +218,7 @@ msgstr "メッシュの一部でない凸包、またはFEMを持たない凸包
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:153
 msgid "Example::"
-msgstr ""
+msgstr "例"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:165
 msgid "``CVs = gf_mesh_fem_get(mesh_fem MF, 'convex_index')``"
@@ -408,6 +413,7 @@ msgid ""
 "Save a mesh_fem in a text file (and optionally its linked mesh object if "
 "`opt` is the string 'with_mesh')."
 msgstr ""
+"mesh_femをテキストファイル(オプションで `opt` が文字列 'with_mesh' の場合はリンクされたメッシュオブジェクト)に保存します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:285
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'char'[, string opt])``"
@@ -437,7 +443,7 @@ msgstr "``m = gf_mesh_fem_get(mesh_fem MF, 'linked mesh')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:300
 msgid "Return a reference to the mesh object linked to `mf`."
-msgstr ""
+msgstr "`mf` にリンクされたmeshオブジェクトへの参照を返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:303
 msgid "``m = gf_mesh_fem_get(mesh_fem MF, 'mesh')``"
@@ -448,6 +454,7 @@ msgid ""
 "Return a reference to the mesh object linked to `mf`. (identical to "
 "gf_mesh_get(mesh M, 'linked mesh'))"
 msgstr ""
+"`mf` にリンクされたメッシュオブジェクトへの参照を返します( gf_mesh_get(mesh M, 'linked mesh') と同一です)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_fem_get.rst:309
 msgid ""
@@ -614,3 +621,5 @@ msgid ""
 "expression can be a numeric constant, or a cell array containing numeric "
 "constants, string expressions or function handles. For example::"
 msgstr ""
+"gf_mesh_fem_get_evalを呼び出します。lagrangian "
+"mesh_fem(DOFLSTが指定されている場合を除くすべてのdof)の式を補間します。式には、数値定数、または数値定数、文字列式、関数ハンドルを含むセル配列を指定できます。次に例を示します。"

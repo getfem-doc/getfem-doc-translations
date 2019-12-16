@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-15 13:04+0000\n"
+"POT-Creation-Date: 2019-12-16 13:08+0000\n"
 "PO-Revision-Date: 2018-07-16 07:10+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -35,7 +35,7 @@ msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:63
 msgid "Get information from a model object."
-msgstr ""
+msgstr "modelオブジェクトから情報を取得します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:66
 msgid "**Command list :**"
@@ -107,6 +107,10 @@ msgid ""
 "symmetric terms acting on two different variables (default is 0). `ind_iter`"
 " is the iteration number when time dispatchers are used (default is 1)."
 msgstr ""
+"特定の非線形ブリックの項の右側部分にアクセスします。最終的な時間ディスパッチャを考慮しません。まず、右辺のアセンブリを行う必要があります。 "
+"`ind_brick` はブリックインデックスです。 `ind_term` はブリック内部の項のインデックスです(デフォルト値は1)。 `sym` "
+"は2つの異なる変数に作用する対称項のためにの右辺の2番目にアクセスすることです(デフォルトは0です)。 `ind_iter` "
+"は時間ディスパッチャを使用した場合の反復番号です(デフォルトは1です)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:115
 msgid "``z = gf_model_get(model M, 'memsize')``"
@@ -136,7 +140,7 @@ msgstr "モデルのレンガのリストを出力に出力します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:131
 msgid "``gf_model_get(model M, 'list residuals')``"
-msgstr ""
+msgstr "``gf_model_get(model M, 'list residuals')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:133
 msgid ""
@@ -146,7 +150,7 @@ msgstr "モデルに含まれるすべての項に対応する残差を出力し
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:137
 msgid "``V = gf_model_get(model M, 'variable', string name)``"
-msgstr ""
+msgstr "``V = gf_model_get(model M, 'variable', string name)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:139
 msgid "Gives the value of a variable or data."
@@ -158,6 +162,9 @@ msgid ""
 "mesh_imd mimd | vec pts,  mesh m}[, int region[, int extrapolation[, int "
 "rg_source]]])``"
 msgstr ""
+"``V = gf_model_get(model M, 'interpolation', string expr, {mesh_fem mf | "
+"mesh_imd mimd | vec pts,  mesh m}[, int region[, int extrapolation[, int "
+"rg_source]]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:144
 msgid ""
@@ -180,6 +187,8 @@ msgid ""
 "``V = gf_model_get(model M, 'local_projection', mesh_im mim, string expr, "
 "mesh_fem mf[, int region])``"
 msgstr ""
+"``V = gf_model_get(model M, 'local_projection', mesh_im mim, string expr, "
+"mesh_fem mf[, int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:156
 msgid ""
@@ -193,7 +202,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:164
 msgid "``mf = gf_model_get(model M, 'mesh fem of variable', string name)``"
-msgstr ""
+msgstr "``mf = gf_model_get(model M, 'mesh fem of variable', string name)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:166
 msgid "Gives access to the `mesh_fem` of a variable or data."
@@ -203,6 +212,7 @@ msgstr "変数またはデータの `mesh_fem` へのアクセスを許可しま
 msgid ""
 "``name = gf_model_get(model M, 'mult varname Dirichlet', int ind_brick)``"
 msgstr ""
+"``name = gf_model_get(model M, 'mult varname Dirichlet', int ind_brick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:171
 msgid ""
@@ -214,7 +224,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:176
 msgid "``I = gf_model_get(model M, 'interval of variable', string varname)``"
-msgstr ""
+msgstr "``I = gf_model_get(model M, 'interval of variable', string varname)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:178
 msgid ""
@@ -224,7 +234,7 @@ msgstr "モデルの線形システムの変数 `varname` の間隔を指定し�
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:182
 msgid "``V = gf_model_get(model M, 'from variables')``"
-msgstr ""
+msgstr "``V = gf_model_get(model M, 'from variables')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:184
 msgid ""
@@ -235,7 +245,7 @@ msgstr "モデルの変数を連結したモデルのすべての自由度(独�
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:189
 msgid "``gf_model_get(model M, 'assembly'[, string option])``"
-msgstr ""
+msgstr "``gf_model_get(model M, 'assembly'[, string option])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:191
 msgid ""
@@ -251,7 +261,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:199
 msgid "``{nbit, converged} = gf_model_get(model M, 'solve'[, ...])``"
-msgstr ""
+msgstr "``{nbit, converged} = gf_model_get(model M, 'solve'[, ...])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:201
 msgid "Run the standard getfem solver."
@@ -263,6 +273,8 @@ msgid ""
 "possible to obtain the tangent matrix and its right hand side with the "
 "gf_model_get(model M, 'tangent matrix') etc.)."
 msgstr ""
+"必要に応じて、独自のソルバを使用できるようにする必要があります( gf_model_get(model M, 'tangent matrix') "
+"などで接線行列とその右辺を得ることができます)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:207
 msgid "Various options can be specified:"
@@ -342,12 +354,17 @@ msgid ""
 "a subset of variables (the disabled variables are then considered as data) "
 "for instance to replace the global Newton strategy with a fixed point one."
 msgstr ""
+"変数のサブセット(無効にされた変数はデータとみなされます)に関してのみ問題を求解するために、いくつかの変数( gf_model_set(model M,"
+" 'disable variable')  "
+"を参照してください)を無効にすることが可能であることに注意してください。例えば、全体Newton法を固定小数点法で置き換えることができます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:240
 msgid ""
 "``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar"
 " scale]]])``"
 msgstr ""
+"``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar"
+" scale]]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:242
 msgid ""
@@ -370,6 +387,8 @@ msgid ""
 "``gf_model_get(model M, 'test tangent matrix term', string varname1, string "
 "varname2[, scalar EPS[, int NB[, scalar scale]]])``"
 msgstr ""
+"``gf_model_get(model M, 'test tangent matrix term', string varname1, string "
+"varname2[, scalar EPS[, int NB[, scalar scale]]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:256
 msgid ""
@@ -419,6 +438,9 @@ msgid ""
 "Tresca', string varname, string dataname_lambda, string dataname_mu, "
 "mesh_fem mf_vm[, string version])``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises or "
+"Tresca', string varname, string dataname_lambda, string dataname_mu, "
+"mesh_fem mf_vm[, string version])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:286
 msgid ""
@@ -435,6 +457,8 @@ msgid ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
 "pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
+"pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:295
 msgid ""
@@ -450,6 +474,8 @@ msgid ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
 "pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
+"pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:303
 msgid ""
@@ -465,6 +491,8 @@ msgid ""
 "``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, "
 "string lawname, string dataname, mesh_fem mf_vm[, string version])``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, "
+"string lawname, string dataname, mesh_fem mf_vm[, string version])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:311
 msgid ""
@@ -489,6 +517,9 @@ msgid ""
 "string lawname, string varname, string params, mesh_fem mf_vm[, int "
 "region])``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute finite strain elasticity Von Mises',  "
+"string lawname, string varname, string params, mesh_fem mf_vm[, int "
+"region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:324
 msgid ""
@@ -507,6 +538,8 @@ msgid ""
 "``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string "
 "varname, string lawname, string dataname, mesh_fem mf_sigma)``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string "
+"varname, string lawname, string dataname, mesh_fem mf_sigma)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:335
 msgid ""
@@ -529,6 +562,9 @@ msgid ""
 "varname, string previous_dep_name, string projname, string datalambda, "
 "string datamu, string datathreshold, string datasigma)``"
 msgstr ""
+"``gf_model_get(model M, 'elastoplasticity next iter', mesh_im mim, string "
+"varname, string previous_dep_name, string projname, string datalambda, "
+"string datamu, string datathreshold, string datasigma)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:348
 msgid ""
@@ -555,6 +591,10 @@ msgid ""
 "string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int"
 " region = -1])``"
 msgstr ""
+"``gf_model_get(model M, 'small strain elastoplasticity next iter', mesh_im "
+"mim,  string lawname, string unknowns_type [, string varnames, ...] [, "
+"string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int"
+" region = -1])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:361
 msgid ""
@@ -581,6 +621,10 @@ msgid ""
 "varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = "
 "'timestep']] [, int region])``"
 msgstr ""
+"``V = gf_model_get(model M, 'small strain elastoplasticity Von Mises', "
+"mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type [, string "
+"varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = "
+"'timestep']] [, int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:376
 msgid ""
@@ -601,6 +645,8 @@ msgid ""
 "``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', "
 "string datasigma, mesh_fem mf_vm[, string version])``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', "
+"string datasigma, mesh_fem mf_vm[, string version])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:387
 msgid ""
@@ -619,6 +665,9 @@ msgid ""
 "mf_pl, string varname, string previous_dep_name, string projname, string "
 "datalambda, string datamu, string datathreshold, string datasigma)``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute plastic part', mesh_im mim, mesh_fem "
+"mf_pl, string varname, string previous_dep_name, string projname, string "
+"datalambda, string datamu, string datathreshold, string datasigma)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:394
 msgid ""
@@ -634,6 +683,9 @@ msgid ""
 "mim, string lawname, string unknowns_type, [, string varnames, ...] [, "
 "string params, ...] [, int region = -1])``"
 msgstr ""
+"``gf_model_get(model M, 'finite strain elastoplasticity next iter', mesh_im "
+"mim, string lawname, string unknowns_type, [, string varnames, ...] [, "
+"string params, ...] [, int region = -1])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:400
 msgid ""
@@ -659,6 +711,9 @@ msgid ""
 "Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, "
 "[, string varnames, ...] [, string params, ...] [, int region = -1])``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute finite strain elastoplasticity Von "
+"Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, "
+"[, string varnames, ...] [, string params, ...] [, int region = -1])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:415
 msgid ""
@@ -674,6 +729,8 @@ msgid ""
 "``V = gf_model_get(model M, 'sliding data group name of large sliding "
 "contact brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'sliding data group name of large sliding "
+"contact brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:422
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:428
@@ -691,35 +748,46 @@ msgid ""
 "``V = gf_model_get(model M, 'displacement group name of large sliding "
 "contact brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'displacement group name of large sliding "
+"contact brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:432
 msgid ""
 "``V = gf_model_get(model M, 'transformation name of large sliding contact "
 "brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'transformation name of large sliding contact "
+"brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:438
 msgid ""
 "``V = gf_model_get(model M, 'sliding data group name of Nitsche large "
 "sliding contact brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'sliding data group name of Nitsche large "
+"sliding contact brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:444
 msgid ""
 "``V = gf_model_get(model M, 'displacement group name of Nitsche large "
 "sliding contact brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'displacement group name of Nitsche large "
+"sliding contact brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:450
 msgid ""
 "``V = gf_model_get(model M, 'transformation name of Nitsche large sliding "
 "contact brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'transformation name of Nitsche large sliding "
+"contact brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:456
 msgid ""
 "``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``"
 msgstr ""
+"``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:458
 msgid "Gives the matrix term ind_term of the brick ind_brick if it exists"
@@ -727,22 +795,22 @@ msgstr "存在する場合、ブリック ind_brick のマトリックス項 ind
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:462
 msgid "``s = gf_model_get(model M, 'char')``"
-msgstr ""
+msgstr "``s = gf_model_get(model M, 'char')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:464
 msgid "Output a (unique) string representation of the model."
-msgstr ""
+msgstr "modelの(ユニークな)文字列表現を出力します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:466
 msgid ""
 "This can be used to perform comparisons between two different model objects."
 " This function is to be completed."
-msgstr ""
+msgstr "これを使用して、2つの異なるmodelオブジェクト間の比較を実行できます。この機能は完成予定です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:472
 msgid "``gf_model_get(model M, 'display')``"
-msgstr ""
+msgstr "``gf_model_get(model M, 'display')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_model_get.rst:474
 msgid "displays a short summary for a model object."
-msgstr ""
+msgstr "modelオブジェクトの概要が表示されます。"

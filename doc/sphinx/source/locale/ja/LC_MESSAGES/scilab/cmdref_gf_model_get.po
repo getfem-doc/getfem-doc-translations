@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-15 13:04+0000\n"
+"POT-Creation-Date: 2019-12-16 13:08+0000\n"
 "PO-Revision-Date: 2018-07-16 07:00+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -35,7 +35,7 @@ msgstr "**説明 :**"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:63
 msgid "Get information from a model object."
-msgstr ""
+msgstr "modelオブジェクトから情報を取得します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:66
 msgid "**Command list :**"
@@ -73,7 +73,7 @@ msgstr "``t = gf_model_get(model M, 'get time')``"
 msgid ""
 "Give the value of the data <literal>t</literal> corresponding to the current"
 " time."
-msgstr ""
+msgstr "現在時刻に対応するデータ <literal>t</literal> の値を指定します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:91
 msgid "``T = gf_model_get(model M, 'tangent_matrix')``"
@@ -111,6 +111,11 @@ msgid ""
 "<literal>ind_iter</literal> is the iteration number when time dispatchers "
 "are used (default is 1)."
 msgstr ""
+"特定の非線形ブリックの項の右側部分にアクセスします。最終的な時間ディスパッチャを考慮しません。まず、右辺のアセンブリを行う必要があります。 "
+"<literal>ind_brick</literal> はブリックインデックスです。 <literal>ind_term</literal> "
+"はブリック内部の項のインデックスです(デフォルト値は1)。 <literal>sym</literal> "
+"は2つの異なる変数に作用する対称項のためにの右辺の2番目にアクセスすることです(デフォルトは0です)。 "
+"<literal>ind_iter</literal> は時間ディスパッチャを使用した場合の反復番号です(デフォルトは0です)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:115
 msgid "``z = gf_model_get(model M, 'memsize')``"
@@ -140,7 +145,7 @@ msgstr "モデルのレンガのリストを出力に出力します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:131
 msgid "``gf_model_get(model M, 'list residuals')``"
-msgstr ""
+msgstr "``gf_model_get(model M, 'list residuals')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:133
 msgid ""
@@ -150,7 +155,7 @@ msgstr "モデルに含まれるすべての項に対応する残差を出力し
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:137
 msgid "``V = gf_model_get(model M, 'variable', string name)``"
-msgstr ""
+msgstr "``V = gf_model_get(model M, 'variable', string name)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:139
 msgid "Gives the value of a variable or data."
@@ -162,6 +167,9 @@ msgid ""
 "mesh_imd mimd | vec pts,  mesh m}[, int region[, int extrapolation[, int "
 "rg_source]]])``"
 msgstr ""
+"``V = gf_model_get(model M, 'interpolation', string expr, {mesh_fem mf | "
+"mesh_imd mimd | vec pts,  mesh m}[, int region[, int extrapolation[, int "
+"rg_source]]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:144
 msgid ""
@@ -172,6 +180,9 @@ msgid ""
 "language possibly including references to the variables and data of the "
 "model."
 msgstr ""
+"mesh_fem <literal>mf</literal> または mesh_im_data <literal>mimd</literal> "
+"またはメッシュ <literal>m</literal> 上の点の集合 <literal>pts</literal> "
+"を基準にして特定の式を補間します。式は、モデルの変数とデータへの参照を含む可能性があります、高水準汎用アセンブリ言語に従って有効である必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:150
 msgid ""
@@ -179,12 +190,16 @@ msgid ""
 "<literal>rg_source</literal> are specific to interpolations with respect to "
 "a set of points <literal>pts</literal>."
 msgstr ""
+"オプション <literal>外挿</literal> と <literal>rg_source</literal> は、点 "
+"<literal>pts</literal> の集合に関する補間のためのものです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:154
 msgid ""
 "``V = gf_model_get(model M, 'local_projection', mesh_im mim, string expr, "
 "mesh_fem mf[, int region])``"
 msgstr ""
+"``V = gf_model_get(model M, 'local_projection', mesh_im mim, string expr, "
+"mesh_fem mf[, int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:156
 msgid ""
@@ -194,19 +209,22 @@ msgid ""
 " language possibly including references to the variables and data of the "
 "model."
 msgstr ""
+"mesh_fem <literal>mf</literal> "
+"を基準にして、式の要素ごとのL2投影を作成します。このmesh_femは不連続である必要があります。式は、モデルの変数とデータへの参照を含む可能性があります、上位レベルの汎用アセンブリ言語に従い有効である必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:164
 msgid "``mf = gf_model_get(model M, 'mesh fem of variable', string name)``"
-msgstr ""
+msgstr "``mf = gf_model_get(model M, 'mesh fem of variable', string name)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:166
 msgid "Gives access to the <literal>mesh_fem</literal> of a variable or data."
-msgstr ""
+msgstr "変数またはデータの <literal>mesh_fem</literal> へのアクセスを許可します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:169
 msgid ""
 "``name = gf_model_get(model M, 'mult varname Dirichlet', int ind_brick)``"
 msgstr ""
+"``name = gf_model_get(model M, 'mult varname Dirichlet', int ind_brick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:171
 msgid ""
@@ -218,17 +236,17 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:176
 msgid "``I = gf_model_get(model M, 'interval of variable', string varname)``"
-msgstr ""
+msgstr "``I = gf_model_get(model M, 'interval of variable', string varname)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:178
 msgid ""
 "Gives the interval of the variable <literal>varname</literal> in the linear "
 "system of the model."
-msgstr ""
+msgstr "モデルの線形システムの変数 <literal>varname</literal> の間隔を指定します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:182
 msgid "``V = gf_model_get(model M, 'from variables')``"
-msgstr ""
+msgstr "``V = gf_model_get(model M, 'from variables')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:184
 msgid ""
@@ -239,7 +257,7 @@ msgstr "モデルの変数を連結したモデルのすべての自由度(独�
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:189
 msgid "``gf_model_get(model M, 'assembly'[, string option])``"
-msgstr ""
+msgstr "``gf_model_get(model M, 'assembly'[, string option])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:191
 msgid ""
@@ -249,10 +267,13 @@ msgid ""
 "linear system (matrix and rhs). This function is useful to solve your "
 "problem with you own solver."
 msgstr ""
+"すべてのブリックの項を考慮した接線システムのアセンブリです。 <literal>option</literal> を指定する場合、 "
+"'build_all' 、 'build_rhs' 、 'build_matrix' "
+"とする必要があります。デフォルトでは、接線線形システム全体(行列とrhs)が構築されます。この関数は、独自のソルバを使用して求解する場合に便利です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:199
 msgid "``{nbit, converged} = gf_model_get(model M, 'solve'[, ...])``"
-msgstr ""
+msgstr "``{nbit, converged} = gf_model_get(model M, 'solve'[, ...])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:201
 msgid "Run the standard getfem solver."
@@ -264,6 +285,8 @@ msgid ""
 "possible to obtain the tangent matrix and its right hand side with the "
 "gf_model_get(model M, 'tangent matrix') etc.)."
 msgstr ""
+"必要に応じて、独自のソルバを使用できるようにする必要があります( gf_model_get(model M, 'tangent matrix') "
+"などで接線行列とその右辺を得ることができます)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:207
 msgid "Various options can be specified:"
@@ -343,12 +366,17 @@ msgid ""
 "a subset of variables (the disabled variables are then considered as data) "
 "for instance to replace the global Newton strategy with a fixed point one."
 msgstr ""
+"変数のサブセット(無効にされた変数はデータとみなされます)に関してのみ問題を求解するために、いくつかの変数( gf_model_set(model M,"
+" 'disable variable')  "
+"を参照してください)を無効にすることが可能であることに注意してください。例えば、全体Newton法を固定小数点法で置き換えることができます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:240
 msgid ""
 "``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar"
 " scale]]])``"
 msgstr ""
+"``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar"
+" scale]]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:242
 msgid ""
@@ -361,12 +389,18 @@ msgid ""
 "1, 0 is an acceptable value) around the current position. Each dof of the "
 "random position is chosen in the range [current-scale, current+scale]."
 msgstr ""
+"ランダムな位置と方向(新しく作成されたブリックをテストするのに便利)で、接線行列の整合性をテストします。<literal>EPS</literal>は微分の差分計算のための小パラメータの値であり、ランダム方向(デフォルトは1E-6)です。"
+" <literal>NN</literal> はテストの数です(デフォルトは100です)。 <literal>scale</literal> "
+"は現在位置の周囲のランダムな位置(デフォルトは1で、0が許容値です)のパラメータです。ランダム位置の各自由度は [current-scale, "
+"current+scale] の範囲内で選択されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:254
 msgid ""
 "``gf_model_get(model M, 'test tangent matrix term', string varname1, string "
 "varname2[, scalar EPS[, int NB[, scalar scale]]])``"
 msgstr ""
+"``gf_model_get(model M, 'test tangent matrix term', string varname1, string "
+"varname2[, scalar EPS[, int NB[, scalar scale]]])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:256
 msgid ""
@@ -383,6 +417,14 @@ msgid ""
 "1, 0 is an acceptable value) around the current position. Each dof of the "
 "random position is chosen in the range [current-scale, current+scale]."
 msgstr ""
+"ランダムな位置と方向(新しく作成されたレンガをテストするのに便利)で、接線行列の一部の整合性をテストします。インクリメントは、変数 "
+"<literal>varname2</literal> に対してのみ行われ、 "
+"<literal>varname1</literal>に対応する残差の部分でテストされます。これは、接線マトリックスの項 "
+"(<literal>varname1</literal>, <literal>varname2</literal>) "
+"のみがテストされることを意味します。<literal>EPS</literal>は微分の差分計算のための微小パラメータの値(デフォルトは1E-6)であり、ランダム方向です。"
+" <literal>NN</literal> はテストの数です(デフォルトは100です)。 <literal>scale</literal> "
+"は現在位置の周囲のランダムな位置(デフォルトは1で、0が許容値です)のパラメータである。ランダム位置の各自由度は [current-scale, "
+"current+scale] の範囲内で選択されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:272
 msgid ""
@@ -400,6 +442,10 @@ msgid ""
 " only after all the volumic bricks have been declared. Complains, if a brick"
 " omit to declare an assembly string."
 msgstr ""
+"<literal>region</literal> のfem変数 <literal>varname</literal> "
+"のNeumann項に対応するアセンブリ文字列を返します。モデルブリックによって宣言されたアセンブリ文字列から推定されます。 "
+"<literal>region</literal> は <literal>varname</literal> "
+"が定義されているメッシュ上の境界領域のインデックスである必要があります。この関数は、すべての体積ブリックが宣言された後で呼び出すようにしてください。ブリックがアセンブリ文字列の宣言を省略した場合はエラーが発生します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:284
 msgid ""
@@ -407,6 +453,9 @@ msgid ""
 "Tresca', string varname, string dataname_lambda, string dataname_mu, "
 "mesh_fem mf_vm[, string version])``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises or "
+"Tresca', string varname, string dataname_lambda, string dataname_mu, "
+"mesh_fem mf_vm[, string version])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:286
 msgid ""
@@ -415,12 +464,17 @@ msgid ""
 "be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default). Parametrized by "
 "Lame coefficients."
 msgstr ""
+"Von-Mises 応力またはフィールドのTresca応力(3次元の等方性線形化弾性にのみ有効)を計算します。 "
+"<literal>version</literal> は 'Von_Mises' または 'Tresca' ( 'Von_Mises' "
+"がデフォルト)でなければなりません。Lame係数によってパラメータ化されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:293
 msgid ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
 "pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
+"pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:295
 msgid ""
@@ -436,6 +490,8 @@ msgid ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
 "pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
+"pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:303
 msgid ""
@@ -451,6 +507,8 @@ msgid ""
 "``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, "
 "string lawname, string dataname, mesh_fem mf_vm[, string version])``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, "
+"string lawname, string dataname, mesh_fem mf_vm[, string version])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:311
 msgid ""
@@ -464,6 +522,12 @@ msgid ""
 "<literal>version</literal> should be  'Von_Mises' or 'Tresca' ('Von_Mises' "
 "is the default)."
 msgstr ""
+"3次元の非線形弾性のフィールドのVon-Mises応力またはTresca応力を <literal>mf_vm</literal> で計算します。 "
+"<literal>lawname</literal> は構成則で、 'SaintVenant Kirchhoff' 、 'Mooney Rivlin' "
+"、 'neo Hookean' 、 'Ciarlet Geymonat' だ。 <literal>dataname</literal> "
+"は構成則のパラメータのベクトルです。長さは法則によります。これは、定数値の短いベクトル、または可変係数の有限要素法で記述されたベクトルフィールドです。 "
+"<literal>version</literal> は 'Von_Mises' または 'Tresca' のいずれかです( 'Von_Mises' "
+"がデフォルトです)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:322
 msgid ""
@@ -471,6 +535,9 @@ msgid ""
 "string lawname, string varname, string params, mesh_fem mf_vm[, int "
 "region])``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute finite strain elasticity Von Mises',  "
+"string lawname, string varname, string params, mesh_fem mf_vm[, int "
+"region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:324
 msgid ""
@@ -481,12 +548,18 @@ msgid ""
 "vector of constant values or may depend on data or variables of the model. "
 "Uses the high-level generic assembly."
 msgstr ""
+"3次元の非線形弾性のフィールド <literal>varname</literal> のVon-Mises応力を "
+"<literal>mf_vm</literal> で計算します。<literal>lawname</literal> "
+"は構成則であり、有効な名前である必要があります。 <literal>params</literal> "
+"はパラメータ則です。定数値の短いベクトルにすることも、モデルのデータや変数に依存することもできます。高水準汎用アセンブリを使用します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:333
 msgid ""
 "``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string "
 "varname, string lawname, string dataname, mesh_fem mf_sigma)``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string "
+"varname, string lawname, string dataname, mesh_fem mf_sigma)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:335
 msgid ""
@@ -498,6 +571,10 @@ msgid ""
 "law. It could be a short vector of constant values or a vector field "
 "described on a finite element method for variable coefficients."
 msgstr ""
+"3次元非線形弾性の場の第2Piola Kirchhoff応力テンソルの<literal>mf_sigma</literal>を計算します。 "
+"<literal>lawname</literal> は構成則で 'SaintVenant Kirchhoff' 、 'Mooney Rivlin' 、"
+" 'neo Hookean' 、あるいは 'Ciarlet Geymonat'となります。 <literal>dataname</literal> "
+"は構成則のパラメータのベクトルです。長さは法則によります。これは、定数値の短いベクトル、または可変係数の有限要素法で記述されたベクトルフィールドです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:346
 msgid ""
@@ -505,6 +582,9 @@ msgid ""
 "varname, string previous_dep_name, string projname, string datalambda, "
 "string datamu, string datathreshold, string datasigma)``"
 msgstr ""
+"``gf_model_get(model M, 'elastoplasticity next iter', mesh_im mim, string "
+"varname, string previous_dep_name, string projname, string datalambda, "
+"string datamu, string datathreshold, string datasigma)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:348
 msgid ""
@@ -531,6 +611,10 @@ msgid ""
 "string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int"
 " region = -1])``"
 msgstr ""
+"``gf_model_get(model M, 'small strain elastoplasticity next iter', mesh_im "
+"mim,  string lawname, string unknowns_type [, string varnames, ...] [, "
+"string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int"
+" region = -1])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:361
 msgid ""
@@ -544,6 +628,12 @@ msgid ""
 "to 'Previous_u'). It has to be called before any use of "
 "<literal>compute_small_strain_elastoplasticity_Von_Mises</literal>."
 msgstr ""
+"微小ひずみ塑性ブリックの時間ステップ間を通過できる関数。パラメータは、<literal>add_small_strain_elastoplasticity_brick</literal>"
+" "
+"とまったく同じでなければなりません。説明については、この関数のドキュメントを参照してください。基本的に、このブリックは塑性歪みと塑性乗数を計算し、次のステップのために保存します。さらに、計算されたディスプレイスメントが、前のタイムステップのディスプレイスメントを格納するデータにコピーされます(通常は"
+" 'u' から 'Previous_u' )。これは、 "
+"<literal>compute_small_strain_elastoplasticity_Von_Mises</literal> "
+"を使用する前に呼び出す必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:374
 msgid ""
@@ -552,6 +642,10 @@ msgid ""
 "varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = "
 "'timestep']] [, int region])``"
 msgstr ""
+"``V = gf_model_get(model M, 'small strain elastoplasticity Von Mises', "
+"mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type [, string "
+"varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = "
+"'timestep']] [, int region])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:376
 msgid ""
@@ -563,12 +657,19 @@ msgid ""
 "<literal>small_strain_elastoplasticity_next_iter</literal> has to be called "
 "before any call of this function."
 msgstr ""
+"この関数は、 <literal>mf_vm</literal> で近似された小さな歪みの弾塑性項に関するフォンミーゼス応力場を計算し、その結果を "
+"<literal>VM</literal> に格納します。その他のパラメータはすべて、 "
+"<literal>add_small_strain_elastoplasticity_brick</literal> "
+"とまったく同じでなければなりません。この関数を呼び出す前に、 "
+"<literal>small_strain_elastoplasticity_next_iter</literal> を呼び出す必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:385
 msgid ""
 "``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', "
 "string datasigma, mesh_fem mf_vm[, string version])``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', "
+"string datasigma, mesh_fem mf_vm[, string version])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:387
 msgid ""
@@ -578,6 +679,10 @@ msgid ""
 "constraints values supported by the mesh. <literal>version</literal> should "
 "be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
 msgstr ""
+"塑性の場のVon-Mises応力またはTresca応力を <literal>mf_vm</literal> で計算し、ベクトルVに戻します。 "
+"<literal>datasigma</literal> はメッシュによってサポートされる応力制約値を含むベクトルです。 "
+"<literal>version</literal> は 'Von_Mises' または 'Tresca' ('Von_Mises' "
+"がデフォルト)でなければなりません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:392
 msgid ""
@@ -585,6 +690,9 @@ msgid ""
 "mf_pl, string varname, string previous_dep_name, string projname, string "
 "datalambda, string datamu, string datathreshold, string datasigma)``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute plastic part', mesh_im mim, mesh_fem "
+"mf_pl, string varname, string previous_dep_name, string projname, string "
+"datalambda, string datamu, string datathreshold, string datasigma)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:394
 msgid ""
@@ -592,6 +700,8 @@ msgid ""
 "vector V. <literal>datasigma</literal> is a vector which contains the stress"
 " constraints values supported by the mesh."
 msgstr ""
+"プラスチック成形品を <literal>mf_pl</literal> で計算し、ベクトルVに返します。 "
+"<literal>datasigma</literal> はメッシュでサポートされる応力拘束値を含むベクトルです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:398
 msgid ""
@@ -599,6 +709,9 @@ msgid ""
 "mim, string lawname, string unknowns_type, [, string varnames, ...] [, "
 "string params, ...] [, int region = -1])``"
 msgstr ""
+"``gf_model_get(model M, 'finite strain elastoplasticity next iter', mesh_im "
+"mim, string lawname, string unknowns_type, [, string varnames, ...] [, "
+"string params, ...] [, int region = -1])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:400
 msgid ""
@@ -612,6 +725,12 @@ msgid ""
 "two entries of <literal>varnames</literal>, and resets the plastic "
 "multiplier field given as the second entry of <literal>varnames</literal>."
 msgstr ""
+"有限ひずみ塑性ブリックの時間ステップから別のステップへの移行を可能にする関数です。パラメータは、 "
+"<literal>add_finite_strain_elastoplasticity_brick</literal> "
+"とまったく同じでなければなりません。説明については、この関数のドキュメントを参照してください。基本的に、このブリックは塑性歪みと塑性乗数を計算し、次のステップのために保存します"
+"。現在実装されている唯一のSimo-Mieheの法則に対して、この関数は <literal>varnames</literal> "
+"の最後の2つのエントリで定義されている状態変数を更新し、  <literal>varnames</literal> "
+"の2番目のエントリとして与えられる塑性乗数フィールドをリセットします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:413
 msgid ""
@@ -619,6 +738,9 @@ msgid ""
 "Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, "
 "[, string varnames, ...] [, string params, ...] [, int region = -1])``"
 msgstr ""
+"``V = gf_model_get(model M, 'compute finite strain elastoplasticity Von "
+"Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, "
+"[, string varnames, ...] [, string params, ...] [, int region = -1])``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:415
 msgid ""
@@ -626,12 +748,17 @@ msgid ""
 "field for plasticity and return it into the vector V. The first input "
 "parameters ar as in the function 'finite strain elastoplasticity next iter'."
 msgstr ""
+"塑性場のVon-MisesまたはTresca応力を <literal>mf_vm</literal> "
+"で計算し、ベクトルVに返します。最初の入力パラメータは関数 'finite strain elastoplasticity next iter' "
+"と同様です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:420
 msgid ""
 "``V = gf_model_get(model M, 'sliding data group name of large sliding "
 "contact brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'sliding data group name of large sliding "
+"contact brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:422
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:428
@@ -649,35 +776,46 @@ msgid ""
 "``V = gf_model_get(model M, 'displacement group name of large sliding "
 "contact brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'displacement group name of large sliding "
+"contact brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:432
 msgid ""
 "``V = gf_model_get(model M, 'transformation name of large sliding contact "
 "brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'transformation name of large sliding contact "
+"brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:438
 msgid ""
 "``V = gf_model_get(model M, 'sliding data group name of Nitsche large "
 "sliding contact brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'sliding data group name of Nitsche large "
+"sliding contact brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:444
 msgid ""
 "``V = gf_model_get(model M, 'displacement group name of Nitsche large "
 "sliding contact brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'displacement group name of Nitsche large "
+"sliding contact brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:450
 msgid ""
 "``V = gf_model_get(model M, 'transformation name of Nitsche large sliding "
 "contact brick', int indbrick)``"
 msgstr ""
+"``V = gf_model_get(model M, 'transformation name of Nitsche large sliding "
+"contact brick', int indbrick)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:456
 msgid ""
 "``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``"
 msgstr ""
+"``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:458
 msgid "Gives the matrix term ind_term of the brick ind_brick if it exists"
@@ -685,22 +823,22 @@ msgstr "存在する場合、ブリック ind_brick のマトリックス項 ind
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:462
 msgid "``s = gf_model_get(model M, 'char')``"
-msgstr ""
+msgstr "``s = gf_model_get(model M, 'char')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:464
 msgid "Output a (unique) string representation of the model."
-msgstr ""
+msgstr "modelの(ユニークな)文字列表現を出力します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:466
 msgid ""
 "This can be used to perform comparisons between two different model objects."
 " This function is to be completed."
-msgstr ""
+msgstr "これを使用して、2つの異なるmodelオブジェクト間の比較を実行できます。この機能は完成予定です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:472
 msgid "``gf_model_get(model M, 'display')``"
-msgstr ""
+msgstr "``gf_model_get(model M, 'display')``"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_get.rst:474
 msgid "displays a short summary for a model object."
-msgstr ""
+msgstr "modelオブジェクトの概要が表示されます。"
