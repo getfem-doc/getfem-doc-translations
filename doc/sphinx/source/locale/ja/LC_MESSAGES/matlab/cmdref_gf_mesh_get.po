@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-20 13:02+0000\n"
+"POT-Creation-Date: 2019-12-21 13:01+0000\n"
 "PO-Revision-Date: 2018-07-16 07:09+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -40,6 +40,9 @@ msgid ""
 " used). Note that when your mesh is recognized as a Matlab object , you can "
 "simply use \"get(M, 'dim')\" instead of \"gf_mesh_get(M, 'dim')\"."
 msgstr ""
+"一般的なメッシュ参照機能。これらの関数はすべて、mesh "
+"M(この場合、mesh_femリンクメッシュが使用されます)の代わりにmesh_fem引数も受け入れます。メッシュがMatlabオブジェクトとして認識されている場合は、"
+" \"gf_mesh_get(M, 'dim')\" の代わりに \"get(M, 'dim')\" を使用します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:71
 msgid "**Command list :**"
@@ -88,6 +91,12 @@ msgid ""
 " The columns corresponding to deleted points will be filled with NaN. You "
 "can use gf_mesh_get(mesh M, 'pid') to filter such invalid points."
 msgstr ""
+"返されるマトリックスの各列には、各点の座標が含まれます。オプションの引数  `PIDs` が指定された場合、このベクトルに #id "
+"がリストされているポイントのみが返されます。それ以外の場合、返されるマトリックスは gf_mesh_get(mesh M, 'max_pid') "
+"列になります。(メッシュの一部のポイントが破棄され、 gf_mesh_set(mesh M, 'optimize structure')  "
+"が呼び出されていない場合)  gf_mesh_get(mesh M, 'nbpts')  "
+"より大きい可能性があります。削除された点に対応する列はNaNで埋められます。そのような空のポイントを取り除くには gf_mesh_get(mesh M,"
+" 'pid') を使用します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:105
 msgid "``Pid = gf_mesh_get(mesh M, 'pid')``"
@@ -104,6 +113,9 @@ msgid ""
 "from the mesh. You can use gf_mesh_set(mesh M, 'optimize_structure') to "
 "enforce a contiguous numbering. Pid is a row vector."
 msgstr ""
+"番号付けは、1から gf_mesh_get(mesh M, 'nbpts') まで連続していないことに注意してください。  "
+"gf_mesh_set(mesh M, 'optimize_structure')  "
+"を使用すると、連続した番号付けが行われます。Pidは行ベクトルです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:116
 msgid "``PIDs = gf_mesh_get(mesh M, 'pid in faces', imat CVFIDs)``"
@@ -119,6 +131,8 @@ msgid ""
 "second lists face numbers. On return, `PIDs` is a row vector containing "
 "points #id."
 msgstr ""
+"`CVFIDs` は2行の行列で、最初の行には凸包の #id がリストされ、2番目の行には面の番号がリストされます。返される  `PIDs` "
+"は、点#idを含む行ベクトルです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:125
 msgid "``PIDs = gf_mesh_get(mesh M, 'pid in cvids', imat CVIDs)``"
@@ -131,7 +145,7 @@ msgstr "`CVIDs` にリストされているポイント #id の検索。"
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:129
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:136
 msgid "`PIDs` is a row vector containing points #id."
-msgstr ""
+msgstr "`PIDs` はポイント #id を含む行ベクトルです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:132
 msgid "``PIDs = gf_mesh_get(mesh M, 'pid in regions', imat RIDs)``"
@@ -159,6 +173,8 @@ msgid ""
 "is a row vector containing points #id for each point found in `eps` range, "
 "and -1 for those which where not found in the mesh."
 msgstr ""
+"`PTS` は、点の座標のリストを含む配列です。返される `PIDs` は、 `eps` の範囲内で見つかった各ポイントのポイント #id "
+"の行ベクトルです。メッシュ内で見つからなかった場合には -1 が返されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:149
 msgid "``{Pid, IDx} = gf_mesh_get(mesh M, 'pid from cvid'[, imat CVIDs])``"
@@ -178,6 +194,10 @@ msgid ""
 "Hence, for example, the list of #id of points of the second convex is "
 "Pid(IDx(2):IDx(3)-1)."
 msgstr ""
+"`CVIDs` ( `CVIDs = Mesh.max_cvid()` と同じです)を省略すると、すべての凸包が対象となります。 `IDx` "
+"はベクトルであり、 length(IDx) = length(CVIDs)+1 です。 `Pid` は `CVIDs` における各凸包の点の #id "
+"の連結リストを含むベクトルです。 `IDx` の各エントリは、 `Pid` の対応する凸包点リストの位置です。したがって、例えば、第2凸包の点の #id"
+" のリストは Pid(IDx(2):IDx(3)-1) です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:162
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:179
@@ -203,6 +223,10 @@ msgid ""
 "is the position of the corresponding convex point list in `Pts`. Hence, for "
 "example, the list of points of the second convex is Pts(:,IDx(2):IDx(3)-1)."
 msgstr ""
+"`CVIDs` ( `CVIDs = gf_mesh_get(mesh M, 'max cvid')` "
+"と同じです)を省略すると、すべての凸包が対象となります。 `IDx` はベクトルであり、 length(IDx) = length(CVIDs)+1 "
+"です。 `Pts` は `CVIDs` における各凸包の点の 連結リストを含むベクトルです。 `IDx` の各エントリは、 `Pid` "
+"の対応する凸包点リストの位置です。したがって、例えば、第2凸包の点の #id のリストは Pts(:,IDx(2):IDx(3)-1) です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:183
 msgid "``CVid = gf_mesh_get(mesh M, 'cvid')``"
@@ -219,6 +243,9 @@ msgid ""
 "from the mesh. You can use gf_mesh_set(mesh M, 'optimize_structure') to "
 "enforce a contiguous numbering. CVid is a row vector."
 msgstr ""
+"番号付けは、1から gf_mesh_get(mesh M, 'nbcvs') まで連続していないことに注意してください。  "
+"gf_mesh_set(mesh M, 'optimize_structure')  "
+"を使用すると、連続した番号付けが行われます。CVidは行ベクトルです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:194
 msgid "``m = gf_mesh_get(mesh M, 'max pid')``"
@@ -306,6 +333,8 @@ msgid ""
 "`share=True`, search convex #ids that share the point #ids given in `PIDs`. "
 "`CVIDs` is a row vector (possibly empty)."
 msgstr ""
+"`share=False` の場合は、頂点#idsが `PIDs` にある凸包を検索します。 `share=True` の場合は、  `PIDs` "
+"で指定されたポイント #ids を共有する凸包 #ids を検索します。 `CVIDs` は(空である可能性がある)行ベクトルです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:248
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'faces from pid', ivec PIDs)``"
@@ -611,6 +640,8 @@ msgid ""
 "second lists face numbers (local number in the convex). (and 0 when the "
 "whole convex is in the regions)."
 msgstr ""
+"`CVFIDs` は2行の行列で、最初の行には凸包の #id "
+"がリストされ、2番目の行には面番号(凸包のローカル番号)がリストされます。(凸包全体が領域内にある場合は 0 です)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/cmdref_gf_mesh_get.rst:414
 msgid "``gf_mesh_get(mesh M, 'save', string filename)``"
