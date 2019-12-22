@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-21 13:01+0000\n"
+"POT-Creation-Date: 2019-12-22 13:03+0000\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -45,10 +45,12 @@ msgid ""
 "unpack it and enter inside the directory of the distribution  with the "
 "commands::"
 msgstr ""
+"また、 |gmm| はテンプレートライブラリであるため、インストールにコンパイルは必要ありません。 |gmm| "
+"アーカイブが現在のディレクトリにある場合は、次のコマンドを使用して、それを展開し、配布ディレクトリ内に入力できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/install.rst:21
 msgid "Then you you have to run the configure script just typing::"
-msgstr ""
+msgstr "次に、configureスクリプトを実行して、次のように入力します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/install.rst:25
 msgid ""
@@ -56,30 +58,33 @@ msgid ""
 "can use the ``--prefix`` option (the default prefix directory is "
 "``/usr/local``)::"
 msgstr ""
+"あるいは、ライブラリをインストールするプレフィックスディレクトリを設定したい場合は、 ``--prefix`` "
+"オプション(デフォルトのプレフィックスディレクトリは ``/usr/local`` です)を使うことができます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/install.rst:29
 msgid "then start the installation with::"
-msgstr ""
+msgstr "次のコマンドでインストールを開始します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/install.rst:33
 msgid "You can also check if your configuration is correct with::"
-msgstr ""
+msgstr "設定が正しいかどうかは、次の方法でも確認できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/install.rst:37
 msgid "which compiles random tests."
-msgstr ""
+msgstr "ランダムなテストをコンパイルします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/install.rst:39
 msgid ""
 "If you want to use a different compiler than the one chosen automatically by"
 " the ``./configure`` script, just specify its name on the command line::"
 msgstr ""
+"``./configure`` スクリプトを実行し、自動的に選択されたコンパイラとは異なるコンパイラを使用する場合。コマンドラインで名前を指定します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/install.rst:45
 msgid ""
 "More specific instructions can be found in the ``README*`` files of the "
 "distribution."
-msgstr ""
+msgstr "より具体的な説明は、ディストリビューションの ``README*`` ファイルにあります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/install.rst:48
 msgid ""
@@ -89,7 +94,10 @@ msgid ""
 "``gmm/gmm\\_kernel.h`` (vectors and matrix types, blas, sub vector and sub "
 "matrices)."
 msgstr ""
+"プログラムで |gmm| を使うには、ファイル ``gmm/gmm.h`` "
+"をインクルードするほうが簡単です。このファイルには、すべてのテンプレートライブラリが含まれます。コンパイル時間が重要すぎる場合には、必要最小限のファイルは"
+" ``gmm/gmm\\_kernel.h`` (ベクトルと行列の型、blas、部分ベクトルと部分行列)です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/install.rst:50
 msgid "DO NOT FORGET to catch errors messages. See the corresponding section."
-msgstr ""
+msgstr "エラーメッセージをキャッチするために忘れないでください。対応するセクションを参照してください。"
