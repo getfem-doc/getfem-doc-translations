@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-25 13:04+0000\n"
+"POT-Creation-Date: 2019-12-26 04:08+0000\n"
 "PO-Revision-Date: 2018-07-16 07:14+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -160,6 +160,8 @@ msgid ""
 "geometric transformation is of order 2, and a Q2 FEM. This picture shows the"
 " Von Mises criterion on the deformed tire."
 msgstr ""
+"この例では、タイヤの自重による変形を示します。このタイヤは、幾何学的変形が2次の規則的な6面体セル(384セル)の一層とQ2FEMでかみ合っています。この写真は、変形したタイヤのVon"
+" Mises 基準を示している。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:117
 msgid "im-houari"
@@ -171,6 +173,8 @@ msgid ""
 "12secs) `disk_in_contact.avi`_ (mpeg1, 1MB) (A newmark scheme adapted for "
 "the unilateral contact condition)."
 msgstr ""
+"(柔らかい)弾性ディスクのアニメーションも利用できます(mpeg-4 動画、4MB、12秒) `disk_in_contact.avi`_ "
+"(mpeg1、1MB)(片側接触条件に適合したnewmark法)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:126
 msgid "Xfem cracks in a beam"
@@ -185,6 +189,7 @@ msgid ""
 "mesh below. Four singular functions, which form a basis for asymptotical "
 "solution to the linear elasticity problem near the crack tips."
 msgstr ""
+"ここでは、XFemを使用して梁のき裂を処理しました。XFemは,古典的有限要素空間(この例ではP2FEMを使用した)を不連続関数で強化したものである。この機能のおかげで、亀裂経路は元のメッシュに従う必要がありません。下のメッシュ上のき裂要素がどのように交差しているかに注目してください。き裂先端近傍の線形弾性問題に対する漸近解の基礎を形成する4つの特異関数です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:137
 msgid "im-crack"
@@ -196,13 +201,13 @@ msgstr "im-crack2"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:145
 msgid "A 3D crack, made via level-set"
-msgstr ""
+msgstr "level-setを介して作成された3D亀裂"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:147
 msgid ""
 "In this example, the mesh was a simple cartesian mesh 20x20x1, and the crack"
 " geometry was defined implicitly via a levelset."
-msgstr ""
+msgstr "この例では、メッシュは単純な直交メッシュ20x20x1であり、亀裂のジオメトリはlevelsetを介して暗黙的に定義されています。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:153
 msgid "im-crack3d"
@@ -210,7 +215,7 @@ msgstr "im-crack3d"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:155
 msgid "Large strain"
-msgstr ""
+msgstr "有限ひずみ"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:157
 msgid ""
@@ -220,6 +225,9 @@ msgid ""
 "`tests/nonlinear_elastostatic.cc` file of |gf| package. This picture was "
 "made with OpenDX."
 msgstr ""
+"この例では、棒がねじれています。各ステップはNewton法で解かれます。材料法則は \"Ciarlet Geymonat\" "
+"則です。P2FEMを使用する。この例のソースコードは、 |gf| の `tests/nonlinear_elastostatic.cc` "
+"にあります。この写真はOpenDXで作ったものです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:165
 msgid "im-largestrain"
@@ -228,11 +236,11 @@ msgstr "im-largestrain"
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:166
 msgid ""
 "A short animation is also available: (mpeg-4 movie, 3MB) `torsion.avi`_."
-msgstr ""
+msgstr "短いアニメーション `torsion.avi`_ (mpeg-4動画、3MB)も利用できます。。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:171
 msgid "Shape and topological optimization"
-msgstr ""
+msgstr "形状とトポロジーの最適化"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:173
 msgid ""
@@ -243,6 +251,9 @@ msgid ""
 "fictitious domain approach is used together with both a shape gradient and a"
 " topological gradient."
 msgstr ""
+"この画像は、スクリプト `interface/tests/matlab/demo_structural_optimization.m` で取得しました "
+"(Alassane SY と Yves "
+"Renard)。これは、右辺で垂直荷重を受け、左辺ではクランプされた構造の形状最適化を表します。(Xfemのような)仮想領域法を形状勾配と位相勾配と共に用いました。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:185
 msgid "im-shape1 im-shape2"
@@ -254,6 +265,7 @@ msgid ""
 " For the second one the holes are initiated by the topological optimization."
 " The two following images correspond to a 3D case."
 msgstr ""
+"最初の画像は、既存の穴を持つ初期構造に対応します。2番目の場合、穴はトポロジー最適化によって開始されます。次の2つの画像は、3Dの場合に対応しています。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:195
 msgid "im-shape3 im-shape4"
@@ -261,7 +273,7 @@ msgstr "im-shape3 im-shape4"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:197
 msgid "3D planetary gears"
-msgstr ""
+msgstr "3D遊星歯車"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:199
 msgid ""
@@ -270,6 +282,8 @@ msgid ""
 "to be a tool for easy, almost automatic, creation and calculation of gear "
 "transmissions."
 msgstr ""
+" |link23|_この画像は、Konstantinos Pouliosによって開発されたアプリケーションに基づいています。このツールは |gf| "
+"に基づいており、歯車伝動の作成と計算を簡単に、ほぼ自動的に実行できるように設計されています。これは |link23|_ から無料で入手できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/screenshots/shots.rst:209
 msgid "im-gear"
