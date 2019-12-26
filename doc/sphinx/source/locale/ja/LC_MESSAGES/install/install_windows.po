@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-26 11:16+0000\n"
+"POT-Creation-Date: 2019-12-26 11:49+0000\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -52,12 +52,18 @@ msgid ""
 "installer or simply download Mingw and copy it in the directory "
 "``C:\\mingw64``"
 msgstr ""
+"最初の手順は、Mingwを64ビットバージョン(x86_64、posix、sjljオプション `Mingw-64 web page "
+"<https://mingw-w64.org/doku.php/download>`_ "
+"を参照)でインストールすることです。そのためにはインストーラを使うか、単にMingwをダウンロードして ``C:\\mingw64`` "
+"ディレクトリにコピーします。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/install/install_windows.rst:32
 msgid ""
 "Install also Msys 64 bits version the same way (either with an installer or "
 "directly copy Msys in the directory ``C:\\msys``)"
 msgstr ""
+"Msys64ビットバージョンも同様にインストールします(インストーラを使うか、Msysを直接 ``C:\\msys`` "
+"ディレクトリにコピーしてください)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/install/install_windows.rst:35
 msgid ""
@@ -78,6 +84,11 @@ msgid ""
 "directory name). You have first to create a file in that path named "
 "``.profile`` and containing at list the two following lines::"
 msgstr ""
+"Windowsのコマンドコンソールを開き、 ``msys`` "
+"と入力します。これでMsysシェルコンソールが開きます。sh/bashに慣れている人にとっては、普通はもっと文明化された環境にいるように感じます。あまり幸せなことはありませんが、この環境の(目的)はどこかミニマリスト的です。通常、Msysはホームディレクトリを作成します(コマンド"
+" ``pwd`` を実行してMsysのパスを確認し、 ``C:\\msys\\home\\login`` windows "
+"pathに対応していることを確認します。  ``login`` はホームディレクトリ名です。)。まず、そのパスに ``.profile`` "
+"という名前のファイルを作成し、次の2行をリストに含める必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/install/install_windows.rst:53
 msgid ""
@@ -100,7 +111,7 @@ msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/install/install_windows.rst:72
 msgid "Do the same for LAPACK with::"
-msgstr ""
+msgstr "以下のコマンドを使用して、LAPACKに対して同じ操作を行います。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/install/install_windows.rst:81
 msgid ""
@@ -145,10 +156,12 @@ msgid ""
 "compilation is correctly done. Note the separate compilation of the "
 "``superlu`` library is due to some difficulties with Msys command ``ar``."
 msgstr ""
+"``make check`` は必要ありませんが、コンパイルが正しく行われていることを確認するためです。 ``superlu`` "
+"ライブラリを別々にコンパイルするのは、Msysコマンドの ``ar``  に問題があるためです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/install/install_windows.rst:134
 msgid "Build with the Python interface"
-msgstr ""
+msgstr "Pythonインタフェースで構築する"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/install/install_windows.rst:136
 msgid ""
@@ -204,6 +217,7 @@ msgid ""
 "first, of course to have installed a (recent) version of Matlab on your "
 "system."
 msgstr ""
+"次に、Matlabインターフェースを作成するための追加手順を示します。もちろん最初に、Matlabの(最近の)バージョンをシステムにインストールしておく必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/install/install_windows.rst:169
 msgid ""
@@ -212,6 +226,7 @@ msgid ""
 "section for Python interface installation. However, for the Matlab "
 "interface, Numpy and Scipy are not required."
 msgstr ""
+"また、一部のPythonスクリプトを使用してインタフェースを構築するため、Pythonのインストールも必要です。Pythonインタフェースのインストールについては、前のセクションで説明した手順に従ってください。ただし、Matlabインターフェースでは、NumpyとScipyは必要ありません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/install/install_windows.rst:174
 msgid ""
