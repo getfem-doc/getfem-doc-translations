@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-26 12:53+0000\n"
+"POT-Creation-Date: 2019-12-26 13:25+0000\n"
 "PO-Revision-Date: 2018-07-16 07:11+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -68,7 +68,7 @@ msgstr ""
 msgid ""
 "Now we can try to have a **look at the mesh**, with its vertices numbering "
 "and the convexes numbering::"
-msgstr ""
+msgstr "次に、頂点の番号と凸包の番号が付いた **メッシュを見てみましょう** 。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:47
 msgid ""
@@ -76,6 +76,7 @@ msgid ""
 "convexes is also regular (this is guaranteed for cartesian meshes, but do "
 "not hope a similar numbering for the degrees of freedom)."
 msgstr ""
+"このように、メッシュは規則的であり、節点と凸包の番号付けも規則的です(これは直交メッシュでは保証されていますが、自由度に同様の番号付けは望めません)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:51
 msgid ""
@@ -270,7 +271,7 @@ msgid ""
 "The model now contains the solution (as well as other things, such as the "
 "linear system which was solved). It is extracted, a display into a |mlab| "
 "figure::"
-msgstr ""
+msgstr "これで、(解かれた線形系のような他のものと同様に)モデルに解が含まれました。抽出され、 |mlab| 図に表示されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:224
 msgid "Another Laplacian with exact solution"
@@ -298,7 +299,7 @@ msgstr "次の図は :envvar:`Von Mises` 応力を示しています。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:248
 msgid "deformed tripod"
-msgstr ""
+msgstr "変形三脚"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:252
 msgid "Avoiding the bricks framework"
@@ -313,6 +314,9 @@ msgid ""
 ":file:`demo_tripod_alt.m` is very similar to the :file:`demo_tripod.m` "
 "except that the assembly is explicit::"
 msgstr ""
+"モデルブリックは、最終的な線形システムのアセンブリのほとんどの詳細を隠蔽するため、非常に便利です。しかし、より低い水準で、線形システムのアセンブリと解析を直接"
+" |mlab| で処理することも可能です。例えば、 :file:`demo_tripod_alt.m` はアセンブリが明示的であることを除き、 "
+":file:`demo_tripod.m` によく似ています。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:284
 msgid ""
@@ -325,6 +329,11 @@ msgid ""
 "system. Note that it might be more efficient (and simpler) to deal with "
 "Dirichlet condition via a penalization technique."
 msgstr ""
+"|gfi| では、ベクトルと行列のアセンブリは ``gf_asm`` 関数により行われます。Dirichlet条件 :math:`u(x) = "
+"r(x)` は、弱形式 :math:`\\int (h(x)u(x)).v(x) = \\int r(x).v(x)\\quad\\forall v` "
+"で処理されます(ここで、 :math:`h(x)` は :math:`3\\times 3` "
+"行列です。これは定数であり、単位と等価です)。元のシステムからDirichlet条件を除去することにより、縮退システム ``KK UU = FF`` "
+"を構築します。ペナルティ法を使用してDirichlet条件を処理する方が効率的(よりシンプル)であることに注意してください。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:295
 msgid "Other examples"
@@ -337,6 +346,8 @@ msgid ""
 "approximation in the area where the stress is singular (the transition "
 "between the clamped area and the neumann boundary)."
 msgstr ""
+":file:`demo_refine.m` "
+"スクリプトは、端部がクランプされた単純な2次元または3次元バーを示します。応力が特異な領域(クランプ領域とNeumann境界の間の遷移)でより良い近似を得るために適合リファインメントを用いました。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:302
 msgid ""
@@ -345,6 +356,8 @@ msgid ""
 "applied in many steps. At each step, a non-linear (large deformations) "
 "elasticity problem is solved."
 msgstr ""
+":file:`demo_nonlinear_elasticity.m` "
+"スクリプトは、曲げ捻りの3次元バーを示しています。これは、変形が多数のステップで適用されるため、準静的な問題です。各ステップで非線形(有限変形)弾性問題を解きます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:307
 msgid ""
@@ -365,6 +378,8 @@ msgid ""
 "example :file:`tests/bilaplacian.cc`. Solve the bilaplacian (or a Kirchhoff-"
 "Love plate model) on a square."
 msgstr ""
+":file:`demo_bilaplacian.m` スクリプトは、 |gf| の例である :file:`tests/bilaplacian.cc` "
+"を改作したものです。bilaplacian(かKirchhoff-Loveのプレートモデル)を正方形で求解します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:317
 msgid ""
@@ -373,6 +388,9 @@ msgid ""
 " plasticity of the material is taken into account (plastification occurs "
 "when the material's Von Mises exceeds a given threshold)."
 msgstr ""
+":file:`demo_plasticity.m` スクリプトは、 |gf| の例である :file:`tests/plasticity.cc` "
+"を応用したものです。2次元または3次元バーは多数のステップで曲げられ、材料の塑性が考慮されます(材料の Von Mises "
+"が所定の閾値を超えたときに塑化が起こります)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:322
 msgid ""
@@ -380,6 +398,7 @@ msgid ""
 "of a plane wave by a cylinder), with high order geometric transformations "
 "and high order FEMs."
 msgstr ""
+":file:`demo_wave2D.m` は高次の幾何学的変換と高次のFEMを持つ2次元スカラー波動方程式の例(円柱による平面波の回折)です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/matlab/examples.rst:328
 msgid "Using Matlab Object-Oriented features"
