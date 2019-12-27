@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-27 03:19+0000\n"
+"POT-Creation-Date: 2019-12-27 03:52+0000\n"
 "PO-Revision-Date: 2018-07-16 07:12+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -127,6 +127,8 @@ msgid ""
 "of a piece of documentation.  It too does not result in any output "
 "currently."
 msgstr ""
+"``moduleauthor`` 命令は複数回現れることがあり、 ``sectionauthor`` "
+"が(複数の)文書の作者を指定するのと同じように、モジュールコードの作者を指定します。この場合も、現在は何も出力されません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/documenting/markup.rst:80
 msgid ""
@@ -149,6 +151,8 @@ msgid ""
 "``:noindex:``.  The following example shows all of the features of this "
 "directive type::"
 msgstr ""
+"モジュールが提供する特定の機能を記述するために使用される多くのディレクティブがあります。各ディレクティブでは、記述されている内容に関する基本情報を提供するために1つ以上の記号が必要であり、その内容は記述である必要があります。基本バージョンでは、一般インデックスにエントリが作成されます。インデックスエントリが必要ない場合は、ディレクティブオプションフラグ"
+" ``:noindex:`` を指定できます。次の例は、このディレクティブタイプのすべての機能を示しています。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/documenting/markup.rst:101
 msgid ""
@@ -201,6 +205,9 @@ msgid ""
 "Examples of its use in the Python documentation include ``PyObject_HEAD`` "
 "and ``Py_BEGIN_ALLOW_THREADS``."
 msgstr ""
+"\"simple\" "
+"Cマクロについて説明します。単純なマクロは、コードの展開に使用されるマクロですが、引数を取らないため関数として記述できません。これは、単純な定数の定義には使用できません。Pythonマニュアルでの使用例には、"
+" ``PyObject_HEAD`` や ``Py_BEGIN_ALLOW_THREADS`` などがあります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/documenting/markup.rst:142
 msgid "Describes a C type. The signature should just be the type name."
@@ -389,6 +396,9 @@ msgid ""
 "using the ``literalinclude`` directive. [1]_ For example, to include the "
 "Python source file :file:`example.py`, use::"
 msgstr ""
+"プレーンテキストのみを含む外部ファイルにサンプルテキストを保存することで、より長い逐語的テキストの表示を含めることができます。ファイルは "
+"``literalinclude`` 指令を使用して含めることができる。 [1]_ たとえば、Pythonソースファイル "
+":file:`example.py` を含めるには、次のように指定します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/documenting/markup.rst:278
 msgid ""
@@ -707,6 +717,8 @@ msgid ""
 "the executable for some platforms.  In particular, the ``.exe`` (or other) "
 "extension should be omitted for Windows programs."
 msgstr ""
+"実行可能プログラムの名前。これは、一部のプラットフォームの実行可能ファイルのファイル名とは異なる場合があります。特に、 ``.exe`` "
+"(その他)拡張子はWindowsプログラムでは省略されるべきです。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/documenting/markup.rst:516
 msgid "A regular expression. Quotes should not be included."
@@ -854,6 +866,8 @@ msgid ""
 "sub-sections.  For the HTML output, it is shown boxed off from the main flow"
 " of the text."
 msgstr ""
+"``seealso`` "
+"ディレクティブは通常、サブセクションの直前のセクションに配置されます。HTML出力の場合は、テキストのメインフローから枠で囲んで表示されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/documenting/markup.rst:636
 msgid ""
@@ -1060,6 +1074,7 @@ msgid ""
 "continuation line must begin with a colon placed at the same column as in "
 "the first line."
 msgstr ""
+"このディレクティブは、プロダクションのグループを囲むために使用します。各プロダクションは1行で指定され、次の定義からコロンで区切られた名前で構成されます。定義が複数行にまたがる場合、各継続行は最初の行と同じ列に配置されたコロンで始まる必要があります。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/documenting/markup.rst:773
 msgid ""
