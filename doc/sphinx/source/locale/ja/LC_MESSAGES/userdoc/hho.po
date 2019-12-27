@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-27 01:43+0000\n"
+"POT-Creation-Date: 2019-12-27 02:15+0000\n"
 "PO-Revision-Date: 2019-09-25 04:03+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -49,6 +49,8 @@ msgid ""
 "still experimental and not pretending to optimality. For the moment, there "
 "is no tool to make an automatic condensation of internal dofs."
 msgstr ""
+"HHO法は任意の形状要素に適用できます。しかし、 |gf| "
+"での実装は、現時点では標準的な要素に限定されています。さらに、この実装はまだ実験的であり、最適のふりをしません。現時点では、内部自由度を自動的に圧縮するツールはありません。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:19
 msgid "HHO elements"
@@ -68,6 +70,9 @@ msgid ""
 "hybrid method from standard finite element spaces. For instance, on a "
 "triangle, a possible HHO method can be obtained with::"
 msgstr ""
+"HHO要素は,要素の内部に対して多項式近似空間を持ち,要素の各面に対して多項式近似を持つ複合要素である。さらに、これは不連続近似であり、要素内部の近似と面上の近似との間には、要素の2つの異なる面上の近似の間にも、連続性が規定されていないという意味である。ただし、2つの隣接する要素が面を共有している場合、この面の近似は2つの要素によって共有されます。"
+" |gf| は、単純に ``FEM_HHO(fem_int, fem_face1, fem_face2, ...)`` "
+"と呼ばれる特殊な方法を提供します。これは、標準的な有限要素空間からハイブリッド法を構築することを可能にします。たとえば、三角形の場合、次のようにしてHHO法を取得できます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:25
 msgid ""
@@ -177,6 +182,8 @@ msgid ""
 ":file:`interface/tests/demo_laplacian_HHO.py` and "
 ":file:`interface/tests/demo_elasticity_HHO.py`."
 msgstr ""
+"2つの完全な使用例がテストプログラム :file:`interface/tests/demo_laplacian_HHO.py` と "
+":file:`interface/tests/demo_elasticity_HHO.py` に与えられます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:77
 msgid "Reconstructed symmetrized gradient"
@@ -224,6 +231,8 @@ msgid ""
 "``transname=\"HHO_sym_grad\"``, with ``Gu`` still determining the "
 "reconstruction space."
 msgstr ""
+"``transname=\"HHO_sym_grad\"`` の場合は ``Elementary_transformation(u, "
+"HHO_sym_grad, Gu)`` という弱形式言語に変換され、 ``Gu`` が再構成空間を決定します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:93
 msgid "Reconstructed variable"
@@ -236,6 +245,8 @@ msgid ""
 ":math:`D(u)` will be the solution to the local Neumann problem on a chosen "
 "space :math:`V_D`"
 msgstr ""
+"高次の再構成は、内部の近似とフェースの近似の両方を使用して行うことができます。再構成された変数 :math:`D(u)` は、選択された空間 "
+":math:`V_D` 上の局所Neumann問題の解決策になるだろう"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:97
 msgid ""
@@ -282,6 +293,8 @@ msgid ""
 "recontructed variable :math:`D(u)` will be the solution to the local Neumann"
 " problem on a chosen space :math:`V_D`"
 msgstr ""
+"変数の再構成の変形は、対称化された勾配を使用するものである。ベクトルフィールド変数にのみ使用でき、さらにベクトルフィールドの次元がドメインの次元と同じ場合にも使用できます。再構成された変数"
+" :math:`D(u)` は、選択された空間 :math:`V_D` 上の局所Neumann問題に対する解であるだろう"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:117
 msgid ""
@@ -327,6 +340,8 @@ msgid ""
 ":math:`S(u)` is defined on the boundary space :math:`V_{\\partial T}` of the"
 " element, with the formula"
 msgstr ""
+"安定化演算子は、ある意味で近似の不連続性を測定する演算子です。この演算子を用いてペナルティ項により安定化が得られます。安定化演算子 "
+":math:`S(u)` は、要素の境界空間 :math:`V_{\\partial T}` 上で次の式で定義されます。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:142
 msgid "S(u) = \\Pi_{\\partial T}(u_{\\partial T} - D(u) - \\Pi_{T}(u_T - D(u)))"
@@ -346,7 +361,7 @@ msgid ""
 "For vector field variables having the same dimension as the domain, there "
 "exists also a stabilization operator using the symmetrized gradient, which "
 "is defined by"
-msgstr ""
+msgstr "領域と同じ次元を持つベクトル場変数に対して、対称化勾配を用いた安定化演算子も存在します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:149
 msgid "S^s(u) = \\Pi_{\\partial T}(u_{\\partial T} - D^s(u) - \\Pi_{T}(u_T - D^s(u)))"
