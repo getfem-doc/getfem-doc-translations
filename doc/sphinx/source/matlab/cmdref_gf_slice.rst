@@ -124,7 +124,7 @@ General constructor for slice objects.
 
     Return the "slice" composed of points given by the columns of `Pts`
     (useful for interpolation on a given set of sparse points, see
-    ``gf_compute('interpolate on',sl)``.
+    ``gf_compute('interpolate on',sl)``).
 
 
   ``sl = gf_slice('load', string filename[, mesh m])``

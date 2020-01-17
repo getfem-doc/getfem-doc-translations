@@ -454,7 +454,7 @@ gf_model_set
     If you are not sure, the better is to declare the term not symmetric
     and not coercive. But some solvers (conjugate gradient for instance)
     are not allowed for non-coercive problems.
-    <literal>brickname</literal> is an otpional name for the brick.
+    <literal>brickname</literal> is an optional name for the brick.
 
 
   ``ind = gf_model_set(model M, 'add linear twodomain term', mesh_im mim, string expression, int region, string secondary_domain[, int is_symmetric[, int is_coercive]])``
@@ -482,7 +482,7 @@ gf_model_set
     If you are not sure, the better is to declare the term not symmetric
     and not coercive. But some solvers (conjugate gradient for instance)
     are not allowed for non-coercive problems.
-    <literal>brickname</literal> is an otpional name for the brick.
+    <literal>brickname</literal> is an optional name for the brick.
 
 
   ``ind = gf_model_set(model M, 'add nonlinear twodomain term', mesh_im mim, string expression, int region, string secondary_domain[, int is_symmetric[, int is_coercive]])``
@@ -936,7 +936,7 @@ gf_model_set
 
     Add an additional explicit penalized constraint on the variable <literal>varname</literal>.
     The constraint is :math<literal>BU=L</literal> with <literal>B</literal> being a rectangular sparse matrix.
-    Be aware that <literal>B</literal> should not contain a palin row, otherwise the whole
+    Be aware that <literal>B</literal> should not contain a plain row, otherwise the whole
     tangent matrix will be plain. It is possible to change the constraint
     at any time with the methods gf_model_set(model M, 'set private matrix')
     and gf_model_set(model M, 'set private rhs'). The method
@@ -1299,7 +1299,7 @@ gf_model_set
   ``ind = gf_model_set(model M, 'add normal derivative Dirichlet condition with multipliers', mesh_im mim, string varname, mult_description, int region [, string dataname, int R_must_be_derivated])``
 
     Add a Dirichlet condition on the normal derivative of the variable
-    <literal>varname</literal> and on the mesh region <literal>region</literal> (which should be a boundary.
+    <literal>varname</literal> and on the mesh region <literal>region</literal> (which should be a boundary).
     The general form is
     <latex style="text"><![CDATA[\int \partial_n u(x)v(x) = \int r(x)v(x) \forall v]]></latex>
     where <latex style="text"><![CDATA[r(x)]]></latex> is
@@ -1325,7 +1325,7 @@ gf_model_set
   ``ind = gf_model_set(model M, 'add normal derivative Dirichlet condition with penalization', mesh_im mim, string varname, scalar coeff, int region [, string dataname, int R_must_be_derivated])``
 
     Add a Dirichlet condition on the normal derivative of the variable
-    <literal>varname</literal> and on the mesh region <literal>region</literal> (which should be a boundary.
+    <literal>varname</literal> and on the mesh region <literal>region</literal> (which should be a boundary).
     The general form is
     <latex style="text"><![CDATA[\int \partial_n u(x)v(x) = \int r(x)v(x) \forall v]]></latex>
     where <latex style="text"><![CDATA[r(x)]]></latex> is
@@ -1437,7 +1437,7 @@ gf_model_set
   ``gf_model_set(model M, 'set time step', scalar dt)``
 
     Set the value of the time step to <literal>dt</literal>. This value can be change
-    from a step to another for all one-step schemes (i.e for the moment
+    from a step to another for all one-step schemes (i.e. for the moment
     to all proposed time integration schemes). 
 
 

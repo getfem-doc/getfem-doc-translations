@@ -116,7 +116,7 @@ gf_fem_get
 
     Evaluate the Hessian of all base functions of the fem at point `p`.
     
-    `p` is supposed to be in the reference convex!.
+    `p` is supposed to be in the reference convex!
 
 
   ``gf_fem_get(fem F, 'poly_str')``

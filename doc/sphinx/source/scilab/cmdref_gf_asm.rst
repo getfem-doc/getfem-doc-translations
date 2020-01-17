@@ -153,7 +153,7 @@ gf_asm
     may be choosen among:
     
     - 'SaintVenant Kirchhoff':
-      Linearized law, should be avoided). This law has the two usual
+      Linearized law, should be avoided. This law has the two usual
       Lame coefficients as parameters, called lambda and mu.
     - 'Mooney Rivlin':
       This law has three parameters, called C1, C2 and D1.

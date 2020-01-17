@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-17 02:17+0000\n"
+"POT-Creation-Date: 2020-01-17 13:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -342,7 +342,7 @@ msgid "``ind = gf_model_set(model M, 'add linear term', mesh_im mim, string expr
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:442
-msgid "Adds a matrix term given by the assembly string <literal>expr</literal> which will be assembled in region <literal>region</literal> and with the integration method <literal>mim</literal>. Only the matrix term will be taken into account, assuming that it is linear. The advantage of declaring a term linear instead of nonlinear is that it will be assembled only once and no assembly is necessary for the residual. Take care that if the expression contains some variables and if the expression is a potential or of first order (i.e. describe the weak form, not the derivative of the weak form), the expression will be derivated with respect to all variables. You can specify if the term is symmetric, coercive or not. If you are not sure, the better is to declare the term not symmetric and not coercive. But some solvers (conjugate gradient for instance) are not allowed for non-coercive problems. <literal>brickname</literal> is an otpional name for the brick."
+msgid "Adds a matrix term given by the assembly string <literal>expr</literal> which will be assembled in region <literal>region</literal> and with the integration method <literal>mim</literal>. Only the matrix term will be taken into account, assuming that it is linear. The advantage of declaring a term linear instead of nonlinear is that it will be assembled only once and no assembly is necessary for the residual. Take care that if the expression contains some variables and if the expression is a potential or of first order (i.e. describe the weak form, not the derivative of the weak form), the expression will be derivated with respect to all variables. You can specify if the term is symmetric, coercive or not. If you are not sure, the better is to declare the term not symmetric and not coercive. But some solvers (conjugate gradient for instance) are not allowed for non-coercive problems. <literal>brickname</literal> is an optional name for the brick."
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:460
@@ -366,7 +366,7 @@ msgid "``ind = gf_model_set(model M, 'add nonlinear term', mesh_im mim, string e
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:476
-msgid "Adds a nonlinear term given by the assembly string <literal>expr</literal> which will be assembled in region <literal>region</literal> and with the integration method <literal>mim</literal>. The expression can describe a potential or a weak form. Second order terms (i.e. containing second order test functions, Test2) are not allowed. You can specify if the term is symmetric, coercive or not. If you are not sure, the better is to declare the term not symmetric and not coercive. But some solvers (conjugate gradient for instance) are not allowed for non-coercive problems. <literal>brickname</literal> is an otpional name for the brick."
+msgid "Adds a nonlinear term given by the assembly string <literal>expr</literal> which will be assembled in region <literal>region</literal> and with the integration method <literal>mim</literal>. The expression can describe a potential or a weak form. Second order terms (i.e. containing second order test functions, Test2) are not allowed. You can specify if the term is symmetric, coercive or not. If you are not sure, the better is to declare the term not symmetric and not coercive. But some solvers (conjugate gradient for instance) are not allowed for non-coercive problems. <literal>brickname</literal> is an optional name for the brick."
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:488
@@ -598,7 +598,7 @@ msgid "``ind = gf_model_set(model M, 'add constraint with penalization', string 
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:937
-msgid "Add an additional explicit penalized constraint on the variable <literal>varname</literal>. The constraint is :math<literal>BU=L</literal> with <literal>B</literal> being a rectangular sparse matrix. Be aware that <literal>B</literal> should not contain a palin row, otherwise the whole tangent matrix will be plain. It is possible to change the constraint at any time with the methods gf_model_set(model M, 'set private matrix') and gf_model_set(model M, 'set private rhs'). The method gf_model_set(model M, 'change penalization coeff') can be used. If <literal>dataname</literal> is specified instead of <literal>L</literal>, the vector <literal>L</literal> is defined in the model as data with the given name. Return the brick index in the model."
+msgid "Add an additional explicit penalized constraint on the variable <literal>varname</literal>. The constraint is :math<literal>BU=L</literal> with <literal>B</literal> being a rectangular sparse matrix. Be aware that <literal>B</literal> should not contain a plain row, otherwise the whole tangent matrix will be plain. It is possible to change the constraint at any time with the methods gf_model_set(model M, 'set private matrix') and gf_model_set(model M, 'set private rhs'). The method gf_model_set(model M, 'change penalization coeff') can be used. If <literal>dataname</literal> is specified instead of <literal>L</literal>, the vector <literal>L</literal> is defined in the model as data with the given name. Return the brick index in the model."
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:950
@@ -834,7 +834,7 @@ msgid "``ind = gf_model_set(model M, 'add normal derivative Dirichlet condition 
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:1301
-msgid "Add a Dirichlet condition on the normal derivative of the variable <literal>varname</literal> and on the mesh region <literal>region</literal> (which should be a boundary. The general form is <latex style=\"text\"><![CDATA[\\int \\partial_n u(x)v(x) = \\int r(x)v(x) \\forall v]]></latex> where <latex style=\"text\"><![CDATA[r(x)]]></latex> is the right hand side for the Dirichlet condition (0 for homogeneous conditions) and <latex style=\"text\"><![CDATA[v]]></latex> is in a space of multipliers defined by <literal>mult_description</literal>. If <literal>mult_description</literal> is a string this is assumed to be the variable name corresponding to the multiplier (which should be first declared as a multiplier variable on the mesh region in the model). If it is a finite element method (mesh_fem object) then a multiplier variable will be added to the model and build on this finite element method (it will be restricted to the mesh region <literal>region</literal> and eventually some conflicting dofs with some other multiplier variables will be suppressed). If it is an integer, then a  multiplier variable will be added to the model and build on a classical finite element of degree that integer. <literal>dataname</literal> is an optional parameter which represents the right hand side of the Dirichlet condition. If <literal>R_must_be_derivated</literal> is set to <literal>true</literal> then the normal derivative of <literal>dataname</literal> is considered. Return the brick index in the model."
+msgid "Add a Dirichlet condition on the normal derivative of the variable <literal>varname</literal> and on the mesh region <literal>region</literal> (which should be a boundary). The general form is <latex style=\"text\"><![CDATA[\\int \\partial_n u(x)v(x) = \\int r(x)v(x) \\forall v]]></latex> where <latex style=\"text\"><![CDATA[r(x)]]></latex> is the right hand side for the Dirichlet condition (0 for homogeneous conditions) and <latex style=\"text\"><![CDATA[v]]></latex> is in a space of multipliers defined by <literal>mult_description</literal>. If <literal>mult_description</literal> is a string this is assumed to be the variable name corresponding to the multiplier (which should be first declared as a multiplier variable on the mesh region in the model). If it is a finite element method (mesh_fem object) then a multiplier variable will be added to the model and build on this finite element method (it will be restricted to the mesh region <literal>region</literal> and eventually some conflicting dofs with some other multiplier variables will be suppressed). If it is an integer, then a  multiplier variable will be added to the model and build on a classical finite element of degree that integer. <literal>dataname</literal> is an optional parameter which represents the right hand side of the Dirichlet condition. If <literal>R_must_be_derivated</literal> is set to <literal>true</literal> then the normal derivative of <literal>dataname</literal> is considered. Return the brick index in the model."
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:1325
@@ -842,7 +842,7 @@ msgid "``ind = gf_model_set(model M, 'add normal derivative Dirichlet condition 
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:1327
-msgid "Add a Dirichlet condition on the normal derivative of the variable <literal>varname</literal> and on the mesh region <literal>region</literal> (which should be a boundary. The general form is <latex style=\"text\"><![CDATA[\\int \\partial_n u(x)v(x) = \\int r(x)v(x) \\forall v]]></latex> where <latex style=\"text\"><![CDATA[r(x)]]></latex> is the right hand side for the Dirichlet condition (0 for homogeneous conditions). The penalization coefficient is initially <literal>coeff</literal> and will be added to the data of the model. It can be changed with the command gf_model_set(model M, 'change penalization coeff'). <literal>dataname</literal> is an optional parameter which represents the right hand side of the Dirichlet condition. If <literal>R_must_be_derivated</literal> is set to <literal>true</literal> then the normal derivative of <literal>dataname</literal> is considered. Return the brick index in the model."
+msgid "Add a Dirichlet condition on the normal derivative of the variable <literal>varname</literal> and on the mesh region <literal>region</literal> (which should be a boundary). The general form is <latex style=\"text\"><![CDATA[\\int \\partial_n u(x)v(x) = \\int r(x)v(x) \\forall v]]></latex> where <latex style=\"text\"><![CDATA[r(x)]]></latex> is the right hand side for the Dirichlet condition (0 for homogeneous conditions). The penalization coefficient is initially <literal>coeff</literal> and will be added to the data of the model. It can be changed with the command gf_model_set(model M, 'change penalization coeff'). <literal>dataname</literal> is an optional parameter which represents the right hand side of the Dirichlet condition. If <literal>R_must_be_derivated</literal> is set to <literal>true</literal> then the normal derivative of <literal>dataname</literal> is considered. Return the brick index in the model."
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:1344
@@ -890,7 +890,7 @@ msgid "``gf_model_set(model M, 'set time step', scalar dt)``"
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:1439
-msgid "Set the value of the time step to <literal>dt</literal>. This value can be change from a step to another for all one-step schemes (i.e for the moment to all proposed time integration schemes)."
+msgid "Set the value of the time step to <literal>dt</literal>. This value can be change from a step to another for all one-step schemes (i.e. for the moment to all proposed time integration schemes)."
 msgstr ""
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:1444

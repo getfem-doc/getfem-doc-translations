@@ -87,7 +87,7 @@ General constructor for fem objects.
     - FEM_PK_HIERARCHICAL(n,k) :
       PK element with a hierarchical basis.
     - FEM_QK_HIERARCHICAL(n,k) :
-      QK element with a hierarchical basis
+      QK element with a hierarchical basis.
     - FEM_PK_PRISM_HIERARCHICAL(n,k) :
       PK element on a prism with a hierarchical basis.
     - FEM_STRUCTURED_COMPOSITE(fem f,k) :

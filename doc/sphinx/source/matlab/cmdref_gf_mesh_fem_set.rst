@@ -37,7 +37,7 @@ gf_mesh_fem_set
 
     Set the Finite Element Method.
     
-    Assign a FEM `f` to all convexes whose #ids are listed in `CVids`.
+    Assign an FEM `f` to all convexes whose #ids are listed in `CVids`.
     If `CVids` is not given, the integration is assigned to all convexes.
     
     See the help of gf_fem to obtain a list of available FEM methods.

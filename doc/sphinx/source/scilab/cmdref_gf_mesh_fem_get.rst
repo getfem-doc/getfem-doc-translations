@@ -154,7 +154,7 @@ gf_mesh_fem_get
 
   ``CVs = gf_mesh_fem_get(mesh_fem MF, 'convex_index')``
 
-    Return the list of convexes who have a FEM.
+    Return the list of convexes who have an FEM.
 
 
   ``bB = gf_mesh_fem_get(mesh_fem MF, 'is_lagrangian'[, mat CVids])``
@@ -346,7 +346,7 @@ gf_mesh_fem_get
 
     Interpolate data given on each convex of the mesh to the mesh_fem dof.
     The mesh_fem has to be lagrangian, and should be discontinuous (typically
-    a FEM_PK(N,0) or FEM_QK(N,0) should be used).
+    an FEM_PK(N,0) or FEM_QK(N,0) should be used).
     
     The last dimension of the input vector Ucv should have
     gf_mesh_get(mesh M, 'max cvid') elements.
