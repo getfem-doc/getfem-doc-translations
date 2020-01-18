@@ -214,7 +214,7 @@ AUTOHEADER = ${SHELL} /home/travis/build/getfem-doc/getfem-doc-translations/getf
 AUTOMAKE = ${SHELL} /home/travis/build/getfem-doc/getfem-doc-translations/getfem/missing automake-1.15
 AWK = gawk
 BLAS_LIBS = -lblas
-BUILDDATE = 01/18/20,19:05:35
+BUILDDATE = 01/18/20,19:33:55
 BUILDER = travis
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -270,7 +270,7 @@ MAKEINFO = ${SHELL} /home/travis/build/getfem-doc/getfem-doc-translations/getfem
 MANIFEST_TOOL = :
 MATLAB_COM_EXT = 
 MATLAB_INC_DIR = 
-MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMeshLevelSet @gfMesherObject @gfMeshImData @gfContStruct @gfGeoTrans @gfLevelSet @gfCvStruct @gfMeshFem @gfPrecond @gfMeshIm @gfSpmat @gfSlice @gfModel @gfInteg @gfEltm @gfMesh @gfFem 
+MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMesherObject @gfMeshLevelSet @gfMeshImData @gfContStruct @gfMeshFem @gfCvStruct @gfLevelSet @gfGeoTrans @gfPrecond @gfMeshIm @gfSpmat @gfSlice @gfModel @gfInteg @gfEltm @gfMesh @gfFem 
 MATLAB_RELEASE = 
 MATLAB_ROOT = 
 METIS_LIBS = 
