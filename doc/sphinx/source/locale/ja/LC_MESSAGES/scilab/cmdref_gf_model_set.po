@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-23 13:20+0000\n"
+"POT-Creation-Date: 2020-01-24 13:21+0000\n"
 "PO-Revision-Date: 2018-07-16 07:01+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -643,6 +643,10 @@ msgid ""
 "solvers (conjugate gradient for instance) are not allowed for non-coercive "
 "problems. <literal>brickname</literal> is an optional name for the brick."
 msgstr ""
+"アセンブリ文字列  <literal>expr</literal> で指定された行列項を追加します。この行列は、領域  "
+"<literal>region</literal> で積分法 <literal>mim</literal> "
+"を使用して組み立てられます。線形であると仮定すると、行列項のみが考慮されます。項を非線形ではなく線形と宣言する利点は、項が1回だけ組み立てられ、残差にアセンブリが必要ないことです。式にいくつかの変数が含まれ、式がポテンシャルまたは一次(すなわち、弱形式の微分ではなく、弱形式を記述する)場合、式はすべての変数に関して微分することに注意してください。項が対称か、強制でないかどうかを指定できます。よくわからない場合は、対称ではなく、強制的ではないと宣言した方がよいでしょう。しかし、一部のソルバー(例えば共役勾配)は非強制問題には使用できません。"
+" <literal>brickname</literal> はブリックのオプション名です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:460
 msgid ""
@@ -701,6 +705,10 @@ msgid ""
 "gradient for instance) are not allowed for non-coercive problems. "
 "<literal>brickname</literal> is an optional name for the brick."
 msgstr ""
+"アセンブリ文字列  <literal>expr</literal> で指定された非線形項を追加します。この非線形項は、領域 "
+"<literal>region</literal> と積分法 <literal>mim</literal> "
+"で組み立てられます。この表現は、ポテンシャルまたは弱形式を表すことができます。2次項(すなわち、2次試験関数Test2を含みます)は使用できません。項が対称か、強制かどうかを指定できます。よくわからない場合は、対称ではなく、強制ではないと宣言した方がよいでしょう。しかし、一部のソルバー(例えば共役勾配)は非強制問題には使用できません。"
+" <literal>brickname</literal> はブリックのオプション名です。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:488
 msgid ""
@@ -1576,6 +1584,14 @@ msgid ""
 "is defined in the model as data with the given name. Return the brick index "
 "in the model."
 msgstr ""
+"変数 <literal>varname</literal> に追加の明示的ペナルティ制約を追加します。制約は以下の通りである。 "
+":math<literal>BU=L</literal> と <literal>B</literal> は矩形の疎行列である。 "
+"<literal>B</literal> にはペイン行を含めないでください。そうしないと、接線行列全体が単純になります。 "
+"gf_model_set(model M, 'set private matrix') と  gf_model_set(model M, 'set "
+"private rhs') メソッドを使用すると、いつでも拘束を変更できます。gf_model_set(model M, 'change "
+"penalization coeff') を使用できます。 <literal>L</literal> の代わりに  "
+"<literal>dataname</literal> が指定された場合、ベクトル <literal>L</literal> "
+"は指定された名前のデータとしてモデル内で定義されます。モデル内のブリックインデックスを返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:950
 msgid ""
@@ -2331,6 +2347,19 @@ msgid ""
 "then the normal derivative of <literal>dataname</literal> is considered. "
 "Return the brick index in the model."
 msgstr ""
+"変数 <literal>varname</literal> の法線導関数とメッシュ領域 <literal>region</literal> "
+"(境界である必要があります）にDirichlet条件を追加します。一般的な形式は以下の通りである<latex "
+"style=\"text\"><![CDATA[\\int \\partial_n u(x)v(x) = \\int r(x)v(x) \\forall"
+" v]]></latex>ここで、 <latex style=\"text\"><![CDATA[r(x)]]></latex> "
+"はDirichlet条件(均一条件の場合は0)の右辺であり、<latex style=\"text\"><![CDATA[v]]></latex>は "
+"<literal>mult_description</literal> で定義される乗数の空間にある。 "
+"<literal>mult_description</literal> "
+"が文字列の場合は、乗数(これは、最初にモデルのメッシュ領域で乗数変数として宣言する必要があります)に対応する変数名と見なされます。有限要素法(mesh_femオブジェクト)の場合は、乗数変数がモデルに追加され、この有限要素法(メッシュ領域"
+"  <literal>region</literal> "
+"に制限され、最終的に他の乗数変数との自由度の競合が抑制されます)に基づいて構築されます。整数の場合は、乗数変数がモデルに追加され、その整数の次数の従来の有限要素に基づいて構築されます。"
+" <literal>dataname</literal> はDirichlet条件の右辺を表すオプションのパラメータです。もし "
+"<literal>R_must_be_derivated</literal> が <literal>true</literal> に設定されていれば、 "
+"<literal>dataname</literal> の正規導関数が考慮されます。モデル内のブリックインデックスを返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:1325
 msgid ""
@@ -2359,6 +2388,15 @@ msgid ""
 "then the normal derivative of <literal>dataname</literal> is considered. "
 "Return the brick index in the model."
 msgstr ""
+"変数 <literal>varname</literal> の法線導関数とメッシュ領域 <literal>region</literal>  "
+"(境界である必要があります）にDirichlet条件を追加します。一般的な形式は以下の通りです <latex "
+"style=\"text\"><![CDATA[\\int \\partial_n u(x)v(x) = \\int r(x)v(x) \\forall"
+" v]]></latex> ここで <latex style=\"text\"><![CDATA[r(x)]]></latex> "
+"はDirichlet条件(均一条件の場合は0)の右辺です。ペナルティ係数は最初は <literal>coeff</literal> "
+"であり、モデルのデータに追加されます。これは、 gf_model_set(model M, 'change penalization coeff') "
+"コマンドで変更できます。 <literal>dataname</literal> はDirichlet条件の右辺を表すオプションのパラメータです。もし "
+"<literal>R_must_be_derivated</literal> が <literal>true</literal> に設定されていれば、"
+"  <literal>dataname</literal> の正規導関数が考慮されます。モデル内のブリックインデックスを返します。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:1344
 msgid ""
@@ -2528,6 +2566,8 @@ msgid ""
 "change from a step to another for all one-step schemes (i.e. for the moment "
 "to all proposed time integration schemes)."
 msgstr ""
+"時間ステップの値を <literal>dt</literal> "
+"に設定します。この値は、すべてのワンステップスキームでステップから別のステップに変更できます(すなわち現時点では、提案されているすべての時間積分法)。"
 
 #: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_model_set.rst:1444
 msgid "``gf_model_set(model M, 'set time', scalar t)``"
