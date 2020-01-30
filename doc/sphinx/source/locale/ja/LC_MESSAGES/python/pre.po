@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: 2018-07-16 07:17+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:10
+#: ../source/python/pre.rst:10
 msgid "Preliminary"
 msgstr "準備"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:12
+#: ../source/python/pre.rst:12
 msgid ""
 "This is just a short summary of the terms employed in this manual. If you "
 "are not familiar with finite elements, this should be useful (but in any "
@@ -34,7 +34,7 @@ msgstr ""
 "これは、このマニュアルで使用されている用語の簡単な要約です。有限要素に慣れていない場合であれば便利です(但し、どんな場合でも :ref:`dp` "
 "は読みましょう)。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:16
+#: ../source/python/pre.rst:16
 msgid ""
 "The :envvar:`mesh` is composed of :envvar:`convexes`. What we call convexes "
 "can be simple line segments, prisms, tetrahedrons, curved triangles, of even"
@@ -58,7 +58,7 @@ msgstr ""
 " :envvar:`geometrical nodes` を定義します。幾何変換はこれらのノードを :envvar:`mesh nodes` "
 "にマップします。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:28
+#: ../source/python/pre.rst:28
 msgid ""
 "On the mesh, one defines a set of basis functions: the :envvar:`FEM`. A FEM "
 "is associated at each convex. The basis functions are also attached to some "
@@ -82,7 +82,7 @@ msgstr ""
 "に関連)します。FEMは各基底関数が積分された形状点で1に等しく、他の基底関数の形状点でnullであるとき、 :envvar:`Lagrangian` "
 "であるといいます。有限要素空間上の任意の関数を :envvar:`補間` することが非常に簡単になるため、これは重要な特性です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:41
+#: ../source/python/pre.rst:41
 msgid ""
 "The finite elements method involves evaluation of integrals of these basis "
 "functions (or product of basis functions etc.) on convexes (and faces of "
@@ -103,25 +103,25 @@ msgstr ""
 " :envvar:`積分法` の :envvar:`求積公式` の式が付加されます "
 "。近似積分法を使用する必要がある場合は、常にその次数(すなわち、方法と正確に積分された多項式の最高次数)を慎重に選択してください。FEMの次数、幾何変換の多項式次数、および基本行列の性質を考慮する必要があります。適切な次数がわからない場合は、不要な線形システムを生成する低次積分法よりも、(アセンブリが遅くなりますが)常に高次積分法を選択します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:55
+#: ../source/python/pre.rst:55
 msgid ""
 "The process of construction of a global linear system from integrals of "
 "basis functions on each convex is the :envvar:`assembly`."
 msgstr "各凸包の基底関数の積分から全体線形システムを構築するプロセスは :envvar:`assembly` です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:58
+#: ../source/python/pre.rst:58
 msgid ""
 "A mesh, with a set of FEM attached to its convexes is called a "
 ":envvar:`mesh_fem` object in |gf|."
 msgstr "一連のFEMが凸包に接続されたメッシュは |gf| で :envvar:`mesh_fem` オブジェクトと呼ばれます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:61
+#: ../source/python/pre.rst:61
 msgid ""
 "A mesh, with a set of integration methods attached to its convexes is called"
 " a :envvar:`mesh_im` object in |gf|."
 msgstr "一連の積分法が接続されたメッシュは |gf| で :envvar:`mesh_im` オブジェクトと呼ばれます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:64
+#: ../source/python/pre.rst:64
 msgid ""
 "A |mf| can be used to approximate scalar fields (heat, pression, ...), or "
 "vector fields (displacement, electric field, ...). A |mim| will be used to "
@@ -139,7 +139,7 @@ msgstr ""
 ":math:`Qdim` をベクトルフィールドの次元に設定します(例えば :math:`Qdim=1` :math:`\\Rightarrow` "
 "スカラーフィールド、 :math:`Qdim=2` :math:`\\Rightarrow` ベクトルフィールドなど)。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:73
+#: ../source/python/pre.rst:73
 msgid ""
 "When solving a PDE, one often has to use more than one FEM. The most "
 "important one will be of course the one on which is defined the solution of "
@@ -147,11 +147,11 @@ msgid ""
 msgstr ""
 "偏微分方程式を解く場合、多くの場合、複数のFEMを使用する必要があります。もちろん偏微分方程式の解が定義されている問題は最も重要です。ただし、ほとんどの偏微分方程式にはさまざまな係数が含まれます。たとえば、次のような場合です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:77
+#: ../source/python/pre.rst:77
 msgid "\\nabla\\cdot(\\lambda(x)\\nabla u) = f(x)."
 msgstr "\\nabla\\cdot(\\lambda(x)\\nabla u) = f(x)."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:81
+#: ../source/python/pre.rst:81
 msgid ""
 "Hence one has to define a FEM for the main unknown :math:`u`, but also for "
 "the data :math:`\\lambda(x)` and :math:`f(x)` if they are not constant. In "
@@ -162,7 +162,7 @@ msgstr ""
 ":math:`f(x)` に対しても定義が必要になります。これらの係数を有限要素空間で容易に補間するためにLagrange "
 "有限要素法を選択することが多いです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:86
+#: ../source/python/pre.rst:86
 msgid ""
 "The convexes, mesh nodes, and dof are all numbered. We sometimes refer to "
 "the number associated to a convex as its :envvar:`convex id` (contracted to "
@@ -176,7 +176,7 @@ msgstr ""
 "とします) で参照することがあります。メッシュ節点番号は :envvar:`ポイントid` ( :envvar:`pid` "
 "とします)とも呼ばれます。凸包面にはグローバルな番号付けはなく、各凸包のローカルな番号のみが付けられます。したがって、面のリストを必要とする関数や返す関数は、常に2行の行列を使用します。最初の行列には凸包idが含まれ、2番目の行列にはローカル面番号が含まれます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/pre.rst:94
+#: ../source/python/pre.rst:94
 msgid ""
 "While the dof are always numbered consecutively, **this is not always the "
 "case for point ids and convex ids**, especially if you have removed points "

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:14
+#: ../source/userdoc/model_contact_friction.rst:14
 msgid "Small sliding contact with friction bricks"
 msgstr "摩擦ブリック要素との微小すべり接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:16
+#: ../source/userdoc/model_contact_friction.rst:16
 msgid ""
 "The aim of these bricks is to take into account a contact condition with or "
 "without friction of an elastic structure on a rigid foundation or between "
@@ -35,11 +35,11 @@ msgid ""
 msgstr ""
 "これらのブリック要素の目的は、剛性のある基礎上または2つの弾性構造の間の弾性構造の摩擦を伴うかまたは伴わない接触条件を考慮に入れることです。これらのブリック要素の接触は微小変形近似に制限されています（これは平坦な障害物に大きな変形を含むことがあります）。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:19
+#: ../source/userdoc/model_contact_friction.rst:19
 msgid "Approximation of contact"
 msgstr "接触の近似"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:21
+#: ../source/userdoc/model_contact_friction.rst:21
 msgid ""
 "For small deformation problems submitted a simple (compared to large "
 "deformation !) expression of the contact with friction condition is usually "
@@ -52,7 +52,7 @@ msgstr ""
 "微小変形問題に対しては、接線方向の変位が通常の変位に影響を与えない場合、摩擦条件との接触の単純な表現（有限変形と比較して "
 "!）が通常使用されます。これは、障害物が完全に平坦でない場合には、当然、接線方向の変位が接点が保持する点に影響するという意味での近似です。これは、接触状態が基準構成に記載されているとみなすことができる微小変形の場合には当てはまりません。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:24
+#: ../source/userdoc/model_contact_friction.rst:24
 msgid ""
 "There are mainly two largely used discretizations of the contact with "
 "friction condition in this framework: a direct nodal contact condition "
@@ -67,17 +67,17 @@ msgid ""
 msgstr ""
 "主に摩擦条件との接触の離散化は、結合接触条件（通常は変位有限要素節点で規定される）または微小すべり接触条件（通常は乗数有限要素節点で規定される）の2つです。2つの離散化は同様のシステムにつながります。しかし、量の解釈は同じではありません。第3のアプローチは、弱積分接触条件であるGetfem接触ブリック要素です。各反復時に接触境界に非線形積分の計算が必要ですが、数値分解能は連続原理から直接導出されるため、ポテンシャル的によりスケーラブルです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:26
+#: ../source/userdoc/model_contact_friction.rst:26
 msgid ""
 "More details can be found for instance in [KI-OD1988]_, [KH-PO-RE2006]_ and "
 "[LA-RE2006]_."
 msgstr "詳細は、例えば [KI-OD1988]_ 、 [KH-PO-RE2006]_ および [LA-RE2006]_ で見つけることができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:29
+#: ../source/userdoc/model_contact_friction.rst:29
 msgid "Direct nodal contact condition"
 msgstr "結合接触状態"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:31
+#: ../source/userdoc/model_contact_friction.rst:31
 msgid ""
 "A nodal contact condition consists in a certain number of contact nodes "
 ":math:`a_i`, :math:`i=1..N_c` on which a contact with (or without) friction "
@@ -86,7 +86,7 @@ msgstr ""
 "節点接触条件は、摩擦条件との接触（または摩擦条件なし）が適用されるいくつかの接触節点 :math:`a_i`, :math:`i=1..N_c` "
 "で構成されます。接触条件は次の通りです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:33
+#: ../source/userdoc/model_contact_friction.rst:33
 msgid ""
 "u_N(a_i)-\\text{gap}_i \\le 0, ~~ \\lambda_N^i \\le 0,  ~~ "
 "(u_N(a_i)-\\text{gap}_i) \\lambda_N^i = 0,"
@@ -94,7 +94,7 @@ msgstr ""
 "u_N(a_i)-\\text{gap}_i \\le 0, ~~ \\lambda_N^i \\le 0, ~~ "
 "(u_N(a_i)-\\text{gap}_i) \\lambda_N^i = 0,"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:37
+#: ../source/userdoc/model_contact_friction.rst:37
 msgid ""
 "where :math:`\\lambda_N^i` is the equivalent nodal contact force on "
 ":math:`a_i` and :math:`u_N(a_i)` is the normal relative displacement between"
@@ -106,7 +106,7 @@ msgstr ""
 "は弾性体と障害物の間、または2つの弾性体の正規相対変位です。項 :math:`\\text{gap}_i` "
 "は、参照設定の2つのソリッド間の通常のギャップを表します。摩擦条件は"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:39
+#: ../source/userdoc/model_contact_friction.rst:39
 msgid ""
 "\\|\\lambda_T^i\\| \\le -{\\mathscr F} \\lambda_N^i,  \\lambda_T^i = "
 "{\\mathscr F} \\lambda_N^i \\frac{\\dot{u}_T}{\\|\\dot{u}_T\\|} ~~~ \\text{ "
@@ -116,7 +116,7 @@ msgstr ""
 "{\\mathscr F} \\lambda_N^i \\frac{\\dot{u}_T}{\\|\\dot{u}_T\\|} ~~~ \\text{ "
 "when } \\dot{u}_T \\ne 0,"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:45
+#: ../source/userdoc/model_contact_friction.rst:45
 msgid ""
 "where :math:`\\dot{u}_T` is the relative slip velocity, :math:`{\\mathscr "
 "F}` is the friction coefficient and :math:`\\lambda_T^i` the equivalent "
@@ -126,11 +126,11 @@ msgstr ""
 "ここで、 :math:`\\dot{u}_T` は相対すべり速度です。 :math:`{\\mathscr F}` は摩擦係数で、 "
 ":math:`\\lambda_T^i` は :math:`a_i` 上の等価節点摩擦力です。摩擦条件は、包含物によって整理することができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:47
+#: ../source/userdoc/model_contact_friction.rst:47
 msgid "\\lambda_T^i \\in {\\mathscr F} \\lambda_N^i \\text{Dir}(\\dot{u}_T),"
 msgstr "\\lambda_T^i \\in {\\mathscr F} \\lambda_N^i \\text{Dir}(\\dot{u}_T),"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:51
+#: ../source/userdoc/model_contact_friction.rst:51
 msgid ""
 "where :math:`\\text{Dir}(\\dot{u}_T)` is the multivalued map being the sub-"
 "differential of :math:`x \\mapsto \\|x_T\\|` (i.e. :math:`\\text{Dir}(x) = "
@@ -145,18 +145,18 @@ msgstr ""
 ":math:`\\text{Sign}(\\dot{u}_T)` のようになります、ここで :math:`\\text{Sign}` "
 "は多値記号写像です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:53
+#: ../source/userdoc/model_contact_friction.rst:53
 msgid ""
 "A complete linearized elasticity problem with contact with friction reads as"
 msgstr "摩擦が発生する接触の完全な線形弾性問題は次の通りです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:55
+#: ../source/userdoc/model_contact_friction.rst:55
 msgid ""
 "Given an augmentation parameter :math:`r`, the contact and friction "
 "conditions can be equivalently expressed in term of projection as"
 msgstr "増大パラメータ :math:`r` が与えられた場合、接触および摩擦条件は、等価的に投影の項で表すことができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:57
+#: ../source/userdoc/model_contact_friction.rst:57
 msgid ""
 "\\frac{1}{r}(\\lambda_N^i - P_{]-\\infty, 0]}(\\lambda_N^i - r (u_N(a_i) - "
 "\\text{gap}_i))) = 0,  \\frac{1}{r}(\\lambda_T^i - P_{{\\mathscr "
@@ -168,7 +168,7 @@ msgstr ""
 "B}(-{\\mathscr F}P_{]-\\infty, 0]}(\\lambda_N^i - r(u_N(a_i) - "
 "\\text{gap}_i))}(\\lambda_T^i - r \\dot{u}_T(a_i))) = 0,"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:63
+#: ../source/userdoc/model_contact_friction.rst:63
 msgid ""
 "where :math:`P_K` is the projection on the convex :math:`K` and "
 ":math:`{\\mathscr B}(-{\\mathscr F}\\lambda_N^i)` is the ball of center "
@@ -179,7 +179,7 @@ msgstr ""
 "F}\\lambda_N^i)` は中心 :math:`0` 半径 :math:`-{\\mathscr F}\\lambda_N^i` "
 "の球です。これらの表現は、半 Smooth Newton法を実行するために使用されます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:66
+#: ../source/userdoc/model_contact_friction.rst:66
 msgid ""
 "Suppose now that you approximate a linearized elasticity problem submitted "
 "to contact with friction. Then, if :math:`U` is the vector of the unknown "
@@ -189,13 +189,13 @@ msgstr ""
 "摩擦との接触に提出された線形弾性問題を近似したとします。そして、もし :math:`U` が変位のための未知数のベクトルなら、次のような行列 "
 ":math:`B_N` と :math:`B_T` を表現することができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:68
+#: ../source/userdoc/model_contact_friction.rst:68
 msgid ""
 "u_N(a_i) = (B_N U)_i,  (\\dot{u}_T(a_i))_k = (B_T \\dot{U})_{(d-1)(i-1)+k},"
 msgstr ""
 "u_N(a_i) = (B_N U)_i,  (\\dot{u}_T(a_i))_k = (B_T \\dot{U})_{(d-1)(i-1)+k},"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:74
+#: ../source/userdoc/model_contact_friction.rst:74
 msgid ""
 "where :math:`d` is the dimension of the domain and :math:`k = 1..d-1`. The "
 "expression of the elasticity problem with contact with friction can be "
@@ -204,7 +204,7 @@ msgstr ""
 "ここで、 :math:`d` は領域の次元であり、 :math:`k = 1..d-1` "
 "です。摩擦との接触による弾性問題の表現は、次のように書くことができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:76
+#: ../source/userdoc/model_contact_friction.rst:76
 msgid ""
 "K U = L + B_N^T \\lambda_N + B_T^T \\lambda_T,  "
 "-\\frac{1}{r\\alpha_i}(\\lambda_N^i - P_{]-\\infty, 0]}(\\lambda_N^i - "
@@ -222,7 +222,7 @@ msgstr ""
 "\\text{gap}_i))))}(\\lambda_T^i - \\alpha_i r (B_T U - B_T U^{0})_i)) = 0, "
 "~~ i = 1..N_c,"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:84
+#: ../source/userdoc/model_contact_friction.rst:84
 msgid ""
 "where :math:`\\alpha_i` is a parameter which can be added for the "
 "homogenization of the augmentation parameter, :math:`(B_T U)_i` denotes here"
@@ -241,7 +241,7 @@ msgstr ""
 "U^{0})}{\\Delta t}` に離散化されています。もちろん他の滑り速度の表現も可能であるが、時間ステップ :math:`\\Delta t`"
 " は摩擦条件の中に表れません。なぜなら、それは滑り速度の方向に影響を与えないためです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:87
+#: ../source/userdoc/model_contact_friction.rst:87
 msgid ""
 "In that case, the homogenization coefficient :math:`\\alpha_i` can be taken "
 "proportional to :math:`h^{d-2}` (:math:`h` being the diameter of the "
@@ -254,11 +254,11 @@ msgstr ""
 "はブリック要素の直径です。)。このようにして、増強パラメータ :math:`r` は、 :math:`N/m^2` "
 "で表すことができ、弾性体のYoung率に近づくように選択されています。この解は、増強パラメータの値に対して敏感ではないことに注意してください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:91
+#: ../source/userdoc/model_contact_friction.rst:91
 msgid "Weak nodal contact condition"
 msgstr "微小すべり接触条件"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:93
+#: ../source/userdoc/model_contact_friction.rst:93
 msgid ""
 "The direct nodal condition may have some drawback : locking phenomena, over-"
 "constraint. It is in fact often more stable and for the same accuracy to use"
@@ -268,7 +268,7 @@ msgid ""
 msgstr ""
 "結合接触条件にはいくつかの欠点があります：ロック現象、過度の制約。実際には、変位と比較して減少した次数の乗数を使用することは、しばしばより安定しており、同じ精度となります（結合接触条件は、変位と同じ有限要素法で記述された乗数にほぼ相当します）。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:95
+#: ../source/userdoc/model_contact_friction.rst:95
 msgid ""
 "Let :math:`\\varphi_i` be the shapes functions of the finite element "
 "describing the displacement and :math:`\\psi_i` be the shape functions of a "
@@ -279,7 +279,7 @@ msgstr ""
 ":math:`\\varphi_i` を、変位を記述する有限要素の試行関数とします。:math:`\\psi_i` は、接触境界 "
 ":math:`\\Gamma_c` 上の乗数を記述する有限要素の試行関数です。法線応力を記述する許容乗数の集合は、"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:97
+#: ../source/userdoc/model_contact_friction.rst:97
 msgid ""
 "\\Lambda_N^h = \\{ \\mu^h_N = \\sum \\mu^j_N \\psi_j : \\mu^h_N(a_i) \\le 0,"
 " ~i = 1..N_c \\}"
@@ -287,7 +287,7 @@ msgstr ""
 "\\Lambda_N^h = \\{ \\mu^h_N = \\sum \\mu^j_N \\psi_j : \\mu^h_N(a_i) \\le 0,"
 " ~i = 1..N_c \\}"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:101
+#: ../source/userdoc/model_contact_friction.rst:101
 msgid ""
 "where :math:`a_i`, :math:`~~i=1..N_c` are the finite element nodes "
 "corresponding to the multiplier. The discrete contact condition is now "
@@ -296,7 +296,7 @@ msgstr ""
 "ここで、 :math:`a_i` 、 :math:`~~i=1..N_c` "
 "は、乗数に対応する有限要素節点です。離散接触条件は、次のように弱形式で表されます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:103
+#: ../source/userdoc/model_contact_friction.rst:103
 msgid ""
 "\\int_{\\Gamma_c} (\\mu_N^h - \\lambda_N^h) (u_N - \\text{gap}) d\\Gamma "
 "\\ge 0 ~~ \\forall \\mu_N^h \\in \\Lambda_N^h."
@@ -304,7 +304,7 @@ msgstr ""
 "\\int_{\\Gamma_c} (\\mu_N^h - \\lambda_N^h) (u_N - \\text{gap}) d\\Gamma "
 "\\ge 0 ~~ \\forall \\mu_N^h \\in \\Lambda_N^h."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:107
+#: ../source/userdoc/model_contact_friction.rst:107
 msgid ""
 "In that case, the component :math:`\\lambda_N^i` is a contact stress "
 "(:math:`N/m^2`) and the matrix :math:`B_N` can be written"
@@ -312,17 +312,17 @@ msgstr ""
 "その場合、成分 :math:`\\lambda_N^i` は接触応力(:math:`N/m^2`)であり、行列 :math:`B_N` "
 "は次のように表すことができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:109
+#: ../source/userdoc/model_contact_friction.rst:109
 msgid "(B_N)_{ij} = \\int_{\\Gamma_c} \\psi_i \\varphi_j d\\Gamma."
 msgstr "(B_N)_{ij} = \\int_{\\Gamma_c} \\psi_i \\varphi_j d\\Gamma."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:113
+#: ../source/userdoc/model_contact_friction.rst:113
 msgid ""
 "The matrix :math:`B_T` can also be written in a similar way. The friction "
 "condition can be written in a weak form"
 msgstr "行列 :math:`B_T` も同様の方法で書くことができます。摩擦状態は弱形式で書くことができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:115
+#: ../source/userdoc/model_contact_friction.rst:115
 msgid ""
 "\\int_{\\Gamma_c} (\\mu_T^h - \\lambda_T^h) \\dot{u}_T d\\Gamma \\ge 0 ~~ "
 "\\forall \\mu_T^h \\in \\Lambda_T^h({\\mathscr F}\\lambda_N^h),"
@@ -330,18 +330,18 @@ msgstr ""
 "\\int_{\\Gamma_c} (\\mu_T^h - \\lambda_T^h) \\dot{u}_T d\\Gamma \\ge 0 ~~ "
 "\\forall \\mu_T^h \\in \\Lambda_T^h({\\mathscr F}\\lambda_N^h),"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:119
+#: ../source/userdoc/model_contact_friction.rst:119
 msgid ""
 "where :math:`\\Lambda_T^h({\\mathscr F}\\lambda_N^h)` is the discrete set of"
 " admissible friction stress."
 msgstr "ここで、 :math:`\\Lambda_T^h({\\mathscr F}\\lambda_N^h)` は許容できる摩擦応力の離散集合です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:121
+#: ../source/userdoc/model_contact_friction.rst:121
 msgid ""
 "Finally, the expression of the direct nodal contact condition are recovered"
 msgstr "最後に、直接結節接触状態の表現を再掲します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:123
+#: ../source/userdoc/model_contact_friction.rst:123
 msgid ""
 "K U = L + B_N^T \\lambda_N + B_T^T \\lambda_T,  "
 "-\\frac{1}{r\\alpha_i}(\\lambda_N^i - P_{]-\\infty, 0]}(\\lambda_N^i - "
@@ -359,7 +359,7 @@ msgstr ""
 "\\text{gap}_i)))}(\\lambda_T^i - \\alpha_i r (B_T U - B_T U^{0})_i)) = 0, ~~"
 " i = 1..N_c,"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:131
+#: ../source/userdoc/model_contact_friction.rst:131
 msgid ""
 "except that now :math:`\\lambda_N^i` and :math:`\\lambda_T^i` are force "
 "densities, and :math:`\\alpha_i` has to be now chosen proportional to "
@@ -369,7 +369,7 @@ msgstr ""
 ":math:`\\lambda_N^i` と :math:`\\lambda_T^i` は力の密度であることを除き、:math:`\\alpha_i` "
 "は :math:`1/h^d` に比例するように選択され、増強パラメータ :math:`r` は弾性体のYoung率に近いまま選択できるようにします。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:134
+#: ../source/userdoc/model_contact_friction.rst:134
 msgid ""
 "Note that without additional stabilization technique (see [HI-RE2010]_) an "
 "inf-sup condition have to be satisfied between the finite element of the "
@@ -381,11 +381,11 @@ msgstr ""
 "を参照）がないと、変位の有限要素と乗数の要素の間で極限条件を満たされなければならないことに注意してください。これは、乗数の有限要素が、変位の有限要素よりも"
 " \"less rich\" でなければならないことを特に意味します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:140
+#: ../source/userdoc/model_contact_friction.rst:140
 msgid "Weak integral contact condition"
 msgstr "弱積分接触条件"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:142
+#: ../source/userdoc/model_contact_friction.rst:142
 msgid ""
 "The weak integral contact formulation allows not to explicitly describe the "
 "discrete set of admissible stress. See also "
@@ -397,7 +397,7 @@ msgstr ""
 "も参照してください。接触応力（摩擦を含む）は接触境界 :math:`\\Gamma_c` 上の有限要素空間 :math:`W^h` "
 "上に記述されています。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:144
+#: ../source/userdoc/model_contact_friction.rst:144
 msgid ""
 "\\lambda^h \\in W^h = \\left\\{ \\sum \\lambda_i \\psi_i, \\lambda_i \\in "
 "I\\hspace{-0.2em}R^d \\right\\}"
@@ -405,7 +405,7 @@ msgstr ""
 "\\lambda^h \\in W^h = \\left\\{ \\sum \\lambda_i \\psi_i, \\lambda_i \\in "
 "I\\hspace{-0.2em}R^d \\right\\}"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:148
+#: ../source/userdoc/model_contact_friction.rst:148
 msgid ""
 "where :math:`d` is the dimension of the problem and :math:`\\psi_i` still "
 "the shapes functions on which the contact stress is developed. Now, given a "
@@ -415,7 +415,7 @@ msgstr ""
 ":math:`d` は問題の次元であり、:math:`\\psi_i` は接触応力が発生する形状関数です。今、外向きの単位ベクトル :math:`n` "
 "を与える接触境界 :math:`\\Gamma_c` 上の（通常は障害物の法線）の標準分解を行います。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:150
+#: ../source/userdoc/model_contact_friction.rst:150
 msgid ""
 "\\lambda_N^h = \\lambda^h \\cdot n, ~~~~ \\lambda_T^h = \\lambda^h - "
 "\\lambda_N^h n, ~~~~ u_N^h = u^h \\cdot n, ~~~~ u_T^h = u^h - u_N^h n,"
@@ -423,7 +423,7 @@ msgstr ""
 "\\lambda_N^h = \\lambda^h \\cdot n, ~~~~ \\lambda_T^h = \\lambda^h - "
 "\\lambda_N^h n, ~~~~ u_N^h = u^h \\cdot n, ~~~~ u_T^h = u^h - u_N^h n,"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:155
+#: ../source/userdoc/model_contact_friction.rst:155
 msgid ""
 "where :math:`u^h` is the displacement field approximated on a finite element"
 " space :math:`V^h`. This allows to express the contact condition in the "
@@ -432,7 +432,7 @@ msgstr ""
 "ここで、 :math:`u^h` は、有限要素空間で近似された変位場 :math:`V^h` "
 "です。これにより、接触状態を以下のように表現することができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:157
+#: ../source/userdoc/model_contact_friction.rst:157
 msgid ""
 "\\displaystyle \\int_{\\Gamma_c} (\\lambda^h_N + (\\lambda^h_N - r(u^h_N-"
 "gap))_-)\\mu^h_N d\\Gamma = 0 ~~~~ \\forall \\mu^h \\in W^h,"
@@ -440,7 +440,7 @@ msgstr ""
 "\\displaystyle \\int_{\\Gamma_c} (\\lambda^h_N + (\\lambda^h_N - r(u^h_N-"
 "gap))_-)\\mu^h_N d\\Gamma = 0 ~~~~ \\forall \\mu^h \\in W^h,"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:161
+#: ../source/userdoc/model_contact_friction.rst:161
 msgid ""
 "where :math:`gap` is a given initial gap in reference configuration, "
 ":math:`r` is an augmentation parameter and "
@@ -451,7 +451,7 @@ msgstr ""
 "は拡大パラメータで、:math:`(\\cdot)_-:I\\hspace{-0.2em}R\\rightarrow "
 "I\\hspace{-0.2em}R_+` は負の部分です。摩擦条件も同様に書くことができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:163
+#: ../source/userdoc/model_contact_friction.rst:163
 msgid ""
 "\\displaystyle \\int_{\\Gamma_c} (\\lambda^h_T -P_{B(\\mathscr "
 "F(\\lambda^h_N - r(u^h_N-gap))_-)}(\\lambda^h_T - "
@@ -463,7 +463,7 @@ msgstr ""
 "r\\alpha(u^h_T-w^h_T)))\\cdot \\mu^h_T d\\Gamma = 0 ~~~~ \\forall \\mu^h "
 "\\in W^h,"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:167
+#: ../source/userdoc/model_contact_friction.rst:167
 msgid ""
 "where :math:`B(\\rho)` is the closed ball of center  :math:`0` and radius "
 ":math:`\\rho` and :math:`P_{B(\\rho)}` is the orthogonal projection on it "
@@ -479,7 +479,7 @@ msgstr ""
 ":math:`\\alpha` とフィールド :math:`w^h_T` "
 "は、選択された近似に関して適合させなければなりません。例えば、標準的な有限差分は次のようになります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:169
+#: ../source/userdoc/model_contact_friction.rst:169
 msgid ""
 "(\\dot{u}^h_T)^{n+1} \\approx \\displaystyle \\frac{(u^h_T)^{n+1} - "
 "(u^h_T)^{n}}{dt}"
@@ -487,7 +487,7 @@ msgstr ""
 "(\\dot{u}^h_T)^{n+1} \\approx \\displaystyle \\frac{(u^h_T)^{n+1} - "
 "(u^h_T)^{n}}{dt}"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:173
+#: ../source/userdoc/model_contact_friction.rst:173
 msgid ""
 "is chosen, then one has to take :math:`\\alpha = 1/dt` and :math:`w^h_T = "
 "(u^h_T)^{n}`. Note that due to the symmetry of the ball, the parameter "
@@ -502,7 +502,7 @@ msgstr ""
 "を選択する必要があります。ボールの対称性のために、パラメータ :math:`\\alpha` "
 "は、調合において重要な役割を果たさないことに注意してください。これは、接触条件のための増強パラメータと摩擦条件のための増強パラメータとの間のスケーリングとして単純に見ることができます。以前の接触式とは対照的に、ここでは、増強パラメータ（独立性は連続レベルでのみ生じる）に関して条件の厳密な独立性はありません。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:176
+#: ../source/userdoc/model_contact_friction.rst:176
 msgid ""
 "GetFEM++ bricks implement four versions of the contact condition derived "
 "from the Alart-Curnier augmented Lagrangian formulation [AL-CU1991]_. The "
@@ -511,7 +511,7 @@ msgstr ""
 "GetFEM++ ブリック要素は、Alart-Curnier拡張Lagrangian配合 [AL-CU1991]_ "
 "から得られた接触条件の4つのバージョンを実装しています。最初のものは非対称バージョンに対応します。それは次のようになります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:178
+#: ../source/userdoc/model_contact_friction.rst:178
 msgid ""
 "\\left\\{\\begin{array}{l} a(u^h, v^h) + \\displaystyle \\int_{\\Gamma_c} "
 "\\lambda^h \\cdot v^h d\\Gamma = \\ell(v^h) ~~~~ \\forall v^h \\in V^h, \\\\"
@@ -529,7 +529,7 @@ msgstr ""
 "r\\alpha(u^h_T-w^h_T)))\\cdot \\mu^h_T d\\Gamma = 0 ~~~~ \\forall \\mu^h "
 "\\in W^h, \\end{array}\\right."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:186
+#: ../source/userdoc/model_contact_friction.rst:186
 msgid ""
 "where :math:`a(\\cdot, \\cdot)` and :math:`\\ell(v)` represent the remaining"
 " parts of the problem in  :math:`u`, for instance linear elasticity and "
@@ -547,7 +547,7 @@ msgstr ""
 "/ r` を選択することにあたることに注意してください。 :math:`r_0` "
 "は、弾性係数の次元を有します（古典的にはYoung率の値）。Newton反復を書くためには、接線系を導出しなければなりません。それは右辺ではなく、接触と摩擦の項のみで書くことができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:188
+#: ../source/userdoc/model_contact_friction.rst:188
 msgid ""
 "\\left\\{\\begin{array}{l} \\cdots - \\displaystyle \\int_{\\Gamma_c} "
 "\\delta_{\\lambda} \\cdot v d\\Gamma = \\cdots  ~~~~ \\forall v^h \\in V^h, "
@@ -587,7 +587,7 @@ msgstr ""
 "r\\alpha(u^h_T-w^h_T))\\delta_{\\lambda_N})\\cdot\\mu^h_T d\\Gamma = \\cdots"
 " ~~~ \\forall \\mu^h \\in W^h, \\end{array}\\right."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:200
+#: ../source/userdoc/model_contact_friction.rst:200
 msgid ""
 "where :math:`H(\\cdot)` is the Heaviside function (0 for a negative argument"
 " and 1 for a non-negative argument), :math:`D_xP_{B(\\rho)}(x)` and "
@@ -601,7 +601,7 @@ msgstr ""
 ":math:`\\rho \\le 0` が消滅すると想定される)射影 :math:`B(\\rho)` の微分で "
 ":math:`\\delta_{\\lambda}` と :math:`\\delta_{u}` は接線問題に対応する未知数です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:203
+#: ../source/userdoc/model_contact_friction.rst:203
 msgid ""
 "The second version corresponds to the \"symmetric\" version. It is in fact "
 "symmetric in the frictionless case only (because in this case it directly "
@@ -610,7 +610,7 @@ msgstr ""
 "第2のバージョンは、 \"対称\" "
 "バージョンに対応します。実際には、摩擦のない場合のみ対称です（この場合、これは、拡張されたLagrangian式から直接導かれるからである）。それは以下の通りになります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:205
+#: ../source/userdoc/model_contact_friction.rst:205
 msgid ""
 "\\left\\{\\begin{array}{l} a(u^h, v^h) + \\displaystyle \\int_{\\Gamma_c} "
 "(\\lambda^h_N - r(u^h_N-gap))_- v^h_N d\\Gamma \\\\ ~~~~~~ - \\displaystyle "
@@ -632,12 +632,12 @@ msgstr ""
 "r\\alpha(u^h_T-w^h_T)))\\cdot \\mu^h_T d\\Gamma = 0 ~~~~ \\forall \\mu^h "
 "\\in W^h, \\end{array}\\right."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:214
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:243
+#: ../source/userdoc/model_contact_friction.rst:214
+#: ../source/userdoc/model_contact_friction.rst:243
 msgid "and the tangent system:"
 msgstr "そして接線系は次の通りです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:216
+#: ../source/userdoc/model_contact_friction.rst:216
 msgid ""
 "\\left\\{\\begin{array}{l} \\cdots + \\displaystyle \\int_{\\Gamma_c} rH(r(u"
 "^h_N-gap)-\\lambda_N)\\delta_{u_N} v_N -  H(r(u^h_N-"
@@ -699,11 +699,11 @@ msgstr ""
 "r\\alpha(u^h_T-w^h_T))\\delta_{\\lambda_N})\\cdot\\mu^h_T d\\Gamma = \\cdots"
 " ~~~ \\forall \\mu^h \\in W^h, \\end{array}\\right."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:232
+#: ../source/userdoc/model_contact_friction.rst:232
 msgid "still with :math:`\\rho={\\mathscr F}(\\lambda^h_N - r(u^h_N-gap))_-`."
 msgstr ":math:`\\rho={\\mathscr F}(\\lambda^h_N - r(u^h_N-gap))_-` のようになります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:234
+#: ../source/userdoc/model_contact_friction.rst:234
 msgid ""
 "The third version corresponds to a penalized contact and friction condition."
 " It does not require the use of a multiplier. In this version, the parameter"
@@ -715,7 +715,7 @@ msgstr ""
 ":math:`r` "
 "はペナルティ化パラメータであり、非貫通およびCoulomb摩擦条件の良好な近似を実行するのに十分な大きさです。定式化は以下の通りです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:236
+#: ../source/userdoc/model_contact_friction.rst:236
 msgid ""
 "\\left\\{\\begin{array}{l} a(u^h, v^h) + \\displaystyle \\int_{\\Gamma_c} "
 "r(u^h_N-gap)_+ v^h_N d\\Gamma \\\\ ~~~~~~ + \\displaystyle \\int_{\\Gamma_c}"
@@ -727,7 +727,7 @@ msgstr ""
 " P_{B(\\mathscr F r(u^h_N-gap)_+)}(r\\alpha(u^h_T-w^h_T))\\cdot v^h_T "
 "d\\Gamma = \\ell(v^h) ~~~~ \\forall v^h \\in V^h, \\end{array}\\right."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:245
+#: ../source/userdoc/model_contact_friction.rst:245
 msgid ""
 "\\left\\{\\begin{array}{l} \\cdots + \\displaystyle \\int_{\\Gamma_c} rH(u"
 "^h_N-gap)\\delta_{u_N} v_N d\\Gamma \\\\ ~~~~~~- \\displaystyle "
@@ -747,11 +747,11 @@ msgstr ""
 "\\delta_{u_N})\\cdot v^h_T d\\Gamma = \\cdots  ~~~~ \\forall v^h \\in V^h, "
 "\\end{array}\\right."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:255
+#: ../source/userdoc/model_contact_friction.rst:255
 msgid "Numerical continuation"
 msgstr "数値継続"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:257
+#: ../source/userdoc/model_contact_friction.rst:257
 msgid ""
 "In addition, |gf| develops a method of numerical continuation for finding "
 "numerical solutions of discretized evolutionary contact problems based on "
@@ -763,7 +763,7 @@ msgstr ""
 "は積分された弱接触条件に基づいて、離散化された進化的接触問題の数値解を見つけるための数値継続法を開発しています（一般的な紹介については、 :ref"
 ":`ud-model-continuation` を参照）。この目的のために、パラメータに依存するすべり速度を摩擦条件に加えることができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:259
+#: ../source/userdoc/model_contact_friction.rst:259
 msgid ""
 "\\displaystyle \\int_{\\Gamma_c} \\Bigl(\\lambda^h_T -P_{B(-\\mathscr "
 "F\\lambda^h_N)}\\bigl(\\lambda^h_T - "
@@ -775,13 +775,13 @@ msgstr ""
 "r\\bigl(\\alpha(u^h_T-w^h_T)+(1-\\gamma)z^h_T\\bigr)\\bigr)\\Bigr)\\cdot "
 "\\mu^h_T d\\Gamma = 0 ~~~~ \\forall \\mu^h \\in W^h."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:263
+#: ../source/userdoc/model_contact_friction.rst:263
 msgid ""
 "Here, :math:`\\gamma` is a parameter and :math:`z^h_T` is an initial sliding"
 " velocity. It is worth mentioning that if one chooses"
 msgstr "ここで、 :math:`\\gamma` はパラメータであり、 :math:`z^h_T` は初期滑り速度です。もし誰かが選んだのであれば、"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:265
+#: ../source/userdoc/model_contact_friction.rst:265
 msgid ""
 "\\displaystyle \\alpha = \\frac{1}{dt},\\quad w^h_T = (u^h_T)^{n},\\quad "
 "z^h_T = \\frac{(u^h_T)^{n} - (u^h_T)^{n-1}}{dt},"
@@ -789,17 +789,17 @@ msgstr ""
 "\\displaystyle \\alpha = \\frac{1}{dt},\\quad w^h_T = (u^h_T)^{n},\\quad "
 "z^h_T = \\frac{(u^h_T)^{n} - (u^h_T)^{n-1}}{dt},"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:269
+#: ../source/userdoc/model_contact_friction.rst:269
 msgid ""
 "then he recovers the standard friction condition at time :math:`t_{n}` and "
 ":math:`t_{n+1}` for :math:`\\gamma` equal to 0 and 1, respectively."
 msgstr ":math:`t_{n}` と :math:`t_{n+1}` の標準摩擦条件をそれぞれ0と1に戻します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:274
+#: ../source/userdoc/model_contact_friction.rst:274
 msgid "Friction law"
 msgstr "摩擦則"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:276
+#: ../source/userdoc/model_contact_friction.rst:276
 msgid ""
 "Apart from pure Coulomb friction :math:`\\rho = {\\mathscr F} \\left| "
 "\\sigma_n \\right|`, the weak integral contact framework in |gf| also "
@@ -808,7 +808,7 @@ msgstr ""
 "純粋なCoulomb摩擦とは別に、次のようになります。 :math:`\\rho = {\\mathscr F} \\left| \\sigma_n "
 "\\right|` 、弱積分接触先フレームワーク |gf| より汎用的な摩擦法の記述もサポートしています。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:280
+#: ../source/userdoc/model_contact_friction.rst:280
 msgid ""
 "\\displaystyle \\rho = \\left\\{\\begin{array}{ll} \\tau_{adh} + {\\mathscr "
 "F} \\left| \\sigma_n \\right| & ~~~\\mbox{if } ~~ \\tau_{adh} + {\\mathscr "
@@ -820,7 +820,7 @@ msgstr ""
 "F} \\left| \\sigma_n \\right| < \\tau_{tresca} \\\\ \\tau_{tresca} & "
 "~~~\\mbox{otherwise} \\end{array}\\right."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:288
+#: ../source/userdoc/model_contact_friction.rst:288
 msgid ""
 "In this equation :math:`\\rho` is the admissible friction stress for a given"
 " normal stress :math:`\\sigma_n`, :math:`{\\mathscr F}` is the coefficient "
@@ -830,21 +830,21 @@ msgstr ""
 ":math:`{\\mathscr F}` は摩擦係数であり、次のようになります。 :math:`\\tau_{adh}` "
 "は接着荷重（負荷に依存しない）せん断応力であり、次のようになります。 :math:`\\tau_{tresca}` は最大せん断応力限界です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:300
+#: ../source/userdoc/model_contact_friction.rst:300
 msgid "Add a contact with or without friction to a model"
 msgstr "モデルに摩擦を伴うか伴わない接触を加えます"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:303
+#: ../source/userdoc/model_contact_friction.rst:303
 msgid "Frictionless basic contact brick"
 msgstr "摩擦のない基本接触ブリック要素"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:305
+#: ../source/userdoc/model_contact_friction.rst:305
 msgid ""
 "In order to add a frictionless contact brick you call the model object "
 "method::"
 msgstr "摩擦のない接触ブリック要素を追加するには、modelオブジェクトメソッドを呼び出します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:310
+#: ../source/userdoc/model_contact_friction.rst:310
 msgid ""
 "This function adds a frictionless contact brick on ``varname_u`` thanks to a"
 " multiplier variable ``multname_n``. If :math:`U` is the vector of degrees "
@@ -866,7 +866,7 @@ msgstr ""
 "は初期ギャップを表すオプションのパラメータです。これは、単一の値または値のベクトルにすることができます。 ``dataname_alpha`` "
 "は、拡張パラメータのためのオプションの均質化パラメータです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:312
+#: ../source/userdoc/model_contact_friction.rst:312
 msgid ""
 "The parameter `aug_version` indicates the augmentation strategy : 1 for the "
 "non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
@@ -875,21 +875,21 @@ msgstr ""
 "パラメータaug_versionは、非対称のAlart-"
 "Curnier拡張Lagrangeの場合は1、対称の場合は2、拡張された乗数に基づく非対称の方法の場合は3です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:314
+#: ../source/userdoc/model_contact_friction.rst:314
 msgid ""
 "Note that is possible to change the basic contact matrix :math:`B_N` by "
 "using::"
 msgstr "基本的な接触行列 :math:`B_N` を変更することは可能ですなことに注意してください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:320
+#: ../source/userdoc/model_contact_friction.rst:320
 msgid "Basic contact brick with friction"
 msgstr "摩擦を伴う基本接触ブリック要素"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:323
+#: ../source/userdoc/model_contact_friction.rst:323
 msgid "getfem::add_basic_contact_brick"
 msgstr "getfem::add_basic_contact_brick"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:323
+#: ../source/userdoc/model_contact_friction.rst:323
 msgid ""
 "(md, varname_u, multname_n, multname_t, dataname_r, BN, "
 "dataname_friction_coeff, dataname_gap, dataname_alpha, aug_version);"
@@ -897,7 +897,7 @@ msgstr ""
 "(md, varname_u, multname_n, multname_t, dataname_r, BN, "
 "dataname_friction_coeff, dataname_gap, dataname_alpha, aug_version);"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:325
+#: ../source/userdoc/model_contact_friction.rst:325
 msgid ""
 "This function adds a contact brick with friction on ``varname_u`` thanks to "
 "two multiplier variables ``multname_n`` and ``multname_t``. If ``U`` is the "
@@ -930,8 +930,8 @@ msgstr ""
 "は初期ギャップを表すオプションのパラメータです。これは、単一の値または値のベクトルにすることができます。 ``dataname_alpha`` "
 "は、拡張パラメータのためのオプションの均質化パラメータです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:346
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:406
+#: ../source/userdoc/model_contact_friction.rst:346
+#: ../source/userdoc/model_contact_friction.rst:406
 msgid ""
 "The parameter `aug_version` indicates the augmentation strategy : 1 for the "
 "non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
@@ -942,28 +942,28 @@ msgstr ""
 "Curnier拡張Lagrangianの場合は1、対称の場合は2、拡張乗算器に基づく非対称法の場合は3、De "
 "Saxceの拡張乗算器に基づく非対称投影の場合は4です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:352
+#: ../source/userdoc/model_contact_friction.rst:352
 msgid ""
 "Note that is possible to change the basic contact matrices :math:`B_N` and "
 ":math:`B_T` by using::"
 msgstr "基本的な接触行列 :math:`B_N` と :math:`B_T` を次のように変更することができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:359
+#: ../source/userdoc/model_contact_friction.rst:359
 msgid "Frictionless nodal contact with a rigid obstacle brick"
 msgstr "頑丈な障害物ブリック要素との摩擦のない節点接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:362
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:384
+#: ../source/userdoc/model_contact_friction.rst:362
+#: ../source/userdoc/model_contact_friction.rst:384
 msgid "getfem::add_nodal_contact_with_rigid_obstacle_brick"
 msgstr "getfem::add_nodal_contact_with_rigid_obstacle_brick"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:362
+#: ../source/userdoc/model_contact_friction.rst:362
 msgid ""
 "(md, mim, varname_u, multname_n, dataname_r, region, obstacle, aug_version);"
 msgstr ""
 "(md, mim, varname_u, multname_n, dataname_r, region, obstacle, aug_version);"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:364
+#: ../source/userdoc/model_contact_friction.rst:364
 msgid ""
 "This function adds a direct nodal frictionless contact condition with a "
 "rigid obstacle to the model. The condition is applied on the variable "
@@ -989,11 +989,11 @@ msgstr ""
 "は許容可能な値の範囲で選択する必要があります（弾性体のYoung率に近いです、Getfemのユーザーマニュアルを参照）。非対称のAlart-"
 "Curnier拡張Lagrangeの場合は1、対称の場合は2、拡張された乗算器に基づく非対称の方法の場合は3です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:379
+#: ../source/userdoc/model_contact_friction.rst:379
 msgid "Nodal contact with a rigid obstacle brick with friction"
 msgstr "摩擦を伴う頑丈な障害物のブリック要素との節の接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:382
+#: ../source/userdoc/model_contact_friction.rst:382
 msgid ""
 "(md, mim, varname_u, multname_n, multname_t, dataname_r, "
 "dataname_friction_coeff, region, obstacle, aug_version);"
@@ -1001,7 +1001,7 @@ msgstr ""
 "(md, mim, varname_u, multname_n, multname_t, dataname_r, "
 "dataname_friction_coeff, region, obstacle, aug_version);"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:386
+#: ../source/userdoc/model_contact_friction.rst:386
 msgid ""
 "This function adds a direct nodal contact with friction condition with a "
 "rigid obstacle to the model. The condition is applied on the variable "
@@ -1033,16 +1033,16 @@ msgstr ""
 "は許容可能な値の範囲で選択する必要があります（弾性体のYoung率に近いです、Getfemのユーザーマニュアルを参照）。 "
 "``dataname_friction_coeff`` は摩擦係数です。それは、各接点節点上の摩擦係数を表す値のスカラまたはベクトルです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:414
+#: ../source/userdoc/model_contact_friction.rst:414
 msgid "Frictionless nodal contact between non-matching meshes brick"
 msgstr "非整合メッシュブリック要素間の摩擦のない節点接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:418
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:456
+#: ../source/userdoc/model_contact_friction.rst:418
+#: ../source/userdoc/model_contact_friction.rst:456
 msgid "getfem::add_nodal_contact_between_nonmatching_meshes_brick"
 msgstr "getfem::add_nodal_contact_between_nonmatching_meshes_brick"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:417
+#: ../source/userdoc/model_contact_friction.rst:417
 msgid ""
 "(md, mim1, mim2, varname_u1, varname_u2, multname_n, dataname_r, rg1, rg2, "
 "slave1=true, slave2=false, aug_version=1);"
@@ -1050,7 +1050,7 @@ msgstr ""
 "(md, mim1, mim2, varname_u1, varname_u2, multname_n, dataname_r, rg1, rg2, "
 "slave1=true, slave2=false, aug_version=1);"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:420
+#: ../source/userdoc/model_contact_friction.rst:420
 msgid ""
 "This function adds a frictionless contact condition between two faces of one"
 " or two elastic bodies. The condition is applied on the variable `varname_u`"
@@ -1086,7 +1086,7 @@ msgstr ""
 "`slave1` は真で、`slave2` はfalseです。すなわち `rg1` はスレーブ面を含み、 `rg2` はマスター面です。 "
 "`slave1` と `slave2` のうちの1つだけがtrueに設定されるのが望ましいです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:441
+#: ../source/userdoc/model_contact_friction.rst:441
 msgid ""
 "The parameter `aug_version` indicates the augmentation strategy : 1 for the "
 "non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
@@ -1095,22 +1095,22 @@ msgstr ""
 "パラメータ `aug_version` は、非対称のAlart-"
 "Curnier拡張Lagrangeの場合は1、対称なLagrangianの場合は1、拡張された乗数を使用する非対称の方法の場合は3です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:446
+#: ../source/userdoc/model_contact_friction.rst:446
 msgid ""
 "Basically, this brick computes the matrix :math:`B_N` and the vectors gap "
 "and alpha and calls the basic contact brick."
 msgstr ""
 "基本的には、このブリック要素は行列 :math:`B_N` とベクトルのギャップとアルファを計算し、基本的な接触ブリック要素を呼び出します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:451
+#: ../source/userdoc/model_contact_friction.rst:451
 msgid "Nodal contact between non-matching meshes brick with friction"
 msgstr "非整合メッシュと摩擦との間の節点接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:456
+#: ../source/userdoc/model_contact_friction.rst:456
 msgid "(md, mim1, mim2, varname_u1, varname_u2, multname_n, multname_t,"
 msgstr "(md, mim1, mim2, varname_u1, varname_u2, multname_n, multname_t,"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:455
+#: ../source/userdoc/model_contact_friction.rst:455
 msgid ""
 "dataname_r, dataname_friction_coeff, rg1, rg2, slave1=true, slave2=false, "
 "aug_version=1);"
@@ -1118,7 +1118,7 @@ msgstr ""
 "dataname_r, dataname_friction_coeff, rg1, rg2, slave1=true, slave2=false, "
 "aug_version=1);"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:458
+#: ../source/userdoc/model_contact_friction.rst:458
 msgid ""
 "This function adds a contact with friction condition between two faces of "
 "one or two elastic bodies. The condition is applied on the variable "
@@ -1162,7 +1162,7 @@ msgstr ""
 "はスレーブ面を含み、 `rg2` はマスター面を含みます。`slave1` と `slave2` "
 "のうちの1つだけがtrueに設定されるのが望ましいです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:484
+#: ../source/userdoc/model_contact_friction.rst:484
 msgid ""
 "The parameter `aug_version` indicates the augmentation strategy : 1 for the "
 "non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3"
@@ -1173,7 +1173,7 @@ msgstr ""
 "Curnier拡張Lagrangianの場合は1、対称の場合は2、拡張倍率を使用する非対称方法の場合は3、拡張倍率およびDe "
 "Saxce投影の場合の非対称方法の場合は増補戦略として4を示します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:490
+#: ../source/userdoc/model_contact_friction.rst:490
 msgid ""
 "Basically, this brick computes the matrices :math:`B_N` and :math:`B_T` as "
 "well the vectors gap and alpha and calls the basic contact brick."
@@ -1181,17 +1181,17 @@ msgstr ""
 "基本的には、このブリック要素は行列 :math:`B_N` と :math:`B_T` "
 "とベクトルgapとalphaを計算し、基本的な接触要素を呼び出します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:496
+#: ../source/userdoc/model_contact_friction.rst:496
 msgid "Hughes stabilized frictionless contact condition"
 msgstr "摩擦のない接触状態を安定させるヒューズ"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:498
+#: ../source/userdoc/model_contact_friction.rst:498
 msgid ""
 "In order to add a Hughes stabilized frictionless contact brick you call the "
 "model object method::"
 msgstr "ヒューズにより安定化された摩擦のない接触要素を追加するには、modelオブジェクトメソッドを呼び出します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:503
+#: ../source/userdoc/model_contact_friction.rst:503
 msgid ""
 "This function adds a Hughes stabilized frictionless contact brick on "
 "``varname_u`` thanks to a multiplier variable ``multname_n``. If we take "
@@ -1216,7 +1216,7 @@ msgstr ""
 "は初期ギャップを表すオプションのパラメータです。これは、単一の値または値のベクトルにすることができます。``dataname_alpha`` "
 "は、拡張パラメータのためのオプションの均質化パラメータです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:505
+#: ../source/userdoc/model_contact_friction.rst:505
 msgid ""
 "The parameter `aug_version` indicates the augmentation strategy :  1 for the"
 " non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, "
@@ -1225,17 +1225,17 @@ msgstr ""
 "パラメータaug_versionは、非対称のAlart-Curnier拡張Lagrangeの場合は1、対称の場合は2、非対称のAlart-"
 "Curnierで拡張された乗数に基づく非対称の方法の場合は3です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:507
+#: ../source/userdoc/model_contact_friction.rst:507
 msgid ""
 "Note that the matrix :math:`D_N` is a sum of the basic contact term and the "
 "Hughes stabilised term. You can change it with::"
 msgstr "マトリクス :math:`D_N` は、基本接触項とヒューズ安定項の和であることに留意してください。これは変更することができます"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:513
+#: ../source/userdoc/model_contact_friction.rst:513
 msgid "Frictionless integral contact with a rigid obstacle brick"
 msgstr "剛性の障害物ブリック要素との摩擦のない一体接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:520
+#: ../source/userdoc/model_contact_friction.rst:520
 msgid ""
 "This function adds a frictionless contact condition with a rigid obstacle to"
 " the model, which is defined in an integral way. It is the direct "
@@ -1256,8 +1256,8 @@ msgstr ""
 "で記述されるべきです。 ``multname_n`` は接触応力を表す有限要素法変数でなければなりません。 ``multname_n`` と "
 "``varname_u`` の間の極限条件が必要です。拡張パラメータ ``dataname_r`` は、許容可能な値の範囲で選択する必要があります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:535
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:615
+#: ../source/userdoc/model_contact_friction.rst:535
+#: ../source/userdoc/model_contact_friction.rst:615
 msgid ""
 "Possible values for `option` is 1 for the non-symmetric Alart-Curnier "
 "augmented Lagrangian method, 2 for the symmetric one, 3 for the non-"
@@ -1267,19 +1267,19 @@ msgstr ""
 "オプションの可能な値は、非対称のAlart-Curnier拡張Lagrange法の場合は1、対称の場合は2、追加の増強を伴う非対称のAlart-"
 "Curnier法の場合は3、新しい非対称法の場合は4です。デフォルト値は1です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:540
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:620
+#: ../source/userdoc/model_contact_friction.rst:540
+#: ../source/userdoc/model_contact_friction.rst:620
 msgid ""
 "``mim`` represents of course the integration method. Note that it should be "
 "accurate enough to integrate efficiently the nonlinear terms involved."
 msgstr ""
 "``mim`` はもちろん積分法を表します。それは、関係する非線形項を効率的に積分するのに十分正確でなければならないことに注意してください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:545
+#: ../source/userdoc/model_contact_friction.rst:545
 msgid "Integral contact with a rigid obstacle brick with friction"
 msgstr "摩擦を伴う頑丈な障害物ブリック要素との一体的な接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:555
+#: ../source/userdoc/model_contact_friction.rst:555
 msgid ""
 "This function adds a contact with friction condition with a rigid obstacle "
 "to the model, which is defined in an integral way. It is the direct "
@@ -1300,8 +1300,8 @@ msgstr ""
 "で記述されるべきです。 ``multname_n`` は接触応力を表す有限要素法変数でなければなりません。 ``multname_n`` と "
 "``varname_u`` の間の極限条件が必要です。拡張パラメータ ``dataname_r`` は、許容可能な値の範囲で選択する必要があります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:570
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:707
+#: ../source/userdoc/model_contact_friction.rst:570
+#: ../source/userdoc/model_contact_friction.rst:707
 msgid ""
 "The parameter `dataname_friction_coeffs` contains the Coulomb friction "
 "coefficient and optionally an adhesional shear stress threshold and the "
@@ -1313,7 +1313,7 @@ msgstr ""
 "パラメータ ``dataname_friction_coeffs`` "
 "には、Coulomb摩擦係数とオプションとして接着剪断応力閾値とTresca限界せん断応力が含まれています。定数係数の場合、そのサイズは1から3までです。有限要素法で記述された係数の場合、このベクトルには対応するmesh_femの基本自由度の数に等しい数の単一値、値のペアまたはトリプレットが含まれます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:577
+#: ../source/userdoc/model_contact_friction.rst:577
 msgid ""
 "Possible values for `option` is 1 for the non-symmetric Alart-Curnier "
 "augmented Lagrangian method, 2 for the symmetric one, 3 for the non-"
@@ -1325,7 +1325,7 @@ msgstr ""
 "オプションの可能な値は、非対称のAlart-Curnier拡張Lagrange法の場合は1、対称の場合は2、追加の増強を伴う非対称のAlart-"
 "Curnier法の場合は3、新しい非対称法の場合は4です。デフォルト値は1です。オプション4は、純粋なCoulomb摩擦を仮定し、接着応力とトレスカ限界係数を無視します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:584
+#: ../source/userdoc/model_contact_friction.rst:584
 msgid ""
 "``dataname_alpha`` and ``dataname_wt`` are optional parameters to solve "
 "evolutionary friction problems. ``dataname_gamma`` and ``dataname_vt`` "
@@ -1339,11 +1339,11 @@ msgstr ""
 "は、摩擦条件にパラメータ依存滑り速度を加えるためのオプションのデータを示します。 ``mim`` "
 "はもちろん積分法を表します。それは、関係する非線形項を効率的に積分するのに十分正確でなければならないことに注意してください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:592
+#: ../source/userdoc/model_contact_friction.rst:592
 msgid "Frictionless integral contact between non-matching meshes brick"
 msgstr "非整合メッシュ要素間の摩擦のない一体的接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:600
+#: ../source/userdoc/model_contact_friction.rst:600
 msgid ""
 "This function adds a frictionless contact condition between nonmatching "
 "meshes to the model, which is defined in an integral way. It is the direct "
@@ -1363,11 +1363,11 @@ msgstr ""
 "``varname_u1`` と ``varname_u2`` の間の極限条件が必要です。拡張パラメータ ``dataname_r`` "
 "は、許容可能な値の範囲で選択する必要があります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:625
+#: ../source/userdoc/model_contact_friction.rst:625
 msgid "Integral contact between non-matching meshes brick with friction"
 msgstr "摩擦と非整合メッシュブリック要素間の一体的接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:634
+#: ../source/userdoc/model_contact_friction.rst:634
 msgid ""
 "This function adds a contact with friction condition between nonmatching "
 "meshes to the model. This brick adds a contact which is defined in an "
@@ -1388,7 +1388,7 @@ msgstr ""
 "``varname_u1`` と ``varname_u2`` の間の極限条件が必要です。拡張パラメータ ``dataname_r`` "
 "は、許容可能な値の範囲で選択する必要があります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:647
+#: ../source/userdoc/model_contact_friction.rst:647
 msgid ""
 "The parameter `dataname_friction_coeffs` contains the Coulomb friction "
 "coefficient and optionally an adhesional shear stress threshold and the "
@@ -1402,7 +1402,7 @@ msgstr ""
 " ``varname_u1`` "
 "と同じメッシュの有限要素法で記述された係数の場合、このベクトルにはmesh_femの基本的な自由度に対応する数値の数に等しい単一の値、値のペアまたはトリプレットが含まれます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:655
+#: ../source/userdoc/model_contact_friction.rst:655
 msgid ""
 "Possible values for `option` is 1 for the non-symmetric Alart-Curnier "
 "augmented Lagrangian method, 2 for the symmetric one, 3 for the non-"
@@ -1419,11 +1419,11 @@ msgstr ""
 " は ``varname_u1`` "
 "と同じメッシュ上での積分法を表します。それは、関係する非線形項を効率的に積分するのに十分正確でなければならないことに注意してください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:667
+#: ../source/userdoc/model_contact_friction.rst:667
 msgid "Frictionless penalized contact with a rigid obstacle brick"
 msgstr "剛性の障害物要素との摩擦のないペナルティ接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:675
+#: ../source/userdoc/model_contact_friction.rst:675
 msgid ""
 "This function adds a frictionless penalized contact condition with a rigid "
 "obstacle to the model. The condition is applied on the variable "
@@ -1444,11 +1444,11 @@ msgstr ""
 " は、オプションが2の場合に使用されるオプションのパラメータです。この場合、ペナルティ項は ``lambda_n`` "
 "だけシフトされます（対応する拡張dLagrangianの式にUzawaアルゴリズムを使用できます）"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:691
+#: ../source/userdoc/model_contact_friction.rst:691
 msgid "Penalized contact with a rigid obstacle brick with friction"
 msgstr "摩擦を伴う頑丈な障害物要素とのペナルティ接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:700
+#: ../source/userdoc/model_contact_friction.rst:700
 msgid ""
 "This function adds a penalized contact condition with Coulomb friction with "
 "a rigid obstacle to the model. The condition is applied on the variable "
@@ -1460,7 +1460,7 @@ msgstr ""
 "``varname_u`` に適用されます。剛性の障害物は、データ ``dataname_obstacle`` "
 "が障害物までの符号付き距離である（有限要素法で補間された）データで記述するべきです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:714
+#: ../source/userdoc/model_contact_friction.rst:714
 msgid ""
 "The penalization parameter ``dataname_r`` should be chosen large enough to "
 "prescribe approximate non-penetration and friction conditions but not too "
@@ -1477,11 +1477,11 @@ msgstr ""
 "``lambda`` だけシフトします（対応する拡張Lagrangian式に対するUzawaアルゴリズムの使用が可能になります）。 "
 "``dataname_alpha`` と ``dataname_wt`` は、進化的摩擦の問題を解決するためのオプションのパラメータです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:727
+#: ../source/userdoc/model_contact_friction.rst:727
 msgid "Frictionless penalized contact between non-matching meshes brick"
 msgstr "非整合要素間の摩擦なしペナルティ接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:735
+#: ../source/userdoc/model_contact_friction.rst:735
 msgid ""
 "This function adds a penalized contact frictionless condition between "
 "nonmatching meshes to the model. The condition is applied on the variables "
@@ -1501,11 +1501,11 @@ msgstr ""
 "``dataname_n`` は、オプションが2の場合に使用されるオプションのパラメータです。この場合、ペナルティ項は ``lambda_n`` "
 "だけシフトします（これにより対応する拡張Lagrangian式にUzawaアルゴリズムを使用できます）"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:749
+#: ../source/userdoc/model_contact_friction.rst:749
 msgid "Penalized contact between non-matching meshes brick with friction"
 msgstr "要素とマッチングしていないメッシュと摩擦との不利な接触"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:758
+#: ../source/userdoc/model_contact_friction.rst:758
 msgid ""
 "This function adds a penalized contact condition with Coulomb friction "
 "between nonmatching meshes to the model. The condition is applied on the "
@@ -1520,7 +1520,7 @@ msgstr ""
 "に適用されます。ペナルティ化パラメータ ``dataname_r`` "
 "は、近似非貫通条件を規定するのに十分な大きさですが、接線系の条件付けをあまり大きく悪化させないように大きすぎないように選択すべきです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:767
+#: ../source/userdoc/model_contact_friction.rst:767
 msgid ""
 "The parameter `dataname_friction_coeffs` contains the Coulomb friction "
 "coefficient and optionally an adhesional shear stress threshold and the "
@@ -1534,7 +1534,7 @@ msgstr ""
 " `varname_u1` と同じメッシュ上の有限要素法で記述された係数の場合、このベクトルは、対応する mesh_fem "
 "の基本自由度数に等しいいくつかの単一値です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_contact_friction.rst:775
+#: ../source/userdoc/model_contact_friction.rst:775
 msgid ""
 "``dataname_lambda`` is an optional parameter used if ``option`` is 2. In "
 "that case, the penalization term is shifted by ``lambda`` (this allows the "

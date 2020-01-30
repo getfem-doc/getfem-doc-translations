@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: 2018-07-16 07:02+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:10
+#: ../source/project/femdesc.rst:10
 msgid "The FEM description in |gf|"
 msgstr "|gf| の有限要素法の記述"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:12
+#: ../source/project/femdesc.rst:12
 msgid ""
 "The aim of this section is to briefly introduce the FEM description in |gf| "
 "mainly in order to fix the notation used in the rest of the document "
@@ -35,11 +35,11 @@ msgstr ""
 "このセクションの目的は |gf| "
 "でのFEMの記述方法を簡単に紹介することです。文書の他の部分（要素の定義、参照要素、幾何学的変換、幾何学的変換の勾配...）で使用される表記法を固定化することが主な目的です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:19
+#: ../source/project/femdesc.rst:19
 msgid "Convex structures"
 msgstr "凸包構造"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:21
+#: ../source/project/femdesc.rst:21
 msgid ""
 "Finite element methods are defined on small convex domains called elements. "
 "The simplest element on which a finite element method can be defined is a "
@@ -52,7 +52,7 @@ msgstr ""
 " |gf| では、要素の種類(凸包)は :file:`bgeot_convex_structure.h` ファイルで定義されているオブジェクト "
 "|bg_cs| で記述されています。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:28
+#: ../source/project/femdesc.rst:28
 msgid ""
 "It describes only the structure of the convex not the coordinates of the "
 "vertices. This structure is not to be manipulated by itself, because it is "
@@ -63,39 +63,39 @@ msgstr ""
 "ここでは頂点の座標ではなく凸包の構造だけを記述します。この種類の構造は同じタイプの凸包を記述する必要はないので、この構造は自分自身を操作することはできません。このような記述子上のポインタは"
 " |bg_pcs| 型で宣言します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:34
+#: ../source/project/femdesc.rst:34
 msgid ""
 "The following functions give a pointer onto the descriptor of the usual type"
 " of elements:"
 msgstr "次の関数で通常の要素タイプの記述子に対するポインタを得ることができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:39
+#: ../source/project/femdesc.rst:39
 msgid "description of a simplex of dimension ``d``."
 msgstr "``d`` 次元のシンプレックスの記述。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:43
+#: ../source/project/femdesc.rst:43
 msgid "description of a parallelepiped of dimension ``d``."
 msgstr "``d`` 次元の直方体の記述。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:47
+#: ../source/project/femdesc.rst:47
 msgid "description of the direct product of ``p1`` and ``p2``."
 msgstr "``p1`` と ``p2`` の直積の記述。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:51
+#: ../source/project/femdesc.rst:51
 msgid "description of a prism of dimension ``d``."
 msgstr "``d`` 次元のプリズムの記述。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:53
+#: ../source/project/femdesc.rst:53
 msgid ""
 "For instance if one needs the description of a square, one can call "
 "equivalently::"
 msgstr "たとえば、正方形を記述する場合、以下のような表現ができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:58
+#: ../source/project/femdesc.rst:58
 msgid "or::"
 msgstr "または"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:63
+#: ../source/project/femdesc.rst:63
 msgid ""
 "The descriptor contains in particular the number of faces "
 "(``p->nb_faces()``), the dimension of the convex (``p->dim()``), for the "
@@ -108,15 +108,15 @@ msgstr ""
 "``p->dim()`` "
 "）が含まれています。他には、各面の頂点の数、面の記述、および（幾何変換の記述に使用される）より基本的な記述への最終的な参照先が情報として含まれます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:74
+#: ../source/project/femdesc.rst:74
 msgid "usual elements"
 msgstr "通常の要素"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:78
+#: ../source/project/femdesc.rst:78
 msgid "Convexes of reference"
 msgstr "凸包の参照"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:80
+#: ../source/project/femdesc.rst:80
 msgid ""
 "A convex of reference is a particular real element, i.e. a structure of "
 "convex with a list of vertices. It describes the particular element from "
@@ -130,29 +130,29 @@ msgstr ""
 "によって記述されています。ライブラリは、凸包のそれぞれの種類に対して1つの記述のみ保持します。したがって、操作するのは記述子上の |bg_pcr| "
 "型のポインタです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:87
+#: ../source/project/femdesc.rst:87
 msgid "The following functions build the descriptions:"
 msgstr "次の関数は記述を構築します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:91
+#: ../source/project/femdesc.rst:91
 msgid "description of the simplex of reference of dimension ``d``."
 msgstr "``d`` 次元の参照シンプレックスの記述。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:95
+#: ../source/project/femdesc.rst:95
 msgid ""
 "description of the simplex of reference of dimension ``d`` with degree ``k``"
 " Lagrange grid."
 msgstr "``k`` 次 ``d`` 次元の Lagrange 格子を参照するシンプレックスの記述。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:100
+#: ../source/project/femdesc.rst:100
 msgid "description of the direct product of two convexes of reference."
 msgstr "2つの参照凸包の直積の記述。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:104
+#: ../source/project/femdesc.rst:104
 msgid "description of the parallelepiped of reference of dimension ``d``."
 msgstr "``d`` 次元を参照する平行六面体の記述。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:106
+#: ../source/project/femdesc.rst:106
 msgid ""
 "The vertices correspond to the classical vertices for such reference "
 "element. For instance the vertices for the triangle are :math:`(0, 0)`, "
@@ -162,7 +162,7 @@ msgstr ""
 "頂点は、そのような参照要素の古典的な頂点に対応しています。たとえば、三角形の頂点は、 :math:`(0, 0)` 、 :math:`(1, 0)` 、"
 " :math:`(0, 1)` です。これは、図 :ref:`dp-fig-elem` に示す構成に対応します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:111
+#: ../source/project/femdesc.rst:111
 msgid ""
 "If ``p`` is of type |bg_pcr| then ``p->structure()`` is the corresponding "
 "convex structure. Thus for instance ``p->structure()->nb_points()`` gives "
@@ -181,11 +181,11 @@ msgstr ""
 "&pt)`` は点 ``pt`` が面 ``f`` にある場合はnullを返します。他の関数は :file:`bgeot_convex_ref.h` と"
 " :file:`bgeot_convex.h` にあります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:123
+#: ../source/project/femdesc.rst:123
 msgid "Shape function type"
 msgstr "形状関数の種類"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:125
+#: ../source/project/femdesc.rst:125
 msgid ""
 "Most of the time the shape functions of finite element methods are "
 "polynomials, at least on the convex of reference. But, the possibility is "
@@ -194,7 +194,7 @@ msgid ""
 msgstr ""
 "ほとんどの場合、有限要素法の形状関数は、少なくとも参照している凸包においては多項式です。しかし、それ以外の種類の要素を与えることも可能性です。区分多項式、補間曲線ウェーブレットなどの他の種類の基底関数を定義することもできます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:130
+#: ../source/project/femdesc.rst:130
 msgid ""
 "To be used by the finite element description, a shape function type must be "
 "able to be evaluated on a point (``a = F.eval(pt)``, where ``pt`` is a "
@@ -205,7 +205,7 @@ msgstr ""
 "``base_node`` です）。そして、i次の変数に関する導関数を計算するメソッド（ ``F.derivative(i)`` "
 "）を持たなければなりません。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:135
+#: ../source/project/femdesc.rst:135
 msgid ""
 "For the moment, only polynomials and piecewise polynomials are defined in "
 "the files :file:`bgeot_poly.h` and :file:`bgeot_poly_composite.h`."
@@ -213,33 +213,33 @@ msgstr ""
 "現時点では、ファイル :file:`bgeot_poly.h` と :file:`bgeot_poly_composite.h` "
 "では、多項式と区分多項式のみが定義されています。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:141
+#: ../source/project/femdesc.rst:141
 msgid "Geometric transformations"
 msgstr "幾何変換"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:148
+#: ../source/project/femdesc.rst:148
 msgid "geometric transformation"
 msgstr "幾何変換"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:150
+#: ../source/project/femdesc.rst:150
 msgid "A geometric transformation is a polynomial application:"
 msgstr "幾何変換は多項式を利用します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:152
+#: ../source/project/femdesc.rst:152
 msgid "\\tau : \\widehat{T} \\subset \\Reel^P \\longrightarrow T \\subset \\Reel^N,"
 msgstr "\\tau : \\widehat{T} \\subset \\Reel^P \\longrightarrow T \\subset \\Reel^N,"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:156
+#: ../source/project/femdesc.rst:156
 msgid ""
 "which maps the reference element :math:`\\widehat{T}` to the real element "
 ":math:`T`. The geometric nodes are denoted:"
 msgstr "これは、参照要素 :math:`\\widehat{T}` を実数要素 :math:`T` にマップします。幾何節点は次のように表記されます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:159
+#: ../source/project/femdesc.rst:159
 msgid "g^i, i = 0, \\ldots, n_g - 1."
 msgstr "g^i, i = 0, \\ldots, n_g - 1."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:163
+#: ../source/project/femdesc.rst:163
 msgid ""
 "The geometric transformation is described thanks to a :math:`n_g` components"
 " polynomial vector (In fact, as an extention, non polynomial geometric "
@@ -248,42 +248,41 @@ msgstr ""
 "幾何変換は :math:`n_g` 成分多項式ベクトルにより記述されています。 (実際には、非多項式幾何変換を |gf| "
 "の拡張でサポートすることはできますが、これが使用されるのは非常にまれです。)"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:167
+#: ../source/project/femdesc.rst:167
 msgid "{\\cal N}(\\widehat{x}),"
 msgstr "{\\cal N}(\\widehat{x}),"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:171
+#: ../source/project/femdesc.rst:171
 msgid "such that"
 msgstr "ただし"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:173
+#: ../source/project/femdesc.rst:173
 msgid "\\tau(\\widehat{x}) = \\sum_{i = 0}^{n_g - 1}{\\cal N}_i(\\widehat{x}) g^i."
 msgstr "\\tau(\\widehat{x}) = \\sum_{i = 0}^{n_g - 1}{\\cal N}_i(\\widehat{x}) g^i."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:177
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:250
+#: ../source/project/femdesc.rst:177 ../source/project/femdesc.rst:250
 msgid "Denoting"
 msgstr "ここで"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:179
+#: ../source/project/femdesc.rst:179
 msgid "G = (g^0; g^1; ...; g^{n_g - 1}),"
 msgstr "G = (g^0; g^1; ...; g^{n_g - 1}),"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:183
+#: ../source/project/femdesc.rst:183
 msgid ""
 "the :math:`N\\times n_g` matrix containing of all the geometric nodes, one "
 "has"
 msgstr "は :math:`N\\times n_g` の行列でありすべての幾何節点を含みます, ゆえに次式が成り立ちます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:185
+#: ../source/project/femdesc.rst:185
 msgid "\\fbox{$\\tau(\\widehat{x}) = G\\cdot{\\cal N}(\\widehat{x})$.}"
 msgstr "\\fbox{$\\tau(\\widehat{x}) = G\\cdot{\\cal N}(\\widehat{x})$.}"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:189
+#: ../source/project/femdesc.rst:189
 msgid "The derivative of :math:`\\tau` is then"
 msgstr ":math:`\\tau` の微分は次式で表されます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:191
+#: ../source/project/femdesc.rst:191
 msgid ""
 "\\fbox{$K(\\widehat{x}) := \\nabla\\tau(\\widehat{x}) = G\\cdot\\nabla "
 "{\\cal N}(\\widehat{x})$,}"
@@ -291,7 +290,7 @@ msgstr ""
 "\\fbox{$K(\\widehat{x}) := \\nabla\\tau(\\widehat{x}) = G\\cdot\\nabla "
 "{\\cal N}(\\widehat{x})$,}"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:195
+#: ../source/project/femdesc.rst:195
 msgid ""
 "where :math:`K(\\widehat{x}) = \\nabla\\tau(\\widehat{x})` is a "
 ":math:`N\\times P` matrix and :math:`\\nabla {\\cal N}(\\widehat{x})` a "
@@ -304,7 +303,7 @@ msgstr ""
 "行列です。行列 :math:`B(\\widehat{x})` は :math:`N\\times P` の行列であり、 "
 ":math:`\\nabla\\tau(\\widehat{x})`  の(転置) 擬似逆行列です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:200
+#: ../source/project/femdesc.rst:200
 msgid ""
 "\\fbox{$B(\\widehat{x}) := K(\\widehat{x})(K(\\widehat{x})^T "
 "K(\\widehat{x}))^{-1}$,}"
@@ -312,7 +311,7 @@ msgstr ""
 "\\fbox{$B(\\widehat{x}) := K(\\widehat{x})(K(\\widehat{x})^T "
 "K(\\widehat{x}))^{-1}$,}"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:204
+#: ../source/project/femdesc.rst:204
 msgid ""
 "Of course, when :math:`P=N`, one has "
 ":math:`B(\\widehat{x})=K(\\widehat{x})^{-T}`."
@@ -320,7 +319,7 @@ msgstr ""
 "もちろん :math:`P=N` の場合、次の式が成り立ちます :math:`B(\\widehat{x})=K(\\widehat{x})^{-T}`"
 " 。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:206
+#: ../source/project/femdesc.rst:206
 msgid ""
 "Pointers on a descriptor of a geometric transformation can be obtained by "
 "the following function defined in the file :file:`bgeot_geometric_trans.h`::"
@@ -328,54 +327,54 @@ msgstr ""
 "幾何変換の記述子に対するポインタは、ファイル :file:`bgeot_geometric_trans.h` "
 "で定義されている次の関数によって取得できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:211
+#: ../source/project/femdesc.rst:211
 msgid "where ``\"name of trans\"`` can be chosen among the following list."
 msgstr "ここで、 ``\"name of trans\"`` は次のリストの中から選択します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:213
+#: ../source/project/femdesc.rst:213
 msgid "``\"GT_PK(n,k)\"``"
 msgstr "``\"GT_PK(n,k)\"``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:215
+#: ../source/project/femdesc.rst:215
 msgid ""
 "Description of the simplex transformation of dimension ``n`` and degree "
 "``k`` (Most of the time, the degree 1 is used)."
 msgstr "``n`` 次元 ``k`` 次のシンプレックス変換の記述子(ほとんどの場合、次数1が使用されます)。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:218
+#: ../source/project/femdesc.rst:218
 msgid "``\"GT_QK(n,k)\"``"
 msgstr "``\"GT_QK(n,k)\"``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:220
+#: ../source/project/femdesc.rst:220
 msgid ""
 "Description of the parallelepiped transformation of dimension ``n`` and "
 "degree ``k``."
 msgstr "``n`` 次元および次数 ``k`` の直方体変換の記述子。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:223
+#: ../source/project/femdesc.rst:223
 msgid "``\"GT_PRISM(n,k)\"``"
 msgstr "``\"GT_PRISM(n,k)\"``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:225
+#: ../source/project/femdesc.rst:225
 msgid ""
 "Description of the prism transformation of dimension ``n`` and degree ``k``."
 msgstr "``n`` 次元および次数 ``k`` のプリズム変換の記述子。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:227
+#: ../source/project/femdesc.rst:227
 msgid "``\"GT_PRODUCT(a,b)\"``"
 msgstr "``\"GT_PRODUCT(a,b)\"``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:229
+#: ../source/project/femdesc.rst:229
 msgid ""
 "Description of the direct product of the two transformations ``a`` and "
 "``b``."
 msgstr "2つの変換 ``a`` と ``b`` の直積の記述子。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:231
+#: ../source/project/femdesc.rst:231
 msgid "``\"GT_LINEAR_PRODUCT(a,b)\"``"
 msgstr "``\"GT_LINEAR_PRODUCT(a,b)\"``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:233
+#: ../source/project/femdesc.rst:233
 msgid ""
 "Description of the direct product of the two transformations ``a`` and ``b``"
 " keeping a linear transformation (this is a restriction of the previous "
@@ -385,11 +384,11 @@ msgstr ""
 "線形変換（これは前の関数による制約です）である ``a`` と ``b`` "
 "の2つの直積の記述子。これにより、たとえば、平行四辺形を含む通常のメッシュ上で正確な積分を使用することができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:240
+#: ../source/project/femdesc.rst:240
 msgid "Finite element methods description"
 msgstr "有限要素法の記述"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:242
+#: ../source/project/femdesc.rst:242
 msgid ""
 "A finite element method is defined on a reference element "
 ":math:`\\widehat{T}\\subset\\Reel^P` by a set of :math:`n_d` nodes "
@@ -398,11 +397,11 @@ msgstr ""
 "有限要素法は節点 :math:`a^i` と対応する基底関数の集合 :math:`n_d` により参照要素 "
 ":math:`\\widehat{T}\\subset\\Reel^P` に対して定義されます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:246
+#: ../source/project/femdesc.rst:246
 msgid "(\\widehat{\\varphi})^i : \\widehat{T}\\subset\\Reel^P \\longrightarrow \\Reel^Q"
 msgstr "(\\widehat{\\varphi})^i : \\widehat{T}\\subset\\Reel^P \\longrightarrow \\Reel^Q"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:252
+#: ../source/project/femdesc.rst:252
 msgid ""
 "\\psi^i(x) = (\\widehat{\\varphi})^i(\\widehat{x}) = "
 "(\\widehat{\\varphi})^i(\\tau^{-1}(x)),"
@@ -410,16 +409,16 @@ msgstr ""
 "\\psi^i(x) = (\\widehat{\\varphi})^i(\\widehat{x}) = "
 "(\\widehat{\\varphi})^i(\\tau^{-1}(x)),"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:256
+#: ../source/project/femdesc.rst:256
 msgid ""
 "a supplementary linear transformation is allowed for the real base function"
 msgstr "補足する線形変換は実基底関数の場合に成り立ちます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:258
+#: ../source/project/femdesc.rst:258
 msgid "\\varphi^i(x) = \\sum_{j = 0}^{n_d - 1} M_{ij} \\psi^j(x),"
 msgstr "\\varphi^i(x) = \\sum_{j = 0}^{n_d - 1} M_{ij} \\psi^j(x),"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:262
+#: ../source/project/femdesc.rst:262
 msgid ""
 "where :math:`M` is a :math:`n_d \\times n_d` matrix possibly depending on "
 "the geometric transformation (i.e. on the real element). For basic elements "
@@ -431,7 +430,7 @@ msgstr ""
 "行列です。基本的なLagrange要素では、この行列は恒等行列です(単純に無視されます)。この場合、要素は次のように :math:`\\tau` "
 "-等価になります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:267
+#: ../source/project/femdesc.rst:267
 msgid ""
 "This approach allows to define hermite elements (Argyris for instance) in a "
 "generic way, even with non linear transformations (i.e. mainly for curved "
@@ -445,25 +444,25 @@ msgstr ""
 ":math:`(\\widehat{\\varphi})^i(\\widehat{x})` である :math:`n_d \\times Q` "
 "の行列です。この表現を使用して、関数は次のように定義されます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:273
+#: ../source/project/femdesc.rst:273
 msgid "f(x) = \\sum_{i = 0}^{n_d - 1} \\alpha_i \\varphi^i(x),"
 msgstr "f(x) = \\sum_{i = 0}^{n_d - 1} \\alpha_i \\varphi^i(x),"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:277
+#: ../source/project/femdesc.rst:277
 msgid "one has"
 msgstr "ゆえに"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:279
+#: ../source/project/femdesc.rst:279
 msgid "\\fbox{$f(\\tau(\\widehat{x})) = \\alpha^T M [\\widehat{\\varphi}(\\widehat{x})]$,}"
 msgstr "\\fbox{$f(\\tau(\\widehat{x})) = \\alpha^T M [\\widehat{\\varphi}(\\widehat{x})]$,}"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:283
+#: ../source/project/femdesc.rst:283
 msgid ""
 "where :math:`\\alpha` is the vector whose ith component is "
 ":math:`\\alpha_i`."
 msgstr "ここで :math:`\\alpha` は、 i 番目の成分 :math:`\\alpha_i` を持つベクトルです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:285
+#: ../source/project/femdesc.rst:285
 msgid ""
 "A certain number of description of classical finite element method are "
 "defined in the file :file:`getfem_fem.h`. See :ref:`ud-appendixa` for an "
@@ -472,13 +471,13 @@ msgstr ""
 "特定の古典的な有限要素法の記述子はファイル :file:`getfem_fem.h` で定義されています。利用可能な有限要素法全体のリストは :ref"
 ":`ud-appendixa` を参照してください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:289
+#: ../source/project/femdesc.rst:289
 msgid ""
 "A pointer to the finite element descriptor of a method is obtained using the"
 " function::"
 msgstr "有限要素記述子の手法へのポインタは、次の関数を使用することで取得できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:294
+#: ../source/project/femdesc.rst:294
 msgid ""
 "We refer to the file :file:`getfem_fem.cc` for how to define a new finite "
 "element method."

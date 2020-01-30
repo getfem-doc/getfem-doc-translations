@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,61 +21,61 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:8
+#: ../source/scilab/cmdref_gf_precond.rst:8
 msgid "gf_precond"
 msgstr "gf_precond"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:10
+#: ../source/scilab/cmdref_gf_precond.rst:10
 msgid "**Synopsis**"
 msgstr "**概要**"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:24
+#: ../source/scilab/cmdref_gf_precond.rst:24
 msgid "**Description :**"
 msgstr "**説明 :**"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:27
+#: ../source/scilab/cmdref_gf_precond.rst:27
 msgid "General constructor for precond objects."
 msgstr "precond オブジェクトの汎用的なコンストラクタ"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:29
+#: ../source/scilab/cmdref_gf_precond.rst:29
 msgid ""
 "The preconditioners may store REAL or COMPLEX values. They accept getfem "
 "sparse matrices and Matlab sparse matrices."
 msgstr "前処理行列は、REAL値またはCOMPLEX値を記憶することができます。getfem疎行列とMatlab疎行列が使用可能です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:33
+#: ../source/scilab/cmdref_gf_precond.rst:33
 msgid "**Command list :**"
 msgstr "**コマンドリスト**"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:37
+#: ../source/scilab/cmdref_gf_precond.rst:37
 msgid "``PC = gf_precond('identity')``"
 msgstr "``PC = gf_precond('identity')``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:39
+#: ../source/scilab/cmdref_gf_precond.rst:39
 msgid "Create a REAL identity precondioner."
 msgstr "実数の前処理行列を作成します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:42
+#: ../source/scilab/cmdref_gf_precond.rst:42
 msgid "``PC = gf_precond('cidentity')``"
 msgstr "``PC = gf_precond('cidentity')``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:44
+#: ../source/scilab/cmdref_gf_precond.rst:44
 msgid "Create a COMPLEX identity precondioner."
 msgstr "``PC = Precond('cidentity')`` COMPLEX 単位前処理行列を作成します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:47
+#: ../source/scilab/cmdref_gf_precond.rst:47
 msgid "``PC = gf_precond('diagonal', vec D)``"
 msgstr "``PC = gf_precond('diagonal', vec D)``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:49
+#: ../source/scilab/cmdref_gf_precond.rst:49
 msgid "Create a diagonal precondioner."
 msgstr "``PC = Precond('diagonal', vec D)`` 対角前処理行列を作成します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:52
+#: ../source/scilab/cmdref_gf_precond.rst:52
 msgid "``PC = gf_precond('ildlt', spmat m)``"
 msgstr "``PC = gf_precond('ildlt', spmat m)``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:54
+#: ../source/scilab/cmdref_gf_precond.rst:54
 msgid ""
 "Create an ILDLT (Cholesky) preconditioner for the (symmetric) sparse matrix "
 "<literal>m</literal>. This preconditioner has the same sparsity pattern than"
@@ -84,11 +84,11 @@ msgstr ""
 "(Cholesky)疎行列 <literal>m</literal> のILDLT(Cholesky)前処理行列を作成します。この前処理行列は"
 "(fill-in無しの) <literal>m</literal> と同じ非ゼロパターンです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:59
+#: ../source/scilab/cmdref_gf_precond.rst:59
 msgid "``PC = gf_precond('ilu', spmat m)``"
 msgstr "``PC = gf_precond('ilu', spmat m)``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:61
+#: ../source/scilab/cmdref_gf_precond.rst:61
 msgid ""
 "Create an ILU (Incomplete LU) preconditioner for the sparse matrix "
 "<literal>m</literal>. This preconditioner has the same sparsity pattern than"
@@ -97,13 +97,13 @@ msgstr ""
 "疎行列 <literal>m</literal> に対するILU(不完全なLU)前処理行列を作成します。この前処理行列は、(fill-in無し) "
 "<literal>m</literal> と同じじ非ゼロパターンを有します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:66
+#: ../source/scilab/cmdref_gf_precond.rst:66
 msgid ""
 "``PC = gf_precond('ildltt', spmat m[, int fillin[, scalar threshold]])``"
 msgstr ""
 "``PC = gf_precond('ildltt', spmat m[, int fillin[, scalar threshold]])``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:68
+#: ../source/scilab/cmdref_gf_precond.rst:68
 msgid ""
 "Create an ILDLTT (Cholesky with filling) preconditioner for the (symmetric) "
 "sparse matrix <literal>m</literal>. The preconditioner may add at most "
@@ -115,12 +115,12 @@ msgstr ""
 ")前処理行列を作成します。前処理行列は、各行上に追加の非ゼロのエントリを最大 <literal>fillin</literal> "
 "個追加することができます。 <literal>fillin</literal> のデフォルト値は10で、デフォルトの閾値は1e-7です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:74
+#: ../source/scilab/cmdref_gf_precond.rst:74
 msgid "``PC = gf_precond('ilut', spmat m[, int fillin[, scalar threshold]])``"
 msgstr ""
 "``PC = gf_precond('ilut', spmat m[, int fillin[, scalar threshold]])``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:76
+#: ../source/scilab/cmdref_gf_precond.rst:76
 msgid ""
 "Create an ILUT (Incomplete LU with filling) preconditioner for the sparse "
 "matrix <literal>m</literal>. The preconditioner may add at most "
@@ -133,11 +133,11 @@ msgstr ""
 "<literal>fillin</literal> 個追加することができます。 <literal>fillin</literal>のデフォルト値は10で"
 "、デフォルトの閾値は1e-7です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:82
+#: ../source/scilab/cmdref_gf_precond.rst:82
 msgid "``PC = gf_precond('superlu', spmat m)``"
 msgstr "``PC = gf_precond('superlu', spmat m)``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:84
+#: ../source/scilab/cmdref_gf_precond.rst:84
 msgid ""
 "Uses SuperLU to build an exact factorization of the sparse matrix "
 "<literal>m</literal>. This preconditioner is only available if the getfem-"
@@ -148,10 +148,10 @@ msgstr ""
 "をサポートするgetfem-"
 "interfaceが構築されている場合にのみ使用できます。LU分解は、3次元問題の場合、メモリをすべて消費する可能性が高いことに注意してください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:90
+#: ../source/scilab/cmdref_gf_precond.rst:90
 msgid "``PC = gf_precond('spmat', spmat m)``"
 msgstr "``PC = gf_precond('spmat', spmat m)``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_precond.rst:92
+#: ../source/scilab/cmdref_gf_precond.rst:92
 msgid "Preconditioner given explicitely by a sparse matrix."
 msgstr "疎行列によって明示的に与えられる前処理行列です。"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: 2018-07-16 07:18+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,15 +21,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:10
+#: ../source/python/examples.rst:10
 msgid "Examples"
 msgstr "例題"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:17
+#: ../source/python/examples.rst:17
 msgid "A step-by-step basic example"
 msgstr "ステップごとの基本的な例"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:19
+#: ../source/python/examples.rst:19
 msgid ""
 "This example shows the basic usage of getfem, on the über-canonical problem "
 "above all others: solving the :envvar:`Laplacian`, :math:`-\\Delta u = f` on"
@@ -43,7 +43,7 @@ msgstr ""
 "g(x)` をドメイン境界上で解きます。この例の **py-file** は **demo_step_by_step.py** "
 "という名前の下にあります。 |gf| ディストリビューションの ``interface/tests/python/`` ディレクトリにあります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:25
+#: ../source/python/examples.rst:25
 msgid ""
 "The first step is to **create a Mesh object**. It is possible to create "
 "simple structured meshes or unstructured meshes for simple geometries (see "
@@ -60,13 +60,13 @@ msgstr ""
 ":math:`\\{x_{i=0\\ldots10,j=0..10}=(i/10,j/10)\\}` である通常の mesh "
 "\\index{cartesian mesh} を考えます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:34
+#: ../source/python/examples.rst:34
 msgid ""
 "The next step is to **create a MeshFem object**. This one links a mesh with "
 "a set of FEM"
 msgstr "次のステップでは **MeshFemオブジェクト** を作成します。これは、メッシュをFEMの集合とリンクします。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:41
+#: ../source/python/examples.rst:41
 msgid ""
 "The first instruction builds a new |py_mf| object, the second argument "
 "specifies that this object will be used to interpolate scalar fields (since "
@@ -83,13 +83,13 @@ msgstr ""
 ":math:`Q^k\\Rightarrow` 多項式です)に :math:`Q^2` FEMを割り当てます。 :math:`Q^2` "
 "は多項式FEMなので、参照凸包でその基底関数の式を見ることができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:54
+#: ../source/python/examples.rst:54
 msgid ""
 "Now, in order to perform numerical integrations on ``mf``, we need to "
 "**build a MeshIm object**"
 msgstr "さて、 ``mf`` で数値積分を行うには、 **MeshImオブジェクトを構築する** 必要があります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:61
+#: ../source/python/examples.rst:61
 msgid ""
 "The integration method will be used to compute the various integrals on each"
 " element: here we choose to perform exact computations (no "
@@ -105,13 +105,13 @@ msgstr ""
 ":envvar:`求積公式`)を実行することを選択します。これは、参照凸包からのこれらの凸包の幾何変換が線形(これはすべてのシンプレックスに当てはまり、通常のメッシュの平行六面体にも当てはまりますが、一般的な四角形には当てはまりません)であり、選択したFEMが多項式であるために可能です。このため、すべての基底関数/基底関数の積/傾き/などを解析的に積分することが可能であり、FEMの手法や積分法にも多くの選択肢があります("
 " :ref:`ud` を参照)。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:71
+#: ../source/python/examples.rst:71
 msgid ""
 "Note however that in the general case, approximate integration methods are a"
 " better choice than exact integration methods."
 msgstr "ただし、一般的なケースでは、厳密な積分法よりも近似積分法の方が適しています。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:74
+#: ../source/python/examples.rst:74
 msgid ""
 "Now we have to **find the** <:envvar:`boundary`> **of the domain**, in order"
 " to set a Dirichlet condition. A mesh object has the ability to store some "
@@ -122,13 +122,13 @@ msgstr ""
 "必要があります。メッシュオブジェクトには、凸包面と凸包面の集合を保存する機能があります。これらの集合(<regions> と呼ばれます)には、整数 "
 "*#id* を使用してアクセスします。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:83
+#: ../source/python/examples.rst:83
 msgid ""
 "Here we find the faces of the convexes which are on the boundary of the mesh"
 " (i.e. the faces which are not shared by two convexes)."
 msgstr "ここでは、メッシュの境界上にある凸包の面(つまり、2つの凸包によって共有されていない面)を見つけます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:86
+#: ../source/python/examples.rst:86
 msgid ""
 "The array ``border`` has two rows, on the first row is a convex number, on "
 "the second row is a face number (which is local to the convex, there is no "
@@ -138,7 +138,7 @@ msgstr ""
 "配列 ``border`` "
 "には二つの行があり、最初の行は凸包の番号で、次の行は面の番号です(これは凸包に対してローカルであり、面のグローバルな番号付けはありません)。次に、この面の集合を領域番号42に割り当てます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:90
+#: ../source/python/examples.rst:90
 msgid ""
 "At this point, we just have to describe the model and run the solver to get "
 "the solution! The \":envvar:`model`\" is created with the |py_md| "
@@ -154,7 +154,7 @@ msgstr ""
 "コンストラクタで作成されます。モデルは基本的に、全体線形システム(非線形問題の接線行列)とそれに関連するRHSを構築するオブジェクトです。代表的な修正は、考慮される問題(線形弾性、Laplacian等)に対する剛性マトリックスの挿入、拘束の集合の処理、Dirichlet条件、ソース項のRHSへの追加などです。全体正接行列とその右辺は、"
 " \":envvar:`model`\" 構造に格納されます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:99
+#: ../source/python/examples.rst:99
 msgid ""
 "Let us build a problem with an easy solution: :math:`u = x(x-1)-y(y-1)`, "
 "then we have :math:`-\\Delta u = 0` (the FEM won't be able to catch the "
@@ -163,11 +163,11 @@ msgstr ""
 "簡単な方法で問題を作成してみましょう。 :math:`u = x(x-1)-y(y-1)` とすると、 :math:`-\\Delta u = 0` ("
 " :math:`Q^2` 法を使っているので、FEMは正確な解を捕らえることができません)となります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:103
+#: ../source/python/examples.rst:103
 msgid "We start with an empty real model"
 msgstr "まず空の実数モデルから始めます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:109
+#: ../source/python/examples.rst:109
 msgid ""
 "(a model is either ``'real'`` or ``'complex'``). And we declare that ``u`` "
 "is an unknown of the system on the finite element method `mf` by"
@@ -175,7 +175,7 @@ msgstr ""
 "(モデルは  ``'real'`` か ``'complex'`` のどちらかです)。そして有限要素法 `mf` のシステムでは、 ``u`` "
 "は未知であると宣言します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:116
+#: ../source/python/examples.rst:116
 msgid ""
 "Now, we add a `generic elliptic` brick, which handles "
 ":math:`-\\nabla\\cdot(A:\\nabla u) = \\ldots` problems, where :math:`A` can "
@@ -186,11 +186,11 @@ msgstr ""
 ":math:`-\\nabla\\cdot(A:\\nabla u) = \\ldots` 問題をハンドルします。ここで :math:`A` "
 "はスカラー場、行列場、4次テンソル場の場合があります。デフォルトでは、 :math:`A=1` です。これを変数 ``u`` に追加します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:125
+#: ../source/python/examples.rst:125
 msgid "Next we add a Dirichlet condition on the domain boundary"
 msgstr "次に、領域の境界にDirichlet条件を追加します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:131
+#: ../source/python/examples.rst:131
 msgid ""
 "The two first lines defines a data of the model which represents the value "
 "of the Dirichlet condition. The third one add a Dirichlet condition to the "
@@ -207,11 +207,11 @@ msgstr ""
 "\\int_\\Gamma g(x)v(x)\\ \\forall v` で課されるからです。ここで :math:`v` はここでは ``mf`` "
 "で与えられる乗数空間で使われます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rstNone
+#: ../source/python/examples.rstNone
 msgid "Remark:"
 msgstr "備考:"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:141
+#: ../source/python/examples.rst:141
 msgid ""
 "the polynomial expression was interpolated on ``mf``. It is possible only if"
 " ``mf`` is of Lagrange type. In this first example we use the same |py_mf| "
@@ -223,39 +223,39 @@ msgstr ""
 "のようなデータに同じ |py_mf| を使用していますが、一般的なケースでは ``mf`` "
 "はLagrangianではなく、Dirichlet条件やソース項などの記述には別の(Lagrangian) |py_mf| が使用されます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:147
+#: ../source/python/examples.rst:147
 msgid "A source term can be added with (uncommented) the following lines"
 msgstr "ソース項は以下の行(コメントなし)で追加できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:153
+#: ../source/python/examples.rst:153
 msgid ""
 "It only remains now to launch the solver. The linear system is assembled and"
 " solve with the instruction"
 msgstr "残るはソルバを起動するだけです。次の命令で線形系をアセンブルして解きます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:160
+#: ../source/python/examples.rst:160
 msgid ""
 "The model now contains the solution (as well as other things, such as the "
 "linear system which was solved). It is extracted"
 msgstr "これで、(解かれた線形系のような他のものと同様に)モデルに解が含まれました。次のように抽出します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:167
+#: ../source/python/examples.rst:167
 msgid "Then export solution"
 msgstr "次に、解をエクスポートします"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:173
+#: ../source/python/examples.rst:173
 msgid "and view with ``gmsh u.pos``, see figure :ref:`py-fig-sbs`."
 msgstr "そして ``gmsh u.pos`` で見てください。図 :ref:`py-fig-sbs` を参照。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:180
+#: ../source/python/examples.rst:180
 msgid "Computed solution"
 msgstr "計算された解"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:184
+#: ../source/python/examples.rst:184
 msgid "Another Laplacian with exact solution (source term)"
 msgstr "別のLaplacianによる厳密解(ソース項)"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:186
+#: ../source/python/examples.rst:186
 msgid ""
 "This example shows the basic usage of getfem, on the canonical problem: "
 "solving the Laplacian, :math:`-\\Delta u = f` on a square, with the "
@@ -271,39 +271,39 @@ msgstr ""
 "u}{\\partial\\eta} = h(x)` です。この例の **py-file** は |gf| ディストリビューションの "
 "``interface/tests/python/`` ディレクトリに **demo_laplacian.py** という名前であります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:194
+#: ../source/python/examples.rst:194
 msgid ""
 "We create Mesh, MeshFem, MeshIm object and find the boundary of the domain "
 "in the same way as the previous example"
 msgstr "Mesh、MeshFem、MeshImオブジェクトを作成し、前の例と同じ方法で領域の境界を見つけます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:201
+#: ../source/python/examples.rst:201
 msgid "then, we interpolate the exact solution and source terms"
 msgstr "次に、厳密解とソース項を補間します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:207
+#: ../source/python/examples.rst:207
 msgid "and we bricked the problem as in the previous example"
 msgstr "前の例のように問題をブリックにしました"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:213
+#: ../source/python/examples.rst:213
 msgid ""
 "the only change is the add of `source term` bricks. Finally the solution of "
 "the problem is extracted and exported"
 msgstr "唯一の変更点は `ソース項` ブリックの追加です。最後に問題の解を抽出しエクスポートします。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:220
+#: ../source/python/examples.rst:220
 msgid "view with ``gmsh sol.pos``:"
 msgstr "``gmsh sol.pos`` で見てください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:226
+#: ../source/python/examples.rst:226
 msgid "Differences"
 msgstr "差分"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:230
+#: ../source/python/examples.rst:230
 msgid "Linear and non-linear elasticity"
 msgstr "線形および非線形弾性"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:232
+#: ../source/python/examples.rst:232
 msgid ""
 "This example uses a mesh that was generated with `GiD`_. The object is "
 "meshed with quadratic tetrahedrons. You can find the **py-file** of this "
@@ -314,21 +314,21 @@ msgstr ""
 "|gf| ディストリビューションの :file:`interface/tests/python/` ディレクトリの "
 ":file:`demo_tripod.py` にあります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:241
+#: ../source/python/examples.rst:241
 msgid ""
 "Here is the final figure, displaying the :envvar:`Von Mises` stress and "
 "displacements norms:"
 msgstr "次の図は :envvar:`Von Mises` 応力および変位ノルムを示しています。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:248
+#: ../source/python/examples.rst:248
 msgid "\\(a\\) Tripod Von Mises, \\(b\\) Tripod displacements norms."
 msgstr "\\(a\\) 三脚 Von Mises, \\(b\\) 三脚変位ノルム。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:252
+#: ../source/python/examples.rst:252
 msgid "Avoiding the model framework"
 msgstr "モデルフレームワークを使わない"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:254
+#: ../source/python/examples.rst:254
 msgid ""
 "The model bricks are very convenient, as they hide most of the details of "
 "the assembly of the final linear systems. However it is also possible to "
@@ -341,7 +341,7 @@ msgstr ""
 " |py| で処理することも可能です。例えば、 :file:`demo_tripod_alt.py` はアセンブリが明示的であることを除き、 "
 ":file:`demo_tripod.py` によく似ています。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:263
+#: ../source/python/examples.rst:263
 msgid ""
 "In |gfi|, the assembly of vectors, and matrices is done via the ``gf.asm_*``"
 " functions. The Dirichlet condition :math:`h(x)u(x) = r(x)` is handled in "
@@ -358,11 +358,11 @@ msgstr ""
 "行列です。これは定数であり、単位と等価です)。元のシステムからDirichlet条件を除去することにより、縮退システム ``KK UU = FF`` "
 "を構築します。ペナルティ法を使用してDirichlet条件を処理する方が効率的(よりシンプル)であることに注意してください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:273
+#: ../source/python/examples.rst:273
 msgid "Other examples"
 msgstr "その他の例"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:275
+#: ../source/python/examples.rst:275
 msgid ""
 "the :file:`demo_refine.py` script shows a simple 2D or 3D bar whose "
 "extremity is clamped. An adaptative refinement is used to obtain a better "
@@ -372,7 +372,7 @@ msgstr ""
 ":file:`demo_refine.py` "
 "スクリプトは、端部がクランプされた単純な2次元または3次元バーを示します。応力が特異な領域(クランプ領域とNeumann境界の間の遷移)でより良い近似を得るために適合リファインメントを用いました。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:280
+#: ../source/python/examples.rst:280
 msgid ""
 "the :file:`demo_nonlinear_elasticity.py` script shows a 3D bar which is is "
 "bended and twisted. This is a quasi-static problem as the deformation is "
@@ -382,7 +382,7 @@ msgstr ""
 ":file:`demo_nonlinear_elasticity.py` "
 "スクリプトは、曲げ捻りの3次元バーを示しています。これは、変形が多数のステップで適用されるため、準静的な問題です。各ステップで非線形(有限変形)弾性問題を解きます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:285
+#: ../source/python/examples.rst:285
 msgid ""
 "the :file:`demo_stokes_3D_tank.py` script shows a Stokes (viscous fluid) "
 "problem in a tank. The :file:`demo_stokes_3D_tank_draw.py` shows how to draw"
@@ -395,7 +395,7 @@ msgstr ""
 "はメッシュスライスとストリームラインを使用して、解の適切なプロットを描画する方法を示します。 "
 ":file:`demo_stokes_3D_tank_alt.py` は古い例で、廃止された ``gf_solve`` 関数を使っています。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:291
+#: ../source/python/examples.rst:291
 msgid ""
 "the :file:`demo_bilaplacian.py` script is just an adaption of the |gf| "
 "example :file:`tests/bilaplacian.cc`. Solve the bilaplacian (or a Kirchhoff-"
@@ -404,7 +404,7 @@ msgstr ""
 ":file:`demo_bilaplacian.py` スクリプトは、 |gf| の例である :file:`tests/bilaplacian.cc` "
 "を改作したものです。bilaplacian(かKirchhoff-Loveのプレートモデル)を正方形で求解します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:295
+#: ../source/python/examples.rst:295
 msgid ""
 "the :file:`demo_plasticity.py` script is an adaptation of the |gf| example "
 ":file:`tests/plasticity.cc`: a 2D or 3D bar is bended in many steps, and the"
@@ -415,7 +415,7 @@ msgstr ""
 "を応用したものです。2次元または3次元バーは多数のステップで曲げられ、材料の塑性が考慮されます(材料の Von Mises "
 "が所定の閾値を超えたときに塑化が起こります)。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/python/examples.rst:300
+#: ../source/python/examples.rst:300
 msgid ""
 "the :file:`demo_wave2D.py` is a 2D scalar wave equation example (diffraction"
 " of a plane wave by a cylinder), with high order geometric transformations "

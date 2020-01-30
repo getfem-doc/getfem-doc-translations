@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,27 +21,27 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:12
+#: ../source/userdoc/model_Mindlin_plate.rst:12
 msgid "Mindlin-Reissner plate model"
 msgstr "Mindlin-Reissner板モデル"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:14
+#: ../source/userdoc/model_Mindlin_plate.rst:14
 msgid ""
 "This brick implements the classical Mindlin-Reissner bending model for "
 "isotropic plates."
 msgstr "このブリック要素は等方性プレート用の古典的なMindlin-Reissner曲げモデルを実装しています。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:17
+#: ../source/userdoc/model_Mindlin_plate.rst:17
 msgid "The Mindlin-Reissner plate model"
 msgstr "Mindlin-Reissner板モデル"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:19
+#: ../source/userdoc/model_Mindlin_plate.rst:19
 msgid ""
 "Let :math:`\\Omega \\subset \\R^2` be the reference configuration of the "
 "mid-plane of a plate of thickness :math:`\\epsilon`."
 msgstr ":math:`\\Omega\\subset\\R^2` は厚さ :math:`\\epsilon` のプレートの中間面の参照構成です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:21
+#: ../source/userdoc/model_Mindlin_plate.rst:21
 msgid ""
 "The weak formulation of the Mindlin-Reissner model for isotropic material "
 "can be written as follows for :math:`u_3` the transverse displacement and "
@@ -50,7 +50,7 @@ msgstr ""
 "等方性材料のMindlin-Reissnerモデルの弱定式化は以下のように書くことができます。ここで :math:`u_3` は横方向の変位であり、 "
 ":math:`\\theta` は中間面に垂直なファイバーの回転です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:23
+#: ../source/userdoc/model_Mindlin_plate.rst:23
 msgid ""
 "& \\int_{\\Omega} D \\epsilon^3\\left((1-v)\\gamma(\\theta):\\gamma(\\psi) +"
 " \\nu \\mbox{div}(\\theta)\\mbox{div}(\\psi)\\right) dx \\\\ & "
@@ -62,7 +62,7 @@ msgstr ""
 "~~~~~~~~~~~~~~ + \\int_{\\Omega}G\\epsilon (\\nabla u_3 - "
 "\\theta)\\cdot(\\nabla v_3 - \\psi)dx = \\int_{\\Omega} F_3v_3 + M.\\psi dx,"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:28
+#: ../source/userdoc/model_Mindlin_plate.rst:28
 msgid ""
 "for all admissible test functions :math:`v_3 : \\Omega \\rightarrow \\R,$ "
 "$\\psi : \\Omega \\rightarrow \\R^2` and where:"
@@ -70,7 +70,7 @@ msgstr ""
 "すべての許容可能な試行関数について :math:`v_3 : \\Omega \\rightarrow \\R,$ $\\psi : \\Omega "
 "\\rightarrow \\R^2` です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:30
+#: ../source/userdoc/model_Mindlin_plate.rst:30
 msgid ""
 "& D = \\Frac{E}{12(1-\\nu^2)}, ~~ G = \\Frac{E\\kappa}{2(1+\\nu)}, \\\\ & "
 "\\gamma(\\theta) = (\\nabla \\theta + \\nabla \\theta^T)/2, \\\\ & F_3 = "
@@ -86,7 +86,7 @@ msgstr ""
 "\\int_{-\\epsilon/2}^{\\epsilon/2} x_3 f_{\\alpha}dx_3, \\alpha \\in \\{1, "
 "2\\},"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:36
+#: ../source/userdoc/model_Mindlin_plate.rst:36
 msgid ""
 ":math:`f` being a volumic force applied inside the three dimensional plate, "
 ":math:`g^+` and :math:`g^-` a force applied on the top and bottom surface of"
@@ -97,29 +97,29 @@ msgstr ""
 " :math:`E` はYoung率、 :math:`\\nu` Poisson比そして :math:`\\kappa` "
 "はせん断補正係数（通常5/6に設定）です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:38
+#: ../source/userdoc/model_Mindlin_plate.rst:38
 msgid "The classical boundary conditions are the following:"
 msgstr "古典的な境界条件は次のとおりです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:40
+#: ../source/userdoc/model_Mindlin_plate.rst:40
 msgid "Simple support :  a dirichlet condition on :math:`u_3`."
 msgstr "単純支持： :math:`u_3` 上のDirichlet条件。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:42
+#: ../source/userdoc/model_Mindlin_plate.rst:42
 msgid ""
 "Clamped support : a dirichlet condition on both :math:`u_3` and "
 ":math:`\\theta`."
 msgstr "固定支持: :math:`u_3` と :math:`\\theta` のDirichlet条件。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:44
+#: ../source/userdoc/model_Mindlin_plate.rst:44
 msgid "Prescribed transverse force : boundary source term on :math:`u_3`."
 msgstr "既定の横力： :math:`u_3` 上の境界ソース項。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:46
+#: ../source/userdoc/model_Mindlin_plate.rst:46
 msgid "Prescribed moment : boundary source term on :math:`\\theta`."
 msgstr "既定のモーメント： :math:`\\ theta` 上の境界源項。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:49
+#: ../source/userdoc/model_Mindlin_plate.rst:49
 msgid ""
 "An important issue of this model is that it is subjected to the so called "
 "shear locking so that a direct Galerkin procedure do not give a satisfactory"
@@ -129,21 +129,21 @@ msgid ""
 msgstr ""
 "このモデルの重要な問題は、直接的Galerkin法が満足できる近似を与えないため、いわゆるせん断ロッキングが発生することです。せん断ロッキングの問題を回避するには、積分の低減・横方向のせん断項の投影・混合方法があります。2つの高速な方法が提案されています。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:53
+#: ../source/userdoc/model_Mindlin_plate.rst:53
 msgid "Reduced integration of the transverse shear term"
 msgstr "横断せん断項の積分を減少させる"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:55
+#: ../source/userdoc/model_Mindlin_plate.rst:55
 msgid ""
 "This strategy consists simply to use a lower order integration method to "
 "numerically compute the term"
 msgstr "この方法では単に下位の積分法を使用して数値的に計算します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:57
+#: ../source/userdoc/model_Mindlin_plate.rst:57
 msgid "\\int_{\\Omega}G\\epsilon (\\nabla u_3 - \\theta)\\cdot(\\nabla v_3 - \\psi)dx"
 msgstr "\\int_{\\Omega}G\\epsilon (\\nabla u_3 - \\theta)\\cdot(\\nabla v_3 - \\psi)dx"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:61
+#: ../source/userdoc/model_Mindlin_plate.rst:61
 msgid ""
 "This strategy is working properly at least when both the rotation and the "
 "transverse displacement is approximated with Q1 quadrilateral element with a"
@@ -151,11 +151,11 @@ msgid ""
 msgstr ""
 "この戦略は少なくとも回転変位と横変位の両方を選択的1次低減積分法を用いたQ14辺形要素（いわゆるQUAD4要素）で近似するとき適切に機能します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:64
+#: ../source/userdoc/model_Mindlin_plate.rst:64
 msgid "Projection of the transverse shear term"
 msgstr "横断方向せん断項の射影"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:66
+#: ../source/userdoc/model_Mindlin_plate.rst:66
 msgid ""
 "Another strategy comes from the MITC elements (Mixed Interpolation of "
 "Tensorial Components) which correspond to a re-interpretation in terms of "
@@ -170,11 +170,11 @@ msgstr ""
 "Thomas要素（RT0）の横断方向せん断項の投影を伴う4辺形要素Q1に対応するMITC4です（ [ba-dv1985]_ , [br-ba-"
 "fo1989]_ を参照）。横せん断項は次の通りです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:68
+#: ../source/userdoc/model_Mindlin_plate.rst:68
 msgid "\\int_{\\Omega}G\\epsilon P^h(\\nabla u_3 - \\theta)\\cdot P^h(\\nabla v_3 - \\psi)dx"
 msgstr "\\int_{\\Omega}G\\epsilon P^h(\\nabla u_3 - \\theta)\\cdot P^h(\\nabla v_3 - \\psi)dx"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:72
+#: ../source/userdoc/model_Mindlin_plate.rst:72
 msgid ""
 "where :math:`P^h(T)` is the elementwize :math:`L^2`-projection onto the "
 "rotated RT0 space.  For the moment, the only projection implemented is the "
@@ -189,7 +189,7 @@ msgstr ""
 " [Mi-Zh2002]_, [br-ba-fo1989]_, [Duan2014]_ を参照）。また、以下のことに注意してください。 "
 ":math:`P^h(\\nabla u_3) = \\nabla u_3` であるため、項は"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:74
+#: ../source/userdoc/model_Mindlin_plate.rst:74
 msgid ""
 "\\int_{\\Omega}G\\epsilon (\\nabla u_3 - P^h(\\theta))\\cdot(\\nabla v_3 - "
 "P^h(\\psi))dx"
@@ -197,7 +197,7 @@ msgstr ""
 "\\int_{\\Omega}G\\epsilon (\\nabla u_3 - P^h(\\theta))\\cdot(\\nabla v_3 - "
 "P^h(\\psi))dx"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:78
+#: ../source/userdoc/model_Mindlin_plate.rst:78
 msgid ""
 "The principle of the definition of an elementary projection is explained if "
 "the description of the weak form language (see :ref:`ud-gasm-high-elem-"
@@ -208,11 +208,11 @@ msgstr ""
 "high-elem-trans` を参照）。また例はファイル :file:`src/getfem_linearized_plates.cc` "
 "にあります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:83
+#: ../source/userdoc/model_Mindlin_plate.rst:83
 msgid "Add a Mindlin-Reissner plate model brick to a model"
 msgstr "Mindlin-Reissner板モデルブリック要素をモデルに追加する"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:85
+#: ../source/userdoc/model_Mindlin_plate.rst:85
 msgid ""
 "The following function defined in "
 ":file:`src/getfem/getfem_linearized_plates.h` allows to add a Mindlin-"
@@ -222,7 +222,7 @@ msgstr ""
 ":file:`src/getfem/getfem_linearized_plates.h` で定義されている次の関数はMindlin-"
 "Reissner板モデル項を横方向変位 `u3` と回転 `theta` に追加します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:91
+#: ../source/userdoc/model_Mindlin_plate.rst:91
 msgid ""
 "where `name_u3` is name of the variable which represents the transverse "
 "displacmenent, `name_theta` the variable which represents the rotation, "
@@ -250,7 +250,7 @@ msgstr ""
 "が使用され、横断せん断項に `mim_reduced` が使用される縮小積分に対応します。 `variant = 2` "
 "（デフォルト）は横せん断項の回転RT0要素への投影に対応します。現時点では、4辺形のみに適用されています（3角形要素のロッキング現象を除去するには不十分であるため）。高次の要素を使用すると、RT0の投影によって近似の次数が減少することにも注意してください。モデル内の要素のインデックスを返します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/model_Mindlin_plate.rst:112
+#: ../source/userdoc/model_Mindlin_plate.rst:112
 msgid ""
 "The projection on rotated RTO element can be added to a model thanks to the "
 "following function::"

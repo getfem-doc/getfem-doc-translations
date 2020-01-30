@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,23 +21,23 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:8
+#: ../source/scilab/cmdref_gf_spmat.rst:8
 msgid "gf_spmat"
 msgstr "gf_spmat"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:10
+#: ../source/scilab/cmdref_gf_spmat.rst:10
 msgid "**Synopsis**"
 msgstr "**概要**"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:22
+#: ../source/scilab/cmdref_gf_spmat.rst:22
 msgid "**Description :**"
 msgstr "**説明 :**"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:25
+#: ../source/scilab/cmdref_gf_spmat.rst:25
 msgid "General constructor for spmat objects."
 msgstr "spmat オブジェクトの汎用的なコンストラクタ"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:27
+#: ../source/scilab/cmdref_gf_spmat.rst:27
 msgid ""
 "Create a new sparse matrix in getfem++ format. These sparse matrix can be "
 "stored as CSC (compressed column sparse), which is the format used by "
@@ -50,7 +50,7 @@ msgid ""
 msgstr ""
 "getfem++形式で新しい疎行列を作成します。これらの疎行列は、Matlabで使用される形式であるCSC(圧縮された疎の列)として保存することも、WSC(getfemの内部形式)として保存することもできます。CSC行列は書き込み可能ではありませんが(これは非常に非効率的です)、ベクトルとの乗算とメモリ使用量のために最適化されています。WSCは書き込み可能であり、ランダムな読み取り/書き込み操作に関して非常に高速です。しかし、メモリオーバヘッドはCSC行列よりも高く、行列ベクトル乗算では若干遅いです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:36
+#: ../source/scilab/cmdref_gf_spmat.rst:36
 msgid ""
 "By default, all newly created matrices are build as WSC matrices. This can "
 "be changed later with <literal></literal>gf_spmat_set(spmat S, "
@@ -64,19 +64,19 @@ msgstr ""
 "<literal></literal>gf_linsolve()<literal></literal> "
 "は行列をCSCに変換します)によって自動的に変更できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:41
+#: ../source/scilab/cmdref_gf_spmat.rst:41
 msgid "The matrices may store REAL or COMPLEX values."
 msgstr "マトリックスには実数値または複素数値を格納できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:44
+#: ../source/scilab/cmdref_gf_spmat.rst:44
 msgid "**Command list :**"
 msgstr "**コマンドリスト**"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:48
+#: ../source/scilab/cmdref_gf_spmat.rst:48
 msgid "``SM = gf_spmat('empty', int m [, int n])``"
 msgstr "``SM = gf_spmat('empty', int m [, int n])``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:50
+#: ../source/scilab/cmdref_gf_spmat.rst:50
 msgid ""
 "Create a new empty (i.e. full of zeros) sparse matrix, of dimensions "
 "<literal>m x n</literal>. If <literal>n</literal> is omitted, the matrix "
@@ -85,11 +85,11 @@ msgstr ""
 "新しい空の(すなわち、ゼロで満たされた)次元 <literal>m x n</literal> 疎行列を作成します。 "
 "<literal>n</literal> を省略すると、行列の次元は <literal>m x m</literal> になります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:54
+#: ../source/scilab/cmdref_gf_spmat.rst:54
 msgid "``SM = gf_spmat('copy', mat K [,  I [,  J]])``"
 msgstr "``SM = gf_spmat('copy', mat K [,  I [,  J]])``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:56
+#: ../source/scilab/cmdref_gf_spmat.rst:56
 msgid ""
 "Duplicate a matrix <literal>K</literal> (which might be a spmat). If index "
 "<literal>I</literal> and/or <literal>J</literal> are given, the matrix will "
@@ -98,23 +98,23 @@ msgstr ""
 "(spmatかもしれない)マトリックス<literal>K</literal>を複製します。インデックス <literal>I</literal> "
 "及び/又は <literal>J</literal> が与えられる場合、行列は <literal>K</literal> の部分行列となります。例えば"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:63
+#: ../source/scilab/cmdref_gf_spmat.rst:63
 msgid "will return a 40x5 matrix."
 msgstr "は 40x5 の行列を返します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:66
+#: ../source/scilab/cmdref_gf_spmat.rst:66
 msgid "``SM = gf_spmat('identity', int n)``"
 msgstr "``SM = gf_spmat('identity', int n)``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:68
+#: ../source/scilab/cmdref_gf_spmat.rst:68
 msgid "Create a <literal>n x n</literal> identity matrix."
 msgstr "<literal>n x n</literal> 次の単位行列を作成します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:71
+#: ../source/scilab/cmdref_gf_spmat.rst:71
 msgid "``SM = gf_spmat('mult', spmat A, spmat B)``"
 msgstr "``SM = gf_spmat('mult', spmat A, spmat B)``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:73
+#: ../source/scilab/cmdref_gf_spmat.rst:73
 msgid ""
 "Create a sparse matrix as the product of the sparse matrices "
 "<literal>A</literal> and <literal>B</literal>. It requires that "
@@ -127,11 +127,11 @@ msgstr ""
 "<literal></literal>gf_spmat_set(spmat S, 'to_complex')<literal></literal> "
 "を使う必要があるかもしれません。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:78
+#: ../source/scilab/cmdref_gf_spmat.rst:78
 msgid "``SM = gf_spmat('add', spmat A, spmat B)``"
 msgstr "``SM = gf_spmat('add', spmat A, spmat B)``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:80
+#: ../source/scilab/cmdref_gf_spmat.rst:80
 msgid ""
 "Create a sparse matrix as the sum of the sparse matrices "
 "<literal>A</literal> and <literal>B</literal>. Adding a real matrix with a "
@@ -139,11 +139,11 @@ msgid ""
 msgstr ""
 "疎行列<literal>A</literal>と<literal>B</literal>の和の疎行列を作成します。複素数行列を持つ実数行列の追加が可能です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:84
+#: ../source/scilab/cmdref_gf_spmat.rst:84
 msgid "``SM = gf_spmat('diag', mat D [, ivec E [, int n [,int m]]])``"
 msgstr "``SM = gf_spmat('diag', mat D [, ivec E [, int n [,int m]]])``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:86
+#: ../source/scilab/cmdref_gf_spmat.rst:86
 msgid ""
 "Create a diagonal matrix. If <literal>E</literal> is given, "
 "<literal>D</literal> might be a matrix and each column of "
@@ -153,7 +153,7 @@ msgstr ""
 "対角行列を作成します。<literal>E</literal> が与えられる場合、 <literal>D</literal> は行列であり、 "
 "<literal>E</literal> の各列は <literal>D</literal> の対応する列の部分対角の番号を含みます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:91
+#: ../source/scilab/cmdref_gf_spmat.rst:91
 msgid ""
 "``SM = gf_spmat('load','hb'|'harwell-boeing'|'mm'|'matrix-market', string "
 "filename)``"
@@ -161,6 +161,6 @@ msgstr ""
 "``SM = gf_spmat('load','hb'|'harwell-boeing'|'mm'|'matrix-market', string "
 "filename)``"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_spmat.rst:93
+#: ../source/scilab/cmdref_gf_spmat.rst:93
 msgid "Read a sparse matrix from an Harwell-Boeing or a Matrix-Market file ."
 msgstr "Harwell-BoeingやMatrix-Marketのファイルから疎行列を読みます。"

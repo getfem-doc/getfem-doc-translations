@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: 2019-09-25 04:03+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:10
+#: ../source/userdoc/hho.rst:10
 msgid "Tools for HHO (Hybrid High-Order) methods"
 msgstr "HHO (Hybrid High-Order) 法用ツール"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:14
+#: ../source/userdoc/hho.rst:14
 msgid ""
 "HHO method are hybrid methods in the sense that they have both degrees of "
 "freedom located on the element of a mesh and on the faces of the elements "
@@ -46,7 +46,7 @@ msgstr ""
 "[AB-ER-PI2018]_ を、塑性については [AB-ER-PI2019]_ を、接触問題については [ca-ch-er2019]_ "
 "を参照)の近似にも容易に拡張できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:16
+#: ../source/userdoc/hho.rst:16
 msgid ""
 "HHO methods can be applied to arbitrary shape elements. However, the "
 "implementation in |gf| is for the moment limited to standard elements : "
@@ -57,11 +57,11 @@ msgstr ""
 "HHO法は任意の形状要素に適用できます。しかし、 |gf| "
 "での実装は、現時点では標準的な要素に限定されています。さらに、この実装はまだ実験的であり、最適のふりをしません。現時点では、内部自由度を自動的に圧縮するツールはありません。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:19
+#: ../source/userdoc/hho.rst:19
 msgid "HHO elements"
 msgstr "HHO要素"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:21
+#: ../source/userdoc/hho.rst:21
 msgid ""
 "HHO elements are composite ones having a polynomial approximation space for "
 "the interior of the element and a polynomial approximation for each face of "
@@ -79,7 +79,7 @@ msgstr ""
 " |gf| は、単純に ``FEM_HHO(fem_int, fem_face1, fem_face2, ...)`` "
 "と呼ばれる特殊な方法を提供します。これは、標準的な有限要素空間からハイブリッド法を構築することを可能にします。たとえば、三角形の場合、次のようにしてHHO法を取得できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:25
+#: ../source/userdoc/hho.rst:25
 msgid ""
 "The first argument to ``FEM_HHO(...)`` is the fem for the interior of the "
 "element. It has to be a discontinuous FEM. The method "
@@ -99,7 +99,7 @@ msgstr ""
 " ``FEM_HHO(FEM_PK(2,2), FEM_PK(1,2))`` のような方法は ``FEM_PK(2,2)`` "
 "と変わりません。)であるという事実についての検証ではありません。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:27
+#: ../source/userdoc/hho.rst:27
 msgid ""
 "For the moment, the fursnished element for interior and faces are - "
 "``FEM_SIMPLEX_IPK(n,k)`` : interior PK element of degree k for the simplices"
@@ -119,11 +119,11 @@ msgstr ""
 ":単体上の内部PKエレメントで、追加で接続可能です。HHOエレメント面に使用するように設計されています。- ``FEM_QUAD_CIPK(k)`` "
 ":追加接続可能な4角形上の内部PK要素。HHO要素面に使用するように設計されています。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:35
+#: ../source/userdoc/hho.rst:35
 msgid "Reconstruction operators"
 msgstr "再構築演算子"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:37
+#: ../source/userdoc/hho.rst:37
 msgid ""
 "For a variable ``u``, we will note :math:`u_{T}` its value in the interior "
 "of the element :math:`T` and :math:`u_{\\partial T}` its value on the "
@@ -135,11 +135,11 @@ msgstr ""
 "(2つの異なる近似に対応する)の境界における :math:`u_{\\partial T}` の値に注目します。再構成演算子は、セクション :ref"
 ":`ud-gasm-high-elem-trans` で説明されているように、基本変換として|gf|で実装されます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:40
+#: ../source/userdoc/hho.rst:40
 msgid "Reconstructed gradient"
 msgstr "再構築された勾配"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:42
+#: ../source/userdoc/hho.rst:42
 msgid ""
 "The first reconstruction operator is the reconstructed gradient. Given a "
 "certain polynomial space :math:`V_G`, the reconstructed gradient "
@@ -148,7 +148,7 @@ msgstr ""
 "第1の再構成演算子は再構成勾配である。ある多項式空間 :math:`V_G` が与えられると、再構築された勾配 :math:`G(u)` "
 "は、局所問題の解になるでしょう"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:44
+#: ../source/userdoc/hho.rst:44
 msgid ""
 "\\int_T G(u):\\tau dx = \\int_T \\nabla u_T : \\tau dx + \\int_{\\partial T}"
 " (u_{\\partial T} - u_{T}).(\\tau n_T) d\\Gamma, ~~~ \\forall \\tau \\in V_G"
@@ -156,7 +156,7 @@ msgstr ""
 "\\int_T G(u):\\tau dx = \\int_T \\nabla u_T : \\tau dx + \\int_{\\partial T}"
 " (u_{\\partial T} - u_{T}).(\\tau n_T) d\\Gamma, ~~~ \\forall \\tau \\in V_G"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:47
+#: ../source/userdoc/hho.rst:47
 msgid ""
 "where :math:`n_T` is the outward unit normal to  :math:`T` on  "
 ":math:`\\partial T`. Note that the space :math:`V` is a vector-valued one if"
@@ -168,13 +168,13 @@ msgstr ""
 "がスカラーフィールド変数(この場合、 :math:`G(u):\\tau` は :math:`G(u).\\tau` に縮小されます。)である場合、空間"
 " :math:`V` はベクトル値の単位であり、 ``u`` がベクトルフィールド変数である場合、行列値の単位であることに注意してください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:49
+#: ../source/userdoc/hho.rst:49
 msgid ""
 "In order to be used, the elementary transformation corresponding to this "
 "operator has first to be added to the model by the command::"
 msgstr "この演算子に対応する基本変換を使用するには、まず次のコマンドでモデルに追加する必要があります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:53
+#: ../source/userdoc/hho.rst:53
 msgid ""
 "where ``transname`` is an arbitrary name which will designate the "
 "transformation in the weak form language. Then, it will be possible to refer"
@@ -191,13 +191,13 @@ msgstr ""
 "の第3パラメータは有限要素法変数またはモデルのデータであるべきです。この変数はそれ自体では使用されませんが、再構築の有限要素空間(空間 "
 ":math:`V_G` )を決定します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:55
+#: ../source/userdoc/hho.rst:55
 msgid ""
 "This is an example of use with the Python interface for a two-dimensional "
 "triangule mesh ``m`` ::"
 msgstr "これは、Pythonインタフェースを使用して2次元の三角形メッシュ ``m`` を作成する例です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:70
+#: ../source/userdoc/hho.rst:70
 msgid ""
 "The macro definitions allowing to use the gradient of the variable inside "
 "weak formulations as usual. For instance, the addition of a weak term for "
@@ -205,7 +205,7 @@ msgid ""
 msgstr ""
 "マクロ定義では、弱定式内の変数の勾配を通常どおり使用できます。たとえば、Laplace方程式に弱項を追加する場合、次のように簡単に記述できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:74
+#: ../source/userdoc/hho.rst:74
 msgid ""
 "Two complete examples of use are given in the test programs "
 ":file:`interface/tests/demo_laplacian_HHO.py` and "
@@ -214,11 +214,11 @@ msgstr ""
 "2つの完全な使用例がテストプログラム :file:`interface/tests/demo_laplacian_HHO.py` と "
 ":file:`interface/tests/demo_elasticity_HHO.py` に与えられます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:77
+#: ../source/userdoc/hho.rst:77
 msgid "Reconstructed symmetrized gradient"
 msgstr "再構築された対称化勾配"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:79
+#: ../source/userdoc/hho.rst:79
 msgid ""
 "The symmetrized gradient is only for vector field variables and additionally"
 " when the vector field dimension is the same as the domain dimension. This "
@@ -229,7 +229,7 @@ msgstr ""
 "対称化勾配はベクトル場変数に対してのみであり,加えてベクトル場次元が領域次元と同じ場合である。これは通常、弾性の問題などに当てはまります。前の節と同じ表記法で、再構築された勾配"
 " :math:`G^s(u)` が局所問題の解決になるでしょう"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:81
+#: ../source/userdoc/hho.rst:81
 msgid ""
 "\\int_T G^s(u):\\tau dx = \\int_T \\nabla^s u_T : \\tau dx + "
 "\\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\tau^s n_T) d\\Gamma, ~~~ "
@@ -239,7 +239,7 @@ msgstr ""
 "\\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\tau^s n_T) d\\Gamma, ~~~ "
 "\\forall \\tau \\in V_G"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:84
+#: ../source/userdoc/hho.rst:84
 msgid ""
 "where :math:`\\nabla^s u_T = (\\nabla u_T + (\\nabla u_T)^T)/2` and "
 ":math:`\\tau^s = (\\tau + \\tau^T)/2`."
@@ -247,13 +247,13 @@ msgstr ""
 "where :math:`\\nabla^s u_T = (\\nabla u_T + (\\nabla u_T)^T)/2` and "
 ":math:`\\tau^s = (\\tau + \\tau^T)/2`."
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:86
+#: ../source/userdoc/hho.rst:86
 msgid ""
 "The elementary transformation corresponding to this operator can be added to"
 " the model by the command::"
 msgstr "この演算子に対応する基本変換は、次のコマンドでモデルに追加できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:90
+#: ../source/userdoc/hho.rst:90
 msgid ""
 "and then be used into the weak form language as "
 "``Elementary_transformation(u, HHO_sym_grad, Gu)``, if "
@@ -263,11 +263,11 @@ msgstr ""
 "``transname=\"HHO_sym_grad\"`` の場合は ``Elementary_transformation(u, "
 "HHO_sym_grad, Gu)`` という弱形式言語に変換され、 ``Gu`` が再構成空間を決定します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:93
+#: ../source/userdoc/hho.rst:93
 msgid "Reconstructed variable"
 msgstr "再構築された変数"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:95
+#: ../source/userdoc/hho.rst:95
 msgid ""
 "A recontruction of higher order can be done using both the approximation on "
 "the interior and the approximation on the faces. The recontructed variable "
@@ -277,7 +277,7 @@ msgstr ""
 "高次の再構成は、内部の近似とフェースの近似の両方を使用して行うことができます。再構成された変数 :math:`D(u)` は、選択された空間 "
 ":math:`V_D` 上の局所Neumann問題の解決策になるだろう"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:97
+#: ../source/userdoc/hho.rst:97
 msgid ""
 "\\int_T \\nabla D(u). \\nabla v dx = \\int_T \\nabla u_T . \\nabla v dx + "
 "\\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\nabla v n_T) d\\Gamma, ~~~ "
@@ -287,23 +287,21 @@ msgstr ""
 "\\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\nabla v n_T) d\\Gamma, ~~~ "
 "\\forall v \\in V_D"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:100
+#: ../source/userdoc/hho.rst:100
 msgid "with the additional constraint"
 msgstr "追加の拘束を使用して"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:102
+#: ../source/userdoc/hho.rst:102
 msgid "\\int_T D(u) dx = \\int_T u_T dx"
 msgstr "\\int_T D(u) dx = \\int_T u_T dx"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:106
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:130
+#: ../source/userdoc/hho.rst:106 ../source/userdoc/hho.rst:130
 msgid ""
 "The corresponding elementary transformation can be added to the model by the"
 " command::"
 msgstr "対応する基本変換は、次のコマンドでモデルに追加できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:110
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:134
+#: ../source/userdoc/hho.rst:110 ../source/userdoc/hho.rst:134
 msgid ""
 "and used into the weak form language as ``Elementary_transformation(u, "
 "HHO_val, ud)``, if ``transname=\"HHO_val\"``, with ``ud`` determining the "
@@ -312,11 +310,11 @@ msgstr ""
 "そして、もし ``transname=\"HHO_val\"`` ならば、 ``ud`` が再構築空間を決定する "
 "``Elementary_transformation(u, HHO_val, ud)`` として、弱形式言語に使われます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:113
+#: ../source/userdoc/hho.rst:113
 msgid "Reconstructed variable with symmetrized gradient"
 msgstr "対称化された勾配を持つ再構築された変数"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:115
+#: ../source/userdoc/hho.rst:115
 msgid ""
 "A variant of the recontruction of a variable is the one using a symmetrized "
 "gradient. It can be used only for vector field variables and additionally "
@@ -327,7 +325,7 @@ msgstr ""
 "変数の再構成の変形は、対称化された勾配を使用するものである。ベクトルフィールド変数にのみ使用でき、さらにベクトルフィールドの次元がドメインの次元と同じ場合にも使用できます。再構成された変数"
 " :math:`D(u)` は、選択された空間 :math:`V_D` 上の局所Neumann問題に対する解であるだろう"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:117
+#: ../source/userdoc/hho.rst:117
 msgid ""
 "\\int_T \\nabla^s D(u). \\nabla^s v dx = \\int_T \\nabla^s u_T . \\nabla^s v"
 " dx + \\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\nabla^s v n_T) "
@@ -337,11 +335,11 @@ msgstr ""
 " dx + \\int_{\\partial T} (u_{\\partial T} - u_{T}).(\\nabla^s v n_T) "
 "d\\Gamma, ~~~ \\forall v \\in V_D"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:120
+#: ../source/userdoc/hho.rst:120
 msgid "with the additional constraints"
 msgstr "追加の拘束を使用して"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:122
+#: ../source/userdoc/hho.rst:122
 msgid ""
 "& \\int_T D(u) dx = \\int_T u_T dx   &\\int_T \\mbox{Skew}(\\nabla D(u)) dx "
 "= \\int_{\\partial T} (n_T \\otimes u_{\\partial T} - u_{\\partial T} "
@@ -351,7 +349,7 @@ msgstr ""
 "= \\int_{\\partial T} (n_T \\otimes u_{\\partial T} - u_{\\partial T} "
 "\\otimes n_T)/2 d\\Gamma"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:128
+#: ../source/userdoc/hho.rst:128
 msgid ""
 "where :math:`\\mbox{Skew}(\\nabla D(u)) = (\\nabla D(u) - (\\nabla "
 "D(u))^T)/2`."
@@ -359,11 +357,11 @@ msgstr ""
 "ここで、 :math:`\\mbox{Skew}(\\nabla D(u)) = (\\nabla D(u) - (\\nabla "
 "D(u))^T)/2` である。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:138
+#: ../source/userdoc/hho.rst:138
 msgid "Stabilization operators"
 msgstr "安定操作子"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:140
+#: ../source/userdoc/hho.rst:140
 msgid ""
 "The stabilization operators is an operator that measure in a sense the "
 "discontinuity of the approximation. A stabilization is obtained by a "
@@ -374,11 +372,11 @@ msgstr ""
 "安定化演算子は、ある意味で近似の不連続性を測定する演算子です。この演算子を用いてペナルティ項により安定化が得られます。安定化演算子 "
 ":math:`S(u)` は、要素の境界空間 :math:`V_{\\partial T}` 上で次の式で定義されます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:142
+#: ../source/userdoc/hho.rst:142
 msgid "S(u) = \\Pi_{\\partial T}(u_{\\partial T} - D(u) - \\Pi_{T}(u_T - D(u)))"
 msgstr "S(u) = \\Pi_{\\partial T}(u_{\\partial T} - D(u) - \\Pi_{T}(u_T - D(u)))"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:145
+#: ../source/userdoc/hho.rst:145
 msgid ""
 "where :math:`D(u)` is the reconstruction operator on a polynomial space one "
 "degree higher that the finite element space used for the variable, "
@@ -390,26 +388,26 @@ msgstr ""
 "T}` は面近似の空間への :math:`L^2` 投影であり、 :math:`\\Pi_{T}` は要素の内部の空間への :math:`L^2` "
 "投影である。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:147
+#: ../source/userdoc/hho.rst:147
 msgid ""
 "For vector field variables having the same dimension as the domain, there "
 "exists also a stabilization operator using the symmetrized gradient, which "
 "is defined by"
 msgstr "領域と同じ次元を持つベクトル場変数に対して、対称化勾配を用いた安定化演算子も存在します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:149
+#: ../source/userdoc/hho.rst:149
 msgid "S^s(u) = \\Pi_{\\partial T}(u_{\\partial T} - D^s(u) - \\Pi_{T}(u_T - D^s(u)))"
 msgstr ""
 "S^s(u) = \\Pi_{\\partial T}(u_{\\partial T} - D^s(u) - \\Pi_{T}(u_T - "
 "D^s(u)))"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:152
+#: ../source/userdoc/hho.rst:152
 msgid ""
 "The corresponding elementary transformations can be added to the model by "
 "the two commands::"
 msgstr "対応する基本的な変換は、次の2つのコマンドでモデルに追加できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/userdoc/hho.rst:157
+#: ../source/userdoc/hho.rst:157
 msgid ""
 "and used into the weak form language as ``Elementary_transformation(u, "
 "HHO_stab)``, if ``transname=\"HHO_stab\"``. A third argument is optional to "

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: 2018-07-16 07:14+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,15 +21,15 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:11
+#: ../source/gmm/first-step.rst:11
 msgid "First steps with |gmm|"
 msgstr "|gmm| の最初のステップ"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:15
+#: ../source/gmm/first-step.rst:15
 msgid "How can I invert a matrix ?"
 msgstr "どのように逆行列を計算しますか？"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:17
+#: ../source/gmm/first-step.rst:17
 msgid ""
 "It is not possible in |gmm| to invert all kind of matrices. For the moment, "
 "the only mean to invert a matrix is to use the dense LU decomposition (thus,"
@@ -38,7 +38,7 @@ msgstr ""
 "|gmm| "
 "では全ての種類の行列の逆行列を計算することはできません。今のところ、逆行列を計算する唯一の方法は、密なLU分解(つまり、密行列の場合のみ)を使用することです。例えば"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:32
+#: ../source/gmm/first-step.rst:32
 msgid ""
 "see the section corresponding to dense LU decomposition for more details. "
 "The type ``gmm::dense_matrix<double>`` can be replaced by ``gmm::row_matrix<"
@@ -48,17 +48,17 @@ msgstr ""
 "``gmm::row_matrix< std::vector<double> >`` または ``gmm::col_matrix< "
 "std::vector<double> >`` で置き換えることができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:35
+#: ../source/gmm/first-step.rst:35
 msgid "How can I solve a linear system ?"
 msgstr "線形システムをどのように解きますか？"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:37
+#: ../source/gmm/first-step.rst:37
 msgid ""
 "You have more than one possibility to solve a linear system. If you have a "
 "dense matrix, the best may be to use the LU decomposition. An example::"
 msgstr "線形システムを解く方法は複数あります。密行列の場合は、LU分解を使用するのが最善です。例えば"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:54
+#: ../source/gmm/first-step.rst:54
 msgid ""
 "If, now, you have a sparse system coming for example from a pde "
 "discretization, you have various iterative solvers, with or without "
@@ -66,11 +66,11 @@ msgid ""
 msgstr ""
 "今、偏微分方程式の離散化から来る疎なシステムを持っているなら、前処理行列の有無にかかわらず、さまざまな反復ソルバーがあります。これは、前処理GMRESによる例です。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:75
+#: ../source/gmm/first-step.rst:75
 msgid "How can I transform a vector into a matrix and reshape it ?"
 msgstr "どのようにベクトルを行列に変換し、それを変形することができますか？"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:77
+#: ../source/gmm/first-step.rst:77
 msgid ""
 "In |gmm|, a vector is not considered as a matrix. If you need to use a "
 "vector as a (1 by n) row matrix or (n by 1) column matrix in a computation, "
@@ -79,24 +79,24 @@ msgstr ""
 "|gmm| "
 "では、ベクトルは行列とはみなされません。ベクトルを（1×n）行行列または（n×1）列行列として計算で使用する必要がある場合は、次を使用する必要があります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:84
+#: ../source/gmm/first-step.rst:84
 msgid "for instance, you can transform a vector into a dense matrix with::"
 msgstr "たとえば、次のようにしてベクトルを密行列に変換できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:94
+#: ../source/gmm/first-step.rst:94
 msgid "Then you can also reshape matrix ``M`` with::"
 msgstr "次のようにして、行列 ``M`` の形状を変更することもできます。行列"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:100
+#: ../source/gmm/first-step.rst:100
 msgid "What is the better way to resize a matrix ?"
 msgstr "行列のサイズを変更するより良い方法は何ですか？"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:102
+#: ../source/gmm/first-step.rst:102
 msgid ""
 "You can change the dimensions of a matrix, if it is not a reference, using::"
 msgstr "行列の大きさは、参照でない場合は次を使用して変更することができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:106
+#: ../source/gmm/first-step.rst:106
 msgid ""
 "This function respects the intersection between the original matrix and the "
 "resized matrix, and new components are set to zero. An important thing is "
@@ -107,7 +107,7 @@ msgstr ""
 "この関数は元の行列とサイズ変更された行列の交点を尊重し、新しい要素はゼロに設定されます。重要なことは、 ``std::vector`` "
 "のサイズ変更メソッドに基づいていることです。したがって、新しい行列のサイズが元のサイズよりも小さい場合、メモリフリーは行われません。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:108
+#: ../source/gmm/first-step.rst:108
 msgid ""
 "If you do not need to keep old values of the components, or if you want to "
 "really free the surplus of memory, you can resize a matrix using "
@@ -116,6 +116,6 @@ msgstr ""
 "コンポーネントの古い値を保持する必要がない場合、または余分なメモリを解放したい場合は、次のように ``std::swap`` "
 "を使って行列のサイズを変更できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/first-step.rst:116
+#: ../source/gmm/first-step.rst:116
 msgid "Of course, this works also for a vector."
 msgstr "もちろん、これはベクトルに対しても機能します。"

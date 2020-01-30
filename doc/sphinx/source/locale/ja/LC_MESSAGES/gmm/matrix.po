@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:10
+#: ../source/gmm/matrix.rst:10
 msgid "Matrix and Vector type provided by |gmm|"
 msgstr "|gmm| によって提供される行列およびベクトル型"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:13
+#: ../source/gmm/matrix.rst:13
 msgid ""
 "The convention is that any vector or matrix type (except if it is a  "
 "reference) can be instantiated with the constructors::"
 msgstr "どのようなベクトル型や行列型(参照である場合を除く)でもコンストラクタでインスタンス化することができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:19
+#: ../source/gmm/matrix.rst:19
 msgid ""
 "No other constructor is used inside |gmm| and you should not use any other "
 "if you want your code to be compatible with any matrix and vector type."
@@ -39,19 +39,19 @@ msgstr ""
 "|gmm| "
 "の内部では他のコンストラクタは使用されていません。また、行列やベクトル型と互換性を持たせたい場合は、他のコンストラクタを使用しないでください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:22
+#: ../source/gmm/matrix.rst:22
 msgid ""
 "It is assumed that each vector type interfaced with |gmm| allows to access "
 "to a component with the following syntax::"
 msgstr "|gmm| でインターフェイスされる各ベクトル型は、次の構文でコンポーネントにアクセスできます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:29
+#: ../source/gmm/matrix.rst:29
 msgid ""
 "The write access being available if the vector is not a constant reference. "
 "For a matrix::"
 msgstr "ベクトルが定数参照でない場合に使用できる書き込みアクセスについて。行列の場合は次のようになります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:34
+#: ../source/gmm/matrix.rst:34
 msgid ""
 "Again the write access is available if the matrix is not a const reference. "
 "Generally, especially for sparse matrices, this access is not very "
@@ -61,7 +61,7 @@ msgstr ""
 "この場合も、行列がconst参照でない場合は、書き込みアクセスが可能です。一般に、特に疎行列の場合、このアクセスはあまり効率的ではありません。線形代数のプロシージャはイテレータを介してベクトルと行列の成分にアクセスします。("
 " :ref:`gmm-inside` 参照)"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:36
+#: ../source/gmm/matrix.rst:36
 msgid ""
 "It is also not recommended (at all) to use the original copy operator for "
 "vectors or matrices. Generally, it will not do the appropriate job. instead,"
@@ -69,7 +69,7 @@ msgid ""
 msgstr ""
 "ベクトルや行列にオリジナルのコピー演算子を使用することも(全く)お勧めしません。一般的に、それは適切に動きません。代わりに、次のメソッドを使用する必要があります。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:41
+#: ../source/gmm/matrix.rst:41
 msgid ""
 "which works for all correctly interfaced matrix and vector type, even if "
 "``V`` is not of the same type as ``W`` (``V`` could be sparse and ``W`` "
@@ -78,7 +78,7 @@ msgstr ""
 "これは、たとえ ``V`` が ``W`` と同じ型でなくても(たとえば、 ``V`` は疎、 ``W`` "
 "は密の場合)、正しくインターフェイスされた行列とベクトル型のすべてに対して機能します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:43
+#: ../source/gmm/matrix.rst:43
 msgid ""
 "in |gmm|, a vector is not a (n by 1) matrix, it is a one dimensional object."
 " If you need to use a vector as a (n by 1) column matrix or a (1 by n) row "
@@ -87,7 +87,7 @@ msgstr ""
 "|gmm| "
 "では、ベクトルは(n×1)行列ではなく、1次元オブジェクトです。ベクトルを(n×1)列行列または(1×n)行行列として使用する必要がある場合は、次のようにします。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:50
+#: ../source/gmm/matrix.rst:50
 msgid ""
 "In the following, the template parameter ``T`` will represent a scalar type "
 "like ``double`` or ``std::complex<double>``."
@@ -95,11 +95,11 @@ msgstr ""
 "以下では、テンプレートパラメータ ``T`` は、 ``double`` や ``std::complex<double>`` "
 "のようなスカラー型を表します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:54
+#: ../source/gmm/matrix.rst:54
 msgid "dense vectors"
 msgstr "密ベクトル"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:56
+#: ../source/gmm/matrix.rst:56
 msgid ""
 "|gmm| interfaces ``std::vector<T>`` so you can use it as your basic dense "
 "vector type. If you need to interface another type of dense vector you can "
@@ -109,11 +109,11 @@ msgstr ""
 "をインターフェイスするので、基本的な密ベクトル型として使うことができます。別の型の密なベクトルをインタフェースする必要がある場合は、 "
 "``gmm/gmm_interface.h`` のいくつか例をを参照してください。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:61
+#: ../source/gmm/matrix.rst:61
 msgid "sparse vectors"
 msgstr "疎ベクトル"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:63
+#: ../source/gmm/matrix.rst:63
 msgid ""
 "|gmm| provides two types of sparse vectors: ``gmm::wsvector<T>`` and "
 "``gmm::rsvector<T>``. ``gmm::wsvector<T>`` is optimized for write operations"
@@ -129,11 +129,11 @@ msgstr ""
 "``gmm::rsvector<T>`` でベクトルをコピーするのが適切です。これらの2つのベクトル型は、行優先行列または列優先行列( "
 ":ref:`gmmracmat` を参照)を作成するために使用できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:66
+#: ../source/gmm/matrix.rst:66
 msgid "skyline vectors"
 msgstr "スカイラインベクトル"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:68
+#: ../source/gmm/matrix.rst:68
 msgid ""
 "The type ``gmm::slvector<T>`` defines a skyline vector, in the sense that "
 "only an interval of this vector is stored. With this type of vector you can "
@@ -145,11 +145,11 @@ msgstr ""
 "``gmm::row_matrix< gmm::slvector<T> >`` (次の節 :ref:`gmmracmat` "
 "を参照)として構築することができます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:73
+#: ../source/gmm/matrix.rst:73
 msgid "generic row and column matrices"
 msgstr "包括的な行と列の行列"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:75
+#: ../source/gmm/matrix.rst:75
 msgid ""
 "|gmm| provides the two following types of matrices: "
 "``gmm::row_matrix<VECT>`` and ``gmm::col_matrix<VECT>`` where ``VECT`` "
@@ -161,27 +161,27 @@ msgstr ""
 "の2つの型の行列を提供します。ここで ``VECT`` は有効な(すなわち、インターフェイス)ベクトル型であるべきです。この2種類の行列は "
 "``VECT`` の配列を格納するため、メモリは連続していません。初期化は次のとおりです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:81
+#: ../source/gmm/matrix.rst:81
 msgid ""
 "Of course ``gmm::row_matrix<VECT>`` is a row matrix and it is impossible to "
 "access to a particular column of this matrix."
 msgstr "もちろん ``gmm::row_matrix<VECT>`` は行行列であり、この行列の特定の列にアクセスすることはできません。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:84
+#: ../source/gmm/matrix.rst:84
 msgid ""
 "``gmm::mat_nrows(M)`` gives the number of rows of a matrix and "
 "``gmm::mat_ncols(M)`` the number of columns."
 msgstr "``gmm::mat_nrows(M)`` は行列の行数を表し、 ``gmm::mat_ncols(M)`` は列数を表します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:87
+#: ../source/gmm/matrix.rst:87
 msgid "dense matrices"
 msgstr "密行列"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:89
+#: ../source/gmm/matrix.rst:89
 msgid "It is recommended to use the type::"
 msgstr "次の型を使用することをお勧めします。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:93
+#: ../source/gmm/matrix.rst:93
 msgid ""
 "to represent a dense matrix type because it is compatible with the Fortran "
 "format (column major) and some operations are interfaced with blas and "
@@ -192,7 +192,7 @@ msgstr ""
 "密行列型を表現するため、Fortran形式(列優先)と互換性があり、一部の演算がblasおよびLapack( :ref:`gmm-lapack` "
 "を参照)とインタフェースされるためです。これは、列と行の行列(行優先)と見なされ、列と行の両方にアクセスできます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:95
+#: ../source/gmm/matrix.rst:95
 msgid ""
 "However, matrix types as ``gmm::row_matrix< std::vector<double> >`` or "
 "``gmm::col_matrix< std::vector<double> >`` represent also some dense "
@@ -201,11 +201,11 @@ msgstr ""
 "しかし、 ``gmm::row_matrix< std::vector<double> >`` や ``gmm::col_matrix< "
 "std::vector<double> >`` などの行列型も密行列を表します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:98
+#: ../source/gmm/matrix.rst:98
 msgid "sparse matrices"
 msgstr "疎行列"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:100
+#: ../source/gmm/matrix.rst:100
 msgid ""
 "Similarly, ``gmm::row_matrix< gmm::wsvector<double> >`` or "
 "``gmm::col_matrix< gmm::rsvector<double> >`` represents some sparse "
@@ -215,7 +215,7 @@ msgstr ""
 "同様に、 ``gmm::row_matrix< gmm::wsvector<double> >`` や ``gmm::col_matrix< "
 "gmm::rsvector<double> >`` はいくつかの疎行列を表しますが、 |gmm| は古典的な疎行列の型を二つ提供します。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:105
+#: ../source/gmm/matrix.rst:105
 msgid ""
 "The type ``gmm::csr_matrix<T>`` represents a compressed sparse row matrix "
 "and ``gmm::csc_matrix<T>`` a compressed sparse column matrix. The "
@@ -231,7 +231,7 @@ msgstr ""
 " ``gmm::copy`` だけです。これらの行列を使う正しい方法は、まず ``gmm::row_matrix< "
 "gmm::wsvector<double> >`` のような別の型の行列に対して書き込み操作を実行し、それからコピーを行うことです。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:117
+#: ../source/gmm/matrix.rst:117
 msgid ""
 "Matrices ``gmm::csr_matrix<T>`` and ``gmm::csc_matrix<T>`` have the "
 "advantage to have a standard format (interfaceable with Fortran code) and to"
@@ -242,6 +242,6 @@ msgstr ""
 "行列 ``gmm::csr_matrix<T>`` と ``gmm::csc_matrix<T>`` "
 "は、標準形式(Fortranコードとのインターフェースが可能)と(メモリ内で連続な)コンパクトフォーマットを持つ利点があります。Fortranプログラムとの互換性を確保するために、これらの型に2番目のテンプレートパラメータが存在する場合、次のように宣言できます。"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/gmm/matrix.rst:122
+#: ../source/gmm/matrix.rst:122
 msgid "The ``1`` means that a shift will be done on all the indices."
 msgstr "``1`` はすべてのインデックスがシフトされることを意味します。"

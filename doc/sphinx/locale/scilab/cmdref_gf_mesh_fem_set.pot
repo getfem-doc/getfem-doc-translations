@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,138 +16,138 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:8
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:8
 msgid "gf_mesh_fem_set"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:10
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:10
 msgid "**Synopsis**"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:26
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:26
 msgid "**Description :**"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:29
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:29
 msgid "General function for modifying mesh_fem objects."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:32
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:32
 msgid "**Command list :**"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:36
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:36
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'fem', fem f[, ivec CVids])``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:38
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:38
 msgid "Set the Finite Element Method."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:40
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:40
 msgid "Assign an FEM <literal>f</literal> to all convexes whose #ids are listed in <literal>CVids</literal>. If <literal>CVids</literal> is not given, the integration is assigned to all convexes."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:43
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:43
 msgid "See the help of gf_fem to obtain a list of available FEM methods."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:46
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:46
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'classical fem', int k[[, 'complete'], ivec CVids])``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:48
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:48
 msgid "Assign a classical (Lagrange polynomial) fem of order <literal>k</literal> to the mesh_fem. The option 'complete' requests complete Langrange polynomial elements, even if the element geometric transformation is an incomplete one (e.g. 8-node quadrilateral or 20-node hexahedral)."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:53
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:53
 msgid "Uses FEM_PK for simplexes, FEM_QK for parallelepipeds etc."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:56
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:56
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'classical discontinuous fem', int k[[, 'complete'], @tscalar alpha[, ivec CVIDX]])``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:58
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:58
 msgid "Assigns a classical (Lagrange polynomial) discontinuous fem of order k."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:60
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:60
 msgid "Similar to gf_mesh_fem_set(mesh_fem MF, 'set classical fem') except that FEM_PK_DISCONTINUOUS is used. Param <literal>alpha</literal> the node inset, <latex style=\"text\"><![CDATA[0 \\leq alpha < 1]]></latex>, where 0 implies usual dof nodes, greater values move the nodes toward the center of gravity, and 1 means that all degrees of freedom collapse on the center of gravity. The option 'complete' requests complete Langrange polynomial elements, even if the element geometric transformation is an incomplete one (e.g. 8-node quadrilateral or 20-node hexahedral)."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:70
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:70
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'qdim', int Q)``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:72
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:72
 msgid "Change the <literal>Q</literal> dimension of the field that is interpolated by the mesh_fem."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:74
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:74
 msgid "<literal>Q = 1</literal> means that the mesh_fem describes a scalar field, <literal>Q = N</literal> means that the mesh_fem describes a vector field of dimension N."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:78
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:78
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'reduction matrices', mat R, mat E)``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:80
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:80
 msgid "Set the reduction and extension matrices and valid their use."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:83
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:83
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'reduction', int s)``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:85
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:85
 msgid "Set or unset the use of the reduction/extension matrices."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:88
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:88
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'reduce meshfem', mat RM)``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:90
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:90
 msgid "Set reduction mesh fem This function selects the degrees of freedom of the finite element method by selecting a set of independent vectors of the matrix RM. The numer of columns of RM should corresponds to the number of degrees of freedom of the finite element method."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:97
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:97
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'dof partition', ivec DOFP)``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:99
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:99
 msgid "Change the 'dof_partition' array."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:101
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:101
 msgid "<literal>DOFP</literal> is a vector holding a integer value for each convex of the mesh_fem. See gf_mesh_fem_get(mesh_fem MF, 'dof partition') for a description of \"dof partition\"."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:105
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:105
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'set partial', ivec DOFs[, ivec RCVs])``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:107
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:107
 msgid "Can only be applied to a partial mesh_fem. Change the subset of the degrees of freedom of <literal>mf</literal>."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:110
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:110
 msgid "If <literal>RCVs</literal> is given, no FEM will be put on the convexes listed in <literal>RCVs</literal>."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:114
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:114
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'adapt')``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:116
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:116
 msgid "For a mesh_fem levelset object only. Adapt the mesh_fem object to a change of the levelset function."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:120
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:120
 msgid "``gf_mesh_fem_set(mesh_fem MF, 'set enriched dofs', ivec DOFs)``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/scilab/cmdref_gf_mesh_fem_set.rst:122
+#: ../source/scilab/cmdref_gf_mesh_fem_set.rst:122
 msgid "For a mesh_fem product object only. Set te enriched dofs and adapt the mesh_fem product."
 msgstr ""

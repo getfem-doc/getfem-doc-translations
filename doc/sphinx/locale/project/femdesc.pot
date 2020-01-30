@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-30 14:29+0000\n"
+"POT-Creation-Date: 2020-01-30 15:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,295 +16,295 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:10
+#: ../source/project/femdesc.rst:10
 msgid "The FEM description in |gf|"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:12
+#: ../source/project/femdesc.rst:12
 msgid "The aim of this section is to briefly introduce the FEM description in |gf| mainly in order to fix the notation used in the rest of the document (definition of element, reference element, geometric transformation, gradient of the geometric transformation ...)."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:19
+#: ../source/project/femdesc.rst:19
 msgid "Convex structures"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:21
+#: ../source/project/femdesc.rst:21
 msgid "Finite element methods are defined on small convex domains called elements. The simplest element on which a finite element method can be defined is a segment (simplex of dimension 1), other possibilities are triangles, tetrahedrons (simplices of dimension 2 and 3), prisms, parallelepiped, etc. In |gf|, a type of element (for us, a convex) is described by the object |bg_cs| defined in the file :file:`bgeot_convex_structure.h`."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:28
+#: ../source/project/femdesc.rst:28
 msgid "It describes only the structure of the convex not the coordinates of the vertices. This structure is not to be manipulated by itself, because it is not necessary that more than one structure of this type describe the same type of convex. What will be manipulated is a pointer on such a descriptor which has to be declared with the type |bg_pcs|"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:34
+#: ../source/project/femdesc.rst:34
 msgid "The following functions give a pointer onto the descriptor of the usual type of elements:"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:39
+#: ../source/project/femdesc.rst:39
 msgid "description of a simplex of dimension ``d``."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:43
+#: ../source/project/femdesc.rst:43
 msgid "description of a parallelepiped of dimension ``d``."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:47
+#: ../source/project/femdesc.rst:47
 msgid "description of the direct product of ``p1`` and ``p2``."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:51
+#: ../source/project/femdesc.rst:51
 msgid "description of a prism of dimension ``d``."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:53
+#: ../source/project/femdesc.rst:53
 msgid "For instance if one needs the description of a square, one can call equivalently::"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:58
+#: ../source/project/femdesc.rst:58
 msgid "or::"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:63
+#: ../source/project/femdesc.rst:63
 msgid "The descriptor contains in particular the number of faces (``p->nb_faces()``), the dimension of the convex (``p->dim()``), for the number of vertices (``p->nb_points()``). Other information is the number of vertices of each face, the description of a face and the eventual reference to a more basic description (used for the description of geometric transformations)."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:74
+#: ../source/project/femdesc.rst:74
 msgid "usual elements"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:78
+#: ../source/project/femdesc.rst:78
 msgid "Convexes of reference"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:80
+#: ../source/project/femdesc.rst:80
 msgid "A convex of reference is a particular real element, i.e. a structure of convex with a list of vertices. It describes the particular element from which a finite element method is defined. In the file :file:`bgeot_convex_ref.h` the object |bg_cr| makes this description. The library keeps only one description for each type of convex. So what will be manipulated is a pointer of type |bg_pcr| on the descriptor."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:87
+#: ../source/project/femdesc.rst:87
 msgid "The following functions build the descriptions:"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:91
+#: ../source/project/femdesc.rst:91
 msgid "description of the simplex of reference of dimension ``d``."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:95
+#: ../source/project/femdesc.rst:95
 msgid "description of the simplex of reference of dimension ``d`` with degree ``k`` Lagrange grid."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:100
+#: ../source/project/femdesc.rst:100
 msgid "description of the direct product of two convexes of reference."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:104
+#: ../source/project/femdesc.rst:104
 msgid "description of the parallelepiped of reference of dimension ``d``."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:106
+#: ../source/project/femdesc.rst:106
 msgid "The vertices correspond to the classical vertices for such reference element. For instance the vertices for the triangle are :math:`(0, 0)`, :math:`(1, 0)` and :math:`(0, 1)`. It corresponds to the configuration shown in Figure :ref:`dp-fig-elem`"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:111
+#: ../source/project/femdesc.rst:111
 msgid "If ``p`` is of type |bg_pcr| then ``p->structure()`` is the corresponding convex structure. Thus for instance ``p->structure()->nb_points()`` gives the number of vertices. The function ``p->points()`` give the array of vertices and ``p->points()[0]`` is the first vertex. The function ``p->is_in(const base_node &pt)`` return a real which is negative or null if the point ``pt`` is in the element. The function ``p->is_in_face(short_type f, const base_node &pt)`` return a real which is null if the point ``pt`` is in the face ``f`` of the element. Other functions can be found in :file:`bgeot_convex_ref.h` and :file:`bgeot_convex.h`."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:123
+#: ../source/project/femdesc.rst:123
 msgid "Shape function type"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:125
+#: ../source/project/femdesc.rst:125
 msgid "Most of the time the shape functions of finite element methods are polynomials, at least on the convex of reference. But, the possibility is given to have other types of elements. It is possible to define other kind of base functions such as piecewise polynomials, interpolant wavelets, etc."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:130
+#: ../source/project/femdesc.rst:130
 msgid "To be used by the finite element description, a shape function type must be able to be evaluated on a point (``a = F.eval(pt)``, where ``pt`` is a ``base_node``) and must have a method to compute the derivative with respect to the ith variable (``F.derivative(i)``)."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:135
+#: ../source/project/femdesc.rst:135
 msgid "For the moment, only polynomials and piecewise polynomials are defined in the files :file:`bgeot_poly.h` and :file:`bgeot_poly_composite.h`."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:141
+#: ../source/project/femdesc.rst:141
 msgid "Geometric transformations"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:148
+#: ../source/project/femdesc.rst:148
 msgid "geometric transformation"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:150
+#: ../source/project/femdesc.rst:150
 msgid "A geometric transformation is a polynomial application:"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:152
+#: ../source/project/femdesc.rst:152
 msgid "\\tau : \\widehat{T} \\subset \\Reel^P \\longrightarrow T \\subset \\Reel^N,"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:156
+#: ../source/project/femdesc.rst:156
 msgid "which maps the reference element :math:`\\widehat{T}` to the real element :math:`T`. The geometric nodes are denoted:"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:159
+#: ../source/project/femdesc.rst:159
 msgid "g^i, i = 0, \\ldots, n_g - 1."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:163
+#: ../source/project/femdesc.rst:163
 msgid "The geometric transformation is described thanks to a :math:`n_g` components polynomial vector (In fact, as an extention, non polynomial geometric transformation can also be supported by |gf|, but this is very rarely used)"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:167
+#: ../source/project/femdesc.rst:167
 msgid "{\\cal N}(\\widehat{x}),"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:171
+#: ../source/project/femdesc.rst:171
 msgid "such that"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:173
+#: ../source/project/femdesc.rst:173
 msgid "\\tau(\\widehat{x}) = \\sum_{i = 0}^{n_g - 1}{\\cal N}_i(\\widehat{x}) g^i."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:177
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:250
+#: ../source/project/femdesc.rst:177
+#: ../source/project/femdesc.rst:250
 msgid "Denoting"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:179
+#: ../source/project/femdesc.rst:179
 msgid "G = (g^0; g^1; ...; g^{n_g - 1}),"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:183
+#: ../source/project/femdesc.rst:183
 msgid "the :math:`N\\times n_g` matrix containing of all the geometric nodes, one has"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:185
+#: ../source/project/femdesc.rst:185
 msgid "\\fbox{$\\tau(\\widehat{x}) = G\\cdot{\\cal N}(\\widehat{x})$.}"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:189
+#: ../source/project/femdesc.rst:189
 msgid "The derivative of :math:`\\tau` is then"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:191
+#: ../source/project/femdesc.rst:191
 msgid "\\fbox{$K(\\widehat{x}) := \\nabla\\tau(\\widehat{x}) = G\\cdot\\nabla {\\cal N}(\\widehat{x})$,}"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:195
+#: ../source/project/femdesc.rst:195
 msgid "where :math:`K(\\widehat{x}) = \\nabla\\tau(\\widehat{x})` is a :math:`N\\times P` matrix and :math:`\\nabla {\\cal N}(\\widehat{x})` a :math:`n_g\\times P` matrix. The (transposed) pseudo-inverse of :math:`\\nabla\\tau(\\widehat{x})` is a :math:`N\\times P` matrix denoted :math:`B(\\widehat{x})`:"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:200
+#: ../source/project/femdesc.rst:200
 msgid "\\fbox{$B(\\widehat{x}) := K(\\widehat{x})(K(\\widehat{x})^T K(\\widehat{x}))^{-1}$,}"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:204
+#: ../source/project/femdesc.rst:204
 msgid "Of course, when :math:`P=N`, one has :math:`B(\\widehat{x})=K(\\widehat{x})^{-T}`."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:206
+#: ../source/project/femdesc.rst:206
 msgid "Pointers on a descriptor of a geometric transformation can be obtained by the following function defined in the file :file:`bgeot_geometric_trans.h`::"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:211
+#: ../source/project/femdesc.rst:211
 msgid "where ``\"name of trans\"`` can be chosen among the following list."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:213
+#: ../source/project/femdesc.rst:213
 msgid "``\"GT_PK(n,k)\"``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:215
+#: ../source/project/femdesc.rst:215
 msgid "Description of the simplex transformation of dimension ``n`` and degree ``k`` (Most of the time, the degree 1 is used)."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:218
+#: ../source/project/femdesc.rst:218
 msgid "``\"GT_QK(n,k)\"``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:220
+#: ../source/project/femdesc.rst:220
 msgid "Description of the parallelepiped transformation of dimension ``n`` and degree ``k``."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:223
+#: ../source/project/femdesc.rst:223
 msgid "``\"GT_PRISM(n,k)\"``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:225
+#: ../source/project/femdesc.rst:225
 msgid "Description of the prism transformation of dimension ``n`` and degree ``k``."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:227
+#: ../source/project/femdesc.rst:227
 msgid "``\"GT_PRODUCT(a,b)\"``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:229
+#: ../source/project/femdesc.rst:229
 msgid "Description of the direct product of the two transformations ``a`` and ``b``."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:231
+#: ../source/project/femdesc.rst:231
 msgid "``\"GT_LINEAR_PRODUCT(a,b)\"``"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:233
+#: ../source/project/femdesc.rst:233
 msgid "Description of the direct product of the two transformations ``a`` and ``b`` keeping a linear transformation (this is a restriction of the previous function). This allows, for instance, to use exact integrations on regular meshes with parallelograms."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:240
+#: ../source/project/femdesc.rst:240
 msgid "Finite element methods description"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:242
+#: ../source/project/femdesc.rst:242
 msgid "A finite element method is defined on a reference element :math:`\\widehat{T}\\subset\\Reel^P` by a set of :math:`n_d` nodes :math:`a^i` and corresponding base functions"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:246
+#: ../source/project/femdesc.rst:246
 msgid "(\\widehat{\\varphi})^i : \\widehat{T}\\subset\\Reel^P \\longrightarrow \\Reel^Q"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:252
+#: ../source/project/femdesc.rst:252
 msgid "\\psi^i(x) = (\\widehat{\\varphi})^i(\\widehat{x}) = (\\widehat{\\varphi})^i(\\tau^{-1}(x)),"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:256
+#: ../source/project/femdesc.rst:256
 msgid "a supplementary linear transformation is allowed for the real base function"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:258
+#: ../source/project/femdesc.rst:258
 msgid "\\varphi^i(x) = \\sum_{j = 0}^{n_d - 1} M_{ij} \\psi^j(x),"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:262
+#: ../source/project/femdesc.rst:262
 msgid "where :math:`M` is a :math:`n_d \\times n_d` matrix possibly depending on the geometric transformation (i.e. on the real element). For basic elements as Lagrange elements this matrix is the identity matrix (it is simply ignored). In this case, we will say that the element is :math:`\\tau`-equivalent."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:267
+#: ../source/project/femdesc.rst:267
 msgid "This approach allows to define hermite elements (Argyris for instance) in a generic way, even with non linear transformations (i.e. mainly for curved boundaries). We denote :math:`[\\widehat{\\varphi}(\\widehat{x})]` the :math:`n_d \\times Q` matrix whose ith line is :math:`(\\widehat{\\varphi})^i(\\widehat{x})`. Whis this notation, for a function is defined by"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:273
+#: ../source/project/femdesc.rst:273
 msgid "f(x) = \\sum_{i = 0}^{n_d - 1} \\alpha_i \\varphi^i(x),"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:277
+#: ../source/project/femdesc.rst:277
 msgid "one has"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:279
+#: ../source/project/femdesc.rst:279
 msgid "\\fbox{$f(\\tau(\\widehat{x})) = \\alpha^T M [\\widehat{\\varphi}(\\widehat{x})]$,}"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:283
+#: ../source/project/femdesc.rst:283
 msgid "where :math:`\\alpha` is the vector whose ith component is :math:`\\alpha_i`."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:285
+#: ../source/project/femdesc.rst:285
 msgid "A certain number of description of classical finite element method are defined in the file :file:`getfem_fem.h`. See :ref:`ud-appendixa` for an exhaustive list of available finite element methods."
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:289
+#: ../source/project/femdesc.rst:289
 msgid "A pointer to the finite element descriptor of a method is obtained using the function::"
 msgstr ""
 
-#: /home/travis/build/getfem-doc/getfem-doc-translations/getfem/doc/sphinx/source/project/femdesc.rst:294
+#: ../source/project/femdesc.rst:294
 msgid "We refer to the file :file:`getfem_fem.cc` for how to define a new finite element method."
 msgstr ""
