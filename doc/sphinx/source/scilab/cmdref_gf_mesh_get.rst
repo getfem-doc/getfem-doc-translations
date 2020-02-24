@@ -35,6 +35,7 @@ gf_mesh_get
   CVFIDs = gf_mesh_get(mesh M, 'all faces'[, CVIDs])
   CVFIDs = gf_mesh_get(mesh M, 'outer faces with direction', vec v, scalar angle [, CVIDs])
   CVFIDs = gf_mesh_get(mesh M, 'outer faces in box', vec pmin, vec pmax [, CVIDs])
+  CVFIDs = gf_mesh_get(mesh M, 'outer faces in ball', vec center, scalar radius [, CVIDs])
   CVFIDs = gf_mesh_get(mesh M, 'adjacent face', int cvid, int fid)
   CVFIDs = gf_mesh_get(mesh M, 'faces from cvid'[, ivec CVIDs][, 'merge'])
   [mat T] = gf_mesh_get(mesh M, 'triangulated surface', int Nrefine [,CVLIST])
@@ -113,7 +114,7 @@ gf_mesh_get
 
   ``PIDs = gf_mesh_get(mesh M, 'pid in faces', imat CVFIDs)``
 
-    Search point #id listed in <literal>CVFIDs</literal>.
+    Return point #id listed in <literal>CVFIDs</literal>.
     
     <literal>CVFIDs</literal> is a two-rows matrix, the first row lists convex #ids,
     and the second lists face numbers. On return, <literal>PIDs</literal> is a
@@ -122,21 +123,21 @@ gf_mesh_get
 
   ``PIDs = gf_mesh_get(mesh M, 'pid in cvids', imat CVIDs)``
 
-    Search point #id listed in <literal>CVIDs</literal>.
+    Return point #id listed in <literal>CVIDs</literal>.
     
     <literal>PIDs</literal> is a vector containing points #id.
 
 
   ``PIDs = gf_mesh_get(mesh M, 'pid in regions', imat RIDs)``
 
-    Search point #id listed in <literal>RIDs</literal>.
+    Return point #id listed in <literal>RIDs</literal>.
     
     <literal>PIDs</literal> is a vector containing points #id.
 
 
   ``PIDs = gf_mesh_get(mesh M, 'pid from coords', mat PTS[, scalar radius=0])``
 
-    Search point #id whose coordinates are listed in <literal>PTS</literal>.
+    Return point #id whose coordinates are listed in <literal>PTS</literal>.
     
     <literal>PTS</literal> is an array containing a list of point coordinates. On
     return, <literal>PIDs</literal> is a vector containing points
@@ -165,6 +166,7 @@ gf_mesh_get
 
     Search point listed in <literal>CVID</literal>.
     
+    Return <literal>Pts</literal> and <literal>IDx</literal>.
     If <literal>CVIDs</literal> is omitted, all the convexes will be considered
     (equivalent to <literal>CVIDs = gf_mesh_get(mesh M, 'max cvid')</literal>). <literal>IDx</literal> is a
     vector, length(IDx) = length(CVIDs)+1. <literal>Pts</literal> is a
@@ -218,6 +220,7 @@ gf_mesh_get
 
     [OBSOLETE FUNCTION! will be removed in a future release]
     
+    Return E and C.
     More sophisticated version of gf_mesh_get(mesh M, 'edges') designed for
     curved elements. This one will return N (N>=2) points of the
     (curved) edges. With N==2, this is equivalent to
@@ -230,12 +233,12 @@ gf_mesh_get
 
   ``PIDs = gf_mesh_get(mesh M, 'orphaned pid')``
 
-    Search point #id which are not linked to a convex.
+    Return point #id which are not linked to a convex.
 
 
   ``CVIDs = gf_mesh_get(mesh M, 'cvid from pid', ivec PIDs[, bool share=False])``
 
-    Search convex #ids related with the point #ids given in <literal>PIDs</literal>.
+    Return convex #ids related with the point #ids given in <literal>PIDs</literal>.
     
     If <literal>share=False</literal>, search convex whose vertex #ids are in <literal>PIDs</literal>.
     If <literal>share=True</literal>, search convex #ids that share the point #ids
@@ -299,6 +302,16 @@ gf_mesh_get
     the convex set defined by the #ids listed in <literal>CVIDs</literal>.
 
 
+  ``CVFIDs = gf_mesh_get(mesh M, 'outer faces in ball', vec center, scalar radius [, CVIDs])``
+
+    Return the set of faces not shared by two convexes and lying within the ball of corresponding <literal>center</literal> and <literal>radius</literal>.
+    
+    The output <literal>CVFIDs</literal> is a two-rows matrix, the first row lists convex
+    #ids, and the second one lists face numbers (local number in the
+    convex). If <literal>CVIDs</literal> is given, it returns portion of the boundary of
+    the convex set defined by the #ids listed in <literal>CVIDs</literal>.
+
+
   ``CVFIDs = gf_mesh_get(mesh M, 'adjacent face', int cvid, int fid)``
 
     Return convex face of the neighbour element if it exists.
@@ -329,7 +342,7 @@ gf_mesh_get
 
   ``N = gf_mesh_get(mesh M, 'normal of face', int cv, int f[, int nfpt])``
 
-    Evaluates the normal of convex <literal>cv</literal>, face <literal>f</literal> at the <literal>nfpt</literal> point of the face.
+    Return the normal vector of convex <literal>cv</literal>, face <literal>f</literal> at the <literal>nfpt</literal> point of the face.
     
     If <literal>nfpt</literal> is not specified, then the normal is evaluated at each
     geometrical node of the face.
@@ -337,7 +350,7 @@ gf_mesh_get
 
   ``N = gf_mesh_get(mesh M, 'normal of faces', imat CVFIDs)``
 
-    Evaluates (at face centers) the normals of convexes.
+    Return matrix of (at face centers) the normal vectors of convexes.
     
     <literal>CVFIDs</literal> is supposed a two-rows matrix, the first row lists convex
     #ids, and the second lists face numbers (local number in the convex).
