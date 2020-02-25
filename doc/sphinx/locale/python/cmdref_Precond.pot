@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-24 21:35+0000\n"
+"POT-Creation-Date: 2020-02-25 13:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,82 +20,82 @@ msgstr ""
 msgid "Precond"
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:1
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:1
 msgid "GeFEM Precond object"
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:3
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:3
 msgid "The preconditioners may store REAL or COMPLEX values. They accept getfem sparse matrices and Matlab sparse matrices."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:7
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:7
 msgid "General constructor for Precond objects"
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:9
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:9
 msgid "``PC = Precond('identity')`` Create a REAL identity precondioner."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:12
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:12
 msgid "``PC = Precond('cidentity')`` Create a COMPLEX identity precondioner."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:15
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:15
 msgid "``PC = Precond('diagonal', vec D)`` Create a diagonal precondioner."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:18
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:18
 msgid "``PC = Precond('ildlt', SpMat m)`` Create an ILDLT (Cholesky) preconditioner for the (symmetric) sparse matrix `m`. This preconditioner has the same sparsity pattern than `m` (no fill-in)."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:23
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:23
 msgid "``PC = Precond('ilu', SpMat m)`` Create an ILU (Incomplete LU) preconditioner for the sparse matrix `m`. This preconditioner has the same sparsity pattern than `m` (no fill-in)."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:28
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:28
 msgid "``PC = Precond('ildltt', SpMat m[, int fillin[, scalar threshold]])`` Create an ILDLTT (Cholesky with filling) preconditioner for the (symmetric) sparse matrix `m`. The preconditioner may add at most `fillin` additional non-zero entries on each line. The default value for `fillin` is 10, and the default threshold is1e-7."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:34
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:34
 msgid "``PC = Precond('ilut', SpMat m[, int fillin[, scalar threshold]])`` Create an ILUT (Incomplete LU with filling) preconditioner for the sparse matrix `m`. The preconditioner may add at most `fillin` additional non-zero entries on each line. The default value for `fillin` is 10, and the default threshold is 1e-7."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:40
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:40
 msgid "``PC = Precond('superlu', SpMat m)`` Uses SuperLU to build an exact factorization of the sparse matrix `m`. This preconditioner is only available if the getfem-interface was built with SuperLU support. Note that LU factorization is likely to eat all your memory for 3D problems."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:46
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond:46
 msgid "``PC = Precond('spmat', SpMat m)`` Preconditionner given explicitely by a sparse matrix."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.char:1
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.char:1
 msgid "Output a (unique) string representation of the Precond."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.char:3
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.char:3
 msgid "This can be used to perform comparisons between two different Precond objects. This function is to be completed."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.display:1
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.display:1
 msgid "displays a short summary for a Precond object."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.is_complex:1
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.is_complex:1
 msgid "Return 1 if the preconditioner stores complex values."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.mult:1
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.mult:1
 msgid "Apply the preconditioner to the supplied vector."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.size:1
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.size:1
 msgid "Return the dimensions of the preconditioner."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.tmult:1
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.tmult:1
 msgid "Apply the transposed preconditioner to the supplied vector."
 msgstr ""
 
-#: ../../../../../../../virtualenv/python3.6.9/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.type:1
+#: ../../../../../../../virtualenv/python3.6.10/lib/python3.6/site-packages/getfem/__init__.py:docstring of getfem.Precond.type:1
 msgid "Return a string describing the type of the preconditioner ('ilu', 'ildlt',..)."
 msgstr ""
