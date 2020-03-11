@@ -3,8 +3,7 @@
 [![Build Status](https://travis-ci.com/getfem-doc/getfem-doc-translations.svg?branch=master)](https://travis-ci.com/getfem-doc/getfem-doc-translations)
 [![Documentation Status](https://readthedocs.org/projects/getfem/badge/?version=latest)](https://getfem.readthedocs.io/en/latest/?badge=latest)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
-![GitHub issues](https://img.shields.io/github/issues/getfem-doc/getfem-doc-translations?style=flat-square)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/getfem-doc/getfem-doc-translations?style=flat-square)
+[![GitHub issues](https://img.shields.io/github/issues/getfem-doc/getfem-doc-translations.svg?style=flat-square)](https://img.shields.io/github/issues/getfem-doc/getfem-doc-translations?style=flat-square)
 ![GitHub contributors](https://img.shields.io/github/contributors/getfem-doc/getfem-doc-translations?style=flat-square)
 
 This is a project to provide Getfem official documentation with multiple versions and multiple languages on Read The Docs site.
