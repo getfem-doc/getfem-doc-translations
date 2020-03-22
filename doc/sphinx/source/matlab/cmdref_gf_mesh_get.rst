@@ -274,13 +274,13 @@ gf_mesh_get
 
     Return the set of faces shared at least by two elements in CVIDs.
     Each face is represented only once and is arbitrarily chosen
-    between the two neighbour elements. 
+    between the two neighbor elements. 
 
 
   ``CVFIDs = gf_mesh_get(mesh M, 'all faces'[, CVIDs])``
 
     Return the set of faces of the in CVIDs (in all the mesh if CVIDs is
-    omitted). Note that the face shared by two neighbour elements will be
+    omitted). Note that the face shared by two neighbor elements will be
     represented twice. 
 
 
@@ -316,8 +316,8 @@ gf_mesh_get
 
   ``CVFIDs = gf_mesh_get(mesh M, 'adjacent face', int cvid, int fid)``
 
-    Return convex face of the neighbour element if it exists.
-    If the convex have more than one neighbour
+    Return convex face of the neighbor element if it exists.
+    If the convex have more than one neighbor
     relatively to the face ``f`` (think to bar elements in 3D for instance),
     return the first face found. 
 

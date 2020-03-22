@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-21 15:49+0000\n"
+"POT-Creation-Date: 2020-03-22 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -941,7 +941,7 @@ msgid "In order to use this functionality, the user have first to declare to the
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:721
-msgid "Different kind of transformations can be described. Several kinds of transformations has been implemented. The first one, described hereafter is a transformation described by an expression. A second one corresponds to the raytracing contact detection (see :ref:`ud-model-contact-friction_raytrace_inter_trans`). Some other transformations (neighbour element and element extrapolation) are describe in the next sections."
+msgid "Different kind of transformations can be described. Several kinds of transformations has been implemented. The first one, described hereafter is a transformation described by an expression. A second one corresponds to the raytracing contact detection (see :ref:`ud-model-contact-friction_raytrace_inter_trans`). Some other transformations (neighbor element and element extrapolation) are describe in the next sections."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:723
@@ -1005,7 +1005,7 @@ msgid "Element extrapolation transformation"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:790
-msgid "A specific transformation (see previous section) is defined in order to allows the evaluation of certain quantities by extrapolation with respect to another element (in general a neighbour element). This is not strictly speaking a transformation since the point location remain unchanged, but the evaluation is made on another element extrapolating the shape functions outside it. This transformation is used for stabilization term in fictitious domain applications (with cut elements) where it is more robust to extrapolate some quantities on a neighbour element having a sufficiently large intersection with the real domain than evaluating them on the current element if it has a small intersection with the real domain. The functions allowing to add such a transformation to a model or a workspace are::"
+msgid "A specific transformation (see previous section) is defined in order to allows the evaluation of certain quantities by extrapolation with respect to another element (in general a neighbor element). This is not strictly speaking a transformation since the point location remain unchanged, but the evaluation is made on another element extrapolating the shape functions outside it. This transformation is used for stabilization term in fictitious domain applications (with cut elements) where it is more robust to extrapolate some quantities on a neighbor element having a sufficiently large intersection with the real domain than evaluating them on the current element if it has a small intersection with the real domain. The functions allowing to add such a transformation to a model or a workspace are::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:798
@@ -1021,11 +1021,11 @@ msgid "Evaluating discontinuities across inter-element edges/faces"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:814
-msgid "A specific interpolate transformation (see previous sections), called ``neighbour_elt`` is defined by default in all models. This transformation can only be used when a computation is made on an internal edge/face of a mesh, i.e. an element face shared at least by two elements. It aims to compute discontinuity jumps of a variable across inter-element faces. It is particularly suitable to implement Discontinuous Galerkin and interior penalty methods, Ghost penalty terms or a posteriori estimators. The expressions::"
+msgid "A specific interpolate transformation (see previous sections), called ``neighbor_element`` is defined by default in all models. This transformation can only be used when a computation is made on an internal edge/face of a mesh, i.e. an element face shared at least by two elements. It aims to compute discontinuity jumps of a variable across inter-element faces. It is particularly suitable to implement Discontinuous Galerkin and interior penalty methods, Ghost penalty terms or a posteriori estimators. The expressions::"
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:827
-msgid "are available (as with any other interpolate transformation) and compute a field on the current point but on the neighbour element. Of course, ``Interpolate(X, neighbour_elt)`` as no specific interest since it returns the same result as ``X``. Similarly, in most cases, ``Interpolate(Normal, neighbour_elt)`` will return the opposite of ``Normal`` except for instance for 2D shell element in a 3D mesh where it has an interest."
+msgid "are available (as with any other interpolate transformation) and compute a field on the current point but on the neighbor element. Of course, ``Interpolate(X, neighbor_element)`` as no specific interest since it returns the same result as ``X``. Similarly, in most cases, ``Interpolate(Normal, neighbor_element)`` will return the opposite of ``Normal`` except for instance for 2D shell element in a 3D mesh where it has an interest."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:829
@@ -1041,7 +1041,7 @@ msgid "Note that the region representing the set of all internal faces of a mesh
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:841
-msgid "where ``mr`` is an optional mesh region. If ``mr`` is specified only the face internal with respect to this region are returned. An important aspect is that  each face is represented only once and is arbitrarily chosen between the two neighbour elements."
+msgid "where ``mr`` is an optional mesh region. If ``mr`` is specified only the face internal with respect to this region are returned. An important aspect is that  each face is represented only once and is arbitrarily chosen between the two neighbor elements."
 msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:843

@@ -2361,13 +2361,13 @@ gf_mesh_get
 
     Return the set of faces shared at least by two elements in CVIDs.
     Each face is represented only once and is arbitrarily chosen
-    between the two neighbour elements. 
+    between the two neighbor elements. 
 
 
   ``CVFIDs = gf_mesh_get(mesh M, 'all faces'[, CVIDs])``
 
     Return the set of faces of the in CVIDs (in all the mesh if CVIDs is
-    omitted). Note that the face shared by two neighbour elements will be
+    omitted). Note that the face shared by two neighbor elements will be
     represented twice. 
 
 
@@ -2403,8 +2403,8 @@ gf_mesh_get
 
   ``CVFIDs = gf_mesh_get(mesh M, 'adjacent face', int cvid, int fid)``
 
-    Return convex face of the neighbour element if it exists.
-    If the convex have more than one neighbour
+    Return convex face of the neighbor element if it exists.
+    If the convex have more than one neighbor
     relatively to the face <literal></literal>f<literal></literal> (think to bar elements in 3D for instance),
     return the first face found. 
 
@@ -3100,7 +3100,7 @@ gf_mesh_fem_get
     Return the array which associates an integer (the partition number)
     to each convex of the mesh_fem. By default, it is an all-zero array.
     The degrees of freedom of each convex of the mesh_fem are connected
-    only to the dof of neighbouring convexes which have the same
+    only to the dof of neighboring convexes which have the same
     partition number, hence it is possible to create partially
     discontinuous mesh_fem very easily.
 
@@ -4691,7 +4691,7 @@ gf_model_set
     Define a new macro for the high generic assembly language.
     The name include the parameters. For instance name='sp(a,b)', expr='a.b'
     is a valid definition. Macro without parameter can also be defined.
-    For instance name='x1', expr='X[1]' is valid. Teh form name='grad(u)',
+    For instance name='x1', expr='X[1]' is valid. The form name='grad(u)',
     expr='Grad_u' is also allowed but in that case, the parameter 'u' will
     only be allowed to be a variable name when using the macro. Note that
     macros can be directly defined inside the assembly strings with the

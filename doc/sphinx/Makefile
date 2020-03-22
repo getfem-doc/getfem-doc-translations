@@ -174,7 +174,7 @@ AUTOHEADER = ${SHELL} /home/travis/build/getfem-doc/getfem-doc-translations/getf
 AUTOMAKE = ${SHELL} /home/travis/build/getfem-doc/getfem-doc-translations/getfem/missing automake-1.15
 AWK = gawk
 BLAS_LIBS = -lblas
-BUILDDATE = 03/21/20,15:37:53
+BUILDDATE = 03/22/20,13:37:00
 BUILDER = travis
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -230,7 +230,7 @@ MAKEINFO = ${SHELL} /home/travis/build/getfem-doc/getfem-doc-translations/getfem
 MANIFEST_TOOL = :
 MATLAB_COM_EXT = 
 MATLAB_INC_DIR = 
-MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMesherObject @gfMeshLevelSet @gfMeshImData @gfContStruct @gfCvStruct @gfLevelSet @gfGeoTrans @gfMeshFem @gfMeshIm @gfPrecond @gfInteg @gfSlice @gfSpmat @gfModel @gfMesh @gfEltm @gfFem 
+MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMeshLevelSet @gfMesherObject @gfMeshImData @gfContStruct @gfMeshFem @gfCvStruct @gfGeoTrans @gfLevelSet @gfMeshIm @gfPrecond @gfModel @gfSpmat @gfInteg @gfSlice @gfMesh @gfEltm @gfFem 
 MATLAB_RELEASE = 
 MATLAB_ROOT = 
 METIS_LIBS = 
@@ -259,7 +259,7 @@ PSEUDO_FUNCTIONS = /home/travis/build/getfem-doc/getfem-doc-translations/getfem/
 PSEUDO_FUNCTIONS_LOC = gf_asm.cc gf_compute.cc gf_cont_struct.cc gf_cont_struct_get.cc gf_cvstruct_get.cc gf_delete.cc gf_eltm.cc gf_fem.cc gf_fem_get.cc gf_geotrans.cc gf_geotrans_get.cc gf_global_function.cc gf_global_function_get.cc gf_integ.cc gf_integ_get.cc gf_levelset.cc gf_levelset_get.cc gf_levelset_set.cc gf_linsolve.cc gf_mesh.cc gf_mesh_fem.cc gf_mesh_fem_get.cc gf_mesh_fem_set.cc gf_mesh_get.cc gf_mesh_im.cc gf_mesh_im_data.cc gf_mesh_im_data_get.cc gf_mesh_im_data_set.cc gf_mesh_im_get.cc gf_mesh_im_set.cc gf_mesh_levelset.cc gf_mesh_levelset_get.cc gf_mesh_levelset_set.cc gf_mesh_set.cc gf_mesher_object.cc gf_mesher_object_get.cc gf_model.cc gf_model_get.cc gf_model_set.cc gf_poly.cc gf_precond.cc gf_precond_get.cc gf_slice.cc gf_slice_get.cc gf_slice_set.cc gf_spmat.cc gf_spmat_get.cc gf_spmat_set.cc gf_util.cc gf_workspace.cc 
 
 # You can set these variables from the command line.
-PYTHON = python
+PYTHON = python3
 PYTHON_CC_ARG = 
 PYTHON_CPPFLAGS = -I/opt/python/3.6.10/include/python3.6m
 PYTHON_EXEC_PREFIX = ${exec_prefix}
@@ -357,7 +357,8 @@ SPHINXROOT = http://svn.python.org/projects
 LANGUAGE = en
 SPHINXOPTS = -D language=$(LANGUAGE)
 # SPHINXBUILD   = $(PYTHON) tools/sphinx-build.py
-SPHINXBUILD = sphinx-build
+# SPHINXBUILD   = sphinx-build
+SPHINXBUILD = python3 -msphinx
 SPHINXINTL = sphinx-intl
 PAPER = 
 SOURCES = $(srcdir)/source

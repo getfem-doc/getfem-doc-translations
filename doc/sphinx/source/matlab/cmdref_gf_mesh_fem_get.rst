@@ -271,7 +271,7 @@ gf_mesh_fem_get
     Return the array which associates an integer (the partition number)
     to each convex of the mesh_fem. By default, it is an all-zero array.
     The degrees of freedom of each convex of the mesh_fem are connected
-    only to the dof of neighbouring convexes which have the same
+    only to the dof of neighboring convexes which have the same
     partition number, hence it is possible to create partially
     discontinuous mesh_fem very easily.
 
