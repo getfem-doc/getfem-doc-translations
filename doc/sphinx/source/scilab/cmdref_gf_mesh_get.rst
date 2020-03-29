@@ -30,12 +30,12 @@ gf_mesh_get
   PIDs = gf_mesh_get(mesh M, 'orphaned pid')
   CVIDs = gf_mesh_get(mesh M, 'cvid from pid', ivec PIDs[, bool share=False])
   CVFIDs = gf_mesh_get(mesh M, 'faces from pid', ivec PIDs)
-  CVFIDs = gf_mesh_get(mesh M, 'outer faces'[, CVIDs])
+  CVFIDs = gf_mesh_get(mesh M, 'outer faces'[, dim][, CVIDs])
   CVFIDs = gf_mesh_get(mesh M, 'inner faces'[, CVIDs])
   CVFIDs = gf_mesh_get(mesh M, 'all faces'[, CVIDs])
-  CVFIDs = gf_mesh_get(mesh M, 'outer faces with direction', vec v, scalar angle [, CVIDs])
-  CVFIDs = gf_mesh_get(mesh M, 'outer faces in box', vec pmin, vec pmax [, CVIDs])
-  CVFIDs = gf_mesh_get(mesh M, 'outer faces in ball', vec center, scalar radius [, CVIDs])
+  CVFIDs = gf_mesh_get(mesh M, 'outer faces with direction', vec v, scalar angle[, dim][, CVIDs])
+  CVFIDs = gf_mesh_get(mesh M, 'outer faces in box', vec pmin, vec pmax[, dim][, CVIDs])
+  CVFIDs = gf_mesh_get(mesh M, 'outer faces in ball', vec center, scalar radius[, dim][, CVIDs])
   CVFIDs = gf_mesh_get(mesh M, 'adjacent face', int cvid, int fid)
   CVFIDs = gf_mesh_get(mesh M, 'faces from cvid'[, ivec CVIDs][, 'merge'])
   [mat T] = gf_mesh_get(mesh M, 'triangulated surface', int Nrefine [,CVLIST])
@@ -256,14 +256,17 @@ gf_mesh_get
     listed in <literal>PIDs</literal>.
 
 
-  ``CVFIDs = gf_mesh_get(mesh M, 'outer faces'[, CVIDs])``
+  ``CVFIDs = gf_mesh_get(mesh M, 'outer faces'[, dim][, CVIDs])``
 
     Return the set of faces not shared by two elements.
     
     The output <literal>CVFIDs</literal> is a two-rows matrix, the first row lists
     convex #ids, and the second one lists face numbers (local number
-    in the convex). If <literal>CVIDs</literal> is not given, all convexes are
-    considered, and it basically returns the mesh boundary. If <literal>CVIDs</literal>
+    in the convex). If <literal>dim</literal> is provided, the function is forced to
+    detect faces of elements that have dimension <literal>dim</literal>, e.g. <literal>dim</literal>=2 will
+    detect edges of surface elements, even if these belong to a 3D mesh.
+    If <literal>CVIDs</literal> is not given, all convexes are considered, and the
+    function basically returns the mesh boundary. If <literal>CVIDs</literal>
     is given, it returns the boundary of the convex set whose #ids are
     listed in <literal>CVIDs</literal>.
 
@@ -282,33 +285,36 @@ gf_mesh_get
     represented twice. 
 
 
-  ``CVFIDs = gf_mesh_get(mesh M, 'outer faces with direction', vec v, scalar angle [, CVIDs])``
+  ``CVFIDs = gf_mesh_get(mesh M, 'outer faces with direction', vec v, scalar angle[, dim][, CVIDs])``
 
     Return the set of faces not shared by two convexes and with a mean outward vector lying within an angle <literal>angle</literal> (in radians) from vector <literal>v</literal>.
     
     The output <literal>CVFIDs</literal> is a two-rows matrix, the first row lists convex
     #ids, and the second one lists face numbers (local number in the
-    convex). If <literal>CVIDs</literal> is given, it returns portion of the boundary of
+    convex). The argument <literal>dim</literal> works as in outer_faces().
+    If <literal>CVIDs</literal> is given, it returns portion of the boundary of
     the convex set defined by the #ids listed in <literal>CVIDs</literal>.
 
 
-  ``CVFIDs = gf_mesh_get(mesh M, 'outer faces in box', vec pmin, vec pmax [, CVIDs])``
+  ``CVFIDs = gf_mesh_get(mesh M, 'outer faces in box', vec pmin, vec pmax[, dim][, CVIDs])``
 
     Return the set of faces not shared by two convexes and lying within the box defined by the corner points <literal>pmin</literal> and <literal>pmax</literal>.
     
     The output <literal>CVFIDs</literal> is a two-rows matrix, the first row lists convex
     #ids, and the second one lists face numbers (local number in the
-    convex). If <literal>CVIDs</literal> is given, it returns portion of the boundary of
+    convex). The argument <literal>dim</literal> works as in outer_faces().
+    If <literal>CVIDs</literal> is given, it returns portion of the boundary of
     the convex set defined by the #ids listed in <literal>CVIDs</literal>.
 
 
-  ``CVFIDs = gf_mesh_get(mesh M, 'outer faces in ball', vec center, scalar radius [, CVIDs])``
+  ``CVFIDs = gf_mesh_get(mesh M, 'outer faces in ball', vec center, scalar radius[, dim][, CVIDs])``
 
     Return the set of faces not shared by two convexes and lying within the ball of corresponding <literal>center</literal> and <literal>radius</literal>.
     
     The output <literal>CVFIDs</literal> is a two-rows matrix, the first row lists convex
     #ids, and the second one lists face numbers (local number in the
-    convex). If <literal>CVIDs</literal> is given, it returns portion of the boundary of
+    convex). The argument <literal>dim</literal> works as in outer_faces().
+    If <literal>CVIDs</literal> is given, it returns portion of the boundary of
     the convex set defined by the #ids listed in <literal>CVIDs</literal>.
 
 

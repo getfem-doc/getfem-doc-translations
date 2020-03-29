@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-28 20:22+0000\n"
+"POT-Creation-Date: 2020-03-29 01:45+0000\n"
 "PO-Revision-Date: 2019-09-25 04:03+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -174,19 +174,14 @@ msgstr "この演算子に対応する基本変換を使用するには、まず
 #: ../source/userdoc/hho.rst:53
 msgid ""
 "where ``transname`` is an arbitrary name which will designate the "
-"transformation in the weak form language. Then, it will be possible to refer"
-" to the reconstructed gradient of a variable ``u`` into the weak form "
-"language as ``Elementary_transformation(u, HHO_grad, Gu)``, if "
+"transformation in GWFL (the generic weak form language). Then, it will be "
+"possible to refer to the reconstructed gradient of a variable ``u`` into "
+"GWFL as ``Elementary_transformation(u, HHO_grad, Gu)``, if "
 "``transname=\"HHO_grad\"``. The third parameter of the transformation ``Gu``"
 " should be a fem variable or a data of the model. This variable will not be "
 "used on itself but will determine the finite element space of the "
 "reconstruction (the space :math:`V_G`)."
 msgstr ""
-"``transname`` は弱形式言語で変換を指定する任意の名前です。そして、 ``transname=\"HHO_grad\"`` の場合、可変 "
-"``u`` の弱形式言語への再構成された勾配を ``Elementary_transformation(u, HHO_grad, Gu)`` "
-"として参照することが可能である。変換 ``Gu`` "
-"の第3パラメータは有限要素法変数またはモデルのデータであるべきです。この変数はそれ自体では使用されませんが、再構築の有限要素空間(空間 "
-":math:`V_G` )を決定します。"
 
 #: ../source/userdoc/hho.rst:55
 msgid ""
@@ -252,13 +247,10 @@ msgstr "この演算子に対応する基本変換は、次のコマンドでモ
 
 #: ../source/userdoc/hho.rst:90
 msgid ""
-"and then be used into the weak form language as "
-"``Elementary_transformation(u, HHO_sym_grad, Gu)``, if "
-"``transname=\"HHO_sym_grad\"``, with ``Gu`` still determining the "
+"and then be used into GWFL as ``Elementary_transformation(u, HHO_sym_grad, "
+"Gu)``, if ``transname=\"HHO_sym_grad\"``, with ``Gu`` still determining the "
 "reconstruction space."
 msgstr ""
-"``transname=\"HHO_sym_grad\"`` の場合は ``Elementary_transformation(u, "
-"HHO_sym_grad, Gu)`` という弱形式言語に変換され、 ``Gu`` が再構成空間を決定します。"
 
 #: ../source/userdoc/hho.rst:93
 msgid "Reconstructed variable"
@@ -300,12 +292,9 @@ msgstr "対応する基本変換は、次のコマンドでモデルに追加で
 
 #: ../source/userdoc/hho.rst:110 ../source/userdoc/hho.rst:134
 msgid ""
-"and used into the weak form language as ``Elementary_transformation(u, "
-"HHO_val, ud)``, if ``transname=\"HHO_val\"``, with ``ud`` determining the "
-"reconstruction space."
+"and used into GWFL as ``Elementary_transformation(u, HHO_val, ud)``, if "
+"``transname=\"HHO_val\"``, with ``ud`` determining the reconstruction space."
 msgstr ""
-"そして、もし ``transname=\"HHO_val\"`` ならば、 ``ud`` が再構築空間を決定する "
-"``Elementary_transformation(u, HHO_val, ud)`` として、弱形式言語に使われます。"
 
 #: ../source/userdoc/hho.rst:113
 msgid "Reconstructed variable with symmetrized gradient"
@@ -406,15 +395,10 @@ msgstr "対応する基本的な変換は、次の2つのコマンドでモデ�
 
 #: ../source/userdoc/hho.rst:157
 msgid ""
-"and used into the weak form language as ``Elementary_transformation(u, "
-"HHO_stab)``, if ``transname=\"HHO_stab\"``. A third argument is optional to "
-"specify the target (HHO) space (the default is one of the variable itself). "
-"An example of use is also given in the test programs "
+"and used into GWFL as ``Elementary_transformation(u, HHO_stab)``, if "
+"``transname=\"HHO_stab\"``. A third argument is optional to specify the "
+"target (HHO) space (the default is one of the variable itself). An example "
+"of use is also given in the test programs "
 ":file:`interface/tests/demo_laplacian_HHO.py` and "
 ":file:`interface/tests/demo_elasticity_HHO.py`."
 msgstr ""
-"そして ``transname=\"HHO_stab\"`` ならば ``Elementary_transformation(u, "
-"HHO_stab)`` "
-"としてウィーク型言語に使用されます。3番目の引数はターゲット(ほほ)空間を指定するオプションです(デフォルトは、変数自体の1つです。)。使用例は、テストプログラム"
-" :file:`interface/tests/demo_laplacian_HHO.py` および "
-":file:`interface/tests/demo_elasticity_HHO.py` にも示されています。"

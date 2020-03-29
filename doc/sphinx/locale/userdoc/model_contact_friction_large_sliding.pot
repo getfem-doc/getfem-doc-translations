@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-28 20:22+0000\n"
+"POT-Creation-Date: 2020-03-29 01:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgid "Large sliding/large deformation contact with friction bricks"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:14
-msgid "The basic tools to deal with large sliding/large deformation contact of deformable structures are accessible in the weak form language. Some interpolate transformations (see :ref:`ud-gasm-high-transf`) are defined to perform the contact detection and allow to integrate from a contacct bondary to the opposite contact boundary. Some other useful tools such as the unit normal vector in the real configuration and projections to take into account contact with Coulomb friction are also defined as operators in the weak form language."
+msgid "The basic tools to deal with large sliding/large deformation contact of deformable structures are accessible in GWFL (the generic weak form language). Some interpolate transformations (see :ref:`ud-gasm-high-transf`) are defined to perform the contact detection and allow to integrate from a contacct bondary to the opposite contact boundary. Some other useful tools such as the unit normal vector in the real configuration and projections to take into account contact with Coulomb friction are also defined as operators in GWFL."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:16
@@ -49,7 +49,7 @@ msgid "The addition of a raytracing transformation to a model::"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:41
-msgid "where ``transname`` is a name given to the transformation which allows to refer to it in the weak form language and ``d`` is the release distance (see above)."
+msgid "where ``transname`` is a name given to the transformation which allows to refer to it in GWFL and ``d`` is the release distance (see above)."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:43
@@ -65,11 +65,11 @@ msgid "It is also possible to add a rigid obstacle (considered as a master surfa
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:62
-msgid "where ``expr`` is the expression of a signed distance to the obstacle using the syntax of the weak form language (``X`` being the current position, ``X(0)``, ``X(1)`` ... the corresponding components). For instance an expression ``X(0) + 5`` will correspond to a flat obstacle lying on the right of the position ``-5`` of the first coordinate. Be aware that the expression have to be close to a signed distance, which in particular means that the gradient norm have to be close to 1."
+msgid "where ``expr`` is the expression of a signed distance to the obstacle using the syntax of GWFL (``X`` being the current position, ``X(0)``, ``X(1)`` ... the corresponding components). For instance an expression ``X(0) + 5`` will correspond to a flat obstacle lying on the right of the position ``-5`` of the first coordinate. Be aware that the expression have to be close to a signed distance, which in particular means that the gradient norm have to be close to 1."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:64
-msgid "In order to distinguish between non-contact situations and the occurence of a contact with another deformable body or with a rigid obstacle, the transformation returns an integer identifier which can be used by the `Interpolate_filter` command of the weak form language (see :ref:`ud-gasm-high-transf`). The different values:"
+msgid "In order to distinguish between non-contact situations and the occurence of a contact with another deformable body or with a rigid obstacle, the transformation returns an integer identifier which can be used by the `Interpolate_filter` command of GWFL (see :ref:`ud-gasm-high-transf`). The different values:"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:66
@@ -89,7 +89,7 @@ msgid "such that it is possible to differentiate the treatment of these three ca
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:78
-msgid "in the weak form language, where ``expr1``, ``expr2`` and ``expr3`` correspond to the different terms to be computed. The matlab interface demo program :file:`/interface/tests/matlab/demo_large_sliding_contact.m` presents an example of use."
+msgid "in GWFL, where ``expr1``, ``expr2`` and ``expr3`` correspond to the different terms to be computed. The matlab interface demo program :file:`/interface/tests/matlab/demo_large_sliding_contact.m` presents an example of use."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:80
@@ -201,7 +201,7 @@ msgid "Tools of the high-level generic assembly for contact with friction"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:234
-msgid "The following nonlinear operators are defined in the weak form language (see :ref:`ud-gasm-high`):"
+msgid "The following nonlinear operators are defined in GWFL (see :ref:`ud-gasm-high`):"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:236
@@ -269,5 +269,5 @@ msgid "A rigid obstacle can be added to the brick with::"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:361
-msgid "where `expr` is an expression using the weak form language (with `X` is the current position) which should be a signed distance to the obstacle. `N` is the mesh dimension."
+msgid "where `expr` is an expression using GWFL (with `X` is the current position) which should be a signed distance to the obstacle. `N` is the mesh dimension."
 msgstr ""

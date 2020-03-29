@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-28 20:22+0000\n"
+"POT-Creation-Date: 2020-03-29 01:45+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -86,28 +86,24 @@ msgid ""
 "Instead of using the previous tools (interpolated and projected fems), it is"
 " possible to use a finite element variable defined on an another mesh than "
 "the one on which an assembly is computed using the \"interpolate "
-"transformation\" tool of the weak form language (see :ref:`ud-gasm-high-"
-"transf` ), the finite element variables will be interpolated on each Gauss "
-"point. There is no restriction on the dimensions of the mesh used, which "
-"means in particular that a two-dimensional fem variable can be interpolated "
-"on a one-dimensional mesh (allowing the coupling of shell and beam elements,"
-" for instance). It is also possible to use some transformations like polar "
-"coordinates to euclidean ones."
+"transformation\" tool of GWFL (the generic weak form language, see :ref:`ud-"
+"gasm-high-transf` ), the finite element variables will be interpolated on "
+"each Gauss point. There is no restriction on the dimensions of the mesh "
+"used, which means in particular that a two-dimensional fem variable can be "
+"interpolated on a one-dimensional mesh (allowing the coupling of shell and "
+"beam elements, for instance). It is also possible to use some "
+"transformations like polar coordinates to euclidean ones."
 msgstr ""
-"前述のツール(挿入され投影されたフェム)を使用する代わりに、弱形式言語( :ref:`ud-gasm-high-transf` を参照)の "
-"\"interpolate transformation\" "
-"ツールを使用してアセンブリを計算するメッシュ以外のメッシュ上で定義された有限要素変数を使用することもできます。この場合、有限要素変数は各Gauss "
-"点で補間されます。使用されるメッシュの次元に制限はなく、特に、2次元のfem変数を一次元メッシュ上で補間することができます(たとえば、シェル要素とビーム要素の結合を可能にします)。極座標からユークリッド座標への変換など、いくつかの変換を使用することもできます。"
 
-#: ../source/userdoc/interNMM.rst:67
+#: ../source/userdoc/interNMM.rst:68
 msgid "mortar methods"
 msgstr "モルタル法"
 
-#: ../source/userdoc/interNMM.rst:68
+#: ../source/userdoc/interNMM.rst:69
 msgid ""
 "Mortar methods are supported by |gf|. The coupling term between non matching"
 " meshes can in particular be computed using the interpolate transformations "
-"of the weak form language (see :ref:`ud-gasm-high-transf`)."
+"of GWFL (see :ref:`ud-gasm-high-transf`)."
 msgstr ""
-"mortarメソッドは |gf| でサポートされています。非適合メッシュ間の結合項は特に弱形式言語( :ref:`ud-gasm-high-"
-"transf` を参照)の補間変換を用いて計算できます。"
+"mortarメソッドは |gf| でサポートされています。非適合メッシュ間の結合項は特にGWFL( :ref:`ud-gasm-high-transf`"
+" を参照)の補間変換を用いて計算できます。"

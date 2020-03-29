@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-28 20:22+0000\n"
+"POT-Creation-Date: 2020-03-29 01:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgid "Some data are added to the model to represent the state of the system at 
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:22
-msgid "Some intermediate variables are added to the model to represent the time derivative (and the second order time derivative for second order problem). For instance, if `u` is a variable, `Dot_u` will represent the first order time derivative of `u` and `Dot2_u` the second order one. One can refer to these variables in the model to add a brick on it or to use it in the weak form language. However, these are not considered to be independent variables, they will be linked to their corresponding original variable (in an affine way) by the time integration scheme. Most of the schemes need also the time derivative at the previous time step and add the data `Previous_Dot_u` and possibly `Previous_Dot2_u` to the model."
+msgid "Some intermediate variables are added to the model to represent the time derivative (and the second order time derivative for second order problem). For instance, if `u` is a variable, `Dot_u` will represent the first order time derivative of `u` and `Dot2_u` the second order one. One can refer to these variables in the model to add a brick on it or to use it in GWFL, the generic weak form language. However, these are not considered to be independent variables, they will be linked to their corresponding original variable (in an affine way) by the time integration scheme. Most of the schemes need also the time derivative at the previous time step and add the data `Previous_Dot_u` and possibly `Previous_Dot2_u` to the model."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:24
@@ -41,11 +41,11 @@ msgid "A different time integration scheme can be applied on each variable of th
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:26
-msgid "The data `t` represent the time parameter and can be used (either in the weak form language or as parameter of some bricks). Before the assembly of the system, the data `t` is automatically updated to the time step `n`."
+msgid "The data `t` represent the time parameter and can be used (either in GWFL or as parameter of some bricks). Before the assembly of the system, the data `t` is automatically updated to the time step `n`."
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:28
-msgid "The problem to be solved at each iteration correspond to the formulation of the transient problem in its natural (weak) formulation in which the velocity and the acceleration are expressed by the intermediate variables introduced. For instance, the translation into the weak form language of the problem"
+msgid "The problem to be solved at each iteration correspond to the formulation of the transient problem in its natural (weak) formulation in which the velocity and the acceleration are expressed by the intermediate variables introduced. For instance, the translation into GWFL of the problem"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:30
@@ -275,7 +275,7 @@ msgid "As it has been explained in previous sections, some intermediate variable
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:266
-msgid "This also mean that \"Dot_u\" (and \"Dot2_u\" in order two in time problems) can be used to express the transient terms. In the weak form language, the term:"
+msgid "This also mean that \"Dot_u\" (and \"Dot2_u\" in order two in time problems) can be used to express the transient terms. In GWFL, the term:"
 msgstr ""
 
 #: ../source/userdoc/model_time_integration.rst:268
