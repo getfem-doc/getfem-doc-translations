@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-29 01:45+0000\n"
+"POT-Creation-Date: 2020-03-29 13:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,6 +36,9 @@ msgid ""
 "take into account contact with Coulomb friction are also defined as "
 "operators in GWFL."
 msgstr ""
+"変形可能な構造の有限すべり/有限変形接触に対処するための基本的なツールはGWFL（汎用弱形式言語）でアクセス可能です。いくつかの補間変換（ :ref"
+":`ud-gasm-high-transf` "
+"を参照）は接触検出を実行し、反対側の境界境界にある接触境界から積分できるように定義されています。実際の構成における単位法線ベクトルやCoulomb摩擦との接触を考慮する投影などの他の有用なツールも弱形式言語の演算子として定義されています。"
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:16
 msgid ""
@@ -96,7 +99,7 @@ msgstr "レイトレーシング変換のモデルへの追加は次の通りで
 msgid ""
 "where ``transname`` is a name given to the transformation which allows to "
 "refer to it in GWFL and ``d`` is the release distance (see above)."
-msgstr ""
+msgstr "ここで ``transname`` はGWFLでそれを参照できる変換に与えられた名前で、 ``d`` は解放距離です（上記参照）。"
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:43
 msgid ""
@@ -133,6 +136,9 @@ msgid ""
 "signed distance, which in particular means that the gradient norm have to be"
 " close to 1."
 msgstr ""
+"ここで、 ``expr`` はGWFLの構文を使用した障害物までの距離の記号表現です（ ``X`` は現在の位置、 ``X(0)`` 、 "
+"``X(1)`` ...対応する成分）。たとえば、式 ``X(0) + 5`` は最初の座標の位置 ``-5`` "
+"の右側にある平坦な障害物に対応します。式は符号付き距離に近いものでなければならないことに注意してください。特に、勾配ノルムは1に近づく必要があります。"
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:64
 msgid ""
@@ -168,6 +174,9 @@ msgid ""
 ":file:`/interface/tests/matlab/demo_large_sliding_contact.m` presents an "
 "example of use."
 msgstr ""
+"GWFLでは、 ``expr1`` 、 ``expr2`` 、 ``expr3`` は計算されるべき異なる項に対応しています。 "
+"matlabインタフェースのデモプログラム "
+":file:`/interface/tests/matlab/demo_large_sliding_contact.m` は、使用例を示しています。"
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:80
 msgid ""
@@ -488,7 +497,7 @@ msgstr "摩擦接触のための高水準汎用構築のツール"
 msgid ""
 "The following nonlinear operators are defined in GWFL (see :ref:`ud-gasm-"
 "high`):"
-msgstr ""
+msgstr "次の非線形演算子は、GWFLで定義されています（ :ref:`ud-gasm-high` 参照）。"
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:236
 msgid ""
@@ -688,3 +697,4 @@ msgid ""
 "which should be a signed distance to the obstacle. `N` is the mesh "
 "dimension."
 msgstr ""
+"ここで、 `expr` はGWFL（ `X` は現在の位置）を使った式で、障害物までの符号付き距離でなければなりません。  `N` はメッシュ寸法です。"

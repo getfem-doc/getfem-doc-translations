@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-29 01:45+0000\n"
+"POT-Creation-Date: 2020-03-29 13:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:03+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid ""
 "Compute arbitrary terms - high-level generic assembly procedures - Generic "
 "Weak-Form Language (GWFL)"
-msgstr ""
+msgstr "任意の項を計算する - 高水準の汎用的な構築手順 - 弱形式言語 (GWFL)"
 
 #: ../source/userdoc/gasm_high.rst:14
 msgid ""
@@ -42,6 +42,10 @@ msgid ""
 "optimized instructions before the evaluation on each integration point in "
 "order to obtain a an optimal computational cost."
 msgstr ""
+"このセクションでは、現在の |gf| の主要な汎用構築を紹介します。これは、弱微分方程式の境界値問題の弱定式化を記述するために、汎用弱形式言語 "
+"(GWFL) に基づいているという意味で、高水準の汎用構築とされています。これは主に、非線形項を記述することが非常に難しい従来の低水準汎用構築（ "
+":ref:`ud-gasm-low` "
+"参照）の問題を回避するために開発されました。逆に、このバージョンでは記号的な微分アルゴリズムが使用されています。これは、非線形結合問題の近似を多く簡略化します。弱形式のみを記述する必要があるため、接線系は自動的に計算されるためです。さらに、GWFLは、最適な計算コストを得るために各積分点の評価の前に最適化された命令にコンパイルされます。"
 
 #: ../source/userdoc/gasm_high.rst:16
 msgid ""
@@ -76,7 +80,7 @@ msgstr ""
 
 #: ../source/userdoc/gasm_high.rst:25
 msgid "Overview of GWFL"
-msgstr ""
+msgstr "GWFLの概要"
 
 #: ../source/userdoc/gasm_high.rst:27
 msgid ""
@@ -847,6 +851,12 @@ msgid ""
 "``Grad_Test_u:Grad_Test2_u`` there are two components implicitly added for "
 "first and second order test functions)."
 msgstr ""
+"基本的に、GWFLで操作されるのはテンソルです。例えば、スカラー式の0次テンソル（例えば、 ``3 + sin(pi / 2)`` "
+"）、ベクトル式の1テンソル（ ``XX`` や ``u`` がスカラー変数の場合の ``Grad_u`` "
+"など）、行列表現の2テンソルなどです。効率性の理由から、言語はテンソルを最大6まで操作します。この言語は、6以上の次数のテンソルもサポートするように容易に拡張することができますが、非効率的な計算につながる可能性があります。式に試行関数が含まれている場合（ベクトルフィールド"
+" ``u`` の場合は ``Trace(Grad_Test_u)`` "
+"のように）、テンソルは暗黙的に補足成分を持つ各試行関数に対して計算が行われます。これは暗黙のうちに、操作されるテンソルの最大次数は実際には6であることを意味します（"
+" ``Grad_Test_u.Grad_Test2_u`` には1次および2次試行関数のために2つの成分が暗黙に追加されています）。"
 
 #: ../source/userdoc/gasm_high.rst:373
 msgid ""
@@ -1091,6 +1101,14 @@ msgid ""
 "``f2``  should be a C pointer on a scalar C function having two scalar "
 "parameters."
 msgstr ""
+"``name`` は定義される関数の名前で、 ``nb_args`` は1または2です。最初の呼び出しでは、``expr`` "
+"はGWFLで関数を記述する文字列です。最初の変数に ``t`` を、2番目の変数に ``u`` （ ``nb_args`` "
+"が2に等しい場合）を使います。たとえば、 ``sin(2*t)+sqr(t)`` は有効な式です。 ``ga_workspace`` "
+"オブジェクトで定義された定数やデータを参照することはできません。``der1`` と ``der2`` は ``t`` と ``u`` "
+"に対する導関数の式です。これらはオプションです。それらが提供されていない場合、導関数が必要な場合には記号的な微分が用いられます。 ``der1`` と "
+"``der2`` が関数名だけであると定義されている場合、その導関数が対応する関数です。第2の呼び出しでは、 ``f1`` "
+"は1つのスカラーパラメーターを持つスカラーC関数上のCポインターでなければならず、 ``f2`` "
+"は2つのスカラーパラメーターを持つスカラーC関数上のCポインターでなければなりません。"
 
 #: ../source/userdoc/gasm_high.rst:445
 msgid "Additionally,::"
@@ -1293,6 +1311,13 @@ msgid ""
 "2*Grad_Test_u(1)]``. Note also that using the quite opertor (transpose), an "
 "expression ``[a,b,c,d,e]'`` stands for 'row vector`, i.e. a 1x5 matrix."
 msgstr ""
+"GWFLは、表記 ``[a,b,c,d,e]`` "
+"、すなわちコンマで区切られた任意の数の成分を持つ陽なベクトル（すなわち、1テンソル）を定義することが可能です（セミコロン ``[a;b;c;d;e]``"
+" "
+"も許されます）。ベクトル全体は右括弧で始まり左括弧で終わります。成分は、いくつかの数値定数、いくつかの有効な式、試行関数を含むことができます。後者の場合、ベクトルは試行関数に関して均質でなければなりません。これは、型"
+" ``[Test_u; Test_v]`` は許されません。有効な例として、 ``u`` をスカラーフィールド変数とすると "
+"``[5*Grad_Test_u(2), 2*Grad_Test_u(1)]`` があります。また、オペレータ（転置）を使うと、式 "
+"``[a,b,c,d,e]'`` は ``行ベクトル`` 、つまり1x5行列を表します。"
 
 #: ../source/userdoc/gasm_high.rst:518
 msgid "Explicit matrices"
@@ -1560,6 +1585,7 @@ msgid ""
 "operator can be applied to an expression as long as this expression do not "
 "contain some test functions."
 msgstr ""
+"GWFLは、あらかじめ定義された非線形演算子を提供します。各非線形演算子は、その第1および第2導関数と共に利用可能です。非線形演算子は、式にいくつかの試行関数が含まれていない限り、適用できます。"
 
 #: ../source/userdoc/gasm_high.rst:591
 msgid ""
@@ -1666,6 +1692,9 @@ msgid ""
 "string. The definition into a ga_workspace or model object is done as "
 "follows::"
 msgstr ""
+"GWFLを使用すると、modelまたは ga_workspace "
+"オブジェクトであらかじめ定義されているか、構築文字列の先頭に直接定義されているマクロを使用できます。ga_workspace "
+"またはmodelオブジェクトへの定義は次のように行われます。"
 
 #: ../source/userdoc/gasm_high.rst:628
 msgid ""
@@ -1680,6 +1709,8 @@ msgid ""
 " itself contain some macro definitions). For instance, a valid macro with no"
 " parameter is::"
 msgstr ""
+"``name`` はマクロ名であり、GWFLで使用され、マクロのパラメータも含みます。 ``expr`` "
+"はGWFLの有効な式です（それ自体がいくつかのマクロ定義を含むかもしれません）。たとえば、パラメータを持たない有効なマクロは次の通りです。"
 
 #: ../source/userdoc/gasm_high.rst:636
 msgid ""
@@ -1839,6 +1870,9 @@ msgid ""
 "friction_raytrace_inter_trans`). Some other transformations (neighbor "
 "element and element extrapolation) are describe in the next sections."
 msgstr ""
+"異なる種類の変換を記述するためにいくつかの種類の変換が実装されています。以下で説明する最初のものは、式によって記述される変換です。2番目はレイトレーシング接触検出に相当します（"
+" :ref:`ud-model-contact-friction_raytrace_inter_trans` "
+"を参照）。次のセクションでは、他の変換（隣接要素と要素の外挿）について説明します。"
 
 #: ../source/userdoc/gasm_high.rst:723
 msgid ""
@@ -1854,6 +1888,9 @@ msgid ""
 "interpolation is performed and ``expr`` is a regular expression of GWFL "
 "which may contains reference to the variables of the workspace/model."
 msgstr ""
+"``workspace`` はworkspaceオブジェクト、 ``model`` はmodelオブジェクト、 ``transname`` "
+"は変換に与えられた名前、 ``source_mesh`` は積分が行われるメッシュ、 ``target_mesh`` 補間が実行されるメッシュで "
+"``expr`` は、workspace/modelの変数への参照を含むGWFLの正規表現です。"
 
 #: ../source/userdoc/gasm_high.rst:735
 msgid "For instance, an expression::"
@@ -1918,6 +1955,10 @@ msgid ""
 " 1 means that a corresponding point has been found. This identifier can be "
 "used thanks to the following special command of GWFL::"
 msgstr ""
+"場合によっては、変換された点がターゲットメッシュの外側にある場合、点の補間が失敗することがあります。両方とも、このケースを処理し、変換が他のいくつかの場合を微分できるようにするために（両方とも、剛体とRaytracing_interpolate_transformationの変形可能なものとの間の差異については。"
+" :ref:`ud-model-contact-friction_raytrace_inter_trans` "
+"を参照）、変換は整数識別子が弱形式言語に返されます。この識別子の値0は、ターゲットメッシュ上の対応する位置が見つからなかったことを意味します。 "
+"1の値は、対応する点が見つかったことを意味します。この識別子は、GWFLの次の特別なコマンドにより使用できます。"
 
 #: ../source/userdoc/gasm_high.rst:777
 msgid ""
@@ -1970,6 +2011,7 @@ msgid ""
 "element if it has a small intersection with the real domain. The functions "
 "allowing to add such a transformation to a model or a workspace are::"
 msgstr ""
+"別の要素（一般的に隣接要素）に関してある量の外挿による評価を可能にするために、特定の変換（前の節を参照）が定義されます。点の位置は変わらないので、厳密には変換ではありませんが、評価は試行関数を外挿する別の要素に対して行われます。この変換は、実領域との交差が小さい場合に、実領域との交差が十分に大きい隣接要素上のいくつかの量を実要素上で評価するよりも、実領域との交差が十分に大きい隣接要素上のいくつかの量を外挿する方がロバストである（切断要素を有する）仮想領域法における安定化項に使用されます。このような変換をmodelまたはworkspaceに追加するには次の関数を使用します::"
 
 #: ../source/userdoc/gasm_high.rst:798
 msgid ""
@@ -2002,6 +2044,8 @@ msgid ""
 "interior penalty methods, Ghost penalty terms or a posteriori estimators. "
 "The expressions::"
 msgstr ""
+"``neighbor_element`` "
+"と呼ばれる特定の補間変換（前のセクションを参照）は、デフォルトですべてのmodelで定義されています。この変換は、メッシュの内部エッジ/面、すなわち少なくとも2つの要素によって共有される要素面で計算が行われる場合にのみ使用できます。これは、要素間の面で変数の不連続ジャンプを計算することを目的としています。不連続Galerkinと内部ペナルティ法、ゴーストペナルティ項または事後推定を実装するのに特に適しています。表現は、"
 
 #: ../source/userdoc/gasm_high.rst:827
 msgid ""
@@ -2013,6 +2057,10 @@ msgid ""
 "``Normal`` except for instance for 2D shell element in a 3D mesh where it "
 "has an interest."
 msgstr ""
+"（他の補間変換の場合と同様に）現在の点ではなく隣接要素上のフィールドを計算することができます。もちろん、 ``Interpolate(X, "
+"neighbor_element)`` は ``X`` と同じ結果を返すのでそれほど特別なものではありません。同様に、ほとんどの場合、 "
+"``Interpolate(X, neighbor_element)`` は、関心のある3Dメッシュの2Dシェル要素を除いて、 ``Normal`` "
+"の反対側を返します。"
 
 #: ../source/userdoc/gasm_high.rst:829
 msgid "The jump on a variable ``u`` can be computed with::"
@@ -2035,6 +2083,8 @@ msgid ""
 "is that  each face is represented only once and is arbitrarily chosen "
 "between the two neighbor elements."
 msgstr ""
+"ここで ``mr`` はオプションのメッシュ領域です。``mr`` "
+"が指定されていれば、この領域に関して内部の面だけが返されます。重要な点は、各面が1回だけ表され、2つの隣接要素の間で任意に選択されることです。"
 
 #: ../source/userdoc/gasm_high.rst:843
 msgid ""
@@ -2093,6 +2143,7 @@ msgid ""
 "methods. The addition of a standard secondary domain can be done with one of"
 " the two following functions::"
 msgstr ""
+"GWFLはそのような項を計算するためのメカニズムを与えます。まず、第2領域は、その積分法を使用してworkspace/model内で宣言されなければなりません。標準的な第2領域の追加は、次の2つの関数のうちの1つを使用して行うことができます。"
 
 #: ../source/userdoc/gasm_high.rst:869
 msgid ""
@@ -2121,6 +2172,9 @@ msgid ""
 "``add_linear_twodomain_term``, ``add_nonlinear_twodomain_term`` or "
 "``add_twodomain_source_term`` functions::"
 msgstr ""
+"第2領域が宣言されると、現在の領域と第2領域の直接的な生成物にGWFLをアセンブルし、 ``add_expression`` "
+"メソッドに次の関数を使用して、第2領域の名前を追加する必要があると指定できます。 ``add_linear_twodomain_term`` 、 "
+"``add_nonlinear_twodomain_term`` または ``add_twodomain_source_term`` の関数となります。"
 
 #: ../source/userdoc/gasm_high.rst:878
 msgid ""
@@ -2135,7 +2189,7 @@ msgid ""
 "Inside an expression of GWFL, one can refer to the unit normal vector to a "
 "boundary, to the current position or to the value of a variable thanks to "
 "the expressions::"
-msgstr ""
+msgstr "GWFLの表現中で、式により、境界への単位法線ベクトル、変数の現在の位置または値を参照することができます。"
 
 #: ../source/userdoc/gasm_high.rst:894
 msgid "For instance, a term like"
@@ -2179,6 +2233,8 @@ msgid ""
 " ``virtual_elementary_transformation``. Once it is added to the "
 "model/workspace, it is possible to use the following expressions in GWFL::"
 msgstr ""
+"ここで ``pelementary_transformation`` は ``virtual_elementary_transformation`` "
+"から派生したオブジェクトへのポインタです。model/workspaceに追加されると、GWFLで次の式を使用することができます。"
 
 #: ../source/userdoc/gasm_high.rst:934
 msgid ""
@@ -2227,6 +2283,9 @@ msgid ""
 "value. For this purpose, GWFL furnishes the following expressions for ``u`` "
 "a FEM variable::"
 msgstr ""
+"レベル集合（ fem_level_set または mesh_fem_level_set "
+"オブジェクトを使用）によって有限要素法を切断する場合、変数の不連続ジャンプ、または勾配または平均値のジャンプを組み込むのが面白いことがよくあります。そのために、GWFLに、"
+" ``u`` というFEM変数を用意しています。"
 
 #: ../source/userdoc/gasm_high.rst:977
 msgid ""

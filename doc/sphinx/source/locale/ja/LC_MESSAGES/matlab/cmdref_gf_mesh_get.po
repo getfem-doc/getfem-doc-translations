@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-29 01:45+0000\n"
+"POT-Creation-Date: 2020-03-29 13:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:09+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -123,7 +123,7 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in faces', imat CVFIDs)``"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:119
 msgid "Return point #id listed in `CVFIDs`."
-msgstr ""
+msgstr "`CVFIDs` にリストされているポイント #id を戻す。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:121
 msgid ""
@@ -140,7 +140,7 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in cvids', imat CVIDs)``"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:128
 msgid "Return point #id listed in `CVIDs`."
-msgstr ""
+msgstr "`CVIDs` にリストされているポイント #id を戻す。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:130
 #: ../source/matlab/cmdref_gf_mesh_get.rst:137
@@ -153,7 +153,7 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in regions', imat RIDs)``"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:135
 msgid "Return point #id listed in `RIDs`."
-msgstr ""
+msgstr "`RIDs` にリストされているポイント #id を戻す。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:140
 msgid ""
@@ -165,7 +165,7 @@ msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:142
 msgid "Return point #id whose coordinates are listed in `PTS`."
-msgstr ""
+msgstr "座標が `PTS` にリストされているポイント #id を戻す。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:144
 msgid ""
@@ -224,6 +224,10 @@ msgid ""
 "`Pts`. Hence, for example, the list of points of the second convex is "
 "Pts(:,IDx(2):IDx(3)-1)."
 msgstr ""
+"`Pts` と `IDx` を返します。 `CVIDs` ( `CVIDs = gf_mesh_get(mesh M, 'max cvid')` "
+"と同じです)を省略すると、すべての凸包が対象となります。 `IDx` はベクトルであり、 length(IDx) = length(CVIDs)+1 "
+"です。 `Pts` は `CVIDs` における各凸包の点の 連結リストを含むベクトルです。 `IDx` の各エントリは、 `Pid` "
+"の対応する凸包点リストの位置です。したがって、例えば、第2凸包の点の #id のリストは Pts(:,IDx(2):IDx(3)-1) です。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:185
 msgid "``CVid = gf_mesh_get(mesh M, 'cvid')``"
@@ -299,6 +303,10 @@ msgid ""
 " [ mesh_dim x 2 x nb_edges ] array.  If the optional output argument C is "
 "specified, it will contain the convex number associated with each edge."
 msgstr ""
+"EとCを返します。曲線要素用に設計された gf_mesh_get(mesh M, 'edges') "
+"のより洗練されたバージョン。これは(曲がった)エッジのN(N>=2)点を返します。N==2の場合、これは  gf_mesh_get(mesh M, "
+"'edges') と同等です。点は常にメッシュの一部ではないため、 [ mesh_dim x 2 x nb_edges ] "
+"配列である配列Eで、点の番号の代わりに座標が返されます。オプションの出力引数Cを指定すると、各エッジに関連付けられた凸包の番号が含まれます。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:236
 msgid "``PIDs = gf_mesh_get(mesh M, 'orphaned pid')``"
@@ -306,7 +314,7 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'orphaned pid')``"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:238
 msgid "Return point #id which are not linked to a convex."
-msgstr ""
+msgstr "凸包にリンクされていないポイント #id を返す。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:241
 msgid ""
@@ -318,7 +326,7 @@ msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:243
 msgid "Return convex #ids related with the point #ids given in `PIDs`."
-msgstr ""
+msgstr "`PIDs` で指定されたポイント #ids に関連する凸包 #ids を戻します。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:245
 msgid ""
@@ -349,7 +357,7 @@ msgstr ""
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:261
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'outer faces'[, dim][, CVIDs])``"
-msgstr ""
+msgstr "``CVFIDs = gf_mesh_get(mesh M, 'outer faces'[, dim][, CVIDs])``"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:263
 msgid "Return the set of faces not shared by two elements."
@@ -376,7 +384,7 @@ msgid ""
 "Return the set of faces shared at least by two elements in CVIDs. Each face "
 "is represented only once and is arbitrarily chosen between the two neighbor "
 "elements."
-msgstr ""
+msgstr "CVIDの2つ以上の要素が共有する面の集合を返します。各面は1回だけ表示され、2つの隣接エレメントの間で任意に選択されます。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:283
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'all faces'[, CVIDs])``"
@@ -388,12 +396,15 @@ msgid ""
 "omitted). Note that the face shared by two neighbor elements will be "
 "represented twice."
 msgstr ""
+"CVID(CVIDが省略されている場合、すべてのメッシュで)での面の集合を返します。2つの隣接する要素が共有する面が2回表示されることに注意してください。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:290
 msgid ""
 "``CVFIDs = gf_mesh_get(mesh M, 'outer faces with direction', vec v, scalar "
 "angle[, dim][, CVIDs])``"
 msgstr ""
+"``CVFIDs = gf_mesh_get(mesh M, 'outer faces with direction', vec v, scalar "
+"angle[, dim][, CVIDs])``"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:292
 msgid ""
@@ -412,12 +423,17 @@ msgid ""
 "portion of the boundary of the convex set defined by the #ids listed in "
 "`CVIDs`."
 msgstr ""
+"出力される `CVFIDs` は2行の行列であり、最初の行は凸包の #ids をリストし、2番目の行は面番号(凸包の局所番号)をリストします。引数 "
+"`dim` は outer_faces() と同様に機能します。 `CVIDs` が指定された場合、 `CVIDs` にリストされた #id "
+"によって定義される凸包集合の境界の一部を返します。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:301
 msgid ""
 "``CVFIDs = gf_mesh_get(mesh M, 'outer faces in box', vec pmin, vec pmax[, "
 "dim][, CVIDs])``"
 msgstr ""
+"``CVFIDs = gf_mesh_get(mesh M, 'outer faces in box', vec pmin, vec pmax[, "
+"dim][, CVIDs])``"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:303
 msgid ""
@@ -431,12 +447,14 @@ msgid ""
 "``CVFIDs = gf_mesh_get(mesh M, 'outer faces in ball', vec center, scalar "
 "radius[, dim][, CVIDs])``"
 msgstr ""
+"``CVFIDs = gf_mesh_get(mesh M, 'outer faces in ball', vec center, scalar "
+"radius[, dim][, CVIDs])``"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:314
 msgid ""
 "Return the set of faces not shared by two convexes and lying within the ball"
 " of corresponding `center` and `radius`."
-msgstr ""
+msgstr "2つの凸形によって共有されておらず、対応する `center` と `radius` の球内にある面の集合を返します。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:323
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'adjacent face', int cvid, int fid)``"
@@ -448,6 +466,8 @@ msgid ""
 "more than one neighbor relatively to the face ``f`` (think to bar elements "
 "in 3D for instance), return the first face found."
 msgstr ""
+"存在する場合、隣接する要素の凸包面を返します。凸包が面 ``f`` "
+"(例えば、3次元で要素を抑制することを考える)に対して相対的に隣接する面を複数持つ場合、最初に見つかった面を返します。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:331
 msgid ""
@@ -502,7 +522,7 @@ msgstr ""
 msgid ""
 "Return the normal vector of convex `cv`, face `f` at the `nfpt` point of the"
 " face."
-msgstr ""
+msgstr "面の `nfpt` 点で凸包の `cv` 、面 `f` の法線ベクトルを返します。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:355
 msgid ""
@@ -516,7 +536,7 @@ msgstr "``N = gf_mesh_get(mesh M, 'normal of faces', imat CVFIDs)``"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:361
 msgid "Return matrix of (at face centers) the normal vectors of convexes."
-msgstr ""
+msgstr "凸包の(面の中心の)法線ベクトルの行列を返します。"
 
 #: ../source/matlab/cmdref_gf_mesh_get.rst:363
 msgid ""

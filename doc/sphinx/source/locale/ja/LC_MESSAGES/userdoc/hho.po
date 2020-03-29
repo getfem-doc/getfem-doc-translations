@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-29 01:45+0000\n"
+"POT-Creation-Date: 2020-03-29 13:51+0000\n"
 "PO-Revision-Date: 2019-09-25 04:03+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -75,6 +75,9 @@ msgid ""
 "hybrid method from standard finite element spaces. For instance, on a "
 "triangle, a possible HHO method can be obtained with::"
 msgstr ""
+"HHO要素は,要素の内部に対して多項式近似空間を持ち,要素の各面に対して多項式近似を持つ複合要素である。さらに、これは不連続近似であり、要素内部の近似と面上の近似との間には、要素の2つの異なる面上の近似の間にも、連続性が規定されていないという意味である。ただし、2つの隣接する要素が面を共有している場合、この面の近似は2つの要素によって共有されます。"
+" |gf| は、単純に ``FEM_HHO(fem_int, fem_face1, fem_face2, ...)`` "
+"と呼ばれる特殊な方法を提供します。これは、標準的な有限要素空間からハイブリッド法を構築することを可能にします。たとえば、三角形の場合、次のようにしてHHO法を取得できます。"
 
 #: ../source/userdoc/hho.rst:25
 msgid ""
@@ -182,6 +185,11 @@ msgid ""
 "used on itself but will determine the finite element space of the "
 "reconstruction (the space :math:`V_G`)."
 msgstr ""
+"``transname`` はGWFL(汎用弱形式言語)で変換を指定する任意の名前です。そして、 ``transname=\"HHO_grad\"`` "
+"の場合、可変 ``u`` のGWFLへの再構成された勾配を ``Elementary_transformation(u, HHO_grad, Gu)``"
+" として参照することが可能である。変換 ``Gu`` "
+"の第3パラメータは有限要素法変数またはモデルのデータであるべきです。この変数はそれ自体では使用されませんが、再構築の有限要素空間(空間 "
+":math:`V_G` )を決定します。"
 
 #: ../source/userdoc/hho.rst:55
 msgid ""
@@ -251,6 +259,8 @@ msgid ""
 "Gu)``, if ``transname=\"HHO_sym_grad\"``, with ``Gu`` still determining the "
 "reconstruction space."
 msgstr ""
+"``transname=\"HHO_sym_grad\"`` の場合は ``Elementary_transformation(u, "
+"HHO_sym_grad, Gu)`` というGWFLに変換され、 ``Gu`` が再構成空間を決定します。"
 
 #: ../source/userdoc/hho.rst:93
 msgid "Reconstructed variable"
@@ -295,6 +305,8 @@ msgid ""
 "and used into GWFL as ``Elementary_transformation(u, HHO_val, ud)``, if "
 "``transname=\"HHO_val\"``, with ``ud`` determining the reconstruction space."
 msgstr ""
+"そして、もし ``transname=\"HHO_val\"`` ならば、 ``ud`` が再構築空間を決定する "
+"``Elementary_transformation(u, HHO_val, ud)`` として、GWFLに使われます。"
 
 #: ../source/userdoc/hho.rst:113
 msgid "Reconstructed variable with symmetrized gradient"
@@ -402,3 +414,8 @@ msgid ""
 ":file:`interface/tests/demo_laplacian_HHO.py` and "
 ":file:`interface/tests/demo_elasticity_HHO.py`."
 msgstr ""
+"そして ``transname=\"HHO_stab\"`` ならば ``Elementary_transformation(u, "
+"HHO_stab)`` "
+"としてGWFLに使用されます。3番目の引数はターゲット(ほほ)空間を指定するオプションです(デフォルトは、変数自体の1つです。)。使用例は、テストプログラム"
+" :file:`interface/tests/demo_laplacian_HHO.py` および "
+":file:`interface/tests/demo_elasticity_HHO.py` にも示されています。"

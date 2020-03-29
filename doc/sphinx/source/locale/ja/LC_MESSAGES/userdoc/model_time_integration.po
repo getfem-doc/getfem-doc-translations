@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-29 01:45+0000\n"
+"POT-Creation-Date: 2020-03-29 13:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,6 +70,10 @@ msgid ""
 "schemes need also the time derivative at the previous time step and add the "
 "data `Previous_Dot_u` and possibly `Previous_Dot2_u` to the model."
 msgstr ""
+"いくつかの中間変数は、時間導関数（および2次問題の2次時間導関数）を表すためにモデルに追加されます。例えば、 `u` が変数であれば、 `Dot_u` "
+"は `u` の一次時間導関数を表し、 `Dot2_u` "
+"は2次のものを表します。モデル内のこれらの変数を参照して、要素を追加するか、GWFL、汎用弱形式言語で使用することができます。しかし、これらは独立変数とはみなされず、時間積分法によって対応する元の変数に（Affine方式で）リンクされます。アルゴリズムの大部分は前の時間ステップで時間微分を必要とし、"
+" `Previous_Dot_u` と `Previous_Dot2_u` データをモデルに加えることが可能です。"
 
 #: ../source/userdoc/model_time_integration.rst:24
 msgid ""
@@ -86,6 +90,8 @@ msgid ""
 " as parameter of some bricks). Before the assembly of the system, the data "
 "`t` is automatically updated to the time step `n`."
 msgstr ""
+"データ `t` は時間パラメータを表し、（GWFLで、またはいくつかの要素のパラメータとして）使用することができます。システムの構築前に、データ `t`"
+" は自動的に時間ステップ `n` に更新されます。"
 
 #: ../source/userdoc/model_time_integration.rst:28
 msgid ""
@@ -519,6 +525,8 @@ msgid ""
 "This also mean that \"Dot_u\" (and \"Dot2_u\" in order two in time problems)"
 " can be used to express the transient terms. In GWFL, the term:"
 msgstr ""
+"これはまた、過渡項を表現するために \"Dot_u\" ( および2次の時間問題において \"Dot2_u\" "
+"）を使用できることを意味します。GWFLでは、"
 
 #: ../source/userdoc/model_time_integration.rst:268
 msgid "\\int_{\\Omega} \\dot{u} v dx"
