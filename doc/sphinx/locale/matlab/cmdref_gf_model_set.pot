@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-04 13:53+0000\n"
+"POT-Creation-Date: 2020-04-12 01:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -690,7 +690,7 @@ msgid "``ind = gf_model_set(model M, 'add small strain elastoplasticity brick', 
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_model_set.rst:1089
-msgid "Adds a small strain plasticity term to the model `M`. This is the main GetFEM++ brick for small strain plasticity. `lawname` is the name of an implemented plastic law, `unknowns_type` indicates the choice between a discretization where the plastic multiplier is an unknown of the problem or (return mapping approach) just a data of the model stored for the next iteration. Remember that in both cases, a multiplier is stored anyway. `varnames` is a set of variable and data names with length which may depend on the plastic law (at least the displacement, the plastic multiplier and the plastic strain). `params` is a list of expressions for the parameters (at least elastic coefficients and the yield stress). These expressions can be some data names (or even variable names) of the model but can also be any scalar valid expression of the high level assembly language (such as '1/2', '2+sin(X[0])', '1+Norm(v)' ...). The last two parameters optionally provided in `params` are the `theta` parameter of the `theta`-scheme (generalized trapezoidal rule) used for the plastic strain integration and the time-step`dt`. The default value for `theta` if omitted is 1, which corresponds to the classical Backward Euler scheme which is first order consistent. `theta=1/2` corresponds to the Crank-Nicolson scheme (trapezoidal rule) which is second order consistent. Any value between 1/2 and 1 should be a valid value. The default value of `dt` is 'timestep' which simply indicates the time step defined in the model (by md.set_time_step(dt)). Alternatively it can be any expression (data name, constant value ...). The time step can be altered from one iteration to the next one. `region` is a mesh region."
+msgid "Adds a small strain plasticity term to the model `M`. This is the main GetFEM brick for small strain plasticity. `lawname` is the name of an implemented plastic law, `unknowns_type` indicates the choice between a discretization where the plastic multiplier is an unknown of the problem or (return mapping approach) just a data of the model stored for the next iteration. Remember that in both cases, a multiplier is stored anyway. `varnames` is a set of variable and data names with length which may depend on the plastic law (at least the displacement, the plastic multiplier and the plastic strain). `params` is a list of expressions for the parameters (at least elastic coefficients and the yield stress). These expressions can be some data names (or even variable names) of the model but can also be any scalar valid expression of the high level assembly language (such as '1/2', '2+sin(X[0])', '1+Norm(v)' ...). The last two parameters optionally provided in `params` are the `theta` parameter of the `theta`-scheme (generalized trapezoidal rule) used for the plastic strain integration and the time-step`dt`. The default value for `theta` if omitted is 1, which corresponds to the classical Backward Euler scheme which is first order consistent. `theta=1/2` corresponds to the Crank-Nicolson scheme (trapezoidal rule) which is second order consistent. Any value between 1/2 and 1 should be a valid value. The default value of `dt` is 'timestep' which simply indicates the time step defined in the model (by md.set_time_step(dt)). Alternatively it can be any expression (data name, constant value ...). The time step can be altered from one iteration to the next one. `region` is a mesh region."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_model_set.rst:1115
@@ -714,7 +714,7 @@ msgid "\"plane strain Prandtl Reuss linear hardening\" (or \"plane strain isotro
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_model_set.rst:1155
-msgid "See GetFEM++ user documentation for further explanations on the discretization of the plastic flow and on the implemented plastic laws. See also GetFEM++ user documentation on time integration strategy (integration of transient problems)."
+msgid "See GetFEM user documentation for further explanations on the discretization of the plastic flow and on the implemented plastic laws. See also GetFEM user documentation on time integration strategy (integration of transient problems)."
 msgstr ""
 
 #: ../source/matlab/cmdref_gf_model_set.rst:1160

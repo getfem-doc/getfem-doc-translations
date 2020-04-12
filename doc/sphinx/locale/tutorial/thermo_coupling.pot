@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-04 13:53+0000\n"
+"POT-Creation-Date: 2020-04-12 01:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgid "The problem setting"
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:15
-msgid "Let :math:`\\Omega \\subset \\R^2` be the reference configuration of a 2D plate (see the geometry :ref:`here <tut-fig-meshthermo>`) of thickness :math:`\\varepsilon` submitted to external forces, electric potential and heating. We will denote by  :math:`\\theta : \\Omega \\rightarrow \\R` the temperature field (in |degreC|),  :math:`V : \\Omega \\rightarrow \\R` the electric potential field and :math:`u : \\Omega \\rightarrow \\R^2` the membrane displacement field."
+msgid "Let :math:`\\Omega \\subset \\rm I\\hspace{-0.15em}R^2` be the reference configuration of a 2D plate (see the geometry :ref:`here <tut-fig-meshthermo>`) of thickness :math:`\\varepsilon` submitted to external forces, electric potential and heating. We will denote by  :math:`\\theta : \\Omega \\rightarrow \\rm I\\hspace{-0.15em}R` the temperature field (in |degreC|),  :math:`V : \\Omega \\rightarrow \\rm I\\hspace{-0.15em}R` the electric potential field and :math:`u : \\Omega \\rightarrow \\rm I\\hspace{-0.15em}R^2` the membrane displacement field."
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:18
@@ -75,7 +75,7 @@ msgid "where :math:`\\sigma` is still the electrical conductivity. Moreover, we 
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:52
-msgid "\\sigma = \\Frac{1}{\\rho_0(1+\\alpha(\\theta - T_0))},"
+msgid "\\sigma = \\dfrac{1}{\\rho_0(1+\\alpha(\\theta - T_0))},"
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:56
@@ -107,7 +107,7 @@ msgid ":math:`\\bar{\\varepsilon}(u) = (\\nabla u + (\\nabla u)^T)/2` being the 
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:82
-msgid "&\\lambda = \\Frac{E\\nu}{(1+\\nu)(1-2\\nu)}, \\\\ &\\mu = \\Frac{E}{2(1+\\nu)}, \\\\ &\\lambda^* = \\Frac{2\\lambda\\mu}{\\lambda+2*\\mu},"
+msgid "&\\lambda = \\dfrac{E\\nu}{(1+\\nu)(1-2\\nu)}, \\\\ &\\mu = \\dfrac{E}{2(1+\\nu)}, \\\\ &\\lambda^* = \\dfrac{2\\lambda\\mu}{\\lambda+2*\\mu},"
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:88
@@ -131,7 +131,7 @@ msgid "Weak formulation of each partial differential equation is obtained by mul
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:100
-msgid "&\\mbox{Find } \\theta, V, u \\mbox{ with } V = 0.1, u = 0 \\mbox{ on the left face}, V = 0 \\mbox{ on the right face}, \\\\ &\\ds \\int_{\\Omega} \\varepsilon\\kappa\\nabla\\theta\\cdot\\nabla\\delta_{\\theta} + 2D\\theta\\delta_{\\theta}d\\Omega = \\int_{\\Omega} (2DT_0 + \\varepsilon\\sigma|\\nabla V|^2)\\delta_{\\theta} d\\Omega ~~~\\mbox{ for all } \\delta_{\\theta}, \\\\ &\\ds \\int_{\\Omega} \\varepsilon\\sigma\\nabla V\\cdot\\nabla\\delta_V = 0 d\\Omega ~~~ \\mbox{ for all } \\delta_V \\mbox{ satisfying } \\delta_V = 0 \\mbox{ on the left and right faces}, \\\\ &\\ds \\int_{\\Omega} \\bar{\\sigma}(u):\\bar{\\varepsilon}(\\delta_u)d\\Omega = \\int_{\\Gamma_N} F\\cdot \\delta_u d\\Gamma ~~~ \\mbox{ for all } \\delta_{u} \\mbox{ satisfying } \\delta_u = 0 \\mbox{ on the left face},"
+msgid "&\\mbox{Find } \\theta, V, u \\mbox{ with } V = 0.1, u = 0 \\mbox{ on the left face}, V = 0 \\mbox{ on the right face}, \\\\ & \\int_{\\Omega} \\varepsilon\\kappa\\nabla\\theta\\cdot\\nabla\\delta_{\\theta} + 2D\\theta\\delta_{\\theta}d\\Omega = \\int_{\\Omega} (2DT_0 + \\varepsilon\\sigma|\\nabla V|^2)\\delta_{\\theta} d\\Omega ~~~\\mbox{ for all } \\delta_{\\theta}, \\\\ & \\int_{\\Omega} \\varepsilon\\sigma\\nabla V\\cdot\\nabla\\delta_V = 0 d\\Omega ~~~ \\mbox{ for all } \\delta_V \\mbox{ satisfying } \\delta_V = 0 \\mbox{ on the left and right faces}, \\\\ & \\int_{\\Omega} \\bar{\\sigma}(u):\\bar{\\varepsilon}(\\delta_u)d\\Omega = \\int_{\\Gamma_N} F\\cdot \\delta_u d\\Gamma ~~~ \\mbox{ for all } \\delta_{u} \\mbox{ satisfying } \\delta_u = 0 \\mbox{ on the left face},"
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:108

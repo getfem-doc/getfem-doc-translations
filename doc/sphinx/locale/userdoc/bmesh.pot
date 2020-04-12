@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-04 13:53+0000\n"
+"POT-Creation-Date: 2020-04-12 01:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -189,7 +189,7 @@ msgid "gives a ``dal::bit_vector`` object which represents all the indexes of va
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:224
-msgid "gives the point of index ``i`` (a ``bgeot::base_node``)."
+msgid "gives the point of each index (a ``bgeot::base_node``)."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:228
@@ -201,217 +201,217 @@ msgid "gives the description of the structure of element of index ``i``. The fun
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:238
-msgid "number of faces of element of index ``i``."
+msgid "number of faces of |bg_pcs|."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:242
-msgid "number of vertices of element of index ``i``."
+msgid "number of vertices of |bg_pcs|."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:246
-msgid "intrinsic dimension of element of index ``i``."
+msgid "intrinsic dimension of |bg_pcs|."
 msgstr ""
 
 #: ../source/userdoc/bmesh.rst:251
-msgid "number of vertices of the face of local index ``f`` of element of index ``i``."
+msgid "number of vertices of the face of local index ``f`` of |bg_pcs|."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:256
-msgid "return a container with the local indexes of all vertices of the face of local index ``f`` of element of index ``i``. For instance ``mesh.structure_of_convex(i)->ind_points_of_face(f)[0]`` is the local index of the first vertex."
+#: ../source/userdoc/bmesh.rst:255
+msgid "return a container with the local indexes of all vertices of the face of local index ``f`` of |bg_pcs|. For instance ``mesh.structure_of_convex(i)->ind_points_of_face(f)[0]`` is the local index of the first vertex."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:263
-msgid "gives the structure (a |bg_pcs|) of local index ``f`` of element of index ``i``."
+#: ../source/userdoc/bmesh.rst:262
+msgid "gives the structure (a |bg_pcs|) of local index ``f`` of |bg_pcs|."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:268
-msgid "gives a container with the global indexes of vertices of element of index ``i``."
+#: ../source/userdoc/bmesh.rst:267
+msgid "gives a container with the global indexes of vertices of |bg_pcs|."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:273
-msgid "gives a container with the vertices of element of index ``i``. This is an array of ``bgeot::base_node``."
+#: ../source/userdoc/bmesh.rst:271
+msgid "gives a container with the vertices of |bg_pcs|. This is an array of ``bgeot::base_node``."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:278
+#: ../source/userdoc/bmesh.rst:276
 msgid "gives a container with the indexes of all elements attached to the point of global index ``ipt``."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:283
+#: ../source/userdoc/bmesh.rst:281
 msgid "gives a container with the indexes of all elements in ``mesh`` having the common face of local index ``f`` of element ``ic`` except element ``ic``."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:289
+#: ../source/userdoc/bmesh.rst:287
 msgid "gives the index of the first elements in ``mesh`` having the common face of local index ``f`` of element ``ic`` except element ``ic``. return size_type(-1) if none is found."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:295
+#: ../source/userdoc/bmesh.rst:293
 msgid "return whether or not the element ``ic`` has a neighbor with respect to its face of local index ``f``."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:300
+#: ../source/userdoc/bmesh.rst:298
 msgid "delete all elements and points from the mesh."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:305
+#: ../source/userdoc/bmesh.rst:303
 msgid "compact the structure (renumbers points and convexes such that there is no hole in their numbering)."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:310
+#: ../source/userdoc/bmesh.rst:308
 msgid "return the geometric transformation of the element of index ``i`` (in a |bg_pgt|). See :ref:`dp` for more details about geometric transformations."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:315
+#: ../source/userdoc/bmesh.rst:313
 msgid "gives a ``bgeot::base_small_vector`` representing an outward normal to the element at the face of local index ``f`` at the point of local coordinates (coordinates in the element of reference) ``pt``. The point ``pt`` has no influence if the geometric transformation is linear. This is not a unit normal, the norm of the resulting vector is the ratio between the surface of the face of the reference element and the surface of the face of the real element."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:325
+#: ../source/userdoc/bmesh.rst:323
 msgid "gives an estimate of the area of convex ``ic``."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:329
+#: ../source/userdoc/bmesh.rst:327
 msgid "gives a rough estimate of the quality of element ``ic``."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:333
+#: ../source/userdoc/bmesh.rst:331
 msgid "gives an estimate of the radius of element ``ic``."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:337
+#: ../source/userdoc/bmesh.rst:335
 msgid "return a |gf_mr|. The region is stored in the mesh, and can contain a set of convex numbers and or convex faces."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:342
+#: ../source/userdoc/bmesh.rst:340
 msgid "returns true if the region of index ``irg`` has been created."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:344
+#: ../source/userdoc/bmesh.rst:342
 msgid "The methods of the convexes/convex faces container ``getfem::mesh_region`` are:"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:348
+#: ../source/userdoc/bmesh.rst:346
 msgid "add the convex of index ``ic`` to the region."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:352
+#: ../source/userdoc/bmesh.rst:350
 msgid "add the face number ``f`` of the convex ``ic``."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:357
+#: ../source/userdoc/bmesh.rst:355
 msgid "remove the convex or the convex face from the region."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:362
+#: ../source/userdoc/bmesh.rst:360
 msgid "return true if the convex (or convex face) is in the region."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:366
+#: ../source/userdoc/bmesh.rst:364
 msgid "return true if the region does not contain any convex."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:370
+#: ../source/userdoc/bmesh.rst:368
 msgid "return true if the region does not contain any convex face."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:374
+#: ../source/userdoc/bmesh.rst:372
 msgid "return a ``dal::bit_vector`` containing the list of convexes which are stored (or whose faces are stored) in the region."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:377
+#: ../source/userdoc/bmesh.rst:375
 msgid "Iteration over a |gf_mr| should be done with |gf_mrv|::"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:386
+#: ../source/userdoc/bmesh.rst:384
 msgid "Using |dal_bv|"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:388
+#: ../source/userdoc/bmesh.rst:386
 msgid "The object |dal_bv| (declared in :file:`getfem/dal_bit_vector.h`) is a structure heavily used in |gf|. It is very close to ``std::bitset`` and ``std::vector<bool>`` but with additional functionalities to represent a set of non negative integers and iterate over them."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:393
+#: ../source/userdoc/bmesh.rst:391
 msgid "If ``nn`` is declared to be a |dal_bv|, the two instructions ``nn.add(6)`` or ``nn[6] = true`` are equivalent and means that integer 6 is added to the set."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:397
+#: ../source/userdoc/bmesh.rst:395
 msgid "In a same way ``nn.sup(6)`` or ``nn[6] = false`` remove the integer 6 from the set. The instruction ``nn.add(6, 4)`` adds 6,7,8,9 to the set."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:401
+#: ../source/userdoc/bmesh.rst:399
 msgid "To iterate on a |dal_bv|, it is possible to use iterators as usual, but, most of the time, as this object represents a set of integers, one just wants to iterate on the integers included into the set. The simplest way to do that is to use the pseudo-iterator |dal_bv_v|."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:407
+#: ../source/userdoc/bmesh.rst:405
 msgid "For instance, here is the code to iterate on the points of a mesh and print it to the standard output::"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:414
+#: ../source/userdoc/bmesh.rst:412
 msgid "Face numbering"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:416
+#: ../source/userdoc/bmesh.rst:414
 msgid "The numeration of faces on usual elements is given in figure :ref:`ud-fig-elemf`."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:423
+#: ../source/userdoc/bmesh.rst:421
 msgid "faces numeration for usual elements"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:425
+#: ../source/userdoc/bmesh.rst:423
 msgid "Note that, while the convexes and the points are globally numbered in a |gf_m| object, there is no global numbering of the faces, so the only way to refer to a given face, is to give the convex number, and the local face number in the convex."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:433
+#: ../source/userdoc/bmesh.rst:431
 msgid "Save and load meshes"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:436
+#: ../source/userdoc/bmesh.rst:434
 msgid "From |gf| file format"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:438
+#: ../source/userdoc/bmesh.rst:436
 msgid "In :file:`getfem/getfem_mesh.h`, two methods are defined to load meshes from file and write meshes to a file."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:443
+#: ../source/userdoc/bmesh.rst:441
 msgid "save the mesh into a file."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:447
+#: ../source/userdoc/bmesh.rst:445
 msgid "load the mesh from a file."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:449
+#: ../source/userdoc/bmesh.rst:447
 msgid "The following is an example of how to load a mesh and extract information on it::"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:482
+#: ../source/userdoc/bmesh.rst:480
 msgid "Import a mesh"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:484
+#: ../source/userdoc/bmesh.rst:482
 msgid "The file :file:`getfem/getfem_import.h` provides the function::"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:488
+#: ../source/userdoc/bmesh.rst:486
 msgid "Here the string ``fmtfilename`` must contain a descriptor of the file format (\"gid\", \"gmsh\", \"cdb\", \"noboite\", \"am_fmt\", \"emc2_mesh\", or \"structured\"), followed by a colon and the file name (if there is not format descriptor, it is assumed that the file is a native getfem mesh and the ``mesh::read_from_file()`` method is used). Example::"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:497
+#: ../source/userdoc/bmesh.rst:495
 msgid "Alternatively the function::"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:502
+#: ../source/userdoc/bmesh.rst:500
 msgid "can be used in an equivalent manner with the string ``fmt`` being one of the aforementioned format specifiers."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:505
+#: ../source/userdoc/bmesh.rst:503
 msgid "The \"gid\" format specifier is for meshes generated by `GiD`_ and \"gmsh\" is for meshes generated by the open-source mesh generator `Gmsh`_. The \"cdb\" format specifier is for reading meshes from `ANSYS <http://www.ansys.com>`_ models exported in blocked format with the CDWRITE command. Currently the `ANSYS`_ element types 42,45,73,82,87,89,90,92,95,162,182,183,185,186,187 and 191 can be imported, this however does not include any finite element techology linked to these elements but only their geometry. The \"noboite\" format is for TetMesh-GHS3D, and the \"am_fmt\" and \"emc2_mesh\" are for files built with `EMC2`_ (but 2D only)."
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:515
+#: ../source/userdoc/bmesh.rst:513
 msgid "The \"structured\" format is just a short specification for regular meshes: the rest of ``fmtfilename`` in that case is not a filename, but a string whose format is following::"
 msgstr ""
 
-#: ../source/userdoc/bmesh.rst:525
+#: ../source/userdoc/bmesh.rst:523
 msgid "where ``GT`` is the name of the geometric transformation, ``NSUBDIV`` a vector of the number of subdivisions in each coordinate (default value 2), ``ORG`` is the origin of the mesh (default value ``[0,0,...]``), ``SIZES`` is a vector of the sizes in each direction (default value ``[1, 1, ...]`` and if ``NOISED=1`` the nodes of the interior of the mesh are randomly \"shaken\" (default value ``NOISED=0``). In that string, all the parameters are optional except ``GT``."
 msgstr ""

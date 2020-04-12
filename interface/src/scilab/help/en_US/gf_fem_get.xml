@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="gf_fem_get" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <refnamediv>
+    <refname>gf_fem_get</refname>
+    <refpurpose>  General function for querying information about FEM objects.
+</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>n = gf_fem_get(fem F, 'nbdof'[, int cv])</synopsis>
+    <synopsis>n = gf_fem_get(fem F, 'index of global dof', cv)</synopsis>
+    <synopsis>d = gf_fem_get(fem F, 'dim')</synopsis>
+    <synopsis>td = gf_fem_get(fem F, 'target_dim')</synopsis>
+    <synopsis>P = gf_fem_get(fem F, 'pts'[, int cv])</synopsis>
+    <synopsis>b = gf_fem_get(fem F, 'is_equivalent')</synopsis>
+    <synopsis>b = gf_fem_get(fem F, 'is_lagrange')</synopsis>
+    <synopsis>b = gf_fem_get(fem F, 'is_polynomial')</synopsis>
+    <synopsis>d = gf_fem_get(fem F, 'estimated_degree')</synopsis>
+    <synopsis>E = gf_fem_get(fem F, 'base_value',mat p)</synopsis>
+    <synopsis>ED = gf_fem_get(fem F, 'grad_base_value',mat p)</synopsis>
+    <synopsis>EH = gf_fem_get(fem F, 'hess_base_value',mat p)</synopsis>
+    <synopsis>gf_fem_get(fem F, 'poly_str')</synopsis>
+    <synopsis>string = gf_fem_get(fem F, 'char')</synopsis>
+    <synopsis>gf_fem_get(fem F, 'display')</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Description</title>
+    <para>  General function for querying information about FEM objects.
+</para>
+  </refsection>
+
+  <refsection>
+    <title>Command list</title>
+
+    <itemizedlist>
+    <listitem>
+    <para><literal>n = gf_fem_get(fem F, 'nbdof'[, int cv])</literal></para>
+
+    <para>       Return the number of dof for the fem.
+
+    Some specific fem (for example 'interpolated_fem') may require a
+    convex number <literal>cv</literal> to give their result. In most of the case, you
+    can omit this convex number.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>n = gf_fem_get(fem F, 'index of global dof', cv)</literal></para>
+
+    <para>       Return the index of global dof for special fems such as interpolated fem.
+    
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>d = gf_fem_get(fem F, 'dim')</literal></para>
+
+    <para>         Return the dimension (dimension of the reference convex) of the fem.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>td = gf_fem_get(fem F, 'target_dim')</literal></para>
+
+    <para>       Return the dimension of the target space.
+
+    The target space dimension is usually 1, except for vector fem. 
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>P = gf_fem_get(fem F, 'pts'[, int cv])</literal></para>
+
+    <para>         Get the location of the dof on the reference element.
+      
+      Some specific fem may require a convex number <literal>cv</literal> to give their
+      result (for example 'interpolated_fem'). In most of the case, you
+      can omit this convex number. 
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>b = gf_fem_get(fem F, 'is_equivalent')</literal></para>
+
+    <para>         Return 0 if the fem is not equivalent.
+      
+      Equivalent fem are evaluated on the reference convex. This is
+      the case of most classical fem's.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>b = gf_fem_get(fem F, 'is_lagrange')</literal></para>
+
+    <para>         Return 0 if the fem is not of Lagrange type.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>b = gf_fem_get(fem F, 'is_polynomial')</literal></para>
+
+    <para>         Return 0 if the basis functions are not polynomials.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>d = gf_fem_get(fem F, 'estimated_degree')</literal></para>
+
+    <para>       Return an estimation of the polynomial degree of the fem.
+
+    This is an estimation for fem which are not polynomials.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>E = gf_fem_get(fem F, 'base_value',mat p)</literal></para>
+
+    <para>         Evaluate all basis functions of the FEM at point <literal>p</literal>.
+      
+      <literal>p</literal> is supposed to be in the reference convex!
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>ED = gf_fem_get(fem F, 'grad_base_value',mat p)</literal></para>
+
+    <para>       Evaluate the gradient of all base functions of the fem at point <literal>p</literal>.
+
+    <literal>p</literal> is supposed to be in the reference convex!
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>EH = gf_fem_get(fem F, 'hess_base_value',mat p)</literal></para>
+
+    <para>       Evaluate the Hessian of all base functions of the fem at point <literal>p</literal>.
+
+    <literal>p</literal> is supposed to be in the reference convex!
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>gf_fem_get(fem F, 'poly_str')</literal></para>
+
+    <para>         Return the polynomial expressions of its basis functions in
+      the reference convex.
+
+      The result is expressed as a cell array of
+      strings. Of course this will fail on non-polynomial fem's. 
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>string = gf_fem_get(fem F, 'char')</literal></para>
+
+    <para>       Ouput a (unique) string representation of the fem.
+
+    This can be used to perform comparisons between two different fem
+    objects.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>gf_fem_get(fem F, 'display')</literal></para>
+
+    <para>       displays a short summary for a fem object.
+    </para>
+    </listitem>
+
+    </itemizedlist>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member><link linkend="getfem_types">getfem types</link></member>
+    </simplelist>
+  </refsection>
+
+  <refsection>
+    <title>Authors</title>
+    <para>Y. Collette</para>
+  </refsection>
+
+</refentry>

@@ -24,7 +24,7 @@ gf_cvstruct_get
 
   General function for querying information about convex_structure objects.
 
-  The convex structures are internal structures of getfem++. They do not
+  The convex structures are internal structures of GetFEM. They do not
   contain points positions. These structures are recursive, since the faces
   of a convex structures are convex structures.
 

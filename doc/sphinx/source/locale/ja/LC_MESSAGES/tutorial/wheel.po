@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-04 13:53+0000\n"
+"POT-Creation-Date: 2020-04-12 01:49+0000\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -45,15 +45,13 @@ msgstr "問題の設定"
 
 #: ../source/tutorial/wheel.rst:15
 msgid ""
-"Let :math:`\\Omega^1 \\subset \\R^2` be the reference configuration of a 2D "
-"wheel and :math:`\\Omega^2 \\subset \\R^2` the reference configuration of a "
-"deformable foundation. We consider small deformation of these two bodies "
-"(linearized elasticity) and the contact between them. We also consider that "
-"the rim of the wheel is rigid and apply a vertical force on the wheel."
+"Let :math:`\\Omega^1 \\subset \\rm I\\hspace{-0.15em}R^2` be the reference "
+"configuration of a 2D wheel and :math:`\\Omega^2 \\subset \\rm "
+"I\\hspace{-0.15em}R^2` the reference configuration of a deformable "
+"foundation. We consider small deformation of these two bodies (linearized "
+"elasticity) and the contact between them. We also consider that the rim of "
+"the wheel is rigid and apply a vertical force on the wheel."
 msgstr ""
-":math:`\\Omega^1 \\subset \\R^2` は2次元の車輪の基準配置であり、 :math:`\\Omega^2 \\subset "
-"\\R^2` は変形可能な基礎の基準配置です。これら2つの (線形弾性) "
-"体の微小変形とそれらの間の接触を考慮します。また、車輪の周縁は剛であり、車輪に垂直方向の力がはたらくとします。"
 
 #: ../source/tutorial/wheel.rst:19
 msgid "Building the program"
@@ -235,21 +233,14 @@ msgstr ""
 
 #: ../source/tutorial/wheel.rst:164
 msgid ""
-"& \\cdots + \\ds \\int_{\\Gamma_c} \\lambda_N(X) "
-"(\\delta_{u^1}(X)-\\delta_{u^2}(\\Pi(X)))\\cdot n d\\Gamma \\\\ & -  \\ds "
+"& \\cdots +  \\int_{\\Gamma_c} \\lambda_N(X) "
+"(\\delta_{u^1}(X)-\\delta_{u^2}(\\Pi(X)))\\cdot n d\\Gamma \\\\ & -   "
 "\\int_{\\Gamma_c} \\left(\\lambda_N(X) + \\left(\\lambda_N(X) + "
-"\\Frac{1}{h_T\\gamma_0}((X + u^1(X))\\cdot n - (\\Pi(X) - "
+"\\dfrac{1}{h_T\\gamma_0}((X + u^1(X))\\cdot n - (\\Pi(X) - "
 "u^2(\\Pi(X)))\\cdot n\\right)_-\\right)\\delta_{\\lambda_N}(X) d\\Gamma = 0 "
 "~~~~ \\forall \\delta_{\\lambda_N}, \\forall \\delta_{u^1}, \\forall "
 "\\delta_{u^2},"
 msgstr ""
-"& \\cdots + \\ds \\int_{\\Gamma_c} \\lambda_N(X) "
-"(\\delta_{u^1}(X)-\\delta_{u^2}(\\Pi(X)))\\cdot n d\\Gamma \\\\ & -  \\ds "
-"\\int_{\\Gamma_c} \\left(\\lambda_N(X) + \\left(\\lambda_N(X) + "
-"\\Frac{1}{h_T\\gamma_0}((X + u^1(X))\\cdot n - (\\Pi(X) - "
-"u^2(\\Pi(X)))\\cdot n\\right)_-\\right)\\delta_{\\lambda_N}(X) d\\Gamma = 0 "
-"~~~~ \\forall \\delta_{\\lambda_N}, \\forall \\delta_{u^1}, \\forall "
-"\\delta_{u^2},"
 
 #: ../source/tutorial/wheel.rst:169
 msgid ""
@@ -325,12 +316,12 @@ msgstr "ここで :math:`\\Gamma_D` はリムの境界であり、 :math:`F` は
 msgid "This could be added to the model with GWFL:"
 msgstr "これをGWFLでモデルに追加します。"
 
-#: ../source/tutorial/wheel.rst:215
+#: ../source/tutorial/wheel.rst:214
 msgid ""
 "For more robustness, a small penalization on :math:`alpha_D` can be added"
 msgstr "よりロバスト性を向上させるために :math:`alpha_D` 上に微小のペナルティを追加することもできます。"
 
-#: ../source/tutorial/wheel.rst:222
+#: ../source/tutorial/wheel.rst:221
 msgid ""
 "Note that the fixed size variable `alpha_D` is linked to each points of the "
 "rim boundary. This means that the line of the tangent matrix corresponding "
@@ -340,28 +331,28 @@ msgstr ""
 "固定サイズ変数 `alpha_D` は、リム境界の各点にリンクされていることに注意してください。そのため `alpha_D` "
 "に対応する接線行列の行は、ゼロ以外の成分を多く含む可能性があります。ゆえに、固定サイズ変数の使用は慎重に行う必要があります。"
 
-#: ../source/tutorial/wheel.rst:225
+#: ../source/tutorial/wheel.rst:224
 msgid "Model solve"
 msgstr "モデルを解く"
 
-#: ../source/tutorial/wheel.rst:227
+#: ../source/tutorial/wheel.rst:226
 msgid "We can now solve our problem with:"
 msgstr "次のコードで問題を解くことができます。"
 
-#: ../source/tutorial/wheel.rst:233
+#: ../source/tutorial/wheel.rst:232
 msgid ""
 "Note that in some configuration, it is preferable to use a more basic line "
 "search than the default one:"
 msgstr "設定によっては、デフォルトのものよりも基本的な線形探索を使用する方が望ましい場合もあります。"
 
-#: ../source/tutorial/wheel.rst:241
+#: ../source/tutorial/wheel.rst:240
 msgid "Export the solution"
 msgstr "解の出力"
 
-#: ../source/tutorial/wheel.rst:243
+#: ../source/tutorial/wheel.rst:242
 msgid "Now the code to export the solution with the VonMises stress:"
 msgstr "最後に、VonMises 応力の解を出力するコードを示します。"
 
-#: ../source/tutorial/wheel.rst:270
+#: ../source/tutorial/wheel.rst:269
 msgid "Plot of the solution."
 msgstr "解のプロット。"

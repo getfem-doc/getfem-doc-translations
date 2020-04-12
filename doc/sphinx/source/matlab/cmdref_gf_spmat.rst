@@ -24,7 +24,7 @@ gf_spmat
 
 General constructor for spmat objects.
 
-  Create a new sparse matrix in getfem++ format(, i.e. sparse
+  Create a new sparse matrix in GetFEM format(, i.e. sparse
   matrices which are stored in the getfem workspace, not the matlab sparse
   matrices). These sparse matrix can be stored as CSC (compressed column
   sparse), which is the format used by Matlab, or they can be stored as WSC

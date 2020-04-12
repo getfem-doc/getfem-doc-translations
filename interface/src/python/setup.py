@@ -1,0 +1,75 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Python GetFEM interface
+#
+# Copyright (C) 2004-2020 Julien Pommier.
+#
+# This file is a part of GetFEM
+#
+# GetFEM  is  free software;  you  can  redistribute  it  and/or modify it
+# under  the  terms  of the  GNU  Lesser General Public License as published
+# by  the  Free Software Foundation;  either version 3 of the License,  or
+# (at your option) any later version along with the GCC Runtime Library
+# Exception either version 3.1 or (at your option) any later version.
+# This program  is  distributed  in  the  hope  that it will be useful,  but
+# WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+# or  FITNESS  FOR  A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+# License and GCC Runtime Library Exception for more details.
+# You  should  have received a copy of the GNU Lesser General Public License
+# along  with  this program;  if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+"""This is the getfem-python-interface module.
+
+"""
+from distutils.core import setup, Extension
+import os
+
+try:
+    import numpy
+except ImportError:
+    raise Exception("PYTHON interface requires numpy")
+npy_include_dir = numpy.get_include()
+
+# cclibopts = "../../../src/.libs/libgetfem.a".split()
+cclibopts = "".split() # getfem is explicitly added below
+cclibopts += '-lsmumps_seq -ldmumps_seq -lcmumps_seq -lzmumps_seq -lqhull -llapack  -lblas'.split()
+cclibopts += ''.split()
+
+libnames = ['getfemint','getfem']
+libnames += [l[2:] for l in cclibopts if l.startswith("-l")]
+libdirs  = [l[2:] for l in cclibopts if l.startswith("-L")]
+libdirs += [l for l in cclibopts if not l.startswith("-")]
+
+libnames += ['stdc++','m']
+libdirs = ['../.libs', '../../../src/.libs'] + libdirs
+for i in range(0,len(libdirs)):
+    if (os.path.isfile(libdirs[i])):
+        libfile=os.path.splitext(os.path.basename(libdirs[i]))[0]
+        #print libdirs[i], ' -> ', libfile
+        if (libfile.startswith('lib')):
+            libnames.append(libfile[3:])
+            libdirs[i]=os.path.dirname(libdirs[i])
+        else:
+            libnames.append(libdirs[i])
+            libdirs[i]= ''
+
+libdirs = [l for l in libdirs if len(l.strip())]
+
+#print "cclibopts=", cclibopts
+#print "libnames = ", libnames
+#print "libdirs = ", libdirs
+getfemmod = Extension('_getfem',
+                      include_dirs = ['../../../src/getfem','../../../src/getfem','./..','.',npy_include_dir],
+                      libraries = libnames,
+                      library_dirs = libdirs,
+                      sources = ['getfem_python_c.c'],
+                      )
+
+setup (name = 'getfem-interface',
+       license='LGPL',
+       version = '5.3',
+       maintainer="Yves Renard",
+       maintainer_email="Yves.Renard@insa-lyon.fr",
+       description = "This is the getfem-python-interface module",
+       ext_modules = [getfemmod])

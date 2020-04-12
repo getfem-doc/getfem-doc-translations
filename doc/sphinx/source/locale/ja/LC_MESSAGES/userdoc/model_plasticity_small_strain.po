@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-04 13:53+0000\n"
+"POT-Creation-Date: 2020-04-12 01:49+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -54,15 +54,12 @@ msgstr "微小ひずみテンソルの加算分解"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:27
 msgid ""
-"Let :math:`\\Omega \\subset \\R^3` be the reference configuration of a "
-"deformable body and :math:`u : \\Omega \\rightarrow \\R^3` be the "
-"displacement field. Small strain plasticity is based on the additive "
-"decomposition of the small strain tensor :math:`\\varepsilon(u) = "
-"\\Frac{\\nabla u + \\nabla u^T}{2}` in"
+"Let :math:`\\Omega \\subset \\rm I\\hspace{-0.15em}R^3` be the reference "
+"configuration of a deformable body and :math:`u : \\Omega \\rightarrow \\rm "
+"I\\hspace{-0.15em}R^3` be the displacement field. Small strain plasticity is"
+" based on the additive decomposition of the small strain tensor "
+":math:`\\varepsilon(u) = \\dfrac{\\nabla u + \\nabla u^T}{2}` in"
 msgstr ""
-":math:`\\Omega \\subset \\R^3` は変形可能な物体の参照構成であり、:math:`u : \\Omega "
-"\\rightarrow \\R^3` は変形フィールドです。微小ひずみの可塑性は、微小ひずみテンソル :math:`\\varepsilon(u) ="
-" \\Frac{\\nabla u + \\nabla u^T}{2}` の加法分解に基づいています。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:29
 msgid "\\varepsilon(u) = \\varepsilon^e + \\varepsilon^p"
@@ -85,8 +82,8 @@ msgid "We consider"
 msgstr "以下を考慮します"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:39
-msgid "\\alpha : \\Omega \\rightarrow \\R^{d_{\\alpha}},"
-msgstr "\\alpha : \\Omega \\rightarrow \\R^{d_{\\alpha}},"
+msgid "\\alpha : \\Omega \\rightarrow \\rm I\\hspace{-0.15em}R^{d_{\\alpha}},"
+msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:42
 msgid ""
@@ -108,13 +105,10 @@ msgstr "対応する応力型変数は以下で決定されます。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:49
 msgid ""
-"\\sigma = \\Frac{\\partial \\psi}{\\partial \\varepsilon^e}(\\varepsilon^e, "
-"\\alpha), ~~~~ A =  \\Frac{\\partial \\psi}{\\partial "
+"\\sigma = \\dfrac{\\partial \\psi}{\\partial \\varepsilon^e}(\\varepsilon^e,"
+" \\alpha), ~~~~ A =  \\dfrac{\\partial \\psi}{\\partial "
 "\\alpha}(\\varepsilon^e, \\alpha),"
 msgstr ""
-"\\sigma = \\Frac{\\partial \\psi}{\\partial \\varepsilon^e}(\\varepsilon^e, "
-"\\alpha), ~~~~ A =  \\Frac{\\partial \\psi}{\\partial "
-"\\alpha}(\\varepsilon^e, \\alpha),"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:52
 msgid ""
@@ -187,13 +181,10 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:77
 msgid ""
-"\\dot{\\varepsilon}^p = \\gamma \\Frac{\\partial \\Psi}{\\partial "
-"\\sigma}(\\sigma, A), ~~~~~~ \\dot{\\alpha} = -\\gamma \\Frac{\\partial "
+"\\dot{\\varepsilon}^p = \\gamma \\dfrac{\\partial \\Psi}{\\partial "
+"\\sigma}(\\sigma, A), ~~~~~~ \\dot{\\alpha} = -\\gamma \\dfrac{\\partial "
 "\\Psi}{\\partial A}(\\sigma, A),"
 msgstr ""
-"\\dot{\\varepsilon}^p = \\gamma \\Frac{\\partial \\Psi}{\\partial "
-"\\sigma}(\\sigma, A), ~~~~~~ \\dot{\\alpha} = -\\gamma \\Frac{\\partial "
-"\\Psi}{\\partial A}(\\sigma, A),"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:79
 msgid "with the additional complementarity condition"
@@ -228,17 +219,12 @@ msgstr "動的弾塑性問題の弱定式化は、任意の運動学的に許容
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:90
 msgid ""
-"\\left| \\begin{array}{l} \\ds \\int_{\\Omega} \\rho \\ddot{u}\\cdot v + "
-"\\sigma : \\nabla v dx =  \\int_{\\Omega} f\\dot v dx + \\int_{\\Gamma_N} "
-"g\\dot v dx, \\\\ u(0,x) = u_0(x), ~~~\\dot{u}(0) = \\mathrm{v}_0(x), \\\\ "
+"\\left| \\begin{array}{l}  \\int_{\\Omega} \\rho \\ddot{u}\\cdot v + \\sigma"
+" : \\nabla v dx =  \\int_{\\Omega} f\\dot v dx + \\int_{\\Gamma_N} g\\dot v "
+"dx, \\\\ u(0,x) = u_0(x), ~~~\\dot{u}(0) = \\mathrm{v}_0(x), \\\\ "
 "\\varepsilon^p(0,x) = \\varepsilon^p_0, ~~~ \\alpha(0,x) = \\alpha_0, "
 "\\end{array} \\right."
 msgstr ""
-"\\left| \\begin{array}{l} \\ds \\int_{\\Omega} \\rho \\ddot{u}\\cdot v + "
-"\\sigma : \\nabla v dx =  \\int_{\\Omega} f\\dot v dx + \\int_{\\Gamma_N} "
-"g\\dot v dx, \\\\ u(0,x) = u_0(x), ~~~\\dot{u}(0) = \\mathrm{v}_0(x), \\\\ "
-"\\varepsilon^p(0,x) = \\varepsilon^p_0, ~~~ \\alpha(0,x) = \\alpha_0, "
-"\\end{array} \\right."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:98
 msgid ""
@@ -304,24 +290,18 @@ msgstr "塑性流れ則の積分のための :math:`\\theta`- 法は"
 #: ../source/userdoc/model_plasticity_small_strain.rst:115
 msgid ""
 "\\varepsilon^p_{n+1} - \\varepsilon^p_{n} = (1-\\theta)\\Delta t \\gamma_n "
-"\\Frac{\\partial \\Psi}{\\partial \\sigma}(\\sigma_{n}, A_{n}) + \\theta "
-"\\Delta t \\gamma_{n+1} \\Frac{\\partial \\Psi}{\\partial "
+"\\dfrac{\\partial \\Psi}{\\partial \\sigma}(\\sigma_{n}, A_{n}) + \\theta "
+"\\Delta t \\gamma_{n+1} \\dfrac{\\partial \\Psi}{\\partial "
 "\\sigma}(\\sigma_{n+1}, A_{n+1}),"
 msgstr ""
-"\\varepsilon^p_{n+1} - \\varepsilon^p_{n} = (1-\\theta)\\Delta t \\gamma_n "
-"\\Frac{\\partial \\Psi}{\\partial \\sigma}(\\sigma_{n}, A_{n}) + \\theta "
-"\\Delta t \\gamma_{n+1} \\Frac{\\partial \\Psi}{\\partial "
-"\\sigma}(\\sigma_{n+1}, A_{n+1}),"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:118
 msgid ""
-"\\alpha_{n+1} - \\alpha_n = -(1-\\theta)\\Delta t \\gamma_n \\Frac{\\partial"
-" \\Psi}{\\partial A}(\\sigma_{n}, A_{n}) - \\theta\\Delta t \\gamma_{n+1} "
-"\\Frac{\\partial \\Psi}{\\partial A}(\\sigma_{n+1}, A_{n+1}),"
+"\\alpha_{n+1} - \\alpha_n = -(1-\\theta)\\Delta t \\gamma_n "
+"\\dfrac{\\partial \\Psi}{\\partial A}(\\sigma_{n}, A_{n}) - \\theta\\Delta t"
+" \\gamma_{n+1} \\dfrac{\\partial \\Psi}{\\partial A}(\\sigma_{n+1}, "
+"A_{n+1}),"
 msgstr ""
-"\\alpha_{n+1} - \\alpha_n = -(1-\\theta)\\Delta t \\gamma_n \\Frac{\\partial"
-" \\Psi}{\\partial A}(\\sigma_{n}, A_{n}) - \\theta\\Delta t \\gamma_{n+1} "
-"\\Frac{\\partial \\Psi}{\\partial A}(\\sigma_{n+1}, A_{n+1}),"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:121
 msgid "with the complementary condition"
@@ -388,14 +368,10 @@ msgstr ""
 #: ../source/userdoc/model_plasticity_small_strain.rst:138
 msgid ""
 "\\zeta_n = \\varepsilon^p_{n} + (1-\\theta)\\Delta t \\gamma_n "
-"\\Frac{\\partial \\Psi}{\\partial \\sigma}(\\sigma_{n}, A_{n}) ,  \\eta_n = "
-"\\alpha_n - (1-\\theta)\\Delta t \\gamma_n \\Frac{\\partial \\Psi}{\\partial"
-" A}(\\sigma_{n}, A_{n})"
+"\\dfrac{\\partial \\Psi}{\\partial \\sigma}(\\sigma_{n}, A_{n}) ,  \\eta_n ="
+" \\alpha_n - (1-\\theta)\\Delta t \\gamma_n \\dfrac{\\partial "
+"\\Psi}{\\partial A}(\\sigma_{n}, A_{n})"
 msgstr ""
-"\\zeta_n = \\varepsilon^p_{n} + (1-\\theta)\\Delta t \\gamma_n "
-"\\Frac{\\partial \\Psi}{\\partial \\sigma}(\\sigma_{n}, A_{n}) ,  \\eta_n = "
-"\\alpha_n - (1-\\theta)\\Delta t \\gamma_n \\Frac{\\partial \\Psi}{\\partial"
-" A}(\\sigma_{n}, A_{n})"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:143
 msgid ""
@@ -442,8 +418,8 @@ msgstr ""
 "という追加の（そしてオプションの）関数と新しい未知のスカラー場を考えます"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:149
-msgid "\\xi_{n+1} = \\Frac{\\gamma_{n+1}}{\\alpha(\\sigma_{n+1}, A_{n+1})} ,"
-msgstr "\\xi_{n+1} = \\Frac{\\gamma_{n+1}}{\\alpha(\\sigma_{n+1}, A_{n+1})} ,"
+msgid "\\xi_{n+1} = \\dfrac{\\gamma_{n+1}}{\\alpha(\\sigma_{n+1}, A_{n+1})} ,"
+msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:151
 msgid ""
@@ -456,28 +432,19 @@ msgstr ""
 #: ../source/userdoc/model_plasticity_small_strain.rst:153
 msgid ""
 "\\varepsilon^p_{n+1} - \\varepsilon^p_{n} = "
-"(1-\\theta)\\alpha(\\sigma_n,A_n)\\Delta t \\xi_n \\Frac{\\partial "
+"(1-\\theta)\\alpha(\\sigma_n,A_n)\\Delta t \\xi_n \\dfrac{\\partial "
 "\\Psi}{\\partial \\sigma}(\\sigma_{n}, A_{n}) + \\theta "
-"\\alpha(\\sigma_{n+1},A_{n+1}) \\Delta t \\xi_{n+1} \\Frac{\\partial "
+"\\alpha(\\sigma_{n+1},A_{n+1}) \\Delta t \\xi_{n+1} \\dfrac{\\partial "
 "\\Psi}{\\partial \\sigma}(\\sigma_{n+1}, A_{n+1}),"
 msgstr ""
-"\\varepsilon^p_{n+1} - \\varepsilon^p_{n} = "
-"(1-\\theta)\\alpha(\\sigma_n,A_n)\\Delta t \\xi_n \\Frac{\\partial "
-"\\Psi}{\\partial \\sigma}(\\sigma_{n}, A_{n}) + \\theta "
-"\\alpha(\\sigma_{n+1},A_{n+1}) \\Delta t \\xi_{n+1} \\Frac{\\partial "
-"\\Psi}{\\partial \\sigma}(\\sigma_{n+1}, A_{n+1}),"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:156
 msgid ""
 "\\alpha_{n+1} - \\alpha_n = (1-\\theta) \\alpha(\\sigma_n,A_n)\\Delta t "
-"\\xi_n \\Frac{\\partial \\Psi}{\\partial A}(\\sigma_{n}, A_{n}) + \\theta "
-"\\alpha(\\sigma_{n+1},A_{n+1}) \\Delta t \\xi_{n+1} \\Frac{\\partial "
+"\\xi_n \\dfrac{\\partial \\Psi}{\\partial A}(\\sigma_{n}, A_{n}) + \\theta "
+"\\alpha(\\sigma_{n+1},A_{n+1}) \\Delta t \\xi_{n+1} \\dfrac{\\partial "
 "\\Psi}{\\partial A}(\\sigma_{n+1}, A_{n+1}),"
 msgstr ""
-"\\alpha_{n+1} - \\alpha_n = (1-\\theta) \\alpha(\\sigma_n,A_n)\\Delta t "
-"\\xi_n \\Frac{\\partial \\Psi}{\\partial A}(\\sigma_{n}, A_{n}) + \\theta "
-"\\alpha(\\sigma_{n+1},A_{n+1}) \\Delta t \\xi_{n+1} \\Frac{\\partial "
-"\\Psi}{\\partial A}(\\sigma_{n+1}, A_{n+1}),"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:159
 msgid ""
@@ -530,15 +497,13 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:175
 msgid ""
-"\\sigma_{n+1} = \\Frac{\\partial \\psi^e}{\\partial "
+"\\sigma_{n+1} = \\dfrac{\\partial \\psi^e}{\\partial "
 "\\varepsilon^e}(\\varepsilon(u_{n+1}) -\\varepsilon^p_{n+1})."
 msgstr ""
-"\\sigma_{n+1} = \\Frac{\\partial \\psi^e}{\\partial "
-"\\varepsilon^e}(\\varepsilon(u_{n+1}) -\\varepsilon^p_{n+1})."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:177
-msgid "A_{n+1} = \\Frac{\\partial \\psi^p}{\\partial \\alpha}(\\alpha_{n+1})."
-msgstr "A_{n+1} = \\Frac{\\partial \\psi^p}{\\partial \\alpha}(\\alpha_{n+1})."
+msgid "A_{n+1} = \\dfrac{\\partial \\psi^p}{\\partial \\alpha}(\\alpha_{n+1})."
+msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:179
 msgid ""
@@ -551,11 +516,9 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:181
 msgid ""
-"\\ds \\int_{\\Omega} (\\xi_{n+1} - (\\xi_{n+1} + r f(\\sigma_{n+1}, "
-"A_{n+1}))_+) \\lambda dx = 0,   \\forall \\lambda"
+"\\int_{\\Omega} (\\xi_{n+1} - (\\xi_{n+1} + r f(\\sigma_{n+1}, A_{n+1}))_+) "
+"\\lambda dx = 0,   \\forall \\lambda"
 msgstr ""
-"\\ds \\int_{\\Omega} (\\xi_{n+1} - (\\xi_{n+1} + r f(\\sigma_{n+1}, "
-"A_{n+1}))_+) \\lambda dx = 0,   \\forall \\lambda"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:183
 msgid "or"
@@ -563,11 +526,9 @@ msgstr "または"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:185
 msgid ""
-"\\ds \\int_{\\Omega} (f(\\sigma_{n+1} + (-f(\\sigma_{n+1}, A_{n+1}) - "
+"\\int_{\\Omega} (f(\\sigma_{n+1} + (-f(\\sigma_{n+1}, A_{n+1}) - "
 "\\xi_{n+1}/r)_+ , A_{n+1}) ) \\lambda dx = 0,   \\forall \\lambda"
 msgstr ""
-"\\ds \\int_{\\Omega} (f(\\sigma_{n+1} + (-f(\\sigma_{n+1}, A_{n+1}) - "
-"\\xi_{n+1}/r)_+ , A_{n+1}) ) \\lambda dx = 0,   \\forall \\lambda"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:187
 msgid ""
@@ -694,11 +655,9 @@ msgstr "均等塑性ひずみが想定される汎用的なケースでは、以
 #: ../source/userdoc/model_plasticity_small_strain.rst:224
 #: ../source/userdoc/model_plasticity_small_strain.rst:261
 msgid ""
-"\\mbox{ tr}(\\varepsilon^p) = 0 ~~~~ \\Rightarrow  ~~~ \\varepsilon^p_{3,3} "
-"= - (\\varepsilon^p_{1,1} + \\varepsilon^p_{2,2})."
+"\\mbox{ tr}(\\varepsilon^p) = 0 ~~~~ \\rm I\\hspace{-0.15em}Rightarrow  ~~~ "
+"\\varepsilon^p_{3,3} = - (\\varepsilon^p_{1,1} + \\varepsilon^p_{2,2})."
 msgstr ""
-"\\mbox{ tr}(\\varepsilon^p) = 0 ~~~~ \\Rightarrow  ~~~ \\varepsilon^p_{3,3} "
-"= - (\\varepsilon^p_{1,1} + \\varepsilon^p_{2,2})."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:229
 msgid "Plane stress approximation"
@@ -776,12 +735,9 @@ msgstr "また"
 #: ../source/userdoc/model_plasticity_small_strain.rst:247
 msgid ""
 "\\varepsilon^e_{3,3} = "
-"-\\Frac{\\lambda}{\\lambda+2\\mu}(\\varepsilon^e_{1,1} + "
+"-\\dfrac{\\lambda}{\\lambda+2\\mu}(\\varepsilon^e_{1,1} + "
 "\\varepsilon^e_{2,2})"
 msgstr ""
-"\\varepsilon^e_{3,3} = "
-"-\\Frac{\\lambda}{\\lambda+2\\mu}(\\varepsilon^e_{1,1} + "
-"\\varepsilon^e_{2,2})"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:249
 msgid "so that"
@@ -791,11 +747,8 @@ msgstr "そのため、"
 msgid ""
 "\\bar{\\sigma} = \\lambda^* \\mbox{tr}(\\bar{\\varepsilon}^e) + "
 "2\\mu\\bar{\\varepsilon}^e ~~~\\mbox{ with } \\lambda^* = "
-"\\Frac{2\\mu\\lambda}{\\lambda+2\\mu}"
+"\\dfrac{2\\mu\\lambda}{\\lambda+2\\mu}"
 msgstr ""
-"\\bar{\\sigma} = \\lambda^* \\mbox{tr}(\\bar{\\varepsilon}^e) + "
-"2\\mu\\bar{\\varepsilon}^e ~~~\\mbox{ with } \\lambda^* = "
-"\\Frac{2\\mu\\lambda}{\\lambda+2\\mu}"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:254
 msgid "Moreover"
@@ -804,10 +757,8 @@ msgstr "さらに、"
 #: ../source/userdoc/model_plasticity_small_strain.rst:256
 msgid ""
 "\\|\\mbox{Dev}(\\sigma)\\| = \\left(\\|\\bar{\\sigma}\\|^2 - "
-"\\Frac{1}{3}(\\mbox{tr}(\\bar{\\sigma}))^2\\right)^{1/2}."
+"\\dfrac{1}{3}(\\mbox{tr}(\\bar{\\sigma}))^2\\right)^{1/2}."
 msgstr ""
-"\\|\\mbox{Dev}(\\sigma)\\| = \\left(\\|\\bar{\\sigma}\\|^2 - "
-"\\Frac{1}{3}(\\mbox{tr}(\\bar{\\sigma}))^2\\right)^{1/2}."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:259
 msgid ""
@@ -855,8 +806,8 @@ msgid ""
 msgstr "内部変数はなく、等方性弾性応答を考慮します。流動化則は次の式になります。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:279
-msgid "\\dot{\\varepsilon}^p = \\gamma \\Frac{\\mbox{Dev}(\\sigma)}{\\|\\mbox{Dev}(\\sigma)\\|}"
-msgstr "\\dot{\\varepsilon}^p = \\gamma \\Frac{\\mbox{Dev}(\\sigma)}{\\|\\mbox{Dev}(\\sigma)\\|}"
+msgid "\\dot{\\varepsilon}^p = \\gamma \\dfrac{\\mbox{Dev}(\\sigma)}{\\|\\mbox{Dev}(\\sigma)\\|}"
+msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:281
 msgid ""
@@ -876,25 +827,17 @@ msgstr "塑性流れ則の積分のための :math:`\\theta`- 法は次式とな
 msgid ""
 "\\varepsilon^p_{n+1} - \\varepsilon^p_{n} = (1-\\theta)\\alpha(\\sigma_{n}) "
 "\\Delta t \\xi_n "
-"\\Frac{\\mbox{Dev}(\\sigma_{n})}{\\|\\mbox{Dev}(\\sigma_{n})\\|} + "
+"\\dfrac{\\mbox{Dev}(\\sigma_{n})}{\\|\\mbox{Dev}(\\sigma_{n})\\|} + "
 "\\theta\\alpha(\\sigma_{n+1}) \\Delta t \\xi_{n+1} "
-"\\Frac{\\mbox{Dev}(\\sigma_{n+1})}{\\|\\mbox{Dev}(\\sigma_{n+1})\\|}."
+"\\dfrac{\\mbox{Dev}(\\sigma_{n+1})}{\\|\\mbox{Dev}(\\sigma_{n+1})\\|}."
 msgstr ""
-"\\varepsilon^p_{n+1} - \\varepsilon^p_{n} = (1-\\theta)\\alpha(\\sigma_{n}) "
-"\\Delta t \\xi_n "
-"\\Frac{\\mbox{Dev}(\\sigma_{n})}{\\|\\mbox{Dev}(\\sigma_{n})\\|} + "
-"\\theta\\alpha(\\sigma_{n+1}) \\Delta t \\xi_{n+1} "
-"\\Frac{\\mbox{Dev}(\\sigma_{n+1})}{\\|\\mbox{Dev}(\\sigma_{n+1})\\|}."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:288
 msgid ""
 "Choosing the factor :math:`\\alpha(\\sigma_{n}) = "
 "\\|\\mbox{Dev}(\\sigma_{n})\\|` and still with :math:`\\xi_n = "
-"\\Frac{\\gamma_n}{\\alpha(\\sigma_{n})}` this gives the equation"
+"\\dfrac{\\gamma_n}{\\alpha(\\sigma_{n})}` this gives the equation"
 msgstr ""
-"因子を選択すると、次のようになります。 :math:`\\alpha(\\sigma_{n}) = "
-"\\|\\mbox{Dev}(\\sigma_{n})\\|` と :math:`\\xi_n = "
-"\\Frac{\\gamma_n}{\\alpha(\\sigma_{n})}` 。ゆえに次式となります。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:290
 msgid ""
@@ -918,12 +861,9 @@ msgstr ""
 #: ../source/userdoc/model_plasticity_small_strain.rst:294
 msgid ""
 "\\tilde{\\mathscr E}^p(u_{n+1}, \\theta \\Delta t \\xi_{n+1}, \\zeta_{n}) = "
-"\\zeta_n + \\left(1-\\Frac{1}{1+2\\mu\\theta\\Delta "
+"\\zeta_n + \\left(1-\\dfrac{1}{1+2\\mu\\theta\\Delta "
 "t\\xi_{n+1}}\\right)(\\mbox{Dev}(\\varepsilon(u_{n+1})) - \\zeta_n),"
 msgstr ""
-"\\tilde{\\mathscr E}^p(u_{n+1}, \\theta \\Delta t \\xi_{n+1}, \\zeta_{n}) = "
-"\\zeta_n + \\left(1-\\Frac{1}{1+2\\mu\\theta\\Delta "
-"t\\xi_{n+1}}\\right)(\\mbox{Dev}(\\varepsilon(u_{n+1})) - \\zeta_n),"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:296
 msgid ""
@@ -958,13 +898,9 @@ msgstr "次式が成り立ちます"
 msgid ""
 "\\|\\mbox{Dev}(\\sigma_{n+1})\\| = "
 "2\\mu\\|\\mbox{Dev}(\\varepsilon(u_{n+1})) -\\varepsilon^p_{n+1}\\| = "
-"\\Frac{2\\mu}{1+2\\mu\\theta\\Delta t "
+"\\dfrac{2\\mu}{1+2\\mu\\theta\\Delta t "
 "\\xi_{n+1}}\\|\\mbox{Dev}(\\varepsilon(u_{n+1})) - \\zeta_n\\|,"
 msgstr ""
-"\\|\\mbox{Dev}(\\sigma_{n+1})\\| = "
-"2\\mu\\|\\mbox{Dev}(\\varepsilon(u_{n+1})) -\\varepsilon^p_{n+1}\\| = "
-"\\Frac{2\\mu}{1+2\\mu\\theta\\Delta t "
-"\\xi_{n+1}}\\|\\mbox{Dev}(\\varepsilon(u_{n+1})) - \\zeta_n\\|,"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:308
 msgid ""
@@ -986,16 +922,14 @@ msgstr ""
 ":math:`\\|\\mbox{Dev}(\\sigma_{n+1})\\| =  \\sqrt{\\frac{2}{3}}` となり、"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:314
-msgid "1+2\\mu\\theta\\Delta t \\xi_{n+1} = \\Frac{2\\mu\\|B\\|}{\\sqrt{\\frac{2}{3}}\\sigma_y},"
-msgstr "1+2\\mu\\theta\\Delta t \\xi_{n+1} = \\Frac{2\\mu\\|B\\|}{\\sqrt{\\frac{2}{3}}\\sigma_y},"
+msgid "1+2\\mu\\theta\\Delta t \\xi_{n+1} = \\dfrac{2\\mu\\|B\\|}{\\sqrt{\\frac{2}{3}}\\sigma_y},"
+msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:318
 msgid ""
 "\\varepsilon^p_{n+1} = \\zeta_n + \\left( 1 - "
-"\\sqrt{\\frac{2}{3}}\\Frac{\\sigma_y}{2\\mu\\|B\\|}\\right) B."
+"\\sqrt{\\frac{2}{3}}\\dfrac{\\sigma_y}{2\\mu\\|B\\|}\\right) B."
 msgstr ""
-"\\varepsilon^p_{n+1} = \\zeta_n + \\left( 1 - "
-"\\sqrt{\\frac{2}{3}}\\Frac{\\sigma_y}{2\\mu\\|B\\|}\\right) B."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:320
 msgid "The two options can be summarized by"
@@ -1004,10 +938,9 @@ msgstr "2つの選択肢は次のように表されれます。"
 #: ../source/userdoc/model_plasticity_small_strain.rst:322
 msgid ""
 "\\varepsilon^p_{n+1} = {\\mathscr E}^p(u_{n+1}, \\zeta_{n}) = \\zeta_n + "
-"\\left( 1 - \\sqrt{\\frac{2}{3}}\\Frac{\\sigma_y}{2\\mu\\|B\\|}\\right)_+ B."
+"\\left( 1 - \\sqrt{\\frac{2}{3}}\\dfrac{\\sigma_y}{2\\mu\\|B\\|}\\right)_+ "
+"B."
 msgstr ""
-"\\varepsilon^p_{n+1} = {\\mathscr E}^p(u_{n+1}, \\zeta_{n}) = \\zeta_n + "
-"\\left( 1 - \\sqrt{\\frac{2}{3}}\\Frac{\\sigma_y}{2\\mu\\|B\\|}\\right)_+ B."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:324
 msgid ""
@@ -1019,13 +952,10 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:326
 msgid ""
-"\\xi_{n+1} = \\Frac{1}{\\theta\\Delta "
-"t}\\left(\\sqrt{\\frac{3}{2}}\\Frac{\\|B\\|}{\\sigma_y} - "
-"\\Frac{1}{2\\mu}\\right)_+."
+"\\xi_{n+1} = \\dfrac{1}{\\theta\\Delta "
+"t}\\left(\\sqrt{\\frac{3}{2}}\\dfrac{\\|B\\|}{\\sigma_y} - "
+"\\dfrac{1}{2\\mu}\\right)_+."
 msgstr ""
-"\\xi_{n+1} = \\Frac{1}{\\theta\\Delta "
-"t}\\left(\\sqrt{\\frac{3}{2}}\\Frac{\\|B\\|}{\\sigma_y} - "
-"\\Frac{1}{2\\mu}\\right)_+."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:329
 #: ../source/userdoc/model_plasticity_small_strain.rst:426
@@ -1045,25 +975,17 @@ msgstr ""
 msgid ""
 "\\bar{\\tilde{\\mathscr E}}^p(u_{n+1}, \\theta \\Delta t \\xi_{n+1}, "
 "\\bar{\\zeta}_{n}) = \\bar{\\zeta}_n + "
-"\\left(1-\\Frac{1}{1+2\\mu\\theta\\Delta "
+"\\left(1-\\dfrac{1}{1+2\\mu\\theta\\Delta "
 "t\\xi_{n+1}}\\right)(\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}(u_{n+1})) -"
 " \\bar{\\zeta}_n),"
 msgstr ""
-"\\bar{\\tilde{\\mathscr E}}^p(u_{n+1}, \\theta \\Delta t \\xi_{n+1}, "
-"\\bar{\\zeta}_{n}) = \\bar{\\zeta}_n + "
-"\\left(1-\\Frac{1}{1+2\\mu\\theta\\Delta "
-"t\\xi_{n+1}}\\right)(\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}(u_{n+1})) -"
-" \\bar{\\zeta}_n),"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:335
 msgid ""
 "where :math:`\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}) = "
-"\\bar{\\varepsilon} - \\Frac{\\mbox{tr}(\\bar{\\varepsilon})}{3} \\bar{I}` "
+"\\bar{\\varepsilon} - \\dfrac{\\mbox{tr}(\\bar{\\varepsilon})}{3} \\bar{I}` "
 "is the 2D restriction of the 3D deviator."
 msgstr ""
-"ここで、 :math:`\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}) = "
-"\\bar{\\varepsilon} - \\Frac{\\mbox{tr}(\\bar{\\varepsilon})}{3} \\bar{I}` "
-"は3次元偏差器の2次元制限です。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:337
 msgid "Moreover, for the yield condition,"
@@ -1074,14 +996,9 @@ msgid ""
 "\\|\\mbox{Dev}(\\sigma)\\|^2 = "
 "4\\mu^2\\left(\\|\\overline{\\mbox{Dev}}\\bar{\\varepsilon}(u) - "
 "\\bar{\\varepsilon}^p\\|^2 + "
-"\\left(\\Frac{\\mbox{tr}(\\bar{\\varepsilon}(u))}{3} "
+"\\left(\\dfrac{\\mbox{tr}(\\bar{\\varepsilon}(u))}{3} "
 "-\\mbox{tr}(\\bar{\\varepsilon}^p) \\right)^2\\right)."
 msgstr ""
-"\\|\\mbox{Dev}(\\sigma)\\|^2 = "
-"4\\mu^2\\left(\\|\\overline{\\mbox{Dev}}\\bar{\\varepsilon}(u) - "
-"\\bar{\\varepsilon}^p\\|^2 + "
-"\\left(\\Frac{\\mbox{tr}(\\bar{\\varepsilon}(u))}{3} "
-"-\\mbox{tr}(\\bar{\\varepsilon}^p) \\right)^2\\right)."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:341
 msgid "And for the elimination of the multiplier,"
@@ -1091,11 +1008,8 @@ msgstr "そして乗数の除去のために次式とします。"
 msgid ""
 "\\bar{\\mathscr E}^p(\\bar{u}_{n+1}, \\bar{\\varepsilon}^p_{n}) = "
 "\\bar{\\zeta}^p_{n} + \\left( 1 - "
-"\\sqrt{\\frac{2}{3}}\\Frac{\\sigma_y}{2\\mu\\|B\\|}\\right)_+ \\bar{B}"
+"\\sqrt{\\frac{2}{3}}\\dfrac{\\sigma_y}{2\\mu\\|B\\|}\\right)_+ \\bar{B}"
 msgstr ""
-"\\bar{\\mathscr E}^p(\\bar{u}_{n+1}, \\bar{\\varepsilon}^p_{n}) = "
-"\\bar{\\zeta}^p_{n} + \\left( 1 - "
-"\\sqrt{\\frac{2}{3}}\\Frac{\\sigma_y}{2\\mu\\|B\\|}\\right)_+ \\bar{B}"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:345
 msgid ""
@@ -1103,15 +1017,9 @@ msgid ""
 "\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}(u_{n+1}))-\\bar{\\zeta}_{n}` and"
 " :math:`\\|B\\|^2 = \\|\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}(u_{n+1}))"
 " - \\bar{\\zeta}_n\\|^2 + "
-"\\left(\\Frac{\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))}{3} "
+"\\left(\\dfrac{\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))}{3} "
 "-\\mbox{tr}(\\bar{\\zeta}_n) \\right)^2`."
 msgstr ""
-"ここで :math:`\\bar{B} = "
-"\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}(u_{n+1}))-\\bar{\\zeta}_{n}` and"
-" :math:`\\|B\\|^2 = \\|\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}(u_{n+1}))"
-" - \\bar{\\zeta}_n\\|^2 + "
-"\\left(\\Frac{\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))}{3} "
-"-\\mbox{tr}(\\bar{\\zeta}_n) \\right)^2`。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:347
 msgid "**Plane stress approximation**"
@@ -1125,47 +1033,31 @@ msgstr "平面応力近似の場合、 :eq:`plane_stress_iso` を使用して、
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:351
 msgid ""
-"\\bar{\\varepsilon}^p_{n+1} = \\Frac{1}{1+2\\mu\\theta\\Delta "
+"\\bar{\\varepsilon}^p_{n+1} = \\dfrac{1}{1+2\\mu\\theta\\Delta "
 "\\xi}\\left(\\bar{\\zeta}_{n} +2\\mu\\theta\\Delta "
 "\\xi\\left(\\bar{\\varepsilon}(u_{n+1}) - "
-"\\Frac{2\\mu}{3(\\lambda+2\\mu)}(\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1})) - "
-"\\mbox{tr}(\\bar{\\varepsilon}_{n+1}^p))\\bar{I}\\right) \\right),"
+"\\dfrac{2\\mu}{3(\\lambda+2\\mu)}(\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1})) -"
+" \\mbox{tr}(\\bar{\\varepsilon}_{n+1}^p))\\bar{I}\\right) \\right),"
 msgstr ""
-"\\bar{\\varepsilon}^p_{n+1} = \\Frac{1}{1+2\\mu\\theta\\Delta "
-"\\xi}\\left(\\bar{\\zeta}_{n} +2\\mu\\theta\\Delta "
-"\\xi\\left(\\bar{\\varepsilon}(u_{n+1}) - "
-"\\Frac{2\\mu}{3(\\lambda+2\\mu)}(\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1})) - "
-"\\mbox{tr}(\\bar{\\varepsilon}_{n+1}^p))\\bar{I}\\right) \\right),"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:353
 msgid ""
 "since :math:`\\mbox{Dev}(\\varepsilon(u)) = \\varepsilon(u) - "
-"\\Frac{2\\mu}{3(\\lambda+2\\mu)}(\\mbox{tr}(\\bar{\\varepsilon}(u)) - "
+"\\dfrac{2\\mu}{3(\\lambda+2\\mu)}(\\mbox{tr}(\\bar{\\varepsilon}(u)) - "
 "\\mbox{tr}(\\bar{\\varepsilon}^p))`. Of course, this relation still has to "
 "be inverted. Denoting :math:`\\alpha = 1+2\\mu\\theta\\Delta \\xi`, "
-":math:`\\beta = \\Frac{4\\mu^2\\theta\\Delta \\xi}{3\\lambda+6\\mu}` and "
+":math:`\\beta = \\dfrac{4\\mu^2\\theta\\Delta \\xi}{3\\lambda+6\\mu}` and "
 ":math:`C = \\bar{\\zeta}_{n} +2\\mu\\theta\\Delta "
 "\\xi\\left(\\bar{\\varepsilon}(u_{n+1}) - "
-"\\Frac{2\\mu}{3(\\lambda+2\\mu)}(\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))))\\bar{I}\\right)`"
+"\\dfrac{2\\mu}{3(\\lambda+2\\mu)}(\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))))\\bar{I}\\right)`"
 " one obtains"
 msgstr ""
-"ここで :math:`\\mbox{Dev}(\\varepsilon(u)) = \\varepsilon(u) - "
-"\\Frac{2\\mu}{3(\\lambda+2\\mu)}(\\mbox{tr}(\\bar{\\varepsilon}(u)) - "
-"\\mbox{tr}(\\bar{\\varepsilon}^p))`。 もちろん、この関係はまだ反転させなければなりません。 "
-":math:`\\alpha = 1+2\\mu\\theta\\Delta \\xi`, :math:`\\beta = "
-"\\Frac{4\\mu^2\\theta\\Delta \\xi}{3\\lambda+6\\mu}` と :math:`C = "
-"\\bar{\\zeta}_{n} +2\\mu\\theta\\Delta "
-"\\xi\\left(\\bar{\\varepsilon}(u_{n+1}) - "
-"\\Frac{2\\mu}{3(\\lambda+2\\mu)}(\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))))\\bar{I}\\right)`"
-" を使用して表記します。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:355
 msgid ""
-"\\bar{\\varepsilon}^p_{n+1} = \\Frac{\\beta "
-"\\mbox{tr}(C)}{\\alpha(\\alpha-2\\beta)}\\bar{I} + \\Frac{1}{\\alpha}C."
+"\\bar{\\varepsilon}^p_{n+1} = \\dfrac{\\beta "
+"\\mbox{tr}(C)}{\\alpha(\\alpha-2\\beta)}\\bar{I} + \\dfrac{1}{\\alpha}C."
 msgstr ""
-"\\bar{\\varepsilon}^p_{n+1} = \\Frac{\\beta "
-"\\mbox{tr}(C)}{\\alpha(\\alpha-2\\beta)}\\bar{I} + \\Frac{1}{\\alpha}C."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:357
 msgid ""
@@ -1182,15 +1074,13 @@ msgstr "線形等方性および移動硬化とVon-Mises基準を用いた等方
 #: ../source/userdoc/model_plasticity_small_strain.rst:362
 msgid ""
 "We consider an isotropic elastic reponse and the internal variable "
-":math:`\\alpha : \\Omega \\rightarrow \\R` being the accumulated plastic "
-"strain which satisfies"
+":math:`\\alpha : \\Omega \\rightarrow \\rm I\\hspace{-0.15em}R` being the "
+"accumulated plastic strain which satisfies"
 msgstr ""
-"等方性弾性応答と内部変数 :math:`\\alpha : \\Omega \\rightarrow \\R` "
-"を蓄積されたひずみとして次式を満たすと考えてみます。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:364
-msgid "\\dot{\\alpha} = \\sqrt{\\Frac{2}{3}}\\gamma"
-msgstr "\\dot{\\alpha} = \\sqrt{\\Frac{2}{3}}\\gamma"
+msgid "\\dot{\\alpha} = \\sqrt{\\dfrac{2}{3}}\\gamma"
+msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:366
 msgid ""
@@ -1236,48 +1126,29 @@ msgstr "ここで、 :math:`H_k` は動力学的硬化係数です。前節と�
 #: ../source/userdoc/model_plasticity_small_strain.rst:381
 msgid ""
 "\\tilde{\\mathscr E}^p(u_{n+1}, \\theta\\Delta t \\xi_{n+1}, \\zeta_n) = "
-"\\zeta_n + \\Frac{1}{2(\\mu+H_k/3)}\\left(1 - "
-"\\Frac{1}{1+2(\\mu+H_k/3)\\theta\\Delta "
+"\\zeta_n + \\dfrac{1}{2(\\mu+H_k/3)}\\left(1 - "
+"\\dfrac{1}{1+2(\\mu+H_k/3)\\theta\\Delta "
 "t\\xi_{n+1}}\\right)(2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1}))-2(\\mu+H_k/3)\\zeta_n)"
 msgstr ""
-"\\tilde{\\mathscr E}^p(u_{n+1}, \\theta\\Delta t \\xi_{n+1}, \\zeta_n) = "
-"\\zeta_n + \\Frac{1}{2(\\mu+H_k/3)}\\left(1 - "
-"\\Frac{1}{1+2(\\mu+H_k/3)\\theta\\Delta "
-"t\\xi_{n+1}}\\right)(2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1}))-2(\\mu+H_k/3)\\zeta_n)"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:384
 msgid ""
 "\\begin{array}{rcl} \\tilde{\\mathscr A}(u_{n+1}, \\theta \\Delta t "
-"\\xi_{n+1}, \\zeta_{n}, \\eta_n) &=& \\eta_n + \\sqrt{\\Frac{2}{3}} \\theta "
-"\\Delta t \\xi_{n+1}\\|\\mbox{Dev}(\\sigma_{n+1} - "
+"\\xi_{n+1}, \\zeta_{n}, \\eta_n) &=& \\eta_n + \\sqrt{\\dfrac{2}{3}} \\theta"
+" \\Delta t \\xi_{n+1}\\|\\mbox{Dev}(\\sigma_{n+1} - "
 "\\frac{2}{3}H_k\\varepsilon^p_{n+1})\\| \\\\ &=& \\eta_n + "
-"\\sqrt{\\Frac{2}{3}} \\theta \\Delta t "
+"\\sqrt{\\dfrac{2}{3}} \\theta \\Delta t "
 "\\xi_{n+1}\\|2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1})) - "
 "2(\\mu+H_k/3)\\varepsilon^p_{n+1}\\| \\\\ &=&  \\eta_n + "
-"\\sqrt{\\Frac{2}{3}} \\Frac{\\theta \\Delta t "
+"\\sqrt{\\dfrac{2}{3}} \\dfrac{\\theta \\Delta t "
 "\\xi_{n+1}}{1+2(\\mu+H_k/3)\\theta\\Delta "
 "t\\xi_{n+1}}\\|2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1})) - "
 "2(\\mu+H_k/3)\\zeta_{n}\\| \\\\ &=& \\eta_n + "
-"\\sqrt{\\Frac{2}{3}}\\Frac{1}{2(\\mu+H_k/3)}\\left(1 - "
-"\\Frac{1}{1+2(\\mu+H_k/3)\\theta\\Delta t\\xi_{n+1}}\\right) "
+"\\sqrt{\\dfrac{2}{3}}\\dfrac{1}{2(\\mu+H_k/3)}\\left(1 - "
+"\\dfrac{1}{1+2(\\mu+H_k/3)\\theta\\Delta t\\xi_{n+1}}\\right) "
 "\\|2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1})) - "
 "2(\\mu+H_k/3)\\zeta_{n}\\|\\end{array}"
 msgstr ""
-"\\begin{array}{rcl} \\tilde{\\mathscr A}(u_{n+1}, \\theta \\Delta t "
-"\\xi_{n+1}, \\zeta_{n}, \\eta_n) &=& \\eta_n + \\sqrt{\\Frac{2}{3}} \\theta "
-"\\Delta t \\xi_{n+1}\\|\\mbox{Dev}(\\sigma_{n+1} - "
-"\\frac{2}{3}H_k\\varepsilon^p_{n+1})\\| \\\\ &=& \\eta_n + "
-"\\sqrt{\\Frac{2}{3}} \\theta \\Delta t "
-"\\xi_{n+1}\\|2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1})) - "
-"2(\\mu+H_k/3)\\varepsilon^p_{n+1}\\| \\\\ &=&  \\eta_n + "
-"\\sqrt{\\Frac{2}{3}} \\Frac{\\theta \\Delta t "
-"\\xi_{n+1}}{1+2(\\mu+H_k/3)\\theta\\Delta "
-"t\\xi_{n+1}}\\|2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1})) - "
-"2(\\mu+H_k/3)\\zeta_{n}\\| \\\\ &=& \\eta_n + "
-"\\sqrt{\\Frac{2}{3}}\\Frac{1}{2(\\mu+H_k/3)}\\left(1 - "
-"\\Frac{1}{1+2(\\mu+H_k/3)\\theta\\Delta t\\xi_{n+1}}\\right) "
-"\\|2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1})) - "
-"2(\\mu+H_k/3)\\zeta_{n}\\|\\end{array}"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:386
 msgid "where :math:`\\zeta_n` and :math:`\\eta_n` are defined by"
@@ -1297,15 +1168,11 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:390
 msgid ""
-"\\eta_n  = \\alpha_n+(1-\\theta)\\sqrt{\\Frac{2}{3}}\\Delta t \\xi_n "
+"\\eta_n  = \\alpha_n+(1-\\theta)\\sqrt{\\dfrac{2}{3}}\\Delta t \\xi_n "
 "\\|\\mbox{Dev}(\\sigma_n)-\\frac{2}{3}H_k\\varepsilon^n_p\\| =  "
-"\\alpha_n+(1-\\theta)\\sqrt{\\Frac{2}{3}}\\Delta t \\xi_n "
+"\\alpha_n+(1-\\theta)\\sqrt{\\dfrac{2}{3}}\\Delta t \\xi_n "
 "\\|2\\mu\\mbox{Dev}(\\varepsilon(u_{n}))-2(\\mu+H_k/3)\\varepsilon^n_p\\|."
 msgstr ""
-"\\eta_n  = \\alpha_n+(1-\\theta)\\sqrt{\\Frac{2}{3}}\\Delta t \\xi_n "
-"\\|\\mbox{Dev}(\\sigma_n)-\\frac{2}{3}H_k\\varepsilon^n_p\\| =  "
-"\\alpha_n+(1-\\theta)\\sqrt{\\Frac{2}{3}}\\Delta t \\xi_n "
-"\\|2\\mu\\mbox{Dev}(\\varepsilon(u_{n}))-2(\\mu+H_k/3)\\varepsilon^n_p\\|."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:392
 msgid ""
@@ -1318,24 +1185,18 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:396
 msgid ""
-"Denoting :math:`\\delta = \\Frac{1}{1+2(\\mu+H_k/3)\\theta\\Delta "
-"t\\xi_{n+1}}`, :math:`\\beta = \\Frac{1-\\delta}{2(\\mu+H_k/3)}` and "
+"Denoting :math:`\\delta = \\dfrac{1}{1+2(\\mu+H_k/3)\\theta\\Delta "
+"t\\xi_{n+1}}`, :math:`\\beta = \\dfrac{1-\\delta}{2(\\mu+H_k/3)}` and "
 ":math:`B = 2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1}))-2(\\mu+H_k/3)\\zeta_n` "
 "the expression for :math:`\\varepsilon^p_{n+1}` and :math:`\\alpha_{n+1}` "
 "becomes"
 msgstr ""
-"式 :math:`\\delta = \\Frac{1}{1+2(\\mu+H_k/3)\\theta\\Delta t\\xi_{n+1}}`, "
-":math:`\\beta = \\Frac{1-\\delta}{2(\\mu+H_k/3)}` と、 :math:`B = "
-"2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1}))-2(\\mu+H_k/3)\\zeta_n` によって "
-":math:`\\varepsilon^p_{n+1}` と :math:`\\alpha_{n+1}` の式は次のようになります。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:398
 msgid ""
 "\\varepsilon^p_{n+1} = \\zeta_n+\\beta B, ~~~ \\alpha_{n+1} = \\eta_n + "
-"\\sqrt{\\Frac{2}{3}}\\beta \\|B\\|,"
+"\\sqrt{\\dfrac{2}{3}}\\beta \\|B\\|,"
 msgstr ""
-"\\varepsilon^p_{n+1} = \\zeta_n+\\beta B, ~~~ \\alpha_{n+1} = \\eta_n + "
-"\\sqrt{\\Frac{2}{3}}\\beta \\|B\\|,"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:401
 msgid "and the plastic constraint"
@@ -1343,8 +1204,8 @@ msgstr "そして、塑性の拘束は次の通りです。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:403
 #: ../source/userdoc/model_plasticity_small_strain.rst:441
-msgid "\\delta \\|B\\| \\le \\sqrt{\\Frac{2}{3}}(\\sigma_{y0}+H_i \\alpha_{n+1})."
-msgstr "\\delta \\|B\\| \\le \\sqrt{\\Frac{2}{3}}(\\sigma_{y0}+H_i \\alpha_{n+1})."
+msgid "\\delta \\|B\\| \\le \\sqrt{\\dfrac{2}{3}}(\\sigma_{y0}+H_i \\alpha_{n+1})."
+msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:405
 msgid ""
@@ -1353,28 +1214,22 @@ msgid ""
 msgstr "従って、弾性の場合、 :math:`\\xi_{n+1} = 0, \\delta = 1` であり次式となります。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:407
-msgid "\\|B\\| \\le \\sqrt{\\Frac{2}{3}}(\\sigma_{y0}+H_i \\eta_n),"
-msgstr "\\|B\\| \\le \\sqrt{\\Frac{2}{3}}(\\sigma_{y0}+H_i \\eta_n),"
+msgid "\\|B\\| \\le \\sqrt{\\dfrac{2}{3}}(\\sigma_{y0}+H_i \\eta_n),"
+msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:409
 msgid ""
 "or we are in the plastic case and :math:`\\xi_{n+1} > 0, \\delta < 1`, "
-":math:`\\delta \\|B\\| = \\sqrt{\\Frac{2}{3}}(\\sigma_{y0}+H_i "
+":math:`\\delta \\|B\\| = \\sqrt{\\dfrac{2}{3}}(\\sigma_{y0}+H_i "
 "\\alpha_{n+1})` and :math:`(1-\\delta)` solves the equation"
 msgstr ""
-"塑性領域の場合 :math:`\\xi_{n+1} > 0, \\delta < 1`  、:math:`\\delta \\|B\\| = "
-"\\sqrt{\\Frac{2}{3}}(\\sigma_{y0}+H_i \\alpha_{n+1})` と :math:`(1-\\delta)` "
-"を使用して方程式を解きます。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:411
 msgid ""
-"\\|B\\| - (1-\\delta)\\|B\\| = \\sqrt{\\Frac{2}{3}}\\left(\\sigma_{y0}+H_i "
-"\\eta_n + \\sqrt{\\Frac{2}{3}} "
-"\\Frac{H_i}{2(\\mu+H_k/3)}(1-\\delta)\\|B\\|\\right),"
+"\\|B\\| - (1-\\delta)\\|B\\| = \\sqrt{\\dfrac{2}{3}}\\left(\\sigma_{y0}+H_i "
+"\\eta_n + \\sqrt{\\dfrac{2}{3}} "
+"\\dfrac{H_i}{2(\\mu+H_k/3)}(1-\\delta)\\|B\\|\\right),"
 msgstr ""
-"\\|B\\| - (1-\\delta)\\|B\\| = \\sqrt{\\Frac{2}{3}}\\left(\\sigma_{y0}+H_i "
-"\\eta_n + \\sqrt{\\Frac{2}{3}} "
-"\\Frac{H_i}{2(\\mu+H_k/3)}(1-\\delta)\\|B\\|\\right),"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:413
 msgid "which leads to"
@@ -1383,12 +1238,9 @@ msgstr "それにより、次式となります。"
 #: ../source/userdoc/model_plasticity_small_strain.rst:415
 msgid ""
 "1-\\delta = "
-"\\Frac{2(\\mu+H_k/3)}{\\|B\\|(2\\mu+\\frac{2}{3}(H_k+H_i))}\\left(\\|B\\|-\\sqrt{\\Frac{2}{3}}(\\sigma_{y0}+H_i"
+"\\dfrac{2(\\mu+H_k/3)}{\\|B\\|(2\\mu+\\frac{2}{3}(H_k+H_i))}\\left(\\|B\\|-\\sqrt{\\dfrac{2}{3}}(\\sigma_{y0}+H_i"
 " \\eta_n) \\right)"
 msgstr ""
-"1-\\delta = "
-"\\Frac{2(\\mu+H_k/3)}{\\|B\\|(2\\mu+\\frac{2}{3}(H_k+H_i))}\\left(\\|B\\|-\\sqrt{\\Frac{2}{3}}(\\sigma_{y0}+H_i"
-" \\eta_n) \\right)"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:417
 msgid "The two cases can be summarized by"
@@ -1397,12 +1249,9 @@ msgstr "この2つのケースをまとめると、"
 #: ../source/userdoc/model_plasticity_small_strain.rst:419
 msgid ""
 "\\beta = "
-"\\Frac{1}{\\|B\\|(2\\mu+\\frac{2}{3}(H_k+H_i))}\\left(\\|B\\|-\\sqrt{\\Frac{2}{3}}(\\sigma_{y0}+H_i"
+"\\dfrac{1}{\\|B\\|(2\\mu+\\frac{2}{3}(H_k+H_i))}\\left(\\|B\\|-\\sqrt{\\dfrac{2}{3}}(\\sigma_{y0}+H_i"
 " \\eta_n) \\right)_+"
 msgstr ""
-"\\beta = "
-"\\Frac{1}{\\|B\\|(2\\mu+\\frac{2}{3}(H_k+H_i))}\\left(\\|B\\|-\\sqrt{\\Frac{2}{3}}(\\sigma_{y0}+H_i"
-" \\eta_n) \\right)_+"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:421
 msgid ""
@@ -1416,29 +1265,20 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:423
 msgid ""
-"\\xi_{n+1} = \\Frac{1}{(2(\\mu+H_k/3))\\theta\\Delta "
-"t}(\\Frac{1}{\\delta}-1) = \\Frac{1}{\\theta\\Delta "
-"t}~\\Frac{\\beta}{1-2(\\mu+H_k/3)\\beta}."
+"\\xi_{n+1} = \\dfrac{1}{(2(\\mu+H_k/3))\\theta\\Delta "
+"t}(\\dfrac{1}{\\delta}-1) = \\dfrac{1}{\\theta\\Delta "
+"t}~\\dfrac{\\beta}{1-2(\\mu+H_k/3)\\beta}."
 msgstr ""
-"\\xi_{n+1} = \\Frac{1}{(2(\\mu+H_k/3))\\theta\\Delta "
-"t}(\\Frac{1}{\\delta}-1) = \\Frac{1}{\\theta\\Delta "
-"t}~\\Frac{\\beta}{1-2(\\mu+H_k/3)\\beta}."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:428
 msgid ""
-"Still denoting  :math:`\\delta = \\Frac{1}{1+2(\\mu+H_k/3)\\theta\\Delta "
-"t\\xi_{n+1}}`, :math:`\\beta = \\Frac{1-\\delta}{2(\\mu+H_k/3)}`, :math:`B ="
-" 2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1}))-2(\\mu+H_k/3)\\zeta_n` and "
+"Still denoting  :math:`\\delta = \\dfrac{1}{1+2(\\mu+H_k/3)\\theta\\Delta "
+"t\\xi_{n+1}}`, :math:`\\beta = \\dfrac{1-\\delta}{2(\\mu+H_k/3)}`, :math:`B "
+"= 2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1}))-2(\\mu+H_k/3)\\zeta_n` and "
 ":math:`\\overline{B} = "
 "2\\mu\\overline{Dev}(\\bar{\\varepsilon}(u_{n+1}))-2(\\mu+H_k/3)\\bar{\\zeta}_n`"
 " its in-plane part, one has"
 msgstr ""
-":math:`\\delta = \\Frac{1}{1+2(\\mu+H_k/3)\\theta\\Delta t\\xi_{n+1}}`, "
-":math:`\\beta = \\Frac{1-\\delta}{2(\\mu+H_k/3)}`, :math:`B = "
-"2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1}))-2(\\mu+H_k/3)\\zeta_n` と "
-":math:`\\overline{B} = "
-"2\\mu\\overline{Dev}(\\bar{\\varepsilon}(u_{n+1}))-2(\\mu+H_k/3)\\bar{\\zeta}_n`"
-" により面内部では"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:430
 msgid ""
@@ -1451,22 +1291,16 @@ msgstr ""
 #: ../source/userdoc/model_plasticity_small_strain.rst:433
 msgid ""
 "\\tilde{\\mathscr A}(u_{n+1}, \\theta \\Delta t \\xi_{n+1}, \\zeta_{n}, "
-"\\eta_n) = \\eta_n + \\sqrt{\\Frac{2}{3}}\\beta\\|B\\|,"
+"\\eta_n) = \\eta_n + \\sqrt{\\dfrac{2}{3}}\\beta\\|B\\|,"
 msgstr ""
-"\\tilde{\\mathscr A}(u_{n+1}, \\theta \\Delta t \\xi_{n+1}, \\zeta_{n}, "
-"\\eta_n) = \\eta_n + \\sqrt{\\Frac{2}{3}}\\beta\\|B\\|,"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:437
 msgid ""
 "\\|B\\|^2 = \\|2\\mu\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}(u_{n+1})) - "
 "2(\\mu+H_k/3)\\bar{\\zeta}_n\\|^2 + "
-"\\left(2\\mu\\Frac{\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))}{3} "
+"\\left(2\\mu\\dfrac{\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))}{3} "
 "-2(\\mu+H_k/3)\\mbox{tr}(\\bar{\\zeta}_n) \\right)^2."
 msgstr ""
-"\\|B\\|^2 = \\|2\\mu\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}(u_{n+1})) - "
-"2(\\mu+H_k/3)\\bar{\\zeta}_n\\|^2 + "
-"\\left(2\\mu\\Frac{\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))}{3} "
-"-2(\\mu+H_k/3)\\mbox{tr}(\\bar{\\zeta}_n) \\right)^2."
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:439
 msgid "The yield condition still reads"
@@ -1501,14 +1335,10 @@ msgstr ""
 #: ../source/userdoc/model_plasticity_small_strain.rst:454
 msgid ""
 "\\Psi(\\sigma) = f(\\sigma)  = \\left\\|\\mbox{Dev}\\left(\\sigma - "
-"c_1\\Frac{\\varepsilon^p}{\\|\\varepsilon^p\\|} - c_2\\varepsilon^p - "
-"\\delta \\Frac{\\varepsilon^p}{\\|\\varepsilon^p\\|}\\right)\\right\\| - "
+"c_1\\dfrac{\\varepsilon^p}{\\|\\varepsilon^p\\|} - c_2\\varepsilon^p - "
+"\\delta \\dfrac{\\varepsilon^p}{\\|\\varepsilon^p\\|}\\right)\\right\\| - "
 "\\sqrt{\\frac{2}{3}}\\sigma_{y},"
 msgstr ""
-"\\Psi(\\sigma) = f(\\sigma)  = \\left\\|\\mbox{Dev}\\left(\\sigma - "
-"c_1\\Frac{\\varepsilon^p}{\\|\\varepsilon^p\\|} - c_2\\varepsilon^p - "
-"\\delta \\Frac{\\varepsilon^p}{\\|\\varepsilon^p\\|}\\right)\\right\\| - "
-"\\sqrt{\\frac{2}{3}}\\sigma_{y},"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:456
 msgid "with the complementarity condition"
@@ -1521,12 +1351,9 @@ msgstr "\\delta \\ge 0, \\|\\varepsilon^p\\| \\le c_3,  \\delta (\\|\\varepsilon
 #: ../source/userdoc/model_plasticity_small_strain.rst:461
 msgid ""
 "where :math:`c_1, c_2 \\mbox{ and } c_3` are some physical parameters. Note "
-"that :math:`\\Frac{\\varepsilon^p}{\\|\\varepsilon^p\\|}` has to be "
+"that :math:`\\dfrac{\\varepsilon^p}{\\|\\varepsilon^p\\|}` has to be "
 "understood to be the whole unit ball for :math:`\\varepsilon^p = 0`."
 msgstr ""
-"ここで、 :math:`c_1, c_2 \\mbox{ と } c_3` はいくつかの物理的なパラメータです。 "
-":math:`\\Frac{\\varepsilon^p}{\\|\\varepsilon^p\\|}` は :math:`\\varepsilon^p"
-" = 0` の単位球全体として処理されることに注意してください。"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:464
 msgid "to be done ..."
@@ -1562,13 +1389,10 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:481
 msgid ""
-"\\int_{\\Omega} \\sigma_{n+1} : \\nabla \\delta u dx +  \\ds \\int_{\\Omega}"
-" (\\xi_{n+1} - (\\xi_{n+1} + r f(\\sigma_{n+1}, A_{n+1}))_+) \\delta\\xi dx "
-"= 0,"
+"\\int_{\\Omega} \\sigma_{n+1} : \\nabla \\delta u dx +   \\int_{\\Omega} "
+"(\\xi_{n+1} - (\\xi_{n+1} + r f(\\sigma_{n+1}, A_{n+1}))_+) \\delta\\xi dx ="
+" 0,"
 msgstr ""
-"\\int_{\\Omega} \\sigma_{n+1} : \\nabla \\delta u dx +  \\ds \\int_{\\Omega}"
-" (\\xi_{n+1} - (\\xi_{n+1} + r f(\\sigma_{n+1}, A_{n+1}))_+) \\delta\\xi dx "
-"= 0,"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:483
 msgid ""
@@ -1831,11 +1655,9 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:625
 msgid ""
-"u^{n+1} \\Rightarrow u^n \\ \\ \\ \\ \\ \\textrm{ and } \\ \\ \\ \\ \\ "
-"\\sigma^{n+1} \\Rightarrow \\sigma^n"
+"u^{n+1} \\rm I\\hspace{-0.15em}Rightarrow u^n \\ \\ \\ \\ \\ \\textrm{ and }"
+" \\ \\ \\ \\ \\ \\sigma^{n+1} \\rm I\\hspace{-0.15em}Rightarrow \\sigma^n"
 msgstr ""
-"u^{n+1} \\Rightarrow u^n \\ \\ \\ \\ \\ \\textrm{ and } \\ \\ \\ \\ \\ "
-"\\sigma^{n+1} \\Rightarrow \\sigma^n"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:629
 msgid ""

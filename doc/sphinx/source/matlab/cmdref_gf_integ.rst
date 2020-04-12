@@ -28,7 +28,7 @@ General constructor for integ objects.
 
   ``I = gf_integ(string method)``
 
-    Here is a list of some integration methods defined in getfem++ (see the
+    Here is a list of some integration methods defined in GetFEM (see the
     description of finite element and integration methods for a complete
     reference):
     

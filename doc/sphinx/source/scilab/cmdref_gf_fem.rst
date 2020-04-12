@@ -56,7 +56,7 @@ General constructor for fem objects.
   ``F = gf_fem(string fem_name)``
 
     The <literal>fem_name</literal> should contain a description of the finite element
-    method. Please refer to the getfem++ manual (especially the
+    method. Please refer to the GetFEM manual (especially the
     description of finite element and integration methods) for a complete
     reference. Here is a list of some of them:
     

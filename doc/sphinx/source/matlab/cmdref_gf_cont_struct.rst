@@ -20,7 +20,7 @@ General constructor for cont_struct objects.
 
   This object serves for storing parameters and data used in numerical
   continuation of solution branches of models (for more details about
-  continuation see the GetFEM++ user documentation).
+  continuation see the GetFEM user documentation).
 
 
 **Command list :**

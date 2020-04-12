@@ -5,7 +5,7 @@
 
 .. include:: ../replaces.txt
 
-.. highlightlang:: matlab
+.. highlight:: matlab
 
 .. _mlab-cmdref:
 
@@ -23,7 +23,7 @@ reference. Here is a list of these types:
 
 =====================  ==================================================
 `int`                  integer value
-`hobj`                 a handle for any GetFEM++ object
+`hobj`                 a handle for any GetFEM object
 `scalar`               scalar value
 `string`               string
 `ivec`                 vector of integer values
@@ -383,7 +383,7 @@ gf_asm
     arguments (with optional data) and assigned to the output arguments.
     For details about the syntax of assembly expressions, please refer
     to the getfem user manual (or look at the file getfem_assembling.h
-    in the getfem++ sources).
+    in the GetFEM sources).
     
     For example, the L2 norm of a field can be computed with::
     
@@ -717,7 +717,7 @@ General constructor for cont_struct objects.
 
   This object serves for storing parameters and data used in numerical
   continuation of solution branches of models (for more details about
-  continuation see the GetFEM++ user documentation).
+  continuation see the GetFEM user documentation).
 
 
 **Command list :**
@@ -936,7 +936,7 @@ gf_cvstruct_get
 
   General function for querying information about convex_structure objects.
 
-  The convex structures are internal structures of getfem++. They do not
+  The convex structures are internal structures of GetFEM. They do not
   contain points positions. These structures are recursive, since the faces
   of a convex structures are convex structures.
 
@@ -1144,7 +1144,7 @@ General constructor for fem objects.
   ``F = gf_fem(string fem_name)``
 
     The `fem_name` should contain a description of the finite element
-    method. Please refer to the getfem++ manual (especially the
+    method. Please refer to the GetFEM manual (especially the
     description of finite element and integration methods) for a complete
     reference. Here is a list of some of them:
     
@@ -1605,7 +1605,7 @@ General constructor for integ objects.
 
   ``I = gf_integ(string method)``
 
-    Here is a list of some integration methods defined in getfem++ (see the
+    Here is a list of some integration methods defined in GetFEM (see the
     description of finite element and integration methods for a complete
     reference):
     
@@ -2076,7 +2076,7 @@ General constructor for mesh objects.
 
   ``M = gf_mesh('load', string filename)``
 
-    Load a mesh from a getfem++ ascii mesh file.
+    Load a mesh from a GetFEM ascii mesh file.
     
     See also ``gf_mesh_get(mesh M, 'save', string filename)``.
 
@@ -5617,7 +5617,7 @@ gf_model_set
   ``ind = gf_model_set(model M, 'add small strain elastoplasticity brick', mesh_im mim,  string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int region = -1])``
 
     Adds a small strain plasticity term to the model `M`. This is the
-    main GetFEM++ brick for small strain plasticity. `lawname` is the name
+    main GetFEM brick for small strain plasticity. `lawname` is the name
     of an implemented plastic law, `unknowns_type` indicates the choice
     between a discretization where the plastic multiplier is an unknown of
     the problem or (return mapping approach) just a data of the model
@@ -5682,9 +5682,9 @@ gf_model_set
       The same law as the previous one but adapted to the plane strain
       approximation. Can only be used in 2D.
     
-    See GetFEM++ user documentation for further explanations on the
+    See GetFEM user documentation for further explanations on the
     discretization of the plastic flow and on the implemented plastic laws.
-    See also GetFEM++ user documentation on time integration strategy
+    See also GetFEM user documentation on time integration strategy
     (integration of transient problems).
     
     IMPORTANT : remember that `small_strain_elastoplasticity_next_iter` has
@@ -6998,7 +6998,7 @@ gf_spmat
 
 General constructor for spmat objects.
 
-  Create a new sparse matrix in getfem++ format(, i.e. sparse
+  Create a new sparse matrix in GetFEM format(, i.e. sparse
   matrices which are stored in the getfem workspace, not the matlab sparse
   matrices). These sparse matrix can be stored as CSC (compressed column
   sparse), which is the format used by Matlab, or they can be stored as WSC
@@ -7342,7 +7342,7 @@ gf_util
 
   ``tl = gf_util('trace level' [, int level])``
 
-    Set the verbosity of some getfem++ routines.
+    Set the verbosity of some GetFEM routines.
     
     Typically the messages printed by the model bricks, 0 means no
     trace message (default is 3). if no level is given,

@@ -5,7 +5,7 @@
 
 .. include:: ../replaces.txt
 
-.. highlightlang:: matlab
+.. highlight:: matlab
 
 .. _mlab-cmdref:
 
@@ -23,7 +23,7 @@ reference. Here is a list of these types:
 
 =====================  ==================================================
 `int`                  integer value
-`hobj`                 a handle for any GetFEM++ object
+`hobj`                 a handle for any GetFEM object
 `scalar`               scalar value
 `string`               string
 `ivec`                 vector of integer values

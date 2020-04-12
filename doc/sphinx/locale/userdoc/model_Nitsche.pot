@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-04 13:53+0000\n"
+"POT-Creation-Date: 2020-04-12 01:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgid "the sum of all Neumann terms on this variable. Note that the Neumann term
 msgstr ""
 
 #: ../source/userdoc/model_Nitsche.rst:29
-msgid "For instance, if there is a Laplace term (:math:`\\Delta u`), applied on the variable :math:`u`, the Neumann term will be :math:`G = \\Frac{\\partial u}{\\partial n}` where :math:`n` is the outward unit normal on the considered boundary. If :math:`u` represents the displacements of a deformable body, the Neumann term will be :math:`G = \\sigma(u)n`, where :math:`\\sigma(u)` is the stress tensor depending on the consitutive law. Of course, in that case :math:`G` also depends on some material parameters. If additionally a mixed incompressibility brick is added with a variable :math:`p` denoting the pressure, the Neumann term on :math:`u` will depend on :math:`p` in the following way: :math:`G = \\sigma(u)n - pn`"
+msgid "For instance, if there is a Laplace term (:math:`\\Delta u`), applied on the variable :math:`u`, the Neumann term will be :math:`G = \\dfrac{\\partial u}{\\partial n}` where :math:`n` is the outward unit normal on the considered boundary. If :math:`u` represents the displacements of a deformable body, the Neumann term will be :math:`G = \\sigma(u)n`, where :math:`\\sigma(u)` is the stress tensor depending on the consitutive law. Of course, in that case :math:`G` also depends on some material parameters. If additionally a mixed incompressibility brick is added with a variable :math:`p` denoting the pressure, the Neumann term on :math:`u` will depend on :math:`p` in the following way: :math:`G = \\sigma(u)n - pn`"
 msgstr ""
 
 #: ../source/userdoc/model_Nitsche.rst:35
@@ -69,7 +69,7 @@ msgid "Nitsche's method for prescribing this Dirichlet condition consists in add
 msgstr ""
 
 #: ../source/userdoc/model_Nitsche.rst:62
-msgid "\\int_{\\Gamma_D} \\Frac{1}{\\gamma}(Hu-g-\\gamma HG).(Hv) - \\theta(Hu-g).(HD_uG[v])d\\Gamma,"
+msgid "\\int_{\\Gamma_D} \\dfrac{1}{\\gamma}(Hu-g-\\gamma HG).(Hv) - \\theta(Hu-g).(HD_uG[v])d\\Gamma,"
 msgstr ""
 
 #: ../source/userdoc/model_Nitsche.rst:65
@@ -109,7 +109,7 @@ msgid "P_{n,\\mathscr{F}}(x) = -(x.n)_- n + P_{B(0,\\mathscr{F}(x.n)_-)}(x - (x.
 msgstr ""
 
 #: ../source/userdoc/model_Nitsche.rst:173
-msgid "This application make the projection of the normal part of :math:`x` on :math:`\\Reel_-` and the tangential part on the ball of center :math:`0` and radius :math:`\\mathscr{F}(x.n)_-`, where :math:`\\mathscr{F}` is the friction coefficient."
+msgid "This application make the projection of the normal part of :math:`x` on :math:`\\rm I\\hspace{-0.15em}R_-` and the tangential part on the ball of center :math:`0` and radius :math:`\\mathscr{F}(x.n)_-`, where :math:`\\mathscr{F}` is the friction coefficient."
 msgstr ""
 
 #: ../source/userdoc/model_Nitsche.rst:175
@@ -117,7 +117,7 @@ msgid "Using this, and considering that the sliding velocity is approximated by 
 msgstr ""
 
 #: ../source/userdoc/model_Nitsche.rst:177
-msgid "&-\\int_{\\Gamma_C} \\theta \\gamma G\\cdot D_u G[v] d\\Gamma \\\\ &+\\int_{\\Gamma_C} \\gamma P_{n,\\mathscr{F}}(G - \\Frac{Au}{\\gamma} + \\Frac{gap}{\\gamma}n + \\Frac{\\alpha w_{_T}}{\\gamma})\\cdot(\\theta D_u G[v] - \\Frac{v}{\\gamma}) d\\Gamma."
+msgid "&-\\int_{\\Gamma_C} \\theta \\gamma G\\cdot D_u G[v] d\\Gamma \\\\ &+\\int_{\\Gamma_C} \\gamma P_{n,\\mathscr{F}}(G - \\dfrac{Au}{\\gamma} + \\dfrac{gap}{\\gamma}n + \\dfrac{\\alpha w_{_T}}{\\gamma})\\cdot(\\theta D_u G[v] - \\dfrac{v}{\\gamma}) d\\Gamma."
 msgstr ""
 
 #: ../source/userdoc/model_Nitsche.rst:181

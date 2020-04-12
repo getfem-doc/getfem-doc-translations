@@ -329,7 +329,7 @@ gf_asm
     arguments (with optional data) and assigned to the output arguments.
     For details about the syntax of assembly expressions, please refer
     to the getfem user manual (or look at the file getfem_assembling.h
-    in the getfem++ sources).
+    in the GetFEM sources).
     
     For example, the L2 norm of a field can be computed with::
     

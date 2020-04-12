@@ -1087,7 +1087,7 @@ gf_model_set
   ``ind = gf_model_set(model M, 'add small strain elastoplasticity brick', mesh_im mim,  string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int region = -1])``
 
     Adds a small strain plasticity term to the model `M`. This is the
-    main GetFEM++ brick for small strain plasticity. `lawname` is the name
+    main GetFEM brick for small strain plasticity. `lawname` is the name
     of an implemented plastic law, `unknowns_type` indicates the choice
     between a discretization where the plastic multiplier is an unknown of
     the problem or (return mapping approach) just a data of the model
@@ -1152,9 +1152,9 @@ gf_model_set
       The same law as the previous one but adapted to the plane strain
       approximation. Can only be used in 2D.
     
-    See GetFEM++ user documentation for further explanations on the
+    See GetFEM user documentation for further explanations on the
     discretization of the plastic flow and on the implemented plastic laws.
-    See also GetFEM++ user documentation on time integration strategy
+    See also GetFEM user documentation on time integration strategy
     (integration of transient problems).
     
     IMPORTANT : remember that `small_strain_elastoplasticity_next_iter` has

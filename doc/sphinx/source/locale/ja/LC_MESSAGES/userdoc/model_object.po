@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-04 13:53+0000\n"
+"POT-Creation-Date: 2020-04-12 01:49+0000\n"
 "PO-Revision-Date: 2018-07-16 07:07+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -214,49 +214,75 @@ msgstr ""
 
 #: ../source/userdoc/model_object.rst:141
 msgid ""
+"Add a variable defined on the integration points of the ``im_data`` object "
+"imd. The variable can be scalar-valued, vector-valued or tensor-valued "
+"depending on the dimension of imd. It increases the model degrees of freedom"
+" by the number of integration points time the size of the variable at one "
+"integration point."
+msgstr ""
+
+#: ../source/userdoc/model_object.rst:149
+msgid ""
+"Add a variable defined on the integration points of the ``im_data`` object "
+"``imd`` that will be statically condensed out during the linearization of "
+"the problem. The variable can be scalar-valued, vector-valued or tensor-"
+"valued depending on the dimension of imd. It does not add degrees of freedom"
+" to the model."
+msgstr ""
+
+#: ../source/userdoc/model_object.rst:157
+msgid ""
+"Add a data object deignated with the string ``name``, defined at all "
+"integration points of the ``im_data`` object ``imd``. The data can be "
+"scalar-valued, vector-valued or tensor-valued depending on the dimension of "
+"imd."
+msgstr ""
+
+#: ../source/userdoc/model_object.rst:164
+msgid ""
 "Gives the access to the vector value of a variable or data. Real version."
 msgstr "変数またはデータのベクトル値にアクセスできます。実数バージョンです。"
 
-#: ../source/userdoc/model_object.rst:145
+#: ../source/userdoc/model_object.rst:168
 msgid ""
 "Gives the access to the vector value of a variable or data. Complex version."
 msgstr "変数またはデータのベクトル値にアクセスできます。複素数バージョンです。"
 
-#: ../source/userdoc/model_object.rst:149
+#: ../source/userdoc/model_object.rst:172
 msgid ""
 "Gives a reference on the |mf| on which the variable is defined. Throw an "
 "exception if this is not a fem variable."
 msgstr "定義されている変数の |mf| のリファレンスが与えられます。有限積分法変数でない場合は例外を返します。"
 
-#: ../source/userdoc/model_object.rst:154
+#: ../source/userdoc/model_object.rst:177
 msgid ""
 "Gives the access to tangent matrix. Real version. A computation of the "
 "tangent system have to be done first."
 msgstr "接線行列へのアクセスが与えられます。実数バージョンです。最初に接線系の計算を行う必要があります。"
 
-#: ../source/userdoc/model_object.rst:159
+#: ../source/userdoc/model_object.rst:182
 msgid ""
 "Gives the access to tangent matrix. Complex version. A computation of the "
 "tangent system have to be done first."
 msgstr "接線行列へのアクセスが与えられます。複素数バージョンです。最初に接線系の計算を行う必要があります。"
 
-#: ../source/userdoc/model_object.rst:164
+#: ../source/userdoc/model_object.rst:187
 msgid ""
 "Gives the access to right hand side vector of the linear system. real "
 "version. A computation of the tangent system have to be done first."
 msgstr "線形システムの右辺ベクトルへのアクセスが与えられます。実数バージョンです。最初に接線系の計算を行う必要があります。"
 
-#: ../source/userdoc/model_object.rst:169
+#: ../source/userdoc/model_object.rst:192
 msgid ""
 "Gives the access to right hand side vector of the linear system. Complex "
 "version. A computation of the tangent system have to be done first."
 msgstr "線形システムの右辺ベクトルへのアクセスが与えられます。複素数バージョンです。最初に接線系の計算を行う必要があります。"
 
-#: ../source/userdoc/model_object.rst:174
+#: ../source/userdoc/model_object.rst:197
 msgid "The |br| object"
 msgstr "|br| オブジェクト"
 
-#: ../source/userdoc/model_object.rst:176
+#: ../source/userdoc/model_object.rst:199
 msgid ""
 "A model brick is an object that is supposed to represent a part of a model. "
 "It aims to represent some integral terms in a weak formulation of a PDE "
@@ -287,7 +313,7 @@ msgstr ""
 ":math:`u` "
 "に対応する対角ブロック上の全体線形システムに追加されます。したがって、ブリック要素の唯一の役割はmodelオブジェクトがそれを求めるときに対応する構築手順を呼び出すことです。このように線形項のための項の構築は非常に簡単です。"
 
-#: ../source/userdoc/model_object.rst:192
+#: ../source/userdoc/model_object.rst:215
 msgid ""
 "Basically, the brick object will derive from the object ``virtual_brick`` "
 "defined in :file:`getfem/getfem_models.h` and should redefine the method "
@@ -298,11 +324,11 @@ msgstr ""
 "オブジェクトから派生し、 実数項か固有の複素数項かによって ``asm_real_tangent_terms`` または "
 "``asm_complex_tangent_terms`` メソッドを再定義する必要があります。"
 
-#: ../source/userdoc/model_object.rst:199
+#: ../source/userdoc/model_object.rst:222
 msgid "How to build a new brick"
 msgstr "新しいブリックを作る方法"
 
-#: ../source/userdoc/model_object.rst:201
+#: ../source/userdoc/model_object.rst:224
 msgid ""
 "Note first that the design of a new brick is only necessary for special "
 "terms not covered by existing bricks and not covered by the wide range of "
@@ -312,7 +338,7 @@ msgstr ""
 "まず最初に、新しい項の設計は、既存の項ではカバーされず、汎用的な構築項の幅広いアクセシブルな項（複雑な結合条件を含む）でカバーされていない特別な項に対してのみ必要である点に注意してください（"
 " :ref:`ud-model-generic-assembly` ）。"
 
-#: ../source/userdoc/model_object.rst:206
+#: ../source/userdoc/model_object.rst:229
 msgid ""
 "According to the spirit in which the brick has been designed, a brick should"
 " avoid as much as possible to store additional data. The parameters of a "
@@ -325,7 +351,7 @@ msgid ""
 msgstr ""
 "設計思想によれば、項は追加のデータをできるだけ保存しないようにすべきです。ブリック要素のパラメータはモデルの変数とデータに含める必要があります。例えば、線形弾性ブリック要素のパラメータは弾性係数です。この係数はモデルの何らかのデータでなければなりません。項がmodelオブジェクトによって呼び出されると、変数とデータのリストが項に与えられます。あらかじめ定義された項の大部分はデータを格納しません。これにより、そのような項を一度だけインスタンス化することができます。"
 
-#: ../source/userdoc/model_object.rst:214
+#: ../source/userdoc/model_object.rst:237
 msgid ""
 "An example of a brick corresponding to the laplacian term is the following "
 "(other examples can be found in the file :file:`getfem_models.cc` which "
@@ -334,7 +360,7 @@ msgstr ""
 "Laplacian項に対応するブリック要素の例は次のとおりです（他の例は標準的な項を含むファイル :file:`getfem_models.cc` "
 "で確認できます）。"
 
-#: ../source/userdoc/model_object.rst:252
+#: ../source/userdoc/model_object.rst:275
 msgid ""
 "The constructor of a brick should call the method ``set_flags``. The first "
 "parameter of this method is a name for the brick (this allows to list the "
@@ -344,11 +370,11 @@ msgstr ""
 "項のコンストラクタは ``set_flags`` "
 "メソッドを呼び出す必要があります。このメソッドの最初のパラメータは項の名前です（これにより、モデルの項をリストしその識別を容易にすることができます）。その他のパラメータは、それぞれ次のフラグです。"
 
-#: ../source/userdoc/model_object.rst:257
+#: ../source/userdoc/model_object.rst:280
 msgid "if the brick terms are all linear or not."
 msgstr "ブリック要素項がすべて線形であるかどうかを示します。"
 
-#: ../source/userdoc/model_object.rst:259
+#: ../source/userdoc/model_object.rst:282
 msgid ""
 "if the brick terms are globally symmetric (conjugated in the complex "
 "version) or at least do not affect the symmetry. The terms corresponding to "
@@ -358,18 +384,18 @@ msgstr ""
 "ブリック要素項が全体的に対称（複素数の場合で共役）か、少なくとも対称性に影響を与えていないか。 "
 "2つの異なる変数にで対称に宣言された項は全体線形システム（項と項の転置）で2回追加されます。"
 
-#: ../source/userdoc/model_object.rst:264
+#: ../source/userdoc/model_object.rst:287
 msgid "if the terms do not affect the coercivity."
 msgstr "その項が保磁力に影響を与えないか。"
 
-#: ../source/userdoc/model_object.rst:266
+#: ../source/userdoc/model_object.rst:289
 msgid ""
 "if the terms have a real version or not. If yes, the method "
 "``asm_real_tangent_terms`` should be redefined."
 msgstr ""
 "項が実数のバージョンを持っているかどうか。もしそうなら、 ``asm_real_tangent_terms`` メソッドを再定義する必要があります。"
 
-#: ../source/userdoc/model_object.rst:269
+#: ../source/userdoc/model_object.rst:292
 msgid ""
 "if the terms have a complex version or not. If yes, the method "
 "``asm_complex_tangent_terms`` should be redefined."
@@ -377,7 +403,7 @@ msgstr ""
 "項が複素数バージョンを持っているかどうか。もしそうなら、 ``asm_complex_tangent_terms`` "
 "メソッドを再定義する必要があります。"
 
-#: ../source/userdoc/model_object.rst:272
+#: ../source/userdoc/model_object.rst:295
 msgid ""
 "The method ``asm_real_tangent_terms`` will be called by the model object for"
 " the assembly of the tangent system. The model object gives the whole "
@@ -408,13 +434,13 @@ msgstr ""
 " ``region`` は、特定の領域に項を構築することを示すメッシュ領域番号です。 ``nl`` "
 "は非線形項のみです。これは接線行列または残差または両方を計算するか（線形項の場合は、すべての呼び出しごとに計算されます）を示します。"
 
-#: ../source/userdoc/model_object.rst:290
+#: ../source/userdoc/model_object.rst:313
 msgid ""
 "For the very simple Laplacian brick defined above, only one variable is used"
 " and no data and there is only one term. The lines::"
 msgstr "上で定義した非常に単純なLaplacian項の場合、1つの変数のみが使用され、データはなく、1つの項しか存在しません。行"
 
-#: ../source/userdoc/model_object.rst:300
+#: ../source/userdoc/model_object.rst:323
 msgid ""
 "are not mandatory and just verify that the good number of terms (1), "
 "integration methods (1), variables(1), data(0) are passed to the "
@@ -423,20 +449,20 @@ msgstr ""
 "は必須ではなく、項の数（1）、積分法（1）、変数（1）、データ（0）が  ``asm_real_tangent_terms`` "
 "メソッドに渡されるのに問題ない値であることを確認するだけです。"
 
-#: ../source/userdoc/model_object.rst:304
-#: ../source/userdoc/model_object.rst:405
-#: ../source/userdoc/model_object.rst:414
+#: ../source/userdoc/model_object.rst:327
+#: ../source/userdoc/model_object.rst:428
+#: ../source/userdoc/model_object.rst:437
 msgid "The lines::"
 msgstr "行"
 
-#: ../source/userdoc/model_object.rst:309
+#: ../source/userdoc/model_object.rst:332
 msgid ""
 "takes the |mf| object from the variable on which the Laplacian term will be "
 "added and the |mim| object in the list of integrations methods. Finally, the"
 " lines::"
 msgstr "はLaplacian項が追加される変数の |mf| オブジェクトで |mim| オブジェクトは積分法のリストです。最後に"
 
-#: ../source/userdoc/model_object.rst:316
+#: ../source/userdoc/model_object.rst:339
 msgid ""
 "call a standard assembly procedure for the Laplacian term defined in the "
 "file :file:`getfem/getfem_assembling.h`. The clear method is necessary "
@@ -447,7 +473,7 @@ msgstr ""
 "``matl`` の行列は適切なサイズであることが保証されていますが、 ``asm_real_tangent_terms`` "
 "の呼び出しの前に初期化されない可能性があるので、初期化メソッドが必要です。"
 
-#: ../source/userdoc/model_object.rst:321
+#: ../source/userdoc/model_object.rst:344
 msgid ""
 "Note that this simple brick has only one term and is linear. In the case of "
 "a linear brick, either the matrix or the right hand side vector have to be "
@@ -456,18 +482,18 @@ msgid ""
 msgstr ""
 "この単純な項は項が1つしかなく、線形であることに注意してください。線形ブリック要素の場合、行列または右辺のベクトルのどちらか一方を埋める必要がありますが、両方を埋める必要はありません。項の宣言に応じて。モデルにブリック要素を積分する方法は以下を参照してください。"
 
-#: ../source/userdoc/model_object.rst:326
+#: ../source/userdoc/model_object.rst:349
 msgid ""
 "Let us see now a second example of a simple brick which prescribes a "
 "Dirichlet condition thanks to the use of a Lagrange multiplier. The "
 "Dirichlet condition is of the form"
 msgstr "Lagrange乗数の使用によりDirichlet条件を規定する単純な項の2番目の例を見てみましょう。Dirichlet条件は、"
 
-#: ../source/userdoc/model_object.rst:330
+#: ../source/userdoc/model_object.rst:353
 msgid "u = u_D \\text{ on } \\Gamma,"
 msgstr "u = u_D \\text{ on } \\Gamma,"
 
-#: ../source/userdoc/model_object.rst:334
+#: ../source/userdoc/model_object.rst:357
 msgid ""
 "where :math:`u` is the variable, :math:`u_D` is a given value and "
 ":math:`\\Gamma` is a part on the boundary of the considered domain. The weak"
@@ -477,11 +503,11 @@ msgstr ""
 "ここで、 :math:`u` は変数で、 :math:`u_D` は与えられた値で、:math:`\\Gamma` "
 "は対象とする領域の境界上にある部分です。Lagrange乗数で規定されたこの条件に対応する弱定式項は、"
 
-#: ../source/userdoc/model_object.rst:338
+#: ../source/userdoc/model_object.rst:361
 msgid "\\int_{\\Gamma} u \\mu\\ d\\Gamma = \\int_{\\Gamma} u_D \\mu\\ d\\Gamma, \\forall \\mu \\in M,"
 msgstr "\\int_{\\Gamma} u \\mu\\ d\\Gamma = \\int_{\\Gamma} u_D \\mu\\ d\\Gamma, \\forall \\mu \\in M,"
 
-#: ../source/userdoc/model_object.rst:342
+#: ../source/userdoc/model_object.rst:365
 msgid ""
 "where :math:`M` is an appropriate multiplier space. The contributions to the"
 " global linear system can be viewed in Fig. :ref:`ud-fig-syslinDir`. The "
@@ -494,15 +520,15 @@ msgstr ""
 "で見ることができます。行列 :math:`B` は変数の有限要素空間 :math:`u` と乗数の有限要素空間 :math:`\\mu` の間の "
 "\"質量行列\" です。 :math:`L_{u}` はデータ :math:`u_D` に対応する右辺です。"
 
-#: ../source/userdoc/model_object.rst:353
+#: ../source/userdoc/model_object.rst:376
 msgid "Contributions of the simple Dirichlet brick"
 msgstr "シンプルなDirichletブリック要素の寄与"
 
-#: ../source/userdoc/model_object.rst:355
+#: ../source/userdoc/model_object.rst:378
 msgid "The brick can be defined as follows::"
 msgstr "項は次のように定義できます。"
 
-#: ../source/userdoc/model_object.rst:398
+#: ../source/userdoc/model_object.rst:421
 msgid ""
 "This brick has again only one term but defines both the matrix and the right"
 " hand side parts. Two variables are concerned, the primal variable on which "
@@ -515,7 +541,7 @@ msgstr ""
 " ``add_multiplier`` "
 "メソッドでモデルに追加する必要があります）の2つの変数が関係しています。項は対称であると宣言されます（次のセクションを参照）。"
 
-#: ../source/userdoc/model_object.rst:410
+#: ../source/userdoc/model_object.rst:433
 msgid ""
 "allow to have the access to the value of the data corresponding to the right"
 " hand side of the Dirichlet condition and to the |mf| on which this data is "
@@ -525,55 +551,55 @@ msgstr ""
 "はDirichlet状態の右辺に対応するデータの値とこのデータが定義されている |mf| "
 "にアクセスすることを許可します。データが一定である場合（有限要素法で記述されていない場合）、 ``mf_data`` はヌルポインタです。"
 
-#: ../source/userdoc/model_object.rst:421
+#: ../source/userdoc/model_object.rst:444
 msgid ""
 "make the assembly of the right hand side. The two versions correspond to a "
 "data defined on a finite element method or constant size data."
 msgstr "は右辺を構築します。 2つのバージョンは有限要素法または一定サイズのデータで定義されたデータに対応します。"
 
-#: ../source/userdoc/model_object.rst:424
+#: ../source/userdoc/model_object.rst:447
 msgid "( + some example with a nonlinear term ... )"
 msgstr "（+非線形項を持ついくつかの例...）"
 
-#: ../source/userdoc/model_object.rst:428
+#: ../source/userdoc/model_object.rst:451
 msgid "How to add the brick to a model"
 msgstr "モデルに項を追加する方法"
 
-#: ../source/userdoc/model_object.rst:430
+#: ../source/userdoc/model_object.rst:453
 msgid ""
 "In order to add a brick to a model, a certain information have to be passed "
 "to the model:"
 msgstr "モデルに項を追加するには、モデルに特定の情報を渡す必要があります。"
 
-#: ../source/userdoc/model_object.rst:433
+#: ../source/userdoc/model_object.rst:456
 msgid "A pointer to the brick itself."
 msgstr "ブリック要素自体へのポインタ。"
 
-#: ../source/userdoc/model_object.rst:434
+#: ../source/userdoc/model_object.rst:457
 msgid "The set of variable names concerned with the terms of the brick."
 msgstr "ブリック要素の項に関係する一連の変数名。"
 
-#: ../source/userdoc/model_object.rst:435
+#: ../source/userdoc/model_object.rst:458
 msgid "The set of data names concerned with the terms of the brick."
 msgstr "データ名の集合は、ブリック要素の項に関係します。"
 
-#: ../source/userdoc/model_object.rst:436
+#: ../source/userdoc/model_object.rst:459
 msgid "A list of terms description."
 msgstr "項の説明のリスト。"
 
-#: ../source/userdoc/model_object.rst:437
+#: ../source/userdoc/model_object.rst:460
 msgid "A list of integration methods."
 msgstr "積分法のリスト。"
 
-#: ../source/userdoc/model_object.rst:438
+#: ../source/userdoc/model_object.rst:461
 msgid "Eventually the concerned mesh region."
 msgstr "最終的に関連するメッシュ領域。"
 
-#: ../source/userdoc/model_object.rst:440
+#: ../source/userdoc/model_object.rst:463
 msgid "This is done by the call of the |mo| object method::"
 msgstr "これは、オブジェクトメソッド |mo| の呼び出しによって行われます。"
 
-#: ../source/userdoc/model_object.rst:448
+#: ../source/userdoc/model_object.rst:471
 msgid ""
 "The method returns the index of the brick in the model. The call of this "
 "method is rather complex because it can be adapted to many situations. The "
@@ -583,13 +609,13 @@ msgid ""
 msgstr ""
 "このメソッドは、モデル内の項のインデックスを返します。このメソッドの呼び出しは、多くの状況に適応できるため、かなり複雑です。新しいブリック要素の構築は、このメソッドを呼び出すモデルに新しいブリック要素を追加し、より簡単に使用できる関数の定義に従わなければなりません。"
 
-#: ../source/userdoc/model_object.rst:453
+#: ../source/userdoc/model_object.rst:476
 msgid ""
 "For instance, for the simple Laplacian brick described above, this function "
 "can be defined as folows::"
 msgstr "例えば、上記の単純なLaplacian項の場合、この関数は次のように定義することができます。"
 
-#: ../source/userdoc/model_object.rst:468
+#: ../source/userdoc/model_object.rst:491
 msgid ""
 "This function will be called by the user of your brick. The type "
 "``getfem::model::varnamelist`` is a ``std::vector<std::string>`` and "
@@ -606,13 +632,13 @@ msgstr ""
 "``getfem::model::termlist`` "
 "は項の記述の配列です。項には2種類あります。線形（接線）システムに右辺のみを追加する項は次のようにリストに追加する必要があります。"
 
-#: ../source/userdoc/model_object.rst:478
+#: ../source/userdoc/model_object.rst:501
 msgid ""
 "and the terms having a contribution to the matrix of the linear system which"
 " have to be added to the list by::"
 msgstr "そして、線形システムの行列に寄与する項は次のようにリストに追加する必要があります。"
 
-#: ../source/userdoc/model_object.rst:483
+#: ../source/userdoc/model_object.rst:506
 msgid ""
 "In this case, the matrix term is added in the rows corresponding to the "
 "variable ``varname1`` and the columns corresponding to the variable "
@@ -634,7 +660,7 @@ msgstr ""
 "``asm_real_tangent_terms`` のパラメータ ``matl`` "
 "）を宣言します。非線形項では、行列と右辺ベクトルの両方を満たす必要があることに注意してください。線形項の場合、行列項と宣言された項の右辺が式を満たしている場合は無視されます。"
 
-#: ../source/userdoc/model_object.rst:495
+#: ../source/userdoc/model_object.rst:518
 msgid ""
 "The variable names and the data names are given in two separate arrays "
 "because the dependence of the brick is not the same in both cases. A linear "
@@ -643,13 +669,13 @@ msgid ""
 msgstr ""
 "変数名とデータ名は2つの別々の配列で与えられます。これは、どちらの場合でも項の依存関係が同じではないためです。線形項は、データの値が変更された場合には再計算されなければなりませんが、変数の値が変更された場合は再計算されません。"
 
-#: ../source/userdoc/model_object.rst:500
+#: ../source/userdoc/model_object.rst:523
 msgid ""
 "The function allowing to add the simple Dirichlet brick described above can "
 "be defined as follows::"
 msgstr "上記の単純なDirichlet項を追加する関数は、次のように定義することができます。"
 
-#: ../source/userdoc/model_object.rst:518
+#: ../source/userdoc/model_object.rst:541
 msgid ""
 "Again, here, the term is declared symmetric and then the matrix term and its"
 " transpose will be added."

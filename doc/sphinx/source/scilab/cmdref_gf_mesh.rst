@@ -126,7 +126,7 @@ General constructor for mesh objects.
 
   ``M = gf_mesh('load', string filename)``
 
-    Load a mesh from a getfem++ ascii mesh file.
+    Load a mesh from a GetFEM ascii mesh file.
     
     See also <literal></literal>gf_mesh_get(mesh M, 'save', string filename)<literal></literal>.
 

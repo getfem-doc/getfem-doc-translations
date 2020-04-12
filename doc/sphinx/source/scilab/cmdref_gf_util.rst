@@ -39,7 +39,7 @@ gf_util
 
   ``tl = gf_util('trace level' [, int level])``
 
-    Set the verbosity of some getfem++ routines.
+    Set the verbosity of some GetFEM routines.
     
     Typically the messages printed by the model bricks, 0 means no
     trace message (default is 3). if no level is given,

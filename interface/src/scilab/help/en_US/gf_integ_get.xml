@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="gf_integ_get" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <refnamediv>
+    <refname>gf_integ_get</refname>
+    <refpurpose>  General function for querying information about integration method objects.
+</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>b = gf_integ_get(integ I, 'is_exact')</synopsis>
+    <synopsis>d = gf_integ_get(integ I, 'dim')</synopsis>
+    <synopsis>n = gf_integ_get(integ I, 'nbpts')</synopsis>
+    <synopsis>Pp = gf_integ_get(integ I, 'pts')</synopsis>
+    <synopsis>Pf = gf_integ_get(integ I, 'face_pts',F)</synopsis>
+    <synopsis>Cp = gf_integ_get(integ I, 'coeffs')</synopsis>
+    <synopsis>Cf = gf_integ_get(integ I, 'face_coeffs',F)</synopsis>
+    <synopsis>s = gf_integ_get(integ I, 'char')</synopsis>
+    <synopsis>gf_integ_get(integ I, 'display')</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Description</title>
+    <para>  General function for querying information about integration method objects.
+</para>
+  </refsection>
+
+  <refsection>
+    <title>Command list</title>
+
+    <itemizedlist>
+    <listitem>
+    <para><literal>b = gf_integ_get(integ I, 'is_exact')</literal></para>
+
+    <para>       Return 0 if the integration is an approximate one.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>d = gf_integ_get(integ I, 'dim')</literal></para>
+
+    <para>       Return the dimension of the reference convex of
+    the method.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>n = gf_integ_get(integ I, 'nbpts')</literal></para>
+
+    <para>       Return the total number of integration points.
+
+    Count the points for the volume integration, and points for
+    surface integration on each face of the reference convex.
+
+    Only for approximate methods, this has no meaning for exact
+    integration methods!
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>Pp = gf_integ_get(integ I, 'pts')</literal></para>
+
+    <para>         Return the list of integration points
+      
+      Only for approximate methods, this has no meaning for exact
+      integration methods!
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>Pf = gf_integ_get(integ I, 'face_pts',F)</literal></para>
+
+    <para>         Return the list of integration points for a face.
+      
+      Only for approximate methods, this has no meaning for exact
+      integration methods!
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>Cp = gf_integ_get(integ I, 'coeffs')</literal></para>
+
+    <para>       Returns the coefficients associated to each integration point.
+
+    Only for approximate methods, this has no meaning for exact
+    integration methods!
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>Cf = gf_integ_get(integ I, 'face_coeffs',F)</literal></para>
+
+    <para>       Returns the coefficients associated to each integration of a face.
+
+    Only for approximate methods, this has no meaning for exact
+    integration methods!
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>s = gf_integ_get(integ I, 'char')</literal></para>
+
+    <para>       Ouput a (unique) string representation of the integration method.
+
+    This can be used to  comparisons between two different integ
+    objects.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>gf_integ_get(integ I, 'display')</literal></para>
+
+    <para>       displays a short summary for a integ object.
+    </para>
+    </listitem>
+
+    </itemizedlist>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member><link linkend="getfem_types">getfem types</link></member>
+    </simplelist>
+  </refsection>
+
+  <refsection>
+    <title>Authors</title>
+    <para>Y. Collette</para>
+  </refsection>
+
+</refentry>
