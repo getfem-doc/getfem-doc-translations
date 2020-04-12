@@ -36,13 +36,54 @@ jobs:
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
       run: |
         sudo apt-get install python3-venv
+        sudo apt-get install -y --no-install-recommends automake
+        sudo apt-get install -y --no-install-recommends libtool
+        sudo apt-get install -y --no-install-recommends make
+        sudo apt-get install -y --no-install-recommends g++
+        sudo apt-get install -y --no-install-recommends libqd-dev
+        sudo apt-get install -y --no-install-recommends libqhull-dev
+        sudo apt-get install -y --no-install-recommends libmumps-seq-dev
+        sudo apt-get install -y --no-install-recommends liblapack-dev
+        sudo apt-get install -y --no-install-recommends libopenblas-dev
+        sudo apt-get install -y --no-install-recommends libpython3-dev
+        sudo apt-get install -y --no-install-recommends ufraw
+        sudo apt-get install -y --no-install-recommends imagemagick
+        sudo apt-get install -y --no-install-recommends fig2dev
+        sudo apt-get install -y --no-install-recommends texlive
+        sudo apt-get install -y --no-install-recommends xzdec
+        sudo apt-get install -y --no-install-recommends fig2ps
+        sudo apt-get install -y --no-install-recommends gv
         python3 -m venv ../.venv
         source ../.venv/bin/activate
         git submodule update
         (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
         pip install -U pip setuptools
         pip install -r ./requirements.txt
-        sh ./locale/update.sh
+        cd getfem
+        bash autogen.sh
+        ./configure --with-pic --enable-python3=yes
+        make -j8  >  make.log
+        sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
+        sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
+        sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
+        sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
+        pip install sphinx-intl[transifex]
+        (cd doc/sphinx;
+         make latex;
+         make images;
+         sphinx-intl create-transifexrc;
+         sphinx-build -T -b gettext source locale ;
+         sphinx-intl update-txconfig-resources -p locale -d source/locale;
+         cat .tx/config;
+         tx push -s --skip;
+         rm -rf source/locale/ja;
+         tx pull -l ja)
+        rm -rf ../doc
+        rm -rf ../interface
+        rm -rf doc/sphinx/locale/.doctrees
+        cp -r doc ../doc
+        cp -r interface ../interface
+        cd ../
         git branch -a
         git checkout master
         git config --global user.email $EMAIL
