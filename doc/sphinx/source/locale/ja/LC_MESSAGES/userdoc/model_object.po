@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2019
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-12 01:49+0000\n"
+"POT-Creation-Date: 2020-04-13 00:16+0000\n"
 "PO-Revision-Date: 2018-07-16 07:07+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2019\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -220,6 +220,8 @@ msgid ""
 " by the number of integration points time the size of the variable at one "
 "integration point."
 msgstr ""
+"``im_data`` "
+"オブジェクトimdの積分点に定義された変数を追加します。変数は、imdの次元に応じて、スカラー値、ベクトル値、またはテンソル値にすることができます。これにより、1つの積分点での変数のサイズを積分点の数で割った分だけ、モデルの自由度が増加します。"
 
 #: ../source/userdoc/model_object.rst:149
 msgid ""
@@ -229,6 +231,8 @@ msgid ""
 "valued depending on the dimension of imd. It does not add degrees of freedom"
 " to the model."
 msgstr ""
+"問題の線形化中に静的に圧縮される ``im_data`` オブジェクト ``imd`` "
+"の積分点で定義された変数を追加します。変数は、imdの次元に応じて、スカラー値、ベクトル値、またはテンソル値にすることができます。モデルに自由度は追加されません。"
 
 #: ../source/userdoc/model_object.rst:157
 msgid ""
@@ -237,6 +241,8 @@ msgid ""
 "scalar-valued, vector-valued or tensor-valued depending on the dimension of "
 "imd."
 msgstr ""
+"``im_data`` オブジェクト ``imd`` のすべての積分点で定義された文字列 ``name`` "
+"で定義されたデータオブジェクトを追加します。データは、imdの次元に応じて、スカラー値、ベクトル値、またはテンソル値にすることができます。"
 
 #: ../source/userdoc/model_object.rst:164
 msgid ""
