@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-21 00:17+0000\n"
+"POT-Creation-Date: 2020-04-23 00:17+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -284,7 +284,7 @@ msgid ""
 "partition of the mesh for parallel solvers, etc.::"
 msgstr ""
 "メッシュオブジェクトには、多くの |gf_mr| オブジェクト（ :file:`getfem/getfem_mesh_region.h` "
-"で宣言）を含めることができます。 これらのオブジェクトは、凸と凸面のセットのコンテナです。 "
+"で宣言）を含めることができます。 これらのオブジェクトは、凸包と凸包面のセットのコンテナです。 "
 "それらは、境界を定義するため、または並列ソルバーのメッシュの区画などに使用されます。 ::"
 
 #: ../source/userdoc/bmesh.rst:209
@@ -425,7 +425,7 @@ msgstr ""
 
 #: ../source/userdoc/bmesh.rst:323
 msgid "gives an estimate of the area of convex ``ic``."
-msgstr "``ic`` 凸面の面積の推定値を与えます。"
+msgstr "``ic`` 凸包面の面積の推定値を与えます。"
 
 #: ../source/userdoc/bmesh.rst:327
 msgid "gives a rough estimate of the quality of element ``ic``."
@@ -449,7 +449,7 @@ msgstr "インデックス ``irg`` が作成されている場合はtrueを返�
 msgid ""
 "The methods of the convexes/convex faces container ``getfem::mesh_region`` "
 "are:"
-msgstr "凸/凸面コンテナ ``getfem::mesh_region`` のメソッドは次のとおりです："
+msgstr "凸包/凸包面コンテナ ``getfem::mesh_region`` のメソッドは次のとおりです："
 
 #: ../source/userdoc/bmesh.rst:346
 msgid "add the convex of index ``ic`` to the region."
@@ -461,25 +461,25 @@ msgstr "``ic`` 番目の凸包の面番号 ``f`` を追加してください。"
 
 #: ../source/userdoc/bmesh.rst:355
 msgid "remove the convex or the convex face from the region."
-msgstr "その領域から凸または凸面を除去します。"
+msgstr "その領域から凸包または凸包面を除去します。"
 
 #: ../source/userdoc/bmesh.rst:360
 msgid "return true if the convex (or convex face) is in the region."
-msgstr "凸（または凸面）が領域内にある場合はtrueを返します。"
+msgstr "凸包（または凸包面）が領域内にある場合はtrueを返します。"
 
 #: ../source/userdoc/bmesh.rst:364
 msgid "return true if the region does not contain any convex."
-msgstr "領域に凸が含まれていない場合はtrueを返します。"
+msgstr "領域に凸包が含まれていない場合はtrueを返します。"
 
 #: ../source/userdoc/bmesh.rst:368
 msgid "return true if the region does not contain any convex face."
-msgstr "領域に凸面が含まれていない場合はtrueを返します。"
+msgstr "領域に凸包面が含まれていない場合はtrueを返します。"
 
 #: ../source/userdoc/bmesh.rst:372
 msgid ""
 "return a ``dal::bit_vector`` containing the list of convexes which are "
 "stored (or whose faces are stored) in the region."
-msgstr "領域に格納されている（または面が格納されている）凸のリストを含む ``dal::bit_vector`` を返します。"
+msgstr "領域に格納されている（または面が格納されている）凸包のリストを含む ``dal::bit_vector`` を返します。"
 
 #: ../source/userdoc/bmesh.rst:375
 msgid "Iteration over a |gf_mr| should be done with |gf_mrv|::"
@@ -555,7 +555,7 @@ msgid ""
 " refer to a given face, is to give the convex number, and the local face "
 "number in the convex."
 msgstr ""
-"凸と点はgf_mオブジェクト内でグローバルに番号が付けられていますが、面のグローバルな番号付けはありません。そのため、与えられた面を参照する唯一の方法は凸面の番号と凸面の局所面番号を与えますことです。"
+"凸包と点はgf_mオブジェクト内でグローバルに番号が付けられていますが、面のグローバルな番号付けはありません。そのため、与えられた面を参照する唯一の方法は凸包面の番号と凸包面の局所面番号を与えますことです。"
 
 #: ../source/userdoc/bmesh.rst:431
 msgid "Save and load meshes"

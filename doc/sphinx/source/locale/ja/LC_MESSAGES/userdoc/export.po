@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-21 00:17+0000\n"
+"POT-Creation-Date: 2020-04-23 00:17+0000\n"
 "PO-Revision-Date: 2018-07-16 07:07+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -31,12 +31,12 @@ msgid ""
 msgstr "getfemの計算結果を見るには、基本的に4つの方法があります。"
 
 #: ../source/userdoc/export.rst:14
-msgid "Matlab, with the matlab-interface."
-msgstr "matlabインターフェースを使用したMatlabによる出力"
+msgid "Scilab, Octave or Matlab, with the interface."
+msgstr ""
 
 #: ../source/userdoc/export.rst:15
-msgid "The open-source Mayavi or any other VTK files viewer."
-msgstr "オープンソースのMayaviやその他のVTKファイルビューア"
+msgid "The open-source Paraview or Mayavi or any other VTK files viewer."
+msgstr ""
 
 #: ../source/userdoc/export.rst:16
 msgid "The open-source OpenDX program."
@@ -56,18 +56,15 @@ msgstr "Matlabインターフェース用のmeshとmesh_femオブジェクトの
 
 #: ../source/userdoc/export.rst:24
 msgid ""
-"If you have installed the Matlab interface, you can simply use "
-"``mesh_fem::write_to_file`` and save the solution as a plain text file, and "
-"then, load them into Matlab. For example, supposing you have a solution "
-"``U`` on a |mf| ``mf``,::"
+"If you have installed the Scilab, Octave or Matlab interface, you can simply"
+" use ``mesh_fem::write_to_file`` and save the solution as a plain text file,"
+" and then, load them with the interface. For example, supposing you have a "
+"solution ``U`` on a |mf| ``mf``,::"
 msgstr ""
-"Matlabインターフェースをインストールしている場合は、単に ``mesh_fem::write_to_file`` "
-"を実行し、解をプレーンテキストファイルとして保存し、Matlabにロードしてください。例えば、 |mf|  ``mf`` 上に解 ``U`` "
-"を持っている場合 、"
 
 #: ../source/userdoc/export.rst:36
-msgid "and then, under matlab:"
-msgstr "と入力し、matlabで以下を実行します。"
+msgid "and then, under Scilab, Octave or Matlab:"
+msgstr ""
 
 #: ../source/userdoc/export.rst:44
 msgid "See the getfem-matlab interface documentation for more details."
@@ -235,13 +232,9 @@ msgid ""
 "during the slicing operation. This allows an accurate representation of any "
 "finite element field onto a very simple structure (linear "
 "segment/triangles/tetrahedrons with P1 discontinuous data on them) which is "
-"what most visualization programs (gmsh, mayavi, opendx, matlab, etc.) "
-"expect."
+"what most visualization programs (gmsh, mayavi, opendx, scilab, octave, "
+"matlab, etc.) expect."
 msgstr ""
-"``nrefine`` "
-"パラメータは非常に重要です。なぜなら、最終結果の\"精度\"はこの変数に依存するからです。最後のスライスで表現されるデータが線形幾何変換を持つ凸面のP1データだけである場合、"
-"  ``nrefine=1`` が正しい選択ですが、P2、P3、非線形変換などでは、スライス操作中に元のメッシュの各凸面を改良する方が良いです。 "
-"ほとんどの視覚化プログラム（gmsh、mayavi、opendx、matlabなど）は、非常に単純な構造（線形セグメント/3角形/4面体にP1不連続データを持つ）上に有限要素フィールドを正確に表現することができます。"
 
 #: ../source/userdoc/export.rst:161
 msgid ""

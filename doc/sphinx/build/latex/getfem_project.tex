@@ -79,8 +79,8 @@
 
 
 \title{Description of the Project}
-\date{Apr 21, 2020}
-\release{5.3}
+\date{Apr 23, 2020}
+\release{5.4}
 \author{Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
 \renewcommand{\releasename}{Release}
@@ -156,7 +156,7 @@ However, the Python, Scilab and matlab interfaces allows to easily build applica
 coupling the definition of the problem, the finite element methods
 selection and the graphical post\sphinxhyphen{}processing.
 
-Copyright © 2004\sphinxhyphen{}2018 \sphinxstyleemphasis{GetFEM} project.
+Copyright © 2004\sphinxhyphen{}2020 \sphinxstyleemphasis{GetFEM} project.
 
 The text of the \sphinxstyleemphasis{GetFEM} website and the documentations are available for modification and reuse under the terms of the \sphinxhref{http://www.gnu.org/licenses/fdl.html}{GNU Free Documentation License}
 
@@ -289,7 +289,7 @@ cd doc/sphinx
 tx pull \PYGZhy{}l \PYGZlt{}lang\PYGZgt{}
 \end{sphinxVerbatim}
 
-Set code for your native language to \textless{}lang\textgreater{} (see \sphinxhref{http://www.sphinx-doc.org/en/stable/usage/configuration.html\#confval-language}{Currently supported languages by Sphinx are} ).
+Set code for your native language to \textless{}lang\textgreater{} (see \sphinxhref{https://www.sphinx-doc.org/en/latest/usage/configuration.html\#confval-language}{Currently supported languages by Sphinx are} ).
 
 \begin{sphinxadmonition}{warning}{Warning:}
 \sphinxstylestrong{DO NOT} tx push to transifex. It will have some trouble. You can upload file one by one in team page.
@@ -2097,7 +2097,7 @@ produced during compilation by the python script
 The main concepts manipulated by the interface are a limited number of objects
 (Fem, Mesh, MeshFem, Model …), the associated methods and some functions defined on these objects.
 
-A special effort has been done to facilitate the addition of new objects, methods and functions to the interface without doing it separately for each part supported script language (Python, Scilab, Matlab).
+A special effort has been done to facilitate the addition of new objects, methods and functions to the interface without doing it separately for each part supported script language (Python, Scilab, Octave, Matlab).
 
 All the information needed to build the interface for the different objects, methods and functions is contained in the files \sphinxtitleref{interface/src/gf*.cc}. A python script (\sphinxtitleref{bin/extract\_doc}) produces all the necessary files from the information it takes there. In particular, it produces the python file getfem.py, the matlab m\sphinxhyphen{}files for the different functions and objects (including subdirectories) and it also produces the automatic documentations.
 
@@ -2147,7 +2147,7 @@ The first three line are a c++ commentary which describes the call of the
 method/function with a special syntax and also gives a description of the
 method/function which will be included in the documentations. The first
 line of this commentary is important since it will be analyzed to produce
-the right interface for Python, Matlab and Scilab.
+the right interface for Python, Octave, Matlab and Scilab.
 
 The syntax for the description of the call of a method/function is the
 following: After \sphinxcode{\sphinxupquote{/*@}} a special keyword should be present. It is either
@@ -2290,7 +2290,7 @@ It is possible to refer to another method or function of the interface
 with the syntax \sphinxcode{\sphinxupquote{INIT::OBJNAME(\textquotesingle{}method\sphinxhyphen{}name\textquotesingle{}, ...)}},
 \sphinxcode{\sphinxupquote{GET::OBJNAME(\textquotesingle{}method\sphinxhyphen{}name\textquotesingle{}, ...)}}, \sphinxcode{\sphinxupquote{SET::OBJNAME(\textquotesingle{}method\sphinxhyphen{}name\textquotesingle{}, ...)}},
 \sphinxcode{\sphinxupquote{FUNC::FUNCNAME(\textquotesingle{}subcommand\sphinxhyphen{}name\textquotesingle{}, ...)}}. This will be replaced with
-the right syntax depending on the language (Matlab, Scilab or Python).
+the right syntax depending on the language (Octave, Matlab, Scilab or Python).
 
 \item {} 
 Still in the documentations, parts for a specific language can be added by
@@ -2314,20 +2314,20 @@ a \sphinxtitleref{GET} method, the \sphinxtitleref{SET} method is prefixed by \s
 \label{\detokenize{project/libdesc_interface:adding-a-new-function-or-object-method-to-the-getfem-interface}}
 If one want to add a new function \sphinxcode{\sphinxupquote{gf\_mesh\_get(m, "foobar", .)}}, then the
 main file to modify is \sphinxcode{\sphinxupquote{gf\_mesh\_get.cc}}. Remember to check every argument
-passed to the function in order to make sure that the user cannot crash scilab, matlab or python when using that function. Use the macro defined in \sphinxcode{\sphinxupquote{gf\_mesh\_get.cc}} to add your function.
+passed to the function in order to make sure that the user cannot crash Scilab, Octave, Matlab or Python when using that function. Use the macro defined in \sphinxcode{\sphinxupquote{gf\_mesh\_get.cc}} to add your function.
 
 Do not forget to add documentation for that function: in \sphinxcode{\sphinxupquote{gf\_mesh\_get.cc}},
-this is the documentation that appears in the matlab/scilab/python help files (that is when on
+this is the documentation that appears in the Octave/Matlab/Scilab/Python help files (that is when on
 type “\sphinxcode{\sphinxupquote{help gf\_mesh\_get}}” at the matlab prompt), and in the getfem\_python
 autogenerated documentation.
 
-IMPORTANT. Note that the array indices start at 0 in Python and 1 in Matlab and Scilab. A specific function:
+IMPORTANT. Note that the array indices start at 0 in Python and 1 in Octave, Matlab and Scilab. A specific function:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{config}\PYG{o}{:}\PYG{o}{:}\PYG{n}{base\PYGZus{}index}\PYG{p}{(}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-whose value is 0 in python and 1 in Matlab and Scilab has to be used to exchange indices and array of indices. Take care not to make the correction twice. Some Array of indices are automatically shifted.
+whose value is 0 in python and 1 in Octave, Matlab and Scilab has to be used to exchange indices and array of indices. Take care not to make the correction twice. Some Array of indices are automatically shifted.
 
 
 \subsection{Adding a new object to the getfem interface}

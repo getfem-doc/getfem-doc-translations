@@ -4475,6 +4475,8 @@ gf_model_set
   gf_model_set(model M, 'clear')
   gf_model_set(model M, 'add fem variable', string name, mesh_fem mf)
   gf_model_set(model M, 'add filtered fem variable', string name, mesh_fem mf, int region)
+  gf_model_set(model M, 'add im variable', string name, mesh_imd mimd)
+  gf_model_set(model M, 'add internal im variable', string name, mesh_imd mimd)
   gf_model_set(model M, 'add variable', string name, sizes)
   gf_model_set(model M, 'delete variable', string name)
   gf_model_set(model M, 'resize variable', string name, sizes)
@@ -4633,6 +4635,19 @@ gf_model_set
     Add a variable to the model linked to a mesh_fem. The variable is filtered
     in the sense that only the dof on the region are considered.
     <literal>name</literal> is the variable name. 
+
+
+  ``gf_model_set(model M, 'add im variable', string name, mesh_imd mimd)``
+
+    Add a variable to the model linked to a mesh_imd. <literal>name</literal> is the variable
+    name. 
+
+
+  ``gf_model_set(model M, 'add internal im variable', string name, mesh_imd mimd)``
+
+    Add a variable to the model, which is linked to a mesh_imd and will be
+    condensed out during the assemblage of the tangent matrix. <literal>name</literal> is
+    the variable name. 
 
 
   ``gf_model_set(model M, 'add variable', string name, sizes)``

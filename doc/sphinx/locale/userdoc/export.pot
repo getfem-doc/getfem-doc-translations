@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-21 00:17+0000\n"
+"POT-Creation-Date: 2020-04-23 00:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,11 +25,11 @@ msgid "There are essentially four ways to view the result of getfem computations
 msgstr ""
 
 #: ../source/userdoc/export.rst:14
-msgid "Matlab, with the matlab-interface."
+msgid "Scilab, Octave or Matlab, with the interface."
 msgstr ""
 
 #: ../source/userdoc/export.rst:15
-msgid "The open-source Mayavi or any other VTK files viewer."
+msgid "The open-source Paraview or Mayavi or any other VTK files viewer."
 msgstr ""
 
 #: ../source/userdoc/export.rst:16
@@ -49,11 +49,11 @@ msgid "Saving mesh and mesh_fem objects for the Matlab interface"
 msgstr ""
 
 #: ../source/userdoc/export.rst:24
-msgid "If you have installed the Matlab interface, you can simply use ``mesh_fem::write_to_file`` and save the solution as a plain text file, and then, load them into Matlab. For example, supposing you have a solution ``U`` on a |mf| ``mf``,::"
+msgid "If you have installed the Scilab, Octave or Matlab interface, you can simply use ``mesh_fem::write_to_file`` and save the solution as a plain text file, and then, load them with the interface. For example, supposing you have a solution ``U`` on a |mf| ``mf``,::"
 msgstr ""
 
 #: ../source/userdoc/export.rst:36
-msgid "and then, under matlab:"
+msgid "and then, under Scilab, Octave or Matlab:"
 msgstr ""
 
 #: ../source/userdoc/export.rst:44
@@ -145,7 +145,7 @@ msgid "In order to apply these slicers, a ``getfem::mesh_slicer(mesh&)`` object 
 msgstr ""
 
 #: ../source/userdoc/export.rst:152
-msgid "The ``nrefine`` parameter is very important, as the \"precision\" of the final result will depend on it: if the data that is represented on the final slice is just P1 data on convexes with a linear geometric transformation, ``nrefine = 1`` is the right choice, but for P2, P3, non linear transformation etc, it is better to refine each convex of the original mesh during the slicing operation. This allows an accurate representation of any finite element field onto a very simple structure (linear segment/triangles/tetrahedrons with P1 discontinuous data on them) which is what most visualization programs (gmsh, mayavi, opendx, matlab, etc.) expect."
+msgid "The ``nrefine`` parameter is very important, as the \"precision\" of the final result will depend on it: if the data that is represented on the final slice is just P1 data on convexes with a linear geometric transformation, ``nrefine = 1`` is the right choice, but for P2, P3, non linear transformation etc, it is better to refine each convex of the original mesh during the slicing operation. This allows an accurate representation of any finite element field onto a very simple structure (linear segment/triangles/tetrahedrons with P1 discontinuous data on them) which is what most visualization programs (gmsh, mayavi, opendx, scilab, octave, matlab, etc.) expect."
 msgstr ""
 
 #: ../source/userdoc/export.rst:161

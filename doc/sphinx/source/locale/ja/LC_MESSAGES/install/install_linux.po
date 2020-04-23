@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-21 00:17+0000\n"
+"POT-Creation-Date: 2020-04-23 00:17+0000\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -193,18 +193,16 @@ msgstr "Scilab インターフェース"
 msgid ""
 "The installation of the |sci| |gf| toolbox can be somewhat tricky, since it "
 "combines a C++ compiler, libraries and |sci| interaction. In case of "
-"troubles with a non-GNU compiler, gcc/g++ (>= 4.8) should be a safe "
+"troubles with a non-GNU compiler, gcc/g++ (>= 8.0) should be a safe "
 "solution."
 msgstr ""
-"|sci| |gf| toolboxのインストールは、C++コンパイラ、ライブラリ、および |sci| "
-"を相互に組み合わせているため、多少面倒です。GNU以外のコンパイラで問題が発生した場合は、 gcc/g++ (>= 4.8) "
-"を使うことが安全な解決策になります。"
 
 #: ../source/install/install_linux.rst:129
 msgid "The minimal |sci| release is the 5.2.2."
 msgstr "最初の |sci| リリースは5.2.2です。"
 
 #: ../source/install/install_linux.rst:131
+#: ../source/install/install_linux.rst:175
 msgid ""
 "you should have built the |gf| static library (i.e. do not use ``./configure"
 " --disable-static`` when building |gf|). On linux/x86_64 platforms, a "
@@ -249,7 +247,7 @@ msgid "Optionally, you can install it with ::"
 msgstr "オプションで、次の方法でインストールできます。"
 
 #: ../source/install/install_linux.rst:149
-#: ../source/install/install_linux.rst:197
+#: ../source/install/install_linux.rst:220
 msgid ""
 "If you want to use a different compiler than the one chosen automatically by"
 " the ``./configure`` script, just specify its name on the command line: "
@@ -285,22 +283,54 @@ msgid ""
 "demo_static_contact.sce;``"
 msgstr "次のようにしてデモを起動してみてください。 ``cd demos;`` ``exec demo_static_contact.sce;``"
 
-#: ../source/install/install_linux.rst:167
+#: ../source/install/install_linux.rst:166
+msgid "Octave interface"
+msgstr ""
+
+#: ../source/install/install_linux.rst:168
+msgid "You have first to install |octv| with the developpement package"
+msgstr ""
+
+#: ../source/install/install_linux.rst:172
+msgid ""
+"You have first to install |octv|, minimal release 4.1.1 with the "
+"developpement package such that the command ``mkoctfile`` is available "
+"(liboctave-dev package on Debian, for instance)"
+msgstr ""
+
+#: ../source/install/install_linux.rst:180
+msgid ""
+"you should have use the ``--enable-octave`` option to configure the |gf| "
+"sources (i.e. ``./configure --enable-octave`` ...)"
+msgstr ""
+
+#: ../source/install/install_linux.rst:184
+msgid "The last step is to add the path to the toolbox in the octave path:"
+msgstr ""
+
+#: ../source/install/install_linux.rst:186
+msgid ""
+"you can put ``addpath('toolbox_dir', '-begin')`` to your ``$HOME/.octaverc``"
+" file"
+msgstr ""
+
+#: ../source/install/install_linux.rst:187
+msgid "you can simply use the ``addpath`` command in the octave command line."
+msgstr ""
+
+#: ../source/install/install_linux.rst:190
 msgid "Matlab interface"
 msgstr "Matlabインタフェース"
 
-#: ../source/install/install_linux.rst:169
+#: ../source/install/install_linux.rst:192
 msgid ""
 "The installation of the |gfi| toolbox can be somewhat tricky, since it "
 "combines a C++ compiler, libraries and |Mlab| interaction... In case of "
-"troubles with a non-GNU compiler, gcc/g++ (>= 4.8) should be a safe "
+"troubles with a non-GNU compiler, gcc/g++ (>= 8.0) should be a safe "
 "solution."
 msgstr ""
-"|gfi| toolboxのインストールは、C++コンパイラ、ライブラリ、および |Mlab| "
-"の相互に組み合わせているため、多少面倒です。GNU以外のコンパイラで問題が発生した場合は、 gcc/g++ (>= 4.8) "
-"を使うことが安全な解決策になります。"
 
-#: ../source/install/install_linux.rst:176
+#: ../source/install/install_linux.rst:199
 msgid ""
 "you should have built the |gf| static library (i.e. do not use ``./configure"
 " --disable-static`` when building |gf|). On linux/x86_64 platforms, a "
@@ -312,7 +342,7 @@ msgstr ""
 "toolbox(リンクされている静的ライブラリ)をビルドする際の必須オプションは、それぞれの ``./configure`` スクリプトの "
 "``--with-pic`` オプションです。"
 
-#: ../source/install/install_linux.rst:181
+#: ../source/install/install_linux.rst:204
 msgid ""
 "you should have use the --enable-matlab option to configure the |gf| sources"
 " (i.e. ./configure --enable-matlab ...)"
@@ -320,7 +350,7 @@ msgstr ""
 "--enable-matlab オプションを使って |gf| ソース(すなわち ./configure --enable-matlab "
 "...)を設定する必要があります。"
 
-#: ../source/install/install_linux.rst:183
+#: ../source/install/install_linux.rst:206
 msgid ""
 "You may also use ``--with-matlab-toolbox-dir=toolbox_dir`` to change the "
 "default toolbox installation directory (``gfdest_dir/getfem_toolbox``). Use "
@@ -330,7 +360,7 @@ msgstr ""
 "(``gfdest_dir/getfem_toolbox``) を変更することもできます。 ``./configure --help`` "
 "で他のオプションを参照してください。"
 
-#: ../source/install/install_linux.rst:186
+#: ../source/install/install_linux.rst:209
 msgid ""
 "With this, since the Matlab interface is contained into the |gf| sources (in"
 " the directory interface/src) you can compile both the |gf| library and the "
@@ -339,7 +369,7 @@ msgstr ""
 "Matlabインターフェイスは |gf| ソース(ディレクトリ interface/src 内)に含まれているので、次のようにして |gf| "
 "ライブラリとMatlabインターフェイスの両方をコンパイルできます。"
 
-#: ../source/install/install_linux.rst:190
+#: ../source/install/install_linux.rst:213
 msgid ""
 "An optional step is ``make check`` in order to check the matlab interface "
 "(this sets some environment variables and runs the ``check_all.m`` script "
@@ -351,7 +381,7 @@ msgstr ""
 "を実行します。これはディストリビューションの  ``tests/matlab`` ディレクトリです。)をチェックしてインストールします(ライブラリは "
 "``gfdest_dir/lib`` にコピーされ、MEX-FileとM-Filesは ``toolbox_dir`` にコピーされます。)。"
 
-#: ../source/install/install_linux.rst:199
+#: ../source/install/install_linux.rst:222
 msgid ""
 "When the library is installed, you may have to set the ``LD_LIBRARY_PATH`` "
 "environment variable to the directory containing the ``libgetfem.so`` and "
@@ -360,11 +390,11 @@ msgstr ""
 "ライブラリがインストールされている場合、 ``libgetfem.so`` と ``libgetfemint.so`` を含むディレクトリ、つまり "
 "``gfdest_dir/lib`` を ``LD_LIBRARY_PATH`` 環境変数に設定する必要があるかもしれません。"
 
-#: ../source/install/install_linux.rst:205
+#: ../source/install/install_linux.rst:228
 msgid "The last step is to add the path to the toolbox in the matlab path:"
 msgstr "最後に、ツールボックスへのパスをmatlabパスに追加します。"
 
-#: ../source/install/install_linux.rst:207
+#: ../source/install/install_linux.rst:230
 msgid ""
 "you can set the environment variable ``MATLABPATH`` to ``toolbox_dir`` "
 "(``export MATLABPATH=toolbox_dir`` for example)."
@@ -372,12 +402,12 @@ msgstr ""
 "環境変数 ``MATLABPATH`` を ``toolbox_dir`` (例えば ``export MATLABPATH=toolbox_dir``"
 " )に設定することができます。"
 
-#: ../source/install/install_linux.rst:209
+#: ../source/install/install_linux.rst:232
 msgid ""
 "you can put ``addpath('toolbox_dir')`` to your ``$HOME/matlab/startup.m``"
 msgstr " ``addpath('toolbox_dir')`` を ``$HOME/matlab/startup.m``に追加することができます。"
 
-#: ../source/install/install_linux.rst:211
+#: ../source/install/install_linux.rst:234
 msgid ""
 "A very classical problem at this step is the incompatibility of the C and "
 "C++ libraries used by Matlab. Matlab is distributed with its own libc and "
@@ -386,7 +416,7 @@ msgid ""
 msgstr ""
 "このステップにおける非常に古典的な問題は、Matlabが使用するCとC++のライブラリーの非互換性です。Matlabは、独自のlibcおよびlibstdc++ライブラリとともに配布されています。インターフェイスのコマンドを使用しようとすると、次のタイプのエラーメッセージが表示されます。"
 
-#: ../source/install/install_linux.rst:216
+#: ../source/install/install_linux.rst:239
 msgid ""
 "In order to fix this problem one has to enforce Matlab to load the C and C++"
 " libraries of the system. There is two possibilities to do this. The most "
@@ -395,19 +425,19 @@ msgid ""
 msgstr ""
 "この問題を解決するには、MatlabにシステムのC/C++ライブラリをロードさせる必要があります。これには2つの方法があります。(管理者権限がある場合...!)最も根本的な方法は,Matlabと一緒に配布されているCとC++のライブラリを削除することです。"
 
-#: ../source/install/install_linux.rst:222
+#: ../source/install/install_linux.rst:245
 msgid ""
 "The second possibility is to set the variable LDPRELOAD before launching "
 "Matlab for instance with (depending on the system)::"
 msgstr "第2の方法は、例えば(システムによって異なる)でMatlabを起動する前に変数LDPRELOADを設定することです。"
 
-#: ../source/install/install_linux.rst:226
+#: ../source/install/install_linux.rst:249
 msgid ""
 "More specific instructions can be found in the ``README*`` files of the "
 "distribution."
 msgstr "より具体的な説明は、ディストリビューションの ``README*`` ファイルにあります。"
 
-#: ../source/install/install_linux.rst:229
+#: ../source/install/install_linux.rst:252
 msgid ""
 "A few precompiled versions of the Matlab interface are available on the "
 "`download and install <../download.html>`_ page of |gf|."
@@ -415,7 +445,7 @@ msgstr ""
 "Matlabインターフェースのプリコンパイル版は、 |gf| の `download and install <../download.html>`_ "
 "から入手できます。"
 
-#: ../source/install/install_linux.rst:232
+#: ../source/install/install_linux.rst:255
 msgid ""
 "A second problem arising with recent distribution of Matlab (2016a), is the "
 "incompatibility of some libraries with ILP64 version of MKL loaded by MATLAB"

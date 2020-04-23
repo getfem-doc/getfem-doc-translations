@@ -79,8 +79,8 @@
 
 
 \title{User Documentation}
-\date{Apr 21, 2020}
-\release{5.3}
+\date{Apr 23, 2020}
+\release{5.4}
 \author{Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
 \renewcommand{\releasename}{Release}
@@ -144,7 +144,7 @@ necessary to import meshes. Imports formats currently known by \sphinxstyleempha
 are \sphinxstyleemphasis{GiD}, \sphinxstyleemphasis{Gmsh} and \sphinxstyleemphasis{emc2} mesh files. However, given a mesh, it
 is possible to refine it automatically.
 
-Copyright © 2004\sphinxhyphen{}2018 \sphinxstyleemphasis{GetFEM} project.
+Copyright © 2004\sphinxhyphen{}2020 \sphinxstyleemphasis{GetFEM} project.
 
 The text of the \sphinxstyleemphasis{GetFEM} website and the documentations are available for modification and reuse under the terms of the \sphinxhref{http://www.gnu.org/licenses/fdl.html}{GNU Free Documentation License}
 
@@ -214,7 +214,7 @@ parallelization adapted to its specificities in order to
 obtain a good load balancing. You may build your own parallelization
 using the mesh regions to parallelize assembly procedures.
 
-Nevertheless, the brick system offers a generic parallelization based on MPI
+Nevertheless, the brick system offers a generic parallelization based on \sphinxhref{https://www.open-mpi.org}{Open MPI}
 (communication between processes),
 \sphinxhref{http://glaros.dtc.umn.edu/gkhome/metis/metis/overview}{METIS}
 (partition of the mesh)
@@ -2189,7 +2189,7 @@ workspace.clear\PYGZus{}expressions();
 
 allows to cancel all furnished expressions and allows to re\sphinxhyphen{}use the same workspace for another assembly.
 
-It is also possible to call the generic assembly from the Python/Scilab/Matlab interface. See \sphinxcode{\sphinxupquote{gf\_asm}} command of the interface for more details.
+It is also possible to call the generic assembly from the Python/Scilab/Octave/Matlab interface. See \sphinxcode{\sphinxupquote{gf\_asm}} command of the interface for more details.
 
 
 \section{C++ assembly examples}
@@ -2333,7 +2333,7 @@ with \sphinxcode{\sphinxupquote{D}} the flexion modulus and \sphinxcode{\sphinxu
 
 \section{Script languages call of the assembly}
 \label{\detokenize{userdoc/gasm_high:script-languages-call-of-the-assembly}}
-For the use with Python, Scilab or Matlab interfaces, see the respective documentation, in particular the \sphinxcode{\sphinxupquote{gf\_asm}} command and the \sphinxcode{\sphinxupquote{model}} object.
+For the use with Python, Scilab, Octave or Matlab interfaces, see the respective documentation, in particular the \sphinxcode{\sphinxupquote{gf\_asm}} command and the \sphinxcode{\sphinxupquote{model}} object.
 
 
 \section{The tensors}
@@ -2854,7 +2854,7 @@ For instance, the assembly expression to prescribe the equality of a variable \s
 (Interpolate(u,my\PYGZus{}transformation)\PYGZhy{}u)*lambda
 \end{sphinxVerbatim}
 
-(see \sphinxcode{\sphinxupquote{demo\_periodic\_laplacian.m}} in \sphinxcode{\sphinxupquote{interface/tests/matlab}} directory).
+(see \sphinxcode{\sphinxupquote{demo\_periodic\_laplacian.m}} in \sphinxcode{\sphinxupquote{interface/tests/matlab\sphinxhyphen{}octave}} directory).
 
 In some situations, the interpolation of a point may fail if the transformed point is outside the target mesh. Both in order to treat this case and to allow the transformation to differentiate some other cases (see {\hyperref[\detokenize{userdoc/model_contact_friction_large_sliding:ud-model-contact-friction-raytrace-inter-trans}]{\sphinxcrossref{\DUrole{std,std-ref}{Raytracing interpolate transformation}}}} for the differentiation between rigid bodies and deformable ones in the Raytracing\_interpolate\_transformation) the transformation returns an integer identifier to the weak form language. A value 0 of this identifier means that no corresponding location on the target mesh has been found. A value of 1 means that a corresponding point has been found. This identifier can be used thanks to the following special command of GWFL:
 
@@ -2938,7 +2938,7 @@ mr\PYGZus{}internal\PYGZus{}face = inner\PYGZus{}faces\PYGZus{}of\PYGZus{}mesh(m
 
 where \sphinxcode{\sphinxupquote{mr}} is an optional mesh region. If \sphinxcode{\sphinxupquote{mr}} is specified only the face internal with respect to this region are returned. An important aspect is that  each face is represented only once and is arbitrarily chosen between the two neighbor elements.
 
-See for instance \sphinxcode{\sphinxupquote{interface/tests/python/demo\_laplacian\_DG.py}} or \sphinxcode{\sphinxupquote{interface/tests/matlab/demo\_laplacian\_DG.m}} for an example of use.
+See for instance \sphinxcode{\sphinxupquote{interface/tests/python/demo\_laplacian\_DG.py}} or \sphinxcode{\sphinxupquote{interface/tests/matlab\sphinxhyphen{}octave/demo\_laplacian\_DG.m}} for an example of use.
 
 Compared to other interpolate transformations, this transformation is more optimized and benefits from finite element and geometric transformation pre\sphinxhyphen{}computations.
 
@@ -2972,7 +2972,7 @@ add\PYGZus{}linear\PYGZus{}twodomain\PYGZus{}term(model, mim, expr, region, seco
 add\PYGZus{}nonlinear\PYGZus{}twodomain\PYGZus{}term(model, mim, expr, region, secondary\PYGZus{}domain)
 \end{sphinxVerbatim}
 
-For the utilisation with the Python/Scilab/Matlab interface, see the documentation on \sphinxcode{\sphinxupquote{gf\_asm}} command and the \sphinxcode{\sphinxupquote{model}} object.
+For the utilisation with the Python/Scilab/Octave/Matlab interface, see the documentation on \sphinxcode{\sphinxupquote{gf\_asm}} command and the \sphinxcode{\sphinxupquote{model}} object.
 
 Inside an expression of GWFL, one can refer to the unit normal vector to a boundary, to the current position or to the value of a variable thanks to the expressions:
 
@@ -2993,7 +2993,7 @@ For instance, a term like
 \begin{equation*}
 \begin{split}\int_{\Omega_1}\int_{\Omega_1}e^{-\|x-y\|}u(x)u(y)dydx,\end{split}
 \end{equation*}
-would correspond to the following weak for language expression:
+would correspond to the following weak form language expression:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 exp(Norm(X\PYGZhy{}Secondary\PYGZus{}domain(X)))*u*Secondary\PYGZus{}domain(u)
@@ -3131,7 +3131,7 @@ allows to cancel all the assembly assignments previously added.
 
 \chapter{Compute arbitrary terms \sphinxhyphen{} low\sphinxhyphen{}level generic assembly procedures (deprecated)}
 \label{\detokenize{userdoc/gasm_low:compute-arbitrary-terms-low-level-generic-assembly-procedures-deprecated}}\label{\detokenize{userdoc/gasm_low:ud-gasm-low}}\label{\detokenize{userdoc/gasm_low:index-0}}\label{\detokenize{userdoc/gasm_low::doc}}
-This section present the first version of generic assembly procedure which has been implemented in \sphinxstyleemphasis{GetFEM} and is now considered as deprecated. It allows to make the assembly of arbitrary matrices in the linear case. In the nonlinear case, some special “non\_linear\_term” object have to be implemented, which could be a bit tricky and obliges to use very low\sphinxhyphen{}level internal tools of \sphinxstyleemphasis{GetFEM}. The generic weak for language (GWFL) has been developed to circumvent these difficulties (see {\hyperref[\detokenize{userdoc/gasm_high:ud-gasm-high}]{\sphinxcrossref{\DUrole{std,std-ref}{Compute arbitrary terms \sphinxhyphen{} high\sphinxhyphen{}level generic assembly procedures \sphinxhyphen{} Generic Weak\sphinxhyphen{}Form Language (GWFL)}}}}).
+This section present the first version of generic assembly procedure which has been implemented in \sphinxstyleemphasis{GetFEM} and is now considered as deprecated. It allows to make the assembly of arbitrary matrices in the linear case. In the nonlinear case, some special “non\_linear\_term” object have to be implemented, which could be a bit tricky and obliges to use very low\sphinxhyphen{}level internal tools of \sphinxstyleemphasis{GetFEM}. The generic weak form language (GWFL) has been developed to circumvent these difficulties (see {\hyperref[\detokenize{userdoc/gasm_high:ud-gasm-high}]{\sphinxcrossref{\DUrole{std,std-ref}{Compute arbitrary terms \sphinxhyphen{} high\sphinxhyphen{}level generic assembly procedures \sphinxhyphen{} Generic Weak\sphinxhyphen{}Form Language (GWFL)}}}}).
 
 As it can be seen in the file \sphinxcode{\sphinxupquote{getfem/getfem\_assembling.h}}, all the
 previous assembly procedures use a \sphinxcode{\sphinxupquote{getfem::generic\_assembly}} object and provide it an adequate
@@ -4225,10 +4225,10 @@ the domain.
 There are essentially four ways to view the result of getfem computations:
 \begin{itemize}
 \item {} 
-Matlab, with the matlab\sphinxhyphen{}interface.
+Scilab, Octave or Matlab, with the interface.
 
 \item {} 
-The open\sphinxhyphen{}source Mayavi or any other VTK files viewer.
+The open\sphinxhyphen{}source Paraview or Mayavi or any other VTK files viewer.
 
 \item {} 
 The open\sphinxhyphen{}source OpenDX program.
@@ -4243,9 +4243,9 @@ The objects that can be exported are, \sphinxtitleref{mesh}, \sphinxtitleref{mes
 
 \section{Saving mesh and mesh\_fem objects for the Matlab interface}
 \label{\detokenize{userdoc/export:saving-mesh-and-mesh-fem-objects-for-the-matlab-interface}}
-If you have installed the Matlab interface, you can simply use
+If you have installed the Scilab, Octave or Matlab interface, you can simply use
 \sphinxcode{\sphinxupquote{mesh\_fem::write\_to\_file}} and save the solution as a plain text file, and then,
-load them into Matlab. For example, supposing you have a solution \sphinxcode{\sphinxupquote{U}} on a \sphinxtitleref{mesh\_fem}
+load them with the interface. For example, supposing you have a solution \sphinxcode{\sphinxupquote{U}} on a \sphinxtitleref{mesh\_fem}
 \sphinxcode{\sphinxupquote{mf}},:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -4257,7 +4257,7 @@ load them into Matlab. For example, supposing you have a solution \sphinxcode{\s
 \PYG{n}{mf}\PYG{p}{.}\PYG{n}{write\PYGZus{}to\PYGZus{}file}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{solution.mf}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{true}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
-and then, under matlab:
+and then, under Scilab, Octave or Matlab:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{U}\PYG{p}{=}\PYG{n}{load}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solution.U\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
@@ -4483,7 +4483,7 @@ right choice, but for P2, P3, non linear transformation etc, it is better to ref
 each convex of the original mesh during the slicing operation. This allows an
 accurate representation of any finite element field onto a very simple structure
 (linear segment/triangles/tetrahedrons with P1 discontinuous data on them) which is
-what most visualization programs (gmsh, mayavi, opendx, matlab, etc.) expect.
+what most visualization programs (gmsh, mayavi, opendx, scilab, octave, matlab, etc.) expect.
 
 Example of use (cut the boundary of a mesh \sphinxcode{\sphinxupquote{m}} with a half\sphinxhyphen{}space, and save the
 result into a \sphinxtitleref{stored\_mesh\_slice}):
@@ -5858,7 +5858,7 @@ This is the case for instance for mixed formulations of incompressible elasticit
 The Neumann terms depend also frequently on some parameters of the model (elasticity coefficients …) but this is assumed to be contained in its expression.
 
 For instance, if there is a Laplace term (\(\Delta u\)), applied on the variable \(u\), the Neumann term will be \(G = \dfrac{\partial u}{\partial n}\) where \(n\) is the outward unit normal on the considered boundary.
-If \(u\) represents the displacements of a deformable body, the Neumann term will be \(G = \sigma(u)n\), where \(\sigma(u)\) is the stress tensor depending on the consitutive law.
+If \(u\) represents the displacements of a deformable body, the Neumann term will be \(G = \sigma(u)n\), where \(\sigma(u)\) is the stress tensor depending on the constitutive law.
 Of course, in that case \(G\) also depends on some material parameters.
 If additionally a mixed incompressibility brick is added with a variable \(p\) denoting the pressure, the Neumann term on \(u\) will depend on \(p\) in the following way:
 \(G = \sigma(u)n - pn\)

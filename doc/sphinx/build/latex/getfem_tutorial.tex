@@ -79,8 +79,8 @@
 
 
 \title{Tutorial}
-\date{Apr 21, 2020}
-\release{5.3}
+\date{Apr 23, 2020}
+\release{5.4}
 \author{Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
 \renewcommand{\releasename}{Release}
@@ -1516,7 +1516,7 @@ where \(X\) is the vector of coordinates of the point. We add this transformatio
 \PYG{n}{md}\PYG{o}{.}\PYG{n}{add\PYGZus{}interpolate\PYGZus{}transformation\PYGZus{}from\PYGZus{}expression}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Proj1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{mesh1}\PYG{p}{,} \PYG{n}{mesh2}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{[X(1);0]}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-As a consequence, it will be possible to use this transformation, from the mesh of the wheel to the mesh of the foundation, into GWFL expressions. Notes that this is here a very simple constant expression. More complex expressions depending on the data or even the variables of the model can be used. If the expression of a transformation depends on the variable of the model, the tangent linear system will automatically takes into account this dependence (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}gasm\sphinxhyphen{}high\sphinxhyphen{}transf} for more details. Note also that transformation corresponding to a large sliding contact and automatically searching for the correspondence between contact boundaries exist in \sphinxstyleemphasis{GetFEM} (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}model\sphinxhyphen{}contact\sphinxhyphen{}friction\sphinxhyphen{}large\sphinxhyphen{}hlgav}).
+As a consequence, it will be possible to use this transformation, from the mesh of the wheel to the mesh of the foundation, into GWFL expressions. Notes that this is here a very simple constant expression. More complex expressions depending on the data or even the variables of the model can be used. If the expression of a transformation depends on the variable of the model, the tangent linear system will automatically takes into account this dependence (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}gasm\sphinxhyphen{}high\sphinxhyphen{}transf} for more details). Note also that transformation corresponding to a large sliding contact and automatically searching for the correspondence between contact boundaries exist in \sphinxstyleemphasis{GetFEM} (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}model\sphinxhyphen{}contact\sphinxhyphen{}friction\sphinxhyphen{}large\sphinxhyphen{}hlgav}).
 
 Using the defined transformation, we can write an integral contact condition using an augmented Lagrangian formulation (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}model\sphinxhyphen{}contact\sphinxhyphen{}friction} for more details). The corresponding term (to be added to the rest of the weak formulation) reads:
 \begin{equation*}

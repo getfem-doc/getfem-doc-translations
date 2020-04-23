@@ -17,7 +17,11 @@
 
 
 if BUILDMEX
-subdirMATLAB=matlab
+subdirMATLAB=matlab-octave
+else
+if BUILDOCTAVE
+subdirMATLAB=matlab-octave
+endif
 endif
 
 if BUILDPYTHON

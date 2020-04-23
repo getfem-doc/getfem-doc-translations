@@ -252,7 +252,7 @@ am__define_uniq_tagged_files = \
   done | $(am__uniquify_input)`
 ETAGS = etags
 CTAGS = ctags
-DIST_SUBDIRS = . matlab python scilab
+DIST_SUBDIRS = . matlab octave python scilab
 am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp \
 	$(top_srcdir)/mkinstalldirs
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -353,6 +353,7 @@ MATLAB_ROOT = @MATLAB_ROOT@
 METIS_LIBS = @METIS_LIBS@
 MEX = @MEX@
 MKDIR_P = @MKDIR_P@
+MKOCTFILE = @MKOCTFILE@
 MPICC = @MPICC@
 MPICXX = @MPICXX@
 MPIFC = @MPIFC@
@@ -361,6 +362,9 @@ NM = @NM@
 NMEDIT = @NMEDIT@
 OBJDUMP = @OBJDUMP@
 OBJEXT = @OBJEXT@
+OCTAVETOOLBOXDIR = @OCTAVETOOLBOXDIR@
+OCTAVE_COM_EXT = @OCTAVE_COM_EXT@
+OCTAVE_RELEASE = @OCTAVE_RELEASE@
 OPENMP_CXXFLAGS = @OPENMP_CXXFLAGS@
 OTOOL = @OTOOL@
 OTOOL64 = @OTOOL64@
@@ -470,9 +474,10 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 @BUILDMEX_TRUE@subdirMATLAB = matlab
+@BUILDOCTAVE_TRUE@subdirOCTAVE = octave
 @BUILDPYTHON_TRUE@subdirPYTHON = python
 @BUILDSCILAB_TRUE@subdirSCILAB = scilab
-SUBDIRS = . $(subdirMATLAB) $(subdirPYTHON) $(subdirSCILAB)
+SUBDIRS = . $(subdirMATLAB) $(subdirOCTAVE) $(subdirPYTHON) $(subdirSCILAB)
 PSEUDO_MFUNCTIONS = \
 	gf_spmat.cc 			\
 	gf_spmat_set.cc 		\

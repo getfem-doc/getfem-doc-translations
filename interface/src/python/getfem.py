@@ -3220,6 +3220,19 @@ class Model:
     return self.set("add_filtered_fem_variable", name, mf, region)
 
 
+  def add_im_variable(self, name, mimd):
+    """Add a variable to the model linked to a MeshImd. `name` is the variable
+    name. """
+    return self.set("add_im_variable", name, mimd)
+
+
+  def add_internal_im_variable(self, name, mimd):
+    """Add a variable to the model, which is linked to a MeshImd and will be
+    condensed out during the assemblage of the tangent matrix. `name` is
+    the variable name. """
+    return self.set("add_internal_im_variable", name, mimd)
+
+
   def add_variable(self, name, sizes):
     """Add a variable to the model of constant sizes. `sizes` is either a
     integer (for a scalar or vector variable) or a vector of dimensions

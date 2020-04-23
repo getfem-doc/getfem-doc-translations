@@ -79,8 +79,8 @@
 
 
 \title{Scilab Interface}
-\date{Apr 21, 2020}
-\release{5.3}
+\date{Apr 23, 2020}
+\release{5.4}
 \author{Yann Colette, Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
 \renewcommand{\releasename}{Release}
@@ -113,7 +113,7 @@ description of the structures algorithms and concepts used.
 
 This documentation is still under construction. It is still close to copy of the Matlab interface documentation.
 
-Copyright © 2004\sphinxhyphen{}2018 \sphinxstyleemphasis{GetFEM} project.
+Copyright © 2004\sphinxhyphen{}2020 \sphinxstyleemphasis{GetFEM} project.
 
 The text of the \sphinxstyleemphasis{GetFEM} website and the documentations are available for modification and reuse under the terms of the \sphinxhref{http://www.gnu.org/licenses/fdl.html}{GNU Free Documentation License}
 
@@ -5779,6 +5779,8 @@ displays a short summary for a model object.
 \PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{model} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{clear}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{model} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{add fem variable}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{name}\PYG{p}{,} \PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{model} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{add filtered fem variable}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{name}\PYG{p}{,} \PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf}\PYG{p}{,} \PYG{n+nb}{int} \PYG{n}{region}\PYG{p}{)}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{model} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{add im variable}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{name}\PYG{p}{,} \PYG{n}{mesh\PYGZus{}imd} \PYG{n}{mimd}\PYG{p}{)}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{model} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{add internal im variable}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{name}\PYG{p}{,} \PYG{n}{mesh\PYGZus{}imd} \PYG{n}{mimd}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{model} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{add variable}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{name}\PYG{p}{,} \PYG{n}{sizes}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{model} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{delete variable}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{name}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{model} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{resize variable}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{name}\PYG{p}{,} \PYG{n}{sizes}\PYG{p}{)}
@@ -5940,6 +5942,21 @@ name.
 Add a variable to the model linked to a mesh\_fem. The variable is filtered
 in the sense that only the dof on the region are considered.
 \textless{}literal\textgreater{}name\textless{}/literal\textgreater{} is the variable name.
+\end{quote}
+
+\sphinxcode{\sphinxupquote{gf\_model\_set(model M, \textquotesingle{}add im variable\textquotesingle{}, string name, mesh\_imd mimd)}}
+\begin{quote}
+
+Add a variable to the model linked to a mesh\_imd. \textless{}literal\textgreater{}name\textless{}/literal\textgreater{} is the variable
+name.
+\end{quote}
+
+\sphinxcode{\sphinxupquote{gf\_model\_set(model M, \textquotesingle{}add internal im variable\textquotesingle{}, string name, mesh\_imd mimd)}}
+\begin{quote}
+
+Add a variable to the model, which is linked to a mesh\_imd and will be
+condensed out during the assemblage of the tangent matrix. \textless{}literal\textgreater{}name\textless{}/literal\textgreater{} is
+the variable name.
 \end{quote}
 
 \sphinxcode{\sphinxupquote{gf\_model\_set(model M, \textquotesingle{}add variable\textquotesingle{}, string name, sizes)}}
