@@ -363,8 +363,8 @@ am__set_TESTS_bases = \
   bases=`for i in $$bases; do echo $$i; done | sed 's/\.log$$//'`; \
   bases=`echo $$bases`
 RECHECK_LOGS = $(TEST_LOGS)
-#am__EXEEXT_1 = $(abs_srcdir)/check_all_matlab.sh
-#am__EXEEXT_2 = $(abs_srcdir)/check_all_octave.sh
+#am__EXEEXT_1 = check_all_matlab.sh
+#am__EXEEXT_2 = check_all_octave.sh
 TEST_SUITE_LOG = test-suite.log
 TEST_EXTENSIONS =  .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/test-driver
@@ -424,7 +424,7 @@ AUTOHEADER = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-trans
 AUTOMAKE = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-translations/getfem/missing automake-1.15
 AWK = gawk
 BLAS_LIBS = -lblas
-BUILDDATE = 04/23/20,00:07:39
+BUILDDATE = 04/26/20,01:34:55
 BUILDER = runner
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -480,7 +480,7 @@ MAKEINFO = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-transla
 MANIFEST_TOOL = :
 MATLAB_COM_EXT = 
 MATLAB_INC_DIR = 
-MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMeshLevelSet @gfMesherObject @gfMeshImData @gfContStruct @gfLevelSet @gfMeshFem @gfGeoTrans @gfCvStruct @gfPrecond @gfMeshIm @gfInteg @gfModel @gfSpmat @gfSlice @gfMesh @gfEltm @gfFem 
+MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMesherObject @gfMeshLevelSet @gfMeshImData @gfContStruct @gfGeoTrans @gfLevelSet @gfMeshFem @gfCvStruct @gfMeshIm @gfPrecond @gfInteg @gfModel @gfSpmat @gfSlice @gfEltm @gfMesh @gfFem 
 MATLAB_RELEASE = 
 MATLAB_ROOT = 
 METIS_LIBS = 
@@ -608,9 +608,9 @@ top_builddir = ../../..
 top_srcdir = ../../..
 SUBDIRS = private
 TESTSM = 
-#TESTSM = $(abs_srcdir)/check_all_matlab.sh
+#TESTSM = check_all_matlab.sh
 TESTSO = 
-#TESTSO = $(abs_srcdir)/check_all_octave.sh
+#TESTSO = check_all_octave.sh
 EXTRA_DIST = \
 	axrot_matrix.m 					\
 	check_all.m 					\
@@ -994,16 +994,16 @@ recheck: all
 	        am__force_recheck=am--force-recheck \
 	        TEST_LOGS="$$log_list"; \
 	exit $$?
-$(abs_srcdir)/check_all_matlab.sh.log: $(abs_srcdir)/check_all_matlab.sh
-	@p='$(abs_srcdir)/check_all_matlab.sh'; \
-	b='$(abs_srcdir)/check_all_matlab.sh'; \
+check_all_matlab.sh.log: check_all_matlab.sh
+	@p='check_all_matlab.sh'; \
+	b='check_all_matlab.sh'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-$(abs_srcdir)/check_all_octave.sh.log: $(abs_srcdir)/check_all_octave.sh
-	@p='$(abs_srcdir)/check_all_octave.sh'; \
-	b='$(abs_srcdir)/check_all_octave.sh'; \
+check_all_octave.sh.log: check_all_octave.sh
+	@p='check_all_octave.sh'; \
+	b='check_all_octave.sh'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \

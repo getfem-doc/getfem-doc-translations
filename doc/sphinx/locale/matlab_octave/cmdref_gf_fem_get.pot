@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2018 GetFEM++ project
+# This file is distributed under the same license as the GetFEM++ package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM++ 5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-26 01:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:8
+msgid "gf_fem_get"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:10
+msgid "**Synopsis**"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:30
+msgid "**Description :**"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:33
+msgid "General function for querying information about FEM objects."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:36
+msgid "**Command list :**"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:40
+msgid "``n = gf_fem_get(fem F, 'nbdof'[, int cv])``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:42
+msgid "Return the number of dof for the fem."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:44
+msgid "Some specific fem (for example 'interpolated_fem') may require a convex number `cv` to give their result. In most of the case, you can omit this convex number."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:49
+msgid "``n = gf_fem_get(fem F, 'index of global dof', cv)``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:51
+msgid "Return the index of global dof for special fems such as interpolated fem."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:55
+msgid "``d = gf_fem_get(fem F, 'dim')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:57
+msgid "Return the dimension (dimension of the reference convex) of the fem."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:60
+msgid "``td = gf_fem_get(fem F, 'target_dim')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:62
+msgid "Return the dimension of the target space."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:64
+msgid "The target space dimension is usually 1, except for vector fem."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:67
+msgid "``P = gf_fem_get(fem F, 'pts'[, int cv])``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:69
+msgid "Get the location of the dof on the reference element."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:71
+msgid "Some specific fem may require a convex number `cv` to give their result (for example 'interpolated_fem'). In most of the case, you can omit this convex number."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:76
+msgid "``b = gf_fem_get(fem F, 'is_equivalent')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:78
+msgid "Return 0 if the fem is not equivalent."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:80
+msgid "Equivalent fem are evaluated on the reference convex. This is the case of most classical fem's."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:84
+msgid "``b = gf_fem_get(fem F, 'is_lagrange')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:86
+msgid "Return 0 if the fem is not of Lagrange type."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:89
+msgid "``b = gf_fem_get(fem F, 'is_polynomial')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:91
+msgid "Return 0 if the basis functions are not polynomials."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:94
+msgid "``d = gf_fem_get(fem F, 'estimated_degree')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:96
+msgid "Return an estimation of the polynomial degree of the fem."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:98
+msgid "This is an estimation for fem which are not polynomials."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:101
+msgid "``E = gf_fem_get(fem F, 'base_value',mat p)``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:103
+msgid "Evaluate all basis functions of the FEM at point `p`."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:105
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:112
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:119
+msgid "`p` is supposed to be in the reference convex!"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:108
+msgid "``ED = gf_fem_get(fem F, 'grad_base_value',mat p)``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:110
+msgid "Evaluate the gradient of all base functions of the fem at point `p`."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:115
+msgid "``EH = gf_fem_get(fem F, 'hess_base_value',mat p)``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:117
+msgid "Evaluate the Hessian of all base functions of the fem at point `p`."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:122
+msgid "``gf_fem_get(fem F, 'poly_str')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:124
+msgid "Return the polynomial expressions of its basis functions in the reference convex."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:127
+msgid "The result is expressed as a cell array of strings. Of course this will fail on non-polynomial fem's."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:131
+msgid "``string = gf_fem_get(fem F, 'char')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:133
+msgid "Ouput a (unique) string representation of the fem."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:135
+msgid "This can be used to perform comparisons between two different fem objects."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:139
+msgid "``gf_fem_get(fem F, 'display')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_fem_get.rst:141
+msgid "displays a short summary for a fem object."
+msgstr ""

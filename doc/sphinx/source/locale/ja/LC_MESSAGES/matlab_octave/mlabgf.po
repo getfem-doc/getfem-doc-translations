@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-23 00:17+0000\n"
+"POT-Creation-Date: 2020-04-26 01:52+0000\n"
 "PO-Revision-Date: 2020-04-23 00:22+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -35,6 +35,11 @@ msgid ""
 "|octv| or |mlab| prompt and then pressing the ``<tab>`` key is a quick way "
 "to obtain the list of getfem functions)."
 msgstr ""
+"|gfm| toolboxは、 |gf| ライブラリへの単なる便利なインターフェイスで、コンピュータに動作する |gf| "
+"がインストールされている必要があります。このツールボックスには、大きな :envvar:`mex-file` ( |octv| か |mlab| "
+"から呼び出し可能なc++バイナリ)といくつかの追加の `m-file` (文書化と機能追加)があります。 |gfm| のすべての関数の前には、 "
+"``gf_`` (したがって、 |octv| か |mlab| プロンプトで ``gf_`` とタイプして ``<tab>`` "
+"キーを押せば、getfem関数のリストを簡単に得ることができます)が付いています。"
 
 #: ../source/matlab_octave/mlabgf.rst:22
 msgid "Functions"
@@ -332,7 +337,7 @@ msgid ""
 "|mlab_mf|, |mlab_mim| etc. Deprecated object, replaced now by gfModel."
 msgstr ""
 ":envvar:`gfMdBrick` : |mlab_mbr| "
-"は、ソルバーの一部を抽象化したものです(たとえば、接線マトリックスを構築するパーツ、dirichlet "
+"は、ソルバーの一部を抽象化したものです(たとえば、接線行列を構築するパーツ、dirichlet "
 "条件を処理するパーツなどです)。これらのオブジェクトは、さまざまな問題に対する完全なソルバを構築するためにスタックされます。通常は、|mlab_mf| "
 "、 |mlab_mim| などを使用します。非推奨のオブジェクトで、現在はgfModelに置き換えられています。"
 
@@ -364,7 +369,7 @@ msgstr ""
 
 #: ../source/matlab_octave/mlabgf.rst:123
 msgid "is issued at the |octv| or |mlab| prompt, but instead the function::"
-msgstr ""
+msgstr "が |octv| か |mlab| プロンプトで発行されますが、代わりに次の関数が発行されます。"
 
 #: ../source/matlab_octave/mlabgf.rst:127
 msgid ""
@@ -373,6 +378,9 @@ msgid ""
 " integer identifiers to the real objects. Hence the |octv| or |mlab| "
 "command::"
 msgstr ""
+"を使用してください。さまざまな |gfm| オブジェクトには、 *handles* (または *descriptors* "
+")を介してアクセスできます。これは、実際のオブジェクトへの32ビット整数識別子を含む単なる  |octv| / |mlab| 構造体です。したがって、 "
+"|octv| か |mlab| コマンドは次のようになります。"
 
 #: ../source/matlab_octave/mlabgf.rst:133
 msgid ""

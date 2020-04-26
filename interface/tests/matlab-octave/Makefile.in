@@ -363,8 +363,8 @@ am__set_TESTS_bases = \
   bases=`for i in $$bases; do echo $$i; done | sed 's/\.log$$//'`; \
   bases=`echo $$bases`
 RECHECK_LOGS = $(TEST_LOGS)
-@BUILDMEX_TRUE@am__EXEEXT_1 = $(abs_srcdir)/check_all_matlab.sh
-@BUILDOCTAVE_TRUE@am__EXEEXT_2 = $(abs_srcdir)/check_all_octave.sh
+@BUILDMEX_TRUE@am__EXEEXT_1 = check_all_matlab.sh
+@BUILDOCTAVE_TRUE@am__EXEEXT_2 = check_all_octave.sh
 TEST_SUITE_LOG = test-suite.log
 TEST_EXTENSIONS = @EXEEXT@ .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/test-driver
@@ -608,9 +608,9 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 SUBDIRS = private
 @BUILDMEX_FALSE@TESTSM = 
-@BUILDMEX_TRUE@TESTSM = $(abs_srcdir)/check_all_matlab.sh
+@BUILDMEX_TRUE@TESTSM = check_all_matlab.sh
 @BUILDOCTAVE_FALSE@TESTSO = 
-@BUILDOCTAVE_TRUE@TESTSO = $(abs_srcdir)/check_all_octave.sh
+@BUILDOCTAVE_TRUE@TESTSO = check_all_octave.sh
 EXTRA_DIST = \
 	axrot_matrix.m 					\
 	check_all.m 					\
@@ -994,16 +994,16 @@ recheck: all
 	        am__force_recheck=am--force-recheck \
 	        TEST_LOGS="$$log_list"; \
 	exit $$?
-$(abs_srcdir)/check_all_matlab.sh.log: $(abs_srcdir)/check_all_matlab.sh
-	@p='$(abs_srcdir)/check_all_matlab.sh'; \
-	b='$(abs_srcdir)/check_all_matlab.sh'; \
+check_all_matlab.sh.log: check_all_matlab.sh
+	@p='check_all_matlab.sh'; \
+	b='check_all_matlab.sh'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-$(abs_srcdir)/check_all_octave.sh.log: $(abs_srcdir)/check_all_octave.sh
-	@p='$(abs_srcdir)/check_all_octave.sh'; \
-	b='$(abs_srcdir)/check_all_octave.sh'; \
+check_all_octave.sh.log: check_all_octave.sh
+	@p='check_all_octave.sh'; \
+	b='check_all_octave.sh'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \

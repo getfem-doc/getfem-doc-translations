@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM++ 5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-23 00:17+0000\n"
+"POT-Creation-Date: 2020-04-26 01:52+0000\n"
 "PO-Revision-Date: 2020-04-23 00:22+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -38,6 +38,10 @@ msgid ""
 "**demo_step_by_step.m** in the directory ``interface/tests/matlab-octave/`` "
 "of the |gf| distribution."
 msgstr ""
+"この例は、以下のような über-canonical 問題に対するgetfemの基本的な使い方を示しています。これは "
+":envvar:`Laplacian`, :math:`-\\Delta u = f` を正方形上で、Dirichlet条件 :math:`u = "
+"g(x)` をドメイン境界上で解きます。この例の **m-file** は **demo_step_by_step.m** という名前の下にあります。 "
+"|gf| ディストリビューションの ``interface/tests/matlab-octave/`` ディレクトリにあります。"
 
 #: ../source/matlab_octave/examples.rst:23
 msgid ""
@@ -64,6 +68,11 @@ msgid ""
 " data structures. Anyway, you can still inspect the |gf| objects via the "
 "command ``gf_workspace('stats')``."
 msgstr ""
+"``m`` "
+"の値を調べれば、それが2つの整数を含む構造体であることに気づくでしょう。最初のものはその識別子であり、2番目のものはそのクラスID、すなわちその型の識別子です。この小さな構造は、実際のオブジェクトに対する単なる"
+" \"handle\" または \"descriptor\" であり、 |gf| メモリに格納され、 |octv| と |mlab| "
+"データ構造では表現できません。いずれにしても、  ``gf_workspace('stats')`` "
+"コマンドを使って|gf|オブジェクトを検査することはできます。"
 
 #: ../source/matlab_octave/examples.rst:40
 msgid ""
@@ -96,6 +105,11 @@ msgid ""
 " polynomial FEM, you can view the expression of its basis functions on the "
 "reference element::"
 msgstr ""
+"最初の命令は新しい |mlab_mf| "
+"オブジェクトを構築し、2番目の引数はこのオブジェクトがスカラーフィールドの補間に使用されることを指定します(未知変数 :math:`u` "
+"はスカラーフィールドです)。第2の命令は、すべての凸包(各基底関数は4次の多項式であり :math:`k` 次 :math:`P_k` "
+"多項式であることを覚えておいてください、ここで :math:`2k` 次 :math:`Q_k` 多項式です)に :math:`Q_2` "
+"有限要素法を割り当てます。 :math:`Q_2` は多項式有限要素法なので、参照要素でその基底関数の式を見ることができます。"
 
 #: ../source/matlab_octave/examples.rst:78
 msgid ""
@@ -107,6 +121,10 @@ msgid ""
 "``get(..)`` and ``set(..)`` methods. For example, the previous steps could "
 "have been::"
 msgstr ""
+"|mlab| の \"object oriented\" 機能を利用することもできます。お気付きかもしれませんが、クラス \"foo\" が |gfi|"
+" によって提供される場合、それは関数 ``gf_foo`` でビルドされ、関数 ``gf_foo_get`` および ``gf_foo_set`` "
+"で操作されます。しかし、 ``gfFoo`` コンストラクタでオブジェクトを作成し、 ``get(..)`` および ``set(..)`` "
+"メソッドで操作することもできます。たとえば、前の手順は次のようになります。"
 
 #: ../source/matlab_octave/examples.rst:98
 msgid ""
@@ -274,7 +292,7 @@ msgid ""
 "The model now contains the solution (as well as other things, such as the "
 "linear system which was solved). It is extracted, a display into a |octv| or"
 " |mlab| figure::"
-msgstr ""
+msgstr "これで、(解かれた線形系のような他のものと同様に)モデルに解が含まれました。抽出され、 |octv| か |mlab| 図に表示されます。"
 
 #: ../source/matlab_octave/examples.rst:223
 msgid "Another Laplacian with exact solution"
@@ -282,7 +300,7 @@ msgstr "別のLaplacianによる厳密解"
 
 #: ../source/matlab_octave/examples.rst:225
 msgid "This is the :file:`tests/matlab-octave/demo_laplacian.m` example."
-msgstr ""
+msgstr "これは :file:`tests/matlab-octave/demo_laplacian.m` の例です。"
 
 #: ../source/matlab_octave/examples.rst:231
 msgid "Linear and non-linear elasticity"
@@ -295,6 +313,9 @@ msgid ""
 "example under the name :file:`demo_tripod.m` in the directory :file:`tests"
 "/matlab-octave` of the toolbox distribution."
 msgstr ""
+"この例では、 `GiD`_ で生成されたメッシュを使用しています。オブジェクトは2次4面体でメッシュ分割されます。この例の ``m-file`` は "
+"|gf| ディストリビューションの  :file:`tests/matlab-octave` ディレクトリの :file:`demo_tripod.m`"
+" にあります。"
 
 #: ../source/matlab_octave/examples.rst:240
 msgid "Here is the final figure, displaying the :envvar:`Von Mises` stress:"
@@ -317,6 +338,9 @@ msgid ""
 ":file:`demo_tripod_alt.m` is very similar to the :file:`demo_tripod.m` "
 "except that the assembly is explicit::"
 msgstr ""
+"モデルブリックは、最終的な線形システムのアセンブリのほとんどの詳細を隠蔽するため、非常に便利です。しかし、より低い水準で、線形システムのアセンブリと解析を直接"
+" |octv| か |mlab| で処理することも可能です。例えば、 :file:`demo_tripod_alt.m` "
+"はアセンブリが明示的であることを除き、 :file:`demo_tripod.m` によく似ています。"
 
 #: ../source/matlab_octave/examples.rst:283
 msgid ""
@@ -402,7 +426,7 @@ msgstr ""
 
 #: ../source/matlab_octave/examples.rst:327
 msgid "Using Octave/Matlab Object-Oriented features"
-msgstr ""
+msgstr "Octave/Matlabオブジェクト指向フィーチャーの使用"
 
 #: ../source/matlab_octave/examples.rst:329
 msgid ""
@@ -413,6 +437,10 @@ msgid ""
 "The aim is not to provide extra-functionalities, but to have a better "
 "integration of the toolbox."
 msgstr ""
+"|gf| ツールボックスの基本機能では、拡張 |octv| か |mlab| "
+"機能は使用しません(ただし、getfemオブジェクトのハンドルは小さな構造体に格納されます)。しかしツールボックスには、ハンドルをカプセル化して本当の "
+"|octv| / |mlab| "
+"オブジェクトのように見せるオブジェクトの集合が付属しています。目的は特別な機能を提供することではなく、ツールボックスの一貫性を改善することです。"
 
 #: ../source/matlab_octave/examples.rst:334
 msgid "Here is an example of its use::"
