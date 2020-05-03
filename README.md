@@ -5,7 +5,7 @@
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![GitHub issues](https://img.shields.io/github/issues/getfem-doc/getfem-doc-translations.svg?style=flat-square)](https://img.shields.io/github/issues/getfem-doc/getfem-doc-translations?style=flat-square)
 ![GitHub contributors](https://img.shields.io/github/contributors/getfem-doc/getfem-doc-translations?style=flat-square)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 This is a project to provide Getfem official documentation with multiple versions and multiple languages on Read The Docs site.
 
