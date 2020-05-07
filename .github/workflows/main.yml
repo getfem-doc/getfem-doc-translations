@@ -22,18 +22,7 @@ jobs:
       with:
         host: github.com
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - name: update
-      env:
-        ACCOUNT: tkoyama010
-        ORGANIZATION: getfem-doc
-        NAME: "getfem-auto-update"
-        EMAIL: "getfem-auto-update"
-        REPO: getfem-doc-translations
-        JOB_ID: ${{ steps.jobs.outputs.job_id }}
-        HTML_URL: ${{ steps.jobs.outputs.html_url }}
-        SPHINXINTL_TRANSIFEX_USERNAME: api
-        SPHINXINTL_TRANSIFEX_PROJECT_NAME: getfem-53-1
-        TX_TOKEN: ${{ secrets.TX_TOKEN }}
+    - name: install
       run: |
         sudo apt update
         sudo apt-get install python3-venv
@@ -54,8 +43,6 @@ jobs:
         sudo apt-get install -y --no-install-recommends xzdec
         sudo apt-get install -y --no-install-recommends fig2ps
         sudo apt-get install -y --no-install-recommends gv
-        python3 -m venv ../.venv
-        source ../.venv/bin/activate
         git submodule update
         (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
         pip install -U pip setuptools
@@ -65,6 +52,12 @@ jobs:
         ./configure --with-pic --enable-python3=yes
         make -j8  >  make.log
         sudo make install
+    - name: update
+      env:
+        SPHINXINTL_TRANSIFEX_USERNAME: api
+        SPHINXINTL_TRANSIFEX_PROJECT_NAME: getfem-53-1
+        TX_TOKEN: ${{ secrets.TX_TOKEN }}
+      run: |
         sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
@@ -86,14 +79,20 @@ jobs:
         cp -r doc ../doc
         cp -r interface ../interface
         cd ../
+    - name: git_config
+      run: |
         git branch -a
         git checkout master
-        git config --global user.email $EMAIL
-        git config --global user.name $NAME
+        git config --global user.email $GITHUB_REPOSITORY
+        git config --global user.name $GITHUB_REPOSITORY
+    - name: commit
+      env:
+        JOB_ID: ${{ steps.jobs.outputs.job_id }}
+        HTML_URL: ${{ steps.jobs.outputs.html_url }}
+      run: |
         git add .
         git commit --allow-empty -m ":green_heart: $JOB_ID
         $HTML_URL"
         git remote -v
-        git remote add github git@github.com:$ORGANIZATION/$REPO.git
+        git remote add github git@github.com:$GITHUB_REPOSITORY.git
         git push github master
-        deactivate
