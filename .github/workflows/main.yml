@@ -61,6 +61,7 @@ jobs:
         SPHINXINTL_TRANSIFEX_USERNAME: api
         SPHINXINTL_TRANSIFEX_PROJECT_NAME: getfem-53-1
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
+        LOCAL_PYTHON_PATH: "/home/runner/.local/bin"
       run: |
         cd getfem
         sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
@@ -70,13 +71,13 @@ jobs:
         (cd doc/sphinx;
          make latex;
          make images;
-         sphinx-intl create-transifexrc;
-         sphinx-build -T -b gettext source locale ;
-         sphinx-intl update-txconfig-resources -p locale -d source/locale;
+         $LOCAL_PYTHON_PATH/sphinx-intl create-transifexrc;
+         $LOCAL_PYTHON_PATH/sphinx-build -T -b gettext source locale ;
+         $LOCAL_PYTHON_PATH/sphinx-intl update-txconfig-resources -p locale -d source/locale;
          cat .tx/config;
-         tx push -s --skip;
+         $LOCAL_PYTHON_PATH/tx push -s --skip;
          rm -rf source/locale/ja;
-         tx pull -l ja)
+         $LOCAL_PYTHON_PATH/tx pull -l ja)
         rm -rf ../doc
         rm -rf ../interface
         rm -rf doc/sphinx/locale/.doctrees
