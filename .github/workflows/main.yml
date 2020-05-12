@@ -55,12 +55,14 @@ jobs:
         ./configure --with-pic --enable-python3=yes
         make -j8  >  make.log
         sudo make install
+        cd ../
     - name: update
       env:
         SPHINXINTL_TRANSIFEX_USERNAME: api
         SPHINXINTL_TRANSIFEX_PROJECT_NAME: getfem-53-1
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
       run: |
+        cd getfem
         sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
