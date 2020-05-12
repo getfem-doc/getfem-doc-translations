@@ -48,27 +48,27 @@ jobs:
         sudo apt-get install -y --no-install-recommends gv
         git submodule update
         (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
-        python3 -m ensurepip --upgrade
-        pip3 install -U setuptools
-        pip3 install -U pip
-        pip3 install python-dotenv
-        pip3 install -U distribute
-        pip3 install -r ./requirements.txt
+        python3 -m venv .venv
+        sourve .venv/bin/activate
+        pip install -U setuptools
+        pip install -U pip
+        pip install -r ./requirements.txt
         cd getfem
         bash autogen.sh
         ./configure --with-pic --enable-python3=yes
         make -j8  >  make.log
         sudo make install
         cd ../
+        deactivate
     - name: update
       env:
         SPHINXINTL_TRANSIFEX_USERNAME: api
         SPHINXINTL_TRANSIFEX_PROJECT_NAME: getfem-53-1
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
         LOCAL_PYTHON_PATH: "/home/runner/.local/bin"
-        PYTHONPATH: "/usr/local/lib/python3.6/site-packages:$PYTHONPATH"
         PATH: "/home/runner/.local/bin:$PATH"
       run: |
+        sourve .venv/bin/activate
         cd getfem
         sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
@@ -90,6 +90,7 @@ jobs:
         cp -r doc ../doc
         cp -r interface ../interface
         cd ../
+        deactivate
     - name: git_config
       run: |
         git branch -a
