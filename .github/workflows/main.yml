@@ -48,7 +48,9 @@ jobs:
         sudo apt-get install -y --no-install-recommends gv
         git submodule update
         (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
-        pip3 install -U pip setuptools
+        pip3 install -U setuptools
+        pip3 install -U pip
+        pip3 install -U distribute
         pip3 install -r ./requirements.txt
         cd getfem
         bash autogen.sh
