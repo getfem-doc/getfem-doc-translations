@@ -62,7 +62,7 @@ jobs:
         SPHINXINTL_TRANSIFEX_PROJECT_NAME: getfem-53-1
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
         LOCAL_PYTHON_PATH: "/home/runner/.local/bin"
-        PYTHONPATH: "/usr/local/lib/python3.8/site-packages:$PYTHONPATH"
+        PYTHONPATH: "/usr/local/lib/python3.6/site-packages:$PYTHONPATH"
       run: |
         cd getfem
         sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
