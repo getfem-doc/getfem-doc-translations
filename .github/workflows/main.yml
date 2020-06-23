@@ -62,7 +62,7 @@ jobs:
         pip install -r ./requirements.txt
         cd getfem
         bash autogen.sh
-        ./configure --prefix=$HOME/venv --with-pic
+        ./configure --prefix=/home/runner/work/getfem-doc-translations/.venv --with-pic
         ./configure --with-pic --enable-python3=yes
         make -j8  >  make.log
         sudo make install
