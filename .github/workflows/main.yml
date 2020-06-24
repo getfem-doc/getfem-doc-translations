@@ -54,15 +54,15 @@ jobs:
         sudo apt-get install -y --no-install-recommends xzdec
         sudo apt-get install -y --no-install-recommends fig2ps
         sudo apt-get install -y --no-install-recommends gv
-        python3 -m venv ../.venv
-        source ../.venv/bin/activate
+        python3 -m venv /home/runner/work/getfem-doc-translations/getfem-doc-translations/.venv
+        source /home/runner/work/getfem-doc-translations/getfem-doc-translations/.venv/bin/activate
         git submodule update
         (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
         pip install -U pip setuptools
         pip install -r ./requirements.txt
         cd getfem
         bash autogen.sh
-        ./configure --prefix=/home/runner/work/getfem-doc-translations/.venv --with-pic
+        ./configure --prefix=/home/runner/work/getfem-doc-translations/getfem-doc-translations/.venv --with-pic
         ./configure --with-pic --enable-python3=yes
         make -j8  >  make.log
         sudo make install
