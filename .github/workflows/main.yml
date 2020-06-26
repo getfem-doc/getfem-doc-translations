@@ -53,11 +53,12 @@ jobs:
         sudo apt-get install -y --no-install-recommends xzdec
         sudo apt-get install -y --no-install-recommends fig2ps
         sudo apt-get install -y --no-install-recommends gv
-        sudo apt-get install -y --no-install-recommends python-getfem++
+        sudo apt-get install -y --no-install-recommends python3-getfem++
+        sudo apt-get install -y --no-install-recommends python3-pip
         git submodule update
         (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
-        pip install -U pip setuptools
-        pip install -r ./requirements.txt
+        pip3 install -U pip3 setuptools
+        pip3 install -r ./requirements.txt
         cd getfem
         bash autogen.sh
         ./configure --with-pic
@@ -67,7 +68,7 @@ jobs:
         sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
-        pip install sphinx-intl[transifex]
+        pip3 install sphinx-intl[transifex]
         (cd doc/sphinx;
          make latex;
          make images;
