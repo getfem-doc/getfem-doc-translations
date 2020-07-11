@@ -20,15 +20,6 @@ This repository is inspired by [sphinx-doc/sphinx-doc-translations](https://gith
 
   * https://readthedocs.org/projects/getfem/  (Master)
   * https://readthedocs.org/projects/getfem-ja/
-  * https://readthedocs.org/projects/getfem-pt-br/
-  * https://readthedocs.org/projects/getfem-es/
-
-* Documentation pages for each languages:
-
-  * http://www.getfem-doc.org/
-  * http://www.getfem-doc.org/ja
-  * http://www.getfem-doc.org/pt_BR
-  * http://www.getfem-doc.org/es
 
 ## How to setup a translated documentation project on RTD
 
