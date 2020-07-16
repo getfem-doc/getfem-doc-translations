@@ -57,7 +57,7 @@ jobs:
         git submodule update
         (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
         pip3 config set global.index-url https://pypi.python.org/simple/
-        pip3 install -U pip3 setuptools
+        pip3 install -U pip setuptools
         pip3 install -r ./requirements.txt
         cd getfem
         bash autogen.sh
