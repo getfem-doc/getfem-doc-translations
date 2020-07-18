@@ -78,7 +78,7 @@ jobs:
          sphinx-intl update-txconfig-resources -p locale -d source/locale;
          cat .tx/config;
          tx push -s --skip;
-         rm -rf source/locale/ja source/locale/pt_BR;
+         rm -rf source/locale/ja source/locale/pt_BR || true;
          tx pull -l ja,pt_BR)
         rm -rf ../doc
         rm -rf ../interface
