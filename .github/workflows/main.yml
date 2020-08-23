@@ -83,12 +83,12 @@ jobs:
          tx push -s --skip;
          rm -rf source/locale/ja source/locale/pt_BR || true;
          tx pull -l ja,pt_BR)
-        cp doc/sphinx/source/conf.py .
+        cp doc/sphinx/source/conf.py ../
         rm -rf ../doc
         rm -rf ../interface
         rm -rf doc/sphinx/locale/.doctrees
         cp -r doc ../doc
-        cp conf.py doc/sphinx/source/
+        cp conf.py ../doc/sphinx/source/
         cp -r interface ../interface
         cd ../
     - name: git_config
