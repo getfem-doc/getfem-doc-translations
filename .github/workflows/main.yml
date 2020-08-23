@@ -52,13 +52,6 @@ jobs:
         sudo apt-get install -y --no-install-recommends python3-venv
     - name: update
       env:
-        ACCOUNT: tkoyama010
-        ORGANIZATION: getfem-doc
-        NAME: "getfem-auto-update"
-        EMAIL: "getfem-auto-update"
-        REPO: getfem-doc-translations
-        JOB_ID: ${{ steps.jobs.outputs.job_id }}
-        HTML_URL: ${{ steps.jobs.outputs.html_url }}
         SPHINXINTL_TRANSIFEX_USERNAME: api
         SPHINXINTL_TRANSIFEX_PROJECT_NAME: getfem-53-1
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
@@ -97,13 +90,20 @@ jobs:
         cp -r interface ../interface
         cd ../
     - name: git_config
-      if: contains(github.event.head_commit.message, '[ci skip]') == false && contains(github.ref, 'master')
+      env:
+        NAME: "getfem-auto-update"
+        EMAIL: "getfem-auto-update"
       run: |
         git branch -a
         git config --global user.email $EMAIL
         git config --global user.name $NAME
     - name: commit
       if: contains(github.event.head_commit.message, '[ci skip]') == false && contains(github.ref, 'master')
+      env:
+        ORGANIZATION: getfem-doc
+        REPO: getfem-doc-translations
+        JOB_ID: ${{ steps.jobs.outputs.job_id }}
+        HTML_URL: ${{ steps.jobs.outputs.html_url }}
       run: |
         git add .
         git commit --allow-empty -m "[ci skip] $JOB_ID
