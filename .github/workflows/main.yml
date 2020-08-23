@@ -73,19 +73,19 @@ jobs:
         cd getfem
         bash autogen.sh
         ./configure --prefix=/home/runner/work/venv --with-pic
-        make -j8  >  make.log
-        sudo make install
         sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
         pip3 install sphinx-intl[transifex]
         (cd doc/sphinx;
-         make latex;
-         make images;
-         sphinx-intl create-transifexrc;
-         sphinx-build -T -b gettext source locale ;
-         sphinx-intl update-txconfig-resources -p locale -d source/locale;
+         docker run -v /home/runner/work/getfem:/ getfemdoc/getfem:latest \
+         source /venv/bin/activate && \
+         make latex && \
+         make images && \
+         sphinx-intl create-transifexrc && \
+         sphinx-build -T -b gettext source locale  && \
+         sphinx-intl update-txconfig-resources -p locale -d source/locale
          cat .tx/config;
          tx push -s --skip;
          rm -rf source/locale/ja source/locale/pt_BR || true;
