@@ -97,14 +97,14 @@ jobs:
         cp -r interface ../interface
         cd ../
     - name: git_config
-      if: contains(github.event.head_commit.message, '[ci skip]') = false && contains(github.ref, 'master')
+      if: contains(github.event.head_commit.message, '[ci skip]') == false && contains(github.ref, 'master')
       run: |
         git branch -a
         git checkout master
         git config --global user.email $EMAIL
         git config --global user.name $NAME
     - name: commit
-      if: contains(github.event.head_commit.message, '[ci skip]') = false && contains(github.ref, 'master')
+      if: contains(github.event.head_commit.message, '[ci skip]') == false && contains(github.ref, 'master')
       run: |
         git add .
         git commit --allow-empty -m "[ci skip] $JOB_ID
