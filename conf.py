@@ -18,11 +18,10 @@ import shutil
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "./interface/src/python"))
 
-execfile_(os.path.join(basedir, "conf.py"), globals())
-
 autodoc_mock_imports = ["getfem"]
 
 basedir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "./doc/sphinx/source")
+execfile_(os.path.join(basedir, "conf.py"), globals())
 locale_dirs = [os.path.join(basedir, "../../locale/")]
 html_static_path = [os.path.join(basedir, "./doc/sphinx/source/.static")]
 templates_path = [os.path.join(basedir, "./doc/sphinx/source/.templates")]
