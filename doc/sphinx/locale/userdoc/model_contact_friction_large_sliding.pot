@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2004-2018 GetFEM++ project
-# This file is distributed under the same license as the GetFEM++ package.
+# Copyright (C) 2004-2020 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM++ 5.3\n"
+"Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-05 00:16+0000\n"
+"POT-Creation-Date: 2020-08-23 12:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -185,7 +185,12 @@ msgid "Considering only stationnary rigid obstacles and applying the principle o
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:214
-msgid "\\left\\{\\begin{array}{l} \\mbox{Find } \\varphi^h \\in V^h \\mbox{ such that } \\\\ \\displaystyle \\delta J(\\varphi^h)[\\delta u^h] - \\sum_{i \\in I_{\\text{def}}} \\lambda_i \\cdot (\\delta u^h(X_i) - \\delta u^h(Y_i)) - \\sum_{i \\in I_{\\text{rig}}} \\lambda_i \\delta u^h(X_i) = 0 ~~~ \\forall \\delta u^h \\in V^h, \\\\ \\displaystyle \\dfrac{1}{r} \\left[\\lambda_i + P_{n_y, {\\mathscr F}}(\\lambda_i + r\\left(g_i n_y - \\alpha(\\varphi^h(X_i) - \\varphi^h(Y_i) - W_T(X_i)+W_T(Y_i)))\\right)\\right]= 0  ~~\\forall i \\in I_{\\text{def}}, \\\\[1em] \\displaystyle \\dfrac{1}{r} \\left[\\lambda_i + P_{n_y, {\\mathscr F}}(\\lambda_i + r\\left(g_i n_y - \\alpha(\\varphi^h(X_i) - W_T(X_i)))\\right)\\right]= 0  ~~\\forall i \\in I_{\\text{rig}}, \\end{array}\\right."
+msgid "\\left\\{\\begin{array}{l}\n"
+"\\mbox{Find } \\varphi^h \\in V^h \\mbox{ such that } \\\\\n"
+"\\displaystyle \\delta J(\\varphi^h)[\\delta u^h] - \\sum_{i \\in I_{\\text{def}}} \\lambda_i \\cdot (\\delta u^h(X_i) - \\delta u^h(Y_i)) - \\sum_{i \\in I_{\\text{rig}}} \\lambda_i \\delta u^h(X_i) = 0 ~~~ \\forall \\delta u^h \\in V^h, \\\\\n"
+"\\displaystyle \\dfrac{1}{r} \\left[\\lambda_i + P_{n_y, {\\mathscr F}}(\\lambda_i + r\\left(g_i n_y - \\alpha(\\varphi^h(X_i) - \\varphi^h(Y_i) - W_T(X_i)+W_T(Y_i)))\\right)\\right]= 0  ~~\\forall i \\in I_{\\text{def}}, \\\\[1em]\n"
+"\\displaystyle \\dfrac{1}{r} \\left[\\lambda_i + P_{n_y, {\\mathscr F}}(\\lambda_i + r\\left(g_i n_y - \\alpha(\\varphi^h(X_i) - W_T(X_i)))\\right)\\right]= 0  ~~\\forall i \\in I_{\\text{rig}},\n"
+"\\end{array}\\right."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:223
@@ -217,7 +222,9 @@ msgid "with the following partial derivatives"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:246
-msgid "\\partial_{u} n_{trans}[\\delta u] = -(I - n_{trans}\\otimes n_{trans})(I+ \\nabla u)^{-T}(\\nabla \\delta u)^T n_{trans}  \\partial_{n} n_{trans}[\\delta n] = \\dfrac{(I+ \\nabla u)^{-T}\\delta n - n_{trans}(n_{trans}\\cdot \\delta n)}{\\|(I+\\nabla u)^{-T} n\\|}"
+msgid "\\partial_{u} n_{trans}[\\delta u] = -(I - n_{trans}\\otimes n_{trans})(I+ \\nabla u)^{-T}(\\nabla \\delta u)^T n_{trans}\n"
+"\n"
+"\\partial_{n} n_{trans}[\\delta n] = \\dfrac{(I+ \\nabla u)^{-T}\\delta n - n_{trans}(n_{trans}\\cdot \\delta n)}{\\|(I+\\nabla u)^{-T} n\\|}"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:252
@@ -225,7 +232,9 @@ msgid "``Coulomb_friction_coupled_projection(lambda, n, Vs, g, f, r)`` where ``l
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:257
-msgid "P(\\lambda, n, V_s, g, f, r) = -(\\lambda\\cdot n + rg)_- n + P_{B(n,\\tau)}(\\lambda - rV_s)  \\mbox{with } \\tau = \\mbox{min}(f_3 + f_1(\\lambda\\cdot n + rg)_-, f_2)"
+msgid "P(\\lambda, n, V_s, g, f, r) = -(\\lambda\\cdot n + rg)_- n + P_{B(n,\\tau)}(\\lambda - rV_s)\n"
+"\n"
+"\\mbox{with } \\tau = \\mbox{min}(f_3 + f_1(\\lambda\\cdot n + rg)_-, f_2)"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:263
@@ -241,7 +250,58 @@ msgid "The derivatives can be expressed as follows with :math:`T_n = (I - n \\ot
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:269
-msgid "\\partial_q P_{B(n,\\tau)}(q) = \\left\\{\\begin{array}{cl} 0 & \\mbox{for } \\tau \\le 0 \\\\ \\mathbf{T}_n & \\mbox{for } \\|q_{_T}\\| \\le \\tau \\\\ \\dfrac{\\tau}{\\|q_{_T}\\|} \\left(\\mathbf{T}_n - \\dfrac{q_{_T}}{\\|q_{_T}\\|}\\otimes \\dfrac{q_{_T}}{\\|q_{_T}\\|} \\right) & \\mbox{otherwise } \\end{array} \\right.  \\partial_{\\tau} P_{B(n,\\tau)}(q) = \\left\\{\\begin{array}{cl} 0 & \\mbox{for } \\tau \\le 0 \\mbox{ or } \\|q_{_T}\\| \\le \\tau \\\\ \\dfrac{q_{_T}}{\\|q_{_T}\\|} & \\mbox{otherwise} \\end{array} \\right.  \\partial_n P_{B(n,\\tau)}(q) = \\left\\{ \\begin{array}{cl} 0 & \\mbox{for } \\tau \\le 0 \\\\ -q \\cdot n~\\mathbf{T}_n - n \\otimes q_{_T} & \\mbox{for } \\|q_{_T}\\| \\le \\tau \\\\ -\\dfrac{\\tau}{\\|q_{_T}\\|} \\left( q \\cdot n \\left(\\mathbf{T}_n - \\dfrac{q_{_T}}{\\|q_{_T}\\|}\\otimes \\dfrac{q_{_T}}{\\|q_{_T}\\|} \\right) + n \\otimes q_{_T} \\right) & \\mbox{otherwise.} \\end{array} \\right.  \\partial_{\\lambda} P(\\lambda, n, V_s, g, f, r) = \\partial_q P_{B(n,\\tau)} +\\partial_{\\tau}P_{B(n,\\tau)} \\otimes  \\partial_{\\lambda} \\tau +H(-\\lambda\\cdot n - r\\,g)~n \\otimes n,  \\partial_{n} P(\\lambda, n, V_s, g, f, r) = \\left|\\begin{array}{l} \\partial_n P_{B(n,\\tau)} +\\partial_{\\tau} P_{B(n,\\tau)} \\otimes \\partial_n \\tau \\\\ \\hspace*{3em}+H(-\\lambda\\cdot n - r\\,g) ~ \\left(n \\otimes \\lambda - (2~\\lambda\\cdot n + r\\,g)~n \\otimes n + (\\lambda\\cdot n + r\\,g)~\\mathbf{I}\\right), \\end{array}\\right.  \\partial_{g} P(\\lambda, n, V_s, g, f, r) = \\partial_{\\tau} P_{B(n,\\tau)} ~ \\partial_g \\tau +H(-\\lambda\\cdot n - r\\,g)~r~n  \\partial_{f} P(\\lambda, n, V_s, g, f, r) = \\partial_{\\tau} P_{B(n,\\tau)} \\partial_{f} \\tau  \\partial_{r} P(\\lambda, n, V_s, g, f, r) =  H(-\\lambda\\cdot n - r\\,g)gn + \\partial_q P_{B(n,\\tau)}V_s  +\\partial_{\\tau} P_{B(n,\\tau)} \\partial_r \\tau"
+msgid "\\partial_q P_{B(n,\\tau)}(q) =\n"
+"\\left\\{\\begin{array}{cl}\n"
+"0 & \\mbox{for } \\tau \\le 0 \\\\\n"
+"\\mathbf{T}_n & \\mbox{for } \\|q_{_T}\\| \\le \\tau \\\\\n"
+"\\dfrac{\\tau}{\\|q_{_T}\\|}\n"
+"\\left(\\mathbf{T}_n - \\dfrac{q_{_T}}{\\|q_{_T}\\|}\\otimes \\dfrac{q_{_T}}{\\|q_{_T}\\|}\n"
+"\\right) & \\mbox{otherwise }\n"
+"\\end{array} \\right.\n"
+"\n"
+"\\partial_{\\tau} P_{B(n,\\tau)}(q) =\n"
+"\\left\\{\\begin{array}{cl}\n"
+"0 & \\mbox{for } \\tau \\le 0 \\mbox{ or } \\|q_{_T}\\| \\le \\tau \\\\\n"
+"\\dfrac{q_{_T}}{\\|q_{_T}\\|} & \\mbox{otherwise}\n"
+"\\end{array} \\right.\n"
+"\n"
+"\\partial_n P_{B(n,\\tau)}(q) =\n"
+"\\left\\{\n"
+"\\begin{array}{cl}\n"
+"0 & \\mbox{for } \\tau \\le 0 \\\\\n"
+"-q \\cdot n~\\mathbf{T}_n - n \\otimes q_{_T}\n"
+"& \\mbox{for } \\|q_{_T}\\| \\le \\tau \\\\\n"
+"-\\dfrac{\\tau}{\\|q_{_T}\\|}\n"
+"\\left( q \\cdot n\n"
+"\\left(\\mathbf{T}_n - \\dfrac{q_{_T}}{\\|q_{_T}\\|}\\otimes \\dfrac{q_{_T}}{\\|q_{_T}\\|}\n"
+"\\right)\n"
+"+ n \\otimes q_{_T}\n"
+"\\right) & \\mbox{otherwise.}\n"
+"\\end{array} \\right.\n"
+"\n"
+"\\partial_{\\lambda} P(\\lambda, n, V_s, g, f, r) = \\partial_q P_{B(n,\\tau)}\n"
+"+\\partial_{\\tau}P_{B(n,\\tau)} \\otimes  \\partial_{\\lambda} \\tau\n"
+"+H(-\\lambda\\cdot n - r\\,g)~n \\otimes n,\n"
+"\n"
+"\\partial_{n} P(\\lambda, n, V_s, g, f, r) =\n"
+"\\left|\\begin{array}{l} \\partial_n P_{B(n,\\tau)}\n"
+"+\\partial_{\\tau} P_{B(n,\\tau)} \\otimes \\partial_n \\tau \\\\\n"
+"\\hspace*{3em}+H(-\\lambda\\cdot n - r\\,g) ~\n"
+"\\left(n \\otimes \\lambda -\n"
+"(2~\\lambda\\cdot n + r\\,g)~n \\otimes n +\n"
+"(\\lambda\\cdot n + r\\,g)~\\mathbf{I}\\right),\n"
+"\\end{array}\\right.\n"
+"\n"
+"\\partial_{g} P(\\lambda, n, V_s, g, f, r) =\n"
+"\\partial_{\\tau} P_{B(n,\\tau)} ~ \\partial_g \\tau\n"
+"+H(-\\lambda\\cdot n - r\\,g)~r~n\n"
+"\n"
+"\\partial_{f} P(\\lambda, n, V_s, g, f, r) =\n"
+"\\partial_{\\tau} P_{B(n,\\tau)} \\partial_{f} \\tau\n"
+"\n"
+"\\partial_{r} P(\\lambda, n, V_s, g, f, r) =\n"
+" H(-\\lambda\\cdot n - r\\,g)gn + \\partial_q P_{B(n,\\tau)}V_s\n"
+" +\\partial_{\\tau} P_{B(n,\\tau)} \\partial_r \\tau"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction_large_sliding.rst:330

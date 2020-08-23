@@ -66,6 +66,7 @@
 % Set up styles of URL: it should be placed after hyperref.
 \urlstyle{same}
 
+
 \usepackage{sphinxmessages}
 \setcounter{tocdepth}{1}
 
@@ -79,8 +80,8 @@
 
 
 \title{Gmm++ user documentation}
-\date{May 05, 2020}
-\release{5.4}
+\date{Aug 23, 2020}
+\release{5.4.1}
 \author{Yves Renard}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
 \renewcommand{\releasename}{Release}
@@ -1011,7 +1012,7 @@ Some other functionalities of SuperLU can be interfaced.
 
 \chapter{How to use \sphinxstyleemphasis{Gmm++} with QD type (double\sphinxhyphen{}double and quad\sphinxhyphen{}double)}
 \label{\detokenize{gmm/qd:how-to-use-gmm-with-qd-type-double-double-and-quad-double}}\label{\detokenize{gmm/qd:gmm-qd}}\label{\detokenize{gmm/qd::doc}}
-The QD library (see \sphinxurl{http://www.cs.berkeley.edu/verb~yozo} or \sphinxurl{http://www.nersc.gov/verb~dhb/mpdist/mpdist.html}) is an efficient library for double\sphinxhyphen{}double (32 decimal digits) and quad\sphinxhyphen{}double (approx. 64 decimal digits). Once you installed this library on your system you have to link your program with QD library (with \sphinxhyphen{}lqd). In your program, include the header files of QD with:
+The QD library (see \sphinxhref{http://www.cs.berkeley.edu/verb~yozo}{http://www.cs.berkeley.edu/verb\textasciitilde{}yozo} or \sphinxhref{http://www.nersc.gov/verb~dhb/mpdist/mpdist.html}{http://www.nersc.gov/verb\textasciitilde{}dhb/mpdist/mpdist.html}) is an efficient library for double\sphinxhyphen{}double (32 decimal digits) and quad\sphinxhyphen{}double (approx. 64 decimal digits). Once you installed this library on your system you have to link your program with QD library (with \sphinxhyphen{}lqd). In your program, include the header files of QD with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include} \PYG{c+cpf}{\PYGZlt{}qd/dd.h\PYGZgt{}}

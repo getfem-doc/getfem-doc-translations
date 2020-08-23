@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2004-2018 GetFEM++ project
-# This file is distributed under the same license as the GetFEM++ package.
+# Copyright (C) 2004-2020 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM++ 5.3\n"
+"Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-05 00:16+0000\n"
+"POT-Creation-Date: 2020-08-23 12:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,7 +42,9 @@ msgid "It is supposed that the considered body is submitted approximately to a r
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:27
-msgid "\\tau(X) = R(t)X + Z(t)"
+msgid "\\tau(X) = R(t)X + Z(t)\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:30
@@ -50,7 +52,13 @@ msgid "and may have additonal deformation (exptected smaller) with respect to th
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:32
-msgid "R(t) = \\left(\\begin{array}{ccc} \\cos(\\theta(t)) & \\sin(\\theta(t)) & 0 \\\\ -\\sin(\\theta(t)) & \\cos(\\theta(t)) & 0 \\\\ 0 & 0 & 1 \\end{array} \\right),"
+msgid "R(t) = \\left(\\begin{array}{ccc}\n"
+"\\cos(\\theta(t)) & \\sin(\\theta(t)) & 0 \\\\\n"
+"-\\sin(\\theta(t)) & \\cos(\\theta(t)) & 0 \\\\\n"
+"0 & 0 & 1\n"
+"\\end{array} \\right),\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:39
@@ -62,7 +70,14 @@ msgid "Note that the description is given for a three-dimensional body. For two-
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:51
-msgid "r(t,X) = R(t)X, ~~~~~~~~~ \\mbox{ and } A = \\left(\\begin{array}{ccc} 0 & 1 & 0 \\\\ -1 & 0 & 0 \\\\ 0 & 0 & 0 \\end{array} \\right)."
+msgid "r(t,X) = R(t)X, ~~~~~~~~~ \\mbox{ and }\n"
+"A = \\left(\\begin{array}{ccc}\n"
+"0 & 1 & 0 \\\\\n"
+"-1 & 0 & 0 \\\\\n"
+"0 & 0 & 0\n"
+"\\end{array} \\right).\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:59
@@ -70,7 +85,9 @@ msgid "We have then"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:61
-msgid "\\dot{r}(t,X) = \\dot{\\theta}AR(t)X"
+msgid "\\dot{r}(t,X) = \\dot{\\theta}AR(t)X\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:64
@@ -78,7 +95,9 @@ msgid "If :math:`\\varphi(t, X)` is the deformation of the body which maps the r
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:66
-msgid "\\varphi(t, X) = (\\tau(t) \\circ \\bar{\\varphi}(t) \\circ r(t))(X) = \\bar{\\varphi}(t, r(t, X)) + Z(t)"
+msgid "\\varphi(t, X) = (\\tau(t) \\circ \\bar{\\varphi}(t) \\circ r(t))(X) = \\bar{\\varphi}(t, r(t, X)) + Z(t)\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:69
@@ -86,7 +105,9 @@ msgid "With :math:`\\bar{X} = R(t)X` the new considered deformation is"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:71
-msgid "\\bar{\\varphi}(t,\\bar{X}) = \\varphi(X) - Z(t)"
+msgid "\\bar{\\varphi}(t,\\bar{X}) = \\varphi(X) - Z(t)\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:75
@@ -98,7 +119,9 @@ msgid "The denomination ALE of the method is justified by the fact that :math:`\
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:87
-msgid "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - \\bar{X}"
+msgid "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - \\bar{X}\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:90
@@ -110,7 +133,9 @@ msgid "Due to the objectivity properties of standard constitutive laws, the expr
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:94
-msgid "\\dfrac{\\partial \\varphi}{\\partial t} = \\dfrac{\\partial \\bar{\\varphi}}{\\partial t} + \\dot{\\theta} \\nabla \\bar{\\varphi} A \\bar{X} + \\dot{Z}(t),  \\dfrac{\\partial^2 \\varphi}{\\partial t^2} = \\dfrac{\\partial^2 \\bar{\\varphi}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\dfrac{\\partial \\bar{\\varphi}}{\\partial t}A \\bar{X} + \\dot{\\theta}^2\\mbox{div}((\\nabla\\bar{\\varphi}A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta}\\nabla\\bar{\\varphi}A \\bar{X} + \\ddot{Z}(t)."
+msgid "\\dfrac{\\partial \\varphi}{\\partial t} = \\dfrac{\\partial \\bar{\\varphi}}{\\partial t} + \\dot{\\theta} \\nabla \\bar{\\varphi} A \\bar{X} + \\dot{Z}(t),\n"
+"\n"
+"\\dfrac{\\partial^2 \\varphi}{\\partial t^2} = \\dfrac{\\partial^2 \\bar{\\varphi}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\dfrac{\\partial \\bar{\\varphi}}{\\partial t}A \\bar{X} + \\dot{\\theta}^2\\mbox{div}((\\nabla\\bar{\\varphi}A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta}\\nabla\\bar{\\varphi}A \\bar{X} + \\ddot{Z}(t)."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:100
@@ -130,7 +155,9 @@ msgid "|gf| bricks for structural mechanics are mainly considering the displacem
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:110
-msgid "\\dfrac{\\partial u}{\\partial t} = \\dfrac{\\partial \\bar{u}}{\\partial t} + \\dot{\\theta} (I_d + \\nabla \\bar{u}) A \\bar{X} + \\dot{Z}(t),  \\dfrac{\\partial^2 u}{\\partial t^2} = \\dfrac{\\partial^2 \\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\dfrac{\\partial \\bar{u}}{\\partial t}A \\bar{X} +  \\dot{\\theta}^2\\mbox{div}(((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta} (I_d + \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t)."
+msgid "\\dfrac{\\partial u}{\\partial t} = \\dfrac{\\partial \\bar{u}}{\\partial t} + \\dot{\\theta} (I_d + \\nabla \\bar{u}) A \\bar{X} + \\dot{Z}(t),\n"
+"\n"
+"\\dfrac{\\partial^2 u}{\\partial t^2} = \\dfrac{\\partial^2 \\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\dfrac{\\partial \\bar{u}}{\\partial t}A \\bar{X} +  \\dot{\\theta}^2\\mbox{div}(((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta} (I_d + \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t)."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:120
@@ -143,7 +170,9 @@ msgid "Assuming :math:`\\rho^0` the density in the reference configuration havin
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:124
-msgid "\\int_{\\Omega^0} \\rho^0 \\dfrac{\\partial^2 u}{\\partial t^2}\\cdot vdX =  \\int_{\\bar{\\Omega}^0} \\rho^0 \\left[\\dfrac{\\partial^2 \\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\dfrac{\\partial \\bar{u}}{\\partial t}A \\bar{X} +  \\dot{\\theta}^2\\mbox{div}(((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta} (I_d + \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t) \\right] \\cdot \\bar{v} d\\bar{X}."
+msgid "\\int_{\\Omega^0} \\rho^0 \\dfrac{\\partial^2 u}{\\partial t^2}\\cdot vdX =\n"
+"\n"
+"\\int_{\\bar{\\Omega}^0} \\rho^0 \\left[\\dfrac{\\partial^2 \\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\dfrac{\\partial \\bar{u}}{\\partial t}A \\bar{X} +  \\dot{\\theta}^2\\mbox{div}(((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) )  + \\ddot{\\theta} (I_d + \\nabla\\bar{u}) A \\bar{X}  + \\ddot{Z}(t) \\right] \\cdot \\bar{v} d\\bar{X}."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:129
@@ -151,7 +180,12 @@ msgid "The third term in the right hand side can be integrated by part as follow
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:131
-msgid "\\begin{array}{rcl}   \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2\\mbox{div}(((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) ) \\cdot \\bar{v} d\\bar{X} &=& -  \\int_{\\bar{\\Omega}^0} (\\dot{\\theta}^2 (I_d + \\nabla\\bar{u})A \\bar{X})) \\cdot (\\nabla (\\rho^0 \\bar{v}) A \\bar{X}) d\\bar{X} \\\\  && + \\int_{\\partial \\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2 (((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) ) \\bar{N} \\cdot \\bar{v} d\\bar{\\Gamma}. \\end{array}"
+msgid "\\begin{array}{rcl}\n"
+"  \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2\\mbox{div}(((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) ) \\cdot \\bar{v} d\\bar{X} &=& -  \\int_{\\bar{\\Omega}^0} (\\dot{\\theta}^2 (I_d + \\nabla\\bar{u})A \\bar{X})) \\cdot (\\nabla (\\rho^0 \\bar{v}) A \\bar{X}) d\\bar{X} \\\\\n"
+" && + \\int_{\\partial \\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2 (((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) ) \\bar{N} \\cdot \\bar{v} d\\bar{\\Gamma}.\n"
+"\\end{array}\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:137
@@ -159,7 +193,9 @@ msgid "Since :math:`\\bar{N}` the outward unit normal vector on :math:`\\partial
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:139
-msgid "\\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2\\mbox{div}(((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) ) \\cdot \\bar{v} d\\bar{X} = - \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2(\\nabla\\bar{u}A \\bar{X}) \\cdot (\\nabla \\bar{v} A \\bar{X}) d\\bar{X} - \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2 (A^2 \\bar{X})\\cdot \\bar{v} d\\bar{X}."
+msgid "\\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2\\mbox{div}(((I_d + \\nabla\\bar{u})A \\bar{X}) \\otimes (A \\bar{X}) ) \\cdot \\bar{v} d\\bar{X} = - \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2(\\nabla\\bar{u}A \\bar{X}) \\cdot (\\nabla \\bar{v} A \\bar{X}) d\\bar{X} - \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2 (A^2 \\bar{X})\\cdot \\bar{v} d\\bar{X}.\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:142
@@ -167,7 +203,13 @@ msgid "Thus globally"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:144
-msgid "\\begin{array}{rcl}  \\int_{\\Omega^0} \\rho^0 \\dfrac{\\partial^2 u}{\\partial t^2}\\cdot vdX &=&  \\int_{\\bar{\\Omega}^0} \\rho^0 \\left[\\dfrac{\\partial^2 \\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\dfrac{\\partial \\bar{u}}{\\partial t}A \\bar{X} + \\ddot{\\theta} \\nabla\\bar{u} A \\bar{X}   \\right] \\cdot \\bar{v} d\\bar{X}\\\\ && - \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2(\\nabla\\bar{u}A \\bar{X}) \\cdot (\\nabla \\bar{v} A \\bar{X}) d\\bar{X} - \\int_{\\bar{\\Omega}^0} \\rho^0 (\\dot{\\theta}^2 A^2 \\bar{X} + \\ddot{\\theta} A\\bar{X} + \\ddot{Z}(t))\\cdot \\bar{v} d\\bar{X}. \\end{array}"
+msgid "\\begin{array}{rcl}\n"
+" \\int_{\\Omega^0} \\rho^0 \\dfrac{\\partial^2 u}{\\partial t^2}\\cdot vdX &=&\n"
+" \\int_{\\bar{\\Omega}^0} \\rho^0 \\left[\\dfrac{\\partial^2 \\bar{u}}{\\partial t^2} + 2\\dot{\\theta} \\nabla\\dfrac{\\partial \\bar{u}}{\\partial t}A \\bar{X} + \\ddot{\\theta} \\nabla\\bar{u} A \\bar{X}   \\right] \\cdot \\bar{v} d\\bar{X}\\\\\n"
+"&& - \\int_{\\bar{\\Omega}^0} \\rho^0 \\dot{\\theta}^2(\\nabla\\bar{u}A \\bar{X}) \\cdot (\\nabla \\bar{v} A \\bar{X}) d\\bar{X} - \\int_{\\bar{\\Omega}^0} \\rho^0 (\\dot{\\theta}^2 A^2 \\bar{X} + \\ddot{\\theta} A\\bar{X} + \\ddot{Z}(t))\\cdot \\bar{v} d\\bar{X}.\n"
+"\\end{array}\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:151
@@ -199,7 +241,9 @@ msgid "Let us consider an object whose reference configuration :math:`\\Omega^0 
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:177
-msgid "\\Omega^{0t} = (\\alpha + z(t), \\beta + z(t)) \\times \\omega^0"
+msgid "\\Omega^{0t} = (\\alpha + z(t), \\beta + z(t)) \\times \\omega^0\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:180
@@ -211,7 +255,9 @@ msgid "If :math:`\\varphi(t, X)` is the deformation of the body which maps the r
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:184
-msgid "\\bar{\\Omega}^{0} = (\\alpha, \\beta) \\times \\omega^0"
+msgid "\\bar{\\Omega}^{0} = (\\alpha, \\beta) \\times \\omega^0\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:187
@@ -219,7 +265,9 @@ msgid "and :math:`\\bar{\\varphi}(t, X) : \\rm I\\hspace{-0.15em}R_+ \\times \\b
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:189
-msgid "\\bar{\\varphi}(t,\\bar{X}) = \\varphi(t,X), ~~~\\mbox{ with } \\bar{X} = X - Z(t),"
+msgid "\\bar{\\varphi}(t,\\bar{X}) = \\varphi(t,X), ~~~\\mbox{ with } \\bar{X} = X - Z(t),\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:192
@@ -231,7 +279,9 @@ msgid "If we denote"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:205
-msgid "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - X = u(t, X),"
+msgid "\\bar{u}(t,\\bar{X}) = \\bar{\\varphi}(t, \\bar{X}) - X = u(t, X),\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:208
@@ -239,7 +289,9 @@ msgid "the displacement on the intermediary configuration, then it is easy to ch
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:210
-msgid "\\dfrac{\\partial \\varphi}{\\partial t} = \\dfrac{\\partial \\bar{u}}{\\partial t} - \\nabla \\bar{u} \\dot{Z}  \\dfrac{\\partial^2 \\varphi}{\\partial t^2} = \\dfrac{\\partial^2 \\bar{u}}{\\partial t^2} - \\nabla\\dfrac{\\partial \\bar{u}}{\\partial t}\\dot{Z} + \\dfrac{\\partial^2 \\bar{u}}{\\partial \\dot{Z}^2} - \\nabla\\bar{u}\\ddot{Z}."
+msgid "\\dfrac{\\partial \\varphi}{\\partial t} = \\dfrac{\\partial \\bar{u}}{\\partial t} - \\nabla \\bar{u} \\dot{Z}\n"
+"\n"
+"\\dfrac{\\partial^2 \\varphi}{\\partial t^2} = \\dfrac{\\partial^2 \\bar{u}}{\\partial t^2} - \\nabla\\dfrac{\\partial \\bar{u}}{\\partial t}\\dot{Z} + \\dfrac{\\partial^2 \\bar{u}}{\\partial \\dot{Z}^2} - \\nabla\\bar{u}\\ddot{Z}."
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:221
@@ -247,7 +299,9 @@ msgid "Assuming :math:`\\rho^0` the density in the reference being invariant wit
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:223
-msgid "\\int_{\\Omega^0} \\rho^0 \\dfrac{\\partial^2 u}{\\partial t^2}\\cdot vdX =  \\int_{\\bar{\\Omega}^{0}} \\rho^0 \\left[\\dfrac{\\partial^2 \\bar{u}}{\\partial t^2} - 2\\nabla\\dfrac{\\partial \\bar{u}}{\\partial t}\\dot{Z} - \\nabla\\bar{u}\\ddot{Z}\\right]\\cdot \\bar{v}  - \\rho^0 (\\nabla\\bar{u}\\dot{Z}).(\\nabla\\bar{v}\\dot{Z}) d\\bar{X} + \\int_{\\partial \\bar{\\Omega}^0} \\rho^0 (\\nabla\\bar{u}\\dot{Z}).\\bar{v}(\\dot{Z}.\\bar{N}) d\\bar{\\Gamma},"
+msgid "\\int_{\\Omega^0} \\rho^0 \\dfrac{\\partial^2 u}{\\partial t^2}\\cdot vdX =\n"
+"\n"
+"\\int_{\\bar{\\Omega}^{0}} \\rho^0 \\left[\\dfrac{\\partial^2 \\bar{u}}{\\partial t^2} - 2\\nabla\\dfrac{\\partial \\bar{u}}{\\partial t}\\dot{Z} - \\nabla\\bar{u}\\ddot{Z}\\right]\\cdot \\bar{v}  - \\rho^0 (\\nabla\\bar{u}\\dot{Z}).(\\nabla\\bar{v}\\dot{Z}) d\\bar{X} + \\int_{\\partial \\bar{\\Omega}^0} \\rho^0 (\\nabla\\bar{u}\\dot{Z}).\\bar{v}(\\dot{Z}.\\bar{N}) d\\bar{\\Gamma},"
 msgstr ""
 
 #: ../source/userdoc/model_ALE_rotating.rst:228

@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2004-2018 GetFEM++ project
-# This file is distributed under the same license as the GetFEM++ package.
+# Copyright (C) 2004-2020 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM++ 5.3\n"
+"Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-05 00:16+0000\n"
+"POT-Creation-Date: 2020-08-23 12:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,13 @@ msgid "One has"
 msgstr ""
 
 #: ../source/project/appendixA.rst:17
-msgid "\\int_T f(x)\\ dx = \\int_{\\widehat{T}} \\widehat{f}(\\widehat{x}) |\\mbox{vol}\\left( \\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_0}; \\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_1}; \\ldots; \\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_{P-1}} \\right)|\\ d\\widehat{x}."
+msgid "\\int_T f(x)\\ dx = \\int_{\\widehat{T}} \\widehat{f}(\\widehat{x})\n"
+"|\\mbox{vol}\\left(\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_0};\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_1};\n"
+"\\ldots;\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_{P-1}}\n"
+"\\right)|\\ d\\widehat{x}."
 msgstr ""
 
 #: ../source/project/appendixA.rst:28
@@ -38,7 +44,14 @@ msgid "Denoting :math:`J_{\\tau}(\\widehat{x})` the jacobian"
 msgstr ""
 
 #: ../source/project/appendixA.rst:30
-msgid "\\fbox{$ J_{\\tau}(\\widehat{x}) := |\\mbox{vol}\\left( \\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_0}; \\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_1}; \\ldots; \\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_{P-1}} \\right)| = (\\mbox{det}(K(\\widehat{x})^T K(\\widehat{x})))^{1/2}$,}"
+msgid "\\fbox{$ J_{\\tau}(\\widehat{x}) :=\n"
+"|\\mbox{vol}\\left(\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_0};\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_1};\n"
+"\\ldots;\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_{P-1}}\n"
+"\\right)| =\n"
+"(\\mbox{det}(K(\\widehat{x})^T K(\\widehat{x})))^{1/2}$,}"
 msgstr ""
 
 #: ../source/project/appendixA.rst:41
@@ -62,7 +75,8 @@ msgid "With :math:`\\Gamma` a part of the boundary of :math:`T` a real element a
 msgstr ""
 
 #: ../source/project/appendixA.rst:58
-msgid "\\fbox{$\\int_{\\Gamma} f(x)\\ d\\sigma = \\int_{\\widehat{\\Gamma}}\\widehat{f}(\\widehat{x}) \\|B(\\widehat{x})\\widehat{n}\\| J_{\\tau}(\\widehat{x})\\ d\\widehat{\\sigma}$,}"
+msgid "\\fbox{$\\int_{\\Gamma} f(x)\\ d\\sigma =\n"
+"\\int_{\\widehat{\\Gamma}}\\widehat{f}(\\widehat{x}) \\|B(\\widehat{x})\\widehat{n}\\| J_{\\tau}(\\widehat{x})\\ d\\widehat{\\sigma}$,}"
 msgstr ""
 
 #: ../source/project/appendixA.rst:63
@@ -70,7 +84,8 @@ msgid "where :math:`\\widehat{n}` is the unit normal to :math:`\\widehat{T}` on 
 msgstr ""
 
 #: ../source/project/appendixA.rst:66
-msgid "\\fbox{$\\int_{\\Gamma} F(x)\\cdot n\\ d\\sigma = \\int_{\\widehat{\\Gamma}} \\widehat{F}(\\widehat{x})\\cdot(B(\\widehat{x})\\cdot\\widehat{n}) J_{\\tau}(\\widehat{x})\\ d\\widehat{\\sigma}$,}"
+msgid "\\fbox{$\\int_{\\Gamma} F(x)\\cdot n\\ d\\sigma =\n"
+"\\int_{\\widehat{\\Gamma}} \\widehat{F}(\\widehat{x})\\cdot(B(\\widehat{x})\\cdot\\widehat{n}) J_{\\tau}(\\widehat{x})\\ d\\widehat{\\sigma}$,}"
 msgstr ""
 
 #: ../source/project/appendixA.rst:71
@@ -94,7 +109,8 @@ msgid "Denoting"
 msgstr ""
 
 #: ../source/project/appendixA.rst:89
-msgid "\\nabla^2 f = \\left[\\frac{\\partial^2 f}{\\partial x_i \\partial x_j}\\right]_{ij},"
+msgid "\\nabla^2 f =\n"
+"\\left[\\frac{\\partial^2 f}{\\partial x_i \\partial x_j}\\right]_{ij},"
 msgstr ""
 
 #: ../source/project/appendixA.rst:94
@@ -102,7 +118,10 @@ msgid "the :math:`N \\times N` matrix and"
 msgstr ""
 
 #: ../source/project/appendixA.rst:96
-msgid "\\widehat{X}(\\widehat{x}) = \\sum_{k = 0}^{N-1}\\widehat{\\nabla}^2\\tau_k(\\widehat{x})\\frac{\\partial f}{\\partial x_k}(x) = \\sum_{k = 0}^{N-1}\\sum_{i = 0}^{P-1} \\widehat{\\nabla}^2\\tau_k(\\widehat{x})B_{ki}\\frac{\\partial \\widehat{f}}{\\partial \\widehat{x}_i}(\\widehat{x}),"
+msgid "\\widehat{X}(\\widehat{x}) =\n"
+"\\sum_{k = 0}^{N-1}\\widehat{\\nabla}^2\\tau_k(\\widehat{x})\\frac{\\partial f}{\\partial x_k}(x) =\n"
+"\\sum_{k = 0}^{N-1}\\sum_{i = 0}^{P-1}\n"
+"\\widehat{\\nabla}^2\\tau_k(\\widehat{x})B_{ki}\\frac{\\partial \\widehat{f}}{\\partial \\widehat{x}_i}(\\widehat{x}),"
 msgstr ""
 
 #: ../source/project/appendixA.rst:103
@@ -126,7 +145,10 @@ msgid "In order to have uniform methods for the computation of elementary matric
 msgstr ""
 
 #: ../source/project/appendixA.rst:121
-msgid "\\left[B_2(\\widehat{x})\\right]_{ij} = \\sum_{k = 0}^{N-1} \\frac{\\partial^2 \\tau_k(\\widehat{x})}{\\partial \\widehat{x}_{i / P} \\partial \\widehat{x}_{i\\mbox{ mod }P}} B_{kj}(\\widehat{x}),"
+msgid "\\left[B_2(\\widehat{x})\\right]_{ij} =\n"
+"\\sum_{k = 0}^{N-1}\n"
+"\\frac{\\partial^2 \\tau_k(\\widehat{x})}{\\partial \\widehat{x}_{i / P} \\partial \\widehat{x}_{i\\mbox{ mod }P}}\n"
+"B_{kj}(\\widehat{x}),"
 msgstr ""
 
 #: ../source/project/appendixA.rst:128
@@ -134,7 +156,8 @@ msgid "and :math:`B_3` the :math:`N^2 \\times P^2` matrix defined as"
 msgstr ""
 
 #: ../source/project/appendixA.rst:130
-msgid "\\left[B_3(\\widehat{x})\\right]_{ij} = B_{i / N, j / P}(\\widehat{x}) B_{i\\mbox{ mod }N, j\\mbox{ mod }P}(\\widehat{x}),"
+msgid "\\left[B_3(\\widehat{x})\\right]_{ij} =\n"
+"B_{i / N, j / P}(\\widehat{x}) B_{i\\mbox{ mod }N, j\\mbox{ mod }P}(\\widehat{x}),"
 msgstr ""
 
 #: ../source/project/appendixA.rst:135
@@ -142,7 +165,8 @@ msgid "one has"
 msgstr ""
 
 #: ../source/project/appendixA.rst:137
-msgid "\\fbox{$H f(x) = B_3(\\widehat{x}) \\left(\\widehat{H}\\ \\widehat{f}(\\widehat{x}) - B_2(\\widehat{x})\\widehat{\\nabla} \\widehat{f}(\\widehat{x})\\right)$.}"
+msgid "\\fbox{$H f(x) = B_3(\\widehat{x})\n"
+"\\left(\\widehat{H}\\ \\widehat{f}(\\widehat{x}) - B_2(\\widehat{x})\\widehat{\\nabla} \\widehat{f}(\\widehat{x})\\right)$.}"
 msgstr ""
 
 #: ../source/project/appendixA.rst:144
@@ -154,7 +178,10 @@ msgid "Assume one needs to compute the elementary \"matrix\":"
 msgstr ""
 
 #: ../source/project/appendixA.rst:148
-msgid "t(i_0, i_1, \\ldots, i_7) = \\int_{T}\\varphi_{i_1}^{i_0} \\partial_{i_4}\\varphi_{i_3}^{i_2} \\partial^2_{i_7/ P, i_7\\mbox{ mod } P}\\varphi_{i_6}^{i_5}\\ dx,"
+msgid "t(i_0, i_1, \\ldots, i_7) =\n"
+"\\int_{T}\\varphi_{i_1}^{i_0}\n"
+"\\partial_{i_4}\\varphi_{i_3}^{i_2}\n"
+"\\partial^2_{i_7/ P, i_7\\mbox{ mod } P}\\varphi_{i_6}^{i_5}\\ dx,"
 msgstr ""
 
 #: ../source/project/appendixA.rst:155
@@ -162,7 +189,10 @@ msgid "The computations to be made on the reference elements are"
 msgstr ""
 
 #: ../source/project/appendixA.rst:157
-msgid "\\widehat{t}_0(i_0, i_1, \\ldots,i_7) = \\int_{\\widehat{T}}(\\widehat{\\varphi})_{i_1}^{i_0} \\partial_{i_4}(\\widehat{\\varphi})_{i_3}^{i_2} \\partial^2_{i_7 / P, i_7\\mbox{ mod } P}(\\widehat{\\varphi})_{i_6}^{i_5} J(\\widehat{x})\\ d\\widehat{x},"
+msgid "\\widehat{t}_0(i_0, i_1, \\ldots,i_7) =\n"
+"\\int_{\\widehat{T}}(\\widehat{\\varphi})_{i_1}^{i_0}\n"
+"\\partial_{i_4}(\\widehat{\\varphi})_{i_3}^{i_2}\n"
+"\\partial^2_{i_7 / P, i_7\\mbox{ mod } P}(\\widehat{\\varphi})_{i_6}^{i_5} J(\\widehat{x})\\ d\\widehat{x},"
 msgstr ""
 
 #: ../source/project/appendixA.rst:164
@@ -170,7 +200,10 @@ msgid "and"
 msgstr ""
 
 #: ../source/project/appendixA.rst:166
-msgid "\\widehat{t}_1(i_0, i_1, \\ldots, i_7) = \\int_{\\widehat{T}}(\\widehat{\\varphi})_{i_1}^{i_0} \\partial_{i_4}(\\widehat{\\varphi})_{i_3}^{i_2} \\partial_{i_7}(\\widehat{\\varphi})_{i_6}^{i_5} J(\\widehat{x})\\ d\\widehat{x},"
+msgid "\\widehat{t}_1(i_0, i_1, \\ldots, i_7) =\n"
+"\\int_{\\widehat{T}}(\\widehat{\\varphi})_{i_1}^{i_0}\n"
+"\\partial_{i_4}(\\widehat{\\varphi})_{i_3}^{i_2}\n"
+"\\partial_{i_7}(\\widehat{\\varphi})_{i_6}^{i_5} J(\\widehat{x})\\ d\\widehat{x},"
 msgstr ""
 
 #: ../source/project/appendixA.rst:173

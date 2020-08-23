@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2004-2018 GetFEM++ project
-# This file is distributed under the same license as the GetFEM++ package.
+# Copyright (C) 2004-2020 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM++ 5.3\n"
+"Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-05 00:16+0000\n"
+"POT-Creation-Date: 2020-08-23 12:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,8 @@ msgid "The deformation tensor (Green-Lagrange)"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:29
-msgid "E = \\frac{1}{2}\\left(\\nabla\\Phi^T\\nabla\\Phi - I)\\right)   = \\frac{1}{2}\\left({\\nabla u^T}{\\nabla u} + {\\nabla u^T} + {\\nabla u}\\right)"
+msgid "E = \\frac{1}{2}\\left(\\nabla\\Phi^T\\nabla\\Phi - I)\\right)\n"
+"  = \\frac{1}{2}\\left({\\nabla u^T}{\\nabla u} + {\\nabla u^T} + {\\nabla u}\\right)"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:35
@@ -77,7 +78,9 @@ msgid ":math:`i_1,i_2,i_3` are the invariants of orders :math:`1,2` and :math:`3
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:52
-msgid "i_1( E) = \\mbox{tr } E \\hspace{5cm} &i_1( C) = 2\\mbox{tr } E + 3\\\\ i_2( E) = \\frac{(\\mbox{tr } E)^2 - \\mbox{tr } E^2}{2}\\quad\\hspace{3cm}& i_2( C)=4i_2( E)+4i_1( E)+3\\\\ i_3( E) = \\det E \\hspace{5cm} &i_3( C) = 8i_3( E) + 4i_2( E) + 2i_1( E) + 1"
+msgid "i_1( E) = \\mbox{tr } E \\hspace{5cm} &i_1( C) = 2\\mbox{tr } E + 3\\\\\n"
+"i_2( E) = \\frac{(\\mbox{tr } E)^2 - \\mbox{tr } E^2}{2}\\quad\\hspace{3cm}& i_2( C)=4i_2( E)+4i_1( E)+3\\\\\n"
+"i_3( E) = \\det E \\hspace{5cm} &i_3( C) = 8i_3( E) + 4i_2( E) + 2i_1( E) + 1"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:58
@@ -85,7 +88,9 @@ msgid "The derivatives of the invariants with respect to the tensor :math:`E` in
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:60
-msgid "&\\frac{\\partial i_1}{\\partial E}(E;H) = I:H = \\mbox{tr } H\\\\ &\\frac{\\partial i_2}{\\partial E}(E;H) = (i_1( E)I -  E^T):H = (\\mbox{tr }  E)(\\mbox{tr } H) -  E^T:H\\\\ &\\frac{\\partial i_3}{\\partial E}(E;H) = i_3( E)(E^{-T}):H  = (i_2( E)I - i_1( E) E +  E^2):H \\mbox{ in 3D}."
+msgid "&\\frac{\\partial i_1}{\\partial E}(E;H) = I:H = \\mbox{tr } H\\\\\n"
+"&\\frac{\\partial i_2}{\\partial E}(E;H) = (i_1( E)I -  E^T):H = (\\mbox{tr }  E)(\\mbox{tr } H) -  E^T:H\\\\\n"
+"&\\frac{\\partial i_3}{\\partial E}(E;H) = i_3( E)(E^{-T}):H  = (i_2( E)I - i_1( E) E +  E^2):H \\mbox{ in 3D}."
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:66
@@ -93,7 +98,9 @@ msgid "We will write"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:68
-msgid "&\\frac{\\partial i_1}{\\partial E}(E) = I\\\\ &\\frac{\\partial i_2}{\\partial E}(E) = i_1( E)I -  E^T\\\\ &\\frac{\\partial i_3}{\\partial E}(E) = i_3( E)E^{-T}."
+msgid "&\\frac{\\partial i_1}{\\partial E}(E) = I\\\\\n"
+"&\\frac{\\partial i_2}{\\partial E}(E) = i_1( E)I -  E^T\\\\\n"
+"&\\frac{\\partial i_3}{\\partial E}(E) = i_3( E)E^{-T}."
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:74
@@ -109,7 +116,9 @@ msgid "The second derivatives of the invariants are fourth order tensors defined
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:83
-msgid "&\\frac{\\partial^2 i_1}{\\partial E^2}(E) = 0\\\\ &\\frac{\\partial^2 i_2}{\\partial E^2}(E)_{ijkl} = \\delta_{ij}\\delta_{kl} - \\delta_{il}\\delta_{jk} \\\\ &\\frac{\\partial^2 i_3}{\\partial E^2}(E)_{ijkl} = i_3(E) (E^{-1}_{ji}E^{-1}_{lk} - E^{-1}_{jk}E^{-1}_{li})."
+msgid "&\\frac{\\partial^2 i_1}{\\partial E^2}(E) = 0\\\\\n"
+"&\\frac{\\partial^2 i_2}{\\partial E^2}(E)_{ijkl} = \\delta_{ij}\\delta_{kl} - \\delta_{il}\\delta_{jk} \\\\\n"
+"&\\frac{\\partial^2 i_3}{\\partial E^2}(E)_{ijkl} = i_3(E) (E^{-1}_{ji}E^{-1}_{lk} - E^{-1}_{jk}E^{-1}_{li})."
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:90
@@ -117,7 +126,10 @@ msgid "The notation :math:`A:B` denotes the Frobenius product :math:`A:B = \\dis
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:92
-msgid "A:B &= \\mbox{tr }(A^TB) = \\mbox{tr }(AB^T) = \\mbox{tr }(BA^T) = \\mbox{tr }(B^TA),\\\\ A:BC &= B^TA:C,\\\\ A:BC &= AC^T:B,\\\\ \\mbox{tr }(ABC) &= \\mbox{tr }(B^TA^TC^T)"
+msgid "A:B &= \\mbox{tr }(A^TB) = \\mbox{tr }(AB^T) = \\mbox{tr }(BA^T) = \\mbox{tr }(B^TA),\\\\\n"
+"A:BC &= B^TA:C,\\\\\n"
+"A:BC &= AC^T:B,\\\\\n"
+"\\mbox{tr }(ABC) &= \\mbox{tr }(B^TA^TC^T)"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:100
@@ -165,7 +177,8 @@ msgid "because in particular"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:132
-msgid "D E(u;v) &= \\frac{1}{2}({\\nabla u^T}{\\nabla v} + {\\nabla v^T}{\\nabla u} + {\\nabla v^T} + {\\nabla v})\\\\ &= \\frac{1}{2}({\\nabla v^T}(I+{\\nabla u}) + (I+{\\nabla u^T}){\\nabla v})"
+msgid "D E(u;v) &= \\frac{1}{2}({\\nabla u^T}{\\nabla v} + {\\nabla v^T}{\\nabla u} + {\\nabla v^T} + {\\nabla v})\\\\\n"
+"&= \\frac{1}{2}({\\nabla v^T}(I+{\\nabla u}) + (I+{\\nabla u^T}){\\nabla v})"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:137
@@ -177,7 +190,9 @@ msgid "Another way is to consider the static equilibrium which can be written as
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:141
-msgid "-\\mbox{div } \\left((I+{\\nabla u}){\\hat{\\hat{\\sigma}}}\\right) = f."
+msgid "-\\mbox{div } \\left((I+{\\nabla u}){\\hat{\\hat{\\sigma}}}\\right) = f.\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:145
@@ -205,7 +220,8 @@ msgid "and considers the linear part w.r.t. :math:`h`, which is"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:163
-msgid "\\int_\\Omega{\\nabla h}~{\\hat{\\hat{\\sigma}}}( E(u)) : {\\nabla v}  dX +\\\\ \\int_\\Omega \\frac{\\partial^2 W}{\\partial E^2}\\left(\\frac{{\\nabla h}+{\\nabla h^T}+{\\nabla h^T}{\\nabla u}+{\\nabla u^T}{\\nabla h}}{2}\\right) : (I+{\\nabla u}^T){\\nabla v}  dX"
+msgid "\\int_\\Omega{\\nabla h}~{\\hat{\\hat{\\sigma}}}( E(u)) : {\\nabla v}  dX +\\\\\n"
+"\\int_\\Omega \\frac{\\partial^2 W}{\\partial E^2}\\left(\\frac{{\\nabla h}+{\\nabla h^T}+{\\nabla h^T}{\\nabla u}+{\\nabla u^T}{\\nabla h}}{2}\\right) : (I+{\\nabla u}^T){\\nabla v}  dX"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:169
@@ -229,7 +245,9 @@ msgid "``Linearized: Saint-Venant Kirchhoff  law (small deformations)``"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:184
-msgid "{W} &= \\frac{\\lambda}{2}i_1( E)^2 + \\mu i_1( E^2)\\\\ {\\hat{\\hat{\\sigma}}}   &= \\lambda i_1( E)I + 2\\mu E\\\\ \\mathcal{A} &= \\lambda i_1(H)I + \\mu (H + H^T)"
+msgid "{W} &= \\frac{\\lambda}{2}i_1( E)^2 + \\mu i_1( E^2)\\\\\n"
+"{\\hat{\\hat{\\sigma}}}   &= \\lambda i_1( E)I + 2\\mu E\\\\\n"
+"\\mathcal{A} &= \\lambda i_1(H)I + \\mu (H + H^T)"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:191
@@ -249,7 +267,14 @@ msgid "where :math:`c_1`, :math:`c_2` and :math:`d_1` are given coefficients and
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:201
-msgid "j_1(C) &= i_1(C) i_3(C)^{-1/3}\\\\ j_2(C) &= i_2(C) i_3(C)^{-2/3}\\\\ \\frac{\\partial j_1}{\\partial C}(C) &= i_3(C)^{-1/3}\\left(\\frac{\\partial i_1}{\\partial C}(C) - \\frac{i_1(C)}{3i_3(C)} \\frac{\\partial i_3}{\\partial C}(C)\\right)\\\\ \\frac{\\partial j_2}{\\partial C}(C) &= i_3(C)^{-2/3}\\left(\\frac{\\partial i_2}{\\partial C}(C) - \\frac{2i_2(C)}{3i_3(C)} \\frac{\\partial i_3}{\\partial C}(C)\\right)\\\\ \\frac{\\partial^2 j_1}{\\partial C^2}(C) &= i_3(C)^{-1/3}\\left(\\frac{4i_1(C)}{9i_3(C)^2} \\frac{\\partial i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C) - \\frac{1}{3i_3(C)}\\left(\\frac{\\partial i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_1}{\\partial C}(C)\\right.\\right. \\\\ & ~~~~~~~~~~~~~~~~\\left.\\left. + \\frac{\\partial i_1}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C)\\right) - \\frac{i_1(C)}{3i_3(C)} \\frac{\\partial^2 i_3}{\\partial C^2}(C)\\right)\\\\ \\frac{\\partial^2 j_2}{\\partial C^2}(C) &= i_3(C)^{-2/3}\\left(\\frac{\\partial^2 i_2}{\\partial C^2}(C) + \\frac{10i_2(C)}{9i_3(C)^2} \\frac{\\partial i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C) \\right. \\\\ & ~~~~~~~~~~~~~~~~\\left. - \\frac{2}{3i_3(C)}(\\frac{\\partial i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_2}{\\partial C}(C) + \\frac{\\partial i_2}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C)) - \\frac{2i_2(C)}{3i_3(C)} \\frac{\\partial^2 i_3}{\\partial C^2}(C)\\right)"
+msgid "j_1(C) &= i_1(C) i_3(C)^{-1/3}\\\\\n"
+"j_2(C) &= i_2(C) i_3(C)^{-2/3}\\\\\n"
+"\\frac{\\partial j_1}{\\partial C}(C) &= i_3(C)^{-1/3}\\left(\\frac{\\partial i_1}{\\partial C}(C) - \\frac{i_1(C)}{3i_3(C)} \\frac{\\partial i_3}{\\partial C}(C)\\right)\\\\\n"
+"\\frac{\\partial j_2}{\\partial C}(C) &= i_3(C)^{-2/3}\\left(\\frac{\\partial i_2}{\\partial C}(C) - \\frac{2i_2(C)}{3i_3(C)} \\frac{\\partial i_3}{\\partial C}(C)\\right)\\\\\n"
+"\\frac{\\partial^2 j_1}{\\partial C^2}(C) &= i_3(C)^{-1/3}\\left(\\frac{4i_1(C)}{9i_3(C)^2} \\frac{\\partial i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C) - \\frac{1}{3i_3(C)}\\left(\\frac{\\partial i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_1}{\\partial C}(C)\\right.\\right. \\\\\n"
+"& ~~~~~~~~~~~~~~~~\\left.\\left. + \\frac{\\partial i_1}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C)\\right) - \\frac{i_1(C)}{3i_3(C)} \\frac{\\partial^2 i_3}{\\partial C^2}(C)\\right)\\\\\n"
+"\\frac{\\partial^2 j_2}{\\partial C^2}(C) &= i_3(C)^{-2/3}\\left(\\frac{\\partial^2 i_2}{\\partial C^2}(C) + \\frac{10i_2(C)}{9i_3(C)^2} \\frac{\\partial i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C) \\right. \\\\\n"
+"& ~~~~~~~~~~~~~~~~\\left. - \\frac{2}{3i_3(C)}(\\frac{\\partial i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_2}{\\partial C}(C) + \\frac{\\partial i_2}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C)) - \\frac{2i_2(C)}{3i_3(C)} \\frac{\\partial^2 i_3}{\\partial C^2}(C)\\right)"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:212
@@ -257,7 +282,9 @@ msgid "and then"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:214
-msgid "{\\hat{\\hat{\\sigma}}}   &= 2c_1 \\frac{\\partial j_1}{\\partial C}(C) + 2c_2 \\frac{\\partial j_2}{\\partial C}(C)  + 2d_1\\left(1-i_3(C)^{-1/2}\\right)\\frac{\\partial i_3}{\\partial C}(C) \\\\ \\mathcal{B} &= 4 c_1 \\frac{\\partial^2 j_1}{\\partial C^2}(C) + 4c_2 \\frac{\\partial^2 j_2}{\\partial C^2}(C) + 4d_1\\left(\\left(1-i_3(C)^{-1/2}\\right)\\frac{\\partial^2 i_3}{\\partial C^2}(C) + \\frac{1}{2}i_3(C)^{-3/2} \\frac{\\partial i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C)\\right) \\\\ \\mathcal{A}_{ijkl} &= (\\mathcal{B}_{ijkl} + \\mathcal{B}_{jikl})/2"
+msgid "{\\hat{\\hat{\\sigma}}}   &= 2c_1 \\frac{\\partial j_1}{\\partial C}(C) + 2c_2 \\frac{\\partial j_2}{\\partial C}(C)  + 2d_1\\left(1-i_3(C)^{-1/2}\\right)\\frac{\\partial i_3}{\\partial C}(C) \\\\\n"
+"\\mathcal{B} &= 4 c_1 \\frac{\\partial^2 j_1}{\\partial C^2}(C) + 4c_2 \\frac{\\partial^2 j_2}{\\partial C^2}(C) + 4d_1\\left(\\left(1-i_3(C)^{-1/2}\\right)\\frac{\\partial^2 i_3}{\\partial C^2}(C) + \\frac{1}{2}i_3(C)^{-3/2} \\frac{\\partial i_3}{\\partial C}(C) \\otimes \\frac{\\partial i_3}{\\partial C}(C)\\right) \\\\\n"
+"\\mathcal{A}_{ijkl} &= (\\mathcal{B}_{ijkl} + \\mathcal{B}_{jikl})/2"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:220
@@ -265,7 +292,9 @@ msgid "Incompressible material."
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:222
-msgid "{d_1} = 0 \\intertext{with the additional constraint:} i_3( C) = 1"
+msgid "{d_1} = 0\n"
+"\\intertext{with the additional constraint:}\n"
+"i_3( C) = 1"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:228
@@ -277,11 +306,15 @@ msgid "constraint: :math:`\\sigma = -pI \\rm I\\hspace{-0.15em}Rightarrow {\\hat
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:232
-msgid "1 - i_3(\\nabla\\Phi) &= 0 \\\\ -\\int_{\\Omega_0} (\\det\\nabla\\Phi  -1) q  dX &= 0 ~~~ \\forall q"
+msgid "1 - i_3(\\nabla\\Phi) &= 0 \\\\\n"
+"-\\int_{\\Omega_0} (\\det\\nabla\\Phi  -1) q  dX &= 0 ~~~ \\forall q"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:238
-msgid "B &= -\\int_{\\Omega_0} p(\\nabla\\Phi)^{-T} \\det \\nabla\\Phi : \\nabla v  dX \\\\ K &= \\int_{\\Omega_0} \\left( p(\\nabla\\Phi)^{-T}(\\nabla h)^{T}(\\nabla\\Phi)^{-T}\\det\\nabla\\Phi : \\nabla v  dX - p(\\nabla\\Phi)^{-T}(\\det \\nabla\\Phi(\\nabla\\Phi)^{-T}:\\nabla h) : \\nabla v \\right)  dX\\\\ &= \\int_{\\Omega_0} p(\\nabla h^T\\nabla\\Phi^{-T}):(\\nabla\\Phi^{-1}\\nabla v)\\det\\nabla\\Phi dX - \\int_{\\Omega_0} p(\\nabla\\Phi^{-T}:\\nabla h)(\\nabla\\Phi^{-T}:\\nabla v)\\det\\nabla\\Phi dX"
+msgid "B &= -\\int_{\\Omega_0} p(\\nabla\\Phi)^{-T} \\det \\nabla\\Phi : \\nabla v  dX \\\\\n"
+"K &= \\int_{\\Omega_0} \\left( p(\\nabla\\Phi)^{-T}(\\nabla h)^{T}(\\nabla\\Phi)^{-T}\\det\\nabla\\Phi : \\nabla v  dX -\n"
+"p(\\nabla\\Phi)^{-T}(\\det \\nabla\\Phi(\\nabla\\Phi)^{-T}:\\nabla h) : \\nabla v \\right)  dX\\\\\n"
+"&= \\int_{\\Omega_0} p(\\nabla h^T\\nabla\\Phi^{-T}):(\\nabla\\Phi^{-1}\\nabla v)\\det\\nabla\\Phi dX - \\int_{\\Omega_0} p(\\nabla\\Phi^{-T}:\\nabla h)(\\nabla\\Phi^{-T}:\\nabla v)\\det\\nabla\\Phi dX"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:247
@@ -309,7 +342,20 @@ msgid "Since :math:`\\frac{\\partial}{\\partial C} {W}(C) = \\displaystyle\\sum_
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:265
-msgid "\\begin{array}{l} \\frac{\\partial W}{\\partial i_1(C)} = naZ^{n-1} ~~~~\\mbox{with } Z = (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)\\\\ \\frac{\\partial W}{\\partial i_2(C)} = n\\frac{c}{i_3(C)}Z^{n-1}\\\\ \\frac{\\partial W}{\\partial i_3(C)} = n(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-1}\\\\ \\frac{\\partial W^2}{\\partial^2 i_1(C)} = n(n-1)A^2Z^{n-2}\\\\ \\frac{\\partial W^2}{\\partial i_1(C) \\partial i_2(C)} = n(n-1)A\\frac{c}{i_3(C)}Z^{n-2}\\\\ \\frac{\\partial W^2}{\\partial i_1(C) \\partial i_3(C)} = n(n-1)A(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2}\\\\ \\frac{\\partial W^2}{\\partial^2 i_2(C)} = n(n-1)\\frac{c^2}{i_3(C)^2}Z^{n-2}\\\\ \\frac{\\partial W^2}{\\partial i_2(C) \\partial i_3(C)} = n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2} - n\\frac{c^2}{i_3(C)^2}Z^{n-1}\\\\ \\frac{\\partial W^2}{\\partial i_3(C)^2} = n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})^2Z^{n-2} + n(-\\frac{b}{4i_3(C)^{3/2}}+2\\frac{ci_2(C)}{i_3(C)^4})Z^{n-1} \\end{array}"
+msgid "\\begin{array}{l}\n"
+"\\frac{\\partial W}{\\partial i_1(C)} = naZ^{n-1}\n"
+"~~~~\\mbox{with } Z = (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)\\\\\n"
+"\\frac{\\partial W}{\\partial i_2(C)} = n\\frac{c}{i_3(C)}Z^{n-1}\\\\\n"
+"\\frac{\\partial W}{\\partial i_3(C)} = n(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-1}\\\\\n"
+"\\frac{\\partial W^2}{\\partial^2 i_1(C)} = n(n-1)A^2Z^{n-2}\\\\\n"
+"\\frac{\\partial W^2}{\\partial i_1(C) \\partial i_2(C)} = n(n-1)A\\frac{c}{i_3(C)}Z^{n-2}\\\\\n"
+"\\frac{\\partial W^2}{\\partial i_1(C) \\partial i_3(C)} = n(n-1)A(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2}\\\\\n"
+"\\frac{\\partial W^2}{\\partial^2 i_2(C)} = n(n-1)\\frac{c^2}{i_3(C)^2}Z^{n-2}\\\\\n"
+"\\frac{\\partial W^2}{\\partial i_2(C) \\partial i_3(C)} = n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2} - n\\frac{c^2}{i_3(C)^2}Z^{n-1}\\\\\n"
+"\\frac{\\partial W^2}{\\partial i_3(C)^2} = n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})^2Z^{n-2} + n(-\\frac{b}{4i_3(C)^{3/2}}+2\\frac{ci_2(C)}{i_3(C)^4})Z^{n-1}\n"
+"\\end{array}\n"
+"\n"
+""
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:280

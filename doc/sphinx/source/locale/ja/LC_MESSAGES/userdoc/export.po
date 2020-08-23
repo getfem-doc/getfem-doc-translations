@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2004-2018 GetFEM++ project
-# This file is distributed under the same license as the GetFEM++ package.
+# Copyright (C) 2004-2020 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM++ 5.3\n"
+"Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-05 00:16+0000\n"
+"POT-Creation-Date: 2020-08-23 12:25+0000\n"
 "PO-Revision-Date: 2018-07-16 07:07+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -35,8 +35,8 @@ msgid "Scilab, Octave or Matlab, with the interface."
 msgstr "インターフェースを使用した Scilab 、 Octave または Matlab による出力。"
 
 #: ../source/userdoc/export.rst:15
-msgid "The open-source Paraview or Mayavi or any other VTK files viewer."
-msgstr "オープンソースのParaviewまたはMayaviやその他のVTKファイルビューア"
+msgid "The open-source Paraview or Mayavi or any other VTK/VTU file viewer."
+msgstr "オープンソースのParaviewまたはMayaviやその他のVTK/VTUファイルビューア"
 
 #: ../source/userdoc/export.rst:16
 msgid "The open-source OpenDX program."
@@ -75,22 +75,29 @@ msgstr "詳細については、getfem-matlabインタフェースのドキュ�
 
 #: ../source/userdoc/export.rst:46
 msgid ""
-"Two other file formats are supported for export: the `VTK`_ file format, the"
-" `OpenDX`_ file format and the `Gmsh`_ post-processing file format. Both can"
-" export either a |gf_m| or |gf_mf| , but also the more versatile |gf_smsl|."
+"Four file formats are supported for export: the `VTK`_ and `VTU`_ file "
+"formats, the`OpenDX`_ file format and the `Gmsh`_ post-processing file "
+"format. All four can be used for exporting either a |gf_m| or |gf_mf|, and "
+"all except `VTU`_ can be used for exporting the more versatile |gf_smsl|. "
+"The corresponding four classes: |gf_vtk_export|, |gf_vtu_export|, "
+"|gf_dx_export| and |gf_pos_export| are contained in the file "
+":file:`getfem/getfem_export.h`."
 msgstr ""
-"他の2つのファイルフォーマット、すなわちVTKファイルフォーマット、 `OpenDX`_ ファイル形式と `Gmsh`_ 後処理ファイル形式の両方では、"
-" |gf_m| または |gf_mf| のどちらかを出力するだけでなく、より汎用性の高い |gf_smsl| を出力します。"
+"書き出しでサポートされているファイル形式は、 `VTK`_ と `VTU`_ ファイル形式、 `OpenDX`_ ファイル形式、 `Gmsh`_ "
+"ポストプロセスファイル形式の4つです。これら4つのクラスはすべて |gf_m| または |gf_mf| のいずれかのエクスポートに使用でき、 "
+"`VTU`_ を除くすべてのクラスは、より汎用性の高い |gf_smsl| のエクスポートに使用できます。対応する4つのクラス、 "
+"|gf_vtk_export| 、 |gf_vtu_export| 、 |gf_dx_export| 、および |gf_pos_export| "
+"は、ファイル :file:`getfem/getfem_export.h` に含まれています。"
 
-#: ../source/userdoc/export.rst:50
+#: ../source/userdoc/export.rst:54
 msgid "Examples of use can be found in the examples of the tests directory."
 msgstr "使用例はtestsディレクトリの例にあります。"
 
-#: ../source/userdoc/export.rst:55
+#: ../source/userdoc/export.rst:59
 msgid "Producing mesh slices"
 msgstr "メッシュスライスの生成"
 
-#: ../source/userdoc/export.rst:57
+#: ../source/userdoc/export.rst:61
 msgid ""
 "|gf| provides \"slicers\" objects which are dedicated to generating post-"
 "treatment data from meshes and solutions. These slicers, defined in the file"
@@ -111,7 +118,7 @@ msgstr ""
 "オブジェクトに格納することができます（ :file:`getfem/getfem_mesh_slice.h` を参照 ）。 |smsl| "
 "オブジェクトは高速補間を伴う非等角メッシュ上のP1不連続FEMとして、スライスはセグメント、3角形、4面体で作られているので、元のメッシュの凸包は常に単純化されています。"
 
-#: ../source/userdoc/export.rst:69
+#: ../source/userdoc/export.rst:73
 msgid ""
 "All slicer operation inherit from |gf_sl_a|, it is very easy to create a new"
 " slicer. Example of slicers are (some of them use a |gf_sl_ddb| which is "
@@ -120,21 +127,21 @@ msgstr ""
 "すべてのスライサー操作は |gf_sl_a| から継承しています。新しいスライス操作を作成するのは非常に簡単です。スライサーの例は（いくつかは "
 "|gf_sl_ddb| を使用しています。これは |mf| ``mf`` と |mf| 上のフィールド ``U`` への単なる参照です）。"
 
-#: ../source/userdoc/export.rst:75
+#: ../source/userdoc/export.rst:79
 msgid "empty slicer."
 msgstr "空のスライサー"
 
-#: ../source/userdoc/export.rst:79
+#: ../source/userdoc/export.rst:83
 msgid "extract the boundary of a mesh."
 msgstr "メッシュの境界を抽出します"
 
-#: ../source/userdoc/export.rst:83
+#: ../source/userdoc/export.rst:87
 msgid ""
 "apply a deformation to the mesh , the deformation field is defined on a "
 "|mf|."
 msgstr "変形をメッシュに適用する、 |mf| 上の変形フィールド"
 
-#: ../source/userdoc/export.rst:87
+#: ../source/userdoc/export.rst:91
 msgid ""
 "cut the mesh with a half space (if ``orient`` = -1 or +1), or a plane (if "
 "``orient`` = 0), ``x0`` being a node of the plane, and ``n`` being a normal "
@@ -143,7 +150,7 @@ msgstr ""
 "半分の体積（ ``orient`` = -1または+1の場合）または面（ ``orient`` = 0の場合）でメッシュをカットする、 ``x0`` "
 "は面節点で、 ``n`` は面の法線。"
 
-#: ../source/userdoc/export.rst:93
+#: ../source/userdoc/export.rst:97
 msgid ""
 "cut with the interior (``orient``=-1), boundary (``orient``=0) or exterior "
 "(``orient``=+1) or a sphere of center ``x0`` and radius ``R``."
@@ -151,13 +158,13 @@ msgstr ""
 "中心 ``x0`` と半径 ``R`` の内部（ ``orient`` = -1）、境界（ ``orient`` = 0）または外部 （ "
 "``orient`` = + 1）でカットします。"
 
-#: ../source/userdoc/export.rst:98
+#: ../source/userdoc/export.rst:102
 msgid ""
 "slice with the interior/boundary/exterior of a cylinder of axis ``(x0,x1)`` "
 "and radius ``R``."
 msgstr "軸（x0、x1）の半径 ``R`` の円柱の内側/境界/外側のスライス。"
 
-#: ../source/userdoc/export.rst:103
+#: ../source/userdoc/export.rst:107
 msgid ""
 "cut with the isosurface defined by the scalar field ``mfU`` and ``val``. "
 "Keep only simplices where ::math:`u(x)<val` (``orient``=-1), "
@@ -167,36 +174,36 @@ msgstr ""
 ":math:`u(x)<val` ( ``orient`` =-1), :math:`u(x)=val` ( ``orient=0`` または "
 ":math:`u(x)>val` )。"
 
-#: ../source/userdoc/export.rst:109
+#: ../source/userdoc/export.rst:113
 msgid "cut the convexes with the convexes of the mesh ``m2``."
 msgstr "メッシュ ``m2`` の凸包で凸包をカットします。"
 
-#: ../source/userdoc/export.rst:113
+#: ../source/userdoc/export.rst:117
 msgid "merges the output of two slicer operations."
 msgstr "2つのスライサー操作の出力をマージします。"
 
-#: ../source/userdoc/export.rst:117
+#: ../source/userdoc/export.rst:121
 msgid "intersect the output of two slicer operations."
 msgstr "2つのスライサー操作の出力を交差させます。"
 
-#: ../source/userdoc/export.rst:121
+#: ../source/userdoc/export.rst:125
 msgid "return the complementary of a slicer operation."
 msgstr "スライサー操作の補完を返します。"
 
-#: ../source/userdoc/export.rst:125
+#: ../source/userdoc/export.rst:129
 msgid ""
 "slicer whose side-effect is to build the mesh ``edges_m`` with the edges of "
 "the sliced mesh."
 msgstr "そのスライスメッシュのエッジでメッシュ ``edges_m`` を構築します。"
 
-#: ../source/userdoc/export.rst:130
+#: ../source/userdoc/export.rst:134
 msgid ""
 "in some (rare) occasions , it might be useful to build a mesh from a slice. "
 "Note however that there is absolutely no guaranty that the mesh will be "
 "conformal (although it is often the case)."
 msgstr "ある種の（まれな）場合には、スライスからメッシュを構築すると便利かもしれません。しかし、（しばしばそうですが）メッシュが等角になります。 "
 
-#: ../source/userdoc/export.rst:136
+#: ../source/userdoc/export.rst:140
 msgid ""
 "record the output of the slicing operation into a |smsl| object. Note that "
 "it is often more convenient to use the ``stored_mesh_slice::build(...)`` "
@@ -205,11 +212,11 @@ msgstr ""
 "スライシング操作の出力を |smsl| オブジェクトに記録します。 ``stored_mesh_slice::build(...)`` "
 "を使うほうが同じ結果を得るには便利なことに留意してください。"
 
-#: ../source/userdoc/export.rst:142
+#: ../source/userdoc/export.rst:146
 msgid "shrink or expand each convex with respect to its gravity center."
 msgstr "重心に対してそれぞれの凸包を縮小または拡大します。"
 
-#: ../source/userdoc/export.rst:144
+#: ../source/userdoc/export.rst:148
 msgid ""
 "In order to apply these slicers, a ``getfem::mesh_slicer(mesh&)`` object "
 "should be created, and the |gf_sl_a| are then stacked with "
@@ -225,7 +232,7 @@ msgstr ""
 "``mesh_slicer::exec(int nrefine)`` （または ``mesh_slicer::exec(int nrefine, "
 "const mesh_region&cvlst)`` により、メッシュのサブ集合、またはその境界などに対する操作などを行うことができます）。"
 
-#: ../source/userdoc/export.rst:152
+#: ../source/userdoc/export.rst:156
 msgid ""
 "The ``nrefine`` parameter is very important, as the \"precision\" of the "
 "final result will depend on it: if the data that is represented on the final"
@@ -243,13 +250,13 @@ msgstr ""
 "  ``nrefine=1`` が正しい選択ですが、P2、P3、非線形変換などでは、スライス操作中に元のメッシュの各凸包面を改良する方が良いです。 "
 "ほとんどの視覚化プログラム（gmsh、mayavi、opendx、scilab、octave、matlabなど）は、非常に単純な構造（線形セグメント/3角形/4面体にP1不連続データを持つ）上に有限要素フィールドを正確に表現することができます。"
 
-#: ../source/userdoc/export.rst:161
+#: ../source/userdoc/export.rst:165
 msgid ""
 "Example of use (cut the boundary of a mesh ``m`` with a half-space, and save"
 " the result into a |smsl|)::"
 msgstr "使用例（メッシュ ``m`` の境界を半分にカットし、結果を |smsl| に保存します）::"
 
-#: ../source/userdoc/export.rst:174
+#: ../source/userdoc/export.rst:178
 msgid ""
 "In order to build a |gf_smsl| object during the slicing operation, the "
 "``stored_mesh_slice::build()`` method is often more convenient than using "
@@ -258,68 +265,57 @@ msgstr ""
 "スライシング操作中に |gf_smsl| オブジェクトを構築するための、 ``stored_mesh_slice::build()`` "
 "メソッドは明らかに ``slicer_build_stored_mesh_slice`` スライサーを使うよりも便利です。"
 
-#: ../source/userdoc/export.rst:181
+#: ../source/userdoc/export.rst:185
 msgid ""
 "The simplest way to use these slices is to export them to |vtk|, |opendx|, "
-"or |gmsh|. The file :file:`getfem/getfem_export.h` contains three classes: "
-"|gf_vtk_export|, |gf_dx_export| and |gf_pos_export|."
-msgstr ""
-"これらのスライスを使用する最も簡単な方法は、それらをvtk、opendx、またはgmshに出力することです。 "
-":file:`getfem/getfem_export.h` には3つのクラスがあります： |gf_vtk_export| 、 "
-"|gf_dx_export| 、および |gf_pos_export| です。"
+"or |gmsh|."
+msgstr "これらのスライスを使用する最も簡単な方法は、 |vtk| 、 |opendx| 、または |gmsh| に書き出すことです。"
 
-#: ../source/userdoc/export.rst:187
-msgid "Exporting |m|, |mf| or slices to VTK"
-msgstr "|m| か |mf| またはスライスをVTKに出力します"
+#: ../source/userdoc/export.rst:190
+msgid "Exporting |m|, |mf| or slices to VTK/VTU"
+msgstr "VTK/VTUへの |m| 、 |mf| またはスライスのエクスポート"
 
-#: ../source/userdoc/export.rst:189
+#: ../source/userdoc/export.rst:192
 msgid ""
-"First, it is important to know the limitation of VTK data files: each file "
-"can contain only one mesh, with at most one scalar field and one vector "
-"field and one tensor field on this mesh (in that order). VTK files can "
-"handle data on segment, triangles, quadrangles, tetrahedrons and "
-"hexahedrons. Although quadratic triangles, segments etc are said to be "
-"supported, it is just equivalent to using ``nrefine=2`` when building a "
-"slice. VTK data file do support meshes with more than one type of element "
-"(i.e. meshes with triangles and quadrangles, for example)."
-msgstr ""
-"まず、VTKデータファイルの制限を知っておくことが重要です。各ファイルには、1つのメッシュだけが含まれ、このメッシュにはスカラーフィールドが1つ、ベクトルフィールドが1つとテンソルフィールドが1つ（この順序で）含まれます。VTKファイルは、セグメント、3角形、4角形、4面体、6面体のデータを扱うことができます。"
-" 2次の3角形、セグメントなどはサポートされていると言われていますが、スライスを構築するときは ``nrefine=2`` を使うのと同じです。 "
-"VTKデータファイルは、複数のタイプの要素（例えば、3角形や4角形などのメッシュ）を使用してメッシュをサポートしています。"
+"VTK/VTU files can handle data on segment, triangles, quadrangles, "
+"tetrahedrons and hexahedrons of first or second degree."
+msgstr "VTK/VTUファイルは、1次または2次のセグメント、三角形、四角形、四面体、および六面体のデータを処理できます。"
 
-#: ../source/userdoc/export.rst:198
+#: ../source/userdoc/export.rst:195
 msgid "For example, supposing that a |smsl| ``sl`` has already been built::"
 msgstr "例えば、 |smsl| の ``sl`` が既にビルドされていると仮定します。"
 
-#: ../source/userdoc/export.rst:207
+#: ../source/userdoc/export.rst:204
 msgid ""
 "In this example, the fields ``P`` and ``U`` are interpolated on the slice "
-"nodes, and then written into the VTK field. The vector fields should always "
-"be written after the scalar fields (and the tensor fields should be written "
-"last)."
-msgstr ""
-"この例では、スライス ``P`` と ``U`` のフィールドは、スライス "
-"節点に書き込まれ、VTKフィールドに書き込まれます。ベクトルフィールドは常にスカラーフィールドの後に書かれます（テンソルフィールドは最終です）。"
+"nodes and then written into the VTK field."
+msgstr "この例では、スライス ``P`` と ``U`` のフィールドは、スライス 節点に書き込まれ、VTKフィールドに書き込まれます。"
 
-#: ../source/userdoc/export.rst:211
-msgid "It is also possible to export a |mf| without having to build a slice::"
-msgstr "スライスを構築せずにmfを出力することもできます。"
-
-#: ../source/userdoc/export.rst:220
+#: ../source/userdoc/export.rst:207
 msgid ""
-"Note however that with this approach, the ``vtk_export`` will map each "
-"convex/fem of ``mfu`` to a VTK element type. As VTK does not handle elements"
-" of degree greater than 2, there will be a loss of precision for higher "
-"degree FEMs."
-msgstr ""
-"しかし、このアプローチでは ``vtk_export`` はそれぞれの VTK要素型に ``mfu`` "
-"の凸面/有限要素法を指定します。そのため、VTKが2次より次数の大きいの要素を扱わない場合、より高い次元の有限要素法の精度が失われます。"
+"It is also possible to export a |mf| ``mfu`` without having to build a "
+"slice::"
+msgstr "スライスを構築せずに |mf| ``mfu`` を出力することもできます。"
 
-#: ../source/userdoc/export.rst:225
+#: ../source/userdoc/export.rst:216
+msgid "An |mf| ``mfu`` can also be exported in the VTU format with::"
+msgstr "|mf| ``mfu`` は以下のようにVTUフォーマットでエクスポートすることもできます::"
+
+#: ../source/userdoc/export.rst:224
+msgid ""
+"Note however that when exporing a |mf| with ``vtk_export`` or ``vtu_export``"
+" each convex/fem of ``mfu`` will be mapped to a VTK/VTU element type. As "
+"VTK/VTU does not handle elements of degree greater than 2, there will be a "
+"loss of precision for higher degree FEMs."
+msgstr ""
+"ただし、 ``vtk_export`` または ``vtu_export`` を使用して |mf| を出力する場合、 ``mfu`` "
+"の各凸包/femはVTK/VTU要素型にマップされることに注意してください。VTK/VTUは2より大きい次数の要素を処理しないので、より高い次数のFEMのための精度の損失があります。"
+
+#: ../source/userdoc/export.rst:230
 msgid "Exporting |m|, |mf| or slices to OpenDX"
 msgstr "|m| か |mf| またはスライスをOpenDXに出力する"
 
-#: ../source/userdoc/export.rst:227
+#: ../source/userdoc/export.rst:232
 msgid ""
 "The OpenDX data file is more versatile than the VTK one. It is able to store"
 " more that one mesh, any number of fields on these meshes etc. However, it "
@@ -333,11 +329,11 @@ msgstr ""
 "OpenDXのデータファイルはVTKよりも汎用性があり、より多くのメッシュ、これらのメッシュの任意の数のフィールドなどを格納することができます。しかし、それが可能なのは1次と0次の要素（セグメント、3角形、4面体、4角形など）です。そして、それぞれのメッシュは1つのタイプしか作成できません。要素の3角形と4角形を同じオブジェクトに混在させることはできません。その理由から、（複雑な要素が単純化されている）"
 " |gf_smsl| オブジェクトを |gf_mf| および |gf_m| オブジェクトよりも使用します。"
 
-#: ../source/userdoc/export.rst:236
+#: ../source/userdoc/export.rst:241
 msgid "The basic usage is very similar to |gf_vtk_export|::"
 msgstr "基本的な使い方は |gf_vtk_export| と非常に似ています。"
 
-#: ../source/userdoc/export.rst:242
+#: ../source/userdoc/export.rst:247
 msgid ""
 "Moreover, |gf_dx_export| is able to reopen a '.dx' file and append new data "
 "into it. Hence it is possible, if many time-steps are to be saved, to view "
@@ -347,13 +343,13 @@ msgstr ""
 "さらに、 |gf_dx_export| は '.dx' "
 "ファイルを再オープンして新しいデータを追加することができます。そこで、多くの時間ステップを保存すれば、OpenDXの中間結果を確認することができます。コンストラクタの雛形は次の通りです。"
 
-#: ../source/userdoc/export.rst:249
+#: ../source/userdoc/export.rst:254
 msgid ""
 "An example of use, with multiple time steps (taken from "
 ":file:`tests/dynamic_friction.cc`)::"
 msgstr "複数の時間ステップを持つ使用例（ :file:`tests/dynamic_friction.cc` を参照）は次の通りです。 "
 
-#: ../source/userdoc/export.rst:270
+#: ../source/userdoc/export.rst:275
 msgid ""
 "In this example, an OpenDX \"time series\" is created, for each time step, "
 "two data fields are saved: a vector field called \"deformation\", and a "
@@ -362,7 +358,7 @@ msgstr ""
 "この例では、時間ステップごとにOpenDXの "
 "\"時系列\"が作成され、2つのデータフィールドが保存されます。\"deformation\"と呼ばれるベクトルフィールドと、\"von_mises_stress\"というスカラーフィールドです。"
 
-#: ../source/userdoc/export.rst:274
+#: ../source/userdoc/export.rst:279
 msgid ""
 "Note also that the ``dx_export::exporting_mesh_edges()`` function has been "
 "called. It implies that for each mesh exported, the edges of the original "
@@ -373,7 +369,7 @@ msgstr ""
 "``dx_export::exporting_mesh_edges()`` 関数はこれは、出力されたメッシュごとに、オリジナルの "
 "メッシュも（別のOpenDXメッシュに）出力されます。この例では、OpenDXは4つのデータフィールドにアクセスします。\"deformation\"、\"deformation_edges\"、\"von_mises_stress\"と\"von_mises_stress_edges\"。"
 
-#: ../source/userdoc/export.rst:280
+#: ../source/userdoc/export.rst:285
 msgid ""
 "The ``tests/dynamic_friction.net`` is an example of OpenDX program for these"
 " data (run it with ``cd tests; dx -edit dynamic_friction.net`` , menu "

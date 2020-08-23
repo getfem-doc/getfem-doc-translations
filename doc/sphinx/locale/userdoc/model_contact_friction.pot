@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2004-2018 GetFEM++ project
-# This file is distributed under the same license as the GetFEM++ package.
+# Copyright (C) 2004-2020 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM++ 5.3\n"
+"Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-05 00:16+0000\n"
+"POT-Creation-Date: 2020-08-23 12:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,7 +57,9 @@ msgid "where :math:`\\lambda_N^i` is the equivalent nodal contact force on :math
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:39
-msgid "\\|\\lambda_T^i\\| \\le -{\\mathscr F} \\lambda_N^i,  \\lambda_T^i = {\\mathscr F} \\lambda_N^i \\frac{\\dot{u}_T}{\\|\\dot{u}_T\\|} ~~~ \\text{ when } \\dot{u}_T \\ne 0,"
+msgid "\\|\\lambda_T^i\\| \\le -{\\mathscr F} \\lambda_N^i,\n"
+"\n"
+"\\lambda_T^i = {\\mathscr F} \\lambda_N^i \\frac{\\dot{u}_T}{\\|\\dot{u}_T\\|} ~~~ \\text{ when } \\dot{u}_T \\ne 0,"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:45
@@ -81,7 +83,9 @@ msgid "Given an augmentation parameter :math:`r`, the contact and friction condi
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:57
-msgid "\\frac{1}{r}(\\lambda_N^i - P_{]-\\infty, 0]}(\\lambda_N^i - r (u_N(a_i) - \\text{gap}_i))) = 0,  \\frac{1}{r}(\\lambda_T^i - P_{{\\mathscr B}(-{\\mathscr F}P_{]-\\infty, 0]}(\\lambda_N^i - r(u_N(a_i) - \\text{gap}_i))}(\\lambda_T^i - r \\dot{u}_T(a_i))) = 0,"
+msgid "\\frac{1}{r}(\\lambda_N^i - P_{]-\\infty, 0]}(\\lambda_N^i - r (u_N(a_i) - \\text{gap}_i))) = 0,\n"
+"\n"
+"\\frac{1}{r}(\\lambda_T^i - P_{{\\mathscr B}(-{\\mathscr F}P_{]-\\infty, 0]}(\\lambda_N^i - r(u_N(a_i) - \\text{gap}_i))}(\\lambda_T^i - r \\dot{u}_T(a_i))) = 0,"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:63
@@ -93,7 +97,9 @@ msgid "Suppose now that you approximate a linearized elasticity problem submitte
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:68
-msgid "u_N(a_i) = (B_N U)_i,  (\\dot{u}_T(a_i))_k = (B_T \\dot{U})_{(d-1)(i-1)+k},"
+msgid "u_N(a_i) = (B_N U)_i,\n"
+"\n"
+"(\\dot{u}_T(a_i))_k = (B_T \\dot{U})_{(d-1)(i-1)+k},"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:74
@@ -101,7 +107,11 @@ msgid "where :math:`d` is the dimension of the domain and :math:`k = 1..d-1`. Th
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:76
-msgid "K U = L + B_N^T \\lambda_N + B_T^T \\lambda_T,  -\\frac{1}{r\\alpha_i}(\\lambda_N^i - P_{]-\\infty, 0]}(\\lambda_N^i - \\alpha_i r ((B_N U)_i - \\text{gap}_i))) = 0, ~~ i = 1..N_c,  -\\frac{1}{r\\alpha_i}(\\lambda_T^i - P_{{\\mathscr B}(-{\\mathscr F}P_{]-\\infty, 0]}(\\lambda_N^i - \\alpha_i r ((B_N U)_i - \\text{gap}_i))))}(\\lambda_T^i - \\alpha_i r (B_T U - B_T U^{0})_i)) = 0, ~~ i = 1..N_c,"
+msgid "K U = L + B_N^T \\lambda_N + B_T^T \\lambda_T,\n"
+"\n"
+"-\\frac{1}{r\\alpha_i}(\\lambda_N^i - P_{]-\\infty, 0]}(\\lambda_N^i - \\alpha_i r ((B_N U)_i - \\text{gap}_i))) = 0, ~~ i = 1..N_c,\n"
+"\n"
+"-\\frac{1}{r\\alpha_i}(\\lambda_T^i - P_{{\\mathscr B}(-{\\mathscr F}P_{]-\\infty, 0]}(\\lambda_N^i - \\alpha_i r ((B_N U)_i - \\text{gap}_i))))}(\\lambda_T^i - \\alpha_i r (B_T U - B_T U^{0})_i)) = 0, ~~ i = 1..N_c,"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:84
@@ -161,7 +171,11 @@ msgid "Finally, the expression of the direct nodal contact condition are recover
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:123
-msgid "K U = L + B_N^T \\lambda_N + B_T^T \\lambda_T,  -\\frac{1}{r\\alpha_i}(\\lambda_N^i - P_{]-\\infty, 0]}(\\lambda_N^i - \\alpha_i r ((B_N U)_i - \\text{gap}_i))) = 0, ~~ i = 1..N_c,  -\\frac{1}{r\\alpha_i}(\\lambda_T^i - P_{{\\mathscr B}(-{\\mathscr F}P_{]-\\infty, 0]}(\\lambda_N^i - \\alpha_i r ((B_N U)_i - \\text{gap}_i)))}(\\lambda_T^i - \\alpha_i r (B_T U - B_T U^{0})_i)) = 0, ~~ i = 1..N_c,"
+msgid "K U = L + B_N^T \\lambda_N + B_T^T \\lambda_T,\n"
+"\n"
+"-\\frac{1}{r\\alpha_i}(\\lambda_N^i - P_{]-\\infty, 0]}(\\lambda_N^i - \\alpha_i r ((B_N U)_i - \\text{gap}_i))) = 0, ~~ i = 1..N_c,\n"
+"\n"
+"-\\frac{1}{r\\alpha_i}(\\lambda_T^i - P_{{\\mathscr B}(-{\\mathscr F}P_{]-\\infty, 0]}(\\lambda_N^i - \\alpha_i r ((B_N U)_i - \\text{gap}_i)))}(\\lambda_T^i - \\alpha_i r (B_T U - B_T U^{0})_i)) = 0, ~~ i = 1..N_c,"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:131
@@ -189,7 +203,8 @@ msgid "where :math:`d` is the dimension of the problem and :math:`\\psi_i` still
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:150
-msgid "\\lambda_N^h = \\lambda^h \\cdot n, ~~~~ \\lambda_T^h = \\lambda^h - \\lambda_N^h n, ~~~~ u_N^h = u^h \\cdot n, ~~~~ u_T^h = u^h - u_N^h n,"
+msgid "\\lambda_N^h = \\lambda^h \\cdot n, ~~~~ \\lambda_T^h = \\lambda^h - \\lambda_N^h n, ~~~~\n"
+"u_N^h = u^h \\cdot n, ~~~~ u_T^h = u^h - u_N^h n,"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:155
@@ -225,7 +240,11 @@ msgid "GetFEM bricks implement four versions of the contact condition derived fr
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:178
-msgid "\\left\\{\\begin{array}{l} a(u^h, v^h) + \\displaystyle \\int_{\\Gamma_c} \\lambda^h \\cdot v^h d\\Gamma = \\ell(v^h) ~~~~ \\forall v^h \\in V^h, \\\\ \\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c} (\\lambda^h_N + (\\lambda^h_N - r(u^h_N-gap))_-)\\mu^h_N d\\Gamma \\\\ ~~~~~~~~~~\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c} (\\lambda^h_T -P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)))\\cdot \\mu^h_T d\\Gamma = 0 ~~~~ \\forall \\mu^h \\in W^h, \\end{array}\\right."
+msgid "\\left\\{\\begin{array}{l}\n"
+"a(u^h, v^h) + \\displaystyle \\int_{\\Gamma_c} \\lambda^h \\cdot v^h d\\Gamma = \\ell(v^h) ~~~~ \\forall v^h \\in V^h, \\\\\n"
+"\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c} (\\lambda^h_N + (\\lambda^h_N - r(u^h_N-gap))_-)\\mu^h_N d\\Gamma \\\\\n"
+"~~~~~~~~~~\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c} (\\lambda^h_T -P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)))\\cdot \\mu^h_T d\\Gamma = 0 ~~~~ \\forall \\mu^h \\in W^h,\n"
+"\\end{array}\\right."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:186
@@ -233,7 +252,15 @@ msgid "where :math:`a(\\cdot, \\cdot)` and :math:`\\ell(v)` represent the remain
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:188
-msgid "\\left\\{\\begin{array}{l} \\cdots - \\displaystyle \\int_{\\Gamma_c} \\delta_{\\lambda} \\cdot v d\\Gamma = \\cdots  ~~~~ \\forall v^h \\in V^h, \\\\ \\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c}(1-H(r(u^h_N-gap)-\\lambda_N))\\delta_{\\lambda_N}\\mu^h_N d\\Gamma \\displaystyle -\\int_{\\Gamma_c}H(r(u^h_N-gap)-\\lambda_N)\\delta_{u_N}\\mu^h_N d\\Gamma \\\\ ~~~~~~\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c}(\\delta_{\\lambda_T} - D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{\\lambda_T})\\cdot\\mu^h_T d\\Gamma \\\\ ~~~~~~\\displaystyle -\\int_{\\Gamma_c}\\alpha D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{u_T}\\cdot\\mu^h_T d\\Gamma \\\\ ~~~~~~ \\displaystyle +\\int_{\\Gamma_c}({\\mathscr F} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{u_N})\\cdot\\mu^h_T d\\Gamma \\\\ ~~~~~~ \\displaystyle -\\int_{\\Gamma_c}(\\frac{\\mathscr F}{r} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{\\lambda_N})\\cdot\\mu^h_T d\\Gamma = \\cdots ~~~ \\forall \\mu^h \\in W^h, \\end{array}\\right."
+msgid "\\left\\{\\begin{array}{l}\n"
+"\\cdots - \\displaystyle \\int_{\\Gamma_c} \\delta_{\\lambda} \\cdot v d\\Gamma = \\cdots  ~~~~ \\forall v^h \\in V^h, \\\\\n"
+"\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c}(1-H(r(u^h_N-gap)-\\lambda_N))\\delta_{\\lambda_N}\\mu^h_N d\\Gamma\n"
+"\\displaystyle -\\int_{\\Gamma_c}H(r(u^h_N-gap)-\\lambda_N)\\delta_{u_N}\\mu^h_N d\\Gamma \\\\\n"
+"~~~~~~\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c}(\\delta_{\\lambda_T} - D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{\\lambda_T})\\cdot\\mu^h_T d\\Gamma \\\\\n"
+"~~~~~~\\displaystyle -\\int_{\\Gamma_c}\\alpha D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{u_T}\\cdot\\mu^h_T d\\Gamma \\\\\n"
+"~~~~~~ \\displaystyle +\\int_{\\Gamma_c}({\\mathscr F} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{u_N})\\cdot\\mu^h_T d\\Gamma \\\\\n"
+"~~~~~~ \\displaystyle -\\int_{\\Gamma_c}(\\frac{\\mathscr F}{r} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{\\lambda_N})\\cdot\\mu^h_T d\\Gamma = \\cdots ~~~ \\forall \\mu^h \\in W^h,\n"
+"\\end{array}\\right."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:200
@@ -245,7 +272,12 @@ msgid "The second version corresponds to the \"symmetric\" version. It is in fac
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:205
-msgid "\\left\\{\\begin{array}{l} a(u^h, v^h) + \\displaystyle \\int_{\\Gamma_c} (\\lambda^h_N - r(u^h_N-gap))_- v^h_N d\\Gamma \\\\ ~~~~~~ - \\displaystyle \\int_{\\Gamma_c} P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)))\\cdot v^h_T d\\Gamma = \\ell(v^h) ~~~~ \\forall v^h \\in V^h, \\\\ \\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c} (\\lambda^h_N + (\\lambda^h_N - r(u^h_N-gap))_-)\\mu^h_N d\\Gamma \\\\ ~~~~~~~~~~\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c} (\\lambda^h_T -P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)))\\cdot \\mu^h_T d\\Gamma = 0 ~~~~ \\forall \\mu^h \\in W^h, \\end{array}\\right."
+msgid "\\left\\{\\begin{array}{l}\n"
+"a(u^h, v^h) + \\displaystyle \\int_{\\Gamma_c} (\\lambda^h_N - r(u^h_N-gap))_- v^h_N d\\Gamma \\\\\n"
+"~~~~~~ - \\displaystyle \\int_{\\Gamma_c} P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)))\\cdot v^h_T d\\Gamma = \\ell(v^h) ~~~~ \\forall v^h \\in V^h, \\\\\n"
+"\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c} (\\lambda^h_N + (\\lambda^h_N - r(u^h_N-gap))_-)\\mu^h_N d\\Gamma \\\\\n"
+"~~~~~~~~~~\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c} (\\lambda^h_T -P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)))\\cdot \\mu^h_T d\\Gamma = 0 ~~~~ \\forall \\mu^h \\in W^h,\n"
+"\\end{array}\\right."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:214
@@ -254,7 +286,19 @@ msgid "and the tangent system:"
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:216
-msgid "\\left\\{\\begin{array}{l} \\cdots + \\displaystyle \\int_{\\Gamma_c} rH(r(u^h_N-gap)-\\lambda_N)\\delta_{u_N} v_N -  H(r(u^h_N-gap)-\\lambda_N)\\delta_{\\lambda_N} v_N d\\Gamma \\\\ ~~~~~~+ \\displaystyle \\int_{\\Gamma_c} r \\alpha D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)) \\delta_{u_T}\\cdot v^h_T d\\Gamma \\\\ ~~~~~~- \\displaystyle \\int_{\\Gamma_c} D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)) \\delta_{\\lambda_T}\\cdot v^h_T d\\Gamma \\\\ ~~~~~~- \\displaystyle \\int_{\\Gamma_c} (r{\\mathscr F} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)) \\delta_{u_N})\\cdot v^h_T d\\Gamma \\\\ ~~~~~~- \\displaystyle \\int_{\\Gamma_c} ({\\mathscr F} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)) \\delta_{\\lambda_N})\\cdot v^h_T d\\Gamma = \\cdots  ~~~~ \\forall v^h \\in V^h, \\\\ \\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c}(1-H(r(u^h_N-gap)-\\lambda_N))\\delta_{\\lambda_N}\\mu^h_N d\\Gamma \\displaystyle -\\int_{\\Gamma_c}H(r(u^h_N-gap)-\\lambda_N)\\delta_{u_N}\\mu^h_N d\\Gamma \\\\ ~~~~~~\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c}(\\delta_{\\lambda_T} - D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{\\lambda_T})\\cdot\\mu^h_T d\\Gamma \\\\ ~~~~~~\\displaystyle -\\int_{\\Gamma_c}\\alpha D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{u_T}\\cdot\\mu^h_T d\\Gamma \\\\ ~~~~~~ \\displaystyle +\\int_{\\Gamma_c}({\\mathscr F} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{u_N})\\cdot\\mu^h_T d\\Gamma \\\\ ~~~~~~ \\displaystyle -\\int_{\\Gamma_c}(\\frac{\\mathscr F}{r} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{\\lambda_N})\\cdot\\mu^h_T d\\Gamma = \\cdots ~~~ \\forall \\mu^h \\in W^h, \\end{array}\\right."
+msgid "\\left\\{\\begin{array}{l}\n"
+"\\cdots + \\displaystyle \\int_{\\Gamma_c} rH(r(u^h_N-gap)-\\lambda_N)\\delta_{u_N} v_N -  H(r(u^h_N-gap)-\\lambda_N)\\delta_{\\lambda_N} v_N d\\Gamma \\\\\n"
+"~~~~~~+ \\displaystyle \\int_{\\Gamma_c} r \\alpha D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)) \\delta_{u_T}\\cdot v^h_T d\\Gamma \\\\\n"
+"~~~~~~- \\displaystyle \\int_{\\Gamma_c} D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)) \\delta_{\\lambda_T}\\cdot v^h_T d\\Gamma \\\\\n"
+"~~~~~~- \\displaystyle \\int_{\\Gamma_c} (r{\\mathscr F} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)) \\delta_{u_N})\\cdot v^h_T d\\Gamma \\\\\n"
+"~~~~~~- \\displaystyle \\int_{\\Gamma_c} ({\\mathscr F} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T)) \\delta_{\\lambda_N})\\cdot v^h_T d\\Gamma = \\cdots  ~~~~ \\forall v^h \\in V^h, \\\\\n"
+"\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c}(1-H(r(u^h_N-gap)-\\lambda_N))\\delta_{\\lambda_N}\\mu^h_N d\\Gamma\n"
+"\\displaystyle -\\int_{\\Gamma_c}H(r(u^h_N-gap)-\\lambda_N)\\delta_{u_N}\\mu^h_N d\\Gamma \\\\\n"
+"~~~~~~\\displaystyle -\\frac{1}{r}\\int_{\\Gamma_c}(\\delta_{\\lambda_T} - D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{\\lambda_T})\\cdot\\mu^h_T d\\Gamma \\\\\n"
+"~~~~~~\\displaystyle -\\int_{\\Gamma_c}\\alpha D_xP_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{u_T}\\cdot\\mu^h_T d\\Gamma \\\\\n"
+"~~~~~~ \\displaystyle +\\int_{\\Gamma_c}({\\mathscr F} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{u_N})\\cdot\\mu^h_T d\\Gamma \\\\\n"
+"~~~~~~ \\displaystyle -\\int_{\\Gamma_c}(\\frac{\\mathscr F}{r} D_{\\rho}P_{B(\\rho)}(\\lambda^h_T - r\\alpha(u^h_T-w^h_T))\\delta_{\\lambda_N})\\cdot\\mu^h_T d\\Gamma = \\cdots ~~~ \\forall \\mu^h \\in W^h,\n"
+"\\end{array}\\right."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:232
@@ -266,11 +310,18 @@ msgid "The third version corresponds to a penalized contact and friction conditi
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:236
-msgid "\\left\\{\\begin{array}{l} a(u^h, v^h) + \\displaystyle \\int_{\\Gamma_c} r(u^h_N-gap)_+ v^h_N d\\Gamma \\\\ ~~~~~~ + \\displaystyle \\int_{\\Gamma_c} P_{B(\\mathscr F r(u^h_N-gap)_+)}(r\\alpha(u^h_T-w^h_T))\\cdot v^h_T d\\Gamma = \\ell(v^h) ~~~~ \\forall v^h \\in V^h, \\end{array}\\right."
+msgid "\\left\\{\\begin{array}{l}\n"
+"a(u^h, v^h) + \\displaystyle \\int_{\\Gamma_c} r(u^h_N-gap)_+ v^h_N d\\Gamma \\\\\n"
+"~~~~~~ + \\displaystyle \\int_{\\Gamma_c} P_{B(\\mathscr F r(u^h_N-gap)_+)}(r\\alpha(u^h_T-w^h_T))\\cdot v^h_T d\\Gamma = \\ell(v^h) ~~~~ \\forall v^h \\in V^h,\n"
+"\\end{array}\\right."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:245
-msgid "\\left\\{\\begin{array}{l} \\cdots + \\displaystyle \\int_{\\Gamma_c} rH(u^h_N-gap)\\delta_{u_N} v_N d\\Gamma \\\\ ~~~~~~- \\displaystyle \\int_{\\Gamma_c} r \\alpha D_xP_{B(\\mathscr F r(u^h_N-gap)_+)}(r\\alpha(u^h_T-w^h_T)) \\delta_{u_T}\\cdot v^h_T d\\Gamma \\\\ ~~~~~~+ \\displaystyle \\int_{\\Gamma_c} ({r\\mathscr F} H(u^h_N-gap) D_{\\rho}P_{B(\\mathscr F r(u^h_N-gap)_+)}(r\\alpha(u^h_T-w^h_T)) \\delta_{u_N})\\cdot v^h_T d\\Gamma = \\cdots  ~~~~ \\forall v^h \\in V^h, \\end{array}\\right."
+msgid "\\left\\{\\begin{array}{l}\n"
+"\\cdots + \\displaystyle \\int_{\\Gamma_c} rH(u^h_N-gap)\\delta_{u_N} v_N d\\Gamma \\\\\n"
+"~~~~~~- \\displaystyle \\int_{\\Gamma_c} r \\alpha D_xP_{B(\\mathscr F r(u^h_N-gap)_+)}(r\\alpha(u^h_T-w^h_T)) \\delta_{u_T}\\cdot v^h_T d\\Gamma \\\\\n"
+"~~~~~~+ \\displaystyle \\int_{\\Gamma_c} ({r\\mathscr F} H(u^h_N-gap) D_{\\rho}P_{B(\\mathscr F r(u^h_N-gap)_+)}(r\\alpha(u^h_T-w^h_T)) \\delta_{u_N})\\cdot v^h_T d\\Gamma = \\cdots  ~~~~ \\forall v^h \\in V^h,\n"
+"\\end{array}\\right."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:255
@@ -306,7 +357,11 @@ msgid "Apart from pure Coulomb friction :math:`\\rho = {\\mathscr F} \\left| \\s
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:280
-msgid "\\displaystyle \\rho = \\left\\{\\begin{array}{ll} \\tau_{adh} + {\\mathscr F} \\left| \\sigma_n \\right| & ~~~\\mbox{if } ~~ \\tau_{adh} + {\\mathscr F} \\left| \\sigma_n \\right| < \\tau_{tresca} \\\\ \\tau_{tresca} & ~~~\\mbox{otherwise} \\end{array}\\right."
+msgid "\\displaystyle \\rho = \\left\\{\\begin{array}{ll}\n"
+"\\tau_{adh} + {\\mathscr F} \\left| \\sigma_n \\right| &\n"
+"~~~\\mbox{if } ~~ \\tau_{adh} + {\\mathscr F} \\left| \\sigma_n \\right| < \\tau_{tresca} \\\\\n"
+"\\tau_{tresca} & ~~~\\mbox{otherwise}\n"
+"\\end{array}\\right."
 msgstr ""
 
 #: ../source/userdoc/model_contact_friction.rst:288

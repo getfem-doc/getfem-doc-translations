@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2004-2018 GetFEM++ project
-# This file is distributed under the same license as the GetFEM++ package.
+# Copyright (C) 2004-2020 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM++ 5.3\n"
+"Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-05 00:16+0000\n"
+"POT-Creation-Date: 2020-08-23 12:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,10 @@ msgid "The equation on the temperature :math:`\\theta` and boundary condition ca
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:24
-msgid "\\left\\{\\begin{array}{l} -\\mbox{div}(\\varepsilon\\kappa(\\nabla \\theta)) + 2D(\\theta - T_0) - \\varepsilon\\sigma|\\nabla V|^2 = 0 ~~ \\mbox{ in } \\Omega, \\\\ \\kappa\\nabla \\theta \\cdot n = 0 ~~ \\mbox{ on } \\partial \\Omega, \\end{array} \\right."
+msgid "\\left\\{\\begin{array}{l}\n"
+"-\\mbox{div}(\\varepsilon\\kappa(\\nabla \\theta)) + 2D(\\theta - T_0) - \\varepsilon\\sigma|\\nabla V|^2 = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
+"\\kappa\\nabla \\theta \\cdot n = 0 ~~ \\mbox{ on } \\partial \\Omega,\n"
+"\\end{array} \\right."
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:32
@@ -67,7 +70,12 @@ msgid "We consider a potential difference of :math:`0.1V` between the right and 
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:41
-msgid "\\left\\{\\begin{array}{l} -\\mbox{div}(\\varepsilon\\sigma(\\nabla V)) = 0 ~~ \\mbox{ in } \\Omega, \\\\ \\sigma\\nabla V \\cdot n = 0 ~~ \\mbox{ on the top an bottom lateral faces}, \\\\ V = 0 ~~ \\mbox{ on the right lateral face}, \\\\ V = 0.1 ~~ \\mbox{ on the left lateral face}, \\\\ \\end{array} \\right."
+msgid " \\left\\{\\begin{array}{l}\n"
+"-\\mbox{div}(\\varepsilon\\sigma(\\nabla V)) = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
+"\\sigma\\nabla V \\cdot n = 0 ~~ \\mbox{ on the top an bottom lateral faces}, \\\\\n"
+"V = 0 ~~ \\mbox{ on the right lateral face}, \\\\\n"
+"V = 0.1 ~~ \\mbox{ on the left lateral face}, \\\\\n"
+"\\end{array} \\right."
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:50
@@ -91,7 +99,12 @@ msgid "We consider the membrane small deformation of the plate under a force app
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:65
-msgid "\\left\\{\\begin{array}{l} -\\mbox{div}(\\bar{\\sigma}(u)) = 0 ~~ \\mbox{ in } \\Omega, \\\\ \\bar{\\sigma}\\ n = 0 ~~ \\mbox{ on the top an bottom lateral faces}, \\\\ \\bar{\\sigma}\\ n = F ~~ \\mbox{ on the right lateral face}, \\\\ u = 0 ~~ \\mbox{ on the left lateral face}, \\end{array} \\right."
+msgid " \\left\\{\\begin{array}{l}\n"
+"-\\mbox{div}(\\bar{\\sigma}(u)) = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
+"\\bar{\\sigma}\\ n = 0 ~~ \\mbox{ on the top an bottom lateral faces}, \\\\\n"
+"\\bar{\\sigma}\\ n = F ~~ \\mbox{ on the right lateral face}, \\\\\n"
+"u = 0 ~~ \\mbox{ on the left lateral face},\n"
+"\\end{array} \\right."
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:74
@@ -107,7 +120,9 @@ msgid ":math:`\\bar{\\varepsilon}(u) = (\\nabla u + (\\nabla u)^T)/2` being the 
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:82
-msgid "&\\lambda = \\dfrac{E\\nu}{(1+\\nu)(1-2\\nu)}, \\\\ &\\mu = \\dfrac{E}{2(1+\\nu)}, \\\\ &\\lambda^* = \\dfrac{2\\lambda\\mu}{\\lambda+2*\\mu},"
+msgid "&\\lambda = \\dfrac{E\\nu}{(1+\\nu)(1-2\\nu)}, \\\\\n"
+"&\\mu = \\dfrac{E}{2(1+\\nu)}, \\\\\n"
+"&\\lambda^* = \\dfrac{2\\lambda\\mu}{\\lambda+2*\\mu},"
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:88
@@ -131,7 +146,10 @@ msgid "Weak formulation of each partial differential equation is obtained by mul
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:100
-msgid "&\\mbox{Find } \\theta, V, u \\mbox{ with } V = 0.1, u = 0 \\mbox{ on the left face}, V = 0 \\mbox{ on the right face}, \\\\ & \\int_{\\Omega} \\varepsilon\\kappa\\nabla\\theta\\cdot\\nabla\\delta_{\\theta} + 2D\\theta\\delta_{\\theta}d\\Omega = \\int_{\\Omega} (2DT_0 + \\varepsilon\\sigma|\\nabla V|^2)\\delta_{\\theta} d\\Omega ~~~\\mbox{ for all } \\delta_{\\theta}, \\\\ & \\int_{\\Omega} \\varepsilon\\sigma\\nabla V\\cdot\\nabla\\delta_V = 0 d\\Omega ~~~ \\mbox{ for all } \\delta_V \\mbox{ satisfying } \\delta_V = 0 \\mbox{ on the left and right faces}, \\\\ & \\int_{\\Omega} \\bar{\\sigma}(u):\\bar{\\varepsilon}(\\delta_u)d\\Omega = \\int_{\\Gamma_N} F\\cdot \\delta_u d\\Gamma ~~~ \\mbox{ for all } \\delta_{u} \\mbox{ satisfying } \\delta_u = 0 \\mbox{ on the left face},"
+msgid "&\\mbox{Find } \\theta, V, u \\mbox{ with } V = 0.1, u = 0 \\mbox{ on the left face}, V = 0 \\mbox{ on the right face}, \\\\\n"
+"& \\int_{\\Omega} \\varepsilon\\kappa\\nabla\\theta\\cdot\\nabla\\delta_{\\theta} + 2D\\theta\\delta_{\\theta}d\\Omega = \\int_{\\Omega} (2DT_0 + \\varepsilon\\sigma|\\nabla V|^2)\\delta_{\\theta} d\\Omega ~~~\\mbox{ for all } \\delta_{\\theta}, \\\\\n"
+"& \\int_{\\Omega} \\varepsilon\\sigma\\nabla V\\cdot\\nabla\\delta_V = 0 d\\Omega ~~~ \\mbox{ for all } \\delta_V \\mbox{ satisfying } \\delta_V = 0 \\mbox{ on the left and right faces}, \\\\\n"
+"& \\int_{\\Omega} \\bar{\\sigma}(u):\\bar{\\varepsilon}(\\delta_u)d\\Omega = \\int_{\\Gamma_N} F\\cdot \\delta_u d\\Gamma ~~~ \\mbox{ for all } \\delta_{u} \\mbox{ satisfying } \\delta_u = 0 \\mbox{ on the left face},"
 msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:108

@@ -33,7 +33,7 @@ npy_include_dir = numpy.get_include()
 
 # cclibopts = "../../../src/.libs/libgetfem.a".split()
 cclibopts = "".split() # getfem is explicitly added below
-cclibopts += '-lsmumps_seq -ldmumps_seq -lcmumps_seq -lzmumps_seq -lqhull -llapack  -lblas'.split()
+cclibopts += '-lsmumps_seq -ldmumps_seq -lcmumps_seq -lzmumps_seq -lqhull -ldl -llapack  -lblas'.split()
 cclibopts += ''.split()
 
 libnames = ['getfemint','getfem']
@@ -68,7 +68,7 @@ getfemmod = Extension('_getfem',
 
 setup (name = 'getfem-interface',
        license='LGPL',
-       version = '5.3',
+       version = '5.4.1',
        maintainer="Yves Renard",
        maintainer_email="Yves.Renard@insa-lyon.fr",
        description = "This is the getfem-python-interface module",
