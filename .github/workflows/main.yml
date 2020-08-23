@@ -52,17 +52,19 @@ jobs:
         sudo apt-get install -y --no-install-recommends xzdec
         sudo apt-get install -y --no-install-recommends fig2ps
         sudo apt-get install -y --no-install-recommends gv
-        sudo apt-get install -y --no-install-recommends python3-getfem++
         sudo apt-get install -y --no-install-recommends python3-pip
         sudo apt-get install -y --no-install-recommends sphinx-intl
+        sudo apt-get install -y --no-install-recommends python3-venv
         git submodule update
+        python3 -m venv /home/runner/work/.venv
+        source /home/runner/work/.venv
         (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
         pip3 config set global.index-url https://pypi.python.org/simple/
         pip3 install -U pip setuptools
         pip3 install -r ./requirements.txt
         cd getfem
         bash autogen.sh
-        ./configure --with-pic
+        ./configure --prefix=/venv --with-pic
         make -j8  >  make.log
         sudo make install
         sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
