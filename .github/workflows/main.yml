@@ -1,5 +1,8 @@
 name: getfem-auto-update
 on:
+  push:
+    branches:
+    - master
   schedule:
     - cron:  '0 0 * * *'
   pull_request:
@@ -25,18 +28,7 @@ jobs:
       with:
         host: github.com
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - name: update
-      env:
-        ACCOUNT: tkoyama010
-        ORGANIZATION: getfem-doc
-        NAME: "getfem-auto-update"
-        EMAIL: "getfem-auto-update"
-        REPO: getfem-doc-translations
-        JOB_ID: ${{ steps.jobs.outputs.job_id }}
-        HTML_URL: ${{ steps.jobs.outputs.html_url }}
-        SPHINXINTL_TRANSIFEX_USERNAME: api
-        SPHINXINTL_TRANSIFEX_PROJECT_NAME: getfem-53-1
-        TX_TOKEN: ${{ secrets.TX_TOKEN }}
+    - name: install
       run: |
         sudo apt update
         sudo apt-get install -y --no-install-recommends automake
@@ -58,6 +50,19 @@ jobs:
         sudo apt-get install -y --no-install-recommends python3-pip
         sudo apt-get install -y --no-install-recommends sphinx-intl
         sudo apt-get install -y --no-install-recommends python3-venv
+    - name: update
+      env:
+        ACCOUNT: tkoyama010
+        ORGANIZATION: getfem-doc
+        NAME: "getfem-auto-update"
+        EMAIL: "getfem-auto-update"
+        REPO: getfem-doc-translations
+        JOB_ID: ${{ steps.jobs.outputs.job_id }}
+        HTML_URL: ${{ steps.jobs.outputs.html_url }}
+        SPHINXINTL_TRANSIFEX_USERNAME: api
+        SPHINXINTL_TRANSIFEX_PROJECT_NAME: getfem-53-1
+        TX_TOKEN: ${{ secrets.TX_TOKEN }}
+      run: |
         git submodule update
         python3 -m venv /home/runner/work/venv
         source /home/runner/work/venv/bin/activate
@@ -91,12 +96,17 @@ jobs:
         cp -r doc ../doc
         cp -r interface ../interface
         cd ../
+    - name: git_config
+      if: contains(github.event.head_commit.message, "[ci skip]") = false && contains(github.ref, 'master')
+      run: |
         git branch -a
         git checkout master
         git config --global user.email $EMAIL
         git config --global user.name $NAME
+    - name: commit
+      if: contains(github.event.head_commit.message, "[ci skip]") = false && contains(github.ref, 'master')
         git add .
-        git commit --allow-empty -m ":green_heart: $JOB_ID
+        git commit --allow-empty -m "[ci skip] $JOB_ID
         $HTML_URL"
         git remote -v
         git remote add github git@github.com:$ORGANIZATION/$REPO.git
