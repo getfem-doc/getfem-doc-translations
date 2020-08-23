@@ -1,7 +1,7 @@
 from distutils.core import setup, Extension
 import os
 
-setup (name = 'getfem-interface',
+setup (name = 'getfem',
        license='LGPL',
        version = '5.4.1',
        maintainer="Yves Renard",
