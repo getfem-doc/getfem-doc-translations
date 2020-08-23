@@ -15,6 +15,7 @@ import os
 import sys
 from sphinx.util.pycompat import execfile_
 import shutil
+import getfem
 
 autodoc_mock_imports = ["getfem"]
 basedir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "./doc/sphinx/source")
