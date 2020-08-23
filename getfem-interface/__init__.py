@@ -1,1 +1,1 @@
-from ../interface/src/python/getfem import *
+from .getfem import *
