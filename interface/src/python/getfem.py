@@ -42,9 +42,9 @@ except ImportError:
 from numpy import *
 
 try:
-  from ._getfem import getfem
+  from ._getfem import getfem, register_python_factory
 except ImportError:
-  from _getfem import getfem
+  from _getfem import getfem, register_python_factory
 
 obj_count = {}
 getfem('workspace', 'clear all')
