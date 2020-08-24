@@ -46,7 +46,7 @@ extensions = ['sphinx.ext.mathjax','sphinx.ext.autodoc',
               'sphinx.ext.coverage',
               'sphinx.ext.doctest']
 
-autodoc_mock_imports = ["_getfem"]
+autodoc_mock_imports = ["_getfem", "getfem"]
 
 # The suffix of source filenames.
 #source_suffix = '.rst'
