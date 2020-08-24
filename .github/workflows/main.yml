@@ -90,8 +90,8 @@ jobs:
         rm -rf doc/sphinx/locale/.doctrees
         cp -r doc ../doc
         mv ../conf.py ../doc/sphinx/source/conf.py
-        mv ../getfem.py ../interface/src/python/getfem.py
         cp -r interface ../interface
+        mv ../getfem.py ../interface/src/python/getfem.py
         cd ../
     - name: git_config
       env:
