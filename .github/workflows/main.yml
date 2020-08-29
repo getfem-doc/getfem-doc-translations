@@ -93,6 +93,7 @@ jobs:
         cp -r interface ../interface
         mv ../getfem.py ../interface/src/python/getfem.py
         cd ../
+        deactivate
     - name: git_config
       env:
         NAME: "getfem-auto-update"
@@ -115,4 +116,3 @@ jobs:
         git remote -v
         git remote add github git@github.com:$ORGANIZATION/$REPO.git
         git push github master
-        deactivate
