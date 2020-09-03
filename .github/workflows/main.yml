@@ -85,6 +85,7 @@ jobs:
          tx pull -l ja,pt_BR)
         cp ../doc/sphinx/source/conf.py ../
         cp ../interface/src/python/getfem.py ../
+        cp ../doc/sphinx/source/.templates/download.html ../
         rm -rf ../doc
         rm -rf ../interface
         rm -rf doc/sphinx/locale/.doctrees
@@ -92,6 +93,7 @@ jobs:
         mv ../conf.py ../doc/sphinx/source/conf.py
         cp -r interface ../interface
         mv ../getfem.py ../interface/src/python/getfem.py
+        cp  ../download.html ../doc/sphinx/source/.templates/download.html
         cd ../
         deactivate
     - name: git_config
