@@ -74,6 +74,10 @@ jobs:
         sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
         pip3 install sphinx-intl[transifex]
         cp ../doc/sphinx/source/.templates/download.html doc/sphinx/source/.templates
+        cp ../doc/sphinx/source/.templates/gmm.html doc/sphinx/source/.templates
+        cp ../doc/sphinx/source/.templates/indexcontent.html doc/sphinx/source/.templates
+        cp ../doc/sphinx/source/.templates/indexsidebar.html doc/sphinx/source/.templates
+        cp ../doc/sphinx/source/.templates/layout.html doc/sphinx/source/.templates
         (cd doc/sphinx;
          make latex;
          make images;
