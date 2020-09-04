@@ -21,6 +21,7 @@ jobs:
     - name: checkout with submodule
       uses: actions/checkout@v2
       with:
+        fetch-depth: 0
         submodules: true
         token: ${{ secrets.PERSONAL_ACCESSTOKEN }}
     - name: Setup SSH
