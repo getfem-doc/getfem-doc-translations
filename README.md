@@ -1,7 +1,6 @@
 # getfem-doc.org on the Read The Docs.
 
 ![getfem-auto-update](https://github.com/getfem-doc/getfem-doc-translations/workflows/getfem-auto-update/badge.svg)
-[![Documentation Status](https://readthedocs.org/projects/getfem/badge/?version=latest)](https://getfem.readthedocs.io/en/latest/?badge=latest)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![GitHub issues](https://img.shields.io/github/issues/getfem-doc/getfem-doc-translations.svg?style=flat-square)](https://img.shields.io/github/issues/getfem-doc/getfem-doc-translations?style=flat-square)
 ![GitHub contributors](https://img.shields.io/github/contributors/getfem-doc/getfem-doc-translations?style=flat-square)
@@ -18,9 +17,9 @@ This repository is inspired by [sphinx-doc/sphinx-doc-translations](https://gith
 
 * RTD project pages for Getfem:
 
-  * https://getfem.readthedocs.io/en/latest/  (Master)
-  * https://getfem.readthedocs.io/ja/latest/
-  * https://getfem.readthedocs.io/pt_BR/latest/
+  * :us: [![Documentation Status](https://readthedocs.org/projects/getfem/badge/?version=latest)](https://getfem.readthedocs.io/en/latest/?badge=latest)  (Master) 
+  * :jp: [![Documentation Status](https://readthedocs.org/projects/getfem-ja/badge/?version=latest)](https://getfem.readthedocs.io/ja/latest/?badge=latest)
+  * :brazil: [![Documentation Status](https://readthedocs.org/projects/getfem-pt-br/badge/?version=latest)](https://getfem.readthedocs.io/pt_BR/latest/?badge=latest)
 
 ## How to setup a translated documentation project on RTD
 
