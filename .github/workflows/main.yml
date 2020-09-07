@@ -60,7 +60,7 @@ jobs:
         git submodule update
         python3 -m venv /home/runner/work/venv
         source /home/runner/work/venv/bin/activate
-        (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
+        (cd getfem; git fetch origin; git checkout fixmisspell; git reset --hard origin/fixmisspell; git branch -a)
         pip3 config set global.index-url https://pypi.python.org/simple/
         pip3 install -U pip setuptools
         pip3 install -r ./requirements.txt
