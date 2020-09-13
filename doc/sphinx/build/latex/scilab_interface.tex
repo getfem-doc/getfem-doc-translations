@@ -80,7 +80,7 @@
 
 
 \title{Scilab Interface}
-\date{Sep 12, 2020}
+\date{Sep 13, 2020}
 \release{5.4.1}
 \author{Yann Colette, Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -443,7 +443,7 @@ or ‘earth’.
 \sphinxstylestrong{Synopsis}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{p}{[}\PYG{n}{hsurf}\PYG{p}{,} \PYG{n}{hcontour}\PYG{p}{,} \PYG{n}{hquiver}\PYG{p}{,} \PYG{n}{hmesh}\PYG{p}{,} \PYG{n}{hdefmesh}\PYG{p}{]}\PYG{p}{=}\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{c}{...)}
+\PYG{p}{[}\PYG{n}{hsurf}\PYG{p}{,} \PYG{n}{hcontour}\PYG{p}{,} \PYG{n}{hquiver}\PYG{p}{,} \PYG{n}{hmesh}\PYG{p}{,} \PYG{n}{hdefmesh}\PYG{p}{]}\PYG{p}{=}\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{k}{...}\PYG{c}{)}
 
 \PYG{n}{The} \PYG{l+s}{options} \PYG{l+s}{are} \PYG{l+s}{specified} \PYG{l+s}{as} \PYG{l+s}{pairs} \PYG{l+s}{of} \PYG{l+s}{\PYGZdq{}option} \PYG{l+s}{name\PYGZdq{}/\PYGZdq{}option} \PYG{l+s}{value\PYGZdq{}}
 
@@ -490,7 +490,7 @@ For example, plotting a scalar field on the border of a 3D mesh can be done with
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c}{\PYGZpc{} load the \PYGZsq{}strange.mesh\PYGZus{}fem\PYGZsq{} (found in the getfem\PYGZus{}matlab/tests directory)}
 \PYG{n}{mf}\PYG{p}{=}\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{load\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{strange.mesh\PYGZus{}fem\PYGZsq{}}\PYG{p}{)}
-\PYG{n}{U}\PYG{p}{=}\PYG{n+nb}{rand}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mf}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbdof\PYGZsq{}}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;} \PYGZsh{} \PYG{n}{random} \PYG{n}{field} \PYG{n}{that} \PYG{n}{will} \PYG{n}{be} \PYG{n}{drawn}
+\PYG{n}{U}\PYG{p}{=}\PYG{n}{rand}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mf}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbdof\PYGZsq{}}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;} \PYGZsh{} \PYG{n}{random} \PYG{n}{field} \PYG{n}{that} \PYG{n}{will} \PYG{n}{be} \PYG{n}{drawn}
 \PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mf}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{25}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cvlst\PYGZsq{}}\PYG{p}{,} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mf}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces\PYGZsq{}}\PYG{p}{)}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 \end{quote}
@@ -501,7 +501,7 @@ For example, plotting a scalar field on the border of a 3D mesh can be done with
 \sphinxstylestrong{Synopsis}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}plot\PYGZus{}1D}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{c}{...)}
+\PYG{n}{gf\PYGZus{}plot\PYGZus{}1D}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{k}{...}\PYG{c}{)}
 
 \PYG{n}{Available} \PYG{l+s}{options} \PYG{l+s}{are} \PYG{l+s}{specified} \PYG{l+s}{as} \PYG{l+s}{pairs} \PYG{l+s}{of} \PYG{l+s}{\PYGZdq{}option} \PYG{l+s}{name\PYGZdq{}/\PYGZdq{}option} \PYG{l+s}{value\PYGZdq{}}
 
@@ -523,7 +523,7 @@ This function plots a 1D finite element field.
 \sphinxstylestrong{Synopsis}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,} \PYG{c}{...)}
+\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,} \PYG{k}{...}\PYG{c}{)}
 
 \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{vertices\PYGZsq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{o}{|}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{\PYGZcb{}}    \PYG{p}{:} \PYG{n}{displays} \PYG{n}{also} \PYG{n}{vertices} \PYG{n}{numbers}\PYG{p}{.}
 \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{convexes\PYGZsq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{o}{|}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{\PYGZcb{}}    \PYG{p}{:} \PYG{n}{displays} \PYG{n}{also} \PYG{n}{convexes} \PYG{n}{numbers}\PYG{p}{.}
@@ -562,7 +562,7 @@ Example
 \sphinxstylestrong{Synopsis}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}plot\PYGZus{}slice}\PYG{p}{(}\PYG{n}{sl}\PYG{p}{,} \PYG{c}{...)}
+\PYG{n}{gf\PYGZus{}plot\PYGZus{}slice}\PYG{p}{(}\PYG{n}{sl}\PYG{p}{,} \PYG{k}{...}\PYG{c}{)}
 
 \PYG{n}{The} \PYG{l+s}{options} \PYG{l+s}{are} \PYG{l+s}{specified} \PYG{l+s}{as} \PYG{l+s}{pairs} \PYG{l+s}{of} \PYG{l+s}{\PYGZdq{}option} \PYG{l+s}{name\PYGZdq{}/\PYGZdq{}option} \PYG{l+s}{value\PYGZdq{}}
 

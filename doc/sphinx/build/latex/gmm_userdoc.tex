@@ -80,7 +80,7 @@
 
 
 \title{Gmm++ user documentation}
-\date{Sep 12, 2020}
+\date{Sep 13, 2020}
 \release{5.4.1}
 \author{Yves Renard}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -524,7 +524,7 @@ addition of vectors or matrices. It is alway possible to mix different type of v
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add}\PYG{p}{(}\PYG{n}{V1}\PYG{p}{,} \PYG{n}{V2}\PYG{p}{)}\PYG{p}{;} \PYG{c+c1}{// V1 + V2 \PYGZhy{}\PYGZhy{}\PYGZgt{} V2}
 \PYG{n}{cout} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vref}\PYG{p}{(}\PYG{n}{V2}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add}\PYG{p}{(}\PYG{n}{V1}\PYG{p}{,} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{scaled}\PYG{p}{(}\PYG{n}{V2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.0}\PYG{p}{)}\PYG{p}{,} \PYG{n}{V2}\PYG{p}{)}\PYG{p}{;} \PYG{c+c1}{// V1 \PYGZhy{} 2.0 * V2 \PYGZhy{}\PYGZhy{}\PYGZgt{} V2}
+\PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add}\PYG{p}{(}\PYG{n}{V1}\PYG{p}{,} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{scaled}\PYG{p}{(}\PYG{n}{V2}\PYG{p}{,} \PYG{l+m+mf}{\PYGZhy{}2.0}\PYG{p}{)}\PYG{p}{,} \PYG{n}{V2}\PYG{p}{)}\PYG{p}{;} \PYG{c+c1}{// V1 \PYGZhy{} 2.0 * V2 \PYGZhy{}\PYGZhy{}\PYGZgt{} V2}
 \PYG{n}{cout} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vref}\PYG{p}{(}\PYG{n}{V2}\PYG{p}{)}\PYG{p}{;}
 
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{row\PYGZus{}matrix}\PYG{o}{\PYGZlt{}} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{double}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZgt{}} \PYG{n}{M1}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}\PYG{p}{;}
@@ -554,7 +554,7 @@ Matrix\sphinxhyphen{}vector or matrix\sphinxhyphen{}matrix multiplication. Again
 
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{mult\PYGZus{}add}\PYG{p}{(}\PYG{n}{M1}\PYG{p}{,} \PYG{n}{V2}\PYG{p}{,} \PYG{n}{V1}\PYG{p}{)}\PYG{p}{;}  \PYG{c+c1}{// M1 * V2 + V1 \PYGZhy{}\PYGZhy{}\PYGZgt{} V1}
 
-\PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{mult}\PYG{p}{(}\PYG{n}{M1}\PYG{p}{,} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{scaled}\PYG{p}{(}\PYG{n}{V2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.0}\PYG{p}{)}\PYG{p}{,} \PYG{n}{V2}\PYG{p}{,} \PYG{n}{V1}\PYG{p}{)}\PYG{p}{;}  \PYG{c+c1}{// M1 * (\PYGZhy{}V2) + V2 \PYGZhy{}\PYGZhy{}\PYGZgt{} V1}
+\PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{mult}\PYG{p}{(}\PYG{n}{M1}\PYG{p}{,} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{scaled}\PYG{p}{(}\PYG{n}{V2}\PYG{p}{,} \PYG{l+m+mf}{\PYGZhy{}1.0}\PYG{p}{)}\PYG{p}{,} \PYG{n}{V2}\PYG{p}{,} \PYG{n}{V1}\PYG{p}{)}\PYG{p}{;}  \PYG{c+c1}{// M1 * (\PYGZhy{}V2) + V2 \PYGZhy{}\PYGZhy{}\PYGZgt{} V1}
 
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{col\PYGZus{}matrix}\PYG{o}{\PYGZlt{}} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{wsvector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{double}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZgt{}} \PYG{n}{M2}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{col\PYGZus{}matrix}\PYG{o}{\PYGZlt{}} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vsvector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{double}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZgt{}} \PYG{n}{M3}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}\PYG{p}{;}

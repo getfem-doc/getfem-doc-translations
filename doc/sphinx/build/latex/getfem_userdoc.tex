@@ -80,7 +80,7 @@
 
 
 \title{User Documentation}
-\date{Sep 12, 2020}
+\date{Sep 13, 2020}
 \release{5.4.1}
 \author{Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -1087,7 +1087,7 @@ The following is an example of how to load a mesh and extract information on it:
     \PYG{c+c1}{// List all the convexes}
     \PYG{n}{dal}\PYG{o}{:}\PYG{o}{:}\PYG{n}{bit\PYGZus{}vector} \PYG{n}{nn} \PYG{o}{=} \PYG{n}{mymesh}\PYG{p}{.}\PYG{n}{convex\PYGZus{}index}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
     \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{size\PYGZus{}type} \PYG{n}{i}\PYG{p}{;}
-    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{nn}\PYG{p}{;} \PYG{n}{i} \PYG{o}{!}\PYG{o}{=} \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{nn}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{nn}\PYG{p}{;} \PYG{n}{i} \PYG{o}{!}\PYG{o}{=} \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{nn}\PYG{p}{)} \PYG{p}{\PYGZob{}}
       \PYG{n}{cout} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Convex of index }\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{i} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
       \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{pconvex\PYGZus{}structure} \PYG{n}{cvs} \PYG{o}{=} \PYG{n}{mymesh}\PYG{p}{.}\PYG{n}{structure\PYGZus{}of\PYGZus{}convex}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)}\PYG{p}{;}
       \PYG{n}{cout} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Number of vertices: }\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{cvs}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZgt{}}\PYG{n}{nb\PYGZus{}points}\PYG{p}{(}\PYG{p}{)} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
@@ -4495,7 +4495,7 @@ result into a \sphinxtitleref{stored\_mesh\_slice}):
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{slicer\PYGZus{}boundary} \PYG{n}{a0}\PYG{p}{(}\PYG{n}{m}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{slicer\PYGZus{}half\PYGZus{}space} \PYG{n}{a1}\PYG{p}{(}\PYG{n}{base\PYGZus{}node}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{,} \PYG{n}{base\PYGZus{}node}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{slicer\PYGZus{}half\PYGZus{}space} \PYG{n}{a1}\PYG{p}{(}\PYG{n}{base\PYGZus{}node}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{,} \PYG{n}{base\PYGZus{}node}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{stored\PYGZus{}mesh\PYGZus{}slice} \PYG{n}{sl}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{slicer\PYGZus{}build\PYGZus{}stored\PYGZus{}mesh\PYGZus{}slice} \PYG{n}{a2}\PYG{p}{(}\PYG{n}{sl}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{mesh\PYGZus{}slicer} \PYG{n}{slicer}\PYG{p}{(}\PYG{n}{m}\PYG{p}{)}\PYG{p}{;}
@@ -4510,7 +4510,7 @@ In order to build a \sphinxcode{\sphinxupquote{getfem::stored\_mesh\_slice}} obj
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{stored\PYGZus{}mesh\PYGZus{}slice} \PYG{n}{sl}\PYG{p}{;}
 \PYG{n}{sl}\PYG{p}{.}\PYG{n}{build}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{slicer\PYGZus{}boundary}\PYG{p}{(}\PYG{n}{m}\PYG{p}{)}\PYG{p}{,}
-         \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{slicer\PYGZus{}half\PYGZus{}space}\PYG{p}{(}\PYG{n}{base\PYGZus{}node}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{,} \PYG{n}{base\PYGZus{}node}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,}
+         \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{slicer\PYGZus{}half\PYGZus{}space}\PYG{p}{(}\PYG{n}{base\PYGZus{}node}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{,} \PYG{n}{base\PYGZus{}node}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{,}
          \PYG{n}{nrefine}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
@@ -5077,9 +5077,9 @@ examples can be found in the file \sphinxcode{\sphinxupquote{getfem\_models.cc}}
 very standard bricks):
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{struct} \PYG{n+nl}{my\PYGZus{}Laplacian\PYGZus{}brick}\PYG{p}{:} \PYG{k}{public} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{virtual\PYGZus{}brick} \PYG{p}{\PYGZob{}}
+\PYG{k}{struct} \PYG{n+nc}{my\PYGZus{}Laplacian\PYGZus{}brick}\PYG{o}{:} \PYG{k}{public} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{virtual\PYGZus{}brick} \PYG{p}{\PYGZob{}}
 
-  \PYG{k+kt}{void} \PYG{n}{asm\PYGZus{}real\PYGZus{}tangent\PYGZus{}terms}\PYG{p}{(}\PYG{k}{const} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model} \PYG{o}{\PYGZam{}}\PYG{n}{md}\PYG{p}{,} \PYG{n}{size\PYGZus{}type} \PYG{n}{ib}\PYG{p}{,}
+  \PYG{k+kt}{void} \PYG{n+nf}{asm\PYGZus{}real\PYGZus{}tangent\PYGZus{}terms}\PYG{p}{(}\PYG{k}{const} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model} \PYG{o}{\PYGZam{}}\PYG{n}{md}\PYG{p}{,} \PYG{n}{size\PYGZus{}type} \PYG{n}{ib}\PYG{p}{,}
                               \PYG{k}{const} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model}\PYG{o}{:}\PYG{o}{:}\PYG{n}{varnamelist} \PYG{o}{\PYGZam{}}\PYG{n}{varl}\PYG{p}{,}
                               \PYG{k}{const} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model}\PYG{o}{:}\PYG{o}{:}\PYG{n}{varnamelist} \PYG{o}{\PYGZam{}}\PYG{n}{datal}\PYG{p}{,}
                               \PYG{k}{const} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model}\PYG{o}{:}\PYG{o}{:}\PYG{n}{mimlist} \PYG{o}{\PYGZam{}}\PYG{n}{mims}\PYG{p}{,}
@@ -5227,9 +5227,9 @@ global linear system can be viewed in Fig. {\hyperref[\detokenize{userdoc/model_
 The brick can be defined as follows:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{struct} \PYG{n+nl}{my\PYGZus{}Dirichlet\PYGZus{}brick}\PYG{p}{:} \PYG{k}{public} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{virtual\PYGZus{}brick} \PYG{p}{\PYGZob{}}
+\PYG{k}{struct} \PYG{n+nc}{my\PYGZus{}Dirichlet\PYGZus{}brick}\PYG{o}{:} \PYG{k}{public} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{virtual\PYGZus{}brick} \PYG{p}{\PYGZob{}}
 
-  \PYG{k+kt}{void} \PYG{n}{asm\PYGZus{}real\PYGZus{}tangent\PYGZus{}terms}\PYG{p}{(}\PYG{k}{const} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model} \PYG{o}{\PYGZam{}}\PYG{n}{md}\PYG{p}{,} \PYG{n}{size\PYGZus{}type} \PYG{n}{ib}\PYG{p}{,}
+  \PYG{k+kt}{void} \PYG{n+nf}{asm\PYGZus{}real\PYGZus{}tangent\PYGZus{}terms}\PYG{p}{(}\PYG{k}{const} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model} \PYG{o}{\PYGZam{}}\PYG{n}{md}\PYG{p}{,} \PYG{n}{size\PYGZus{}type} \PYG{n}{ib}\PYG{p}{,}
                               \PYG{k}{const} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model}\PYG{o}{:}\PYG{o}{:}\PYG{n}{varnamelist} \PYG{o}{\PYGZam{}}\PYG{n}{varl}\PYG{p}{,}
                               \PYG{k}{const} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model}\PYG{o}{:}\PYG{o}{:}\PYG{n}{varnamelist} \PYG{o}{\PYGZam{}}\PYG{n}{datal}\PYG{p}{,}
                               \PYG{k}{const} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model}\PYG{o}{:}\PYG{o}{:}\PYG{n}{mimlist} \PYG{o}{\PYGZam{}}\PYG{n}{mims}\PYG{p}{,}
@@ -5348,7 +5348,7 @@ defined as folows:
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k+kt}{size\PYGZus{}t} \PYG{n+nf}{add\PYGZus{}my\PYGZus{}Laplacian\PYGZus{}brick}\PYG{p}{(}\PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model} \PYG{o}{\PYGZam{}}\PYG{n}{md}\PYG{p}{,} \PYG{k}{const} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{mesh\PYGZus{}im} \PYG{o}{\PYGZam{}}\PYG{n}{mim}\PYG{p}{,}
                               \PYG{k}{const} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{string} \PYG{o}{\PYGZam{}}\PYG{n}{varname}\PYG{p}{,}
-                              \PYG{k+kt}{size\PYGZus{}t} \PYG{n}{region} \PYG{o}{=} \PYG{k+kt}{size\PYGZus{}t}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                              \PYG{k+kt}{size\PYGZus{}t} \PYG{n}{region} \PYG{o}{=} \PYG{k+kt}{size\PYGZus{}t}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{pbrick} \PYG{n}{pbr} \PYG{o}{=} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{make\PYGZus{}shared}\PYG{o}{\PYGZlt{}}\PYG{n}{my\PYGZus{}Laplacian\PYGZus{}brick}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
   \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{model}\PYG{o}{:}\PYG{o}{:}\PYG{n}{termlist} \PYG{n}{tl}\PYG{p}{;}
 
@@ -5426,7 +5426,7 @@ A mean to add a term either on one variable or on several ones is to directly us
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{size\PYGZus{}type} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}nonlinear\PYGZus{}term}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{expr}\PYG{p}{,}
-                      \PYG{n}{region} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{is\PYGZus{}sym} \PYG{o}{=} \PYG{n+nb}{false}\PYG{p}{,} \PYG{n}{is\PYGZus{}coercive} \PYG{o}{=} \PYG{n+nb}{false}\PYG{p}{)}\PYG{p}{;}
+                      \PYG{n}{region} \PYG{o}{=} \PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{,} \PYG{n}{is\PYGZus{}sym} \PYG{o}{=} \PYG{n+nb}{false}\PYG{p}{,} \PYG{n}{is\PYGZus{}coercive} \PYG{o}{=} \PYG{n+nb}{false}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 This adds a brick to the model \sphinxcode{\sphinxupquote{md}}, using the integration method \sphinxcode{\sphinxupquote{mim}}, the assembly string \sphinxcode{\sphinxupquote{expr}} on the mesh region \sphinxcode{\sphinxupquote{region}}. If the result is symmetric, you can specify it on the 5th argument and if it is coercive on the 6th argument. The latter indications of symmetry and coercivness are used to determine the right linear solver. If you are not so sure, it is preferable not to indicate anything.
@@ -5435,13 +5435,13 @@ However, this brick consider that the expression is nonlinear. This brick is esp
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{size\PYGZus{}type} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}linear\PYGZus{}term}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{expr}\PYG{p}{,}
-                       \PYG{n}{region} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{is\PYGZus{}sym} \PYG{o}{=} \PYG{n+nb}{false}\PYG{p}{,} \PYG{n}{is\PYGZus{}coercive} \PYG{o}{=} \PYG{n+nb}{false}\PYG{p}{)}\PYG{p}{;}
+                       \PYG{n}{region} \PYG{o}{=} \PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{,} \PYG{n}{is\PYGZus{}sym} \PYG{o}{=} \PYG{n+nb}{false}\PYG{p}{,} \PYG{n}{is\PYGZus{}coercive} \PYG{o}{=} \PYG{n+nb}{false}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 with the same arguments. Conversely, this brick alway assume that the term corresponding to \sphinxcode{\sphinxupquote{expr}} is linear and the assembly will be performed only once if the data used do not change. Thus, you have to care that your expression is indeed linear (affine in fact) with respect to each variable. Otherwise, the result is of course not guaranted. Source terms in the expression are taken into account. Still for linear problem, it is possible to perform the assembly of a sole source term thanks to:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{size\PYGZus{}type} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}source\PYGZus{}term}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{expr}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{size\PYGZus{}type} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}source\PYGZus{}term}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{expr}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 with again the same arguments except the symmetry and coercivness. This brick performs the assembly of the corresponding order 1 term (residual vector) and add it as a right hand side to the problem. The assembly will be performed only once, so the term should not depend on the variables of the model (but could depend of course on the constants).
@@ -5449,13 +5449,13 @@ with again the same arguments except the symmetry and coercivness. This brick pe
 For instance, if one wants to solve a Poisson problem on a predefined variable \sphinxcode{\sphinxupquote{u}} of the model, one may use the corresponding pre\sphinxhyphen{}defined bricks (see below) or simply use:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}nonlinear\PYGZus{}term}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Grad\PYGZus{}u.Grad\PYGZus{}Test\PYGZus{}u \PYGZhy{} F*Test\PYGZus{}u}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n+nb}{true}\PYG{p}{,} \PYG{n+nb}{true}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}nonlinear\PYGZus{}term}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Grad\PYGZus{}u.Grad\PYGZus{}Test\PYGZus{}u \PYGZhy{} F*Test\PYGZus{}u}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{,} \PYG{n+nb}{true}\PYG{p}{,} \PYG{n+nb}{true}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 where \sphinxcode{\sphinxupquote{F}} is a pre\sphinxhyphen{}defined constant of the model representing the right hand side. Of course, doing so, Newton’s algorithms will be called. So, the more appropriate manner is to use the linear bricks as follows:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}linear\PYGZus{}term}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Grad\PYGZus{}u.Grad\PYGZus{}Test\PYGZus{}u}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n+nb}{true}\PYG{p}{,} \PYG{n+nb}{true}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}linear\PYGZus{}term}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Grad\PYGZus{}u.Grad\PYGZus{}Test\PYGZus{}u}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{,} \PYG{n+nb}{true}\PYG{p}{,} \PYG{n+nb}{true}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}source\PYGZus{}term}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{F*Test\PYGZus{}u}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
@@ -5488,7 +5488,7 @@ This brick can be added to a model \sphinxcode{\sphinxupquote{md}} thanks to two
 is:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{size\PYGZus{}type} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}Laplacian\PYGZus{}brick}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{size\PYGZus{}type} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}Laplacian\PYGZus{}brick}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 that adds an elliptic term relatively to the variable \sphinxcode{\sphinxupquote{varname}} of the model
@@ -5501,7 +5501,7 @@ result of the function is the brick index in the model.
 The second function is:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{size\PYGZus{}type} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}generic\PYGZus{}elliptic\PYGZus{}brick}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{dataexpr}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{size\PYGZus{}type} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}generic\PYGZus{}elliptic\PYGZus{}brick}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{dataexpr}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 It adds a term with an arbitrary coefficient given by the expression \sphinxcode{\sphinxupquote{dataexpr}} which has to be a regular expression of GWFL, the generic weak form language (like “1”, “sin(X{[}0{]})” or “Norm(u)” for instance) even depending on model variables (except for the complex version where it has to be a declared data of the model)
@@ -5709,7 +5709,7 @@ The function to add a source term to a model is:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{add\PYGZus{}source\PYGZus{}term\PYGZus{}brick}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,}
-                      \PYG{n}{varname}\PYG{p}{,} \PYG{n}{dataexpr}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}
+                      \PYG{n}{varname}\PYG{p}{,} \PYG{n}{dataexpr}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{,}
                       \PYG{n}{directdataname} \PYG{o}{=} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{string}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
@@ -6211,7 +6211,7 @@ The function which adds this brick to a model and parametrized with the Lamé co
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{ind\PYGZus{}brick} \PYG{o}{=} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}isotropic\PYGZus{}linearized\PYGZus{}elasticity\PYGZus{}brick}
             \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{data\PYGZus{}lambda}\PYG{p}{,} \PYG{n}{data\PYGZus{}mu}\PYG{p}{,}
-             \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+             \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 where \sphinxcode{\sphinxupquote{dataname\_lambda}} and \sphinxcode{\sphinxupquote{dataname\_mu}} are the data of the model
@@ -6221,14 +6221,14 @@ The function which adds this brick to a model and parametrized with Young modulu
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{ind\PYGZus{}brick} \PYG{o}{=} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}isotropic\PYGZus{}linearized\PYGZus{}elasticity\PYGZus{}brick\PYGZus{}pstrain}
-            \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{data\PYGZus{}E}\PYG{p}{,} \PYG{n}{data\PYGZus{}nu}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+            \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{data\PYGZus{}E}\PYG{p}{,} \PYG{n}{data\PYGZus{}nu}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 This brick represent a plane strain approximation when it is applied to a 2D mesh (and a standard model on a 3D mesh). In order to obtain a plane stress approximation for 2D meshes, one can use:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{ind\PYGZus{}brick} \PYG{o}{=} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}isotropic\PYGZus{}linearized\PYGZus{}elasticity\PYGZus{}brick\PYGZus{}pstress}
-            \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{data\PYGZus{}E}\PYG{p}{,} \PYG{n}{data\PYGZus{}nu}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+            \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{data\PYGZus{}E}\PYG{p}{,} \PYG{n}{data\PYGZus{}nu}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 For 3D meshes, the two previous bricks give the same result.
@@ -6271,7 +6271,7 @@ The function adding this incompressibility condition is:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{ind\PYGZus{}brick} \PYG{o}{=} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}linear\PYGZus{}incompressibility}
-            \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{multname\PYGZus{}pressure}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,}
+            \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{multname\PYGZus{}pressure}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{,}
              \PYG{n}{dataexpr\PYGZus{}penal\PYGZus{}coeff} \PYG{o}{=} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{string}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
@@ -6341,7 +6341,7 @@ The function which adds this brick to a model is:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{ind\PYGZus{}brick} \PYG{o}{=} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}mass\PYGZus{}brick}
-            \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{dataexpr\PYGZus{}rho}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+            \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{dataexpr\PYGZus{}rho}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 where \sphinxcode{\sphinxupquote{dataexpr\_rho}} is an optional expression representing the density
@@ -6355,7 +6355,7 @@ The following function
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{ind} \PYG{o}{=} \PYG{n}{add\PYGZus{}bilaplacian\PYGZus{}brick}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{dataname}\PYG{p}{,}
-                            \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+                            \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 adds a bilaplacian brick on the variable \sphinxtitleref{varname} and on the mesh region \sphinxtitleref{region}. This represent a term \(\Delta(D \Delta u)\). where \(D(x)\) is a coefficient determined by \sphinxtitleref{dataname} which could be constant or described on a f.e.m. The corresponding weak form is \(\int D(x)\Delta u(x) \Delta v(x) dx\).
@@ -6364,7 +6364,7 @@ For the Kirchhoff\sphinxhyphen{}Love plate model, the weak form is a bit differe
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{ind} \PYG{o}{=} \PYG{n}{add\PYGZus{}bilaplacian\PYGZus{}brick\PYGZus{}KL}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{varname}\PYG{p}{,} \PYG{n}{dataname1}\PYG{p}{,} \PYG{n}{dataname2}\PYG{p}{,}
-                               \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+                               \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 It adds a bilaplacian brick on the variable \sphinxtitleref{varname} and on the mesh region \sphinxtitleref{region}. This represent a term \(\Delta(D \Delta u)\) where \(D(x)\)
@@ -6755,8 +6755,8 @@ where \(dt\) means a time step, \(M\) the matrix in term of “Dot2\_u”, \(C\)
 The affine dependences are thus given by:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{Dot\PYGZus{}u}  \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{o}{*}\PYG{n}{dt}\PYG{p}{)}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{11}\PYG{o}{*}\PYG{n}{u}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{18}\PYG{o}{*}\PYG{n}{Previous\PYGZus{}u}\PYG{o}{+}\PYG{l+m+mi}{9}\PYG{o}{*}\PYG{n}{Previous2\PYGZus{}u}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{Previous3\PYGZus{}u}\PYG{p}{)}
-\PYG{n}{Dot2\PYGZus{}u} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{p}{(}\PYG{n}{dt}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{u}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{5}\PYG{o}{*}\PYG{n}{Previous\PYGZus{}u}\PYG{o}{+}\PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{Previous2\PYGZus{}u}\PYG{o}{\PYGZhy{}}\PYG{n}{Previous3\PYGZus{}u}\PYG{p}{)}
+\PYG{n}{Dot\PYGZus{}u}  \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{o}{*}\PYG{n}{dt}\PYG{p}{)}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{11}\PYG{o}{*}\PYG{n}{u}\PYG{l+m+mi}{\PYGZhy{}18}\PYG{o}{*}\PYG{n}{Previous\PYGZus{}u}\PYG{o}{+}\PYG{l+m+mi}{9}\PYG{o}{*}\PYG{n}{Previous2\PYGZus{}u}\PYG{l+m+mi}{\PYGZhy{}2}\PYG{o}{*}\PYG{n}{Previous3\PYGZus{}u}\PYG{p}{)}
+\PYG{n}{Dot2\PYGZus{}u} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{p}{(}\PYG{n}{dt}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{u}\PYG{l+m+mi}{\PYGZhy{}5}\PYG{o}{*}\PYG{n}{Previous\PYGZus{}u}\PYG{o}{+}\PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{Previous2\PYGZus{}u}\PYG{o}{\PYGZhy{}}\PYG{n}{Previous3\PYGZus{}u}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 When aplying this scheme to a variable “u” of the model, the following affine dependent variables are added to the model:
@@ -9237,7 +9237,7 @@ The function which adds the brick to a model \sphinxtitleref{md} is
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}small\PYGZus{}strain\PYGZus{}elastoplasticity\PYGZus{}brick}
   \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{lawname}\PYG{p}{,} \PYG{n}{unknowns\PYGZus{}type}\PYG{p}{,}
    \PYG{k}{const} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{varnames}\PYG{p}{,}
-   \PYG{k}{const} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{params}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+   \PYG{k}{const} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{params}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 where \sphinxtitleref{lawname} is the name of an implemented plastic law, \sphinxtitleref{unknowns\_type}
@@ -9320,7 +9320,7 @@ Additionaly, the following function allow to pass from a time step to another fo
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{small\PYGZus{}strain\PYGZus{}elastoplasticity\PYGZus{}next\PYGZus{}iter}
   \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{lawname}\PYG{p}{,} \PYG{n}{unknowns\PYGZus{}type}\PYG{p}{,}
    \PYG{k}{const} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{varnames}\PYG{p}{,}
-   \PYG{k}{const} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{params}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+   \PYG{k}{const} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{params}\PYG{p}{,} \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 The parameters have to be exactly the same as the ones of the
@@ -9341,7 +9341,7 @@ The function
    \PYG{k}{const} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{varnames}\PYG{p}{,}
    \PYG{k}{const} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{params}\PYG{p}{,}
    \PYG{k}{const} \PYG{n}{mesh\PYGZus{}fem} \PYG{o}{\PYGZam{}}\PYG{n}{mf\PYGZus{}vm}\PYG{p}{,} \PYG{n}{model\PYGZus{}real\PYGZus{}plain\PYGZus{}vector} \PYG{o}{\PYGZam{}}\PYG{n}{VM}\PYG{p}{,}
-   \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+   \PYG{n}{region} \PYG{o}{=} \PYG{n}{size\PYGZus{}type}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 computes the Von Mises stress field with respect to

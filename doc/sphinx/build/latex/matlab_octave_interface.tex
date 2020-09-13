@@ -80,7 +80,7 @@
 
 
 \title{Matlab-Octave Interface}
-\date{Sep 12, 2020}
+\date{Sep 13, 2020}
 \release{5.4.1}
 \author{Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -570,7 +570,7 @@ reference element:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{gf\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{gf\PYGZus{}fem}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{FEM\PYGZus{}QK(2,2)\PYGZsq{}}\PYG{p}{)}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{poly\PYGZus{}str\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n+nb}{ans} \PYG{p}{=}
+\PYG{n}{ans} \PYG{p}{=}
     \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{1 \PYGZhy{} 3*x \PYGZhy{} 3*y + 2*x\PYGZca{}2 + 9*x*y + 2*y\PYGZca{}2 \PYGZhy{} 6*x\PYGZca{}2*y \PYGZhy{} 6*x*y\PYGZca{}2 + 4*x\PYGZca{}2*y\PYGZca{}2\PYGZsq{}}
     \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{4*x \PYGZhy{} 4*x\PYGZca{}2 \PYGZhy{} 12*x*y + 12*x\PYGZca{}2*y + 8*x*y\PYGZca{}2 \PYGZhy{} 8*x\PYGZca{}2*y\PYGZca{}2\PYGZsq{}}
     \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{\PYGZhy{}x + 2*x\PYGZca{}2 + 3*x*y \PYGZhy{} 6*x\PYGZca{}2*y \PYGZhy{} 2*x*y\PYGZca{}2 + 4*x\PYGZca{}2*y\PYGZca{}2\PYGZsq{}}
@@ -777,7 +777,7 @@ This is the \sphinxcode{\sphinxupquote{tests/matlab\sphinxhyphen{}octave/demo\_l
 \PYG{c}{\PYGZpc{} interpolate the exact solution}
 \PYG{n}{Uexact} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mf}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{eval\PYGZsq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{y.*(y\PYGZhy{}1).*x.*(x\PYGZhy{}1)+x.\PYGZca{}5\PYGZsq{}} \PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
 \PYG{c}{\PYGZpc{} its second derivative}
-\PYG{n}{F}      \PYG{l+s}{=} \PYG{l+s}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get(mf,} \PYG{l+s}{\PYGZsq{}eval\PYGZsq{}}\PYG{l+s}{,} \PYG{l+s}{\PYGZob{}} \PYG{l+s}{\PYGZsq{}\PYGZhy{}(2*(x.\PYGZca{}2+y.\PYGZca{}2)\PYGZhy{}2*x\PYGZhy{}2*y+20*x.\PYGZca{}3)\PYGZsq{}} \PYG{l+s}{\PYGZcb{})}\PYG{p}{;}
+\PYG{n}{F}      \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mf}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{eval\PYGZsq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{\PYGZhy{}(2*(x.\PYGZca{}2+y.\PYGZca{}2)\PYGZhy{}2*x\PYGZhy{}2*y+20*x.\PYGZca{}3)\PYGZsq{}} \PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
 
 
 \PYG{n}{md}\PYG{p}{=}\PYG{n}{gf\PYGZus{}model}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{real\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
@@ -841,7 +841,7 @@ toolbox distribution.
 \PYG{c}{\PYGZpc{} the material is homogeneous, hence we use a P0 fem for the data}
 \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mfd}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{fem\PYGZsq{}}\PYG{p}{,}\PYG{n}{gf\PYGZus{}fem}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{FEM\PYGZus{}PK(3,0)\PYGZsq{}}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \PYG{c}{\PYGZpc{} display some informations about the mesh}
-\PYG{n+nb}{disp}\PYG{p}{(}\PYG{n}{sprintf}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbcvs=\PYGZpc{}d, nbpts=\PYGZpc{}d, nbdof=\PYGZpc{}d\PYGZsq{}}\PYG{p}{,}\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbcvs\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}\PYG{c}{...}
+\PYG{n+nb}{disp}\PYG{p}{(}\PYG{n}{sprintf}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbcvs=\PYGZpc{}d, nbpts=\PYGZpc{}d, nbdof=\PYGZpc{}d\PYGZsq{}}\PYG{p}{,}\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbcvs\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}\PYG{k}{...}
              \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbpts\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mfu}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbdof\PYGZsq{}}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{P}\PYG{p}{=}\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{pts\PYGZsq{}}\PYG{p}{)}\PYG{p}{;} \PYG{c}{\PYGZpc{} get list of mesh points coordinates}
 \PYG{n}{pidtop}\PYG{p}{=}\PYG{n+nb}{find}\PYG{p}{(}\PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{P}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{p}{:}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{13}\PYG{p}{)}\PYG{o}{\PYGZlt{}}\PYG{l+m+mf}{1e\PYGZhy{}6}\PYG{p}{)}\PYG{p}{;} \PYG{c}{\PYGZpc{} find those on top of the object}
@@ -868,7 +868,7 @@ toolbox distribution.
   \PYG{k}{if} \PYG{p}{(}\PYG{n}{incompressible}\PYG{p}{)}
     \PYG{n}{b1} \PYG{p}{=} \PYG{n}{gfMdBrick}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{linear incompressibility term\PYGZsq{}}\PYG{p}{,} \PYG{n}{b0}\PYG{p}{,} \PYG{n}{mfp}\PYG{p}{)}\PYG{p}{;}
   \PYG{n}{else}
-    \PYG{l+s}{b1} \PYG{l+s}{=} \PYG{l+s}{b0}\PYG{p}{;}
+    \PYG{l+s}{b1} \PYG{p}{=} \PYG{n}{b0}\PYG{p}{;}
   \PYG{k}{end}\PYG{p}{;}
 \PYG{n}{else}
   \PYG{l+s}{\PYGZpc{}} \PYG{l+s}{See} \PYG{l+s}{also} \PYG{l+s}{demo\PYGZus{}nonlinear\PYGZus{}elasticity} \PYG{l+s}{for} \PYG{l+s}{a} \PYG{l+s}{better} \PYG{l+s}{example}
@@ -915,7 +915,7 @@ toolbox distribution.
 \PYG{c}{\PYGZpc{} we plot the von mises on the deformed object, in superposition}
 \PYG{c}{\PYGZpc{} with the initial mesh.}
 \PYG{k}{if} \PYG{p}{(}\PYG{n}{linear}\PYG{p}{)}\PYG{p}{,}
-  \PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfdu}\PYG{p}{,}\PYG{n}{VM}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cvlst\PYGZsq{}}\PYG{p}{,} \PYG{n}{get}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}\PYG{c}{...}
+  \PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfdu}\PYG{p}{,}\PYG{n}{VM}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cvlst\PYGZsq{}}\PYG{p}{,} \PYG{n}{get}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}\PYG{k}{...}
 	  \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,}\PYG{n}{U}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,}\PYG{n}{mfu}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{else}
   \PYG{l+s}{gf\PYGZus{}plot(mfdu,VM,}\PYG{l+s}{\PYGZsq{}mesh\PYGZsq{}}\PYG{l+s}{,}\PYG{l+s}{\PYGZsq{}on\PYGZsq{}}\PYG{l+s}{,} \PYG{l+s}{\PYGZsq{}cvlst\PYGZsq{}}\PYG{l+s}{,} \PYG{l+s}{get(m,} \PYG{l+s}{\PYGZsq{}outer faces\PYGZsq{}}\PYG{l+s}{),...}
@@ -953,7 +953,7 @@ very similar to the \sphinxcode{\sphinxupquote{demo\_tripod.m}} except that the 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{nbd}\PYG{p}{=}\PYG{n}{get}\PYG{p}{(}\PYG{n}{mfd}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbdof\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{F} \PYG{p}{=} \PYG{n}{gf\PYGZus{}asm}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{boundary\PYGZus{}source\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{n}{mfd}\PYG{p}{,} \PYG{n+nb}{repmat}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10}\PYG{p}{;}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{nbd}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{K} \PYG{p}{=} \PYG{n}{gf\PYGZus{}asm}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{linear\PYGZus{}elasticity\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{n}{mfd}\PYG{p}{,} \PYG{c}{...}
+\PYG{n}{K} \PYG{p}{=} \PYG{n}{gf\PYGZus{}asm}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{linear\PYGZus{}elasticity\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{n}{mfd}\PYG{p}{,} \PYG{k}{...}
            \PYG{n}{lambda}\PYG{o}{*}\PYG{n+nb}{ones}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{nbd}\PYG{p}{)}\PYG{p}{,}\PYG{n}{mu}\PYG{o}{*}\PYG{n+nb}{ones}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{nbd}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 
 \PYG{c}{\PYGZpc{} handle Dirichlet condition}
@@ -1048,11 +1048,11 @@ Here is an example of its use:
 \PYG{c}{\PYGZpc{} these  objects  have  been  overloaded,  the  toolbox  displays  some}
 \PYG{c}{\PYGZpc{} information about the mesh instead of the content of the structure.}
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbpts\PYGZsq{}}\PYG{p}{)}
-\PYG{n+nb}{ans} \PYG{p}{=}
+\PYG{n}{ans} \PYG{p}{=}
    \PYG{n}{121}
 \PYG{l+s}{\PYGZpc{}} \PYG{l+s}{pseudo} \PYG{l+s}{member} \PYG{l+s}{access} \PYG{l+s}{(which} \PYG{l+s}{calls} \PYG{l+s}{\PYGZsh{}\PYGZsh{}gf\PYGZus{}mesh\PYGZus{}get(m2,}\PYG{l+s}{\PYGZsq{}nbpts\PYGZsq{}}\PYG{l+s}{))}
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{m2}\PYG{p}{.}\PYG{n}{nbpts}
-\PYG{n+nb}{ans} \PYG{p}{=}
+\PYG{n}{ans} \PYG{p}{=}
    \PYG{n}{121}
 \end{sphinxVerbatim}
 
@@ -1084,7 +1084,7 @@ or ‘earth’.
 \sphinxstylestrong{Synopsis}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{p}{[}\PYG{n}{hsurf}\PYG{p}{,} \PYG{n}{hcontour}\PYG{p}{,} \PYG{n}{hquiver}\PYG{p}{,} \PYG{n}{hmesh}\PYG{p}{,} \PYG{n}{hdefmesh}\PYG{p}{]}\PYG{p}{=}\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{c}{...)}
+\PYG{p}{[}\PYG{n}{hsurf}\PYG{p}{,} \PYG{n}{hcontour}\PYG{p}{,} \PYG{n}{hquiver}\PYG{p}{,} \PYG{n}{hmesh}\PYG{p}{,} \PYG{n}{hdefmesh}\PYG{p}{]}\PYG{p}{=}\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{k}{...}\PYG{c}{)}
 
 \PYG{n}{The} \PYG{l+s}{options} \PYG{l+s}{are} \PYG{l+s}{specified} \PYG{l+s}{as} \PYG{l+s}{pairs} \PYG{l+s}{of} \PYG{l+s}{\PYGZdq{}option} \PYG{l+s}{name\PYGZdq{}/\PYGZdq{}option} \PYG{l+s}{value\PYGZdq{}}
 
@@ -1131,7 +1131,7 @@ For example, plotting a scalar field on the border of a 3D mesh can be done with
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c}{\PYGZpc{} load the \PYGZsq{}strange.mesh\PYGZus{}fem\PYGZsq{} (found in the getfem\PYGZus{}matlab/tests directory)}
 \PYG{n}{mf}\PYG{p}{=}\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{load\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{strange.mesh\PYGZus{}fem\PYGZsq{}}\PYG{p}{)}
-\PYG{n}{U}\PYG{p}{=}\PYG{n+nb}{rand}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mf}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbdof\PYGZsq{}}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;} \PYGZsh{} \PYG{n}{random} \PYG{n}{field} \PYG{n}{that} \PYG{n}{will} \PYG{n}{be} \PYG{n}{drawn}
+\PYG{n}{U}\PYG{p}{=}\PYG{n}{rand}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mf}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbdof\PYGZsq{}}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;} \PYGZsh{} \PYG{n}{random} \PYG{n}{field} \PYG{n}{that} \PYG{n}{will} \PYG{n}{be} \PYG{n}{drawn}
 \PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mf}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{25}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cvlst\PYGZsq{}}\PYG{p}{,} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mf}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces\PYGZsq{}}\PYG{p}{)}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 \end{quote}
@@ -1142,7 +1142,7 @@ For example, plotting a scalar field on the border of a 3D mesh can be done with
 \sphinxstylestrong{Synopsis}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}plot\PYGZus{}1D}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{c}{...)}
+\PYG{n}{gf\PYGZus{}plot\PYGZus{}1D}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{k}{...}\PYG{c}{)}
 
 \PYG{n}{The} \PYG{l+s}{options} \PYG{l+s}{are} \PYG{l+s}{specified} \PYG{l+s}{as} \PYG{l+s}{pairs} \PYG{l+s}{of} \PYG{l+s}{\PYGZdq{}option} \PYG{l+s}{name\PYGZdq{}/\PYGZdq{}option} \PYG{l+s}{value\PYGZdq{}}
 
@@ -1165,7 +1165,7 @@ This function plots a 1D finite elements field.
 \sphinxstylestrong{Synopsis}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,} \PYG{c}{...)}
+\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,} \PYG{k}{...}\PYG{c}{)}
 
 \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{vertices\PYGZsq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{o}{|}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{\PYGZcb{}}    \PYG{p}{:} \PYG{n}{displays} \PYG{n}{also} \PYG{n}{vertices} \PYG{n}{numbers}\PYG{p}{.}
 \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{convexes\PYGZsq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{o}{|}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{\PYGZcb{}}    \PYG{p}{:} \PYG{n}{displays} \PYG{n}{also} \PYG{n}{convexes} \PYG{n}{numbers}\PYG{p}{.}
@@ -1204,7 +1204,7 @@ Example
 \sphinxstylestrong{Synopsis}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}plot\PYGZus{}slice}\PYG{p}{(}\PYG{n}{sl}\PYG{p}{,} \PYG{c}{...)}
+\PYG{n}{gf\PYGZus{}plot\PYGZus{}slice}\PYG{p}{(}\PYG{n}{sl}\PYG{p}{,} \PYG{k}{...}\PYG{c}{)}
 
 \PYG{n}{The} \PYG{l+s}{options} \PYG{l+s}{are} \PYG{l+s}{specified} \PYG{l+s}{as} \PYG{l+s}{pairs} \PYG{l+s}{of} \PYG{l+s}{\PYGZdq{}option} \PYG{l+s}{name\PYGZdq{}/\PYGZdq{}option} \PYG{l+s}{value\PYGZdq{}}
 
@@ -9750,28 +9750,28 @@ As an example:
 \PYG{n}{gfMesh} \PYG{l+s}{object} \PYG{l+s}{ID=3} \PYG{l+s}{[11544} \PYG{l+s}{bytes],} \PYG{l+s}{dim=3,} \PYG{l+s}{nbpts=40,} \PYG{l+s}{nbcvs=7}
 \PYG{c}{\PYGZpc{} get(m, \PYGZsq{}pid\PYGZus{}from\PYGZus{}cvid\PYGZsq{}) is redirected to gf\PYGZus{}mesh\PYGZus{}get(m,\PYGZsq{}pid from cvid\PYGZsq{})}
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{get}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{pid\PYGZus{}from\PYGZus{}cvid\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}
-\PYG{n+nb}{ans} \PYG{p}{=}
+\PYG{n}{ans} \PYG{p}{=}
      \PYG{n}{8}     \PYG{l+s}{9}    \PYG{l+s}{11}    \PYG{l+s}{15}    \PYG{l+s}{17}    \PYG{l+s}{16}    \PYG{l+s}{18}    \PYG{l+s}{10}    \PYG{l+s}{12}
 \PYG{c}{\PYGZpc{} m.nbpts is directly translated into gf\PYGZus{}mesh\PYGZus{}get(m,\PYGZsq{}nbpts\PYGZsq{})}
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{m}\PYG{p}{.}\PYG{n}{nbpts}
-\PYG{n+nb}{ans} \PYG{p}{=}
+\PYG{n}{ans} \PYG{p}{=}
     \PYG{n}{40}
 
-\PYG{l+s}{\PYGZgt{}\PYGZgt{}} \PYG{l+s}{mf=gfMeshFem(}\PYG{l+s}{\PYGZsq{}load\PYGZsq{}}\PYG{l+s}{,}\PYG{l+s}{\PYGZsq{}many\PYGZus{}element.mesh\PYGZus{}fem\PYGZsq{}}\PYG{l+s}{)}
+\PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{mf}\PYG{p}{=}\PYG{n}{gfMeshFem}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{load\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{many\PYGZus{}element.mesh\PYGZus{}fem\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{gfMeshFem} \PYG{l+s}{object:} \PYG{l+s}{ID=5} \PYG{l+s}{[1600} \PYG{l+s}{bytes],} \PYG{l+s}{qdim=1,} \PYG{l+s}{nbdof=99,}
   \PYG{n}{linked} \PYG{l+s}{gfMesh} \PYG{l+s}{object:} \PYG{l+s}{dim=3,} \PYG{l+s}{nbpts=40,} \PYG{l+s}{nbcvs=7}
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{mf}\PYG{p}{.}\PYG{n}{mesh}
 \PYG{n}{gfMesh} \PYG{l+s}{object} \PYG{l+s}{ID=4} \PYG{l+s}{[11544} \PYG{l+s}{bytes],} \PYG{l+s}{dim=3,} \PYG{l+s}{nbpts=40,} \PYG{l+s}{nbcvs=7}
 \PYG{c}{\PYGZpc{} accessing the linked mesh object}
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{mf}\PYG{p}{.}\PYG{n}{mesh}\PYG{p}{.}\PYG{n}{nbpts}
-\PYG{n+nb}{ans} \PYG{p}{=}
+\PYG{n}{ans} \PYG{p}{=}
     \PYG{n}{40}
-\PYG{l+s}{\PYGZgt{}\PYGZgt{}} \PYG{l+s}{get(mf.mesh,} \PYG{l+s}{\PYGZsq{}pid\PYGZus{}from\PYGZus{}cvid\PYGZsq{}}\PYG{l+s}{,} \PYG{l+s}{3)}
-\PYG{n+nb}{ans} \PYG{p}{=}
+\PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{get}\PYG{p}{(}\PYG{n}{mf}\PYG{p}{.}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{pid\PYGZus{}from\PYGZus{}cvid\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{n}{ans} \PYG{p}{=}
      \PYG{n}{8}     \PYG{l+s}{9}    \PYG{l+s}{11}    \PYG{l+s}{15}    \PYG{l+s}{17}    \PYG{l+s}{16}    \PYG{l+s}{18}    \PYG{l+s}{10}    \PYG{l+s}{12}
 
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{mf}\PYG{p}{.}\PYG{n}{nbdof}
-\PYG{n+nb}{ans} \PYG{p}{=}
+\PYG{n}{ans} \PYG{p}{=}
     \PYG{n}{99}
 
 \PYG{l+s}{\PYGZpc{}} \PYG{l+s}{access} \PYG{l+s}{to} \PYG{l+s}{fem} \PYG{l+s}{of} \PYG{l+s}{convex} \PYG{l+s}{1}
@@ -9787,13 +9787,13 @@ induce a call to a mex\sphinxhyphen{}file, and additional \sphinxstyleemphasis{O
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{tic}\PYG{p}{;} \PYG{n+nb}{j}\PYG{p}{=}\PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{for} \PYG{l+s}{i=1:1000,} \PYG{l+s}{j=j+mf.nbdof}\PYG{p}{;} \PYG{k}{end}\PYG{p}{;} \PYG{n}{toc}
-\PYG{l+s}{elapsed\PYGZus{}time} \PYG{l+s}{=}
+\PYG{l+s}{elapsed\PYGZus{}time} \PYG{p}{=}
     \PYG{l+m+mf}{0.6060}
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{tic}\PYG{p}{;} \PYG{n+nb}{j}\PYG{p}{=}\PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{for} \PYG{l+s}{i=1:1000,} \PYG{l+s}{j=j+gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get(mf,}\PYG{l+s}{\PYGZsq{}nbdof\PYGZsq{}}\PYG{l+s}{)}\PYG{p}{;} \PYG{k}{end}\PYG{p}{;} \PYG{n}{toc}
-\PYG{l+s}{elapsed\PYGZus{}time} \PYG{l+s}{=}
+\PYG{l+s}{elapsed\PYGZus{}time} \PYG{p}{=}
     \PYG{l+m+mf}{0.1698}
 \PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}} \PYG{n}{tic}\PYG{p}{;} \PYG{n+nb}{j}\PYG{p}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{n}\PYG{p}{=}\PYG{n}{mf}\PYG{p}{.}\PYG{n}{nbdof}\PYG{p}{;}  \PYG{n}{for} \PYG{l+s}{i=1:1000,} \PYG{l+s}{j=j+n}\PYG{p}{;} \PYG{k}{end}\PYG{p}{;} \PYG{n}{toc}
-\PYG{l+s}{elapsed\PYGZus{}time} \PYG{l+s}{=}
+\PYG{l+s}{elapsed\PYGZus{}time} \PYG{p}{=}
     \PYG{l+m+mf}{0.0088}
 \end{sphinxVerbatim}
 

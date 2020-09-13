@@ -80,7 +80,7 @@
 
 
 \title{Tutorial}
-\date{Sep 12, 2020}
+\date{Sep 13, 2020}
 \release{5.4.1}
 \author{Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -405,7 +405,7 @@ Let us now define the different physical and numerical parameters of the problem
 \PYG{k+kt}{double} \PYG{n}{epsilon} \PYG{o}{=} \PYG{l+m+mf}{1.}\PYG{p}{;} \PYG{c+c1}{// Thickness of the plate (cm)}
 \PYG{k+kt}{double} \PYG{n}{E} \PYG{o}{=} \PYG{l+m+mf}{21E6}\PYG{p}{;}     \PYG{c+c1}{// Young Modulus (N/cm\PYGZca{}2)}
 \PYG{k+kt}{double} \PYG{n}{nu} \PYG{o}{=} \PYG{l+m+mf}{0.3}\PYG{p}{;}     \PYG{c+c1}{// Poisson ratio}
-\PYG{k+kt}{double} \PYG{n}{clambda} \PYG{o}{=} \PYG{n}{E}\PYG{o}{*}\PYG{n}{nu}\PYG{o}{/}\PYG{p}{(}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{+}\PYG{n}{nu}\PYG{p}{)}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{nu}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{k+kt}{double} \PYG{n}{clambda} \PYG{o}{=} \PYG{n}{E}\PYG{o}{*}\PYG{n}{nu}\PYG{o}{/}\PYG{p}{(}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{+}\PYG{n}{nu}\PYG{p}{)}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{l+m+mi}{\PYGZhy{}2}\PYG{o}{*}\PYG{n}{nu}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \PYG{k+kt}{double} \PYG{n}{cmu} \PYG{o}{=} \PYG{n}{E}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{+}\PYG{n}{nu}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \PYG{k+kt}{double} \PYG{n}{clambdastar} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{clambda}\PYG{o}{*}\PYG{n}{cmu}\PYG{o}{/}\PYG{p}{(}\PYG{n}{clambda}\PYG{o}{+}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{cmu}\PYG{p}{)}\PYG{p}{;}
 \PYG{k+kt}{double} \PYG{n}{F} \PYG{o}{=} \PYG{l+m+mf}{100E2}\PYG{p}{;}    \PYG{c+c1}{// Force density at the right boundary (N/cm\PYGZca{}2)}
@@ -468,7 +468,7 @@ The geometry of the domain is supposed to be a rectangle with three circular hol
 \PYG{n}{mo} \PYG{o}{=} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{new\PYGZus{}mesher\PYGZus{}setminus}\PYG{p}{(}\PYG{n}{mo1}\PYG{p}{,} \PYG{n}{mo5}\PYG{p}{)}\PYG{p}{;}
 
 \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{base\PYGZus{}node}\PYG{o}{\PYGZgt{}} \PYG{n}{fixed}\PYG{p}{;}
-\PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{build\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{n}{mo}\PYG{p}{,} \PYG{n}{h}\PYG{p}{,} \PYG{n}{fixed}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{build\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{n}{mo}\PYG{p}{,} \PYG{n}{h}\PYG{p}{,} \PYG{n}{fixed}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{\PYGZhy{}2}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -494,7 +494,7 @@ The geometry of the domain is supposed to be a rectangle with three circular hol
 \PYG{n}{mo3} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{50} \PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{mo4} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{75} \PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{mo5} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{union\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo2}\PYG{p}{,} \PYG{n}{mo3}\PYG{p}{,} \PYG{n}{mo4}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo}  \PYG{l+s}{=} \PYG{l+s}{gf\PYGZus{}mesher\PYGZus{}object(}\PYG{l+s}{\PYGZsq{}set minus\PYGZsq{}}\PYG{l+s}{,} \PYG{l+s}{mo1,} \PYG{l+s}{mo5)}\PYG{p}{;}
+\PYG{n}{mo}  \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{set minus\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo1}\PYG{p}{,} \PYG{n}{mo5}\PYG{p}{)}\PYG{p}{;}
 
 \PYG{n}{mesh} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{generate\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo}\PYG{p}{,} \PYG{n}{h}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
@@ -508,7 +508,7 @@ The geometry of the domain is supposed to be a rectangle with three circular hol
 \PYG{n}{mo3} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{50} \PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{mo4} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{75} \PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{mo5} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{union\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo2}\PYG{p}{,} \PYG{n}{mo3}\PYG{p}{,} \PYG{n}{mo4}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo}  \PYG{l+s}{=} \PYG{l+s}{gf\PYGZus{}mesher\PYGZus{}object(}\PYG{l+s}{\PYGZsq{}set minus\PYGZsq{}}\PYG{l+s}{,} \PYG{l+s}{mo1,} \PYG{l+s}{mo5)}\PYG{p}{;}
+\PYG{n}{mo}  \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{set minus\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo1}\PYG{p}{,} \PYG{n}{mo5}\PYG{p}{)}\PYG{p}{;}
 
 \PYG{n}{mesh} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{generate\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo}\PYG{p}{,} \PYG{n}{h}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
@@ -551,13 +551,13 @@ Since we have different boundary conditions on the different parts of the bounda
                      \PYG{n}{base\PYGZus{}small\PYGZus{}vector}\PYG{p}{(} \PYG{l+m+mf}{1.}\PYG{p}{,} \PYG{l+m+mf}{0.}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{mesh\PYGZus{}region} \PYG{n}{fb3}
   \PYG{o}{=} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{select\PYGZus{}faces\PYGZus{}of\PYGZus{}normal}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{n}{border\PYGZus{}faces}\PYG{p}{,}
-                     \PYG{n}{base\PYGZus{}small\PYGZus{}vector}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.}\PYG{p}{,} \PYG{l+m+mf}{0.}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
+                     \PYG{n}{base\PYGZus{}small\PYGZus{}vector}\PYG{p}{(}\PYG{l+m+mf}{\PYGZhy{}1.}\PYG{p}{,} \PYG{l+m+mf}{0.}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{mesh\PYGZus{}region} \PYG{n}{fb4}
   \PYG{o}{=} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{select\PYGZus{}faces\PYGZus{}of\PYGZus{}normal}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{n}{border\PYGZus{}faces}\PYG{p}{,}
                      \PYG{n}{base\PYGZus{}small\PYGZus{}vector}\PYG{p}{(}\PYG{l+m+mf}{0.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{mesh\PYGZus{}region} \PYG{n}{fb5}
   \PYG{o}{=} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{select\PYGZus{}faces\PYGZus{}of\PYGZus{}normal}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{n}{border\PYGZus{}faces}\PYG{p}{,}
-                     \PYG{n}{base\PYGZus{}small\PYGZus{}vector}\PYG{p}{(}\PYG{l+m+mf}{0.}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
+                     \PYG{n}{base\PYGZus{}small\PYGZus{}vector}\PYG{p}{(}\PYG{l+m+mf}{0.}\PYG{p}{,} \PYG{l+m+mf}{\PYGZhy{}1.}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
 
 \PYG{n}{size\PYGZus{}type} \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{TOP\PYGZus{}BOUND}\PYG{o}{=}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{o}{=}\PYG{l+m+mi}{4}\PYG{p}{;}
 \PYG{n}{mesh}\PYG{p}{.}\PYG{n}{region}\PYG{p}{(} \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)} \PYG{o}{=} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{mesh\PYGZus{}region}\PYG{o}{:}\PYG{o}{:}\PYG{n}{subtract}\PYG{p}{(}\PYG{n}{fb2}\PYG{p}{,} \PYG{n}{fb1}\PYG{p}{)}\PYG{p}{;}
@@ -683,7 +683,7 @@ In order to preview the mesh and to control its validity, the following instruct
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
 \PYG{n}{scf}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{curved\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{regions\PYGZsq{}}\PYG{p}{,} \PYG{c}{...}
+\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{curved\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{regions\PYGZsq{}}\PYG{p}{,} \PYG{k}{...}
              \PYG{p}{[}\PYG{n}{RIGHT\PYGZus{}BOUND} \PYG{n}{LEFT\PYGZus{}BOUND} \PYG{n}{TOP\PYGZus{}BOUND} \PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Mesh\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{)}\PYG{p}{;}
@@ -693,7 +693,7 @@ In order to preview the mesh and to control its validity, the following instruct
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{curved\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{regions\PYGZsq{}}\PYG{p}{,} \PYG{c}{...}
+\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{curved\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{regions\PYGZsq{}}\PYG{p}{,} \PYG{k}{...}
              \PYG{p}{[}\PYG{n}{RIGHT\PYGZus{}BOUND} \PYG{n}{LEFT\PYGZus{}BOUND} \PYG{n}{TOP\PYGZus{}BOUND} \PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Mesh\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{pause}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
@@ -883,11 +883,11 @@ The following program allows to take into account the whole elastic deformation 
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}isotropic\PYGZus{}linearized\PYGZus{}elasticity\PYGZus{}brick}
   \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{u}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{clambdastar}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{cmu}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}Dirichlet\PYGZus{}condition\PYGZus{}with\PYGZus{}multipliers}
-  \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{u}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{dim\PYGZus{}type}\PYG{p}{(}\PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,} \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+  \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{u}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{dim\PYGZus{}type}\PYG{p}{(}\PYG{n}{elements\PYGZus{}degree}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{,} \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{md}\PYG{p}{.}\PYG{n}{add\PYGZus{}initialized\PYGZus{}fixed\PYGZus{}size\PYGZus{}data}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Fdata}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{base\PYGZus{}small\PYGZus{}vector}\PYG{p}{(}\PYG{n}{F}\PYG{o}{*}\PYG{n}{epsilon}\PYG{p}{,}\PYG{l+m+mf}{0.}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}source\PYGZus{}term\PYGZus{}brick}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{u}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Fdata}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{md}\PYG{p}{.}\PYG{n}{add\PYGZus{}initialized\PYGZus{}scalar\PYGZus{}data}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{beta}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{alpha\PYGZus{}th}\PYG{o}{*}\PYG{n}{E}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{nu}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{md}\PYG{p}{.}\PYG{n}{add\PYGZus{}initialized\PYGZus{}scalar\PYGZus{}data}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{beta}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{alpha\PYGZus{}th}\PYG{o}{*}\PYG{n}{E}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{l+m+mi}{\PYGZhy{}2}\PYG{o}{*}\PYG{n}{nu}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}linear\PYGZus{}term}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{beta*(T0\PYGZhy{}theta)*Div\PYGZus{}Test\PYGZus{}u}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
@@ -980,10 +980,10 @@ Similarly, the following program take into account the electric potential equati
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}nonlinear\PYGZus{}term}
   \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{sigmaeps}\PYG{o}{+}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{*(Grad\PYGZus{}V.Grad\PYGZus{}Test\PYGZus{}V)}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}Dirichlet\PYGZus{}condition\PYGZus{}with\PYGZus{}multipliers}
-  \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{V}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{dim\PYGZus{}type}\PYG{p}{(}\PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,} \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+  \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{V}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{dim\PYGZus{}type}\PYG{p}{(}\PYG{n}{elements\PYGZus{}degree}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{,} \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{md}\PYG{p}{.}\PYG{n}{add\PYGZus{}initialized\PYGZus{}scalar\PYGZus{}data}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{DdataV}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mf}{0.1}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add\PYGZus{}Dirichlet\PYGZus{}condition\PYGZus{}with\PYGZus{}multipliers}
-  \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{V}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{dim\PYGZus{}type}\PYG{p}{(}\PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,} \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{DdataV}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+  \PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{V}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{dim\PYGZus{}type}\PYG{p}{(}\PYG{n}{elements\PYGZus{}degree}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{p}{,} \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{DdataV}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1309,7 +1309,7 @@ The finite element problem is now solved. We can plot the solution as follows. N
 \PYG{n}{drawlater}\PYG{p}{;}
 \PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,} \PYG{n}{V}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{colorbar}\PYG{p}{(}\PYG{n}{min}\PYG{p}{(}\PYG{n}{V}\PYG{p}{)}\PYG{p}{,}\PYG{n}{max}\PYG{p}{(}\PYG{n}{V}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{n}{CO}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZus{}density\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{0.1}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{c}{...}
+\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{n}{CO}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZus{}density\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{0.1}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{k}{...}
         \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Electric potential in Volt (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{drawnow}\PYG{p}{;}
@@ -1348,7 +1348,7 @@ The finite element problem is now solved. We can plot the solution as follows. N
 \PYG{n}{hold} \PYG{l+s}{on}\PYG{p}{;}
 \PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,} \PYG{n}{V}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{colorbar}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{n}{CO}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZus{}density\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{0.1}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{c}{...}
+\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{n}{CO}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZus{}density\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{0.1}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{k}{...}
         \PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{colorbar}\PYG{p}{;}
 \PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Electric potential in Volt (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
