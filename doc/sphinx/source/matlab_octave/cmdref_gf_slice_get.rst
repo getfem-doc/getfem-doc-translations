@@ -24,6 +24,7 @@ gf_slice_get
   m = gf_slice_get(slice S, 'mesh')
   z = gf_slice_get(slice S, 'memsize')
   gf_slice_get(slice S, 'export to vtk', string filename, ...)
+  gf_slice_get(slice S, 'export to vtu', string filename, ...)
   gf_slice_get(slice S, 'export to pov', string filename)
   gf_slice_get(slice S, 'export to dx', string filename, ...)
   gf_slice_get(slice S, 'export to pos', string filename[, string name][[,mesh_fem mf1], mat U1, string nameU1[[,mesh_fem mf1], mat U2, string nameU2,...])
@@ -146,6 +147,32 @@ gf_slice_get
       U2, 'second_dataset')
     - gf_slice_get(slice S, 'export to vtk', 'test.vtk', 'ascii', mf,U2)
     - gf_slice_get(slice S, 'export to vtk', 'test.vtk', 'edges', 'ascii', Uslice)
+
+
+  ``gf_slice_get(slice S, 'export to vtu', string filename, ...)``
+
+    Export a slice to VTK(XML).
+    
+    Following the `filename`, you may use any of the following options:
+    
+    - if 'ascii' is not used, the file will contain binary data
+      (non portable, but fast).
+    - if 'edges' is used, the edges of the original mesh will be
+      written instead of the slice content.
+    
+    More than one dataset may be written, just list them. Each dataset
+    consists of either:
+    
+    - a field interpolated on the slice (scalar, vector or tensor),
+      followed by an optional name.
+    - a mesh_fem and a field, followed by an optional name.
+    
+    Examples:
+    
+    - gf_slice_get(slice S, 'export to vtu', 'test.vtu', Usl, 'first_dataset', mf,
+      U2, 'second_dataset')
+    - gf_slice_get(slice S, 'export to vtu', 'test.vtu', 'ascii', mf,U2)
+    - gf_slice_get(slice S, 'export to vtu', 'test.vtu', 'edges', 'ascii', Uslice)
 
 
   ``gf_slice_get(slice S, 'export to pov', string filename)``

@@ -54,6 +54,7 @@ gf_mesh_get
   gf_mesh_get(mesh M, 'save', string filename)
   s = gf_mesh_get(mesh M, 'char')
   gf_mesh_get(mesh M, 'export to vtk', string filename, ... [,'ascii'][,'quality'])
+  gf_mesh_get(mesh M, 'export to vtu', string filename, ... [,'ascii'][,'quality'])
   gf_mesh_get(mesh M, 'export to dx', string filename, ... [,'ascii'][,'append'][,'as',string name,[,'serie',string serie_name]][,'edges'])
   gf_mesh_get(mesh M, 'export to pos', string filename[, string name])
   z = gf_mesh_get(mesh M, 'memsize')
@@ -448,6 +449,16 @@ gf_mesh_get
     convex will be written to the file.
     
     See also gf_mesh_fem_get(mesh_fem MF, 'export to vtk'), gf_slice_get(slice S, 'export to vtk').
+
+
+  ``gf_mesh_get(mesh M, 'export to vtu', string filename, ... [,'ascii'][,'quality'])``
+
+    Exports a mesh to a VTK(XML) file .
+    
+    If 'quality' is specified, an estimation of the quality of each
+    convex will be written to the file.
+    
+    See also gf_mesh_fem_get(mesh_fem MF, 'export to vtu'), gf_slice_get(slice S, 'export to vtu').
 
 
   ``gf_mesh_get(mesh M, 'export to dx', string filename, ... [,'ascii'][,'append'][,'as',string name,[,'serie',string serie_name]][,'edges'])``

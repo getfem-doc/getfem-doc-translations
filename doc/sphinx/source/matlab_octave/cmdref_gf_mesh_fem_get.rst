@@ -41,6 +41,7 @@ gf_mesh_fem_get
   m = gf_mesh_fem_get(mesh_fem MF, 'linked mesh')
   m = gf_mesh_fem_get(mesh_fem MF, 'mesh')
   gf_mesh_fem_get(mesh_fem MF, 'export to vtk',string filename, ... ['ascii'], U, 'name'...)
+  gf_mesh_fem_get(mesh_fem MF, 'export to vtu',string filename, ... ['ascii'], U, 'name'...)
   gf_mesh_fem_get(mesh_fem MF, 'export to dx',string filename, ...['as', string mesh_name][,'edges']['serie',string serie_name][,'ascii'][,'append'], U, 'name'...)
   gf_mesh_fem_get(mesh_fem MF, 'export to pos',string filename[, string name][[,mesh_fem mf1], mat U1, string nameU1[[,mesh_fem mf2], mat U2, string nameU2,...]])
   gf_mesh_fem_get(mesh_fem MF, 'dof_from_im',mesh_im mim[, int p])
@@ -315,6 +316,17 @@ gf_mesh_fem_get
     order elements). If you need to represent high-order FEMs or
     high-order geometric transformations, you should consider
     gf_slice_get(slice S, 'export to vtk').
+
+
+  ``gf_mesh_fem_get(mesh_fem MF, 'export to vtu',string filename, ... ['ascii'], U, 'name'...)``
+
+    Export a mesh_fem and some fields to a vtu file.
+    
+    The FEM and geometric transformations will be mapped to order 1
+    or 2 isoparametric Pk (or Qk) FEMs (as VTK(XML) does not handle higher
+    order elements). If you need to represent high-order FEMs or
+    high-order geometric transformations, you should consider
+    gf_slice_get(slice S, 'export to vtu').
 
 
   ``gf_mesh_fem_get(mesh_fem MF, 'export to dx',string filename, ...['as', string mesh_name][,'edges']['serie',string serie_name][,'ascii'][,'append'], U, 'name'...)``

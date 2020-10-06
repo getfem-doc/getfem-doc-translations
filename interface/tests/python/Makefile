@@ -104,8 +104,9 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
-TESTS = check_export.py check_global_functions.py \
-	check_asm.py check_secondary_domain.py \
+TESTS = check_export.py check_export_vtu.py \
+	check_global_functions.py check_asm.py \
+	check_secondary_domain.py \
 	check_mixed_mesh.py demo_wave.py \
 	demo_wave_equation.py demo_laplacian.py \
 	demo_laplacian_HHO.py demo_elasticity_HHO.py \
@@ -367,7 +368,7 @@ AUTOHEADER = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-trans
 AUTOMAKE = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-translations/getfem/missing automake-1.16
 AWK = gawk
 BLAS_LIBS = -lblas
-BUILDDATE = 10/05/20,00:48:57
+BUILDDATE = 10/06/20,00:49:13
 BUILDER = runner
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -423,7 +424,7 @@ MAKEINFO = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-transla
 MANIFEST_TOOL = :
 MATLAB_COM_EXT = 
 MATLAB_INC_DIR = 
-MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMeshLevelSet @gfMesherObject @gfMeshImData @gfContStruct @gfGeoTrans @gfMeshFem @gfLevelSet @gfCvStruct @gfMeshIm @gfPrecond @gfModel @gfSlice @gfInteg @gfSpmat @gfMesh @gfEltm @gfFem 
+MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMeshLevelSet @gfMesherObject @gfMeshImData @gfContStruct @gfLevelSet @gfCvStruct @gfGeoTrans @gfMeshFem @gfMeshIm @gfPrecond @gfModel @gfSlice @gfSpmat @gfInteg @gfMesh @gfEltm @gfFem 
 MATLAB_RELEASE = 
 MATLAB_ROOT = 
 METIS_LIBS = 
@@ -553,6 +554,7 @@ top_srcdir = ../../..
 optpy = check_levelset.py
 EXTRA_DIST = \
 	check_export.py 				\
+	check_export_vtu.py 				\
 	check_global_functions.py			\
 	check_levelset.py				\
 	check_asm.py    				\
@@ -561,6 +563,7 @@ EXTRA_DIST = \
 	demo_crack.py 					\
 	demo_fictitious_domains.py 			\
 	demo_laplacian.py 				\
+	demo_parallel_laplacian.py 			\
 	demo_laplacian_HHO.py 				\
 	demo_laplacian_pyramid.py			\
 	demo_laplacian_DG.py 				\
@@ -786,6 +789,13 @@ recheck: all
 check_export.py.log: check_export.py
 	@p='check_export.py'; \
 	b='check_export.py'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+check_export_vtu.py.log: check_export_vtu.py
+	@p='check_export_vtu.py'; \
+	b='check_export_vtu.py'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \

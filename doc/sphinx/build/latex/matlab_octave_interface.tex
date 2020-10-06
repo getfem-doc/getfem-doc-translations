@@ -80,7 +80,7 @@
 
 
 \title{Matlab-Octave Interface}
-\date{Oct 05, 2020}
+\date{Oct 06, 2020}
 \release{5.4.1}
 \author{Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -3906,6 +3906,7 @@ to manipulate geometric primitives in order to describe the geometry.
 \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{save}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{filename}\PYG{p}{)}
 \PYG{n}{s} \PYG{o}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{char}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to vtk}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{filename}\PYG{p}{,} \PYG{o}{.}\PYG{o}{.}\PYG{o}{.} \PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{ascii}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{quality}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to vtu}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{filename}\PYG{p}{,} \PYG{o}{.}\PYG{o}{.}\PYG{o}{.} \PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{ascii}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{quality}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to dx}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{filename}\PYG{p}{,} \PYG{o}{.}\PYG{o}{.}\PYG{o}{.} \PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{ascii}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{append}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{as}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{string} \PYG{n}{name}\PYG{p}{,}\PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{serie}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{string} \PYG{n}{serie\PYGZus{}name}\PYG{p}{]}\PYG{p}{]}\PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{edges}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to pos}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{filename}\PYG{p}{[}\PYG{p}{,} \PYG{n}{string} \PYG{n}{name}\PYG{p}{]}\PYG{p}{)}
 \PYG{n}{z} \PYG{o}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh} \PYG{n}{M}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{memsize}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
@@ -4347,6 +4348,17 @@ convex will be written to the file.
 See also gf\_mesh\_fem\_get(mesh\_fem MF, ‘export to vtk’), gf\_slice\_get(slice S, ‘export to vtk’).
 \end{quote}
 
+\sphinxcode{\sphinxupquote{gf\_mesh\_get(mesh M, \textquotesingle{}export to vtu\textquotesingle{}, string filename, ... {[},\textquotesingle{}ascii\textquotesingle{}{]}{[},\textquotesingle{}quality\textquotesingle{}{]})}}
+\begin{quote}
+
+Exports a mesh to a VTK(XML) file .
+
+If ‘quality’ is specified, an estimation of the quality of each
+convex will be written to the file.
+
+See also gf\_mesh\_fem\_get(mesh\_fem MF, ‘export to vtu’), gf\_slice\_get(slice S, ‘export to vtu’).
+\end{quote}
+
 \sphinxcode{\sphinxupquote{gf\_mesh\_get(mesh M, \textquotesingle{}export to dx\textquotesingle{}, string filename, ... {[},\textquotesingle{}ascii\textquotesingle{}{]}{[},\textquotesingle{}append\textquotesingle{}{]}{[},\textquotesingle{}as\textquotesingle{},string name,{[},\textquotesingle{}serie\textquotesingle{},string serie\_name{]}{]}{[},\textquotesingle{}edges\textquotesingle{}{]})}}
 \begin{quote}
 
@@ -4729,6 +4741,7 @@ If \sphinxtitleref{RCVs} is given, no FEM will be put on the convexes listed in
 \PYG{n}{m} \PYG{o}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{MF}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{linked mesh}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{m} \PYG{o}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{MF}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{mesh}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{MF}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to vtk}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{string} \PYG{n}{filename}\PYG{p}{,} \PYG{o}{.}\PYG{o}{.}\PYG{o}{.} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{ascii}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{o}{.}\PYG{o}{.}\PYG{p}{)}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{MF}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to vtu}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{string} \PYG{n}{filename}\PYG{p}{,} \PYG{o}{.}\PYG{o}{.}\PYG{o}{.} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{ascii}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{o}{.}\PYG{o}{.}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{MF}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to dx}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{string} \PYG{n}{filename}\PYG{p}{,} \PYG{o}{.}\PYG{o}{.}\PYG{o}{.}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{as}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{mesh\PYGZus{}name}\PYG{p}{]}\PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{edges}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{serie}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{string} \PYG{n}{serie\PYGZus{}name}\PYG{p}{]}\PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{ascii}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{[}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{append}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{o}{.}\PYG{o}{.}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{MF}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to pos}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{string} \PYG{n}{filename}\PYG{p}{[}\PYG{p}{,} \PYG{n}{string} \PYG{n}{name}\PYG{p}{]}\PYG{p}{[}\PYG{p}{[}\PYG{p}{,}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf1}\PYG{p}{]}\PYG{p}{,} \PYG{n}{mat} \PYG{n}{U1}\PYG{p}{,} \PYG{n}{string} \PYG{n}{nameU1}\PYG{p}{[}\PYG{p}{[}\PYG{p}{,}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf2}\PYG{p}{]}\PYG{p}{,} \PYG{n}{mat} \PYG{n}{U2}\PYG{p}{,} \PYG{n}{string} \PYG{n}{nameU2}\PYG{p}{,}\PYG{o}{.}\PYG{o}{.}\PYG{o}{.}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{MF}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{dof\PYGZus{}from\PYGZus{}im}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{mesh\PYGZus{}im} \PYG{n}{mim}\PYG{p}{[}\PYG{p}{,} \PYG{n+nb}{int} \PYG{n}{p}\PYG{p}{]}\PYG{p}{)}
@@ -5032,6 +5045,18 @@ or 2 isoparametric Pk (or Qk) FEMs (as VTK does not handle higher
 order elements). If you need to represent high\sphinxhyphen{}order FEMs or
 high\sphinxhyphen{}order geometric transformations, you should consider
 gf\_slice\_get(slice S, ‘export to vtk’).
+\end{quote}
+
+\sphinxcode{\sphinxupquote{gf\_mesh\_fem\_get(mesh\_fem MF, \textquotesingle{}export to vtu\textquotesingle{},string filename, ... {[}\textquotesingle{}ascii\textquotesingle{}{]}, U, \textquotesingle{}name\textquotesingle{}...)}}
+\begin{quote}
+
+Export a mesh\_fem and some fields to a vtu file.
+
+The FEM and geometric transformations will be mapped to order 1
+or 2 isoparametric Pk (or Qk) FEMs (as VTK(XML) does not handle higher
+order elements). If you need to represent high\sphinxhyphen{}order FEMs or
+high\sphinxhyphen{}order geometric transformations, you should consider
+gf\_slice\_get(slice S, ‘export to vtu’).
 \end{quote}
 
 \sphinxcode{\sphinxupquote{gf\_mesh\_fem\_get(mesh\_fem MF, \textquotesingle{}export to dx\textquotesingle{},string filename, ...{[}\textquotesingle{}as\textquotesingle{}, string mesh\_name{]}{[},\textquotesingle{}edges\textquotesingle{}{]}{[}\textquotesingle{}serie\textquotesingle{},string serie\_name{]}{[},\textquotesingle{}ascii\textquotesingle{}{]}{[},\textquotesingle{}append\textquotesingle{}{]}, U, \textquotesingle{}name\textquotesingle{}...)}}
@@ -8939,6 +8964,7 @@ from a text file.
 \PYG{n}{m} \PYG{o}{=} \PYG{n}{gf\PYGZus{}slice\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{slice} \PYG{n}{S}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{mesh}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{z} \PYG{o}{=} \PYG{n}{gf\PYGZus{}slice\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{slice} \PYG{n}{S}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{memsize}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}slice\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{slice} \PYG{n}{S}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to vtk}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{filename}\PYG{p}{,} \PYG{o}{.}\PYG{o}{.}\PYG{o}{.}\PYG{p}{)}
+\PYG{n}{gf\PYGZus{}slice\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{slice} \PYG{n}{S}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to vtu}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{filename}\PYG{p}{,} \PYG{o}{.}\PYG{o}{.}\PYG{o}{.}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}slice\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{slice} \PYG{n}{S}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to pov}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{filename}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}slice\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{slice} \PYG{n}{S}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to dx}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{filename}\PYG{p}{,} \PYG{o}{.}\PYG{o}{.}\PYG{o}{.}\PYG{p}{)}
 \PYG{n}{gf\PYGZus{}slice\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{slice} \PYG{n}{S}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{export to pos}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{string} \PYG{n}{filename}\PYG{p}{[}\PYG{p}{,} \PYG{n}{string} \PYG{n}{name}\PYG{p}{]}\PYG{p}{[}\PYG{p}{[}\PYG{p}{,}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf1}\PYG{p}{]}\PYG{p}{,} \PYG{n}{mat} \PYG{n}{U1}\PYG{p}{,} \PYG{n}{string} \PYG{n}{nameU1}\PYG{p}{[}\PYG{p}{[}\PYG{p}{,}\PYG{n}{mesh\PYGZus{}fem} \PYG{n}{mf1}\PYG{p}{]}\PYG{p}{,} \PYG{n}{mat} \PYG{n}{U2}\PYG{p}{,} \PYG{n}{string} \PYG{n}{nameU2}\PYG{p}{,}\PYG{o}{.}\PYG{o}{.}\PYG{o}{.}\PYG{p}{]}\PYG{p}{)}
@@ -9089,6 +9115,50 @@ gf\_slice\_get(slice S, ‘export to vtk’, ‘test.vtk’, ‘ascii’, mf,U2)
 
 \item {} 
 gf\_slice\_get(slice S, ‘export to vtk’, ‘test.vtk’, ‘edges’, ‘ascii’, Uslice)
+
+\end{itemize}
+\end{quote}
+
+\sphinxcode{\sphinxupquote{gf\_slice\_get(slice S, \textquotesingle{}export to vtu\textquotesingle{}, string filename, ...)}}
+\begin{quote}
+
+Export a slice to VTK(XML).
+
+Following the \sphinxtitleref{filename}, you may use any of the following options:
+\begin{itemize}
+\item {} 
+if ‘ascii’ is not used, the file will contain binary data
+(non portable, but fast).
+
+\item {} 
+if ‘edges’ is used, the edges of the original mesh will be
+written instead of the slice content.
+
+\end{itemize}
+
+More than one dataset may be written, just list them. Each dataset
+consists of either:
+\begin{itemize}
+\item {} 
+a field interpolated on the slice (scalar, vector or tensor),
+followed by an optional name.
+
+\item {} 
+a mesh\_fem and a field, followed by an optional name.
+
+\end{itemize}
+
+Examples:
+\begin{itemize}
+\item {} 
+gf\_slice\_get(slice S, ‘export to vtu’, ‘test.vtu’, Usl, ‘first\_dataset’, mf,
+U2, ‘second\_dataset’)
+
+\item {} 
+gf\_slice\_get(slice S, ‘export to vtu’, ‘test.vtu’, ‘ascii’, mf,U2)
+
+\item {} 
+gf\_slice\_get(slice S, ‘export to vtu’, ‘test.vtu’, ‘edges’, ‘ascii’, Uslice)
 
 \end{itemize}
 \end{quote}
