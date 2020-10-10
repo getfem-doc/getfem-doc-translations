@@ -1566,6 +1566,18 @@ class Mesh:
     return self.get("export_to_vtk", filename, *args)
 
 
+  def export_to_vtu(self, filename, *args):
+    """Synopsis: Mesh.export_to_vtu(self, string filename, ... [,'ascii'][,'quality'])
+
+    Exports a mesh to a VTK(XML) file .
+    
+    If 'quality' is specified, an estimation of the quality of each
+    convex will be written to the file.
+    
+    See also MeshFem.export_to_vtu(), Slice.export_to_vtu()."""
+    return self.get("export_to_vtu", filename, *args)
+
+
   def export_to_dx(self, filename, *args):
     """Synopsis: Mesh.export_to_dx(self, string filename, ... [,'ascii'][,'append'][,'as',string name,[,'serie',string serie_name]][,'edges'])
 
@@ -2070,6 +2082,19 @@ class MeshFem:
     high-order geometric transformations, you should consider
     Slice.export_to_vtk()."""
     return self.get("export_to_vtk", filename, *args)
+
+
+  def export_to_vtu(self, filename, *args):
+    """Synopsis: MeshFem.export_to_vtu(self,string filename, ... ['ascii'], U, 'name'...)
+
+    Export a MeshFem and some fields to a vtu file.
+    
+    The FEM and geometric transformations will be mapped to order 1
+    or 2 isoparametric Pk (or Qk) FEMs (as VTK(XML) does not handle higher
+    order elements). If you need to represent high-order FEMs or
+    high-order geometric transformations, you should consider
+    Slice.export_to_vtu()."""
+    return self.get("export_to_vtu", filename, *args)
 
 
   def export_to_dx(self, filename, *args):
@@ -5380,6 +5405,34 @@ class Slice:
     - Slice.export_to_vtk('test.vtk', 'ascii', mf,U2)
     - Slice.export_to_vtk('test.vtk', 'edges', 'ascii', Uslice)"""
     return self.get("export_to_vtk", filename, *args)
+
+
+  def export_to_vtu(self, filename, *args):
+    """Synopsis: Slice.export_to_vtu(self, string filename, ...)
+
+    Export a slice to VTK(XML).
+    
+    Following the `filename`, you may use any of the following options:
+    
+    - if 'ascii' is not used, the file will contain binary data
+      (non portable, but fast).
+    - if 'edges' is used, the edges of the original mesh will be
+      written instead of the slice content.
+    
+    More than one dataset may be written, just list them. Each dataset
+    consists of either:
+    
+    - a field interpolated on the slice (scalar, vector or tensor),
+      followed by an optional name.
+    - a mesh_fem and a field, followed by an optional name.
+    
+    Examples:
+    
+    - Slice.export_to_vtu('test.vtu', Usl, 'first_dataset', mf,
+      U2, 'second_dataset')
+    - Slice.export_to_vtu('test.vtu', 'ascii', mf,U2)
+    - Slice.export_to_vtu('test.vtu', 'edges', 'ascii', Uslice)"""
+    return self.get("export_to_vtu", filename, *args)
 
 
   def export_to_pov(self, filename):
