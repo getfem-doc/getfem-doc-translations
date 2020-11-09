@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-08 00:50+0000\n"
+"POT-Creation-Date: 2020-11-09 00:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:17+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -26,39 +26,39 @@ msgid "Precond"
 msgstr "Precond"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:1
+#: of getfem.getfem.Precond:1
 msgid "GetFEM Precond object"
 msgstr "GetFEM Precond オブジェクト"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:3
+#: of getfem.getfem.Precond:3
 msgid ""
 "The preconditioners may store REAL or COMPLEX values. They accept getfem "
 "sparse matrices and Matlab sparse matrices."
 msgstr "前処理行列は、REAL値またはCOMPLEX値を記憶することができます。getfem疎行列とMatlab疎行列が使用可能です。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:7
+#: of getfem.getfem.Precond:7
 msgid "General constructor for Precond objects"
 msgstr "Precondオブジェクトの汎用的なコンストラクタ"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:9
+#: of getfem.getfem.Precond:9
 msgid "``PC = Precond('identity')`` Create a REAL identity precondioner."
 msgstr "``PC = Precond('identity')`` 実数の前処理行列を作成します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:12
+#: of getfem.getfem.Precond:12
 msgid "``PC = Precond('cidentity')`` Create a COMPLEX identity precondioner."
 msgstr "``PC = Precond('cidentity')`` COMPLEX 単位前処理行列を作成します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:15
+#: of getfem.getfem.Precond:15
 msgid "``PC = Precond('diagonal', vec D)`` Create a diagonal precondioner."
 msgstr "``PC = Precond('diagonal', vec D)`` 対角前処理行列を作成します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:18
+#: of getfem.getfem.Precond:18
 msgid ""
 "``PC = Precond('ildlt', SpMat m)`` Create an ILDLT (Cholesky) preconditioner"
 " for the (symmetric) sparse matrix `m`. This preconditioner has the same "
@@ -68,7 +68,7 @@ msgstr ""
 "のILDLT(Cholesky)前処理行列を作成します。この前処理行列は(fill-in無しの) `m` と同じ非ゼロパターンです。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:23
+#: of getfem.getfem.Precond:23
 msgid ""
 "``PC = Precond('ilu', SpMat m)`` Create an ILU (Incomplete LU) "
 "preconditioner for the sparse matrix `m`. This preconditioner has the same "
@@ -78,7 +78,7 @@ msgstr ""
 "、(fill-in無し) `m` と同じじ非ゼロパターンを有します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:28
+#: of getfem.getfem.Precond:28
 msgid ""
 "``PC = Precond('ildltt', SpMat m[, int fillin[, scalar threshold]])`` Create"
 " an ILDLTT (Cholesky with filling) preconditioner for the (symmetric) sparse"
@@ -91,7 +91,7 @@ msgstr ""
 "`fillin` 個追加することができます。 `fillin` のデフォルト値は10で、デフォルトの閾値は1e-7です。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:34
+#: of getfem.getfem.Precond:34
 msgid ""
 "``PC = Precond('ilut', SpMat m[, int fillin[, scalar threshold]])`` Create "
 "an ILUT (Incomplete LU with filling) preconditioner for the sparse matrix "
@@ -104,7 +104,7 @@ msgstr ""
 "個追加することができます。 `fillin`のデフォルト値は10で、デフォルトの閾値は1e-7です。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:40
+#: of getfem.getfem.Precond:40
 msgid ""
 "``PC = Precond('superlu', SpMat m)`` Uses SuperLU to build an exact "
 "factorization of the sparse matrix `m`. This preconditioner is only "
@@ -116,51 +116,51 @@ msgstr ""
 "interfaceが構築されている場合にのみ使用できます。LU分解は、3次元問題の場合、メモリをすべて消費する可能性が高いことに注意してください。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond:46
+#: of getfem.getfem.Precond:46
 msgid ""
 "``PC = Precond('spmat', SpMat m)`` Preconditioner given explicitely by a "
 "sparse matrix."
 msgstr "``PC = Precond('spmat', SpMat m)`` 疎行列によって明示的に与えられる前処理行列です。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond.char:1
+#: of getfem.getfem.Precond.char:1
 msgid "Output a (unique) string representation of the Precond."
 msgstr "Precondの(一意な)文字列表現を出力します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond.char:3
+#: of getfem.getfem.Precond.char:3
 msgid ""
 "This can be used to perform comparisons between two different Precond "
 "objects. This function is to be completed."
 msgstr "これを使用して、2つの異なるPrecondオブジェクト間の比較を実行できます。この機能は完成予定です。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond.display:1
+#: of getfem.getfem.Precond.display:1
 msgid "displays a short summary for a Precond object."
 msgstr "Precondオブジェクトの概要が表示されます。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond.is_complex:1
+#: of getfem.getfem.Precond.is_complex:1
 msgid "Return 1 if the preconditioner stores complex values."
 msgstr "前処理行列が複素数値を格納する場合は1を返します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond.mult:1
+#: of getfem.getfem.Precond.mult:1
 msgid "Apply the preconditioner to the supplied vector."
 msgstr "与えられたベクトルに前処理行列を適用します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond.size:1
+#: of getfem.getfem.Precond.size:1
 msgid "Return the dimensions of the preconditioner."
 msgstr "前処理行列の次元を返します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond.tmult:1
+#: of getfem.getfem.Precond.tmult:1
 msgid "Apply the transposed preconditioner to the supplied vector."
 msgstr "転置された前処理行列を与えられたベクトルに適用します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.Precond.type:1
+#: of getfem.getfem.Precond.type:1
 msgid ""
 "Return a string describing the type of the preconditioner ('ilu', "
 "'ildlt',..)."
