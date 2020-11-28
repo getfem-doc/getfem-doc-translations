@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-27 00:53+0000\n"
+"POT-Creation-Date: 2020-11-28 00:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -153,7 +153,7 @@ msgid "The stress in the reference configuration can be describe by the second P
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:114
-msgid "{\\hat{\\hat{\\sigma}}} &= \\frac{\\partial}{\\partial E} {W}(E) = 2\\frac{\\partial}{\\partial C} {W}(C)"
+msgid "{\\hat{\\hat{\\sigma}}} = \\frac{\\partial}{\\partial E} {W}(E) = 2\\frac{\\partial}{\\partial C} {W}(C)"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:118
@@ -293,7 +293,7 @@ msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:222
 msgid "{d_1} = 0\n"
-"\\intertext{with the additional constraint:}\n"
+"\\mbox{ with the additional constraint: }\n"
 "i_3( C) = 1"
 msgstr ""
 
@@ -302,7 +302,7 @@ msgid "The incompressibility constraint :math:`i_3( C) = 1` is handled with a La
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:230
-msgid "constraint: :math:`\\sigma = -pI \\rm I\\hspace{-0.15em}Rightarrow {\\hat{\\hat{\\sigma}}} = -p\\nabla\\Phi\\nabla\\Phi^{-T}\\det\\nabla\\Phi`"
+msgid "constraint: :math:`\\sigma = -pI \\Rightarrow {\\hat{\\hat{\\sigma}}} = -p\\nabla\\Phi\\nabla\\Phi^{-T}\\det\\nabla\\Phi`"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:232
@@ -322,7 +322,7 @@ msgid "``Ciarlet-Geymonat law``"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:249
-msgid "{W} &= a\\; i_1(C) + (\\frac{\\mu}{2} - a)i_2(C) + (\\frac{\\lambda}{4} - \\frac{\\mu}{2} + a)i_3(C) - (\\frac{\\mu}{2}+\\frac{\\lambda}{4})\\log \\det(C)"
+msgid "{W} = a\\; i_1(C) + (\\frac{\\mu}{2} - a)i_2(C) + (\\frac{\\lambda}{4} - \\frac{\\mu}{2} + a)i_3(C) - (\\frac{\\mu}{2}+\\frac{\\lambda}{4})\\log \\det(C)"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:253
@@ -334,7 +334,7 @@ msgid "``Generalized Blatz-Ko law``"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:259
-msgid "{W} &= (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)^n"
+msgid "{W} = (a i_1(C) + b i_3(C)^{1/2} + c\\frac{i_2(C)}{i_3(C)} + d)^n"
 msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:263
@@ -344,7 +344,7 @@ msgstr ""
 #: ../source/userdoc/model_nonlinear_elasticity.rst:265
 msgid "\\begin{array}{l}\n"
 "\\frac{\\partial W}{\\partial i_1(C)} = naZ^{n-1}\n"
-"~~~~\\mbox{with } Z = (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)\\\\\n"
+"~~~~\\mbox{with } Z = (a i_1(C) + b i_3(C)^{1/2} + c\\frac{i_2(C)}{i_3(C)} + d)\\\\\n"
 "\\frac{\\partial W}{\\partial i_2(C)} = n\\frac{c}{i_3(C)}Z^{n-1}\\\\\n"
 "\\frac{\\partial W}{\\partial i_3(C)} = n(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-1}\\\\\n"
 "\\frac{\\partial W^2}{\\partial^2 i_1(C)} = n(n-1)A^2Z^{n-2}\\\\\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-27 00:53+0000\n"
+"POT-Creation-Date: 2020-11-28 00:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -185,29 +185,33 @@ msgid "'gmsh' for a mesh created with <literal>Gmsh</literal>"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_mesh.rst:148
-msgid "'gid' for a mesh created with <literal>GiD</literal>"
+msgid "'gmsh_with_lower_dim_elt' for a mesh created with <literal>Gmsh</literal> and including elements of lower dimension than the mesh"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_mesh.rst:149
-msgid "'cdb' for a mesh created with <literal>ANSYS</literal>"
+msgid "'gid' for a mesh created with <literal>GiD</literal>"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_mesh.rst:150
+msgid "'cdb' for a mesh created with <literal>ANSYS</literal>"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mesh.rst:151
 msgid "'am_fmt' for a mesh created with <literal>EMC2</literal>"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:153
+#: ../source/scilab/cmdref_gf_mesh.rst:154
 msgid "``M = gf_mesh('clone', mesh m2)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:155
+#: ../source/scilab/cmdref_gf_mesh.rst:156
 msgid "Create a copy of a mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:158
+#: ../source/scilab/cmdref_gf_mesh.rst:159
 msgid "``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat vertices]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:160
+#: ../source/scilab/cmdref_gf_mesh.rst:161
 msgid "Call the experimental mesher of Getfem on the geometry represented by <literal>mo</literal>. please control the conformity of the produced mesh. You can help the mesher by adding a priori vertices in the array <literal>vertices</literal> which should be of size <literal></literal>n x m<literal></literal> where <literal></literal>n<literal></literal> n is the dimension of the mesh and <literal></literal>m<literal></literal> the number of points. <literal>h</literal> is approximate diameter of the elements. <literal>K</literal> is the degree of the mesh ( > 1 for curved boundaries).  The mesher try to optimize the quality of the elements. This operation may be time consuming. Note that if the mesh generation fails, because of some random procedure used, it can be run again since it will not give necessarily the same result due to random procedures used. The messages send to the console by the mesh generation can be deactivated using <literal>gf_util('trace level', 2)</literal>. More information can be obtained by <literal>gf_util('trace level', 4)</literal>. See <literal></literal>gf_mesher_object<literal></literal> to manipulate geometric primitives in order to describe the geometry."
 msgstr ""

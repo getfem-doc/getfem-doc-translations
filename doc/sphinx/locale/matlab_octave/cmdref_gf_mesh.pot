@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-27 00:53+0000\n"
+"POT-Creation-Date: 2020-11-28 00:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -193,29 +193,33 @@ msgid "'gmsh' for a mesh created with `Gmsh`"
 msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh.rst:152
-msgid "'gid' for a mesh created with `GiD`"
+msgid "'gmsh_with_lower_dim_elt' for a mesh created with `Gmsh` and including elements of lower dimension than the mesh"
 msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh.rst:153
-msgid "'cdb' for a mesh created with `ANSYS`"
+msgid "'gid' for a mesh created with `GiD`"
 msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh.rst:154
+msgid "'cdb' for a mesh created with `ANSYS`"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:155
 msgid "'am_fmt' for a mesh created with `EMC2`"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:157
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:158
 msgid "``M = gf_mesh('clone', mesh m2)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:159
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:160
 msgid "Create a copy of a mesh."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:162
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:163
 msgid "``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat vertices]])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:164
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:165
 msgid "Call the experimental mesher of Getfem on the geometry represented by `mo`. please control the conformity of the produced mesh. You can help the mesher by adding a priori vertices in the array `vertices` which should be of size ``n x m`` where ``n`` n is the dimension of the mesh and ``m`` the number of points. `h` is approximate diameter of the elements. `K` is the degree of the mesh ( > 1 for curved boundaries).  The mesher try to optimize the quality of the elements. This operation may be time consuming. Note that if the mesh generation fails, because of some random procedure used, it can be run again since it will not give necessarily the same result due to random procedures used. The messages send to the console by the mesh generation can be deactivated using `gf_util('trace level', 2)`. More information can be obtained by `gf_util('trace level', 4)`. See ``gf_mesher_object`` to manipulate geometric primitives in order to describe the geometry."
 msgstr ""

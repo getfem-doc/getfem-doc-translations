@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-27 00:53+0000\n"
+"POT-Creation-Date: 2020-11-28 00:52+0000\n"
 "PO-Revision-Date: 2018-07-16 07:04+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -225,11 +225,9 @@ msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:114
 msgid ""
-"{\\hat{\\hat{\\sigma}}} &= \\frac{\\partial}{\\partial E} {W}(E) = "
+"{\\hat{\\hat{\\sigma}}} = \\frac{\\partial}{\\partial E} {W}(E) = "
 "2\\frac{\\partial}{\\partial C} {W}(C)"
 msgstr ""
-"{\\hat{\\hat{\\sigma}}} &= \\frac{\\partial}{\\partial E} {W}(E) = "
-"2\\frac{\\partial}{\\partial C} {W}(C)"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:118
 msgid ""
@@ -428,12 +426,9 @@ msgstr "非圧縮性の材料です。"
 #: ../source/userdoc/model_nonlinear_elasticity.rst:222
 msgid ""
 "{d_1} = 0\n"
-"\\intertext{with the additional constraint:}\n"
+"\\mbox{ with the additional constraint: }\n"
 "i_3( C) = 1"
 msgstr ""
-"{d_1} = 0\n"
-"\\intertext{with the additional constraint:}\n"
-"i_3( C) = 1"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:228
 msgid ""
@@ -443,11 +438,11 @@ msgstr "非圧縮性制約 :math:`i_3( C) = 1` はLagrange乗数 :math:`p` （�
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:230
 msgid ""
-"constraint: :math:`\\sigma = -pI \\rm I\\hspace{-0.15em}Rightarrow "
-"{\\hat{\\hat{\\sigma}}} = -p\\nabla\\Phi\\nabla\\Phi^{-T}\\det\\nabla\\Phi`"
+"constraint: :math:`\\sigma = -pI \\Rightarrow {\\hat{\\hat{\\sigma}}} = "
+"-p\\nabla\\Phi\\nabla\\Phi^{-T}\\det\\nabla\\Phi`"
 msgstr ""
-"拘束: :math:`\\sigma = -pI \\rm I\\hspace{-0.15em}Rightarrow "
-"{\\hat{\\hat{\\sigma}}} = -p\\nabla\\Phi\\nabla\\Phi^{-T}\\det\\nabla\\Phi`"
+"拘束: :math:`\\sigma = -pI \\Rightarrow {\\hat{\\hat{\\sigma}}} = "
+"-p\\nabla\\Phi\\nabla\\Phi^{-T}\\det\\nabla\\Phi`"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:232
 msgid ""
@@ -475,13 +470,10 @@ msgstr "``Ciarlet-Geymonat 法``"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:249
 msgid ""
-"{W} &= a\\; i_1(C) + (\\frac{\\mu}{2} - a)i_2(C) + (\\frac{\\lambda}{4} - "
+"{W} = a\\; i_1(C) + (\\frac{\\mu}{2} - a)i_2(C) + (\\frac{\\lambda}{4} - "
 "\\frac{\\mu}{2} + a)i_3(C) - (\\frac{\\mu}{2}+\\frac{\\lambda}{4})\\log "
 "\\det(C)"
 msgstr ""
-"{W} &= a\\; i_1(C) + (\\frac{\\mu}{2} - a)i_2(C) + (\\frac{\\lambda}{4} - "
-"\\frac{\\mu}{2} + a)i_3(C) - (\\frac{\\mu}{2}+\\frac{\\lambda}{4})\\log "
-"\\det(C)"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:253
 msgid ""
@@ -498,8 +490,8 @@ msgid "``Generalized Blatz-Ko law``"
 msgstr "``一般化されたBlatz-Ko法``"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:259
-msgid "{W} &= (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)^n"
-msgstr "{W} &= (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)^n"
+msgid "{W} = (a i_1(C) + b i_3(C)^{1/2} + c\\frac{i_2(C)}{i_3(C)} + d)^n"
+msgstr ""
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:263
 msgid ""
@@ -532,7 +524,7 @@ msgstr ""
 msgid ""
 "\\begin{array}{l}\n"
 "\\frac{\\partial W}{\\partial i_1(C)} = naZ^{n-1}\n"
-"~~~~\\mbox{with } Z = (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)\\\\\n"
+"~~~~\\mbox{with } Z = (a i_1(C) + b i_3(C)^{1/2} + c\\frac{i_2(C)}{i_3(C)} + d)\\\\\n"
 "\\frac{\\partial W}{\\partial i_2(C)} = n\\frac{c}{i_3(C)}Z^{n-1}\\\\\n"
 "\\frac{\\partial W}{\\partial i_3(C)} = n(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-1}\\\\\n"
 "\\frac{\\partial W^2}{\\partial^2 i_1(C)} = n(n-1)A^2Z^{n-2}\\\\\n"
@@ -544,19 +536,6 @@ msgid ""
 "\\end{array}\n"
 "\n"
 msgstr ""
-"\\begin{array}{l}\n"
-"\\frac{\\partial W}{\\partial i_1(C)} = naZ^{n-1}\n"
-"~~~~\\mbox{with } Z = (ai_1(C) + bi_3(C)^{1/2} + c\\frac{\\i_2(C)}{\\i_3(C)} + d)\\\\\n"
-"\\frac{\\partial W}{\\partial i_2(C)} = n\\frac{c}{i_3(C)}Z^{n-1}\\\\\n"
-"\\frac{\\partial W}{\\partial i_3(C)} = n(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-1}\\\\\n"
-"\\frac{\\partial W^2}{\\partial^2 i_1(C)} = n(n-1)A^2Z^{n-2}\\\\\n"
-"\\frac{\\partial W^2}{\\partial i_1(C) \\partial i_2(C)} = n(n-1)A\\frac{c}{i_3(C)}Z^{n-2}\\\\\n"
-"\\frac{\\partial W^2}{\\partial i_1(C) \\partial i_3(C)} = n(n-1)A(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2}\\\\\n"
-"\\frac{\\partial W^2}{\\partial^2 i_2(C)} = n(n-1)\\frac{c^2}{i_3(C)^2}Z^{n-2}\\\\\n"
-"\\frac{\\partial W^2}{\\partial i_2(C) \\partial i_3(C)} = n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})Z^{n-2} - n\\frac{c^2}{i_3(C)^2}Z^{n-1}\\\\\n"
-"\\frac{\\partial W^2}{\\partial i_3(C)^2} = n(n-1)(\\frac{b}{2i_3(C)^{1/2}}-\\frac{ci_2(C)}{i_3(C)^2})^2Z^{n-2} + n(-\\frac{b}{4i_3(C)^{3/2}}+2\\frac{ci_2(C)}{i_3(C)^4})Z^{n-1}\n"
-"\\end{array}\n"
-"\n"
 
 #: ../source/userdoc/model_nonlinear_elasticity.rst:280
 msgid "``Plane strain hyper-elasticity``"

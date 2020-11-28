@@ -80,7 +80,7 @@
 
 
 \title{User Documentation}
-\date{Nov 27, 2020}
+\date{Nov 28, 2020}
 \release{5.4.1}
 \author{Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -8523,7 +8523,7 @@ This property enables us to write the constitutive laws as a function of the Cau
 \label{\detokenize{userdoc/model_nonlinear_elasticity:potential-elastic-energy-and-its-derivative}}
 The stress in the reference configuration can be describe by the second Piola\sphinxhyphen{}Kirchhoff stress tensor \({\hat{\hat{\sigma}}} = \nabla\Phi^{-1}\sigma\nabla\Phi^{-t}~\det \nabla\Phi\) where \(\sigma\) is the Cauchy stress tensor in the deformed configuration \(\Omega_t\). An hyper\sphinxhyphen{}elastic constitutive law is given by
 \begin{equation*}
-\begin{split}{\hat{\hat{\sigma}}} &= \frac{\partial}{\partial E} {W}(E) = 2\frac{\partial}{\partial C} {W}(C)\end{split}
+\begin{split}{\hat{\hat{\sigma}}} = \frac{\partial}{\partial E} {W}(E) = 2\frac{\partial}{\partial C} {W}(C)\end{split}
 \end{equation*}
 where \({W}\) is the density of strain energy of the material. The total strain energy is given by
 \begin{equation*}
@@ -8603,12 +8603,12 @@ and then
 Incompressible material.
 \begin{equation*}
 \begin{split}{d_1} = 0
-\intertext{with the additional constraint:}
+\mbox{ with the additional constraint: }
 i_3( C) = 1\end{split}
 \end{equation*}
 The incompressibility constraint \(i_3( C) = 1\) is handled with a Lagrange multiplier \(p\) (the pressure)
 
-constraint: \(\sigma = -pI \rm I\hspace{-0.15em}Rightarrow {\hat{\hat{\sigma}}} = -p\nabla\Phi\nabla\Phi^{-T}\det\nabla\Phi\)
+constraint: \(\sigma = -pI \Rightarrow {\hat{\hat{\sigma}}} = -p\nabla\Phi\nabla\Phi^{-T}\det\nabla\Phi\)
 \begin{equation*}
 \begin{split}1 - i_3(\nabla\Phi) &= 0 \\
 -\int_{\Omega_0} (\det\nabla\Phi  -1) q  dX &= 0 ~~~ \forall q\end{split}
@@ -8621,20 +8621,20 @@ p(\nabla\Phi)^{-T}(\det \nabla\Phi(\nabla\Phi)^{-T}:\nabla h) : \nabla v \right)
 
 \subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{Ciarlet\sphinxhyphen{}Geymonat law}}}
 \label{\detokenize{userdoc/model_nonlinear_elasticity:ciarlet-geymonat-law}}\begin{equation*}
-\begin{split}{W} &= a\; i_1(C) + (\frac{\mu}{2} - a)i_2(C) + (\frac{\lambda}{4} - \frac{\mu}{2} + a)i_3(C) - (\frac{\mu}{2}+\frac{\lambda}{4})\log \det(C)\end{split}
+\begin{split}{W} = a\; i_1(C) + (\frac{\mu}{2} - a)i_2(C) + (\frac{\lambda}{4} - \frac{\mu}{2} + a)i_3(C) - (\frac{\mu}{2}+\frac{\lambda}{4})\log \det(C)\end{split}
 \end{equation*}
 with  \(\lambda, \mu\) the Lame coefficients and \(\max(0,\frac{\mu}{2}-\frac{\lambda}{4})<a<\frac{\mu}{2}\) (see \sphinxcite{biblio:ciarlet1988}).
 
 
 \subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{Generalized Blatz\sphinxhyphen{}Ko law}}}
 \label{\detokenize{userdoc/model_nonlinear_elasticity:generalized-blatz-ko-law}}\begin{equation*}
-\begin{split}{W} &= (ai_1(C) + bi_3(C)^{1/2} + c\frac{\i_2(C)}{\i_3(C)} + d)^n\end{split}
+\begin{split}{W} = (a i_1(C) + b i_3(C)^{1/2} + c\frac{i_2(C)}{i_3(C)} + d)^n\end{split}
 \end{equation*}
 Since \(\frac{\partial}{\partial C} {W}(C) = \displaystyle\sum_{j}\frac{\partial W}{\partial i_j(C)} \frac{\partial i_j(C)}{\partial C}\), and \(\frac{\partial^2}{\partial C^2} {W}(C) = \displaystyle\sum_{j} \displaystyle\sum_{k} \frac{\partial^2 W}{\partial i_j(C) \partial i_k(C)} \frac{\partial i_k(C)}{\partial C} \otimes \frac{\partial i_j(C)}{\partial C} + \displaystyle\sum_{j} \frac{\partial W}{\partial i_j(C)} \frac{\partial^2 i_j(C)}{\partial C^2}\) we must compute the derivatives of the strain energy function with respect to the Cauchy\sphinxhyphen{}Green tensor invariants (we don’t need to compute the invariants derivatives with respect to \(E\) since \(\frac{\partial i_j}{\partial E}(C;H) = 2 \frac{\partial i_j}{\partial C}(C;H)\)) :
 \begin{equation*}
 \begin{split}\begin{array}{l}
 \frac{\partial W}{\partial i_1(C)} = naZ^{n-1}
-~~~~\mbox{with } Z = (ai_1(C) + bi_3(C)^{1/2} + c\frac{\i_2(C)}{\i_3(C)} + d)\\
+~~~~\mbox{with } Z = (a i_1(C) + b i_3(C)^{1/2} + c\frac{i_2(C)}{i_3(C)} + d)\\
 \frac{\partial W}{\partial i_2(C)} = n\frac{c}{i_3(C)}Z^{n-1}\\
 \frac{\partial W}{\partial i_3(C)} = n(\frac{b}{2i_3(C)^{1/2}}-\frac{ci_2(C)}{i_3(C)^2})Z^{n-1}\\
 \frac{\partial W^2}{\partial^2 i_1(C)} = n(n-1)A^2Z^{n-2}\\
