@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-10 01:00+0000\n"
+"POT-Creation-Date: 2020-12-11 00:58+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -127,7 +127,7 @@ msgstr "ここで ``bgeot::simplex_geotrans(N,1);`` は次元Nの単体のため
 
 #: ../source/userdoc/bmesh.rst:72
 msgid "For simplices, a more specialized function exists, which is::"
-msgstr "シンプレックスのために、以下のようにより特殊化された関数が存在します。"
+msgstr "単体のために、以下のようにより特殊化された関数が存在します。"
 
 #: ../source/userdoc/bmesh.rst:76
 msgid ""
@@ -148,7 +148,7 @@ msgid ""
 "``mymesh.add_convex_by_points`` or ``mymesh.add_convex`` with the "
 "appropriate geometric transformation."
 msgstr ""
-"シンプレックス以外の要素についても、 ``mymesh.add_convex_by_points`` や ``mymesh.add_convex`` "
+"単体以外の要素についても、 ``mymesh.add_convex_by_points`` や ``mymesh.add_convex`` "
 "で適切な幾何学的変換と共に使用することが可能です。"
 
 #: ../source/userdoc/bmesh.rst:96
@@ -180,8 +180,8 @@ msgid ""
 "other elements, it is important to respect the vertex order shown in :ref"
 ":`ud-fig-elem` (first order elements)."
 msgstr ""
-"点の配列における点の順序は、シンプレックス要素にとっては重要ではありません(あなたがシンプレックスの向きを気にする場合を除いては)。他の要素については、"
-"  :ref:`ud-fig-elem`  (1次要素) で示される頂点の順序を守ることが重要です。"
+"点の配列における点の順序は、単体要素にとっては重要ではありません(あなたが単体の向きを気にする場合を除いては)。他の要素については、  :ref"
+":`ud-fig-elem`  (1次要素) で示される頂点の順序を守ることが重要です。"
 
 #: ../source/userdoc/bmesh.rst:119
 msgid "Vertex numeration for usual first order elements"
@@ -219,7 +219,7 @@ msgid ""
 "in :file:`getfem/getfem_regular_meshes.h`."
 msgstr ""
 "平行6面体の領域の場合、 :file:`getfem/getfem_regular_meshes.h` "
-"で定義されている3つの関数からシンプレックス、平行6面体、またはプリズム要素を持つ構造化メッシュを得ることができます。"
+"で定義されている3つの関数から単体、平行6面体、またはプリズム要素を持つ構造化メッシュを得ることができます。"
 
 #: ../source/userdoc/bmesh.rst:141
 msgid "The simplest function to use is::"
@@ -251,8 +251,8 @@ msgid ""
 "direction."
 msgstr ""
 "ここで ``mymesh`` は構造化されたメッシュが構築されるメッシュ変数で、 ``N`` "
-"は次元です（シンプレックスの場合は4、プリズムの場合は5、平行6面体の場合は無制限です）。 ``org`` を ``bgeot::base_node``"
-" と設定し、メッシュの起点を表します。  ``ivect`` は平行四辺形の領域を構築するための ``N`` ベクトルの配列上のイテレータです。 "
+"は次元です（単体の場合は4、プリズムの場合は5、平行6面体の場合は無制限です）。 ``org`` を ``bgeot::base_node`` "
+"と設定し、メッシュの起点を表します。  ``ivect`` は平行四辺形の領域を構築するための ``N`` ベクトルの配列上のイテレータです。 "
 "``iref`` は、 各方向の分割数を表す ``N`` の自然数の配列です。"
 
 #: ../source/userdoc/bmesh.rst:169
