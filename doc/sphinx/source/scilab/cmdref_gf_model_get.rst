@@ -190,10 +190,10 @@ gf_model_get
 
     Assembly of the tangent system taking into account the terms
     from all bricks. <literal>option</literal>, if specified, should be 'build_all',
-    'build_rhs', 'build_matrix'.
-    The default is to build the whole
-    tangent linear system (matrix and rhs). This function is useful
-    to solve your problem with you own solver. 
+    'build_rhs', 'build_matrix', 'build_rhs_with_internal',
+    'build_matrix_condensed', 'build_all_condensed'.
+    The default is to build the whole tangent linear system (matrix and rhs).
+    This function is useful to solve your problem with you own solver. 
 
 
   ``{nbit, converged} = gf_model_get(model M, 'solve'[, ...])``

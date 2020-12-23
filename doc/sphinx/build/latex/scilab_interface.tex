@@ -80,7 +80,7 @@
 
 
 \title{Scilab Interface}
-\date{Dec 22, 2020}
+\date{Dec 23, 2020}
 \release{5.4.1}
 \author{Yann Colette, Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -5479,10 +5479,10 @@ to solve your problem with you own solver).
 
 Assembly of the tangent system taking into account the terms
 from all bricks. \textless{}literal\textgreater{}option\textless{}/literal\textgreater{}, if specified, should be ‘build\_all’,
-‘build\_rhs’, ‘build\_matrix’.
-The default is to build the whole
-tangent linear system (matrix and rhs). This function is useful
-to solve your problem with you own solver.
+‘build\_rhs’, ‘build\_matrix’, ‘build\_rhs\_with\_internal’,
+‘build\_matrix\_condensed’, ‘build\_all\_condensed’.
+The default is to build the whole tangent linear system (matrix and rhs).
+This function is useful to solve your problem with you own solver.
 \end{quote}
 
 \sphinxcode{\sphinxupquote{\{nbit, converged\} = gf\_model\_get(model M, \textquotesingle{}solve\textquotesingle{}{[}, ...{]})}}
