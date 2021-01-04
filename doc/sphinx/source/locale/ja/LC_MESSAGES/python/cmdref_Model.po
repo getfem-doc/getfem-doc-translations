@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-03 01:15+0000\n"
+"POT-Creation-Date: 2021-01-04 01:17+0000\n"
 "PO-Revision-Date: 2018-07-16 07:17+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -1625,7 +1625,7 @@ msgstr ""
 msgid ""
 "Adds a contact boundary to an existing large sliding contact with friction "
 "brick which is both master and slave (allowing the self-contact)."
-msgstr "接触境界を、マスターでもスレーブでもある摩擦レンガの既存の有限スライド接触に追加します(自己接触は許容します)。"
+msgstr "接触境界を、マスターでもスレーブでもある摩擦ブリックの既存の有限スライド接触に追加します(自己接触は許容します)。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_multiplier:1
@@ -2614,7 +2614,7 @@ msgstr ""
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.brick_list:1
 msgid "print to the output the list of bricks of the model."
-msgstr "モデルのレンガのリストを出力に出力します。"
+msgstr "モデルのブリックのリストを出力に出力します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.brick_term_rhs:1
@@ -3084,14 +3084,14 @@ msgstr "要素外挿補間変換の対応マップを変更します。"
 msgid ""
 "For some specific bricks having an internal sparse matrix (explicit bricks: "
 "'constraint brick' and 'explicit matrix brick'), set this matrix."
-msgstr "内部に疎行列がある特定のブリック(陽なレンガ: '拘束ブリック' と '陽な行列ブリック' )では、この行列を設定します。"
+msgstr "内部に疎行列がある特定のブリック(陽なブリック: '拘束ブリック' と '陽な行列ブリック' )では、この行列を設定します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.set_private_rhs:1
 msgid ""
 "For some specific bricks having an internal right hand side vector (explicit"
 " bricks: 'constraint brick' and 'explicit rhs brick'), set this rhs."
-msgstr "内部右辺ベクトル(陽なブリック: '拘束ブリック' と '陽なブリック')を持つ特定のレンガでは、このrhsを設定します。"
+msgstr "内部右辺ベクトル(陽なブリック: '拘束ブリック' と '陽なブリック')を持つ特定のブリックでは、このrhsを設定します。"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.set_time:1
@@ -3356,9 +3356,9 @@ msgid ""
 "dof of the random position is chosen in the range [current-scale, "
 "current+scale]."
 msgstr ""
-"ランダムな位置と方向(新しく作成されたレンガをテストするのに便利)で、接線行列の一部の整合性をテストします。インクリメントは、変数 `varname2`"
-" に対してのみ行われ、 `varname1`に対応する残差の部分でテストされます。これは、接線マトリックスの項 (`varname1`, "
-"`varname2`) "
+"ランダムな位置と方向(新しく作成されたブリックをテストするのに便利)で、接線行列の一部の整合性をテストします。インクリメントは、変数 "
+"`varname2` に対してのみ行われ、 `varname1`に対応する残差の部分でテストされます。これは、接線マトリックスの項 "
+"(`varname1`, `varname2`) "
 "のみがテストされることを意味します。EPSは微分の差分計算のための微小パラメータの値(デフォルトは1E-6)であり、ランダム方向です。 `NN` "
 "はテストの数です(デフォルトは100です)。 `scale` "
 "は現在位置の周囲のランダムな位置(デフォルトは1で、0が許容値です)のパラメータである。ランダム位置の各自由度は [current-scale, "
