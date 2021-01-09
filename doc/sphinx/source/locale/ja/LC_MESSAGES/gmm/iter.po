@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-08 01:17+0000\n"
+"POT-Creation-Date: 2021-01-09 01:20+0000\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,8 +31,8 @@ msgid ""
 "modifications (gmres has been optimized and adapted for complex matrices). "
 "Include the file ``gmm/gmm_iter_solvers.h`` to use them."
 msgstr ""
-"|gmm| で提供されているソルバーのほとんどは、ITLから少しだけ変更を加えたものです(gresが最適化され、複雑な行列に適用されています)。ファイル"
-"  ``gmm/gmm_iter_solvers.h`` をインクルードします。"
+"|gmm| で提供されているソルバーのほとんどは，ITLから少しだけ変更を加えたものです(gresが最適化され，複雑な行列に適用されています)．ファイル"
+"  ``gmm/gmm_iter_solvers.h`` をインクルードします．"
 
 #: ../source/gmm/iter.rst:17
 msgid "iterations"
@@ -42,17 +42,17 @@ msgstr "イテレーション"
 msgid ""
 "The iteration object of |gmm| is a modification of the one in ITL. This is "
 "not a template type as in ITL."
-msgstr "|gmm| の反復オブジェクトはITLのイテレーションオブジェクトを変更したものです。これはITLのテンプレート型ではありません。"
+msgstr "|gmm| の反復オブジェクトはITLのイテレーションオブジェクトを変更したものです．これはITLのテンプレート型ではありません．"
 
 #: ../source/gmm/iter.rst:21
 msgid "The simplest initialization is::"
-msgstr "最も簡単な初期化は次のとおりです。"
+msgstr "最も簡単な初期化は次のとおりです．"
 
 #: ../source/gmm/iter.rst:25
 msgid ""
 "where ``2.0E-10`` is the (relative) residual to be obtained to have the "
 "convergence. Some possibilities::"
-msgstr "ここで、 ``2.0E-10`` は収束を得るために得られる(相対的)残差です。以下のようにいくつかの呼び出しが可能です。"
+msgstr "ここで， ``2.0E-10`` は収束を得るために得られる(相対的)残差です．以下のようにいくつかの呼び出しが可能です．"
 
 #: ../source/gmm/iter.rst:42
 msgid "Linear solvers"
@@ -60,7 +60,7 @@ msgstr "線形ソルバー"
 
 #: ../source/gmm/iter.rst:44
 msgid "Here is the list of available linear solvers::"
-msgstr "使用可能な線形ソルバのリストを次に示します。"
+msgstr "使用可能な線形ソルバのリストを次に示します．"
 
 #: ../source/gmm/iter.rst:66
 msgid ""
@@ -68,8 +68,8 @@ msgid ""
 " with linear constraints, ``C`` is a matrix which represents the "
 "constraints. But it is still experimental."
 msgstr ""
-"ソルバ ``gmm::constrained_cg(A, C, X, B, PS, PR, iter);`` は線形拘束でシステムを解きます 、  "
-"``C`` は拘束を表す行列です。しかし、まだ実験段階です。"
+"ソルバ ``gmm::constrained_cg(A, C, X, B, PS, PR, iter);`` は線形拘束でシステムを解きます ，  "
+"``C`` は拘束を表す行列です．しかし，まだ実験段階です．"
 
 #: ../source/gmm/iter.rst:68
 msgid ""
@@ -79,8 +79,8 @@ msgid ""
 "``GRAD``. ``restart`` is the max number of stored update vectors."
 msgstr ""
 "(バージョン1.7)ソルバー ``gmm::bfgs(F, GRAD, X, restart, iter)`` "
-"はBFGSの準Newtonアルゴリズムであり、Wolfe式を用いて大規模な問題を探索します。制約なしに関数 ``F`` を最小化し、勾配 "
-"``GRAD`` を与えます。 ``restart`` は保存されている更新ベクトルの最大数です。"
+"はBFGSの準Newtonアルゴリズムであり，Wolfe式を用いて大規模な問題を探索します．制約なしに関数 ``F`` を最小化し，勾配 "
+"``GRAD`` を与えます． ``restart`` は保存されている更新ベクトルの最大数です．"
 
 #: ../source/gmm/iter.rst:71
 msgid "Preconditioners"
@@ -90,7 +90,7 @@ msgstr "前処理行列"
 msgid ""
 "The following preconditioners, to be used with linear solvers, are "
 "available::"
-msgstr "次の前処理行列は、線形ソルバーで使用できます。"
+msgstr "次の前処理行列は，線形ソルバーで使用できます．"
 
 #: ../source/gmm/iter.rst:107
 msgid ""
@@ -102,11 +102,11 @@ msgid ""
 "``ildlt\\_precond`` and ``ildltt_precond`` are designed for symmetric real "
 "or hermitian complex matrices to be use principally with cg."
 msgstr ""
-"これらの前処理行列は、 ``ildltt\\_precond`` を除き、すべてITLから提供されています。 ``ilut_precond`` "
-"は最適化されて単純化されています。また、安定性の理由から、不完全なLDLT 前処理行列で修正および変換されています(同様に、 "
-"``cholesky_precond`` を追加します。これは、実際には閾値前処理を持つ不完全なLDLT前処理行列です)。もちろん、 "
+"これらの前処理行列は， ``ildltt\\_precond`` を除き，すべてITLから提供されています． ``ilut_precond`` "
+"は最適化されて単純化されています．また，安定性の理由から，不完全なLDLT 前処理行列で修正および変換されています(同様に， "
+"``cholesky_precond`` を追加します．これは，実際には閾値前処理を持つ不完全なLDLT前処理行列です)．もちろん， "
 "``ildlt\\_precond`` と ``ildltt_precond`` "
-"は対称的な実数あるいはHermitian複素行列を主にcgで使うために設計されています。"
+"は対称的な実数あるいはHermitian複素行列を主にcgで使うために設計されています．"
 
 #: ../source/gmm/iter.rst:110
 msgid "Additive Schwarz method"
@@ -118,13 +118,13 @@ msgid ""
 "resolution of huge linear systems (see [SCHADD]_ for the principle of the "
 "method)."
 msgstr ""
-"加算Schwarz法は巨大線形システム(手法の原理については、 [SCHADD]_ を参照してください)を解くことを可能にする分解領域法です。"
+"加算Schwarz法は巨大線形システム(手法の原理については， [SCHADD]_ を参照してください)を解くことを可能にする分解領域法です．"
 
 #: ../source/gmm/iter.rst:114
 msgid ""
 "For the moment, the method is not parallelized (this should be done ...). "
 "The call is the following::"
-msgstr "現時点では、手法は並列化されていません(これは完了させる必要があります...)。呼び出しは次のとおりです。"
+msgstr "現時点では，手法は並列化されていません(これは完了させる必要があります...)．呼び出しは次のとおりです．"
 
 #: ../source/gmm/iter.rst:118
 msgid ""
@@ -142,16 +142,16 @@ msgid ""
 "be chosen in the list ``gmm::using_gmres(), gmm::using_bicgstab(), "
 "gmm::using_cg(), gmm::using_qmr()``."
 msgstr ""
-"``A`` は線形システムの行列です。 ``u`` は未知のベクトルである。 ``f`` は右辺です。 ``P`` "
-"はローカルソルバーの最終的な前処理行列です。 ``vB`` は矩形疎行列(``of type const std::vector<vBMatrix>``"
-" ( ``vBMatrix`` は疎行列型))のベクトルであり、これらの行列の各々はサイズ :math:`N \\times N_i` "
-"であり、:math:`N` は ``A`` のサイズであり、 :math:`N_i` は :math:`i^{th}` "
-"サブドメイン内の変数の数です。行列の各列は、 :math:`i^{th}` サブドメインを表すサブ空間の基本ベクトルである。 ``iter`` "
-"はイテレーションオブジェクトです。SuperLuがインストールされている場合は、 ``local_solver`` はリスト "
+"``A`` は線形システムの行列です． ``u`` は未知のベクトルである． ``f`` は右辺です． ``P`` "
+"はローカルソルバーの最終的な前処理行列です． ``vB`` は矩形疎行列(``of type const std::vector<vBMatrix>``"
+" ( ``vBMatrix`` は疎行列型))のベクトルであり，これらの行列の各々はサイズ :math:`N \\times N_i` "
+"であり，:math:`N` は ``A`` のサイズであり， :math:`N_i` は :math:`i^{th}` "
+"サブドメイン内の変数の数です．行列の各列は， :math:`i^{th}` サブドメインを表すサブ空間の基本ベクトルである． ``iter`` "
+"はイテレーションオブジェクトです．SuperLuがインストールされている場合は， ``local_solver`` はリスト "
 "``gmm::using_gmres(), gmm::using_bicgstab(), gmm::using_cg(), "
-"gmm::using_qmr()`` から選択する必要があります。 ``global_solver`` は、リスト "
+"gmm::using_qmr()`` から選択する必要があります． ``global_solver`` は，リスト "
 "``gmm::using_gmres(), gmm::using_bicgstab(), gmm::using_cg(), "
-"gmm::using_qmr()`` から選択する必要があります。"
+"gmm::using_qmr()`` から選択する必要があります．"
 
 #: ../source/gmm/iter.rst:120
 msgid ""
@@ -162,14 +162,14 @@ msgid ""
 "mesh)."
 msgstr ""
 "テストプログラム ``schwarz_additive.C`` はGetFEMのディレクトリ ``tests`` "
-"にあり、より良い前処理(つまり、サブドメインの1つは、実際には粗いメッシュを表します)を作るために粗いメッシュの使用による弾性静的問題の付加的Schwarz法による求解の例です。"
+"にあり，より良い前処理(つまり，サブドメインの1つは，実際には粗いメッシュを表します)を作るために粗いメッシュの使用による弾性静的問題の付加的Schwarz法による求解の例です．"
 
 #: ../source/gmm/iter.rst:122
 msgid ""
 "In the case of multiple solves with the same linear system, it is possible "
 "to store the preconditioners or the LU factorizations to save computation "
 "time."
-msgstr "同一線形系で複数の解が存在する場合、前処理行列やLU分解を格納することで計算時間を短縮することができます。"
+msgstr "同一線形系で複数の解が存在する場合，前処理行列やLU分解を格納することで計算時間を短縮することができます．"
 
 #: ../source/gmm/iter.rst:124
 msgid ""
@@ -178,8 +178,8 @@ msgid ""
 "produces the vector of matrices ``vB`` for the additive Schwarz method."
 msgstr ""
 "``gmm/gmm_domain_decomp.h`` "
-"の(とても)簡単なプログラムは、一定のオーバーラップ率で、規則的なドメイン分解を構築することができます。加算Schwarz法に対する行列 ``vB`` "
-"のベクトルを直接生成します。"
+"の(とても)簡単なプログラムは，一定のオーバーラップ率で，規則的なドメイン分解を構築することができます．加算Schwarz法に対する行列 ``vB`` "
+"のベクトルを直接生成します．"
 
 #: ../source/gmm/iter.rst:127
 msgid "Range basis function"
@@ -194,38 +194,38 @@ msgid ""
 "contains the indices of the selected columns."
 msgstr ""
 "``gmm/gmm\\_range\\_basis.h`` で定義されている関数 ``gmm\\_range\\_basis(B, columns, "
-"EPS=1e-12)`` は、この行列の範囲の基礎となる疎行列 ``B`` の列から選択することができます。結果は ``columns`` "
-"に返されます。これは ``std::set<size_type>`` 型で、選択された列のインデックスを含みます。"
+"EPS=1e-12)`` は，この行列の範囲の基礎となる疎行列 ``B`` の列から選択することができます．結果は ``columns`` "
+"に返されます．これは ``std::set<size_type>`` 型で，選択された列のインデックスを含みます．"
 
 #: ../source/gmm/iter.rst:131
 msgid ""
 "The algorithm is specially designed to select independent constraints from a"
 " large matrix with linearly dependent columns."
-msgstr "このアルゴリズムは、線形依存列を持つ大きな行列から独立制約を選択するように特別に設計されています。"
+msgstr "このアルゴリズムは，線形依存列を持つ大きな行列から独立制約を選択するように特別に設計されています．"
 
 #: ../source/gmm/iter.rst:133
 msgid "There is four step in the implemented algorithm"
-msgstr "実装されたアルゴリズムには4つのステップがあります。"
+msgstr "実装されたアルゴリズムには4つのステップがあります．"
 
 #: ../source/gmm/iter.rst:136
 msgid "Elimination of null columns."
-msgstr "NULL列の削除。"
+msgstr "NULL列の削除．"
 
 #: ../source/gmm/iter.rst:137
 msgid "Selection of a set of already orthogonal columns."
-msgstr "すでに直交している列の集合の選択。"
+msgstr "すでに直交している列の集合の選択．"
 
 #: ../source/gmm/iter.rst:138
 msgid ""
 "Elimination of locally dependent columns by a blockwise Gram-Schmidt "
 "algorithm."
-msgstr "ブロック単位のGram-Schmidtアルゴリズムによる局所依存列の排除。"
+msgstr "ブロック単位のGram-Schmidtアルゴリズムによる局所依存列の排除．"
 
 #: ../source/gmm/iter.rst:139
 msgid ""
 "Computation of vectors of the remaining null space by a global restarted "
 "Lanczos algorithm and deduction of some columns to be eliminated."
-msgstr "大域的リスタート付きLanczosアルゴリズムによる残りの零空間のベクトルの計算と除去されるべきいくつかの列の推論。"
+msgstr "大域的リスタート付きLanczosアルゴリズムによる残りの零空間のベクトルの計算と除去されるべきいくつかの列の推論．"
 
 #: ../source/gmm/iter.rst:141
 msgid ""
@@ -233,8 +233,8 @@ msgid ""
 "remains a low dimension null space. The implemented restarted Lanczos "
 "algorithm find the null space vectors one by one."
 msgstr ""
-"このアルゴリズムは、局所 Gram-Schmidt "
-"アルゴリズムの後、それが低次元null空間のままであれば効率的です。実装されたリスタート付きLanczosアルゴリズムは、null空間ベクトルを1つずつ見つけます。"
+"このアルゴリズムは，局所 Gram-Schmidt "
+"アルゴリズムの後，それが低次元null空間のままであれば効率的です．実装されたリスタート付きLanczosアルゴリズムは，null空間ベクトルを1つずつ見つけます．"
 
 #: ../source/gmm/iter.rst:143
 msgid ""
@@ -243,5 +243,5 @@ msgid ""
 "method (in order to be parallelized) or simply the computation of more than "
 "one vector of the null space at each iteration."
 msgstr ""
-"大域的リスタート付きLanczosアルゴリズムは、ブロックLanczos法( [ca-re-so1994]_ "
-"の例を参照)、(並列化するための)ブロックWiedelann法、または単に各イテレーションにおけるnull空間の複数のベクトルの計算によって改良または置換することができます。"
+"大域的リスタート付きLanczosアルゴリズムは，ブロックLanczos法( [ca-re-so1994]_ "
+"の例を参照)，(並列化するための)ブロックWiedelann法，または単に各イテレーションにおけるnull空間の複数のベクトルの計算によって改良または置換することができます．"

@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-08 01:17+0000\n"
+"POT-Creation-Date: 2021-01-09 01:20+0000\n"
 "PO-Revision-Date: 2018-07-16 07:06+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,16 +38,16 @@ msgid ""
 "data on the same mesh. One can instantiate a |gf_mf| object as follows::"
 msgstr ""
 ":file:`getfem/getfem_mesh_fem.h` で定義されているオブジェクト |gf_mf| "
-"は、メッシュ全体に有限要素法を記述するために、すなわちいくつかの変数が記述される有限要素空間を記述するために設計されています。これは |gf| "
-"の中心にあるかなり複雑なオブジェクトです。基本的に、この構造は、メッシュの各要素の有限要素法と、いくつかの追加のオプションの変換を記述します。 "
-"1つのメッシュに対して任意の数の有限要素法を持つことが可能です。これは、混合法には特に必要ですが、同じメッシュ上の異なるデータを記述する場合にも必要です。次のように"
+"は，メッシュ全体に有限要素法を記述するために，すなわちいくつかの変数が記述される有限要素空間を記述するために設計されています．これは |gf| "
+"の中心にあるかなり複雑なオブジェクトです．基本的に，この構造は，メッシュの各要素の有限要素法と，いくつかの追加のオプションの変換を記述します． "
+"1つのメッシュに対して任意の数の有限要素法を持つことが可能です．これは，混合法には特に必要ですが，同じメッシュ上の異なるデータを記述する場合にも必要です．次のように"
 " |gf_mf| オブジェクトをインスタンス化することもできます::"
 
 #: ../source/userdoc/bfem.rst:27
 msgid ""
 "where ``mymesh`` is an already existing mesh. The structure will be linked "
 "to this mesh and will react when modifications will be done on it."
-msgstr "``mymesh`` は既に存在するメッシュです。構造はこのメッシュにリンクされ、メッシュに変更が行われると同期されます。"
+msgstr "``mymesh`` は既に存在するメッシュです．構造はこのメッシュにリンクされ，メッシュに変更が行われると同期されます．"
 
 #: ../source/userdoc/bfem.rst:30
 msgid ""
@@ -61,20 +61,20 @@ msgid ""
 "the numeration of the degrees of freedom. Every |gf_mf| object has its own "
 "numeration."
 msgstr ""
-"要素ごとに有限要素法を指定することができるので、たとえ次元が異なっていても混合型要素を扱うことができます。通常の要素では、2つの要素に互換性がある場合（共通面で同じ自由度）、2つの要素の間の接続が行われます。自由度の数値は、Cuthill"
-" Mc Keeアルゴリズムのように自動的に行われます。メッシュの頂点の数と自由度の数値との間には絶対的な関係はないことに注意してください。すべての "
-"|gf_mf| オブジェクトには独自の数値があります。"
+"要素ごとに有限要素法を指定することができるので，たとえ次元が異なっていても混合型要素を扱うことができます．通常の要素では，2つの要素に互換性がある場合（共通面で同じ自由度），2つの要素の間の接続が行われます．自由度の数値は，Cuthill"
+" Mc Keeアルゴリズムのように自動的に行われます．メッシュの頂点の数と自由度の数値との間には絶対的な関係はないことに注意してください．すべての "
+"|gf_mf| オブジェクトには独自の数値があります．"
 
 #: ../source/userdoc/bfem.rst:39
 msgid "There are three levels in the |gf_mf| object:"
-msgstr "|gf_mf| オブジェクトには3つのレベルがあります。"
+msgstr "|gf_mf| オブジェクトには3つのレベルがあります．"
 
 #: ../source/userdoc/bfem.rst:41
 msgid ""
 "The element level: one finite element method per element. It is possible to "
 "mix the dimensions of the elements and the property to be vectorial or "
 "scalar."
-msgstr "要素レベル：要素ごとに1つの有限要素法。要素の次元とベクトルまたはスカラーのプロパティを混在させることは可能です。"
+msgstr "要素レベル：要素ごとに1つの有限要素法．要素の次元とベクトルまたはスカラーのプロパティを混在させることは可能です．"
 
 #: ../source/userdoc/bfem.rst:44
 msgid ""
@@ -84,9 +84,9 @@ msgid ""
 "you can mix some intrinsic vectorial elements (Raviart-Thomas element for "
 "instance) which will not be vectorized and scalar elements which will be."
 msgstr ""
-"オプションのベクトル化/テンソル化（getfemの専門用語qdim。`vocabulary`_ "
-"を参照）。例えば、連続体力学における変位またはテンソル場を表します。スカラー要素は成分単位で使用されます。ベクトル化されない固有のベクトル要素（例えば"
-"、Raviart-Thomas要素）とスカラー要素を混在させることができます。"
+"オプションのベクトル化/テンソル化（getfemの専門用語qdim．`vocabulary`_ "
+"を参照）．例えば，連続体力学における変位またはテンソル場を表します．スカラー要素は成分単位で使用されます．ベクトル化されない固有のベクトル要素（例えば"
+"，Raviart-Thomas要素）とスカラー要素を混在させることができます．"
 
 #: ../source/userdoc/bfem.rst:52
 msgid ""
@@ -104,13 +104,13 @@ msgid ""
 "degrees)."
 msgstr ""
 "（ |gf|  version "
-"4.0）自由度のオプションの追加線形変換（縮小）。これは、2つの行列すなわち、縮小行列と拡張行列を与えます。縮小行列は、基本的な自由度を縮小された自由度に変換する必要があります（縮小された自由度の数は、基本的な自由度の数よりも少ないか等しい必要があります）。拡張行列は、逆変換を記述する必要があります。縮小行列と拡張行列との積は、単位行列でなければなりません（特に、2つの行列が最大ランクであることを保証する必要があります）。この任意の変換を使用して、有限要素空間を特定の領域（基本的に境界）に縮小したり、本来適合しない有限要素法（例えば、自由度度の異なる有限要素法）間のいくつかの一致条件を指定することができます。"
+"4.0）自由度のオプションの追加線形変換（縮小）．これは，2つの行列すなわち，縮小行列と拡張行列を与えます．縮小行列は，基本的な自由度を縮小された自由度に変換する必要があります（縮小された自由度の数は，基本的な自由度の数よりも少ないか等しい必要があります）．拡張行列は，逆変換を記述する必要があります．縮小行列と拡張行列との積は，単位行列でなければなりません（特に，2つの行列が最大ランクであることを保証する必要があります）．この任意の変換を使用して，有限要素空間を特定の領域（基本的に境界）に縮小したり，本来適合しない有限要素法（例えば，自由度度の異なる有限要素法）間のいくつかの一致条件を指定することができます．"
 
 #: ../source/userdoc/bfem.rst:64
 msgid ""
 "One has to keep in mind this construction manipulating the degrees of "
 "freedom of a |gf_mf| object."
-msgstr "|gf_mf| オブジェクトの自由度を操作するこの構造を念頭に置いておく必要があります。"
+msgstr "|gf_mf| オブジェクトの自由度を操作するこの構造を念頭に置いておく必要があります．"
 
 #: ../source/userdoc/bfem.rst:69
 msgid "First level: manipulating fems on each elements"
@@ -129,8 +129,8 @@ msgid ""
 "|gf_vfem|) of the finite element method. Alternative forms of this member "
 "function are::"
 msgstr ""
-"``i`` は要素のインデックスで、 ``pf`` は有限要素法の記述子( |gf_pfem| 型、基本的には |gf_vfem| "
-"から継承するオブジェクトへのポインタ)です。このメンバ関数の代わりのフォーマットは::"
+"``i`` は要素のインデックスで， ``pf`` は有限要素法の記述子( |gf_pfem| 型，基本的には |gf_vfem| "
+"から継承するオブジェクトへのポインタ)です．このメンバ関数の代わりのフォーマットは::"
 
 #: ../source/userdoc/bfem.rst:83
 msgid ""
@@ -139,7 +139,7 @@ msgid ""
 "method makes a call to the method::"
 msgstr ""
 "``bit_vector cvs`` "
-"にリストアップされた凸包、またはメッシュのすべての凸包の有限要素を設定します。最後のメソッドは次のメソッドを呼び出します::"
+"にリストアップされた凸包，またはメッシュのすべての凸包の有限要素を設定します．最後のメソッドは次のメソッドを呼び出します::"
 
 #: ../source/userdoc/bfem.rst:89
 msgid ""
@@ -147,19 +147,19 @@ msgid ""
 "added on new elements of the mesh (this is very useful, for instance, when a"
 " refinement of the mesh is performed)."
 msgstr ""
-"これは、メッシュの新しい要素に自動的に追加されるデフォルトの有限要素法を定義します（例えば、メッシュの細分化が実行されるときに非常に便利です）。"
+"これは，メッシュの新しい要素に自動的に追加されるデフォルトの有限要素法を定義します（例えば，メッシュの細分化が実行されるときに非常に便利です）．"
 
 #: ../source/userdoc/bfem.rst:93
 msgid ""
 "Descriptors for finite element methods and integration methods are available"
 " thanks to the following function::"
-msgstr "有限要素法と積分法の記述子は、次の関数によって利用できます。"
+msgstr "有限要素法と積分法の記述子は，次の関数によって利用できます．"
 
 #: ../source/userdoc/bfem.rst:98
 msgid ""
 "where ``\"name of method\"`` is to be chosen among the existing methods. A "
 "name of a method can be retrieved thanks to the following functions::"
-msgstr "既存のメソッドの中で ``\"メソッド名\"`` を選択する場所です。メソッドの名前は、次の関数によって取得できます::"
+msgstr "既存のメソッドの中で ``\"メソッド名\"`` を選択する場所です．メソッドの名前は，次の関数によって取得できます::"
 
 #: ../source/userdoc/bfem.rst:103
 msgid ""
@@ -182,22 +182,22 @@ msgid ""
 "dimension ``n``. Tensorial product of degree ``k`` :math:`P_K` method on the"
 " segment."
 msgstr ""
-"``\"FEM_QK(n,k)\"``: 次元nの平行6面体上の古典的 :math:`Q_K` 法。セグメント上の次数 ``k`` の "
-":math:`P_K` 法のテンソルによる生成物。"
+"``\"FEM_QK(n,k)\"``: 次元nの平行6面体上の古典的 :math:`Q_K` 法．セグメント上の次数 ``k`` の "
+":math:`P_K` 法のテンソルによる生成物．"
 
 #: ../source/userdoc/bfem.rst:112
 msgid ""
 "``\"FEM_PK_PRISM(n,k)\"``: Classical methods on prism of dimension ``n``. "
 "Tensorial product of two degree ``k`` :math:`P_K` method."
 msgstr ""
-"``\"FEM_PK_PRISM(n,k)\"``: 次元 ``n`` のプリズムに関する古典的な方法。 2次の ``k`` の "
-":math:`|P_K|` 法のテンソル積。"
+"``\"FEM_PK_PRISM(n,k)\"``: 次元 ``n`` のプリズムに関する古典的な方法． 2次の ``k`` の "
+":math:`|P_K|` 法のテンソル積．"
 
 #: ../source/userdoc/bfem.rst:115
 msgid ""
 "``\"FEM_PRODUCT(a,b)\"``: Tensorial product of the two polynomial finite "
 "element method ``a`` and ``b``."
-msgstr "``\"FEM_PRODUCT(a,b)\"``: 2つの多項式有限要素法 ``a`` と ``b`` のテンソル積。"
+msgstr "``\"FEM_PRODUCT(a,b)\"``: 2つの多項式有限要素法 ``a`` と ``b`` のテンソル積．"
 
 #: ../source/userdoc/bfem.rst:118
 msgid ""
@@ -205,7 +205,7 @@ msgid ""
 "simplexes of dimension ``n`` with degree ``k`` polynomials."
 msgstr ""
 "``\"FEM_PK_DISCONTINUOUS(n,k)\"``: 次数 ``k`` の多項式を持つ次元 ``n`` の単体に関する不連続 "
-":math:`P_K` 法。"
+":math:`P_K` 法．"
 
 #: ../source/userdoc/bfem.rst:121
 msgid ""
@@ -224,21 +224,21 @@ msgstr "いくつかの他の方法:"
 #: ../source/userdoc/bfem.rst:142
 msgid ""
 "Set of indexes (a |dal_bv|) on which a finite element method is defined."
-msgstr "有限要素法が定義されている索引( |dal_bv| )の集合。"
+msgstr "有限要素法が定義されている索引( |dal_bv| )の集合．"
 
 #: ../source/userdoc/bfem.rst:146
 msgid "gives a reference to the linked mesh."
-msgstr "リンクされたメッシュへの参照を与えます。"
+msgstr "リンクされたメッシュへの参照を与えます．"
 
 #: ../source/userdoc/bfem.rst:150
 msgid ""
 "gives a descriptor on the finite element method defined on element of index "
 "``i`` (does not take into account the qdim nor the optional reduction)."
-msgstr "インデックス ``i`` の要素に定義されている有限要素法の記述子を与えます（qdimもオプションの削減も考慮しない）。"
+msgstr "インデックス ``i`` の要素に定義されている有限要素法の記述子を与えます（qdimもオプションの削減も考慮しない）．"
 
 #: ../source/userdoc/bfem.rst:155
 msgid "Clears the structure, no finite element method is still defined."
-msgstr "構造をクリアし、有限要素法が定義されない状態になります。"
+msgstr "構造をクリアし，有限要素法が定義されない状態になります．"
 
 #: ../source/userdoc/bfem.rst:159
 msgid "Examples"
@@ -248,7 +248,7 @@ msgstr "例"
 msgid ""
 "For instance if one needs to have a description of a :math:`P_1` finite "
 "element method on a triangle, the way to set it is::"
-msgstr "例えば、3角形上に :math:`P_1` 有限要素法の記述が必要な場合、それを設定する方法は::"
+msgstr "例えば，3角形上に :math:`P_1` 有限要素法の記述が必要な場合，それを設定する方法は::"
 
 #: ../source/userdoc/bfem.rst:166
 msgid ""
@@ -257,12 +257,12 @@ msgid ""
 "``mf.set_finite_element`` a |dal_bv| instead of a single index. For "
 "instance::"
 msgstr ""
-"ここで ``i`` はまだ単一のインデックスではなく、3角形のインデックスです。 ``mf.set_finite_element`` に "
-"|dal_bv| を渡して、要素集合上で直接特定のメソッドを選択することもできます。例えば、"
+"ここで ``i`` はまだ単一のインデックスではなく，3角形のインデックスです． ``mf.set_finite_element`` に "
+"|dal_bv| を渡して，要素集合上で直接特定のメソッドを選択することもできます．例えば，"
 
 #: ../source/userdoc/bfem.rst:173
 msgid "selects the method on all the elements of the mesh."
-msgstr "はメッシュのすべての要素のメソッドを選択します。"
+msgstr "はメッシュのすべての要素のメソッドを選択します．"
 
 #: ../source/userdoc/bfem.rst:177
 msgid "Second level: the optional \"vectorization/tensorization\""
@@ -274,8 +274,8 @@ msgid ""
 "method ``mf.set_qdim(Q)`` allows set the target dimension for the definition"
 " of the target dimension :math:`Q`."
 msgstr ""
-"有限要素がベクトルフィールドである未知数を表す場合、メソッド ``mf.set_qdim(Q)`` は、ターゲットディメンション :math:`Q` "
-"が定義しているターゲットディメンションを設定します。"
+"有限要素がベクトルフィールドである未知数を表す場合，メソッド ``mf.set_qdim(Q)`` は，ターゲットディメンション :math:`Q` "
+"が定義しているターゲットディメンションを設定します．"
 
 #: ../source/userdoc/bfem.rst:182
 msgid ""
@@ -287,10 +287,10 @@ msgid ""
 "used, the target dimension of the ``fem`` and the one of the |mf| object "
 "have to match. To sum it up,"
 msgstr ""
-"対象の次元Qが :math:`1` 以外の値に設定されている場合、スカラFEM（ :math:`P_k` 有限要素法など）は |mf| "
-"オブジェクトの観点から自動的に「ベクトル化」されます。つまり、各スカラー自由度はベクトル場の :math:`Q` 成分を表現するため :math:`Q`"
-" 回表示されます。本質的にベクトル要素が使用される場合、 ``fem`` のターゲットディメンションと |mf| "
-"オブジェクトのターゲットディメンションが一致しなければなりません。要約すると、"
+"対象の次元Qが :math:`1` 以外の値に設定されている場合，スカラFEM（ :math:`P_k` 有限要素法など）は |mf| "
+"オブジェクトの観点から自動的に「ベクトル化」されます．つまり，各スカラー自由度はベクトル場の :math:`Q` 成分を表現するため :math:`Q`"
+" 回表示されます．本質的にベクトル要素が使用される場合， ``fem`` のターゲットディメンションと |mf| "
+"オブジェクトのターゲットディメンションが一致しなければなりません．要約すると，"
 
 #: ../source/userdoc/bfem.rst:189
 msgid ""
@@ -307,7 +307,7 @@ msgid ""
 "vector field (for instance the stress or strain tensor field in elasticity),"
 " it is possible to specify the tensor dimensions with the methods::"
 msgstr ""
-"さらに、表現されるフィールドがベクトル場の代わりにテンソル場（例えば、弾性の応力またはひずみテンソル場）である場合、テンソルの次元を以下の方法で指定することが可能です。"
+"さらに，表現されるフィールドがベクトル場の代わりにテンソル場（例えば，弾性の応力またはひずみテンソル場）である場合，テンソルの次元を以下の方法で指定することが可能です．"
 
 #: ../source/userdoc/bfem.rst:205
 msgid ""
@@ -318,37 +318,37 @@ msgid ""
 "generic assembly. Remember that the components inside a tensor are stored in"
 " Fortran order."
 msgstr ""
-"2次、4次、任意（但し、6に限定される）のテンソル場について、ほとんどの演算では、これは次元の積であるベクトル場を宣言するのと同じです。しかし、宣言されたテンソルの次元は、高水準の汎用構築に考慮されます。テンソル内の成分はFortranの次数で格納されることに注意してください。"
+"2次，4次，任意（但し，6に限定される）のテンソル場について，ほとんどの演算では，これは次元の積であるベクトル場を宣言するのと同じです．しかし，宣言されたテンソルの次元は，高水準の汎用構築に考慮されます．テンソル内の成分はFortranの次数で格納されることに注意してください．"
 
 #: ../source/userdoc/bfem.rst:209
 msgid ""
 "At this level are defined the basic degrees of freedom. Some methods of the "
 "|gf_mf| allows to obtain information on the basic dofs:"
-msgstr "このレベルでは、基本的な自由度が定義されています。 |gf_mf| のいくつかのメソッドは基本的な自由度に関する情報を得ることができます："
+msgstr "このレベルでは，基本的な自由度が定義されています． |gf_mf| のいくつかのメソッドは基本的な自由度に関する情報を得ることができます："
 
 #: ../source/userdoc/bfem.rst:214
 msgid ""
 "gives the number of basic degrees of freedom on the element of index ``i``."
-msgstr "インデックス ``i`` の要素の基本自由度の数を返します。"
+msgstr "インデックス ``i`` の要素の基本自由度の数を返します．"
 
 #: ../source/userdoc/bfem.rst:218
 msgid ""
 "gives a container (an array) with all the global indexes of the basic "
 "degrees of freedom of element of index ``i``."
-msgstr "インデックス ``i`` の要素の基本自由度のすべてのグローバルインデックスを持つコンテナ（配列）を返します。"
+msgstr "インデックス ``i`` の要素の基本自由度のすべてのグローバルインデックスを持つコンテナ（配列）を返します．"
 
 #: ../source/userdoc/bfem.rst:223
 msgid ""
 "gives a ``bgeot::base_node`` which represents the point associated with the "
 "basic dof of local index ``j`` on element of index ``i``."
 msgstr ""
-"インデックス ``i`` の要素上のローカルインデックス ``j`` の基本自由度点を表す ``bgeot::base_node`` を返します。"
+"インデックス ``i`` の要素上のローカルインデックス ``j`` の基本自由度点を表す ``bgeot::base_node`` を返します．"
 
 #: ../source/userdoc/bfem.rst:228
 msgid ""
 "gives a ``bgeot::base_node`` which represents the point associated with the "
 "basic dof of global index ``j``."
-msgstr "グローバルインデックス ``j`` の基本自由度に関連する点を表す ``bgeot::base_node`` を返します。"
+msgstr "グローバルインデックス ``j`` の基本自由度に関連する点を表す ``bgeot::base_node`` を返します．"
 
 #: ../source/userdoc/bfem.rst:233
 msgid ""
@@ -357,21 +357,21 @@ msgid ""
 "of the reference element."
 msgstr ""
 "参照要素の座標におけるインデックス ``i`` の要素上のローカルインデックス ``j`` の基本自由度に関連する点を表す "
-"``bgeot::base_node`` を与えます。"
+"``bgeot::base_node`` を与えます．"
 
 #: ../source/userdoc/bfem.rst:239
 msgid ""
 "gives the index of the first element on which the basic degree of freedom of"
 " global index ``j`` is defined."
-msgstr "グローバルインデックス ``j`` の基本自由度が定義されている最初の要素のインデックスを返します。"
+msgstr "グローバルインデックス ``j`` の基本自由度が定義されている最初の要素のインデックスを返します．"
 
 #: ../source/userdoc/bfem.rst:244
 msgid "gives the total number of different basic degrees of freedom."
-msgstr "異なる基本自由度の総数を与えます。"
+msgstr "異なる基本自由度の総数を与えます．"
 
 #: ../source/userdoc/bfem.rst:248
 msgid "gives the target dimension ``Q``."
-msgstr "対象の次元 ``Q`` を与えます。"
+msgstr "対象の次元 ``Q`` を与えます．"
 
 #: ../source/userdoc/bfem.rst:252
 msgid ""
@@ -379,7 +379,7 @@ msgid ""
 " set of convexes or the set of faces of index ``i`` (see the |gf_m| object)."
 msgstr ""
 "凸包要素の集合またはインデックス ``i`` の面の集合にある基本自由度のインデックスを表す |dal_bv| を返します（ |gf_m| "
-"オブジェクトを参照）。"
+"オブジェクトを参照）．"
 
 #: ../source/userdoc/bfem.rst:257
 msgid ""
@@ -390,8 +390,8 @@ msgid ""
 " is used to make the correspondence between basic and reduced dofs."
 msgstr ""
 "凸包の集合またはインデックス ``i`` の面の集合にある自由度のインデックスを表す |dal_bv| を返します（ |gf_m| "
-"オブジェクトを参照）。 "
-"mesh_femを小さくすると、対応している試行関数がこの領域上でゼロでない場合、自由度は領域上に設定されます。拡張行列は、基本と縮小の自由度間の対応付けを行うために使用されます。"
+"オブジェクトを参照）． "
+"mesh_femを小さくすると，対応している試行関数がこの領域上でゼロでない場合，自由度は領域上に設定されます．拡張行列は，基本と縮小の自由度間の対応付けを行うために使用されます．"
 
 #: ../source/userdoc/bfem.rst:265
 msgid "Third level: the optional linear transformation (or reduction)"
@@ -409,16 +409,16 @@ msgid ""
 " the extension matrix should be sparse. Otherwise, each assembled matrix "
 "will be plain !"
 msgstr ""
-"上述のように、自由度の線形変換を記述する2つの行列、縮小行列 :math:`R` および拡張行列 :math:`E` が提供されています。 "
-":math:`V` が基本自由度のベクトルである場合、 :math:`U=RV` "
-"は上述のように減少した自由度のベクトルとなります。逆に、減少した自由度のベクトル :math:`U` が与えられると、 :math:`V=EU` "
-"は元の自由度のベクトルとなります。単純な場合、Eは単にRの転置になります。拡張行列のすべての行は疎でなければなりません。これに注意しないと、各マトリックスの構築は難しくなります！"
+"上述のように，自由度の線形変換を記述する2つの行列，縮小行列 :math:`R` および拡張行列 :math:`E` が提供されています． "
+":math:`V` が基本自由度のベクトルである場合， :math:`U=RV` "
+"は上述のように減少した自由度のベクトルとなります．逆に，減少した自由度のベクトル :math:`U` が与えられると， :math:`V=EU` "
+"は元の自由度のベクトルとなります．単純な場合，Eは単にRの転置になります．拡張行列のすべての行は疎でなければなりません．これに注意しないと，各マトリックスの構築は難しくなります！"
 
 #: ../source/userdoc/bfem.rst:276
 msgid ""
 "A natural condition is that :math:`RE = I` where :math:`I` is the identity "
 "matrix."
-msgstr "自然条件は :math:`RE = I` であり :math:`I` は単位行列です。"
+msgstr "自然条件は :math:`RE = I` であり :math:`I` は単位行列です．"
 
 #: ../source/userdoc/bfem.rst:280
 msgid ""
@@ -426,25 +426,25 @@ msgid ""
 "reduction is used, this will be the number of columns of the reduction "
 "matrix. Otherwise it will return the number of basic degrees of freedom."
 msgstr ""
-"は異なる自由度の総数を与えます。オプションの縮小が使用される場合、これは削減行列の列の数になります。それ以外の場合、基本自由度の数が返されます。"
+"は異なる自由度の総数を与えます．オプションの縮小が使用される場合，これは削減行列の列の数になります．それ以外の場合，基本自由度の数が返されます．"
 
 #: ../source/userdoc/bfem.rst:286
 msgid "return a boolean. True if the reduction is used."
-msgstr "ブール値を返します。縮小が使用されている場合はTrueです。"
+msgstr "ブール値を返します．縮小が使用されている場合はTrueです．"
 
 #: ../source/userdoc/bfem.rst:290
 msgid "return a const reference to the reduction matrix :math:`R`."
-msgstr "縮小行列 :math:`R` にconst参照を返します。"
+msgstr "縮小行列 :math:`R` にconst参照を返します．"
 
 #: ../source/userdoc/bfem.rst:294
 msgid "return a const reference to the extension matrix :math:`E`."
-msgstr "縮小行列 :math:`E` にconst参照を返す。"
+msgstr "縮小行列 :math:`E` にconst参照を返す．"
 
 #: ../source/userdoc/bfem.rst:298
 msgid ""
 "Set the reduction and extension matrices to ``R`` and ``E`` and validate "
 "their use."
-msgstr "縮小行列と拡張行列を ``R`` と ``E`` と定義し、それらの使用法を検証します。"
+msgstr "縮小行列と拡張行列を ``R`` と ``E`` と定義し，それらの使用法を検証します．"
 
 #: ../source/userdoc/bfem.rst:303
 msgid ""
@@ -452,8 +452,8 @@ msgid ""
 " validate it if ``b`` is true. If ``b`` is true, the extension and reduction"
 " matrices have to be set previously."
 msgstr ""
-":math:`b` はブール値です。 :math:`b` が偽であれば削減を取り消し、 :math:`b` が真であれば削除を検証します。 "
-":math:`b` が真の場合は、事前に拡張行列と縮約行列を設定している必要があります。"
+":math:`b` はブール値です． :math:`b` が偽であれば削減を取り消し， :math:`b` が真であれば削除を検証します． "
+":math:`b` が真の場合は，事前に拡張行列と縮約行列を設定している必要があります．"
 
 #: ../source/userdoc/bfem.rst:309
 msgid ""
@@ -462,9 +462,9 @@ msgid ""
 "or a ``std::set<size_type>``. This is equivalent to the use of a "
 "``getfem::partial_mesh_fem`` object."
 msgstr ""
-"``idof`` に存在する基本自由度のみを保持するように対応する縮小行列と拡張行列を設定します。パラメータ ``idof`` は |dal_bv| "
-"または ``std::set<size_type>`` のいずれかです。これは ``getfem::partial_mesh_fem`` "
-"オブジェクトの使用方法と同じです。"
+"``idof`` に存在する基本自由度のみを保持するように対応する縮小行列と拡張行列を設定します．パラメータ ``idof`` は |dal_bv| "
+"または ``std::set<size_type>`` のいずれかです．これは ``getfem::partial_mesh_fem`` "
+"オブジェクトの使用方法と同じです．"
 
 #: ../source/userdoc/bfem.rst:316
 msgid "Obtaining generic |mf|'s"
@@ -483,9 +483,9 @@ msgid ""
 "arguments will return the same |mf| object. A consequence is that you should"
 " NEVER modify this |mf|!"
 msgstr ""
-"与えられた ``mymesh`` 上で次数 :math:`K` の古典的多項式 |mf| を得ることができます。 |mf| "
-"はリンクされたメッシュが破棄されると自動的に破棄されます。この関数によって構築されたすべての |mf| "
-"はキャッシュに格納されます。つまり、この関数を同じ引数で2回呼び出すと、同じ |mf| オブジェクトが返されます。ゆえに、決してこの |mf| "
+"与えられた ``mymesh`` 上で次数 :math:`K` の古典的多項式 |mf| を得ることができます． |mf| "
+"はリンクされたメッシュが破棄されると自動的に破棄されます．この関数によって構築されたすべての |mf| "
+"はキャッシュに格納されます．つまり，この関数を同じ引数で2回呼び出すと，同じ |mf| オブジェクトが返されます．ゆえに，決してこの |mf| "
 "を修正してはいけません！"
 
 #: ../source/userdoc/bfem.rst:330
@@ -505,10 +505,10 @@ msgid ""
 "description to prescribed boundary conditions."
 msgstr ""
 "``getfem_partial_mesh_fem.h`` ファイルで定義された ``getfem::partial_mesh_fem`` "
-"オブジェクトは |gf_mf| オブジェクトを自由度の集合に減らすことができます。注目してほしいことは、これは有限要素法の完全な記述ではなく、元の "
-"|gf_mf| を参照して、縮小と拡張行列を追加しているだけということです。例えば、``getfem::classical_mesh_fem(mesh,"
-" K)`` 関数で得られた |mf| を縮約し、メッシュ領域（境界でもよい）上で有限要素法を得ることができます。 "
-"``getfem::partial_mesh_fem`` は特に指定された境界条件の乗数記述を得るために使用されます。"
+"オブジェクトは |gf_mf| オブジェクトを自由度の集合に減らすことができます．注目してほしいことは，これは有限要素法の完全な記述ではなく，元の "
+"|gf_mf| を参照して，縮小と拡張行列を追加しているだけということです．例えば，``getfem::classical_mesh_fem(mesh,"
+" K)`` 関数で得られた |mf| を縮約し，メッシュ領域（境界でもよい）上で有限要素法を得ることができます． "
+"``getfem::partial_mesh_fem`` は特に指定された境界条件の乗数記述を得るために使用されます．"
 
 #: ../source/userdoc/bfem.rst:342
 msgid ""
@@ -517,7 +517,7 @@ msgstr "``getfem::partial_mesh_fem`` オブジェクトの宣言は次のとお�
 
 #: ../source/userdoc/bfem.rst:346
 msgid "Then, one has to call the adapt method as follows::"
-msgstr "次に、適合メソッドを次のように呼び出す必要があります::"
+msgstr "次に，適合メソッドを次のように呼び出す必要があります::"
 
 #: ../source/userdoc/bfem.rst:350
 msgid ""
@@ -528,6 +528,6 @@ msgid ""
 "finite element method. This is to avoid unnecessary computations during "
 "assembly procedures."
 msgstr ""
-"``kept_dof`` と ``rejected_elt`` はいくつかの |dal_bv| です。 ``kept_dof`` は、保持される元の "
-"|mf| ``mf`` の自由度インデックスのリストです。 rejected_eltは ``getfem::partial_mesh_fem`` "
-"が有限要素法がないことを示す要素インデックスのリストを含むオプションのパラメータです。これは、構築中の不要な計算を避けるためです。"
+"``kept_dof`` と ``rejected_elt`` はいくつかの |dal_bv| です． ``kept_dof`` は，保持される元の "
+"|mf| ``mf`` の自由度インデックスのリストです． rejected_eltは ``getfem::partial_mesh_fem`` "
+"が有限要素法がないことを示す要素インデックスのリストを含むオプションのパラメータです．これは，構築中の不要な計算を避けるためです．"

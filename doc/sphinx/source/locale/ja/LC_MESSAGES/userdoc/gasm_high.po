@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-08 01:17+0000\n"
+"POT-Creation-Date: 2021-01-09 01:20+0000\n"
 "PO-Revision-Date: 2018-07-16 07:03+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,17 +39,17 @@ msgid ""
 "is compiled into optimized instructions before the evaluation on each "
 "integration point in order to obtain a an optimal computational cost."
 msgstr ""
-"このセクションでは、現在の |gf| の主要な汎用構築を紹介します。これは、偏微分方程式の境界値問題の弱定式化を記述するために、汎用弱形式言語 "
+"このセクションでは，現在の |gf| の主要な汎用構築を紹介します．これは，偏微分方程式の境界値問題の弱定式化を記述するために，汎用弱形式言語 "
 "(GWFL, [GetFEM2020]_) "
-"に基づいているという意味で、高水準の汎用構築とされています。記号的な微分アルゴリズムが使用されています。これは、非線形結合問題の近似を多く簡略化します。弱形式のみを記述する必要があるため、接線系は自動的に計算されるためです。さらに、GWFLは、最適な計算コストを得るために各積分点の評価の前に最適化された命令にコンパイルされます。"
+"に基づいているという意味で，高水準の汎用構築とされています．記号的な微分アルゴリズムが使用されています．これは，非線形結合問題の近似を多く簡略化します．弱形式のみを記述する必要があるため，接線系は自動的に計算されるためです．さらに，GWFLは，最適な計算コストを得るために各積分点の評価の前に最適化された命令にコンパイルされます．"
 
 #: ../source/userdoc/gasm_high.rst:16
 msgid ""
 "The header file to be included to use the high-level generic assembly "
 "procedures in C++ is :file:`getfem/generic\\_assembly.h`."
 msgstr ""
-"C++で高水準の汎用構築手順を使用するためにインクルードするヘッダーファイルは、 :file:`getfem/generic_assembly.h` "
-"です。"
+"C++で高水準の汎用構築手順を使用するためにインクルードするヘッダーファイルは， :file:`getfem/generic_assembly.h` "
+"です．"
 
 #: ../source/userdoc/gasm_high.rst:20
 msgid "Overview of GWFL"
@@ -58,7 +58,7 @@ msgstr "GWFLの概要"
 #: ../source/userdoc/gasm_high.rst:22
 msgid ""
 "Another description of the main principles can be found in [GetFEM2020]_."
-msgstr "主な原則については、 [GetFEM2020]_ を参照してください。"
+msgstr "主な原則については， [GetFEM2020]_ を参照してください．"
 
 #: ../source/userdoc/gasm_high.rst:24
 msgid ""
@@ -67,7 +67,7 @@ msgid ""
 "structure of a standard weak formulation and it incorporates the following "
 "components:"
 msgstr ""
-"境界値問題の弱定式化を記述するために、特定の弱形式言語が開発されています。これは、標準的な弱定式化の構造に近いことを意図しており、以下の成分を含みます。"
+"境界値問題の弱定式化を記述するために，特定の弱形式言語が開発されています．これは，標準的な弱定式化の構造に近いことを意図しており，以下の成分を含みます．"
 
 #: ../source/userdoc/gasm_high.rst:26
 msgid ""
@@ -76,14 +76,14 @@ msgid ""
 "For instance ``u``, ``v``, ``p``, ``pressure``, ``electric_field`` are valid"
 " variable names."
 msgstr ""
-"変数名: 変数のリストを与える必要があります。変数は有限要素法で記述されるか、未知変数の単純なベクトルになります。例えば、 ``u`` 、 ``v`` "
-"、 ``p`` 、 ``pressure`` 、 ``electric_field`` は有効な変数名です。"
+"変数名: 変数のリストを与える必要があります．変数は有限要素法で記述されるか，未知変数の単純なベクトルになります．例えば， ``u`` ， ``v`` "
+"， ``p`` ， ``pressure`` ， ``electric_field`` は有効な変数名です．"
 
 #: ../source/userdoc/gasm_high.rst:28
 msgid ""
 "Constant names: A list of constants could be given. The rules are the same "
 "as for the variables but no test functions can be associated to constants."
-msgstr "定数名: 定数のリストを与ることができます。ルールは変数と同じですが、試験関数を定数に関連付けることはできません。"
+msgstr "定数名: 定数のリストを与ることができます．ルールは変数と同じですが，試験関数を定数に関連付けることはできません．"
 
 #: ../source/userdoc/gasm_high.rst:30
 msgid ""
@@ -93,10 +93,10 @@ msgid ""
 "``Test_electric_field``. For the tangent system, second order test functions"
 " are denoted ``Test2_`` followed by the variable name."
 msgstr ""
-"試験関数: 任意の変数に対して使用できます。試験関数は接頭辞 ``Test_`` とそれに続く対応する変数名によって識別されます。例えば "
-"``Test_u`` 、 ``Test_v`` 、 ``Test_p`` 、 ``Test_pressure`` 、 "
-"``Test_electric_field`` のようなものです。接触モデルの場合、2次の試験関数は ``Test2_`` "
-"と表記されその後ろに変数名が続きます。"
+"試験関数: 任意の変数に対して使用できます．試験関数は接頭辞 ``Test_`` とそれに続く対応する変数名によって識別されます．例えば "
+"``Test_u`` ， ``Test_v`` ， ``Test_p`` ， ``Test_pressure`` ， "
+"``Test_electric_field`` のようなものです．接触モデルの場合，2次の試験関数は ``Test2_`` "
+"と表記されその後ろに変数名が続きます．"
 
 #: ../source/userdoc/gasm_high.rst:32
 msgid ""
@@ -108,11 +108,11 @@ msgid ""
 "fields, ``Div_u`` and ``Div_Test_u`` are some shortcuts for "
 "``Trace(Grad_u)`` and ``Trace(Grad_Test_u)``, respectively."
 msgstr ""
-"勾配: 変数または試験関数の空間的な勾配は、 ``Grad_`` を変数名か ``Test_`` 、 ``Test2_`` "
-"の接頭辞にすることで表現できます。FEM変数でのみ使用可能です。たとえば、 ``Grad_u`` 、 ``Grad_pressure`` 、 "
-"``Grad_electric_field`` 、および ``Grad_Test_u`` 、 ``Grad_Test2_v`` です。ベクトルの場合、 "
-"``Div_u`` と ``Div_Test_u`` は、それぞれ ``Trace(Grad_u)`` と ``Trace(Grad_Test_u)``"
-" と等価です。"
+"勾配: 変数または試験関数の空間的な勾配は， ``Grad_`` を変数名か ``Test_`` ， ``Test2_`` "
+"の接頭辞にすることで表現できます．FEM変数でのみ使用可能です．たとえば， ``Grad_u`` ， ``Grad_pressure`` ， "
+"``Grad_electric_field`` ，および ``Grad_Test_u`` ， ``Grad_Test2_v`` です．ベクトルの場合， "
+"``Div_u`` と ``Div_Test_u`` は，それぞれ ``Trace(Grad_u)`` と ``Trace(Grad_Test_u)``"
+" と等価です．"
 
 #: ../source/userdoc/gasm_high.rst:34
 msgid ""
@@ -122,9 +122,9 @@ msgid ""
 "only. For instance ``Hess_u``, ``Hess_v``, ``Hess_p``, ``Hess_Test2_v``, "
 "``Hess_Test_p``, ``Hess_Test_pressure``."
 msgstr ""
-"Hessian: 変数または試験関数のHessian行列は、``Hess_`` を変数名または ``Test_`` または ``Test2_`` "
-"の接頭辞にすることで表現できます。FEM変数でのみ使用可能です。たとえば、 ``Hess_u``、 ``Hess_v``、 ``Hess_p``、 "
-"``Hess_Test2_v``、 ``Hess_Test_p``、 ``Hess_Test_pressure`` などです。"
+"Hessian: 変数または試験関数のHessian行列は，``Hess_`` を変数名または ``Test_`` または ``Test2_`` "
+"の接頭辞にすることで表現できます．FEM変数でのみ使用可能です．たとえば， ``Hess_u``， ``Hess_v``， ``Hess_p``， "
+"``Hess_Test2_v``， ``Hess_Test_p``， ``Hess_Test_pressure`` などです．"
 
 #: ../source/userdoc/gasm_high.rst:36
 msgid ""
@@ -135,12 +135,12 @@ msgid ""
 "``min(t,u)`` ...) if two non-scalar arguments are passed, the dimension have"
 " to be the same. For instance \"max([1;2],[0;3])\" will return \"[1;3]\"."
 msgstr ""
-"いくつかの定義済みのスカラ関数( ``sin(t)`` 、 ``cos(t)`` 、 ``pow(t,u)`` 、 ``sqrt(t)`` 、 "
-"``sqr(t)`` 、 ``Heaviside(t)`` "
-"、...)。スカラー関数は、スカラーまたはベクトル/行列/テンソル式に適用することができます。成分ごとに適用されます。 2つの引数( "
-"``pow(t,u)`` 、 ``min(t,u)`` ...)を持つ関数の場合、 "
-"2つの非スカラー引数が渡された場合、次元は同じでなければなりません。たとえば、 \"max([1; 2]、[0; 3])\" は \"[1;3]\" "
-"を返します。"
+"いくつかの定義済みのスカラ関数( ``sin(t)`` ， ``cos(t)`` ， ``pow(t,u)`` ， ``sqrt(t)`` ， "
+"``sqr(t)`` ， ``Heaviside(t)`` "
+"，...)．スカラー関数は，スカラーまたはベクトル/行列/テンソル式に適用することができます．成分ごとに適用されます． 2つの引数( "
+"``pow(t,u)`` ， ``min(t,u)`` ...)を持つ関数の場合， "
+"2つの非スカラー引数が渡された場合，次元は同じでなければなりません．たとえば， \"max([1; 2]，[0; 3])\" は \"[1;3]\" "
+"を返します．"
 
 #: ../source/userdoc/gasm_high.rst:38
 msgid ""
@@ -148,19 +148,19 @@ msgid ""
 "``.*``, ``./``, ``@``, ``'``, ``Cross_product(v1,v2)``."
 msgstr ""
 "``+``, ``-``, ``*``, ``/``, ``:``, ``.``, ``.*``, ``./``, ``@``, ``'``, "
-"``Cross_product(v1,v2)`` となります。"
+"``Cross_product(v1,v2)`` となります．"
 
 #: ../source/userdoc/gasm_high.rst:40
 msgid ""
 "A certain number of linear operator: ``Trace(M)``, ``Sym(M)``, ``Skew(M)``, "
 "..."
-msgstr "ある数の線形演算子、 ``Trace(M)``, ``Sym(M)``, ``Skew(M)``, ..."
+msgstr "ある数の線形演算子， ``Trace(M)``, ``Sym(M)``, ``Skew(M)``, ..."
 
 #: ../source/userdoc/gasm_high.rst:42
 msgid ""
 "A certain number of nonlinear operator: ``Norm(V)``, ``Det(M)``, ``Sym(M)``,"
 " ``Skew(M)``, ..."
-msgstr "ある数の非線形演算子、 ``Norm(V)``, ``Det(M)``, ``Sym(M)``, ``Skew(M)``, ..."
+msgstr "ある数の非線形演算子， ``Norm(V)``, ``Det(M)``, ``Sym(M)``, ``Skew(M)``, ..."
 
 #: ../source/userdoc/gasm_high.rst:44
 msgid ""
@@ -169,16 +169,16 @@ msgid ""
 "for fixed size variables and the dimension of the vector field for FEM "
 "variables), ``Id(n)`` the identity :math:`n\\times n` matrix."
 msgstr ""
-"いくつかの定数: ``pi`` 、 ``meshdim`` （現在のメッシュの次元）、変数 ``u`` の大きさ ``qdim(u)`` と "
-"``qdims(u)`` （固定サイズの変数のサイズとFEM変数のベクトルフィールドの次元）、 ``Id(n)`` は :math:`n\\times "
-"n` 次の単位行列です。"
+"いくつかの定数: ``pi`` ， ``meshdim`` （現在のメッシュの次元），変数 ``u`` の大きさ ``qdim(u)`` と "
+"``qdims(u)`` （固定サイズの変数のサイズとFEM変数のベクトルフィールドの次元）， ``Id(n)`` は :math:`n\\times "
+"n` 次の単位行列です．"
 
 #: ../source/userdoc/gasm_high.rst:46
 msgid ""
 "Parentheses can be used to change the operations order in a standard way. "
 "For instance ``(1+2)*4`` or ``(u+v)*Test_u`` are valid expressions."
 msgstr ""
-"括弧は標準的な方法で操作の順序を変更するために使用できます。例えば ``(1+2)*4`` や ``(u+v)*Test_u`` は有効な式です。"
+"括弧は標準的な方法で操作の順序を変更するために使用できます．例えば ``(1+2)*4`` や ``(u+v)*Test_u`` は有効な式です．"
 
 #: ../source/userdoc/gasm_high.rst:48
 msgid ""
@@ -189,21 +189,21 @@ msgid ""
 " interface). A colon can replace the value of an index in a Matlab like "
 "syntax."
 msgstr ""
-"ベクトル/行列/テンソルの成分へのアクセスは、左括弧、成分のリスト、右括弧の項をたどることによって行うことができます。たとえば、 "
+"ベクトル/行列/テンソルの成分へのアクセスは，左括弧，成分のリスト，右括弧の項をたどることによって行うことができます．たとえば， "
 "``[1,1,2](3)`` は正しく ``2`` "
-"を返します。インデックスは1で始まることに注意してください（C++やPythonインタフェースでも）。コロンを使うことでMatlabのような構文でインデックス先の値を置き換えることができます。"
+"を返します．インデックスは1で始まることに注意してください（C++やPythonインタフェースでも）．コロンを使うことでMatlabのような構文でインデックス先の値を置き換えることができます．"
 
 #: ../source/userdoc/gasm_high.rst:50
 msgid ""
 "Explicit vectors: For instance ``[1;2;3;4]`` is an explicit vector of size "
 "four. Each component can be an expression."
-msgstr "陽なベクトル: 例えば ``[1;2;3;4]`` はサイズが4の陽なベクトルです。各成分は式になります。"
+msgstr "陽なベクトル: 例えば ``[1;2;3;4]`` はサイズが4の陽なベクトルです．各成分は式になります．"
 
 #: ../source/userdoc/gasm_high.rst:52
 msgid ""
 "Explicit matrices: For instance ``[1,3;2,4]`` and ``[[1,2],[3,4]]`` denote "
 "the same 2x2 matrix. Each component can be an expression."
-msgstr "陽行列: たとえば ``[1,3;2,4]`` と ``[[1,2],[3,4]]`` は同じ2x2行列を表します。各成分は式になります。"
+msgstr "陽行列: たとえば ``[1,3;2,4]`` と ``[[1,2],[3,4]]`` は同じ2x2行列を表します．各成分は式になります．"
 
 #: ../source/userdoc/gasm_high.rst:54
 msgid ""
@@ -213,13 +213,13 @@ msgid ""
 msgstr ""
 "陽な4次テンソル: 例えば入れ子形式の陽な3x2x2x2の4次テンソルは: "
 "``[[[[1,2,3],[1,2,3]],[[1,2,3],[1,2,3]]],[[[1,2,3],[1,2,3]],[[1,2,3],[1,2,3]]]]``"
-" です。"
+" です．"
 
 #: ../source/userdoc/gasm_high.rst:56
 msgid ""
 "``X`` is the current coordinate on the real element, ``X(i)`` is its i-th "
 "component."
-msgstr "``X`` は実要素上の現在の座標です。 ``X(i)`` はi番目の要素です。"
+msgstr "``X`` は実要素上の現在の座標です． ``X(i)`` はi番目の要素です．"
 
 #: ../source/userdoc/gasm_high.rst:58
 msgid ""
@@ -229,16 +229,16 @@ msgid ""
 "latter case, the normal vector is in the direction of the level-set function"
 " gradient."
 msgstr ""
-"``Normal`` は領域境界に積分するときの境界に対する外向きの単位法線ベクトル、または ``mesh_im_level_set`` "
-"メソッドでレベル集合に積分するときのレベル集合への単位法線ベクトルです。後者の場合、法線ベクトルはレベル集合関数勾配の方向にあります。"
+"``Normal`` は領域境界に積分するときの境界に対する外向きの単位法線ベクトル，または ``mesh_im_level_set`` "
+"メソッドでレベル集合に積分するときのレベル集合への単位法線ベクトルです．後者の場合，法線ベクトルはレベル集合関数勾配の方向にあります．"
 
 #: ../source/userdoc/gasm_high.rst:60
 msgid ""
 "``Reshape(t, i, j, ...)``: Reshape a vector/matrix/tensor. Note that all "
 "tensors in |gf| are stored in the Fortran order."
 msgstr ""
-"``Reshape(t, i, j, ...)``: ベクトル/行列/テンソルを変形します。 |gf| "
-"のすべてのテンソルはFortranの次数で格納されることに留意してください。"
+"``Reshape(t, i, j, ...)``: ベクトル/行列/テンソルを変形します． |gf| "
+"のすべてのテンソルはFortranの次数で格納されることに留意してください．"
 
 #: ../source/userdoc/gasm_high.rst:62
 msgid ""
@@ -246,14 +246,14 @@ msgid ""
 "``Det``, ``Deviator``, ``Contract``, ...). The nonlinear operators cannot be"
 " applied to test functions."
 msgstr ""
-"ある数の線形と非線形の演算子（ ``Trace``、 ``Norm``、 ``Det``、 ``Deviator``、 ``Contract`` "
-"など）。非線形演算子は試験関数には適用できません。"
+"ある数の線形と非線形の演算子（ ``Trace``， ``Norm``， ``Det``， ``Deviator``， ``Contract`` "
+"など）．非線形演算子は試験関数には適用できません．"
 
 #: ../source/userdoc/gasm_high.rst:64
 msgid ""
 "``Diff(expression, variable)``: The possibility to explicit differentiate an"
 " expression with respect to a variable (symbolic differentiation)."
-msgstr "``Diff(expression、variable)``: 変数に対する陽な微分可能性（記号による微分）。"
+msgstr "``Diff(expression，variable)``: 変数に対する陽な微分可能性（記号による微分）．"
 
 #: ../source/userdoc/gasm_high.rst:66
 msgid ""
@@ -261,13 +261,13 @@ msgid ""
 "``expression`` with respect to ``variable`` in the direction ``direction``."
 msgstr ""
 "``Diff(expression, variable, direction)``: ``direction`` 方向の ``variable`` "
-"に対して ``expression`` の導関数を計算します。"
+"に対して ``expression`` の導関数を計算します．"
 
 #: ../source/userdoc/gasm_high.rst:68
 msgid ""
 "``Grad(expression)``: When possible, symbolically derive the gradient of the"
 " given expression."
-msgstr "``Grad(expression)``: 可能であれば、与えられた式の勾配を記号的に微分します。"
+msgstr "``Grad(expression)``: 可能であれば，与えられた式の勾配を記号的に微分します．"
 
 #: ../source/userdoc/gasm_high.rst:70
 msgid ""
@@ -277,7 +277,7 @@ msgid ""
 "are used several times, the computation is automatically factorized at the "
 "compilation stage)."
 msgstr ""
-"マクロ定義の可能性（model内では、ga_workspaceオブジェクトまたは構築文字列内で直接）。マクロは、字句解析フェーズでインライン展開された有効な式でなければなりません（数回使用すると、計算はコンパイル段階で自動的に因数分解されます）。"
+"マクロ定義の可能性（model内では，ga_workspaceオブジェクトまたは構築文字列内で直接）．マクロは，字句解析フェーズでインライン展開された有効な式でなければなりません（数回使用すると，計算はコンパイル段階で自動的に因数分解されます）．"
 
 #: ../source/userdoc/gasm_high.rst:72
 msgid ""
@@ -292,8 +292,8 @@ msgid ""
 "interaction."
 msgstr ""
 "``Interpolate(variable, transformation)``: "
-"他の要素や別のメッシュ上の同じメッシュ上で変数を補間したり試験関数を補うことができる強力な演算。 ``transformation`` "
-"は、現在の点から補間を実行する点までのマップを記述するworkspaceまたはmodelオブジェクトによって格納されるオブジェクトです。この機能は、例えば、周期的な条件を規定するため、または異なるメッシュ上に定義された2つの有限要素空間のMortar行列を計算するため、またはより一般的には流体構造相互作用のような架空の領域法のために使用できます。"
+"他の要素や別のメッシュ上の同じメッシュ上で変数を補間したり試験関数を補うことができる強力な演算． ``transformation`` "
+"は，現在の点から補間を実行する点までのマップを記述するworkspaceまたはmodelオブジェクトによって格納されるオブジェクトです．この機能は，例えば，周期的な条件を規定するため，または異なるメッシュ上に定義された2つの有限要素空間のMortar行列を計算するため，またはより一般的には流体構造相互作用のような架空の領域法のために使用できます．"
 
 #: ../source/userdoc/gasm_high.rst:74
 msgid ""
@@ -308,10 +308,10 @@ msgid ""
 " target fem of the transformation is the one of the first variable."
 msgstr ""
 "``Elementary_transformation(variable, transformation, dest)``: "
-"要素水準で定義された線形変換を許可します（つまり、Gauss積分点基準では定義できません）。この機能は、主にプレート要素の縮小（回転RT0などの低水準のベクトル要素への投影）を定義するために追加されました。"
-" ``transformation`` は、特定の要素の変換を記述するworkspaceやmodelオブジェクトによって格納されるオブジェクトです。 "
+"要素水準で定義された線形変換を許可します（つまり，Gauss積分点基準では定義できません）．この機能は，主にプレート要素の縮小（回転RT0などの低水準のベクトル要素への投影）を定義するために追加されました．"
+" ``transformation`` は，特定の要素の変換を記述するworkspaceやmodelオブジェクトによって格納されるオブジェクトです． "
 "``dest`` "
-"は、変換のターゲットとなるfemを持つモデル変数またはデータを参照するオプションの引数です。省略された場合、変換のターゲットのfemは最初の変数のものとなります。"
+"は，変換のターゲットとなるfemを持つモデル変数またはデータを参照するオプションの引数です．省略された場合，変換のターゲットのfemは最初の変数のものとなります．"
 
 #: ../source/userdoc/gasm_high.rst:76
 msgid ""
@@ -325,12 +325,12 @@ msgid ""
 ":math:`\\Omega_2`. The keyword ``Secondary_domain(variable)`` allows to "
 "access to the variables on the second domain of integration."
 msgstr ""
-"二重積分計算またはカーネル/畳み込み/積分積分による2つの変数の結合のための2つの領域の直接積に対する積分の可能です。これにより、次のような表現が可能になります。:math:`\\Omega_1`"
+"二重積分計算またはカーネル/畳み込み/積分積分による2つの変数の結合のための2つの領域の直接積に対する積分の可能です．これにより，次のような表現が可能になります．:math:`\\Omega_1`"
 " 上と :math:`\\Omega_2` 上の2つの領域で "
 ":math:`\\displaystyle\\int_{\\Omega_1}\\int_{\\Omega_2}k(x,y)u(x)v(y)dydx` "
-"同じにしろ違うにしろ固有のメッシュと積分手法を持つことができます。ここで、 :math:`u` は :math:`\\Omega_1` "
-"上で定義された変数で :math:`v` は :math:`\\Omega_2` 上で定義された変数です。キーワード "
-"``Secondary_domain(変数)`` を使用すると、積分の第2領域上の変数にアクセスできます。"
+"同じにしろ違うにしろ固有のメッシュと積分手法を持つことができます．ここで， :math:`u` は :math:`\\Omega_1` "
+"上で定義された変数で :math:`v` は :math:`\\Omega_2` 上で定義された変数です．キーワード "
+"``Secondary_domain(変数)`` を使用すると，積分の第2領域上の変数にアクセスできます．"
 
 #: ../source/userdoc/gasm_high.rst:79
 msgid "Some basic examples"
@@ -338,7 +338,7 @@ msgstr "いくつかの基本的な例"
 
 #: ../source/userdoc/gasm_high.rst:81
 msgid "The weak formulation for the Poisson problem on a domain :math:`\\Omega`"
-msgstr "領域 :math:`\\Omega` 上のPoisson問題の弱定式化。"
+msgstr "領域 :math:`\\Omega` 上のPoisson問題の弱定式化．"
 
 #: ../source/userdoc/gasm_high.rst:83 ../source/userdoc/gasm_high.rst:229
 msgid "-\\mbox{div } \\nabla u = f, \\mbox{ in } \\Omega,"
@@ -359,12 +359,12 @@ msgid ""
 "for all test functions :math:`v` vanishing on  :math:`\\partial\\Omega`. The"
 " corresponding expression on the assembly string is::"
 msgstr ""
-"すべての試験関数について :math:`v` が :math:`\\partial\\Omega` から消えます。構築文字列の対応する式は次の通りです。"
+"すべての試験関数について :math:`v` が :math:`\\partial\\Omega` から消えます．構築文字列の対応する式は次の通りです．"
 
 #: ../source/userdoc/gasm_high.rst:99
 msgid ""
 "where ``my_f`` is the expression of the source term. If now the equation is"
-msgstr "ここで、 ``my_f`` はソース項の式です。式が次の通りです。"
+msgstr "ここで， ``my_f`` はソース項の式です．式が次の通りです．"
 
 #: ../source/userdoc/gasm_high.rst:101
 msgid "-\\mbox{div } a\\nabla u = f, \\mbox{ in } \\Omega,"
@@ -372,13 +372,13 @@ msgstr "-\\mbox{div } a\\nabla u = f, \\mbox{ in } \\Omega,"
 
 #: ../source/userdoc/gasm_high.rst:105
 msgid "for ``a`` a scalar coefficient, the corresponding assembly string is::"
-msgstr "``a`` がスカラー係数の場合、対応する構築文字列は"
+msgstr "``a`` がスカラー係数の場合，対応する構築文字列は"
 
 #: ../source/userdoc/gasm_high.rst:109
 msgid ""
 "where ``a`` has to be declared as a scalar constant or a scalar field. Not "
 "that is is also possible to describe it explicitly. For instance the problem"
-msgstr "で ``a`` がスカラー定数またはスカラー項として宣言されなければなりません。それを陽に記述することも可能です。例えば、問題"
+msgstr "で ``a`` がスカラー定数またはスカラー項として宣言されなければなりません．それを陽に記述することも可能です．例えば，問題"
 
 #: ../source/userdoc/gasm_high.rst:111
 msgid "-\\mbox{div } \\sin(x_1+x_2)\\nabla u = f, \\mbox{ in } \\Omega,"
@@ -387,11 +387,11 @@ msgstr "-\\mbox{div } \\sin(x_1+x_2)\\nabla u = f, \\mbox{ in } \\Omega,"
 #: ../source/userdoc/gasm_high.rst:115
 msgid ""
 "where :math:`x_1, x_2` are the coordinates on the mesh, can be expressed::"
-msgstr "では :math:`x_1, x_2` はメッシュ上の座標で次のように表現することができます。"
+msgstr "では :math:`x_1, x_2` はメッシュ上の座標で次のように表現することができます．"
 
 #: ../source/userdoc/gasm_high.rst:119
 msgid "Another classical equation is linear elasticity:"
-msgstr "別の古典的な方程式は線形弾性です。"
+msgstr "別の古典的な方程式は線形弾性です．"
 
 #: ../source/userdoc/gasm_high.rst:121
 msgid "-\\mbox{div } \\sigma(u) = f, \\mbox{ in } \\Omega,"
@@ -404,14 +404,14 @@ msgid ""
 "considered. The corresponding assembly string to describe the weak "
 "formulation can be written::"
 msgstr ""
-"等価線形弾性の場合には、ベクトル場 :math:`u` と :math:`\\sigma(u) = \\lambda \\mbox{div } u + "
+"等価線形弾性の場合には，ベクトル場 :math:`u` と :math:`\\sigma(u) = \\lambda \\mbox{div } u + "
 "\\mu (\\nabla u + (\\nabla u)^T)` "
-"が考えられています。弱定式化の記述に対応する構築文字列は以下のように書くことができます。"
+"が考えられています．弱定式化の記述に対応する構築文字列は以下のように書くことができます．"
 
 #: ../source/userdoc/gasm_high.rst:129 ../source/userdoc/gasm_high.rst:621
 #: ../source/userdoc/gasm_high.rst:725
 msgid "or::"
-msgstr "または次の通りです。"
+msgstr "または次の通りです．"
 
 #: ../source/userdoc/gasm_high.rst:133
 msgid ""
@@ -420,14 +420,14 @@ msgid ""
 "other variables in order to couples some problems. For instance, if the "
 "coefficients depends on a temperature field one can write::"
 msgstr ""
-"ここでもまた、いくつかの問題を結合するために、係数 ``lambda`` と ``mu`` "
-"に定数、あるいはスカラーフィールドや陽表現、あるいは他の変数からの式を与えますことができます。たとえば、係数が温度場に依存する場合、次のように書くことができます。"
+"ここでもまた，いくつかの問題を結合するために，係数 ``lambda`` と ``mu`` "
+"に定数，あるいはスカラーフィールドや陽表現，あるいは他の変数からの式を与えますことができます．たとえば，係数が温度場に依存する場合，次のように書くことができます．"
 
 #: ../source/userdoc/gasm_high.rst:137
 msgid ""
 "where ``theta`` is the temperature which can be the solution to a Poisson "
 "equation::"
-msgstr "ここで、 ``theta`` は、Poisson方程式の解である温度です。"
+msgstr "ここで， ``theta`` は，Poisson方程式の解である温度です．"
 
 #: ../source/userdoc/gasm_high.rst:141
 msgid ""
@@ -435,8 +435,8 @@ msgid ""
 "case, the problem is nonlinear due to the coupling, even if the two "
 "functions  ``my_f1`` and ``my_f2`` are linear."
 msgstr ""
-"``my_f1`` と ``my_f2`` はいくつかの与えられた関数です。その場合、2つの関数 ``my_f1`` と ``my_f2`` "
-"が線形であっても、結合されているために問題は非線形であることに注意してください。"
+"``my_f1`` と ``my_f2`` はいくつかの与えられた関数です．その場合，2つの関数 ``my_f1`` と ``my_f2`` "
+"が線形であっても，結合されているために問題は非線形であることに注意してください．"
 
 #: ../source/userdoc/gasm_high.rst:145
 msgid "Derivation order and symbolic differentiation"
@@ -451,7 +451,7 @@ msgid ""
 "order test functions are found, the order will be considered to be 2 "
 "(tangent system)."
 msgstr ""
-"構築文字列の微分次数は自動的に検出されます。試験関数が見つからない場合、次数は0（ポテンシャルエネルギー）とみなされ、1次試験関数が見つかった場合、その次数は1（弱定式化）とみなされ、1次と2次の両方の試験関数が見つかると、次数は2（接線系）とみなされます。"
+"構築文字列の微分次数は自動的に検出されます．試験関数が見つからない場合，次数は0（ポテンシャルエネルギー）とみなされ，1次試験関数が見つかった場合，その次数は1（弱定式化）とみなされ，1次と2次の両方の試験関数が見つかると，次数は2（接線系）とみなされます．"
 
 #: ../source/userdoc/gasm_high.rst:149
 msgid ""
@@ -464,7 +464,7 @@ msgid ""
 " should not be generally not possible since an arbitrary weak formulation do"
 " not necessary derive from a potential energy."
 msgstr ""
-"構築（次のセクションを参照）を実行するには、次数（0,1または2）を指定する必要があります。次数1の文字列が提供され、次数2の構築が必要な場合は、式の記号微分が行われます。次数0の文字列が提供され、次数1または2の構築が必要な場合も同じです。もちろん、その逆は真ではありません。次数1の式が指定され、次数0の構築が予想される場合、積分は行われません。任意の弱定式化はポテンシャルエネルギーから微分する必要はないので、これは一般に必要ではありません。"
+"構築（次のセクションを参照）を実行するには，次数（0,1または2）を指定する必要があります．次数1の文字列が提供され，次数2の構築が必要な場合は，式の記号微分が行われます．次数0の文字列が提供され，次数1または2の構築が必要な場合も同じです．もちろん，その逆は真ではありません．次数1の式が指定され，次数0の構築が予想される場合，積分は行われません．任意の弱定式化はポテンシャルエネルギーから微分する必要はないので，これは一般に必要ではありません．"
 
 #: ../source/userdoc/gasm_high.rst:151
 msgid ""
@@ -476,7 +476,7 @@ msgid ""
 " weak formulation is necessary to obtain the residual. So nothing could be "
 "done with a tangent term without having the corresponding order 1 term."
 msgstr ""
-"汎用構築を使用する標準的な方法は、次数1の式（すなわち、弱定式化）を与えることです。ポテンシャルエネルギーが存在する場合、それを供給することが可能です。しかし、複雑な表現をもたらす接線系を得るためには2回導かれます。非線形問題では、2次式を直接指定することはできません。その理由は、残差を得るために弱定式化が必要であるからです。したがって、対応する次数1の項を持たないで接線項を使用することはできません。"
+"汎用構築を使用する標準的な方法は，次数1の式（すなわち，弱定式化）を与えることです．ポテンシャルエネルギーが存在する場合，それを供給することが可能です．しかし，複雑な表現をもたらす接線系を得るためには2回導かれます．非線形問題では，2次式を直接指定することはできません．その理由は，残差を得るために弱定式化が必要であるからです．したがって，対応する次数1の項を持たないで接線項を使用することはできません．"
 
 #: ../source/userdoc/gasm_high.rst:153
 msgid ""
@@ -491,7 +491,7 @@ msgid ""
 "potential should be the exception."
 msgstr ""
 "重要な注意事項: "
-"結合した問題については、グローバルポテンシャルはしばしば存在しないことに注意してください。ポテンシャルが直接定義された問題の部分を結合するのは難しい場合があります。これを説明するために、いくつかのパラメータ（たとえば弾性係数）を持つポテンシャルを定義し、その係数が別の変数との変動の変化で構成されている場合、弱定式化はもちろんポテンシャルの導関数ではありません、一般的に意味を持たない係数に関するものです。ポテンシャルの定義が例外でなければならないのはこれが理由です。"
+"結合した問題については，グローバルポテンシャルはしばしば存在しないことに注意してください．ポテンシャルが直接定義された問題の部分を結合するのは難しい場合があります．これを説明するために，いくつかのパラメータ（たとえば弾性係数）を持つポテンシャルを定義し，その係数が別の変数との変動の変化で構成されている場合，弱定式化はもちろんポテンシャルの導関数ではありません，一般的に意味を持たない係数に関するものです．ポテンシャルの定義が例外でなければならないのはこれが理由です．"
 
 #: ../source/userdoc/gasm_high.rst:157
 msgid "C++ Call of the assembly"
@@ -505,7 +505,7 @@ msgid ""
 " assembly on its own."
 msgstr ""
 "汎用構築を使用する最も自然な方法はmodelオブジェクトの汎用構築要素を使用することです（ :ref:`ud-model-generic-"
-"assembly` 節を参照してください）。しかし、高水準汎用構築を単独で使用することも可能です。"
+"assembly` 節を参照してください）．しかし，高水準汎用構築を単独で使用することも可能です．"
 
 #: ../source/userdoc/gasm_high.rst:161
 msgid ""
@@ -513,15 +513,15 @@ msgid ""
 "defined in :file:`getfem/getfem\\_generic_assembly.h`."
 msgstr ""
 "汎用構築は :file:`getfem/getfem\\_generic_assembly.h` で定義されたオブジェクト "
-"``getfem::ga_workspace`` によって駆動されます。"
+"``getfem::ga_workspace`` によって駆動されます．"
 
 #: ../source/userdoc/gasm_high.rst:163
 msgid ""
 "There is two ways to define a ``getfem::ga_workspace`` object. It can depend"
 " on a model (see :ref:`ud-model`) and should be declared as::"
 msgstr ""
-"``getfem::ga_workspace`` オブジェクトを定義する方法は2つあります。それはmodelに依存し（ :ref:`ud-model` "
-"を参照）次のように定義する必要があります。"
+"``getfem::ga_workspace`` オブジェクトを定義する方法は2つあります．それはmodelに依存し（ :ref:`ud-model` "
+"を参照）次のように定義する必要があります．"
 
 #: ../source/userdoc/gasm_high.rst:167
 msgid ""
@@ -530,14 +530,14 @@ msgid ""
 "way it to define an independent ``getfem::ga_workspace`` object by::"
 msgstr ""
 "``model`` はあらかじめ ``getfem::model`` "
-"でオブジェクトとしてを定義されています。その場合、考慮する変数と定数はmodelの一部です。第2の方法は次に示す方法によって独立した "
-"``getfem::ga_workspace`` オブジェクトを定義する方法です。"
+"でオブジェクトとしてを定義されています．その場合，考慮する変数と定数はmodelの一部です．第2の方法は次に示す方法によって独立した "
+"``getfem::ga_workspace`` オブジェクトを定義する方法です．"
 
 #: ../source/userdoc/gasm_high.rst:171
 msgid ""
 "In that case, the variable and constant have to be added to the workspace. "
 "This can be done thanks to the following methods::"
-msgstr "その場合、変数と定数をworkspaceに追加する必要があります。これは以下の方法により実行できます::"
+msgstr "その場合，変数と定数をworkspaceに追加する必要があります．これは以下の方法により実行できます::"
 
 #: ../source/userdoc/gasm_high.rst:183
 msgid ""
@@ -550,18 +550,18 @@ msgid ""
 " ``im_data`` object ``imd`` which allows to store scalar/vector/tensor field"
 " informations on the integration points of an ``mesh_im`` object."
 msgstr ""
-"ここで、 ``name`` は変数/定数名です（次の節の名前の制限を参照）。 ``mf`` は有限要素法を記述する "
-"``getfem::mesh_fem`` オブジェクトです。 ``I`` は構築られたベクトル/行列上の変数の間隔を示す "
-"``gmm::sub_interval`` クラスのオブジェクトであり、 ``V`` は変数/変数の値である "
-"``getfem::base_vector`` です。最後のメソッドは、 ``im_data`` オブジェクト ``imd`` "
-"に定義された定数を追加します。これは、 ``mesh_im`` "
-"オブジェクトの積分点にスカラー/ベクトル/テンソルフィールド情報を格納することを可能にします。"
+"ここで， ``name`` は変数/定数名です（次の節の名前の制限を参照）． ``mf`` は有限要素法を記述する "
+"``getfem::mesh_fem`` オブジェクトです． ``I`` は構築られたベクトル/行列上の変数の間隔を示す "
+"``gmm::sub_interval`` クラスのオブジェクトであり， ``V`` は変数/変数の値である "
+"``getfem::base_vector`` です．最後のメソッドは， ``im_data`` オブジェクト ``imd`` "
+"に定義された定数を追加します．これは， ``mesh_im`` "
+"オブジェクトの積分点にスカラー/ベクトル/テンソルフィールド情報を格納することを可能にします．"
 
 #: ../source/userdoc/gasm_high.rst:186
 msgid ""
 "Once it is declared and once the variables and constant are declared, it is "
 "possible to add assembly string to the workspace with::"
-msgstr "一度宣言され、一度変数と定数が宣言されると、構築文字列を次のようにしてworkspaceに追加することができます。"
+msgstr "一度宣言され，一度変数と定数が宣言されると，構築文字列を次のようにしてworkspaceに追加することができます．"
 
 #: ../source/userdoc/gasm_high.rst:190
 msgid ""
@@ -569,20 +569,20 @@ msgid ""
 "``getfem::mesh_im`` object and ``rg`` if an optional valid region of the "
 "mesh corresponding to ``mim``."
 msgstr ""
-"``mim`` に対応するメッシュのオプションの有効な領域が ``mf`` にある場合、 ``mf`` は ``getfem::mesh_im`` "
-"オブジェクトと ``rg`` です。"
+"``mim`` に対応するメッシュのオプションの有効な領域が ``mf`` にある場合， ``mf`` は ``getfem::mesh_im`` "
+"オブジェクトと ``rg`` です．"
 
 #: ../source/userdoc/gasm_high.rst:192
 msgid ""
 "As it is explained in the previous section, the order of the string will be "
 "automatically detected and a symbolic differentiation will be performed to "
 "obtain the corresponding tangent term."
-msgstr "前のセクションで説明したように、文字列の順序が自動的に検出され、対応する接線項を得るために記号的な微分が実行されます。"
+msgstr "前のセクションで説明したように，文字列の順序が自動的に検出され，対応する接線項を得るために記号的な微分が実行されます．"
 
 #: ../source/userdoc/gasm_high.rst:194
 msgid ""
 "Once assembly strings are added to the workspace, is is possible to call::"
-msgstr "構築文字列がworkspaceに追加されると、以下を呼び出すことができます。"
+msgstr "構築文字列がworkspaceに追加されると，以下を呼び出すことができます．"
 
 #: ../source/userdoc/gasm_high.rst:198
 msgid ""
@@ -591,7 +591,7 @@ msgid ""
 " the assembly is available as follows::"
 msgstr ""
 "``order`` "
-"は0（ポテンシャルエネルギー）、1（残差ベクトル）または2（線形問題の接線項または剛性行列）のいずれかでなければなりません。構築の結果は次のように利用できます。"
+"は0（ポテンシャルエネルギー），1（残差ベクトル）または2（線形問題の接線項または剛性行列）のいずれかでなければなりません．構築の結果は次のように利用できます．"
 
 #: ../source/userdoc/gasm_high.rst:206
 msgid ""
@@ -600,24 +600,24 @@ msgid ""
 "recommended) to set the assembly vector and matrix to external ones to "
 "perform an incremental assembly. The two methods::"
 msgstr ""
-"デフォルトでは、アセンブルされたポテンシャル、ベクトル、およびマトリックスは、構築の開始時にゼロに初期化されます。ただし、増分構築を実行するために、構築ベクトルと行列を外部ベクトルと行列に設定することが可能です（お勧めします）。"
-" 2つの方法により構築が可能です。"
+"デフォルトでは，アセンブルされたポテンシャル，ベクトル，およびマトリックスは，構築の開始時にゼロに初期化されます．ただし，増分構築を実行するために，構築ベクトルと行列を外部ベクトルと行列に設定することが可能です（お勧めします）．"
+" 2つの方法により構築が可能です．"
 
 #: ../source/userdoc/gasm_high.rst:212
 msgid ""
 "allows to do so. Be aware to give a vector and a matrix of the right "
 "dimension."
-msgstr "そうすることができます。正しい次元のベクトルと行列を与えるように注意してください。"
+msgstr "そうすることができます．正しい次元のベクトルと行列を与えるように注意してください．"
 
 #: ../source/userdoc/gasm_high.rst:215
 msgid "Note also that the method::"
-msgstr "また、次のメソッドにより"
+msgstr "また，次のメソッドにより"
 
 #: ../source/userdoc/gasm_high.rst:219
 msgid ""
 "allows to cancel all furnished expressions and allows to re-use the same "
 "workspace for another assembly."
-msgstr "付属のすべての式を取り消すことができ、別の構築で同じworkspaceを再利用することができます。"
+msgstr "付属のすべての式を取り消すことができ，別の構築で同じworkspaceを再利用することができます．"
 
 #: ../source/userdoc/gasm_high.rst:222
 msgid ""
@@ -625,8 +625,8 @@ msgid ""
 "Python/Scilab/Octave/Matlab interface. See ``gf_asm`` command of the "
 "interface for more details."
 msgstr ""
-"汎用構築を Python/Scilab/Octave/Matlab インタフェースから呼び出すこともできます。詳細はインタフェースの "
-"``gf_asm`` コマンドを参照してください。"
+"汎用構築を Python/Scilab/Octave/Matlab インタフェースから呼び出すこともできます．詳細はインタフェースの "
+"``gf_asm`` コマンドを参照してください．"
 
 #: ../source/userdoc/gasm_high.rst:225
 msgid "C++ assembly examples"
@@ -636,7 +636,7 @@ msgstr "C ++構築の例"
 msgid ""
 "As a first example, if one needs to perform the assembly of a Poisson "
 "problem"
-msgstr "第1の例として、Poisson問題の構築を紹介します。"
+msgstr "第1の例として，Poisson問題の構築を紹介します．"
 
 #: ../source/userdoc/gasm_high.rst:233
 msgid "the stiffness matrix is given"
@@ -648,7 +648,7 @@ msgstr "K_{i,j} = \\int_{\\Omega} \\nabla \\varphi_i \\cdot \\nabla \\varphi_j d
 
 #: ../source/userdoc/gasm_high.rst:239
 msgid "and will be assembled by the following code::"
-msgstr "次のコードでアセンブルされます。"
+msgstr "次のコードでアセンブルされます．"
 
 #: ../source/userdoc/gasm_high.rst:250
 msgid ""
@@ -667,20 +667,20 @@ msgid ""
 "order 1 expression (weak formulation) if there is no particular reason to "
 "prefer an order 0 or an order 2 expression."
 msgstr ""
-"もちろん、 ``mf`` はすでに宣言された ``getfem::mesh_fem`` オブジェクトであり、 ``mim`` はすでに同じメッシュ上に "
+"もちろん， ``mf`` はすでに宣言された ``getfem::mesh_fem`` オブジェクトであり， ``mim`` はすでに同じメッシュ上に "
 "``getfem::mesh_im`` "
-"オブジェクトとして宣言されています。変数の値は、問題の線形性のために実際に使用するわけではないことに注意してください。使用されない変数の値として "
-"``getfem::base_vector(nbdof)`` を渡すことができます。また、構築-文字列の結果とまったく同じ結果が得られる2つの式は、 "
-"``\"Grad_Test2_u.Grad_Test_u\"`` すなわち、2次式）または ``\"Norm_sqr(Grad_u)/2\"`` "
-"（すなわち、ポテンシャル）。 ``\"Grad_u.Grad_u/2\"`` か2次元問題のための  ``\"[Grad_u(1), "
+"オブジェクトとして宣言されています．変数の値は，問題の線形性のために実際に使用するわけではないことに注意してください．使用されない変数の値として "
+"``getfem::base_vector(nbdof)`` を渡すことができます．また，構築-文字列の結果とまったく同じ結果が得られる2つの式は， "
+"``\"Grad_Test2_u.Grad_Test_u\"`` すなわち，2次式）または ``\"Norm_sqr(Grad_u)/2\"`` "
+"（すなわち，ポテンシャル）． ``\"Grad_u.Grad_u/2\"`` か2次元問題のための  ``\"[Grad_u(1), "
 "Grad_u(2)].[Grad_Test_u(1), Grad_Test_u(2)]\"`` "
-"などでも同じ結果が得られます。しかしながら、0次または2次の表現を使用する特別な理由がなければ、1次の表現（弱定式化）を与えることが推奨されます。"
+"などでも同じ結果が得られます．しかしながら，0次または2次の表現を使用する特別な理由がなければ，1次の表現（弱定式化）を与えることが推奨されます．"
 
 #: ../source/userdoc/gasm_high.rst:252
 msgid ""
 "As a second example, let us consider a coupled problem, for instance the "
 "mixed problem of incompressible elasticity given by the equations"
-msgstr "第2の例として、連成問題である非圧縮性弾性の混合問題を考えます"
+msgstr "第2の例として，連成問題である非圧縮性弾性の混合問題を考えます"
 
 #: ../source/userdoc/gasm_high.rst:254
 msgid ""
@@ -697,7 +697,7 @@ msgid ""
 "where ``u`` is the vector valued displacement and ``p`` the pressure. The "
 "assembly of the matrix for the whole coupled system can be performed as "
 "follows::"
-msgstr "ここで ``u`` はベクトル値の変位であり、 ``p`` は圧力です。結合されたシステム全体のマトリックスは以下のように構築します。"
+msgstr "ここで ``u`` はベクトル値の変位であり， ``p`` は圧力です．結合されたシステム全体のマトリックスは以下のように構築します．"
 
 #: ../source/userdoc/gasm_high.rst:277
 msgid ""
@@ -707,15 +707,15 @@ msgid ""
 "is also possible to perform the assembly of the sub-matrix of this system "
 "separately."
 msgstr ""
-"ここで ``mf_u`` と ``mf_p`` はすでに同じメッシュに定義されている ``getfem::mesh_fem`` オブジェクトの一部で、 "
-"``mim`` は定義済みの ``getfem::mesh_im`` オブジェクト、  ``mu`` "
-"はLameの弾性定数です。このシステムの部分行列の構築を別々に行うことも可能です。"
+"ここで ``mf_u`` と ``mf_p`` はすでに同じメッシュに定義されている ``getfem::mesh_fem`` オブジェクトの一部で， "
+"``mim`` は定義済みの ``getfem::mesh_im`` オブジェクト，  ``mu`` "
+"はLameの弾性定数です．このシステムの部分行列の構築を別々に行うことも可能です．"
 
 #: ../source/userdoc/gasm_high.rst:280
 msgid ""
 "Let us see now how to perform the assembly of a source term. The weak "
 "formulation of a volumic source term is"
-msgstr "ソース項の構築方法を見てみましょう。ボリュームソース項の弱定式化は次のとおりです。"
+msgstr "ソース項の構築方法を見てみましょう．ボリュームソース項の弱定式化は次のとおりです．"
 
 #: ../source/userdoc/gasm_high.rst:282
 msgid ""
@@ -729,7 +729,7 @@ msgstr ""
 msgid ""
 "where :math:`f` is the source term and :math:`v` the test function. The "
 "corresponding assembly can be written::"
-msgstr "ここで、 :math:`f` はソース項であり、 :math:`v` は試験関数です。この構築は次のように記述します。"
+msgstr "ここで， :math:`f` はソース項であり， :math:`v` は試験関数です．この構築は次のように記述します．"
 
 #: ../source/userdoc/gasm_high.rst:297
 msgid ""
@@ -738,7 +738,7 @@ msgid ""
 "also possible. For instance::"
 msgstr ""
 "ソース項が有限要素 ``mf_data`` とそれに対応する自由度のベクトル ``F`` "
-"で記述されている場合。陽なソース項を定義することも可能です。例えば ::"
+"で記述されている場合．陽なソース項を定義することも可能です．例えば ::"
 
 #: ../source/userdoc/gasm_high.rst:308
 msgid ""
@@ -746,11 +746,11 @@ msgid ""
 "condition) the only difference is that the mesh region corresponding to the "
 "boundary have to be given as follows::"
 msgstr ""
-"も有効です。ソース項が境界項（Neumann条件の場合）である場合、唯一の違いは、境界に対応するメッシュ領域を次のように与えられなければならないことです。"
+"も有効です．ソース項が境界項（Neumann条件の場合）である場合，唯一の違いは，境界に対応するメッシュ領域を次のように与えられなければならないことです．"
 
 #: ../source/userdoc/gasm_high.rst:312
 msgid "where ``region`` is the mesh region number."
-msgstr "ここで ``region`` はメッシュ領域番号です。"
+msgstr "ここで ``region`` はメッシュ領域番号です．"
 
 #: ../source/userdoc/gasm_high.rst:314
 msgid ""
@@ -759,7 +759,7 @@ msgid ""
 "means that we consider the following elastic energy on a body of reference "
 "configuration :math:`\\Omega`:"
 msgstr ""
-"別の例として、単純な非線形弾性問題を説明します。Saint-Venant Kirchhoff構成則を考えると、次のような基準構成体 "
+"別の例として，単純な非線形弾性問題を説明します．Saint-Venant Kirchhoff構成則を考えると，次のような基準構成体 "
 ":math:`\\Omega` 上の弾性エネルギーとみなす必要があります"
 
 #: ../source/userdoc/gasm_high.rst:316
@@ -776,14 +776,14 @@ msgid ""
 "the strain tensor given by :math:`E = (\\nabla u + (\\nabla u)^T + (\\nabla "
 "u)^T\\nabla u)/2`."
 msgstr ""
-"ここで :math:`\\lambda, \\mu` は |Lame| 定数で :math:`E` は、式 :math:`E = (\\nabla u "
-"+ (\\nabla u)^T + (\\nabla u)^T\\nabla u)/2` で与えられる歪みテンソルです。"
+"ここで :math:`\\lambda, \\mu` は |Lame| 定数で :math:`E` は，式 :math:`E = (\\nabla u "
+"+ (\\nabla u)^T + (\\nabla u)^T\\nabla u)/2` で与えられる歪みテンソルです．"
 
 #: ../source/userdoc/gasm_high.rst:321
 msgid ""
 "This is possible to perform the assembly of the corresponding tangent "
 "problem as follows::"
-msgstr "この問題では、対応する接線問題を以下のように構築することが可能です。"
+msgstr "この問題では，対応する接線問題を以下のように構築することが可能です．"
 
 #: ../source/userdoc/gasm_high.rst:340
 msgid ""
@@ -794,17 +794,17 @@ msgid ""
 "assembly."
 msgstr ""
 "この非線形問題を解くためにNewton-"
-"Raphsonアルゴリズムを適応します。もちろん、表現はより反復的であり、いくつかの中間非線形演算子を定義することが望ましいです。ただし、繰り返し式は自動的に検出され、構築内で1回だけ計算されます。"
+"Raphsonアルゴリズムを適応します．もちろん，表現はより反復的であり，いくつかの中間非線形演算子を定義することが望ましいです．ただし，繰り返し式は自動的に検出され，構築内で1回だけ計算されます．"
 
 #: ../source/userdoc/gasm_high.rst:342
 msgid ""
 "The last example is the assembly of the stiffness matrix of an order four "
 "problem, the Kirchhoff-Love plate problem::"
-msgstr "最後の例は、4次問題の剛性行列を構築するKirchhoff-Love板の問題です。"
+msgstr "最後の例は，4次問題の剛性行列を構築するKirchhoff-Love板の問題です．"
 
 #: ../source/userdoc/gasm_high.rst:357
 msgid "with ``D`` the flexion modulus and ``nu`` the Poisson ratio."
-msgstr "``D`` は屈曲率であり、 ``nu`` はPoisson比です。"
+msgstr "``D`` は屈曲率であり， ``nu`` はPoisson比です．"
 
 #: ../source/userdoc/gasm_high.rst:360
 msgid "Script languages call of the assembly"
@@ -816,8 +816,8 @@ msgid ""
 "respective documentation, in particular the ``gf_asm`` command and the "
 "``model`` object."
 msgstr ""
-"Python、Scilab、OctaveまたはMatlabのインタフェースで使用する場合は、それぞれのドキュメント、特に ``gf_asm`` "
-"コマンドと ``model`` オブジェクトを参照してください。"
+"Python，Scilab，OctaveまたはMatlabのインタフェースで使用する場合は，それぞれのドキュメント，特に ``gf_asm`` "
+"コマンドと ``model`` オブジェクトを参照してください．"
 
 #: ../source/userdoc/gasm_high.rst:366
 msgid "The tensors"
@@ -839,18 +839,18 @@ msgid ""
 "``Grad_Test_u:Grad_Test2_u`` there are two components implicitly added for "
 "first and second order test functions)."
 msgstr ""
-"基本的に、GWFLで操作されるのはテンソルです。例えば、スカラー式の0次テンソル（例えば、 ``3 + sin(pi / 2)`` "
-"）、ベクトル式の1テンソル（ ``XX`` や ``u`` がスカラー変数の場合の ``Grad_u`` "
-"など）、行列表現の2テンソルなどです。効率性の理由から、言語はテンソルを最大6まで操作します。この言語は、6以上の次数のテンソルもサポートするように容易に拡張することができますが、非効率的な計算につながる可能性があります。式に試験関数が含まれている場合（ベクトルフィールド"
+"基本的に，GWFLで操作されるのはテンソルです．例えば，スカラー式の0次テンソル（例えば， ``3 + sin(pi / 2)`` "
+"），ベクトル式の1テンソル（ ``XX`` や ``u`` がスカラー変数の場合の ``Grad_u`` "
+"など），行列表現の2テンソルなどです．効率性の理由から，言語はテンソルを最大6まで操作します．この言語は，6以上の次数のテンソルもサポートするように容易に拡張することができますが，非効率的な計算につながる可能性があります．式に試験関数が含まれている場合（ベクトルフィールド"
 " ``u`` の場合は ``Trace(Grad_Test_u)`` "
-"のように）、テンソルは暗黙的に補足成分を持つ各試験関数に対して計算が行われます。これは暗黙のうちに、操作されるテンソルの最大次数は実際には6であることを意味します（"
-" ``Grad_Test_u.Grad_Test2_u`` には1次および2次試験関数のために2つの成分が暗黙に追加されています）。"
+"のように），テンソルは暗黙的に補足成分を持つ各試験関数に対して計算が行われます．これは暗黙のうちに，操作されるテンソルの最大次数は実際には6であることを意味します（"
+" ``Grad_Test_u.Grad_Test2_u`` には1次および2次試験関数のために2つの成分が暗黙に追加されています）．"
 
 #: ../source/userdoc/gasm_high.rst:370
 msgid ""
 "Order four tensors are necessary for instance to express elasticity tensors "
 "or in general to obtain the tangent term for vector valued unknowns."
-msgstr "弾性テンソルを表現するために、または汎用的なベクトル値の未知数の接線項を得るために、4次のテンソルが必要です。"
+msgstr "弾性テンソルを表現するために，または汎用的なベクトル値の未知数の接線項を得るために，4次のテンソルが必要です．"
 
 #: ../source/userdoc/gasm_high.rst:374
 msgid "The variables"
@@ -871,11 +871,11 @@ msgid ""
 "...) and to constants (``pi``, ``Normal``, ``X``, ``Id`` ...)."
 msgstr ""
 "変数のリストは ``ga_worspace`` "
-"オブジェクトに（直接またはmodelオブジェクトを通して）与えなければなりません。変数は有限要素法で記述されるか、未知数の単純なベクトルになります。これは、代数方程式をmodel上の部分方程式に結合することも可能であることを意味します。変数名は、文字（大文字小文字を区別する）またはアンダースコアの後に文字、数字、またはアンダースコアを続けて指定する必要があります。いくつかの名前は予約されていますが、これは演算子の名前（``Det``、"
-" ``Norm``、 ``Trace``、 ``Deviator`` など）で、変数名として使用できません。名前は ``Test_`` 、 "
-"``Test2_`` 、 ``Grad_`` 、 ``Div_`` または ``Hess_`` "
-"で始めることはできません。変数名はあらかじめ定義された関数（ ``sin``、 ``cos``、 ``acos`` ...）と定数（``pi`` 、 "
-"``Normal`` 、 ``X`` 、 ``Id`` ...）を使用することはできません。"
+"オブジェクトに（直接またはmodelオブジェクトを通して）与えなければなりません．変数は有限要素法で記述されるか，未知数の単純なベクトルになります．これは，代数方程式をmodel上の部分方程式に結合することも可能であることを意味します．変数名は，文字（大文字小文字を区別する）またはアンダースコアの後に文字，数字，またはアンダースコアを続けて指定する必要があります．いくつかの名前は予約されていますが，これは演算子の名前（``Det``，"
+" ``Norm``， ``Trace``， ``Deviator`` など）で，変数名として使用できません．名前は ``Test_`` ， "
+"``Test2_`` ， ``Grad_`` ， ``Div_`` または ``Hess_`` "
+"で始めることはできません．変数名はあらかじめ定義された関数（ ``sin``， ``cos``， ``acos`` ...）と定数（``pi`` ， "
+"``Normal`` ， ``X`` ， ``Id`` ...）を使用することはできません．"
 
 #: ../source/userdoc/gasm_high.rst:379
 msgid "The constants or data"
@@ -893,7 +893,7 @@ msgid ""
 "approximation of constitutive laws such as plasticity)."
 msgstr ""
 "定数のリストを ``ga_worspace`` "
-"オブジェクトに与えることもできます。ルールは変数と同じですが、試験関数を定数に関連付けることはできず、定数に関して記号的な微分もありません。スカラー定数は、構成則に介入する係数を表すために定義されることが多いです。さらに、定数は、「im_data」オブジェクトを介して積分点上に定義されたいくつかのスカラー/ベクトル/テンソルフィールド（例えば、可塑性のような構成法の近似のいくつかの実装のために）です。"
+"オブジェクトに与えることもできます．ルールは変数と同じですが，試験関数を定数に関連付けることはできず，定数に関して記号的な微分もありません．スカラー定数は，構成則に介入する係数を表すために定義されることが多いです．さらに，定数は，「im_data」オブジェクトを介して積分点上に定義されたいくつかのスカラー/ベクトル/テンソルフィールド（例えば，可塑性のような構成法の近似のいくつかの実装のために）です．"
 
 #: ../source/userdoc/gasm_high.rst:385
 msgid "Test functions"
@@ -915,12 +915,12 @@ msgid ""
 "return if face a vector of ``N`` values. But of course, this is implicit in "
 "the language. So one do not have to care about this."
 msgstr ""
-"各変数は、1次および2次の試験関数に関連付けられています。第1次試験関数は、弱定式化（それが存在すれば潜在的な式を微分する）で使用され、第2次試験関数は接触モデルで使用されます。変数"
+"各変数は，1次および2次の試験関数に関連付けられています．第1次試験関数は，弱定式化（それが存在すれば潜在的な式を微分する）で使用され，第2次試験関数は接触モデルで使用されます．変数"
 " ``u`` に関連する試験関数は ``Test_u`` と ``Test2_u`` "
-"です。構築文字列は、試験関数に対して線形でなければなりません。構築文字列に ``Test_u`` という項が存在する結果として、式は変数 ``u`` "
-"に対応する有限要素の各試験関数について評価されます。与えられた要素において、有限要素が試験関数 ``N`` を持つ場合、 ``u`` "
-"がスカラ場である場合、 ``Test_u`` の値は現在の点上の各試験関数の値になります。ゆえに ``Test_u`` は ``N`` "
-"値のベクトルの直交面を返します。もちろん、これは言語に暗黙のうちに書かれています。ゆえに、これについて気にする必要はありません。"
+"です．構築文字列は，試験関数に対して線形でなければなりません．構築文字列に ``Test_u`` という項が存在する結果として，式は変数 ``u`` "
+"に対応する有限要素の各試験関数について評価されます．与えられた要素において，有限要素が試験関数 ``N`` を持つ場合， ``u`` "
+"がスカラ場である場合， ``Test_u`` の値は現在の点上の各試験関数の値になります．ゆえに ``Test_u`` は ``N`` "
+"値のベクトルの直交面を返します．もちろん，これは言語に暗黙のうちに書かれています．ゆえに，これについて気にする必要はありません．"
 
 #: ../source/userdoc/gasm_high.rst:392
 msgid "Gradient"
@@ -940,14 +940,14 @@ msgid ""
 "derivative.  ``Div_u`` and ``Div_Test_u`` are some optimized shortcuts for "
 "``Trace(Grad_u)`` and ``Trace(Grad_Test_u)``, respectively."
 msgstr ""
-"変数または試験関数の勾配は、 ``Grad_`` と変数名または ``Test_`` "
-"とそれに続く変数名によって識別されます。これは、FEM変数（または定数）でのみ使用できます。例えば、 ``Grad_u`` 、 ``Grad_v`` 、"
-" ``Grad_p`` 、 ``Grad_pressure`` 、 ``Grad_electric_field`` 、 ``Grad_Test_u`` "
-"、 ``Grad_Test_v`` 、``Grad_Test_p``、 ``Grad_Test_pressure``、 "
+"変数または試験関数の勾配は， ``Grad_`` と変数名または ``Test_`` "
+"とそれに続く変数名によって識別されます．これは，FEM変数（または定数）でのみ使用できます．例えば， ``Grad_u`` ， ``Grad_v`` ，"
+" ``Grad_p`` ， ``Grad_pressure`` ， ``Grad_electric_field`` ， ``Grad_Test_u`` "
+"， ``Grad_Test_v`` ，``Grad_Test_p``， ``Grad_Test_pressure``， "
 "``Grad_Test_electric_field`` "
-"です。勾配は、スカラ変数のベクトルかベクトル場変数の行列のいずれかです。後者の場合、第1のインデックスはベクトルフィールド次元に対応し、第2のインデックスは部分導関数のインデックスに対応します。"
-" ``Div_u`` と ``Div_Test_u`` は、それぞれ ``Trace(Grad_u)`` と "
-"``Trace(Grad_Test_u)`` を最適化したショートカットです。"
+"です．勾配は，スカラ変数のベクトルかベクトル場変数の行列のいずれかです．後者の場合，第1のインデックスはベクトルフィールド次元に対応し，第2のインデックスは部分導関数のインデックスに対応します．"
+" ``Div_u`` と ``Div_Test_u`` は，それぞれ ``Trace(Grad_u)`` と "
+"``Trace(Grad_Test_u)`` を最適化したショートカットです．"
 
 #: ../source/userdoc/gasm_high.rst:397
 msgid "Hessian"
@@ -966,12 +966,12 @@ msgid ""
 "the vector field dimension and the two remaining to the indices of partial "
 "derivatives."
 msgstr ""
-"同様に、変数または試験関数のヘッセ行列は、 ``Hess_`` と変数名または ``Test_`` "
-"とそれに続く変数名によって識別されます。これは、FEM変数でのみ使用できます。例えば、 ``Hess_u`` 、 ``Hess_v`` 、 "
-"``Hess_p`` 、 ``Hess_pressure`` 、 ``Hess_electric_field`` 、 ``Hess_Test_u`` 、"
-" ``Hess_Test_v`` 、 ``Hess_Test_p`` 、 ``Hess_Test_pressure`` 、 "
+"同様に，変数または試験関数のヘッセ行列は， ``Hess_`` と変数名または ``Test_`` "
+"とそれに続く変数名によって識別されます．これは，FEM変数でのみ使用できます．例えば， ``Hess_u`` ， ``Hess_v`` ， "
+"``Hess_p`` ， ``Hess_pressure`` ， ``Hess_electric_field`` ， ``Hess_Test_u`` ，"
+" ``Hess_Test_v`` ， ``Hess_Test_p`` ， ``Hess_Test_pressure`` ， "
 "``Hess_Test_electric_field`` "
-"です。ヘッセ行列は、スカラ変数の行列またはベクトル場変数の3次テンソルのいずれかです。後者の場合、第1のインデックスはベクトル場次元に対応し、第2のインデックスは部分導関数に対応します。"
+"です．ヘッセ行列は，スカラ変数の行列またはベクトル場変数の3次テンソルのいずれかです．後者の場合，第1のインデックスはベクトル場次元に対応し，第2のインデックスは部分導関数に対応します．"
 
 #: ../source/userdoc/gasm_high.rst:403
 msgid "Predefined scalar functions"
@@ -982,7 +982,7 @@ msgid ""
 "A certain number of predefined scalar functions can be used. The exhaustive "
 "list is the following and for most of them are equivalent to the "
 "corresponding C function:"
-msgstr "特定の数の事前定義されたスカラー関数を使用することができます。網羅的なリストは以下の通りであり、そのほとんどは対応するC関数と同等です。"
+msgstr "特定の数の事前定義されたスカラー関数を使用することができます．網羅的なリストは以下の通りであり，そのほとんどは対応するC関数と同等です．"
 
 #: ../source/userdoc/gasm_high.rst:407
 msgid ""
@@ -990,8 +990,8 @@ msgid ""
 "power u), ``sqrt(t)`` (square root of t), ``exp(t)``, ``log(t)``, "
 "``log10(t)``"
 msgstr ""
-"``sqr(t)`` （tの平方根、t*t に相当）、 ``pow(t,u)`` （tのu乗）、 ``sqrt(t)`` （tの平方根）、 "
-"``exp(t)`` 、 ``log(t)`` 、 ``log10(t)``"
+"``sqr(t)`` （tの平方根，t*t に相当）， ``pow(t,u)`` （tのu乗）， ``sqrt(t)`` （tの平方根）， "
+"``exp(t)`` ， ``log(t)`` ， ``log10(t)``"
 
 #: ../source/userdoc/gasm_high.rst:410
 msgid ""
@@ -1054,10 +1054,10 @@ msgid ""
 "arguments are passed, the dimension have to be the same. For instance "
 "\"max([1;2],[0;3])\" will return \"[0;3]\"."
 msgstr ""
-"スカラ関数は、スカラー式に適用することもできますが、テンソル式に適用することもできます。 "
-"テンソル式に適用される場合、これは成分単位で適用され、結果は同じ次元のテンソルになります。 2つの引数 (pow(t,u), min(t,u) ...)"
-" を持つ関数の場合、2つの非スカラー引数が渡された場合、次元は同じでなければなりません。たとえば、 \"max([1;2],[0;3])\" は "
-"\"[0;3]\" を返します。"
+"スカラ関数は，スカラー式に適用することもできますが，テンソル式に適用することもできます． "
+"テンソル式に適用される場合，これは成分単位で適用され，結果は同じ次元のテンソルになります． 2つの引数 (pow(t,u), min(t,u) ...)"
+" を持つ関数の場合，2つの非スカラー引数が渡された場合，次元は同じでなければなりません．たとえば， \"max([1;2],[0;3])\" は "
+"\"[0;3]\" を返します．"
 
 #: ../source/userdoc/gasm_high.rst:429
 msgid "User defined scalar functions"
@@ -1070,7 +1070,7 @@ msgid ""
 "parameters. In order to add a scalar function to the generic assembly, one "
 "has to call::"
 msgstr ""
-"すでに定義されているスカラー関数にスカラー関数を追加することは可能です。汎用構築は、1つまたは2つのパラメータを持つスカラー関数のみを考慮します。汎用構築にスカラー関数を追加するには、次のように呼び出します。"
+"すでに定義されているスカラー関数にスカラー関数を追加することは可能です．汎用構築は，1つまたは2つのパラメータを持つスカラー関数のみを考慮します．汎用構築にスカラー関数を追加するには，次のように呼び出します．"
 
 #: ../source/userdoc/gasm_high.rst:439
 msgid ""
@@ -1089,28 +1089,28 @@ msgid ""
 "``f2``  should be a C pointer on a scalar C function having two scalar "
 "parameters."
 msgstr ""
-"``name`` は定義される関数の名前で、 ``nb_args`` は1または2です。最初の呼び出しでは、``expr`` "
-"はGWFLで関数を記述する文字列です。最初の変数に ``t`` を、2番目の変数に ``u`` （ ``nb_args`` "
-"が2に等しい場合）を使います。たとえば、 ``sin(2*t)+sqr(t)`` は有効な式です。 ``ga_workspace`` "
-"オブジェクトで定義された定数やデータを参照することはできません。``der1`` と ``der2`` は ``t`` と ``u`` "
-"に対する導関数の式です。これらはオプションです。それらが提供されていない場合、導関数が必要な場合には記号的な微分が用いられます。 ``der1`` と "
-"``der2`` が関数名だけであると定義されている場合、その導関数が対応する関数です。第2の呼び出しでは、 ``f1`` "
-"は1つのスカラーパラメーターを持つスカラーC関数上のCポインターでなければならず、 ``f2`` "
-"は2つのスカラーパラメーターを持つスカラーC関数上のCポインターでなければなりません。"
+"``name`` は定義される関数の名前で， ``nb_args`` は1または2です．最初の呼び出しでは，``expr`` "
+"はGWFLで関数を記述する文字列です．最初の変数に ``t`` を，2番目の変数に ``u`` （ ``nb_args`` "
+"が2に等しい場合）を使います．たとえば， ``sin(2*t)+sqr(t)`` は有効な式です． ``ga_workspace`` "
+"オブジェクトで定義された定数やデータを参照することはできません．``der1`` と ``der2`` は ``t`` と ``u`` "
+"に対する導関数の式です．これらはオプションです．それらが提供されていない場合，導関数が必要な場合には記号的な微分が用いられます． ``der1`` と "
+"``der2`` が関数名だけであると定義されている場合，その導関数が対応する関数です．第2の呼び出しでは， ``f1`` "
+"は1つのスカラーパラメーターを持つスカラーC関数上のCポインターでなければならず， ``f2`` "
+"は2つのスカラーパラメーターを持つスカラーC関数上のCポインターでなければなりません．"
 
 #: ../source/userdoc/gasm_high.rst:442
 msgid "Additionally,::"
-msgstr "さらに、"
+msgstr "さらに，"
 
 #: ../source/userdoc/gasm_high.rst:446
 msgid "return true is a function ``name`` is already defined and::"
-msgstr "trueは ``name`` が既に定義されている関数である場合に返されます。"
+msgstr "trueは ``name`` が既に定義されている関数である場合に返されます．"
 
 #: ../source/userdoc/gasm_high.rst:450
 msgid ""
 "cancel the definition of an already define function (it has no action if the"
 " function does not exist) which allow to redefine a function."
-msgstr "この関数は関数を再定義することができるように、既に定義済みの関数の定義を取り消します（関数が存在しない場合はアクションはありません）。"
+msgstr "この関数は関数を再定義することができるように，既に定義済みの関数の定義を取り消します（関数が存在しない場合はアクションはありません）．"
 
 #: ../source/userdoc/gasm_high.rst:454
 msgid "Derivatives of defined scalar functions"
@@ -1125,9 +1125,9 @@ msgid ""
 "the second argument with the prefix  ``Derivative_2_`` before the function "
 "name."
 msgstr ""
-"関数名に接頭辞 ``Derivative_`` を加えることで、定義された関数の導関数を直接参照することができます。たとえば、 "
-"``Derivative_sin(t)`` は ``cos(t)`` に相当します。 ``pow(t,u)`` "
-"のような2つの引数の関数の場合、関数名の前に接頭辞 ``Derivative_2_`` を付けた2番目の引数に関して導関数を参照できます。"
+"関数名に接頭辞 ``Derivative_`` を加えることで，定義された関数の導関数を直接参照することができます．たとえば， "
+"``Derivative_sin(t)`` は ``cos(t)`` に相当します． ``pow(t,u)`` "
+"のような2つの引数の関数の場合，関数名の前に接頭辞 ``Derivative_2_`` を付けた2番目の引数に関して導関数を参照できます．"
 
 #: ../source/userdoc/gasm_high.rst:460
 msgid "Binary operations"
@@ -1135,23 +1135,23 @@ msgstr "バイナリ演算"
 
 #: ../source/userdoc/gasm_high.rst:462
 msgid "A certain number of binary operations between tensors are available:"
-msgstr "テンソル間の特定の数のバイナリ演算が利用できます。"
+msgstr "テンソル間の特定の数のバイナリ演算が利用できます．"
 
 #: ../source/userdoc/gasm_high.rst:465
 msgid ""
 "``+`` and ``-`` are the standard addition and subtraction of scalar, vector,"
 " matrix or tensors."
-msgstr "``+`` と ``-`` は、スカラ、ベクトル、行列、またはテンソルの標準的な加減算です。"
+msgstr "``+`` と ``-`` は，スカラ，ベクトル，行列，またはテンソルの標準的な加減算です．"
 
 #: ../source/userdoc/gasm_high.rst:467
 msgid ""
 "``*`` stands for the scalar, matrix-vector, matrix-matrix or (fourth order "
 "tensor)-matrix multiplication."
-msgstr "``*`` はスカラ、行列-ベクトル、行列-行列または（4次テンソル）-行列の乗法を表します。"
+msgstr "``*`` はスカラ，行列-ベクトル，行列-行列または（4次テンソル）-行列の乗法を表します．"
 
 #: ../source/userdoc/gasm_high.rst:469
 msgid "``/`` stands for the division by a scalar."
-msgstr "``/`` はスカラーによる除算を表します。"
+msgstr "``/`` はスカラーによる除算を表します．"
 
 #: ../source/userdoc/gasm_high.rst:471
 msgid ""
@@ -1161,8 +1161,8 @@ msgid ""
 " for matrix-vector or matrix-matrix multiplication."
 msgstr ""
 "``.`` "
-"は、ベクトルのスカラー積を表します。より一般的には、ベクトルを持つ最後のインデックスまたは別のテンソルの最初のインデックスを持つテンソルの収縮を表します。"
-" ``*`` と ``.`` は、行列ベクトルまたは行列と行列の乗算と等価であることに注意してください。"
+"は，ベクトルのスカラー積を表します．より一般的には，ベクトルを持つ最後のインデックスまたは別のテンソルの最初のインデックスを持つテンソルの収縮を表します．"
+" ``*`` と ``.`` は，行列ベクトルまたは行列と行列の乗算と等価であることに注意してください．"
 
 #: ../source/userdoc/gasm_high.rst:473
 msgid ""
@@ -1171,30 +1171,30 @@ msgid ""
 "matrix or the two first indices of a higher order tensor. Note that ``*`` "
 "and ``:`` are equivalent for (fourth order tensor)-matrix multiplication."
 msgstr ""
-"``:`` は |Frobenius| 行列の積、またはより一般的には、マトリックスを有する2つの最後のインデックスに関するテンソルの収縮を表します。 "
-"``*`` と ``:`` は（4次テンソル）行列の乗算と等価であることに注意してください。"
+"``:`` は |Frobenius| 行列の積，またはより一般的には，マトリックスを有する2つの最後のインデックスに関するテンソルの収縮を表します． "
+"``*`` と ``:`` は（4次テンソル）行列の乗算と等価であることに注意してください．"
 
 #: ../source/userdoc/gasm_high.rst:475
 msgid ""
 "``.*`` stands for the multiplication of two vectors/matrix/tensor "
 "componentwise."
-msgstr "``.*`` は、2つのベクトル/行列/テンソルの成分ごとの乗算を表します。"
+msgstr "``.*`` は，2つのベクトル/行列/テンソルの成分ごとの乗算を表します．"
 
 #: ../source/userdoc/gasm_high.rst:477
 msgid ""
 "``./`` stands for the division of two vectors/matrix/tensor componentwise."
-msgstr "``./`` は、2つのベクトル/行列/テンソルの成分ごとの除算を表します。"
+msgstr "``./`` は，2つのベクトル/行列/テンソルの成分ごとの除算を表します．"
 
 #: ../source/userdoc/gasm_high.rst:479
 msgid "``@`` stands for the tensor product."
-msgstr "``@`` はテンソル積を表します。"
+msgstr "``@`` はテンソル積を表します．"
 
 #: ../source/userdoc/gasm_high.rst:481
 msgid ""
 "``Cross_product(V, W)`` stands for the cross product (vector product) of "
 "``V`` and ``W``. Defined only for three-dimensional vectors."
 msgstr ""
-"``Cross_product(V, W)`` は ``V`` と ``W`` の直積(ベクトル積)を表し、三次元ベクトルに対してのみ定義されます。"
+"``Cross_product(V, W)`` は ``V`` と ``W`` の直積(ベクトル積)を表し，三次元ベクトルに対してのみ定義されます．"
 
 #: ../source/userdoc/gasm_high.rst:483
 msgid ""
@@ -1204,8 +1204,8 @@ msgid ""
 "two vectors ``V`` and ``W``."
 msgstr ""
 "``Contract(A, i, B, j)`` "
-"は、Aのi番目のインデックスとBのj番目のインデックスに関するテンソルAとBの縮小を表します。最初のインデックスは1です。例えば "
-"``Contract(V,1,W,1)`` は ``V`` と ``W`` の2つのベクトルの ``VW`` に相当します。"
+"は，Aのi番目のインデックスとBのj番目のインデックスに関するテンソルAとBの縮小を表します．最初のインデックスは1です．例えば "
+"``Contract(V,1,W,1)`` は ``V`` と ``W`` の2つのベクトルの ``VW`` に相当します．"
 
 #: ../source/userdoc/gasm_high.rst:485
 msgid ""
@@ -1215,8 +1215,8 @@ msgid ""
 " ``A:B`` for two matrices ``A`` and ``B``."
 msgstr ""
 "``Contract(A, i, j, B, k, l)`` "
-"はAのインデックスi、jとBのインデックスk、lに関してテンソルAとBの二重収縮を表します。例えば、 ``Contract(A,1,2,B,1,2)``"
-" は ``A`` と ``B`` の2つの行列の ``A:B`` に相当します。"
+"はAのインデックスi，jとBのインデックスk，lに関してテンソルAとBの二重収縮を表します．例えば， ``Contract(A,1,2,B,1,2)``"
+" は ``A`` と ``B`` の2つの行列の ``A:B`` に相当します．"
 
 #: ../source/userdoc/gasm_high.rst:489
 msgid "Unary operators"
@@ -1224,7 +1224,7 @@ msgstr "単項演算子"
 
 #: ../source/userdoc/gasm_high.rst:491
 msgid "``-`` the unary minus operator: change the sign of an expression."
-msgstr "``-`` 単体マイナス演算子: 式の符号を変更します。"
+msgstr "``-`` 単体マイナス演算子: 式の符号を変更します．"
 
 #: ../source/userdoc/gasm_high.rst:493
 msgid ""
@@ -1232,8 +1232,8 @@ msgid ""
 "tensor ``A`` is of order greater than two,``A'`` denotes the inversion of "
 "the two first indices."
 msgstr ""
-"``'`` はベクトルの行列またはラインビューの転置を表します。テンソル ``A`` は2より大きい次数であり、 ``A'`` "
-"は2つの第1指標の逆数を表示します。"
+"``'`` はベクトルの行列またはラインビューの転置を表します．テンソル ``A`` は2より大きい次数であり， ``A'`` "
+"は2つの第1指標の逆数を表示します．"
 
 #: ../source/userdoc/gasm_high.rst:495
 msgid ""
@@ -1241,8 +1241,8 @@ msgid ""
 " its ith and jth indices. The first index is numbered 1. For instance, "
 "``Contract(A, 1, 2)`` is equivalent to ``Trace(A)`` for a matrix ``A``."
 msgstr ""
-"``Contract(A, i, j)`` は、i番目とj番目のインデックスに対するテンソルAの収縮を表します。例えば、 ``Contract(A, "
-"1, 2)`` は、 ``A`` の ``Trace(A)`` に相当します。"
+"``Contract(A, i, j)`` は，i番目とj番目のインデックスに対するテンソルAの収縮を表します．例えば， ``Contract(A, "
+"1, 2)`` は， ``A`` の ``Trace(A)`` に相当します．"
 
 #: ../source/userdoc/gasm_high.rst:497
 msgid ""
@@ -1250,8 +1250,8 @@ msgid ""
 "is numbered 1. For instance ``Swap_indices(A, 1, 2)`` is equivalent to "
 "``A'`` for a matrix ``A``."
 msgstr ""
-"``Swap_indices(A, i, j)`` はインデックス番号iとjを交換します。たとえば、 ``Swap_indices(A, 1, 2)``"
-" は行列 ``A`` の ``A'`` に相当します。"
+"``Swap_indices(A, i, j)`` はインデックス番号iとjを交換します．たとえば， ``Swap_indices(A, 1, 2)``"
+" は行列 ``A`` の ``A'`` に相当します．"
 
 #: ../source/userdoc/gasm_high.rst:499
 msgid ""
@@ -1261,9 +1261,9 @@ msgid ""
 "be the tensor :math:`B_{i_1i_3i_4i_2} = A_{i_1i_2i_3i_4}`. For a matrix, "
 "``Index_move_last(A, 1)`` is equivalent to ``A'``."
 msgstr ""
-"``Index_move_last(A, i)`` は、インデックス番号iを最後に移動させます。例えば、 ``A`` が4次テンソルであるとすれば、 "
+"``Index_move_last(A, i)`` は，インデックス番号iを最後に移動させます．例えば， ``A`` が4次テンソルであるとすれば， "
 "``Index_move_last(A, 2)`` の結果はテンソル :math:`B_ {i_1i_3i_4i_2} = A_ "
-"{i_1i_2i_3i_4}` になります。行列の場合、 ``Index_move_last(A, 1)`` は ``A'`` に相当します。"
+"{i_1i_2i_3i_4}` になります．行列の場合， ``Index_move_last(A, 1)`` は ``A'`` に相当します．"
 
 #: ../source/userdoc/gasm_high.rst:503
 msgid "Parentheses"
@@ -1277,9 +1277,9 @@ msgid ""
 "then ``*``, ``/``, ``:``, ``.``, ``.*``, ``./``, ``@`` with no distinction "
 "and the higher priority is reserved for the unary operators ``-`` and ``'``."
 msgstr ""
-"括弧は、標準的な方法で操作の順序を変更するために使用できます。括弧が表示されていない場合、``*``, ``/``, ``:``, ``.``, "
-"``.*``, ``./``, ``@``  の通常優先順位が使用されます。 微分なしで、優先度が高いものは単項演算子 ``-`` と ``'`` "
-"に予約されています。"
+"括弧は，標準的な方法で操作の順序を変更するために使用できます．括弧が表示されていない場合，``*``, ``/``, ``:``, ``.``, "
+"``.*``, ``./``, ``@``  の通常優先順位が使用されます． 微分なしで，優先度が高いものは単項演算子 ``-`` と ``'`` "
+"に予約されています．"
 
 #: ../source/userdoc/gasm_high.rst:509
 msgid "Explicit vectors"
@@ -1299,13 +1299,13 @@ msgid ""
 "2*Grad_Test_u(1)]``. Note also that using the quite opertor (transpose), an "
 "expression ``[a,b,c,d,e]'`` stands for 'row vector`, i.e. a 1x5 matrix."
 msgstr ""
-"GWFLは、表記 ``[a,b,c,d,e]`` "
-"、すなわちコンマで区切られた任意の数の成分を持つ陽なベクトル（すなわち、1テンソル）を定義することが可能です（セミコロン ``[a;b;c;d;e]``"
+"GWFLは，表記 ``[a,b,c,d,e]`` "
+"，すなわちコンマで区切られた任意の数の成分を持つ陽なベクトル（すなわち，1テンソル）を定義することが可能です（セミコロン ``[a;b;c;d;e]``"
 " "
-"も許されます）。ベクトル全体は右括弧で始まり左括弧で終わります。成分は、いくつかの数値定数、いくつかの有効な式、試験関数を含むことができます。後者の場合、ベクトルは試験関数に関して均質でなければなりません。これは、型"
-" ``[Test_u; Test_v]`` は許されません。有効な例として、 ``u`` をスカラーフィールド変数とすると "
-"``[5*Grad_Test_u(2), 2*Grad_Test_u(1)]`` があります。また、オペレータ（転置）を使うと、式 "
-"``[a,b,c,d,e]'`` は ``行ベクトル`` 、つまり1x5行列を表します。"
+"も許されます）．ベクトル全体は右括弧で始まり左括弧で終わります．成分は，いくつかの数値定数，いくつかの有効な式，試験関数を含むことができます．後者の場合，ベクトルは試験関数に関して均質でなければなりません．これは，型"
+" ``[Test_u; Test_v]`` は許されません．有効な例として， ``u`` をスカラーフィールド変数とすると "
+"``[5*Grad_Test_u(2), 2*Grad_Test_u(1)]`` があります．また，オペレータ（転置）を使うと，式 "
+"``[a,b,c,d,e]'`` は ``行ベクトル`` ，つまり1x5行列を表します．"
 
 #: ../source/userdoc/gasm_high.rst:515
 msgid "Explicit matrices"
@@ -1321,11 +1321,11 @@ msgid ""
 "represent the same 2x3 matrix. The components can be some numeric constants,"
 " some valid expressions and may also contain test functions."
 msgstr ""
-"陽なベクトルと同様に、 ``[[a,b],[c,d]]`` "
-"という表記で陽な行列（すなわち、2次テンソル）を定義することができます。つまり、カンマで区切られた任意の数の列ベクトル（セミコロンで区切られた行の構文 "
-"``[a、c; b、d]`` も許可されます）。例えば、 ``[[11,21]、[12,22]、[13,23]]`` と "
+"陽なベクトルと同様に， ``[[a,b],[c,d]]`` "
+"という表記で陽な行列（すなわち，2次テンソル）を定義することができます．つまり，カンマで区切られた任意の数の列ベクトル（セミコロンで区切られた行の構文 "
+"``[a，c; b，d]`` も許可されます）．例えば， ``[[11,21]，[12,22]，[13,23]]`` と "
 "``[[11,12,13;21,22,23]`` "
-"はどちらも同じ2x3行列を表します。成分は、いくつかの数値定数、いくつかの有効な式、試験関数を含むことができます。"
+"はどちらも同じ2x3行列を表します．成分は，いくつかの数値定数，いくつかの有効な式，試験関数を含むことができます．"
 
 #: ../source/userdoc/gasm_high.rst:521
 msgid "Explicit tensors"
@@ -1341,12 +1341,12 @@ msgid ""
 "``Reshape([1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3], 3, 2, 2, 2)`` "
 "where the components have to be given in Fortran order."
 msgstr ""
-"入れ子の形式では、任意の次数の陽なテンソルが許可されます。 ``n`` 次のテンソルは、等次元の ``n-1`` "
-"次テンソルを継承して書かれ、コンマで区切られています。たとえば、 "
+"入れ子の形式では，任意の次数の陽なテンソルが許可されます． ``n`` 次のテンソルは，等次元の ``n-1`` "
+"次テンソルを継承して書かれ，コンマで区切られています．たとえば， "
 "``[[[[1,2,3],[1,2,3]],[[1,2,3],[1,2,3]]],[[[1,2,3],[1,2,3]],[[1,2,3],[1,2,3]]]]``"
-" は4次のテンソルです。もう一つの形式は、構文 "
+" は4次のテンソルです．もう一つの形式は，構文 "
 "``Reshape([1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3], 3, 2, 2, 2)`` "
-"であり、成分はFortranの次数で指定する必要があります。"
+"であり，成分はFortranの次数で指定する必要があります．"
 
 #: ../source/userdoc/gasm_high.rst:527
 msgid "Access to tensor components"
@@ -1368,14 +1368,14 @@ msgid ""
 " first line of the matrix ``[1,1;2,3]``. It can also be used for a fourth "
 "order tensor."
 msgstr ""
-"ベクトル/行列/テンソルの成分へのアクセスは、左括弧、成分のリスト、右括弧の項をたどることによって行うことができます。たとえば、 "
-"``[1,1,2](3)`` は正しく、期待通りに ``2`` "
-"を返します。インデックスは1で始まると仮定されていることに注意してください（C++やPythonインタフェースでも）。 ``[1,1; "
-"2,3](2,2)`` と ``Grad_u(2,2)`` という表現は、 ``u`` "
-"がベクトル値の宣言された変数であれば正しいです。構成要素は、一定の計算の結果であり得ることに留意してください。例えば、 "
+"ベクトル/行列/テンソルの成分へのアクセスは，左括弧，成分のリスト，右括弧の項をたどることによって行うことができます．たとえば， "
+"``[1,1,2](3)`` は正しく，期待通りに ``2`` "
+"を返します．インデックスは1で始まると仮定されていることに注意してください（C++やPythonインタフェースでも）． ``[1,1; "
+"2,3](2,2)`` と ``Grad_u(2,2)`` という表現は， ``u`` "
+"がベクトル値の宣言された変数であれば正しいです．構成要素は，一定の計算の結果であり得ることに留意してください．例えば， "
 "``[1,1;2,3](1+1,a)`` は ``a`` "
-"が宣言された定数ですが、変数として宣言されていない場合は正しいです。コロンはMatlabのようなシンタックスのインデックスの値を置き換えて、例えば行列の行や列にアクセスすることができます。``[1,1;"
-" 2,3](1,:)`` は行列 ``[1,1;2,3]`` の最初の行を示します。また、4次のテンソルで使用することもできます。"
+"が宣言された定数ですが，変数として宣言されていない場合は正しいです．コロンはMatlabのようなシンタックスのインデックスの値を置き換えて，例えば行列の行や列にアクセスすることができます．``[1,1;"
+" 2,3](1,:)`` は行列 ``[1,1;2,3]`` の最初の行を示します．また，4次のテンソルで使用することもできます．"
 
 #: ../source/userdoc/gasm_high.rst:531
 msgid "Constant expressions"
@@ -1385,17 +1385,17 @@ msgstr "定数式"
 msgid ""
 "Floating points with standards notations (for instance ``3``, ``1.456``, "
 "``1E-6``)"
-msgstr "標準表記の浮動小数点数（例えば、 ``3`` 、 ``1.456`` 、 ``1E-6`` ）"
+msgstr "標準表記の浮動小数点数（例えば， ``3`` ， ``1.456`` ， ``1E-6`` ）"
 
 #: ../source/userdoc/gasm_high.rst:534
 msgid "``pi``: the constant Pi."
-msgstr "``pi``: 定数 Pi 。"
+msgstr "``pi``: 定数 Pi ．"
 
 #: ../source/userdoc/gasm_high.rst:535
 msgid ""
 "``meshdim``: the dimension of the current mesh (i.e. size of geometrical "
 "nodes)"
-msgstr "``meshdim``: 現在のメッシュの次元（すなわち、幾何学的節点のサイズ）"
+msgstr "``meshdim``: 現在のメッシュの次元（すなわち，幾何学的節点のサイズ）"
 
 #: ../source/userdoc/gasm_high.rst:536
 msgid ""
@@ -1404,15 +1404,15 @@ msgid ""
 "workspaces."
 msgstr ""
 "``timestep``: この構築文字列が評価されるmodelのメイン時間ステップ（``model.set_time_step(dt)`` "
-"で定義されます）。純粋な作業領域では実行しないでください。"
+"で定義されます）．純粋な作業領域では実行しないでください．"
 
 #: ../source/userdoc/gasm_high.rst:537
 msgid ""
 "``Id(n)``: the identity matrix of size :math:`n\\times n`. `n` should be an "
 "integer expression. For instance ``Id(meshdim)`` is allowed."
 msgstr ""
-"``Id(n)``: :math:`n\\times n` サイズの単位行列。 `n` は整数式でなければなりません。例えば、 "
-"``Id(meshdim)`` が許可されます。"
+"``Id(n)``: :math:`n\\times n` サイズの単位行列． `n` は整数式でなければなりません．例えば， "
+"``Id(meshdim)`` が許可されます．"
 
 #: ../source/userdoc/gasm_high.rst:538
 msgid ""
@@ -1420,7 +1420,7 @@ msgid ""
 "fixed size variables and the total dimension of the vector/tensor field for "
 "FEM variables)"
 msgstr ""
-"``qdim(u)``: 変数 ``u`` の全次元（すなわち、固定サイズ変数のサイズとFEM変数のベクトル/テンソルフィールドの合計サイズ）"
+"``qdim(u)``: 変数 ``u`` の全次元（すなわち，固定サイズ変数のサイズとFEM変数のベクトル/テンソルフィールドの合計サイズ）"
 
 #: ../source/userdoc/gasm_high.rst:539
 msgid ""
@@ -1428,7 +1428,7 @@ msgid ""
 "size variables and the vector of dimensions of the vector/tensor field for "
 "FEM variables)"
 msgstr ""
-"``qdims(u)``: 変数 ``u`` のサイズ（すなわち、固定サイズ変数のサイズとFEM変数のベクトル/テンソルフィールドの次元のベクトル）"
+"``qdims(u)``: 変数 ``u`` のサイズ（すなわち，固定サイズ変数のサイズとFEM変数のベクトル/テンソルフィールドの次元のベクトル）"
 
 #: ../source/userdoc/gasm_high.rst:542
 msgid "Special expressions linked to the current position"
@@ -1441,22 +1441,22 @@ msgid ""
 "``X(i)`` is its i-th component. For instance ``sin(X(1)+X(2))`` is a valid "
 "expression on a mesh of dimension greater or equal to two."
 msgstr ""
-"``X(i)`` はi番目の成分であり、 ``X`` "
-"は実要素上の現在の座標（すなわち、式が評価される現在のGauss点のメッシュ上の位置）です。例えば、 ``sin(X(1)+X(2))`` "
-"は2次元以上のメッシュ上で有効な式です。"
+"``X(i)`` はi番目の成分であり， ``X`` "
+"は実要素上の現在の座標（すなわち，式が評価される現在のGauss点のメッシュ上の位置）です．例えば， ``sin(X(1)+X(2))`` "
+"は2次元以上のメッシュ上で有効な式です．"
 
 #: ../source/userdoc/gasm_high.rst:546
 msgid ""
 "``Normal`` the outward unit normal vector to a boundary when integration on "
 "a boundary is performed."
-msgstr "``Normal`` は、境界の積分を行う際の境界の外向きの単位法線ベクトルです。"
+msgstr "``Normal`` は，境界の積分を行う際の境界の外向きの単位法線ベクトルです．"
 
 #: ../source/userdoc/gasm_high.rst:548
 msgid ""
 "``element_size`` gives an estimate of the current element diameter (using "
 "getfem::convex_radius_estimate)."
 msgstr ""
-"``element_size`` は、（ getfem::convex_radius_estimate を使って）現在の要素の直径の推定値を返します。"
+"``element_size`` は，（ getfem::convex_radius_estimate を使って）現在の要素の直径の推定値を返します．"
 
 #: ../source/userdoc/gasm_high.rst:550
 msgid ""
@@ -1464,8 +1464,8 @@ msgid ""
 ":`dp-transgeo`) from the reference (parent) element. Could be used only if "
 "the mesh do not contain elements of mixed dimensions."
 msgstr ""
-"``element_K`` は、参照（親）要素からの幾何学変換の勾配（ :ref:`dp-transgeo` "
-"を参照）を与えます。メッシュに混合次元の要素が含まれていない場合にのみ使用できます。"
+"``element_K`` は，参照（親）要素からの幾何学変換の勾配（ :ref:`dp-transgeo` "
+"を参照）を与えます．メッシュに混合次元の要素が含まれていない場合にのみ使用できます．"
 
 #: ../source/userdoc/gasm_high.rst:552
 msgid ""
@@ -1474,8 +1474,8 @@ msgid ""
 "(parent) element. Could be used only if the mesh do not contain elements of "
 "mixed dimensions."
 msgstr ""
-"``element_B`` は、参照（親）要素からの幾何学変換の勾配の擬似逆行列の転置を与えます（ :ref:`dp-transgeo` "
-"を参照）。メッシュに混合次元の要素が含まれていない場合にのみ使用できます。"
+"``element_B`` は，参照（親）要素からの幾何学変換の勾配の擬似逆行列の転置を与えます（ :ref:`dp-transgeo` "
+"を参照）．メッシュに混合次元の要素が含まれていない場合にのみ使用できます．"
 
 #: ../source/userdoc/gasm_high.rst:557
 msgid "Print command"
@@ -1491,10 +1491,10 @@ msgid ""
 " the expression could be derived so that the derivative of the term may be "
 "printed instead of the term itself."
 msgstr ""
-"``Print(a)`` コマンドはデバッグ目的のためにテンソル ``a`` を出力し、それをそのまま渡します。たとえば、 "
+"``Print(a)`` コマンドはデバッグ目的のためにテンソル ``a`` を出力し，それをそのまま渡します．たとえば， "
 "``Grad_u.Print(Grad_Test_u)`` は ``Grad_u.Grad_Test_u`` "
-"と同じ効果を持ちますが、各要素の各Gauss積分点に対してテンソル ``Grad_Test_u`` "
-"を出力します。定数項は、構築の最初に1回だけプリントされることに注意してください。項自体の代わりに項の導関数をプリントするように表現できることにも留意してください。"
+"と同じ効果を持ちますが，各要素の各Gauss積分点に対してテンソル ``Grad_Test_u`` "
+"を出力します．定数項は，構築の最初に1回だけプリントされることに注意してください．項自体の代わりに項の導関数をプリントするように表現できることにも留意してください．"
 
 #: ../source/userdoc/gasm_high.rst:562
 msgid "Reshape a tensor"
@@ -1510,9 +1510,9 @@ msgid ""
 "for compatibility with Blas/Lapack."
 msgstr ""
 "コマンド ``Reshape(t, i, j, ...)`` はテンソル ``t`` "
-"（式でもよい）を再形成します。唯一の制約は、成分の数に互換性が必要なことです。例えば、  ``Reshape(Grad_u, 1, meshdim)``"
-" はスカラー変数の ``Grad_u'`` に相当します。成分次数は変更されず、 Blas/Lapack "
-"との互換性のためにFortranの次数で古典的に格納されることに注意してください。"
+"（式でもよい）を再形成します．唯一の制約は，成分の数に互換性が必要なことです．例えば，  ``Reshape(Grad_u, 1, meshdim)``"
+" はスカラー変数の ``Grad_u'`` に相当します．成分次数は変更されず， Blas/Lapack "
+"との互換性のためにFortranの次数で古典的に格納されることに注意してください．"
 
 #: ../source/userdoc/gasm_high.rst:567
 msgid "Trace, Deviator, Sym and Skew operators"
@@ -1522,13 +1522,13 @@ msgstr "Trace, Deviator, Sym と Skew 演算子"
 msgid ""
 "Trace, Deviator, Sym and Skew operators are linear operators acting on "
 "square matrices:"
-msgstr "Trace, Deviator, Sym および Skew 演算子は、正方行列に作用する線形演算子です。"
+msgstr "Trace, Deviator, Sym および Skew 演算子は，正方行列に作用する線形演算子です．"
 
 #: ../source/userdoc/gasm_high.rst:571
 msgid ""
 "``Trace(m)`` gives the trace (sum of diagonal components) of a square matrix"
 " ``m``."
-msgstr "``Trace(m)`` は正方行列 ``m`` のTrace（対角成分の合計）を返します。"
+msgstr "``Trace(m)`` は正方行列 ``m`` のTrace（対角成分の合計）を返します．"
 
 #: ../source/userdoc/gasm_high.rst:573
 msgid ""
@@ -1536,20 +1536,20 @@ msgid ""
 "equivalent to ``m - Trace(m)*Id(m_dim)/m_dim``, where ``m_dim`` is the "
 "dimension of ``m``."
 msgstr ""
-"``Deviator(m)`` は正方行列 ``m`` の偏差を与えます。 これは ``m-Trace(m)*Id(m_dim)/m_dim`` "
-"に相当します。ここで ``m_dim`` は ``m`` の次元です。"
+"``Deviator(m)`` は正方行列 ``m`` の偏差を与えます． これは ``m-Trace(m)*Id(m_dim)/m_dim`` "
+"に相当します．ここで ``m_dim`` は ``m`` の次元です．"
 
 #: ../source/userdoc/gasm_high.rst:575
 msgid ""
 "``Sym(m)`` gives the symmetric part of a square matrix ``m``, i.e. ``(m + "
 "m')/2``."
-msgstr "``Sym(m)`` は正方行列 ``m`` の対称部分、すなわち ``(m + m')/2`` を与えます。"
+msgstr "``Sym(m)`` は正方行列 ``m`` の対称部分，すなわち ``(m + m')/2`` を与えます．"
 
 #: ../source/userdoc/gasm_high.rst:577
 msgid ""
 "``Skew(m)`` gives the skew-symmetric part of a square matrix ``m``, i.e. "
 "``(m - m')/2``."
-msgstr "``Skew(m)`` は、正方行列のSkew-対称部分、 ``(m - m')/2`` を返します。"
+msgstr "``Skew(m)`` は，正方行列のSkew-対称部分， ``(m - m')/2`` を返します．"
 
 #: ../source/userdoc/gasm_high.rst:579
 msgid ""
@@ -1558,9 +1558,9 @@ msgid ""
 "``Grad_u`` is a square matrix (i.e. ``u`` a vector field of the same "
 "dimension as the mesh)."
 msgstr ""
-"4つの演算子を試験関数に適用することができます。これは、例えば ``Grad_u`` が正方行列（ ``u`` "
-"と同じ次元のベクトルフィールド）であるとき、 ``Trace(Grad_u)`` と ``Trace(Grad_Test_u)`` "
-"は有効であることを意味します。(すなわち、 ``u`` と次元として同じ次元のベクトルフィールドです。）。"
+"4つの演算子を試験関数に適用することができます．これは，例えば ``Grad_u`` が正方行列（ ``u`` "
+"と同じ次元のベクトルフィールド）であるとき， ``Trace(Grad_u)`` と ``Trace(Grad_Test_u)`` "
+"は有効であることを意味します．(すなわち， ``u`` と次元として同じ次元のベクトルフィールドです．）．"
 
 #: ../source/userdoc/gasm_high.rst:584
 msgid "Nonlinear operators"
@@ -1573,15 +1573,15 @@ msgid ""
 "operator can be applied to an expression as long as this expression do not "
 "contain some test functions."
 msgstr ""
-"GWFLは、あらかじめ定義された非線形演算子を提供します。各非線形演算子は、その第1および第2導関数と共に利用可能です。非線形演算子は、式にいくつかの試験関数が含まれていない限り、適用できます。"
+"GWFLは，あらかじめ定義された非線形演算子を提供します．各非線形演算子は，その第1および第2導関数と共に利用可能です．非線形演算子は，式にいくつかの試験関数が含まれていない限り，適用できます．"
 
 #: ../source/userdoc/gasm_high.rst:588
 msgid ""
 "``Norm(v)`` for ``v`` a vector or a matrix gives the euclidean norm of a "
 "vector or a |Frobenius| norm of a matrix."
 msgstr ""
-"ベクトルまたは行列である ``v`` に対して ``Norm(v)`` を実行すると、ベクトルのユークリッドのノルムまたは |Frobenius| "
-"行列のノルムが与えられます。"
+"ベクトルまたは行列である ``v`` に対して ``Norm(v)`` を実行すると，ベクトルのユークリッドのノルムまたは |Frobenius| "
+"行列のノルムが与えられます．"
 
 #: ../source/userdoc/gasm_high.rst:590
 msgid ""
@@ -1589,8 +1589,8 @@ msgid ""
 "euclidean norm of a vector or of the |Frobenius| norm of a matrix. For a "
 "vector this is equivalent to ``v.v`` and for a matrix to ``m:m``."
 msgstr ""
-"ベクトルまたは行列のユークリッドのノルムの二乗は、 |Frobenius| 行列のノルムベクトルの場合、これは ``v.v`` に相当し、行列は "
-"``m:m`` に相当します。"
+"ベクトルまたは行列のユークリッドのノルムの二乗は， |Frobenius| 行列のノルムベクトルの場合，これは ``v.v`` に相当し，行列は "
+"``m:m`` に相当します．"
 
 #: ../source/userdoc/gasm_high.rst:592
 msgid ""
@@ -1602,9 +1602,9 @@ msgid ""
 "different from the derivative of ``v``."
 msgstr ""
 "``v`` に対して ``Normalized(v)`` は ``v`` をユークリッド（ベクトルの場合）または |Frobenius|  "
-"（行列の場合）ノルムで割られます。 ``v`` が0に近いときの問題を避けるため、 ``Normalized_reg(v, 1E-25)`` "
-"として実装されています。注意して使用してください。 ``Normalized(v)*Norm(v)`` "
-"起源の導関数は間違っています（今後削除されます）、 ``v`` の導関数とは非常に異なると考えてください。"
+"（行列の場合）ノルムで割られます． ``v`` が0に近いときの問題を避けるため， ``Normalized_reg(v, 1E-25)`` "
+"として実装されています．注意して使用してください． ``Normalized(v)*Norm(v)`` "
+"起源の導関数は間違っています（今後削除されます）， ``v`` の導関数とは非常に異なると考えてください．"
 
 #: ../source/userdoc/gasm_high.rst:594
 msgid ""
@@ -1612,7 +1612,7 @@ msgid ""
 "regularized version of ``Normalized(v)`` : ``v/sqrt(|v|*|v|+eps*eps)``."
 msgstr ""
 "``v`` の ``Normalized_reg(v, eps)`` ベクトルまたは行列は``Normalized(v)`` : "
-"``v/sqrt(|v|*|v|+eps*eps)`` の正規化されたバージョンを与えます。"
+"``v/sqrt(|v|*|v|+eps*eps)`` の正規化されたバージョンを与えます．"
 
 #: ../source/userdoc/gasm_high.rst:596
 msgid ""
@@ -1620,12 +1620,12 @@ msgid ""
 " gives the projection of ``v`` on the ball of radius ``r`` and center the "
 "origin."
 msgstr ""
-"ベクトルまたは行列 ``v`` とスカラーの ``r`` の ``Ball_projection(v, r)`` は、原点を中心にした半径 ``r`` "
-"のボールに ``v`` の投影を与えます。"
+"ベクトルまたは行列 ``v`` とスカラーの ``r`` の ``Ball_projection(v, r)`` は，原点を中心にした半径 ``r`` "
+"のボールに ``v`` の投影を与えます．"
 
 #: ../source/userdoc/gasm_high.rst:598
 msgid "``Det(m)`` gives the determinant of a square matrix ``m``."
-msgstr "``Det(m)`` は正方行列 ``m`` の行列式を与えます。"
+msgstr "``Det(m)`` は正方行列 ``m`` の行列式を与えます．"
 
 #: ../source/userdoc/gasm_high.rst:600
 msgid ""
@@ -1634,16 +1634,16 @@ msgid ""
 "cannot be used in the description of a potential energy."
 msgstr ""
 "``Inv(m)`` は正方行列 ``m`` "
-"の逆行列を返します。2次導関数は、6次テンソルであるため利用できません。つまり、ポテンシャルエネルギーの記述には ``Inv(m)`` "
-"は使用できません。"
+"の逆行列を返します．2次導関数は，6次テンソルであるため利用できません．つまり，ポテンシャルエネルギーの記述には ``Inv(m)`` "
+"は使用できません．"
 
 #: ../source/userdoc/gasm_high.rst:602
 msgid "``Expm(m)`` gives the exponential of a square matrix ``m``."
-msgstr "``Expm(m)`` は正方行列 ``m`` の指数を与えます。"
+msgstr "``Expm(m)`` は正方行列 ``m`` の指数を与えます．"
 
 #: ../source/userdoc/gasm_high.rst:604
 msgid "``Logm(m)`` gives the logarithm of a square matrix ``m``."
-msgstr "``Logm(m)`` は正方行列 ``m``の対数を返します。"
+msgstr "``Logm(m)`` は正方行列 ``m``の対数を返します．"
 
 #: ../source/userdoc/gasm_high.rst:606
 msgid ""
@@ -1651,15 +1651,15 @@ msgid ""
 "is defined by ``(sqr(Trace(m)) - Trace(m*m))/2``."
 msgstr ""
 "``Matrix_I2(m)`` は ``(sqr(Trace(m)) - Trace(m*m))/2`` で定義される正方行列 ``m`` "
-"の第2の不変量を返します。"
+"の第2の不変量を返します．"
 
 #: ../source/userdoc/gasm_high.rst:608
 msgid ""
 "``Matrix_J1(m)`` gives the modified first invariant of a square matrix "
 "defined by ``Trace(m)pow(Det(m),-1/3)``."
 msgstr ""
-"``Matrix_J1(m)`` は、  ``Trace(m)pow(Det(m),-1/3)`` "
-"で定義された正方行列の最初の不変量を修正したものです。"
+"``Matrix_J1(m)`` は，  ``Trace(m)pow(Det(m),-1/3)`` "
+"で定義された正方行列の最初の不変量を修正したものです．"
 
 #: ../source/userdoc/gasm_high.rst:610
 msgid ""
@@ -1667,7 +1667,7 @@ msgid ""
 "defined by ``Matrix_I2(m)*pow(Det(m),-2/3)``."
 msgstr ""
 "``Matrix_J2(m)`` は  ``Matrix_I2(m)*pow(Det(m),-2/3)`` "
-"で定義された正方行列の修正された最初の不変量を返します。"
+"で定義された正方行列の修正された最初の不変量を返します．"
 
 #: ../source/userdoc/gasm_high.rst:615
 msgid "Macro definition"
@@ -1680,15 +1680,15 @@ msgid ""
 "string. The definition into a ga_workspace or model object is done as "
 "follows::"
 msgstr ""
-"GWFLを使用すると、modelまたは ga_workspace "
-"オブジェクトであらかじめ定義されているか、構築文字列の先頭に直接定義されているマクロを使用できます。ga_workspace "
-"またはmodelオブジェクトへの定義は次のように行われます。"
+"GWFLを使用すると，modelまたは ga_workspace "
+"オブジェクトであらかじめ定義されているか，構築文字列の先頭に直接定義されているマクロを使用できます．ga_workspace "
+"またはmodelオブジェクトへの定義は次のように行われます．"
 
 #: ../source/userdoc/gasm_high.rst:625
 msgid ""
 "The definition of a macro into an assembly string is inserted before any "
 "regular expression, separated by a semicolon with the following syntax::"
-msgstr "マクロの構築文字列への定義は、正規表現の前に次の構文でセミコロンで区切られて挿入されます。"
+msgstr "マクロの構築文字列への定義は，正規表現の前に次の構文でセミコロンで区切られて挿入されます．"
 
 #: ../source/userdoc/gasm_high.rst:629
 msgid ""
@@ -1697,36 +1697,36 @@ msgid ""
 " itself contain some macro definitions). For instance, a valid macro with no"
 " parameter is::"
 msgstr ""
-"``name`` はマクロ名であり、GWFLで使用され、マクロのパラメータも含みます。 ``expr`` "
-"はGWFLの有効な式です（それ自体がいくつかのマクロ定義を含むかもしれません）。たとえば、パラメータを持たない有効なマクロは次の通りです。"
+"``name`` はマクロ名であり，GWFLで使用され，マクロのパラメータも含みます． ``expr`` "
+"はGWFLの有効な式です（それ自体がいくつかのマクロ定義を含むかもしれません）．たとえば，パラメータを持たない有効なマクロは次の通りです．"
 
 #: ../source/userdoc/gasm_high.rst:633
 msgid ""
 "where ``alpha`` should be a valid declared variable or data. A valid macro "
 "with two parameters is for instance::"
-msgstr "``alpha`` は有効な宣言された変数またはデータでなければなりません。 2つのパラメータを持つ有効なマクロは、例えば次の通りです。"
+msgstr "``alpha`` は有効な宣言された変数またはデータでなければなりません． 2つのパラメータを持つ有効なマクロは，例えば次の通りです．"
 
 #: ../source/userdoc/gasm_high.rst:637
 msgid ""
 "The following assembly string is then valid (if ``u`` is a valid variable)::"
-msgstr "次の構築文字列は有効です（ ``u`` が有効な変数である場合）。"
+msgstr "次の構築文字列は有効です（ ``u`` が有効な変数である場合）．"
 
 #: ../source/userdoc/gasm_high.rst:641
 msgid ""
 "Parameter are allowed to be post-fixed to ``Grad_``, ``Hess_``, ``Test_`` "
 "and ``Test2_`` prefixes, so that the following assembly string is valid::"
 msgstr ""
-"パラメータは ``Grad_`` 、 ``Hess_`` 、 ``Test_`` 、 ``Test2_`` "
-"の接頭辞の後に固定することができ、次の構築文字列が有効です。"
+"パラメータは ``Grad_`` ， ``Hess_`` ， ``Test_`` ， ``Test2_`` "
+"の接頭辞の後に固定することができ，次の構築文字列が有効です．"
 
 #: ../source/userdoc/gasm_high.rst:645
 msgid "or with an imbrication of two macros::"
-msgstr "または2つのマクロの組み込みも可能です。"
+msgstr "または2つのマクロの組み込みも可能です．"
 
 #: ../source/userdoc/gasm_high.rst:649
 msgid ""
 "A macro can be deleted from a ga_workspace or model object as follows::"
-msgstr "マクロは、次のようにga_workspaceオブジェクトまたはmodelオブジェクトから削除できます。"
+msgstr "マクロは，次のようにga_workspaceオブジェクトまたはmodelオブジェクトから削除できます．"
 
 #: ../source/userdoc/gasm_high.rst:654
 msgid ""
@@ -1734,15 +1734,15 @@ msgid ""
 "defined in the assembly string and cannot be used later without being added "
 "in a model or ga_workspace object."
 msgstr ""
-"構築文字列の先頭に定義されたマクロはその構築文字列でのみ定義され、後で model または ga_workspace "
-"オブジェクトに追加することなく使用することはできないことに注意してください。"
+"構築文字列の先頭に定義されたマクロはその構築文字列でのみ定義され，後で model または ga_workspace "
+"オブジェクトに追加することなく使用することはできないことに注意してください．"
 
 #: ../source/userdoc/gasm_high.rst:656
 msgid ""
 "The macros are expanded inline at the lexical analysis phase. Note that a "
 "the compilation phase, the repeated expressions are automatically factorized"
 " and computed only once."
-msgstr "このマクロは字句解析フェーズでインライン展開されます。コンパイル段階では、繰り返し式は自動的に分解され、1回だけ計算されます。"
+msgstr "このマクロは字句解析フェーズでインライン展開されます．コンパイル段階では，繰り返し式は自動的に分解され，1回だけ計算されます．"
 
 #: ../source/userdoc/gasm_high.rst:659
 msgid "Explicit Differentiation"
@@ -1757,26 +1757,26 @@ msgid ""
 "variables of model/workspace but this is not necessarily the expected "
 "behavior when using a potential energy, for instance. The syntax is::"
 msgstr ""
-"workspaceオブジェクトは、より低い次数の微分を自動的に微分します。しかしながら、変数に対して式を陽に微分することもできます。 "
-"注目すべきは、自動微分はmodel/workspaceの宣言されたすべての変数に関して微分を実行しますが、これは例えばポテンシャルエネルギーを使用する場合に必ずしも期待される挙動ではありません。構文は次の通りです。"
+"workspaceオブジェクトは，より低い次数の微分を自動的に微分します．しかしながら，変数に対して式を陽に微分することもできます． "
+"注目すべきは，自動微分はmodel/workspaceの宣言されたすべての変数に関して微分を実行しますが，これは例えばポテンシャルエネルギーを使用する場合に必ずしも期待される挙動ではありません．構文は次の通りです．"
 
 #: ../source/userdoc/gasm_high.rst:664
 msgid "For instance, the following expression::"
-msgstr "例えば、次の式の場合"
+msgstr "例えば，次の式の場合"
 
 #: ../source/userdoc/gasm_high.rst:668 ../source/userdoc/gasm_high.rst:685
 msgid "will result in::"
-msgstr "結果は次の通りです。"
+msgstr "結果は次の通りです．"
 
 #: ../source/userdoc/gasm_high.rst:672
 msgid "So that::"
-msgstr "そのため次のようにします。"
+msgstr "そのため次のようにします．"
 
 #: ../source/userdoc/gasm_high.rst:676
 msgid ""
 "is a valid expression. A third argument can be added to the ``Diff`` command"
 " to specify the direction::"
-msgstr "これは有効な式です。方向を指定するために ``Diff`` コマンドに3番目の引数を追加することができます。"
+msgstr "これは有効な式です．方向を指定するために ``Diff`` コマンドに3番目の引数を追加することができます．"
 
 #: ../source/userdoc/gasm_high.rst:680
 msgid ""
@@ -1785,12 +1785,12 @@ msgid ""
 "computes the derivative of ``expression`` with respect to ``variable`` in "
 "the direction ``direction``. For instance::"
 msgstr ""
-"その場合、 ``Test_variable`` を ``variable`` と同じ次元である式 ``direction`` で置き換えます。 "
-"``direction`` 方向の ``variable`` に対して ``expression`` の導関数を計算します。例えば。"
+"その場合， ``Test_variable`` を ``variable`` と同じ次元である式 ``direction`` で置き換えます． "
+"``direction`` 方向の ``variable`` に対して ``expression`` の導関数を計算します．例えば．"
 
 #: ../source/userdoc/gasm_high.rst:689
 msgid "if ``v`` is any valid expression of the same dimension than ``u``."
-msgstr "``v`` は ``u`` と同じ次元の有効な式です。"
+msgstr "``v`` は ``u`` と同じ次元の有効な式です．"
 
 #: ../source/userdoc/gasm_high.rst:692
 msgid "Explicit Gradient"
@@ -1800,7 +1800,7 @@ msgstr "陽な勾配"
 msgid ""
 "It is possible to ask for symbolic computation of the gradient of an "
 "expression with::"
-msgstr "次の関数を使って式の勾配の記号計算をすることができます。"
+msgstr "次の関数を使って式の勾配の記号計算をすることができます．"
 
 #: ../source/userdoc/gasm_high.rst:697
 msgid ""
@@ -1809,19 +1809,19 @@ msgid ""
 "nonlinear operators are supposed to provide only first and second order "
 "derivatives."
 msgstr ""
-"これは可能な限り計算されます。制限として、 |gf| は形状関数の2階微分に限定され、非線形演算子は1次微分と2次微分のみを与えると考えられています。"
+"これは可能な限り計算されます．制限として， |gf| は形状関数の2階微分に限定され，非線形演算子は1次微分と2次微分のみを与えると考えられています．"
 
 #: ../source/userdoc/gasm_high.rst:699
 msgid "Of course::"
-msgstr "もちろん、"
+msgstr "もちろん，"
 
 #: ../source/userdoc/gasm_high.rst:703
 msgid "is equivalent to::"
-msgstr "は次と等価です。"
+msgstr "は次と等価です．"
 
 #: ../source/userdoc/gasm_high.rst:707
 msgid "for a varible ``u``."
-msgstr "``u`` は変数です。"
+msgstr "``u`` は変数です．"
 
 #: ../source/userdoc/gasm_high.rst:712
 msgid "Interpolate transformations"
@@ -1837,7 +1837,7 @@ msgid ""
 "cost."
 msgstr ""
 "``Interpolate`` "
-"演算は、メッシュの異なる部分に定義された量または異なるメッシュに定義された量の間の積分を計算することを可能にします。それはMortar行列を計算するか、または周期的な条件を考慮に入れることができる強力な演算です。しかしながら、これは無視できない計算コストを有するかもしれない補間に基づいていることを覚えておいてください。"
+"演算は，メッシュの異なる部分に定義された量または異なるメッシュに定義された量の間の積分を計算することを可能にします．それはMortar行列を計算するか，または周期的な条件を考慮に入れることができる強力な演算です．しかしながら，これは無視できない計算コストを有するかもしれない補間に基づいていることを覚えておいてください．"
 
 #: ../source/userdoc/gasm_high.rst:716
 msgid ""
@@ -1846,8 +1846,8 @@ msgid ""
 "described the map between the current integration point and the point lying "
 "on the same mesh or on another mesh."
 msgstr ""
-"この機能を使用するために、ユーザはまず、現在の積分ポイントと同じメッシュまたは別のメッシュ上にあるポイントとの間のマップを記述する補間変換を "
-"workspace または model オブジェクトに宣言する必要があります。"
+"この機能を使用するために，ユーザはまず，現在の積分ポイントと同じメッシュまたは別のメッシュ上にあるポイントとの間のマップを記述する補間変換を "
+"workspace または model オブジェクトに宣言する必要があります．"
 
 #: ../source/userdoc/gasm_high.rst:718
 msgid ""
@@ -1858,15 +1858,15 @@ msgid ""
 "friction_raytrace_inter_trans`). Some other transformations (neighbor "
 "element and element extrapolation) are describe in the next sections."
 msgstr ""
-"異なる種類の変換を記述するためにいくつかの種類の変換が実装されています。以下で説明する最初のものは、式によって記述される変換です。2番目はレイトレーシング接触検出に相当します（"
+"異なる種類の変換を記述するためにいくつかの種類の変換が実装されています．以下で説明する最初のものは，式によって記述される変換です．2番目はレイトレーシング接触検出に相当します（"
 " :ref:`ud-model-contact-friction_raytrace_inter_trans` "
-"を参照）。次のセクションでは、他の変換（隣接要素と要素の外挿）について説明します。"
+"を参照）．次のセクションでは，他の変換（隣接要素と要素の外挿）について説明します．"
 
 #: ../source/userdoc/gasm_high.rst:720
 msgid ""
 "The transformation defined by an expression can be added to the workspace or"
 " the model thanks to the command::"
-msgstr "式で定義された変換は、次のコマンドにより workspace またはmodelに追加できます。"
+msgstr "式で定義された変換は，次のコマンドにより workspace またはmodelに追加できます．"
 
 #: ../source/userdoc/gasm_high.rst:730
 msgid ""
@@ -1876,13 +1876,13 @@ msgid ""
 "interpolation is performed and ``expr`` is a regular expression of GWFL "
 "which may contains reference to the variables of the workspace/model."
 msgstr ""
-"``workspace`` はworkspaceオブジェクト、 ``model`` はmodelオブジェクト、 ``transname`` "
-"は変換に与えられた名前、 ``source_mesh`` は積分が行われるメッシュ、 ``target_mesh`` 補間が実行されるメッシュで "
-"``expr`` は、workspace/modelの変数への参照を含むGWFLの正規表現です。"
+"``workspace`` はworkspaceオブジェクト， ``model`` はmodelオブジェクト， ``transname`` "
+"は変換に与えられた名前， ``source_mesh`` は積分が行われるメッシュ， ``target_mesh`` 補間が実行されるメッシュで "
+"``expr`` は，workspace/modelの変数への参照を含むGWFLの正規表現です．"
 
 #: ../source/userdoc/gasm_high.rst:732
 msgid "For instance, an expression::"
-msgstr "例えば、次の式は、"
+msgstr "例えば，次の式は，"
 
 #: ../source/userdoc/gasm_high.rst:737
 msgid ""
@@ -1890,15 +1890,15 @@ msgid ""
 "shift of -1 with respect to the first coordinate. This simple kind of "
 "transformation can be used to prescribe a periodic condition."
 msgstr ""
-"現在の位置にある式を最初の座標に対して-1のシフトで積分することができます。この単純な種類の変換を使用して、周期的な条件を規定することができます。"
+"現在の位置にある式を最初の座標に対して-1のシフトで積分することができます．この単純な種類の変換を使用して，周期的な条件を規定することができます．"
 
 #: ../source/userdoc/gasm_high.rst:739
 msgid "Of course, one may used more complex expressions such as::"
-msgstr "もちろん、もっと複雑な表現も可能です。"
+msgstr "もちろん，もっと複雑な表現も可能です．"
 
 #: ../source/userdoc/gasm_high.rst:747
 msgid "where ``u`` is a vector variable of the workspace/model."
-msgstr "ここで ``u`` はworkspace/modelのベクトル変数です。"
+msgstr "ここで ``u`` はworkspace/modelのベクトル変数です．"
 
 #: ../source/userdoc/gasm_high.rst:749
 msgid ""
@@ -1906,11 +1906,11 @@ msgid ""
 " a variable or test functions, the position or the unit normal vector to a "
 "boundary thanks to one of these expressions::"
 msgstr ""
-"workspace/modelで変換が定義されると、変数または試験関数、これらの式の1つのために境界への位置または単位法線ベクトルを補間できます。"
+"workspace/modelで変換が定義されると，変数または試験関数，これらの式の1つのために境界への位置または単位法線ベクトルを補間できます．"
 
 #: ../source/userdoc/gasm_high.rst:762
 msgid "where ``u`` is the name of the variable to be interpolated."
-msgstr "ここで ``u`` は補間される変数の名前です。"
+msgstr "ここで ``u`` は補間される変数の名前です．"
 
 #: ../source/userdoc/gasm_high.rst:764
 msgid ""
@@ -1919,8 +1919,8 @@ msgid ""
 "periodic boundary condition) thanks to a multiplier ``lambda`` could be "
 "written::"
 msgstr ""
-"例えば、乗算器 ``lambda`` によって、変数 ``u`` "
-"とその補間（例えば、周期的境界条件を規定するため）との等価を規定する構築式は、次のように書くことができます。"
+"例えば，乗算器 ``lambda`` によって，変数 ``u`` "
+"とその補間（例えば，周期的境界条件を規定するため）との等価を規定する構築式は，次のように書くことができます．"
 
 #: ../source/userdoc/gasm_high.rst:768
 msgid ""
@@ -1928,7 +1928,7 @@ msgid ""
 "octave` directory)."
 msgstr ""
 "( :file:`interface/tests/matlab-octave` 内の "
-":file:`demo\\_periodic\\_laplacian.m` を参照してください。)"
+":file:`demo\\_periodic\\_laplacian.m` を参照してください．)"
 
 #: ../source/userdoc/gasm_high.rst:770
 msgid ""
@@ -1943,10 +1943,10 @@ msgid ""
 " 1 means that a corresponding point has been found. This identifier can be "
 "used thanks to the following special command of GWFL::"
 msgstr ""
-"場合によっては、変換された点がターゲットメッシュの外側にある場合、点の補間が失敗することがあります。両方とも、このケースを処理し、変換が他のいくつかの場合を微分できるようにするために（両方とも、剛体とRaytracing_interpolate_transformationの変形可能なものとの間の差異については。"
+"場合によっては，変換された点がターゲットメッシュの外側にある場合，点の補間が失敗することがあります．両方とも，このケースを処理し，変換が他のいくつかの場合を微分できるようにするために（両方とも，剛体とRaytracing_interpolate_transformationの変形可能なものとの間の差異については．"
 " :ref:`ud-model-contact-friction_raytrace_inter_trans` "
-"を参照）、変換は整数識別子が弱形式言語に返されます。この識別子の値0は、ターゲットメッシュ上の対応する位置が見つからなかったことを意味します。 "
-"1の値は、対応する点が見つかったことを意味します。この識別子は、GWFLの次の特別なコマンドにより使用できます。"
+"を参照），変換は整数識別子が弱形式言語に返されます．この識別子の値0は，ターゲットメッシュ上の対応する位置が見つからなかったことを意味します． "
+"1の値は，対応する点が見つかったことを意味します．この識別子は，GWFLの次の特別なコマンドにより使用できます．"
 
 #: ../source/userdoc/gasm_high.rst:774
 msgid ""
@@ -1958,16 +1958,16 @@ msgid ""
 "the previous assembly expression to prescribe the equality of a variable "
 "``u`` with its interpolation could be writtne::"
 msgstr ""
-"``transname`` は変換の名前、 ``expr`` は評価される式、``i`` は式が計算されるべきかを返す整数識別子です。 ``i`` "
-"は省略することができ、この場合、式は非ゼロの識別情報（すなわち、対応する点が見つかったとき）について評価されることに留意してください。例えば、変数``u``"
-" とその補間との等価を規定する以前の構築式は、次のように書くことができます。"
+"``transname`` は変換の名前， ``expr`` は評価される式，``i`` は式が計算されるべきかを返す整数識別子です． ``i`` "
+"は省略することができ，この場合，式は非ゼロの識別情報（すなわち，対応する点が見つかったとき）について評価されることに留意してください．例えば，変数``u``"
+" とその補間との等価を規定する以前の構築式は，次のように書くことができます．"
 
 #: ../source/userdoc/gasm_high.rst:779
 msgid ""
 "In that case, the equality will only be prescribed in the part of the domain"
 " where the transformation succeed and in the other part, the mulitplier is "
 "enforced to vanish."
-msgstr "その場合、等式は、変換が成功する領域の部分でのみ規定され、他の部分では、乗数は消滅するように強制されます。"
+msgstr "その場合，等式は，変換が成功する領域の部分でのみ規定され，他の部分では，乗数は消滅するように強制されます．"
 
 #: ../source/userdoc/gasm_high.rst:782
 msgid ""
@@ -1979,7 +1979,7 @@ msgid ""
 "cannot be derived twice."
 msgstr ""
 "**注意** : "
-"変換でいくつかの変数が使用される場合、接触モデルの計算でこれらの依存性が考慮されていると考える必要があります。しかし、使用される変数に関する変換の2次導関数は実装されていません。従って、このような変換は、2回微分することができないので、電位の定義には使用できません。"
+"変換でいくつかの変数が使用される場合，接触モデルの計算でこれらの依存性が考慮されていると考える必要があります．しかし，使用される変数に関する変換の2次導関数は実装されていません．従って，このような変換は，2回微分することができないので，電位の定義には使用できません．"
 
 #: ../source/userdoc/gasm_high.rst:785
 msgid "Element extrapolation transformation"
@@ -1999,7 +1999,7 @@ msgid ""
 "element if it has a small intersection with the real domain. The functions "
 "allowing to add such a transformation to a model or a workspace are::"
 msgstr ""
-"別の要素（一般的に隣接要素）に関してある量の外挿による評価を可能にするために、特定の変換（前の節を参照）が定義されます。点の位置は変わらないので、厳密には変換ではありませんが、評価は試行関数を外挿する別の要素に対して行われます。この変換は、実領域との交差が小さい場合に、実領域との交差が十分に大きい隣接要素上のいくつかの量を実要素上で評価するよりも、実領域との交差が十分に大きい隣接要素上のいくつかの量を外挿する方がロバストである（切断要素を有する）仮想領域法における安定化項に使用されます。このような変換をmodelまたはworkspaceに追加するには次の関数を使用します::"
+"別の要素（一般的に隣接要素）に関してある量の外挿による評価を可能にするために，特定の変換（前の節を参照）が定義されます．点の位置は変わらないので，厳密には変換ではありませんが，評価は試行関数を外挿する別の要素に対して行われます．この変換は，実領域との交差が小さい場合に，実領域との交差が十分に大きい隣接要素上のいくつかの量を実要素上で評価するよりも，実領域との交差が十分に大きい隣接要素上のいくつかの量を外挿する方がロバストである（切断要素を有する）仮想領域法における安定化項に使用されます．このような変換をmodelまたはworkspaceに追加するには次の関数を使用します::"
 
 #: ../source/userdoc/gasm_high.rst:795
 msgid ""
@@ -2009,17 +2009,17 @@ msgid ""
 "transformation is applied and the evaluation is performed normally on the "
 "current element."
 msgstr ""
-"マップelt_corrには、変換が適用される要素と、補外が行われる必要があります。それぞれの要素との間の対応関係が含まれている必要があります。マップにリストされていない要素では、変換は適用されず、評価は現在の要素に対して正常に実行されます。"
+"マップelt_corrには，変換が適用される要素と，補外が行われる必要があります．それぞれの要素との間の対応関係が含まれている必要があります．マップにリストされていない要素では，変換は適用されず，評価は現在の要素に対して正常に実行されます．"
 
 #: ../source/userdoc/gasm_high.rst:797
 msgid ""
 "The following functions allow to change the element correspondence of a "
 "previously added element extrapolation transformation::"
-msgstr "以下の関数は、以前に追加された要素補間変換の要素対応を変更することを可能にします。"
+msgstr "以下の関数は，以前に追加された要素補間変換の要素対応を変更することを可能にします．"
 
 #: ../source/userdoc/gasm_high.rst:809
 msgid "Evaluating discontinuities across inter-element edges/faces"
-msgstr "要素間エッジ/面間の不連続性の評価します。"
+msgstr "要素間エッジ/面間の不連続性の評価します．"
 
 #: ../source/userdoc/gasm_high.rst:811
 msgid ""
@@ -2033,7 +2033,7 @@ msgid ""
 "The expressions::"
 msgstr ""
 "``neighbor_element`` "
-"と呼ばれる特定の補間変換（前のセクションを参照）は、デフォルトですべてのmodelで定義されています。この変換は、メッシュの内部エッジ/面、すなわち少なくとも2つの要素によって共有される要素面で計算が行われる場合にのみ使用できます。これは、要素間の面で変数の不連続ジャンプを計算することを目的としています。不連続Galerkinと内部ペナルティ法、ゴーストペナルティ項または事後推定を実装するのに特に適しています。表現は、"
+"と呼ばれる特定の補間変換（前のセクションを参照）は，デフォルトですべてのmodelで定義されています．この変換は，メッシュの内部エッジ/面，すなわち少なくとも2つの要素によって共有される要素面で計算が行われる場合にのみ使用できます．これは，要素間の面で変数の不連続ジャンプを計算することを目的としています．不連続Galerkinと内部ペナルティ法，ゴーストペナルティ項または事後推定を実装するのに特に適しています．表現は，"
 
 #: ../source/userdoc/gasm_high.rst:824
 msgid ""
@@ -2045,24 +2045,24 @@ msgid ""
 "``Normal`` except for instance for 2D shell element in a 3D mesh where it "
 "has an interest."
 msgstr ""
-"（他の補間変換の場合と同様に）現在の点ではなく隣接要素上のフィールドを計算することができます。もちろん、 ``Interpolate(X, "
-"neighbor_element)`` は ``X`` と同じ結果を返すのでそれほど特別なものではありません。同様に、ほとんどの場合、 "
-"``Interpolate(X, neighbor_element)`` は、関心のある3Dメッシュの2Dシェル要素を除いて、 ``Normal`` "
-"の反対側を返します。"
+"（他の補間変換の場合と同様に）現在の点ではなく隣接要素上のフィールドを計算することができます．もちろん， ``Interpolate(X, "
+"neighbor_element)`` は ``X`` と同じ結果を返すのでそれほど特別なものではありません．同様に，ほとんどの場合， "
+"``Interpolate(X, neighbor_element)`` は，関心のある3Dメッシュの2Dシェル要素を除いて， ``Normal`` "
+"の反対側を返します．"
 
 #: ../source/userdoc/gasm_high.rst:826
 msgid "The jump on a variable ``u`` can be computed with::"
-msgstr "変数 ``u`` のジャンプは、"
+msgstr "変数 ``u`` のジャンプは，"
 
 #: ../source/userdoc/gasm_high.rst:830
 msgid "and a penalisation term of the jump can be written::"
-msgstr "ジャンプのペナルティ・タームを書くことができます。"
+msgstr "ジャンプのペナルティ・タームを書くことができます．"
 
 #: ../source/userdoc/gasm_high.rst:834
 msgid ""
 "Note that the region representing the set of all internal faces of a mesh "
 "can be obtained thanks to the function::"
-msgstr "メッシュのすべての内部面の集合を表す領域は、次の関数により与えられます。"
+msgstr "メッシュのすべての内部面の集合を表す領域は，次の関数により与えられます．"
 
 #: ../source/userdoc/gasm_high.rst:838
 msgid ""
@@ -2071,8 +2071,8 @@ msgid ""
 "is that  each face is represented only once and is arbitrarily chosen "
 "between the two neighbor elements."
 msgstr ""
-"ここで ``mr`` はオプションのメッシュ領域です。``mr`` "
-"が指定されていれば、この領域に関して内部の面だけが返されます。重要な点は、各面が1回だけ表され、2つの隣接要素の間で任意に選択されることです。"
+"ここで ``mr`` はオプションのメッシュ領域です．``mr`` "
+"が指定されていれば，この領域に関して内部の面だけが返されます．重要な点は，各面が1回だけ表され，2つの隣接要素の間で任意に選択されることです．"
 
 #: ../source/userdoc/gasm_high.rst:840
 msgid ""
@@ -2081,14 +2081,14 @@ msgid ""
 "use."
 msgstr ""
 "使用例は :file:`interface/tests/python/demo_laplacian_DG.py` や "
-":file:`interface/tests/matlab-octave/demo_laplacian_DG.m` を参照してください。"
+":file:`interface/tests/matlab-octave/demo_laplacian_DG.m` を参照してください．"
 
 #: ../source/userdoc/gasm_high.rst:842
 msgid ""
 "Compared to other interpolate transformations, this transformation is more "
 "optimized and benefits from finite element and geometric transformation pre-"
 "computations."
-msgstr "他の補間変換と比較すると、この変換はより最適化され、有限要素変換および幾何変換前処理で恩恵があります。"
+msgstr "他の補間変換と比較すると，この変換はより最適化され，有限要素変換および幾何変換前処理で恩恵があります．"
 
 #: ../source/userdoc/gasm_high.rst:847
 msgid ""
@@ -2100,7 +2100,7 @@ msgid ""
 "In some very special cases, it can be interesting to compute an integral on "
 "the direct product of two domains, i.e. a double integral such as for "
 "instance"
-msgstr "いくつかの非常に特殊な場合には、2つの領域の直積、すなわち例えば2重積分の積分を計算することに着目する必要があります。"
+msgstr "いくつかの非常に特殊な場合には，2つの領域の直積，すなわち例えば2重積分の積分を計算することに着目する必要があります．"
 
 #: ../source/userdoc/gasm_high.rst:851
 msgid "\\int_{\\Omega_1}\\int_{\\Omega_2}k(x,y)u(x)v(y)dydx,"
@@ -2114,16 +2114,16 @@ msgid ""
 "This can be interesting either to compute such an integral or to define an "
 "interaction term between two variables defined on two different domains."
 msgstr ""
-"ここで :math:`k(x,y)` は与えられたカーネルです、 :math:`u` は :math:`\\Omega_1` 上で定義された量で "
-":math:`v` は :math:`\\Omega_2` 上で定義された量です、 :math:`\\Omega_1` と "
+"ここで :math:`k(x,y)` は与えられたカーネルです， :math:`u` は :math:`\\Omega_1` 上で定義された量で "
+":math:`v` は :math:`\\Omega_2` 上で定義された量です， :math:`\\Omega_1` と "
 ":math:`\\Omega_2` "
-"は同じ領域にあります。これは、そのような積分を計算するか、または2つの異なる領域上に定義された2つの変数間の相互作用項を定義する際に着目する必要があります。"
+"は同じ領域にあります．これは，そのような積分を計算するか，または2つの異なる領域上に定義された2つの変数間の相互作用項を定義する際に着目する必要があります．"
 
 #: ../source/userdoc/gasm_high.rst:857
 msgid ""
 "CAUTION: Of course, this kind of term have to be used with great care, since"
 " it naturally leads to fully populated stiffness or tangent matrices."
-msgstr "注意: 当然のことながら、この種の項は、通常完全に計算された剛性または接線行列に関連するため、細心の注意を払って使用する必要があります。"
+msgstr "注意: 当然のことながら，この種の項は，通常完全に計算された剛性または接線行列に関連するため，細心の注意を払って使用する必要があります．"
 
 #: ../source/userdoc/gasm_high.rst:860
 msgid ""
@@ -2132,7 +2132,7 @@ msgid ""
 "methods. The addition of a standard secondary domain can be done with one of"
 " the two following functions::"
 msgstr ""
-"GWFLはそのような項を計算するためのメカニズムを与えます。まず、第2領域は、その積分法を使用してworkspace/model内で宣言されなければなりません。標準的な第2領域の追加は、次の2つの関数のうちの1つを使用して行うことができます。"
+"GWFLはそのような項を計算するためのメカニズムを与えます．まず，第2領域は，その積分法を使用してworkspace/model内で宣言されなければなりません．標準的な第2領域の追加は，次の2つの関数のうちの1つを使用して行うことができます．"
 
 #: ../source/userdoc/gasm_high.rst:866
 msgid ""
@@ -2146,11 +2146,11 @@ msgid ""
 "necessary elements with respect to the element of the primary domain. A "
 "structure is dedicated to this in |gf|."
 msgstr ""
-"``model`` または ``workspace`` は第2領域を宣言しなければならないmodelまたはworkspaceで、 "
-"``domain_name`` はメッシュ領域と積分法とともにこの領域を識別する文字列です。積分法を ``mim`` 、メッシュ領域を "
+"``model`` または ``workspace`` は第2領域を宣言しなければならないmodelまたはworkspaceで， "
+"``domain_name`` はメッシュ領域と積分法とともにこの領域を識別する文字列です．積分法を ``mim`` ，メッシュ領域を "
 "``region`` "
-"と呼びます。これらの標準的な第2領域では、第1領域の各要素について領域全体で積分が行われることに着目してください。第1領域の要素に関して必要な要素への積分を制限する特定の第2領域を実装することに着目してください。|gf|"
-" の中の構造体はこれ専用です。"
+"と呼びます．これらの標準的な第2領域では，第1領域の各要素について領域全体で積分が行われることに着目してください．第1領域の要素に関して必要な要素への積分を制限する特定の第2領域を実装することに着目してください．|gf|"
+" の中の構造体はこれ専用です．"
 
 #: ../source/userdoc/gasm_high.rst:868
 msgid ""
@@ -2161,28 +2161,28 @@ msgid ""
 "``add_linear_twodomain_term``, ``add_nonlinear_twodomain_term`` or "
 "``add_twodomain_source_term`` functions::"
 msgstr ""
-"第2領域が宣言されると、現在の領域と第2領域の直接的な生成物にGWFLをアセンブルし、 ``add_expression`` "
-"メソッドに次の関数を使用して、第2領域の名前を追加する必要があると指定できます。 ``add_linear_twodomain_term`` 、 "
-"``add_nonlinear_twodomain_term`` または ``add_twodomain_source_term`` の関数となります。"
+"第2領域が宣言されると，現在の領域と第2領域の直接的な生成物にGWFLをアセンブルし， ``add_expression`` "
+"メソッドに次の関数を使用して，第2領域の名前を追加する必要があると指定できます． ``add_linear_twodomain_term`` ， "
+"``add_nonlinear_twodomain_term`` または ``add_twodomain_source_term`` の関数となります．"
 
 #: ../source/userdoc/gasm_high.rst:875
 msgid ""
 "For the utilisation with the Python/Scilab/Octave/Matlab interface, see the "
 "documentation on ``gf_asm`` command and the ``model`` object."
 msgstr ""
-"Python / Scilab / Octave / Matlabインタフェースを利用するには、 ``gf_asm`` コマンドと ``model`` "
-"オブジェクトに関するドキュメントを参照してください。"
+"Python / Scilab / Octave / Matlabインタフェースを利用するには， ``gf_asm`` コマンドと ``model`` "
+"オブジェクトに関するドキュメントを参照してください．"
 
 #: ../source/userdoc/gasm_high.rst:878
 msgid ""
 "Inside an expression of GWFL, one can refer to the unit normal vector to a "
 "boundary, to the current position or to the value of a variable thanks to "
 "the expressions::"
-msgstr "GWFLの表現中で、式により、境界への単位法線ベクトル、変数の現在の位置または値を参照することができます。"
+msgstr "GWFLの表現中で，式により，境界への単位法線ベクトル，変数の現在の位置または値を参照することができます．"
 
 #: ../source/userdoc/gasm_high.rst:891
 msgid "For instance, a term like"
-msgstr "たとえば、"
+msgstr "たとえば，"
 
 #: ../source/userdoc/gasm_high.rst:893
 msgid "\\int_{\\Omega_1}\\int_{\\Omega_1}e^{-\\|x-y\\|}u(x)u(y)dydx,"
@@ -2190,7 +2190,7 @@ msgstr "\\int_{\\Omega_1}\\int_{\\Omega_1}e^{-\\|x-y\\|}u(x)u(y)dydx,"
 
 #: ../source/userdoc/gasm_high.rst:897
 msgid "would correspond to the following weak form language expression::"
-msgstr "は次の弱形式言語に対応します。"
+msgstr "は次の弱形式言語に対応します．"
 
 #: ../source/userdoc/gasm_high.rst:905
 msgid "Elementary transformations"
@@ -2206,15 +2206,15 @@ msgid ""
 "local projection of a finite element on a lower level element to perform a "
 "reduction such as the one used in MITC elements."
 msgstr ""
-"基本変換は、要素水準で局所自由度に適用される要素に依存する可能性のある行列によって与えられる形状関数の線形変換です。基本変換の定義の例はファイル "
+"基本変換は，要素水準で局所自由度に適用される要素に依存する可能性のある行列によって与えられる形状関数の線形変換です．基本変換の定義の例はファイル "
 ":file:`src/getfem_linearized_plates.cc` "
-"にあります。これは、例えば、MITC要素で使用されるような縮小を実行するために、より低い水準の要素上の有限要素の局所射影を定義することを目的とします。"
+"にあります．これは，例えば，MITC要素で使用されるような縮小を実行するために，より低い水準の要素上の有限要素の局所射影を定義することを目的とします．"
 
 #: ../source/userdoc/gasm_high.rst:915
 msgid ""
 "Once a transformation is defined, it can be added to the model/workspace "
 "with the method::"
-msgstr "変換が定義されると、model/workspaceに次のメソッドを追加することができます。"
+msgstr "変換が定義されると，model/workspaceに次のメソッドを追加することができます．"
 
 #: ../source/userdoc/gasm_high.rst:920
 msgid ""
@@ -2223,7 +2223,7 @@ msgid ""
 "model/workspace, it is possible to use the following expressions in GWFL::"
 msgstr ""
 "ここで ``pelementary_transformation`` は ``virtual_elementary_transformation`` "
-"から派生したオブジェクトへのポインタです。model/workspaceに追加されると、GWFLで次の式を使用することができます。"
+"から派生したオブジェクトへのポインタです．model/workspaceに追加されると，GWFLで次の式を使用することができます．"
 
 #: ../source/userdoc/gasm_high.rst:931
 msgid ""
@@ -2233,8 +2233,8 @@ msgid ""
 "omitted, by default, the transformation is from the fem of the first "
 "variable to itself."
 msgstr ""
-"ここで、 ``u`` はmodel/workspaceのFEM変数の1つであり、 ``dest`` "
-"はオプションのパラメータであり、モデルの変数またはデータ名であり、変換のターゲットfemに対応します。省略した場合、デフォルトでは、最初の変数のfemからそれ自体への変換が行われます。"
+"ここで， ``u`` はmodel/workspaceのFEM変数の1つであり， ``dest`` "
+"はオプションのパラメータであり，モデルの変数またはデータ名であり，変換のターゲットfemに対応します．省略した場合，デフォルトでは，最初の変数のfemからそれ自体への変換が行われます．"
 
 #: ../source/userdoc/gasm_high.rst:933
 msgid ""
@@ -2243,8 +2243,8 @@ msgid ""
 "plate element. It can be added thanks to the function (defined in "
 ":file:`src/getfem/getfem_linearized_plates.h`)::"
 msgstr ""
-"典型的な変換はMITCプレート要素の成分である二次元要素に対する回転RT0要素上への投影のための変換です。これは関数( "
-":file:`src/getfem/getfem_linearized_plates.h` に定義されています)のおかげで追加できます。"
+"典型的な変換はMITCプレート要素の成分である二次元要素に対する回転RT0要素上への投影のための変換です．これは関数( "
+":file:`src/getfem/getfem_linearized_plates.h` に定義されています)のおかげで追加できます．"
 
 #: ../source/userdoc/gasm_high.rst:937
 msgid ""
@@ -2256,9 +2256,9 @@ msgid ""
 "different transformations can be added with the functions (defined in "
 ":file:`src/getfem/getfem_HHO.h`)::"
 msgstr ""
-"Hybrid High-Order法(HHO法の詳細については、 :ref:`ud-hho` "
-"を参照してください。)に使用できる変換は他にもいくつかあります。これらの変換は、変数または変数自体の勾配の再構成に対応し、HHO法は、要素の内部およびその面上で分離した離散化を有します。次の関数を使用して、さまざまな変換を追加できます("
-" :file:`src/getfem/getfem_HHO.h` で定義されています)。"
+"Hybrid High-Order法(HHO法の詳細については， :ref:`ud-hho` "
+"を参照してください．)に使用できる変換は他にもいくつかあります．これらの変換は，変数または変数自体の勾配の再構成に対応し，HHO法は，要素の内部およびその面上で分離した離散化を有します．次の関数を使用して，さまざまな変換を追加できます("
+" :file:`src/getfem/getfem_HHO.h` で定義されています)．"
 
 #: ../source/userdoc/gasm_high.rst:952
 msgid "Xfem discontinuity evaluation (with mesh_fem_level_set)"
@@ -2273,8 +2273,8 @@ msgid ""
 "a FEM variable::"
 msgstr ""
 "レベル集合（ fem_level_set または mesh_fem_level_set "
-"オブジェクトを使用）によって有限要素法を切断する場合、変数の不連続ジャンプ、または勾配または平均値のジャンプを組み込むのが面白いことがよくあります。そのために、GWFLに、"
-" ``u`` というFEM変数を用意しています。"
+"オブジェクトを使用）によって有限要素法を切断する場合，変数の不連続ジャンプ，または勾配または平均値のジャンプを組み込むのが面白いことがよくあります．そのために，GWFLに，"
+" ``u`` というFEM変数を用意しています．"
 
 #: ../source/userdoc/gasm_high.rst:974
 msgid ""
@@ -2283,12 +2283,12 @@ msgid ""
 " of a considered level-set function (using a ``mesh_im_level_set`` object). "
 "For instance, a jump in the variable ``u`` will be given by::"
 msgstr ""
-"これは、連続性の2つのゾーンを分離する曲線/表面、すなわち、考慮されるレベル集合関数のゼロレベル集合（ ``mesh_im_level_set`` "
-"オブジェクトを使用する）で評価（積分）が行われる場合にのみ利用可能です。例えば、 ``u`` 変数のジャンプは次のようになります。"
+"これは，連続性の2つのゾーンを分離する曲線/表面，すなわち，考慮されるレベル集合関数のゼロレベル集合（ ``mesh_im_level_set`` "
+"オブジェクトを使用する）で評価（積分）が行われる場合にのみ利用可能です．例えば， ``u`` 変数のジャンプは次のようになります．"
 
 #: ../source/userdoc/gasm_high.rst:978
 msgid "and the average by::"
-msgstr "平均値は次のようになります。"
+msgstr "平均値は次のようになります．"
 
 #: ../source/userdoc/gasm_high.rst:982
 msgid ""
@@ -2296,8 +2296,8 @@ msgid ""
 "corresponding level-set function is positive and ``Xfem_minus(u)`` the value"
 " of ``u`` on the side where the level-set function is negative."
 msgstr ""
-"値 ``Xfem_plus(u)`` は、対応するlevel-set関数が正である側の ``u`` の値であり、level-set関数が負である側の "
-"``Xfem_minus(u)`` の値です。"
+"値 ``Xfem_plus(u)`` は，対応するlevel-set関数が正である側の ``u`` の値であり，level-set関数が負である側の "
+"``Xfem_minus(u)`` の値です．"
 
 #: ../source/userdoc/gasm_high.rst:984
 msgid ""
@@ -2305,8 +2305,8 @@ msgid ""
 "``mesh_im_level_set`` object, ``Normal`` stands for the normal unit vector "
 "to the level-set in the direction of the gradient of the level-set function."
 msgstr ""
-"また、 ``mesh_im_level_set`` オブジェクトを持つ level-set上で積分する場合、  ``Normal`` は level-"
-"set 関数の勾配方向に設定されるレベルに対する法線単位ベクトルを表します。"
+"また， ``mesh_im_level_set`` オブジェクトを持つ level-set上で積分する場合，  ``Normal`` は level-"
+"set 関数の勾配方向に設定されるレベルに対する法線単位ベクトルを表します．"
 
 #: ../source/userdoc/gasm_high.rst:987
 msgid "Storage of sub-expressions in a getfem::im_data object during assembly"
@@ -2320,13 +2320,13 @@ msgid ""
 " functions which allows not to compute twice the same expression."
 msgstr ""
 "getfem::im_data "
-"オブジェクトに応じてベクトルに格納することができます。たとえば、この計算を別の構築で使用するために、構築計算の一部にすることができます。これは、同じ式を2回計算しないようにするための補間関数の代替方法です。"
+"オブジェクトに応じてベクトルに格納することができます．たとえば，この計算を別の構築で使用するために，構築計算の一部にすることができます．これは，同じ式を2回計算しないようにするための補間関数の代替方法です．"
 
 #: ../source/userdoc/gasm_high.rst:991
 msgid ""
 "The method to add such an assignment in the assembly is the following for a "
 "model or a ga_workspace::"
-msgstr "このような割り当てを構築に追加する方法は、 model または ga_workspace です。"
+msgstr "このような割り当てを構築に追加する方法は， model または ga_workspace です．"
 
 #: ../source/userdoc/gasm_high.rst:999
 msgid ""
@@ -2341,16 +2341,16 @@ msgid ""
 "performed for the tangent system). If before = 0 (default), the assignement "
 "is done after the assembly terms."
 msgstr ""
-"構築時に評価される式 `expr` を追加し、im_data型でなければならないデータ `dataname` に代入します。 `order` "
-"は、この割り当てが行われなければならない構築の次数を表します（ポテンシャル（0）、弱形式（1）または接線のシステム（2）または次数ごと（-1））。 "
+"構築時に評価される式 `expr` を追加し，im_data型でなければならないデータ `dataname` に代入します． `order` "
+"は，この割り当てが行われなければならない構築の次数を表します（ポテンシャル（0），弱形式（1）または接線のシステム（2）または次数ごと（-1））． "
 "before = 1 "
-"の場合、代入は他の構築項の計算の前に実行されるため、データを構築の残りの部分で中間結果として使用することができます（データとしてはまだ考慮していることに注意してください、接線系の式の微分は行われません）。before"
-" = 0（デフォルト）の場合、構築の項の後に割り当てが行われます。"
+"の場合，代入は他の構築項の計算の前に実行されるため，データを構築の残りの部分で中間結果として使用することができます（データとしてはまだ考慮していることに注意してください，接線系の式の微分は行われません）．before"
+" = 0（デフォルト）の場合，構築の項の後に割り当てが行われます．"
 
 #: ../source/userdoc/gasm_high.rst:1011
 msgid "Additionally, In a model, the method::"
-msgstr "さらに、modelでは、次のメソッドがあります。"
+msgstr "さらに，modelでは，次のメソッドがあります．"
 
 #: ../source/userdoc/gasm_high.rst:1015
 msgid "allows to cancel all the assembly assignments previously added."
-msgstr "これにより、以前に追加された構築割り当てをすべてキャンセルすることができます。"
+msgstr "これにより，以前に追加された構築割り当てをすべてキャンセルすることができます．"

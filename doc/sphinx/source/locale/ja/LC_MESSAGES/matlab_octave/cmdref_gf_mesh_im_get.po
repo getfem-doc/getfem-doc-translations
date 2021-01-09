@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-08 01:17+0000\n"
+"POT-Creation-Date: 2021-01-09 01:20+0000\n"
 "PO-Revision-Date: 2020-04-26 01:50+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgstr "**説明 :**"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:27
 msgid "General function extracting information from mesh_im objects."
-msgstr "mesh_imオブジェクトから情報を抽出する汎用的な関数。"
+msgstr "mesh_imオブジェクトから情報を抽出する汎用的な関数．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:30
 msgid "**Command list :**"
@@ -47,7 +47,7 @@ msgstr "``{I, CV2I} = gf_mesh_im_get(mesh_im MI, 'integ'[, mat CVids])``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:36
 msgid "Return a list of integration methods used by the mesh_im."
-msgstr "mesh_imで使用される積分法のリストを返します。"
+msgstr "mesh_imで使用される積分法のリストを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:38
 msgid ""
@@ -56,14 +56,14 @@ msgid ""
 "listed in `CVids`, the index of its correspounding integration method in "
 "`I`."
 msgstr ""
-"`I` は `CVids` で与えられた凸包にあるすべてのintegオブジェクトの配列です。 `CV2I` が出力引数として与えられた場合、 "
-"`CVids` に列挙されている各凸包に対し、 `I` における相関積分法のインデックスを含みます。"
+"`I` は `CVids` で与えられた凸包にあるすべてのintegオブジェクトの配列です． `CV2I` が出力引数として与えられた場合， "
+"`CVids` に列挙されている各凸包に対し， `I` における相関積分法のインデックスを含みます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:43
 msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have any "
 "integration method have their correspounding entry in `CV2I` set to -1."
-msgstr "メッシュの一部ではない凸包、または積分法を持たない凸包については、 `CV2I` の対応エントリを-1に設定します。"
+msgstr "メッシュの一部ではない凸包，または積分法を持たない凸包については， `CV2I` の対応エントリを-1に設定します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:47
 msgid "Example::"
@@ -75,11 +75,11 @@ msgstr "``CVids = gf_mesh_im_get(mesh_im MI, 'convex_index')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:62
 msgid "Return the list of convexes who have a integration method."
-msgstr "積分法がある凸包のリストを返します。"
+msgstr "積分法がある凸包のリストを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:64
 msgid "Convexes who have the dummy IM_NONE method are not listed."
-msgstr "ダミーの IM_NONE メソッドを持つ凸包は表示されません。"
+msgstr "ダミーの IM_NONE メソッドを持つ凸包は表示されません．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:67
 msgid "``M = gf_mesh_im_get(mesh_im MI, 'eltm', eltm em, int cv [, int f])``"
@@ -88,7 +88,7 @@ msgstr "``M = gf_mesh_im_get(mesh_im MI, 'eltm', eltm em, int cv [, int f])``"
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:69
 msgid ""
 "Return the elementary matrix (or tensor) integrated on the convex `cv`."
-msgstr "凸包の `cv` 上で積分された基本行列(またはテンソル)を返します。"
+msgstr "凸包の `cv` 上で積分された基本行列(またはテンソル)を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:71
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:86
@@ -102,8 +102,8 @@ msgid ""
 "the argument `f` is given, then the elementary tensor is integrated on the "
 "face `f` of `cv` instead of the whole convex."
 msgstr ""
-" `em` の作成に使用する有限要素法が、要素 `cv` に割り当てられた有限要素法と互換性があることを確認してください ! "
-"これは関数によってチェックされません。引数 `f` が与えられた場合、基本テンソルは、全体の凸包ではなく、 `cv` の面 `f` 上で積分されます。"
+" `em` の作成に使用する有限要素法が，要素 `cv` に割り当てられた有限要素法と互換性があることを確認してください ! "
+"これは関数によってチェックされません．引数 `f` が与えられた場合，基本テンソルは，全体の凸包ではなく， `cv` の面 `f` 上で積分されます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:79
 msgid "``Ip = gf_mesh_im_get(mesh_im MI, 'im_nodes'[, mat CVids])``"
@@ -111,20 +111,20 @@ msgstr "``Ip = gf_mesh_im_get(mesh_im MI, 'im_nodes'[, mat CVids])``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:81
 msgid "Return the coordinates of the integration points, with their weights."
-msgstr "積分点の座標とその重みを返します。"
+msgstr "積分点の座標とその重みを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:83
 msgid ""
 "`CVids` may be a list of convexes, or a list of convex faces, such as "
 "returned by gf_mesh_get(mesh M, 'region')"
-msgstr "`CVids` は gf_mesh_get(mesh M, 'region') によって返される凸包のリストまたは凸包面のリストです。"
+msgstr "`CVids` は gf_mesh_get(mesh M, 'region') によって返される凸包のリストまたは凸包面のリストです．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:88
 msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have an "
 "approximate integration method do not have their corresponding entry (this "
 "has no meaning for exact integration methods!)."
-msgstr "メッシュの一部でない凸包、または近似積分法を持たない凸包には、対応するエントリ(これは、厳密な積分法には意味がありません!)がありません。"
+msgstr "メッシュの一部でない凸包，または近似積分法を持たない凸包には，対応するエントリ(これは，厳密な積分法には意味がありません!)がありません．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:94
 msgid "``gf_mesh_im_get(mesh_im MI, 'save',string filename[, 'with mesh'])``"
@@ -133,7 +133,7 @@ msgstr "``gf_mesh_im_get(mesh_im MI, 'save',string filename[, 'with mesh'])``"
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:96
 msgid ""
 "Saves a mesh_im in a text file (and optionally its linked mesh object)."
-msgstr "mesh_imをテキストファイル(とオプションでリンクされたメッシュオブジェクト)に保存します。"
+msgstr "mesh_imをテキストファイル(とオプションでリンクされたメッシュオブジェクト)に保存します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:99
 msgid "``gf_mesh_im_get(mesh_im MI, 'char'[,'with mesh'])``"
@@ -141,12 +141,12 @@ msgstr "``gf_mesh_im_get(mesh_im MI, 'char'[,'with mesh'])``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:101
 msgid "Output a string description of the mesh_im."
-msgstr "mesh_imの string description を出力します。"
+msgstr "mesh_imの string description を出力します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:103
 msgid ""
 "By default, it does not include the description of the linked mesh object."
-msgstr "既定値では、リンクされたmeshオブジェクトの説明は含まれません。"
+msgstr "既定値では，リンクされたmeshオブジェクトの説明は含まれません．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:107
 msgid "``gf_mesh_im_get(mesh_im MI, 'display')``"
@@ -154,7 +154,7 @@ msgstr "``gf_mesh_im_get(mesh_im MI, 'display')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:109
 msgid "displays a short summary for a mesh_im object."
-msgstr "mesh_imオブジェクトの簡単な概要が表示されます。"
+msgstr "mesh_imオブジェクトの簡単な概要が表示されます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:112
 msgid "``m = gf_mesh_im_get(mesh_im MI, 'linked mesh')``"
@@ -162,7 +162,7 @@ msgstr "``m = gf_mesh_im_get(mesh_im MI, 'linked mesh')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:114
 msgid "Returns a reference to the mesh object linked to `mim`."
-msgstr "`mim` にリンクされているmeshオブジェクトへの参照を返します。"
+msgstr "`mim` にリンクされているmeshオブジェクトへの参照を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:117
 msgid "``z = gf_mesh_im_get(mesh_im MI, 'memsize')``"
@@ -170,8 +170,8 @@ msgstr "``z = gf_mesh_im_get(mesh_im MI, 'memsize')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:119
 msgid "Return the amount of memory (in bytes) used by the mesh_im object."
-msgstr "mesh_im オブジェクトが使用するメモリ量(バイト単位)を返します。"
+msgstr "mesh_im オブジェクトが使用するメモリ量(バイト単位)を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:121
 msgid "The result does not take into account the linked mesh object."
-msgstr "この結果では、リンクされたメッシュオブジェクトは考慮されません。"
+msgstr "この結果では，リンクされたメッシュオブジェクトは考慮されません．"

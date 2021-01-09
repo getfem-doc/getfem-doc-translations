@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2018
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-08 01:17+0000\n"
+"POT-Creation-Date: 2021-01-09 01:20+0000\n"
 "PO-Revision-Date: 2018-07-16 07:07+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2018\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,8 +31,8 @@ msgid ""
 "library. Please see the `GMM++ user documentation "
 "<http://getfem.org/gmm.html>`_."
 msgstr ""
-"|gf| で使用される線形代数ライブラリは |gmm| で、今は別のライブラリとして独立しています。 `GMM++ユーザドキュメント "
-"<http://getfem.org/gmm.html>`_ を参照してください。"
+"|gf| で使用される線形代数ライブラリは |gmm| で，今は別のライブラリとして独立しています． `GMM++ユーザドキュメント "
+"<http://getfem.org/gmm.html>`_ を参照してください．"
 
 #: ../source/userdoc/linalg.rst:16
 msgid ""
@@ -44,8 +44,8 @@ msgid ""
 msgstr ""
 "|gf| 内にはバージョン3.0の |sLU| ( `SuperLU のウェブサイト "
 "<http://crd.lbl.gov/~xiaoye/SuperLU>`_ "
-"を確認してください)が含まれているので（リリース1.7以降）、直接的な疎ソルバーがそのまま利用可能です。ただし、 ``./configure`` "
-"ファイルのオプションでは、インストールされているバージョンを使用するために |sLU| のインクルードバージョンを無効にすることができます。"
+"を確認してください)が含まれているので（リリース1.7以降），直接的な疎ソルバーがそのまま利用可能です．ただし， ``./configure`` "
+"ファイルのオプションでは，インストールされているバージョンを使用するために |sLU| のインクルードバージョンを無効にすることができます．"
 
 #: ../source/userdoc/linalg.rst:22
 msgid ""
@@ -56,8 +56,8 @@ msgid ""
 msgstr ""
 "|mumps| に対する小さなインターフェースも提供されています( `MUMPSのウェブサイト1 <http://graal.ens-"
 "lyon.fr/MUMPS>`_ もしくは `MUMPSのウェブサイト2 <http://www.enseeiht.fr/apo/MUMPS>`_ "
-"を確認してください)。ファイル :file:`gmm/gmm_MUMPS_interface.h` を参照してください。 |mumps| "
-"を使用するには、configureシェルにいくつかのオプションを指定する必要があります ::"
+"を確認してください)．ファイル :file:`gmm/gmm_MUMPS_interface.h` を参照してください． |mumps| "
+"を使用するには，configureシェルにいくつかのオプションを指定する必要があります ::"
 
 #: ../source/userdoc/linalg.rst:31
 msgid ""
@@ -68,16 +68,16 @@ msgid ""
 "necessary to add the option ``--with-mumps=\"-lsmumps_seq -ldmumps_seq "
 "-lcmumps_seq -lzmumps_seq\"``."
 msgstr ""
-"あるいは、オプション ``--enable-mumps`` "
-"を指定することで、インストールされているMUMPSライブラリを検索します。あなたのシステム（特にDebianとUbuntu）に直列版と並列版の両方がインストールされている場合、デフォルトのバージョンは並列版になります。直列版を選択するには、オプション"
+"あるいは，オプション ``--enable-mumps`` "
+"を指定することで，インストールされているMUMPSライブラリを検索します．あなたのシステム（特にDebianとUbuntu）に直列版と並列版の両方がインストールされている場合，デフォルトのバージョンは並列版になります．直列版を選択するには，オプション"
 " ``--with-mumps=\"-lsmumps_seq -ldmumps_seq -lcmumps_seq -lzmumps_seq\"`` "
-"を追加する必要があります。"
+"を追加する必要があります．"
 
 #: ../source/userdoc/linalg.rst:33
 msgid ""
 "For instance if you want to use the sequential version of |mumps| with "
 "double and complex double::"
-msgstr "例えば、 |mumps| の直列版を倍精度と倍精度複素数で使用したい場合以下のようにします。"
+msgstr "例えば， |mumps| の直列版を倍精度と倍精度複素数で使用したい場合以下のようにします．"
 
 #: ../source/userdoc/linalg.rst:40
 msgid ""
@@ -88,9 +88,9 @@ msgid ""
 "with the intel ``ifort`` compiler, it is ``-L/opt/icc8.0/lib -lifport "
 "-lifcoremt -limf -lm -lcxa -lunwind -lpthread``)"
 msgstr ""
-"ここで、 ``...F90libs...`` は、 |mumps| "
-"をコンパイルするために使用されるFortranコンパイラのライブラリです（この部分は使用されているFortran 90コンパイラに大きく依存しますが、 "
+"ここで， ``...F90libs...`` は， |mumps| "
+"をコンパイルするために使用されるFortranコンパイラのライブラリです（この部分は使用されているFortran 90コンパイラに大きく依存しますが， "
 "``./configure`` スクリプトではマシン上のデフォルトのFortran "
-"90コンパイラに関連するオプションを捜し出して指定する必要があります。例えば、 ``ifort`` コンパイラでは、 "
+"90コンパイラに関連するオプションを捜し出して指定する必要があります．例えば， ``ifort`` コンパイラでは， "
 "``-L/opt/icc8.0/lib -lifport -lifcoremt -limf -lm -lcxa -lunwind -lpthread``"
-" です。）。"
+" です．）．"

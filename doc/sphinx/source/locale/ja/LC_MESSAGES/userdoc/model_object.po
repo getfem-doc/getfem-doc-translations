@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-08 01:17+0000\n"
+"POT-Creation-Date: 2021-01-09 01:20+0000\n"
 "PO-Revision-Date: 2018-07-16 07:07+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,14 +38,14 @@ msgid ""
 " one and complex one."
 msgstr ""
 ":file:`getfem/getfem_models.h` で定義されている |mo| "
-"オブジェクトの目的は、微分方程式モデルをグローバルに記述することです。主に2つのリストがあります：変数のリスト（ |mf| "
-"オブジェクトに関連するかどうか）とデータ（これも |mf| オブジェクトに関連するかどうか）と項のリストです。 |mo| "
-"の役割はモジュールを調整しそれらに式の線形システムを生成させることです。モデルが線形の場合、これは単純に対応するdofの式の線形システムになります。モデルが非線形の場合、これは接線系になります。"
-" |mo| オブジェクトは実数と複素数の2つのバージョンがあります。"
+"オブジェクトの目的は，微分方程式モデルをグローバルに記述することです．主に2つのリストがあります：変数のリスト（ |mf| "
+"オブジェクトに関連するかどうか）とデータ（これも |mf| オブジェクトに関連するかどうか）と項のリストです． |mo| "
+"の役割はモジュールを調整しそれらに式の線形システムを生成させることです．モデルが線形の場合，これは単純に対応するdofの式の線形システムになります．モデルが非線形の場合，これは接線系になります．"
+" |mo| オブジェクトは実数と複素数の2つのバージョンがあります．"
 
 #: ../source/userdoc/model_object.rst:23
 msgid "The declaration of a model object is done by::"
-msgstr "modelオブジェクトは次ように宣言します。"
+msgstr "modelオブジェクトは次ように宣言します．"
 
 #: ../source/userdoc/model_object.rst:27
 msgid ""
@@ -53,7 +53,7 @@ msgid ""
 "model deals with complex number or real numbers. The default is false for a "
 "model dealing with real numbers."
 msgstr ""
-"コンストラクタのパラメータは、モデルが複素数を扱うか実数を扱うかを決定するブール値です。デフォルトはfalseで実数を扱うモデルになります。"
+"コンストラクタのパラメータは，モデルが複素数を扱うか実数を扱うかを決定するブール値です．デフォルトはfalseで実数を扱うモデルになります．"
 
 #: ../source/userdoc/model_object.rst:35
 msgid "The (tangent) linear system"
@@ -77,10 +77,10 @@ msgid ""
 "fixed size, or they can depend on a finite element method (be the d.o.f. of "
 "a finite element method)."
 msgstr ""
-"モデルにはさまざまな種類の変数/データがあります。変数はモデルの未知数です。これらは、モデルによって構築された（接線）線形システムを解くことによって（汎用的に）計算されます。一般に、モデルにはいくつかの変数があります。各変数は一定の大きさ（自由度の数）を持ち、さまざまな変数は英数字順にソートされ、グローバルな未知数（図"
-" :ref:`ud-fig-syslin` の :math:`U` ）を形成します。各変数はグローバルシステム内のこの変数に対応する自由度指標を表す "
+"モデルにはさまざまな種類の変数/データがあります．変数はモデルの未知数です．これらは，モデルによって構築された（接線）線形システムを解くことによって（汎用的に）計算されます．一般に，モデルにはいくつかの変数があります．各変数は一定の大きさ（自由度の数）を持ち，さまざまな変数は英数字順にソートされ，グローバルな未知数（図"
+" :ref:`ud-fig-syslin` の :math:`U` ）を形成します．各変数はグローバルシステム内のこの変数に対応する自由度指標を表す "
 ":math:`I = [n_1, n_2]` "
-"という区間に関連付けられます。また、モデルはいくつかのデータを（変数と同じフォーマットで）保存します。データと変数の違いは、データがモデルの未知数ではないということです。データの値は提供する必要があります。いくつかの（非線形モデル）の場合によっては、いくつかの変数はある種のデータとして考えることができます。変数とデータは2種類あります。それらは固定サイズを有することができ、または有限積分法（有限積分法の自由度）に依存することができます。"
+"という区間に関連付けられます．また，モデルはいくつかのデータを（変数と同じフォーマットで）保存します．データと変数の違いは，データがモデルの未知数ではないということです．データの値は提供する必要があります．いくつかの（非線形モデル）の場合によっては，いくつかの変数はある種のデータとして考えることができます．変数とデータは2種類あります．それらは固定サイズを有することができ，または有限積分法（有限積分法の自由度）に依存することができます．"
 
 #: ../source/userdoc/model_object.rst:52
 msgid ""
@@ -92,26 +92,26 @@ msgid ""
 "(:math:`R_{X,Y}, R_{X,V}, R_{W,V}, \\cdots`). This different contributions "
 "will be given by the different bricks added to the model."
 msgstr ""
-"例えば、図 :ref:`ud-fig-syslin` の場合モデルには4つの変数、すなわち、 :math:`X, Y, V` と :math:`W` "
-"があります。modelオブジェクトの役割は、線形システムを構築すること、すなわち、各変数に対応する部分行列（ :math:`R_{X,X}, "
+"例えば，図 :ref:`ud-fig-syslin` の場合モデルには4つの変数，すなわち， :math:`X, Y, V` と :math:`W` "
+"があります．modelオブジェクトの役割は，線形システムを構築すること，すなわち，各変数に対応する部分行列（ :math:`R_{X,X}, "
 "R_{Y,Y}, R_{V,V}`, と :math:`R_{W,W}`）を満たすことと2つの変数の間の項（ :math:`R_{X,Y}, "
-"R_{X,V}, R_{W,V}, \\cdots` ）を結合することです。これははモデルに追加された様々なブリックによって構築されます。"
+"R_{X,V}, R_{W,V}, \\cdots` ）を結合することです．これははモデルに追加された様々なブリックによって構築されます．"
 
 #: ../source/userdoc/model_object.rst:59
 msgid "The main useful methods on a |mo| object are"
-msgstr "|mo| オブジェクトの主な便利なメソッドは以下の通りです。"
+msgstr "|mo| オブジェクトの主な便利なメソッドは以下の通りです．"
 
 #: ../source/userdoc/model_object.rst:63
 msgid ""
 "A boolean which says if the model deals with real or complex unknowns and "
 "data."
-msgstr "モデルが実数または複素数の未知数とデータを扱うかどうかを示すブール値です。"
+msgstr "モデルが実数または複素数の未知数とデータを扱うかどうかを示すブール値です．"
 
 #: ../source/userdoc/model_object.rst:67
 msgid ""
 "Add a variable of fixed size. ``name`` is a string which designate the "
 "variable. ``niter`` is the number of copy of the variable."
-msgstr "固定サイズの変数を追加します。 ``name`` は変数を指定する文字列です。 ``niter`` は変数のコピー数です。"
+msgstr "固定サイズの変数を追加します． ``name`` は変数を指定する文字列です． ``niter`` は変数のコピー数です．"
 
 #: ../source/userdoc/model_object.rst:72
 msgid ""
@@ -119,14 +119,14 @@ msgid ""
 "variable. ``sizes`` is a vector of dimension for matrix or tensor fixed size"
 " variables. ``niter`` is the number of copy of the variable."
 msgstr ""
-"固定サイズの変数を追加します。 ``name`` は変数を指定する文字列です。 ``sizes`` "
-"は行列やテンソルの固定サイズ変数の次元のベクトルです。 ``niter`` は変数のコピー数です。"
+"固定サイズの変数を追加します． ``name`` は変数を指定する文字列です． ``sizes`` "
+"は行列やテンソルの固定サイズ変数の次元のベクトルです． ``niter`` は変数のコピー数です．"
 
 #: ../source/userdoc/model_object.rst:78
 msgid ""
 "Add a data of fixed size. ``name`` is a string which designate the data. "
 "``niter`` is the number of copy of the data."
-msgstr "固定サイズのデータを追加します。 ``name`` はデータを指定する文字列です。 ``niter`` はデータのコピー数です。"
+msgstr "固定サイズのデータを追加します． ``name`` はデータを指定する文字列です． ``niter`` はデータのコピー数です．"
 
 #: ../source/userdoc/model_object.rst:83
 msgid ""
@@ -134,20 +134,20 @@ msgid ""
 "``sizes`` is a vector of dimension for matrix or tensor fixed size "
 "variables. ``niter`` is the number of copy of the data."
 msgstr ""
-"固定サイズのデータを追加します。 ``name`` はデータを指定する文字列です。 ``sizes`` "
-"は行列やテンソルの固定サイズ変数の次元のベクトルです。 ``niter`` はデータのコピー数です。"
+"固定サイズのデータを追加します． ``name`` はデータを指定する文字列です． ``sizes`` "
+"は行列やテンソルの固定サイズ変数の次元のベクトルです． ``niter`` はデータのコピー数です．"
 
 #: ../source/userdoc/model_object.rst:89
 msgid ""
 "Add a data of fixed size initialized with the given vector ``V``. ``name`` "
 "is a string which designate the data."
-msgstr "与えられたベクトル ``V`` で初期化された固定サイズのデータを追加します。 ``name`` はデータを指定する文字列です。"
+msgstr "与えられたベクトル ``V`` で初期化された固定サイズのデータを追加します． ``name`` はデータを指定する文字列です．"
 
 #: ../source/userdoc/model_object.rst:94
 msgid ""
 "Add a data of size 1 initialized with the given scalar value ``e``. ``name``"
 " is a string which designate the data."
-msgstr "与えられたスカラー値 ``e`` で初期化されたサイズ1のデータを追加します。 ``name`` はデータを指定する文字列です。"
+msgstr "与えられたスカラー値 ``e`` で初期化されたサイズ1のデータを追加します． ``name`` はデータを指定する文字列です．"
 
 #: ../source/userdoc/model_object.rst:99
 msgid ""
@@ -155,7 +155,7 @@ msgid ""
 " a string which designate the variable. ``niter`` is the number of copy of "
 "the variable."
 msgstr ""
-"有限積分法 ``mf`` の自由度である変数を追加します。 ``name`` は変数を指定する文字列です。 ``niter`` は変数のコピー数です。"
+"有限積分法 ``mf`` の自由度である変数を追加します． ``name`` は変数を指定する文字列です． ``niter`` は変数のコピー数です．"
 
 #: ../source/userdoc/model_object.rst:105
 msgid ""
@@ -168,11 +168,11 @@ msgid ""
 "``mesh_fem_of_variable('name')`` allows to access to the "
 "``partial_mesh_fem`` built."
 msgstr ""
-"与えられた領域に特有な有限要素法 ``mf`` の自由度である変数を追加してください。( |gf| で ``mf`` "
-"を定義する標準的な方法は、ドメイン全体で定義することです。) ``name`` は、変数を指定する文字列です。 ``region`` "
-"は領域番号です。与えられた領域で形状関数がゼロでない自由度を選択します。内部的には ``partial_mesh_fem`` "
-"オブジェクトが使用されます。メソッド ``mesh_fem_of_variable('name')`` は、構築された "
-"``partial_mesh_fem`` へのアクセスを可能にします。"
+"与えられた領域に特有な有限要素法 ``mf`` の自由度である変数を追加してください．( |gf| で ``mf`` "
+"を定義する標準的な方法は，ドメイン全体で定義することです．) ``name`` は，変数を指定する文字列です． ``region`` "
+"は領域番号です．与えられた領域で形状関数がゼロでない自由度を選択します．内部的には ``partial_mesh_fem`` "
+"オブジェクトが使用されます．メソッド ``mesh_fem_of_variable('name')`` は，構築された "
+"``partial_mesh_fem`` へのアクセスを可能にします．"
 
 #: ../source/userdoc/model_object.rst:116
 msgid ""
@@ -180,7 +180,7 @@ msgid ""
 "string which designate the data. ``niter`` is the number of copy of the "
 "data."
 msgstr ""
-"有限積分法 ``mf`` の自由度数のデータ追加します。 ``name`` はデータを指定する文字列です。 ``niter`` はデータのコピー数です。"
+"有限積分法 ``mf`` の自由度数のデータ追加します． ``name`` はデータを指定する文字列です． ``niter`` はデータのコピー数です．"
 
 #: ../source/userdoc/model_object.rst:121
 msgid ""
@@ -188,8 +188,8 @@ msgid ""
 " the given vector ``V``. ``name`` is a string which designate the data. "
 "``niter`` is the number of copy of the data."
 msgstr ""
-"与えられたベクトル ``V`` で初期化された有限積分法 ``mf`` の自由度数のデータを追加します。 ``name`` "
-"はデータを指定する文字列です。 ``niter`` はデータのコピー数です。"
+"与えられたベクトル ``V`` で初期化された有限積分法 ``mf`` の自由度数のデータを追加します． ``name`` "
+"はデータを指定する文字列です． ``niter`` はデータのコピー数です．"
 
 #: ../source/userdoc/model_object.rst:127
 msgid ""
@@ -205,12 +205,12 @@ msgid ""
 "the number of copy of the variable. Note that for complex terms, only the "
 "real part is considered to filter the multiplier."
 msgstr ""
-"有限積分法 ``mf`` にリンクされ、第一変数 ``primal_name`` "
-"上の特定の制約（例えば、Dirichlet条件）のための乗数である特別な変数を追加します。最も重要なことは、線形独立の制約の集合だけを保持するために、 "
+"有限積分法 ``mf`` にリンクされ，第一変数 ``primal_name`` "
+"上の特定の制約（例えば，Dirichlet条件）のための乗数である特別な変数を追加します．最も重要なことは，線形独立の制約の集合だけを保持するために， "
 "``partial_mesh_fem`` "
-"オブジェクトにより自由度がフィルタリングされることです。これを確実にするために、乗数と原変数を結ぶ項を持つ項への呼び出しが行われ、独立した制約を抽出するための特別なアルゴリズムが呼び出されます。このアルゴリズムは、境界乗数に最適化されています（"
-" gmm::range_basis を参照）。体積の積に注意して使用してください。 ``niter`` "
-"は変数のコピー数です。複素数項については、実部のみが乗数をフィルタリングするとみなされることに留意してください。"
+"オブジェクトにより自由度がフィルタリングされることです．これを確実にするために，乗数と原変数を結ぶ項を持つ項への呼び出しが行われ，独立した制約を抽出するための特別なアルゴリズムが呼び出されます．このアルゴリズムは，境界乗数に最適化されています（"
+" gmm::range_basis を参照）．体積の積に注意して使用してください． ``niter`` "
+"は変数のコピー数です．複素数項については，実部のみが乗数をフィルタリングするとみなされることに留意してください．"
 
 #: ../source/userdoc/model_object.rst:141
 msgid ""
@@ -221,7 +221,7 @@ msgid ""
 "integration point."
 msgstr ""
 "``im_data`` "
-"オブジェクトimdの積分点に定義された変数を追加します。変数は、imdの次元に応じて、スカラー値、ベクトル値、またはテンソル値にすることができます。これにより、1つの積分点での変数のサイズを積分点の数で割った分だけ、モデルの自由度が増加します。"
+"オブジェクトimdの積分点に定義された変数を追加します．変数は，imdの次元に応じて，スカラー値，ベクトル値，またはテンソル値にすることができます．これにより，1つの積分点での変数のサイズを積分点の数で割った分だけ，モデルの自由度が増加します．"
 
 #: ../source/userdoc/model_object.rst:149
 msgid ""
@@ -232,7 +232,7 @@ msgid ""
 " to the model."
 msgstr ""
 "問題の線形化中に静的に圧縮される ``im_data`` オブジェクト ``imd`` "
-"の積分点で定義された変数を追加します。変数は、imdの次元に応じて、スカラー値、ベクトル値、またはテンソル値にすることができます。モデルに自由度は追加されません。"
+"の積分点で定義された変数を追加します．変数は，imdの次元に応じて，スカラー値，ベクトル値，またはテンソル値にすることができます．モデルに自由度は追加されません．"
 
 #: ../source/userdoc/model_object.rst:157
 msgid ""
@@ -242,47 +242,47 @@ msgid ""
 "imd."
 msgstr ""
 "``im_data`` オブジェクト ``imd`` のすべての積分点で定義された文字列 ``name`` "
-"で定義されたデータオブジェクトを追加します。データは、imdの次元に応じて、スカラー値、ベクトル値、またはテンソル値にすることができます。"
+"で定義されたデータオブジェクトを追加します．データは，imdの次元に応じて，スカラー値，ベクトル値，またはテンソル値にすることができます．"
 
 #: ../source/userdoc/model_object.rst:164
 msgid ""
 "Gives the access to the vector value of a variable or data. Real version."
-msgstr "変数またはデータのベクトル値にアクセスできます。実数バージョンです。"
+msgstr "変数またはデータのベクトル値にアクセスできます．実数バージョンです．"
 
 #: ../source/userdoc/model_object.rst:168
 msgid ""
 "Gives the access to the vector value of a variable or data. Complex version."
-msgstr "変数またはデータのベクトル値にアクセスできます。複素数バージョンです。"
+msgstr "変数またはデータのベクトル値にアクセスできます．複素数バージョンです．"
 
 #: ../source/userdoc/model_object.rst:172
 msgid ""
 "Gives a reference on the |mf| on which the variable is defined. Throw an "
 "exception if this is not a fem variable."
-msgstr "定義されている変数の |mf| のリファレンスが与えられます。有限積分法変数でない場合は例外を返します。"
+msgstr "定義されている変数の |mf| のリファレンスが与えられます．有限積分法変数でない場合は例外を返します．"
 
 #: ../source/userdoc/model_object.rst:177
 msgid ""
 "Gives the access to tangent matrix. Real version. A computation of the "
 "tangent system have to be done first."
-msgstr "接線行列へのアクセスが与えられます。実数バージョンです。最初に接線系の計算を行う必要があります。"
+msgstr "接線行列へのアクセスが与えられます．実数バージョンです．最初に接線系の計算を行う必要があります．"
 
 #: ../source/userdoc/model_object.rst:182
 msgid ""
 "Gives the access to tangent matrix. Complex version. A computation of the "
 "tangent system have to be done first."
-msgstr "接線行列へのアクセスが与えられます。複素数バージョンです。最初に接線系の計算を行う必要があります。"
+msgstr "接線行列へのアクセスが与えられます．複素数バージョンです．最初に接線系の計算を行う必要があります．"
 
 #: ../source/userdoc/model_object.rst:187
 msgid ""
 "Gives the access to right hand side vector of the linear system. real "
 "version. A computation of the tangent system have to be done first."
-msgstr "線形システムの右辺ベクトルへのアクセスが与えられます。実数バージョンです。最初に接線系の計算を行う必要があります。"
+msgstr "線形システムの右辺ベクトルへのアクセスが与えられます．実数バージョンです．最初に接線系の計算を行う必要があります．"
 
 #: ../source/userdoc/model_object.rst:192
 msgid ""
 "Gives the access to right hand side vector of the linear system. Complex "
 "version. A computation of the tangent system have to be done first."
-msgstr "線形システムの右辺ベクトルへのアクセスが与えられます。複素数バージョンです。最初に接線系の計算を行う必要があります。"
+msgstr "線形システムの右辺ベクトルへのアクセスが与えられます．複素数バージョンです．最初に接線系の計算を行う必要があります．"
 
 #: ../source/userdoc/model_object.rst:197
 msgid "The |br| object"
@@ -309,15 +309,15 @@ msgid ""
 "construction of a brick for such a linear term is thus very simple."
 msgstr ""
 "model "
-"brickとはモデルの部分を表すオブジェクトです。このオブジェクトは微分方程式モデルの弱定式化でいくつかの積分項を表現するためにあります。modelオブジェクトにはブリック要素のリストが含まれます。ブリック要素によって記述されたすべての項は最終的に線形システム（非線形問題のための接線系）を構築するために構築られます。例えばもし項"
+"brickとはモデルの部分を表すオブジェクトです．このオブジェクトは微分方程式モデルの弱定式化でいくつかの積分項を表現するためにあります．modelオブジェクトにはブリック要素のリストが含まれます．ブリック要素によって記述されたすべての項は最終的に線形システム（非線形問題のための接線系）を構築するために構築られます．例えばもし項"
 " :math:`\\Delta u` が微分方程式モデル上に存在します（ :math:`u` "
-"のLaplacian）、次いで弱定式化には:math:`\\int_{\\Omega}\\nabla u\\cdot\\nabla v\\ dx` "
-"項が含まれます。ここで :math:`v` は :math:`u` "
-"に対応する試験関数です。対応するブリック要素の役割は:math:`\\int_{\\Omega}\\nabla\\varphi_i "
-"\\cdot\\nabla\\varphi_j\\ dx` 項をアセンブルすることです、 :math:`\\varphi_i` と "
-":math:`\\varphi_j` は :math:`u` を記述する有限積分法の形状関数です。この項はmodelオブジェクトによって変数  "
+"のLaplacian），次いで弱定式化には:math:`\\int_{\\Omega}\\nabla u\\cdot\\nabla v\\ dx` "
+"項が含まれます．ここで :math:`v` は :math:`u` "
+"に対応する試験関数です．対応するブリック要素の役割は:math:`\\int_{\\Omega}\\nabla\\varphi_i "
+"\\cdot\\nabla\\varphi_j\\ dx` 項をアセンブルすることです， :math:`\\varphi_i` と "
+":math:`\\varphi_j` は :math:`u` を記述する有限積分法の形状関数です．この項はmodelオブジェクトによって変数  "
 ":math:`u` "
-"に対応する対角ブロック上の全体線形システムに追加されます。したがって、ブリック要素の唯一の役割はmodelオブジェクトがそれを求めるときに対応する構築手順を呼び出すことです。このように線形項のための項の構築は非常に簡単です。"
+"に対応する対角ブロック上の全体線形システムに追加されます．したがって，ブリック要素の唯一の役割はmodelオブジェクトがそれを求めるときに対応する構築手順を呼び出すことです．このように線形項のための項の構築は非常に簡単です．"
 
 #: ../source/userdoc/model_object.rst:215
 msgid ""
@@ -326,9 +326,9 @@ msgid ""
 "``asm_real_tangent_terms`` or ``asm_complex_tangent_terms`` depending on "
 "whether it is a real term or an intrinsic complex term."
 msgstr ""
-"基本的には、brickオブジェクトは :file:`getfem/getfem_models.h` で定義された ``virtual_brick`` "
-"オブジェクトから派生し、 実数項か固有の複素数項かによって ``asm_real_tangent_terms`` または "
-"``asm_complex_tangent_terms`` メソッドを再定義する必要があります。"
+"基本的には，brickオブジェクトは :file:`getfem/getfem_models.h` で定義された ``virtual_brick`` "
+"オブジェクトから派生し， 実数項か固有の複素数項かによって ``asm_real_tangent_terms`` または "
+"``asm_complex_tangent_terms`` メソッドを再定義する必要があります．"
 
 #: ../source/userdoc/model_object.rst:222
 msgid "How to build a new brick"
@@ -341,8 +341,8 @@ msgid ""
 "accessible terms (including complex coupling terms) of the generic assembly "
 "brick (see :ref:`ud-model-generic-assembly`)."
 msgstr ""
-"まず最初に、新しい項の設計は、既存の項ではカバーされず、汎用的な構築項の幅広いアクセシブルな項（複雑な結合条件を含む）でカバーされていない特別な項に対してのみ必要である点に注意してください（"
-" :ref:`ud-model-generic-assembly` ）。"
+"まず最初に，新しい項の設計は，既存の項ではカバーされず，汎用的な構築項の幅広いアクセシブルな項（複雑な結合条件を含む）でカバーされていない特別な項に対してのみ必要である点に注意してください（"
+" :ref:`ud-model-generic-assembly` ）．"
 
 #: ../source/userdoc/model_object.rst:229
 msgid ""
@@ -355,7 +355,7 @@ msgid ""
 "to the brick. The great majority of the predefined bricks do not store any "
 "data. This allows to instantiate such a bricks only once."
 msgstr ""
-"設計思想によれば、項は追加のデータをできるだけ保存しないようにすべきです。ブリック要素のパラメータはモデルの変数とデータに含める必要があります。例えば、線形弾性ブリック要素のパラメータは弾性係数です。この係数はモデルの何らかのデータでなければなりません。項がmodelオブジェクトによって呼び出されると、変数とデータのリストが項に与えられます。あらかじめ定義された項の大部分はデータを格納しません。これにより、そのような項を一度だけインスタンス化することができます。"
+"設計思想によれば，項は追加のデータをできるだけ保存しないようにすべきです．ブリック要素のパラメータはモデルの変数とデータに含める必要があります．例えば，線形弾性ブリック要素のパラメータは弾性係数です．この係数はモデルの何らかのデータでなければなりません．項がmodelオブジェクトによって呼び出されると，変数とデータのリストが項に与えられます．あらかじめ定義された項の大部分はデータを格納しません．これにより，そのような項を一度だけインスタンス化することができます．"
 
 #: ../source/userdoc/model_object.rst:237
 msgid ""
@@ -364,7 +364,7 @@ msgid ""
 "contains the very standard bricks)::"
 msgstr ""
 "Laplacian項に対応するブリック要素の例は次のとおりです（他の例は標準的な項を含むファイル :file:`getfem_models.cc` "
-"で確認できます）。"
+"で確認できます）．"
 
 #: ../source/userdoc/model_object.rst:275
 msgid ""
@@ -374,11 +374,11 @@ msgid ""
 " are some flags, respectively:"
 msgstr ""
 "項のコンストラクタは ``set_flags`` "
-"メソッドを呼び出す必要があります。このメソッドの最初のパラメータは項の名前です（これにより、モデルの項をリストしその識別を容易にすることができます）。その他のパラメータは、それぞれ次のフラグです。"
+"メソッドを呼び出す必要があります．このメソッドの最初のパラメータは項の名前です（これにより，モデルの項をリストしその識別を容易にすることができます）．その他のパラメータは，それぞれ次のフラグです．"
 
 #: ../source/userdoc/model_object.rst:280
 msgid "if the brick terms are all linear or not."
-msgstr "ブリック要素項がすべて線形であるかどうかを示します。"
+msgstr "ブリック要素項がすべて線形であるかどうかを示します．"
 
 #: ../source/userdoc/model_object.rst:282
 msgid ""
@@ -387,27 +387,27 @@ msgid ""
 "two different variables and declared symmetric are added twice in the global"
 " linear system (the term and the transpose of the term)."
 msgstr ""
-"ブリック要素項が全体的に対称（複素数の場合で共役）か、少なくとも対称性に影響を与えていないか。 "
-"2つの異なる変数にで対称に宣言された項は全体線形システム（項と項の転置）で2回追加されます。"
+"ブリック要素項が全体的に対称（複素数の場合で共役）か，少なくとも対称性に影響を与えていないか． "
+"2つの異なる変数にで対称に宣言された項は全体線形システム（項と項の転置）で2回追加されます．"
 
 #: ../source/userdoc/model_object.rst:287
 msgid "if the terms do not affect the coercivity."
-msgstr "その項が保磁力に影響を与えないか。"
+msgstr "その項が保磁力に影響を与えないか．"
 
 #: ../source/userdoc/model_object.rst:289
 msgid ""
 "if the terms have a real version or not. If yes, the method "
 "``asm_real_tangent_terms`` should be redefined."
 msgstr ""
-"項が実数のバージョンを持っているかどうか。もしそうなら、 ``asm_real_tangent_terms`` メソッドを再定義する必要があります。"
+"項が実数のバージョンを持っているかどうか．もしそうなら， ``asm_real_tangent_terms`` メソッドを再定義する必要があります．"
 
 #: ../source/userdoc/model_object.rst:292
 msgid ""
 "if the terms have a complex version or not. If yes, the method "
 "``asm_complex_tangent_terms`` should be redefined."
 msgstr ""
-"項が複素数バージョンを持っているかどうか。もしそうなら、 ``asm_complex_tangent_terms`` "
-"メソッドを再定義する必要があります。"
+"項が複素数バージョンを持っているかどうか．もしそうなら， ``asm_complex_tangent_terms`` "
+"メソッドを再定義する必要があります．"
 
 #: ../source/userdoc/model_object.rst:295
 msgid ""
@@ -431,20 +431,20 @@ msgid ""
 "are to be computed (for linear bricks, all is to be computed at each call)."
 msgstr ""
 "``asm_real_tangent_terms`` "
-"メソッドは、タンジェントシステムの構築のためのmodelオブジェクトによって呼び出されます。modelオブジェクトはブリック要素にフレームワーク全体を渡してその項を構築します。"
-" ``asm_real_tangent_terms`` メソッドのパラメータ ``md`` は項を呼び出すモデルであり、 ``ib`` "
-"はモデルの項数です。パラメータ ``varl`` はこのモデルで定義される項で必要とされる変数/データ名の配列です。 ``mims`` は |mim| "
-"ポインタの配列です。これは、項を構築するために必要な積分法に対応します。 ``matl`` は計算された行列の配列です。 ``vecl`` "
-"は計算されるベクトルの配列です（rhsまたは残差ベクトル）。 ``vecl_sym`` "
-"は対称項に対してのみ計算され、第2の変数のrhsに対応するベクトルの配列です。項は任意の数の項を持つことができます。それぞれの項について、少なくとも対応する行列または対応するベクトルを満たされなければなりません（または2つとも、非線形の場合のみ、次のセクションを参照）。"
-" ``region`` は、特定の領域に項を構築することを示すメッシュ領域番号です。 ``nl`` "
-"は非線形項のみです。これは接線行列または残差または両方を計算するか（線形項の場合は、すべての呼び出しごとに計算されます）を示します。"
+"メソッドは，タンジェントシステムの構築のためのmodelオブジェクトによって呼び出されます．modelオブジェクトはブリック要素にフレームワーク全体を渡してその項を構築します．"
+" ``asm_real_tangent_terms`` メソッドのパラメータ ``md`` は項を呼び出すモデルであり， ``ib`` "
+"はモデルの項数です．パラメータ ``varl`` はこのモデルで定義される項で必要とされる変数/データ名の配列です． ``mims`` は |mim| "
+"ポインタの配列です．これは，項を構築するために必要な積分法に対応します． ``matl`` は計算された行列の配列です． ``vecl`` "
+"は計算されるベクトルの配列です（rhsまたは残差ベクトル）． ``vecl_sym`` "
+"は対称項に対してのみ計算され，第2の変数のrhsに対応するベクトルの配列です．項は任意の数の項を持つことができます．それぞれの項について，少なくとも対応する行列または対応するベクトルを満たされなければなりません（または2つとも，非線形の場合のみ，次のセクションを参照）．"
+" ``region`` は，特定の領域に項を構築することを示すメッシュ領域番号です． ``nl`` "
+"は非線形項のみです．これは接線行列または残差または両方を計算するか（線形項の場合は，すべての呼び出しごとに計算されます）を示します．"
 
 #: ../source/userdoc/model_object.rst:313
 msgid ""
 "For the very simple Laplacian brick defined above, only one variable is used"
 " and no data and there is only one term. The lines::"
-msgstr "上で定義した非常に単純なLaplacian項の場合、1つの変数のみが使用され、データはなく、1つの項しか存在しません。行"
+msgstr "上で定義した非常に単純なLaplacian項の場合，1つの変数のみが使用され，データはなく，1つの項しか存在しません．行"
 
 #: ../source/userdoc/model_object.rst:323
 msgid ""
@@ -452,8 +452,8 @@ msgid ""
 "integration methods (1), variables(1), data(0) are passed to the "
 "``asm_real_tangent_terms`` method."
 msgstr ""
-"は必須ではなく、項の数（1）、積分法（1）、変数（1）、データ（0）が  ``asm_real_tangent_terms`` "
-"メソッドに渡されるのに問題ない値であることを確認するだけです。"
+"は必須ではなく，項の数（1），積分法（1），変数（1），データ（0）が  ``asm_real_tangent_terms`` "
+"メソッドに渡されるのに問題ない値であることを確認するだけです．"
 
 #: ../source/userdoc/model_object.rst:327
 #: ../source/userdoc/model_object.rst:428
@@ -466,7 +466,7 @@ msgid ""
 "takes the |mf| object from the variable on which the Laplacian term will be "
 "added and the |mim| object in the list of integrations methods. Finally, the"
 " lines::"
-msgstr "はLaplacian項が追加される変数の |mf| オブジェクトで |mim| オブジェクトは積分法のリストです。最後に"
+msgstr "はLaplacian項が追加される変数の |mf| オブジェクトで |mim| オブジェクトは積分法のリストです．最後に"
 
 #: ../source/userdoc/model_object.rst:339
 msgid ""
@@ -475,9 +475,9 @@ msgid ""
 "because although it is guaranteed that the matrices in ``matl`` have good "
 "sizes they maybe not cleared before the call of ``asm_real_tangent_terms``."
 msgstr ""
-"はファイル :file:`getfem/getfem_assembling.h` で定義されているLaplacian項の標準構築手順を呼び出します。 "
-"``matl`` の行列は適切なサイズであることが保証されていますが、 ``asm_real_tangent_terms`` "
-"の呼び出しの前に初期化されない可能性があるので、初期化メソッドが必要です。"
+"はファイル :file:`getfem/getfem_assembling.h` で定義されているLaplacian項の標準構築手順を呼び出します． "
+"``matl`` の行列は適切なサイズであることが保証されていますが， ``asm_real_tangent_terms`` "
+"の呼び出しの前に初期化されない可能性があるので，初期化メソッドが必要です．"
 
 #: ../source/userdoc/model_object.rst:344
 msgid ""
@@ -486,14 +486,14 @@ msgid ""
 "filled but not both the two. Depending on the declaration of the term. See "
 "below the integration of the brick to the model."
 msgstr ""
-"この単純な項は項が1つしかなく、線形であることに注意してください。線形ブリック要素の場合、行列または右辺のベクトルのどちらか一方を埋める必要がありますが、両方を埋める必要はありません。項の宣言に応じて。モデルにブリック要素を積分する方法は以下を参照してください。"
+"この単純な項は項が1つしかなく，線形であることに注意してください．線形ブリック要素の場合，行列または右辺のベクトルのどちらか一方を埋める必要がありますが，両方を埋める必要はありません．項の宣言に応じて．モデルにブリック要素を積分する方法は以下を参照してください．"
 
 #: ../source/userdoc/model_object.rst:349
 msgid ""
 "Let us see now a second example of a simple brick which prescribes a "
 "Dirichlet condition thanks to the use of a Lagrange multiplier. The "
 "Dirichlet condition is of the form"
-msgstr "Lagrange乗数の使用によりDirichlet条件を規定する単純な項の2番目の例を見てみましょう。Dirichlet条件は、"
+msgstr "Lagrange乗数の使用によりDirichlet条件を規定する単純な項の2番目の例を見てみましょう．Dirichlet条件は，"
 
 #: ../source/userdoc/model_object.rst:353
 msgid "u = u_D \\text{ on } \\Gamma,"
@@ -506,8 +506,8 @@ msgid ""
 " terms corresponding to this condition prescribed with a Lagrange multiplier"
 " are"
 msgstr ""
-"ここで、 :math:`u` は変数で、 :math:`u_D` は与えられた値で、:math:`\\Gamma` "
-"は対象とする領域の境界上にある部分です。Lagrange乗数で規定されたこの条件に対応する弱定式項は、"
+"ここで， :math:`u` は変数で， :math:`u_D` は与えられた値で，:math:`\\Gamma` "
+"は対象とする領域の境界上にある部分です．Lagrange乗数で規定されたこの条件に対応する弱定式項は，"
 
 #: ../source/userdoc/model_object.rst:361
 msgid "\\int_{\\Gamma} u \\mu\\ d\\Gamma = \\int_{\\Gamma} u_D \\mu\\ d\\Gamma, \\forall \\mu \\in M,"
@@ -522,9 +522,9 @@ msgid ""
 ":math:`\\mu`. :math:`L_{u}` is the right hand side corresponding to the data"
 " :math:`u_D`."
 msgstr ""
-"ここで、 :math:`M` は適切な乗数空間です。グローバル線形システムへの寄与は、図 :ref:`ud-fig-syslinDir` "
-"で見ることができます。行列 :math:`B` は変数の有限要素空間 :math:`u` と乗数の有限要素空間 :math:`\\mu` の間の "
-"\"質量行列\" です。 :math:`L_{u}` はデータ :math:`u_D` に対応する右辺です。"
+"ここで， :math:`M` は適切な乗数空間です．グローバル線形システムへの寄与は，図 :ref:`ud-fig-syslinDir` "
+"で見ることができます．行列 :math:`B` は変数の有限要素空間 :math:`u` と乗数の有限要素空間 :math:`\\mu` の間の "
+"\"質量行列\" です． :math:`L_{u}` はデータ :math:`u_D` に対応する右辺です．"
 
 #: ../source/userdoc/model_object.rst:376
 msgid "Contributions of the simple Dirichlet brick"
@@ -532,7 +532,7 @@ msgstr "シンプルなDirichletブリック要素の寄与"
 
 #: ../source/userdoc/model_object.rst:378
 msgid "The brick can be defined as follows::"
-msgstr "項は次のように定義できます。"
+msgstr "項は次のように定義できます．"
 
 #: ../source/userdoc/model_object.rst:421
 msgid ""
@@ -543,9 +543,9 @@ msgid ""
 " added to the model with the method ``add_multiplier``). The term of the "
 "brick will be declared symmetric (see the next section)."
 msgstr ""
-"このブリック要素にも項が1つしかありませんが、マトリックス部分と右辺部分の両方が定義されています。Dirichlet条件が規定されているプライマリ変数と、境界に対応するメッシュ領域に定義される乗数変数（"
+"このブリック要素にも項が1つしかありませんが，マトリックス部分と右辺部分の両方が定義されています．Dirichlet条件が規定されているプライマリ変数と，境界に対応するメッシュ領域に定義される乗数変数（"
 " ``add_multiplier`` "
-"メソッドでモデルに追加する必要があります）の2つの変数が関係しています。項は対称であると宣言されます（次のセクションを参照）。"
+"メソッドでモデルに追加する必要があります）の2つの変数が関係しています．項は対称であると宣言されます（次のセクションを参照）．"
 
 #: ../source/userdoc/model_object.rst:433
 msgid ""
@@ -555,13 +555,13 @@ msgid ""
 "is a null pointer."
 msgstr ""
 "はDirichlet状態の右辺に対応するデータの値とこのデータが定義されている |mf| "
-"にアクセスすることを許可します。データが一定である場合（有限要素法で記述されていない場合）、 ``mf_data`` はヌルポインタです。"
+"にアクセスすることを許可します．データが一定である場合（有限要素法で記述されていない場合）， ``mf_data`` はヌルポインタです．"
 
 #: ../source/userdoc/model_object.rst:444
 msgid ""
 "make the assembly of the right hand side. The two versions correspond to a "
 "data defined on a finite element method or constant size data."
-msgstr "は右辺を構築します。 2つのバージョンは有限要素法または一定サイズのデータで定義されたデータに対応します。"
+msgstr "は右辺を構築します． 2つのバージョンは有限要素法または一定サイズのデータで定義されたデータに対応します．"
 
 #: ../source/userdoc/model_object.rst:447
 msgid "( + some example with a nonlinear term ... )"
@@ -575,35 +575,35 @@ msgstr "モデルに項を追加する方法"
 msgid ""
 "In order to add a brick to a model, a certain information have to be passed "
 "to the model:"
-msgstr "モデルに項を追加するには、モデルに特定の情報を渡す必要があります。"
+msgstr "モデルに項を追加するには，モデルに特定の情報を渡す必要があります．"
 
 #: ../source/userdoc/model_object.rst:456
 msgid "A pointer to the brick itself."
-msgstr "ブリック要素自体へのポインタ。"
+msgstr "ブリック要素自体へのポインタ．"
 
 #: ../source/userdoc/model_object.rst:457
 msgid "The set of variable names concerned with the terms of the brick."
-msgstr "ブリック要素の項に関係する一連の変数名。"
+msgstr "ブリック要素の項に関係する一連の変数名．"
 
 #: ../source/userdoc/model_object.rst:458
 msgid "The set of data names concerned with the terms of the brick."
-msgstr "データ名の集合は、ブリック要素の項に関係します。"
+msgstr "データ名の集合は，ブリック要素の項に関係します．"
 
 #: ../source/userdoc/model_object.rst:459
 msgid "A list of terms description."
-msgstr "項の説明のリスト。"
+msgstr "項の説明のリスト．"
 
 #: ../source/userdoc/model_object.rst:460
 msgid "A list of integration methods."
-msgstr "積分法のリスト。"
+msgstr "積分法のリスト．"
 
 #: ../source/userdoc/model_object.rst:461
 msgid "Eventually the concerned mesh region."
-msgstr "最終的に関連するメッシュ領域。"
+msgstr "最終的に関連するメッシュ領域．"
 
 #: ../source/userdoc/model_object.rst:463
 msgid "This is done by the call of the |mo| object method::"
-msgstr "これは、オブジェクトメソッド |mo| の呼び出しによって行われます。"
+msgstr "これは，オブジェクトメソッド |mo| の呼び出しによって行われます．"
 
 #: ../source/userdoc/model_object.rst:471
 msgid ""
@@ -613,13 +613,13 @@ msgid ""
 "function that adds the new brick to the model calling this method and more "
 "simple to use."
 msgstr ""
-"このメソッドは、モデル内の項のインデックスを返します。このメソッドの呼び出しは、多くの状況に適応できるため、かなり複雑です。新しいブリック要素の構築は、このメソッドを呼び出すモデルに新しいブリック要素を追加し、より簡単に使用できる関数の定義に従わなければなりません。"
+"このメソッドは，モデル内の項のインデックスを返します．このメソッドの呼び出しは，多くの状況に適応できるため，かなり複雑です．新しいブリック要素の構築は，このメソッドを呼び出すモデルに新しいブリック要素を追加し，より簡単に使用できる関数の定義に従わなければなりません．"
 
 #: ../source/userdoc/model_object.rst:476
 msgid ""
 "For instance, for the simple Laplacian brick described above, this function "
 "can be defined as folows::"
-msgstr "例えば、上記の単純なLaplacian項の場合、この関数は次のように定義することができます。"
+msgstr "例えば，上記の単純なLaplacian項の場合，この関数は次のように定義することができます．"
 
 #: ../source/userdoc/model_object.rst:491
 msgid ""
@@ -632,17 +632,17 @@ msgid ""
 "only a right hand side to the linear (tangent) system which have to be added"
 " to the list by::"
 msgstr ""
-"この関数はあなたのブリック要素のユーザーによって呼び出されます。 ``getfem::model::varnamelist`` 型は "
-"``std::vector<std::string>`` であり、変数名の配列を表します。 ``getfem::model::mimlist`` 型は "
-"``std::vector<const getfem::mesh_im *>`` であり、積分法へのポインタの配列を表します。 "
+"この関数はあなたのブリック要素のユーザーによって呼び出されます． ``getfem::model::varnamelist`` 型は "
+"``std::vector<std::string>`` であり，変数名の配列を表します． ``getfem::model::mimlist`` 型は "
+"``std::vector<const getfem::mesh_im *>`` であり，積分法へのポインタの配列を表します． "
 "``getfem::model::termlist`` "
-"は項の記述の配列です。項には2種類あります。線形（接線）システムに右辺のみを追加する項は次のようにリストに追加する必要があります。"
+"は項の記述の配列です．項には2種類あります．線形（接線）システムに右辺のみを追加する項は次のようにリストに追加する必要があります．"
 
 #: ../source/userdoc/model_object.rst:501
 msgid ""
 "and the terms having a contribution to the matrix of the linear system which"
 " have to be added to the list by::"
-msgstr "そして、線形システムの行列に寄与する項は次のようにリストに追加する必要があります。"
+msgstr "そして，線形システムの行列に寄与する項は次のようにリストに追加する必要があります．"
 
 #: ../source/userdoc/model_object.rst:506
 msgid ""
@@ -660,11 +660,11 @@ msgid ""
 "right hand side is filled for a term declared to be a matrix term, it is "
 "IGNORED."
 msgstr ""
-"この場合、行列項は変数 \"varname1\" に対応する行と変数 \"varname2\" "
-"に対応する列に追加されます。第3のパラメータであるブール値はその項が対称であるかどうかを宣言します。対称であり、2つの変数が異なる場合、構築手順は対応する項およびその転置を加えます。項の数は任意です。宣言された各項に対して、項は対応する右辺のベクトル（上の"
+"この場合，行列項は変数 \"varname1\" に対応する行と変数 \"varname2\" "
+"に対応する列に追加されます．第3のパラメータであるブール値はその項が対称であるかどうかを宣言します．対称であり，2つの変数が異なる場合，構築手順は対応する項およびその転置を加えます．項の数は任意です．宣言された各項に対して，項は対応する右辺のベクトル（上の"
 " ``asm_real_tangent_terms`` のパラメータ ``vecl`` ）または/および行列の項（ "
 "``asm_real_tangent_terms`` のパラメータ ``matl`` "
-"）を宣言します。非線形項では、行列と右辺ベクトルの両方を満たす必要があることに注意してください。線形項の場合、行列項と宣言された項の右辺が式を満たしている場合は無視されます。"
+"）を宣言します．非線形項では，行列と右辺ベクトルの両方を満たす必要があることに注意してください．線形項の場合，行列項と宣言された項の右辺が式を満たしている場合は無視されます．"
 
 #: ../source/userdoc/model_object.rst:518
 msgid ""
@@ -673,16 +673,16 @@ msgid ""
 "term has to be recomputed if the value of a data is changed but not if the "
 "value of a variable is changed."
 msgstr ""
-"変数名とデータ名は2つの別々の配列で与えられます。これは、どちらの場合でも項の依存関係が同じではないためです。線形項は、データの値が変更された場合には再計算されなければなりませんが、変数の値が変更された場合は再計算されません。"
+"変数名とデータ名は2つの別々の配列で与えられます．これは，どちらの場合でも項の依存関係が同じではないためです．線形項は，データの値が変更された場合には再計算されなければなりませんが，変数の値が変更された場合は再計算されません．"
 
 #: ../source/userdoc/model_object.rst:523
 msgid ""
 "The function allowing to add the simple Dirichlet brick described above can "
 "be defined as follows::"
-msgstr "上記の単純なDirichlet項を追加する関数は、次のように定義することができます。"
+msgstr "上記の単純なDirichlet項を追加する関数は，次のように定義することができます．"
 
 #: ../source/userdoc/model_object.rst:541
 msgid ""
 "Again, here, the term is declared symmetric and then the matrix term and its"
 " transpose will be added."
-msgstr "再びここでは、この項は対称であると宣言され、次に行列項とその転置が追加されます。"
+msgstr "再びここでは，この項は対称であると宣言され，次に行列項とその転置が追加されます．"

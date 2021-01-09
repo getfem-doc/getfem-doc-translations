@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-08 01:17+0000\n"
+"POT-Creation-Date: 2021-01-09 01:20+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,9 +32,9 @@ msgid ""
 "for the brick implementation and to extend the implementation to new "
 "plasticity models."
 msgstr ""
-"|gf| における可塑性モデルの近似のフレームワークについて説明します。ブリック要素を実装し新しい可塑性モデルを拡張する場合は "
+"|gf| における可塑性モデルの近似のフレームワークについて説明します．ブリック要素を実装し新しい可塑性モデルを拡張する場合は "
 ":file:`interface/src/gf_model_set.cc` と "
-":file:`interface/src/gf_model_set.cc` を参照してください。"
+":file:`interface/src/gf_model_set.cc` を参照してください．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:20
 msgid "Theoretical background"
@@ -45,8 +45,8 @@ msgid ""
 "We present a short introduction to small strain plasticity. We refer mainly "
 "to [SI-HU1998]_ and [SO-PE-OW2008]_ for a more detailed presentation."
 msgstr ""
-"微小ひずみの可塑性について簡単に紹介します。より詳細な説明については、主に [SI-HU1998]_ および [SO-PE-OW2008]_ "
-"を参照してください。"
+"微小ひずみの可塑性について簡単に紹介します．より詳細な説明については，主に [SI-HU1998]_ および [SO-PE-OW2008]_ "
+"を参照してください．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:25
 msgid "Additive decomposition of the small strain tensor"
@@ -60,10 +60,10 @@ msgid ""
 " based on the additive decomposition of the small strain tensor "
 ":math:`\\varepsilon(u) = \\dfrac{\\nabla u + \\nabla u^T}{2}` in"
 msgstr ""
-":math:`\\Omega \\subset \\rm I\\hspace{-0.15em}R^3` は変形可能な物体の基準配置であり、 "
+":math:`\\Omega \\subset \\rm I\\hspace{-0.15em}R^3` は変形可能な物体の基準配置であり， "
 ":math:`u : \\Omega \\rightarrow \\rm I\\hspace{-0.15em}R^3` "
-"は変形フィールドです。微小ひずみの可塑性は、微小ひずみテンソル :math:`\\varepsilon(u) = \\dfrac{\\nabla u +"
-" \\nabla u^T}{2}` の加法分解に基づいています。"
+"は変形フィールドです．微小ひずみの可塑性は，微小ひずみテンソル :math:`\\varepsilon(u) = \\dfrac{\\nabla u +"
+" \\nabla u^T}{2}` の加法分解に基づいています．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:29
 msgid ""
@@ -78,12 +78,12 @@ msgid ""
 "where :math:`\\varepsilon^e` is the elastic part of the strain tensor and "
 ":math:`\\varepsilon^p` the plastic one."
 msgstr ""
-"ここで、 :math:`\\varepsilon^e` はひずみテンソルの弾性部分であり、 :math:`\\varepsilon^p` "
-"は弾性部分です。"
+"ここで， :math:`\\varepsilon^e` はひずみテンソルの弾性部分であり， :math:`\\varepsilon^p` "
+"は弾性部分です．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:35
 msgid "Internal variables, free energy potential and elastic law"
-msgstr "内部変数、自由エネルギーポテンシャル、弾性法則"
+msgstr "内部変数，自由エネルギーポテンシャル，弾性法則"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:37
 msgid "We consider"
@@ -104,8 +104,8 @@ msgid ""
 "consider also a free energy potential"
 msgstr ""
 "これはひずみ型の内部変数 :math:`d_{\\alpha}` "
-"のベクトルフィールドです。(内部変数が考慮されていない場合は、:math:`d_{\\alpha} = 0` "
-"となります。)自由エネルギーポテンシャルも考慮します。"
+"のベクトルフィールドです．(内部変数が考慮されていない場合は，:math:`d_{\\alpha} = 0` "
+"となります．)自由エネルギーポテンシャルも考慮します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:44
 msgid ""
@@ -117,7 +117,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:47
 msgid "such that corresponding stress type variables are determined by"
-msgstr "対応する応力型変数は以下で決定されます。"
+msgstr "対応する応力型変数は以下で決定されます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:49
 msgid ""
@@ -131,7 +131,7 @@ msgstr ""
 msgid ""
 "where :math:`\\sigma` is the Cauchy stress tensor and :math:`A` the stress "
 "type internal variables. The plastic dissipation is given by"
-msgstr "ここで、 :math:`\\sigma` はCauchyの応力テンソルであり、 :math:`A` は応力型の内部変数です。降伏条件は"
+msgstr "ここで， :math:`\\sigma` はCauchyの応力テンソルであり， :math:`A` は応力型の内部変数です．降伏条件は"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:54
 msgid "\\sigma:\\dot{\\varepsilon}^p - A.\\dot{\\alpha} \\ge 0."
@@ -141,7 +141,7 @@ msgstr "\\sigma:\\dot{\\varepsilon}^p - A.\\dot{\\alpha} \\ge 0."
 msgid ""
 "In the standard cases, :math:`\\psi(\\varepsilon^e, \\alpha)` is decomposed "
 "into"
-msgstr "通常、 :math:`\\psi(\\varepsilon^e, \\alpha)` は次のように分解されます。"
+msgstr "通常， :math:`\\psi(\\varepsilon^e, \\alpha)` は次のように分解されます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:60
 msgid ""
@@ -162,16 +162,16 @@ msgid ""
 " where :math:`\\mu` is the shear modulus and :math:`K = \\lambda + 2\\mu/3` "
 "is the bulk modulus."
 msgstr ""
-"線形化弾性体の場合、 :math:`\\psi^e(\\varepsilon^e) = \\frac{1}{2} ({\\cal "
-"A}\\varepsilon^e) :\\varepsilon^e` は4次の弾性テンソルです。等方性線形弾性の場合、この式は "
+"線形化弾性体の場合， :math:`\\psi^e(\\varepsilon^e) = \\frac{1}{2} ({\\cal "
+"A}\\varepsilon^e) :\\varepsilon^e` は4次の弾性テンソルです．等方性線形弾性の場合，この式は "
 ":math:`\\psi^e(\\varepsilon^e) = \\mu \\mbox{dev}(\\varepsilon^e) : "
 "\\mbox{dev}(\\varepsilon^e) + \\frac{1}{2} K (\\mbox{tr}(\\varepsilon^e))^2`"
-" のようになります。ここで、 :math:`\\mu` はせん断弾性率で :math:`K = \\lambda + 2\\mu/3` "
-"はBulk弾性率です。"
+" のようになります．ここで， :math:`\\mu` はせん断弾性率で :math:`K = \\lambda + 2\\mu/3` "
+"はBulk弾性率です．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:67
 msgid "Plastic potential, yield function and plastic flow rule"
-msgstr "塑性ポテンシャル、降伏関数、塑性流れ則"
+msgstr "塑性ポテンシャル，降伏関数，塑性流れ則"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:69
 msgid ""
@@ -179,7 +179,7 @@ msgid ""
 "value. This limit is determined by a yield function :math:`f(\\sigma, A)` "
 "and the condition"
 msgstr ""
-"応力が臨界値に達すると、塑性降伏が起こると考えられます。この限界は、降伏関数 :math:`f(\\sigma, A)` と条件によって決定されます。"
+"応力が臨界値に達すると，塑性降伏が起こると考えられます．この限界は，降伏関数 :math:`f(\\sigma, A)` と条件によって決定されます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:71
 msgid ""
@@ -193,7 +193,7 @@ msgstr ""
 msgid ""
 "The surface :math:`f(\\sigma, A) = 0` is the yield surface where the plastic"
 " deformation may occur."
-msgstr "表面 :math:`f(\\sigma, A) = 0` は、塑性変形が起こる降伏面です。"
+msgstr "表面 :math:`f(\\sigma, A) = 0` は，塑性変形が起こる降伏面です．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:75
 msgid ""
@@ -201,8 +201,8 @@ msgid ""
 "(convex with respect to its both variables) which determines the plastic "
 "flow direction in the sense that the flow rule is defined as"
 msgstr ""
-"また、(両方の変数に関して凸包である)塑性ポテンシャル :math:`\\Psi(\\sigma, A)` "
-"を考慮してみましょう。塑性の流れ則と方向は次のように定義されます。"
+"また，(両方の変数に関して凸包である)塑性ポテンシャル :math:`\\Psi(\\sigma, A)` "
+"を考慮してみましょう．塑性の流れ則と方向は次のように定義されます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:77
 msgid ""
@@ -214,7 +214,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:79
 msgid "with the additional complementarity condition"
-msgstr "付加的な相補性条件として以下が成り立ちます。"
+msgstr "付加的な相補性条件として以下が成り立ちます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:81
 msgid ""
@@ -232,10 +232,10 @@ msgid ""
 " Associated plasticity corresponds to the choice :math:`\\Psi(\\sigma, A) = "
 "f(\\sigma, A)`."
 msgstr ""
-"変数 :math:`\\gamma` は塑性乗数と呼ばれます。以下の場合に注意してください。 :math:`\\psi(\\varepsilon^e, "
+"変数 :math:`\\gamma` は塑性乗数と呼ばれます．以下の場合に注意してください． :math:`\\psi(\\varepsilon^e, "
 "\\alpha), f(\\sigma, A) \\mbox{ と } \\Psi(\\sigma, A)` "
-"が微分可能でないとき、副差を使用しなければなりません。関連する可塑性は :math:`\\Psi(\\sigma, A) = f(\\sigma, "
-"A)` に対応します。"
+"が微分可能でないとき，副差を使用しなければなりません．関連する可塑性は :math:`\\Psi(\\sigma, A) = f(\\sigma, "
+"A)` に対応します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:86
 msgid "Initial boundary value problem"
@@ -245,7 +245,7 @@ msgstr "初期境界値問題"
 msgid ""
 "The weak formulation of a dynamic elastoplastic problem can be written, for "
 "an arbitrary kinematically admissible test function :math:`v`, as follows:"
-msgstr "動的弾塑性問題の弱定式化は、任意の運動学的に許容される次のような試験関数 :math:`v` で書くことができます。"
+msgstr "動的弾塑性問題の弱定式化は，任意の運動学的に許容される次のような試験関数 :math:`v` で書くことができます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:90
 msgid ""
@@ -267,14 +267,14 @@ msgid ""
 "values and :math:`f` and :math:`g` being prescribed forces in the interior "
 "of domain :math:`\\Omega` and on the part of the boundary :math:`\\Gamma_N`."
 msgstr ""
-":math:`u_0, \\mathrm{v}_0, \\varepsilon^p_0, \\alpha_0` は初期値で、:math:`f` と "
-":math:`g` は領域の内部で、 :math:`\\Omega` と境界の部分には :math:`\\Gamma_N` があります。"
+":math:`u_0, \\mathrm{v}_0, \\varepsilon^p_0, \\alpha_0` は初期値で，:math:`f` と "
+":math:`g` は領域の内部で， :math:`\\Omega` と境界の部分には :math:`\\Gamma_N` があります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:100
 msgid ""
 "Note that plasticity models are often applied on quasi-static problems which"
 " correspond to the term :math:`\\rho \\ddot{u}` being neglected."
-msgstr "可塑性モデルは、しばしば、 :math:`\\rho \\ddot{u}` 項が無視される準静的問題に適用されることに注意してください。"
+msgstr "可塑性モデルは，しばしば， :math:`\\rho \\ddot{u}` 項が無視される準静的問題に適用されることに注意してください．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:102
 msgid ""
@@ -287,11 +287,11 @@ msgid ""
 "integration`) which can be different than the time integration scheme used "
 "for the integration of the flow rule (see below)."
 msgstr ""
-"時間ステップ :math:`\\Delta t = t_{n+1} -t_n` が与えられたとします、続いて時刻 :math:`t_n` から "
-":math:`t_{n+1}` までの、 :math:`u_n, \\varepsilon^p_n  \\mbox{ と } \\alpha_n` 時刻"
+"時間ステップ :math:`\\Delta t = t_{n+1} -t_n` が与えられたとします，続いて時刻 :math:`t_n` から "
+":math:`t_{n+1}` までの， :math:`u_n, \\varepsilon^p_n  \\mbox{ と } \\alpha_n` 時刻"
 " :math:`t_n` の :math:`u(t_n), \\varepsilon^p_n(t_n) \\mbox{ と } "
-"\\alpha(t_n)` の近似について示します。選択された時間積分スキームの近似は（例えば、提案されたスキームの1つ :ref:`ud-model-"
-"time-integration` ）流れ則の積分に使用される時間積分スキームとは異なっても構いません（以下を参照）。"
+"\\alpha(t_n)` の近似について示します．選択された時間積分スキームの近似は（例えば，提案されたスキームの1つ :ref:`ud-model-"
+"time-integration` ）流れ則の積分に使用される時間積分スキームとは異なっても構いません（以下を参照）．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:106
 msgid "Flow rule integration"
@@ -306,15 +306,15 @@ msgid ""
 "the choice of the :math:`\\theta`-scheme (:math:`\\theta = 1` corresponds to"
 " the backward Euler scheme as a special case)."
 msgstr ""
-"塑性流れ則は、独自の時間積分法で積分する必要があります。標準法の中で、後方Euler法では、 :math:`\\theta` "
-"法（または汎用された台形ルール）と汎用された中間点法が、この文脈で最も一般的に使用されます。ここでは、 :math:`\\theta`- "
-"法（:math:`\\theta = 1` は特殊なケースとして後方Euler法に対応します）を選択します。"
+"塑性流れ則は，独自の時間積分法で積分する必要があります．標準法の中で，後方Euler法では， :math:`\\theta` "
+"法（または汎用された台形ルール）と汎用された中間点法が，この文脈で最も一般的に使用されます．ここでは， :math:`\\theta`- "
+"法（:math:`\\theta = 1` は特殊なケースとして後方Euler法に対応します）を選択します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:111
 msgid ""
 "Let :math:`u_{n+1}` be the displacement at the considered time step and  "
 ":math:`u_{n}` at the previous one."
-msgstr ":math:`u_{n+1}` は、考慮する時間ステップの変位であり、前のステップの変位は :math:`u_{n}` です。"
+msgstr ":math:`u_{n+1}` は，考慮する時間ステップの変位であり，前のステップの変位は :math:`u_{n}` です．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:113
 msgid ""
@@ -340,7 +340,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:121
 msgid "with the complementary condition"
-msgstr "相補性条件は次の通りです。"
+msgstr "相補性条件は次の通りです．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:123
 msgid ""
@@ -362,11 +362,11 @@ msgid ""
 "previous time step (:math:`\\sigma_{n}, \\alpha_n, \\mbox{and } \\gamma_n` "
 "are supposed to be already determined)."
 msgstr ""
-"ここで、 :math:`0 < \\theta \\le 1` は :math:`\\theta` - 法のパラメータです。:math:`\\theta"
-" = 0` は、可塑性の陽な積分を考慮しないため除外します。:math:`\\theta = 1` "
-"は後方Euler法に対応し、:math:`\\theta = 1/2` は2次整合法であるCrank-"
-"Nicolson（または台形法）法に対応します。時間ステップ :math:`n` における量の相補性条件は、前の時間ステップにより処理されています（ "
-":math:`\\sigma_{n}, \\alpha_n, \\mbox{と } \\gamma_n` は、すでに決定しています）。"
+"ここで， :math:`0 < \\theta \\le 1` は :math:`\\theta` - 法のパラメータです．:math:`\\theta"
+" = 0` は，可塑性の陽な積分を考慮しないため除外します．:math:`\\theta = 1` "
+"は後方Euler法に対応し，:math:`\\theta = 1/2` は2次整合法であるCrank-"
+"Nicolson（または台形法）法に対応します．時間ステップ :math:`n` における量の相補性条件は，前の時間ステップにより処理されています（ "
+":math:`\\sigma_{n}, \\alpha_n, \\mbox{と } \\gamma_n` は，すでに決定しています）．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:127
 msgid ""
@@ -379,10 +379,10 @@ msgid ""
 "plastic flow on each Gauss point of the considered integration method "
 "separately, or more precisely to consider on each Gauss point the maps"
 msgstr ""
-"解はすべての未知数、すなわち次のような全体の問題すべてを解く必要があります。それは :math:`u_{n+1},  \\gamma_{n+1}, "
+"解はすべての未知数，すなわち次のような全体の問題すべてを解く必要があります．それは :math:`u_{n+1},  \\gamma_{n+1}, "
 "\\varepsilon^p_{n+1}` と :math:`A_{n+1}` "
-"です。これはもちろん可能ですが、結果として高い自由度がとなるため、かなり高コストな戦略になります。古典的な戦略（たとえば、[SO-PE-OW2008]_"
-" または最も近い1点投影法を参照）は、考慮する積分法の各Gauss点上の塑性流動を別々に、またより正確に写像します。"
+"です．これはもちろん可能ですが，結果として高い自由度がとなるため，かなり高コストな戦略になります．古典的な戦略（たとえば，[SO-PE-OW2008]_"
+" または最も近い1点投影法を参照）は，考慮する積分法の各Gauss点上の塑性流動を別々に，またより正確に写像します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:129
 msgid ""
@@ -400,7 +400,7 @@ msgid ""
 ":eq:`thetascheme1`, :eq:`thetascheme2`, i.e."
 msgstr ""
 ":math:`\\eta_n, \\zeta_{n}` により方程式 :eq:`thetascheme1`, :eq:`thetascheme2` "
-"の右辺は次のようになります。"
+"の右辺は次のようになります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:138
 msgid ""
@@ -425,12 +425,12 @@ msgid ""
 "each Gauss point is often necessary which is usualy performed with a local "
 "Newton method."
 msgstr ""
-"これは、特に次のことを意味します :math:`(\\varepsilon^p_{n+1}, \\alpha_{n+1}) = ({\\mathscr "
+"これは，特に次のことを意味します :math:`(\\varepsilon^p_{n+1}, \\alpha_{n+1}) = ({\\mathscr "
 "E}^p(u_{n+1},  \\zeta_n, \\eta_n), {\\mathscr A}(u_{n+1}, \\zeta_{n}, "
 "\\eta_n))` は方程式 :eq:`thetascheme1` と :eq:`thetascheme2` "
-"の解です。これらの写像とそれらの接線モジュラス（通常、一貫した接線モジュラスと呼ばれる）は、Newton法を用いた問題のグローバルな解法で使用され、:math:`u_{n+1}`"
-" は一意な残りの変数です。Return Mapping法の利点は、グローバル解の一意の変数が変位 :math:`u_{n+1}` "
-"であることです。各Gauss点上の非線形解法がしばしば必要であり、通常はローカルNewton法で実行されます。"
+"の解です．これらの写像とそれらの接線モジュラス（通常，一貫した接線モジュラスと呼ばれる）は，Newton法を用いた問題のグローバルな解法で使用され，:math:`u_{n+1}`"
+" は一意な残りの変数です．Return Mapping法の利点は，グローバル解の一意の変数が変位 :math:`u_{n+1}` "
+"であることです．各Gauss点上の非線形解法がしばしば必要であり，通常はローカルNewton法で実行されます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:145
 msgid ""
@@ -442,10 +442,10 @@ msgid ""
 "more generic treatment of the yield functions, the price for the simplicity "
 "being this additional unknown scalar field."
 msgstr ""
-"|gf| では我々はReturn Mapping法と、主に [PO-NI2016]_ 、 [SE-PO-WO2015]_ および [HA-"
-"WO2009]_ に触発された、より簡単な接線モジュラスを可能にする以下に展開される代替戦略の両方を提案します。それは :math:`u_{n+1}` "
-"に関して、さらに未知数なものとして、 :math:`\\gamma_{n+1}` "
-"（倍の数）の値を保存する必要があります。それからわかるように、これは、降伏関数のより汎用的な処理を可能にします。これは、この追加の未知数のスカラー場の単純さと引き換えとなっています。"
+"|gf| では我々はReturn Mapping法と，主に [PO-NI2016]_ ， [SE-PO-WO2015]_ および [HA-"
+"WO2009]_ に触発された，より簡単な接線モジュラスを可能にする以下に展開される代替戦略の両方を提案します．それは :math:`u_{n+1}` "
+"に関して，さらに未知数なものとして， :math:`\\gamma_{n+1}` "
+"（倍の数）の値を保存する必要があります．それからわかるように，これは，降伏関数のより汎用的な処理を可能にします．これは，この追加の未知数のスカラー場の単純さと引き換えとなっています．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:147
 msgid ""
@@ -453,7 +453,7 @@ msgid ""
 ":math:`\\alpha(\\sigma_{n+1}, A_{n+1}) > 0` whose interest will appear later"
 " on (it will allow simple local inverses) and the new unknown scalar field"
 msgstr ""
-"まず、後ほど現れる（単純なローカル逆変換が可能になる） :math:`\\alpha(\\sigma_{n+1}, A_{n+1}) > 0` "
+"まず，後ほど現れる（単純なローカル逆変換が可能になる） :math:`\\alpha(\\sigma_{n+1}, A_{n+1}) > 0` "
 "という追加の（そしてオプションの）関数と新しい未知のスカラー場を考えます"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:149
@@ -470,7 +470,7 @@ msgid ""
 "\\xi_{n+1}`. The discretized plastic flow rule integration now reads:"
 msgstr ""
 "私たちの2つの主要な未知数は :math:`u_{n+1} \\mbox{ と } \\xi_{n+1}` "
-"になりました。離散化された塑性流れ則の積分は、次のようになります。"
+"になりました．離散化された塑性流れ則の積分は，次のようになります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:153
 msgid ""
@@ -500,7 +500,7 @@ msgstr ""
 msgid ""
 "For :math:`u_{n+1} \\mbox{ and } \\xi_{n+1}` be given, we define the two "
 "maps"
-msgstr ":math:`u_{n+1} \\mbox{ と } \\xi_{n+1}` が与えられたら、以下の2つの写像を定義します"
+msgstr ":math:`u_{n+1} \\mbox{ と } \\xi_{n+1}` が与えられたら，以下の2つの写像を定義します"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:165
 msgid ""
@@ -526,8 +526,8 @@ msgstr ""
 "E}^p(u_{n+1}, \\theta \\xi_{n+1}, \\zeta_{n}, \\eta_n), \\tilde{\\mathscr "
 "A}(u_{n+1}, \\theta \\xi_{n+1}, \\zeta_{n}, \\eta_n))` は方程式 :eq:`flowrule1`,"
 " :eq:`flowrule2` の解です ( :eq:`flowrule3` "
-"は考慮しません。)。後ほど、少なくとも単純な等方性の塑性流れの則では、これらの写像は単純な表現を持ち、場合によっては :math:`u_{n+1}` "
-"に対し線形になることを示しています。"
+"は考慮しません．)．後ほど，少なくとも単純な等方性の塑性流れの則では，これらの写像は単純な表現を持ち，場合によっては :math:`u_{n+1}` "
+"に対し線形になることを示しています．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:173
 msgid ""
@@ -535,7 +535,7 @@ msgid ""
 ":math:`\\sigma_{n+1}` reads"
 msgstr ""
 "その場合でも :math:`u_{n+1} \\mbox{ と } \\xi_{n+1}` は応力 :math:`\\sigma_{n+1}` "
-"を与えます。"
+"を与えます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:175
 msgid ""
@@ -559,8 +559,8 @@ msgid ""
 " of a well chosen complementarity function, as in [HA-WO2009]_ for :math:`r "
 "> 0` such as:"
 msgstr ""
-"相補性方程式 :eq:`flowrule3` は、 [HA-WO2009]_ のように、 :math:`r > 0` "
-"に対し、適切に選択された相補性関数を使用して規定されます。"
+"相補性方程式 :eq:`flowrule3` は， [HA-WO2009]_ のように， :math:`r > 0` "
+"に対し，適切に選択された相補性関数を使用して規定されます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:181
 msgid ""
@@ -593,9 +593,9 @@ msgid ""
 "using the :math:`\\theta`-scheme."
 msgstr ""
 "注記：表記法 :math:`\\Delta \\xi_{n+1} = \\Delta t \\xi_{n+1}` "
-"は書体でよく使われます。ここでは、2つの量の間の差異を保存するためこれを選択しています。これは主に、適応可能な時間ステップの使用のためです。時間ステップが変化するとき、値"
-" :math:`\\xi_n` は、 :math:`\\theta` -法で、 :math:`\\Delta \\xi_{n}` の代わりに "
-":math:`\\xi_n` を使用することが望ましいです。"
+"は書体でよく使われます．ここでは，2つの量の間の差異を保存するためこれを選択しています．これは主に，適応可能な時間ステップの使用のためです．時間ステップが変化するとき，値"
+" :math:`\\xi_n` は， :math:`\\theta` -法で， :math:`\\Delta \\xi_{n}` の代わりに "
+":math:`\\xi_n` を使用することが望ましいです．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:191
 msgid "Plane strain approximation"
@@ -609,8 +609,8 @@ msgid ""
 "compared to the ones in the other directions and is neglected. It result in "
 "a plane strain tensor of the form"
 msgstr ""
-"平面ひずみ近似は、長手方向の歪み（ :math:`z` "
-"軸に沿っていると仮定します）が他の方向の歪みに比べて小さく無視できると考えられる長い円筒形の物体の変形に対応する2次元問題です。これは、平面ひずみテンソルの形をとります"
+"平面ひずみ近似は，長手方向の歪み（ :math:`z` "
+"軸に沿っていると仮定します）が他の方向の歪みに比べて小さく無視できると考えられる長い円筒形の物体の変形に対応する2次元問題です．これは，平面ひずみテンソルの形をとります"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:195
 msgid ""
@@ -622,7 +622,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:197
 msgid "We denote"
-msgstr "次の式を示します。"
+msgstr "次の式を示します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:199
 msgid ""
@@ -636,7 +636,7 @@ msgstr ""
 msgid ""
 "the non neglected components of the strain tensor. In the decomposition of "
 "plastic and elastic part of the strain tensor, we assume"
-msgstr "この式はひずみテンソルの成分を示します。ひずみテンソルの塑性と弾性部分の分解では、"
+msgstr "この式はひずみテンソルの成分を示します．ひずみテンソルの塑性と弾性部分の分解では，"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:204
 msgid ""
@@ -648,7 +648,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:206
 msgid "and"
-msgstr "と次式となります。"
+msgstr "と次式となります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:208
 msgid ""
@@ -662,7 +662,7 @@ msgstr ""
 msgid ""
 "The adaptation to the plane strain approximation to plastic model is most of"
 " the time an  easy task. An isotropic linearized elastic response reads"
-msgstr "塑性モデルへの平面ひずみ近似の適応は、ほとんどの場合、簡単な作業です。等方性線形弾性応答は、"
+msgstr "塑性モデルへの平面ひずみ近似の適応は，ほとんどの場合，簡単な作業です．等方性線形弾性応答は，"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:212
 msgid ""
@@ -675,7 +675,7 @@ msgstr ""
 #: ../source/userdoc/model_plasticity_small_strain.rst:214
 #: ../source/userdoc/model_plasticity_small_strain.rst:316
 msgid "and thus"
-msgstr "であり、したがって"
+msgstr "であり，したがって"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:216
 msgid ""
@@ -702,7 +702,7 @@ msgstr ""
 msgid ""
 "Note that in the common case where isochoric plastic strain is assumed, one "
 "has"
-msgstr "均等塑性ひずみが想定される汎用的なケースでは、以下の通りになることに留意してください。"
+msgstr "均等塑性ひずみが想定される汎用的なケースでは，以下の通りになることに留意してください．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:224
 #: ../source/userdoc/model_plasticity_small_strain.rst:261
@@ -722,7 +722,7 @@ msgid ""
 "The plane stress approximation describe generally the 2D membrane "
 "deformation of a thin plate. It consist in prescribing the stress tensor to "
 "have only in-plane nonzero components, i.e."
-msgstr "平面応力近似は、一般に、薄板の2次元膜変形を記述します。この近似は、面内非ゼロ成分のみを有するように応力テンソルを規定します。"
+msgstr "平面応力近似は，一般に，薄板の2次元膜変形を記述します．この近似は，面内非ゼロ成分のみを有するように応力テンソルを規定します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:233
 msgid ""
@@ -734,7 +734,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:235
 msgid "We will still denote"
-msgstr "さらに、"
+msgstr "さらに，"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:237
 msgid ""
@@ -753,9 +753,9 @@ msgid ""
 ":math:`\\varepsilon^e_{3,3}` being unknown (see for instance [SO-PE-"
 "OW2008]_)."
 msgstr ""
-"のように応力テンソルの面内成分を与えます。弾塑性の場合、一般に、付加的な未知変数 :math:`\\varepsilon^e_{1,3}`, "
+"のように応力テンソルの面内成分を与えます．弾塑性の場合，一般に，付加的な未知変数 :math:`\\varepsilon^e_{1,3}`, "
 ":math:`\\varepsilon^e_{2,3}`, :math:`\\varepsilon^e_{3,3}` "
-"により、応力テンソルの面外成分をゼロにするように2次の塑性流れ則を適用することにより成り立ちます。（例えば、 [SO-PE-OW2008]_ を参照）。"
+"により，応力テンソルの面外成分をゼロにするように2次の塑性流れ則を適用することにより成り立ちます．（例えば， [SO-PE-OW2008]_ を参照）．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:241
 msgid ""
@@ -763,7 +763,7 @@ msgid ""
 "\\lambda \\mbox{tr}(\\varepsilon^e) + 2\\mu\\varepsilon^e` such that"
 msgstr ""
 "等方性の線形弾性応答 :math:`\\sigma = \\lambda \\mbox{tr}(\\varepsilon^e) + "
-"2\\mu\\varepsilon^e` の場合、次のようになります。"
+"2\\mu\\varepsilon^e` の場合，次のようになります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:243
 msgid ""
@@ -788,7 +788,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:249
 msgid "so that"
-msgstr "そのため、"
+msgstr "そのため，"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:251
 msgid ""
@@ -800,7 +800,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:254
 msgid "Moreover"
-msgstr "さらに、"
+msgstr "さらに，"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:256
 msgid ""
@@ -814,7 +814,7 @@ msgstr ""
 msgid ""
 "Note that in the case where isochoric plastic strain is assumed, one still "
 "has"
-msgstr "均等塑性ひずみが仮定されている場合、以下が成り立ちます。"
+msgstr "均等塑性ひずみが仮定されている場合，以下が成り立ちます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:265
 msgid "Some classical laws"
@@ -827,9 +827,9 @@ msgid ""
 "uniaxial yield stress (which may depend on some hardening internal "
 "variables)."
 msgstr ""
-"Tresca : :math:`\\rho(\\sigma) \\le \\sigma_y` 。ここで、 :math:`\\rho(\\sigma)` "
-"はCauchy応力テンソルのスペクトル半径、 :math:`\\sigma_y` "
-"は一軸降伏応力です。(これはいくつかの硬化内部変数に依存する可能性があります）。"
+"Tresca : :math:`\\rho(\\sigma) \\le \\sigma_y` ．ここで， :math:`\\rho(\\sigma)` "
+"はCauchy応力テンソルのスペクトル半径， :math:`\\sigma_y` "
+"は一軸降伏応力です．(これはいくつかの硬化内部変数に依存する可能性があります）．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:270
 msgid ""
@@ -839,9 +839,9 @@ msgid ""
 "and :math:`\\|\\sigma\\| = \\sqrt{\\sigma:\\sigma}`."
 msgstr ""
 "Von Mises :  :math:`\\|\\mbox{Dev}(\\sigma)\\| \\le "
-"\\sqrt{\\frac{2}{3}}\\sigma_y` 。ここで :math:`\\mbox{Dev}(\\sigma) = \\sigma - "
+"\\sqrt{\\frac{2}{3}}\\sigma_y` ．ここで :math:`\\mbox{Dev}(\\sigma) = \\sigma - "
 "\\frac{1}{3}\\mbox{tr}(\\sigma)I` は :math:`\\sigma` と :math:`\\|\\sigma\\| ="
-" \\sqrt{\\sigma:\\sigma}` の偏差部分です。"
+" \\sqrt{\\sigma:\\sigma}` の偏差部分です．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:275
 msgid ""
@@ -853,7 +853,7 @@ msgstr "Von-Mises基準（Prandl-Reussモデル）を伴う完全な等方性弾
 msgid ""
 "There is no internal variables and we consider an isotropic elastic "
 "response. The flow rule reads"
-msgstr "内部変数はなく、等方性弾性応答を考慮します。流動化則は次の式になります。"
+msgstr "内部変数はなく，等方性弾性応答を考慮します．流動化則は次の式になります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:279
 msgid ""
@@ -869,13 +869,13 @@ msgid ""
 "\\|\\mbox{Dev}(\\sigma)\\| - \\sqrt{\\frac{2}{3}}\\sigma_y`."
 msgstr ""
 "これは式 :math:`\\Psi(\\sigma) = f(\\sigma) = \\|\\mbox{Dev}(\\sigma)\\| - "
-"\\sqrt{\\frac{2}{3}}\\sigma_y` に対応します。"
+"\\sqrt{\\frac{2}{3}}\\sigma_y` に対応します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:284
 msgid ""
 "The :math:`\\theta`-scheme for the integration of the plastic flow rule "
 "reads:"
-msgstr "塑性流れ則の積分のための :math:`\\theta`- 法は次式となります。"
+msgstr "塑性流れ則の積分のための :math:`\\theta`- 法は次式となります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:286
 msgid ""
@@ -891,9 +891,9 @@ msgid ""
 "\\|\\mbox{Dev}(\\sigma_{n})\\|` and still with :math:`\\xi_n = "
 "\\dfrac{\\gamma_n}{\\alpha(\\sigma_{n})}` this gives the equation"
 msgstr ""
-"因子を選択すると、次のようになります。 :math:`\\alpha(\\sigma_{n}) = "
+"因子を選択すると，次のようになります． :math:`\\alpha(\\sigma_{n}) = "
 "\\|\\mbox{Dev}(\\sigma_{n})\\|` と :math:`\\xi_n = "
-"\\dfrac{\\gamma_n}{\\alpha(\\sigma_{n})}` 。ゆえに次式となります。"
+"\\dfrac{\\gamma_n}{\\alpha(\\sigma_{n})}` ．ゆえに次式となります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:290
 msgid ""
@@ -910,7 +910,7 @@ msgid ""
 "directly gives:"
 msgstr ""
 ":math:`\\mbox{Dev}(\\sigma_{n+1}) = 2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1})) "
-"- 2\\mu\\varepsilon^p_{n+1}` であるため次式となります。"
+"- 2\\mu\\varepsilon^p_{n+1}` であるため次式となります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:294
 msgid ""
@@ -924,11 +924,11 @@ msgstr ""
 msgid ""
 "which is a linear expression with respect to :math:`u_{n+1}` (but not with "
 "respect to :math:`\\xi_{n+1}`)."
-msgstr "これは、 :math:`u_{n+1}` （ただし、 :math:`\\xi_{n+1}` とは関係ありません）に関する線形表現です。"
+msgstr "これは， :math:`u_{n+1}` （ただし， :math:`\\xi_{n+1}` とは関係ありません）に関する線形表現です．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:298
 msgid "Moreover, :math:`\\zeta_n` is defined by"
-msgstr "さらに、 :math:`\\zeta_n` は次のように定義されます。"
+msgstr "さらに， :math:`\\zeta_n` は次のように定義されます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:300
 msgid ""
@@ -959,7 +959,7 @@ msgstr ""
 msgid ""
 "Thus, denoting :math:`B = \\mbox{Dev}(\\varepsilon(u_{n+1})) - \\zeta_n`, "
 "either"
-msgstr "したがって、 :math:`B = \\mbox{Dev}(\\varepsilon(u_{n+1})) - \\zeta_n` であり、"
+msgstr "したがって， :math:`B = \\mbox{Dev}(\\varepsilon(u_{n+1})) - \\zeta_n` であり，"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:310
 msgid ""
@@ -975,8 +975,8 @@ msgid ""
 ":math:`\\|\\mbox{Dev}(\\sigma_{n+1})\\| =  \\sqrt{\\frac{2}{3}}` and one "
 "obtains"
 msgstr ""
-"そして弾性範囲の場合は、 :math:`\\xi_{n+1} = 0` 、または "
-":math:`\\|\\mbox{Dev}(\\sigma_{n+1})\\| =  \\sqrt{\\frac{2}{3}}` となり、"
+"そして弾性範囲の場合は， :math:`\\xi_{n+1} = 0` ，または "
+":math:`\\|\\mbox{Dev}(\\sigma_{n+1})\\| =  \\sqrt{\\frac{2}{3}}` となり，"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:314
 msgid ""
@@ -996,7 +996,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:320
 msgid "The two options can be summarized by"
-msgstr "2つの選択肢は次のように表されれます。"
+msgstr "2つの選択肢は次のように表されれます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:322
 msgid ""
@@ -1012,7 +1012,7 @@ msgid ""
 " :math:`\\theta \\ne 1`) is given by"
 msgstr ""
 "乗算器 :math:`\\xi_{n+1}` ( :math:`\\theta \\ne 1` の :math:`\\theta` "
-"-法である必要があります）は次のように与えられます。"
+"-法である必要があります）は次のように与えられます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:326
 msgid ""
@@ -1034,7 +1034,7 @@ msgid ""
 ":math:`\\bar{\\varepsilon}(u_{n+1})`."
 msgstr ""
 "平面ひずみ近似 :math:`\\bar{\\varepsilon}^p` と :math:`\\bar{\\varepsilon}(u_{n+1})`"
-" は3次元歪みテンソルを面内歪みで置き換えるのと同じ表現をしています。"
+" は3次元歪みテンソルを面内歪みで置き換えるのと同じ表現をしています．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:333
 msgid ""
@@ -1050,13 +1050,13 @@ msgid ""
 "\\bar{\\varepsilon} - \\dfrac{\\mbox{tr}(\\bar{\\varepsilon})}{3} \\bar{I}` "
 "is the 2D restriction of the 3D deviator."
 msgstr ""
-"ここで、 :math:`\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}) = "
+"ここで， :math:`\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}) = "
 "\\bar{\\varepsilon} - \\dfrac{\\mbox{tr}(\\bar{\\varepsilon})}{3} \\bar{I}` "
-"は3次元偏差器の2次元制限です。"
+"は3次元偏差器の2次元制限です．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:337
 msgid "Moreover, for the yield condition,"
-msgstr "さらに、降伏条件については、"
+msgstr "さらに，降伏条件については，"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:339
 msgid ""
@@ -1068,7 +1068,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:341
 msgid "And for the elimination of the multiplier,"
-msgstr "そして乗数の除去のために次式とします。"
+msgstr "そして乗数の除去のために次式とします．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:343
 msgid ""
@@ -1092,7 +1092,7 @@ msgstr ""
 " :math:`\\|B\\|^2 = \\|\\overline{\\mbox{Dev}}(\\bar{\\varepsilon}(u_{n+1}))"
 " - \\bar{\\zeta}_n\\|^2 + "
 "\\left(\\dfrac{\\mbox{tr}(\\bar{\\varepsilon}(u_{n+1}))}{3} "
-"-\\mbox{tr}(\\bar{\\zeta}_n) \\right)^2`。"
+"-\\mbox{tr}(\\bar{\\zeta}_n) \\right)^2`．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:347
 msgid "**Plane stress approximation**"
@@ -1102,7 +1102,7 @@ msgstr "**面応力近似**"
 msgid ""
 "For plane stress approximation, using :eq:`plane_stress_iso` we deduce from "
 "the expression of the 3D case"
-msgstr "平面応力近似の場合、 :eq:`plane_stress_iso` を使用して、3次元の場合の式から導きます。"
+msgstr "平面応力近似の場合， :eq:`plane_stress_iso` を使用して，3次元の場合の式から導きます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:351
 msgid ""
@@ -1146,7 +1146,7 @@ msgstr ""
 msgid ""
 "Moreover, for the yield condition, expression :eq:`plane_stress_dev` can be "
 "used."
-msgstr "さらに、降伏条件の場合、式 :eq:`plane_stress_dev` を使用できます。"
+msgstr "さらに，降伏条件の場合，式 :eq:`plane_stress_dev` を使用できます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:360
 msgid ""
@@ -1161,7 +1161,7 @@ msgid ""
 "accumulated plastic strain which satisfies"
 msgstr ""
 "等方性弾性応答と内部変数 :math:`\\alpha : \\Omega \\rightarrow \\rm I\\hspace{-0.15em}R`"
-" を以下の条件を満たす累積塑性歪として考察します。"
+" を以下の条件を満たす累積塑性歪として考察します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:364
 msgid ""
@@ -1175,7 +1175,7 @@ msgstr ""
 msgid ""
 "For :math:`H_i` the isotropic hardening modulus, the linear hardening "
 "consists in"
-msgstr "線形硬化は等方的硬化係数 :math:`H_i` であり、次式となります。"
+msgstr "線形硬化は等方的硬化係数 :math:`H_i` であり，次式となります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:368
 msgid ""
@@ -1187,7 +1187,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:370
 msgid "i.e. :math:`A = H_i\\alpha` and a uniaxial yield stress defined by"
-msgstr "すなわち :math:`A = H_i\\alpha` および一軸降伏応力は次のように定義されます。"
+msgstr "すなわち :math:`A = H_i\\alpha` および一軸降伏応力は次のように定義されます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:373
 msgid ""
@@ -1204,7 +1204,7 @@ msgid ""
 "can be defined by"
 msgstr ""
 ":math:`\\sigma_{y0}` "
-"は最初の一軸降伏応力です。降伏関数（およびこれは塑性モデル関連しているため、塑性ポテンシャル）は次のように定義されます。"
+"は最初の一軸降伏応力です．降伏関数（およびこれは塑性モデル関連しているため，塑性ポテンシャル）は次のように定義されます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:377
 msgid ""
@@ -1218,7 +1218,7 @@ msgstr ""
 msgid ""
 "where :math:`H_k` is the kinematic hardening modulus. The same computation "
 "as in the previous section leads to"
-msgstr "ここで、 :math:`H_k` は動力学的硬化係数です。前節と同じ計算により次式となります。"
+msgstr "ここで， :math:`H_k` は動力学的硬化係数です．前節と同じ計算により次式となります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:381
 msgid ""
@@ -1238,7 +1238,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:386
 msgid "where :math:`\\zeta_n` and :math:`\\eta_n` are defined by"
-msgstr "ここで、 :math:`\\zeta_n` と :math:`\\eta_n` は次のように定義されます。"
+msgstr "ここで， :math:`\\zeta_n` と :math:`\\eta_n` は次のように定義されます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:388
 msgid ""
@@ -1262,8 +1262,8 @@ msgid ""
 ":math:`\\tilde{\\mathscr E}^p(u_{n+1}, \\theta \\Delta \\xi, "
 "\\varepsilon^p_{n})` but only in :math:`f(\\sigma, A)`."
 msgstr ""
-"等方性硬化係数は、:math:`f(\\sigma, A)` 内のみで :math:`\\tilde{\\mathscr E}^p(u_{n+1}, "
-"\\theta \\Delta \\xi, \\varepsilon^p_{n})` の式には影響しないことに注意してください。"
+"等方性硬化係数は，:math:`f(\\sigma, A)` 内のみで :math:`\\tilde{\\mathscr E}^p(u_{n+1}, "
+"\\theta \\Delta \\xi, \\varepsilon^p_{n})` の式には影響しないことに注意してください．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:396
 msgid ""
@@ -1274,9 +1274,9 @@ msgid ""
 "becomes"
 msgstr ""
 "式 :math:`\\delta = \\dfrac{1}{1+2(\\mu+H_k/3)\\theta\\Delta t\\xi_{n+1}}`, "
-":math:`\\beta = \\dfrac{1-\\delta}{2(\\mu+H_k/3)}` と、 :math:`B = "
+":math:`\\beta = \\dfrac{1-\\delta}{2(\\mu+H_k/3)}` と， :math:`B = "
 "2\\mu\\mbox{Dev}(\\varepsilon(u_{n+1}))-2(\\mu+H_k/3)\\zeta_n` によって "
-":math:`\\varepsilon^p_{n+1}` と :math:`\\alpha_{n+1}` の式は次のようになります。"
+":math:`\\varepsilon^p_{n+1}` と :math:`\\alpha_{n+1}` の式は次のようになります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:398
 msgid ""
@@ -1288,7 +1288,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:401
 msgid "and the plastic constraint"
-msgstr "そして、塑性の拘束は次の通りです。"
+msgstr "そして，塑性の拘束は次の通りです．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:403
 #: ../source/userdoc/model_plasticity_small_strain.rst:441
@@ -1303,7 +1303,7 @@ msgstr ""
 msgid ""
 "Thus, either we are in the elastic case, i.e. :math:`\\xi_{n+1} = 0, \\delta"
 " = 1` and"
-msgstr "従って、弾性の場合、 :math:`\\xi_{n+1} = 0, \\delta = 1` であり次式となります。"
+msgstr "従って，弾性の場合， :math:`\\xi_{n+1} = 0, \\delta = 1` であり次式となります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:407
 msgid ""
@@ -1319,9 +1319,9 @@ msgid ""
 ":math:`\\delta \\|B\\| = \\sqrt{\\dfrac{2}{3}}(\\sigma_{y0}+H_i "
 "\\alpha_{n+1})` and :math:`(1-\\delta)` solves the equation"
 msgstr ""
-"塑性領域の場合 :math:`\\xi_{n+1} > 0, \\delta < 1`  、:math:`\\delta \\|B\\| = "
+"塑性領域の場合 :math:`\\xi_{n+1} > 0, \\delta < 1`  ，:math:`\\delta \\|B\\| = "
 "\\sqrt{\\dfrac{2}{3}}(\\sigma_{y0}+H_i \\alpha_{n+1})` と :math:`(1-\\delta)`"
-" を使用して方程式を解きます。"
+" を使用して方程式を解きます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:411
 msgid ""
@@ -1333,7 +1333,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:413
 msgid "which leads to"
-msgstr "それにより、次式となります。"
+msgstr "それにより，次式となります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:415
 msgid ""
@@ -1345,7 +1345,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:417
 msgid "The two cases can be summarized by"
-msgstr "この2つのケースをまとめると、"
+msgstr "この2つのケースをまとめると，"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:419
 msgid ""
@@ -1362,8 +1362,8 @@ msgid ""
 ":eq:`hardeningepsalp`. The multiplier :math:`\\xi_{n+1}` being given by"
 msgstr ""
 ":eq:`hardeningepsalp` により :math:`{\\mathscr E}^p(u_{n+1}, \\zeta_n, "
-"\\eta_n)` と :math:`{\\mathscr A}(u_{n+1}, \\zeta_n, \\eta_n)` が与えられます。乗算器 "
-":math:`\\xi_{n+1}` は次のように与えられます。"
+"\\eta_n)` と :math:`{\\mathscr A}(u_{n+1}, \\zeta_n, \\eta_n)` が与えられます．乗算器 "
+":math:`\\xi_{n+1}` は次のように与えられます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:423
 msgid ""
@@ -1415,7 +1415,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:439
 msgid "The yield condition still reads"
-msgstr "降伏条件は次の通りです。"
+msgstr "降伏条件は次の通りです．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:443
 msgid ""
@@ -1424,8 +1424,8 @@ msgid ""
 " The expressions of :math:`\\bar{\\zeta}_n` and :math:`\\eta_n` have to be "
 "adapted accoringly."
 msgstr ""
-":math:`\\beta` は、前の節で述べた式と同じ式 :math:`\\|B\\|` を持ちます。 :math:`\\bar{\\zeta}_n`"
-" と :math:`\\eta_n` の表現は、条件に応じて適用する必要があります。"
+":math:`\\beta` は，前の節で述べた式と同じ式 :math:`\\|B\\|` を持ちます． :math:`\\bar{\\zeta}_n`"
+" と :math:`\\eta_n` の表現は，条件に応じて適用する必要があります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:450
 msgid "Souza-Auricchio elastoplasticity law (for shape memory alloys)"
@@ -1439,9 +1439,9 @@ msgid ""
 "hardening is considered with a constraint :math:`\\|\\varepsilon^p\\| \\le "
 "c_3`. The plastic potential and yield function have the form"
 msgstr ""
-"この流動化則の構成の正当性については、たとえば [GR-ST2015]_ を参照してください。Von-"
-"Mises応力基準と等方性弾性応答、内部変数および特殊タイプの移動硬化は、次のような制約を考慮して検討されます "
-":math:`\\|\\varepsilon^p\\| \\le c_3` 。塑性ポテンシャルと降伏関数は、"
+"この流動化則の構成の正当性については，たとえば [GR-ST2015]_ を参照してください．Von-"
+"Mises応力基準と等方性弾性応答，内部変数および特殊タイプの移動硬化は，次のような制約を考慮して検討されます "
+":math:`\\|\\varepsilon^p\\| \\le c_3` ．塑性ポテンシャルと降伏関数は，"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:454
 msgid ""
@@ -1469,9 +1469,9 @@ msgid ""
 "that :math:`\\dfrac{\\varepsilon^p}{\\|\\varepsilon^p\\|}` has to be "
 "understood to be the whole unit ball for :math:`\\varepsilon^p = 0`."
 msgstr ""
-"ここで、 :math:`c_1, c_2 \\mbox{ と } c_3` はいくつかの物理的なパラメータです。 "
+"ここで， :math:`c_1, c_2 \\mbox{ と } c_3` はいくつかの物理的なパラメータです． "
 ":math:`\\dfrac{\\varepsilon^p}{\\|\\varepsilon^p\\|}` は "
-":math:`\\varepsilon^p = 0` の単位球全体として処理されることに注意してください。"
+":math:`\\varepsilon^p = 0` の単位球全体として処理されることに注意してください．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:464
 msgid "to be done ..."
@@ -1491,7 +1491,7 @@ msgstr ""
 "テストプログラム :file:`tests/plasticity.cc`, "
 ":file:`interface/tests/matlab/demo_plasticity.m`, "
 ":file:`interface/tests/matlab/demo_plasticity.py` と "
-":file:`contrib/test_plasticity` 内を参照してください。"
+":file:`contrib/test_plasticity` 内を参照してください．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:477
 msgid "Generic brick"
@@ -1503,7 +1503,7 @@ msgid ""
 "multiplier is kept as a variable of the problem where the added term is of "
 "the form:"
 msgstr ""
-"汎用的なブリック要素には2つのバージョンがあります。1つめは塑性乗数が、問題の変数として保持されているときのもので、追加される項は次の形式です。"
+"汎用的なブリック要素には2つのバージョンがあります．1つめは塑性乗数が，問題の変数として保持されているときのもので，追加される項は次の形式です．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:481
 msgid ""
@@ -1519,8 +1519,8 @@ msgid ""
 "the elasticity coefficients), and when the return mapping strategy is "
 "selected (plastic multiplier is just a data), just the added term:"
 msgstr ""
-":math:`r > 0` がブリック要素によって（弾性係数の点で）選択された特定の値を有し、Return "
-"Mapping法が選択されたとき（塑性乗数は単なるデータです）は、次の項を追加するだけです。"
+":math:`r > 0` がブリック要素によって（弾性係数の点で）選択された特定の値を有し，Return "
+"Mapping法が選択されたとき（塑性乗数は単なるデータです）は，次の項を追加するだけです．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:485
 msgid ""
@@ -1532,7 +1532,7 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:487
 msgid "The function which adds the brick to a model `md` is ::"
-msgstr "ブリック要素をモデル `md` に追加する関数は次の通りです。"
+msgstr "ブリック要素をモデル `md` に追加する関数は次の通りです．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:495
 msgid ""
@@ -1559,21 +1559,21 @@ msgid ""
 "name, constant value ...). The time step can be altered from one iteration "
 "to the next one. `region` is a mesh region."
 msgstr ""
-"ここで `lawname` は実装された塑性法則の名前であり、 `unknowns_type` "
-"は塑性乗数が問題もしくは次のイテレーションのために保存されたモデルのデータが(写像手法を返す)未知数である離散化の選択を示します。いずれにしても乗数が格納されることに注意してください。"
-" `varnames` は、塑性法則（少なくとも変位、塑性乗数、塑性ひずみ）に依存する長さの変数とデータ名の集合です。 `params` "
-"はパラメータ（少なくとも弾性係数と降伏応力）表現のリストです。これらの表現は、モデルのいくつかのデータ名（または変数名）でもかまいませんが、GWFL汎用弱形式言語の有効なスカラー式（"
-" \"1/2\", \"2+sin(X[0])\", \"1+Norm(v)\" ... など）も可能です。 `params` "
-"にオプションで指定される最後の2つのパラメータは、塑性ひずみ積分と時間ステップ `dt` に使用される `theta` -法（汎用された台形ルール）の "
-"`theta` パラメータです。省略された場合の `theta` のデフォルト値は1であり、これは1次整合性がある古典的な後方 Euler "
-"方式に対応します。 `theta=1/2` は、2次整合であるCrank-Nicolson法（台形則）に対応します。 1/2と1の間の値は有効な値です。"
-" `dt` のデフォルト値は 'timestep' であり、モデルで定義された時間ステップを単に示すだけです（ md.set_time_step(dt)"
-" による）。あるいは、任意の式（データ名、定数値など "
-"...）でもかまいません。時間ステップは、1つの反復から次のイテレーションまで変更することができます。 `region` はメッシュ領域です。"
+"ここで `lawname` は実装された塑性法則の名前であり， `unknowns_type` "
+"は塑性乗数が問題もしくは次のイテレーションのために保存されたモデルのデータが(写像手法を返す)未知数である離散化の選択を示します．いずれにしても乗数が格納されることに注意してください．"
+" `varnames` は，塑性法則（少なくとも変位，塑性乗数，塑性ひずみ）に依存する長さの変数とデータ名の集合です． `params` "
+"はパラメータ（少なくとも弾性係数と降伏応力）表現のリストです．これらの表現は，モデルのいくつかのデータ名（または変数名）でもかまいませんが，GWFL汎用弱形式言語の有効なスカラー式（"
+" \"1/2\", \"2+sin(X[0])\", \"1+Norm(v)\" ... など）も可能です． `params` "
+"にオプションで指定される最後の2つのパラメータは，塑性ひずみ積分と時間ステップ `dt` に使用される `theta` -法（汎用された台形ルール）の "
+"`theta` パラメータです．省略された場合の `theta` のデフォルト値は1であり，これは1次整合性がある古典的な後方 Euler "
+"方式に対応します． `theta=1/2` は，2次整合であるCrank-Nicolson法（台形則）に対応します． 1/2と1の間の値は有効な値です．"
+" `dt` のデフォルト値は 'timestep' であり，モデルで定義された時間ステップを単に示すだけです（ md.set_time_step(dt)"
+" による）．あるいは，任意の式（データ名，定数値など "
+"...）でもかまいません．時間ステップは，1つの反復から次のイテレーションまで変更することができます． `region` はメッシュ領域です．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:519
 msgid "The available plasticity laws are:"
-msgstr "利用可能な塑性法則は次の通りです。"
+msgstr "利用可能な塑性法則は次の通りです．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:521
 msgid ""
@@ -1594,13 +1594,13 @@ msgid ""
 "strain approximation, see below."
 msgstr ""
 "\"Prandtl Reuss\"（または \"等方性完全可塑性\" "
-"）。硬化なしの等方性弾塑性。変数は変位、塑性乗数、塑性ひずみです。変位は変数でなければならず、前の時間ステップでの変位（通常は \"u\" と "
-"\"Previous_u\" ）に対応する \"Previous\\_\" の接頭辞に対応するデータがあります。塑性乗数には2つのバージョン（通常は "
-"\"xi\" と \"Previous_xi\" ）が必要です。 `unknowns_type = DISPLACEMENT_ONLY` "
-"の場合はデータとして定義され、 `unknowns_type = DISPLACEMENT_AND_PLASTIC_MULTIPLIER` "
-"の場合は変数として定義されます。塑性ひずみは、mesh_femまたは（好ましくは）im_data（ `mim` に対応する）に格納された n x n "
-"のデータテンソルフィールドを表す必要があります。データは、第1のパラメータ(Lame係数)、第2のパラメータ（せん断弾性率）および一軸降伏応力です。重要：この規則は3次元表現を実装していることに注意してください。"
-" 2次元で使用されている場合、式は単に2次元に転置されます。平面ひずみ近似については、以下を参照してください。"
+"）．硬化なしの等方性弾塑性．変数は変位，塑性乗数，塑性ひずみです．変位は変数でなければならず，前の時間ステップでの変位（通常は \"u\" と "
+"\"Previous_u\" ）に対応する \"Previous\\_\" の接頭辞に対応するデータがあります．塑性乗数には2つのバージョン（通常は "
+"\"xi\" と \"Previous_xi\" ）が必要です． `unknowns_type = DISPLACEMENT_ONLY` "
+"の場合はデータとして定義され， `unknowns_type = DISPLACEMENT_AND_PLASTIC_MULTIPLIER` "
+"の場合は変数として定義されます．塑性ひずみは，mesh_femまたは（好ましくは）im_data（ `mim` に対応する）に格納された n x n "
+"のデータテンソルフィールドを表す必要があります．データは，第1のパラメータ(Lame係数)，第2のパラメータ（せん断弾性率）および一軸降伏応力です．重要：この規則は3次元表現を実装していることに注意してください．"
+" 2次元で使用されている場合，式は単に2次元に転置されます．平面ひずみ近似については，以下を参照してください．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:537
 msgid ""
@@ -1608,8 +1608,8 @@ msgid ""
 "plasticity\") The same law as the previous one but adapted to the plane "
 "strain approximation. Can only be used in 2D."
 msgstr ""
-"\"平面ひずみ Prandtl Reuss\" （または \"平面ひずみ等方性完全塑性\" ）平面ひずみ近似に適合したものと同じ規則。 "
-"2次元でのみ使用できます。"
+"\"平面ひずみ Prandtl Reuss\" （または \"平面ひずみ等方性完全塑性\" ）平面ひずみ近似に適合したものと同じ規則． "
+"2次元でのみ使用できます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:541
 msgid ""
@@ -1621,9 +1621,9 @@ msgid ""
 "(preferably on an im_data). Two additional parameters: the kinematic "
 "hardening modulus and the isotropic one. 3D expressions only."
 msgstr ""
-"\"Prandtl Reuss線形硬化\" （または \"等方性塑性線形硬化\" ）。線形等方性および移動硬化による等方性弾性塑性。 \"Prandtl"
-" Reuss\" 則と比較した追加変数：累積塑性ひずみ。塑性ひずみと同様に、時間ステップの終了時にのみ記憶されるので、単純なデータが必要である（ "
-"im_data 上にあるのが好ましい）。2つの追加パラメータ： 移動硬化係数および等方性パラメータ。3次元表現のみです。"
+"\"Prandtl Reuss線形硬化\" （または \"等方性塑性線形硬化\" ）．線形等方性および移動硬化による等方性弾性塑性． \"Prandtl"
+" Reuss\" 則と比較した追加変数：累積塑性ひずみ．塑性ひずみと同様に，時間ステップの終了時にのみ記憶されるので，単純なデータが必要である（ "
+"im_data 上にあるのが好ましい）．2つの追加パラメータ： 移動硬化係数および等方性パラメータ．3次元表現のみです．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:550
 msgid ""
@@ -1632,7 +1632,7 @@ msgid ""
 "adapted to the plane strain approximation. Can only be used in 2D."
 msgstr ""
 "\" 平面ひずみPrandtl Reuss線形硬化\" （または \"平面ひずみ等方性可塑性線形硬化\" "
-"）。前のものと同じ規則ですが、平面ひずみ近似に適合しています。2次元でのみ使用できます。"
+"）．前のものと同じ規則ですが，平面ひずみ近似に適合しています．2次元でのみ使用できます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:555
 msgid ""
@@ -1642,13 +1642,13 @@ msgid ""
 "multiplier)."
 msgstr ""
 "重要： `small_strain_elastoplasticity_next_iter` "
-"は、各時間ステップの終わり、次のステップの前（および後処理の前に、これが塑性ひずみおよび塑性乗数の値を設定する）で呼び出されなければならないことを忘れないでください。"
+"は，各時間ステップの終わり，次のステップの前（および後処理の前に，これが塑性ひずみおよび塑性乗数の値を設定する）で呼び出されなければならないことを忘れないでください．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:560
 msgid ""
 "Additionaly, the following function allow to pass from a time step to "
 "another for the small strain plastic brick: ::"
-msgstr "さらに、以下の関数は、微小塑性ひずみブリック要素の時間ステップをすすめることを許可します。"
+msgstr "さらに，以下の関数は，微小塑性ひずみブリック要素の時間ステップをすすめることを許可します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:567
 msgid ""
@@ -1662,9 +1662,9 @@ msgid ""
 "`compute_small_strain_elastoplasticity_Von_Mises`."
 msgstr ""
 "パラメータは `add_small_strain_elastoplasticity_brick` "
-"のパラメータとまったく同じでなければなりません。そのため、この関数の説明を参照してください。基本的には、このブリック要素は塑性ひずみと塑性積演算子を計算し、次のステップのために保存します。さらに、計算された変位を前の時間ステップの変位を格納するデータに（通常は"
-" \"u\" から \"Previous\\_u\" に）コピーします。 この関数は "
-"`compute_small_strain_elastoplasticity_Von_Mises` を使う前に呼び出さなければなりません。"
+"のパラメータとまったく同じでなければなりません．そのため，この関数の説明を参照してください．基本的には，このブリック要素は塑性ひずみと塑性積演算子を計算し，次のステップのために保存します．さらに，計算された変位を前の時間ステップの変位を格納するデータに（通常は"
+" \"u\" から \"Previous\\_u\" に）コピーします． この関数は "
+"`compute_small_strain_elastoplasticity_Von_Mises` を使う前に呼び出さなければなりません．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:577
 msgid "The function ::"
@@ -1679,10 +1679,10 @@ msgid ""
 "`small_strain_elastoplasticity_next_iter` has to be called before any call "
 "of this function."
 msgstr ""
-"`mf_vm` で近似された微小ひずみ弾塑性項に対するVon Mises応力場を計算し、その結果を`VM`に格納します。他のすべてのパラメータは "
-"`add_small_strain_elastoplasticity_brick` とまったく同じです。 "
+"`mf_vm` で近似された微小ひずみ弾塑性項に対するVon Mises応力場を計算し，その結果を`VM`に格納します．他のすべてのパラメータは "
+"`add_small_strain_elastoplasticity_brick` とまったく同じです． "
 "`small_strain_elastoplasticity_next_iter` "
-"は、この関数を呼び出す前に呼び出さなければならないことに注意してください。"
+"は，この関数を呼び出す前に呼び出さなければならないことに注意してください．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:595
 msgid ""
@@ -1697,11 +1697,11 @@ msgid ""
 "assembly. Its specificity which could be interesting for testing is that the"
 " flow rule is integrated on  finite element nodes (not on Gauss points)."
 msgstr ""
-"これは、等方性完全塑性に制限され、低水準の汎用的な構築に基づいている弾塑性要素の以前のバージョンです。流れ則が有限要素節点（Gauss点ではない）に積分されていることはテストにおいて注意する点です。"
+"これは，等方性完全塑性に制限され，低水準の汎用的な構築に基づいている弾塑性要素の以前のバージョンです．流れ則が有限要素節点（Gauss点ではない）に積分されていることはテストにおいて注意する点です．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:599
 msgid "The function adding this brick to a model is: ::"
-msgstr "このブリック要素をモデルに追加する関数は以下の通りです。"
+msgstr "このブリック要素をモデルに追加する関数は以下の通りです．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:611
 msgid "where:"
@@ -1711,22 +1711,22 @@ msgstr "ここで"
 msgid ""
 "``varname`` represents the main displacement unknown on which the brick is "
 "added (u)."
-msgstr "``varname`` はブリック要素が追加されたメインの未知変位(u)を表します。"
+msgstr "``varname`` はブリック要素が追加されたメインの未知変位(u)を表します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:606
 msgid "``previous_varname`` is the displacement at the previous time step."
-msgstr "``previous_varname`` は直前の時間ステップでの変位です。"
+msgstr "``previous_varname`` は直前の時間ステップでの変位です．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:607
 msgid ""
 "``datalambda`` and ``datamu`` are the data corresponding to the Lame "
 "coefficients."
-msgstr "``datalambda`` と ``datamu`` はLame係数に対応するデータです。"
+msgstr "``datalambda`` と ``datamu`` はLame係数に対応するデータです．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:608
 msgid ""
 "``datathreshold`` represents the plastic threshold of the studied material."
-msgstr "``datathreshold`` は、調査した材料の塑性閾値を表します。"
+msgstr "``datathreshold`` は，調査した材料の塑性閾値を表します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:609
 msgid ""
@@ -1737,8 +1737,8 @@ msgid ""
 "``varname``."
 msgstr ""
 "``datasigma`` "
-"は、材料によって支持される応力制約値を表します。使用されるNewton法に必要な時間スキームの2つの反復で構成される必要があります。 "
-"``datasigma`` が定義されている有限要素法は ``varname`` の導関数を表すことができることに注意してください。"
+"は，材料によって支持される応力制約値を表します．使用されるNewton法に必要な時間スキームの2つの反復で構成される必要があります． "
+"``datasigma`` が定義されている有限要素法は ``varname`` の導関数を表すことができることに注意してください．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:610
 msgid ""
@@ -1746,8 +1746,8 @@ msgid ""
 "`abstract_constraints_projection` type and for the moment, only exists the "
 "`VM_projection` corresponding to the Von Mises one."
 msgstr ""
-"``ACP`` は、使用される投影のタイプに対応します。これは `abstract_constraints_projection` "
-"型を持ち、現時点では、Von Misesのものに対応する `VM_projection` しか存在しません。"
+"``ACP`` は，使用される投影のタイプに対応します．これは `abstract_constraints_projection` "
+"型を持ち，現時点では，Von Misesのものに対応する `VM_projection` しか存在しません．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:613
 msgid ""
@@ -1755,17 +1755,17 @@ msgid ""
 "constants or described on the same finite element method."
 msgstr ""
 "注意: ``datalambda``, ``datamu`` と ``datathreshold`` "
-"は定数でも、同じ有限要素法で記述してもかまいません。"
+"は定数でも，同じ有限要素法で記述してもかまいません．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:615
 msgid ""
 "This function assembles the tangent matrix and the right hand side vector "
 "which will be solved using a Newton algorithm."
-msgstr "この関数は、Newton法を使用して解かれる接ベクトルと右辺ベクトルを構築します。"
+msgstr "この関数は，Newton法を使用して解かれる接ベクトルと右辺ベクトルを構築します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:618
 msgid "Additionaly, The function: ::"
-msgstr "さらに、次の関数は ::"
+msgstr "さらに，次の関数は ::"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:623
 msgid ""
@@ -1773,8 +1773,8 @@ msgid ""
 "load or an unload (once a solve has been done earlier) and upload the "
 "variables ``varname`` and ``datasigma`` as follows:"
 msgstr ""
-"載荷または除荷後に材料がサポートしている新しい応力制約値を計算し、（一度解を求めたら）次のように変数 ``varname`` および "
-"``datasigma`` をアップロードします。"
+"載荷または除荷後に材料がサポートしている新しい応力制約値を計算し，（一度解を求めたら）次のように変数 ``varname`` および "
+"``datasigma`` をアップロードします．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:625
 msgid ""
@@ -1788,7 +1788,7 @@ msgstr ""
 msgid ""
 "Then, :math:`u^n` and :math:`\\sigma^n` contains the new values computed and"
 " one can restart the process."
-msgstr "そして、 :math:`u^n` と :math:`\\sigma^n` は計算された新しい値を含み、プロセスを再起動することができます。"
+msgstr "そして， :math:`u^n` と :math:`\\sigma^n` は計算された新しい値を含み，プロセスを再起動することができます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:632
 #: ../source/userdoc/model_plasticity_small_strain.rst:640
@@ -1804,19 +1804,19 @@ msgid ""
 "``elastoplasticity_next_iter`` has been called earlier."
 msgstr ""
 "``datasigma`` に格納されているVon Mises（または ``tresca`` = true "
-"の場合Tresca）基準の応力テンソルのを計算します。応力は `mesh_fem` ``mf_vm`` で評価され、ベクトル ``VM`` "
-"に格納されます。もちろん、この関数は以前の関数 ``elastoplasticity_next_iter`` "
-"がこの関数の前に呼び出された場合にのみ使用できます。"
+"の場合Tresca）基準の応力テンソルのを計算します．応力は `mesh_fem` ``mf_vm`` で評価され，ベクトル ``VM`` "
+"に格納されます．もちろん，この関数は以前の関数 ``elastoplasticity_next_iter`` "
+"がこの関数の前に呼び出された場合にのみ使用できます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:645
 msgid ""
 "computes on ``mf_pl`` the plastic part of the material, that could appear "
 "after a load and an unload, into the vector ``Plast``."
-msgstr "載荷と除荷後に出現する材料の可塑性部分を ``Plast`` に ``mf_pl`` で計算します。"
+msgstr "載荷と除荷後に出現する材料の可塑性部分を ``Plast`` に ``mf_pl`` で計算します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:647
 msgid ""
 "Note that ``datasigma`` should be the vector containing the new stress "
 "constraint values, i.e. after a load or an unload of the material."
 msgstr ""
-"``datasigma`` は、新しい応力制約値を含むベクトル、すなわち、材料の載荷または除荷後のベクトルでなければならないことに留意してください。"
+"``datasigma`` は，新しい応力制約値を含むベクトル，すなわち，材料の載荷または除荷後のベクトルでなければならないことに留意してください．"

@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-08 01:17+0000\n"
+"POT-Creation-Date: 2021-01-09 01:20+0000\n"
 "PO-Revision-Date: 2018-07-16 07:06+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,8 +31,8 @@ msgid ""
 "hand side of the linear (tangent) system build by the model. If :math:`f` "
 "denotes the value of the source term, the weak form of such a term is"
 msgstr ""
-"このブリック要素は、ソース項、すなわちモデル線形（接線）システム構築の右辺にのみ生じる項を追加します。もし :math:`f` "
-"はソース項の値を表すなら、そのような項の弱形式は次のようになります。"
+"このブリック要素は，ソース項，すなわちモデル線形（接線）システム構築の右辺にのみ生じる項を追加します．もし :math:`f` "
+"はソース項の値を表すなら，そのような項の弱形式は次のようになります．"
 
 #: ../source/userdoc/model_source_term.rst:19
 msgid "\\int_{\\Omega} f v\\ dx"
@@ -42,17 +42,17 @@ msgstr "\\int_{\\Omega} f v\\ dx"
 msgid ""
 "where :math:`v` is the test function. The value :math:`f` can be constant or"
 " described on a finite element method."
-msgstr "ここで、 :math:`v` は試験関数です。値 :math:`f` は、定数であっても有限要素法で記述されてもよいものです。"
+msgstr "ここで， :math:`v` は試験関数です．値 :math:`f` は，定数であっても有限要素法で記述されてもよいものです．"
 
 #: ../source/userdoc/model_source_term.rst:26
 msgid ""
 "It can also represent a Neumann condition if it is applied on a boundary of "
 "the domain."
-msgstr "また、領域の境界に適用される場合、Neumann条件を表すこともできます。"
+msgstr "また，領域の境界に適用される場合，Neumann条件を表すこともできます．"
 
 #: ../source/userdoc/model_source_term.rst:29
 msgid "The function to add a source term to a model is::"
-msgstr "モデルにソース項を追加する関数は次のとおりです。"
+msgstr "モデルにソース項を追加する関数は次のとおりです．"
 
 #: ../source/userdoc/model_source_term.rst:35
 msgid ""
@@ -67,21 +67,21 @@ msgid ""
 " optional additional data which will directly be added to the right hand "
 "side without assembly."
 msgstr ""
-"ここで ``md`` はmodelオブジェクト、 ``mim`` は積分法、 ``varname`` はソース項が追加されたモデルの変数、 "
+"ここで ``md`` はmodelオブジェクト， ``mim`` は積分法， ``varname`` はソース項が追加されたモデルの変数， "
 "``dataexpr`` "
-"はGWFL正規表現の汎用弱形式言語の表現でなければなりません（モデルの宣言されたデータでなければならない複素数バージョンを除く）。変数がスカラー値またはベクトル値である場合、スカラー値またはベクトル値でなければなりません。"
-" ``region`` は項が付加されたメッシュ領域です。領域が境界に対応する場合、ソース項はNeumann条件を表します。 "
-"``directdataname`` はオプションの追加データで、構築なくても右辺に直接追加されます。"
+"はGWFL正規表現の汎用弱形式言語の表現でなければなりません（モデルの宣言されたデータでなければならない複素数バージョンを除く）．変数がスカラー値またはベクトル値である場合，スカラー値またはベクトル値でなければなりません．"
+" ``region`` は項が付加されたメッシュ領域です．領域が境界に対応する場合，ソース項はNeumann条件を表します． "
+"``directdataname`` はオプションの追加データで，構築なくても右辺に直接追加されます．"
 
 #: ../source/userdoc/model_source_term.rst:43
 msgid "The brick has a working complex version."
-msgstr "ブリック要素は作業用の複素数バージョンを持っています。"
+msgstr "ブリック要素は作業用の複素数バージョンを持っています．"
 
 #: ../source/userdoc/model_source_term.rst:45
 msgid ""
 "A slightly different brick, especially dedicated to deal with a Neumann "
 "condition, is added by the following function::"
-msgstr "わずかに異なるブリック要素は、特にNeumann条件を扱うために用意されており、次の関数によって追加されています。"
+msgstr "わずかに異なるブリック要素は，特にNeumann条件を扱うために用意されており，次の関数によって追加されています．"
 
 #: ../source/userdoc/model_source_term.rst:51
 msgid ""
@@ -90,5 +90,5 @@ msgid ""
 "itself vector valued) and a scalar product with the outward unit normal is "
 "performed on it."
 msgstr ""
-"基本ソース項ブリック要素との違いは、データがベクトルフィールド（変数 ``varname`` "
-"自体がベクトル値であれば行列フィールド）でなければならず、外側の単位法線を持つスカラー積がそこで実行されるということです。"
+"基本ソース項ブリック要素との違いは，データがベクトルフィールド（変数 ``varname`` "
+"自体がベクトル値であれば行列フィールド）でなければならず，外側の単位法線を持つスカラー積がそこで実行されるということです．"

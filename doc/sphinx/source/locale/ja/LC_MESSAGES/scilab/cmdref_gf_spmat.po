@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-08 01:17+0000\n"
+"POT-Creation-Date: 2021-01-09 01:20+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,7 +48,7 @@ msgid ""
 "However their memory overhead is higher than CSC matrices, and they are a "
 "little bit slower for matrix-vector multiplications."
 msgstr ""
-"GetFEM形式で新しい疎行列を作成します。これらの疎行列は、Matlabで使用される形式であるCSC(圧縮された疎の列)として保存することも、WSC(getfemの内部形式)として保存することもできます。CSC行列は書き込み可能ではありませんが(これは非常に非効率的です)、ベクトルとの乗算とメモリ使用量のために最適化されています。WSCは書き込み可能であり、ランダムな読み取り/書き込み操作に関して非常に高速です。しかし、メモリオーバヘッドはCSC行列よりも高く、行列ベクトル乗算では若干遅いです。"
+"GetFEM形式で新しい疎行列を作成します．これらの疎行列は，Matlabで使用される形式であるCSC(圧縮された疎の列)として保存することも，WSC(getfemの内部形式)として保存することもできます．CSC行列は書き込み可能ではありませんが(これは非常に非効率的です)，ベクトルとの乗算とメモリ使用量のために最適化されています．WSCは書き込み可能であり，ランダムな読み取り/書き込み操作に関して非常に高速です．しかし，メモリオーバヘッドはCSC行列よりも高く，行列ベクトル乗算では若干遅いです．"
 
 #: ../source/scilab/cmdref_gf_spmat.rst:36
 msgid ""
@@ -58,15 +58,15 @@ msgid ""
 "(for example <literal></literal>gf_linsolve()<literal></literal> converts "
 "the matrices to CSC)."
 msgstr ""
-"デフォルトでは、新しく作成されたマトリックスはすべてWSCマトリックスとして構築されます。これは後で "
+"デフォルトでは，新しく作成されたマトリックスはすべてWSCマトリックスとして構築されます．これは後で "
 "<literal></literal>gf_spmat_set(spmat S, "
-"'to_csc',...)<literal></literal>か、あるいはgetfem(例えば "
+"'to_csc',...)<literal></literal>か，あるいはgetfem(例えば "
 "<literal></literal>gf_linsolve()<literal></literal> "
-"は行列をCSCに変換します)によって自動的に変更できます。"
+"は行列をCSCに変換します)によって自動的に変更できます．"
 
 #: ../source/scilab/cmdref_gf_spmat.rst:41
 msgid "The matrices may store REAL or COMPLEX values."
-msgstr "マトリックスには実数値または複素数値を格納できます。"
+msgstr "マトリックスには実数値または複素数値を格納できます．"
 
 #: ../source/scilab/cmdref_gf_spmat.rst:44
 msgid "**Command list :**"
@@ -82,8 +82,8 @@ msgid ""
 "<literal>m x n</literal>. If <literal>n</literal> is omitted, the matrix "
 "dimension is <literal>m x m</literal>."
 msgstr ""
-"新しい空の(すなわち、ゼロで満たされた)次元 <literal>m x n</literal> 疎行列を作成します。 "
-"<literal>n</literal> を省略すると、行列の次元は <literal>m x m</literal> になります。"
+"新しい空の(すなわち，ゼロで満たされた)次元 <literal>m x n</literal> 疎行列を作成します． "
+"<literal>n</literal> を省略すると，行列の次元は <literal>m x m</literal> になります．"
 
 #: ../source/scilab/cmdref_gf_spmat.rst:54
 msgid "``SM = gf_spmat('copy', mat K [,  I [,  J]])``"
@@ -95,12 +95,12 @@ msgid ""
 "<literal>I</literal> and/or <literal>J</literal> are given, the matrix will "
 "be a submatrix of <literal>K</literal>. For example::"
 msgstr ""
-"(spmatかもしれない)マトリックス<literal>K</literal>を複製します。インデックス <literal>I</literal> "
-"及び/又は <literal>J</literal> が与えられる場合、行列は <literal>K</literal> の部分行列となります。例えば"
+"(spmatかもしれない)マトリックス<literal>K</literal>を複製します．インデックス <literal>I</literal> "
+"及び/又は <literal>J</literal> が与えられる場合，行列は <literal>K</literal> の部分行列となります．例えば"
 
 #: ../source/scilab/cmdref_gf_spmat.rst:63
 msgid "will return a 40x5 matrix."
-msgstr "は 40x5 の行列を返します。"
+msgstr "は 40x5 の行列を返します．"
 
 #: ../source/scilab/cmdref_gf_spmat.rst:66
 msgid "``SM = gf_spmat('identity', int n)``"
@@ -108,7 +108,7 @@ msgstr "``SM = gf_spmat('identity', int n)``"
 
 #: ../source/scilab/cmdref_gf_spmat.rst:68
 msgid "Create a <literal>n x n</literal> identity matrix."
-msgstr "<literal>n x n</literal> 次の単位行列を作成します。"
+msgstr "<literal>n x n</literal> 次の単位行列を作成します．"
 
 #: ../source/scilab/cmdref_gf_spmat.rst:71
 msgid "``SM = gf_spmat('mult', spmat A, spmat B)``"
@@ -122,10 +122,10 @@ msgid ""
 "you may have to use <literal></literal>gf_spmat_set(spmat S, "
 "'to_complex')<literal></literal>"
 msgstr ""
-"疎行列<literal>A</literal>と<literal>B</literal>の積の疎行列を作成します。<literal>A</literal>"
-" と<literal>B</literal>が両方とも実数であるか、両方とも複素数である必要があります。 "
+"疎行列<literal>A</literal>と<literal>B</literal>の積の疎行列を作成します．<literal>A</literal>"
+" と<literal>B</literal>が両方とも実数であるか，両方とも複素数である必要があります． "
 "<literal></literal>gf_spmat_set(spmat S, 'to_complex')<literal></literal> "
-"を使う必要があるかもしれません。"
+"を使う必要があるかもしれません．"
 
 #: ../source/scilab/cmdref_gf_spmat.rst:78
 msgid "``SM = gf_spmat('add', spmat A, spmat B)``"
@@ -137,7 +137,7 @@ msgid ""
 "<literal>A</literal> and <literal>B</literal>. Adding a real matrix with a "
 "complex matrix is possible."
 msgstr ""
-"疎行列<literal>A</literal>と<literal>B</literal>の和の疎行列を作成します。複素数行列を持つ実数行列の追加が可能です。"
+"疎行列<literal>A</literal>と<literal>B</literal>の和の疎行列を作成します．複素数行列を持つ実数行列の追加が可能です．"
 
 #: ../source/scilab/cmdref_gf_spmat.rst:84
 msgid "``SM = gf_spmat('diag', mat D [, ivec E [, int n [,int m]]])``"
@@ -150,8 +150,8 @@ msgid ""
 "<literal>E</literal> will contain the sub-diagonal number that will be "
 "filled with the corresponding column of <literal>D</literal>."
 msgstr ""
-"対角行列を作成します。<literal>E</literal> が与えられる場合、 <literal>D</literal> は行列であり、 "
-"<literal>E</literal> の各列は <literal>D</literal> の対応する列の部分対角の番号を含みます。"
+"対角行列を作成します．<literal>E</literal> が与えられる場合， <literal>D</literal> は行列であり， "
+"<literal>E</literal> の各列は <literal>D</literal> の対応する列の部分対角の番号を含みます．"
 
 #: ../source/scilab/cmdref_gf_spmat.rst:91
 msgid ""
@@ -163,4 +163,4 @@ msgstr ""
 
 #: ../source/scilab/cmdref_gf_spmat.rst:93
 msgid "Read a sparse matrix from an Harwell-Boeing or a Matrix-Market file ."
-msgstr "Harwell-BoeingやMatrix-Marketのファイルから疎行列を読みます。"
+msgstr "Harwell-BoeingやMatrix-Marketのファイルから疎行列を読みます．"

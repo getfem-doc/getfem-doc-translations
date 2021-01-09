@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2020
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-08 01:17+0000\n"
+"POT-Creation-Date: 2021-01-09 01:20+0000\n"
 "PO-Revision-Date: 2020-04-26 01:51+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2020\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +49,7 @@ msgid ""
 "operation. However their memory overhead is higher than CSC matrices, and "
 "they are a little bit slower for matrix-vector multiplications."
 msgstr ""
-"GetFEM形式で新しい疎行列を作成します(つまり、matlab疎行列ではなく、getfemワークスペースに保存される疎行列)。これらの疎行列は、Matlabで使用される形式であるCSC(圧縮された疎の列)として保存することも、WSC(getfemの内部形式)として保存することもできます。CSC行列は書き込み可能ではありませんが(これは非常に非効率的です)、ベクトルとの乗算とメモリ使用量のために最適化されています。WSCは書き込み可能であり、ランダムな読み取り/書き込み操作に関して非常に高速です。しかし、メモリオーバヘッドはCSC行列よりも高く、行列ベクトル乗算では若干遅いです。"
+"GetFEM形式で新しい疎行列を作成します(つまり，matlab疎行列ではなく，getfemワークスペースに保存される疎行列)．これらの疎行列は，Matlabで使用される形式であるCSC(圧縮された疎の列)として保存することも，WSC(getfemの内部形式)として保存することもできます．CSC行列は書き込み可能ではありませんが(これは非常に非効率的です)，ベクトルとの乗算とメモリ使用量のために最適化されています．WSCは書き込み可能であり，ランダムな読み取り/書き込み操作に関して非常に高速です．しかし，メモリオーバヘッドはCSC行列よりも高く，行列ベクトル乗算では若干遅いです．"
 
 #: ../source/matlab_octave/cmdref_gf_spmat.rst:38
 msgid ""
@@ -58,13 +58,13 @@ msgid ""
 "changed automatically by getfem (for example ``gf_linsolve()`` converts the "
 "matrices to CSC)."
 msgstr ""
-"デフォルトでは、新しく作成されたマトリックスはすべてWSCマトリックスとして構築されます。これは後で ``gf_spmat_set(spmat S, "
-"'to_csc',...)``か、あるいはgetfem(例えば ``gf_linsolve()`` "
-"は行列をCSCに変換します)によって自動的に変更できます。"
+"デフォルトでは，新しく作成されたマトリックスはすべてWSCマトリックスとして構築されます．これは後で ``gf_spmat_set(spmat S, "
+"'to_csc',...)``か，あるいはgetfem(例えば ``gf_linsolve()`` "
+"は行列をCSCに変換します)によって自動的に変更できます．"
 
 #: ../source/matlab_octave/cmdref_gf_spmat.rst:43
 msgid "The matrices may store REAL or COMPLEX values."
-msgstr "マトリックスには実数値または複素数値を格納できます。"
+msgstr "マトリックスには実数値または複素数値を格納できます．"
 
 #: ../source/matlab_octave/cmdref_gf_spmat.rst:46
 msgid "**Command list :**"
@@ -79,7 +79,7 @@ msgid ""
 "Create a new empty (i.e. full of zeros) sparse matrix, of dimensions `m x "
 "n`. If `n` is omitted, the matrix dimension is `m x m`."
 msgstr ""
-"新しい空の(すなわち、ゼロで満たされた)次元 `m x n` 疎行列を作成します。 `n` を省略すると、行列の次元は `m x m` になります。"
+"新しい空の(すなわち，ゼロで満たされた)次元 `m x n` 疎行列を作成します． `n` を省略すると，行列の次元は `m x m` になります．"
 
 #: ../source/matlab_octave/cmdref_gf_spmat.rst:56
 msgid "``SM = gf_spmat('copy', mat K [,  I [,  J]])``"
@@ -91,12 +91,12 @@ msgid ""
 "matrix). If index `I` and/or `J` are given, the matrix will be a submatrix "
 "of `K`. For example::"
 msgstr ""
-"(SpMatかmatlabネイティブの疎行列かもしれない)行列Kを複製します。インデックス `I` 及び/又は `J` が与えられる場合、行列は `K`"
-" の部分行列となります。例えば"
+"(SpMatかmatlabネイティブの疎行列かもしれない)行列Kを複製します．インデックス `I` 及び/又は `J` が与えられる場合，行列は `K`"
+" の部分行列となります．例えば"
 
 #: ../source/matlab_octave/cmdref_gf_spmat.rst:66
 msgid "will return a 40x5 matrix."
-msgstr "は 40x5 の行列を返します。"
+msgstr "は 40x5 の行列を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_spmat.rst:69
 msgid "``SM = gf_spmat('identity', int n)``"
@@ -104,7 +104,7 @@ msgstr "``SM = gf_spmat('identity', int n)``"
 
 #: ../source/matlab_octave/cmdref_gf_spmat.rst:71
 msgid "Create a `n x n` identity matrix."
-msgstr "`n x n` 次の単位行列を作成します。"
+msgstr "`n x n` 次の単位行列を作成します．"
 
 #: ../source/matlab_octave/cmdref_gf_spmat.rst:74
 msgid "``SM = gf_spmat('mult', spmat A, spmat B)``"
@@ -116,8 +116,8 @@ msgid ""
 " requires that `A` and `B` be both real or both complex, you may have to use"
 " ``gf_spmat_set(spmat S, 'to_complex')``"
 msgstr ""
-"疎行列AとBの積の疎行列を作成します。 `A` と `B` が両方とも実数であるか、両方とも複素数である必要があります。 "
-"``gf_spmat_set(spmat S, 'to_complex')`` を使う必要があるかもしれません。"
+"疎行列AとBの積の疎行列を作成します． `A` と `B` が両方とも実数であるか，両方とも複素数である必要があります． "
+"``gf_spmat_set(spmat S, 'to_complex')`` を使う必要があるかもしれません．"
 
 #: ../source/matlab_octave/cmdref_gf_spmat.rst:81
 msgid "``SM = gf_spmat('add', spmat A, spmat B)``"
@@ -127,7 +127,7 @@ msgstr "``SM = gf_spmat('add', spmat A, spmat B)``"
 msgid ""
 "Create a sparse matrix as the sum of the sparse matrices `A` and `B`. Adding"
 " a real matrix with a complex matrix is possible."
-msgstr "疎行列AとBの和の疎行列を作成します。複素数行列を持つ実数行列の追加が可能です。"
+msgstr "疎行列AとBの和の疎行列を作成します．複素数行列を持つ実数行列の追加が可能です．"
 
 #: ../source/matlab_octave/cmdref_gf_spmat.rst:87
 msgid "``SM = gf_spmat('diag', mat D [, ivec E [, int n [,int m]]])``"
@@ -139,7 +139,7 @@ msgid ""
 "column of `E` will contain the sub-diagonal number that will be filled with "
 "the corresponding column of `D`."
 msgstr ""
-"対角行列を作成します。 `E` が与えられる場合、 `D` は行列であり、 `E` の各列は `D` の対応する列の部分対角番号を含みます。"
+"対角行列を作成します． `E` が与えられる場合， `D` は行列であり， `E` の各列は `D` の対応する列の部分対角番号を含みます．"
 
 #: ../source/matlab_octave/cmdref_gf_spmat.rst:94
 msgid ""
@@ -154,5 +154,5 @@ msgid ""
 "Read a sparse matrix from an Harwell-Boeing or a Matrix-Market file See also"
 " ``gf_util('load matrix')``."
 msgstr ""
-"Harwell-BoeingやMatrix-Marketのファイルから疎行列を読みます。 ``gf_util('load matrix')`` "
-"も参照してください。"
+"Harwell-BoeingやMatrix-Marketのファイルから疎行列を読みます． ``gf_util('load matrix')`` "
+"も参照してください．"
