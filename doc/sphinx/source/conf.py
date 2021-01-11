@@ -100,10 +100,10 @@ modindex_common_prefix = ['getfem']
 # -------------------
 
 # The documented project’s name.
-project = 'GetFEM++'
+project = 'GetFEM'
 
 # A copyright statement in the style '2008, Author Name'.
-copyright = '2004-2020 GetFEM++ project'
+copyright = '2004-2021 GetFEM project'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -164,7 +164,7 @@ html_style = 'getfem.css'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'GetFEM++'
+html_title = 'GetFEM'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = html_title
