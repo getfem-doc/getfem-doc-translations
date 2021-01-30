@@ -80,7 +80,7 @@
 
 
 \title{Description of the Project}
-\date{Jan 29, 2021}
+\date{Jan 30, 2021}
 \release{5.4.1}
 \author{Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -104,12 +104,14 @@
 
 \chapter{Introduction}
 \label{\detokenize{project/intro:introduction}}\label{\detokenize{project/intro:dp-intro}}\label{\detokenize{project/intro::doc}}
+\sphinxAtStartPar
 The aim of this document is to report details of the internal of \sphinxstyleemphasis{GetFEM}
 useful for developers that have no place in the user documentation.
 It is also to outline the main prospects for the future development
 of \sphinxstyleemphasis{GetFEM}. A list of modifications to be done and main tasks is updated
 on Savannah \sphinxhref{https://savannah.nongnu.org/task/?group=getfem}{\sphinxurl{https://savannah.nongnu.org/task/?group=getfem}}.
 
+\sphinxAtStartPar
 The \sphinxstyleemphasis{GetFEM} project focuses on the development of an open source generic
 finite element library.
 The goal is to provide a finite element framework which allows to
@@ -119,6 +121,7 @@ to the flexibility of the use of the library in the sense that the
 switch from a method offered by the library to another is made as easy
 as possible.
 
+\sphinxAtStartPar
 The major point allowing this, compared to traditional finite element
 codes, is the complete separation between the description of p.d.e.
 models and finite element methods. Moreover, a separation is made
@@ -132,6 +135,7 @@ be changed very easily, thus allowing a large spectrum of experimentations.
 Numerous examples are available in the \sphinxcode{\sphinxupquote{tests}} directory of the
 distribution.
 
+\sphinxAtStartPar
 The goal is also to make the addition of new finite element method
 as simple as possible. For standard method, a description of the
 finite element shape functions and the type of connection of degrees
@@ -144,11 +148,13 @@ with bubble functions, Hermite elements, elements with hierarchic
 basis (for multigrid methods for instance),
 discontinuous \(P_k\) or \(Q_k\), XFem, Argyris, HCT, Raviart\sphinxhyphen{}Thomas.
 
+\sphinxAtStartPar
 The library also includes the usual tools for finite elements such as assembly
 procedures for classical PDEs, interpolation methods, computation of norms,
 mesh operations, boundary conditions, post\sphinxhyphen{}processing tools such as
 extraction of slices from a mesh …
 
+\sphinxAtStartPar
 The aim of the \sphinxstyleemphasis{GetFEM} project is not to provide a ready to use
 finite element code allowing for instance structural mechanics
 computations with a graphic interface. It is basically a library
@@ -157,10 +163,13 @@ However, the Python, Scilab and matlab interfaces allows to easily build applica
 coupling the definition of the problem, the finite element methods
 selection and the graphical post\sphinxhyphen{}processing.
 
+\sphinxAtStartPar
 Copyright © 2004\sphinxhyphen{}2020 \sphinxstyleemphasis{GetFEM} project.
 
+\sphinxAtStartPar
 The text of the \sphinxstyleemphasis{GetFEM} website and the documentations are available for modification and reuse under the terms of the \sphinxhref{http://www.gnu.org/licenses/fdl.html}{GNU Free Documentation License}
 
+\sphinxAtStartPar
 GetFEM  is  free software;  you  can  redistribute  it  and/or modify it
 under  the  terms  of the  GNU  Lesser General Public License as published
 by  the  Free Software Foundation;  either version 3 of the License,  or
@@ -177,25 +186,32 @@ Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110\sphinxhyphen{}1301, USA.
 
 \chapter{How to contribute / Git repository on Savannah}
 \label{\detokenize{project/contribute:how-to-contribute-git-repository-on-savannah}}\label{\detokenize{project/contribute:dp-contribute}}\label{\detokenize{project/contribute::doc}}
+\sphinxAtStartPar
 \sphinxstyleemphasis{GetFEM} is an  open source finite element library based on a collaborative development. If you intend to make some contributions, you can ask for membership of the project there. Contributions of all kinds are welcome: documentation, bug reports, constructive comments, changes suggestions, bug fix, new models, etc …
 
+\sphinxAtStartPar
 Contributors are of course required to be careful that their changes do not affect the proper functioning of the library and that these changes follow a principle of backward compatibility.
 
+\sphinxAtStartPar
 See \sphinxhref{https://savannah.nongnu.org/task/?group=getfem}{here} for a list of task and discussions about \sphinxstyleemphasis{GetFEM} development.
 
+\sphinxAtStartPar
 \sphinxstylestrong{IMPORTANT} : a contributor implicitly accepts that his/her contribution will be distributed under the LGPL licence of \sphinxstyleemphasis{GetFEM}.
 
+\sphinxAtStartPar
 The main repository of \sphinxstyleemphasis{GetFEM} is on Savannah, the software forge of the Free Software Foundation (see \sphinxhref{https://savannah.gnu.org}{Savannah}). The page of the project on Savannah is \sphinxhref{https://savannah.nongnu.org/projects/getfem}{Getfem on Savannah}. See also \sphinxhref{http://git.savannah.nongnu.org/gitweb/?p=getfem.git;a=tree}{Getfem sources on Savannah}.
 
 
 \section{How to get the sources}
 \label{\detokenize{project/contribute:how-to-get-the-sources}}
+\sphinxAtStartPar
 If you just want the sources and do not intend to make some contributions, you can just use the command
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 git clone https://git.savannah.nongnu.org/git/getfem.git
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 If you intend to make some contributions, the first step is to ask for the inclusion in the \sphinxstyleemphasis{GetFEM} project (for this you have to create a Savannah account). You have also to register a ssh key (see \sphinxhref{http://savannah.gnu.org/maintenance/UsingGit/}{git on Savannah}) and then use the command
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -205,6 +221,7 @@ git clone ssh://savannah\PYGZhy{}login@git.sv.gnu.org:/srv/git/getfem.git
 
 \section{How to contribute}
 \label{\detokenize{project/contribute:how-to-contribute}}
+\sphinxAtStartPar
 Before modifying any file, you have to create a \sphinxstyleemphasis{development branch} because it is \sphinxstyleemphasis{not allowed to make a modification directly in the master branch}. It is recommended that the branch name is of the type \sphinxtitleref{devel\sphinxhyphen{}name\sphinxhyphen{}subject} where name is your name or login and subject the main subject of the changes. For instance, if you chose \sphinxtitleref{devel\sphinxhyphen{}me\sphinxhyphen{}rewrite\sphinxhyphen{}fem\sphinxhyphen{}kernel} as the branch name, the creation of the branch reads
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -212,6 +229,7 @@ git branch devel\PYGZhy{}me\PYGZhy{}rewrite\PYGZhy{}fem\PYGZhy{}kernel
 git checkout devel\PYGZhy{}me\PYGZhy{}rewrite\PYGZhy{}fem\PYGZhy{}kernel
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The first command create the branch and the second one position you on your branch. After that you are nearly ready to makes some modifications. You can specify your contact name and e\sphinxhyphen{}mail with the following commands in order to label your changes
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -222,6 +240,7 @@ git config \PYGZhy{}\PYGZhy{}global user.email you@yourdomain.example.com
 
 \section{Specific branch for doc improvements and typo\sphinxhyphen{}fixes}
 \label{\detokenize{project/contribute:specific-branch-for-doc-improvements-and-typo-fixes}}
+\sphinxAtStartPar
 If you want to contribute to the documentation only, it is not necessary to build a specific branch. You can just checkout to the \sphinxcode{\sphinxupquote{fixmisspell}} branch which has been created for this purpose with
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -231,6 +250,7 @@ git checkout fixmisspell
 
 \section{Locally commit your changes}
 \label{\detokenize{project/contribute:locally-commit-your-changes}}
+\sphinxAtStartPar
 Once you made some modifications of a file or you added a new file, say \sphinxtitleref{src/toto.cc}, the local commit is done with the commands:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -238,28 +258,33 @@ git add src/toto.cc
 git commit \PYGZhy{}m \PYGZdq{}Your extensive commit message here\PYGZdq{}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 At this stage the commit is done on your local repository but not in the Savannah one.
 
 
 \section{Push you changes in the Savannah repository}
 \label{\detokenize{project/contribute:push-you-changes-in-the-savannah-repository}}
+\sphinxAtStartPar
 You can now transfer your modifications to the Savannah repository with
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 git push origin devel\PYGZhy{}me\PYGZhy{}rewrite\PYGZhy{}fem\PYGZhy{}kernel
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 where of course \sphinxstyleemphasis{devel\sphinxhyphen{}me\sphinxhyphen{}rewrite\sphinxhyphen{}fem\sphinxhyphen{}kernel} is still the name of your branch. At this stage your modifications are registered in the branch \sphinxstyleemphasis{devel\sphinxhyphen{}me\sphinxhyphen{}rewrite\sphinxhyphen{}fem\sphinxhyphen{}kernel} of Savannah repository.
 Your role stops here, since you are not allowed to modify the master branch of \sphinxstyleemphasis{GetFEM}.
 
 
 \section{Ask for an admin to merge your modifications to the master branch of \sphinxstyleemphasis{GetFEM}}
 \label{\detokenize{project/contribute:ask-for-an-admin-to-merge-your-modifications-to-the-master-branch-of-gf}}
+\sphinxAtStartPar
 Once you validated your modifications with sufficient tests, you can ask an admin of \sphinxstyleemphasis{GetFEM} to merge your modifications. For this, contact one of them directly, or send an e\sphinxhyphen{}mail to \sphinxstyleemphasis{getfem\sphinxhyphen{}commits@nongnu.org} with the message : “please merge branch devel\sphinxhyphen{}me\sphinxhyphen{}rewrite\sphinxhyphen{}fem\sphinxhyphen{}kernel” with eventually a short description of the modifications. IMPORTANT : by default, your branch will be deleted after the merge, unless you express the need to keep it.
 
 
 \section{Merge modifications done by other contributors}
 \label{\detokenize{project/contribute:merge-modifications-done-by-other-contributors}}
+\sphinxAtStartPar
 You can run a
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -267,6 +292,7 @@ git pull origin master
 git merge master
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 in order to integrate the modifications which has been validated and integrated to the master branch. This is recommended to run this command before any request for integration of a modification in the master branch.
 
 
@@ -283,6 +309,7 @@ gitk \PYGZhy{}\PYGZhy{}follow filename : same as previous but with a graphical i
 
 \section{Contributing to document translation}
 \label{\detokenize{project/contribute:contributing-to-document-translation}}
+\sphinxAtStartPar
 The recommended way for new contributors to translate document is to join \sphinxhref{https://www.transifex.com/getfem-doc}{Getfem translation team on Transifex} . For contribution, please make account in \sphinxhref{https://www.transifex.com}{transifex} and click request language and fill form . After translation, pull translated po file from site by using transifex\sphinxhyphen{}client. You need api token which you can get in transifex site.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -290,12 +317,15 @@ cd doc/sphinx
 tx pull \PYGZhy{}l \PYGZlt{}lang\PYGZgt{}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Set code for your native language to \textless{}lang\textgreater{} (see \sphinxhref{https://www.sphinx-doc.org/en/latest/usage/configuration.html\#confval-language}{Currently supported languages by Sphinx are} ).
 
 \begin{sphinxadmonition}{warning}{Warning:}
+\sphinxAtStartPar
 \sphinxstylestrong{DO NOT} tx push to transifex. It will have some trouble. You can upload file one by one in team page.
 \end{sphinxadmonition}
 
+\sphinxAtStartPar
 After pulling translated po files, set \textless{}lang\textgreater{} to LANGUAGE in \sphinxtitleref{doc/sphinx/Makefile.am} .
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -303,6 +333,7 @@ LANGUAGE      = \PYGZlt{}lang\PYGZgt{}
 SPHINXOPTS    = \PYGZhy{}D language=\PYGZdl{}(LANGUAGE)
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Then, you can run a following commands in order to make html localization document.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -310,6 +341,7 @@ cd doc/sphinx
 make html
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 If you want to make pdf file in your language, you can run a
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -318,13 +350,16 @@ cd build/latex
 make all\PYGZhy{}pdf\PYGZhy{}\PYGZlt{}lang\PYGZgt{}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 See details in \sphinxhref{http://www.sphinx-doc.org/en/stable/intl.html}{Sphinx Internationalization} .
 
+\sphinxAtStartPar
 You can see translated document at \sphinxhref{https://getfem.readthedocs.io}{Read the Docs} by switch language.
 
 
 \chapter{The FEM description in \sphinxstyleemphasis{GetFEM}}
 \label{\detokenize{project/femdesc:the-fem-description-in-gf}}\label{\detokenize{project/femdesc:dp-femdesc}}\label{\detokenize{project/femdesc::doc}}
+\sphinxAtStartPar
 The aim of this section is to briefly introduce the FEM description in \sphinxstyleemphasis{GetFEM}
 mainly in order to fix the notation used in the rest of the document (definition
 of element, reference element, geometric transformation, gradient of the
@@ -333,6 +368,7 @@ geometric transformation …).
 
 \section{Convex structures}
 \label{\detokenize{project/femdesc:convex-structures}}
+\sphinxAtStartPar
 Finite element methods are defined on small convex domains called elements. The
 simplest element on which a finite element method can be defined is a segment
 (simplex of dimension 1), other possibilities are triangles, tetrahedrons
@@ -340,12 +376,14 @@ simplest element on which a finite element method can be defined is a segment
 element (for us, a convex) is described by the object \sphinxcode{\sphinxupquote{bgeot::convex\_structure}} defined in the file
 \sphinxcode{\sphinxupquote{bgeot\_convex\_structure.h}}.
 
+\sphinxAtStartPar
 It describes only the structure of the convex not the coordinates of the
 vertices. This structure is not to be manipulated by itself, because it is not
 necessary that more than one structure of this type describe the same type of
 convex. What will be manipulated is a pointer on such a descriptor which has to
 be declared with the type \sphinxcode{\sphinxupquote{bgeot::pconvex\_structure}}
 
+\sphinxAtStartPar
 The following functions give a pointer onto the descriptor of the usual type of
 elements:
 \index{bgeot::simplex\_structure (C++ function)@\spxentry{bgeot::simplex\_structure}\spxextra{C++ function}}
@@ -355,6 +393,7 @@ elements:
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{bgeot\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{simplex\_structure}}}{dim\_type \sphinxstyleemphasis{d}}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 description of a simplex of dimension \sphinxcode{\sphinxupquote{d}}.
 
 \end{fulllineitems}
@@ -366,6 +405,7 @@ description of a simplex of dimension \sphinxcode{\sphinxupquote{d}}.
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{bgeot\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{parallelepiped\_structure}}}{dim\_type \sphinxstyleemphasis{d}}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 description of a parallelepiped of dimension \sphinxcode{\sphinxupquote{d}}.
 
 \end{fulllineitems}
@@ -377,6 +417,7 @@ description of a parallelepiped of dimension \sphinxcode{\sphinxupquote{d}}.
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{bgeot\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{convex\_product\_structure}}}{bgeot::pconvex\_structure \sphinxstyleemphasis{p1}, pconvex\_structure \sphinxstyleemphasis{p2}}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 description of the direct product of \sphinxcode{\sphinxupquote{p1}} and \sphinxcode{\sphinxupquote{p2}}.
 
 \end{fulllineitems}
@@ -388,11 +429,13 @@ description of the direct product of \sphinxcode{\sphinxupquote{p1}} and \sphinx
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{bgeot\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{prism\_P1\_structure}}}{dim\_type \sphinxstyleemphasis{d}}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 description of a prism of dimension \sphinxcode{\sphinxupquote{d}}.
 
 \end{fulllineitems}
 
 
+\sphinxAtStartPar
 For instance if one needs the description of a square, one can call
 equivalently:
 
@@ -400,6 +443,7 @@ equivalently:
 \PYG{n}{p} \PYG{o}{=} \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{parallelepiped\PYGZus{}structure}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 or:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -407,6 +451,7 @@ or:
                                     \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{simplex\PYGZus{}structure}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The descriptor contains in particular the number of faces (\sphinxcode{\sphinxupquote{p\sphinxhyphen{}\textgreater{}nb\_faces()}}),
 the dimension of the convex (\sphinxcode{\sphinxupquote{p\sphinxhyphen{}\textgreater{}dim()}}), for the number of vertices
 (\sphinxcode{\sphinxupquote{p\sphinxhyphen{}\textgreater{}nb\_points()}}). Other information is the number of vertices of each face,
@@ -423,6 +468,7 @@ the description of a face and the eventual reference to a more basic description
 
 \section{Convexes of reference}
 \label{\detokenize{project/femdesc:convexes-of-reference}}
+\sphinxAtStartPar
 A convex of reference is a particular real element, i.e. a structure of convex
 with a list of vertices. It describes the particular element from which a finite
 element method is defined. In the file \sphinxcode{\sphinxupquote{bgeot\_convex\_ref.h}} the object
@@ -430,6 +476,7 @@ element method is defined. In the file \sphinxcode{\sphinxupquote{bgeot\_convex\
 type of convex. So what will be manipulated is a pointer of type \sphinxcode{\sphinxupquote{bgeot::pconvex\_ref}} on the
 descriptor.
 
+\sphinxAtStartPar
 The following functions build the descriptions:
 \index{bgeot::simplex\_of\_reference (C++ function)@\spxentry{bgeot::simplex\_of\_reference}\spxextra{C++ function}}
 
@@ -438,6 +485,7 @@ The following functions build the descriptions:
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{bgeot\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{simplex\_of\_reference}}}{dim\_type \sphinxstyleemphasis{d}}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 description of the simplex of reference of dimension \sphinxcode{\sphinxupquote{d}}.
 
 \end{fulllineitems}
@@ -449,6 +497,7 @@ description of the simplex of reference of dimension \sphinxcode{\sphinxupquote{
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{bgeot\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{simplex\_of\_reference}}}{dim\_type \sphinxstyleemphasis{d}, short\_type \sphinxstyleemphasis{k}}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 description of the simplex of reference of dimension \sphinxcode{\sphinxupquote{d}} with degree \sphinxcode{\sphinxupquote{k}}
 Lagrange grid.
 
@@ -461,6 +510,7 @@ Lagrange grid.
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{bgeot\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{convex\_ref\_product}}}{pconvex\_ref \sphinxstyleemphasis{a}, pconvex\_ref \sphinxstyleemphasis{b}}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 description of the direct product of two convexes of reference.
 
 \end{fulllineitems}
@@ -472,16 +522,19 @@ description of the direct product of two convexes of reference.
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{bgeot\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{parallelepiped\_of\_reference}}}{dim\_type \sphinxstyleemphasis{d}}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 description of the parallelepiped of reference of dimension \sphinxcode{\sphinxupquote{d}}.
 
 \end{fulllineitems}
 
 
+\sphinxAtStartPar
 The vertices correspond to the classical vertices for such reference element. For
 instance the vertices for the triangle are \((0, 0)\), \((1, 0)\) and
 \((0, 1)\). It corresponds to the configuration shown in Figure
 {\hyperref[\detokenize{project/femdesc:dp-fig-elem}]{\sphinxcrossref{\DUrole{std,std-ref}{usual elements}}}}
 
+\sphinxAtStartPar
 If \sphinxcode{\sphinxupquote{p}} is of type \sphinxcode{\sphinxupquote{bgeot::pconvex\_ref}} then \sphinxcode{\sphinxupquote{p\sphinxhyphen{}\textgreater{}structure()}} is the corresponding convex
 structure. Thus for instance \sphinxcode{\sphinxupquote{p\sphinxhyphen{}\textgreater{}structure()\sphinxhyphen{}\textgreater{}nb\_points()}} gives the number of
 vertices. The function \sphinxcode{\sphinxupquote{p\sphinxhyphen{}\textgreater{}points()}} give the array of vertices and
@@ -495,16 +548,19 @@ Other functions can be found in \sphinxcode{\sphinxupquote{bgeot\_convex\_ref.h}
 
 \section{Shape function type}
 \label{\detokenize{project/femdesc:shape-function-type}}
+\sphinxAtStartPar
 Most of the time the shape functions of finite element methods are polynomials,
 at least on the convex of reference. But, the possibility is given to have other
 types of elements. It is possible to define other kind of base functions such as
 piecewise polynomials, interpolant wavelets, etc.
 
+\sphinxAtStartPar
 To be used by the finite element description, a shape function type must be able
 to be evaluated on a point (\sphinxcode{\sphinxupquote{a = F.eval(pt)}}, where \sphinxcode{\sphinxupquote{pt}} is a \sphinxcode{\sphinxupquote{base\_node}})
 and must have a method to compute the derivative with respect to the ith variable
 (\sphinxcode{\sphinxupquote{F.derivative(i)}}).
 
+\sphinxAtStartPar
 For the moment, only polynomials and piecewise polynomials are defined in the
 files \sphinxcode{\sphinxupquote{bgeot\_poly.h}} and \sphinxcode{\sphinxupquote{bgeot\_poly\_composite.h}}.
 
@@ -518,37 +574,45 @@ files \sphinxcode{\sphinxupquote{bgeot\_poly.h}} and \sphinxcode{\sphinxupquote{
 \noindent\sphinxincludegraphics[scale=0.6]{{getfemtransgeo}.png}
 \caption{geometric transformation}\label{\detokenize{project/femdesc:id2}}\label{\detokenize{project/femdesc:dp-fig-transgeo}}\end{figure}
 
+\sphinxAtStartPar
 A geometric transformation is a polynomial application:
 \begin{equation*}
 \begin{split}\tau : \widehat{T} \subset \rm I\hspace{-0.15em}R^P \longrightarrow T \subset \rm I\hspace{-0.15em}R^N,\end{split}
 \end{equation*}
+\sphinxAtStartPar
 which maps the reference element \(\widehat{T}\) to the real element \(T\). The
 geometric nodes are denoted:
 \begin{equation*}
 \begin{split}g^i, i = 0, \ldots, n_g - 1.\end{split}
 \end{equation*}
+\sphinxAtStartPar
 The geometric transformation is described thanks to a \(n_g\) components
 polynomial vector (In fact, as an extention, non polynomial geometric
 transformation can also be supported by \sphinxstyleemphasis{GetFEM}, but this is very rarely used)
 \begin{equation*}
 \begin{split}{\cal N}(\widehat{x}),\end{split}
 \end{equation*}
+\sphinxAtStartPar
 such that
 \begin{equation*}
 \begin{split}\tau(\widehat{x}) = \sum_{i = 0}^{n_g - 1}{\cal N}_i(\widehat{x}) g^i.\end{split}
 \end{equation*}
+\sphinxAtStartPar
 Denoting
 \begin{equation*}
 \begin{split}G = (g^0; g^1; ...; g^{n_g - 1}),\end{split}
 \end{equation*}
+\sphinxAtStartPar
 the \(N\times n_g\) matrix containing of all the geometric nodes, one has
 \begin{equation*}
 \begin{split}\fbox{$\tau(\widehat{x}) = G\cdot{\cal N}(\widehat{x})$.}\end{split}
 \end{equation*}
+\sphinxAtStartPar
 The derivative of \(\tau\) is then
 \begin{equation*}
 \begin{split}\fbox{$K(\widehat{x}) := \nabla\tau(\widehat{x}) = G\cdot\nabla {\cal N}(\widehat{x})$,}\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where \(K(\widehat{x}) = \nabla\tau(\widehat{x})\) is a \(N\times P\) matrix and
 \(\nabla {\cal N}(\widehat{x})\) a \(n_g\times P\) matrix. The (transposed)
 pseudo\sphinxhyphen{}inverse of \(\nabla\tau(\widehat{x})\) is a \(N\times P\) matrix denoted
@@ -556,8 +620,10 @@ pseudo\sphinxhyphen{}inverse of \(\nabla\tau(\widehat{x})\) is a \(N\times P\) m
 \begin{equation*}
 \begin{split}\fbox{$B(\widehat{x}) := K(\widehat{x})(K(\widehat{x})^T K(\widehat{x}))^{-1}$,}\end{split}
 \end{equation*}
+\sphinxAtStartPar
 Of course, when \(P=N\), one has \(B(\widehat{x})=K(\widehat{x})^{-T}\).
 
+\sphinxAtStartPar
 Pointers on a descriptor of a geometric transformation can be obtained by the
 following function defined in the file \sphinxcode{\sphinxupquote{bgeot\_geometric\_trans.h}}:
 
@@ -565,33 +631,44 @@ following function defined in the file \sphinxcode{\sphinxupquote{bgeot\_geometr
 \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{pgeometric\PYGZus{}trans} \PYG{n}{pgt} \PYG{o}{=} \PYG{n}{bgeot}\PYG{o}{:}\PYG{o}{:}\PYG{n}{geometric\PYGZus{}trans\PYGZus{}descriptor}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{name of trans}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 where \sphinxcode{\sphinxupquote{"name of trans"}} can be chosen among the following list.
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{"GT\_PK(n,k)"}}
 
+\sphinxAtStartPar
 Description of the simplex transformation of dimension \sphinxcode{\sphinxupquote{n}} and degree \sphinxcode{\sphinxupquote{k}}
 (Most of the time, the degree 1 is used).
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{"GT\_QK(n,k)"}}
 
+\sphinxAtStartPar
 Description of the parallelepiped transformation of dimension \sphinxcode{\sphinxupquote{n}} and degree
 \sphinxcode{\sphinxupquote{k}}.
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{"GT\_PRISM(n,k)"}}
 
+\sphinxAtStartPar
 Description of the prism transformation of dimension \sphinxcode{\sphinxupquote{n}} and degree \sphinxcode{\sphinxupquote{k}}.
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{"GT\_PRODUCT(a,b)"}}
 
+\sphinxAtStartPar
 Description of the direct product of the two transformations \sphinxcode{\sphinxupquote{a}} and \sphinxcode{\sphinxupquote{b}}.
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{"GT\_LINEAR\_PRODUCT(a,b)"}}
 
+\sphinxAtStartPar
 Description of the direct product of the two transformations \sphinxcode{\sphinxupquote{a}} and \sphinxcode{\sphinxupquote{b}}
 keeping a linear transformation (this is a restriction of the previous
 function). This allows, for instance, to use exact integrations on regular
@@ -602,25 +679,30 @@ meshes with parallelograms.
 
 \section{Finite element methods description}
 \label{\detokenize{project/femdesc:finite-element-methods-description}}
+\sphinxAtStartPar
 A finite element method is defined on a reference element
 \(\widehat{T}\subset\rm I\hspace{-0.15em}R^P\) by a set of \(n_d\) nodes \(a^i\) and
 corresponding base functions
 \begin{equation*}
 \begin{split}(\widehat{\varphi})^i : \widehat{T}\subset\rm I\hspace{-0.15em}R^P \longrightarrow \rm I\hspace{-0.15em}R^Q\end{split}
 \end{equation*}
+\sphinxAtStartPar
 Denoting
 \begin{equation*}
 \begin{split}\psi^i(x) = (\widehat{\varphi})^i(\widehat{x}) = (\widehat{\varphi})^i(\tau^{-1}(x)),\end{split}
 \end{equation*}
+\sphinxAtStartPar
 a supplementary linear transformation is allowed for the real base function
 \begin{equation*}
 \begin{split}\varphi^i(x) = \sum_{j = 0}^{n_d - 1} M_{ij} \psi^j(x),\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where \(M\) is a \(n_d \times n_d\) matrix possibly depending on the
 geometric transformation (i.e. on the real element). For basic elements as
 Lagrange elements this matrix is the identity matrix (it is simply ignored). In
 this case, we will say that the element is \(\tau\)\sphinxhyphen{}equivalent.
 
+\sphinxAtStartPar
 This approach allows to define hermite elements (Argyris for instance) in a
 generic way, even with non linear transformations (i.e. mainly for curved
 boundaries). We denote \([\widehat{\varphi}(\widehat{x})]\) the \(n_d \times Q\) matrix
@@ -629,16 +711,20 @@ defined by
 \begin{equation*}
 \begin{split}f(x) = \sum_{i = 0}^{n_d - 1} \alpha_i \varphi^i(x),\end{split}
 \end{equation*}
+\sphinxAtStartPar
 one has
 \begin{equation*}
 \begin{split}\fbox{$f(\tau(\widehat{x})) = \alpha^T M [\widehat{\varphi}(\widehat{x})]$,}\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where \(\alpha\) is the vector whose ith component is \(\alpha_i\).
 
+\sphinxAtStartPar
 A certain number of description of classical finite element method are defined in
 the file \sphinxcode{\sphinxupquote{getfem\_fem.h}}. See \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}appendixa} for an exhaustive list of
 available finite element methods.
 
+\sphinxAtStartPar
 A pointer to the finite element descriptor of a method is obtained using the
 function:
 
@@ -646,12 +732,14 @@ function:
 \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{pfem} \PYG{n}{pfe} \PYG{o}{=} \PYG{n}{getfem}\PYG{o}{:}\PYG{o}{:}\PYG{n}{fem\PYGZus{}descriptor}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{name of method}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 We refer to the file \sphinxcode{\sphinxupquote{getfem\_fem.cc}} for how to define a new finite element
 method.
 
 
 \chapter{Description of the different parts of the library}
 \label{\detokenize{project/libdesc:description-of-the-different-parts-of-the-library}}\label{\detokenize{project/libdesc:dp-libdesc}}\label{\detokenize{project/libdesc::doc}}
+\sphinxAtStartPar
 Figure {\hyperref[\detokenize{project/libdesc:dp-fig-diagram}]{\sphinxcrossref{\DUrole{std,std-ref}{Diagram of GetFEM library}}}} describes the diagram of the different modules of
 the \sphinxstyleemphasis{GetFEM} library. The current state and perspective for each module is
 described in section {\hyperref[\detokenize{project/libdesc:dp-libdesc}]{\sphinxcrossref{\DUrole{std,std-ref}{Description of the different parts of the library}}}}.
@@ -669,50 +757,61 @@ described in section {\hyperref[\detokenize{project/libdesc:dp-libdesc}]{\sphinx
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_gmm:description}}
+\sphinxAtStartPar
 \sphinxstyleemphasis{Gmm++} is a template linear algebra library which was originally designed to make an
 interface between the need in linear algebra procedures of \sphinxstyleemphasis{GetFEM} and existing free
 linear algebra libraries (MTL, Superlu, Blas, Lapack originally). It rapidly
 evolves to an independent self\sphinxhyphen{}consistent library with its own vector and matrix
 types. It is now used as a base linear algebra library by several other projects.
 
+\sphinxAtStartPar
 However, it preserves the characteristic to be a potential interface for more
 specific packages. Any vector or matrix type having the minimum of compatibility
 can be used by generic algorithms of \sphinxstyleemphasis{Gmm++} writing a \sphinxcode{\sphinxupquote{linalg\_traits}} structure.
 
+\sphinxAtStartPar
 A \sphinxstyleemphasis{Gmm++} standalone version is distributed since release 1.5 of \sphinxstyleemphasis{GetFEM}. It is
 however developed inside the \sphinxstyleemphasis{GetFEM} project even though since release 3.0 it is
 completely independent of any \sphinxstyleemphasis{GetFEM} file.
 
+\sphinxAtStartPar
 In addition to the linear algebra procedures, it furnishes also the following
 utilities to \sphinxstyleemphasis{GetFEM}.
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 Fix some eventual compatibility problems in \sphinxcode{\sphinxupquote{gmm\_std.h}}.
 
 \item {} 
+\sphinxAtStartPar
 Error, warning and trace management in \sphinxcode{\sphinxupquote{gmm\_except.h}}.
 
 \item {} 
+\sphinxAtStartPar
 Some extended math definitions in \sphinxcode{\sphinxupquote{gmm\_def.h}}.
 
 \end{itemize}
 
+\sphinxAtStartPar
 See \DUrole{xref,std,std-ref}{gmm} documenation for more details.
 
 
 \subsection{Files}
 \label{\detokenize{project/libdesc_gmm:files}}
+\sphinxAtStartPar
 All files in src/gmm
 
 
 \subsection{State}
 \label{\detokenize{project/libdesc_gmm:state}}
+\sphinxAtStartPar
 For the moment, \sphinxstyleemphasis{Gmm++} cover the needs of \sphinxstyleemphasis{GetFEM} concerning the basic linear algebra
 procedures.
 
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_gmm:perspectives}}
+\sphinxAtStartPar
 There is potentially several points to be improved in \sphinxstyleemphasis{Gmm++} (partial
 introduction of expression template for some base types of matrix and vectors,
 think about the way to represent in a more coherent manner sparse sub\sphinxhyphen{}vectors
@@ -722,6 +821,7 @@ globally cover the needs of \sphinxstyleemphasis{GetFEM} and since there exists 
 linear algebra, a global change seem to be unnecessary. This part
 is considered to be stabilized.
 
+\sphinxAtStartPar
 The current vocation of \sphinxstyleemphasis{Gmm++} is to continue to collect generic algorithms and
 interfaces to some other packages (DIFFPACK for instance) in order to cover new needs of the whole
 project. The library is now frequently used as a separate package and has also
@@ -734,6 +834,7 @@ improvements, new algorithms or new interfaces.
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_dal:description}}
+\sphinxAtStartPar
 In the very begining of \sphinxstyleemphasis{GetFEM} (the first files was written in 1995) the S.T.L. was
 not available and the containers defined in the \sphinxcode{\sphinxupquote{dal}} namespace was used
 everywhere. Now, in \sphinxstyleemphasis{GetFEM}, the S.T.L. containers are mainly used. The remaining
@@ -742,6 +843,7 @@ these containers. It is however clear that this is not the aim of the \sphinxsty
 project to develop new container concept. So, the use of the \sphinxcode{\sphinxupquote{dal}} containers
 has to be as much as possible reduced.
 
+\sphinxAtStartPar
 Furthermore, \sphinxcode{\sphinxupquote{dal}} contains a certain number of basic algorithms to deal with static stored objects (description of finite element methods, intermediary structures for auxiliary computations …).
 
 
@@ -753,58 +855,80 @@ Furthermore, \sphinxcode{\sphinxupquote{dal}} contains a certain number of basic
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{dal\_config.h}}
 &
+\sphinxAtStartPar
 Mainly load \sphinxstyleemphasis{Gmm++} header files
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{dal\_basic.h}}
 &
+\sphinxAtStartPar
 A variable size array container, dal::dynamic\_array\textless{}T\textgreater{}.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{dal\_bit\_vector.h}} and \sphinxcode{\sphinxupquote{dal\_bit\_vector.cc}}
 &
+\sphinxAtStartPar
 A improved bit vector container based on dal::dynamic\_array\textless{}T\textgreater{}.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{dal\_tas.h}}
 &
+\sphinxAtStartPar
 A heap container based on dal::dynamic\_array\textless{}T\textgreater{}.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{dal\_tree\_sorted.h}}
 &
+\sphinxAtStartPar
 A balanced tree stored array based on dal::dynamic\_array\textless{}T\textgreater{}.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{dal\_static\_stored\_objects.h}} and \sphinxcode{\sphinxupquote{dal\_static\_stored\_objects.cc}}
 &
+\sphinxAtStartPar
 Allows to store some objects and dependencies between some objects. Used to store many things in \sphinxstyleemphasis{GetFEM} (finite element methods, integration methods, pre\sphinxhyphen{}computations, …).
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{dal\_naming\_system.h}}
 &
+\sphinxAtStartPar
 A generic object to associate a name to a method descriptor and store the method descriptor. Used for finite element methods, integration methods and geometric transformations. Uses dal::static\_stored\_object.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{dal\_shared\_ptr.h}}
 &
+\sphinxAtStartPar
 A simplified version of boost::shared\_ptr.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{dal\_singleton.h}} and \sphinxcode{\sphinxupquote{dal\_singleton.cc}}
 &
+\sphinxAtStartPar
 A simple singleton implementation which has been made thread safe for OpenMP (singletons are replicated n each thread).
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{dal\_backtrace.h}} and \sphinxcode{\sphinxupquote{dal\_backtrace.cc}}
 &
+\sphinxAtStartPar
 For debugging, dump glibc backtrace.
 \\
 \hline
@@ -815,11 +939,13 @@ For debugging, dump glibc backtrace.
 
 \subsection{State}
 \label{\detokenize{project/libdesc_dal:state}}
+\sphinxAtStartPar
 Stable, not evolving too much.
 
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_dal:perspectives}}
+\sphinxAtStartPar
 No plan.
 
 
@@ -828,6 +954,7 @@ No plan.
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_misc:description}}
+\sphinxAtStartPar
 A set of miscellaneous basic algorithms and definitions used in \sphinxstyleemphasis{GetFEM}.
 
 
@@ -839,63 +966,87 @@ A set of miscellaneous basic algorithms and definitions used in \sphinxstyleemph
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_comma\_init.h}}
 &
+\sphinxAtStartPar
 Allow to init  container with a list of values, from boost init.hpp.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_ftool.h}} and \sphinxcode{\sphinxupquote{bgeot\_ftool.cc}}
 &
+\sphinxAtStartPar
 Small language allowing to read a parameter file with a Matlab syntax like. Used also for structured meshes.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_kdtree.h}} and \sphinxcode{\sphinxupquote{bgeot\_kdtree.cc}}
 &
+\sphinxAtStartPar
 Balanced N\sphinxhyphen{}dimensional tree. Store a list of points and allows a quick search of points lying in a given box.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_rtree.h}} and \sphinxcode{\sphinxupquote{bgeot\_rtree.cc}}
 &
+\sphinxAtStartPar
 Rectangle tree. Store a list of N\sphinxhyphen{}dimensional rectangles and allows a quick search of rectangles containing a given point.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{permutations.h}}
 &
+\sphinxAtStartPar
 Allows to iterate on permutations. Only used in \sphinxcode{\sphinxupquote{getfem\_integration.cc}}.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_small\_vector.h}} and \sphinxcode{\sphinxupquote{bgeot\_small\_vector.cc}}
 &
+\sphinxAtStartPar
 Defines a vector of low dimension mainly used to represent mesh nodes. Optimized operations.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_tensor.h}}
 &
+\sphinxAtStartPar
 Arbitrary order tensor. Used in assembly.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_sparse\_tensors.h}} and \sphinxcode{\sphinxupquote{bgeot\_sparse\_tensors.cc}}
 &
+\sphinxAtStartPar
 Arbitrary order sparse tensor. Used in the low\sphinxhyphen{}level generic assembly.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_omp.h}} and \sphinxcode{\sphinxupquote{getfem\_omp.cc}}
 &
+\sphinxAtStartPar
 Tools for multithreaded, OpenMP and Boost based parallelization.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_export.h}} and \sphinxcode{\sphinxupquote{getfem\_export.cc}}
 &
+\sphinxAtStartPar
 Export in pos and vtk formats
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_superlu.h}} and \sphinxcode{\sphinxupquote{getfem\_superlu.cc}}
 &
+\sphinxAtStartPar
 Interface with Superlu (the included version or an external one)
 \\
 \hline
@@ -915,6 +1066,7 @@ Interface with Superlu (the included version or an external one)
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_event:description}}
+\sphinxAtStartPar
 The \sphinxcode{\sphinxupquote{mesh}}, \sphinxtitleref{mesh\_fem}, \sphinxtitleref{mesh\_im} and \sphinxtitleref{model} description are linked together in the sense
 that there is some dependencies between them. For instance, when an element is
 suppressed to a mesh, the \sphinxtitleref{mesh\_fem} object has to react.
@@ -928,13 +1080,17 @@ suppressed to a mesh, the \sphinxtitleref{mesh\_fem} object has to react.
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_context.h}} and \sphinxcode{\sphinxupquote{getfem\_context.cc}}
 &
+\sphinxAtStartPar
 Define a class \sphinxtitleref{context\_dependencies} from which all object has to derive in order to manage events.
 \\
 \hline
@@ -945,6 +1101,7 @@ Define a class \sphinxtitleref{context\_dependencies} from which all object has 
 
 \subsection{State}
 \label{\detokenize{project/libdesc_event:state}}
+\sphinxAtStartPar
 The main tool to deal with simple dependence of object is in
 \sphinxcode{\sphinxupquote{getfem\_context.h}}. An object \sphinxcode{\sphinxupquote{context\_dependencies}} is defined there. In
 order to deal with the dependencies of an object, the object
@@ -957,6 +1114,7 @@ following methods to the object:
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{getfem::context\_dependencies\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{add\_dependency}}}{ct}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 Add an object (which has to have \sphinxcode{\sphinxupquote{context\_dependencies}} as a parent class)
 to the list of objects from which the current object depend.
 
@@ -969,6 +1127,7 @@ to the list of objects from which the current object depend.
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{getfem::context\_dependencies\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{touch}}}{}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 Indicates to the dependent objects that something has change in the object.
 
 \end{fulllineitems}
@@ -980,6 +1139,7 @@ Indicates to the dependent objects that something has change in the object.
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{getfem::context\_dependencies\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{context\_check}}}{}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 Check if the object has to be updated. if it is the case it makes first a
 check to the dependency list and call the update function of the object. (the
 update function of the dependencies are called before the update function of
@@ -994,20 +1154,24 @@ the current object).
 \pysigstartmultiline
 \pysiglinewithargsret{\sphinxcode{\sphinxupquote{getfem::context\_dependencies\sphinxcode{\sphinxupquote{::}}}}\sphinxbfcode{\sphinxupquote{context\_valid}}}{}{}%
 \pysigstopmultiline
+\sphinxAtStartPar
 Says if the object has still a valid context, i.e. if the object in the
 dependency list still exist.
 
 \end{fulllineitems}
 
 
+\sphinxAtStartPar
 Moreover, the object has to define a method:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 ``void update\PYGZus{}from\PYGZus{}context(void) const``
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 which is called after a \sphinxcode{\sphinxupquote{context\_check()}} if the context has changed.
 
+\sphinxAtStartPar
 An additional system is present in the object \sphinxtitleref{mesh}. Each individual element has a
 version number in order for the objects \sphinxtitleref{mesh\_fem} and \sphinxtitleref{mesh\_im} to detect which element
 has changed between two calls.
@@ -1015,8 +1179,10 @@ has changed between two calls.
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_event:perspectives}}
+\sphinxAtStartPar
 The event management of some objects should be analysed with care. This is the case for instance of \sphinxtitleref{mesh\_level\_set}, \sphinxtitleref{mesh\_fem\_level\_set}, \sphinxtitleref{partial\_mesh\_fem}, etc.
 
+\sphinxAtStartPar
 The event management still have to be improved to be a fully reactive system.
 
 
@@ -1025,17 +1191,20 @@ The event management still have to be improved to be a fully reactive system.
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_mesh:description}}
+\sphinxAtStartPar
 This part of the library has the role to store and manage the meshes, i.e. a
 collection of elements (real elements) connected to each other by some of their
 faces. For that, it develops concepts of elements, elements of reference,
 structure of meshes, collection of nodes, geometric transformations, subpart of
 the boundary or subzone of the mesh.
 
+\sphinxAtStartPar
 There is no really effective meshing capabilities available for the moment in
 \sphinxstyleemphasis{GetFEM}. The meshes of complex objects must be imported from existing meshers such
 as \sphinxhref{http://www.geuz.org/gmsh}{Gmsh} or \sphinxhref{http://gid.cimne.upc.es}{GiD}. Some importing functions of meshes have been written and
 can be easily extended for other formats.
 
+\sphinxAtStartPar
 The object which represents a mesh declared in the file \sphinxcode{\sphinxupquote{getfem\_mesh.h}} and
 which is used as a basis for handling of the meshes in \sphinxstyleemphasis{GetFEM} manages also the
 possibility for the structures depending on a mesh (see MESHFEM and MESHIM
@@ -1051,88 +1220,122 @@ etc.).
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_convex\_structure.h}} and \sphinxcode{\sphinxupquote{bgeot\_convex\_structure.cc}}
 &
+\sphinxAtStartPar
 Describes the structure of an element disregarding the coordinates of its vertices.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_mesh\_structure.h}} and \sphinxcode{\sphinxupquote{bgeot\_mesh\_structure.cc}}
 &
+\sphinxAtStartPar
 Describes the structure of a mesh disregarding the coordinates of the nodes.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_node\_tab.h}} and \sphinxcode{\sphinxupquote{bgeot\_node\_tab.cc}}
 &
+\sphinxAtStartPar
 A node container allowing the fast search of a node and store nodes identifying the too much close nodes.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_convex.h}}
 &
+\sphinxAtStartPar
 Describes an element with its vertices.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_convex\_ref.h}} and \sphinxcode{\sphinxupquote{bgeot\_convex\_ref.cc}} and \sphinxcode{\sphinxupquote{bgeot\_convex\_structure.cc}}
 &
+\sphinxAtStartPar
 Describe reference elements.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_mesh.h}}
 &
+\sphinxAtStartPar
 Describes a mesh with the collection of node (but without the description of geometric transformations).
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh\_region.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh\_region.cc}}
 &
+\sphinxAtStartPar
 Object representing a mesh region (boundary or part of a mesh).
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_geometric\_trans.h}} and \sphinxcode{\sphinxupquote{bgeot\_geometric\_trans.cc}}
 &
+\sphinxAtStartPar
 Describes geometric transformations.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_geotrans\_inv.h}} and \sphinxcode{\sphinxupquote{bgeot\_geotrans\_inv.cc}}
 &
+\sphinxAtStartPar
 A tool to invert geometric transformations.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh.cc}}
 &
+\sphinxAtStartPar
 Fully describes a mesh (with the geometric transformations, subparts of the mesh, support for parallelization). Includes the Bank algorithm to refine a mesh.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_deformable\_mesh.h}}
 &
+\sphinxAtStartPar
 defines an object capable to deform a mesh with respect to a displacement field and capable to restore it
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesher.h}} and \sphinxcode{\sphinxupquote{getfem\_mesher.cc}}
 &
+\sphinxAtStartPar
 An experimental mesher, in arbitrary dimension. To be used with care and  quite slow (because of node optimization). It meshes geometries defined by some level sets.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_import.h}} and \sphinxcode{\sphinxupquote{getfem\_import.cc}}
 &
+\sphinxAtStartPar
 Import mesh files in various formats
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_regular\_meshes.h}} and \sphinxcode{\sphinxupquote{getfem\_regular\_meshes.cc}}
 &
+\sphinxAtStartPar
 Produces structured meshes
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh\_slicers.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh\_slicers.cc}}
 &
+\sphinxAtStartPar
 A slice is built from a mesh, by applying some slicing operations (cut the mesh with a plane, intersect with a sphere, take the boundary faces, etc..). They are used for post\sphinxhyphen{}treatment (exportation of results to VTK or OpenDX,  etc.).
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh\_slice.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh\_slice.cc}}
 &
+\sphinxAtStartPar
 Store mesh slices.
 \\
 \hline
@@ -1143,21 +1346,26 @@ Store mesh slices.
 
 \subsection{State}
 \label{\detokenize{project/libdesc_mesh:state}}
+\sphinxAtStartPar
 Stable and not evolving so much.
 
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_mesh:perspectives}}
+\sphinxAtStartPar
 For the moment, the module is split into two parts which lie into two different
 namespaces. Of course, It would be more coherent to gather the module in only one
 namespace (\sphinxcode{\sphinxupquote{getfem}}).
 
 \begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
 The file \sphinxcode{\sphinxupquote{bgeot\_mesh.h}} could be renamed \sphinxcode{\sphinxupquote{getfem\_basic\_mesh.h}}.
 \end{sphinxadmonition}
 
+\sphinxAtStartPar
 A  bibliographical review on how to efficiently store a mesh and implement the main operations (add a node, an element, deal with faces, find the neighbour elements, the isolated faces …) would be interesting to make the mesh structure evolve.
 
+\sphinxAtStartPar
 A senstive algorithm is the one (in bgeot\_node\_tab.cc) which identify the too much close nodes. More investigations (and documentation) are probably necessary.
 
 
@@ -1166,6 +1374,7 @@ A senstive algorithm is the one (in bgeot\_node\_tab.cc) which identify the too 
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_fem:description}}
+\sphinxAtStartPar
 The Fem module is the part of \sphinxstyleemphasis{GetFEM} which describes the finite elements at the
 element level and the degrees of freedom. Finite element methods can be of
 different types. They could be scalar or vectorial, polynomial, piecewise
@@ -1184,33 +1393,45 @@ another Lagrange 1D element).
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{bgeot\_poly.h}} and \sphinxcode{\sphinxupquote{bgeot\_poly\_composite.h}} and \sphinxcode{\sphinxupquote{bgeot\_poly.cc}} and \sphinxcode{\sphinxupquote{bgeot\_poly\_composite.cc}}
 &
+\sphinxAtStartPar
 Some classes to represent polynomials and piecewise polynomials in order to describe shape functions of a finite element method on the reference element.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_fem.h}} and \sphinxcode{\sphinxupquote{getfem\_fem.cc}} and \sphinxcode{\sphinxupquote{getfem\_fem\_composite.cc}}
 &
+\sphinxAtStartPar
 Descriptors for finite element and a degree of freedom. Polynomial finite elements are defined in \sphinxcode{\sphinxupquote{getfem\_fem.cc}} and piecewise polynomial finite elements in \sphinxcode{\sphinxupquote{getfem\_fem\_composite.cc}}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_fem\_global\_function.h}} and \sphinxcode{\sphinxupquote{getfem\_fem\_global\_function.cc}}
 &
+\sphinxAtStartPar
 Defines a fem with base functions defined as global functions given by the user. Useful for enrichment with singular functions and for implementation of meshless methods.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_projected\_fem.h}} and \sphinxcode{\sphinxupquote{getfem\_projected\_fem.cc}}
 &
+\sphinxAtStartPar
 Defines a fem which is the projection of a finite element space (represented by a mesh\_fem) on a different mesh. Note that the high\sphinxhyphen{}generic assembly language offers also this functionality by means of the interpolated transformations.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_interpolated\_fem.h}} and \sphinxcode{\sphinxupquote{getfem\_interpolated\_fem.cc}}
 &
+\sphinxAtStartPar
 Dfines a fem which is the interpolation of a finite element space (represented by a mesh\_fem) on a different mesh. Note that the high\sphinxhyphen{}generic assembly language offers also this functionality by means of the interpolated transformations.
 \\
 \hline
@@ -1221,18 +1442,22 @@ Dfines a fem which is the interpolation of a finite element space (represented b
 
 \subsection{State}
 \label{\detokenize{project/libdesc_fem:state}}
+\sphinxAtStartPar
 The two files \sphinxcode{\sphinxupquote{getfem\_fem.cc}} and \sphinxcode{\sphinxupquote{getfem\_fem\_composite.cc}} mainly
 contains all the finite element description for basic elements. A exhaustive list
 of the defined finite elements is given in \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}appendixa}.
 
+\sphinxAtStartPar
 Some other files define some specific finite element such as
 \sphinxcode{\sphinxupquote{getfem\_fem\_level\_set.h}} which is a complex construction which allows to
 “cut” a existing element by one or several level sets.
 
+\sphinxAtStartPar
 The manner to describe the degrees of freedom globally satisfies the needing
 (connecting dof from an element to another in a generic way) but is a little bit
 obscure and too much complicated.
 
+\sphinxAtStartPar
 Conversely, the way to represent non\sphinxhyphen{}equivalent elements with the supplementary
 matrix \sphinxcode{\sphinxupquote{M}} has proven its efficiency on several elements (Hermites elements,
 Argyris, etc.).
@@ -1240,6 +1465,7 @@ Argyris, etc.).
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_fem:perspectives}}
+\sphinxAtStartPar
 The principal dissatisfaction of this module is that description of the degrees
 of freedom is not completely satisfactory. It is the principal reason why one
 documentation on how to build an element from A to Z was not made for the moment
@@ -1256,6 +1482,7 @@ similar way to the cubature methods , at least for the simplest finite elements
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_im:description}}
+\sphinxAtStartPar
 The CUBATURE module gives access to the numerical integration methods on
 reference elements. In fact it does not only contain some cubature formulas
 because it also give access to some exact integration methods. However, the exact
@@ -1278,18 +1505,24 @@ contains the reference to a method of same order on each face of the element.
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_integration.h}} and \sphinxcode{\sphinxupquote{getfem\_integration.cc}} and \sphinxcode{\sphinxupquote{getfem\_integration\_composite.cc}}
 &
+\sphinxAtStartPar
 Structure of integration methods, basic integration methods, product of integration method and composite methods.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_im\_list.h}}
 &
+\sphinxAtStartPar
 file generated by \sphinxcode{\sphinxupquote{cubature/make\_getfem\_list}} with the integration methods defined in cubature directory. This gives the possibility to define a new integration method just listing the Gauss points and weigth in a text file.
 \\
 \hline
@@ -1300,6 +1533,7 @@ file generated by \sphinxcode{\sphinxupquote{cubature/make\_getfem\_list}} with 
 
 \subsection{State}
 \label{\detokenize{project/libdesc_im:state}}
+\sphinxAtStartPar
 This module meets the present needs for the project and is considered as
 stabilized. The list of available cubature formulas is given in
 \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}appendixb}.
@@ -1307,6 +1541,7 @@ stabilized. The list of available cubature formulas is given in
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_im:perspectives}}
+\sphinxAtStartPar
 No change needed for the moment. An effort could be done on the documentation to
 describe completely how to add a new cubature formula (format of descritption
 files).
@@ -1317,6 +1552,7 @@ files).
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_meshfem:description}}
+\sphinxAtStartPar
 The MeshFem module aims to represent a finite element method (space) with respect to a given mesh. The mesh\_fem object will be permanently linked to the given mesh and will be able to react to  changes in the mesh (addition or deletion of elements, in particular). A mesh\_fem object may associate a different finite element method on each element of the mesh even though of course, the most common case it that all the element share the same finite element method.
 
 
@@ -1328,63 +1564,87 @@ The MeshFem module aims to represent a finite element method (space) with respec
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh\_fem.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh\_fem.cc}}
 &
+\sphinxAtStartPar
 Defines the structure representing a finite element on a whole mesh. Each element of the mesh is associated with a finite element method. This is a quite complex structure which perform dof identification and numbering, allows a global linear reduction.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh\_fem\_global\_function.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh\_fem\_global\_function.cc}}
 &
+\sphinxAtStartPar
 Defines mesh\_fem with fem defined as a fem\_global\_function. It provides convenience methods for updating the list of base functions in the linked fem\_global\_function.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh\_fem\_product.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh\_fem\_product.cc}}
 &
+\sphinxAtStartPar
 Produces a mesh\_fem object which is a kind of direct product of two finite element method. Useful for Xfem enrichment.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh\_fem\_sum.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh\_fem\_sum.cc}}
 &
+\sphinxAtStartPar
 Produces a mesh\_fem object which is a kind of direct sum of two finite element method. Useful for Xfem enrichment.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_partial\_mesh\_fem.h}} and \sphinxcode{\sphinxupquote{getfem\_partial\_mesh\_fem.cc}}
 &
+\sphinxAtStartPar
 Produces a mesh\_fem with a reduced number of dofs
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_interpolation.h}} and \sphinxcode{\sphinxupquote{getfem\_interpolation.cc}}
 &
+\sphinxAtStartPar
 Interpolation between two finite element methods, possibly between different meshes. The interpolation facilities of the high\sphinxhyphen{}level generic assembly can be used instead.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_derivatives.h}}
 &
+\sphinxAtStartPar
 Interpolation of some derivatives of a finite element field on a (discontinuous) Lagrange finite element. The interpolation facilities of the high\sphinxhyphen{}level generic assembly can be used instead.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_inter\_element.h}} and \sphinxcode{\sphinxupquote{getfem\_inter\_element.cc}}
 &
+\sphinxAtStartPar
 An attempt to make framework for inter\sphinxhyphen{}element computations (jump in normal derivative for instance). To be continuated and perhaps integrated into the generic assembly language.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_error\_estimate.h}} and \sphinxcode{\sphinxupquote{getfem\_error\_estimate.cc}}
 &
+\sphinxAtStartPar
 An attempt to make framework for computation of error estimates. To be continuated and perhaps integrated into the generic assembly language.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_crack\_sif.h}}
 &
+\sphinxAtStartPar
 Crack support functions for computation of SIF(stress intensity factors).
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_torus.h}} and \sphinxcode{\sphinxupquote{getfem\_torus.cc}}
 &
+\sphinxAtStartPar
 Adapt a mesh\_fem object which extends a 2D dimensional structure with a radial dimension.
 \\
 \hline
@@ -1395,11 +1655,13 @@ Adapt a mesh\_fem object which extends a 2D dimensional structure with a radial 
 
 \subsection{State}
 \label{\detokenize{project/libdesc_meshfem:state}}
+\sphinxAtStartPar
 Stable. Not evolving so much.
 
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_meshfem:perspectives}}
+\sphinxAtStartPar
 Parallelisation of dof numbering to be done. An optimal (an simple) algorithm
 exists.
 
@@ -1409,6 +1671,7 @@ exists.
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_mim:description}}
+\sphinxAtStartPar
 Defines an integration method on a whole mesh.
 
 
@@ -1420,18 +1683,24 @@ Defines an integration method on a whole mesh.
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh\_im.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh\_im.cc}}
 &
+\sphinxAtStartPar
 Object which defines an integration method on each element of the mesh. Reacts to the main mesh changes (add or deletion of elements).
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_im\_data.h}} and \sphinxcode{\sphinxupquote{getfem\_im\_data.cc}}
 &
+\sphinxAtStartPar
 Define an object representing a scalar, a vector or a tensor on each Gauss point of a mesh\_im object. Used for instance in plasticity approximation. Interpolation of arbitrary expressions can be made thanks to the weak form language.
 \\
 \hline
@@ -1442,6 +1711,7 @@ Define an object representing a scalar, a vector or a tensor on each Gauss point
 
 \subsection{State}
 \label{\detokenize{project/libdesc_mim:state}}
+\sphinxAtStartPar
 Stable, not evolving so much.
 
 
@@ -1453,6 +1723,7 @@ Stable, not evolving so much.
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_levelset:description}}
+\sphinxAtStartPar
 Define level\sphinxhyphen{}set objects and cut meshes, integration method and finite element method with respect to one or several level\sphinxhyphen{}set.
 
 
@@ -1464,43 +1735,59 @@ Define level\sphinxhyphen{}set objects and cut meshes, integration method and fi
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_level\_set.h}} and \sphinxcode{\sphinxupquote{getfem\_level\_set.cc}}
 &
+\sphinxAtStartPar
 Define a level\sphinxhyphen{}set function (scalar field defined on a Lagrange fem) with an optional secondary level\sphinxhyphen{}set function.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh\_level\_set.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh\_level\_set.cc}}
 &
+\sphinxAtStartPar
 Cut a mesh with respect to one or several level\sphinxhyphen{}sets.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_fem\_level\_set.h}} and \sphinxcode{\sphinxupquote{getfem\_fem\_level\_set.cc}}
 &
+\sphinxAtStartPar
 Define a special finite element method which depends on the element and which is cut by one or several level\sphinxhyphen{}sets.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh\_fem\_level\_set.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh\_fem\_level\_set.cc}}
 &
+\sphinxAtStartPar
 Produces a mesh\_fem object with shape functions cut by one or several level\sphinxhyphen{}sets.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mesh\_im\_level\_set.h}} and \sphinxcode{\sphinxupquote{getfem\_mesh\_im\_level\_set.cc}}
 &
+\sphinxAtStartPar
 Produce a mesh\_im representing an intergration method cut by the level set and being on on side of level\sphinxhyphen{}set, the oter side, both or only on the levelset itself.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_level\_set\_contact.h}} and \sphinxcode{\sphinxupquote{getfem\_level\_set\_contact.cc}}
 &
+\sphinxAtStartPar
 A level set based large sliding contact algorithm for an easy analysis of implant positioning.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_convect.h}}
 &
+\sphinxAtStartPar
 Compute the convection of a quantity with respect to a vector field. Used to computate the evolution of a level\sphinxhyphen{}set function for instance. Galerkin characteristic method.
 \\
 \hline
@@ -1511,11 +1798,13 @@ Compute the convection of a quantity with respect to a vector field. Used to com
 
 \subsection{State}
 \label{\detokenize{project/libdesc_levelset:state}}
+\sphinxAtStartPar
 Stable.
 
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_levelset:perspectives}}
+\sphinxAtStartPar
 Clarify the algorithm computing the different zones.
 
 
@@ -1524,6 +1813,7 @@ Clarify the algorithm computing the different zones.
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_high_gen_assemb:description}}
+\sphinxAtStartPar
 The high level generic assembly module of \sphinxstyleemphasis{GetFEM} and its generic weak form language (GWFL) is a key module which allows to describe weak formulation of partial differential equation problems. See the description of the language in the user documentation section \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}gasm\sphinxhyphen{}high}.
 
 
@@ -1535,43 +1825,59 @@ The high level generic assembly module of \sphinxstyleemphasis{GetFEM} and its g
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_generic\_assembly.h}}
 &
+\sphinxAtStartPar
 Main header for exported definitions. Only this header has to be included to use the generic assembly. Other headers of the module are for internal use only.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_generic\_assembly\_tree.h}} and \sphinxcode{\sphinxupquote{getfem\_generic\_assembly\_tree.cc}}
 &
+\sphinxAtStartPar
 Definition of the tree structure and basic operations on it, including reading an assembly string and transform it in a syntax tree and make the invert transformation of a tree into a string.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_generic\_assembly\_function\_and\_operators.h}} and \sphinxcode{\sphinxupquote{getfem\_generic\_assembly\_function\_and\_operators.cc}}
 &
+\sphinxAtStartPar
 Definition of redefined function and nonlinear operator of GWFL.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_generic\_assembly\_semantic.h}} and \sphinxcode{\sphinxupquote{getfem\_generic\_assembly\_semantic.cc}}
 &
+\sphinxAtStartPar
 Semantic analysis and enrichment of the syntax tree. Include some operations such as making the derivation of a tree with respect to a variable or computing the tree corresponding to the gradient of an expression.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_generic\_assembly\_workspace.cc}}
 &
+\sphinxAtStartPar
 Methodes of the workspace object (defined in \sphinxcode{\sphinxupquote{getfem\_generic\_assembly.h}}).
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_generic\_assembly\_compile\_and\_exec.h}} and \sphinxcode{\sphinxupquote{getfem\_generic\_assembly\_compile\_and\_exec.cc}}
 &
+\sphinxAtStartPar
 Definition of the optimized instructions, compilation into a sequel of optimize instructions and execution of the instructions on Gauss point/interpolation points.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_generic\_assembly\_interpolation.cc}}
 &
+\sphinxAtStartPar
 Interpolation operations and interpolate transformations.
 \\
 \hline
@@ -1582,67 +1888,87 @@ Interpolation operations and interpolate transformations.
 
 \subsection{A few implementation details}
 \label{\detokenize{project/libdesc_high_gen_assemb:a-few-implementation-details}}
+\sphinxAtStartPar
 The assembly string is transformed in an assembly tree by a set of function in \sphinxcode{\sphinxupquote{src/getfem\_generic\_assembly.cc}}. The process has 6 steps:
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 Lexical analysis with the procedure \sphinxcode{\sphinxupquote{ga\_get\_token(...)}}.
 
 \item {} 
+\sphinxAtStartPar
 Syntax analysis and transformation into a syntax tree by \sphinxcode{\sphinxupquote{ga\_read\_string(...)}}.
 
 \item {} 
+\sphinxAtStartPar
 Semantic analysis, simplification (pre\sphinxhyphen{}computation) of constant expressions and enrichment of the tree by \sphinxcode{\sphinxupquote{ga\_semantic\_analysis(...)}}.
 
 \item {} 
+\sphinxAtStartPar
 Symbolic (automatic) differentiation of an assembly tree by \sphinxcode{\sphinxupquote{ga\_derivative(...)}}
 
 \item {} 
+\sphinxAtStartPar
 Symbolic (automatic) gradient computation of an assembly tree by \sphinxcode{\sphinxupquote{ga\_gradient(...)}}
 
 \item {} 
+\sphinxAtStartPar
 Compilation in a sequence of instructions with optimizations by \sphinxcode{\sphinxupquote{ga\_compile(...)}}.
 
 \item {} 
+\sphinxAtStartPar
 Execution of the sequence of instructions and assembly by \sphinxcode{\sphinxupquote{ga\_exec(...)}}.
 
 \end{itemize}
 
+\sphinxAtStartPar
 These steps are performed only once at the beginning of the assembly. The final tree is compiled in a sequence of optimized instructions which are executed on each Gauss point of each element. The compilation performed some optimizations : repeated terms are automatically detected and evaluated only once, simplifications if the mesh has uniform type of elements, simplifications for vectorized fnite element methods.
 
+\sphinxAtStartPar
 Moreover, there is specifics function for interpolation operations (ga\_interpolation(…), ga\_interpolation\_exec(…), ga\_interpolation\_Lagrange\_fem, ga\_interpolation\_mti, ga\_interpolation\_im\_data, …)
 
 
 \subsection{Assembly tree}
 \label{\detokenize{project/libdesc_high_gen_assemb:assembly-tree}}
+\sphinxAtStartPar
 Assembly strings are transformed into assembly trees by \sphinxcode{\sphinxupquote{ga\_read\_string(...)}}. Assembly trees are syntax trees that are progressively enriched in information in the differents steps (semantic analysis, derivation, compilation).
 
+\sphinxAtStartPar
 The object \sphinxcode{\sphinxupquote{ga\_tree}} represents an assembly tree. It is a copyable object that only contains a pointer to the root of the tree. Each tree node is an object \sphinxcode{\sphinxupquote{ga\_tree\_node}} that contains the main following information:
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 node\_type (function, variable value, variable gradient, operation …)
 
 \item {} 
+\sphinxAtStartPar
 operation type for operation nodes.
 
 \item {} 
+\sphinxAtStartPar
 assembly tensor: used at execution time by optimized instructions to compute the intermediary results. The final result is in the assembly string of the root node at the end of the execution (for each Gauss point).
 
 \item {} 
+\sphinxAtStartPar
 term type: value, order one term (ith order one test functions),
 order two term (with order two test functions) or with both order one and
 order two test functions (tangent term).
 
 \item {} 
+\sphinxAtStartPar
 variable name of tests functions for order 1 or 2 terms.
 
 \item {} 
+\sphinxAtStartPar
 pointer to the parent node.
 
 \item {} 
+\sphinxAtStartPar
 pointers to the children nodes.
 
 \end{itemize}
 
+\sphinxAtStartPar
 For example, the assembly tree for the assembly string “a*Grad\_Test2\_u.Grad\_Test\_u” for the stiffness matrix of a Laplacian problem can be represented as follows with its assembly tensors at each node:
 
 \begin{figure}[htbp]
@@ -1654,18 +1980,23 @@ For example, the assembly tree for the assembly string “a*Grad\_Test2\_u.Grad\
 
 \subsection{Assembly tensors}
 \label{\detokenize{project/libdesc_high_gen_assemb:assembly-tensors}}
+\sphinxAtStartPar
 Assembly tensors are represented on each node by a \sphinxcode{\sphinxupquote{bgeot::tensor\textless{}double\textgreater{}}} object. However, there is a specific structure in \sphinxcode{\sphinxupquote{src/getfem\_generic\_assembly.cc}} for assembly tensors because there is several format of assembly tensors :
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 Normal tensor. The first and second indices may represent the test function local indices if the node represent a first or second order term. Remember that in \sphinxstyleemphasis{GetFEM} all tensors are stored with a Fortran order. This means that for instance t for a \(N\times P\times Q\) tensor one has \sphinxcode{\sphinxupquote{t(i, j, k) = t{[}i + j*N + k*N*P{]}}}.
 
 \item {} 
+\sphinxAtStartPar
 Copied tensor. When a node is detected to have exactly the same expression compared to an already compiled one, the assembly tensor will contain a pointer to the assembly tensor of the already compiled node. The consequence is that no unnecessary copy is made.
 
 \item {} 
+\sphinxAtStartPar
 Sparse tensor with a listed sparsity. When working with a vector field, the finite element method is applied on each component. This results on vector base functions having only one nonzero component and some components are duplicated. The tensor are fully represented because it would be difficul to gain in efficiency with that kind of small sparse tensor format. However, some operation can be optimized with the knoledge of a certain sparsity (and duplication). This can change the order of complexity of a reduction. In order to allows this gain in efficiency, the tensor are labellised with some known sparsity format (vectorisation and format coming from operation applied on vectorized tensors). This results in a certain number of sparsity formats that are listed below:
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 1: Vectorized base sparsity format: The tensor represent a vectorized
 value. Each value of the condensed tensor is repeated on \(Q\)
 components of the vectorized tensor. The mesh dimensions is denoted
@@ -1684,18 +2015,24 @@ represented in the following table
 \begin{tabular}[t]{|\X{5}{17}|\X{12}{17}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 Scalar tensor
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Vectorized tensor
 \\
 \hline
+\sphinxAtStartPar
 \(\bar{t}(i) = \varphi_i(x)\)
 &
+\sphinxAtStartPar
 \(t(j,k) = \varphi_{j/Q}(x) \delta_{k, (j \mbox{ mod } Q)}\)
 \\
 \hline
+\sphinxAtStartPar
 \([\varphi_0(x), \varphi_1(x)]\)
 &
+\sphinxAtStartPar
 \([\varphi_0(x), 0, \varphi_1(x), 0, 0, \varphi_0(x), 0, \varphi_1(x)]\)
 \\
 \hline
@@ -1704,6 +2041,7 @@ Vectorized tensor
 \sphinxattableend\end{savenotes}
 
 \item {} 
+\sphinxAtStartPar
 2: Grad condensed format
 
 
@@ -1712,16 +2050,21 @@ Vectorized tensor
 \begin{tabular}[t]{|\X{5}{17}|\X{12}{17}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 Scalar tensor
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Vectorized tensor
 \\
 \hline
+\sphinxAtStartPar
 \(\bar{t}(i,j) = \partial_j\varphi_i(x)\)
 &
+\sphinxAtStartPar
 \(t(k,l,m) = \partial_m\varphi_{k/Q}(x) \delta_{l, (m \mbox{ mod } Q)}\)
 \\
 \hline
+\sphinxAtStartPar
 \([\partial_0\varphi_0(x), \partial_0\varphi_1(x),\) \(\partial_1\varphi_0(x), \partial_1\varphi_1(x),\) \(\partial_2\varphi_0(x), \partial_2\varphi_1(x)]\)
 &\\
 \hline
@@ -1730,9 +2073,11 @@ Vectorized tensor
 \sphinxattableend\end{savenotes}
 
 \item {} 
+\sphinxAtStartPar
 3: Hessian condensed format
 
 \item {} 
+\sphinxAtStartPar
 10: Vectorized mass: the tensor represent a scalar product of two
 vectorised base functions. This means a tensor \(t(\cdot,\cdot)\)
 where \(t(i*Q+k, j*Q+l) = 0\) for \(k \ne l\) and
@@ -1745,6 +2090,7 @@ where \(t(i*Q+k, j*Q+l) = 0\) for \(k \ne l\) and
 
 \subsection{Optimized instructions}
 \label{\detokenize{project/libdesc_high_gen_assemb:optimized-instructions}}
+\sphinxAtStartPar
 Optimized instructions for variable evaluation, operations, vector and matrix assembly … to be described.
 
 
@@ -1752,13 +2098,16 @@ Optimized instructions for variable evaluation, operations, vector and matrix as
 \label{\detokenize{project/libdesc_high_gen_assemb:predefined-functions}}\begin{description}
 \item[{Some predefined scalar functions are available in GWFL in order to describe a weak formulation (or also to make basic algebraic computations). This is limited to scalar functions of one or two arguments. Due to the automatic differentiation used to obtain the tangent system of described problems, the derivative each function have to be available. The principle retained is the following: For each predefined function is available:}] \leavevmode\begin{itemize}
 \item {} 
+\sphinxAtStartPar
 A C++ function which computes the value given the argument(s).
 
 \item {} 
+\sphinxAtStartPar
 The support of the function in the first each argument in term of a
 (possibly infinite) interval (this is for simplification of expressions).
 
 \item {} 
+\sphinxAtStartPar
 The string corresponding of the derivative in terms of already known
 functions
 
@@ -1766,25 +2115,30 @@ functions
 
 \end{description}
 
+\sphinxAtStartPar
 A new predefined function is easy to add. See init\_predefined\_functions() in file \sphinxcode{\sphinxupquote{src/getfem\_generic\_assembly.cc}}. + describe how to give the derivative …
 
 
 \subsection{Predefined nonlinear operators}
 \label{\detokenize{project/libdesc_high_gen_assemb:predefined-nonlinear-operators}}
+\sphinxAtStartPar
 to be described …
 
 
 \subsection{State}
 \label{\detokenize{project/libdesc_high_gen_assemb:state}}
+\sphinxAtStartPar
 Stable.
 
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_high_gen_assemb:perspectives}}\begin{itemize}
 \item {} 
+\sphinxAtStartPar
 Is a certain extension to complex data possible ?
 
 \item {} 
+\sphinxAtStartPar
 More simplifications : study the possibility to automatically factorize some terms (for instance scalar ones) to reduce the number of operations.
 
 \end{itemize}
@@ -1795,6 +2149,7 @@ More simplifications : study the possibility to automatically factorize some ter
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_low_gen_assemb:description}}
+\sphinxAtStartPar
 First version of the generic assembly. Base on tensor reduction. Not very convenient for nonlinear terms. The high\sphinxhyphen{}level generic assembly have to be prefered now.
 
 
@@ -1806,28 +2161,38 @@ First version of the generic assembly. Base on tensor reduction. Not very conven
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mat\_elem\_type.h}} and :file:\textasciigrave{} getfem\_mat\_elem\_type.cc
 &
+\sphinxAtStartPar
 Defines base type for components of an elementary matrix.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_mat\_elem.h}} and :file:\textasciigrave{} getfem\_mat\_elem.cc
 &
+\sphinxAtStartPar
 Describes an compute elementary matrices.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_assembling\_tensors.h}} and \sphinxcode{\sphinxupquote{getfem\_assembling\_tensors.cc}}
 &
+\sphinxAtStartPar
 Performs the assembly.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_assembling.h}}
 &
+\sphinxAtStartPar
 Various assembly terms (linear elasticity, generic elliptic term, Dirichlet condition …
 \\
 \hline
@@ -1838,11 +2203,13 @@ Various assembly terms (linear elasticity, generic elliptic term, Dirichlet cond
 
 \subsection{State}
 \label{\detokenize{project/libdesc_low_gen_assemb:state}}
+\sphinxAtStartPar
 Stable.
 
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_low_gen_assemb:perspectives}}
+\sphinxAtStartPar
 Will not evolve since the efforts are now focused on the high\sphinxhyphen{}level generic assembly.
 
 
@@ -1851,6 +2218,7 @@ Will not evolve since the efforts are now focused on the high\sphinxhyphen{}leve
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_model:description}}
+\sphinxAtStartPar
 Describe a model (variable, data and equation terms linking the variables).
 
 
@@ -1862,63 +2230,87 @@ Describe a model (variable, data and equation terms linking the variables).
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_models.h}} and \sphinxcode{\sphinxupquote{getfem\_models.cc}}
 &
+\sphinxAtStartPar
 Defines the object models, its internal and the standard bricks (linear elasticity, generic elliptic brick, Dirichlet boundary conditions …).
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_model\_solvers.h}} and \sphinxcode{\sphinxupquote{getfem\_model\_solvers.cc}}
 &
+\sphinxAtStartPar
 Defines the the standard solvers for the model object.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_contact\_and\_friction\_common.h}} and \sphinxcode{\sphinxupquote{getfem\_contact\_and\_friction\_common.cc}}
 &
+\sphinxAtStartPar
 Common algorithms for contact/friction conditions on deformable bodies
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_contact\_and\_friction\_integral.h}} and \sphinxcode{\sphinxupquote{getfem\_contact\_and\_friction\_integral.cc}}
 &
+\sphinxAtStartPar
 Small sliding contact/friction bricks of integral type.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_contact\_and\_friction\_large\_sliding.h}} and \sphinxcode{\sphinxupquote{getfem\_contact\_and\_friction\_large\_sliding.cc}}
 &
+\sphinxAtStartPar
 Large sliding contact/friction bricks.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_contact\_and\_friction\_nodal.h}} and \sphinxcode{\sphinxupquote{getfem\_contact\_and\_friction\_nodal.cc}}
 &
+\sphinxAtStartPar
 Small sliding nodal contact/friction bricks.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_Navier\_Stokes.h}}
 &
+\sphinxAtStartPar
 An attempt for Navier\sphinxhyphen{}Stokes bricks. To be improved.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_fourth\_order.h}} and \sphinxcode{\sphinxupquote{getfem\_fourth\_order.cc}}
 &
+\sphinxAtStartPar
 Bilaplacian and Kirchhoff\sphinxhyphen{}Love plate bricks
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_linearized\_plates.h}} and \sphinxcode{\sphinxupquote{getfem\_linearized\_plates.cc}}
 &
+\sphinxAtStartPar
 Mindlin\sphinxhyphen{}Reissner plate brick
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_nonlinear\_elasticity.h}} and \sphinxcode{\sphinxupquote{getfem\_nonlinear\_elasticity.cc}}
 &
+\sphinxAtStartPar
 Large deformation elasticity bricks.
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_plasticity.h}} and \sphinxcode{\sphinxupquote{getfem\_plasticity.cc}}
 &
+\sphinxAtStartPar
 Plasticity bricks.
 \\
 \hline
@@ -1929,11 +2321,13 @@ Plasticity bricks.
 
 \subsection{State}
 \label{\detokenize{project/libdesc_model:state}}
+\sphinxAtStartPar
 Constant evolution to includes next models.
 
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_model:perspectives}}
+\sphinxAtStartPar
 More plate, load and shell bricks, plasticity in large deformation, …
 
 
@@ -1942,6 +2336,7 @@ More plate, load and shell bricks, plasticity in large deformation, …
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_cont:description}}
+\sphinxAtStartPar
 Allows to follow a solution with respect to a parameter (continuation method), detect a bifurcation and allow branching. Work for low regularity problems (Lipschitz regularity). Use an adapted Moore\sphinxhyphen{}Penrose continuation method.
 
 
@@ -1953,13 +2348,17 @@ Allows to follow a solution with respect to a parameter (continuation method), d
 \begin{tabular}[t]{|\X{8}{23}|\X{15}{23}|}
 \hline
 \sphinxstyletheadfamily 
+\sphinxAtStartPar
 File(s)
 &\sphinxstyletheadfamily 
+\sphinxAtStartPar
 Description
 \\
 \hline
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_continuation.h}} and \sphinxcode{\sphinxupquote{getfem\_continuation.cc}}
 &
+\sphinxAtStartPar
 The generic continuation and branching method
 \\
 \hline
@@ -1970,26 +2369,31 @@ The generic continuation and branching method
 
 \subsection{State}
 \label{\detokenize{project/libdesc_cont:state}}
+\sphinxAtStartPar
 Have already generic and advanced functionalities.
 
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_cont:perspectives}}
+\sphinxAtStartPar
 Still in developement.
 
 
 \section{Interface with scripts languages (Python, Scilab and Matlab)}
 \label{\detokenize{project/libdesc_interface:interface-with-scripts-languages-python-scilab-and-matlab}}\label{\detokenize{project/libdesc_interface:dp-libdesc-interface}}\label{\detokenize{project/libdesc_interface::doc}}
+\sphinxAtStartPar
 A simplified (but rather complete) interface of \sphinxstyleemphasis{GetFEM} is provided, so that it is possible to use getfem in some script languages.
 
 
 \subsection{Description}
 \label{\detokenize{project/libdesc_interface:description}}
+\sphinxAtStartPar
 All sources are located in the \sphinxcode{\sphinxupquote{interface/src}} directory. The interface is
 composed of one large library \sphinxcode{\sphinxupquote{getfemint}} (which stands for getfem
 interaction), which acts as a layer above the \sphinxstyleemphasis{GetFEM} library, and is used by
 the python, matlab and scilab interfaces.
 
+\sphinxAtStartPar
 This interface is not something that is generated automatically from c++ sources
 (as that could be the case with tools such as swig). It is something that has
 been designed as a simplified and consistent interface to getfem. Adding a new
@@ -1999,45 +2403,58 @@ for dense arrays manipulations).
 
 \subsection{Files}
 \label{\detokenize{project/libdesc_interface:files}}
+\sphinxAtStartPar
 All the files in the directory \sphinxcode{\sphinxupquote{interfacesrc}}. A short description of main files:
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfem\_interface.cc}}.
 
+\sphinxAtStartPar
 This is the bridge between the script language and the getfem interface. The
 function getfem\_interface\_main is exported as an \sphinxcode{\sphinxupquote{extern "C"}} function, so
 this is a sort of c++ barrier between the script language and the getfem
 interface (exporting only a C interface avoids many compilation problems).
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{matlab/gfm\_mex.c}}.
 
+\sphinxAtStartPar
 The matlab interface. The only thing it knows about getfem is in
 \sphinxcode{\sphinxupquote{getfem\_interface.h}}.
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{python/getfem\_python.c}}.
 
+\sphinxAtStartPar
 The python interface. The only thing it knows about getfem is in
 \sphinxcode{\sphinxupquote{getfem\_interface.h}}.
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gfi\_array.h}}, \sphinxcode{\sphinxupquote{gfi\_array.c}}.
 
+\sphinxAtStartPar
 Both \sphinxcode{\sphinxupquote{gfm\_mex.c}} and \sphinxcode{\sphinxupquote{getfem\_python.c}} need a simple convention on
 how to send and receive arrays, and object handles, from
 \sphinxcode{\sphinxupquote{getfem\_interface\_main()}}. This file provide such functionnality.
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfemint\_gsparse.h}}, \sphinxcode{\sphinxupquote{getfemint\_precond.h}}, etc.
 
+\sphinxAtStartPar
 Files specific to an interfaced object if needed.
 (getfemint\_gsparse which export some kind of mutable sparse matrix that can
 switch between different storage types, and real of complex elements).
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gf\_workspace.cc}}, \sphinxcode{\sphinxupquote{gf\_delete.cc}}.
 
+\sphinxAtStartPar
 Memory management for getfem objects. There is a layer which handles the
 dependency between for example a \sphinxcode{\sphinxupquote{mesh}} and a \sphinxcode{\sphinxupquote{mesh\_fem}}.
 It makes sure that no object
@@ -2047,13 +2464,16 @@ is to make sure that under no circumstances the user is able to crash getfem
 (and the host program, matlab, scilab or python) by passing incorrect
 argument to the getfem interface.
 
+\sphinxAtStartPar
 It also provides a kind of workspace stack, which was designed to simplify
 handling and cleaning of many getfem objects in matlab (since matlab does not
 have “object destructors”).
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{getfemint.h}}, \sphinxcode{\sphinxupquote{getfemint.cc}}.
 
+\sphinxAtStartPar
 Define the \sphinxcode{\sphinxupquote{mexarg\_in}}, \sphinxcode{\sphinxupquote{mexarg\_out}} classes, which are used to parse the
 list of input and output arguments to the getfem interface functions.
 The name  is not adequate anymore since any reference to “mex”
@@ -2061,9 +2481,11 @@ has been moved into
 \sphinxcode{\sphinxupquote{gfm\_mex.c}}.
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gf\_mesh.cc}}, \sphinxcode{\sphinxupquote{gf\_mesh\_get.cc}}, \sphinxcode{\sphinxupquote{gf\_mesh\_set.cc}},
 \sphinxcode{\sphinxupquote{gf\_fem.cc}}, etc.
 
+\sphinxAtStartPar
 All the functions exported be the getfem interfaces, sorted by object type
 (\sphinxcode{\sphinxupquote{gf\_mesh*}}, \sphinxcode{\sphinxupquote{gf\_mesh\_fem*}}, \sphinxcode{\sphinxupquote{gf\_fem*}}), and then organized as one for
 the object construction (\sphinxcode{\sphinxupquote{gf\_mesh}}), one for the object modification
@@ -2074,8 +2496,10 @@ first argument as the name of a subfunction (\sphinxcode{\sphinxupquote{gf\_mesh
 matlab, or \sphinxcode{\sphinxupquote{Mesh.nbpts()}} in python).
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{matlab/gfm\_rpx\_mexint.c}}.
 
+\sphinxAtStartPar
 An alternative to \sphinxcode{\sphinxupquote{gfm\_mex.c}} which is used when the
 \sphinxcode{\sphinxupquote{\sphinxhyphen{}\sphinxhyphen{}enable\sphinxhyphen{}matlab\sphinxhyphen{}rpc}} is passed to the \sphinxcode{\sphinxupquote{./configure}} script. The main use
 for that is debugging the interface, since in that case, the matlab interface
@@ -2084,8 +2508,10 @@ debug that server program, and identify memory leaks or anything else without
 having to mess with matlab (it is pain to debug).
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{python/getfem.py}}.
 
+\sphinxAtStartPar
 The python interface is available as a “\sphinxcode{\sphinxupquote{getfem.py}}” file which is
 produced during compilation by the python script
 “\sphinxcode{\sphinxupquote{bin/extract\_doc.py}}”.
@@ -2095,37 +2521,48 @@ produced during compilation by the python script
 
 \subsection{Objects, methods and functions of the interface}
 \label{\detokenize{project/libdesc_interface:objects-methods-and-functions-of-the-interface}}
+\sphinxAtStartPar
 The main concepts manipulated by the interface are a limited number of objects
 (Fem, Mesh, MeshFem, Model …), the associated methods and some functions defined on these objects.
 
+\sphinxAtStartPar
 A special effort has been done to facilitate the addition of new objects, methods and functions to the interface without doing it separately for each part supported script language (Python, Scilab, Octave, Matlab).
 
+\sphinxAtStartPar
 All the information needed to build the interface for the different objects, methods and functions is contained in the files \sphinxtitleref{interface/src/gf*.cc}. A python script (\sphinxtitleref{bin/extract\_doc}) produces all the necessary files from the information it takes there. In particular, it produces the python file getfem.py, the matlab m\sphinxhyphen{}files for the different functions and objects (including subdirectories) and it also produces the automatic documentations.
 
+\sphinxAtStartPar
 To make all the things work automatically, a certain number of rules have to be respected:
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 An object have to be defined by three files on the interface
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gf\_objectname.cc}} : contains the constructors of the object
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gf\_objectname\_get.cc}} : contains the methods which only get some information about the object (if any).
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gf\_objectname\_set.cc}} : contains the methods which transform the object (if any).
 
 \end{itemize}
 
 \item {} 
+\sphinxAtStartPar
 A list of function is defined by only one file \sphinxcode{\sphinxupquote{gf\_commandname.cc}}.
 It contains a list of sub\sphinxhyphen{}commands.
 
 \item {} 
+\sphinxAtStartPar
 For each file, the main commentary on the list of functions or methods is delimited by the tags ‘/\sphinxstyleemphasis{@GFDOC’ and ‘@}/’. For a file corresponding to the constructors of an object, the commentary should correspond to the description of the object.
 
 \item {} 
+\sphinxAtStartPar
 Each non trivial file gf\_*.cc contains a macro allowing to define the
 methods of the object or the sub\sphinxhyphen{}commands. In particular, this system
 allows to have a efficient search of the called method/function.
@@ -2144,12 +2581,14 @@ a new method/function with the following syntax:
 \PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The first three line are a c++ commentary which describes the call of the
 method/function with a special syntax and also gives a description of the
 method/function which will be included in the documentations. The first
 line of this commentary is important since it will be analyzed to produce
 the right interface for Python, Octave, Matlab and Scilab.
 
+\sphinxAtStartPar
 The syntax for the description of the call of a method/function is the
 following: After \sphinxcode{\sphinxupquote{/*@}} a special keyword should be present. It is either
 \sphinxcode{\sphinxupquote{INIT}}, \sphinxcode{\sphinxupquote{GET}}, \sphinxcode{\sphinxupquote{SET}}, \sphinxcode{\sphinxupquote{RDATTR}} or \sphinxcode{\sphinxupquote{FUNC}}. The keyword
@@ -2159,117 +2598,151 @@ a short method allowing to get an attribute of an object. \sphinxcode{\sphinxupq
 method of an object which does not modify it. \sphinxcode{\sphinxupquote{SET}} is for a method which
 modifies an object and \sphinxcode{\sphinxupquote{FUNC}} is for the sub\sphinxhyphen{}command of a function list.
 
+\sphinxAtStartPar
 If the method/function returns a value, then a name for the return value
 is given (which is arbitrary) followed by \sphinxcode{\sphinxupquote{=}}.
 
+\sphinxAtStartPar
 The parameters of the method/function are described. For a method, the
 object itself is not mentionned. The first parameter should be the method
 or sub\sphinxhyphen{}command name between single quotes (a special case is when
 this name begins with a dot; this means that it corresponds to a
 method/function where the command name is not required).
 
+\sphinxAtStartPar
 The other parameters, if any, should be declared with a type. Predefined
 types are the following:
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@CELL}}   : a cell array,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@imat}}   : matrix of integers,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@ivec}}   : vector of integers,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@cvec}}   : vector of complex values,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@dcvec}}  : vector of complex values,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@dvec}}   : vector of real values,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@vec}}    : vector of real or complex values,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@dmat}}   : matrix of real values,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@mat}}    : matrix of real or complex values,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@str}}    : a string,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@int}}    : an integer,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@bool}}   : a boolean,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@real}}   : a real value,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@scalar}} : a real or complex value,
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@list}}   : a list.
 
 \end{itemize}
 
+\sphinxAtStartPar
 Moreover, \sphinxcode{\sphinxupquote{@tobj}} refers to an object defined by the interface.
 For instance, ou can refer to \sphinxcode{\sphinxupquote{@tmesh}}, \sphinxcode{\sphinxupquote{@tmesh\_fem}}, \sphinxcode{\sphinxupquote{@tfem}}, etc.
 There are some authorized abbreviations:
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@tcs}}  for  \sphinxcode{\sphinxupquote{@tcont\_struct}}
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@tmf}}  for  \sphinxcode{\sphinxupquote{@tmesh\_fem}}
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@tgt}}  for  \sphinxcode{\sphinxupquote{@tgeotrans}}
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@tgf}}  for  \sphinxcode{\sphinxupquote{@tglobal\_function}}
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@tmo}}  for  \sphinxcode{\sphinxupquote{@tmesher\_object}}
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@tmls}}  for  \sphinxcode{\sphinxupquote{@tmesh\_levelset}}
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@tmim}}  for  \sphinxcode{\sphinxupquote{@tmesh\_im}}
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@tls}}  for  \sphinxcode{\sphinxupquote{@tlevelset}}
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@tsl}}  for  \sphinxcode{\sphinxupquote{@tslice}}
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@tsp}}  for  \sphinxcode{\sphinxupquote{@tspmat}}
 
 \item {} 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{@tpre}}  for  \sphinxcode{\sphinxupquote{@tprecond}}
 
 \end{itemize}
 
+\sphinxAtStartPar
 Three dots at the end of the parameter list (\sphinxcode{\sphinxupquote{...}}) mean that
 additional parameters are possible. Optional parameters can be described
 with brackets. For instance \sphinxcode{\sphinxupquote{/*@SET v = (\textquotesingle{}name\textquotesingle{}{[}, @int i{]})}}. But
 be careful how it is interpreted by the \sphinxcode{\sphinxupquote{extract\_doc}} script
 to build the python interface.
 
+\sphinxAtStartPar
 The second to fifth parameters of the macro correspond respectively to
 the minimum number of input arguments, the maximum one, the minimum
 number of output arguments and the maximum number of output arguments. It
 is dynamically verified.
 
+\sphinxAtStartPar
 Additional parameters for the function lists ….
 
+\sphinxAtStartPar
 For unknown reasons, the body of the function cannot contain multiple
 declarations such as \sphinxcode{\sphinxupquote{int a, b;}} (c++ believes that it is an additional
 parameter of the macro).
@@ -2277,6 +2750,7 @@ parameter of the macro).
 \end{itemize}
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 The parts of documentation included in the c++ commentaries should be in
 \sphinxhref{http://docutils.sourceforge.net/rst.html}{reStructuredText} format. In particular, math formulas can be included
 with :math:\textasciigrave{}f(x) = 3x\textasciicircum{}2+2x+4\textasciigrave{} or with:
@@ -2287,6 +2761,7 @@ with :math:\textasciigrave{}f(x) = 3x\textasciicircum{}2+2x+4\textasciigrave{} o
   \PYG{n}{f}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)} \PYG{o}{=} \PYG{l+m+mi}{3}\PYG{n}{x}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{2}\PYG{o}{+}\PYG{l+m+mi}{2}\PYG{n}{x}\PYG{o}{+}\PYG{l+m+mi}{4}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 It is possible to refer to another method or function of the interface
 with the syntax \sphinxcode{\sphinxupquote{INIT::OBJNAME(\textquotesingle{}method\sphinxhyphen{}name\textquotesingle{}, ...)}},
 \sphinxcode{\sphinxupquote{GET::OBJNAME(\textquotesingle{}method\sphinxhyphen{}name\textquotesingle{}, ...)}}, \sphinxcode{\sphinxupquote{SET::OBJNAME(\textquotesingle{}method\sphinxhyphen{}name\textquotesingle{}, ...)}},
@@ -2294,6 +2769,7 @@ with the syntax \sphinxcode{\sphinxupquote{INIT::OBJNAME(\textquotesingle{}metho
 the right syntax depending on the language (Octave, Matlab, Scilab or Python).
 
 \item {} 
+\sphinxAtStartPar
 Still in the documentations, parts for a specific language can be added by
 \sphinxcode{\sphinxupquote{@MATLAB\{specific part ...\}}}, \sphinxcode{\sphinxupquote{@SCILAB\{specific part ...\}}} and
 \sphinxcode{\sphinxupquote{@PYTHON\{specific part ...\}}}.
@@ -2305,6 +2781,7 @@ with the tags \sphinxcode{\sphinxupquote{/*@MATLABEXT}}, \sphinxcode{\sphinxupqu
 for instance the file \sphinxcode{\sphinxupquote{gf\_mesh\_fem\_get.cc}}.
 
 \item {} 
+\sphinxAtStartPar
 For Python and the Matlab object, if a \sphinxtitleref{SET} method has the same name as
 a \sphinxtitleref{GET} method, the \sphinxtitleref{SET} method is prefixed by \sphinxtitleref{set\_}.
 
@@ -2313,28 +2790,34 @@ a \sphinxtitleref{GET} method, the \sphinxtitleref{SET} method is prefixed by \s
 
 \subsection{Adding a new function or object method to the getfem interface}
 \label{\detokenize{project/libdesc_interface:adding-a-new-function-or-object-method-to-the-getfem-interface}}
+\sphinxAtStartPar
 If one want to add a new function \sphinxcode{\sphinxupquote{gf\_mesh\_get(m, "foobar", .)}}, then the
 main file to modify is \sphinxcode{\sphinxupquote{gf\_mesh\_get.cc}}. Remember to check every argument
 passed to the function in order to make sure that the user cannot crash Scilab, Octave, Matlab or Python when using that function. Use the macro defined in \sphinxcode{\sphinxupquote{gf\_mesh\_get.cc}} to add your function.
 
+\sphinxAtStartPar
 Do not forget to add documentation for that function: in \sphinxcode{\sphinxupquote{gf\_mesh\_get.cc}},
 this is the documentation that appears in the Octave/Matlab/Scilab/Python help files (that is when on
 type “\sphinxcode{\sphinxupquote{help gf\_mesh\_get}}” at the matlab prompt), and in the getfem\_python
 autogenerated documentation.
 
+\sphinxAtStartPar
 IMPORTANT. Note that the array indices start at 0 in Python and 1 in Octave, Matlab and Scilab. A specific function:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{config}\PYG{o}{:}\PYG{o}{:}\PYG{n}{base\PYGZus{}index}\PYG{p}{(}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 whose value is 0 in python and 1 in Octave, Matlab and Scilab has to be used to exchange indices and array of indices. Take care not to make the correction twice. Some Array of indices are automatically shifted.
 
 
 \subsection{Adding a new object to the getfem interface}
 \label{\detokenize{project/libdesc_interface:adding-a-new-object-to-the-getfem-interface}}
+\sphinxAtStartPar
 In order to add a new object to the interface, you have to build the new corresponding sources \sphinxcode{\sphinxupquote{gf\_obj.cc}}, \sphinxcode{\sphinxupquote{gf\_obj\_get.cc}} and \sphinxcode{\sphinxupquote{gf\_obj\_set.cc}}. Of course you can take the existing ones as a model.
 
+\sphinxAtStartPar
 For the management of the object, you have to declare the class at the begining of \sphinxcode{\sphinxupquote{getfemint.h}} (with respect to the alphabetic order), and declare three functions:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -2343,18 +2826,25 @@ For the management of the object, you have to declare the class at the begining 
 \PYG{n}{object\PYGZus{}class} \PYG{o}{*}\PYG{n}{to\PYGZus{}}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{name}\PYG{l+s}{\PYGZdq{}}\PYG{n}{\PYGZus{}object}\PYG{p}{(}\PYG{k}{const} \PYG{n}{mexarg\PYGZus{}in} \PYG{o}{\PYGZam{}}\PYG{n}{p}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 where “name” is the name of the object in the interface and \sphinxcode{\sphinxupquote{object\_class}} is the class name in getfem (for instance  \sphinxcode{\sphinxupquote{getfem::mesh}} for the mesh object). Alternatively, for the object that are manipulated by a shared pointer in \sphinxstyleemphasis{GetFEM}, the third function can return a shared pointer.
 
+\sphinxAtStartPar
 IMPORTANT: In order to be interfaced, a \sphinxstyleemphasis{GetFEM} object has to derive from \sphinxcode{\sphinxupquote{dal::static\_stored\_object}}. However, if it is not the case, a wrapper class can be defined such as the one for \sphinxcode{\sphinxupquote{bgeot::base\_poly}} (see the end of \sphinxcode{\sphinxupquote{getfemint.h}}).
 
+\sphinxAtStartPar
 The previous three functions have to be implemented at the end of \sphinxcode{\sphinxupquote{getfemint.cc}}.It is possible to use one of the two macros defined in \sphinxcode{\sphinxupquote{getfemint.cc}}. The first macro is for a standard object and the second one for an object which is manipulated in \sphinxstyleemphasis{GetFEM} with a shared pointer.
 
+\sphinxAtStartPar
 You have also to complete functions \sphinxcode{\sphinxupquote{name\_of\_getfemint\_class\_id}} and \sphinxcode{\sphinxupquote{class\_id\_of\_object}} at the end of \sphinxcode{\sphinxupquote{getfemint.cc}}.
 
+\sphinxAtStartPar
 You have to add the call of the interface function in \sphinxcode{\sphinxupquote{getfem\_interface.cc}} and modifiy the file \sphinxcode{\sphinxupquote{bin/extract\_doc}} and run the configure file.
 
+\sphinxAtStartPar
 The methods \sphinxcode{\sphinxupquote{get(\textquotesingle{}char\textquotesingle{})}} and \sphinxcode{\sphinxupquote{get(\textquotesingle{}display\textquotesingle{})}} should be defined for each object. The first one should give a string allowing the object to be saved in a file and the second one is to give some information about the object. Additionaly, a constructor from a string is necessary to load the object from a file.
 
+\sphinxAtStartPar
 For the Scilab interface the file \sphinxcode{\sphinxupquote{sci\_gateway/c/builder\_gateway\_c.sce.in}} has to be modified and the files in the directory \sphinxcode{\sphinxupquote{macros/overload}}.
 
 
@@ -2363,6 +2853,7 @@ For the Scilab interface the file \sphinxcode{\sphinxupquote{sci\_gateway/c/buil
 
 \subsection{Perspectives}
 \label{\detokenize{project/libdesc_interface:perspectives}}
+\sphinxAtStartPar
 The interface grows in conjunction with \sphinxstyleemphasis{GetFEM}. The main \sphinxstyleemphasis{GetFEM} functionalities are interfaced.
 
 
@@ -2371,6 +2862,7 @@ The interface grows in conjunction with \sphinxstyleemphasis{GetFEM}. The main \
 
 \section{Volume integral}
 \label{\detokenize{project/appendixA:volume-integral}}
+\sphinxAtStartPar
 One has
 \begin{equation*}
 \begin{split}\int_T f(x)\ dx = \int_{\widehat{T}} \widehat{f}(\widehat{x})
@@ -2381,6 +2873,7 @@ One has
 \frac{\partial\tau(\widehat{x})}{\partial \widehat{x}_{P-1}}
 \right)|\ d\widehat{x}.\end{split}
 \end{equation*}
+\sphinxAtStartPar
 Denoting \(J_{\tau}(\widehat{x})\) the jacobian
 \begin{equation*}
 \begin{split}\fbox{$ J_{\tau}(\widehat{x}) :=
@@ -2392,16 +2885,19 @@ Denoting \(J_{\tau}(\widehat{x})\) the jacobian
 \right)| =
 (\mbox{det}(K(\widehat{x})^T K(\widehat{x})))^{1/2}$,}\end{split}
 \end{equation*}
+\sphinxAtStartPar
 one finally has
 \begin{equation*}
 \begin{split}\fbox{$\int_T f(x)\ dx = \int_{\widehat{T}} \widehat{f}(\widehat{x}) J_{\tau}(\widehat{x})\ d\widehat{x}$.}\end{split}
 \end{equation*}
+\sphinxAtStartPar
 When \(P = N\), the expression of the jacobian reduces to \(J_{\tau}(\widehat{x})
 = |\mbox{det}(K(\widehat{x}))|\).
 
 
 \section{Surface integral}
 \label{\detokenize{project/appendixA:surface-integral}}
+\sphinxAtStartPar
 With \(\Gamma\) a part of the boundary of \(T\) a real element and
 \(\widehat{\Gamma}\) the corresponding boundary on the reference element \(\widehat{T}\),
 one has
@@ -2409,17 +2905,20 @@ one has
 \begin{split}\fbox{$\int_{\Gamma} f(x)\ d\sigma =
 \int_{\widehat{\Gamma}}\widehat{f}(\widehat{x}) \|B(\widehat{x})\widehat{n}\| J_{\tau}(\widehat{x})\ d\widehat{\sigma}$,}\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where \(\widehat{n}\) is the unit normal to \(\widehat{T}\) on \(\widehat{\Gamma}\). In a same
 way
 \begin{equation*}
 \begin{split}\fbox{$\int_{\Gamma} F(x)\cdot n\ d\sigma =
 \int_{\widehat{\Gamma}} \widehat{F}(\widehat{x})\cdot(B(\widehat{x})\cdot\widehat{n}) J_{\tau}(\widehat{x})\ d\widehat{\sigma}$,}\end{split}
 \end{equation*}
+\sphinxAtStartPar
 For \(n\) the unit normal to \(T\) on \(\Gamma\).
 
 
 \section{Derivative computation}
 \label{\detokenize{project/appendixA:derivative-computation}}
+\sphinxAtStartPar
 One has
 \begin{equation*}
 \begin{split}\nabla f(x) = B(\widehat{x})\widehat{\nabla} \widehat{f}(\widehat{x}).\end{split}
@@ -2427,11 +2926,13 @@ One has
 
 \section{Second derivative computation}
 \label{\detokenize{project/appendixA:second-derivative-computation}}
+\sphinxAtStartPar
 Denoting
 \begin{equation*}
 \begin{split}\nabla^2 f =
 \left[\frac{\partial^2 f}{\partial x_i \partial x_j}\right]_{ij},\end{split}
 \end{equation*}
+\sphinxAtStartPar
 the \(N \times N\) matrix and
 \begin{equation*}
 \begin{split}\widehat{X}(\widehat{x}) =
@@ -2439,14 +2940,17 @@ the \(N \times N\) matrix and
 \sum_{k = 0}^{N-1}\sum_{i = 0}^{P-1}
 \widehat{\nabla}^2\tau_k(\widehat{x})B_{ki}\frac{\partial \widehat{f}}{\partial \widehat{x}_i}(\widehat{x}),\end{split}
 \end{equation*}
+\sphinxAtStartPar
 the \(P \times P\) matrix, then
 \begin{equation*}
 \begin{split}\widehat{\nabla}^2 \widehat{f}(\widehat{x}) = \widehat{X}(\widehat{x}) + K(\widehat{x})^T \nabla^2 f(x) K(\widehat{x}),\end{split}
 \end{equation*}
+\sphinxAtStartPar
 and thus
 \begin{equation*}
 \begin{split}\nabla^2 f(x) = B(\widehat{x})(\widehat{\nabla}^2 \widehat{f}(\widehat{x}) - \widehat{X}(\widehat{x})) B(\widehat{x})^T.\end{split}
 \end{equation*}
+\sphinxAtStartPar
 In order to have uniform methods for the computation of elementary matrices, the
 Hessian is computed as a column vector \(H f\) whose components are
 \(\frac{\partial^2 f}{\partial x^2_0}, \frac{\partial^2 f}{\partial
@@ -2458,11 +2962,13 @@ x_1\partial x_0},\ldots, \frac{\partial^2 f}{\partial x^2_{N-1}}\). Then, with
 \frac{\partial^2 \tau_k(\widehat{x})}{\partial \widehat{x}_{i / P} \partial \widehat{x}_{i\mbox{ mod }P}}
 B_{kj}(\widehat{x}),\end{split}
 \end{equation*}
+\sphinxAtStartPar
 and \(B_3\) the \(N^2 \times P^2\) matrix defined as
 \begin{equation*}
 \begin{split}\left[B_3(\widehat{x})\right]_{ij} =
 B_{i / N, j / P}(\widehat{x}) B_{i\mbox{ mod }N, j\mbox{ mod }P}(\widehat{x}),\end{split}
 \end{equation*}
+\sphinxAtStartPar
 one has
 \begin{equation*}
 \begin{split}\fbox{$H f(x) = B_3(\widehat{x})
@@ -2471,6 +2977,7 @@ one has
 
 \section{Example of elementary matrix}
 \label{\detokenize{project/appendixA:example-of-elementary-matrix}}
+\sphinxAtStartPar
 Assume one needs to compute the elementary “matrix”:
 \begin{equation*}
 \begin{split}t(i_0, i_1, \ldots, i_7) =
@@ -2478,6 +2985,7 @@ Assume one needs to compute the elementary “matrix”:
 \partial_{i_4}\varphi_{i_3}^{i_2}
 \partial^2_{i_7/ P, i_7\mbox{ mod } P}\varphi_{i_6}^{i_5}\ dx,\end{split}
 \end{equation*}
+\sphinxAtStartPar
 The computations to be made on the reference elements are
 \begin{equation*}
 \begin{split}\widehat{t}_0(i_0, i_1, \ldots,i_7) =
@@ -2485,6 +2993,7 @@ The computations to be made on the reference elements are
 \partial_{i_4}(\widehat{\varphi})_{i_3}^{i_2}
 \partial^2_{i_7 / P, i_7\mbox{ mod } P}(\widehat{\varphi})_{i_6}^{i_5} J(\widehat{x})\ d\widehat{x},\end{split}
 \end{equation*}
+\sphinxAtStartPar
 and
 \begin{equation*}
 \begin{split}\widehat{t}_1(i_0, i_1, \ldots, i_7) =
@@ -2492,6 +3001,7 @@ and
 \partial_{i_4}(\widehat{\varphi})_{i_3}^{i_2}
 \partial_{i_7}(\widehat{\varphi})_{i_6}^{i_5} J(\widehat{x})\ d\widehat{x},\end{split}
 \end{equation*}
+\sphinxAtStartPar
 Those two tensor can be computed once on the whole reference element if the
 geometric transformation is linear (because \(J(\widehat{x})\) is constant). If the
 geometric transformation is non\sphinxhyphen{}linear, what has to be stored is the value on
@@ -2499,13 +3009,16 @@ each integration point. To compute the integral on the real element a certain
 number of reductions have to be made:
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 Concerning the first term (\(\varphi_{i_1}^{i_0}\)) nothing.
 
 \item {} 
+\sphinxAtStartPar
 Concerning the second term (\(\partial_{i_4}\varphi_{i_3}^{i_2}\)) a
 reduction with respect to \(i_4\) with the matrix \(B\).
 
 \item {} 
+\sphinxAtStartPar
 Concerning the third term (\(\partial^2_{i_7 / P, i_7\mbox{ mod }P}
 \varphi_{i_6}^{i_5}\)) a reduction of \(\widehat{t}_0\) with respect to \(i_7\)
 with the matrix \(B_3\) and a reduction of \(\widehat{t}_1\) with respect also
@@ -2513,11 +3026,13 @@ to \(i_7\) with the matrix \(B_3 B_2\)
 
 \end{itemize}
 
+\sphinxAtStartPar
 The reductions are to be made on each integration point if the geometric
 transformation is non\sphinxhyphen{}linear. Once those reductions are done, an addition of all
 the tensor resulting of those reductions is made (with a factor equal to the load
 of each integration point if the geometric transformation is non\sphinxhyphen{}linear).
 
+\sphinxAtStartPar
 If the finite element is non\sphinxhyphen{}\(\tau\)\sphinxhyphen{}equivalent, a supplementary reduction of the
 resulting tensor with the matrix \(M\) has to be made.
 
@@ -2526,190 +3041,247 @@ resulting tensor with the matrix \(M\) has to be made.
 \label{\detokenize{biblio:references}}\label{\detokenize{biblio:id1}}\label{\detokenize{biblio::doc}}
 \begin{sphinxthebibliography}{Encyclop}
 \bibitem[AB\sphinxhyphen{}ER\sphinxhyphen{}PI2018]{biblio:ab-er-pi2018}
+\sphinxAtStartPar
 M. Abbas, A. Ern, N. Pignet.
 \sphinxstyleemphasis{Hybrid High\sphinxhyphen{}Order methods for finite deformations of hyperelastic materials}.
 Computational Mechanics, 62(4), 909\sphinxhyphen{}928, 2018.
 \bibitem[AB\sphinxhyphen{}ER\sphinxhyphen{}PI2019]{biblio:ab-er-pi2019}
+\sphinxAtStartPar
 M. Abbas, A. Ern, N. Pignet.
 \sphinxstyleemphasis{A Hybrid High\sphinxhyphen{}Order method for incremental associative plasticity with small deformations}.
 Computer Methods in Applied Mechanics and Engineering, 346, 891\sphinxhyphen{}912, 2019.
 \bibitem[AL\sphinxhyphen{}CU1991]{biblio:al-cu1991}
+\sphinxAtStartPar
 P. Alart, A. Curnier.
 \sphinxstyleemphasis{A mixed formulation for frictional contact problems prone to newton like solution methods}. Comput. Methods Appl. Mech. Engrg. 92, 353\textendash{}375, 1991.
 \bibitem[Al\sphinxhyphen{}Ge1997]{biblio:al-ge1997}
+\sphinxAtStartPar
 E.L. Allgower and K. Georg.
 \sphinxstyleemphasis{Numerical Path Following}, Handbook of Numerical Analysis, Vol. V (P.G. Ciarlet and J.L. Lions, eds.). Elsevier, pp. 3\sphinxhyphen{}207, 1997.
 \bibitem[AM\sphinxhyphen{}MO\sphinxhyphen{}RE2014]{biblio:am-mo-re2014}
+\sphinxAtStartPar
 S. Amdouni, M. Moakher, Y. Renard,
 \sphinxstyleemphasis{A local projection stabilization of fictitious domain method for elliptic boundary value problems}. Appl. Numer. Math., 76:60\sphinxhyphen{}75, 2014.
 \bibitem[AM\sphinxhyphen{}MO\sphinxhyphen{}RE2014b]{biblio:am-mo-re2014b}
+\sphinxAtStartPar
 S. Amdouni, M. Moakher, Y. Renard.
 \sphinxstyleemphasis{A stabilized Lagrange multiplier method for the enriched finite element approximation of Tresca contact problems of cracked elastic bodies}. Comput. Methods Appl. Mech. Engrg., 270:178\sphinxhyphen{}200, 2014.
 \bibitem[bank1983]{biblio:bank1983}
+\sphinxAtStartPar
 R.E. Bank, A.H. Sherman, A. Weiser.
 \sphinxstyleemphasis{Refinement algorithms and data structures for regular local mesh refinement}. In Scientific Computing IMACS, Amsterdam, North\sphinxhyphen{}Holland, pp 3\sphinxhyphen{}17, 1983.
 \bibitem[ba\sphinxhyphen{}dv1985]{biblio:ba-dv1985}
+\sphinxAtStartPar
 K.J. Bathe, E.N. Dvorkin,
 \sphinxstyleemphasis{A four\sphinxhyphen{}node plate bending element based on Mindlin\sphinxhyphen{}Reissner plate theory and a mixed interpolation}. Internat. J. Numer. Methods Engrg., 21, 367\sphinxhyphen{}383, 1985.
 \bibitem[Be\sphinxhyphen{}Mi\sphinxhyphen{}Mo\sphinxhyphen{}Bu2005]{biblio:be-mi-mo-bu2005}
+\sphinxAtStartPar
 Bechet E, Minnebo H, Moës N, Burgardt B.
 \sphinxstyleemphasis{Improved implementation and robustness study of the X\sphinxhyphen{}FEM for stress analysis around cracks}.
 Internat. J. Numer. Methods Engrg., 64, 1033\sphinxhyphen{}1056, 2005.
 \bibitem[BE\sphinxhyphen{}CO\sphinxhyphen{}DU2010]{biblio:be-co-du2010}
+\sphinxAtStartPar
 M. Bergot, G. Cohen, M. Duruflé.
 \sphinxstyleemphasis{Higher\sphinxhyphen{}order finite elements for hybrid meshes using new nodal pyramidal elements}
 J. Sci. Comput., 42, 345\sphinxhyphen{}381, 2010.
 \bibitem[br\sphinxhyphen{}ba\sphinxhyphen{}fo1989]{biblio:br-ba-fo1989}
+\sphinxAtStartPar
 F. Brezzi, K.J. Bathe, M. Fortin.
 \sphinxstyleemphasis{Mixed\sphinxhyphen{}interpolated element for Reissner\sphinxhyphen{}Mindlin plates}. Internat. J. Numer. Methods Engrg., 28, 1787\sphinxhyphen{}1801, 1989.
 \bibitem[bu\sphinxhyphen{}ha2010]{biblio:bu-ha2010}
+\sphinxAtStartPar
 E. Burman, P. Hansbo.
 \sphinxstyleemphasis{Fictitious domain finite element methods using cut elements: I. A stabilized Lagrange multiplier method}. Computer Methods in Applied Mechanics, 199:41\sphinxhyphen{}44, 2680\sphinxhyphen{}2686, 2010.
 \bibitem[ca\sphinxhyphen{}re\sphinxhyphen{}so1994]{biblio:ca-re-so1994}
+\sphinxAtStartPar
 D. Calvetti, L. Reichel and D.C. Sorensen.
 \sphinxstyleemphasis{An implicitly restarted Lanczos method for large symmetric eigenvalue problems}. Electronic Transaction on Numerical Analysis\}. 2:1\sphinxhyphen{}21, 1994.
 \bibitem[ca\sphinxhyphen{}ch\sphinxhyphen{}er2019]{biblio:ca-ch-er2019}
+\sphinxAtStartPar
 K. Cascavita, F. Chouly and A. Ern
 \sphinxstyleemphasis{Hybrid High\sphinxhyphen{}Order discretizations combined with Nitsche’s method for Dirichlet and Signorini boundary conditions}.
 hal\sphinxhyphen{}02016378v2, 2019
 \bibitem[CH\sphinxhyphen{}LA\sphinxhyphen{}RE2008]{biblio:ch-la-re2008}
+\sphinxAtStartPar
 E. Chahine, P. Laborde, Y. Renard.
 \sphinxstyleemphasis{Crack\sphinxhyphen{}tip enrichment in the Xfem method using a cut\sphinxhyphen{}off function}. Int. J. Numer. Meth. Engng., 75(6):629\sphinxhyphen{}646, 2008.
 \bibitem[CH\sphinxhyphen{}LA\sphinxhyphen{}RE2011]{biblio:ch-la-re2011}
+\sphinxAtStartPar
 E. Chahine, P. Laborde, Y. Renard.
 \sphinxstyleemphasis{A non\sphinxhyphen{}conformal eXtended Finite Element approach: Integral matching Xfem}. Applied Numerical Mathematics, 61:322\sphinxhyphen{}343, 2011.
 \bibitem[ciarlet1978]{biblio:ciarlet1978}
+\sphinxAtStartPar
 P.G. Ciarlet.
 \sphinxstyleemphasis{The finite element method for elliptic problems}. Studies in Mathematics and its Applications vol. 4, North\sphinxhyphen{}Holland, 1978.
 \bibitem[ciarlet1988]{biblio:ciarlet1988}
+\sphinxAtStartPar
 P.G. Ciarlet.
 \sphinxstyleemphasis{Mathematical Elasticity}. Volume 1: Three\sphinxhyphen{}Dimensional Elasticity. North\sphinxhyphen{}Holland, 1988.
 \bibitem[EncyclopCubature]{biblio:encyclopcubature}
+\sphinxAtStartPar
 R. Cools, \sphinxhref{http://www.cs.kuleuven.ac.be/~ines/research/ecf/ecf.html}{An Encyclopedia of Cubature Formulas}, J. Complexity.
 \bibitem[Dh\sphinxhyphen{}Go\sphinxhyphen{}Ku2003]{biblio:dh-go-ku2003}
+\sphinxAtStartPar
 A. Dhooge, W. Govaerts and Y. A. Kuznetsov.
 \sphinxstyleemphasis{MATCONT: A MATLAB Package for Numerical Bifurcation Analysis of ODEs}.
 ACM Trans. Math. Software 31, 141\sphinxhyphen{}164, 2003.
 \bibitem[Di\sphinxhyphen{}Er2015]{biblio:di-er2015}
+\sphinxAtStartPar
 D.A. Di Pietro, A. Ern.
 \sphinxstyleemphasis{A hybrid high\sphinxhyphen{}order locking free method for linear elasticity on general meshes}.
 Comput. Methods Appl. Mech. Engrg., 283:1\sphinxhyphen{}21, 2015
 \bibitem[Di\sphinxhyphen{}Er2017]{biblio:di-er2017}
+\sphinxAtStartPar
 D.A. Di Pietro, A. Ern.
 \sphinxstyleemphasis{Arbitrary\sphinxhyphen{}order mixed methods for heterogeneous anisotropic diffusion on general meshes}.
 IMA Journal of Numerical Analysis, 37(1), 40\sphinxhyphen{}63. 2017
 \bibitem[Duan2014]{biblio:duan2014}
+\sphinxAtStartPar
 H. Duan.
 \sphinxstyleemphasis{A finite element method for Reissner\sphinxhyphen{}Mindlin plates}.
 Math. Comp., 83:286, 701\sphinxhyphen{}733, 2014.
 \bibitem[Dr\sphinxhyphen{}La\sphinxhyphen{}Ek2014]{biblio:dr-la-ek2014}
+\sphinxAtStartPar
 A. Draganis, F. Larsson, A. Ekberg.
 \sphinxstyleemphasis{Finite element analysis of transient thermomechanical rolling contact using
 an efficient arbitrary Lagrangian\sphinxhyphen{}Eulerian description}.
 Comput. Mech., 54, 389\sphinxhyphen{}405, 2014.
 \bibitem[Fa\sphinxhyphen{}Po\sphinxhyphen{}Re2015]{biblio:fa-po-re2015}
+\sphinxAtStartPar
 M. Fabre, J. Pousin, Y. Renard.
 \sphinxstyleemphasis{A fictitious domain method for frictionless contact problems in elasticity using Nitsche’s method}. preprint, \sphinxurl{https://hal.archives-ouvertes.fr/hal-00960996v1}
 \bibitem[Fa\sphinxhyphen{}Pa2003]{biblio:fa-pa2003}
+\sphinxAtStartPar
 F. Facchinei and J.\sphinxhyphen{}S. Pang.
 \sphinxstyleemphasis{Finite\sphinxhyphen{}Dimensional Variational Inequalities and Complementarity Problems, Vol. II}.
 Springer Series in Operations Research, Springer, New York, 2003.
 \bibitem[Georg2001]{biblio:georg2001}
+\sphinxAtStartPar
 K. Georg.
 \sphinxstyleemphasis{Matrix\sphinxhyphen{}free numerical continuation and bifurcation}. Numer. Funct. Anal. Optimization 22, 303\sphinxhyphen{}320, 2001.
 \bibitem[GR\sphinxhyphen{}GH1999]{biblio:gr-gh1999}
+\sphinxAtStartPar
 R.D. Graglia, I.\sphinxhyphen{}L. Gheorma.
 \sphinxstyleemphasis{Higher order interpolatory vector bases on pyramidal elements}
 IEEE transactions on antennas and propagation, 47:5, 775\sphinxhyphen{}782, 1999.
 \bibitem[GR\sphinxhyphen{}ST2015]{biblio:gr-st2015}
+\sphinxAtStartPar
 D. Grandi, U. Stefanelli.
 \sphinxstyleemphasis{The Souza\sphinxhyphen{}Auricchio model for shape\sphinxhyphen{}memory alloys}
 Discrete and Continuous Dynamical Systems, Series S, 8(4):723\sphinxhyphen{}747, 2015.
 \bibitem[HA\sphinxhyphen{}WO2009]{biblio:ha-wo2009}
+\sphinxAtStartPar
 C. Hager, B.I. Wohlmuth.
 \sphinxstyleemphasis{Nonlinear complementarity functions for plasticity problems with frictional contact}. Comput. Methods Appl. Mech. Engrg., 198:3411\sphinxhyphen{}3427, 2009
 \bibitem[HA\sphinxhyphen{}HA2004]{biblio:ha-ha2004}
+\sphinxAtStartPar
 A Hansbo, P Hansbo.
 \sphinxstyleemphasis{A finite element method for the simulation of strong and weak discontinuities in solid mechanics}. Comput. Methods Appl. Mech. Engrg. 193 (33\sphinxhyphen{}35), 3523\sphinxhyphen{}3540, 2004.
 \bibitem[HA\sphinxhyphen{}RE2009]{biblio:ha-re2009}
+\sphinxAtStartPar
 J. Haslinger, Y. Renard.
 \sphinxstyleemphasis{A new fictitious domain approach inspired by the extended finite element method}. Siam J. on Numer. Anal., 47(2):1474\sphinxhyphen{}1499, 2009.
 \bibitem[HI\sphinxhyphen{}RE2010]{biblio:hi-re2010}
+\sphinxAtStartPar
 Hild P., Renard Y.
 \sphinxstyleemphasis{Stabilized lagrange multiplier method for the finite element approximation of contact problems in elastostatics}. Numer. Math. 15:1, 101\textendash{}129, 2010.
 \bibitem[KH\sphinxhyphen{}PO\sphinxhyphen{}RE2006]{biblio:kh-po-re2006}
+\sphinxAtStartPar
 Khenous H., Pommier J., Renard Y.
 \sphinxstyleemphasis{Hybrid discretization of the Signorini problem with Coulomb friction, theoretical aspects and comparison of some numerical solvers}. Applied Numerical Mathematics, 56/2:163\sphinxhyphen{}192, 2006.
 \bibitem[KI\sphinxhyphen{}OD1988]{biblio:ki-od1988}
+\sphinxAtStartPar
 N. Kikuchi, J.T. Oden.
 \sphinxstyleemphasis{Contact problems in elasticity}. SIAM, 1988.
 \bibitem[LA\sphinxhyphen{}PO\sphinxhyphen{}RE\sphinxhyphen{}SA2005]{biblio:la-po-re-sa2005}
+\sphinxAtStartPar
 Laborde P., Pommier J., Renard Y., Salaun M.
 \sphinxstyleemphasis{High order extended finite element method for cracked domains}. Int. J. Numer. Meth. Engng., 64:354\sphinxhyphen{}381, 2005.
 \bibitem[LA\sphinxhyphen{}RE\sphinxhyphen{}SA2010]{biblio:la-re-sa2010}
+\sphinxAtStartPar
 J. Lasry, Y. Renard, M. Salaun.
 \sphinxstyleemphasis{eXtended Finite Element Method for thin cracked plates with Kirchhoff\sphinxhyphen{}Love theory}. Int. J. Numer. Meth. Engng., 84(9):1115\sphinxhyphen{}1138, 2010.
 \bibitem[KO\sphinxhyphen{}RE2014]{biblio:ko-re2014}
+\sphinxAtStartPar
 K. Poulios, Y. Renard,
 \sphinxstyleemphasis{An unconstrained integral approximation of large sliding frictional contact between deformable solids}. Computers and Structures, 153:75\sphinxhyphen{}90, 2015.
 \bibitem[LA\sphinxhyphen{}RE2006]{biblio:la-re2006}
+\sphinxAtStartPar
 P. Laborde, Y. Renard.
 \sphinxstyleemphasis{Fixed point strategies for elastostatic frictional contact problems}. Math. Meth. Appl. Sci., 31:415\sphinxhyphen{}441, 2008.
 \bibitem[Li\sphinxhyphen{}Re2014]{biblio:li-re2014}
+\sphinxAtStartPar
 T. Ligurský and Y. Renard.
 \sphinxstyleemphasis{A Continuation Problem for Computing Solutions of Discretised Evolution Problems with Application to Plane Quasi\sphinxhyphen{}Static Contact Problems with Friction}. Comput. Methods Appl. Mech. Engrg. 280, 222\sphinxhyphen{}262, 2014.
 \bibitem[Li\sphinxhyphen{}Re2014hal]{biblio:li-re2014hal}
+\sphinxAtStartPar
 T. Ligurský and Y. Renard.
 \sphinxstyleemphasis{Bifurcations in Piecewise\sphinxhyphen{}Smooth Steady\sphinxhyphen{}State Problems: Abstract Study and Application to Plane Contact Problems with Friction}. Computational Mechanics, 56:1:39\sphinxhyphen{}62, 2015.
 \bibitem[Li\sphinxhyphen{}Re2015hal]{biblio:li-re2015hal}
+\sphinxAtStartPar
 T. Ligurský and Y. Renard.
 \sphinxstyleemphasis{A Method of Piecewise\sphinxhyphen{}Smooth Numerical Branching}. Z. Angew. Math. Mech., 97:7:815\textendash{}827, 2017.
 \bibitem[Mi\sphinxhyphen{}Zh2002]{biblio:mi-zh2002}
+\sphinxAtStartPar
 P. Ming and Z. Shi,
 \sphinxstyleemphasis{Optimal L2 error bounds for MITC3 type element}. Numer. Math. 91, 77\sphinxhyphen{}91, 2002.
 \bibitem[Xfem]{biblio:xfem}
+\sphinxAtStartPar
 N. Moës, J. Dolbow and T. Belytschko,
 \sphinxstyleemphasis{A finite element method for crack growth without remeshing}.
 Internat. J. Numer. Methods Engrg., 46, 131\sphinxhyphen{}150, 1999.
 \bibitem[Nackenhorst2004]{biblio:nackenhorst2004}
+\sphinxAtStartPar
 U. Nackenhorst,
 \sphinxstyleemphasis{The ALE formulation of bodies in rolling contact. Theoretical foundation
 and finite element approach}.
 Comput. Methods Appl. Mech. Engrg., 193:4299\sphinxhyphen{}4322, 2004.
 \bibitem[NI\sphinxhyphen{}RE\sphinxhyphen{}CH2011]{biblio:ni-re-ch2011}
+\sphinxAtStartPar
 S. Nicaise, Y. Renard, E. Chahine,
 \sphinxstyleemphasis{Optimal convergence analysis for the eXtended Finite Element Method}. Int. J. Numer. Meth. Engng., 86:528\sphinxhyphen{}548, 2011.
 \bibitem[Pantz2008]{biblio:pantz2008}
+\sphinxAtStartPar
 O. Pantz
 \sphinxstyleemphasis{The Modeling of Deformable Bodies with Frictionless (Self\sphinxhyphen{})Contacts}. Archive for Rational Mechanics and Analysis, Volume 188, Issue 2, pp 183\sphinxhyphen{}212, 2008.
 \bibitem[SCHADD]{biblio:schadd}
+\sphinxAtStartPar
 L.F. Pavarino.
 \sphinxstyleemphasis{Domain decomposition algorithms for the p\sphinxhyphen{}version finite element method for elliptic problems}. Luca F. Pavarino. PhD thesis, Courant Institute of Mathematical Sciences\}. 1992.
 \bibitem[PO\sphinxhyphen{}NI2016]{biblio:po-ni2016}
+\sphinxAtStartPar
 K. Poulios, C.F. Niordson,
 \sphinxstyleemphasis{Homogenization of long fiber reinforced composites including fiber bending effects}. Journal of the Mechanics and Physics of Solids, 94, pp 433\sphinxhyphen{}452, 2016.
 \bibitem[GetFEM2020]{biblio:getfem2020}
+\sphinxAtStartPar
 Y. Renard, K. Poulios
 \sphinxstyleemphasis{GetFEM: Automated FE modeling of multiphysics problems based on a generic weak form language}. Preprint, \sphinxurl{https://hal.archives-ouvertes.fr/hal-02532422/document}
 \bibitem[remacle2003]{biblio:remacle2003}
+\sphinxAtStartPar
 J.\sphinxhyphen{}F. Remacle, M.S. Shephard;
 \sphinxstyleemphasis{An algorithm oriented mesh database}. International Journal for Numerical Methods in Engineering, 58:2, pp 349\sphinxhyphen{}374, 2003.
 \bibitem[SE\sphinxhyphen{}PO\sphinxhyphen{}WO2015]{biblio:se-po-wo2015}
+\sphinxAtStartPar
 A. Seitz, A. Popp, W.A. Wall,
 \sphinxstyleemphasis{A semi\sphinxhyphen{}smooth Newton method for orthotropic plasticity and frictional contact at finite strains}. Comput. Methods Appl. Mech. Engrg. 285:228\sphinxhyphen{}254, 2015.
 \bibitem[SI\sphinxhyphen{}HU1998]{biblio:si-hu1998}
+\sphinxAtStartPar
 J.C. Simo, T.J.R. Hughes.
 \sphinxstyleemphasis{Computational Inelasticity}. Interdisciplinary Applied Mathematics, vol 7, Springer, New York 1998.
 \bibitem[SO\sphinxhyphen{}PE\sphinxhyphen{}OW2008]{biblio:so-pe-ow2008}
+\sphinxAtStartPar
 E.A. de Souza Neto, D Perić, D.R.J. Owen.
 \sphinxstyleemphasis{Computational methods for plasticity}. J. Wiley \& Sons, New York, 2008.
 \bibitem[renard2013]{biblio:renard2013}
+\sphinxAtStartPar
 Y. Renard,
 \sphinxstyleemphasis{Generalized Newton’s methods for the approximation and resolution of frictional contact problems in elasticity}.  Comput. Methods Appl. Mech. Engrg., 256:38\sphinxhyphen{}55, 2013.
 \bibitem[SU\sphinxhyphen{}CH\sphinxhyphen{}MO\sphinxhyphen{}BE2001]{biblio:su-ch-mo-be2001}
+\sphinxAtStartPar
 Sukumar N., Chopp D.L., Moës N., Belytschko T.
 \sphinxstyleemphasis{Modeling holes and inclusions by level sets in the extended finite\sphinxhyphen{}element method}. Comput. Methods Appl. Mech. Engrg., 190:46\sphinxhyphen{}47, 2001.
 \bibitem[ZT1989]{biblio:zt1989}
+\sphinxAtStartPar
 Zienkiewicz and Taylor. \sphinxstyleemphasis{The finite element method}. 5th edition,
 volume 3 : Fluids Dynamics.
 \end{sphinxthebibliography}

@@ -80,7 +80,7 @@
 
 
 \title{Tutorial}
-\date{Jan 29, 2021}
+\date{Jan 30, 2021}
 \release{5.4.1}
 \author{Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -104,46 +104,60 @@
 
 \chapter{Introduction}
 \label{\detokenize{tutorial/intro:introduction}}\label{\detokenize{tutorial/intro:ud-intro-tut}}\label{\detokenize{tutorial/intro::doc}}
+\sphinxAtStartPar
 This tutorial is intended to present the main aspects of the \sphinxstyleemphasis{GetFEM} library  on commented simple examples. \sphinxstyleemphasis{GetFEM} allows numerical modeling of complex problems including coupled ones. It is relatively simple to add arbitrary coupling terms thanks to a weak form description language. Expressions in weak form are then compiled in the form of a list of optimized instructions that are executed during assembly.
 
+\sphinxAtStartPar
 The main presented functionalities are the following
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 Approximation of multiphysics problems and the use of the generic assembly.
 
 \item {} 
+\sphinxAtStartPar
 The use of fixed\sphinxhyphen{}size variables.
 
 \item {} 
+\sphinxAtStartPar
 Contact problems.
 
 \item {} 
+\sphinxAtStartPar
 Fictitious domain functionalities and transformations allowing inter\sphinxhyphen{}mesh or inter\sphinxhyphen{}region assembly.
 
 \item {} 
+\sphinxAtStartPar
 Continuation / bifurcation problems.
 
 \end{itemize}
 
+\sphinxAtStartPar
 This tutorial does not of course takes the place of the various documentations. The user documentation (that of the C++ library) is the reference one concerning the description of implemented methods. Interfaces documentations describe the use of the different functionalities from interfaces but do not repeat the description of methods. ‘Developpers’s guide’ documentation describes more internal concerning the organization of the library.
 
+\sphinxAtStartPar
 \sphinxstyleemphasis{GetFEM} is a free collaborative project hosted by the \sphinxhref{http://savannah.gnu.org}{Savannah} site (see \sphinxurl{https://savannah.nongnu.org/projects/getfem}). New contributors are welcome to all aspects of the project.
 
 
 \section{C++, Python, Scilab or Matlab ?}
 \label{\detokenize{tutorial/intro:c-python-scilab-or-matlab}}
+\sphinxAtStartPar
 \sphinxstyleemphasis{GetFEM} is basically a library written in C++. However, it has an interface that is available in Python, Scilab and Matlab  versions and allows to use all the advanced features. It is recommended to start by using the interface with scripting languages, which makes programming easier. The three versions of the interface differ only by small syntax elements, except for the graphics post\sphinxhyphen{}processing (Scilab and Matlab interfaces offer the possibility of integrated post\sphinxhyphen{}processing while it is necessary to use dedicated software such as Paraview, Mayavi or gmsh when using the Python interface or directly the library in C++). The Python interface is compiled by default along with the C++ library.
 
+\sphinxAtStartPar
 Use \sphinxstyleemphasis{GetFEM} interface is a good strategy even for complex applications, the performance is comparable to the direct use of the C++ library and it is more flexible to use. However, only the Python interface allows for the parallelization (with MPI). The possible addition of functionality to the interface being a relatively simple operation.
 
+\sphinxAtStartPar
 The first example of the tutorial (thermo\sphinxhyphen{}electric coupling elastico) allows to see the difference in the use of the C++ library and one of the versions of the interface.
 
 
 \section{Where are demo files ?}
 \label{\detokenize{tutorial/intro:where-are-demo-files}}
+\sphinxAtStartPar
 A large number of demonstration programs can be found
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 for the C++ examples in directory:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -151,6 +165,7 @@ for the C++ examples in directory:
 \end{sphinxVerbatim}
 
 \item {} 
+\sphinxAtStartPar
 for the Python interface in the directory:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -158,6 +173,7 @@ for the Python interface in the directory:
 \end{sphinxVerbatim}
 
 \item {} 
+\sphinxAtStartPar
 for the Scilab interface in the directory:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -165,6 +181,7 @@ for the Scilab interface in the directory:
 \end{sphinxVerbatim}
 
 \item {} 
+\sphinxAtStartPar
 and for the Matlab interface in the directory:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -176,41 +193,53 @@ and for the Matlab interface in the directory:
 
 \chapter{How to install}
 \label{\detokenize{tutorial/install:how-to-install}}\label{\detokenize{tutorial/install:ud-install-tut}}\label{\detokenize{tutorial/install::doc}}
+\sphinxAtStartPar
 Since \sphinxstyleemphasis{GetFEM} is developed on linux (Ubuntu), the installation is simpler on linux, especially on Debian\sphinxhyphen{}based distributions (Debian/Ubuntu/Mint). However, \sphinxstyleemphasis{GetFEM} can be installed also on other linux distributions, on Mac os X and Windows. In order to compile \sphinxstyleemphasis{GetFEM} from sources, you need a recent C++ complier (supporting C++ 14 standard) and a recent version of python.
 
+\sphinxAtStartPar
 The main dependences of \sphinxstyleemphasis{GetFEM} on other libraries are
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 git client, automake, autoconf and libtool if you  want to build binaries
 from git version to get the latest changes.
 
 \item {} 
+\sphinxAtStartPar
 Python development files (Python.h etc.) and also the \sphinxstyleemphasis{numpy} and \sphinxstyleemphasis{scipy} packages if
 you want to build the python interface.
 
 \item {} 
+\sphinxAtStartPar
 sequential MUMPS package (direct solver for sparse matrices) if you want to use it instead of the SuperLU version distributed along with \sphinxstyleemphasis{GetFEM}.
 
 \item {} 
+\sphinxAtStartPar
 Parallel MUMPS, METIS and MPI4PY packages if you want to use the MPI parallelized version of \sphinxstyleemphasis{GetFEM}.
 
 \item {} 
+\sphinxAtStartPar
 qhull package for mesh generation and fictitious domain applications
 
 \item {} 
+\sphinxAtStartPar
 BLAS and LAPACK packages
 
 \end{itemize}
 
+\sphinxAtStartPar
 \sphinxstyleemphasis{GetFEM} C++ library can be build on its own or together with the Python, Scilab and/or Matlab interface.
 
+\sphinxAtStartPar
 You can also install the stable release of Getfem on linux distributions using the corresponding package management system.
 
+\sphinxAtStartPar
 More specific information on how to build Getfem C++ library can be found on the \sphinxhref{../download.html}{download and install} page.
 
 
 \chapter{Basic Usage of \sphinxstyleemphasis{GetFEM}}
 \label{\detokenize{tutorial/basic_usage:basic-usage-of-gf}}\label{\detokenize{tutorial/basic_usage:tut-bsic-usage}}\label{\detokenize{tutorial/basic_usage::doc}}
+\sphinxAtStartPar
 A \sphinxstyleemphasis{GetFEM} structure can be summarized as follows
 
 \begin{figure}[htbp]
@@ -219,6 +248,7 @@ A \sphinxstyleemphasis{GetFEM} structure can be summarized as follows
 \noindent\sphinxincludegraphics[scale=1.0]{{getfem_structure1}.png}
 \end{figure}
 
+\sphinxAtStartPar
 A program using getfem will often have the following structure
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -242,23 +272,28 @@ A program using getfem will often have the following structure
     \PYG{n}{Model}\PYG{o}{.}\PYG{n}{solve}\PYG{p}{(}\PYG{o}{.}\PYG{o}{.}\PYG{o}{.}\PYG{n}{options}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Note that instead of defining your pde terms with GWFL, the generic weak form language (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}gasm\sphinxhyphen{}high} for more details on the syntax of the weak form language), you can use predefined bricks for standard terms : generic elliptic term, linearized or finite strain elasticity, standard boundary conditions …
 
 
 \chapter{Example of Thermo\sphinxhyphen{}elastic and electrical coupling (simple nonlinear coupled problem, model object, generic assembly, solve and visualization)}
 \label{\detokenize{tutorial/thermo_coupling:example-of-thermo-elastic-and-electrical-coupling-simple-nonlinear-coupled-problem-model-object-generic-assembly-solve-and-visualization}}\label{\detokenize{tutorial/thermo_coupling:tut-thermo-elec-coupling}}\label{\detokenize{tutorial/thermo_coupling::doc}}
+\sphinxAtStartPar
 This example aims to present a simple example of a multiphysics problem with a nonlinear coupling of a displacement field, a temperature field and an electric potential field. It also aims to compare the use of the C++ library and the different interfaces. The corresponding demo files are present in the test directories of \sphinxstyleemphasis{GetFEM} (\sphinxtitleref{tests/}, \sphinxtitleref{interface/tests/python}, \sphinxtitleref{interface/scr/scilab/demos} and \sphinxtitleref{interface/tests/matlab}).
 
 
 \section{The problem setting}
 \label{\detokenize{tutorial/thermo_coupling:the-problem-setting}}
+\sphinxAtStartPar
 Let \(\Omega \subset \rm I\hspace{-0.15em}R^2\) be the reference configuration of a 2D plate (see the geometry {\hyperref[\detokenize{tutorial/thermo_coupling:tut-fig-meshthermo}]{\sphinxcrossref{\DUrole{std,std-ref}{here}}}}) of thickness \(\varepsilon\) submitted to external forces, electric potential and heating. We will denote by  \(\theta : \Omega \rightarrow \rm I\hspace{-0.15em}R\) the temperature field (in °C),  \(V : \Omega \rightarrow \rm I\hspace{-0.15em}R\) the electric potential field and \(u : \Omega \rightarrow \rm I\hspace{-0.15em}R^2\) the membrane displacement field.
 
 
 \subsection{Thermal problem}
 \label{\detokenize{tutorial/thermo_coupling:thermal-problem}}
+\sphinxAtStartPar
 The lateral faces of the plates are supposed to be in thermal insulation since the front and back faces of the plate are supposed to be in thermal exchange with the air (supposed at 20 °C) with a heat transfer coefficient \(D\).
 
+\sphinxAtStartPar
 The equation on the temperature \(\theta\) and boundary condition can be written as follows:
 \begin{equation*}
 \begin{split}\left\{\begin{array}{l}
@@ -266,13 +301,16 @@ The equation on the temperature \(\theta\) and boundary condition can be written
 \kappa\nabla \theta \cdot n = 0 ~~ \mbox{ on } \partial \Omega,
 \end{array} \right.\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where the thermal conductivity is designed by \(\kappa\), \(T_0\) is the temperature of the air, \(\partial \Omega\) the boundary of the domain \(\Omega\) and \(n\) the outward unit normal vector to \(\Omega\) on \(\partial \Omega\).
 
+\sphinxAtStartPar
 The term \(\sigma|\nabla V|^2\) is a nonlinear coupling term corresponding to the Joule heating term, where \(\sigma\) is the electrical conductivity.
 
 
 \subsection{Electric potential problem}
 \label{\detokenize{tutorial/thermo_coupling:electric-potential-problem}}
+\sphinxAtStartPar
 We consider a potential difference of \(0.1V\) between the right and left lateral face of the plate. The other faces are considered electrically insulated. The equation for the electric potential reads as
 \begin{equation*}
 \begin{split} \left\{\begin{array}{l}
@@ -282,15 +320,18 @@ V = 0 ~~ \mbox{ on the right lateral face}, \\
 V = 0.1 ~~ \mbox{ on the left lateral face}, \\
 \end{array} \right.\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where \(\sigma\) is still the electrical conductivity. Moreover, we consider that \(\sigma\) depends on the temperature as follows:
 \begin{equation*}
 \begin{split}\sigma = \dfrac{1}{\rho_0(1+\alpha(\theta - T_0))},\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where \(T_0\) is a reference temperature (air temperature here), \(\rho_0\) the resistance temperature coefficient at \(T_0\) and \(\alpha\) a second resistance temperature coefficient.
 
 
 \subsection{Deformation problem}
 \label{\detokenize{tutorial/thermo_coupling:deformation-problem}}
+\sphinxAtStartPar
 We consider the membrane small deformation of the plate under a force applied on the right lateral face and influenced by the heating of the plate. The displacement \(u\) will be solution of the following problem (linearized elasticity):
 \begin{equation*}
 \begin{split} \left\{\begin{array}{l}
@@ -300,25 +341,31 @@ We consider the membrane small deformation of the plate under a force applied on
 u = 0 ~~ \mbox{ on the left lateral face},
 \end{array} \right.\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where \(F\) is the force density applied on the right lateral boundary and \(\bar{\sigma}(u)\) is the Cauchy stress tensor defined by
 \begin{equation*}
 \begin{split}\bar{\sigma}(u) = \lambda^* \mbox{div}(u) I + 2\mu \bar{\varepsilon}(u) + \beta(T_0-\theta) I,\end{split}
 \end{equation*}
+\sphinxAtStartPar
 \(\bar{\varepsilon}(u) = (\nabla u + (\nabla u)^T)/2\) being the linearized strain tensor, \(I\) the identity second order tensor and \(\lambda^*, \mu\) being the Lamé coefficients defined  by
 \begin{equation*}
 \begin{split}&\lambda = \dfrac{E\nu}{(1+\nu)(1-2\nu)}, \\
 &\mu = \dfrac{E}{2(1+\nu)}, \\
 &\lambda^* = \dfrac{2\lambda\mu}{\lambda+2*\mu},\end{split}
 \end{equation*}
+\sphinxAtStartPar
 from \(E\) the Young modulus and \(\nu\) the Poisson ratio of the material.
 
+\sphinxAtStartPar
 The term \(\beta(T_0-\theta) I\) corresponds to the thermal expansion term, where \(\beta = \alpha_{th} E/(1-2\nu)\), \(\alpha_{th}\) being the thermal expansion coefficient.
 
 
 \section{The weak formulation}
 \label{\detokenize{tutorial/thermo_coupling:the-weak-formulation}}
+\sphinxAtStartPar
 An important step is to obtain the weak formulation of the coupled system of equations. This is a crucial step since the finite element formulation is based on the weak formulation (Galerkin approximation) and the weak formulation is the only one which can give us the expression of the terms to be added.
 
+\sphinxAtStartPar
 Weak formulation of each partial differential equation is obtained by multiplying the equation with a test function corresponding to the main unknown satisfying homogeneous Dirichlet conditions where the main unknown satisfies a Dirichlet condition, then integrating over the domain \(\Omega\) and performing some integrations by parts (using Green’s formula). The weak formulation of the system of partial differential equations reads:
 \begin{equation*}
 \begin{split}&\mbox{Find } \theta, V, u \mbox{ with } V = 0.1, u = 0 \mbox{ on the left face}, V = 0 \mbox{ on the right face}, \\
@@ -326,16 +373,19 @@ Weak formulation of each partial differential equation is obtained by multiplyin
 & \int_{\Omega} \varepsilon\sigma\nabla V\cdot\nabla\delta_V = 0 d\Omega ~~~ \mbox{ for all } \delta_V \mbox{ satisfying } \delta_V = 0 \mbox{ on the left and right faces}, \\
 & \int_{\Omega} \bar{\sigma}(u):\bar{\varepsilon}(\delta_u)d\Omega = \int_{\Gamma_N} F\cdot \delta_u d\Gamma ~~~ \mbox{ for all } \delta_{u} \mbox{ satisfying } \delta_u = 0 \mbox{ on the left face},\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where \(\delta_{\theta}, \delta_V, \delta_u\) are the test functions corresponding to \(\theta, V, u\), respectively, \(\Gamma_N\) denotes the right boundary where the density of force \(F\) is applied and \(\bar{\sigma}:\bar{\varepsilon}\) is the Frobenius scalar product between second order tensors.
 
 
 \section{Implementation in C++ and with the interface}
 \label{\detokenize{tutorial/thermo_coupling:implementation-in-c-and-with-the-interface}}
+\sphinxAtStartPar
 Let us now make a detailed presentation of the use of \sphinxstyleemphasis{GetFEM} to approximate the problem. We build simultaneously a C++, Python, Scilab and Matlab program. For Matlab and Scilab programs, we will not use the oriented object commands (see \DUrole{xref,std,std-ref}{mlab\sphinxhyphen{}oocmd} how to use them)
 
 
 \subsection{Initialization}
 \label{\detokenize{tutorial/thermo_coupling:initialization}}
+\sphinxAtStartPar
 First, in C++, ones has to include a certain number of headers for the model object, the generic assembly, the linear algebra interface (Gmm++), the experimental mesher and the export facilities. For Python, this is simpler, \sphinxstyleemphasis{GetFEM} can be imported globally (numpy has also to be imported). For Scilab, the library has first to be loaded in the Scilab console (this is not described here) and for Matlab, nothing is necessary, except a \sphinxtitleref{gf\_workspace(‘clear all’)} which allows to clear all \sphinxstyleemphasis{GetFEM} variables.
 
 
@@ -344,6 +394,7 @@ First, in C++, ones has to include a certain number of headers for the model obj
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -362,6 +413,7 @@ First, in C++, ones has to include a certain number of headers for the model obj
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -370,6 +422,7 @@ First, in C++, ones has to include a certain number of headers for the model obj
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -377,6 +430,7 @@ First, in C++, ones has to include a certain number of headers for the model obj
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -391,6 +445,7 @@ First, in C++, ones has to include a certain number of headers for the model obj
 
 \subsection{Parameters of the model}
 \label{\detokenize{tutorial/thermo_coupling:parameters-of-the-model}}
+\sphinxAtStartPar
 Let us now define the different physical and numerical parameters of the problem. For script languages (Python, Scilab and Matlab) there is no differences.
 
 
@@ -399,6 +454,7 @@ Let us now define the different physical and numerical parameters of the problem
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -422,6 +478,7 @@ Let us now define the different physical and numerical parameters of the problem
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Scripts}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -445,8 +502,10 @@ Let us now define the different physical and numerical parameters of the problem
 
 \subsection{Mesh generation}
 \label{\detokenize{tutorial/thermo_coupling:mesh-generation}}
+\sphinxAtStartPar
 \sphinxstyleemphasis{GetFEM} has some limited meshing facilities which are described here. We are going to use them. However, there is no guaranty of the quality and conformity of the obtained mesh, so it is better to verify the mesh if you use \sphinxstyleemphasis{GetFEM} meshing facilities. You can also use external meshers (GiD or Gmsh for instance) and import them (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}load\_save\_mesh}).
 
+\sphinxAtStartPar
 The geometry of the domain is supposed to be a rectangle with three circular holes (see {\hyperref[\detokenize{tutorial/thermo_coupling:tut-fig-meshthermo}]{\sphinxcrossref{\DUrole{std,std-ref}{The obtained mesh.}}}}). The geometry is described thanks to some geometrical primitives and union/setminus operations (see \sphinxcode{\sphinxupquote{src/getfem/getfem\_mesher.h}} file). In the following, \sphinxtitleref{h} stands for the mesh size and \sphinxtitleref{2} is the degree of the mesh (this means that the transformation is of degree two, we used curved edges).
 
 
@@ -455,6 +514,7 @@ The geometry of the domain is supposed to be a rectangle with three circular hol
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -472,6 +532,7 @@ The geometry of the domain is supposed to be a rectangle with three circular hol
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -486,6 +547,7 @@ The geometry of the domain is supposed to be a rectangle with three circular hol
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -500,6 +562,7 @@ The geometry of the domain is supposed to be a rectangle with three circular hol
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -530,6 +593,7 @@ The geometry of the domain is supposed to be a rectangle with three circular hol
 
 \subsection{Boundary selection}
 \label{\detokenize{tutorial/thermo_coupling:boundary-selection}}
+\sphinxAtStartPar
 Since we have different boundary conditions on the different parts of the boundary, we have to number the different parts of the boundary (in the hole, thermal and electrical insulation together with a stress free boundary conditions are assumed). Thus, we have to select the element faces on the mesh and define mesh regions (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}mesh\_regions}) 1, 2, 3, 4 to be the right boundary, the left one, the top one and the bottom one respectively. These boundary numbers will be used in the model bricks.
 
 
@@ -538,6 +602,7 @@ Since we have different boundary conditions on the different parts of the bounda
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -567,6 +632,7 @@ Since we have different boundary conditions on the different parts of the bounda
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -600,6 +666,7 @@ Since we have different boundary conditions on the different parts of the bounda
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -622,6 +689,7 @@ Since we have different boundary conditions on the different parts of the bounda
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -651,6 +719,7 @@ Since we have different boundary conditions on the different parts of the bounda
 
 \subsection{Mesh draw}
 \label{\detokenize{tutorial/thermo_coupling:mesh-draw}}
+\sphinxAtStartPar
 In order to preview the mesh and to control its validity, the following instructions can be used:
 
 
@@ -659,6 +728,7 @@ In order to preview the mesh and to control its validity, the following instruct
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -670,6 +740,7 @@ In order to preview the mesh and to control its validity, the following instruct
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -679,6 +750,7 @@ In order to preview the mesh and to control its validity, the following instruct
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -690,6 +762,7 @@ In order to preview the mesh and to control its validity, the following instruct
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -704,11 +777,13 @@ In order to preview the mesh and to control its validity, the following instruct
 \par
 \sphinxattableend\end{savenotes}
 
+\sphinxAtStartPar
 In C++ and with the Python interface, an external graphical post\sphinxhyphen{}processor has to be used (for instance, gmsh, Mayavi2 or Paraview). With Scilab and Matlab interfaces, the internal plot facilities can be used (see the result {\hyperref[\detokenize{tutorial/thermo_coupling:tut-fig-meshthermo}]{\sphinxcrossref{\DUrole{std,std-ref}{The obtained mesh.}}}}).
 
 
 \subsection{Definition of finite element methods and integration method}
 \label{\detokenize{tutorial/thermo_coupling:definition-of-finite-element-methods-and-integration-method}}
+\sphinxAtStartPar
 We will define three finite element methods. The first one, \sphinxtitleref{mfu} is to approximate the displacement field. This is a vector field. This is defined in C++ by
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -716,14 +791,19 @@ We will define three finite element methods. The first one, \sphinxtitleref{mfu}
 \PYG{n}{mfu}\PYG{p}{.}\PYG{n}{set\PYGZus{}classical\PYGZus{}finite\PYGZus{}element}\PYG{p}{(}\PYG{n}{elements\PYGZus{}degree}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 where the \sphinxtitleref{2} stands for the dimension of the vector field. The second line sets the finite element used. \sphinxtitleref{classical\_finite\_element} means a continuous Lagrange element and remember that \sphinxtitleref{elements\_degree} has been set to \sphinxtitleref{2} which means that we will use quadratic (isoparametric) elements.
 
+\sphinxAtStartPar
 There is a wide choice of pre\sphinxhyphen{}existing finite element methods in \sphinxstyleemphasis{GetFEM}, see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}appendixa}. However, Lagrange finite element methods are the most used in practice.
 
+\sphinxAtStartPar
 The second finite element method is a scalar one, \sphinxtitleref{mft} with which we will approximate both the temperature field and the electric potential field. A single finite element method can serve to approximate an arbitrary number of finite element variables.
 
+\sphinxAtStartPar
 The third finite element method is a discontinuous scalar Lagrange one which will allow us to interpolate the derivative of one of the variables (for instance to interpolate the Von Mises stress).
 
+\sphinxAtStartPar
 The last thing to define is an integration method \sphinxtitleref{mim}. There is no default integration method in \sphinxstyleemphasis{GetFEM} so this is mandatory to define an integration method. Of course, the order of the integration method have to be chosen sufficient to make a convenient integration of the selected finite element method. Here, the square of \sphinxtitleref{elements\_degree} is sufficient.
 
 
@@ -732,6 +812,7 @@ The last thing to define is an integration method \sphinxtitleref{mim}. There is
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -747,6 +828,7 @@ The last thing to define is an integration method \sphinxtitleref{mim}. There is
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -760,6 +842,7 @@ The last thing to define is an integration method \sphinxtitleref{mim}. There is
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -773,6 +856,7 @@ The last thing to define is an integration method \sphinxtitleref{mim}. There is
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -793,12 +877,16 @@ The last thing to define is an integration method \sphinxtitleref{mim}. There is
 
 \subsection{Model definition}
 \label{\detokenize{tutorial/thermo_coupling:model-definition}}
+\sphinxAtStartPar
 The model object in \sphinxstyleemphasis{GetFEM} gather the variables of the models (the unknowns), the data and what is called the model bricks. The model bricks are some parts of the model (linear or nonlinear terms) applied on a single variable or linking several variables. They are used to make the assembly of the (tangent) linear system (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}model\sphinxhyphen{}object} for more details).
 
+\sphinxAtStartPar
 This is not strictly mandatory to use the model object since one may use directly the assembly procedures and build by it own the (tangent) linear system. The model object allows a rapid build of the model since most classical parts of a model are pre\sphinxhyphen{}programmed: standard boundary conditions, standard partial differential equations, use of multipliers to prescribe a constraint … Moreover, some bricks are designed to extend the possibilities of the standard bricks (generic assembly bricks, explicit matrix brick …). Thus, it is recommended to use the framework of the model object.
 
+\sphinxAtStartPar
 There are two versions of the model: the real one and the complex one. Complex models have to be reserved for special applications (some electromagnetism problems for instance) where it is advantageous to solve a complex linear system.
 
+\sphinxAtStartPar
 Let us declare a real model with the three variables corresponding to the three fields to be computed:
 
 
@@ -807,6 +895,7 @@ Let us declare a real model with the three variables corresponding to the three 
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -817,6 +906,7 @@ Let us declare a real model with the three variables corresponding to the three 
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -827,6 +917,7 @@ Let us declare a real model with the three variables corresponding to the three 
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -837,6 +928,7 @@ Let us declare a real model with the three variables corresponding to the three 
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -854,18 +946,23 @@ Let us declare a real model with the three variables corresponding to the three 
 
 \subsection{Membrane elastic deformation problem}
 \label{\detokenize{tutorial/thermo_coupling:membrane-elastic-deformation-problem}}
+\sphinxAtStartPar
 Let us now begin by the elastic deformation problem. We will use the predefined brick added by \sphinxtitleref{add\_isotropic\_linearized\_elasticity\_brick} below. Basically it adds the term corresponding to
 \begin{equation*}
 \begin{split}\int_{\Omega} (\lambda^* \mbox{div}(u) I + 2\mu \bar{\varepsilon}(u)):\bar{\varepsilon}(\delta_u)dx,\end{split}
 \end{equation*}
+\sphinxAtStartPar
 to the tangent linear system. In order to use this model brick, the data corresponding to the Lamé coefficient have to be added to the model first. Here, the Lamé coefficients are constant over the domain. However, it it also possible to define some non\sphinxhyphen{}constant data. Note also that instead of using this predefined brick, one can use equivalently GWFL, the generic weak form language term \sphinxtitleref{add\_linear\_term(md mim, “lambda*(Div\_u*Div\_Test\_u) + mu*((Grad\_u + Grad\_u’):Grad\_Test\_u)”}.
 
+\sphinxAtStartPar
 Concerning the coupling term
 \begin{equation*}
 \begin{split}\int_{\Omega} (\beta\theta I) :\bar{\varepsilon}(\delta_u)dx,\end{split}
 \end{equation*}
+\sphinxAtStartPar
 there is no predefined brick and we use directly a GWFL term \sphinxtitleref{add\_linear\_term(md mim, “beta*theta*Div\_Test\_u)”}. See \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}gasm\sphinxhyphen{}high} for more details on GWFL. Basically, the principle is that the assembly string is compiled into a list of optimized assembly instructions which are executed on each Gauss point.
 
+\sphinxAtStartPar
 The following program allows to take into account the whole elastic deformation equation. Note the use of specific brick to prescribe the Dirichlet condition on the left boundary. There is several option to prescribe a Dirichlet condition (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}model\sphinxhyphen{}Dirichlet}).
 
 
@@ -874,6 +971,7 @@ The following program allows to take into account the whole elastic deformation 
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -892,6 +990,7 @@ The following program allows to take into account the whole elastic deformation 
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -909,6 +1008,7 @@ The following program allows to take into account the whole elastic deformation 
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -936,6 +1036,7 @@ The following program allows to take into account the whole elastic deformation 
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -962,6 +1063,7 @@ The following program allows to take into account the whole elastic deformation 
 
 \subsection{Electric potential problem}
 \label{\detokenize{tutorial/thermo_coupling:id1}}
+\sphinxAtStartPar
 Similarly, the following program take into account the electric potential equation. Note the definition of the  electrical conductivity \(\sigma\) and again the use of GWFL terms.
 
 
@@ -970,6 +1072,7 @@ Similarly, the following program take into account the electric potential equati
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -987,6 +1090,7 @@ Similarly, the following program take into account the electric potential equati
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1001,6 +1105,7 @@ Similarly, the following program take into account the electric potential equati
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1015,6 +1120,7 @@ Similarly, the following program take into account the electric potential equati
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1036,6 +1142,7 @@ Similarly, the following program take into account the electric potential equati
 
 \subsection{Thermal problem}
 \label{\detokenize{tutorial/thermo_coupling:id2}}
+\sphinxAtStartPar
 Now, the program to take into account the thermal problem:
 
 
@@ -1044,6 +1151,7 @@ Now, the program to take into account the thermal problem:
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1059,6 +1167,7 @@ Now, the program to take into account the thermal problem:
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1073,6 +1182,7 @@ Now, the program to take into account the thermal problem:
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1087,6 +1197,7 @@ Now, the program to take into account the thermal problem:
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1108,6 +1219,7 @@ Now, the program to take into account the thermal problem:
 
 \subsection{Model solve}
 \label{\detokenize{tutorial/thermo_coupling:model-solve}}
+\sphinxAtStartPar
 Once the model is correctly defined, we can simply solve it by:
 
 
@@ -1116,6 +1228,7 @@ Once the model is correctly defined, we can simply solve it by:
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1124,6 +1237,7 @@ Once the model is correctly defined, we can simply solve it by:
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1131,6 +1245,7 @@ Once the model is correctly defined, we can simply solve it by:
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1138,6 +1253,7 @@ Once the model is correctly defined, we can simply solve it by:
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1149,11 +1265,13 @@ Once the model is correctly defined, we can simply solve it by:
 \par
 \sphinxattableend\end{savenotes}
 
+\sphinxAtStartPar
 Since the problem is globally nonlinear, a Newton method is used to iteratively solve the problem. It needs a few iterations (about 4 in that case).
 
 
 \subsection{Model solve with two steps}
 \label{\detokenize{tutorial/thermo_coupling:model-solve-with-two-steps}}
+\sphinxAtStartPar
 Another option to solve the problem is to solve first the thermal and electric potential problems. Indeed, in our model, the thermal and  electric potential do not depend on the deformation. Once the  thermal and electric potential problem, we then solve the deformation problem. This can be done as follows:
 
 
@@ -1162,6 +1280,7 @@ Another option to solve the problem is to solve first the thermal and electric p
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1176,6 +1295,7 @@ Another option to solve the problem is to solve first the thermal and electric p
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1188,6 +1308,7 @@ Another option to solve the problem is to solve first the thermal and electric p
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1200,6 +1321,7 @@ Another option to solve the problem is to solve first the thermal and electric p
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1219,6 +1341,7 @@ Another option to solve the problem is to solve first the thermal and electric p
 
 \subsection{Export/visualization of the solution}
 \label{\detokenize{tutorial/thermo_coupling:export-visualization-of-the-solution}}
+\sphinxAtStartPar
 The finite element problem is now solved. We can plot the solution as follows. Note that for the C++ and Python programs, it is necessary to use an external graphical post\sphinxhyphen{}processor. Note also that arbitrary quantities can be post\sphinxhyphen{}processed using the generic interpolation (see \sphinxtitleref{ga\_interpolation\_Lagrange\_fem} below). It is also possible to make complex exports and slices (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}export}).
 
 
@@ -1227,6 +1350,7 @@ The finite element problem is now solved. We can plot the solution as follows. N
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{C++}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1260,6 +1384,7 @@ The finite element problem is now solved. We can plot the solution as follows. N
 \end{sphinxVerbatimintable}
 \\
 \hline
+\sphinxAtStartPar
 \sphinxstylestrong{Python}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1290,6 +1415,7 @@ The finite element problem is now solved. We can plot the solution as follows. N
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1330,6 +1456,7 @@ The finite element problem is now solved. We can plot the solution as follows. N
 \begin{tabular}[t]{|p{0.080\linewidth}|p{0.900\linewidth}|}
 \hline
 
+\sphinxAtStartPar
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
@@ -1374,16 +1501,19 @@ The finite element problem is now solved. We can plot the solution as follows. N
 
 \chapter{Example of wheel in contact (Assembly between two meshes, transformations, use of fixed size variables)}
 \label{\detokenize{tutorial/wheel:example-of-wheel-in-contact-assembly-between-two-meshes-transformations-use-of-fixed-size-variables}}\label{\detokenize{tutorial/wheel:tut-wheel}}\label{\detokenize{tutorial/wheel::doc}}
+\sphinxAtStartPar
 In this example of a deformable ‘’wheel’’ enters in contact with a deformable foundation. We use here python interface, translate this program for another interface or in C++ is easy (see the previous example). The complete program  \sphinxtitleref{demo\_wheel\_contact.py} can be found in the directory \sphinxtitleref{interface/tests/python}.
 
 
 \section{The problem setting}
 \label{\detokenize{tutorial/wheel:the-problem-setting}}
+\sphinxAtStartPar
 Let \(\Omega^1 \subset \rm I\hspace{-0.15em}R^2\) be the reference configuration of a 2D wheel and \(\Omega^2 \subset \rm I\hspace{-0.15em}R^2\) the reference configuration of a deformable foundation. We consider small deformation of these two bodies (linearized elasticity) and the contact between them. We also consider that the rim of the wheel is rigid and apply a vertical force on the wheel.
 
 
 \section{Building the program}
 \label{\detokenize{tutorial/wheel:building-the-program}}
+\sphinxAtStartPar
 Let us begin by loading Getfem and fixing the parameters of the problem
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1405,6 +1535,7 @@ Let us begin by loading Getfem and fixing the parameters of the problem
 
 \subsection{Mesh generation}
 \label{\detokenize{tutorial/wheel:mesh-generation}}
+\sphinxAtStartPar
 We consider that the radius of the wheel is 15cm and the one of the rim 8cm and that the wheel lies on a deformable foundation of thickness 10cm. We generate the mesh of the wheel using the experimental mesher of \sphinxstyleemphasis{GetFEM}. Concerning the mesh of the foundation, we build a structured mesh (see the documentation of the Mesh object in the python interface).
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1418,6 +1549,7 @@ We consider that the radius of the wheel is 15cm and the one of the rim 8cm and 
 \PYG{n}{mesh2}\PYG{o}{.}\PYG{n}{translate}\PYG{p}{(}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{15.}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{10.}\PYG{p}{]}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The result is the following
 
 \begin{figure}[htbp]
@@ -1429,6 +1561,7 @@ The result is the following
 
 \subsection{Boundary selection}
 \label{\detokenize{tutorial/wheel:boundary-selection}}
+\sphinxAtStartPar
 We have to select the different parts of the boundary where we will set some boundary conditions, namely the boundary of the rim (in order to apply a force and the fact that the rim is rigid), the contact boundary of the wheel and the bottom boundary of the foundation that we will assume clamped.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1444,11 +1577,13 @@ We have to select the different parts of the boundary where we will set some bou
 \PYG{n}{mesh2}\PYG{o}{.}\PYG{n}{set\PYGZus{}region}\PYG{p}{(}\PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{fb3}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Note that the command \sphinxtitleref{mesh1.outer\_faces\_with\_direction({[}0., \sphinxhyphen{}1.{]}, np.pi/4)} allows to select all the faces having a unit outward normal having an angle less or equal to \sphinxtitleref{np.pi/4} with the vector \sphinxtitleref{{[}0., \sphinxhyphen{}1.{]}}. The command \sphinxtitleref{mesh1.region\_subtract(CONTACT\_BOUND, HOLE\_BOUND)} allow to delete the faces corresponding to the rim in the contact boundary.
 
 
 \subsection{Definition of finite elements methods and integration method}
 \label{\detokenize{tutorial/wheel:definition-of-finite-elements-methods-and-integration-method}}
+\sphinxAtStartPar
 We define \sphinxtitleref{mfu1}, \sphinxtitleref{mfu2} two finite element methods which will approximate the displacements in the wheel and the foundation respectively. \sphinxtitleref{mflambda} is  finite element method to approximate a multiplier to take into account the rigidity of the rim, \sphinxtitleref{mflambda\_C} is to approximate the contact multiplier (contact pressure) and \sphinxtitleref{mfvm1}, \sphinxtitleref{mfvm2} will be used to interpolate the Von Mises stresses of the wheel and the foundation for post\sphinxhyphen{}processing. \sphinxtitleref{mim1}, \sphinxtitleref{mim2} are two integration methods on the  wheel and the foundation.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1471,6 +1606,7 @@ We define \sphinxtitleref{mfu1}, \sphinxtitleref{mfu2} two finite element method
 
 \subsection{Model definition}
 \label{\detokenize{tutorial/wheel:model-definition}}
+\sphinxAtStartPar
 We use a real model and declare the two variables which will represent the displacements:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1482,6 +1618,7 @@ We use a real model and declare the two variables which will represent the displ
 
 \subsection{Linearized elasticity bricks}
 \label{\detokenize{tutorial/wheel:linearized-elasticity-bricks}}
+\sphinxAtStartPar
 We add the Lamé coefficients as data of the model and add a linearized elasticity brick for the wheel and the foundation:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1494,6 +1631,7 @@ We add the Lamé coefficients as data of the model and add a linearized elastici
 
 \subsection{Clamped condition at the bottom of the foundation}
 \label{\detokenize{tutorial/wheel:clamped-condition-at-the-bottom-of-the-foundation}}
+\sphinxAtStartPar
 We prescribed the displacement at  bottom face of the foundation to vanish, for instance with a multiplier with the add of the following brick:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1503,29 +1641,37 @@ We prescribed the displacement at  bottom face of the foundation to vanish, for 
 
 \subsection{Contact condition (use of interpolate transformations)}
 \label{\detokenize{tutorial/wheel:contact-condition-use-of-interpolate-transformations}}
+\sphinxAtStartPar
 Now, let us see how to prescribed the contact condition between the two structures. It is possible to use predefined bricks (see  \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}model\sphinxhyphen{}contact\sphinxhyphen{}friction} for small deformation/small sliding contact and \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}model\sphinxhyphen{}contact\sphinxhyphen{}friction\sphinxhyphen{}large} for large deformation/large sliding contact). However, we will see here how to directly prescribe a contact condition using an augmented Lagrangian formulation and the interpolate transformations.
 
+\sphinxAtStartPar
 For small deformation contact, the correspondence between points of one contact surface to the other have to be described on the reference configuration and is not evolving, which is of course simpler but is an approximation.
 
+\sphinxAtStartPar
 We consider that the contact boundary of the wheel is the slave one and we have to describe the transformation from the contact boundary of the wheel to the contact boundary of the foundation. This is quite simple here, since the contact boundary of the foundation corresponds to a vanishing vertical coordinate. So we define the transformation
 \begin{equation*}
 \begin{split}X \longmapsto (X(1), 0)\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where \(X\) is the vector of coordinates of the point. We add this transformation to the model with the command
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{md}\PYG{o}{.}\PYG{n}{add\PYGZus{}interpolate\PYGZus{}transformation\PYGZus{}from\PYGZus{}expression}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Proj1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{mesh1}\PYG{p}{,} \PYG{n}{mesh2}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{[X(1);0]}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 As a consequence, it will be possible to use this transformation, from the mesh of the wheel to the mesh of the foundation, into GWFL expressions. Notes that this is here a very simple constant expression. More complex expressions depending on the data or even the variables of the model can be used. If the expression of a transformation depends on the variable of the model, the tangent linear system will automatically takes into account this dependence (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}gasm\sphinxhyphen{}high\sphinxhyphen{}transf} for more details). Note also that transformation corresponding to a large sliding contact and automatically searching for the correspondence between contact boundaries exist in \sphinxstyleemphasis{GetFEM} (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}model\sphinxhyphen{}contact\sphinxhyphen{}friction\sphinxhyphen{}large\sphinxhyphen{}hlgav}).
 
+\sphinxAtStartPar
 Using the defined transformation, we can write an integral contact condition using an augmented Lagrangian formulation (see \DUrole{xref,std,std-ref}{ud\sphinxhyphen{}model\sphinxhyphen{}contact\sphinxhyphen{}friction} for more details). The corresponding term (to be added to the rest of the weak formulation) reads:
 \begin{equation*}
 \begin{split}& \cdots +  \int_{\Gamma_c} \lambda_N(X) (\delta_{u^1}(X)-\delta_{u^2}(\Pi(X)))\cdot n d\Gamma \\
 & -   \int_{\Gamma_c} \left(\lambda_N(X) + \left(\lambda_N(X) + \dfrac{1}{h_T\gamma_0}((X + u^1(X))\cdot n - (\Pi(X) - u^2(\Pi(X)))\cdot n\right)_-\right)\delta_{\lambda_N}(X) d\Gamma = 0 ~~~~ \forall \delta_{\lambda_N}, \forall \delta_{u^1}, \forall \delta_{u^2},\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where \(\Gamma_c\) is the slave contact boundary, \(\lambda_N\) is the contact multiplier (contact pressure), \(h_T\) is the radius of the element, \(\Pi\) is the transformation, \sphinxtitleref{n} is the outward normal vector to the master contact boundary (here \(n = (0,1)\)), \(\gamma_0\) is an augmentation parameter, \((\cdot)_-:I\hspace{-0.2em}R\rightarrow I\hspace{-0.2em}R_+\) is the negative part and \(\delta_{\lambda_N}, \delta_{u^1}, \delta_{u^2}\) are the test  functions corresponding to \(\lambda_N, u^1, u^2\), respectively.
 
+\sphinxAtStartPar
 Using GWFL, the contact condition can be added by:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1541,24 +1687,29 @@ Using GWFL, the contact condition can be added by:
 
 \subsection{Prescribing the rigidity of the rim and the vertical force}
 \label{\detokenize{tutorial/wheel:prescribing-the-rigidity-of-the-rim-and-the-vertical-force}}
+\sphinxAtStartPar
 We have now to prescribe the rigidity of the rim. This is a non\sphinxhyphen{}standard condition, since we do not know a priori what will be the vertical displacement of the rim. We can use an additional unknown for that vertical displacement. We add an additional fixed size variable \sphinxtitleref{alpha\_D} (which mean that it does not a finite element field) of size 1 with
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{md}\PYG{o}{.}\PYG{n}{add\PYGZus{}variable}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{alpha\PYGZus{}D}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 We need a multiplier to prescribe the displacement on the rim boundary:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{md}\PYG{o}{.}\PYG{n}{add\PYGZus{}filtered\PYGZus{}fem\PYGZus{}variable}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{lambda\PYGZus{}D}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{mflambda}\PYG{p}{,} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 This multiplier represents the boundary stress that is necessary to prescribe the vertical displacement to be \((0, -\alpha_D)\). The constraint we want to apply on this multiplier is that its integral over the rim boundary is the vertical force we want to apply. The corresponding weak formulation term to be added to the rest of the weak formulation reads
 \begin{equation*}
 \begin{split}\cdots + \int_{\Gamma_D} -\lambda_D.\delta_{u^1} + ((0, \alpha_D) - u^1).\delta_{\lambda_D} + (\lambda_D.(0,1) + F)\delta_{\alpha_D} d\Gamma = 0,\end{split}
 \end{equation*}
+\sphinxAtStartPar
 where \(\Gamma_D\) is the rim boundary, \(F\) is the applied density of force.
 
+\sphinxAtStartPar
 This could be added to the model with GWFL:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1567,23 +1718,27 @@ This could be added to the model with GWFL:
       \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{ + (lambda\PYGZus{}D.[0;1]+F)*Test\PYGZus{}alpha\PYGZus{}D}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 For more robustness, a small penalization on \(alpha_D\) can be added
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{md}\PYG{o}{.}\PYG{n}{add\PYGZus{}linear\PYGZus{}term}\PYG{p}{(}\PYG{n}{mim1}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{1E\PYGZhy{}6*alpha\PYGZus{}D*Test\PYGZus{}alpha\PYGZus{}D}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Note that the fixed size variable \sphinxtitleref{alpha\_D} is linked to each points of the rim boundary. This means that the line of the tangent matrix corresponding to \sphinxtitleref{alpha\_D} may have a lot of nonzero components. This is why such a use of fixed size variable have to be done with care.
 
 
 \subsection{Model solve}
 \label{\detokenize{tutorial/wheel:model-solve}}
+\sphinxAtStartPar
 We can now solve our problem with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{md}\PYG{o}{.}\PYG{n}{solve}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{max\PYGZus{}res}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{max\PYGZus{}iter}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{noisy}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Note that in some configuration, it is preferable to use a more basic line search than the default one:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1593,6 +1748,7 @@ Note that in some configuration, it is preferable to use a more basic line searc
 
 \subsection{Export the solution}
 \label{\detokenize{tutorial/wheel:export-the-solution}}
+\sphinxAtStartPar
 Now the code to export the solution with the VonMises stress:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]

@@ -80,7 +80,7 @@
 
 
 \title{Gmm++ user documentation}
-\date{Jan 29, 2021}
+\date{Jan 30, 2021}
 \release{5.4.1}
 \author{Yves Renard}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -110,12 +110,16 @@
 
 \chapter{Introduction}
 \label{\detokenize{gmm/intro:introduction}}\label{\detokenize{gmm/intro:gmm-intro}}\label{\detokenize{gmm/intro::doc}}
+\sphinxAtStartPar
 \sphinxstyleemphasis{Gmm++} provides some basic types of sparse and dense matrices and vectors. It provides some generic operations on them (copy, addition, multiplication, sub\sphinxhyphen{}vector and sub\sphinxhyphen{}matrices, solvers … ). The syntax of \sphinxstyleemphasis{Gmm++} is very close to MTL and ITL (see \sphinxurl{http://www.mtl4.org/}). Especially, the code for most of the iterative solvers has been imported from ITL. The performance of \sphinxstyleemphasis{Gmm++} is also close to the one of MTL, sometimes better. The difference is that basically \sphinxstyleemphasis{Gmm++} has been written to be able to interface other libraries and gives an access to sub matrices and sub vectors in all cases. Also some optimizations has been made for matrix\sphinxhyphen{}matrix multiplication, usage of reference has been somewhat cleared, const qualifier usage is clarified, and we hope it is somewhat easier to use.
 
+\sphinxAtStartPar
 Copyright © 2004\sphinxhyphen{}2020 \sphinxstyleemphasis{GetFEM} project.
 
+\sphinxAtStartPar
 The text of the \sphinxstyleemphasis{GetFEM} website and the documentations are available for modification and reuse under the terms of the \sphinxhref{http://www.gnu.org/licenses/fdl.html}{GNU Free Documentation License}
 
+\sphinxAtStartPar
 GetFEM  is  free software;  you  can  redistribute  it  and/or modify it
 under  the  terms  of the  GNU  Lesser General Public License as published
 by  the  Free Software Foundation;  either version 3 of the License,  or
@@ -132,10 +136,13 @@ Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110\sphinxhyphen{}1301, USA.
 
 \chapter{Installation}
 \label{\detokenize{gmm/install:installation}}\label{\detokenize{gmm/install:gmm-install}}\label{\detokenize{gmm/install::doc}}
+\sphinxAtStartPar
 Since we use standard GNU tools, the installation of the \sphinxstyleemphasis{Gmm++} library is somewhat standard.
 
+\sphinxAtStartPar
 Note that if you use \sphinxstyleemphasis{GetFEM}, you do not have to install \sphinxstyleemphasis{Gmm++} since \sphinxstyleemphasis{GetFEM} is provided with its own version of \sphinxstyleemphasis{Gmm++}.
 
+\sphinxAtStartPar
 Moreover, as \sphinxstyleemphasis{Gmm++} is a template library, no compilation is needed to install it. If the \sphinxstyleemphasis{Gmm++}  archive is on your current directory you can unpack it and enter inside the directory of the distribution  with the commands:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -143,32 +150,38 @@ gunzip \PYGZhy{}c gmm\PYGZhy{}x.xx.tar.gz \PYG{p}{|} tar xvf \PYGZhy{}
 \PYG{n+nb}{cd}  gmm\PYGZhy{}x.xx
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Then you you have to run the configure script just typing:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 ./configure
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 or if you want to set the prefix directory where to install the library you can use the \sphinxcode{\sphinxupquote{\sphinxhyphen{}\sphinxhyphen{}prefix}} option (the default prefix directory is \sphinxcode{\sphinxupquote{/usr/local}}):
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 ./configure \PYGZhy{}\PYGZhy{}prefix\PYG{o}{=}\PYG{l+s+se}{\PYGZbs{}t}extit\PYG{o}{\PYGZob{}}dest\PYGZus{}dir\PYG{o}{\PYGZcb{}}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 then start the installation with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 make install
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 You can also check if your configuration is correct with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 make check
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 which compiles random tests.
 
+\sphinxAtStartPar
 If you want to use a different compiler than the one chosen
 automatically by the \sphinxcode{\sphinxupquote{./configure}} script, just specify its
 name on the command line:
@@ -177,16 +190,20 @@ name on the command line:
 ./configure \PYG{n+nv}{CXX}\PYG{o}{=}mycompiler
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 More specific instructions can be found in the \sphinxcode{\sphinxupquote{README*}} files of
 the distribution.
 
+\sphinxAtStartPar
 Now, to use \sphinxstyleemphasis{Gmm++} in you programs, the simpler manner is to include the file \sphinxcode{\sphinxupquote{gmm/gmm.h}} which includes all the template library. If the compilation time is too important, the minimum to be included is contained is the file \sphinxcode{\sphinxupquote{gmm/gmm\textbackslash{}\_kernel.h}} (vectors and matrix types, blas, sub vector and sub matrices).
 
+\sphinxAtStartPar
 DO NOT FORGET to catch errors messages. See the corresponding section.
 
 
 \chapter{Matrix and Vector type provided by \sphinxstyleemphasis{Gmm++}}
 \label{\detokenize{gmm/matrix:matrix-and-vector-type-provided-by-gmm}}\label{\detokenize{gmm/matrix:gmm-matrix}}\label{\detokenize{gmm/matrix::doc}}
+\sphinxAtStartPar
 The convention is that any vector or matrix type (except if it is a  reference)
 can be instantiated with the constructors:
 
@@ -195,9 +212,11 @@ can be instantiated with the constructors:
 \PYG{n}{Matrix} \PYG{n+nf}{M}\PYG{p}{(}\PYG{n}{n}\PYG{p}{,} \PYG{n}{m}\PYG{p}{)}\PYG{p}{;}     \PYG{c+c1}{// build a matrix with n rows and m columns.}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 No other constructor is used inside \sphinxstyleemphasis{Gmm++} and you should not use any other if you want your code
 to be compatible with any matrix and vector type.
 
+\sphinxAtStartPar
 It is assumed that each vector type interfaced with \sphinxstyleemphasis{Gmm++} allows to
 access to a component with the following syntax:
 
@@ -206,6 +225,7 @@ access to a component with the following syntax:
 \PYG{n}{V}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{b}\PYG{p}{;}    \PYG{c+c1}{// write the ith component of V.}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The write access being available if the vector is not a constant reference. For a matrix:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -213,16 +233,20 @@ The write access being available if the vector is not a constant reference. For 
 \PYG{n}{M}\PYG{p}{(}\PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{)} \PYG{o}{=} \PYG{n}{b}\PYG{p}{;} \PYG{c+c1}{//  write the component at row i and column j of M.}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Again the write access is available if the matrix is not a const reference. Generally, especially for sparse matrices, this access is not very efficient. Linear algebra procedures access to the components of the vectors and matrices via iterators. (see section  {\hyperref[\detokenize{gmm/inside:gmm-inside}]{\sphinxcrossref{\DUrole{std,std-ref}{Deeper inside Gmm++}}}})
 
+\sphinxAtStartPar
 It is also not recommended (at all) to use the original copy operator for vectors or matrices. Generally, it will not do the appropriate job. instead, you have to use the method:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{copy}\PYG{p}{(}\PYG{n}{V}\PYG{p}{,} \PYG{n}{W}\PYG{p}{)}\PYG{p}{;}  \PYG{c+c1}{//  W \PYGZlt{}\PYGZhy{}\PYGZhy{} V}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 which works for all correctly interfaced matrix and vector type, even if \sphinxcode{\sphinxupquote{V}} is not of the same type as \sphinxcode{\sphinxupquote{W}} (\sphinxcode{\sphinxupquote{V}} could be sparse and \sphinxcode{\sphinxupquote{W}} dense for instance).
 
+\sphinxAtStartPar
 in \sphinxstyleemphasis{Gmm++}, a vector is not a (n by 1) matrix, it is a one dimensional object. If you need to use a vector as a (n by 1) column matrix or a (1 by n) row matrix, you can do it with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -232,11 +256,13 @@ in \sphinxstyleemphasis{Gmm++}, a vector is not a (n by 1) matrix, it is a one d
                    \PYG{c+c1}{// a (n by 1) col matrix}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 In the following, the template parameter \sphinxcode{\sphinxupquote{T}} will represent a scalar type like \sphinxcode{\sphinxupquote{double}} or \sphinxcode{\sphinxupquote{std::complex\textless{}double\textgreater{}}}.
 
 
 \section{dense vectors}
 \label{\detokenize{gmm/matrix:dense-vectors}}
+\sphinxAtStartPar
 \sphinxstyleemphasis{Gmm++} interfaces \sphinxcode{\sphinxupquote{std::vector\textless{}T\textgreater{}}} so you can use it as your basic dense vector type.
 If you need to interface another type of dense vector you can see in \sphinxcode{\sphinxupquote{gmm/gmm\_interface.h}}
 some examples.
@@ -244,16 +270,19 @@ some examples.
 
 \section{sparse vectors}
 \label{\detokenize{gmm/matrix:sparse-vectors}}
+\sphinxAtStartPar
 \sphinxstyleemphasis{Gmm++} provides two types of sparse vectors: \sphinxcode{\sphinxupquote{gmm::wsvector\textless{}T\textgreater{}}} and \sphinxcode{\sphinxupquote{gmm::rsvector\textless{}T\textgreater{}}}. \sphinxcode{\sphinxupquote{gmm::wsvector\textless{}T\textgreater{}}} is optimized for write operations and \sphinxcode{\sphinxupquote{gmm::rsvector\textless{}T\textgreater{}}} is optimized for read operations. It should be appropriate to use \sphinxcode{\sphinxupquote{gmm::wsvector\textless{}T\textgreater{}}} for assembling procedures and then to copy the vector in a \sphinxcode{\sphinxupquote{gmm::rsvector\textless{}T\textgreater{}}} for the solvers. Those two vector types can be used to create row major or column major matrices (see section  {\hyperref[\detokenize{gmm/matrix:gmmracmat}]{\sphinxcrossref{\DUrole{std,std-ref}{generic row and column matrices}}}}).
 
 
 \section{skyline vectors}
 \label{\detokenize{gmm/matrix:skyline-vectors}}
+\sphinxAtStartPar
 The type \sphinxcode{\sphinxupquote{gmm::slvector\textless{}T\textgreater{}}} defines a skyline vector, in the sense that only an interval of this vector is stored. With this type of vector you can build skyline matrices as \sphinxcode{\sphinxupquote{gmm::row\_matrix\textless{} gmm::slvector\textless{}T\textgreater{} \textgreater{}}} (see next section {\hyperref[\detokenize{gmm/matrix:gmmracmat}]{\sphinxcrossref{\DUrole{std,std-ref}{generic row and column matrices}}}}).
 
 
 \section{generic row and column matrices}
 \label{\detokenize{gmm/matrix:generic-row-and-column-matrices}}\label{\detokenize{gmm/matrix:gmmracmat}}
+\sphinxAtStartPar
 \sphinxstyleemphasis{Gmm++} provides the two following types of matrices: \sphinxcode{\sphinxupquote{gmm::row\_matrix\textless{}VECT\textgreater{}}} and \sphinxcode{\sphinxupquote{gmm::col\_matrix\textless{}VECT\textgreater{}}} where \sphinxcode{\sphinxupquote{VECT}} should be a valid (i.e. interfaced) vector type.
 Those two type of matrices store an array of \sphinxcode{\sphinxupquote{VECT}} so the memory is not contiguous. Initializations are:
 
@@ -262,26 +291,32 @@ Those two type of matrices store an array of \sphinxcode{\sphinxupquote{VECT}} s
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{col\PYGZus{}matrix}\PYG{o}{\PYGZlt{}} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{wsvector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{double}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZgt{}} \PYG{n}{M2}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{)}\PYG{p}{;} \PYG{c+c1}{// sparse column matrix}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Of course \sphinxcode{\sphinxupquote{gmm::row\_matrix\textless{}VECT\textgreater{}}} is a row matrix and it is impossible to access to a particular column of this matrix.
 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gmm::mat\_nrows(M)}} gives the number of rows of a matrix and \sphinxcode{\sphinxupquote{gmm::mat\_ncols(M)}} the number of columns.
 
 
 \section{dense matrices}
 \label{\detokenize{gmm/matrix:dense-matrices}}
+\sphinxAtStartPar
 It is recommended to use the type:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{dense\PYGZus{}matrix}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 to represent a dense matrix type because it is compatible with the Fortran format (column major) and some operations are interfaced with blas and Lapack (see section  {\hyperref[\detokenize{gmm/blas_interface:gmm-lapack}]{\sphinxcrossref{\DUrole{std,std-ref}{Interface with BLAS, LAPACK or ATLAS}}}}). It is considered as a column and row matrix (column preferred) which means that you can access both to the columns and rows.
 
+\sphinxAtStartPar
 However, matrix types as \sphinxcode{\sphinxupquote{gmm::row\_matrix\textless{} std::vector\textless{}double\textgreater{} \textgreater{}}} or \sphinxcode{\sphinxupquote{gmm::col\_matrix\textless{} std::vector\textless{}double\textgreater{} \textgreater{}}} represent also some dense matrices.
 
 
 \section{sparse matrices}
 \label{\detokenize{gmm/matrix:sparse-matrices}}
+\sphinxAtStartPar
 Similarly, \sphinxcode{\sphinxupquote{gmm::row\_matrix\textless{} gmm::wsvector\textless{}double\textgreater{} \textgreater{}}} or \sphinxcode{\sphinxupquote{gmm::col\_matrix\textless{} gmm::rsvector\textless{}double\textgreater{} \textgreater{}}} represents some sparse matrices, but \sphinxstyleemphasis{Gmm++} provides also two types of classical sparse matrix types:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -289,6 +324,7 @@ Similarly, \sphinxcode{\sphinxupquote{gmm::row\_matrix\textless{} gmm::wsvector\
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{csc\PYGZus{}matrix}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The type \sphinxcode{\sphinxupquote{gmm::csr\_matrix\textless{}T\textgreater{}}} represents a compressed sparse row matrix and \sphinxcode{\sphinxupquote{gmm::csc\_matrix\textless{}T\textgreater{}}} a compressed sparse column matrix. The particularity of these two types of matrices is to be read only, in the sense that it is not possible to access at a particular component to write on it (the operation is too expansive). The only write operation permitted is \sphinxcode{\sphinxupquote{gmm::copy}}. The right way to use these matrices is first to execute the write operations on another type of matrix like \sphinxcode{\sphinxupquote{gmm::row\_matrix\textless{} gmm::wsvector\textless{}double\textgreater{} \textgreater{}}} then to do a copy:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -303,6 +339,7 @@ The type \sphinxcode{\sphinxupquote{gmm::csr\_matrix\textless{}T\textgreater{}}}
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{copy}\PYG{p}{(}\PYG{n}{M1}\PYG{p}{,} \PYG{n}{M2}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Matrices \sphinxcode{\sphinxupquote{gmm::csr\_matrix\textless{}T\textgreater{}}} and \sphinxcode{\sphinxupquote{gmm::csc\_matrix\textless{}T\textgreater{}}} have the advantage to have a standard format (interfaceable with Fortran code) and to have a compact format (contiguous in memory). To be able to be compatible with Fortran programs a second template parameter exists on these type, you can declare:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -310,11 +347,13 @@ Matrices \sphinxcode{\sphinxupquote{gmm::csr\_matrix\textless{}T\textgreater{}}}
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{csr\PYGZus{}matrix}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{double}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{o}{\PYGZgt{}} \PYG{n}{M2}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The \sphinxcode{\sphinxupquote{1}} means that a shift will be done on all the indices.
 
 
 \chapter{Input and output with Harwell\sphinxhyphen{}Boeing and Matrix Market formats}
 \label{\detokenize{gmm/export:input-and-output-with-harwell-boeing-and-matrix-market-formats}}\label{\detokenize{gmm/export:gmm-export}}\label{\detokenize{gmm/export::doc}}
+\sphinxAtStartPar
 Including the file \sphinxcode{\sphinxupquote{gmm/gmm\_inoutput.h}} you will be able to load and save matrices with Harwell\sphinxhyphen{}Boeing and Matrix Market formats. Concerning the Harwell\sphinxhyphen{}Boeing format, only the type \sphinxcode{\sphinxupquote{gmm::csc\_matrix\textless{}double\textgreater{}}} and \sphinxcode{\sphinxupquote{gmm::csc\_matrix\textless{}std::complex\textless{}double\textgreater{} \textgreater{}}} has been interfaced, so you can execute:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -322,8 +361,10 @@ Including the file \sphinxcode{\sphinxupquote{gmm/gmm\_inoutput.h}} you will be 
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{Harwell\PYGZus{}Boeing\PYGZus{}load}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{filename}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{A}\PYG{p}{)}\PYG{p}{;} \PYG{c+c1}{// load the matrix A.}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 If \sphinxcode{\sphinxupquote{A}} is not a  \sphinxcode{\sphinxupquote{gmm::csc\_matrix\textless{}double\textgreater{}}} or a \sphinxcode{\sphinxupquote{gmm::csc\_matrix\textless{}std::complex\textless{}double\textgreater{} \textgreater{}}} a copy is made.
 
+\sphinxAtStartPar
 Concerning the Matrix Market format, it is possible to save a \sphinxcode{\sphinxupquote{gmm::csc\_matrix\textless{}double\textgreater{}}} or a  \sphinxcode{\sphinxupquote{gmm::csc\_matrix\textless{}std::complex\textless{}double\textgreater{} \textgreater{}}} and to load a \sphinxcode{\sphinxupquote{gmm::row\_matrix\textless{}VECT\textgreater{}}} or a \sphinxcode{\sphinxupquote{gmm::col\_matrix\textless{}VECT\textgreater{}}}:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -334,24 +375,28 @@ Concerning the Matrix Market format, it is possible to save a \sphinxcode{\sphin
 
 \chapter{sub\sphinxhyphen{}vectors and sub\sphinxhyphen{}matrices}
 \label{\detokenize{gmm/sub-matrix:sub-vectors-and-sub-matrices}}\label{\detokenize{gmm/sub-matrix:gmm-sub}}\label{\detokenize{gmm/sub-matrix::doc}}
+\sphinxAtStartPar
 It is possible to obtain any sub\sphinxhyphen{}vector or sub\sphinxhyphen{}matrix of a fully interfaced object. There are four types of sub indices:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{sub\PYGZus{}interval}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,} \PYG{n}{length}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 represents an interval whose first index is \sphinxcode{\sphinxupquote{first}} and length is \sphinxcode{\sphinxupquote{length}} ( for instance \sphinxcode{\sphinxupquote{gmm::sub\_interval(10, 3);}} represents the indices \sphinxcode{\sphinxupquote{\{10, 11, 12\}}}).
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{sub\PYGZus{}slice}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,} \PYG{n}{length}\PYG{p}{,} \PYG{n}{step}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 represents also an interval in which one index over \sphinxcode{\sphinxupquote{step}} is taken. ( for instance \sphinxcode{\sphinxupquote{gmm::sub\_slice(10, 3, 2);}} represents the indices \sphinxcode{\sphinxupquote{\{10, 12, 14\}}})
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{sub\PYGZus{}index}\PYG{p}{(}\PYG{n}{CONT} \PYG{n}{c}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 represents the sub\sphinxhyphen{}index which is the collection of index contained in the container \sphinxcode{\sphinxupquote{c}}. For instance:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -360,18 +405,23 @@ represents the sub\sphinxhyphen{}index which is the collection of index containe
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{sub\PYGZus{}index}\PYG{p}{(}\PYG{n}{c}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 represents the indices \sphinxcode{\sphinxupquote{\{1, 3, 16\}}}.
 
+\sphinxAtStartPar
 \sphinxtitleref{VERY IMPORTANT} : the container \sphinxcode{\sphinxupquote{c}} has to be \sphinxtitleref{sorted} from the smaller index to the greater one (i.e. with increasing order) and no repetition is allowed.
 
+\sphinxAtStartPar
 For unsorted index such as permutation, a special type of sub index is defined:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{unsorted\PYGZus{}sub\PYGZus{}index}\PYG{p}{(}\PYG{n}{CONT} \PYG{n}{c}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Some algorithms are a little bit slower with unsorted sub indices.
 
+\sphinxAtStartPar
 Now \sphinxcode{\sphinxupquote{gmm::sub\_vector(V, subi)}} gives a reference to a sub\sphinxhyphen{}vector:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -380,8 +430,10 @@ Now \sphinxcode{\sphinxupquote{gmm::sub\_vector(V, subi)}} gives a reference to 
 \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{cout} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{sub\PYGZus{}vector}\PYG{p}{(}\PYG{n}{V}\PYG{p}{,} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{sub\PYGZus{}interval}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{)} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{endl}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 prints to the standard output \sphinxcode{\sphinxupquote{V{[}2{]}, V{[}3{]}}} and \sphinxcode{\sphinxupquote{V{[}4{]}}}.
 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gmm::sub\_matrix(V, subi1, subi2)}} gives a reference to a sub\sphinxhyphen{}matrix. For instance:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -391,6 +443,7 @@ prints to the standard output \sphinxcode{\sphinxupquote{V{[}2{]}, V{[}3{]}}} an
           \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{endl}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 prints to the output a sub\sphinxhyphen{}matrix. If the two sub\sphinxhyphen{}indices are equal, it is possible to omit the second. For instance:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -399,11 +452,13 @@ prints to the output a sub\sphinxhyphen{}matrix. If the two sub\sphinxhyphen{}in
 \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{cout} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{sub\PYGZus{}matrix}\PYG{p}{(}\PYG{n}{V}\PYG{p}{,} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{sub\PYGZus{}interval}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{)} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{endl}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The reference on sub\_matrix is writable if the corresponding matrix is writable (so you can copy on a sub\_matrix, add sub\sphinxhyphen{}matrices …).
 
 
 \section{row and column of a matrix}
 \label{\detokenize{gmm/sub-matrix:row-and-column-of-a-matrix}}
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gmm::mat\_row(M, i)}} gives a (possibly writable) reference to the row \sphinxcode{\sphinxupquote{i}} of matrix \sphinxcode{\sphinxupquote{M}}, and \sphinxcode{\sphinxupquote{gmm::mat\_col(M, i)}}  gives a (possibly writable) reference to the column \sphinxcode{\sphinxupquote{i}}. It is not possible to access to the rows if \sphinxcode{\sphinxupquote{M}} is a column matrix and to the columns if it is a row matrix. It is possible to use \sphinxcode{\sphinxupquote{gmm::mat\_const\_row(M, i)}} and \sphinxcode{\sphinxupquote{gmm::mat\_const\_col(M, i)}} to have constant references.
 
 
@@ -443,6 +498,7 @@ The reference on sub\_matrix is writable if the corresponding matrix is writable
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{write}\PYG{p}{(}\PYG{n}{o}\PYG{p}{,} \PYG{n}{M}\PYG{p}{)}\PYG{p}{;} \PYG{c+c1}{// print the matrix M to the output stream o.}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Most of the time it is more convenient to use:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -475,45 +531,53 @@ Most of the time it is more convenient to use:
 
 \chapter{Basic linear algebra operations}
 \label{\detokenize{gmm/blas:basic-linear-algebra-operations}}\label{\detokenize{gmm/blas:gmm-blas}}\label{\detokenize{gmm/blas::doc}}
+\sphinxAtStartPar
 The same choice has been made as in MTL to provide basic operations as functions not as operators. The advantages are that it is clearer to see where are the linear algebra operations in the program and the programming of optimized basic linear algebra operations is greatly simplified.
 
 
 \section{scale and scaled}
 \label{\detokenize{gmm/blas:scale-and-scaled}}
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gmm::scale}} is used to multiply a vector or a matrix with a scalar factor:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{scale}\PYG{p}{(}\PYG{n}{V}\PYG{p}{,} \PYG{l+m+mf}{10.0}\PYG{p}{)}\PYG{p}{;}  \PYG{c+c1}{// V * 10.0 \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} V}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 If one not needs to multiply the vector but wants to use the multiplied vector in an expression  \sphinxcode{\sphinxupquote{gmm::scaled}} gives a reference to a multiplied vector. This is only a reference, no operation is made until this reference is used somewhere. For instance:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{cout} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{scaled}\PYG{p}{(}\PYG{n}{V}\PYG{p}{,} \PYG{l+m+mf}{10.0}\PYG{p}{)} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{endl}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 print to the standard output the vector \sphinxcode{\sphinxupquote{V}} multiplied by \sphinxcode{\sphinxupquote{10.0}} without changing \sphinxcode{\sphinxupquote{V}}.
 
 
 \section{transposition}
 \label{\detokenize{gmm/blas:transposition}}
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gmm::transposed(M)}} gives a possibility modifiable reference on the transposed matrix of \sphinxcode{\sphinxupquote{M}}.
 
 
 \section{imaginary and real part}
 \label{\detokenize{gmm/blas:imaginary-and-real-part}}
+\sphinxAtStartPar
 For a complex matrix \sphinxcode{\sphinxupquote{M}} or a complex vector \sphinxcode{\sphinxupquote{V}},
 \sphinxcode{\sphinxupquote{gmm::real\_part(M)}}, \sphinxcode{\sphinxupquote{gmm::real\_part(V)}}, \sphinxcode{\sphinxupquote{gmm::imag\_part(M)}} or \sphinxcode{\sphinxupquote{gmm::imag\_part(V)}} give a possibility modifiable reference on the real or imaginary part of the matrix or vector (for instance \sphinxcode{\sphinxupquote{gmm::clear(gmm::imag\_part(M))}} will set to zero the imaginary part of a matrix \sphinxcode{\sphinxupquote{M}}). These functions cannot be applied to real matrices or vectors.
 
 
 \section{conjugate}
 \label{\detokenize{gmm/blas:conjugate}}
+\sphinxAtStartPar
 For a matrix \sphinxcode{\sphinxupquote{M}} or a vector \sphinxcode{\sphinxupquote{V}},
 \sphinxcode{\sphinxupquote{gmm::conjugated(M)}} and \sphinxcode{\sphinxupquote{gmm::conjugated(V)}} give a constant reference on the conjugated vector or matrix. Of course, for a real vectors this has no effect (and no cost at all). Note : \sphinxcode{\sphinxupquote{gmm::conjugated(M)}} transposes the matrix \sphinxcode{\sphinxupquote{M}} so that this is the hermitian conjugate of \sphinxcode{\sphinxupquote{M}}. If you need only the conjugate of each component you have to use both transposition and conjugate with \sphinxcode{\sphinxupquote{gmm::conjugated(gmm::transposed(M))}} or equivalently  \sphinxcode{\sphinxupquote{gmm::transposed(gmm::conjugated(M))}}.
 
 
 \section{add}
 \label{\detokenize{gmm/blas:add}}
+\sphinxAtStartPar
 addition of vectors or matrices. It is alway possible to mix different type of vector or matrices in the operations. The following operations are valid:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -534,11 +598,13 @@ addition of vectors or matrices. It is alway possible to mix different type of v
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{add}\PYG{p}{(}\PYG{n}{M1}\PYG{p}{,} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{sub\PYGZus{}matrix}\PYG{p}{(}\PYG{n}{M2}\PYG{p}{,} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{sub\PYGZus{}interval}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 IMPORTANT : all the vectors have to have the same size, no resize will be automatically done. If a vector has not the good size, an error will be thrown.
 
 
 \section{mult}
 \label{\detokenize{gmm/blas:mult}}
+\sphinxAtStartPar
 Matrix\sphinxhyphen{}vector or matrix\sphinxhyphen{}matrix multiplication. Again, all the matrices and vectors have to have the good size. The following operations are valid:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -585,18 +651,21 @@ Matrix\sphinxhyphen{}vector or matrix\sphinxhyphen{}matrix multiplication. Again
 
 \section{trace}
 \label{\detokenize{gmm/blas:trace}}
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{gmm::mat\_trace(M)}} gives the trace of matrix \sphinxcode{\sphinxupquote{M}}.
 
 
 \section{scalar product}
 \label{\detokenize{gmm/blas:scalar-product}}\begin{quote}
 
+\sphinxAtStartPar
 for vectors only, \sphinxcode{\sphinxupquote{gmm::vect\_sp(V1, V2)}} gives the scalar product between \sphinxcode{\sphinxupquote{V1}} and \sphinxcode{\sphinxupquote{V2}}. For complex vectors, this do not conjugate \sphinxcode{\sphinxupquote{V1}}, you can use \sphinxcode{\sphinxupquote{gmm::vect\_sp(V1, gmm::conjugated(V2))}} or \sphinxcode{\sphinxupquote{gmm::vect\_hp(V1, V2)}} which is equivalent.
 \end{quote}
 
 
 \chapter{Solving triangular systems}
 \label{\detokenize{gmm/triangular:solving-triangular-systems}}\label{\detokenize{gmm/triangular:gmm-triangular}}\label{\detokenize{gmm/triangular::doc}}
+\sphinxAtStartPar
 If \sphinxcode{\sphinxupquote{M}} is a triangular matrix (upper or lower) and \sphinxcode{\sphinxupquote{X}} a vector containing the right hand side, the following procedures solve the system \(x \leftarrow M^{-1}x\). The vector \sphinxcode{\sphinxupquote{X}} contains the result:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -608,11 +677,13 @@ If \sphinxcode{\sphinxupquote{M}} is a triangular matrix (upper or lower) and \s
                                   \PYG{c+c1}{// assuming there is 1 on the diagonal}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 components which are lower the diagonal are ignored by \sphinxcode{\sphinxupquote{gmm::upper\_tri\_solve}} and components which are upper the diagonal are ignored by \sphinxcode{\sphinxupquote{gmm::lower\_tri\_solve}}.
 
 
 \chapter{Dense LU decomposition}
 \label{\detokenize{gmm/denselu:dense-lu-decomposition}}\label{\detokenize{gmm/denselu:gmm-denselu}}\label{\detokenize{gmm/denselu::doc}}
+\sphinxAtStartPar
 The following procedures are available in the file \sphinxcode{\sphinxupquote{gmm/gmm\textbackslash{}\_dense\textbackslash{}\_lu.h}} for dense real and complex matrices (\sphinxcode{\sphinxupquote{gmm::dense\_matrix\textless{}T\textgreater{}}}, \sphinxcode{\sphinxupquote{gmm::row\_matrix\textless{} std::vector\textless{}T\textgreater{} \textgreater{}}} and \sphinxcode{\sphinxupquote{gmm::col\_matrix\textless{} std::vector\textless{}T\textgreater{} \textgreater{}}}):
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -646,6 +717,7 @@ The following procedures are available in the file \sphinxcode{\sphinxupquote{gm
 
 \chapter{Dense QR factorisation, eigenvalues and eigenvectors}
 \label{\detokenize{gmm/denseqr:dense-qr-factorisation-eigenvalues-and-eigenvectors}}\label{\detokenize{gmm/denseqr:gmm-denseqr}}\label{\detokenize{gmm/denseqr::doc}}
+\sphinxAtStartPar
 The following procedures are available in the file \sphinxcode{\sphinxupquote{gmm/gmm\textbackslash{}\_dense\textbackslash{}\_qr.h}} for dense real and complex matrices:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -668,34 +740,41 @@ The following procedures are available in the file \sphinxcode{\sphinxupquote{gm
    \PYG{c+c1}{// compute additionally the eigenvectors in the matrix eigvect.}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 \sphinxtitleref{Remark}: The computation of eigenvectors for non hermitian matrices is not yet implemented. You can use for the moment the functions \sphinxcode{\sphinxupquote{geev\_interface\_left}} and \sphinxcode{\sphinxupquote{geev\_interface\_right}} from the LAPACK interface (see \sphinxcode{\sphinxupquote{gmm/gmm\_lapack\_interface.h}}). These LAPACK functions compute right and left eigenvectors.
 
+\sphinxAtStartPar
 The following function defined in the file \sphinxcode{\sphinxupquote{gmm/gmm\textbackslash{}\_condition\textbackslash{}\_number.h}}:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{condition\PYGZus{}number}\PYG{p}{(}\PYG{n}{M}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 compute the condition number of a matrix \sphinxcode{\sphinxupquote{M}}. This function uses a dense QR algorithm and thus is only usable for dense matrices.
 
 
 \chapter{Iterative solvers}
 \label{\detokenize{gmm/iter:iterative-solvers}}\label{\detokenize{gmm/iter:gmm-iter}}\label{\detokenize{gmm/iter::doc}}
+\sphinxAtStartPar
 Most of the solvers provided in \sphinxstyleemphasis{Gmm++} come frorm ITL with slight modifications (gmres has been optimized and adapted for complex matrices). Include the file \sphinxcode{\sphinxupquote{gmm/gmm\_iter\_solvers.h}} to use them.
 
 
 \section{iterations}
 \label{\detokenize{gmm/iter:iterations}}\begin{quote}
 
+\sphinxAtStartPar
 The iteration object of \sphinxstyleemphasis{Gmm++} is a modification of the one in ITL. This is not a template type as in ITL.
 \end{quote}
 
+\sphinxAtStartPar
 The simplest initialization is:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{iteration} \PYG{n}{iter}\PYG{p}{(}\PYG{l+m+mf}{2.0E\PYGZhy{}10}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 where \sphinxcode{\sphinxupquote{2.0E\sphinxhyphen{}10}} is the (relative) residual to be obtained to have the convergence.
 Some possibilities:
 
@@ -716,6 +795,7 @@ Some possibilities:
 
 \section{Linear solvers}
 \label{\detokenize{gmm/iter:linear-solvers}}
+\sphinxAtStartPar
 Here is the list of available linear solvers:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -739,13 +819,16 @@ Here is the list of available linear solvers:
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{least\PYGZus{}squares\PYGZus{}cg}\PYG{p}{(}\PYG{n}{A}\PYG{p}{,} \PYG{n}{X}\PYG{p}{,} \PYG{n}{B}\PYG{p}{,} \PYG{n}{iter}\PYG{p}{)} \PYG{c+c1}{// unpreconditionned least square CG.}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The solver \sphinxcode{\sphinxupquote{gmm::constrained\_cg(A, C, X, B, PS, PR, iter);}} solve a system with linear constraints, \sphinxcode{\sphinxupquote{C}} is a matrix which represents the constraints. But it is still experimental.
 
+\sphinxAtStartPar
 (Version 1.7) The solver \sphinxcode{\sphinxupquote{gmm::bfgs(F, GRAD, X, restart, iter)}} is a BFGS quasi\sphinxhyphen{}Newton algorithm with a Wolfe line search for large scale problems. It minimizes the function \sphinxcode{\sphinxupquote{F}} without constraints, be given its gradient \sphinxcode{\sphinxupquote{GRAD}}. \sphinxcode{\sphinxupquote{restart}} is the max number of stored update vectors.
 
 
 \section{Preconditioners}
 \label{\detokenize{gmm/iter:preconditioners}}
+\sphinxAtStartPar
 The following preconditioners, to be used with linear solvers, are available:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -781,52 +864,68 @@ The following preconditioners, to be used with linear solvers, are available:
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{ilutp\PYGZus{}precond}\PYG{o}{\PYGZlt{}}\PYG{n}{matrix\PYGZus{}type}\PYG{o}{\PYGZgt{}} \PYG{n}{P}\PYG{p}{(}\PYG{n}{SM}\PYG{p}{,} \PYG{n}{k}\PYG{p}{,} \PYG{n}{threshold}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Except \sphinxcode{\sphinxupquote{ildltt\textbackslash{}\_precond}}, all these precontionners come from ITL. \sphinxcode{\sphinxupquote{ilut\_precond}} has been optimized and simplified and \sphinxcode{\sphinxupquote{cholesky\_precond}} has been corrected and transformed in an incomplete LDLT preconditioner for stability reasons (similarly, we add \sphinxcode{\sphinxupquote{choleskyt\_precond}} which is in fact an incomplete LDLT with threshold preconditioner). Of course, \sphinxcode{\sphinxupquote{ildlt\textbackslash{}\_precond}} and \sphinxcode{\sphinxupquote{ildltt\_precond}} are designed for symmetric real or hermitian complex matrices to be use principally with cg.
 
 
 \section{Additive Schwarz method}
 \label{\detokenize{gmm/iter:additive-schwarz-method}}
+\sphinxAtStartPar
 The additive Schwarz method is a decomposition domain method allowing the resolution of huge linear systems (see \sphinxcite{biblio:schadd} for the principle of the method).
 
+\sphinxAtStartPar
 For the moment, the method is not parallelized (this should be done …). The call is the following:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{sequential\PYGZus{}additive\PYGZus{}schwarz}\PYG{p}{(}\PYG{n}{A}\PYG{p}{,} \PYG{n}{u}\PYG{p}{,} \PYG{n}{f}\PYG{p}{,} \PYG{n}{P}\PYG{p}{,} \PYG{n}{vB}\PYG{p}{,} \PYG{n}{iter}\PYG{p}{,} \PYG{n}{local\PYGZus{}solver}\PYG{p}{,} \PYG{n}{global\PYGZus{}solver}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 \sphinxcode{\sphinxupquote{A}} is the matrix of the linear system. \sphinxcode{\sphinxupquote{u}} is the unknown vector. \sphinxcode{\sphinxupquote{f}} is the right hand side. \sphinxcode{\sphinxupquote{P}} is an eventual preconditioner for the local solver. \sphinxcode{\sphinxupquote{vB}} is a vector of rectangular sparse matrices (\sphinxcode{\sphinxupquote{of type const std::vector\textless{}vBMatrix\textgreater{}}}, where \sphinxcode{\sphinxupquote{vBMatrix}} is a sparse matrix type), each of these matrices is of size \(N \times N_i\) where \(N\) is the size of \sphinxcode{\sphinxupquote{A}} and \(N_i\) the number of variables in the \(i^{th}\) sub\sphinxhyphen{}domain ; each column of the matrix is a base vector of the sub\sphinxhyphen{}space representing the \(i^{th}\) sub\sphinxhyphen{}domain. \sphinxcode{\sphinxupquote{iter}} is an iteration object. \sphinxcode{\sphinxupquote{local\_solver}} has to be chosen in the list \sphinxcode{\sphinxupquote{gmm::using\_gmres(), gmm::using\_bicgstab(), gmm::using\_cg(), gmm::using\_qmr()}} and  \sphinxcode{\sphinxupquote{gmm::using\_superlu()}} if SuperLu is installed. \sphinxcode{\sphinxupquote{global\_solver}} has to be chosen in the list \sphinxcode{\sphinxupquote{gmm::using\_gmres(), gmm::using\_bicgstab(), gmm::using\_cg(), gmm::using\_qmr()}}.
 
+\sphinxAtStartPar
 The test program \sphinxcode{\sphinxupquote{schwarz\_additive.C}} is the directory \sphinxcode{\sphinxupquote{tests}} of GetFEM is an example of the resolution with the additive Schwarz method of an elastostatic problem with the use of coarse mesh to make a better preconditioning (i.e. one of the sub\sphinxhyphen{}domains represents in fact a coarser mesh).
 
+\sphinxAtStartPar
 In the case of multiple solves with the same linear system, it is possible to store the preconditioners or the LU factorizations to save computation time.
 
+\sphinxAtStartPar
 A (too) simple program in \sphinxcode{\sphinxupquote{gmm/gmm\_domain\_decomp.h}} allows to build a regular domain decomposition with a certain ratio of overlap. It directly produces the vector of matrices \sphinxcode{\sphinxupquote{vB}} for the additive Schwarz method.
 
 
 \section{Range basis function}
 \label{\detokenize{gmm/iter:range-basis-function}}
+\sphinxAtStartPar
 The function \sphinxcode{\sphinxupquote{gmm\textbackslash{}\_range\textbackslash{}\_basis(B, columns, EPS=1e\sphinxhyphen{}12)}} defined in \sphinxcode{\sphinxupquote{gmm/gmm\textbackslash{}\_range\textbackslash{}\_basis.h}} allows to select from the columns of a sparse matrix \sphinxcode{\sphinxupquote{B}} a basis of the range of this matrix. The result is returned in \sphinxcode{\sphinxupquote{columns}} which should be of type \sphinxcode{\sphinxupquote{std::set\textless{}size\_type\textgreater{}}} and which contains the indices of the selected columns.
 
+\sphinxAtStartPar
 The algorithm is specially designed to select independent constraints from a large matrix with linearly dependent columns.
 
+\sphinxAtStartPar
 There is four step in the implemented algorithm
 \begin{itemize}
 \item {} 
+\sphinxAtStartPar
 Elimination of null columns.
 
 \item {} 
+\sphinxAtStartPar
 Selection of a set of already orthogonal columns.
 
 \item {} 
+\sphinxAtStartPar
 Elimination of locally dependent columns by a blockwise Gram\sphinxhyphen{}Schmidt algorithm.
 
 \item {} 
+\sphinxAtStartPar
 Computation of vectors of the remaining null space by a global restarted Lanczos algorithm and deduction of some columns to be eliminated.
 
 \end{itemize}
 
+\sphinxAtStartPar
 The algorithm is efficient if after the local Gram\sphinxhyphen{}Schmidt algorithm it remains a low dimension null space. The implemented restarted Lanczos algorithm find the null space vectors one by one.
 
+\sphinxAtStartPar
 The Global restarted Lanczos algorithm may be improved or replaced by
 a block Lanczos method (see \sphinxcite{biblio:ca-re-so1994} for instance), a block
 Wiedelann method (in order to be parallelized) or simply
@@ -836,8 +935,10 @@ iteration.
 
 \chapter{Catch errors}
 \label{\detokenize{gmm/catch:catch-errors}}\label{\detokenize{gmm/catch:gmm-catch}}\label{\detokenize{gmm/catch::doc}}
+\sphinxAtStartPar
 Errors used in \sphinxstyleemphasis{Gmm++} are defined in the file \sphinxcode{\sphinxupquote{gmm/gmm\_except.h}}. In order to make easier  the error catching all errors derive from the type \sphinxcode{\sphinxupquote{std::logic\_error}} defined in the file \textasciigrave{}\textasciigrave{} stdexcept\textasciigrave{}\textasciigrave{} of the S.T.L.
 
+\sphinxAtStartPar
 A standard procedure, \sphinxcode{\sphinxupquote{GMM\_STANDARD\_CATCH\_ERROR}}, is defined in \sphinxcode{\sphinxupquote{gmm/gmm\_except.h}}. This procedure catches all errors and print the error message when an error occurs. It can be used in the main procedure of the program as follows:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -849,13 +950,16 @@ int main(void) \PYGZob{}
 \PYGZcb{}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 It is highly recommended to catch the errors at least in the main function, because if you do not so, you will not be able to see error messages.
 
 
 \chapter{Interface with BLAS, LAPACK or ATLAS}
 \label{\detokenize{gmm/blas_interface:interface-with-blas-lapack-or-atlas}}\label{\detokenize{gmm/blas_interface:gmm-lapack}}\label{\detokenize{gmm/blas_interface::doc}}
+\sphinxAtStartPar
 For better performance on dense matrices, it is possible to interface some operations of the type \sphinxcode{\sphinxupquote{gmm::dense\_matrix\textless{}T\textgreater{}}} with \sphinxcode{\sphinxupquote{LAPACK}} (\sphinxurl{http://www.netlib.org/lapack/}) or \sphinxcode{\sphinxupquote{ATLAS}} (\sphinxurl{http://math-atlas.sourceforge.net/}), for \sphinxcode{\sphinxupquote{T = float, double, std::complex\textless{}float\textgreater{} or std::complex\textless{}double\textgreater{}}}. In fact, concerning \sphinxcode{\sphinxupquote{ATLAS}} no specific interface has been made until now, so the fortran interface of \sphinxcode{\sphinxupquote{ATLAS}} should be used.
 
+\sphinxAtStartPar
 to use this interface you have first to define \sphinxcode{\sphinxupquote{GMM\_USES\_LAPACK}} before including \sphinxstyleemphasis{Gmm++} files:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -865,22 +969,27 @@ to use this interface you have first to define \sphinxcode{\sphinxupquote{GMM\_U
 ... your code
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 or specify \sphinxhyphen{}DGMM\_USES\_LAPACK on the command line of your compiler. Of course, you have also to link \sphinxcode{\sphinxupquote{LAPACK}} or \sphinxcode{\sphinxupquote{ATLAS}} libraries. For example on a standard linux configuration and g++ compiler the adding libraries to link \sphinxcode{\sphinxupquote{LAPACK}} are:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 g++ ...  \PYGZhy{}llapack \PYGZhy{}lblas \PYGZhy{}lgfortanbegin \PYGZhy{}lgfortran
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 and to link  \sphinxcode{\sphinxupquote{ATLAS}}:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 g++ ... /usr/lib/atlas/liblapack.a /usr/lib/atlas/libblas.a \PYGZhy{}latlas \PYGZhy{}lgfortranbegin \PYGZhy{}lgfortran
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The library \sphinxcode{\sphinxupquote{libgfortranbegin}} and \sphinxcode{\sphinxupquote{libgfortran}} are specific to g++ compiler and may vary for other compilers.
 
+\sphinxAtStartPar
 Ask your system administrator if this configuration does not work.
 
+\sphinxAtStartPar
 The following operations are interfaced:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -977,10 +1086,13 @@ implicit\PYGZus{}qr\PYGZus{}algorithm(dense\PYGZus{}matrix\PYGZlt{}T\PYGZgt{}, s
                       dense\PYGZus{}matrix\PYGZlt{}T\PYGZgt{})
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Of course, it is not difficult to interface another operation if needed.
 
+\sphinxAtStartPar
 The following interface does not correspond to an algorithm existing in \sphinxstyleemphasis{Gmm++}:
 
+\sphinxAtStartPar
 The interface to \sphinxcode{\sphinxupquote{gesvd}} (singular value decomposition):
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -993,25 +1105,30 @@ svd(dense\PYGZus{}matrix\PYGZlt{}std::complex\PYGZlt{}T\PYGZgt{} \PYGZgt{} \PYGZ
 
 \chapter{Interface with SuperLU}
 \label{\detokenize{gmm/superlu:interface-with-superlu}}\label{\detokenize{gmm/superlu:gmm-superlu}}\label{\detokenize{gmm/superlu::doc}}
+\sphinxAtStartPar
 It is possible to call SuperLU 3.0 (\sphinxurl{https://portal.nersc.gov/project/sparse/superlu/superlu\_3.0.tar.gz}) from \sphinxstyleemphasis{Gmm++}. The following function defined in the file \sphinxcode{\sphinxupquote{gmm/gmm\_superlu\_interface.h}} is available:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{SuperLU\PYGZus{}solve}\PYG{p}{(}\PYG{n}{A}\PYG{p}{,} \PYG{n}{X}\PYG{p}{,} \PYG{n}{B}\PYG{p}{,} \PYG{n}{condest}\PYG{p}{,} \PYG{n}{permc\PYGZus{}spec} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 solves the system \sphinxcode{\sphinxupquote{AX = B}} where A is a sparse matrix of base type \sphinxcode{\sphinxupquote{float, double, std::complex\textless{}float\textgreater{}, or std::complex\textless{}double\textgreater{}}}. \sphinxcode{\sphinxupquote{permc\_spec}} should be 0, 1 or 2 for respectively use the natural ordering, use minimum degree ordering on structure of \sphinxcode{\sphinxupquote{A\textquotesingle{}A}} or use minimum degree ordering on structure of \sphinxcode{\sphinxupquote{A\textquotesingle{}+A}} (1 is the default value), \sphinxcode{\sphinxupquote{condest}} should be a reference on a double, it returns an estimate of the condition number of the matrix \sphinxcode{\sphinxupquote{A}}.
 
+\sphinxAtStartPar
 To use these functions, you need to install SuperLU and compile your code with the additional options:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{g}\PYG{o}{+}\PYG{o}{+} \PYG{p}{.}\PYG{p}{.}\PYG{p}{.}  \PYG{o}{\PYGZhy{}}\PYG{n}{DGMM\PYGZus{}USES\PYGZus{}SUPERLU} \PYG{p}{(}\PYG{n}{dir\PYGZus{}of\PYGZus{}superlu}\PYG{p}{)}\PYG{o}{/}\PYG{n}{superlu}\PYG{p}{.}\PYG{n}{a} \PYG{o}{\PYGZhy{}}\PYG{n}{lblas} \PYG{o}{\PYGZhy{}}\PYG{n}{I}\PYG{p}{(}\PYG{n}{dir\PYGZus{}of\PYGZus{}superlu}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Some other functionalities of SuperLU can be interfaced.
 
 
 \chapter{How to use \sphinxstyleemphasis{Gmm++} with QD type (double\sphinxhyphen{}double and quad\sphinxhyphen{}double)}
 \label{\detokenize{gmm/qd:how-to-use-gmm-with-qd-type-double-double-and-quad-double}}\label{\detokenize{gmm/qd:gmm-qd}}\label{\detokenize{gmm/qd::doc}}
+\sphinxAtStartPar
 The QD library (see \sphinxhref{http://www.cs.berkeley.edu/verb~yozo}{http://www.cs.berkeley.edu/verb\textasciitilde{}yozo} or \sphinxhref{http://www.nersc.gov/verb~dhb/mpdist/mpdist.html}{http://www.nersc.gov/verb\textasciitilde{}dhb/mpdist/mpdist.html}) is an efficient library for double\sphinxhyphen{}double (32 decimal digits) and quad\sphinxhyphen{}double (approx. 64 decimal digits). Once you installed this library on your system you have to link your program with QD library (with \sphinxhyphen{}lqd). In your program, include the header files of QD with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1020,8 +1137,10 @@ The QD library (see \sphinxhref{http://www.cs.berkeley.edu/verb~yozo}{http://www
 \PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include} \PYG{c+cpf}{\PYGZlt{}qd/fpu.h\PYGZgt{}}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Then the two type \sphinxcode{\sphinxupquote{dd\_real}} and \sphinxcode{\sphinxupquote{qd\_real}} will be usable with \sphinxstyleemphasis{Gmm++}. You will also be able to use \sphinxcode{\sphinxupquote{std::complex\textless{}dd\_real\textgreater{}}} and \sphinxcode{\sphinxupquote{std::complex\textless{}qdreal\textgreater{}}}
 
+\sphinxAtStartPar
 IMPORTANT : do not forget to initialize QD before using it with the following call:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1029,12 +1148,14 @@ IMPORTANT : do not forget to initialize QD before using it with the following ca
 \PYG{n}{fpu\PYGZus{}fix\PYGZus{}start}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{old\PYGZus{}cw}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 This disables the 80 bits precision of x86 processors which conflicts with QD. Once you finished to use QD you can reactivate it with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{fpu\PYGZus{}fix\PYGZus{}end}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{old\PYGZus{}cw}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 (see the QD documentation for more details).
 
 
@@ -1043,6 +1164,7 @@ This disables the 80 bits precision of x86 processors which conflicts with QD. O
 
 \section{How can I invert a matrix ?}
 \label{\detokenize{gmm/first-step:how-can-i-invert-a-matrix}}
+\sphinxAtStartPar
 It is not possible in \sphinxstyleemphasis{Gmm++} to invert all kind of matrices. For the moment, the only mean to invert a matrix is to use the dense LU decomposition (thus, only for dense matrices). An example:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1060,11 +1182,13 @@ It is not possible in \sphinxstyleemphasis{Gmm++} to invert all kind of matrices
 \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{cout} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{M} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{ times }\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{M2} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{ is equal to }\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{M3} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 see the section corresponding to dense LU decomposition for more details. The type \sphinxcode{\sphinxupquote{gmm::dense\_matrix\textless{}double\textgreater{}}} can be replaced by \sphinxcode{\sphinxupquote{gmm::row\_matrix\textless{} std::vector\textless{}double\textgreater{} \textgreater{}}} or \sphinxcode{\sphinxupquote{gmm::col\_matrix\textless{} std::vector\textless{}double\textgreater{} \textgreater{}}}.
 
 
 \section{How can I solve a linear system ?}
 \label{\detokenize{gmm/first-step:how-can-i-solve-a-linear-system}}
+\sphinxAtStartPar
 You have more than one possibility to solve a linear system. If you have a dense matrix, the best may be to use the LU decomposition. An example:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1083,6 +1207,7 @@ You have more than one possibility to solve a linear system. If you have a dense
 \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{cout} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{M} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{ times }\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vref}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{l+s}{\PYGZdq{}}\PYG{l+s}{ is equal to }\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{vref}\PYG{p}{(}\PYG{n}{Bagain}\PYG{p}{)} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 If, now, you have a sparse system coming for example from a pde discretization, you have various iterative solvers, with or without preconditioners. This is an example with a precontionned GMRES:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1107,6 +1232,7 @@ If, now, you have a sparse system coming for example from a pde discretization, 
 
 \section{How can I transform a vector into a matrix and reshape it ?}
 \label{\detokenize{gmm/first-step:how-can-i-transform-a-vector-into-a-matrix-and-reshape-it}}
+\sphinxAtStartPar
 In \sphinxstyleemphasis{Gmm++}, a vector is not considered as a matrix. If you need to use a vector as a (1 by n) row matrix or (n by 1) column matrix in a computation, you have to use:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1116,6 +1242,7 @@ In \sphinxstyleemphasis{Gmm++}, a vector is not considered as a matrix. If you n
                    \PYG{c+c1}{// a (n by 1) col matrix}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 for instance, you can transform a vector into a dense matrix with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1127,6 +1254,7 @@ for instance, you can transform a vector into a dense matrix with:
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{copy}\PYG{p}{(}\PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{row\PYGZus{}vector}\PYG{p}{(}\PYG{n}{V}\PYG{p}{)}\PYG{p}{,} \PYG{n}{M}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Then you can also reshape matrix \sphinxcode{\sphinxupquote{M}} with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1136,14 +1264,17 @@ Then you can also reshape matrix \sphinxcode{\sphinxupquote{M}} with:
 
 \section{What is the better way to resize a matrix ?}
 \label{\detokenize{gmm/first-step:what-is-the-better-way-to-resize-a-matrix}}
+\sphinxAtStartPar
 You can change the dimensions of a matrix, if it is not a reference, using:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{gmm}\PYG{o}{:}\PYG{o}{:}\PYG{n}{resize}\PYG{p}{(}\PYG{n}{M}\PYG{p}{,} \PYG{n}{m}\PYG{p}{,} \PYG{n}{n}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 This function respects the intersection between the original matrix and the resized matrix, and new components are set to zero. An important thing is that it is based on the resize method of \sphinxcode{\sphinxupquote{std::vector}}, thus no memory free is done when the size of the new matrix is smaller than the original one.
 
+\sphinxAtStartPar
 If you do not need to keep old values of the components, or if you want to really free the surplus of memory, you can resize a matrix using \sphinxcode{\sphinxupquote{std::swap}} as follows:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1154,6 +1285,7 @@ If you do not need to keep old values of the components, or if you want to reall
 \PYG{p}{\PYGZob{}} \PYG{n}{MATRIX\PYGZus{}TYPE}\PYG{p}{(}\PYG{n}{m2}\PYG{p}{,} \PYG{n}{n2}\PYG{p}{)} \PYG{n}{M2}\PYG{p}{;} \PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{swap}\PYG{p}{(}\PYG{n}{M}\PYG{p}{,} \PYG{n}{M2}\PYG{p}{)}\PYG{p}{;} \PYG{p}{\PYGZcb{}} \PYG{c+c1}{// resize matrix M.}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 Of course, this works also for a vector.
 
 
@@ -1162,6 +1294,7 @@ Of course, this works also for a vector.
 
 \section{The linalg\_traits structure}
 \label{\detokenize{gmm/inside:the-linalg-traits-structure}}
+\sphinxAtStartPar
 The major principle of \sphinxstyleemphasis{Gmm++} is that each vector and matrix type has a corresponding structure (which is never instantiated) named \sphinxcode{\sphinxupquote{linalg\_traits}} containing all informations on it. For instance, the component \sphinxcode{\sphinxupquote{linalg\_type}} of this structure is set to \sphinxcode{\sphinxupquote{abstract\_vector}} or \sphinxcode{\sphinxupquote{abstract\_matrix}} if the corresponding type represent a vector or a matrix. If \sphinxcode{\sphinxupquote{V}} is an interfaced type of vector and \sphinxcode{\sphinxupquote{M}} an interface type of matrix, it is possible to access to this component with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1169,8 +1302,10 @@ typename gmm::linalg\PYGZus{}traits\PYGZlt{}V\PYGZgt{}::linalg\PYGZus{}type ... 
 typename gmm::linalg\PYGZus{}traits\PYGZlt{}M\PYGZgt{}::linalg\PYGZus{}type ...  // should be abstract\PYGZus{}matrix
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The types \sphinxcode{\sphinxupquote{abstract\_vector}} and \sphinxcode{\sphinxupquote{abstract\_matrix}} are defined in \sphinxcode{\sphinxupquote{gmm/gmm\_def.h}}. They are void type allowing to specialize generic algorithms.
 
+\sphinxAtStartPar
 For a vector type, the following informations are available:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1213,6 +1348,7 @@ gmm::linalg\PYGZus{}traits\PYGZlt{}V\PYGZgt{}::clear(o, it, ite) \PYGZhy{}\PYGZh
                                         ``const origin\PYGZus{}type *\PYGZsq{}\PYGZsq{}.
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 and for a matrix type:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1265,11 +1401,13 @@ gmm::linalg\PYGZus{}traits\PYGZlt{}M\PYGZgt{}::access(it,i) \PYGZhy{}\PYGZhy{}\P
 gmm::linalg\PYGZus{}traits\PYGZlt{}M\PYGZgt{}::do\PYGZus{}clear(m)  \PYGZhy{}\PYGZhy{}\PYGZgt{} make a clear on the matrix
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 This is this structure you have to fill in to interface a new vector or matrix type. You can see some examples in \sphinxcode{\sphinxupquote{gmm/gmm\_interface.h}} . Most of the generic algorithms are in \sphinxcode{\sphinxupquote{gmm/gmm\_blas.h}} .
 
 
 \section{How to iterate on the components of a vector}
 \label{\detokenize{gmm/inside:how-to-iterate-on-the-components-of-a-vector}}
+\sphinxAtStartPar
 Here is an example which accumulate the components of a vector. It is assumed that \sphinxcode{\sphinxupquote{V}} is a vector type and \sphinxcode{\sphinxupquote{v}} an instantiated vector:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1281,8 +1419,10 @@ for (; it != ite; ++it)  // loop on the components
   r += *it;              // accumulate the components
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 This piece of code will work with every kind of interfaced vector.
 
+\sphinxAtStartPar
 For sparse or skyline vectors, it is possible to obtain the index of the components pointed by the iterator with \sphinxcode{\sphinxupquote{it.index()}}. Here is the example of the scalar product of two sparse or skyline vectors, assuming \sphinxcode{\sphinxupquote{V1}} and \sphinxcode{\sphinxupquote{V2}} are two vector types and \sphinxcode{\sphinxupquote{v1}}, \sphinxcode{\sphinxupquote{v2}} two corresponding instantiated vectors:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1306,13 +1446,16 @@ while (it1 != ite1 \PYGZam{}\PYGZam{} it2 != ite2) \PYGZob{}  // loops on the co
 \PYGZcb{}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 This algorithm use the fact that indices are increasing in a sparse vector. This code will not work for dense vectors because dense vector iterators do not have the method \sphinxcode{\sphinxupquote{it.index()}}.
 
 
 \section{How to iterate on a matrix}
 \label{\detokenize{gmm/inside:how-to-iterate-on-a-matrix}}
+\sphinxAtStartPar
 You can iterate on the rows of a matrix if it is not a column major matrix and on the columns of a matrix if it is not a row major matrix (the type \sphinxcode{\sphinxupquote{gmm::dense\_matrix\textless{}T\textgreater{}}} has is sub orientation type as col\_and\_rox, so you can iterate on both rows and columns).
 
+\sphinxAtStartPar
 If you need not to be optimal, you can use a basic loop like that:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1325,6 +1468,7 @@ for (size\PYGZus{}t i = 0; i \PYGZlt{} gmm::mat\PYGZus{}nrows(m); ++i) \PYGZob{}
 \PYGZcb{}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 But you can also use iterators, like that:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1344,6 +1488,7 @@ for (; it != ite; ++it) \PYGZob{}
 
 \section{How to make your algorithm working on all type of matrices}
 \label{\detokenize{gmm/inside:how-to-make-your-algorithm-working-on-all-type-of-matrices}}
+\sphinxAtStartPar
 For this, you will generally have to specialize it. For instance, let us take a look at the code for \sphinxcode{\sphinxupquote{gmm::nnz}} which count the number of stored components (in fact, the real \sphinxcode{\sphinxupquote{gmm::nnz}} algorithm is specialized in most of the cases so that it does not count the components one by one):
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1379,11 +1524,13 @@ template \PYGZlt{}class L\PYGZgt{} inline size\PYGZus{}type nnz(const L\PYGZam{}
 \PYGZcb{}
 \end{sphinxVerbatim}
 
+\sphinxAtStartPar
 The first function dispatch on the second or the third function respectively if the parameter is a vector or a matrix. The third function dispatch again on the fourth and the fifth function respectively if the matrix is row\_major or column major. Of course, as the function are declared \sphinxcode{\sphinxupquote{inline}}, at least the two dispatcher functions will not be implemented. Which means that this construction is not costly.
 
 
 \chapter{How to disable verifications}
 \label{\detokenize{gmm/noverif:how-to-disable-verifications}}\label{\detokenize{gmm/noverif:gmm-noverif}}\label{\detokenize{gmm/noverif::doc}}
+\sphinxAtStartPar
 On some type of matrices such as \sphinxcode{\sphinxupquote{gmm::dense\_matrix}} some verification are made on the range of indices. This could deteriorate  the performance of your code but is satisfactory in the development stage. You can disable these verifications adding a \sphinxcode{\sphinxupquote{\sphinxhyphen{}dNDEBUG}} to the compiler options.
 
 
