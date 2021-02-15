@@ -80,7 +80,7 @@
 
 
 \title{Tutorial}
-\date{Feb 14, 2021}
+\date{Feb 15, 2021}
 \release{5.4.1}
 \author{Yves Renard, Julien Pommier, Konstantinos Poulios}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{logogetfem.png}\par}
@@ -426,7 +426,7 @@ First, in C++, ones has to include a certain number of headers for the model obj
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}workspace}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clear all\PYGZsq{}}\PYG{p}{)}\PYG{p}{;} \PYG{o}{/}\PYG{o}{/} \PYG{n}{In} \PYG{k}{case} \PYG{n}{of} \PYG{n}{multiple} \PYG{n}{runs}
+\PYG{n}{gf\PYGZus{}workspace}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clear all\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{/}\PYG{o}{/}\PYG{+w}{ }\PYG{n}{In}\PYG{+w}{ }\PYG{k}{case}\PYG{+w}{ }\PYG{n}{of}\PYG{+w}{ }\PYG{n}{multiple}\PYG{+w}{ }\PYG{n}{runs}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -434,7 +434,7 @@ First, in C++, ones has to include a certain number of headers for the model obj
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}workspace}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clear all\PYGZsq{}}\PYG{p}{)}\PYG{p}{;} \PYG{c}{\PYGZpc{} In case of multiple runs}
+\PYG{n}{gf\PYGZus{}workspace}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clear all\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c}{\PYGZpc{} In case of multiple runs}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -551,14 +551,14 @@ The geometry of the domain is supposed to be a rectangle with three circular hol
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{mo1} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{rectangle\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{100} \PYG{l+m+mi}{25}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo2} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{25} \PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo3} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{50} \PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo4} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{75} \PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo5} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{union\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo2}\PYG{p}{,} \PYG{n}{mo3}\PYG{p}{,} \PYG{n}{mo4}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo}  \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{set minus\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo1}\PYG{p}{,} \PYG{n}{mo5}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo1}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{rectangle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{100}\PYG{+w}{ }\PYG{l+m+mi}{25}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo2}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{25}\PYG{+w}{ }\PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo3}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{50}\PYG{+w}{ }\PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo4}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{75}\PYG{+w}{ }\PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo5}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{union\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo4}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo}\PYG{+w}{  }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{set minus\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo5}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{mesh} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{generate\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo}\PYG{p}{,} \PYG{n}{h}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{mesh}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{generate\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{h}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -566,14 +566,14 @@ The geometry of the domain is supposed to be a rectangle with three circular hol
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{mo1} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{rectangle\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{100} \PYG{l+m+mi}{25}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo2} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{25} \PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo3} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{50} \PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo4} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{75} \PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo5} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{union\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo2}\PYG{p}{,} \PYG{n}{mo3}\PYG{p}{,} \PYG{n}{mo4}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mo}  \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{set minus\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo1}\PYG{p}{,} \PYG{n}{mo5}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo1}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{rectangle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{100}\PYG{+w}{ }\PYG{l+m+mi}{25}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo2}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{25}\PYG{+w}{ }\PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo3}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{50}\PYG{+w}{ }\PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo4}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{ball\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{75}\PYG{+w}{ }\PYG{l+m+mf}{12.5}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo5}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{union\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo4}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mo}\PYG{+w}{  }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesher\PYGZus{}object}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{set minus\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo5}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{mesh} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{generate\PYGZsq{}}\PYG{p}{,} \PYG{n}{mo}\PYG{p}{,} \PYG{n}{h}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{mesh}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{generate\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mo}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{h}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -670,22 +670,22 @@ Since we have different boundary conditions on the different parts of the bounda
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{fb1} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces in box\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{99} \PYG{l+m+mi}{24}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{fb2} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,} \PYG{p}{[} \PYG{l+m+mi}{1} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{fb3} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{fb4} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}  \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{fb5} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fb1}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces in box\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{99}\PYG{+w}{ }\PYG{l+m+mi}{24}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fb2}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fb3}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fb4}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{+w}{  }\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fb5}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{2}\PYG{p}{;} \PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{3}\PYG{p}{;} \PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{4}\PYG{p}{;} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{5}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}  \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{fb2}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}   \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{fb3}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}    \PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{fb4}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,} \PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{fb5}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}   \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{fb1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}  \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}   \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}    \PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,} \PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{2}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{3}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{4}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}\PYG{+w}{  }\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fb2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}\PYG{+w}{   }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fb3}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}\PYG{+w}{    }\PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fb4}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fb5}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}\PYG{+w}{   }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fb1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}\PYG{+w}{  }\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}\PYG{+w}{   }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}\PYG{+w}{    }\PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -693,22 +693,22 @@ Since we have different boundary conditions on the different parts of the bounda
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{fb1} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces in box\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{99} \PYG{l+m+mi}{24}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{fb2} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,} \PYG{p}{[} \PYG{l+m+mi}{1} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{fb3} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{fb4} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}  \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{fb5} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fb1}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces in box\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{99}\PYG{+w}{ }\PYG{l+m+mi}{24}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fb2}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fb3}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fb4}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{+w}{  }\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fb5}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}get}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{outer faces with direction\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.01}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{2}\PYG{p}{;} \PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{3}\PYG{p}{;} \PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{4}\PYG{p}{;} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{5}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}  \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{fb2}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}   \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{fb3}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}    \PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{fb4}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,} \PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{fb5}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}   \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{fb1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}  \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}   \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}    \PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,} \PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{,} \PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{2}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{3}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{4}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{=}\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}\PYG{+w}{  }\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fb2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}\PYG{+w}{   }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fb3}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}\PYG{+w}{    }\PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fb4}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fb5}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region\PYGZsq{}}\PYG{p}{,}\PYG{+w}{   }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fb1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}\PYG{+w}{  }\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}\PYG{+w}{   }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}\PYG{+w}{    }\PYG{n}{TOP\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}set}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{region subtract\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{HOLE\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -755,9 +755,9 @@ In order to preview the mesh and to control its validity, the following instruct
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
 \PYG{n}{scf}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{curved\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{regions\PYGZsq{}}\PYG{p}{,} \PYG{k}{...}
-             \PYG{p}{[}\PYG{n}{RIGHT\PYGZus{}BOUND} \PYG{n}{LEFT\PYGZus{}BOUND} \PYG{n}{TOP\PYGZus{}BOUND} \PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Mesh\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{curved\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{regions\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{...}
+\PYG{+w}{             }\PYG{p}{[}\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{+w}{ }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{+w}{ }\PYG{n}{TOP\PYGZus{}BOUND}\PYG{+w}{ }\PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Mesh\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
@@ -766,10 +766,10 @@ In order to preview the mesh and to control its validity, the following instruct
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{curved\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{regions\PYGZsq{}}\PYG{p}{,} \PYG{k}{...}
-             \PYG{p}{[}\PYG{n}{RIGHT\PYGZus{}BOUND} \PYG{n}{LEFT\PYGZus{}BOUND} \PYG{n}{TOP\PYGZus{}BOUND} \PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Mesh\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{pause}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}plot\PYGZus{}mesh}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{curved\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{regions\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{...}
+\PYG{+w}{             }\PYG{p}{[}\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{+w}{ }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{+w}{ }\PYG{n}{TOP\PYGZus{}BOUND}\PYG{+w}{ }\PYG{n}{BOTTOM\PYGZus{}BOUND}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Mesh\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{pause}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -846,13 +846,13 @@ The last thing to define is an integration method \sphinxtitleref{mim}. There is
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{mfu} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical fem\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mft} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical fem\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mfvm} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical discontinuous fem\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mim} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}im}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mfu}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mfu}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical fem\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mft}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical fem\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mfvm}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical discontinuous fem\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mim}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}im}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -860,13 +860,13 @@ The last thing to define is an integration method \sphinxtitleref{mim}. There is
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{mfu} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical fem\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mft} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical fem\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mfvm} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical discontinuous fem\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{mim} \PYG{p}{=} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}im}\PYG{p}{(}\PYG{n}{mesh}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mfu}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mfu}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical fem\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mft}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical fem\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mfvm}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}set}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{classical discontinuous fem\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mim}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}im}\PYG{p}{(}\PYG{n+nb}{mesh}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -922,9 +922,9 @@ Let us declare a real model with the three variables corresponding to the three 
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
 \PYG{n}{md}\PYG{p}{=}\PYG{n}{gf\PYGZus{}model}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{real\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,} \PYG{n}{mft}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,} \PYG{n}{mft}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfu}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mft}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mft}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -933,9 +933,9 @@ Let us declare a real model with the three variables corresponding to the three 
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
 \PYG{n}{md}\PYG{p}{=}\PYG{n}{gf\PYGZus{}model}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{real\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,} \PYG{n}{mft}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,} \PYG{n}{mft}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfu}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mft}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add fem variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mft}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1012,17 +1012,17 @@ The following program allows to take into account the whole elastic deformation 
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{cmu}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{clambdastar}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{T0\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{T0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add isotropic linearized elasticity brick\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{cmu}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{clambdastar}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{T0\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{T0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add isotropic linearized elasticity brick\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Fdata\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{F}\PYG{o}{*}\PYG{n}{epsilon}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add source term brick\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Fdata\PYGZsq{}}\PYG{p}{,} \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Fdata\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{F}\PYG{o}{*}\PYG{n}{epsilon}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add source term brick\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Fdata\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{beta\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{alpha\PYGZus{}th}\PYG{o}{*}\PYG{n}{E}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{nu}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add linear term\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{beta*(T0\PYGZhy{}theta)*Div\PYGZus{}Test\PYGZus{}u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{beta\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{alpha\PYGZus{}th}\PYG{o}{*}\PYG{n}{E}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{nu}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add linear term\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{beta*(T0\PYGZhy{}theta)*Div\PYGZus{}Test\PYGZus{}u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1040,17 +1040,17 @@ The following program allows to take into account the whole elastic deformation 
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{cmu}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{clambdastar}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{T0\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{T0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add isotropic linearized elasticity brick\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{cmu}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{clambdastar}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{T0\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{T0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add isotropic linearized elasticity brick\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Fdata\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{F}\PYG{o}{*}\PYG{n}{epsilon}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add source term brick\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Fdata\PYGZsq{}}\PYG{p}{,} \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Fdata\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{F}\PYG{o}{*}\PYG{n}{epsilon}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add source term brick\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Fdata\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{beta\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{alpha\PYGZus{}th}\PYG{o}{*}\PYG{n}{E}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{nu}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add linear term\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{beta*(T0\PYGZhy{}theta)*Div\PYGZus{}Test\PYGZus{}u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{beta\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{alpha\PYGZus{}th}\PYG{o}{*}\PYG{n}{E}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{nu}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add linear term\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{beta*(T0\PYGZhy{}theta)*Div\PYGZus{}Test\PYGZus{}u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1109,14 +1109,14 @@ Similarly, the following program take into account the electric potential equati
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{sigmaps} \PYG{p}{=} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{(eps/(rho\PYGZus{}0*(1+alpha*(theta\PYGZhy{}T0))))\PYGZsq{}}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{eps\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{epsilon}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{rho\PYGZus{}0\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{rho\PYGZus{}0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{alpha\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{alpha}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add nonlinear term\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{n}{sigmaeps}\PYG{o}{+}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*(Grad\PYGZus{}V.Grad\PYGZus{}Test\PYGZus{}V)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{DdataV\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mf}{0.1}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{DdataV\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{sigmaps}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{(eps/(rho\PYGZus{}0*(1+alpha*(theta\PYGZhy{}T0))))\PYGZsq{}}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{eps\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{epsilon}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{rho\PYGZus{}0\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{rho\PYGZus{}0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{alpha\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n+nb}{alpha}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add nonlinear term\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{sigmaeps}\PYG{o}{+}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*(Grad\PYGZus{}V.Grad\PYGZus{}Test\PYGZus{}V)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{DdataV\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mf}{0.1}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{DdataV\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1124,14 +1124,14 @@ Similarly, the following program take into account the electric potential equati
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{sigmaps} \PYG{p}{=} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{(eps/(rho\PYGZus{}0*(1+alpha*(theta\PYGZhy{}T0))))\PYGZsq{}}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{eps\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{epsilon}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{rho\PYGZus{}0\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{rho\PYGZus{}0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{alpha\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{alpha}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add nonlinear term\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{p}{[}\PYG{n}{sigmaeps} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*(Grad\PYGZus{}V.Grad\PYGZus{}Test\PYGZus{}V)\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{DdataV\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mf}{0.1}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,} \PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{DdataV\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{sigmaps}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{(eps/(rho\PYGZus{}0*(1+alpha*(theta\PYGZhy{}T0))))\PYGZsq{}}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{eps\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{epsilon}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{rho\PYGZus{}0\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{rho\PYGZus{}0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{alpha\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n+nb}{alpha}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add nonlinear term\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{sigmaeps}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*(Grad\PYGZus{}V.Grad\PYGZus{}Test\PYGZus{}V)\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{RIGHT\PYGZus{}BOUND}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{DdataV\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mf}{0.1}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add Dirichlet condition with multipliers\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{elements\PYGZus{}degree}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{LEFT\PYGZus{}BOUND}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{DdataV\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1186,14 +1186,14 @@ Now, the program to take into account the thermal problem:
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{kaeps\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{kappa}\PYG{o}{*}\PYG{n}{epsilon}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add generic elliptic brick\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{kaeps\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{D}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2airt\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{air\PYGZus{}temp}\PYG{o}{*}\PYG{n}{D}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add mass brick\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add source term brick\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2airt\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{kaeps\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{kappa}\PYG{o}{*}\PYG{n}{epsilon}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add generic elliptic brick\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{kaeps\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{D}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2airt\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{air\PYGZus{}temp}\PYG{o}{*}\PYG{n}{D}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add mass brick\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add source term brick\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2airt\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add nonlinear term\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{\PYGZhy{}\PYGZsq{}}\PYG{o}{+}\PYG{n}{sigmaeps}\PYG{o}{+}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*Norm\PYGZus{}sqr(Grad\PYGZus{}V)*Test\PYGZus{}theta\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add nonlinear term\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{\PYGZhy{}\PYGZsq{}}\PYG{o}{+}\PYG{n}{sigmaeps}\PYG{o}{+}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*Norm\PYGZus{}sqr(Grad\PYGZus{}V)*Test\PYGZus{}theta\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1201,14 +1201,14 @@ Now, the program to take into account the thermal problem:
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{kaeps\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{kappa}\PYG{o}{*}\PYG{n}{epsilon}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add generic elliptic brick\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{kaeps\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{D}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2airt\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{air\PYGZus{}temp}\PYG{o}{*}\PYG{n}{D}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add mass brick\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add source term brick\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2airt\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{kaeps\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{kappa}\PYG{o}{*}\PYG{n}{epsilon}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add generic elliptic brick\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{kaeps\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{D}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add initialized data\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2airt\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{air\PYGZus{}temp}\PYG{o}{*}\PYG{n}{D}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add mass brick\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add source term brick\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{D2airt\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add nonlinear term\PYGZsq{}}\PYG{p}{,} \PYG{n}{mim}\PYG{p}{,} \PYG{p}{[}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{\PYGZhy{}\PYGZsq{}} \PYG{n}{sigmaeps} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*Norm\PYGZus{}sqr(Grad\PYGZus{}V)*Test\PYGZus{}theta\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{add nonlinear term\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mim}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{\PYGZhy{}\PYGZsq{}}\PYG{+w}{ }\PYG{n}{sigmaeps}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*Norm\PYGZus{}sqr(Grad\PYGZus{}V)*Test\PYGZus{}theta\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1249,7 +1249,7 @@ Once the model is correctly defined, we can simply solve it by:
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1257,7 +1257,7 @@ Once the model is correctly defined, we can simply solve it by:
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1312,12 +1312,12 @@ Another option to solve the problem is to solve first the thermal and electric p
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{enable variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{enable variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1325,12 +1325,12 @@ Another option to solve the problem is to solve first the thermal and electric p
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{enable variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{enable variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}set}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{disable variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{solve\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}res\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1E\PYGZhy{}9}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{max\PYGZus{}iter\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{noisy\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1419,30 +1419,30 @@ The finite element problem is now solved. We can plot the solution as follows. N
 \sphinxstylestrong{Scilab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{U} \PYG{p}{=} \PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{V} \PYG{p}{=} \PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{THETA} \PYG{p}{=} \PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{VM} \PYG{p}{=} \PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{compute\PYGZus{}isotropic\PYGZus{}linearized\PYGZus{}Von\PYGZus{}Mises\PYGZus{}or\PYGZus{}Tresca\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfvm}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{CO} \PYG{p}{=} \PYG{n}{matrix}\PYG{p}{(}\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{interpolation\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{\PYGZhy{}\PYGZsq{}}\PYG{o}{+}\PYG{n}{sigmaeps}\PYG{o}{+}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*Grad\PYGZus{}V\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfvm}\PYG{p}{)}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{2} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbdof\PYGZsq{}}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{U}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{V}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{THETA}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{VM}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{compute\PYGZus{}isotropic\PYGZus{}linearized\PYGZus{}Von\PYGZus{}Mises\PYGZus{}or\PYGZus{}Tresca\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfvm}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{CO}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{matrix}\PYG{p}{(}\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{interpolation\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{\PYGZhy{}\PYGZsq{}}\PYG{o}{+}\PYG{n}{sigmaeps}\PYG{o}{+}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*Grad\PYGZus{}V\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfvm}\PYG{p}{)}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbdof\PYGZsq{}}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{hh} \PYG{p}{=} \PYG{n}{scf}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{hh}\PYG{p}{.}\PYG{n}{color\PYGZus{}map} \PYG{p}{=} \PYG{n}{jetcolormap}\PYG{p}{(}\PYG{l+m+mi}{255}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{n}{VM}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{colorbar}\PYG{p}{(}\PYG{n}{min}\PYG{p}{(}\PYG{n}{VM}\PYG{p}{)}\PYG{p}{,}\PYG{n}{max}\PYG{p}{(}\PYG{n}{VM}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Von Mises stress in N/cm\PYGZca{}2 (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{hh}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{scf}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{hh}\PYG{p}{.}\PYG{n}{color\PYGZus{}map}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{jetcolormap}\PYG{p}{(}\PYG{l+m+mi}{255}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{VM}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfu}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{colorbar}\PYG{p}{(}\PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{VM}\PYG{p}{)}\PYG{p}{,}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{VM}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Von Mises stress in N/cm\PYGZca{}2 (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
 \PYG{n}{drawlater}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,} \PYG{n}{V}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{colorbar}\PYG{p}{(}\PYG{n}{min}\PYG{p}{(}\PYG{n}{V}\PYG{p}{)}\PYG{p}{,}\PYG{n}{max}\PYG{p}{(}\PYG{n}{V}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{n}{CO}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZus{}density\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{0.1}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{k}{...}
-        \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Electric potential in Volt (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{drawnow}\PYG{p}{;}
-\PYG{n}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,} \PYG{n}{THETA}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{colorbar}\PYG{p}{(}\PYG{n}{min}\PYG{p}{(}\PYG{n}{THETA}\PYG{p}{)}\PYG{p}{,}\PYG{n}{max}\PYG{p}{(}\PYG{n}{THETA}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Temperature in °C (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{V}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfu}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{colorbar}\PYG{p}{(}\PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{V}\PYG{p}{)}\PYG{p}{,}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{V}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{CO}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZus{}density\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfu}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{...}
+\PYG{+w}{        }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Electric potential in Volt (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{drawnow}\PYG{p}{;}
+\PYG{n+nb}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{THETA}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfu}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{colorbar}\PYG{p}{(}\PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{THETA}\PYG{p}{)}\PYG{p}{,}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{THETA}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Temperature in °C (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
@@ -1460,30 +1460,30 @@ The finite element problem is now solved. We can plot the solution as follows. N
 \sphinxstylestrong{Matlab}
 &
 \begin{sphinxVerbatimintable}[commandchars=\\\{\}]
-\PYG{n}{U} \PYG{p}{=} \PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{V} \PYG{p}{=} \PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{THETA} \PYG{p}{=} \PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{VM} \PYG{p}{=} \PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{compute\PYGZus{}isotropic\PYGZus{}linearized\PYGZus{}Von\PYGZus{}Mises\PYGZus{}or\PYGZus{}Tresca\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfvm}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{CO} \PYG{p}{=} \PYG{n+nb}{reshape}\PYG{p}{(}\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{interpolation\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{\PYGZhy{}\PYGZsq{}} \PYG{n}{sigmaeps} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*Grad\PYGZus{}V\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{n}{mfvm}\PYG{p}{)}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{2} \PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbdof\PYGZsq{}}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{U}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{V}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{V\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{THETA}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{variable\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{theta\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{VM}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{compute\PYGZus{}isotropic\PYGZus{}linearized\PYGZus{}Von\PYGZus{}Mises\PYGZus{}or\PYGZus{}Tresca\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{u\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{clambdastar\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{cmu\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfvm}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{CO}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nb}{reshape}\PYG{p}{(}\PYG{n}{gf\PYGZus{}model\PYGZus{}get}\PYG{p}{(}\PYG{n}{md}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{interpolation\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{\PYGZhy{}\PYGZsq{}}\PYG{+w}{ }\PYG{n}{sigmaeps}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{*Grad\PYGZus{}V\PYGZsq{}}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfvm}\PYG{p}{)}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{n}{gf\PYGZus{}mesh\PYGZus{}fem\PYGZus{}get}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{nbdof\PYGZsq{}}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
 
-\PYG{n}{figure}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{n}{VM}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{colorbar}\PYG{p}{;}
-\PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Von Mises stress in N/cm\PYGZca{}2 (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{hold} \PYG{l+s}{on}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,} \PYG{n}{V}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{colorbar}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,} \PYG{n}{CO}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZus{}density\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{0.1}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{k}{...}
-        \PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{colorbar}\PYG{p}{;}
-\PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Electric potential in Volt (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{hold} \PYG{l+s}{off}\PYG{p}{;}
-\PYG{n}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,} \PYG{n}{THETA}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,} \PYG{n}{U}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,} \PYG{n}{mfu}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{colorbar}\PYG{p}{;}
-\PYG{n}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Temperature in ?C (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{figure}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{VM}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfu}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{colorbar}\PYG{p}{;}
+\PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Von Mises stress in N/cm\PYGZca{}2 (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{hold}\PYG{+w}{ }\PYG{l+s}{on}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{V}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfu}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{colorbar}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mfvm}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{CO}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{on\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{quiver\PYGZus{}density\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{...}
+\PYG{+w}{        }\PYG{n}{mfu}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{colorbar}\PYG{p}{;}
+\PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Electric potential in Volt (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{hold}\PYG{+w}{ }\PYG{l+s}{off}\PYG{p}{;}
+\PYG{n+nb}{subplot}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{gf\PYGZus{}plot}\PYG{p}{(}\PYG{n}{mft}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{THETA}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{mesh\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformed\PYGZus{}mesh\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{off\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}mf\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mfu}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{deformation\PYGZus{}scale\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{refine\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nb}{colorbar}\PYG{p}{;}
+\PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Temperature in ?C (on the deformed configuration, scale factor x100)\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatimintable}
 \\
 \hline
