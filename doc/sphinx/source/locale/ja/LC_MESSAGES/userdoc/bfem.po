@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-23 00:56+0000\n"
+"POT-Creation-Date: 2021-02-24 00:57+0000\n"
 "PO-Revision-Date: 2018-07-16 07:06+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -104,7 +104,7 @@ msgid ""
 "degrees)."
 msgstr ""
 "（ |gf|  version "
-"4.0）自由度のオプションの追加線形変換（縮小）．これは，2つの行列すなわち，縮小行列と拡張行列を与えます．縮小行列は，基本的な自由度を縮小された自由度に変換する必要があります（縮小された自由度の数は，基本的な自由度の数よりも少ないか等しい必要があります）．拡張行列は，逆変換を記述する必要があります．縮小行列と拡張行列との積は，単位行列でなければなりません（特に，2つの行列が最大ランクであることを保証する必要があります）．この任意の変換を使用して，有限要素空間を特定の領域（基本的に境界）に縮小したり，本来適合しない有限要素法（例えば，自由度度の異なる有限要素法）間のいくつかの一致条件を指定することができます．"
+"4.0）自由度のオプションの追加線形変換（縮約）．これは，2つの行列すなわち，縮約行列と拡張行列を与えます．縮約行列は，基本的な自由度を縮約された自由度に変換する必要があります（縮約された自由度の数は，基本的な自由度の数よりも少ないか等しい必要があります）．拡張行列は，逆変換を記述する必要があります．縮約行列と拡張行列との積は，単位行列でなければなりません（特に，2つの行列が最大ランクであることを保証する必要があります）．この任意の変換を使用して，有限要素空間を特定の領域（基本的に境界）に縮約したり，本来適合しない有限要素法（例えば，自由度度の異なる有限要素法）間のいくつかの一致条件を指定することができます．"
 
 #: ../source/userdoc/bfem.rst:64
 msgid ""
@@ -395,7 +395,7 @@ msgstr ""
 
 #: ../source/userdoc/bfem.rst:265
 msgid "Third level: the optional linear transformation (or reduction)"
-msgstr "第3レベル：オプションである線形（または縮小）変換"
+msgstr "第3レベル：オプションである線形（または縮約）変換"
 
 #: ../source/userdoc/bfem.rst:267
 msgid ""
@@ -409,7 +409,7 @@ msgid ""
 " the extension matrix should be sparse. Otherwise, each assembled matrix "
 "will be plain !"
 msgstr ""
-"上述のように，自由度の線形変換を記述する2つの行列，縮小行列 :math:`R` および拡張行列 :math:`E` が提供されています． "
+"上述のように，自由度の線形変換を記述する2つの行列，縮約行列 :math:`R` および拡張行列 :math:`E` が提供されています． "
 ":math:`V` が基本自由度のベクトルである場合， :math:`U=RV` "
 "は上述のように減少した自由度のベクトルとなります．逆に，減少した自由度のベクトル :math:`U` が与えられると， :math:`V=EU` "
 "は元の自由度のベクトルとなります．単純な場合，Eは単にRの転置になります．拡張行列のすべての行は疎でなければなりません．これに注意しないと，各マトリックスの構築は難しくなります！"
@@ -426,25 +426,25 @@ msgid ""
 "reduction is used, this will be the number of columns of the reduction "
 "matrix. Otherwise it will return the number of basic degrees of freedom."
 msgstr ""
-"は異なる自由度の総数を与えます．オプションの縮小が使用される場合，これは削減行列の列の数になります．それ以外の場合，基本自由度の数が返されます．"
+"は異なる自由度の総数を与えます．オプションの縮約が使用される場合，これは削減行列の列の数になります．それ以外の場合，基本自由度の数が返されます．"
 
 #: ../source/userdoc/bfem.rst:286
 msgid "return a boolean. True if the reduction is used."
-msgstr "ブール値を返します．縮小が使用されている場合はTrueです．"
+msgstr "ブール値を返します．縮約が使用されている場合はTrueです．"
 
 #: ../source/userdoc/bfem.rst:290
 msgid "return a const reference to the reduction matrix :math:`R`."
-msgstr "縮小行列 :math:`R` にconst参照を返します．"
+msgstr "縮約行列 :math:`R` のconst参照を返します．"
 
 #: ../source/userdoc/bfem.rst:294
 msgid "return a const reference to the extension matrix :math:`E`."
-msgstr "縮小行列 :math:`E` にconst参照を返す．"
+msgstr "拡張行列 :math:`E` のconst参照を返す．"
 
 #: ../source/userdoc/bfem.rst:298
 msgid ""
 "Set the reduction and extension matrices to ``R`` and ``E`` and validate "
 "their use."
-msgstr "縮小行列と拡張行列を ``R`` と ``E`` と定義し，それらの使用法を検証します．"
+msgstr "縮約行列と拡張行列を ``R`` と ``E`` と定義し，それらの使用法を検証します．"
 
 #: ../source/userdoc/bfem.rst:303
 msgid ""
@@ -462,7 +462,7 @@ msgid ""
 "or a ``std::set<size_type>``. This is equivalent to the use of a "
 "``getfem::partial_mesh_fem`` object."
 msgstr ""
-"``idof`` に存在する基本自由度のみを保持するように対応する縮小行列と拡張行列を設定します．パラメータ ``idof`` は |dal_bv| "
+"``idof`` に存在する基本自由度のみを保持するように対応する縮約行列と拡張行列を設定します．パラメータ ``idof`` は |dal_bv| "
 "または ``std::set<size_type>`` のいずれかです．これは ``getfem::partial_mesh_fem`` "
 "オブジェクトの使用方法と同じです．"
 
@@ -506,7 +506,7 @@ msgid ""
 msgstr ""
 "``getfem_partial_mesh_fem.h`` ファイルで定義された ``getfem::partial_mesh_fem`` "
 "オブジェクトは |gf_mf| オブジェクトを自由度の集合に減らすことができます．注目してほしいことは，これは有限要素法の完全な記述ではなく，元の "
-"|gf_mf| を参照して，縮小と拡張行列を追加しているだけということです．例えば，``getfem::classical_mesh_fem(mesh,"
+"|gf_mf| を参照して，縮約と拡張行列を追加しているだけということです．例えば，``getfem::classical_mesh_fem(mesh,"
 " K)`` 関数で得られた |mf| を縮約し，メッシュ領域（境界でもよい）上で有限要素法を得ることができます． "
 "``getfem::partial_mesh_fem`` は特に指定された境界条件の乗数記述を得るために使用されます．"
 
