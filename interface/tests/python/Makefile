@@ -107,9 +107,10 @@ host_triplet = x86_64-pc-linux-gnu
 TESTS = check_export.py check_export_vtu.py \
 	check_global_functions.py check_asm.py \
 	check_secondary_domain.py \
-	check_mixed_mesh.py demo_wave.py \
-	demo_wave_equation.py demo_laplacian.py \
-	demo_laplacian_HHO.py demo_elasticity_HHO.py \
+	check_mixed_mesh.py demo_truss.py \
+	demo_wave.py demo_wave_equation.py \
+	demo_laplacian.py demo_laplacian_HHO.py \
+	demo_elasticity_HHO.py \
 	demo_thermo_elasticity_electrical_coupling.py \
 	$(am__EXEEXT_1)
 subdir = interface/tests/python
@@ -368,7 +369,7 @@ AUTOHEADER = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-trans
 AUTOMAKE = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-translations/getfem/missing automake-1.16
 AWK = gawk
 BLAS_LIBS = -lblas
-BUILDDATE = 03/22/21,00:48:33
+BUILDDATE = 03/23/21,00:47:42
 BUILDER = runner
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -424,7 +425,7 @@ MAKEINFO = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-transla
 MANIFEST_TOOL = :
 MATLAB_COM_EXT = 
 MATLAB_INC_DIR = 
-MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMeshLevelSet @gfMesherObject @gfMeshImData @gfContStruct @gfMeshFem @gfGeoTrans @gfCvStruct @gfLevelSet @gfMeshIm @gfPrecond @gfModel @gfInteg @gfSlice @gfSpmat @gfEltm @gfMesh @gfFem 
+MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMeshLevelSet @gfMesherObject @gfMeshImData @gfContStruct @gfMeshFem @gfGeoTrans @gfLevelSet @gfCvStruct @gfMeshIm @gfPrecond @gfSlice @gfSpmat @gfModel @gfInteg @gfEltm @gfMesh @gfFem 
 MATLAB_RELEASE = 
 MATLAB_ROOT = 
 METIS_LIBS = 
@@ -573,6 +574,7 @@ EXTRA_DIST = \
 	demo_plasticity.py              		\
 	demo_plate.py 					\
 	demo_unit_disk.py 				\
+        demo_truss.py                                   \
 	demo_static_contact.py 				\
 	demo_dynamic_contact_1D.py			\
 	demo_Mindlin_Reissner_plate.py 			\
@@ -824,6 +826,13 @@ check_secondary_domain.py.log: check_secondary_domain.py
 check_mixed_mesh.py.log: check_mixed_mesh.py
 	@p='check_mixed_mesh.py'; \
 	b='check_mixed_mesh.py'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+demo_truss.py.log: demo_truss.py
+	@p='demo_truss.py'; \
+	b='demo_truss.py'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \

@@ -107,9 +107,10 @@ host_triplet = @host@
 @BUILDPYTHON_TRUE@TESTS = check_export.py check_export_vtu.py \
 @BUILDPYTHON_TRUE@	check_global_functions.py check_asm.py \
 @BUILDPYTHON_TRUE@	check_secondary_domain.py \
-@BUILDPYTHON_TRUE@	check_mixed_mesh.py demo_wave.py \
-@BUILDPYTHON_TRUE@	demo_wave_equation.py demo_laplacian.py \
-@BUILDPYTHON_TRUE@	demo_laplacian_HHO.py demo_elasticity_HHO.py \
+@BUILDPYTHON_TRUE@	check_mixed_mesh.py demo_truss.py \
+@BUILDPYTHON_TRUE@	demo_wave.py demo_wave_equation.py \
+@BUILDPYTHON_TRUE@	demo_laplacian.py demo_laplacian_HHO.py \
+@BUILDPYTHON_TRUE@	demo_elasticity_HHO.py \
 @BUILDPYTHON_TRUE@	demo_thermo_elasticity_electrical_coupling.py \
 @BUILDPYTHON_TRUE@	$(am__EXEEXT_1)
 subdir = interface/tests/python
@@ -573,6 +574,7 @@ EXTRA_DIST = \
 	demo_plasticity.py              		\
 	demo_plate.py 					\
 	demo_unit_disk.py 				\
+        demo_truss.py                                   \
 	demo_static_contact.py 				\
 	demo_dynamic_contact_1D.py			\
 	demo_Mindlin_Reissner_plate.py 			\
@@ -824,6 +826,13 @@ check_secondary_domain.py.log: check_secondary_domain.py
 check_mixed_mesh.py.log: check_mixed_mesh.py
 	@p='check_mixed_mesh.py'; \
 	b='check_mixed_mesh.py'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+demo_truss.py.log: demo_truss.py
+	@p='demo_truss.py'; \
+	b='demo_truss.py'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
