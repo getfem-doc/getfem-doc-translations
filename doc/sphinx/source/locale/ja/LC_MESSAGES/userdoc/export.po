@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2018-07-16 07:07+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -114,9 +114,9 @@ msgstr ""
 "|gf| は \"slicers\" "
 "オブジェクトを提供します．このオブジェクトはポストメッシュとソリューションからの処理データです．これらのスライサーは，ファイル "
 ":file:`getfem/getfem_mesh_slicers.h` で定義され |m| を利用します（時には 解フィールド）を入力して， "
-"*平面との交差* ， *メッシュの抽出境界* ， *各凸包の改善* ， *等値面の抽出* 等これらのスライサーの出力は， |gf_smsl| "
+"*平面との交差* ， *メッシュの抽出境界* ， *各凸の改善* ， *等値面の抽出* 等これらのスライサーの出力は， |gf_smsl| "
 "オブジェクトに格納することができます（ :file:`getfem/getfem_mesh_slice.h` を参照 ）． |smsl| "
-"オブジェクトは高速補間を伴う非等角メッシュ上のP1不連続FEMとして，スライスはセグメント，3角形，4面体で作られているので，元のメッシュの凸包は常に単純化されています．"
+"オブジェクトは高速補間を伴う非等角メッシュ上のP1不連続FEMとして，スライスはセグメント，3角形，4面体で作られているので，元のメッシュの凸は常に単純化されています．"
 
 #: ../source/userdoc/export.rst:73
 msgid ""
@@ -175,7 +175,7 @@ msgstr ""
 
 #: ../source/userdoc/export.rst:113
 msgid "cut the convexes with the convexes of the mesh ``m2``."
-msgstr "メッシュ ``m2`` の凸包で凸包をカットします．"
+msgstr "メッシュ ``m2`` の凸で凸をカットします．"
 
 #: ../source/userdoc/export.rst:117
 msgid "merges the output of two slicer operations."
@@ -213,7 +213,7 @@ msgstr ""
 
 #: ../source/userdoc/export.rst:146
 msgid "shrink or expand each convex with respect to its gravity center."
-msgstr "重心に対してそれぞれの凸包を縮小または拡大します．"
+msgstr "重心に対してそれぞれの凸を縮小または拡大します．"
 
 #: ../source/userdoc/export.rst:148
 msgid ""
@@ -245,8 +245,8 @@ msgid ""
 "matlab, etc.) expect."
 msgstr ""
 "``nrefine`` "
-"パラメータは非常に重要です．なぜなら，最終結果の\"精度\"はこの変数に依存するからです．最後のスライスで表現されるデータが線形幾何変換を持つ凸包面のP1データだけである場合，"
-"  ``nrefine=1`` が正しい選択ですが，P2，P3，非線形変換などでは，スライス操作中に元のメッシュの各凸包面を改良する方が良いです． "
+"パラメータは非常に重要です．なぜなら，最終結果の\"精度\"はこの変数に依存するからです．最後のスライスで表現されるデータが線形幾何変換を持つ凸面のP1データだけである場合，"
+"  ``nrefine=1`` が正しい選択ですが，P2，P3，非線形変換などでは，スライス操作中に元のメッシュの各凸面を改良する方が良いです． "
 "ほとんどの視覚化プログラム（gmsh，mayavi，opendx，scilab，octave，matlabなど）は，非常に単純な構造（線形セグメント/3角形/4面体にP1不連続データを持つ）上に有限要素フィールドを正確に表現することができます．"
 
 #: ../source/userdoc/export.rst:165
@@ -308,7 +308,7 @@ msgid ""
 "loss of precision for higher degree FEMs."
 msgstr ""
 "ただし， ``vtk_export`` または ``vtu_export`` を使用して |mf| を出力する場合， ``mfu`` "
-"の各凸包/femはVTK/VTU要素型にマップされることに注意してください．VTK/VTUは2より大きい次数の要素を処理しないので，より高い次数のFEMのための精度の損失があります．"
+"の各凸/femはVTK/VTU要素型にマップされることに注意してください．VTK/VTUは2より大きい次数の要素を処理しないので，より高い次数のFEMのための精度の損失があります．"
 
 #: ../source/userdoc/export.rst:230
 msgid "Exporting |m|, |mf| or slices to OpenDX"

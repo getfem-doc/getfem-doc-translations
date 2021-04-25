@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2018-07-16 07:17+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -175,7 +175,7 @@ msgstr ""
 #: of getfem.getfem.MeshFem.set_partial:4
 msgid ""
 "If `RCVs` is given, no FEM will be put on the convexes listed in `RCVs`."
-msgstr "`RCVs` が与えられた場合， `RCVs` に列挙されている凸包にはFEMは適用されません．"
+msgstr "`RCVs` が与えられた場合， `RCVs` に列挙されている凸にはFEMは適用されません．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.adapt:1
@@ -188,7 +188,7 @@ msgstr ""
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.basic_dof_from_cv:1
 msgid "Return the dof of the convexes listed in `CVids`."
-msgstr "`CVids` にリストされている凸包の自由度を返します．"
+msgstr "`CVids` にリストされている凸の自由度を返します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.basic_dof_from_cv:3
@@ -199,7 +199,7 @@ msgid ""
 " freedom."
 msgstr ""
 "警告: "
-"自由度は任意の順序で返される可能性があります．アセンブリルーチンではこの関数を使用しないでください．凸包値に関連する自由度をマップする場合は，代わりに "
+"自由度は任意の順序で返される可能性があります．アセンブリルーチンではこの関数を使用しないでください．凸値に関連する自由度をマップする場合は，代わりに "
 "'basic dof from cvid' を使用します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
@@ -208,19 +208,19 @@ msgid ""
 "One can also get the list of basic dof on a set on convex faces, by "
 "indicating on the second row of `CVids` the faces numbers (with respect to "
 "the convex number on the first row)."
-msgstr "また，(最初の行の凸包数に関して)2列目に面番号を表示することで，凸包面上の集合の基本的な自由度のリストを得ることができます．"
+msgstr "また，(最初の行の凸数に関して)2列目に面番号を表示することで，凸面上の集合の基本的な自由度のリストを得ることができます．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.basic_dof_from_cvid:1
 msgid "Return the degrees of freedom attached to each convex of the mesh."
-msgstr "メッシュの各凸包にアタッチされた自由度を返します．"
+msgstr "メッシュの各凸にアタッチされた自由度を返します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.basic_dof_from_cvid:3
 msgid ""
 "If `CVids` is omitted, all the convexes will be considered (equivalent to "
 "`CVids = 1 ... Mesh.max_cvid()`)."
-msgstr "`CVids` を省略すると，すべての凸包が考慮されます( `CVids = 1 ... Mesh.max_cvid()` と同じです)．"
+msgstr "`CVids` を省略すると，すべての凸が考慮されます( `CVids = 1 ... Mesh.max_cvid()` と同じです)．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.basic_dof_from_cvid:6
@@ -232,15 +232,15 @@ msgid ""
 "DOFs[IDx(2):IDx(3)]."
 msgstr ""
 "`IDx` はベクトルであり， `length(IDx) = length(CVids)+1` です． `DOFs`  は `CVids` "
-"の各凸包の自由度の連結リストを含むベクトルです． `IDx` の各エントリは `DOFs` "
-"における対応する凸包点リストの位置です．従って，例えば，第2凸包の点のリストは DOFs[IDx(2):IDx(3)] です．"
+"の各凸の自由度の連結リストを含むベクトルです． `IDx` の各エントリは `DOFs` "
+"における対応する凸点リストの位置です．従って，例えば，第2凸の点のリストは DOFs[IDx(2):IDx(3)] です．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.basic_dof_from_cvid:12
 msgid ""
 "If `CVids` contains convex #id which do not exist in the mesh, their point "
 "list will be empty."
-msgstr "`CVids` にメッシュに存在しない凸包の #id が含まれている場合，点リストは空になります．"
+msgstr "`CVids` にメッシュに存在しない凸の #id が含まれている場合，点リストは空になります．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.basic_dof_nodes:1
@@ -274,7 +274,7 @@ msgid ""
 "in not null on the convex border)."
 msgstr ""
 "より正確には，この関数は `Rs` (境界領域の場合，一部の節点自由度は正確に境界上に存在しない場合があります．たとえば， Pk(n,0) "
-"の自由度は凸包の中心に存在しますが，基底関数は凸包境界上でnullではありません)に #ids "
+"の自由度は凸の中心に存在しますが，基底関数は凸境界上でnullではありません)に #ids "
 "がリストされている領域のいずれかにおいて，サポートが非NULLである基本的な自由度を返します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
@@ -292,7 +292,7 @@ msgstr "デフォルトでは， `opt` が 'with_mesh' の場合を除き，リ�
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.convex_index:1
 msgid "Return the list of convexes who have an FEM."
-msgstr "FEMを持つ凸包のリストを返します．"
+msgstr "FEMを持つ凸のリストを返します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.display:1
@@ -328,7 +328,7 @@ msgstr "`p` は積分法が作用する次元(デフォルトは `p = メッシ�
 msgid ""
 "IMPORTANT: you still have to set a valid integration method on the convexes "
 "which are not crosses by the levelset!"
-msgstr "重要:levelsetと交差しない凸包には，有効な積分法を設定する必要があります!"
+msgstr "重要:levelsetと交差しない凸には，有効な積分法を設定する必要があります!"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.dof_nodes:1
@@ -365,7 +365,7 @@ msgid ""
 "neighboring convexes which have the same partition number, hence it is "
 "possible to create partially discontinuous MeshFem very easily."
 msgstr ""
-"MeshFemの各凸包に整数(パーティション番号)を関連付ける配列を返します．既定では，配列はすべてゼロです．MeshFemの各凸包の自由度は，同じパーティション番号を持つ隣接する凸包の自由度にのみ接続されるため，部分的に不連続なMeshFemを非常に簡単に作成することができます．"
+"MeshFemの各凸に整数(パーティション番号)を関連付ける配列を返します．既定では，配列はすべてゼロです．MeshFemの各凸の自由度は，同じパーティション番号を持つ隣接する凸の自由度にのみ接続されるため，部分的に不連続なMeshFemを非常に簡単に作成することができます．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.eval:1
@@ -400,7 +400,7 @@ msgid ""
 "quads and triangles), or if OpenDX does not handle a specific element type "
 "(i.e. prism connections are not known by OpenDX)."
 msgstr ""
-"MeshFemでさまざまな凸包が混在する場合(つまり，四角形と三角形)，またはOpenDXで特定の要素型が処理されない(つまり，プリズム接続はOpenDXでは認識されない)場合，この関数は失敗します．"
+"MeshFemでさまざまな凸が混在する場合(つまり，四角形と三角形)，またはOpenDXで特定の要素型が処理されない(つまり，プリズム接続はOpenDXでは認識されない)場合，この関数は失敗します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.export_to_dx:9
@@ -507,15 +507,15 @@ msgid ""
 "`CVids`. If `CV2F` was supplied as an output argument, it contains, for each"
 " convex listed in `CVids`, the index of its correspounding FEM in `FEMs`."
 msgstr ""
-"`FEMs` は `CVids` で与えられた凸包にあるすべてのFemオブジェクトの配列です． `CV2F` が出力引数として指定された場合  "
-"`CVids` にリストされている各凸包に対し， `FEMs` 内の対応するFEMのインデックスが含まれます．"
+"`FEMs` は `CVids` で与えられた凸にあるすべてのFemオブジェクトの配列です． `CV2F` が出力引数として指定された場合  "
+"`CVids` にリストされている各凸に対し， `FEMs` 内の対応するFEMのインデックスが含まれます．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.fem:8
 msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have any "
 "FEM have their correspounding entry in `CV2F` set to -1."
-msgstr "メッシュの一部でない凸包，またはFEMを持たない凸包については  `CV2F` の対応エントリを-1に設定します．"
+msgstr "メッシュの一部でない凸，またはFEMを持たない凸については  `CV2F` の対応エントリを-1に設定します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.has_linked_mesh_levelset:1
@@ -529,7 +529,7 @@ msgid ""
 "MeshFem has to be lagrangian, and should be discontinuous (typically an "
 "FEM_PK(N,0) or FEM_QK(N,0) should be used)."
 msgstr ""
-"メッシュの各凸包で指定されたデータをMeshFemの自由度に補間します．MeshFemはlagrangianである必要があり，不連続である必要があります(通常は"
+"メッシュの各凸で指定されたデータをMeshFemの自由度に補間します．MeshFemはlagrangianである必要があり，不連続である必要があります(通常は"
 " FEM_PK(N,0) または FEM_QK(N,0) を使用する必要があります)．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
@@ -579,7 +579,7 @@ msgid ""
 "to `CVids`) which are Lagrangian."
 msgstr ""
 "`CVids` を省略すると，メッシュ内のすべての凸状がLagrangianの場合に1を返します． `CVids` "
-"を使用すると，Lagrangianである( `CVids` に関する)凸包インデックスを返します．"
+"を使用すると，Lagrangianである( `CVids` に関する)凸インデックスを返します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.is_polynomial:1
@@ -643,8 +643,8 @@ msgid ""
 "will be returned by this function (this can be useful when searching the "
 "interfaces between classical FEM and hierarchical FEM)."
 msgstr ""
-"メッシュの境界上にあるものを除き，1つの凸包にのみ属する凸包の境界上にある基本自由度を返します．たとえば，凸包の 'a' と 'b' "
-"が共通の面を共有し， 'a' にP1 FEMがあり， 'b' にP2 "
+"メッシュの境界上にあるものを除き，1つの凸にのみ属する凸の境界上にある基本自由度を返します．たとえば，凸の 'a' と 'b' が共通の面を共有し， "
+"'a' にP1 FEMがあり， 'b' にP2 "
 "FEMがある場合，面の中央の基本自由度がこの関数によって返されます(これは，古典的FEMと階層的FEMの間のインターフェースを探索するときに有用です)．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
@@ -768,7 +768,7 @@ msgid ""
 "`DOFP` is a vector holding a integer value for each convex of the MeshFem. "
 "See MeshFem.dof_partition() for a description of \"dof partition\"."
 msgstr ""
-"`DOFP` はMeshFemの各凸包に対する整数値を保持するベクトルです． \"dof partition\" については， "
+"`DOFP` はMeshFemの各凸に対する整数値を保持するベクトルです． \"dof partition\" については， "
 "MeshFem.dof_partition() を参照してください．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
@@ -789,8 +789,8 @@ msgid ""
 "Assign an FEM `f` to all convexes whose #ids are listed in `CVids`. If "
 "`CVids` is not given, the integration is assigned to all convexes."
 msgstr ""
-"FEMの `f` を `CVids` に #ids がリストされているすべての凸包に割り当てます． `CVids` "
-"が指定されていない場合，積分はすべての凸包に割り当てられます．"
+"FEMの `f` を `CVids` に #ids がリストされているすべての凸に割り当てます． `CVids` "
+"が指定されていない場合，積分はすべての凸に割り当てられます．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshFem.set_fem:6

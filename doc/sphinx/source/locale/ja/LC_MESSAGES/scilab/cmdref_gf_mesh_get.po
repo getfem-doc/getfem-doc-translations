@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2018-07-16 07:00+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -60,7 +60,7 @@ msgstr "``np = gf_mesh_get(mesh M, 'nbpts')``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:82
 msgid "Get the number of points of the mesh."
-msgstr "メッシュのポイント数を取得します．"
+msgstr "メッシュの点数を取得します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:85
 msgid "``nc = gf_mesh_get(mesh M, 'nbcvs')``"
@@ -68,7 +68,7 @@ msgstr "``nc = gf_mesh_get(mesh M, 'nbcvs')``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:87
 msgid "Get the number of convexes of the mesh."
-msgstr "メッシュの凸包の数を取得します．"
+msgstr "メッシュの凸の数を取得します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:90
 msgid "``P = gf_mesh_get(mesh M, 'pts'[, ivec PIDs])``"
@@ -76,7 +76,7 @@ msgstr "``P = gf_mesh_get(mesh M, 'pts'[, ivec PIDs])``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:92
 msgid "Return the list of point coordinates of the mesh."
-msgstr "メッシュのポイントの座標リストを返します．"
+msgstr "メッシュの点の座標リストを返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:94
 msgid ""
@@ -91,11 +91,11 @@ msgid ""
 "points."
 msgstr ""
 "返されるマトリックスの各列には，各点の座標が含まれます．オプションの引数 <literal>PIDs</literal> "
-"が指定された場合，このベクトルに #id がリストされているポイントのみが返されます．それ以外の場合，返されるマトリックスは "
-"gf_mesh_get(mesh M, 'max_pid') 列になります．(メッシュの一部のポイントが破棄され， gf_mesh_set(mesh "
-"M, 'optimize structure')  が呼び出されていない場合)  gf_mesh_get(mesh M, 'nbpts')  "
-"より大きい可能性があります．削除された点に対応する列はNaNで埋められます．そのような空のポイントを取り除くには gf_mesh_get(mesh M,"
-" 'pid') を使用します．"
+"が指定された場合，このベクトルに #id がリストされている点のみが返されます．それ以外の場合，返されるマトリックスは gf_mesh_get(mesh"
+" M, 'max_pid') 列になります．(メッシュの一部の点が破棄され， gf_mesh_set(mesh M, 'optimize "
+"structure')  が呼び出されていない場合)  gf_mesh_get(mesh M, 'nbpts')  "
+"より大きい可能性があります．削除された点に対応する列はNaNで埋められます．そのような空の点を取り除くには gf_mesh_get(mesh M, "
+"'pid') を使用します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:105
 msgid "``Pid = gf_mesh_get(mesh M, 'pid')``"
@@ -103,7 +103,7 @@ msgstr "``Pid = gf_mesh_get(mesh M, 'pid')``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:107
 msgid "Return the list of points #id of the mesh."
-msgstr "メッシュのポイント #id のリストを返します．"
+msgstr "メッシュの点 #id のリストを返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:109
 msgid ""
@@ -121,7 +121,7 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in faces', imat CVFIDs)``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:118
 msgid "Return point #id listed in <literal>CVFIDs</literal>."
-msgstr "<literal>CVFIDs</literal> にリストされているポイント #id を返す．"
+msgstr "<literal>CVFIDs</literal> にリストされている点 #id を返す．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:120
 msgid ""
@@ -129,7 +129,7 @@ msgid ""
 "#ids, and the second lists face numbers. On return, <literal>PIDs</literal> "
 "is a vector containing points #id."
 msgstr ""
-"<literal>CVFIDs</literal> は2行の行列で，最初の行には凸包の #id "
+"<literal>CVFIDs</literal> は2行の行列で，最初の行には凸の #id "
 "がリストされ，2番目の行には面の番号がリストされます．返される  <literal>PIDs</literal> は，点#idを含むベクトルです．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:125
@@ -138,12 +138,12 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in cvids', imat CVIDs)``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:127
 msgid "Return point #id listed in <literal>CVIDs</literal>."
-msgstr "<literal>CVIDs</literal> にリストされているポイント #id を返す．"
+msgstr "<literal>CVIDs</literal> にリストされている点 #id を返す．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:129
 #: ../source/scilab/cmdref_gf_mesh_get.rst:136
 msgid "<literal>PIDs</literal> is a vector containing points #id."
-msgstr "<literal>PIDs</literal> はポイント #id を含むベクトルです．"
+msgstr "<literal>PIDs</literal> は点 #id を含むベクトルです．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:132
 msgid "``PIDs = gf_mesh_get(mesh M, 'pid in regions', imat RIDs)``"
@@ -151,7 +151,7 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in regions', imat RIDs)``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:134
 msgid "Return point #id listed in <literal>RIDs</literal>."
-msgstr "<literal>RIDs</literal> にリストされているポイント #id を返す．"
+msgstr "<literal>RIDs</literal> にリストされている点 #id を返す．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:139
 msgid ""
@@ -164,7 +164,7 @@ msgstr ""
 #: ../source/scilab/cmdref_gf_mesh_get.rst:141
 msgid ""
 "Return point #id whose coordinates are listed in <literal>PTS</literal>."
-msgstr "座標が <literal>PTS</literal> にリストされているポイント #id を返す．"
+msgstr "座標が <literal>PTS</literal> にリストされている点 #id を返す．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:143
 msgid ""
@@ -174,8 +174,7 @@ msgid ""
 "where not found in the mesh."
 msgstr ""
 "<literal>PTS</literal> は，点の座標のリストを含む配列です．返される <literal>PIDs</literal> は， "
-"<literal>eps</literal> の範囲内で見つかった各ポイントのポイント #id です．メッシュ内で見つからなかった場合には -1 "
-"が返されます．"
+"<literal>eps</literal> の範囲内で見つかった各点の点 #id です．メッシュ内で見つからなかった場合には -1 が返されます．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:149
 msgid "``{Pid, IDx} = gf_mesh_get(mesh M, 'pid from cvid'[, imat CVIDs])``"
@@ -183,7 +182,7 @@ msgstr "``{Pid, IDx} = gf_mesh_get(mesh M, 'pid from cvid'[, imat CVIDs])``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:151
 msgid "Return the points attached to each convex of the mesh."
-msgstr "メッシュの各凸包に取り付けられたポイントを返します．"
+msgstr "メッシュの各凸に取り付けられた点を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:153
 msgid ""
@@ -197,10 +196,10 @@ msgid ""
 "points of the second convex is Pid(IDx(2):IDx(3)-1)."
 msgstr ""
 "<literal>CVIDs</literal> ( <literal>CVIDs = Mesh.max_cvid()</literal> "
-"と同じです)を省略すると，すべての凸包が対象となります． <literal>IDx</literal> はベクトルであり， length(IDx) = "
+"と同じです)を省略すると，すべての凸が対象となります． <literal>IDx</literal> はベクトルであり， length(IDx) = "
 "length(CVIDs)+1 です． <literal>Pid</literal> は <literal>CVIDs</literal> "
-"における各凸包の点の #id の連結リストを含むベクトルです． <literal>IDx</literal> の各エントリは， "
-"<literal>Pid</literal> の対応する凸包点リストの位置です．したがって，例えば，第2凸包の点の #id のリストは "
+"における各凸の点の #id の連結リストを含むベクトルです． <literal>IDx</literal> の各エントリは， "
+"<literal>Pid</literal> の対応する凸点リストの位置です．したがって，例えば，第2凸の点の #id のリストは "
 "Pid(IDx(2):IDx(3)-1) です．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:162
@@ -208,7 +207,7 @@ msgstr ""
 msgid ""
 "If <literal>CVIDs</literal> contains convex #id which do not exist in the "
 "mesh, their point list will be empty."
-msgstr "<literal>CVIDs</literal> にメッシュに存在しない凸包の #id が含まれている場合，点リストは空になります．"
+msgstr "<literal>CVIDs</literal> にメッシュに存在しない凸の #id が含まれている場合，点リストは空になります．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:166
 msgid "``{Pts, IDx} = gf_mesh_get(mesh M, 'pts from cvid'[, imat CVIDs])``"
@@ -216,7 +215,7 @@ msgstr "``{Pts, IDx} = gf_mesh_get(mesh M, 'pts from cvid'[, imat CVIDs])``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:168
 msgid "Search point listed in <literal>CVID</literal>."
-msgstr "<literal>CVID</literal> にリストされているポイント #id の検索．"
+msgstr "<literal>CVID</literal> にリストされている点 #id の検索．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:170
 msgid ""
@@ -232,11 +231,11 @@ msgid ""
 msgstr ""
 "<literal>Pts</literal> と <literal>IDx</literal> を返します． "
 "<literal>CVIDs</literal> ( <literal>CVIDs = gf_mesh_get(mesh M, 'max "
-"cvid')</literal> と同じです)を省略すると，すべての凸包が対象となります． <literal>IDx</literal> "
+"cvid')</literal> と同じです)を省略すると，すべての凸が対象となります． <literal>IDx</literal> "
 "はベクトルであり， length(IDx) = length(CVIDs)+1 です． <literal>Pts</literal> は "
-"<literal>CVIDs</literal> における各凸包の点の 連結リストを含むベクトルです． <literal>IDx</literal> "
-"の各エントリは， <literal>Pts</literal> の対応する凸包点リストの位置です．したがって，例えば，第2凸包の点の #id のリストは"
-" Pts(:,IDx(2):IDx(3)-1) です．"
+"<literal>CVIDs</literal> における各凸の点の 連結リストを含むベクトルです． <literal>IDx</literal> "
+"の各エントリは， <literal>Pts</literal> の対応する凸点リストの位置です．したがって，例えば，第2凸の点の #id のリストは "
+"Pts(:,IDx(2):IDx(3)-1) です．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:184
 msgid "``CVid = gf_mesh_get(mesh M, 'cvid')``"
@@ -244,7 +243,7 @@ msgstr "``CVid = gf_mesh_get(mesh M, 'cvid')``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:186
 msgid "Return the list of all convex #id."
-msgstr "すべての凸包#idのリストを返します．"
+msgstr "すべての凸#idのリストを返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:188
 msgid ""
@@ -262,7 +261,7 @@ msgstr "``m = gf_mesh_get(mesh M, 'max pid')``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:197
 msgid "Return the maximum #id of all points in the mesh (see 'max cvid')."
-msgstr "メッシュ内のすべてのポイントの最大 #id を返します( 'max cvid' を参照してください)．"
+msgstr "メッシュ内のすべての点の最大 #id を返します( 'max cvid' を参照してください)．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:200
 msgid "``m = gf_mesh_get(mesh M, 'max cvid')``"
@@ -270,7 +269,7 @@ msgstr "``m = gf_mesh_get(mesh M, 'max cvid')``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:202
 msgid "Return the maximum #id of all convexes in the mesh (see 'max pid')."
-msgstr "メッシュ内のすべての凸包の最大#idを返します( 'max pid' を参照してください．)．"
+msgstr "メッシュ内のすべての凸の最大#idを返します( 'max pid' を参照してください．)．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:205
 msgid "``[E,C] = gf_mesh_get(mesh M, 'edges' [, CVLST][, 'merge'])``"
@@ -292,10 +291,10 @@ msgid ""
 "output argument C is specified, it will contain the convex number associated"
 " with each edge."
 msgstr ""
-"行ベクトルCVLSTにリストされている凸包のメッシュMのエッジのリストを返します．Eはポイントインデックスを含む 2 x nb_edges "
-"行列です．CVLSTを省略すると，すべての凸包のエッジが返されます．CVLSTに2つの行がある場合，最初の行には凸包の数が含まれ，2番目の行には面の数が返されます．"
+"行ベクトルCVLSTにリストされている凸のメッシュMのエッジのリストを返します．Eは点インデックスを含む 2 x nb_edges "
+"行列です．CVLSTを省略すると，すべての凸のエッジが返されます．CVLSTに2つの行がある場合，最初の行には凸の数が含まれ，2番目の行には面の数が返されます．"
 " 'merge' "
-"が指定されている場合，凸包のすべての共通エッジが単一エッジにマージされます．オプションの出力引数Cを指定すると，各エッジに関連付けられた凸包の番号が含まれます．"
+"が指定されている場合，凸のすべての共通エッジが単一エッジにマージされます．オプションの出力引数Cを指定すると，各エッジに関連付けられた凸の番号が含まれます．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:220
 msgid "``[E,C] = gf_mesh_get(mesh M, 'curved edges', int N [, CVLST])``"
@@ -314,7 +313,7 @@ msgstr ""
 "EとCを返します．曲線要素用に設計された gf_mesh_get(mesh M, 'edges') "
 "のより洗練されたバージョン．これは(曲がった)エッジのN(N>=2)点を返します．N==2の場合，これは  gf_mesh_get(mesh M, "
 "'edges') と同等です．点は常にメッシュの一部ではないため， [ mesh_dim x 2 x nb_edges ] "
-"配列である配列Eで，点の番号の代わりに座標が返されます．オプションの出力引数Cを指定すると，各エッジに関連付けられた凸包の番号が含まれます．"
+"配列である配列Eで，点の番号の代わりに座標が返されます．オプションの出力引数Cを指定すると，各エッジに関連付けられた凸の番号が含まれます．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:235
 msgid "``PIDs = gf_mesh_get(mesh M, 'orphaned pid')``"
@@ -322,7 +321,7 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'orphaned pid')``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:237
 msgid "Return point #id which are not linked to a convex."
-msgstr "凸包にリンクされていないポイント #id を返す．"
+msgstr "凸にリンクされていない点 #id を返す．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:240
 msgid ""
@@ -336,7 +335,7 @@ msgstr ""
 msgid ""
 "Return convex #ids related with the point #ids given in "
 "<literal>PIDs</literal>."
-msgstr "<literal>PIDs</literal> で指定されたポイント #ids に関連する凸包 #ids を返します．"
+msgstr "<literal>PIDs</literal> で指定された点 #ids に関連する凸 #ids を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:244
 msgid ""
@@ -346,8 +345,8 @@ msgid ""
 "<literal>CVIDs</literal> is a  vector (possibly empty)."
 msgstr ""
 "<literal>share=False</literal> の場合は，頂点#idsが <literal>PIDs</literal> "
-"にある凸包を検索します． <literal>share=True</literal> の場合は，  <literal>PIDs</literal> "
-"で指定されたポイント #ids を共有する凸包 #ids を検索します． <literal>CVIDs</literal> "
+"にある凸を検索します． <literal>share=True</literal> の場合は，  <literal>PIDs</literal> "
+"で指定された点 #ids を共有する凸 #ids を検索します． <literal>CVIDs</literal> "
 "は(空である可能性がある)ベクトルです．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:250
@@ -357,7 +356,7 @@ msgstr "``CVFIDs = gf_mesh_get(mesh M, 'faces from pid', ivec PIDs)``"
 #: ../source/scilab/cmdref_gf_mesh_get.rst:252
 msgid ""
 "Return the convex faces whose vertex #ids are in <literal>PIDs</literal>."
-msgstr "頂点 #ids が <literal>PIDs</literal> にある凸包面を返します．"
+msgstr "頂点 #ids が <literal>PIDs</literal> にある凸面を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:254
 msgid ""
@@ -367,7 +366,7 @@ msgid ""
 "<literal>PIDs</literal>."
 msgstr ""
 "<literal>CVFIDs</literal> "
-"は2行の行列で，最初の行には凸包の#idがリストされ，2番目の行には面番号(凸包のローカル番号)がリストされます．凸包面を返すには，その各点を "
+"は2行の行列で，最初の行には凸の#idがリストされ，2番目の行には面番号(凸のローカル番号)がリストされます．凸面を返すには，その各点を "
 "<literal>PIDs</literal> にリストする必要があります．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:260
@@ -390,9 +389,9 @@ msgid ""
 "boundary. If <literal>CVIDs</literal> is given, it returns the boundary of "
 "the convex set whose #ids are listed in <literal>CVIDs</literal>."
 msgstr ""
-"出力される<literal>CVFIDs</literal>は2行の行列で，最初の行は凸包 #ids "
-"をリストし，2番目の行は面番号(凸包の局所数)をリストします．<literal>dim</literal>が指定されている場合，この関数は強制的に次元<literal>dim</literal>を持つ要素の面を検出します．たとえば，<literal>dim</literal>=2の場合，3次元メッシュに属するサーフェス要素のエッジを検出します．<literal>CVID</literal>が与えられない場合，全ての凸包が考慮され，この関数は基本的にメッシュ境界を返します．<literal>CVIDs</literal>を指定すると，<literal>CVIDs</literal>に"
-" #ids が列挙されている凸包集合の境界を返します．"
+"出力される<literal>CVFIDs</literal>は2行の行列で，最初の行は凸 #ids "
+"をリストし，2番目の行は面番号(凸の局所数)をリストします．<literal>dim</literal>が指定されている場合，この関数は強制的に次元<literal>dim</literal>を持つ要素の面を検出します．たとえば，<literal>dim</literal>=2の場合，3次元メッシュに属するサーフェス要素のエッジを検出します．<literal>CVID</literal>が与えられない場合，全ての凸が考慮され，この関数は基本的にメッシュ境界を返します．<literal>CVIDs</literal>を指定すると，<literal>CVIDs</literal>に"
+" #ids が列挙されている凸集合の境界を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:275
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'inner faces'[, CVIDs])``"
@@ -431,7 +430,7 @@ msgid ""
 "vector lying within an angle <literal>angle</literal> (in radians) from "
 "vector <literal>v</literal>."
 msgstr ""
-"2つの凸包によって共有されておらず，平均外向きベクトルがベクトル <literal>v</literal> からの角度 "
+"2つの凸によって共有されておらず，平均外向きベクトルがベクトル <literal>v</literal> からの角度 "
 "<literal>angle</literal> (ラジアン)内にある面の集合を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:293
@@ -444,10 +443,10 @@ msgid ""
 "If <literal>CVIDs</literal> is given, it returns portion of the boundary of "
 "the convex set defined by the #ids listed in <literal>CVIDs</literal>."
 msgstr ""
-"出力される <literal>CVFIDs</literal> は2行の行列であり，最初の行は凸包の #ids "
-"をリストし，2番目の行は面番号(凸包の局所番号)をリストします．引数 <literal>dim</literal> は outer_faces() "
+"出力される <literal>CVFIDs</literal> は2行の行列であり，最初の行は凸の #ids "
+"をリストし，2番目の行は面番号(凸の局所番号)をリストします．引数 <literal>dim</literal> は outer_faces() "
 "と同様に機能します． <literal>CVIDs</literal> が指定された場合， <literal>CVIDs</literal> "
-"にリストされた #id によって定義される凸包集合の境界の一部を返します．"
+"にリストされた #id によって定義される凸集合の境界の一部を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:300
 msgid ""
@@ -463,7 +462,7 @@ msgid ""
 "defined by the corner points <literal>pmin</literal> and "
 "<literal>pmax</literal>."
 msgstr ""
-"2つの凸包によって共有されておらず，コーナーポイント <literal>pmin</literal> と <literal>pmax "
+"2つの凸によって共有されておらず，コーナー点 <literal>pmin</literal> と <literal>pmax "
 "によって定義されるボックス内にある面の集合を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:311
@@ -493,7 +492,7 @@ msgid ""
 "<literal></literal>f<literal></literal> (think to bar elements in 3D for "
 "instance), return the first face found."
 msgstr ""
-"存在する場合，隣接する要素の凸包面を返します．凸包が面 <literal></literal>f<literal></literal> "
+"存在する場合，隣接する要素の凸面を返します．凸が面 <literal></literal>f<literal></literal> "
 "(例えば，3次元で要素を抑制することを考える)に対して相対的に隣接する面を複数持つ場合，最初に見つかった面を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:330
@@ -504,7 +503,7 @@ msgstr ""
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:332
 msgid "Return a list of convex faces from a list of convex #id."
-msgstr "凸包 #id のリストから凸包面のリストを返します．"
+msgstr "凸 #id のリストから凸面のリストを返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:334
 msgid ""
@@ -515,9 +514,9 @@ msgid ""
 "<literal>CVIDs</literal>."
 msgstr ""
 "<literal>CVFIDs</literal> "
-"は2行の行列で，最初の行には凸包の#idがリストされ，2番目の行には面番号(凸包のローカル番号)がリストされます． "
-"<literal>CVIDs</literal> が指定されていない場合，すべての凸包が対象となります．オプションの引数 'merge' は "
-"<literal>CVIDs</literal> の凸包が共有している面を結合します．"
+"は2行の行列で，最初の行には凸の#idがリストされ，2番目の行には面番号(凸のローカル番号)がリストされます． "
+"<literal>CVIDs</literal> が指定されていない場合，すべての凸が対象となります．オプションの引数 'merge' は "
+"<literal>CVIDs</literal> の凸が共有している面を結合します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:340
 msgid ""
@@ -553,7 +552,7 @@ msgid ""
 "Return the normal vector of convex <literal>cv</literal>, face "
 "<literal>f</literal> at the <literal>nfpt</literal> point of the face."
 msgstr ""
-"面の <literal>nfpt</literal> 点で凸包の <literal>cv</literal> ，面 "
+"面の <literal>nfpt</literal> 点で凸の <literal>cv</literal> ，面 "
 "<literal>f</literal> の法線ベクトルを返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:354
@@ -568,7 +567,7 @@ msgstr "``N = gf_mesh_get(mesh M, 'normal of faces', imat CVFIDs)``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:360
 msgid "Return matrix of (at face centers) the normal vectors of convexes."
-msgstr "凸包の(面の中心の)法線ベクトルの行列を返します．"
+msgstr "凸の(面の中心の)法線ベクトルの行列を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:362
 msgid ""
@@ -576,8 +575,8 @@ msgid ""
 " convex #ids, and the second lists face numbers (local number in the "
 "convex)."
 msgstr ""
-"<literal>CVFID</literal>は2行の行列を想定しており，最初の行は凸包の #id "
-"をリストし，2番目の行は面番号(凸包のローカル番号)をリストしています．"
+"<literal>CVFID</literal>は2行の行列を想定しており，最初の行は凸の #id "
+"をリストし，2番目の行は面番号(凸のローカル番号)をリストしています．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:366
 msgid "``CVIDs = gf_mesh_get(mesh M, 'convexes in box', vec pmin, vec pmax)``"
@@ -589,8 +588,8 @@ msgid ""
 "Return the set of convexes lying entirely within the box defined by the "
 "corner points <literal>pmin</literal> and <literal>pmax</literal>."
 msgstr ""
-"コーナーポイント  <literal>pmin</literal> と <literal>pmax</literal> "
-"で定義されたボックス内に完全に収まる凸包集合を返します．"
+"コーナー点  <literal>pmin</literal> と <literal>pmax</literal> "
+"で定義されたボックス内に完全に収まる凸集合を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:370
 msgid ""
@@ -600,9 +599,9 @@ msgid ""
 " boundary of the convex set defined by the #ids listed in "
 "<literal>CVIDs</literal>."
 msgstr ""
-"出力される <literal>CVIDs</literal> は2行の行列であり，最初の行は凸包の #ids "
-"をリストし，2番目の行は面番号(凸包の局所番号)をリストします． <literal>CVIDs</literal> が指定された場合， "
-"<literal>CVIDs</literal> にリストされた #id によって定義される凸包集合の境界の一部を返します．"
+"出力される <literal>CVIDs</literal> は2行の行列であり，最初の行は凸の #ids "
+"をリストし，2番目の行は面番号(凸の局所番号)をリストします． <literal>CVIDs</literal> が指定された場合， "
+"<literal>CVIDs</literal> にリストされた #id によって定義される凸集合の境界の一部を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:376
 msgid "``Q = gf_mesh_get(mesh M, 'quality'[, ivec CVIDs])``"
@@ -613,8 +612,8 @@ msgid ""
 "Return an estimation of the quality of each convex (<latex "
 "style=\"text\"><![CDATA[0 \\leq Q \\leq 1]]></latex>)."
 msgstr ""
-"各凸包の品質の推定値を返します (<latex style=\"text\"><![CDATA[0 \\leq Q \\leq "
-"1]]></latex>) ．"
+"各凸の品質の推定値を返します (<latex style=\"text\"><![CDATA[0 \\leq Q \\leq 1]]></latex>)"
+" ．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:381
 msgid "``A = gf_mesh_get(mesh M, 'convex area'[, ivec CVIDs])``"
@@ -622,7 +621,7 @@ msgstr "``A = gf_mesh_get(mesh M, 'convex area'[, ivec CVIDs])``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:383
 msgid "Return an estimate of the area of each convex."
-msgstr "各凸包の面積の推定値を返します．"
+msgstr "各凸の面積の推定値を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:386
 msgid "``A = gf_mesh_get(mesh M, 'convex radius'[, ivec CVIDs])``"
@@ -630,7 +629,7 @@ msgstr "``A = gf_mesh_get(mesh M, 'convex radius'[, ivec CVIDs])``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:388
 msgid "Return an estimate of the radius of each convex."
-msgstr "各凸包の半径の推定値を返します．"
+msgstr "各凸の半径の推定値を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:391
 msgid "``{S, CV2S} = gf_mesh_get(mesh M, 'cvstruct'[, ivec CVIDs])``"
@@ -638,7 +637,7 @@ msgstr "``{S, CV2S} = gf_mesh_get(mesh M, 'cvstruct'[, ivec CVIDs])``"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:393
 msgid "Return an array of the convex structures."
-msgstr "凸包構造の配列を返します．"
+msgstr "凸構造の配列を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:395
 msgid ""
@@ -647,10 +646,9 @@ msgid ""
 "<literal>CV2S</literal> maps the convexes indice in <literal>CVIDs</literal>"
 " to the indice of its structure in <literal>S</literal>."
 msgstr ""
-"<literal>CVIDs</literal> が指定されていない場合，すべての凸包が考慮されます．各凸包構造は "
-"<literal>S</literal> に1つずつ記載されており， <literal>CV2S</literal> は "
-"<literal>CVIDs</literal> の凸包のインデックスを <literal>S</literal> "
-"の構造インデックスにマップしています．"
+"<literal>CVIDs</literal> が指定されていない場合，すべての凸が考慮されます．各凸構造は <literal>S</literal>"
+" に1つずつ記載されており， <literal>CV2S</literal> は <literal>CVIDs</literal> の凸のインデックスを"
+" <literal>S</literal> の構造インデックスにマップしています．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:400
 msgid "``{GT, CV2GT} = gf_mesh_get(mesh M, 'geotrans'[, ivec CVIDs])``"
@@ -695,7 +693,7 @@ msgstr "``CVFIDs = gf_mesh_get(mesh M, 'region', ivec RIDs)``"
 #: ../source/scilab/cmdref_gf_mesh_get.rst:424
 msgid ""
 "Return the list of convexes/faces on the regions <literal>RIDs</literal>."
-msgstr "領域  <literal>RIDs</literal> 上の凸包/面のリストを返します．"
+msgstr "領域  <literal>RIDs</literal> 上の凸/面のリストを返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:426
 msgid ""
@@ -703,8 +701,8 @@ msgid ""
 "#ids, and the second lists face numbers (local number in the convex). (and 0"
 " when the whole convex is in the regions)."
 msgstr ""
-"<literal>CVFIDs</literal> は2行の行列で，最初の行には凸包の #id "
-"がリストされ，2番目の行には面番号(凸包のローカル番号)がリストされます．(凸包全体が領域内にある場合は 0 です)．"
+"<literal>CVFIDs</literal> は2行の行列で，最初の行には凸の #id "
+"がリストされ，2番目の行には面番号(凸のローカル番号)がリストされます．(凸全体が領域内にある場合は 0 です)．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:432
 msgid "``gf_mesh_get(mesh M, 'save', string filename)``"
@@ -743,7 +741,7 @@ msgstr "メッシュをVTKファイルに書き出します．"
 msgid ""
 "If 'quality' is specified, an estimation of the quality of each convex will "
 "be written to the file."
-msgstr "'quality' が指定された場合，各凸包の品質の見積りがファイルに書き込まれます．"
+msgstr "'quality' が指定された場合，各凸の品質の見積りがファイルに書き込まれます．"
 
 #: ../source/scilab/cmdref_gf_mesh_get.rst:451
 msgid ""

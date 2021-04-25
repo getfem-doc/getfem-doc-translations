@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2020-04-26 01:51+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -64,7 +64,7 @@ msgstr "``CVids = gf_slice_get(slice S, 'cvs')``"
 #: ../source/matlab_octave/cmdref_gf_slice_get.rst:56
 msgid ""
 "Return the list of convexes of the original mesh contained in the slice."
-msgstr "スライスに含まれる元のメッシュの凸包のリストを返します．"
+msgstr "スライスに含まれる元のメッシュの凸のリストを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_slice_get.rst:59
 msgid "``n = gf_slice_get(slice S, 'nbpts')``"
@@ -72,7 +72,7 @@ msgstr "``n = gf_slice_get(slice S, 'nbpts')``"
 
 #: ../source/matlab_octave/cmdref_gf_slice_get.rst:61
 msgid "Return the number of points in the slice."
-msgstr "スライス内のポイントの数を返します．"
+msgstr "スライス内の点の数を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_slice_get.rst:64
 msgid "``ns = gf_slice_get(slice S, 'nbsplxs'[, int dim])``"
@@ -89,7 +89,7 @@ msgid ""
 "gf_slice_get(slice S, 'dim')+1, except if the optional argument `dim` is "
 "used."
 msgstr ""
-"スライスには，ポイント(dim0の単体)，セグメント(次元1の単体)，三角形などが含まれる場合があるため，オプションの引数 `dim` "
+"スライスには，点(dim0の単体)，セグメント(次元1の単体)，三角形などが含まれる場合があるため，オプションの引数 `dim` "
 "が使用されている場合を除いて，結果はサイズ  gf_slice_get(slice S, 'dim')+1 のベクトルになります ．"
 
 #: ../source/matlab_octave/cmdref_gf_slice_get.rst:74
@@ -115,9 +115,9 @@ msgid ""
 "any convex stored in the slice. For example 'S(:,CV2S(4):CV2S(5)-1)' gives "
 "the list of simplexes for the fourth convex."
 msgstr ""
-"出力では，Sには 'dim+1' 行があり，各列には単体のポイント番号が含まれています．ベクトル `CV2S` "
-"を使用して，スライス内に格納されている任意の凸包の単体のリストを見つけることができます．たとえば， 'S(:,CV2S(4):CV2S(5)-1)' "
-"とすると，第4の凸包の単体のリストが得られます．"
+"出力では，Sには 'dim+1' 行があり，各列には単体の点番号が含まれています．ベクトル `CV2S` "
+"を使用して，スライス内に格納されている任意の凸の単体のリストを見つけることができます．たとえば， 'S(:,CV2S(4):CV2S(5)-1)' "
+"とすると，第4の凸の単体のリストが得られます．"
 
 #: ../source/matlab_octave/cmdref_gf_slice_get.rst:90
 msgid "``{P, E1, E2} = gf_slice_get(slice S, 'edges')``"
@@ -143,7 +143,7 @@ msgstr "``Usl = gf_slice_get(slice S, 'interpolate_convex_data', mat Ucv)``"
 
 #: ../source/matlab_octave/cmdref_gf_slice_get.rst:102
 msgid "Interpolate data given on each convex of the mesh to the slice nodes."
-msgstr "メッシュの各凸包に指定されたデータをスライスの節点で補間します．"
+msgstr "メッシュの各凸に指定されたデータをスライスの節点で補間します．"
 
 #: ../source/matlab_octave/cmdref_gf_slice_get.rst:104
 msgid ""

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2020-04-26 01:50+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -74,7 +74,7 @@ msgstr "``DOF = gf_mesh_fem_get(mesh_fem MF, 'basic dof from cv',mat CVids)``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:81
 msgid "Return the dof of the convexes listed in `CVids`."
-msgstr "`CVids` にリストされている凸包の自由度を返します．"
+msgstr "`CVids` にリストされている凸の自由度を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:83
 msgid ""
@@ -84,7 +84,7 @@ msgid ""
 " freedom."
 msgstr ""
 "警告: "
-"自由度は任意の順序で返される可能性があります．アセンブリルーチンではこの関数を使用しないでください．凸包値に関連する自由度をマップする場合は，代わりに "
+"自由度は任意の順序で返される可能性があります．アセンブリルーチンではこの関数を使用しないでください．凸値に関連する自由度をマップする場合は，代わりに "
 "'basic dof from cvid' を使用します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:88
@@ -92,7 +92,7 @@ msgid ""
 "One can also get the list of basic dof on a set on convex faces, by "
 "indicating on the second row of `CVids` the faces numbers (with respect to "
 "the convex number on the first row)."
-msgstr "また，(最初の行の凸包数に関して)2列目に面番号を表示することで，凸包面上の集合の基本的な自由度のリストを得ることができます．"
+msgstr "また，(最初の行の凸数に関して)2列目に面番号を表示することで，凸面上の集合の基本的な自由度のリストを得ることができます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:93
 msgid ""
@@ -117,15 +117,15 @@ msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:101
 msgid "Return the degrees of freedom attached to each convex of the mesh."
-msgstr "メッシュの各凸包にアタッチされた自由度を返します．"
+msgstr "メッシュの各凸にアタッチされた自由度を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:103
 msgid ""
 "If `CVids` is omitted, all the convexes will be considered (equivalent to "
 "`CVids = 1 ... gf_mesh_get(mesh M, 'max cvid')`)."
 msgstr ""
-"`CVids` を省略すると，すべての凸包が考慮されます( `CVids = 1 ... gf_mesh_get(mesh M, 'max "
-"cvid')` と同じです)．"
+"`CVids` を省略すると，すべての凸が考慮されます( `CVids = 1 ... gf_mesh_get(mesh M, 'max cvid')`"
+" と同じです)．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:106
 msgid ""
@@ -136,14 +136,14 @@ msgid ""
 "DOFs(IDx(2):IDx(3)-1)."
 msgstr ""
 "`IDx` は行ベクトルであり， `length(IDx) = length(CVids)+1` です． `DOFs`  は `CVids` "
-"の各凸包の自由度の連結リストを含む行ベクトルです． `IDx` の各エントリは `DOFs` "
-"における対応する凸包点リストの位置です．従って，例えば，第2凸包の点のリストは DOFs(IDx(2):IDx(3)-1)です．"
+"の各凸の自由度の連結リストを含む行ベクトルです． `IDx` の各エントリは `DOFs` "
+"における対応する凸点リストの位置です．従って，例えば，第2凸の点のリストは DOFs(IDx(2):IDx(3)-1)です．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:112
 msgid ""
 "If `CVids` contains convex #id which do not exist in the mesh, their point "
 "list will be empty."
-msgstr "`CVids` にメッシュに存在しない凸包の #id が含まれている場合，点リストは空になります．"
+msgstr "`CVids` にメッシュに存在しない凸の #id が含まれている場合，点リストは空になります．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:116
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'non conformal dof'[, mat CVids])``"
@@ -176,8 +176,8 @@ msgid ""
 "will be returned by this function (this can be useful when searching the "
 "interfaces between classical FEM and hierarchical FEM)."
 msgstr ""
-"メッシュの境界上にあるものを除き，1つの凸包にのみ属する凸包の境界上にある基本自由度を返します．たとえば，凸包の 'a' と 'b' "
-"が共通の面を共有し， 'a' にP1 FEMがあり， 'b' にP2 "
+"メッシュの境界上にあるものを除き，1つの凸にのみ属する凸の境界上にある基本自由度を返します．たとえば，凸の 'a' と 'b' が共通の面を共有し， "
+"'a' にP1 FEMがあり， 'b' にP2 "
 "FEMがある場合，面の中央の基本自由度がこの関数によって返されます(これは，古典的FEMと階層的FEMの間のインターフェースを探索するときに有用です)．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:135
@@ -207,14 +207,14 @@ msgid ""
 "`CVids`. If `CV2F` was supplied as an output argument, it contains, for each"
 " convex listed in `CVids`, the index of its correspounding FEM in `FEMs`."
 msgstr ""
-"`FEMs` は `CVids` で与えられた凸包にあるすべてのfemオブジェクトの配列です． `CV2F` が出力引数として指定された場合  "
-"`CVids` にリストされている各凸包に対し， `FEMs` 内の対応するFEMのインデックスが含まれます．"
+"`FEMs` は `CVids` で与えられた凸にあるすべてのfemオブジェクトの配列です． `CV2F` が出力引数として指定された場合  "
+"`CVids` にリストされている各凸に対し， `FEMs` 内の対応するFEMのインデックスが含まれます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:151
 msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have any "
 "FEM have their correspounding entry in `CV2F` set to -1."
-msgstr "メッシュの一部でない凸包，またはFEMを持たない凸包については  `CV2F` の対応エントリを-1に設定します．"
+msgstr "メッシュの一部でない凸，またはFEMを持たない凸については  `CV2F` の対応エントリを-1に設定します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:154
 msgid "Example::"
@@ -226,7 +226,7 @@ msgstr "``CVs = gf_mesh_fem_get(mesh_fem MF, 'convex_index')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:168
 msgid "Return the list of convexes who have an FEM."
-msgstr "FEMを持つ凸包のリストを返します．"
+msgstr "FEMを持つ凸のリストを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:171
 msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_lagrangian'[, mat CVids])``"
@@ -252,7 +252,7 @@ msgid ""
 "to `CVids`) which are Lagrangian."
 msgstr ""
 "`CVids` を省略すると，メッシュ内のすべての凸状がLagrangianの場合に1を返します． `CVids` "
-"を使用すると，Lagrangianである( `CVids` に関する)凸包インデックスを返します．"
+"を使用すると，Lagrangianである( `CVids` に関する)凸インデックスを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:184
 msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_equivalent'[, mat CVids])``"
@@ -337,7 +337,7 @@ msgid ""
 "in not null on the convex border)."
 msgstr ""
 "より正確には，この関数は `Rs` (境界領域の場合，一部の節点自由度は正確に境界上に存在しない場合があります．たとえば， Pk(n,0) "
-"の自由度は凸包の中心に存在しますが，基底関数は凸包境界上でnullではありません)に #ids "
+"の自由度は凸の中心に存在しますが，基底関数は凸境界上でnullではありません)に #ids "
 "がリストされている領域のいずれかにおいて，サポートが非NULLである基本的な自由度を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:236
@@ -401,7 +401,7 @@ msgid ""
 "neighboring convexes which have the same partition number, hence it is "
 "possible to create partially discontinuous mesh_fem very easily."
 msgstr ""
-"mesh_femの各凸包に整数(パーティション番号)を関連付ける配列を返します．既定では，配列はすべてゼロです．mesh_femの各凸包の自由度は，同じパーティション番号を持つ隣接する凸包の自由度にのみ接続されるため，部分的に不連続なmesh_femを非常に簡単に作成することができます．"
+"mesh_femの各凸に整数(パーティション番号)を関連付ける配列を返します．既定では，配列はすべてゼロです．mesh_femの各凸の自由度は，同じパーティション番号を持つ隣接する凸の自由度にのみ接続されるため，部分的に不連続なmesh_femを非常に簡単に作成することができます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:280
 msgid "``gf_mesh_fem_get(mesh_fem MF, 'save',string filename[, string opt])``"
@@ -520,7 +520,7 @@ msgid ""
 "quads and triangles), or if OpenDX does not handle a specific element type "
 "(i.e. prism connections are not known by OpenDX)."
 msgstr ""
-"mesh_femでさまざまな凸包が混在する場合(つまり，四角形と三角形)，またはOpenDXで特定の要素型が処理されない(つまり，プリズム接続はOpenDXでは認識されない)場合，この関数は失敗します．"
+"mesh_femでさまざまな凸が混在する場合(つまり，四角形と三角形)，またはOpenDXで特定の要素型が処理されない(つまり，プリズム接続はOpenDXでは認識されない)場合，この関数は失敗します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:340
 msgid ""
@@ -573,7 +573,7 @@ msgstr "`p` は積分法が作用する次元(デフォルトは `p = メッシ�
 msgid ""
 "IMPORTANT: you still have to set a valid integration method on the convexes "
 "which are not crosses by the levelset!"
-msgstr "重要:levelsetと交差しない凸包には，有効な積分法を設定する必要があります!"
+msgstr "重要:levelsetと交差しない凸には，有効な積分法を設定する必要があります!"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:367
 msgid ""
@@ -587,7 +587,7 @@ msgid ""
 "mesh_fem has to be lagrangian, and should be discontinuous (typically an "
 "FEM_PK(N,0) or FEM_QK(N,0) should be used)."
 msgstr ""
-"メッシュの各凸包で指定されたデータをmesh_femの自由度に補間します．mesh_femはlagrangianである必要があり，不連続である必要があります(通常は"
+"メッシュの各凸で指定されたデータをmesh_femの自由度に補間します．mesh_femはlagrangianである必要があり，不連続である必要があります(通常は"
 " FEM_PK(N,0) または FEM_QK(N,0) を使用する必要があります)．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem_get.rst:373

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2018-07-16 07:17+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -1421,7 +1421,7 @@ msgstr ""
 "は項が追加されるオプションのメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．モデル内のブリックインデックスを返します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.getfem.Model.add_isotropic_linearized_elasticity_brick_pstrain:1
+#: of getfem.getfem.Model.add_isotropic_linearized_elasticity_pstrain_brick:1
 msgid ""
 "Add an isotropic linearized elasticity term to the model relatively to the "
 "variable `varname`. `data_E` and `data_nu` should contain the Young modulus "
@@ -1436,7 +1436,7 @@ msgstr ""
 "はオプションの項が追加されるメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．2次元メッシュでは，この項は単純な歪み近似と相関します．3次元メッシュでは，標準モデルに対応します．モデル内のブリックのインデックスを返します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
-#: of getfem.getfem.Model.add_isotropic_linearized_elasticity_brick_pstress:1
+#: of getfem.getfem.Model.add_isotropic_linearized_elasticity_pstress_brick:1
 msgid ""
 "Add an isotropic linearized elasticity term to the model relatively to the "
 "variable `varname`. `data_E` and `data_nu` should contain the Young modulus "
@@ -1542,6 +1542,23 @@ msgid ""
 "``secondary_domain`` which has to be declared first into the model."
 msgstr ""
 "Modelのような弱形式言語式で与えられる線形項を追加します．add_linear_term()ではなく，二つのドメインの直接の積上での統合の場合には，最初に``mim''と``region''で指定されたものと``secondary_domain''で指定されたものを最初にモデルに宣言しなければなりません．"
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Model.add_lumped_mass_for_first_order_brick:1
+msgid ""
+"Synopsis: ind = Model.add_lumped_mass_for_first_order_brick(self, MeshIm "
+"mim, string varname[, string dataexpr_rho[, int region]])"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Model.add_lumped_mass_for_first_order_brick:3
+msgid ""
+"Add lumped mass for first order term to the model relatively to the variable"
+" `varname`. If specified, the data `dataexpr_rho` is the density (1 if "
+"omitted). `region` is an optional mesh region on which the term is added. If"
+" it is not specified, it is added on the whole mesh. Return the brick index "
+"in the model."
+msgstr ""
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_macro:1
@@ -2184,7 +2201,7 @@ msgid ""
 "Returns the brick index in the model."
 msgstr ""
 "与えられた乗数 `multname` を使用して，変数 `varname` の各点に制約を追加します．条件は，データ `dataname_pt` "
-"に指定された点の集合で規定され，その寸法は点の数とメッシュの寸法の積です．乗数変数は，ポイント数のサイズを固定サイズ変数にする必要があります．変数がベクトルフィールドを表す場合には，データ"
+"に指定された点の集合で規定され，その寸法は点の数とメッシュの寸法の積です．乗数変数は，点数のサイズを固定サイズ変数にする必要があります．変数がベクトルフィールドを表す場合には，データ"
 " `dataname_unitv` "
 "を与えなければなりません．これは，次元のベクトルを表すものであり，点の数と単位ベクトルを格納すべきベクトルフィールドの次元を乗算したものです．この場合，指定拘束は，対応する点における変数と対応する単位ベクトルとのスカラー積である．オプションのデータ"
 " `dataname_val` "
@@ -2217,7 +2234,7 @@ msgid ""
 "the different points. This brick is specifically designed to kill rigid "
 "displacement in a Neumann problem. Returns the brick index in the model."
 msgstr ""
-"multiplierを使用して，変数 `varname` にポイントワイズ制約を追加します．乗数変数が自動的にモデルに追加されます．条件は，データ "
+"multiplierを使用して，変数 `varname` に点ワイズ制約を追加します．乗数変数が自動的にモデルに追加されます．条件は，データ "
 "`dataname_pt` に指定された点のセットで規定され，その寸法は点の数とメッシュ次元の積である．変数がベクトルフィールドを表す場合には，データ "
 "`dataname_unitv` "
 "を与えなければならない．これは，次元のベクトルを表すものであり，点の数と単位ベクトルを格納すべきベクトルフィールドの次元を乗算したものである．この場合，指定拘束は，対応する点における変数と対応する単位ベクトルとのスカラー積である．オプションのデータ"

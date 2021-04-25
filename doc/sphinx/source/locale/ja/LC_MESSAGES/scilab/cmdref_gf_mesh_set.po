@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2018-07-16 07:00+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -57,7 +57,7 @@ msgstr "``PIDs = gf_mesh_set(mesh M, 'add point', mat PTS)``"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:51
 msgid "Insert new points in the mesh and return their #ids."
-msgstr "メッシュに新しいポイントを挿入し，その #id を返します．"
+msgstr "メッシュに新しい点を挿入し，その #id を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:53
 msgid ""
@@ -68,7 +68,7 @@ msgid ""
 " added to the mesh. On output, <literal>PIDs</literal> contains the point "
 "#ids of these new points."
 msgstr ""
-"<literal>PTS</literal>は<literal></literal>nxm<literal></literal>マトリックスでなければなりません．ここで，<literal></literal>n<literal></literal>はメッシュ寸法，<literal></literal>m<literal></literal>はメッシュに追加される点の数です．出力では，<literal>PID</literal>にこれらの新しいポイントのポイント番号IDが含まれます．"
+"<literal>PTS</literal>は<literal></literal>nxm<literal></literal>マトリックスでなければなりません．ここで，<literal></literal>n<literal></literal>はメッシュ寸法，<literal></literal>m<literal></literal>はメッシュに追加される点の数です．出力では，<literal>PID</literal>にこれらの新しい点の点番号IDが含まれます．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:58
 msgid ""
@@ -78,8 +78,8 @@ msgid ""
 "assigned #ids of these points."
 msgstr ""
 "注: ( <literal></literal>1e-8<literal></literal> "
-"程度の小さな許容範囲で)既にメッシュの一部になっているポイントがある場合，それらのポイントは再挿入されず， "
-"<literal>PIDs</literal> には以前に割り当てられた #id のポイントが含まれます．"
+"程度の小さな許容範囲で)既にメッシュの一部になっている点がある場合，それらの点は再挿入されず， <literal>PIDs</literal> "
+"には以前に割り当てられた #id の点が含まれます．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:64
 msgid "``gf_mesh_set(mesh M, 'del point', ivec PIDs)``"
@@ -87,14 +87,14 @@ msgstr "``gf_mesh_set(mesh M, 'del point', ivec PIDs)``"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:66
 msgid "Removes one or more points from the mesh."
-msgstr "メッシュから1つまたは複数のポイントを削除します．"
+msgstr "メッシュから1つまたは複数の点を削除します．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:68
 msgid ""
 "<literal>PIDs</literal> should contain the point #ids, such as the one "
 "returned by the 'add point' command."
 msgstr ""
-"<literal>PIDs</literal> は 'add point' コマンドで返されるポイントである #ids などを指定する必要があります．"
+"<literal>PIDs</literal> は 'add point' コマンドで返される点である #ids などを指定する必要があります．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:72
 msgid "``CVIDs = gf_mesh_set(mesh M, 'add convex', geotrans GT, mat PTS)``"
@@ -102,7 +102,7 @@ msgstr "``CVIDs = gf_mesh_set(mesh M, 'add convex', geotrans GT, mat PTS)``"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:74
 msgid "Add a new convex into the mesh."
-msgstr "メッシュに新しい凸包を追加します．"
+msgstr "メッシュに新しい凸を追加します．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:76
 msgid ""
@@ -113,10 +113,10 @@ msgid ""
 " to insert more than one convex (or a two dimensional array correctly shaped"
 " according to Fortran ordering)."
 msgstr ""
-"凸包(三角形，プリズム，...)は <literal>GT</literal> (  gf_geotrans('...') "
+"凸(三角形，プリズム，...)は <literal>GT</literal> (  gf_geotrans('...') "
 "で取得されます)によって与えられ，その点は <literal>PTS</literal> の列によって与えられます．返される "
-"<literal>CVID</literal> には凸包の #idが含まれます． <literal>PTS</literal> "
-"は複数の凸包(またはFortranの次数に従って正しく形成された2次元配列)を挿入するための3次元配列の場合もあります．"
+"<literal>CVID</literal> には凸の #idが含まれます． <literal>PTS</literal> "
+"は複数の凸(またはFortranの次数に従って正しく形成された2次元配列)を挿入するための3次元配列の場合もあります．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:84
 msgid "``gf_mesh_set(mesh M, 'del convex', mat CVIDs)``"
@@ -124,14 +124,14 @@ msgstr "``gf_mesh_set(mesh M, 'del convex', mat CVIDs)``"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:86
 msgid "Remove one or more convexes from the mesh."
-msgstr "メッシュから1つまたは複数の凸包を削除します．"
+msgstr "メッシュから1つまたは複数の凸を削除します．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:88
 msgid ""
 "<literal>CVIDs</literal> should contain the convexes #ids, such as the ones "
 "returned by the 'add convex' command."
 msgstr ""
-"<literal>CVIDs</literal> には 'add convex' コマンドで返されるような凸包 #id を含める必要があります．"
+"<literal>CVIDs</literal> には 'add convex' コマンドで返されるような凸 #id を含める必要があります．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:92
 msgid "``gf_mesh_set(mesh M, 'del convex of dim', ivec DIMs)``"
@@ -139,7 +139,7 @@ msgstr "``gf_mesh_set(mesh M, 'del convex of dim', ivec DIMs)``"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:94
 msgid "Remove all convexes of dimension listed in <literal>DIMs</literal>."
-msgstr "<literal>DIMs</literal> に表示されている次元の凸包をすべて削除します．"
+msgstr "<literal>DIMs</literal> に表示されている次元の凸をすべて削除します．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:96
 msgid ""
@@ -195,7 +195,7 @@ msgid ""
 "or/and convex faces provided in the matrix <literal>CVFIDs</literal>."
 msgstr ""
 "領域番号 <literal>rnum</literal> を，行列 <literal>CVFIDs</literal> "
-"に提供されている凸包または凸包面，あるいはその両方の集合に割り当てます．"
+"に提供されている凸または凸面，あるいはその両方の集合に割り当てます．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:124
 msgid ""
@@ -204,14 +204,14 @@ msgid ""
 "(regions are usually used to store a list of convex faces, but you may also "
 "use them to store a list of convexes)."
 msgstr ""
-"<literal>CVFIDs</literal> の最初の行は凸包の #id を含み，二番目の行は凸包の中に面番号を含みます (または凸包全体として "
-"0 (領域は通常，凸包面のリストを格納するために使用されますが，凸包面のリストを格納するために使用することもできます)．"
+"<literal>CVFIDs</literal> の最初の行は凸の #id を含み，二番目の行は凸の中に面番号を含みます (または凸全体として 0 "
+"(領域は通常，凸面のリストを格納するために使用されますが，凸面のリストを格納するために使用することもできます)．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:129
 msgid ""
 "If a vector is provided (or a one row matrix) the region will represent the "
 "corresponding set of convex."
-msgstr "ベクトル(または1行の行列)が与えられる場合，領域は対応する凸包集合を表します．"
+msgstr "ベクトル(または1行の行列)が与えられる場合，領域は対応する凸集合を表します．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:133
 msgid "``gf_mesh_set(mesh M, 'extend region', int rnum, mat CVFIDs)``"
@@ -225,7 +225,7 @@ msgid ""
 "'set region)<literal></literal>."
 msgstr ""
 "領域番号 <literal>rnum</literal> で識別される領域を拡張して，マトリックス <literal>CVFIDs</literal> "
-"に与えられた凸包または凸包面あるいはその両方の集合を含めます． <literal></literal>gf_mesh_set(mesh M, 'set "
+"に与えられた凸または凸面あるいはその両方の集合を含めます． <literal></literal>gf_mesh_set(mesh M, 'set "
 "region)<literal></literal> も参照．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:140
@@ -289,7 +289,7 @@ msgid ""
 "not be duplicated. If <literal>m2</literal> is a mesh_fem object, its linked"
 " mesh will be used."
 msgstr ""
-"許容半径 <literal>tol</literal> 内の重複ポイントは複製されません． <literal>m2</literal> "
+"許容半径 <literal>tol</literal> 内の重複点は複製されません． <literal>m2</literal> "
 "がmesh_femオブジェクトの場合は，そのリンクされたメッシュが使用されます．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:174
@@ -298,7 +298,7 @@ msgstr "``gf_mesh_set(mesh M, 'optimize structure'[, int with_renumbering])``"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:176
 msgid "Reset point and convex numbering."
-msgstr "点および凸包の番号付けをリセットします．"
+msgstr "点および凸の番号付けをリセットします．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:178
 msgid ""
@@ -306,8 +306,8 @@ msgid ""
 "numbered from 1 to gf_mesh_get(mesh M, 'max pid') (resp. gf_mesh_get(mesh M,"
 " 'max cvid'))."
 msgstr ""
-"最適化後，ポイント (resp. convexes) には連続して 1 から gf_mesh_get(mesh M, 'max pid') (resp."
-" gf_mesh_get(mesh M, 'max cvid')) まで番号が付けられます．"
+"最適化後，点 (resp. convexes) には連続して 1 から gf_mesh_get(mesh M, 'max pid') (resp. "
+"gf_mesh_get(mesh M, 'max cvid')) まで番号が付けられます．"
 
 #: ../source/scilab/cmdref_gf_mesh_set.rst:183
 msgid "``gf_mesh_set(mesh M, 'refine'[, ivec CVIDs])``"

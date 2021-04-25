@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2018-07-16 07:18+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -198,12 +198,12 @@ msgstr "既定値では，リンクされたメッシュオブジェクトの説
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshIm.convex_index:1
 msgid "Return the list of convexes who have a integration method."
-msgstr "積分法がある凸包のリストを返します．"
+msgstr "積分法がある凸のリストを返します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshIm.convex_index:3
 msgid "Convexes who have the dummy IM_NONE method are not listed."
-msgstr "ダミーの IM_NONE メソッドを持つ凸包は表示されません．"
+msgstr "ダミーの IM_NONE メソッドを持つ凸は表示されません．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshIm.display:1
@@ -214,7 +214,7 @@ msgstr "MeshImオブジェクトの簡単な概要が表示されます．"
 #: of getfem.getfem.MeshIm.eltm:1
 msgid ""
 "Return the elementary matrix (or tensor) integrated on the convex `cv`."
-msgstr "凸包の `cv` 上で積分された基本行列(またはテンソル)を返します．"
+msgstr "凸の `cv` 上で積分された基本行列(またはテンソル)を返します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshIm.eltm:3
@@ -232,7 +232,7 @@ msgid ""
 "face `f` of `cv` instead of the whole convex."
 msgstr ""
 " `em` の作成に使用する有限要素法が，要素 `cv` に割り当てられた有限要素法と互換性があることを確認してください ! "
-"これは関数によってチェックされません．引数 `f` が与えられた場合，基本テンソルは，全体の凸包ではなく， `cv` の面 `f` 上で積分されます．"
+"これは関数によってチェックされません．引数 `f` が与えられた場合，基本テンソルは，全体の凸ではなく， `cv` の面 `f` 上で積分されます．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshIm.im_nodes:1
@@ -244,7 +244,7 @@ msgstr "積分点の座標とその重みを返します．"
 msgid ""
 "`CVids` may be a list of convexes, or a list of convex faces, such as "
 "returned by Mesh.region()"
-msgstr "`CVids` は Mesh.region() によって返される凸包のリストまたは凸包面のリストです．"
+msgstr "`CVids` は Mesh.region() によって返される凸のリストまたは凸面のリストです．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshIm.im_nodes:8
@@ -252,7 +252,7 @@ msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have an "
 "approximate integration method do not have their corresponding entry (this "
 "has no meaning for exact integration methods!)."
-msgstr "メッシュの一部でない凸包，または近似積分法を持たない凸包には，対応するエントリ(これは，厳密な積分法には意味がありません!)がありません．"
+msgstr "メッシュの一部でない凸，または近似積分法を持たない凸には，対応するエントリ(これは，厳密な積分法には意味がありません!)がありません．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshIm.integ:1
@@ -267,15 +267,15 @@ msgid ""
 "listed in `CVids`, the index of its correspounding integration method in "
 "`I`."
 msgstr ""
-"`I` は `CVids` で与えられた凸包にあるすべての整数オブジェクトの配列です． `CV2I` が出力引数として与えられた場合， `CVids` "
-"に列挙されている各凸包に対し， `I` における相関積分法のインデックスを含みます．"
+"`I` は `CVids` で与えられた凸にあるすべての整数オブジェクトの配列です． `CV2I` が出力引数として与えられた場合， `CVids` "
+"に列挙されている各凸に対し， `I` における相関積分法のインデックスを含みます．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshIm.integ:8
 msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have any "
 "integration method have their correspounding entry in `CV2I` set to -1."
-msgstr "メッシュの一部ではない凸包，または積分法を持たない凸包については， `CV2I` の対応エントリを-1に設定します．"
+msgstr "メッシュの一部ではない凸，または積分法を持たない凸については， `CV2I` の対応エントリを-1に設定します．"
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MeshIm.linked_mesh:1
@@ -320,8 +320,8 @@ msgid ""
 "exactly integrated. If `im_degree=-1`, then the dummy integration method "
 "IM_NONE will  be used.)"
 msgstr ""
-"`CVids` に#idがリストされているすべての凸包に積分法を割り当てます． `CVids` "
-"が指定されていない場合，積分はすべての凸包に割り当てられます． Integ('IM_SOMETHING') から取得した積分法ハンドル `im` "
+"`CVids` に#idがリストされているすべての凸に積分法を割り当てます． `CVids` "
+"が指定されていない場合，積分はすべての凸に割り当てられます． Integ('IM_SOMETHING') から取得した積分法ハンドル `im` "
 "を用いて，特定の積分法を割り当てることもできるし， `im_degree` を用いて，getfemに適切な積分法を選択させることもできます．( "
 ":math:`\\text{degree} \\leq \\text{im\\_degree}` の多項式が正確に積分されるように選択します． "
 "`im_degree=-1` の場合，ダミーの積分法 IM_NONE が使用されます．)．"

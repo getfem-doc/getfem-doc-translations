@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -393,11 +393,11 @@ msgstr ""
 msgid "Add an isotropic linearized elasticity term to the model relatively to the variable `varname`. `dataname_lambda` and `dataname_mu` should contain the Lame coefficients. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. Return the brick index in the model."
 msgstr ""
 
-#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.py:docstring of getfem.getfem.Model.add_isotropic_linearized_elasticity_brick_pstrain:1
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.py:docstring of getfem.getfem.Model.add_isotropic_linearized_elasticity_pstrain_brick:1
 msgid "Add an isotropic linearized elasticity term to the model relatively to the variable `varname`. `data_E` and `data_nu` should contain the Young modulus and Poisson ratio, respectively. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. On two-dimensional meshes, the term will correpsond to a plain strain approximation. On three-dimensional meshes, it will correspond to the standard model.  Return the brick index in the model."
 msgstr ""
 
-#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.py:docstring of getfem.getfem.Model.add_isotropic_linearized_elasticity_brick_pstress:1
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.py:docstring of getfem.getfem.Model.add_isotropic_linearized_elasticity_pstress_brick:1
 msgid "Add an isotropic linearized elasticity term to the model relatively to the variable `varname`. `data_E` and `data_nu` should contain the Young modulus and Poisson ratio, respectively. `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. On two-dimensional meshes, the term will correpsond to a plain stress approximation. On three-dimensional meshes, it will correspond to the standard model.  Return the brick index in the model."
 msgstr ""
 
@@ -431,6 +431,14 @@ msgstr ""
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.py:docstring of getfem.getfem.Model.add_linear_twodomain_term:3
 msgid "Adds a linear term given by a weak form language expression like Model.add_linear_term() but for an integration on a direct product of two domains, a first specfied by ``mim`` and ``region`` and a second one by ``secondary_domain`` which has to be declared first into the model."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.py:docstring of getfem.getfem.Model.add_lumped_mass_for_first_order_brick:1
+msgid "Synopsis: ind = Model.add_lumped_mass_for_first_order_brick(self, MeshIm mim, string varname[, string dataexpr_rho[, int region]])"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.py:docstring of getfem.getfem.Model.add_lumped_mass_for_first_order_brick:3
+msgid "Add lumped mass for first order term to the model relatively to the variable `varname`. If specified, the data `dataexpr_rho` is the density (1 if omitted). `region` is an optional mesh region on which the term is added. If it is not specified, it is added on the whole mesh. Return the brick index in the model."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.py:docstring of getfem.getfem.Model.add_macro:1

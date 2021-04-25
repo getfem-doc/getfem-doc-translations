@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2020-04-26 01:50+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -62,7 +62,7 @@ msgstr "``np = gf_mesh_get(mesh M, 'nbpts')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:84
 msgid "Get the number of points of the mesh."
-msgstr "メッシュのポイント数を取得します．"
+msgstr "メッシュの点数を取得します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:87
 msgid "``nc = gf_mesh_get(mesh M, 'nbcvs')``"
@@ -70,7 +70,7 @@ msgstr "``nc = gf_mesh_get(mesh M, 'nbcvs')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:89
 msgid "Get the number of convexes of the mesh."
-msgstr "メッシュの凸包の数を取得します．"
+msgstr "メッシュの凸の数を取得します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:92
 msgid "``P = gf_mesh_get(mesh M, 'pts'[, ivec PIDs])``"
@@ -78,7 +78,7 @@ msgstr "``P = gf_mesh_get(mesh M, 'pts'[, ivec PIDs])``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:94
 msgid "Return the list of point coordinates of the mesh."
-msgstr "メッシュのポイントの座標リストを返します．"
+msgstr "メッシュの点の座標リストを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:96
 msgid ""
@@ -92,11 +92,11 @@ msgid ""
 "can use gf_mesh_get(mesh M, 'pid') to filter such invalid points."
 msgstr ""
 "返されるマトリックスの各列には，各点の座標が含まれます．オプションの引数  `PIDs` が指定された場合，このベクトルに #id "
-"がリストされているポイントのみが返されます．それ以外の場合，返されるマトリックスは gf_mesh_get(mesh M, 'max_pid') "
-"列になります．(メッシュの一部のポイントが破棄され， gf_mesh_set(mesh M, 'optimize structure')  "
+"がリストされている点のみが返されます．それ以外の場合，返されるマトリックスは gf_mesh_get(mesh M, 'max_pid') "
+"列になります．(メッシュの一部の点が破棄され， gf_mesh_set(mesh M, 'optimize structure')  "
 "が呼び出されていない場合)  gf_mesh_get(mesh M, 'nbpts')  "
-"より大きい可能性があります．削除された点に対応する列はNaNで埋められます．そのような空のポイントを取り除くには gf_mesh_get(mesh M,"
-" 'pid') を使用します．"
+"より大きい可能性があります．削除された点に対応する列はNaNで埋められます．そのような空の点を取り除くには gf_mesh_get(mesh M, "
+"'pid') を使用します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:107
 msgid "``Pid = gf_mesh_get(mesh M, 'pid')``"
@@ -104,7 +104,7 @@ msgstr "``Pid = gf_mesh_get(mesh M, 'pid')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:109
 msgid "Return the list of points #id of the mesh."
-msgstr "メッシュのポイント #id のリストを返します．"
+msgstr "メッシュの点 #id のリストを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:111
 msgid ""
@@ -123,7 +123,7 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in faces', imat CVFIDs)``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:120
 msgid "Return point #id listed in `CVFIDs`."
-msgstr "`CVFIDs` にリストされているポイント #id を戻す．"
+msgstr "`CVFIDs` にリストされている点 #id を戻す．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:122
 msgid ""
@@ -131,7 +131,7 @@ msgid ""
 "second lists face numbers. On return, `PIDs` is a row vector containing "
 "points #id."
 msgstr ""
-"`CVFIDs` は2行の行列で，最初の行には凸包の #id がリストされ，2番目の行には面の番号がリストされます．返される  `PIDs` "
+"`CVFIDs` は2行の行列で，最初の行には凸の #id がリストされ，2番目の行には面の番号がリストされます．返される  `PIDs` "
 "は，点#idを含む行ベクトルです．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:127
@@ -140,12 +140,12 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in cvids', imat CVIDs)``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:129
 msgid "Return point #id listed in `CVIDs`."
-msgstr "`CVIDs` にリストされているポイント #id を戻す．"
+msgstr "`CVIDs` にリストされている点 #id を戻す．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:131
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:138
 msgid "`PIDs` is a row vector containing points #id."
-msgstr "`PIDs` はポイント #id を含む行ベクトルです．"
+msgstr "`PIDs` は点 #id を含む行ベクトルです．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:134
 msgid "``PIDs = gf_mesh_get(mesh M, 'pid in regions', imat RIDs)``"
@@ -153,7 +153,7 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'pid in regions', imat RIDs)``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:136
 msgid "Return point #id listed in `RIDs`."
-msgstr "`RIDs` にリストされているポイント #id を戻す．"
+msgstr "`RIDs` にリストされている点 #id を戻す．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:141
 msgid ""
@@ -165,7 +165,7 @@ msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:143
 msgid "Return point #id whose coordinates are listed in `PTS`."
-msgstr "座標が `PTS` にリストされているポイント #id を戻す．"
+msgstr "座標が `PTS` にリストされている点 #id を戻す．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:145
 msgid ""
@@ -173,7 +173,7 @@ msgid ""
 "is a row vector containing points #id for each point found in `eps` range, "
 "and -1 for those which where not found in the mesh."
 msgstr ""
-"`PTS` は，点の座標のリストを含む配列です．返される `PIDs` は， `eps` の範囲内で見つかった各ポイントのポイント #id "
+"`PTS` は，点の座標のリストを含む配列です．返される `PIDs` は， `eps` の範囲内で見つかった各点の点 #id "
 "の行ベクトルです．メッシュ内で見つからなかった場合には -1 が返されます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:151
@@ -182,7 +182,7 @@ msgstr "``{Pid, IDx} = gf_mesh_get(mesh M, 'pid from cvid'[, imat CVIDs])``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:153
 msgid "Return the points attached to each convex of the mesh."
-msgstr "メッシュの各凸包に取り付けられたポイントを返します．"
+msgstr "メッシュの各凸に取り付けられた点を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:155
 msgid ""
@@ -194,17 +194,17 @@ msgid ""
 "Hence, for example, the list of #id of points of the second convex is "
 "Pid(IDx(2):IDx(3)-1)."
 msgstr ""
-"`CVIDs` ( `CVIDs = Mesh.max_cvid()` と同じです)を省略すると，すべての凸包が対象となります． `IDx` "
-"はベクトルであり， length(IDx) = length(CVIDs)+1 です． `Pid` は `CVIDs` における各凸包の点の #id "
-"の連結リストを含むベクトルです． `IDx` の各エントリは， `Pid` の対応する凸包点リストの位置です．したがって，例えば，第2凸包の点の #id"
-" のリストは Pid(IDx(2):IDx(3)-1) です．"
+"`CVIDs` ( `CVIDs = Mesh.max_cvid()` と同じです)を省略すると，すべての凸が対象となります． `IDx` "
+"はベクトルであり， length(IDx) = length(CVIDs)+1 です． `Pid` は `CVIDs` における各凸の点の #id "
+"の連結リストを含むベクトルです． `IDx` の各エントリは， `Pid` の対応する凸点リストの位置です．したがって，例えば，第2凸の点の #id "
+"のリストは Pid(IDx(2):IDx(3)-1) です．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:164
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:182
 msgid ""
 "If `CVIDs` contains convex #id which do not exist in the mesh, their point "
 "list will be empty."
-msgstr "`CVIDs` にメッシュに存在しない凸包の#idが含まれている場合，点リストは空になります．"
+msgstr "`CVIDs` にメッシュに存在しない凸の#idが含まれている場合，点リストは空になります．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:168
 msgid "``{Pts, IDx} = gf_mesh_get(mesh M, 'pts from cvid'[, imat CVIDs])``"
@@ -212,7 +212,7 @@ msgstr "``{Pts, IDx} = gf_mesh_get(mesh M, 'pts from cvid'[, imat CVIDs])``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:170
 msgid "Search point listed in `CVID`."
-msgstr "`CVID` にリストされているポイントの検索．"
+msgstr "`CVID` にリストされている点の検索．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:172
 msgid ""
@@ -225,9 +225,9 @@ msgid ""
 "Pts(:,IDx(2):IDx(3)-1)."
 msgstr ""
 "`Pts` と `IDx` を返します． `CVIDs` ( `CVIDs = gf_mesh_get(mesh M, 'max cvid')` "
-"と同じです)を省略すると，すべての凸包が対象となります． `IDx` はベクトルであり， length(IDx) = length(CVIDs)+1 "
-"です． `Pts` は `CVIDs` における各凸包の点の 連結リストを含むベクトルです． `IDx` の各エントリは， `Pid` "
-"の対応する凸包点リストの位置です．したがって，例えば，第2凸包の点の #id のリストは Pts(:,IDx(2):IDx(3)-1) です．"
+"と同じです)を省略すると，すべての凸が対象となります． `IDx` はベクトルであり， length(IDx) = length(CVIDs)+1 "
+"です． `Pts` は `CVIDs` における各凸の点の 連結リストを含むベクトルです． `IDx` の各エントリは， `Pid` "
+"の対応する凸点リストの位置です．したがって，例えば，第2凸の点の #id のリストは Pts(:,IDx(2):IDx(3)-1) です．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:186
 msgid "``CVid = gf_mesh_get(mesh M, 'cvid')``"
@@ -235,7 +235,7 @@ msgstr "``CVid = gf_mesh_get(mesh M, 'cvid')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:188
 msgid "Return the list of all convex #id."
-msgstr "すべての凸包#idのリストを返します．"
+msgstr "すべての凸#idのリストを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:190
 msgid ""
@@ -254,7 +254,7 @@ msgstr "``m = gf_mesh_get(mesh M, 'max pid')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:199
 msgid "Return the maximum #id of all points in the mesh (see 'max cvid')."
-msgstr "メッシュ内のすべてのポイントの最大 #id を返します( 'max cvid' を参照してください)．"
+msgstr "メッシュ内のすべての点の最大 #id を返します( 'max cvid' を参照してください)．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:202
 msgid "``m = gf_mesh_get(mesh M, 'max cvid')``"
@@ -262,7 +262,7 @@ msgstr "``m = gf_mesh_get(mesh M, 'max cvid')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:204
 msgid "Return the maximum #id of all convexes in the mesh (see 'max pid')."
-msgstr "メッシュ内のすべての凸包の最大#idを返します( 'max pid' を参照してください．)．"
+msgstr "メッシュ内のすべての凸の最大#idを返します( 'max pid' を参照してください．)．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:207
 msgid "``[E,C] = gf_mesh_get(mesh M, 'edges' [, CVLST][, 'merge'])``"
@@ -284,10 +284,10 @@ msgid ""
 "output argument C is specified, it will contain the convex number associated"
 " with each edge."
 msgstr ""
-"行ベクトルCVLSTにリストされている凸包のメッシュMのエッジのリストを返します．Eはポイントインデックスを含む 2 x nb_edges "
-"行列です．CVLSTを省略すると，すべての凸包のエッジが返されます．CVLSTに2つの行がある場合，最初の行には凸包の数が含まれ，2番目の行には面の数が返されます．"
+"行ベクトルCVLSTにリストされている凸のメッシュMのエッジのリストを返します．Eは点インデックスを含む 2 x nb_edges "
+"行列です．CVLSTを省略すると，すべての凸のエッジが返されます．CVLSTに2つの行がある場合，最初の行には凸の数が含まれ，2番目の行には面の数が返されます．"
 " 'merge' "
-"が指定されている場合，凸包のすべての共通エッジが単一エッジにマージされます．オプションの出力引数Cを指定すると，各エッジに関連付けられた凸包の番号が含まれます．"
+"が指定されている場合，凸のすべての共通エッジが単一エッジにマージされます．オプションの出力引数Cを指定すると，各エッジに関連付けられた凸の番号が含まれます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:222
 msgid "``[E,C] = gf_mesh_get(mesh M, 'curved edges', int N [, CVLST])``"
@@ -306,7 +306,7 @@ msgstr ""
 "EとCを返します．曲線要素用に設計された gf_mesh_get(mesh M, 'edges') "
 "のより洗練されたバージョン．これは(曲がった)エッジのN(N>=2)点を返します．N==2の場合，これは  gf_mesh_get(mesh M, "
 "'edges') と同等です．点は常にメッシュの一部ではないため， [ mesh_dim x 2 x nb_edges ] "
-"配列である配列Eで，点の番号の代わりに座標が返されます．オプションの出力引数Cを指定すると，各エッジに関連付けられた凸包の番号が含まれます．"
+"配列である配列Eで，点の番号の代わりに座標が返されます．オプションの出力引数Cを指定すると，各エッジに関連付けられた凸の番号が含まれます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:237
 msgid "``PIDs = gf_mesh_get(mesh M, 'orphaned pid')``"
@@ -314,7 +314,7 @@ msgstr "``PIDs = gf_mesh_get(mesh M, 'orphaned pid')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:239
 msgid "Return point #id which are not linked to a convex."
-msgstr "凸包にリンクされていないポイント #id を返す．"
+msgstr "凸にリンクされていない点 #id を返す．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:242
 msgid ""
@@ -326,7 +326,7 @@ msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:244
 msgid "Return convex #ids related with the point #ids given in `PIDs`."
-msgstr "`PIDs` で指定されたポイント #ids に関連する凸包 #ids を戻します．"
+msgstr "`PIDs` で指定された点 #ids に関連する凸 #ids を戻します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:246
 msgid ""
@@ -334,8 +334,8 @@ msgid ""
 "`share=True`, search convex #ids that share the point #ids given in `PIDs`. "
 "`CVIDs` is a row vector (possibly empty)."
 msgstr ""
-"`share=False` の場合は，頂点#idsが `PIDs` にある凸包を検索します． `share=True` の場合は，  `PIDs` "
-"で指定されたポイント #ids を共有する凸包 #ids を検索します． `CVIDs` は(空である可能性がある)行ベクトルです．"
+"`share=False` の場合は，頂点#idsが `PIDs` にある凸を検索します． `share=True` の場合は，  `PIDs` "
+"で指定された点 #ids を共有する凸 #ids を検索します． `CVIDs` は(空である可能性がある)行ベクトルです．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:252
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'faces from pid', ivec PIDs)``"
@@ -343,7 +343,7 @@ msgstr "``CVFIDs = gf_mesh_get(mesh M, 'faces from pid', ivec PIDs)``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:254
 msgid "Return the convex faces whose vertex #ids are in `PIDs`."
-msgstr "頂点 #ids が `PIDs` にある凸包面を返します．"
+msgstr "頂点 #ids が `PIDs` にある凸面を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:256
 msgid ""
@@ -352,8 +352,8 @@ msgid ""
 " be returned, EACH of its points have to be listed in `PIDs`."
 msgstr ""
 "`CVFIDs` "
-"は2行の行列で，最初の行には凸包の#idがリストされ，2番目の行には面番号(凸包のローカル番号)がリストされます．凸包面を返すには，その各点を "
-"`PIDs` にリストする必要があります．"
+"は2行の行列で，最初の行には凸の#idがリストされ，2番目の行には面番号(凸のローカル番号)がリストされます．凸面を返すには，その各点を `PIDs` "
+"にリストする必要があります．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:262
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'outer faces'[, dim][, CVIDs])``"
@@ -374,11 +374,11 @@ msgid ""
 " is given, it returns the boundary of the convex set whose #ids are listed "
 "in `CVIDs`."
 msgstr ""
-"出力される `CVFIDs` は2行の行列で，最初の行は凸包 #ids をリストし，2番目の行は面番号(凸包の局所数)をリストします． `dim` "
+"出力される `CVFIDs` は2行の行列で，最初の行は凸 #ids をリストし，2番目の行は面番号(凸の局所数)をリストします． `dim` "
 "が指定されている場合，この関数は強制的に次元 `dim` を持つ要素の面を検出します．たとえば， `dim` "
 "=2の場合，3次元メッシュに属するサーフェス要素のエッジを検出します． `CVID` "
-"が与えられない場合，全ての凸包が考慮され，この関数は基本的にメッシュ境界を返します． `CVIDs` を指定すると， `CVIDs` に #ids "
-"が列挙されている凸包集合の境界を返します．"
+"が与えられない場合，全ての凸が考慮され，この関数は基本的にメッシュ境界を返します． `CVIDs` を指定すると， `CVIDs` に #ids "
+"が列挙されている凸集合の境界を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:277
 msgid "``CVFIDs = gf_mesh_get(mesh M, 'inner faces'[, CVIDs])``"
@@ -416,7 +416,7 @@ msgid ""
 "Return the set of faces not shared by two convexes and with a mean outward "
 "vector lying within an angle `angle` (in radians) from vector `v`."
 msgstr ""
-"2つの凸包によって共有されておらず，平均外向きベクトルがベクトル `v` からの角度 `angle` (ラジアン)内にある面の集合を返します．"
+"2つの凸によって共有されておらず，平均外向きベクトルがベクトル `v` からの角度 `angle` (ラジアン)内にある面の集合を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:295
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:306
@@ -428,9 +428,9 @@ msgid ""
 "portion of the boundary of the convex set defined by the #ids listed in "
 "`CVIDs`."
 msgstr ""
-"出力される `CVFIDs` は2行の行列であり，最初の行は凸包の #ids をリストし，2番目の行は面番号(凸包の局所番号)をリストします．引数 "
+"出力される `CVFIDs` は2行の行列であり，最初の行は凸の #ids をリストし，2番目の行は面番号(凸の局所番号)をリストします．引数 "
 "`dim` は outer_faces() と同様に機能します． `CVIDs` が指定された場合， `CVIDs` にリストされた #id "
-"によって定義される凸包集合の境界の一部を返します．"
+"によって定義される凸集合の境界の一部を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:302
 msgid ""
@@ -444,8 +444,7 @@ msgstr ""
 msgid ""
 "Return the set of faces not shared by two convexes and lying within the box "
 "defined by the corner points `pmin` and `pmax`."
-msgstr ""
-"2つの凸包によって共有されておらず，コーナーポイント `pmin` と `pmax` によって定義されるボックス内にある面の集合を返します．"
+msgstr "2つの凸によって共有されておらず，コーナー点 `pmin` と `pmax` によって定義されるボックス内にある面の集合を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:313
 msgid ""
@@ -471,7 +470,7 @@ msgid ""
 "more than one neighbor relatively to the face ``f`` (think to bar elements "
 "in 3D for instance), return the first face found."
 msgstr ""
-"存在する場合，隣接する要素の凸包面を返します．凸包が面 ``f`` "
+"存在する場合，隣接する要素の凸面を返します．凸が面 ``f`` "
 "(例えば，3次元で要素を抑制することを考える)に対して相対的に隣接する面を複数持つ場合，最初に見つかった面を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:332
@@ -482,7 +481,7 @@ msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:334
 msgid "Return a list of convex faces from a list of convex #id."
-msgstr "凸包 #id のリストから凸包面のリストを返します．"
+msgstr "凸 #id のリストから凸面のリストを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:336
 msgid ""
@@ -491,8 +490,8 @@ msgid ""
 "given, all convexes are considered. The optional argument 'merge' merges "
 "faces shared by the convex of `CVIDs`."
 msgstr ""
-"`CVFIDs` は2行の行列で，最初の行には凸包の#idがリストされ，2番目の行には面番号(凸包のローカル番号)がリストされます． `CVIDs` "
-"が指定されていない場合，すべての凸包が対象となります．オプションの引数 'merge' は `CVIDs` の凸包が共有している面を結合します．"
+"`CVFIDs` は2行の行列で，最初の行には凸の#idがリストされ，2番目の行には面番号(凸のローカル番号)がリストされます． `CVIDs` "
+"が指定されていない場合，すべての凸が対象となります．オプションの引数 'merge' は `CVIDs` の凸が共有している面を結合します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:342
 msgid ""
@@ -527,7 +526,7 @@ msgstr ""
 msgid ""
 "Return the normal vector of convex `cv`, face `f` at the `nfpt` point of the"
 " face."
-msgstr "面の `nfpt` 点で凸包の `cv` ，面 `f` の法線ベクトルを返します．"
+msgstr "面の `nfpt` 点で凸の `cv` ，面 `f` の法線ベクトルを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:356
 msgid ""
@@ -541,13 +540,13 @@ msgstr "``N = gf_mesh_get(mesh M, 'normal of faces', imat CVFIDs)``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:362
 msgid "Return matrix of (at face centers) the normal vectors of convexes."
-msgstr "凸包の(面の中心の)法線ベクトルの行列を返します．"
+msgstr "凸の(面の中心の)法線ベクトルの行列を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:364
 msgid ""
 "`CVFIDs` is supposed a two-rows matrix, the first row lists convex #ids, and"
 " the second lists face numbers (local number in the convex)."
-msgstr "CVFIDは2行の行列を想定しており，最初の行は凸包の #id をリストし，2番目の行は面番号(凸包のローカル番号)をリストしています．"
+msgstr "CVFIDは2行の行列を想定しており，最初の行は凸の #id をリストし，2番目の行は面番号(凸のローカル番号)をリストしています．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:368
 msgid "``CVIDs = gf_mesh_get(mesh M, 'convexes in box', vec pmin, vec pmax)``"
@@ -558,7 +557,7 @@ msgstr ""
 msgid ""
 "Return the set of convexes lying entirely within the box defined by the "
 "corner points `pmin` and `pmax`."
-msgstr "コーナーポイント  `pmin` と `pmax` で定義されたボックス内に完全に収まる凸包集合を返します．"
+msgstr "コーナー点  `pmin` と `pmax` で定義されたボックス内に完全に収まる凸集合を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:372
 msgid ""
@@ -567,8 +566,8 @@ msgid ""
 "`CVIDs` is given, it returns portion of the boundary of the convex set "
 "defined by the #ids listed in `CVIDs`."
 msgstr ""
-"出力される `CVID` は二行行列で，最初の行には凸の#idがリストされ，次の行には面の番号(凸包のローカル番号)がリストされます． `CVID` "
-"が指定された場合， `CVID` にリストされた#idによって定義される凸包集合の境界の一部を返します．"
+"出力される `CVID` は二行行列で，最初の行には凸の#idがリストされ，次の行には面の番号(凸のローカル番号)がリストされます． `CVID` "
+"が指定された場合， `CVID` にリストされた#idによって定義される凸集合の境界の一部を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:378
 msgid "``Q = gf_mesh_get(mesh M, 'quality'[, ivec CVIDs])``"
@@ -578,7 +577,7 @@ msgstr "``Q = gf_mesh_get(mesh M, 'quality'[, ivec CVIDs])``"
 msgid ""
 "Return an estimation of the quality of each convex (:math:`0 \\leq Q \\leq "
 "1`)."
-msgstr "各凸包の品質の推定値を返します (:math:`0 \\leq Q \\leq 1`) ．"
+msgstr "各凸の品質の推定値を返します (:math:`0 \\leq Q \\leq 1`) ．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:383
 msgid "``A = gf_mesh_get(mesh M, 'convex area'[, ivec CVIDs])``"
@@ -586,7 +585,7 @@ msgstr "``A = gf_mesh_get(mesh M, 'convex area'[, ivec CVIDs])``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:385
 msgid "Return an estimate of the area of each convex."
-msgstr "各凸包の面積の推定値を返します．"
+msgstr "各凸の面積の推定値を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:388
 msgid "``A = gf_mesh_get(mesh M, 'convex radius'[, ivec CVIDs])``"
@@ -594,7 +593,7 @@ msgstr "``A = gf_mesh_get(mesh M, 'convex radius'[, ivec CVIDs])``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:390
 msgid "Return an estimate of the radius of each convex."
-msgstr "各凸包の半径の推定値を返します．"
+msgstr "各凸の半径の推定値を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:393
 msgid "``{S, CV2S} = gf_mesh_get(mesh M, 'cvstruct'[, ivec CVIDs])``"
@@ -602,7 +601,7 @@ msgstr "``{S, CV2S} = gf_mesh_get(mesh M, 'cvstruct'[, ivec CVIDs])``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:395
 msgid "Return an array of the convex structures."
-msgstr "凸包構造の配列を返します．"
+msgstr "凸構造の配列を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:397
 msgid ""
@@ -610,8 +609,8 @@ msgid ""
 "is listed once in `S`, and `CV2S` maps the convexes indice in `CVIDs` to the"
 " indice of its structure in `S`."
 msgstr ""
-"`CVIDs` が指定されていない場合，すべての凸包が考慮されます．各凸包構造は `S` に1つずつ記載されており， `CV2S` は `CVIDs` "
-"の凸包のインデックスを `S` の構造インデックスにマップしています．"
+"`CVIDs` が指定されていない場合，すべての凸が考慮されます．各凸構造は `S` に1つずつ記載されており， `CV2S` は `CVIDs` "
+"の凸のインデックスを `S` の構造インデックスにマップしています．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:402
 msgid "``{GT, CV2GT} = gf_mesh_get(mesh M, 'geotrans'[, ivec CVIDs])``"
@@ -655,7 +654,7 @@ msgstr "``CVFIDs = gf_mesh_get(mesh M, 'region', ivec RIDs)``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:426
 msgid "Return the list of convexes/faces on the regions `RIDs`."
-msgstr "領域  `RIDs` 上の凸包/面のリストを返します．"
+msgstr "領域  `RIDs` 上の凸/面のリストを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:428
 msgid ""
@@ -663,8 +662,8 @@ msgid ""
 "second lists face numbers (local number in the convex). (and 0 when the "
 "whole convex is in the regions)."
 msgstr ""
-"`CVFIDs` は2行の行列で，最初の行には凸包の #id "
-"がリストされ，2番目の行には面番号(凸包のローカル番号)がリストされます．(凸包全体が領域内にある場合は 0 です)．"
+"`CVFIDs` は2行の行列で，最初の行には凸の #id "
+"がリストされ，2番目の行には面番号(凸のローカル番号)がリストされます．(凸全体が領域内にある場合は 0 です)．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:434
 msgid "``gf_mesh_get(mesh M, 'save', string filename)``"
@@ -703,7 +702,7 @@ msgstr "メッシュをVTKファイルに書き出します．"
 msgid ""
 "If 'quality' is specified, an estimation of the quality of each convex will "
 "be written to the file."
-msgstr "'quality' が指定された場合，各凸包の品質の見積りがファイルに書き込まれます．"
+msgstr "'quality' が指定された場合，各凸の品質の見積りがファイルに書き込まれます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_get.rst:453
 msgid ""

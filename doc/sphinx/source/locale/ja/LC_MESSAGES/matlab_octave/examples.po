@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2020-04-23 00:22+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -78,7 +78,7 @@ msgstr ""
 msgid ""
 "Now we can try to have a **look at the mesh**, with its vertices numbering "
 "and the convexes numbering::"
-msgstr "次に，頂点の番号と凸包の番号が付いた **メッシュを見てみましょう** ．"
+msgstr "次に，頂点の番号と凸の番号が付いた **メッシュを見てみましょう** ．"
 
 #: ../source/matlab_octave/examples.rst:46
 msgid ""
@@ -86,7 +86,7 @@ msgid ""
 "convexes is also regular (this is guaranteed for cartesian meshes, but do "
 "not hope a similar numbering for the degrees of freedom)."
 msgstr ""
-"このように，メッシュは規則的であり，節点と凸包の番号付けも規則的です(これは直交メッシュでは保証されていますが，自由度に同様の番号付けは望めません)．"
+"このように，メッシュは規則的であり，節点と凸の番号付けも規則的です(これは直交メッシュでは保証されていますが，自由度に同様の番号付けは望めません)．"
 
 #: ../source/matlab_octave/examples.rst:50
 msgid ""
@@ -107,7 +107,7 @@ msgid ""
 msgstr ""
 "最初の命令は新しい |mlab_mf| "
 "オブジェクトを構築し，2番目の引数はこのオブジェクトがスカラーフィールドの補間に使用されることを指定します(未知変数 :math:`u` "
-"はスカラーフィールドです)．第2の命令は，すべての凸包(各基底関数は4次の多項式であり :math:`k` 次 :math:`P_k` "
+"はスカラーフィールドです)．第2の命令は，すべての凸(各基底関数は4次の多項式であり :math:`k` 次 :math:`P_k` "
 "多項式であることを覚えておいてください，ここで :math:`2k` 次 :math:`Q_k` 多項式です)に :math:`Q_2` "
 "有限要素法を割り当てます． :math:`Q_2` は多項式有限要素法なので，参照要素でその基底関数の式を見ることができます．"
 
@@ -145,7 +145,7 @@ msgid ""
 "many alternative FEM methods and integration methods (see :ref:`ud`)."
 msgstr ""
 "積分法を使用して各要素の各種積分を計算します．ここでは，正確な計算(非 "
-":envvar:`求積公式`)を実行することを選択します．これは，参照凸包からのこれらの凸包の幾何変換が線形(これはすべての単体に当てはまり，通常のメッシュの平行六面体にも当てはまりますが，一般的な四角形には当てはまりません)であり，選択したFEMが多項式であるために可能です．このため，すべての基底関数/基底関数の積/傾き/などを解析的に積分することが可能であり，FEMの手法や積分法にも多くの選択肢があります("
+":envvar:`求積公式`)を実行することを選択します．これは，参照凸からのこれらの凸の幾何変換が線形(これはすべての単体に当てはまり，通常のメッシュの平行六面体にも当てはまりますが，一般的な四角形には当てはまりません)であり，選択したFEMが多項式であるために可能です．このため，すべての基底関数/基底関数の積/傾き/などを解析的に積分することが可能であり，FEMの手法や積分法にも多くの選択肢があります("
 " :ref:`ud` を参照)．"
 
 #: ../source/matlab_octave/examples.rst:114
@@ -162,14 +162,14 @@ msgid ""
 "accessed via an integer #id::"
 msgstr ""
 "次に，Dirichlet条件を設定するために，**領域の** \":envvar:`boundary`\" を **検索する** "
-"必要があります．メッシュオブジェクトには，凸包面と凸包面の集合を保存する機能があります．これらの集合(\"regions\" と呼ばれます)には，整数 "
+"必要があります．メッシュオブジェクトには，凸面と凸面の集合を保存する機能があります．これらの集合(\"regions\" と呼ばれます)には，整数 "
 "*#id* を使用してアクセスします．"
 
 #: ../source/matlab_octave/examples.rst:128
 msgid ""
 "Here we find the faces of the convexes which are on the boundary of the mesh"
 " (i.e. the faces which are not shared by two convexes)."
-msgstr "ここでは，メッシュの境界上にある凸包の面(つまり，2つの凸包によって共有されていない面)を見つけます．"
+msgstr "ここでは，メッシュの境界上にある凸の面(つまり，2つの凸によって共有されていない面)を見つけます．"
 
 #: ../source/matlab_octave/examples.rst:131
 #: ../source/matlab_octave/examples.rstNone
@@ -192,7 +192,7 @@ msgid ""
 " number 42."
 msgstr ""
 "配列 ``border`` "
-"には二つの行があり，最初の行は凸包の番号で，次の行は面の番号です(これは凸包に対してローカルであり，面のグローバルな番号付けはありません)．次に，この面の集合を領域番号42に割り当てます．"
+"には二つの行があり，最初の行は凸の番号で，次の行は面の番号です(これは凸に対してローカルであり，面のグローバルな番号付けはありません)．次に，この面の集合を領域番号42に割り当てます．"
 
 #: ../source/matlab_octave/examples.rst:140
 msgid ""

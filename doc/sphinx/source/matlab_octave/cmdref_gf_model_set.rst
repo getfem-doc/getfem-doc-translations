@@ -89,8 +89,8 @@ gf_model_set
   gf_model_set(model M, 'set private matrix', int indbrick, spmat B)
   gf_model_set(model M, 'set private rhs', int indbrick, vec B)
   ind = gf_model_set(model M, 'add isotropic linearized elasticity brick', mesh_im mim, string varname, string dataname_lambda, string dataname_mu[, int region])
-  ind = gf_model_set(model M, 'add isotropic linearized elasticity brick pstrain', mesh_im mim, string varname, string data_E, string data_nu[, int region])
-  ind = gf_model_set(model M, 'add isotropic linearized elasticity brick pstress', mesh_im mim, string varname, string data_E, string data_nu[, int region])
+  ind = gf_model_set(model M, 'add isotropic linearized elasticity pstrain brick', mesh_im mim, string varname, string data_E, string data_nu[, int region])
+  ind = gf_model_set(model M, 'add isotropic linearized elasticity pstress brick', mesh_im mim, string varname, string data_E, string data_nu[, int region])
   ind = gf_model_set(model M, 'add linear incompressibility brick', mesh_im mim, string varname, string multname_pressure[, int region[, string dataexpr_coeff]])
   ind = gf_model_set(model M, 'add nonlinear elasticity brick', mesh_im mim, string varname, string constitutive_law, string dataname[, int region])
   ind = gf_model_set(model M, 'add finite strain elasticity brick', mesh_im mim, string constitutive_law, string varname, string params[, int region])
@@ -108,6 +108,7 @@ gf_model_set
   ind = gf_model_set(model M, 'add Mindlin Reissner plate brick', mesh_im mim, mesh_im mim_reduced, string varname_u3, string varname_theta , string param_E, string param_nu, string param_epsilon, string param_kappa [,int variant [, int region]])
   ind = gf_model_set(model M, 'add enriched Mindlin Reissner plate brick', mesh_im mim, mesh_im mim_reduced1, mesh_im mim_reduced2, string varname_ua, string varname_theta,string varname_u3, string varname_theta3 , string param_E, string param_nu, string param_epsilon [,int variant [, int region]])
   ind = gf_model_set(model M, 'add mass brick', mesh_im mim, string varname[, string dataexpr_rho[, int region]])
+  ind = gf_model_set(model M, 'add lumped mass for first order brick', mesh_im mim, string varname[, string dataexpr_rho[, int region]])
   gf_model_set(model M, 'shift variables for time integration')
   gf_model_set(model M, 'perform init time derivative', scalar ddt)
   gf_model_set(model M, 'set time step', scalar dt)
@@ -1010,7 +1011,7 @@ gf_model_set
     on the whole mesh. Return the brick index in the model.
 
 
-  ``ind = gf_model_set(model M, 'add isotropic linearized elasticity brick pstrain', mesh_im mim, string varname, string data_E, string data_nu[, int region])``
+  ``ind = gf_model_set(model M, 'add isotropic linearized elasticity pstrain brick', mesh_im mim, string varname, string data_E, string data_nu[, int region])``
 
     Add an isotropic linearized elasticity term to the model relatively to
     the variable `varname`. `data_E` and `data_nu` should
@@ -1024,7 +1025,7 @@ gf_model_set
     Return the brick index in the model.
 
 
-  ``ind = gf_model_set(model M, 'add isotropic linearized elasticity brick pstress', mesh_im mim, string varname, string data_E, string data_nu[, int region])``
+  ``ind = gf_model_set(model M, 'add isotropic linearized elasticity pstress brick', mesh_im mim, string varname, string data_E, string data_nu[, int region])``
 
     Add an isotropic linearized elasticity term to the model relatively to
     the variable `varname`. `data_E` and `data_nu` should
@@ -1424,6 +1425,15 @@ gf_model_set
   ``ind = gf_model_set(model M, 'add mass brick', mesh_im mim, string varname[, string dataexpr_rho[, int region]])``
 
     Add mass term to the model relatively to the variable `varname`.
+    If specified, the data `dataexpr_rho` is the
+    density (1 if omitted). `region` is an optional mesh region on
+    which the term is added. If it is not specified, it
+    is added on the whole mesh. Return the brick index in the model.
+
+
+  ``ind = gf_model_set(model M, 'add lumped mass for first order brick', mesh_im mim, string varname[, string dataexpr_rho[, int region]])``
+
+    Add lumped mass for first order term to the model relatively to the variable `varname`.
     If specified, the data `dataexpr_rho` is the
     density (1 if omitted). `region` is an optional mesh region on
     which the term is added. If it is not specified, it

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2020-04-26 01:50+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -56,14 +56,14 @@ msgid ""
 "listed in `CVids`, the index of its correspounding integration method in "
 "`I`."
 msgstr ""
-"`I` は `CVids` で与えられた凸包にあるすべてのintegオブジェクトの配列です． `CV2I` が出力引数として与えられた場合， "
-"`CVids` に列挙されている各凸包に対し， `I` における相関積分法のインデックスを含みます．"
+"`I` は `CVids` で与えられた凸にあるすべてのintegオブジェクトの配列です． `CV2I` が出力引数として与えられた場合， "
+"`CVids` に列挙されている各凸に対し， `I` における相関積分法のインデックスを含みます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:43
 msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have any "
 "integration method have their correspounding entry in `CV2I` set to -1."
-msgstr "メッシュの一部ではない凸包，または積分法を持たない凸包については， `CV2I` の対応エントリを-1に設定します．"
+msgstr "メッシュの一部ではない凸，または積分法を持たない凸については， `CV2I` の対応エントリを-1に設定します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:47
 msgid "Example::"
@@ -75,11 +75,11 @@ msgstr "``CVids = gf_mesh_im_get(mesh_im MI, 'convex_index')``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:62
 msgid "Return the list of convexes who have a integration method."
-msgstr "積分法がある凸包のリストを返します．"
+msgstr "積分法がある凸のリストを返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:64
 msgid "Convexes who have the dummy IM_NONE method are not listed."
-msgstr "ダミーの IM_NONE メソッドを持つ凸包は表示されません．"
+msgstr "ダミーの IM_NONE メソッドを持つ凸は表示されません．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:67
 msgid "``M = gf_mesh_im_get(mesh_im MI, 'eltm', eltm em, int cv [, int f])``"
@@ -88,7 +88,7 @@ msgstr "``M = gf_mesh_im_get(mesh_im MI, 'eltm', eltm em, int cv [, int f])``"
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:69
 msgid ""
 "Return the elementary matrix (or tensor) integrated on the convex `cv`."
-msgstr "凸包の `cv` 上で積分された基本行列(またはテンソル)を返します．"
+msgstr "凸の `cv` 上で積分された基本行列(またはテンソル)を返します．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:71
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:86
@@ -103,7 +103,7 @@ msgid ""
 "face `f` of `cv` instead of the whole convex."
 msgstr ""
 " `em` の作成に使用する有限要素法が，要素 `cv` に割り当てられた有限要素法と互換性があることを確認してください ! "
-"これは関数によってチェックされません．引数 `f` が与えられた場合，基本テンソルは，全体の凸包ではなく， `cv` の面 `f` 上で積分されます．"
+"これは関数によってチェックされません．引数 `f` が与えられた場合，基本テンソルは，全体の凸ではなく， `cv` の面 `f` 上で積分されます．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:79
 msgid "``Ip = gf_mesh_im_get(mesh_im MI, 'im_nodes'[, mat CVids])``"
@@ -117,14 +117,14 @@ msgstr "積分点の座標とその重みを返します．"
 msgid ""
 "`CVids` may be a list of convexes, or a list of convex faces, such as "
 "returned by gf_mesh_get(mesh M, 'region')"
-msgstr "`CVids` は gf_mesh_get(mesh M, 'region') によって返される凸包のリストまたは凸包面のリストです．"
+msgstr "`CVids` は gf_mesh_get(mesh M, 'region') によって返される凸のリストまたは凸面のリストです．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:88
 msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have an "
 "approximate integration method do not have their corresponding entry (this "
 "has no meaning for exact integration methods!)."
-msgstr "メッシュの一部でない凸包，または近似積分法を持たない凸包には，対応するエントリ(これは，厳密な積分法には意味がありません!)がありません．"
+msgstr "メッシュの一部でない凸，または近似積分法を持たない凸には，対応するエントリ(これは，厳密な積分法には意味がありません!)がありません．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im_get.rst:94
 msgid "``gf_mesh_im_get(mesh_im MI, 'save',string filename[, 'with mesh'])``"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -58,8 +58,8 @@ msgid ""
 " in <literal>I</literal>."
 msgstr ""
 "<literal>I</literal> は <literal>CVids</literal> "
-"で与えられた凸包にあるすべてのFemオブジェクトの配列です． <literal>CV2I</literal> が出力引数として指定された場合  "
-"<literal>CVids</literal> にリストされている各凸包に対し， <literal>I</literal> "
+"で与えられた凸にあるすべてのFemオブジェクトの配列です． <literal>CV2I</literal> が出力引数として指定された場合  "
+"<literal>CVids</literal> にリストされている各凸に対し， <literal>I</literal> "
 "内の対応する積分法のインデックスが含まれます．"
 
 #: ../source/scilab/cmdref_gf_mesh_im_get.rst:43
@@ -68,7 +68,7 @@ msgid ""
 "integration method have their correspounding entry in "
 "<literal>CV2I</literal> set to -1."
 msgstr ""
-"メッシュの一部ではない凸包，または積分法を持たない凸包については， <literal>CV2I</literal> の対応エントリを-1に設定します．"
+"メッシュの一部ではない凸，または積分法を持たない凸については， <literal>CV2I</literal> の対応エントリを-1に設定します．"
 
 #: ../source/scilab/cmdref_gf_mesh_im_get.rst:50
 msgid "``CVids = gf_mesh_im_get(mesh_im MI, 'convex_index')``"
@@ -76,11 +76,11 @@ msgstr "``CVids = gf_mesh_im_get(mesh_im MI, 'convex_index')``"
 
 #: ../source/scilab/cmdref_gf_mesh_im_get.rst:52
 msgid "Return the list of convexes who have a integration method."
-msgstr "積分法がある凸包のリストを返します．"
+msgstr "積分法がある凸のリストを返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_im_get.rst:54
 msgid "Convexes who have the dummy IM_NONE method are not listed."
-msgstr "ダミーの IM_NONE メソッドを持つ凸包は表示されません．"
+msgstr "ダミーの IM_NONE メソッドを持つ凸は表示されません．"
 
 #: ../source/scilab/cmdref_gf_mesh_im_get.rst:57
 msgid "``M = gf_mesh_im_get(mesh_im MI, 'eltm', eltm em, int cv [, int f])``"
@@ -90,7 +90,7 @@ msgstr "``M = gf_mesh_im_get(mesh_im MI, 'eltm', eltm em, int cv [, int f])``"
 msgid ""
 "Return the elementary matrix (or tensor) integrated on the convex "
 "<literal>cv</literal>."
-msgstr "凸包の <literal>cv</literal> 上で積分された基本行列(またはテンソル)を返します．"
+msgstr "凸の <literal>cv</literal> 上で積分された基本行列(またはテンソル)を返します．"
 
 #: ../source/scilab/cmdref_gf_mesh_im_get.rst:61
 #: ../source/scilab/cmdref_gf_mesh_im_get.rst:76
@@ -107,7 +107,7 @@ msgid ""
 msgstr ""
 " <literal>em</literal> の作成に使用する有限要素法が，要素 <literal>cv</literal> "
 "に割り当てられた有限要素法と互換性があることを確認してください ! これは関数によってチェックされません．引数 <literal>f</literal>"
-" が与えられた場合，基本テンソルは，全体の凸包ではなく， <literal>cv</literal> の面 <literal>f</literal> "
+" が与えられた場合，基本テンソルは，全体の凸ではなく， <literal>cv</literal> の面 <literal>f</literal> "
 "上で積分されます．"
 
 #: ../source/scilab/cmdref_gf_mesh_im_get.rst:69
@@ -124,14 +124,14 @@ msgid ""
 "faces, such as returned by gf_mesh_get(mesh M, 'region')"
 msgstr ""
 "<literal>CVids</literal> は gf_mesh_get(mesh M, 'region') "
-"によって返される凸包のリストまたは凸包面のリストです．"
+"によって返される凸のリストまたは凸面のリストです．"
 
 #: ../source/scilab/cmdref_gf_mesh_im_get.rst:78
 msgid ""
 "Convexes which are not part of the mesh, or convexes which do not have an "
 "approximate integration method do not have their corresponding entry (this "
 "has no meaning for exact integration methods!)."
-msgstr "メッシュの一部でない凸包，または近似積分法を持たない凸包には，対応するエントリ(これは，厳密な積分法には意味がありません!)がありません．"
+msgstr "メッシュの一部でない凸，または近似積分法を持たない凸には，対応するエントリ(これは，厳密な積分法には意味がありません!)がありません．"
 
 #: ../source/scilab/cmdref_gf_mesh_im_get.rst:84
 msgid "``gf_mesh_im_get(mesh_im MI, 'save',string filename[, 'with mesh'])``"

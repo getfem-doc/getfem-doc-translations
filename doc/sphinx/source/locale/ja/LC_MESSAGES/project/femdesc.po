@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-24 01:14+0000\n"
+"POT-Creation-Date: 2021-04-25 01:22+0000\n"
 "PO-Revision-Date: 2018-07-16 07:02+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/getfem-doc/teams/87607/ja/)\n"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../source/project/femdesc.rst:19
 msgid "Convex structures"
-msgstr "凸包構造"
+msgstr "凸構造"
 
 #: ../source/project/femdesc.rst:21
 msgid ""
@@ -48,8 +48,8 @@ msgid ""
 "In |gf|, a type of element (for us, a convex) is described by the object "
 "|bg_cs| defined in the file :file:`bgeot_convex_structure.h`."
 msgstr ""
-"有限要素法は，要素と呼ばれる小さな凸包領域で定義されます．有限要素法を定義できる最も単純な要素は，（1次元の単体）セグメント，他には三角形，（2次元と3次元の単体）四面体，プリズム，直方体などです．"
-" |gf| では，要素の種類(凸包)は :file:`bgeot_convex_structure.h` ファイルで定義されているオブジェクト "
+"有限要素法は，要素と呼ばれる小さな凸領域で定義されます．有限要素法を定義できる最も単純な要素は，（1次元の単体）セグメント，他には三角形，（2次元と3次元の単体）四面体，プリズム，直方体などです．"
+" |gf| では，要素の種類(凸)は :file:`bgeot_convex_structure.h` ファイルで定義されているオブジェクト "
 "|bg_cs| で記述されています．"
 
 #: ../source/project/femdesc.rst:28
@@ -60,7 +60,7 @@ msgid ""
 "type of convex. What will be manipulated is a pointer on such a descriptor "
 "which has to be declared with the type |bg_pcs|"
 msgstr ""
-"ここでは頂点の座標ではなく凸包の構造だけを記述します．この種類の構造は同じタイプの凸包を記述する必要はないので，この構造は自分自身を操作することはできません．このような記述子上のポインタは"
+"ここでは頂点の座標ではなく凸の構造だけを記述します．この種類の構造は同じタイプの凸を記述する必要はないので，この構造は自分自身を操作することはできません．このような記述子上のポインタは"
 " |bg_pcs| 型で宣言します．"
 
 #: ../source/project/femdesc.rst:34
@@ -104,7 +104,7 @@ msgid ""
 "to a more basic description (used for the description of geometric "
 "transformations)."
 msgstr ""
-"記述子には特に頂点の数( ``nb_points()`` ）の計算のために面の数（ ``p->nb_faces()`` ）と凸包の次元（ "
+"記述子には特に頂点の数( ``nb_points()`` ）の計算のために面の数（ ``p->nb_faces()`` ）と凸の次元（ "
 "``p->dim()`` "
 "）が含まれています．他には，各面の頂点の数，面の記述，および（幾何変換の記述に使用される）より基本的な記述への最終的な参照先が情報として含まれます．"
 
@@ -114,7 +114,7 @@ msgstr "通常の要素"
 
 #: ../source/project/femdesc.rst:78
 msgid "Convexes of reference"
-msgstr "凸包の参照"
+msgstr "凸の参照"
 
 #: ../source/project/femdesc.rst:80
 msgid ""
@@ -125,9 +125,9 @@ msgid ""
 "library keeps only one description for each type of convex. So what will be "
 "manipulated is a pointer of type |bg_pcr| on the descriptor."
 msgstr ""
-"参照している凸包は特定の実数要素，すなわち頂点のリストを持つ凸包の構造です．これは有限要素法が定義されている特定の要素を記述しています．ファイル "
+"参照している凸は特定の実数要素，すなわち頂点のリストを持つ凸の構造です．これは有限要素法が定義されている特定の要素を記述しています．ファイル "
 ":file:`bgeot_convex_ref.h` 内のオブジェクト |bg_cr| "
-"によって記述されています．ライブラリは，凸包のそれぞれの種類に対して1つの記述のみ保持します．したがって，操作するのは記述子上の |bg_pcr| "
+"によって記述されています．ライブラリは，凸のそれぞれの種類に対して1つの記述のみ保持します．したがって，操作するのは記述子上の |bg_pcr| "
 "型のポインタです．"
 
 #: ../source/project/femdesc.rst:87
@@ -146,7 +146,7 @@ msgstr "``k`` 次 ``d`` 次元の Lagrange 格子を参照する単体の記述�
 
 #: ../source/project/femdesc.rst:100
 msgid "description of the direct product of two convexes of reference."
-msgstr "2つの参照凸包の直積の記述．"
+msgstr "2つの参照凸の直積の記述．"
 
 #: ../source/project/femdesc.rst:104
 msgid "description of the parallelepiped of reference of dimension ``d``."
@@ -174,7 +174,7 @@ msgid ""
 "is in the face ``f`` of the element. Other functions can be found in "
 ":file:`bgeot_convex_ref.h` and :file:`bgeot_convex.h`."
 msgstr ""
-"``p`` が |bg_pcr| 型の場合 ``p->structure()`` は対応する凸包構造です．したがって，例えば "
+"``p`` が |bg_pcr| 型の場合 ``p->structure()`` は対応する凸構造です．したがって，例えば "
 "``p->structure()->nb_points()`` は頂点の数を返します． ``p->points()`` 関数は頂点の配列を与え， "
 "``p->points()[0]`` は最初の頂点です．関数 ``p->is_in(const base_node &pt)`` "
 "は，点ptが要素内にあれば負の実数を返します．関数 ``p->is_in_face(short_type f, const base_node "
@@ -192,7 +192,7 @@ msgid ""
 "given to have other types of elements. It is possible to define other kind "
 "of base functions such as piecewise polynomials, interpolant wavelets, etc."
 msgstr ""
-"ほとんどの場合，有限要素法の形状関数は，少なくとも参照している凸包においては多項式です．しかし，それ以外の種類の要素を与えることも可能性です．区分多項式，補間曲線ウェーブレットなどの他の種類の基底関数を定義することもできます．"
+"ほとんどの場合，有限要素法の形状関数は，少なくとも参照している凸においては多項式です．しかし，それ以外の種類の要素を与えることも可能性です．区分多項式，補間曲線ウェーブレットなどの他の種類の基底関数を定義することもできます．"
 
 #: ../source/project/femdesc.rst:130
 msgid ""
