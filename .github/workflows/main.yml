@@ -68,8 +68,8 @@ jobs:
         cd getfem
         bash autogen.sh
         ./configure --prefix=/home/runner/work/venv --with-pic
-        make -j8  >  make.log
-        sudo make install
+        # make -j8  >  make.log
+        # sudo make install
         sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
