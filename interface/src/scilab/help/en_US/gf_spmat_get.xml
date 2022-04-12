@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="gf_spmat_get" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <refnamediv>
+    <refname>gf_spmat_get</refname>
+    <refpurpose></refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>n = gf_spmat_get(spmat S, 'nnz')</synopsis>
+    <synopsis>Sm = gf_spmat_get(spmat S, 'full'[, list I[, list J]])</synopsis>
+    <synopsis>MV = gf_spmat_get(spmat S, 'mult', vec V)</synopsis>
+    <synopsis>MtV = gf_spmat_get(spmat S, 'tmult', vec V)</synopsis>
+    <synopsis>D = gf_spmat_get(spmat S, 'diag'[, list E])</synopsis>
+    <synopsis>s = gf_spmat_get(spmat S, 'storage')</synopsis>
+    <synopsis>{ni,nj} = gf_spmat_get(spmat S, 'size')</synopsis>
+    <synopsis>b = gf_spmat_get(spmat S, 'is_complex')</synopsis>
+    <synopsis>{JC, IR} = gf_spmat_get(spmat S, 'csc_ind')</synopsis>
+    <synopsis>V = gf_spmat_get(spmat S, 'csc_val')</synopsis>
+    <synopsis>{N, U0} = gf_spmat_get(spmat S, 'dirichlet nullspace', vec R)</synopsis>
+    <synopsis>gf_spmat_get(spmat S, 'save', string format, string filename)</synopsis>
+    <synopsis>s = gf_spmat_get(spmat S, 'char')</synopsis>
+    <synopsis>gf_spmat_get(spmat S, 'display')</synopsis>
+    <synopsis>{mantissa_r, mantissa_i, exponent} = gf_spmat_get(spmat S, 'determinant')</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Description</title>
+    <para></para>
+  </refsection>
+
+  <refsection>
+    <title>Command list</title>
+
+    <itemizedlist>
+    <listitem>
+    <para><literal>n = gf_spmat_get(spmat S, 'nnz')</literal></para>
+
+    <para>         Return the number of non-null values stored in the sparse matrix.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>Sm = gf_spmat_get(spmat S, 'full'[, list I[, list J]])</literal></para>
+
+    <para>         Return a full (sub-)matrix.
+      
+      The optional arguments <literal>I</literal> and <literal>J</literal>, are the sub-intervals for the
+      rows and columns that are to be extracted.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>MV = gf_spmat_get(spmat S, 'mult', vec V)</literal></para>
+
+    <para>         Product of the sparse matrix <literal>M</literal> with a vector <literal>V</literal>.
+      
+      For matrix-matrix multiplications, see gf_spmat('mult').
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>MtV = gf_spmat_get(spmat S, 'tmult', vec V)</literal></para>
+
+    <para>         Product of <literal>M</literal> transposed (conjugated if <literal>M</literal> is complex) with the
+      vector <literal>V</literal>.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>D = gf_spmat_get(spmat S, 'diag'[, list E])</literal></para>
+
+    <para>         Return the diagonal of <literal>M</literal> as a vector.
+      
+      If <literal>E</literal> is used, return the sub-diagonals whose ranks are given in E.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>s = gf_spmat_get(spmat S, 'storage')</literal></para>
+
+    <para>         Return the storage type currently used for the matrix.
+      
+      The storage is returned as a string, either 'CSC' or 'WSC'.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>{ni,nj} = gf_spmat_get(spmat S, 'size')</literal></para>
+
+    <para>         Return a vector where <literal>ni</literal> and <literal>nj</literal> are the dimensions of the matrix.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>b = gf_spmat_get(spmat S, 'is_complex')</literal></para>
+
+    <para>         Return 1 if the matrix contains complex values.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>{JC, IR} = gf_spmat_get(spmat S, 'csc_ind')</literal></para>
+
+    <para>         Return the two usual index arrays of CSC storage.
+      
+      If <literal>M</literal> is not stored as a CSC matrix, it is converted into CSC.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>V = gf_spmat_get(spmat S, 'csc_val')</literal></para>
+
+    <para>         Return the array of values of all non-zero entries of <literal>M</literal>.
+      
+      If <literal>M</literal> is not stored as a CSC matrix, it is converted into CSC.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>{N, U0} = gf_spmat_get(spmat S, 'dirichlet nullspace', vec R)</literal></para>
+
+    <para>       Solve the dirichlet conditions <literal>M.U=R</literal>.
+
+    A solution <literal>U0</literal> which has a minimum L2-norm is returned, with a
+    sparse matrix <literal>N</literal> containing an orthogonal basis of the kernel of
+    the (assembled) constraints matrix <literal>M</literal> (hence, the PDE linear system
+    should be solved on this subspace): the initial problem
+
+    <literal>K.U = B</literal> with constraints <literal>M.U = R</literal>
+
+    is replaced by
+
+    <literal>(N'.K.N).UU = N'.B</literal> with <literal>U = N.UU + U0</literal>
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>gf_spmat_get(spmat S, 'save', string format, string filename)</literal></para>
+
+    <para>         Export the sparse matrix.
+
+      the format of the file may be 'hb' for Harwell-Boeing, or 'mm'
+      for Matrix-Market.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>s = gf_spmat_get(spmat S, 'char')</literal></para>
+
+    <para>         Output a (unique) string representation of the spmat.
+
+      This can be used to perform comparisons between two
+      different spmat objects.
+      This function is to be completed.
+      
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>gf_spmat_get(spmat S, 'display')</literal></para>
+
+    <para>         displays a short summary for a spmat object.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>{mantissa_r, mantissa_i, exponent} = gf_spmat_get(spmat S, 'determinant')</literal></para>
+
+    <para>         returns the matrix determinant calculated using MUMPS.
+    </para>
+    </listitem>
+
+    </itemizedlist>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member><link linkend="getfem_types">getfem types</link></member>
+    </simplelist>
+  </refsection>
+
+  <refsection>
+    <title>Authors</title>
+    <para>Y. Collette</para>
+  </refsection>
+
+</refentry>
