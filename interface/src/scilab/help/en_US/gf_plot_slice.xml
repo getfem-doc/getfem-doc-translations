@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="gf_plot_slice" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <refnamediv>
+    <refname>gf_plot_slice</refname>
+
+    <refpurpose>this function is used to plot a slice of
+    mesh/mesh_fem</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>function [hfaces, htube, hquiver, hmesh]=gf_plot_slice(sl,varargin)</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Description</title>
+
+    <para>This function is used to plot a slice of mesh/mesh_fem (see
+    gf_slice).</para>
+
+    <para>The options are specified as pairs of 'option name'/'option
+    value':</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>data [] data to be plotted (one value per slice node)</para>
+      </listitem>
+
+      <listitem>
+        <para>convex_data [] data to be plotted (one value per mesh
+        convex)</para>
+      </listitem>
+
+      <listitem>
+        <para>mesh 'auto' :</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>'on' -&gt; show the mesh (faces of edges)</para>
+          </listitem>
+
+          <listitem>
+            <para>'off' -&gt; ignore mesh</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+
+      <listitem>
+        <para>mesh_edges 'on' show mesh edges ?</para>
+      </listitem>
+
+      <listitem>
+        <para>mesh_edges_color [0.60 0.60 1] color of mesh edges</para>
+      </listitem>
+
+      <listitem>
+        <para>mesh_edges_width 0.70 width of mesh edges</para>
+      </listitem>
+
+      <listitem>
+        <para>mesh_slice_edges 'on' show edges of the slice ?</para>
+      </listitem>
+
+      <listitem>
+        <para>mesh_slice_edges_color [0.70 0 0]</para>
+      </listitem>
+
+      <listitem>
+        <para>mesh_slice_edges_width 0.50</para>
+      </listitem>
+
+      <listitem>
+        <para>mesh_faces 'off' 'on' -&gt; fill mesh faces (otherwise they are
+        transparent)</para>
+      </listitem>
+
+      <listitem>
+        <para>mesh_faces_color [0.75 0.75 0.75]</para>
+      </listitem>
+
+      <listitem>
+        <para>pcolor 'on' if the field is scalar, a color plot of its values
+        is plotted</para>
+      </listitem>
+
+      <listitem>
+        <para>quiver 'on' if the field is vector, represent arrows</para>
+      </listitem>
+
+      <listitem>
+        <para>quiver_density 50 density of arrows in quiver plot</para>
+      </listitem>
+
+      <listitem>
+        <para>quiver_scale 1 density of arrows in quiver plot</para>
+      </listitem>
+
+      <listitem>
+        <para>tube 'on' use tube plot for 'filar' (1D) parts of the
+        slice</para>
+      </listitem>
+
+      <listitem>
+        <para>tube_color 'red' color of tubes (ignored if 'data' is not empty
+        and 'pcolor' is on)</para>
+      </listitem>
+
+      <listitem>
+        <para>tube_radius '0.05 tube radius; you can use a constant, or a
+        vector of nodal values</para>
+      </listitem>
+
+      <listitem>
+        <para>showoptions 'on' display the list of options </para>
+      </listitem>
+    </itemizedlist>
+
+    <para>The 'data' and 'convex_data' are mutually exclusive.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <para>Consider that you have a 3D mesh fem mf and a vector field U defined on this mesh fem, solution of the Stokes problem in a tank (see the demo demo_stokes_3D_tank_draw.m in the tests directory).</para>
+
+    <programlisting role="example"><![CDATA[ 
+scf();
+// use a nice colormap
+c = [0 0 1; 0 .5 1; 0 1 .5; 0 1 0; .5 1 0; 1 .5 0; 1 .4 0; 1 0 0; 1 .2 0; 1 .4 0; 1 .6 0; 1 .8 0];
+h = gcf();
+h.color_map = colormap(c);
+// slice the mesh with two half spaces, and take the boundary of the resulting quarter-cylinder
+sl = gf_slice(list('boundary',list('intersection',list('planar',+1,[0;0;0],[0;1;0]},...
+                              list('planar',+1,[0;0;0],[1;0;0]))),m,6);
+Usl = gf_compute(pde('mf_u'),U,'interpolate on', sl); // interpolate the solution on the slice
+// show the norm of the displacement on this slice
+gf_plot_slice(sl,'mesh','on','data',sqrt(sum(Usl.^2,1)),'mesh_slice_edges','off');
+  
+// another slice: now we take the lower part of the mesh
+sl = gf_slice(list('boundary',list('intersection',list('planar',+1,[0;0;6],[0;0;-1]},...
+                              list('planar',+1,[0;0;0],[0;1;0]))),m,6);
+Usl = gf_compute(pde('mf_u'),U,'interpolate on', sl);
+gf_plot_slice(sl,'mesh','on','data',sqrt(sum(Usl.^2,1)),'mesh_slice_edges','off');
+  
+// this slice contains the transparent mesh faces displayed on the picture
+sl2 = gf_slice(list('boundary',list('planar',+1,[0;0;0],[0;1;0])),...
+               m,6,_setdiff(all_faces',TOPfaces','rows')');
+gf_plot_slice(sl2,'mesh_faces','off','mesh','on','pcolor','off'); 
+
+// last step is to plot the streamlines
+hh = [1 5 9 12.5 16 19.5]; // vertical position of the different starting points of the streamlines
+H  = [zeros(2,length(hh));hh];
+
+// compute the streamlines
+tsl  = gf_slice('streamlines',pde('mf_u'),U,H);
+Utsl = gf_compute(pde('mf_u'),U,'interpolate on', tsl);
+
+// render them with "tube plot"
+[a,h] = gf_plot_slice(tsl,'mesh','off','tube_radius',.2,'tube_color','white'); 
+ ]]></programlisting>
+</refsection>
+
+  <refsection>
+    <title>See Also</title>
+
+    <simplelist type="inline">
+      <member><link linkend="gf_slice">gf_slice</link></member>
+    </simplelist>
+  </refsection>
+</refentry>

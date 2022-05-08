@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="gf_slice_set" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <refnamediv>
+    <refname>gf_slice_set</refname>
+    <refpurpose>  Edition of mesh slices.
+</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>gf_slice_set(slice S, 'pts', mat P)</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Description</title>
+    <para>  Edition of mesh slices.
+</para>
+  </refsection>
+
+  <refsection>
+    <title>Command list</title>
+
+    <itemizedlist>
+    <listitem>
+    <para><literal>gf_slice_set(slice S, 'pts', mat P)</literal></para>
+
+    <para>       Replace the points of the slice.
+
+    The new points <literal>P</literal> are stored in the columns the matrix. Note that
+    you can use the function to apply a deformation to a slice, or to
+    change the dimension of the slice (the number of rows of <literal>P</literal> is not
+    required to be equal to gf_slice_get(slice S, 'dim')).
+    </para>
+    </listitem>
+
+    </itemizedlist>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member><link linkend="getfem_types">getfem types</link></member>
+    </simplelist>
+  </refsection>
+
+  <refsection>
+    <title>Authors</title>
+    <para>Y. Collette</para>
+  </refsection>
+
+</refentry>

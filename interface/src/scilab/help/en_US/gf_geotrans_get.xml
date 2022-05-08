@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="gf_geotrans_get" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <refnamediv>
+    <refname>gf_geotrans_get</refname>
+    <refpurpose>    General function for querying information about geometric transformations
+    objects.
+</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>d = gf_geotrans_get(geotrans GT, 'dim')</synopsis>
+    <synopsis>b = gf_geotrans_get(geotrans GT, 'is_linear')</synopsis>
+    <synopsis>n = gf_geotrans_get(geotrans GT, 'nbpts')</synopsis>
+    <synopsis>P = gf_geotrans_get(geotrans GT, 'pts')</synopsis>
+    <synopsis>N = gf_geotrans_get(geotrans GT, 'normals')</synopsis>
+    <synopsis>Pt = gf_geotrans_get(geotrans GT, 'transform',mat G, mat Pr)</synopsis>
+    <synopsis>s = gf_geotrans_get(geotrans GT, 'char')</synopsis>
+    <synopsis>gf_geotrans_get(geotrans GT, 'display')</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Description</title>
+    <para>    General function for querying information about geometric transformations
+    objects.
+</para>
+  </refsection>
+
+  <refsection>
+    <title>Command list</title>
+
+    <itemizedlist>
+    <listitem>
+    <para><literal>d = gf_geotrans_get(geotrans GT, 'dim')</literal></para>
+
+    <para>         Get the dimension of the geotrans.
+      
+      This is the dimension of the source space, i.e. the dimension of
+      the reference convex.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>b = gf_geotrans_get(geotrans GT, 'is_linear')</literal></para>
+
+    <para>         Return 0 if the geotrans is not linear.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>n = gf_geotrans_get(geotrans GT, 'nbpts')</literal></para>
+
+    <para>         Return the number of points of the geotrans.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>P = gf_geotrans_get(geotrans GT, 'pts')</literal></para>
+
+    <para>         Return the reference convex points of the geotrans.
+
+      The points are stored in the columns of the output matrix.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>N = gf_geotrans_get(geotrans GT, 'normals')</literal></para>
+
+    <para>         Get the normals for each face of the reference convex of the geotrans.
+
+      The normals are stored in the columns of the output matrix.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>Pt = gf_geotrans_get(geotrans GT, 'transform',mat G, mat Pr)</literal></para>
+
+    <para>         Apply the geotrans to a set of points.
+      
+      <literal>G</literal> is the set of vertices of the real convex, <literal>Pr</literal> is the set
+      of points (in the reference convex) that are to be transformed.
+      The corresponding set of points in the real convex is returned.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>s = gf_geotrans_get(geotrans GT, 'char')</literal></para>
+
+    <para>         Output a (unique) string representation of the geotrans.
+
+      This can be used to perform comparisons between two
+      different geotrans objects. 
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>gf_geotrans_get(geotrans GT, 'display')</literal></para>
+
+    <para>       displays a short summary for a geotrans object.
+    </para>
+    </listitem>
+
+    </itemizedlist>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member><link linkend="getfem_types">getfem types</link></member>
+    </simplelist>
+  </refsection>
+
+  <refsection>
+    <title>Authors</title>
+    <para>Y. Collette</para>
+  </refsection>
+
+</refentry>

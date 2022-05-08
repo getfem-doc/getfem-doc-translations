@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="gf_cvstruct_get" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <refnamediv>
+    <refname>gf_cvstruct_get</refname>
+    <refpurpose>  General function for querying information about convex_structure objects.
+
+  The convex structures are internal structures of getfem++. They do not
+  contain points positions. These structures are recursive, since the faces
+  of a convex structures are convex structures.
+</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>n = gf_cvstruct_get(cvstruct CVS, 'nbpts')</synopsis>
+    <synopsis>d = gf_cvstruct_get(cvstruct CVS, 'dim')</synopsis>
+    <synopsis>cs = gf_cvstruct_get(cvstruct CVS, 'basic structure')</synopsis>
+    <synopsis>cs = gf_cvstruct_get(cvstruct CVS, 'face', int F)</synopsis>
+    <synopsis>I = gf_cvstruct_get(cvstruct CVS, 'facepts', int F)</synopsis>
+    <synopsis>s = gf_cvstruct_get(cvstruct CVS, 'char')</synopsis>
+    <synopsis>gf_cvstruct_get(cvstruct CVS, 'display')</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Description</title>
+    <para>  General function for querying information about convex_structure objects.
+
+  The convex structures are internal structures of getfem++. They do not
+  contain points positions. These structures are recursive, since the faces
+  of a convex structures are convex structures.
+</para>
+  </refsection>
+
+  <refsection>
+    <title>Command list</title>
+
+    <itemizedlist>
+    <listitem>
+    <para><literal>n = gf_cvstruct_get(cvstruct CVS, 'nbpts')</literal></para>
+
+    <para>         Get the number of points of the convex structure.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>d = gf_cvstruct_get(cvstruct CVS, 'dim')</literal></para>
+
+    <para>         Get the dimension of the convex structure.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>cs = gf_cvstruct_get(cvstruct CVS, 'basic structure')</literal></para>
+
+    <para>       Get the simplest convex structure.
+
+    For example, the 'basic structure' of the 6-node triangle, is the
+    canonical 3-noded triangle.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>cs = gf_cvstruct_get(cvstruct CVS, 'face', int F)</literal></para>
+
+    <para>         Return the convex structure of the face <literal>F</literal>.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>I = gf_cvstruct_get(cvstruct CVS, 'facepts', int F)</literal></para>
+
+    <para>         Return the list of point indices for the face <literal>F</literal>.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>s = gf_cvstruct_get(cvstruct CVS, 'char')</literal></para>
+
+    <para>         Output a string description of the cvstruct.
+    </para>
+    </listitem>
+
+    <listitem>
+    <para><literal>gf_cvstruct_get(cvstruct CVS, 'display')</literal></para>
+
+    <para>         displays a short summary for a cvstruct object.
+    </para>
+    </listitem>
+
+    </itemizedlist>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member><link linkend="getfem_types">getfem types</link></member>
+    </simplelist>
+  </refsection>
+
+  <refsection>
+    <title>Authors</title>
+    <para>Y. Collette</para>
+  </refsection>
+
+</refentry>
