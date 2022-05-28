@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-27 02:08+0000\n"
+"POT-Creation-Date: 2022-05-28 02:04+0000\n"
 "PO-Revision-Date: 2018-07-16 07:03+0000\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/getfem-doc/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -1595,11 +1595,11 @@ msgid ""
 "boundary thanks to one of these expressions::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:762
+#: ../source/userdoc/gasm_high.rst:764
 msgid "where ``u`` is the name of the variable to be interpolated."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:764
+#: ../source/userdoc/gasm_high.rst:766
 msgid ""
 "For instance, the assembly expression to prescribe the equality of a "
 "variable ``u`` with its interpolation (for instance for prescribing a "
@@ -1607,13 +1607,13 @@ msgid ""
 "written::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:768
+#: ../source/userdoc/gasm_high.rst:770
 msgid ""
 "(see :file:`demo\\_periodic\\_laplacian.m` in :file:`interface/tests/matlab-"
 "octave` directory)."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:770
+#: ../source/userdoc/gasm_high.rst:772
 msgid ""
 "In some situations, the interpolation of a point may fail if the transformed"
 " point is outside the target mesh. Both in order to treat this case and to "
@@ -1627,7 +1627,7 @@ msgid ""
 "used thanks to the following special command of GWFL::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:774
+#: ../source/userdoc/gasm_high.rst:776
 msgid ""
 "where ``transname`` is the name of the transformation, ``expr`` is the "
 "expression to be evaluated and ``i`` value of the returned integer "
@@ -1638,14 +1638,14 @@ msgid ""
 "``u`` with its interpolation could be writtne::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:779
+#: ../source/userdoc/gasm_high.rst:781
 msgid ""
 "In that case, the equality will only be prescribed in the part of the domain"
 " where the transformation succeed and in the other part, the mulitplier is "
 "enforced to vanish."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:782
+#: ../source/userdoc/gasm_high.rst:784
 msgid ""
 "**CAUTION**: You have to think that when some variables are used in the "
 "transformation, the computation of the tangent system takes into account "
@@ -1655,11 +1655,11 @@ msgid ""
 "cannot be derived twice."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:785
+#: ../source/userdoc/gasm_high.rst:787
 msgid "Element extrapolation transformation"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:787
+#: ../source/userdoc/gasm_high.rst:789
 msgid ""
 "A specific transformation (see previous section) is defined in order to "
 "allows the evaluation of certain quantities by extrapolation with respect to"
@@ -1674,7 +1674,7 @@ msgid ""
 "allowing to add such a transformation to a model or a workspace are::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:795
+#: ../source/userdoc/gasm_high.rst:797
 msgid ""
 "The map elt_corr should contain the correspondences between the elements "
 "where the transformation is to be applied and the respective elements where "
@@ -1683,17 +1683,17 @@ msgid ""
 "current element."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:797
+#: ../source/userdoc/gasm_high.rst:799
 msgid ""
 "The following functions allow to change the element correspondence of a "
 "previously added element extrapolation transformation::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:809
+#: ../source/userdoc/gasm_high.rst:811
 msgid "Evaluating discontinuities across inter-element edges/faces"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:811
+#: ../source/userdoc/gasm_high.rst:813
 msgid ""
 "A specific interpolate transformation (see previous sections), called "
 "``neighbor_element`` is defined by default in all models. This "
@@ -1705,7 +1705,7 @@ msgid ""
 "The expressions::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:824
+#: ../source/userdoc/gasm_high.rst:826
 msgid ""
 "are available (as with any other interpolate transformation) and compute a "
 "field on the current point but on the neighbor element. Of course, "
@@ -1716,21 +1716,21 @@ msgid ""
 "has an interest."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:826
+#: ../source/userdoc/gasm_high.rst:828
 msgid "The jump on a variable ``u`` can be computed with::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:830
+#: ../source/userdoc/gasm_high.rst:832
 msgid "and a penalisation term of the jump can be written::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:834
+#: ../source/userdoc/gasm_high.rst:836
 msgid ""
 "Note that the region representing the set of all internal faces of a mesh "
 "can be obtained thanks to the function::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:838
+#: ../source/userdoc/gasm_high.rst:840
 msgid ""
 "where ``mr`` is an optional mesh region. If ``mr`` is specified only the "
 "face internal with respect to this region are returned. An important aspect "
@@ -1738,37 +1738,37 @@ msgid ""
 "between the two neighbor elements."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:840
+#: ../source/userdoc/gasm_high.rst:842
 msgid ""
 "See for instance :file:`interface/tests/python/demo_laplacian_DG.py` or "
 ":file:`interface/tests/matlab-octave/demo_laplacian_DG.m` for an example of "
 "use."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:842
+#: ../source/userdoc/gasm_high.rst:844
 msgid ""
 "Compared to other interpolate transformations, this transformation is more "
 "optimized and benefits from finite element and geometric transformation pre-"
 "computations."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:847
+#: ../source/userdoc/gasm_high.rst:849
 msgid ""
 "Double domain integrals or terms (convolution - Kernel - Exchange integrals)"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:849
+#: ../source/userdoc/gasm_high.rst:851
 msgid ""
 "In some very special cases, it can be interesting to compute an integral on "
 "the direct product of two domains, i.e. a double integral such as for "
 "instance"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:851
+#: ../source/userdoc/gasm_high.rst:853
 msgid "\\int_{\\Omega_1}\\int_{\\Omega_2}k(x,y)u(x)v(y)dydx,"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:855
+#: ../source/userdoc/gasm_high.rst:857
 msgid ""
 "where :math:`k(x,y)` is a given kernel, :math:`u` a quantity defined on "
 ":math:`\\Omega_1` and  :math:`v` a quantity defined on :math:`\\Omega_2`, "
@@ -1777,13 +1777,13 @@ msgid ""
 "interaction term between two variables defined on two different domains."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:857
+#: ../source/userdoc/gasm_high.rst:859
 msgid ""
 "CAUTION: Of course, this kind of term have to be used with great care, since"
 " it naturally leads to fully populated stiffness or tangent matrices."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:860
+#: ../source/userdoc/gasm_high.rst:862
 msgid ""
 "GWFL furnishes a mechanism to compute such a term. First, the secondary "
 "domain has to be declared in the workspace/model with its integration "
@@ -1791,7 +1791,7 @@ msgid ""
 " the two following functions::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:866
+#: ../source/userdoc/gasm_high.rst:868
 msgid ""
 "where ``model`` or ``workspace`` is the model or workspace where the "
 "secondary domain has to be declared, ``domain_name`` is a string for the "
@@ -1804,7 +1804,7 @@ msgid ""
 "structure is dedicated to this in |gf|."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:868
+#: ../source/userdoc/gasm_high.rst:870
 msgid ""
 "Once a secondary domain has been declared, it can be specified that a GWFL "
 "expression has to be assembled on the direct product of a current domain and"
@@ -1814,36 +1814,36 @@ msgid ""
 "``add_twodomain_source_term`` functions::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:875
+#: ../source/userdoc/gasm_high.rst:877
 msgid ""
 "For the utilisation with the Python/Scilab/Octave/Matlab interface, see the "
 "documentation on ``gf_asm`` command and the ``model`` object."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:878
+#: ../source/userdoc/gasm_high.rst:880
 msgid ""
 "Inside an expression of GWFL, one can refer to the unit normal vector to a "
 "boundary, to the current position or to the value of a variable thanks to "
 "the expressions::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:891
+#: ../source/userdoc/gasm_high.rst:893
 msgid "For instance, a term like"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:893
+#: ../source/userdoc/gasm_high.rst:895
 msgid "\\int_{\\Omega_1}\\int_{\\Omega_1}e^{-\\|x-y\\|}u(x)u(y)dydx,"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:897
+#: ../source/userdoc/gasm_high.rst:899
 msgid "would correspond to the following weak form language expression::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:905
+#: ../source/userdoc/gasm_high.rst:907
 msgid "Elementary transformations"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:907
+#: ../source/userdoc/gasm_high.rst:909
 msgid ""
 "An elementary transformation is a linear transformation of the shape "
 "functions given by a matrix which may depend on the element which is applied"
@@ -1854,20 +1854,20 @@ msgid ""
 "reduction such as the one used in MITC elements."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:915
+#: ../source/userdoc/gasm_high.rst:917
 msgid ""
 "Once a transformation is defined, it can be added to the model/workspace "
 "with the method::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:920
+#: ../source/userdoc/gasm_high.rst:922
 msgid ""
 "where ``pelementary_transformation`` is a pointer to an object deriving from"
 " ``virtual_elementary_transformation``. Once it is added to the "
 "model/workspace, it is possible to use the following expressions in GWFL::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:931
+#: ../source/userdoc/gasm_high.rst:933
 msgid ""
 "where ``u`` is one of the FEM variables of the model/workspace, and ``dest``"
 " is an optional parameter which should be a variable or data name of the "
@@ -1876,7 +1876,7 @@ msgid ""
 "variable to itself."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:933
+#: ../source/userdoc/gasm_high.rst:935
 msgid ""
 "A typical transformation is the the one for the projection on rotated RT0 "
 "element for two-dimensional elements which is an ingredient of the MITC "
@@ -1884,7 +1884,7 @@ msgid ""
 ":file:`src/getfem/getfem_linearized_plates.h`)::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:937
+#: ../source/userdoc/gasm_high.rst:939
 msgid ""
 "Some other transformations are available for the use into Hybrid High-Order "
 "methods (HHO methods, see :ref:`ud-hho` for more information). These "
@@ -1895,11 +1895,11 @@ msgid ""
 ":file:`src/getfem/getfem_HHO.h`)::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:952
+#: ../source/userdoc/gasm_high.rst:954
 msgid "Xfem discontinuity evaluation (with mesh_fem_level_set)"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:954
+#: ../source/userdoc/gasm_high.rst:956
 msgid ""
 "When using a fem cut by a level-set (using fem_level_set or "
 "mesh_fem_level_set objects), it is often interesting to integrate the "
@@ -1908,7 +1908,7 @@ msgid ""
 "a FEM variable::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:974
+#: ../source/userdoc/gasm_high.rst:976
 msgid ""
 "which are only available when the evaluation (integration) is made on the "
 "curve/surface separating two zones of continuity, i.e. on the zero level-set"
@@ -1916,29 +1916,29 @@ msgid ""
 "For instance, a jump in the variable ``u`` will be given by::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:978
+#: ../source/userdoc/gasm_high.rst:980
 msgid "and the average by::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:982
+#: ../source/userdoc/gasm_high.rst:984
 msgid ""
 "The value ``Xfem_plus(u)`` is the value of ``u`` on the side where the "
 "corresponding level-set function is positive and ``Xfem_minus(u)`` the value"
 " of ``u`` on the side where the level-set function is negative."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:984
+#: ../source/userdoc/gasm_high.rst:986
 msgid ""
 "Additionally, note that, when integrating on a level-set with a "
 "``mesh_im_level_set`` object, ``Normal`` stands for the normal unit vector "
 "to the level-set in the direction of the gradient of the level-set function."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:987
+#: ../source/userdoc/gasm_high.rst:989
 msgid "Storage of sub-expressions in a getfem::im_data object during assembly"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:989
+#: ../source/userdoc/gasm_high.rst:991
 msgid ""
 "It is possible to store in a vector depending on a getfem::im_data object a "
 "part of an assembly computation, for instance in order to use this "
@@ -1946,13 +1946,13 @@ msgid ""
 " functions which allows not to compute twice the same expression."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:991
+#: ../source/userdoc/gasm_high.rst:993
 msgid ""
 "The method to add such an assignment in the assembly is the following for a "
 "model or a ga_workspace::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:999
+#: ../source/userdoc/gasm_high.rst:1001
 msgid ""
 "It adds expression `expr` to be evaluated at assembly time and being "
 "assigned to the data `dataname` which has to be of im_data type. `order` "
@@ -1966,10 +1966,10 @@ msgid ""
 "is done after the assembly terms."
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:1011
+#: ../source/userdoc/gasm_high.rst:1013
 msgid "Additionally, In a model, the method::"
 msgstr ""
 
-#: ../source/userdoc/gasm_high.rst:1015
+#: ../source/userdoc/gasm_high.rst:1017
 msgid "allows to cancel all the assembly assignments previously added."
 msgstr ""
