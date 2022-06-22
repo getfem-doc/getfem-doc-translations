@@ -1,0 +1,559 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-22 02:20+0000\n"
+"PO-Revision-Date: 2018-07-16 07:05+0000\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../source/userdoc/model_time_integration.rst:14
+msgid "The model tools for the integration of transient problems"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:16
+msgid ""
+"Although time integration scheme can be written directly using the model "
+"object by describing the problem to be solved at each iteration, the model "
+"object furnishes some basic tools to facilitate the writing of such schemes."
+" These tools are based on the following basic principles:"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:18
+msgid ""
+"The original variables of the model represent the state of the system to be "
+"solved at the current time step (say step n). This is the case even for a "
+"middle point scheme, mainly because if one needs to apply different schemes "
+"to different variables of the system, all variable should describe the "
+"system at a unique time step."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:20
+msgid ""
+"Some data are added to the model to represent the state of the system at "
+"previous time steps. For classical one-step schemes (for the moment, only "
+"one-step schemes are provided), only the previous time step is stored. For "
+"instance if `u` is a variable (thus represented at step n), `Previous_u`, "
+"`Previous2_u`, `Previous3_u` will be the data representing the state of the "
+"variable at the previous time step (step n-1, n-2 and n-3)."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:22
+msgid ""
+"Some intermediate variables are added to the model to represent the time "
+"derivative (and the second order time derivative for second order problem). "
+"For instance, if `u` is a variable, `Dot_u` will represent the first order "
+"time derivative of `u` and `Dot2_u` the second order one. One can refer to "
+"these variables in the model to add a brick on it or to use it in GWFL, the "
+"generic weak form language. However, these are not considered to be "
+"independent variables, they will be linked to their corresponding original "
+"variable (in an affine way) by the time integration scheme. Most of the "
+"schemes need also the time derivative at the previous time step and add the "
+"data `Previous_Dot_u` and possibly `Previous_Dot2_u` to the model."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:24
+msgid ""
+"A different time integration scheme can be applied on each variable of the "
+"model. Note that most of the time, multiplier variable and more generally "
+"variables for which no time derivative is used do not need a time "
+"integration scheme."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:26
+msgid ""
+"The data `t` represent the time parameter and can be used (either in GWFL or"
+" as parameter of some bricks). Before the assembly of the system, the data "
+"`t` is automatically updated to the time step `n`."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:28
+msgid ""
+"The problem to be solved at each iteration correspond to the formulation of "
+"the transient problem in its natural (weak) formulation in which the "
+"velocity and the acceleration are expressed by the intermediate variables "
+"introduced. For instance, the translation into GWFL of the problem"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:30
+msgid "\\dot{u}(t,x) - \\Delta u(t,x) = \\sin(t)"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:34
+msgid "can simply be::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:38
+msgid ""
+"(even though, of course, in this situation, the use of linear bricks is "
+"preferable for efficiency reasons)"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:40
+msgid ""
+"For all implemented one-step schemes, the time step can be changed from an "
+"iteration to another for both order one and order two in time problems (or "
+"even quasi-static problems)."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:42
+msgid ""
+"A scheme for second order in time problem (resp. first order in time) can be"
+" applied to a second or first order in time or even to a quasi-static "
+"problem (resp. to a first order or quasi-static problem) without any problem"
+" except that the initial data corresponding to the velocity/displacement "
+"have to be initialized with respect ot the order of the scheme. Conversely, "
+"of course, a scheme for first order problem cannot be applied to a second "
+"order in time problem."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:46
+msgid "The implicit theta-method for first-order problems"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:48
+#: ../source/userdoc/model_time_integration.rst:124
+#: ../source/userdoc/model_time_integration.rst:178
+#: ../source/userdoc/model_time_integration.rst:229
+msgid "For a problem which reads"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:50
+#: ../source/userdoc/model_time_integration.rst:107
+msgid "M\\dot{U} = F(U)"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:54
+msgid ""
+"where :math:`F(U)` might be nonlinear (and may depend on some other "
+"variables for coupled problems), for :math:`dt` a time step, :math:`V = "
+"\\dot{U}` and :math:`U^n, V^n` the approximation of :math:`U, V` at time "
+":math:`ndt`, theta-method reads"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:56
+msgid ""
+"\\left\\{ \\begin{array}{l}\n"
+"U^n = U^{n-1} + dt(\\theta V^n + (1-\\theta) V^{n-1}), \\\\\n"
+"MV^n = F(U^n),\n"
+"\\end{array}\\right."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:63
+msgid ""
+"for :math:`\\theta \\in (0, 1]` the parameter of the theta-method (for "
+":math:`\\theta = 0`, the method corresponds to the forward Euler method and "
+"is not an implicit scheme) and for :math:`U^{n-1}, V^{n-1}` given."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:65
+msgid ""
+"Before the first time step, :math:`U^0` should be initialized, however, "
+":math:`V^0` is also needed (except for :math:`\\theta = 1`). In this "
+"example, it should correspond to :math:`M^{-1}F(U^0)`. For a general coupled"
+" problem where :math:`M` might be singular, a generic precomputation of "
+":math:`V^0` is difficult to obtain. Thus :math:`V^0` have to be furnisded "
+"also. Alternatively (see below) the model object (and the standard solve) "
+"furnishes a mean to evaluate them thanks to the application of a Backward "
+"Euler scheme on a (very) small time step."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:68
+#: ../source/userdoc/model_time_integration.rst:144
+#: ../source/userdoc/model_time_integration.rst:198
+msgid "The following formula can be deduced for the time derivative:"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:70
+msgid "V^n = \\frac{U^n - U^{n-1}}{\\theta dt} - \\frac{1-\\theta}{\\theta}V^{n-1}"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:74
+msgid ""
+"When applying this scheme to a variable \"u\" of the model, the following "
+"affine dependent variable is added to the model::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:78
+msgid ""
+"which represent the time derivative of the variable and can be used in some "
+"brick definition."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:80
+#: ../source/userdoc/model_time_integration.rst:158
+#: ../source/userdoc/model_time_integration.rst:212
+#: ../source/userdoc/model_time_integration.rst:249
+msgid "The following data are also added::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:84
+msgid ""
+"which correspond to the values of \"u\" and \"Dot_u\" at the previous time "
+"step."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:86
+msgid ""
+"Before the solve, the data  \"Previous_u\" (corresponding to :math:`U^0` in "
+"the example) has to be initialized (except for :math:`\\theta = 1`). Again, "
+"\"Previous_Dot_u\" has to be either initialized or pre-computed as described"
+" in the next section. The affine dependence of \"Dot_u\" is thus given by::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:90
+msgid ""
+"Which means that \"Dot_u\" will be replaced at assembly time by its "
+"expression in term of \"u\" (multipied by :math:`1/(\\theta*dt)`) and in "
+"term of a constant remaining part depending on the previous time step. The "
+"addition of this scheme to a variable is to be done thanks to::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:98
+msgid "Precomputation of velocity/acceleration"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:100
+msgid ""
+"Most of the time integration schemes (except, for instance, the backward "
+"Euler scheme) needs the pre-computation of the first or second order time "
+"derivative before the initial time step (for instance :math:`V^0` for the "
+"theta-method for first order problems, :math:`A^0` for second order problems"
+" ...)."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:102
+msgid ""
+"The choice is let to the user to either initialize these derivative or to "
+"ask to the model to automatically approximate them."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:105
+msgid ""
+"The method used (for the moment) to approximate the supplementary "
+"derivatives may be explained in the example of the solve of"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:111
+msgid ""
+"with a theta-method (see the previous section). In order to approximate "
+":math:`V_0`, the theta-method is applied for :math:`\\theta = 1` (i.e. a "
+"backward Euler scheme) on a very small time step. This is possible since the"
+"  backward Euler do not need an initial time derivative. Then the time "
+"derivative computed thanks to the  backward Euler at the end of the very "
+"small time step is simply used as an approximation of the initial time "
+"derivative."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:114
+msgid "For a model `md`, the following instructions::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:119
+msgid ""
+"allows to perform automatically the approximation of the initial time "
+"derivative. The parameter `ddt` corresponds to the small time step used to "
+"perform the aproximation. Typically, `ddt = dt/20` could be used where  `dt`"
+" is the time step used to approximate the transient problem (see the example"
+" below)."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:122
+msgid "The implicit theta-method for second-order problems"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:126
+#: ../source/userdoc/model_time_integration.rst:180
+msgid "M\\ddot{U} = F(U)"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:130
+#: ../source/userdoc/model_time_integration.rst:184
+msgid ""
+"where :math:`F(U)` might be nonlinear (and may depend on some othere "
+"variables for coupled problems), for :math:`dt` a time step, :math:`V = "
+"\\dot{U}`, :math:`A = \\ddot{U}` and :math:`U^n, V^n, A^n` the approximation"
+" of :math:`U, V, A` at time :math:`ndt`, the first oder theta-method reads"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:132
+msgid ""
+"\\left\\{ \\begin{array}{l}\n"
+"U^n = U^{n-1} + dt(\\theta V^n + (1-\\theta) V^{n-1}), \\\\\n"
+"V^n = V^{n-1} + dt(\\theta A^n + (1-\\theta) A^{n-1}), \\\\\n"
+"MA^n = F(U^n),\n"
+"\\end{array}\\right."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:140
+msgid ""
+"for :math:`\\theta \\in (0, 1]` the parameter of the theta-method (for "
+":math:`\\theta = 0`, the method correspond to the forward Euler method and "
+"is not an implicit scheme) and for :math:`U^{n-1}, V^{n-1}, A^{n-1}` given."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:142
+msgid ""
+"At the first time step, :math:`U^0, V^0` should be given and :math:`A^0` is "
+"to be given or pre-computed (except for :math:`\\theta = 1`)."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:146
+msgid ""
+"V^n = \\frac{U^n - U^{n-1}}{\\theta dt} - \\frac{1-\\theta}{\\theta}V^{n-1}\n"
+"\n"
+"A^n = \\frac{U^n - U^{n-1}}{\\theta^2 dt^2} - \\frac{1}{\\theta^2dt}V^{n-1} - \\frac{1-\\theta}{\\theta}A^{n-1}"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:152
+#: ../source/userdoc/model_time_integration.rst:206
+#: ../source/userdoc/model_time_integration.rst:243
+msgid ""
+"When aplying this scheme to a variable \"u\" of the model, the following "
+"affine dependent variables are added to the model::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:156
+#: ../source/userdoc/model_time_integration.rst:210
+#: ../source/userdoc/model_time_integration.rst:247
+msgid ""
+"which represent the first and second order time derivative of the variable "
+"and can be used in some brick definition."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:162
+#: ../source/userdoc/model_time_integration.rst:216
+msgid ""
+"which correspond to the values of \"u\", \"Dot_u\"  and \"Dot2_u\" at the "
+"previous time step."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:164
+msgid ""
+"Before the solve, the data  \"Previous_u\" and \"Previous_Dot_u\" "
+"(corresponding to :math:`U^0` in the example) have to be initialized and "
+"\"Previous_Dot2_u\" should be either initialized or precomputed (see the "
+"previous section, and except for :math:`\\theta = 1`). The affine "
+"dependences are thus given by::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:169
+#: ../source/userdoc/model_time_integration.rst:221
+#: ../source/userdoc/model_time_integration.rst:257
+msgid "The addition of this scheme to a variable is to be done thanks to::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:176
+msgid "The implicit Newmark scheme for second order problems"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:186
+msgid ""
+"\\left\\{ \\begin{array}{l}\n"
+"U^n = U^{n-1} + dtV^n + \\frac{dt^2}{2}(2\\beta V^n + (1-2\\beta) V^{n-1}), \\\\\n"
+"V^n = V^{n-1} + dt(\\gamma A^n + (1-\\gamma) A^{n-1}), \\\\\n"
+"MA^n = F(U^n),\n"
+"\\end{array}\\right."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:194
+msgid ""
+"for :math:`\\beta \\in (0, 1]` and :math:`\\gamma \\in [1/2, 1]` are the "
+"parameters of the Newmark scheme and for :math:`U^{n-1}, V^{n-1}, A^{n-1}` "
+"given."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:196
+msgid ""
+"At the first time step, :math:`U^0, V^0` should be given and :math:`A^0` is "
+"to be given or pre-computed (except for :math:`\\beta = 1/2, \\gamma = 1`)."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:200
+msgid ""
+"V^n = \\frac{\\gamma}{\\beta dt}(U^n - U^{n-1}) + \\frac{\\beta-\\gamma}{\\beta}V^{n-1} + dt(1-\\frac{\\gamma}{2\\beta})A^{n-1}\n"
+"\n"
+"A^n = \\frac{U^n - U^{n-1}}{\\beta dt^2} - \\frac{1}{\\beta dt}V^{n-1} - (1/2-\\beta)A^{n-1}"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:218
+msgid ""
+"Before the first solve, the data  \"Previous_u\" and \"Previous_Dot_u\" "
+"(corresponding to :math:`U^0` in the example) have to be initialized. The "
+"data \"Previous_Dot2_u\" is to be given or precomputed (see "
+":ref:`precomp_time_der_section` and except for :math:`\\beta = 1/2, \\gamma "
+"= 1`)."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:227
+msgid "The implicit Houbolt scheme"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:231
+msgid ""
+"(K+\\frac{11}{6 dt}C+\\frac{2}{dt^2}M) u_{n} = F_{n} + (\\frac{5}{dt^2} M + \\frac{3}{  dt} C) u_{n-1}\n"
+"                                                   - (\\frac{4}{dt^2} M + \\frac{3}{2 dt} C) u_{n-2}\n"
+"                                                   + (\\frac{1}{dt^2} M + \\frac{1}{3 dt} C) u_{n-3}"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:237
+msgid ""
+"where :math:`dt` means a time step, :math:`M` the matrix in term of "
+"\"Dot2_u\", :math:`C` the matrix in term of \"Dot_u\" and :math:`K` the "
+"matrix in term of \"u\". The affine dependences are thus given by::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:253
+msgid "which correspond to the values of \"u\" at the time step n-1, n-2 n-3."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:255
+msgid ""
+"Before the solve, the data \"Previous_u\", \"Previous2_u\" and "
+"\"Previous3_u\" (corresponding to :math:`U^0` in the example) have to be "
+"initialized."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:262
+msgid "Transient terms"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:264
+msgid ""
+"As it has been explained in previous sections, some intermediate variables "
+"are added to the model in order to represent the time derivative of the "
+"variables on which the scheme is applied. Once again, if \"u\" is such a "
+"variable, \"Dot_u\" will represent the time derivative of \"u\" approximated"
+" by the used scheme."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:266
+msgid ""
+"This also mean that \"Dot_u\" (and \"Dot2_u\" in order two in time problems)"
+" can be used to express the transient terms. In GWFL, the term:"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:268
+msgid "\\int_{\\Omega} \\dot{u} v dx"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:272
+msgid "can be simply expressed by::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:276
+msgid ""
+"Similarly, every existing model brick of |gf| can be applied to \"Dot_u\". "
+"This is the case for instance with::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:280
+msgid "which adds the same transient term."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:282
+msgid ""
+"VERY IMPORTANT: When adding an existing model brick applied to an affine "
+"dependent variable such as \"Dot_u\", it is always assumed that the "
+"corresponding test function is the one of the corresponding original "
+"variable (i.e. \"Test_u\" here). In other words, \"Test_Dot_u\", the test "
+"variable corresponding to the velocity, is not used. This corresponds to the"
+" choice made to solve the problem in term of the original variable, so that "
+"the test function corresponds to the original variable."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:284
+msgid ""
+"Another example of model brick which can be used to account for a Kelvin-"
+"Voigt linearized viscosity term is the linearized elasticity brick::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:288
+msgid "when applied to an order two transient elasticity problem."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:291
+msgid "Computation on the sequence of time steps"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:293
+msgid ""
+"Typically, the solve on the different time steps will take the following "
+"form::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:308
+msgid "Note that the call of the method::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:312
+msgid ""
+"is needed between two time step since it will copy the current value of the "
+"variables (`u` and `Dot_u` for instance) to the previous ones (`Previous_u` "
+"and `Previous_Dot_u`)."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:315
+msgid "Boundary conditions"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:317
+msgid ""
+"Standard boundary conditions can of course be applied normally to the "
+"different variables of the unknown. By default, applying Dirichlet, Neumann "
+"or contact boundary conditions to the unknown simply means that the "
+"conditions are prescribed on the variable at the current time step n."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:321
+msgid "Small example: heat equation"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:323
+msgid ""
+"The complete compilable program corresponds to the test program "
+":file:`tests/heat_equation.cc` of |gf| distribution. See also "
+":file:`/interface/tests/matlab/demo_wave_equation.m` for an example of order"
+" two in time problem with the Matlab interface."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:325
+msgid ""
+"Assuming that `mf_u` and `mim` are valid finite element and integration "
+"methods defined on a valid mesh, the following code will perform the "
+"approximation of the evolution of the temperature on the mesh assuming a "
+"unitary diffusion coefficient::"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:374
+msgid "Implicit/explicit some terms"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:376
+#: ../source/userdoc/model_time_integration.rst:382
+#: ../source/userdoc/model_time_integration.rst:388
+#: ../source/userdoc/model_time_integration.rst:393
+msgid "..."
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:380
+msgid "Explicit schemes"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:386
+msgid "Time step adaptation"
+msgstr ""
+
+#: ../source/userdoc/model_time_integration.rst:391
+msgid "Quasi-static problems"
+msgstr ""

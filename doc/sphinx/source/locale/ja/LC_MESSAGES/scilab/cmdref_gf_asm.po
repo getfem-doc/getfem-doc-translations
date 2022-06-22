@@ -1,0 +1,786 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-22 02:20+0000\n"
+"PO-Revision-Date: 2018-07-16 06:58+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/scilab/cmdref_gf_asm.rst:8
+msgid "gf_asm"
+msgstr "gf_asm"
+
+#: ../source/scilab/cmdref_gf_asm.rst:10
+msgid "**Synopsis**"
+msgstr "**概要**"
+
+#: ../source/scilab/cmdref_gf_asm.rst:41
+msgid "**Description :**"
+msgstr "**説明 :**"
+
+#: ../source/scilab/cmdref_gf_asm.rst:45
+msgid "General assembly function."
+msgstr "一般的なアセンブリ機能．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:47
+msgid ""
+"Many of the functions below use more than one mesh_fem: the main mesh_fem "
+"(mf_u) used for the main unknown, and data mesh_fem (mf_d) used for the "
+"data. It is always assumed that the Qdim of mf_d is equal to 1: if mf_d is "
+"used to describe vector or tensor data, you just have to \"stack\" (in "
+"fortran ordering) as many scalar fields as necessary."
+msgstr ""
+"以下の関数の多くは，複数のmesh_femを使用します．メインのunknownに使用されるメインのmesh_fem(mf_u)と，データに使用されるdata"
+" "
+"mesh_fem(mf_d)です．mf_dのQdimは常に1とみなされます．mf_dを使用してベクトルまたはテンソルデータを記述する場合は，必要な数のスカラーフィールドを(fortranの次数で)"
+" \"stack\" するだけです．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:55
+msgid "**Command list :**"
+msgstr "**コマンドリスト**"
+
+#: ../source/scilab/cmdref_gf_asm.rst:59
+msgid ""
+"``{...} = gf_asm('generic', mesh_im mim, int order, string expression, int "
+"region, [model model, ['Secondary_domain', 'name',]] [string varname, int "
+"is_variable[, {mesh_fem mf, mesh_imd mimd}], value], ['select_output', "
+"'varname1'[, 'varname2]], ...)``"
+msgstr ""
+"``{...} = gf_asm('generic', mesh_im mim, int order, string expression, int "
+"region, [model model, ['Secondary_domain', 'name',]] [string varname, int "
+"is_variable[, {mesh_fem mf, mesh_imd mimd}], value], ['select_output', "
+"'varname1'[, 'varname2]], ...)``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:61
+msgid ""
+"High-level generic assembly procedure for volumic or boundary assembly."
+msgstr "ボリュームアセンブリまたは境界アセンブリの高水準の汎用アセンブリ手順．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:63
+msgid ""
+"Performs the generic assembly of <literal>expression</literal> with the "
+"integration method <literal>mim</literal> on the mesh region of index "
+"<literal>region</literal> (-1 means all elements of the mesh). The same mesh"
+" should be shared by the integration method and all the finite element "
+"methods or mesh_im_data corresponding to the variables."
+msgstr ""
+"積分法 <literal>mim</literal> を使用して，インデックス <literal>region</literal> "
+"(-1はメッシュのすべての要素を意味します)のメッシュ領域上で <literal>expression</literal> "
+"の汎用アセンブリを実行します．同じメッシュを積分法と，変数に対応するすべての有限要素法またはmesh_im_dataで共有する必要があります．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:69
+msgid ""
+"<literal>order</literal> indicates either that the (scalar) potential (order"
+" = 0) or the (vector) residual (order = 1) or the tangent (matrix) (order = "
+"2) is to be computed."
+msgstr ""
+"<literal>order</literal> は，(スカラー)ポテンシャル (order=0) "
+"，(ベクトル)残差(order=1)，または接線(行列)(order=2)のいずれかが計算されることを示します．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:73
+msgid ""
+"<literal>model</literal> is an optional parameter allowing to take into "
+"account all variables and data of a model. Note that all enabled variables "
+"of the model will occupy space in the returned vector/matrix corresponding "
+"to their degrees of freedom in the global system, even if they are not "
+"present in <literal>expression</literal>."
+msgstr ""
+"<literal>model</literal> "
+"はモデルのすべての変数とデータを考慮に入れることができるオプションのパラメータです．モデルのすべての使用可能な変数は，たとえ "
+"<literal>expression</literal> "
+"に存在しなくても，全体系での自由度に対応する返されたベクトル/行列の空間を占めることに注意してください．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:79
+msgid ""
+"The variables and constants (data) are listed after the region number (or "
+"optionally the model). For each variable/constant, a name must be given "
+"first (as it is referred in the assembly string), then an integer equal to 1"
+" or 0 is expected respectively for declaring a variable or a constant, then "
+"the finite element method if it is a fem variable/constant or the "
+"mesh_im_data if it is data defined on integration points, and the vector "
+"representing the value of the variable/constant. It is possible to give an "
+"arbitrary number of variable/constant. The difference between a variable and"
+" a constant is that test functions are only available for variables, not for"
+" constants."
+msgstr ""
+"変数と定数(データ)は，領域番号(またはオプションでモデル)の後にリストされます．変数/定数ごとに，最初に名前を指定する必要があります(アセンブリ文字列で参照されるとおり)．次に，変数または定数を宣言するために，それぞれ1または0に等しい整数が必要です．次に，fem変数/定数の場合は有限要素法，積分点で定義されたデータの場合はmesh_im_data，および変数/定数の値を表すベクトルが必要です．任意の数の変数/定数を指定できます．変数と定数の違いは，試験関数は変数に対してのみ使用でき，定数に対しては使用できないことです．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:91
+msgid ""
+"<literal>select_output</literal> is an optional parameter which allows to "
+"reduce the output vector (for <literal>order</literal> equal to 1) or the "
+"matrix (for <literal>order</literal> equal to 2) to the degrees of freedom "
+"of the specified variables. One variable has to be specified for a vector "
+"output and two for a matrix output."
+msgstr ""
+"<literal>select_output</literal> は出力ベクトル( <literal>order</literal> "
+"が1の場合)または行列( <literal>order</literal> "
+"が2の場合)を指定された変数の自由度まで減らすことができるオプションのパラメータです．ベクトル出力には1つの変数を指定し，行列出力には2つの変数を指定する必要があります．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:97
+msgid ""
+"Note that if several variables are given, the assembly of the tangent "
+"matrix/residual vector will be done considering the order in the call of the"
+" function (the degrees of freedom of the first variable, then of the second "
+"one, and so on). If a model is provided, all degrees of freedom of the model"
+" will be counted first, even if some of the model variables do not appear in"
+" <literal>expression</literal>."
+msgstr ""
+"複数の変数が与えられた場合，正接行列/残差ベクトルのアセンブリは，関数の呼び出しの順序を考慮して行われます(最初の変数の自由度，次に2番目の変数の自由度，というように続きます)．モデルが提供されている場合，一部のモデル変数が"
+" <literal>expression</literal> に現れない場合でも，モデルのすべての自由度が最初にカウントされます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:104
+msgid "For example, the L2 norm of a vector field \"u\" can be computed with::"
+msgstr "例えば，ベクトルフィールド \"u\" のL2ノルムは"
+
+#: ../source/scilab/cmdref_gf_asm.rst:110
+msgid ""
+"The nonhomogeneous Laplacian stiffness matrix of a scalar field can be "
+"evaluated with::"
+msgstr "スカラー場の不均質Laplacian剛性行列は以下で評価できます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:119
+msgid ""
+"``M = gf_asm('mass matrix', mesh_im mim, mesh_fem mf1[, mesh_fem mf2[, int "
+"region]])``"
+msgstr ""
+"``M = gf_asm('mass matrix', mesh_im mim, mesh_fem mf1[, mesh_fem mf2[, int "
+"region]])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:121
+msgid "Assembly of a mass matrix."
+msgstr "質量行列のアセンブリ．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:123
+#: ../source/scilab/cmdref_gf_asm.rst:133
+#: ../source/scilab/cmdref_gf_asm.rst:144
+#: ../source/scilab/cmdref_gf_asm.rst:191
+#: ../source/scilab/cmdref_gf_asm.rst:201
+#: ../source/scilab/cmdref_gf_asm.rst:211
+#: ../source/scilab/cmdref_gf_asm.rst:273
+#: ../source/scilab/cmdref_gf_asm.rst:406
+#: ../source/scilab/cmdref_gf_asm.rst:414
+#: ../source/scilab/cmdref_gf_asm.rst:422
+msgid "Return a spmat object."
+msgstr "spmatオブジェクトを返します．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:127
+msgid ""
+"``L = gf_asm('laplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec a[,"
+" int region])``"
+msgstr ""
+"``L = gf_asm('laplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec a[,"
+" int region])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:129
+msgid "Assembly of the matrix for the Laplacian problem."
+msgstr "Laplacian問題の行列の組み立て．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:131
+msgid ""
+"<latex style=\"text\"><![CDATA[\\nabla\\cdot(a(x)\\nabla u)]]></latex>  with"
+" <literal>a</literal> a scalar."
+msgstr ""
+"<latex style=\"text\"><![CDATA[\\nabla\\cdot(a(x)\\nabla "
+"u)]]></latex>の<literal>a</literal>はスカラーです．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:137
+msgid ""
+"``Le = gf_asm('linear elasticity', mesh_im mim, mesh_fem mf_u, mesh_fem "
+"mf_d, vec lambda_d, vec mu_d[, int region])``"
+msgstr ""
+"``Le = gf_asm('linear elasticity', mesh_im mim, mesh_fem mf_u, mesh_fem "
+"mf_d, vec lambda_d, vec mu_d[, int region])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:139
+msgid "Assembles of the matrix for the linear (isotropic) elasticity problem."
+msgstr "線形(等方性)弾性問題のためのマトリックスの集合．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:141
+msgid ""
+"<latex style=\"text\"><![CDATA[\\nabla\\cdot(C(x):\\nabla u)]]></latex> with"
+" <latex style=\"text\"><![CDATA[C]]></latex> defined via "
+"<literal>lambda_d</literal> and <literal>mu_d</literal>."
+msgstr ""
+"<latex style=\"text\"><![CDATA[\\nabla\\cdot(C(x):\\nabla "
+"u)]]></latex>と<latex "
+"style=\"text\"><![CDATA[C]]></latex>が<literal>lambda_d</literal>と<literal>mu_d</literal>で定義されています．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:148
+msgid ""
+"``TRHS = gf_asm('nonlinear elasticity', mesh_im mim, mesh_fem mf_u, vec U, "
+"string law, mesh_fem mf_d, mat params, {'tangent "
+"matrix'|'rhs'|'incompressible tangent matrix', mesh_fem mf_p, vec "
+"P|'incompressible rhs', mesh_fem mf_p, vec P})``"
+msgstr ""
+"``TRHS = gf_asm('nonlinear elasticity', mesh_im mim, mesh_fem mf_u, vec U, "
+"string law, mesh_fem mf_d, mat params, {'tangent "
+"matrix'|'rhs'|'incompressible tangent matrix', mesh_fem mf_p, vec "
+"P|'incompressible rhs', mesh_fem mf_p, vec P})``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:150
+msgid ""
+"Assembles terms (tangent matrix and right hand side) for nonlinear "
+"elasticity."
+msgstr "非線形弾性の項(接線行列と右辺)をアセンブルします．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:152
+msgid ""
+"The solution <literal>U</literal> is required at the current time-step. The "
+"<literal>law</literal> may be choosen among:"
+msgstr ""
+"現在の時間ステップでは解 <literal>U</literal> が必要です． <literal>law</literal> "
+"は次の中から選択することができます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:155
+msgid ""
+"'SaintVenant Kirchhoff': Linearized law, should be avoided. This law has the"
+" two usual Lame coefficients as parameters, called lambda and mu."
+msgstr ""
+"'SaintVenant Kirchhoff': "
+"線形則，避けるべきです．この法則には，パラメータとして，lambdaおよびmuと呼ばれる2つの通常のLame係数があります．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:158
+msgid ""
+"'Mooney Rivlin': This law has three parameters, called C1, C2 and D1. Can be"
+" preceded with the words 'compressible' or 'incompressible' to force a "
+"specific version. By default, the incompressible version is considered which"
+" requires only the first two material coefficients."
+msgstr ""
+"'Mooney Rivlin': この法則にはC1，C2，D1という3つのパラメータがあります．前に 'compressible' または "
+"'incompressible' "
+"を付けることで，特定のバージョンを強制するころができます．デフォルトでは，最初の2つの材料係数のみを必要とする非圧縮性バージョンが考慮されます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:163
+msgid ""
+"'neo Hookean': A special case of the 'Mooney Rivlin' law that requires one "
+"material coefficient less (C2 = 0). By default, its compressible version is "
+"used."
+msgstr ""
+"'neo Hookean':  'Mooney Rivlin' 法の特殊なケースです．材料係数がひとつ少なくなります (C2 = "
+"0)．デフォルトでは圧縮性のバージョンが使用されます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:166
+msgid ""
+"'Ciarlet Geymonat': This law has 3 parameters, called lambda, mu and gamma, "
+"with gamma chosen such that gamma is in ]-lambda/2-mu, -mu[."
+msgstr ""
+"'Ciarlet Geymonat': この法則にはlambda，mu と gammaと呼ばれる3つのパラメータがあります．ここでgammaは "
+"]-lambda/2-mu, -mu[ になるように選択されます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:170
+msgid ""
+"The parameters of the material law are described on the mesh_fem "
+"<literal>mf_d</literal>. The matrix <literal>params</literal> should have "
+"<literal>nbdof(mf_d)</literal> columns, each row correspounds to a "
+"parameter."
+msgstr ""
+"材料法則のパラメータは，mesh_fem <literal>mf_d</literal> で記述します．行列 "
+"<literal>params</literal> では，行はパラメータに対応し列は <literal>nbdof(mf_d)</literal> "
+"に対応します．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:174
+msgid ""
+"The last argument selects what is to be built: either the tangent matrix, or"
+" the right hand side. If the incompressibility is considered, it should be "
+"followed by a mesh_fem <literal>mf_p</literal>, for the pression."
+msgstr ""
+"最後の引数は作成するもの，接線行列またはRHS，を選択します．非圧縮性を考慮する場合，圧縮にはmesh_fem "
+"<literal>mf_p</literal> が必要です．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:179
+msgid ""
+"Return a spmat object (tangent matrix), vec object (right hand side), tuple "
+"of spmat objects (incompressible tangent matrix), or tuple of vec objects "
+"(incompressible right hand side)."
+msgstr ""
+"spmatオブジェクト(接線行列)，vecオブジェクト(右辺)，spmatオブジェクトのタプル(非圧縮接線行列)，またはvecオブジェクトのタプル(非圧縮性右辺)を返します．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:185
+msgid ""
+"``A = gf_asm('helmholtz', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec k[,"
+" int region])``"
+msgstr ""
+"``A = gf_asm('helmholtz', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec k[,"
+" int region])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:187
+msgid "Assembly of the matrix for the Helmholtz problem."
+msgstr "Helmholtz問題の行列の組み立て．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:189
+msgid ""
+"<latex style=\"text\"><![CDATA[\\Delta u + k^2 u]]></latex> = 0,  with "
+"<literal>k</literal> complex scalar."
+msgstr ""
+"<latex style=\"text\"><![CDATA[\\Delta u + k^2 u]]></latex> = "
+"0，<literal>k</literal>は複素スカラー．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:195
+msgid ""
+"``A = gf_asm('bilaplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec "
+"a[, int region])``"
+msgstr ""
+"``A = gf_asm('bilaplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec "
+"a[, int region])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:197
+msgid "Assembly of the matrix for the Bilaplacian problem."
+msgstr "Bilaplacian問題のための行列の組み立てです．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:199
+#: ../source/scilab/cmdref_gf_asm.rst:209
+msgid ""
+"<latex style=\"text\"><![CDATA[\\Delta(a(x)\\Delta u) = 0]]></latex>   with "
+"<literal>a</literal> scalar."
+msgstr ""
+"<latex style=\"text\"><![CDATA[\\Delta(a(x)\\Delta u) = "
+"0]]></latex>の<literal>a</literal>はスカラーです．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:205
+msgid ""
+"``A = gf_asm('bilaplacian KL', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, "
+"vec a, vec nu[, int region])``"
+msgstr ""
+"``A = gf_asm('bilaplacian KL', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, "
+"vec a, vec nu[, int region])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:207
+msgid ""
+"Assembly of the matrix for the Bilaplacian problem with Kirchhoff-Love "
+"formulation."
+msgstr "Kirchhoff-Love 定式化を用いたBilaplacian問題に対する行列の組み立て．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:215
+msgid ""
+"``V = gf_asm('volumic source', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, "
+"vec fd[, int region])``"
+msgstr ""
+"``V = gf_asm('volumic source', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, "
+"vec fd[, int region])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:217
+msgid "Assembly of a volumic source term."
+msgstr "体積ソース項のアセンブリ．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:219
+msgid ""
+"Output a vector <literal>V</literal>, assembled on the mesh_fem "
+"<literal>mf_u</literal>, using the data vector <literal>fd</literal> defined"
+" on the data mesh_fem <literal>mf_d</literal>. <literal>fd</literal> may be "
+"real or complex-valued."
+msgstr ""
+"データmesh_fem <literal>mf_d</literal> で定義されたデータベクトル <literal>fd</literal> "
+"を使用して，mesh_fem <literal>mf_u</literal> 上で組み立てられたベクトル <literal>V</literal> "
+"を出力します． <literal>fd</literal> は実数値でも複素数値でもよいです．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:223
+#: ../source/scilab/cmdref_gf_asm.rst:235
+#: ../source/scilab/cmdref_gf_asm.rst:387
+#: ../source/scilab/cmdref_gf_asm.rst:398
+msgid "Return a vec object."
+msgstr "vecオブジェクトを返します．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:227
+msgid ""
+"``B = gf_asm('boundary source', int bnum, mesh_im mim, mesh_fem mf_u, "
+"mesh_fem mf_d, vec G)``"
+msgstr ""
+"``B = gf_asm('boundary source', int bnum, mesh_im mim, mesh_fem mf_u, "
+"mesh_fem mf_d, vec G)``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:229
+msgid "Assembly of a boundary source term."
+msgstr "境界ソース項の構築．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:231
+msgid ""
+"<literal>G</literal> should be a [Qdim x N] matrix, where N is the number of"
+" dof of <literal>mf_d</literal>, and Qdim is the dimension of the unkown u "
+"(that is set when creating the mesh_fem)."
+msgstr ""
+"<literal>G</literal> は [Qdim x N] 行列でなければなりません．ここでNは <literal>mf_d</literal>"
+" の自由度数であり，(mesh_femの作成時に設定される)Qdimは未知のuの次元です．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:239
+msgid ""
+"``{HH, RR} = gf_asm('dirichlet', int bnum, mesh_im mim, mesh_fem mf_u, "
+"mesh_fem mf_d, mat H, vec R [, scalar threshold])``"
+msgstr ""
+"``{HH, RR} = gf_asm('dirichlet', int bnum, mesh_im mim, mesh_fem mf_u, "
+"mesh_fem mf_d, mat H, vec R [, scalar threshold])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:241
+msgid "Assembly of Dirichlet conditions of type <literal>h.u = r</literal>."
+msgstr "<literal>h.u = r</literal> 型のDirichlet条件の集合です．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:243
+msgid ""
+"Handle <literal>h.u = r</literal> where h is a square matrix (of any rank) "
+"whose size is equal to the dimension of the unkown u. This matrix is stored "
+"in <literal>H</literal>, one column per dof in <literal>mf_d</literal>, each"
+" column containing the values of the matrix h stored in fortran order:"
+msgstr ""
+"ハンドル <literal>h.u = r</literal> "
+"ここでhは(あらゆるrankの)正方行列で，その大きさは未知のuの次元と等しいです．この行列は <literal>H</literal> ， "
+"<literal>mf_d</literal> の自由度ごとに1列ずつ格納され，各列には行列hの値がFortranの次数で格納されます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:248
+msgid "<literal>H(:,j) = [h11(x_j) h21(x_j) h12(x_j) h22(x_j)]</literal>"
+msgstr "<literal>H(:,j) = [h11(x_j) h21(x_j) h12(x_j) h22(x_j)]</literal>"
+
+#: ../source/scilab/cmdref_gf_asm.rst:252
+msgid "if u is a 2D vector field."
+msgstr "uが2次元ベクトルフィールドの場合．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:254
+msgid ""
+"Of course, if the unknown is a scalar field, you just have to set <literal>H"
+" = ones(1, N)</literal>, where N is the number of dof of "
+"<literal>mf_d</literal>."
+msgstr ""
+"もちろん，未知のスカラーフィールドである場合，単に <literal>H = ones(1, N)</literal> "
+"を設定する必要があります．ここでNは <literal>mf_d</literal> の自由度数です．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:257
+msgid ""
+"This is basically the same than calling gf_asm('boundary qu term') for "
+"<literal>H</literal> and calling gf_asm('neumann') for <literal>R</literal>,"
+" except that this function tries to produce a 'better' (more diagonal) "
+"constraints matrix (when possible)."
+msgstr ""
+"これは基本的に， gf_asm('boundary qu term') を <literal>H</literal> に対して呼び出し， "
+"gf_asm('neumann') を <literal>R</literal> に対して呼び出すのと同じですが，この関数は(可能な場合) 'より良い "
+"' (より多くの対角線)制約行列を生成しようとします．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:262
+msgid "See also gf_spmat_get(spmat S, 'Dirichlet_nullspace')."
+msgstr "gf_spmat_get(spmat S, 'Dirichlet_nullspace') も参照してください．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:265
+msgid ""
+"``Q = gf_asm('boundary qu term',int boundary_num, mesh_im mim, mesh_fem "
+"mf_u, mesh_fem mf_d, mat q)``"
+msgstr ""
+"``Q = gf_asm('boundary qu term',int boundary_num, mesh_im mim, mesh_fem "
+"mf_u, mesh_fem mf_d, mat q)``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:267
+msgid "Assembly of a boundary qu term."
+msgstr "境界qu項のアセンブリです．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:269
+msgid ""
+"<literal>q</literal> should be be a [Qdim x Qdim x N] array, where N is the "
+"number of dof of <literal>mf_d</literal>, and Qdim is the dimension of the "
+"unkown u (that is set when creating the mesh_fem)."
+msgstr ""
+"<literal>q</literal> は [Qdim x Qdim x N] 配列でなければなりません．ここでNは "
+"<literal>mf_d</literal> の自由度数であり，Qdimは(mesh_femの作成時に設定される)未知変数uの次元です．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:277
+msgid ""
+"``gf_asm('define function', string name, int nb_args, string expression[, "
+"string expression_derivative_t[, string expression_derivative_u]])``"
+msgstr ""
+"``gf_asm('define function', string name, int nb_args, string expression[, "
+"string expression_derivative_t[, string expression_derivative_u]])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:279
+msgid ""
+"Define a new function <literal>name</literal> which can be used in high "
+"level generic assembly. The function can have one or two parameters. In "
+"<literal>expression</literal> all available predefined function or operation"
+" of the generic assembly can be used. However, no reference to some "
+"variables or data can be specified. The argument of the function is "
+"<literal>t</literal> for a one parameter function and <literal>t</literal> "
+"and <literal>u</literal> for a two parameter function. For instance "
+"'sin(pi*t)+2*t*t' is a valid expression for a one parameter function and "
+"'sin(max(t,u)*pi)' is a valid expression for a two parameters function. "
+"<literal>expression_derivative_t</literal> and "
+"<literal>expression_derivative_u</literal> are optional expressions for the "
+"derivatives with respect to <literal>t</literal> and <literal>u</literal>. "
+"If they are not furnished, a symbolic derivation is used."
+msgstr ""
+"高水準汎用アセンブリで使用できる新しい関数 <literal>name</literal> "
+"を定義します．関数には，1つまたは2つのパラメータを指定できます． <literal>expression</literal> "
+"では，汎用アセンブリの使用可能なすべての定義済み関数またはオペレーションを使用できます．ただし，一部の変数またはデータへの参照は指定できません．関数の引数は，1つのパラメータ関数の場合は"
+" <literal>t</literal> ，2つのパラメータ関数の場合は <literal>t</literal> と "
+"<literal>u</literal> です．例えば， 'sin(pi*t)+2*t*t' は1つのパラメータ関数のための有効な式であり， "
+"'sin(max(t,u)*pi)' は2つのパラメータ関数のための有効な式です． "
+"<literal>expression_derivative_t</literal> と "
+"<literal>expression_derivative_u</literal> は <literal>t</literal> と "
+"<literal>u</literal> に関する導関数のオプション式です．指定されていない場合は，記号による微分が使用されます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:294
+msgid "``gf_asm('undefine function', string name)``"
+msgstr "``gf_asm('undefine function', string name)``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:296
+msgid ""
+"Cancel the definition of a previously defined function "
+"<literal>name</literal> for the high level generic assembly."
+msgstr "高水準の汎用アセンブリに対して以前に定義された関数 <literal>name</literal> の定義をキャンセルします．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:300
+msgid ""
+"``gf_asm('define linear hardening function', string name, scalar sigma_y0, "
+"scalar H, ... [string 'Frobenius'])``"
+msgstr ""
+"``gf_asm('define linear hardening function', string name, scalar sigma_y0, "
+"scalar H, ... [string 'Frobenius'])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:302
+msgid ""
+"Define a new linear hardening function under the name "
+"<literal>name</literal>, with initial yield stress "
+"<literal>sigma_y0</literal> and hardening modulus H. If an extra string "
+"argument with the value 'Frobenius' is provided, the hardening function is "
+"expressed in terms of Frobenius norms of its input strain and output stress,"
+" instead of their Von-Mises equivalents."
+msgstr ""
+"初期降伏応力が <literal>sigma_y0</literal> "
+"で硬化係数がHの新しい線形硬化関数を<literal>name</literal>という名前で定義します．値が 'Frobenius' "
+"の特別な文字列引数が指定された場合，硬化関数はVon-Mises相当ではなく，入力ひずみと出力応力のFrobeniusノルムで表されます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:309
+msgid ""
+"``gf_asm('define Ramberg Osgood hardening function', string name, scalar "
+"sigma_ref, {scalar eps_ref | scalar E, scalar alpha}, scalar n[, string "
+"'Frobenius'])``"
+msgstr ""
+"``gf_asm('define Ramberg Osgood hardening function', string name, scalar "
+"sigma_ref, {scalar eps_ref | scalar E, scalar alpha}, scalar n[, string "
+"'Frobenius'])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:311
+msgid ""
+"Define a new Ramberg Osgood hardening function under the name "
+"<literal>name</literal>, with initial yield stress "
+"<literal>sigma_y0</literal> and hardening modulus H. If an extra string "
+"argument with the value 'Frobenius' is provided, the hardening function is "
+"expressed in terms of Frobenius norms of its input strain and output stress,"
+" instead of their Von-Mises equivalents."
+msgstr ""
+"新しいRamberg Osgood硬化関数を，初期降伏応力を <literal>sigma_y0</literal> ，硬化係数をHとして名前 "
+"<literal>name</literal> で定義します．値が 'Frobenius' の特別な文字列引数が指定されている場合，硬化関数は，Von-"
+"Mises相当ではなく，入力ひずみと出力応力のFrobeniusノルムで表されます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:318
+msgid ""
+"``gf_asm('expression analysis', string expression [, {mesh mesh | mesh_im "
+"mim}] [, der_order] [, model model] [, string varname, int is_variable[, "
+"{mesh_fem mf | mesh_imd mimd}], ...])``"
+msgstr ""
+"``gf_asm('expression analysis', string expression [, {mesh mesh | mesh_im "
+"mim}] [, der_order] [, model model] [, string varname, int is_variable[, "
+"{mesh_fem mf | mesh_imd mimd}], ...])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:320
+msgid ""
+"Analyse a high-level generic assembly expression and print information about"
+" the provided expression."
+msgstr "高水準汎用アセンブリ表現を解析し，指定された表現に関する情報を出力します．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:324
+msgid ""
+"``{...} = gf_asm('volumic' [,CVLST], expr [, mesh_ims, mesh_fems, "
+"data...])``"
+msgstr ""
+"``{...} = gf_asm('volumic' [,CVLST], expr [, mesh_ims, mesh_fems, "
+"data...])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:326
+msgid "Low-level generic assembly procedure for volumic assembly."
+msgstr "体積構築の低水準汎用アセンブリ手順．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:328
+msgid ""
+"The expression <literal>expr</literal> is evaluated over the mesh_fem's "
+"listed in the arguments (with optional data) and assigned to the output "
+"arguments. For details about the syntax of assembly expressions, please "
+"refer to the getfem user manual (or look at the file getfem_assembling.h in "
+"the GetFEM sources)."
+msgstr ""
+"式 <literal>expr</literal> "
+"は引数(オプションのデータ)にリストされたmesh_femに対して評価され，出力引数に割り当てられます．アセンブリ式の構文の詳細については，getfemユーザマニュアル(か"
+" GetFEM のソースファイル getfem_assembling.h )を参照してください．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:334
+msgid "For example, the L2 norm of a field can be computed with::"
+msgstr "たとえば，フィールドのL2ノルムは次のように計算できます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:340
+msgid "The Laplacian stiffness matrix can be evaluated with::"
+msgstr "Laplacian剛性マトリックスは，次の式で評価できます．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:347
+msgid ""
+"``{...} = gf_asm('boundary', int bnum, string expr [, mesh_im mim, mesh_fem "
+"mf, data...])``"
+msgstr ""
+"``{...} = gf_asm('boundary', int bnum, string expr [, mesh_im mim, mesh_fem "
+"mf, data...])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:349
+msgid "Low-level generic boundary assembly."
+msgstr "低水準の汎用境界のアセンブリです．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:351
+msgid "See the help for gf_asm('volumic')."
+msgstr "gf_asm('volumic') のヘルプを参照してください．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:354
+msgid ""
+"``Mi = gf_asm('interpolation matrix', mesh_fem mf, {mesh_fem mfi | vec "
+"pts})``"
+msgstr ""
+"``Mi = gf_asm('interpolation matrix', mesh_fem mf, {mesh_fem mfi | vec "
+"pts})``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:356
+msgid ""
+"Build the interpolation matrix from a mesh_fem onto another mesh_fem or a "
+"set of points."
+msgstr "mesh_femから別のmesh_femまたは点集合の補間行列を構築します．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:358
+msgid ""
+"Return a matrix <literal>Mi</literal>, such that <literal>V = Mi.U</literal>"
+" is equal to gf_compute('interpolate_on',mfi). Useful for repeated "
+"interpolations. Note that this is just interpolation, no elementary "
+"integrations are involved here, and <literal>mfi</literal> has to be "
+"lagrangian. In the more general case, you would have to do a L2 projection "
+"via the mass matrix."
+msgstr ""
+"行列 <literal>Mi</literal> を返します．<literal>V = Mi.U</literal> は "
+"gf_compute('interpolate_on',mfi) "
+"と等しいです．反復補間に便利です．これは単なる補間であり，ここでは基本的な積分は行われず， <literal>mfi</literal> "
+"はlagrangianでなければならないことに注意してください．より汎用的なケースでは，質量行列を介してL2投影を行う必要があります．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:365
+msgid "<literal>Mi</literal> is a spmat object."
+msgstr "<literal>Mi</literal> はspmatオブジェクトです．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:369
+msgid ""
+"``Me = gf_asm('extrapolation matrix',mesh_fem mf,  {mesh_fem mfe | vec "
+"pts})``"
+msgstr ""
+"``Me = gf_asm('extrapolation matrix',mesh_fem mf,  {mesh_fem mfe | vec "
+"pts})``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:371
+msgid ""
+"Build the extrapolation matrix from a mesh_fem onto another mesh_fem or a "
+"set of points."
+msgstr "mesh_femから別のmesh_femまたは点集合の外挿行列を構築します．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:373
+msgid ""
+"Return a matrix <literal>Me</literal>, such that <literal>V = Me.U</literal>"
+" is equal to gf_compute('extrapolate_on',mfe). Useful for repeated "
+"extrapolations."
+msgstr ""
+"行列<literal>Me</literal>を返します． <literal>V = Me.U</literal> は "
+"gf_compute('extrapolate_on',mfe) と等しいです．反復外挿に便利です．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:377
+msgid "<literal>Me</literal> is a spmat object."
+msgstr "<literal>Me</literal> はspmatオブジェクトです．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:381
+msgid ""
+"``B = gf_asm('integral contact Uzawa projection', int bnum, mesh_im mim, "
+"mesh_fem mf_u, vec U, mesh_fem mf_lambda, vec vec_lambda, mesh_fem "
+"mf_obstacle, vec obstacle, scalar r [, {scalar coeff | mesh_fem mf_coeff, "
+"vec coeff} [, int option[, scalar alpha, vec W]]])``"
+msgstr ""
+"``B = gf_asm('integral contact Uzawa projection', int bnum, mesh_im mim, "
+"mesh_fem mf_u, vec U, mesh_fem mf_lambda, vec vec_lambda, mesh_fem "
+"mf_obstacle, vec obstacle, scalar r [, {scalar coeff | mesh_fem mf_coeff, "
+"vec coeff} [, int option[, scalar alpha, vec W]]])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:385
+msgid "Specific assembly procedure for the use of an Uzawa algorithm to solve"
+msgstr "Uzawaアルゴリズムを用いて解くための具体的な構築手順です．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:384
+msgid ""
+"contact problems. Projects the term $-(\\lambda - r (u_N-g))_-$ on the "
+"finite element space of $\\lambda$."
+msgstr "接触問題． $-(\\lambda - r (u_N-g))_-$ の項を $\\lambda$ の有限要素空間に投影します．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:391
+msgid ""
+"``B = gf_asm('level set normal source term', int bnum, mesh_im mim, mesh_fem"
+" mf_u, mesh_fem mf_lambda, vec vec_lambda, mesh_fem mf_levelset, vec "
+"levelset)``"
+msgstr ""
+"``B = gf_asm('level set normal source term', int bnum, mesh_im mim, mesh_fem"
+" mf_u, mesh_fem mf_lambda, vec vec_lambda, mesh_fem mf_levelset, vec "
+"levelset)``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:393
+msgid ""
+"Performs an assembly of the source term represented by "
+"<literal>vec_lambda</literal> on <literal>mf_lambda</literal> considered to "
+"be a component in the direction of the gradient of a levelset function "
+"(normal to the levelset) of a vector field defined on "
+"<literal>mf_u</literal> on the boundary <literal>bnum</literal>."
+msgstr ""
+"境界 <literal>bnum</literal> 上の <literal>mf_u</literal> "
+"上で定義されたベクトルフィールドのlevelset関数(levelsetの法線)の勾配方向の成分と考えられる "
+"<literal>mf_lambda</literal> 上で <literal>vec_lambda</literal> "
+"で表されるソース項のアセンブリを実行します．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:402
+msgid ""
+"``M = gf_asm('lsneuman matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, "
+"levelset ls[, int region])``"
+msgstr ""
+"``M = gf_asm('lsneuman matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, "
+"levelset ls[, int region])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:404
+msgid "Assembly of a level set Neuman  matrix."
+msgstr "levelset行列のアセンブリ．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:410
+msgid ""
+"``M = gf_asm('nlsgrad matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, "
+"levelset ls[, int region])``"
+msgstr ""
+"``M = gf_asm('nlsgrad matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, "
+"levelset ls[, int region])``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:412
+msgid "Assembly of a nlsgrad matrix."
+msgstr "nlsgrad行列のアセンブリ．"
+
+#: ../source/scilab/cmdref_gf_asm.rst:418
+msgid ""
+"``M = gf_asm('stabilization patch matrix', @tm mesh, mesh_fem mf,  mesh_im "
+"mim, real ratio, real h)``"
+msgstr ""
+"``M = gf_asm('stabilization patch matrix', @tm mesh, mesh_fem mf,  mesh_im "
+"mim, real ratio, real h)``"
+
+#: ../source/scilab/cmdref_gf_asm.rst:420
+msgid "Assembly of stabilization patch matrix ."
+msgstr "安定化パッチ行列のアセンブリ．"

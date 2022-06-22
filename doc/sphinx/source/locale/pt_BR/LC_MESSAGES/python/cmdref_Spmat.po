@@ -1,0 +1,358 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-22 02:20+0000\n"
+"PO-Revision-Date: 2018-07-16 07:16+0000\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../source/python/cmdref_Spmat.rst:8
+msgid "Spmat"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:1
+msgid "GetFEM Spmat object"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:3
+msgid ""
+"Create a new sparse matrix in GetFEM format. These sparse matrix can be "
+"stored as CSC (compressed column sparse), which is the format used by "
+"Matlab, or they can be stored as WSC (internal format to getfem). The CSC "
+"matrices are not writable (it would be very inefficient), but they are "
+"optimized for multiplication with vectors, and memory usage. The WSC are "
+"writable, they are very fast with respect to random read/write operation. "
+"However their memory overhead is higher than CSC matrices, and they are a "
+"little bit slower for matrix-vector multiplications."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:12
+msgid ""
+"By default, all newly created matrices are build as WSC matrices. This can "
+"be changed later with ``Spmat.to_csc(...)``, or may be changed automatically"
+" by getfem (for example ``gf_linsolve()`` converts the matrices to CSC)."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:17
+msgid "The matrices may store REAL or COMPLEX values."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:19
+msgid "General constructor for Spmat objects"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:21
+msgid ""
+"``SM = Spmat('empty', int m [, int n])`` Create a new empty (i.e. full of "
+"zeros) sparse matrix, of dimensions `m x n`. If `n` is omitted, the matrix "
+"dimension is `m x m`."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:25
+msgid ""
+"``SM = Spmat('copy', mat K [, list I [, list J]])`` Duplicate a matrix `K` "
+"(which might be a SpMat). If index `I` and/or `J` are given, the matrix will"
+" be a submatrix of `K`. For example::"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:33
+msgid "will return a 40x5 matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:35
+msgid "``SM = Spmat('identity', int n)`` Create a `n x n` identity matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:38
+msgid ""
+"``SM = Spmat('mult', Spmat A, Spmat B)`` Create a sparse matrix as the "
+"product of the sparse matrices `A` and `B`. It requires that `A` and `B` be "
+"both real or both complex, you may have to use ``Spmat.to_complex()``"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:43
+msgid ""
+"``SM = Spmat('add', Spmat A, Spmat B)`` Create a sparse matrix as the sum of"
+" the sparse matrices `A` and `B`. Adding a real matrix with a complex matrix"
+" is possible."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:47
+msgid ""
+"``SM = Spmat('diag', mat D [, ivec E [, int n [,int m]]])`` Create a "
+"diagonal matrix. If `E` is given, `D` might be a matrix and each column of "
+"`E` will contain the sub-diagonal number that will be filled with the "
+"corresponding column of `D`."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat:52
+msgid ""
+"``SM = Spmat('load','hb'|'harwell-boeing'|'mm'|'matrix-market', string "
+"filename)`` Read a sparse matrix from an Harwell-Boeing or a Matrix-Market "
+"file ."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.add:1
+msgid "Add `V` to the sub-matrix 'M(I,J)'."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.add:3
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.assign:3
+msgid "`V` might be a sparse matrix or a full matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.assign:1
+msgid "Copy V into the sub-matrix 'M(I,J)'."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.char:1
+msgid "Output a (unique) string representation of the Spmat."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.char:3
+msgid ""
+"This can be used to perform comparisons between two different Spmat objects."
+" This function is to be completed."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.clear:1
+msgid "Synopsis: Spmat.clear(self[, list I[, list J]])"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.clear:3
+msgid "Erase the non-zero entries of the matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.clear:5
+msgid ""
+"The optional arguments `I` and `J` may be specified to clear a sub-matrix "
+"instead of the entire matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.conjugate:1
+msgid "Conjugate each element of the matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.csc_ind:1
+msgid "Return the two usual index arrays of CSC storage."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.csc_ind:3
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.csc_val:3
+msgid "If `M` is not stored as a CSC matrix, it is converted into CSC."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.csc_val:1
+msgid "Return the array of values of all non-zero entries of `M`."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.determinant:1
+msgid "returns the matrix determinant calculated using MUMPS."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.diag:1
+msgid "Return the diagonal of `M` as a vector."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.diag:3
+msgid "If `E` is used, return the sub-diagonals whose ranks are given in E."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.dirichlet_nullspace:1
+msgid "Solve the dirichlet conditions `M.U=R`."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.dirichlet_nullspace:3
+msgid ""
+"A solution `U0` which has a minimum L2-norm is returned, with a sparse "
+"matrix `N` containing an orthogonal basis of the kernel of the (assembled) "
+"constraints matrix `M` (hence, the PDE linear system should be solved on "
+"this subspace): the initial problem"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.dirichlet_nullspace:8
+msgid "`K.U = B` with constraints `M.U = R`"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.dirichlet_nullspace:10
+msgid "is replaced by"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.dirichlet_nullspace:12
+msgid "`(N'.K.N).UU = N'.B` with `U = N.UU + U0`"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.display:1
+msgid "displays a short summary for a Spmat object."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.full:1
+msgid "Synopsis: Sm = Spmat.full(self[, list I[, list J]])"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.full:3
+msgid "Return a full (sub-)matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.full:5
+msgid ""
+"The optional arguments `I` and `J`, are the sub-intervals for the rows and "
+"columns that are to be extracted."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.is_complex:1
+msgid "Return 1 if the matrix contains complex values."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.mult:1
+msgid "Product of the sparse matrix `M` with a vector `V`."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.mult:3
+msgid "For matrix-matrix multiplications, see Spmat('mult')."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.nnz:1
+msgid "Return the number of non-null values stored in the sparse matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.save:1
+msgid "Export the sparse matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.save:3
+msgid ""
+"the format of the file may be 'hb' for Harwell-Boeing, or 'mm' for Matrix-"
+"Market."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.scale:1
+msgid "Multiplies the matrix by a scalar value `v`."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.set_diag:1
+msgid "Change the diagonal (or sub-diagonals) of the matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.set_diag:3
+msgid ""
+"If `E` is given, `D` might be a matrix and each column of `E` will contain "
+"the sub-diagonal number that will be filled with the corresponding column of"
+" `D`."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.size:1
+msgid "Return a vector where `ni` and `nj` are the dimensions of the matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.storage:1
+msgid "Return the storage type currently used for the matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.storage:3
+msgid "The storage is returned as a string, either 'CSC' or 'WSC'."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.tmult:1
+msgid ""
+"Product of `M` transposed (conjugated if `M` is complex) with the vector "
+"`V`."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.to_complex:1
+msgid "Store complex numbers."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.to_csc:1
+msgid "Convert the matrix to CSC storage."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.to_csc:3
+msgid "CSC storage is recommended for matrix-vector multiplications."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.to_wsc:1
+msgid "Convert the matrix to WSC storage."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.to_wsc:3
+msgid "Read and write operation are quite fast with WSC storage."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.transconj:1
+msgid "Transpose and conjugate the matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.8/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Spmat.transpose:1
+msgid "Transpose the matrix."
+msgstr ""

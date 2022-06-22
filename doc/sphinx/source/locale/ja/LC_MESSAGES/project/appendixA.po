@@ -1,0 +1,357 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-22 02:20+0000\n"
+"PO-Revision-Date: 2018-07-16 07:03+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/project/appendixA.rst:10
+msgid ""
+"Appendix A. Some basic computations between reference and real elements"
+msgstr "付録A. 参照要素と実数要素の基本的な計算"
+
+#: ../source/project/appendixA.rst:13
+msgid "Volume integral"
+msgstr "体積積分"
+
+#: ../source/project/appendixA.rst:15 ../source/project/appendixA.rst:77
+msgid "One has"
+msgstr "次式で与えられます．"
+
+#: ../source/project/appendixA.rst:17
+msgid ""
+"\\int_T f(x)\\ dx = \\int_{\\widehat{T}} \\widehat{f}(\\widehat{x})\n"
+"|\\mbox{vol}\\left(\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_0};\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_1};\n"
+"\\ldots;\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_{P-1}}\n"
+"\\right)|\\ d\\widehat{x}."
+msgstr ""
+"\\int_T f(x)\\ dx = \\int_{\\widehat{T}} \\widehat{f}(\\widehat{x})\n"
+"|\\mbox{vol}\\left(\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_0};\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_1};\n"
+"\\ldots;\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_{P-1}}\n"
+"\\right)|\\ d\\widehat{x}."
+
+#: ../source/project/appendixA.rst:28
+msgid "Denoting :math:`J_{\\tau}(\\widehat{x})` the jacobian"
+msgstr ":math:`J_{\\tau}(\\widehat{x})` は Jacobian を意味します"
+
+#: ../source/project/appendixA.rst:30
+msgid ""
+"\\fbox{$ J_{\\tau}(\\widehat{x}) :=\n"
+"|\\mbox{vol}\\left(\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_0};\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_1};\n"
+"\\ldots;\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_{P-1}}\n"
+"\\right)| =\n"
+"(\\mbox{det}(K(\\widehat{x})^T K(\\widehat{x})))^{1/2}$,}"
+msgstr ""
+"\\fbox{$ J_{\\tau}(\\widehat{x}) :=\n"
+"|\\mbox{vol}\\left(\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_0};\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_1};\n"
+"\\ldots;\n"
+"\\frac{\\partial\\tau(\\widehat{x})}{\\partial \\widehat{x}_{P-1}}\n"
+"\\right)| =\n"
+"(\\mbox{det}(K(\\widehat{x})^T K(\\widehat{x})))^{1/2}$,}"
+
+#: ../source/project/appendixA.rst:41
+msgid "one finally has"
+msgstr "最終的に以下のように表されます．"
+
+#: ../source/project/appendixA.rst:43
+msgid ""
+"\\fbox{$\\int_T f(x)\\ dx = \\int_{\\widehat{T}} \\widehat{f}(\\widehat{x}) "
+"J_{\\tau}(\\widehat{x})\\ d\\widehat{x}$.}"
+msgstr ""
+"\\fbox{$\\int_T f(x)\\ dx = \\int_{\\widehat{T}} \\widehat{f}(\\widehat{x}) "
+"J_{\\tau}(\\widehat{x})\\ d\\widehat{x}$.}"
+
+#: ../source/project/appendixA.rst:47
+msgid ""
+"When :math:`P = N`, the expression of the jacobian reduces to "
+":math:`J_{\\tau}(\\widehat{x}) = |\\mbox{det}(K(\\widehat{x}))|`."
+msgstr ""
+":math:`P = N` のときJacobianの式は :math:`J_{\\tau}(\\widehat{x}) = "
+"|\\mbox{det}(K(\\widehat{x}))|` のようになります．"
+
+#: ../source/project/appendixA.rst:52
+msgid "Surface integral"
+msgstr "面積分"
+
+#: ../source/project/appendixA.rst:54
+msgid ""
+"With :math:`\\Gamma` a part of the boundary of :math:`T` a real element and "
+":math:`\\widehat{\\Gamma}` the corresponding boundary on the reference "
+"element :math:`\\widehat{T}`, one has"
+msgstr ""
+":math:`\\Gamma` を実数要素である :math:`T` の境界の一部， :math:`\\widehat{\\Gamma}` を参照要素 "
+":math:`\\widehat{T}` 上の対応する境界とすると次式で表されます．"
+
+#: ../source/project/appendixA.rst:58
+msgid ""
+"\\fbox{$\\int_{\\Gamma} f(x)\\ d\\sigma =\n"
+"\\int_{\\widehat{\\Gamma}}\\widehat{f}(\\widehat{x}) \\|B(\\widehat{x})\\widehat{n}\\| J_{\\tau}(\\widehat{x})\\ d\\widehat{\\sigma}$,}"
+msgstr ""
+"\\fbox{$\\int_{\\Gamma} f(x)\\ d\\sigma =\n"
+"\\int_{\\widehat{\\Gamma}}\\widehat{f}(\\widehat{x}) \\|B(\\widehat{x})\\widehat{n}\\| J_{\\tau}(\\widehat{x})\\ d\\widehat{\\sigma}$,}"
+
+#: ../source/project/appendixA.rst:63
+msgid ""
+"where :math:`\\widehat{n}` is the unit normal to :math:`\\widehat{T}` on "
+":math:`\\widehat{\\Gamma}`. In a same way"
+msgstr ""
+"ここで， :math:`\\widehat{n}` は :math:`\\widehat{\\Gamma}` 上の "
+":math:`\\widehat{T}` の法線です．同様に次式が成り立ちます．"
+
+#: ../source/project/appendixA.rst:66
+msgid ""
+"\\fbox{$\\int_{\\Gamma} F(x)\\cdot n\\ d\\sigma =\n"
+"\\int_{\\widehat{\\Gamma}} \\widehat{F}(\\widehat{x})\\cdot(B(\\widehat{x})\\cdot\\widehat{n}) J_{\\tau}(\\widehat{x})\\ d\\widehat{\\sigma}$,}"
+msgstr ""
+"\\fbox{$\\int_{\\Gamma} F(x)\\cdot n\\ d\\sigma =\n"
+"\\int_{\\widehat{\\Gamma}} \\widehat{F}(\\widehat{x})\\cdot(B(\\widehat{x})\\cdot\\widehat{n}) J_{\\tau}(\\widehat{x})\\ d\\widehat{\\sigma}$,}"
+
+#: ../source/project/appendixA.rst:71
+msgid "For :math:`n` the unit normal to :math:`T` on :math:`\\Gamma`."
+msgstr ":math:`n` は :math:`\\Gamma` 上の :math:`T` に対する単位法線です．"
+
+#: ../source/project/appendixA.rst:75
+msgid "Derivative computation"
+msgstr "微分計算"
+
+#: ../source/project/appendixA.rst:79
+msgid "\\nabla f(x) = B(\\widehat{x})\\widehat{\\nabla} \\widehat{f}(\\widehat{x})."
+msgstr "\\nabla f(x) = B(\\widehat{x})\\widehat{\\nabla} \\widehat{f}(\\widehat{x})."
+
+#: ../source/project/appendixA.rst:85
+msgid "Second derivative computation"
+msgstr "2階微分計算"
+
+#: ../source/project/appendixA.rst:87
+msgid "Denoting"
+msgstr "使用するのは次の"
+
+#: ../source/project/appendixA.rst:89
+msgid ""
+"\\nabla^2 f =\n"
+"\\left[\\frac{\\partial^2 f}{\\partial x_i \\partial x_j}\\right]_{ij},"
+msgstr ""
+"\\nabla^2 f =\n"
+"\\left[\\frac{\\partial^2 f}{\\partial x_i \\partial x_j}\\right]_{ij},"
+
+#: ../source/project/appendixA.rst:94
+msgid "the :math:`N \\times N` matrix and"
+msgstr ":math:`N \\times N` 行列と"
+
+#: ../source/project/appendixA.rst:96
+msgid ""
+"\\widehat{X}(\\widehat{x}) =\n"
+"\\sum_{k = 0}^{N-1}\\widehat{\\nabla}^2\\tau_k(\\widehat{x})\\frac{\\partial f}{\\partial x_k}(x) =\n"
+"\\sum_{k = 0}^{N-1}\\sum_{i = 0}^{P-1}\n"
+"\\widehat{\\nabla}^2\\tau_k(\\widehat{x})B_{ki}\\frac{\\partial \\widehat{f}}{\\partial \\widehat{x}_i}(\\widehat{x}),"
+msgstr ""
+"\\widehat{X}(\\widehat{x}) =\n"
+"\\sum_{k = 0}^{N-1}\\widehat{\\nabla}^2\\tau_k(\\widehat{x})\\frac{\\partial f}{\\partial x_k}(x) =\n"
+"\\sum_{k = 0}^{N-1}\\sum_{i = 0}^{P-1}\n"
+"\\widehat{\\nabla}^2\\tau_k(\\widehat{x})B_{ki}\\frac{\\partial \\widehat{f}}{\\partial \\widehat{x}_i}(\\widehat{x}),"
+
+#: ../source/project/appendixA.rst:103
+msgid "the :math:`P \\times P` matrix, then"
+msgstr ":math:`P \\times P` 行列，そして"
+
+#: ../source/project/appendixA.rst:105
+msgid ""
+"\\widehat{\\nabla}^2 \\widehat{f}(\\widehat{x}) = \\widehat{X}(\\widehat{x})"
+" + K(\\widehat{x})^T \\nabla^2 f(x) K(\\widehat{x}),"
+msgstr ""
+"\\widehat{\\nabla}^2 \\widehat{f}(\\widehat{x}) = \\widehat{X}(\\widehat{x})"
+" + K(\\widehat{x})^T \\nabla^2 f(x) K(\\widehat{x}),"
+
+#: ../source/project/appendixA.rst:109
+msgid "and thus"
+msgstr "です．したがって展開すると次式になります．"
+
+#: ../source/project/appendixA.rst:111
+msgid ""
+"\\nabla^2 f(x) = B(\\widehat{x})(\\widehat{\\nabla}^2 "
+"\\widehat{f}(\\widehat{x}) - \\widehat{X}(\\widehat{x})) B(\\widehat{x})^T."
+msgstr ""
+"\\nabla^2 f(x) = B(\\widehat{x})(\\widehat{\\nabla}^2 "
+"\\widehat{f}(\\widehat{x}) - \\widehat{X}(\\widehat{x})) B(\\widehat{x})^T."
+
+#: ../source/project/appendixA.rst:115
+msgid ""
+"In order to have uniform methods for the computation of elementary matrices,"
+" the Hessian is computed as a column vector :math:`H f` whose components are"
+" :math:`\\frac{\\partial^2 f}{\\partial x^2_0}, \\frac{\\partial^2 "
+"f}{\\partial x_1\\partial x_0},\\ldots, \\frac{\\partial^2 f}{\\partial "
+"x^2_{N-1}}`. Then, with :math:`B_2` the :math:`P^2 \\times P` matrix defined"
+" as"
+msgstr ""
+"基本行列の計算を一様な方法で計算するために，Hessianの成分は :math:`\\frac{\\partial^2 f}{\\partial "
+"x^2_0}, \\frac{\\partial^2 f}{\\partial x_1\\partial x_0},\\ldots, "
+"\\frac{\\partial^2 f}{\\partial x^2_{N-1}}` である列ベクトル :math:`H f` "
+"として計算されます．また， :math:`B_2` は :math:`P^2 \\times P` 行列で次のように定義されます．"
+
+#: ../source/project/appendixA.rst:121
+msgid ""
+"\\left[B_2(\\widehat{x})\\right]_{ij} =\n"
+"\\sum_{k = 0}^{N-1}\n"
+"\\frac{\\partial^2 \\tau_k(\\widehat{x})}{\\partial \\widehat{x}_{i / P} \\partial \\widehat{x}_{i\\mbox{ mod }P}}\n"
+"B_{kj}(\\widehat{x}),"
+msgstr ""
+"\\left[B_2(\\widehat{x})\\right]_{ij} =\n"
+"\\sum_{k = 0}^{N-1}\n"
+"\\frac{\\partial^2 \\tau_k(\\widehat{x})}{\\partial \\widehat{x}_{i / P} \\partial \\widehat{x}_{i\\mbox{ mod }P}}\n"
+"B_{kj}(\\widehat{x}),"
+
+#: ../source/project/appendixA.rst:128
+msgid "and :math:`B_3` the :math:`N^2 \\times P^2` matrix defined as"
+msgstr ":math:`B_3` は :math:`N^2 \\times P^2` 行列で次式のように定義されています"
+
+#: ../source/project/appendixA.rst:130
+msgid ""
+"\\left[B_3(\\widehat{x})\\right]_{ij} =\n"
+"B_{i / N, j / P}(\\widehat{x}) B_{i\\mbox{ mod }N, j\\mbox{ mod }P}(\\widehat{x}),"
+msgstr ""
+"\\left[B_3(\\widehat{x})\\right]_{ij} =\n"
+"B_{i / N, j / P}(\\widehat{x}) B_{i\\mbox{ mod }N, j\\mbox{ mod }P}(\\widehat{x}),"
+
+#: ../source/project/appendixA.rst:135
+msgid "one has"
+msgstr "次式で表されます．"
+
+#: ../source/project/appendixA.rst:137
+msgid ""
+"\\fbox{$H f(x) = B_3(\\widehat{x})\n"
+"\\left(\\widehat{H}\\ \\widehat{f}(\\widehat{x}) - B_2(\\widehat{x})\\widehat{\\nabla} \\widehat{f}(\\widehat{x})\\right)$.}"
+msgstr ""
+"\\fbox{$H f(x) = B_3(\\widehat{x})\n"
+"\\left(\\widehat{H}\\ \\widehat{f}(\\widehat{x}) - B_2(\\widehat{x})\\widehat{\\nabla} \\widehat{f}(\\widehat{x})\\right)$.}"
+
+#: ../source/project/appendixA.rst:144
+msgid "Example of elementary matrix"
+msgstr "基本的な行列の例"
+
+#: ../source/project/appendixA.rst:146
+msgid "Assume one needs to compute the elementary \"matrix\":"
+msgstr "基本的な \"行列\" を計算する場合を想定します．"
+
+#: ../source/project/appendixA.rst:148
+msgid ""
+"t(i_0, i_1, \\ldots, i_7) =\n"
+"\\int_{T}\\varphi_{i_1}^{i_0}\n"
+"\\partial_{i_4}\\varphi_{i_3}^{i_2}\n"
+"\\partial^2_{i_7/ P, i_7\\mbox{ mod } P}\\varphi_{i_6}^{i_5}\\ dx,"
+msgstr ""
+"t(i_0, i_1, \\ldots, i_7) =\n"
+"\\int_{T}\\varphi_{i_1}^{i_0}\n"
+"\\partial_{i_4}\\varphi_{i_3}^{i_2}\n"
+"\\partial^2_{i_7/ P, i_7\\mbox{ mod } P}\\varphi_{i_6}^{i_5}\\ dx,"
+
+#: ../source/project/appendixA.rst:155
+msgid "The computations to be made on the reference elements are"
+msgstr "参照要素に対して行われる計算は次式"
+
+#: ../source/project/appendixA.rst:157
+msgid ""
+"\\widehat{t}_0(i_0, i_1, \\ldots,i_7) =\n"
+"\\int_{\\widehat{T}}(\\widehat{\\varphi})_{i_1}^{i_0}\n"
+"\\partial_{i_4}(\\widehat{\\varphi})_{i_3}^{i_2}\n"
+"\\partial^2_{i_7 / P, i_7\\mbox{ mod } P}(\\widehat{\\varphi})_{i_6}^{i_5} J(\\widehat{x})\\ d\\widehat{x},"
+msgstr ""
+"\\widehat{t}_0(i_0, i_1, \\ldots,i_7) =\n"
+"\\int_{\\widehat{T}}(\\widehat{\\varphi})_{i_1}^{i_0}\n"
+"\\partial_{i_4}(\\widehat{\\varphi})_{i_3}^{i_2}\n"
+"\\partial^2_{i_7 / P, i_7\\mbox{ mod } P}(\\widehat{\\varphi})_{i_6}^{i_5} J(\\widehat{x})\\ d\\widehat{x},"
+
+#: ../source/project/appendixA.rst:164
+msgid "and"
+msgstr "と次式です．"
+
+#: ../source/project/appendixA.rst:166
+msgid ""
+"\\widehat{t}_1(i_0, i_1, \\ldots, i_7) =\n"
+"\\int_{\\widehat{T}}(\\widehat{\\varphi})_{i_1}^{i_0}\n"
+"\\partial_{i_4}(\\widehat{\\varphi})_{i_3}^{i_2}\n"
+"\\partial_{i_7}(\\widehat{\\varphi})_{i_6}^{i_5} J(\\widehat{x})\\ d\\widehat{x},"
+msgstr ""
+"\\widehat{t}_1(i_0, i_1, \\ldots, i_7) =\n"
+"\\int_{\\widehat{T}}(\\widehat{\\varphi})_{i_1}^{i_0}\n"
+"\\partial_{i_4}(\\widehat{\\varphi})_{i_3}^{i_2}\n"
+"\\partial_{i_7}(\\widehat{\\varphi})_{i_6}^{i_5} J(\\widehat{x})\\ d\\widehat{x},"
+
+#: ../source/project/appendixA.rst:173
+msgid ""
+"Those two tensor can be computed once on the whole reference element if the "
+"geometric transformation is linear (because :math:`J(\\widehat{x})` is "
+"constant). If the geometric transformation is non-linear, what has to be "
+"stored is the value on each integration point. To compute the integral on "
+"the real element a certain number of reductions have to be made:"
+msgstr ""
+"これらの2つのテンソルは，幾何変換が線形の場合，（ :math:`J(\\widehat{x})` "
+"が一定であるため），参照要素全体で一度計算できます．幾何変換が非線形である場合，格納されるべきものは各積分点の値です．実数要素上の積分を計算するには，いくつかの低減が必要です．"
+
+#: ../source/project/appendixA.rst:179
+msgid "Concerning the first term (:math:`\\varphi_{i_1}^{i_0}`) nothing."
+msgstr "最初の項 (:math:`\\varphi_{i_1}^{i_0}`) については何もしません．"
+
+#: ../source/project/appendixA.rst:181
+msgid ""
+"Concerning the second term (:math:`\\partial_{i_4}\\varphi_{i_3}^{i_2}`) a "
+"reduction with respect to :math:`i_4` with the matrix :math:`B`."
+msgstr ""
+"第2項 (:math:`\\partial_{i_4}\\varphi_{i_3}^{i_2}`) は行列 :math:`B` を使って "
+":math:`i_4` とします．"
+
+#: ../source/project/appendixA.rst:184
+msgid ""
+"Concerning the third term (:math:`\\partial^2_{i_7 / P, i_7\\mbox{ mod }P} "
+"\\varphi_{i_6}^{i_5}`) a reduction of :math:`\\widehat{t}_0` with respect to"
+" :math:`i_7` with the matrix :math:`B_3` and a reduction of "
+":math:`\\widehat{t}_1` with respect also to :math:`i_7` with the matrix "
+":math:`B_3 B_2`"
+msgstr ""
+"Concerning the third term (:math:`\\partial^2_{i_7 / P, i_7\\mbox{ mod }P} "
+"\\varphi_{i_6}^{i_5}`) a reduction of :math:`\\widehat{t}_0` with respect to"
+" :math:`i_7` with the matrix :math:`B_3` and a reduction of "
+":math:`\\widehat{t}_1` with respect also to :math:`i_7` with the matrix "
+":math:`B_3 B_2`"
+
+#: ../source/project/appendixA.rst:190
+msgid ""
+"The reductions are to be made on each integration point if the geometric "
+"transformation is non-linear. Once those reductions are done, an addition of"
+" all the tensor resulting of those reductions is made (with a factor equal "
+"to the load of each integration point if the geometric transformation is "
+"non-linear)."
+msgstr ""
+"幾何変換が非線形である場合には，各積分点に対して低減を行います．これらの低減が行われると，それらの縮約の結果として生じるすべてのテンソルが（幾何変換が非線形である場合，各積分点の負荷に等しい因子で）追加されます．"
+
+#: ../source/project/appendixA.rst:195
+msgid ""
+"If the finite element is non-:math:`\\tau`-equivalent, a supplementary "
+"reduction of the resulting tensor with the matrix :math:`M` has to be made."
+msgstr "有限要素が :math:`\\tau`- 等価でない場合，結果のテンソルを行列 :math:`M` で補助的に低減しなければなりません．"

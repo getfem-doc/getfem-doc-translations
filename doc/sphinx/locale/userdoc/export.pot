@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2004-2020 GetFEM project
+# Copyright (C) 2004-2022 GetFEM project
 # This file is distributed under the same license as the GetFEM package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM 5.4.1\n"
+"Project-Id-Version: GetFEM 5.4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-21 02:17+0000\n"
+"POT-Creation-Date: 2022-06-22 02:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgid "Scilab, Octave or Matlab, with the interface."
 msgstr ""
 
 #: ../source/userdoc/export.rst:15
-msgid "The open-source Paraview or Mayavi or any other VTK/VTU file viewer."
+msgid "The open-source Paraview, Mayavi2, PyVista or any other VTK/VTU file viewer."
 msgstr ""
 
 #: ../source/userdoc/export.rst:16
@@ -184,38 +184,38 @@ msgstr ""
 msgid "An |mf| ``mfu`` can also be exported in the VTU format with::"
 msgstr ""
 
-#: ../source/userdoc/export.rst:224
+#: ../source/userdoc/export.rst:223
 msgid "Note however that when exporing a |mf| with ``vtk_export`` or ``vtu_export`` each convex/fem of ``mfu`` will be mapped to a VTK/VTU element type. As VTK/VTU does not handle elements of degree greater than 2, there will be a loss of precision for higher degree FEMs."
 msgstr ""
 
-#: ../source/userdoc/export.rst:230
+#: ../source/userdoc/export.rst:229
 msgid "Exporting |m|, |mf| or slices to OpenDX"
 msgstr ""
 
-#: ../source/userdoc/export.rst:232
+#: ../source/userdoc/export.rst:231
 msgid "The OpenDX data file is more versatile than the VTK one. It is able to store more that one mesh, any number of fields on these meshes etc. However, it does only handle elements of degree 1 and 0 (segments, triangles, tetrahedrons, quadrangles etc.). And each mesh can only be made of one type of element, it cannot mix triangles and quadrangles in a same object. For that reason, it is generally preferable to export |gf_smsl| objects (in which non simplex elements are simplexified, and which allows refinement of elements) than |gf_mf| and |gf_m| objects."
 msgstr ""
 
-#: ../source/userdoc/export.rst:241
+#: ../source/userdoc/export.rst:240
 msgid "The basic usage is very similar to |gf_vtk_export|::"
 msgstr ""
 
-#: ../source/userdoc/export.rst:247
+#: ../source/userdoc/export.rst:246
 msgid "Moreover, |gf_dx_export| is able to reopen a '.dx' file and append new data into it. Hence it is possible, if many time-steps are to be saved, to view intermediate results in OpenDX during the computations. The prototype of the constructor is::"
 msgstr ""
 
-#: ../source/userdoc/export.rst:254
+#: ../source/userdoc/export.rst:253
 msgid "An example of use, with multiple time steps (taken from :file:`tests/dynamic_friction.cc`)::"
 msgstr ""
 
-#: ../source/userdoc/export.rst:275
+#: ../source/userdoc/export.rst:274
 msgid "In this example, an OpenDX \"time series\" is created, for each time step, two data fields are saved: a vector field called \"deformation\", and a scalar field called \"von_mises_stress\"."
 msgstr ""
 
-#: ../source/userdoc/export.rst:279
+#: ../source/userdoc/export.rst:278
 msgid "Note also that the ``dx_export::exporting_mesh_edges()`` function has been called. It implies that for each mesh exported, the edges of the original mesh are also exported (into another OpenDX mesh). In this example, you have access in OpenDX to 4 data fields: \"deformation\", \"deformation_edges\", \"von_mises_stress\" and \"von_mises_stress_edges\"."
 msgstr ""
 
-#: ../source/userdoc/export.rst:285
+#: ../source/userdoc/export.rst:284
 msgid "The ``tests/dynamic_friction.net`` is an example of OpenDX program for these data (run it with ``cd tests; dx -edit dynamic_friction.net`` , menu \"Execute/sequencer\")."
 msgstr ""

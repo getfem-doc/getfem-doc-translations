@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-22 02:20+0000\n"
+"PO-Revision-Date: 2018-07-16 07:15+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/gmm/inside.rst:11
+msgid "Deeper inside |gmm|"
+msgstr "|gmm| の深い内部"
+
+#: ../source/gmm/inside.rst:15
+msgid "The linalg_traits structure"
+msgstr "linalg_traits 構造体"
+
+#: ../source/gmm/inside.rst:17
+msgid ""
+"The major principle of |gmm| is that each vector and matrix type has a "
+"corresponding structure (which is never instantiated) named "
+"``linalg_traits`` containing all informations on it. For instance, the "
+"component ``linalg_type`` of this structure is set to ``abstract_vector`` or"
+" ``abstract_matrix`` if the corresponding type represent a vector or a "
+"matrix. If ``V`` is an interfaced type of vector and ``M`` an interface type"
+" of matrix, it is possible to access to this component with::"
+msgstr ""
+"|gmm| の主な原則は，それぞれのベクトルと行列の型(これはインスタンス化されません)が ``linalg_traits`` "
+"という名前の対応する構造体を持っているということです．この構造体にはすべての情報が含まれています．例えば，この構造体の要素 "
+"``linalg_type`` は，対応する型がベクトルまたは行列を表す場合には， ``abstract_vector`` または  "
+"``abstract_matrix`` に設定されます． ``V`` がベクトルのインターフェイス型で， ``M`` "
+"が行列のインターフェイス型である場合，次のようにしてこのコンポーネントにアクセスできます．"
+
+#: ../source/gmm/inside.rst:22
+msgid ""
+"The types ``abstract_vector`` and ``abstract_matrix`` are defined in "
+"``gmm/gmm_def.h``. They are void type allowing to specialize generic "
+"algorithms."
+msgstr ""
+"型 ``abstract_vector`` と ``abstract_matrix`` は ``gmm/gmm_def.h`` で定義されています "
+"．これらは汎用アルゴリズムを特殊化できるvoid型です．"
+
+#: ../source/gmm/inside.rst:24
+msgid "For a vector type, the following informations are available::"
+msgstr "ベクトル型では，次の情報を使用できます．"
+
+#: ../source/gmm/inside.rst:64
+msgid "and for a matrix type::"
+msgstr "行列型の場合"
+
+#: ../source/gmm/inside.rst:115
+msgid ""
+"This is this structure you have to fill in to interface a new vector or "
+"matrix type. You can see some examples in ``gmm/gmm_interface.h`` . Most of "
+"the generic algorithms are in ``gmm/gmm_blas.h`` ."
+msgstr ""
+"これは，新しいベクトルまたは行列型をインタフェースするために入力する必要がある構造です．例は ``gmm/gmm_interface.h`` "
+"で見ることができます．ほとんどの汎用的なアルゴリズムは ``gmm/gmm_blas.h`` にあります．"
+
+#: ../source/gmm/inside.rst:119
+msgid "How to iterate on the components of a vector"
+msgstr "ベクトルのコンポーネントをイテレートする方法"
+
+#: ../source/gmm/inside.rst:121
+msgid ""
+"Here is an example which accumulate the components of a vector. It is "
+"assumed that ``V`` is a vector type and ``v`` an instantiated vector::"
+msgstr ""
+"ベクトルの成分を累積する例を次に示します． ``V`` はベクトル型であり， ``v`` はインスタンス化されたベクトルであると仮定します．"
+
+#: ../source/gmm/inside.rst:130
+msgid "This piece of code will work with every kind of interfaced vector."
+msgstr "このコードは，あらゆる種類のインターフェイスされたベクトルで動作します．"
+
+#: ../source/gmm/inside.rst:132
+msgid ""
+"For sparse or skyline vectors, it is possible to obtain the index of the "
+"components pointed by the iterator with ``it.index()``. Here is the example "
+"of the scalar product of two sparse or skyline vectors, assuming ``V1`` and "
+"``V2`` are two vector types and ``v1``, ``v2`` two corresponding "
+"instantiated vectors::"
+msgstr ""
+"疎なベクトルやスカイラインなベクトルでは，イテレータが指すコンポーネントのインデックスを ``it.index()`` で取得することができます． "
+"``V1`` と ``V2`` が2つのベクトル型であり，  ``v1`` と ``v2`` "
+"が対応する2つのインスタンス化されたベクトルであると仮定した場合の，2つの疎ベクトルまたはスカイラインベクトルのスカラー積の例を次に示します．"
+
+#: ../source/gmm/inside.rst:153
+msgid ""
+"This algorithm use the fact that indices are increasing in a sparse vector. "
+"This code will not work for dense vectors because dense vector iterators do "
+"not have the method ``it.index()``."
+msgstr ""
+"このアルゴリズムでは，インデックスが疎ベクトルで増えているという事実を使用します．密なベクトルイテレータには ``it.index()`` "
+"というメソッドがないので，このコードは密なベクトルに対しては動作しません．"
+
+#: ../source/gmm/inside.rst:156
+msgid "How to iterate on a matrix"
+msgstr "行列をイテレートする方法"
+
+#: ../source/gmm/inside.rst:158
+msgid ""
+"You can iterate on the rows of a matrix if it is not a column major matrix "
+"and on the columns of a matrix if it is not a row major matrix (the type "
+"``gmm::dense_matrix<T>`` has is sub orientation type as col_and_rox, so you "
+"can iterate on both rows and columns)."
+msgstr ""
+"行列が列行列でない場合は行を反復し，行行列でない場合は行列の列を反復します( ``gmm::dense_matrix<T>`` の型は "
+"col_and_roxのような副方向型なので，行と列の両方で反復することができます)．"
+
+#: ../source/gmm/inside.rst:160
+msgid "If you need not to be optimal, you can use a basic loop like that::"
+msgstr "最適化する必要がない場合は，次のような基本的なループを使用できます．"
+
+#: ../source/gmm/inside.rst:170
+msgid "But you can also use iterators, like that::"
+msgstr "しかし，次のようにイテレータを使用することもできます．"
+
+#: ../source/gmm/inside.rst:186
+msgid "How to make your algorithm working on all type of matrices"
+msgstr "アルゴリズムをすべての型の行列で動作させる方法"
+
+#: ../source/gmm/inside.rst:188
+msgid ""
+"For this, you will generally have to specialize it. For instance, let us "
+"take a look at the code for ``gmm::nnz`` which count the number of stored "
+"components (in fact, the real ``gmm::nnz`` algorithm is specialized in most "
+"of the cases so that it does not count the components one by one)::"
+msgstr ""
+"このためには，一般的に特化する必要があります．例えば， ``gmm::nnz`` "
+"のコードを見てみましょう．これは保存されているコンポーネント(実際には，実数の ``gmm::nnz`` "
+"アルゴリズムはほとんどの場合特化されており，コンポーネントを1つずつ数えたりはしません)の数を数えます．"
+
+#: ../source/gmm/inside.rst:222
+msgid ""
+"The first function dispatch on the second or the third function respectively"
+" if the parameter is a vector or a matrix. The third function dispatch again"
+" on the fourth and the fifth function respectively if the matrix is "
+"row_major or column major. Of course, as the function are declared "
+"``inline``, at least the two dispatcher functions will not be implemented. "
+"Which means that this construction is not costly."
+msgstr ""
+"パラメータがベクトルまたは行列の場合，最初の関数は2番目または3番目の関数にそれぞれディスパッチされます．行列がrow_majorまたはcolumn "
+"majorの場合，3番目の関数はそれぞれ4番目と5番目の関数に再ディスパッチされます．もちろん，関数は ``inline`` "
+"で宣言されているので，少なくとも2つのディスパッチャ関数は実装されません．つまり，この構築はコストがかからないということです．"

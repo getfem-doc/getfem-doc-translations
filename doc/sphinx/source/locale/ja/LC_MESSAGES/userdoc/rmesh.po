@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-22 02:20+0000\n"
+"PO-Revision-Date: 2018-07-16 07:07+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/userdoc/rmesh.rst:10
+msgid "Mesh refinement"
+msgstr "メッシュの改善"
+
+#: ../source/userdoc/rmesh.rst:12
+msgid ""
+"Mesh refinement with the Bank et all method (see [bank1983]_) is available "
+"in dimension 1, 2 or 3 for simplex meshes (segments, triangles and "
+"tetrahedrons). For a given object ``mymesh`` of type |gf_m|, the method::"
+msgstr ""
+"単純なメッシュ(セグメント，3角形，4面体)の場合，1，2または3次元では，Bank et all([bank1983]_ "
+"を参照)の方法によるメッシュの細分化が利用できます． |gf_m| オブジェクト ``mymesh`` の場合，メソッドは::"
+
+#: ../source/userdoc/rmesh.rst:18
+msgid ""
+"refines the elements whose indices are stored in ``bv`` (a |dal_bv| object)."
+" The conformity of the mesh is kept thanks to additional refinement (the so "
+"called green triangles). Information about green triangles (in Figure "
+":ref:`ud-fig-refine`) is stored on the mesh object to gather them for "
+"further refinements (see [bank1983]_)."
+msgstr ""
+"インデックスが ``bv`` (dal_bvオブジェクト)に格納されている要素を絞り込みます． "
+"メッシュの適合性は，追加の改良(ここでは緑色の3角形)により維持されます． 緑色の3角形に関する情報(図 :ref:`ud-fig-refine` "
+")はメッシュオブジェクトに格納され，細分化のために集められます( [bank1983]_ を参照)．"
+
+#: ../source/userdoc/rmesh.rst:29
+msgid "Example of Bank refinement in 2D"
+msgstr "2次元でのBankの手法の例"
+
+#: ../source/userdoc/rmesh.rst:31
+msgid ""
+"Mesh refinement is most of the time coupled with an *a posteriori* error "
+"estimate. A very basic error estimate is available in the file "
+":file:`getfem/getfem_error_estimate.h`::"
+msgstr ""
+"メッシュの細分化は，大部分が *ポステオリ* なエラーの見積もりと結びついています． 基本的なエラーの見積もりはファイル "
+":file:`getfem/getfem_error_estimate.h` で利用できます．"
+
+#: ../source/userdoc/rmesh.rst:37
+msgid ""
+"where ``mim`` is the integration method (a |gf_mim| object), ``mf`` is the "
+"finite element method on which the unknown has been computed (a |gf_mf| "
+"object), ``U`` is the vector of degrees of freedom of the unknown, ``err`` "
+"is a sufficiently large vector in which the error estimate is computed for "
+"each element of the mesh, and ``rg`` is a mesh region bulild from elements "
+"on which the error estimate should be computed (a |gf_mr| object)."
+msgstr ""
+"ここで， ``mim`` は積分法( |gf_mim| オブジェクト)， ``mf`` は未知数が計算された有限要素法( |gf_mf| "
+"オブジェクト)， ``U`` は未知数の自由度のベクトル， ``err`` は 誤差推定値が計算されるべき要素( |gf_mr| "
+"オブジェクト)からのメッシュ領域塗りつぶしです．"
+
+#: ../source/userdoc/rmesh.rst:43
+msgid ""
+"This basic error estimate is only valid for order two problems and just "
+"compute the sum of the jump in normal derivative across the elements on each"
+" edge (for two-dimensional problems) or each face (for three-dimensional "
+"problems). This means that for each face :math:`e` of the mesh the following"
+" quantity is computed:"
+msgstr ""
+"この基本誤差推定は，2次の問題に対してのみ有効で，各エッジ(2次元問題の場合)または各面(3次元問題の場合)上の要素間の前後の正規分布の分岐の合計を計算するだけです．"
+" これは，メッシュの各面に対して，以下の量が計算されることを意味しています．"
+
+#: ../source/userdoc/rmesh.rst:49
+msgid ""
+"\\int_e |\\hspace{0.01em}[\\hspace{-0.12em}[\n"
+"\\partial_n u ]\\hspace{-0.12em}]\\hspace{0.01em}|^2 d \\Gamma,"
+msgstr ""
+"\\int_e |\\hspace{0.01em}[\\hspace{-0.12em}[\n"
+"\\partial_n u ]\\hspace{-0.12em}]\\hspace{0.01em}|^2 d \\Gamma,"
+
+#: ../source/userdoc/rmesh.rst:54
+msgid ""
+"where :math:`[\\hspace{-0.12em}[\\partial_n u]\\hspace{-0.12em}]` is the "
+"jump of the normal derivative. Then, the error estimate for a given element "
+"is the sum of the computed quantities on each internal face multiplied by "
+"the element diameter. This basic error estimate can be taken as a model for "
+"more elaborated ones. It uses the high-level generic assembly and the "
+"``neighbor_element`` interpolate transformation (see :ref:`ud-gasm-high-"
+"inter-elt-disc`)."
+msgstr ""
+":math:`[\\hspace{-0.12em}[\\partial_n u]\\hspace{-0.12em}]` は正規微分の分岐です． "
+"次に，所与の要素の誤差推定値は，各内面の計算量の合計に要素の直径を掛けたものです． "
+"この基本的な誤差の見積もりは，より精巧なもののモデルとみなすことができます． これは，高水準の汎用構築と ``neighbor_element`` "
+"補間変換を使用します( :ref:`ud-gasm-high-inter-elt-disc` )．"

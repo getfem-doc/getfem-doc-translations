@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-22 02:20+0000\n"
+"PO-Revision-Date: 2018-07-16 07:02+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/project/libdesc_dal.rst:10
+msgid "Dal library"
+msgstr "Dal ライブラリ"
+
+#: ../source/project/libdesc_dal.rst:15 ../source/project/libdesc_dal.rst:1
+msgid "Description"
+msgstr "説明"
+
+#: ../source/project/libdesc_dal.rst:17
+msgid ""
+"In the very begining of |gf| (the first files was written in 1995) the "
+"S.T.L. was not available and the containers defined in the ``dal`` namespace"
+" was used everywhere. Now, in |gf|, the S.T.L. containers are mainly used. "
+"The remaining uses of ``dal`` containers are eather historical or due to the"
+" specificities of these containers. It is however clear that this is not the"
+" aim of the |gf| project to develop new container concept. So, the use of "
+"the ``dal`` containers has to be as much as possible reduced."
+msgstr ""
+"|gf| の最初期(最初のファイルは1995に書かれていました)には S.T.L. は使用できず，名前空間 ``dal`` "
+"で定義されているコンテナが使用されていました．現在， |gf| では，S.T.L. コンテナが主に使用されています． ``dal`` "
+"コンテナを使用する理由は，歴史的なものまたはこのコンテナの特有の仕様によるものです．しかし， |gf| "
+"が新しいコンセプトのコンテナを開発することが目的のプロジェクトではないことは明らかです．したがって， ``dal`` "
+"コンテナの使用は可能な限りなくす方針です．"
+
+#: ../source/project/libdesc_dal.rst:25
+msgid ""
+"Furthermore, ``dal`` contains a certain number of basic algorithms to deal "
+"with static stored objects (description of finite element methods, "
+"intermediary structures for auxiliary computations ...)."
+msgstr ""
+"さらに， ``dal`` には静的に格納された (有限要素法の記述子，補助計算のための中間構造などの) "
+"オブジェクトを扱うための基本的なアルゴリズムがいくつか含まれています．"
+
+#: ../source/project/libdesc_dal.rst:28
+msgid "Files"
+msgstr "ファイル"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid "File(s)"
+msgstr "ファイル"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ":file:`dal_config.h`"
+msgstr ":file:`dal_config.h`"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid "Mainly load |gmm| header files"
+msgstr "主に |gmm| のヘッダーファイルとしてロードされます"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ":file:`dal_basic.h`"
+msgstr ":file:`dal_basic.h`"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid "A variable size array container, dal::dynamic_array<T>."
+msgstr "可変サイズの配列コンテナ， dal::dynamic_array<T> ．"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ":file:`dal_bit_vector.h` and :file:`dal_bit_vector.cc`"
+msgstr ":file:`dal_bit_vector.h` と :file:`dal_bit_vector.cc`"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid "A improved bit vector container based on dal::dynamic_array<T>."
+msgstr "dal::dynamic_array<T> に基づく改良型ビットベクトルコンテナ．"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ":file:`dal_tas.h`"
+msgstr ":file:`dal_tas.h`"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid "A heap container based on dal::dynamic_array<T>."
+msgstr "dal::dynamic_array<T> に基づくヒープコンテナ．"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ":file:`dal_tree_sorted.h`"
+msgstr ":file:`dal_tree_sorted.h`"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid "A balanced tree stored array based on dal::dynamic_array<T>."
+msgstr "dal::dynamic_array<T> に基づく平衡二分探索木に格納された配列．"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ""
+":file:`dal_static_stored_objects.h` and :file:`dal_static_stored_objects.cc`"
+msgstr ""
+":file:`dal_static_stored_objects.h` と :file:`dal_static_stored_objects.cc`"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ""
+"Allows to store some objects and dependencies between some objects. Used to "
+"store many things in |gf| (finite element methods, integration methods, pre-"
+"computations, ...)."
+msgstr ""
+"いくつかのオブジェクトとの依存関係を格納することができます． |gf| で(有限要素法, 積分法, プリ処理など)を保存するために使用します．"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ":file:`dal_naming_system.h`"
+msgstr ":file:`dal_naming_system.h`"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ""
+"A generic object to associate a name to a method descriptor and store the "
+"method descriptor. Used for finite element methods, integration methods and "
+"geometric transformations. Uses dal::static_stored_object."
+msgstr ""
+"手法記述子に名前を関連付け手法記述子を格納する汎用オブジェクト．有限要素法，積分法および幾何学的変換に使用されます． "
+"dal::static_stored_object を使用しています．"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ":file:`dal_shared_ptr.h`"
+msgstr ":file:`dal_shared_ptr.h`"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid "A simplified version of boost::shared_ptr."
+msgstr "boost::shared_ptr を簡略化したバージョンです．"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ":file:`dal_singleton.h` and :file:`dal_singleton.cc`"
+msgstr ":file:`dal_singleton.h` と :file:`dal_singleton.cc`"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ""
+"A simple singleton implementation which has been made thread safe for OpenMP"
+" (singletons are replicated n each thread)."
+msgstr "OpenMP に対してスレッドセーフに作られた単純なSingleton実装 (Singletonでは，各スレッドが n 個複製されます)．"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid ":file:`dal_backtrace.h` and :file:`dal_backtrace.cc`"
+msgstr ":file:`dal_backtrace.h` と :file:`dal_backtrace.cc`"
+
+#: ../source/project/libdesc_dal.rst:1
+msgid "For debugging, dump glibc backtrace."
+msgstr "デバッグのために， glibc の backtrace をダンプします．"
+
+#: ../source/project/libdesc_dal.rst:48
+msgid "State"
+msgstr "状態"
+
+#: ../source/project/libdesc_dal.rst:50
+msgid "Stable, not evolving too much."
+msgstr "安定しており，あまり開発されていません．"
+
+#: ../source/project/libdesc_dal.rst:54
+msgid "Perspectives"
+msgstr "展望"
+
+#: ../source/project/libdesc_dal.rst:56
+msgid "No plan."
+msgstr "計画はありません．"
