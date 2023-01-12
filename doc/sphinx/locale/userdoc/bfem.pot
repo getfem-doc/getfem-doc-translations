@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-10 01:35+0000\n"
+"POT-Creation-Date: 2023-01-12 01:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgid "where ``mymesh`` is an already existing mesh. The structure will be linke
 msgstr ""
 
 #: ../source/userdoc/bfem.rst:30
-msgid "It is possible to specify element by element the finite element method, so that element of mixed types can be treated, even if the dimensions are different. For usual elements, the connection between two elements is done when the two elements are compatibles (same degrees of freedom on the common face). A numeration of the degrees of freedom is automatically done with a Cuthill Mc Kee like algorithm. You have to keep in mind that there is absolutely no connection between the numeration of vertices of the mesh and the numeration of the degrees of freedom. Every |gf_mf| object has its own numeration."
+msgid "It is possible to specify element by element the finite element method, so that |mf|'s of mixed types can be treated, even if they contain elements with different dimensions. For usual elements, the connection between two elements is done when the two elements are compatibles (same degrees of freedom on the common face). A numeration of the degrees of freedom is automatically done with a Cuthill Mc Kee like algorithm. You have to keep in mind that there is absolutely no connection between the numeration of vertices of the mesh and the numeration of the degrees of freedom. Every |gf_mf| object has its own numeration."
 msgstr ""
 
 #: ../source/userdoc/bfem.rst:39
@@ -41,11 +41,11 @@ msgid "The element level: one finite element method per element. It is possible 
 msgstr ""
 
 #: ../source/userdoc/bfem.rst:44
-msgid "The optional vectorization/tensorization (the qdim in getfem jargon, see `vocabulary`_). For instance to represent a displacement or a tensor field in continuum mechanics. Scalar elements are used componentwise. Note that you can mix some intrinsic vectorial elements (Raviart-Thomas element for instance) which will not be vectorized and scalar elements which will be."
+msgid "The optional vectorization/tensorization (the qdim in getfem jargon, see `glossary`_). For instance to represent a displacement or a tensor field in continuum mechanics. Scalar elements are used componentwise. Note that you can mix some intrinsic vectorial elements (Raviart-Thomas element for instance) which will not be vectorized and scalar elements which will be."
 msgstr ""
 
 #: ../source/userdoc/bfem.rst:52
-msgid "(|gf| version 4.0) The optional additional linear transformation (reduction) of the degrees of freedom. It will consist in giving two matrices, the reduction matrix and the extension matrix. The reduction matrix should transform the basic dofs into the reduced dofs (the number of reduced dofs should be less or equal than the number of basic dofs). The extension matrix should describe the inverse transformation. The product of the reduction matrix with the extension matrix should be the identity matrix (ensuring in particular that the two matrices are of maximal rank). This optional transformation can be used to reduce the finite element space to a certain region (tipically a boundary) or to prescribe some matching conditions between non naturally compatible fems (for instance fems with different degrees)."
+msgid "The optional additional linear transformation (reduction) of the degrees of freedom. It consists in defining two matrices, the reduction matrix and the extension matrix. The reduction matrix should transform the basic dofs into the reduced dofs (the number of reduced dofs should be less or equal than the number of basic dofs). The extension matrix should describe the inverse transformation. The product of the reduction matrix with the extension matrix should be the identity matrix (ensuring in particular that the two matrices are of maximal rank). This optional transformation can be used to reduce the finite element space to a certain region (tipically a boundary) or to prescribe some matching conditions between non naturally compatible fems (for instance fems with different degrees)."
 msgstr ""
 
 #: ../source/userdoc/bfem.rst:64
@@ -53,7 +53,7 @@ msgid "One has to keep in mind this construction manipulating the degrees of fre
 msgstr ""
 
 #: ../source/userdoc/bfem.rst:69
-msgid "First level: manipulating fems on each elements"
+msgid "First level: manipulating fems on specific elements"
 msgstr ""
 
 #: ../source/userdoc/bfem.rst:71
@@ -149,7 +149,7 @@ msgid "selects the method on all the elements of the mesh."
 msgstr ""
 
 #: ../source/userdoc/bfem.rst:177
-msgid "Second level: the optional \"vectorization/tensorization\""
+msgid "Second level: optional \"vectorization/tensorization\""
 msgstr ""
 
 #: ../source/userdoc/bfem.rst:179
@@ -221,7 +221,7 @@ msgid "Return a |dal_bv| which represents the indices of dof which are in the se
 msgstr ""
 
 #: ../source/userdoc/bfem.rst:265
-msgid "Third level: the optional linear transformation (or reduction)"
+msgid "Third level: optional linear transformation (or reduction)"
 msgstr ""
 
 #: ../source/userdoc/bfem.rst:267

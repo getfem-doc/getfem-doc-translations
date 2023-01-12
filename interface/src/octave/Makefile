@@ -106,15 +106,16 @@ build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
 subdir = interface/src/octave
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/ac_python_devel.m4 \
-	$(top_srcdir)/m4/ax_check_cxx_flag.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_cxx_flag.m4 \
 	$(top_srcdir)/m4/ax_prefix_config_h.m4 \
 	$(top_srcdir)/m4/ax_prog_cc_mpi.m4 \
 	$(top_srcdir)/m4/ax_prog_cxx_mpi.m4 \
-	$(top_srcdir)/m4/ax_prog_fc_mpi.m4 $(top_srcdir)/m4/libtool.m4 \
-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
-	$(top_srcdir)/m4/scilab.m4 $(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/ax_prog_fc_mpi.m4 \
+	$(top_srcdir)/m4/ax_python_devel.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
+	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
+	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/m4/scilab.m4 \
+	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
@@ -214,14 +215,14 @@ AUTOHEADER = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-trans
 AUTOMAKE = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-translations/getfem/missing automake-1.16
 AWK = gawk
 BLAS_LIBS = -lblas
-BUILDDATE = 01/10/23,01:25:56
+BUILDDATE = 01/12/23,01:24:54
 BUILDER = runner
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS =  -O3 -fPIC
 CONFIGURE_ARGS =  '--prefix=/home/runner/work/venv' '--with-pic'
 CPP = gcc -E
-CPPFLAGS =  -I/usr/local/include -DGMM_USES_BLAS -DGMM_USES_BLAS_INTERFACE -DGMM_USES_LAPACK  -I/home/runner/work/venv/include
+CPPFLAGS =  -I/usr/local/include -DGMM_USES_BLAS -DGMM_USES_LAPACK  -I/home/runner/work/venv/include
 CXX = g++
 CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
@@ -261,7 +262,7 @@ LIBOBJS =
 LIBS = -lsmumps_seq -ldmumps_seq -lcmumps_seq -lzmumps_seq -lqhull -ldl -llapack  -lblas
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBTOOL_DEPS = ./ltmain.sh
-LIBTOOL_VERSION_INFO = -version-info 5:4:0
+LIBTOOL_VERSION_INFO = -version-info 5:4:2
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
@@ -270,7 +271,7 @@ MAKEINFO = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-transla
 MANIFEST_TOOL = :
 MATLAB_COM_EXT = 
 MATLAB_INC_DIR = 
-MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMeshLevelSet @gfMesherObject @gfMeshImData @gfContStruct @gfGeoTrans @gfLevelSet @gfMeshFem @gfCvStruct @gfMeshIm @gfPrecond @gfModel @gfInteg @gfSlice @gfSpmat @gfMesh @gfEltm @gfFem 
+MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMeshLevelSet @gfMesherObject @gfMeshImData @gfContStruct @gfMeshFem @gfLevelSet @gfGeoTrans @gfCvStruct @gfPrecond @gfMeshIm @gfSlice @gfSpmat @gfModel @gfInteg @gfEltm @gfMesh @gfFem 
 MATLAB_RELEASE = 
 MATLAB_ROOT = 
 METIS_LIBS = 
@@ -307,9 +308,10 @@ PYTHON_CPPFLAGS = -I/usr/include/python3.8
 PYTHON_EXEC_PREFIX = ${exec_prefix}
 PYTHON_EXTRA_EXT_PARAM = 
 PYTHON_EXTRA_LDFLAGS = -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
-PYTHON_EXTRA_LIBS = -lexpat                       -L/usr/lib -lz                       -lexpat -lcrypt -lpthread -ldl  -lutil -lm
-PYTHON_LDFLAGS = -L/usr/lib/python3.8 -lpython3.8
+PYTHON_EXTRA_LIBS = -lcrypt -lpthread -ldl  -lutil -lm -lm
+PYTHON_LIBS = -L/usr/lib -lpython3.8
 PYTHON_PLATFORM = linux
+PYTHON_PLATFORM_SITE_PKG = /home/runner/work/venv/lib/python3.8/site-packages
 PYTHON_PREFIX = ${prefix}
 PYTHON_SITE_PKG = /home/runner/work/venv/lib/python3.8/site-packages
 PYTHON_SO = .cpython-38-x86_64-linux-gnu.so
@@ -330,7 +332,7 @@ SET_MAKE =
 SHELL = /bin/bash
 STDCPP_STATICLIBS = 
 STRIP = strip
-SUPERLU_CPPFLAGS =  -I/usr/local/include -DGMM_USES_BLAS -DGMM_USES_BLAS_INTERFACE -DGMM_USES_LAPACK -DUSE_VENDOR_BLAS -DF77_CALL_C=ADD_
+SUPERLU_CPPFLAGS =  -I/usr/local/include -DGMM_USES_BLAS -DGMM_USES_LAPACK -DUSE_VENDOR_BLAS -DF77_CALL_C=ADD_
 SUPERLU_LIBS = /home/runner/work/getfem-doc-translations/getfem-doc-translations/getfem/superlu/libsuperlu.la
 SUPERLU_SRC = superlu
 SUPLDFLAGS =  -rdynamic

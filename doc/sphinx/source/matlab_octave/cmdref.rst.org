@@ -2807,6 +2807,7 @@ gf_mesh_fem
   MF = gf_mesh_fem('product', mesh_fem mf1, mesh_fem mf2)
   MF = gf_mesh_fem('levelset', mesh_levelset mls, mesh_fem mf)
   MF = gf_mesh_fem('global function', mesh m, levelset ls, {global_function GF1,...}[, int Qdim_m])
+  MF = gf_mesh_fem('bspline', mesh m, int NX, int NY, int order)
   MF = gf_mesh_fem('partial', mesh_fem mf, ivec DOFs[, ivec RCVs])
 
 **Description :**
@@ -2884,6 +2885,13 @@ General constructor for mesh_fem objects.
     Create a mesh_fem whose base functions are global function given by the
     user in the system of coordinate defined by the iso-values of the two
     level-set function of `ls`. 
+
+
+  ``MF = gf_mesh_fem('bspline', mesh m, int NX, int NY, int order)``
+
+    Create a mesh_fem on mesh `m`, whose basis functions are global functions
+    corresponding to bspline basis of order `order`, in an NX x NY grid
+    that spans the entire bounding box of `m`. 
 
 
   ``MF = gf_mesh_fem('partial', mesh_fem mf, ivec DOFs[, ivec RCVs])``

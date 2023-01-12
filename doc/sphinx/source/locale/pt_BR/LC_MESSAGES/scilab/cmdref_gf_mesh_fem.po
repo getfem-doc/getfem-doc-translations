@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-10 01:35+0000\n"
+"POT-Creation-Date: 2023-01-12 01:33+0000\n"
 "PO-Revision-Date: 2018-07-16 06:59+0000\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -25,32 +25,32 @@ msgstr ""
 msgid "**Synopsis**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:24
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:25
 msgid "**Description :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:27
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:28
 msgid "General constructor for mesh_fem objects."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:29
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:30
 msgid ""
 "This object represents a finite element method defined on a whole mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:32
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:33
 msgid "**Command list :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:36
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:37
 msgid "``MF = gf_mesh_fem(mesh m[, int Qdim1=1[, int Qdim2=1, ...]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:38
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:39
 msgid "Build a new mesh_fem object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:40
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:41
 msgid ""
 "The <literal>Qdim</literal> parameters specifies the dimension of the field "
 "represented by the finite element method. Qdim1 = 1 for a scalar field, "
@@ -58,119 +58,131 @@ msgid ""
 " of size mxn ... Returns the handle of the created object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:47
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:48
 msgid "``MF = gf_mesh_fem('load', string fname[, mesh m])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:49
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:50
 msgid "Load a mesh_fem from a file."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:51
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:52
 msgid ""
 "If the mesh <literal>m</literal> is not supplied (this kind of file does not"
 " store the mesh), then it is read from the file <literal>fname</literal> and"
 " its descriptor is returned as the second output argument."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:56
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:57
 msgid "``MF = gf_mesh_fem('from string', string s[, mesh m])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:58
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:59
 msgid "Create a mesh_fem object from its string description."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:60
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:61
 msgid ""
 "See also <literal></literal>gf_mesh_fem_get(mesh_fem MF, "
 "'char')<literal></literal>"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:63
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:64
 msgid "``MF = gf_mesh_fem('clone', mesh_fem mf)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:65
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:66
 msgid "Create a copy of a mesh_fem."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:68
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:69
 msgid ""
 "``MF = gf_mesh_fem('sum', mesh_fem mf1, mesh_fem mf2[, mesh_fem mf3[, "
 "...]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:70
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:71
 msgid "Create a mesh_fem that spans two (or more) mesh_fem's."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:72
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:73
 msgid "All mesh_fem must share the same mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:74
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:75
 msgid ""
 "After that, you should not modify the FEM of <literal>mf1</literal>, "
 "<literal>mf2</literal> etc."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:77
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:78
 msgid "``MF = gf_mesh_fem('product', mesh_fem mf1, mesh_fem mf2)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:79
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:80
 msgid ""
 "Create a mesh_fem that spans all the product of a selection of shape "
 "functions of <literal>mf1</literal> by all shape functions of "
 "<literal>mf2</literal>. Designed for Xfem enrichment."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:83
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:84
 msgid ""
 "<literal>mf1</literal> and <literal>mf2</literal> must share the same mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:85
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:86
 msgid ""
 "After that, you should not modify the FEM of <literal>mf1</literal>, "
 "<literal>mf2</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:88
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:89
 msgid "``MF = gf_mesh_fem('levelset', mesh_levelset mls, mesh_fem mf)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:90
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:91
 msgid ""
 "Create a mesh_fem that is conformal to implicit surfaces defined in "
 "mesh_levelset."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:94
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:95
 msgid ""
 "``MF = gf_mesh_fem('global function', mesh m, levelset ls, {global_function "
 "GF1,...}[, int Qdim_m])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:96
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:97
 msgid ""
 "Create a mesh_fem whose base functions are global function given by the user"
 " in the system of coordinate defined by the iso-values of the two level-set "
 "function of <literal>ls</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:101
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:102
+msgid "``MF = gf_mesh_fem('bspline', mesh m, int NX, int NY, int order)``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:104
+msgid ""
+"Create a mesh_fem on mesh <literal>m</literal>, whose basis functions are "
+"global functions corresponding to bspline basis of order "
+"<literal>order</literal>, in an NX x NY grid that spans the entire bounding "
+"box of <literal>m</literal>."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:109
 msgid "``MF = gf_mesh_fem('partial', mesh_fem mf, ivec DOFs[, ivec RCVs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:103
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:111
 msgid ""
 "Build a restricted mesh_fem by keeping only a subset of the degrees of "
 "freedom of <literal>mf</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:106
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:114
 msgid ""
 "If <literal>RCVs</literal> is given, no FEM will be put on the convexes "
 "listed in <literal>RCVs</literal>."

@@ -110,20 +110,19 @@ host_triplet = @host@
 @BUILDPYTHON_TRUE@	check_mixed_mesh.py demo_truss.py \
 @BUILDPYTHON_TRUE@	demo_wave.py demo_wave_equation.py \
 @BUILDPYTHON_TRUE@	demo_laplacian.py demo_laplacian_HHO.py \
-@BUILDPYTHON_TRUE@	demo_elasticity_HHO.py \
-@BUILDPYTHON_TRUE@	demo_thermo_elasticity_electrical_coupling.py \
-@BUILDPYTHON_TRUE@	$(am__EXEEXT_1)
+@BUILDPYTHON_TRUE@	demo_elasticity_HHO.py $(am__EXEEXT_1)
 subdir = interface/tests/python
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/ac_python_devel.m4 \
-	$(top_srcdir)/m4/ax_check_cxx_flag.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_cxx_flag.m4 \
 	$(top_srcdir)/m4/ax_prefix_config_h.m4 \
 	$(top_srcdir)/m4/ax_prog_cc_mpi.m4 \
 	$(top_srcdir)/m4/ax_prog_cxx_mpi.m4 \
-	$(top_srcdir)/m4/ax_prog_fc_mpi.m4 $(top_srcdir)/m4/libtool.m4 \
-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
-	$(top_srcdir)/m4/scilab.m4 $(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/ax_prog_fc_mpi.m4 \
+	$(top_srcdir)/m4/ax_python_devel.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
+	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
+	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/m4/scilab.m4 \
+	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
@@ -335,7 +334,8 @@ am__set_TESTS_bases = \
   bases=`echo $$bases`
 RECHECK_LOGS = $(TEST_LOGS)
 AM_RECURSIVE_TARGETS = check recheck
-@QHULL_TRUE@am__EXEEXT_1 = check_levelset.py
+@QHULL_TRUE@am__EXEEXT_1 = check_levelset.py \
+@QHULL_TRUE@	demo_thermo_elasticity_electrical_coupling.py
 TEST_SUITE_LOG = test-suite.log
 TEST_EXTENSIONS = @EXEEXT@ .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/test-driver
@@ -463,8 +463,9 @@ PYTHON_EXEC_PREFIX = @PYTHON_EXEC_PREFIX@
 PYTHON_EXTRA_EXT_PARAM = @PYTHON_EXTRA_EXT_PARAM@
 PYTHON_EXTRA_LDFLAGS = @PYTHON_EXTRA_LDFLAGS@
 PYTHON_EXTRA_LIBS = @PYTHON_EXTRA_LIBS@
-PYTHON_LDFLAGS = @PYTHON_LDFLAGS@
+PYTHON_LIBS = @PYTHON_LIBS@
 PYTHON_PLATFORM = @PYTHON_PLATFORM@
+PYTHON_PLATFORM_SITE_PKG = @PYTHON_PLATFORM_SITE_PKG@
 PYTHON_PREFIX = @PYTHON_PREFIX@
 PYTHON_SITE_PKG = @PYTHON_SITE_PKG@
 PYTHON_SO = @PYTHON_SO@
@@ -552,7 +553,9 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 @QHULL_FALSE@optpy = 
-@QHULL_TRUE@optpy = check_levelset.py
+@QHULL_TRUE@optpy = check_levelset.py                               \
+@QHULL_TRUE@        demo_thermo_elasticity_electrical_coupling.py
+
 EXTRA_DIST = \
 	check_export.py 				\
 	check_export_vtu.py 				\
@@ -578,12 +581,12 @@ EXTRA_DIST = \
 	demo_static_contact.py 				\
 	demo_dynamic_contact_1D.py			\
 	demo_Mindlin_Reissner_plate.py 			\
+        demo_thermo_elasticity_electrical_coupling.py	\
 	demo_step_by_step.py				\
 	demo_stokes_3D_tank.py          		\
 	demo_stokes_3D_tank_draw.py			\
 	demo_finite_strain_plasticity.py                \
 	demo_finite_strain_plasticity_3D.py             \
-	demo_thermo_elasticity_electrical_coupling.py 	\
 	demo_cracked_thermo_elastic_body.py             \
 	demo_nonlinear_elasticity.py		 	\
 	demo_elasticity_HHO.py                          \
@@ -872,16 +875,16 @@ demo_elasticity_HHO.py.log: demo_elasticity_HHO.py
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-demo_thermo_elasticity_electrical_coupling.py.log: demo_thermo_elasticity_electrical_coupling.py
-	@p='demo_thermo_elasticity_electrical_coupling.py'; \
-	b='demo_thermo_elasticity_electrical_coupling.py'; \
+check_levelset.py.log: check_levelset.py
+	@p='check_levelset.py'; \
+	b='check_levelset.py'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-check_levelset.py.log: check_levelset.py
-	@p='check_levelset.py'; \
-	b='check_levelset.py'; \
+demo_thermo_elasticity_electrical_coupling.py.log: demo_thermo_elasticity_electrical_coupling.py
+	@p='demo_thermo_elasticity_electrical_coupling.py'; \
+	b='demo_thermo_elasticity_electrical_coupling.py'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
