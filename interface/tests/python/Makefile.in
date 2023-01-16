@@ -106,6 +106,7 @@ build_triplet = @build@
 host_triplet = @host@
 @BUILDPYTHON_TRUE@TESTS = check_export.py check_export_vtu.py \
 @BUILDPYTHON_TRUE@	check_global_functions.py check_asm.py \
+@BUILDPYTHON_TRUE@	check_bspline_mesh_fem.py \
 @BUILDPYTHON_TRUE@	check_secondary_domain.py \
 @BUILDPYTHON_TRUE@	check_mixed_mesh.py demo_truss.py \
 @BUILDPYTHON_TRUE@	demo_wave.py demo_wave_equation.py \
@@ -562,6 +563,7 @@ EXTRA_DIST = \
 	check_global_functions.py			\
 	check_levelset.py				\
 	check_asm.py    				\
+	check_bspline_mesh_fem.py    			\
 	check_secondary_domain.py    			\
 	check_mixed_mesh.py    				\
 	demo_crack.py 					\
@@ -815,6 +817,13 @@ check_global_functions.py.log: check_global_functions.py
 check_asm.py.log: check_asm.py
 	@p='check_asm.py'; \
 	b='check_asm.py'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+check_bspline_mesh_fem.py.log: check_bspline_mesh_fem.py
+	@p='check_bspline_mesh_fem.py'; \
+	b='check_bspline_mesh_fem.py'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \

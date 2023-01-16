@@ -106,6 +106,7 @@ build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
 TESTS = check_export.py check_export_vtu.py \
 	check_global_functions.py check_asm.py \
+	check_bspline_mesh_fem.py \
 	check_secondary_domain.py \
 	check_mixed_mesh.py demo_truss.py \
 	demo_wave.py demo_wave_equation.py \
@@ -369,7 +370,7 @@ AUTOHEADER = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-trans
 AUTOMAKE = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-translations/getfem/missing automake-1.16
 AWK = gawk
 BLAS_LIBS = -lblas
-BUILDDATE = 01/15/23,01:27:33
+BUILDDATE = 01/16/23,01:22:46
 BUILDER = runner
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -425,7 +426,7 @@ MAKEINFO = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-transla
 MANIFEST_TOOL = :
 MATLAB_COM_EXT = 
 MATLAB_INC_DIR = 
-MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMesherObject @gfMeshLevelSet @gfMeshImData @gfContStruct @gfLevelSet @gfGeoTrans @gfCvStruct @gfMeshFem @gfMeshIm @gfPrecond @gfModel @gfInteg @gfSlice @gfSpmat @gfMesh @gfEltm @gfFem 
+MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMeshLevelSet @gfMesherObject @gfMeshImData @gfContStruct @gfGeoTrans @gfLevelSet @gfMeshFem @gfCvStruct @gfMeshIm @gfPrecond @gfSpmat @gfInteg @gfModel @gfSlice @gfEltm @gfMesh @gfFem 
 MATLAB_RELEASE = 
 MATLAB_ROOT = 
 METIS_LIBS = 
@@ -562,6 +563,7 @@ EXTRA_DIST = \
 	check_global_functions.py			\
 	check_levelset.py				\
 	check_asm.py    				\
+	check_bspline_mesh_fem.py    			\
 	check_secondary_domain.py    			\
 	check_mixed_mesh.py    				\
 	demo_crack.py 					\
@@ -815,6 +817,13 @@ check_global_functions.py.log: check_global_functions.py
 check_asm.py.log: check_asm.py
 	@p='check_asm.py'; \
 	b='check_asm.py'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+check_bspline_mesh_fem.py.log: check_bspline_mesh_fem.py
+	@p='check_bspline_mesh_fem.py'; \
+	b='check_bspline_mesh_fem.py'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \

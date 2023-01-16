@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-15 01:37+0000\n"
+"POT-Creation-Date: 2023-01-16 01:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -133,21 +133,21 @@ msgid "Create a mesh_fem whose base functions are global function given by the u
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_mesh_fem.rst:102
-msgid "``MF = gf_mesh_fem('bspline', mesh m, int NX, int NY, int order)``"
+msgid "``MF = gf_mesh_fem('bspline_uniform', mesh m, int NX[, int NY,] int order[, string bcX_low[, string bcY_low[, string bcX_high][, string bcY_high]]])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_mesh_fem.rst:104
-msgid "Create a mesh_fem on mesh <literal>m</literal>, whose basis functions are global functions corresponding to bspline basis of order <literal>order</literal>, in an NX x NY grid that spans the entire bounding box of <literal>m</literal>."
+msgid "Create a mesh_fem on mesh <literal>m</literal>, whose base functions are global functions corresponding to bspline basis of order <literal>order</literal>, in an NX x NY grid (just NX in 1s) that spans the entire bounding box of <literal>m</literal>. Optionally boundary conditions at the edges of the domain can be defined with <literal>bcX_low</literal>, <literal>bcY_low</literal>, <literal>bcX_high</literal>, abd <literal>bcY_high</literal> set to 'free' (default) or 'periodic' or 'symmetry'."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:109
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:112
 msgid "``MF = gf_mesh_fem('partial', mesh_fem mf, ivec DOFs[, ivec RCVs])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:111
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:114
 msgid "Build a restricted mesh_fem by keeping only a subset of the degrees of freedom of <literal>mf</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh_fem.rst:114
+#: ../source/scilab/cmdref_gf_mesh_fem.rst:117
 msgid "If <literal>RCVs</literal> is given, no FEM will be put on the convexes listed in <literal>RCVs</literal>."
 msgstr ""
