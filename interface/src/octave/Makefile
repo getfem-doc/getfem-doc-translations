@@ -215,7 +215,7 @@ AUTOHEADER = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-trans
 AUTOMAKE = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-translations/getfem/missing automake-1.16
 AWK = gawk
 BLAS_LIBS = -lblas
-BUILDDATE = 01/18/23,01:27:25
+BUILDDATE = 01/25/23,01:21:41
 BUILDER = runner
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -259,7 +259,7 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LIBOBJS = 
-LIBS = -lsmumps_seq -ldmumps_seq -lcmumps_seq -lzmumps_seq -lqhull -ldl -llapack  -lblas
+LIBS = -lsmumps_seq -ldmumps_seq -lcmumps_seq -lzmumps_seq -lqhull_r -ldl -llapack  -lblas
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBTOOL_DEPS = ./ltmain.sh
 LIBTOOL_VERSION_INFO = -version-info 5:4:2
@@ -271,7 +271,7 @@ MAKEINFO = ${SHELL} /home/runner/work/getfem-doc-translations/getfem-doc-transla
 MANIFEST_TOOL = :
 MATLAB_COM_EXT = 
 MATLAB_INC_DIR = 
-MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMesherObject @gfMeshLevelSet @gfMeshImData @gfContStruct @gfLevelSet @gfGeoTrans @gfMeshFem @gfCvStruct @gfMeshIm @gfPrecond @gfInteg @gfModel @gfSpmat @gfSlice @gfEltm @gfMesh @gfFem 
+MATLAB_OBJ_DIRS = @gfGlobalFunction @gfMesherObject @gfMeshLevelSet @gfMeshImData @gfContStruct @gfLevelSet @gfGeoTrans @gfMeshFem @gfCvStruct @gfPrecond @gfMeshIm @gfInteg @gfModel @gfSlice @gfSpmat @gfMesh @gfEltm @gfFem 
 MATLAB_RELEASE = 
 MATLAB_ROOT = 
 METIS_LIBS = 
@@ -316,7 +316,7 @@ PYTHON_PREFIX = ${prefix}
 PYTHON_SITE_PKG = /home/runner/work/venv/lib/python3.8/site-packages
 PYTHON_SO = .cpython-38-x86_64-linux-gnu.so
 PYTHON_VERSION = 3.8
-QHULL_LIBS = -lqhull
+QHULL_LIBS = -lqhull_r
 RANLIB = ranlib
 RPC_INC_DIR = 
 RPC_LIB = 
@@ -402,7 +402,7 @@ SUBDIRS = private
 AUTO_M_FILES = $(PSEUDO_FUNCTIONS_LOC:.cc=.m)
 EXTRA_DIST = gfm_rpc_mexint.c gfm_mex.c gfm_common.c gfm_common.h $(M_FILES)
 GETFEM_LIB_LA = ../../../src/libgetfem.la
-GETFEM_STATIC_LIB = ../../../src/.libs/libgetfem.a -lsmumps_seq -ldmumps_seq -lcmumps_seq -lzmumps_seq -lqhull -ldl -llapack  -lblas
+GETFEM_STATIC_LIB = ../../../src/.libs/libgetfem.a -lsmumps_seq -ldmumps_seq -lcmumps_seq -lzmumps_seq -lqhull_r -ldl -llapack  -lblas
 M_FILES = \
 	gf_asm_pdetoolbc.m \
 	gf_compute_Q1grid_interp.m \

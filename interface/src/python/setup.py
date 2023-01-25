@@ -33,7 +33,7 @@ npy_include_dir = numpy.get_include()
 
 # cclibopts = "../../../src/.libs/libgetfem.a".split()
 cclibopts = "".split() # getfem is explicitly added below
-cclibopts += '-lsmumps_seq -ldmumps_seq -lcmumps_seq -lzmumps_seq -lqhull -ldl -llapack  -lblas'.split()
+cclibopts += '-lsmumps_seq -ldmumps_seq -lcmumps_seq -lzmumps_seq -lqhull_r -ldl -llapack  -lblas'.split()
 cclibopts += ''.split()
 
 libnames = ['getfemint','getfem']

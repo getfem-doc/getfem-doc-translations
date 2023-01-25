@@ -120,8 +120,8 @@ else
   ldflags = sci_getfem_path + '/../../../.libs/libgetfemint.a ' + sci_getfem_path + '/../../../../../src/.libs/libgetfem.a';
 end
 
-if ~isempty('-lqhull') & getos()~='Windows' then
-  ldflags = ldflags + ' -L/usr/lib -lqhull';
+if ~isempty('-lqhull_r') & getos()~='Windows' then
+  ldflags = ldflags + ' -L/usr/lib -lqhull_r';
 end
 
 tbx_build_gateway('scigetfem_c', Table, Files, sci_getfem_path, Libraries, ldflags, cflags);
