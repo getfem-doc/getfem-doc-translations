@@ -84,7 +84,7 @@ jobs:
          cat .tx/config;
          tx push -s --skip;
          rm -rf source/locale/ja source/locale/pt_BR || true;
-         tx pull -l ja,pt_BR)
+         tx pull --silent -f -l ja,pt_BR)
         rm -rf ../doc
         rm -rf ../interface
         rm -rf doc/sphinx/locale/.doctrees
