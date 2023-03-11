@@ -79,7 +79,6 @@ jobs:
         (cd doc/sphinx;
          make latex;
          make images;
-         sphinx-intl create-transifexrc --transifex-token=$TX_TOKEN;
          sphinx-build -T -b gettext source locale ;
          sphinx-intl update-txconfig-resources -p locale -d source/locale --transifex-organization-name="tkoyama010";
          cat .tx/config;
