@@ -51,6 +51,8 @@ jobs:
         sudo apt-get install -y --no-install-recommends python3-pip
         sudo apt-get install -y --no-install-recommends sphinx-intl
         sudo apt-get install -y --no-install-recommends python3-venv
+        curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
+        mv tx /usr/local/bin/tx
     - name: update
       env:
         SPHINXINTL_TRANSIFEX_USERNAME: api
@@ -77,9 +79,9 @@ jobs:
         (cd doc/sphinx;
          make latex;
          make images;
-         sphinx-intl create-transifexrc;
+         sphinx-intl create-transifexrc --transifex-token=$TX_TOKEN;
          sphinx-build -T -b gettext source locale ;
-         sphinx-intl update-txconfig-resources -p locale -d source/locale;
+         sphinx-intl update-txconfig-resources -p locale -d source/locale --transifex-organization-name="tkoyama010";
          cat .tx/config;
          tx push -s --skip;
          rm -rf source/locale/ja source/locale/pt_BR || true;
