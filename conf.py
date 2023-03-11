@@ -17,7 +17,7 @@ basedir = os.path.join(
 
 execfile_(os.path.join(basedir, "conf.py"), globals())
 
-locale_dirs = [os.path.join(basedir, "../../../../locale/")]
+locale_dirs = [os.path.join(basedir, "./locale/")]
 html_theme = 'alabaster'
 
 def setup(app):
