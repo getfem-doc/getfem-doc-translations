@@ -8,12 +8,13 @@ This conf.py do:
 - Overrides source directory as 'doc/sphinx/source`.
 """
 import os
+import pathlib
 
 basedir = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "doc/sphinx/source"
 )
 
-exec(os.path.join(basedir, "conf.py"), globals())
+exec(pathlib.Path(os.path.join(basedir, "conf.py")).read_text(), globals())
 
 locale_dirs = [os.path.join(basedir, "./locale/")]
 html_theme = 'alabaster'
