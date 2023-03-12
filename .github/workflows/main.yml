@@ -29,6 +29,9 @@ jobs:
       with:
         host: github.com
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - uses: conda-incubator/setup-miniconda@v2
+      with:
+        environment-file: environment.yml
     - name: install
       run: |
         sudo apt update
@@ -48,10 +51,6 @@ jobs:
         sudo apt-get install -y --no-install-recommends xzdec
         sudo apt-get install -y --no-install-recommends fig2ps
         sudo apt-get install -y --no-install-recommends gv
-        sudo apt-get install -y --no-install-recommends python3-pip
-        sudo apt-get install -y --no-install-recommends sphinx-intl
-        sudo apt-get install -y --no-install-recommends python3-venv
-        sudo apt-get install -y --no-install-recommends python3-getfem++
         curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
         mv tx /usr/local/bin/tx
     - name: update
@@ -64,9 +63,6 @@ jobs:
         python3 -m venv /home/runner/work/venv
         source /home/runner/work/venv/bin/activate
         (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
-        pip3 config set global.index-url https://pypi.python.org/simple/
-        pip3 install -U pip setuptools
-        pip3 install -r ./requirements.txt
         cd getfem
         bash autogen.sh
         ./configure --with-pic
