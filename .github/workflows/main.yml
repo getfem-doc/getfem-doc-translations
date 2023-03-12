@@ -32,6 +32,7 @@ jobs:
     - uses: conda-incubator/setup-miniconda@v2
       with:
         environment-file: environment.yml
+        activate-environment: getfem-doc-translations
     - uses: actions/checkout@v2
     - uses: awalsh128/cache-apt-pkgs-action@latest
       with:
