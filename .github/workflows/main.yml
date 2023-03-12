@@ -60,8 +60,6 @@ jobs:
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
       run: |
         git submodule update
-        python3 -m venv /home/runner/work/venv
-        source /home/runner/work/venv/bin/activate
         (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
         cd getfem
         bash autogen.sh
