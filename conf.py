@@ -1,11 +1,11 @@
 # basedir is set by <lang>/conf.py
 """
-Use "-D language=<LANG>" option to build a localized mayavi document.
+Use "-D language=<LANG>" option to build a localized getfem document.
 For example::
     sphinx-build -D language=ja -b html . _build/html
 This conf.py do:
 - Specify `locale_dirs` and `gettext_compact`.
-- Overrides source directory as 'mayavi/docs/source/mayavi`.
+- Overrides source directory as 'doc/sphinx/source`.
 """
 import os
 
