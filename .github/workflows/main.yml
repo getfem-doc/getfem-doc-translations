@@ -100,6 +100,16 @@ jobs:
         git config --global user.email $EMAIL
         git config --global user.name $NAME
     - name: commit
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: "[ci skip] ${{ steps.jobs.outputs.job_id }}"
+      if: contains(github.event.head_commit.message, '[ci skip]') == false && contains(github.ref, 'master')
+      env:
+        ORGANIZATION: getfem-doc
+        REPO: getfem-doc-translations
+        JOB_ID: ${{ steps.jobs.outputs.job_id }}
+        HTML_URL: ${{ steps.jobs.outputs.html_url }}
+      run: |
+        git add .
+        git commit --allow-empty -m "[ci skip] $JOB_ID
+        $HTML_URL"
+        git remote -v
+        git remote add github git@github.com:$ORGANIZATION/$REPO.git
+        git push github master
