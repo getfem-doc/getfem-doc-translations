@@ -1,0 +1,818 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-12 06:31+0000\n"
+"PO-Revision-Date: 2020-04-26 01:50+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:8
+msgid "gf_model_get"
+msgstr "gf_model_get"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:10
+msgid "**Synopsis**"
+msgstr "**概要**"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:60
+msgid "**Description :**"
+msgstr "**説明 :**"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:63
+msgid "Get information from a model object."
+msgstr "modelオブジェクトから情報を取得します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:66
+msgid "**Command list :**"
+msgstr "**コマンドリスト**"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:70
+msgid "``b = gf_model_get(model M, 'is_complex')``"
+msgstr "``b = gf_model_get(model M, 'is_complex')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:72
+msgid "Return 0 is the model is real, 1 if it is complex."
+msgstr "モデルが実数の場合は0を返し，複素数の場合は1を返します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:75
+msgid "``T = gf_model_get(model M, 'nbdof')``"
+msgstr "``T = gf_model_get(model M, 'nbdof')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:77
+msgid "Return the total number of degrees of freedom of the model."
+msgstr "モデルの自由度の総数を返します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:80
+msgid "``dt = gf_model_get(model M, 'get time step')``"
+msgstr "``dt = gf_model_get(model M, 'get time step')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:82
+msgid "Gives the value of the time step."
+msgstr "タイムステップの値を指定します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:85
+msgid "``t = gf_model_get(model M, 'get time')``"
+msgstr "``t = gf_model_get(model M, 'get time')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:87
+msgid "Give the value of the data `t` corresponding to the current time."
+msgstr "現在時刻に対応するデータ `t` の値を指定します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:91
+msgid "``T = gf_model_get(model M, 'tangent_matrix')``"
+msgstr "``T = gf_model_get(model M, 'tangent_matrix')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:93
+msgid "Return the tangent matrix stored in the model ."
+msgstr "モデルに格納されている接線行列を返します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:96
+msgid "``gf_model_get(model M, 'rhs')``"
+msgstr "``gf_model_get(model M, 'rhs')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:98
+msgid "Return the right hand side of the tangent problem."
+msgstr "接線問題の右辺を返します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:101
+msgid ""
+"``gf_model_get(model M, 'brick term rhs', int ind_brick[, int ind_term, int "
+"sym, int ind_iter])``"
+msgstr ""
+"``gf_model_get(model M, 'brick term rhs', int ind_brick[, int ind_term, int "
+"sym, int ind_iter])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:103
+msgid ""
+"Gives the access to the part of the right hand side of a term of a "
+"particular nonlinear brick. Does not account of the eventual time "
+"dispatcher. An assembly of the rhs has to be done first. `ind_brick` is the "
+"brick index. `ind_term` is the index of the term inside the brick (default "
+"value : 1). `sym` is to access to the second right hand side of for "
+"symmetric terms acting on two different variables (default is 0). `ind_iter`"
+" is the iteration number when time dispatchers are used (default is 1)."
+msgstr ""
+"特定の非線形ブリックの項の右側部分にアクセスします．最終的な時間ディスパッチャを考慮しません．まず，右辺のアセンブリを行う必要があります． "
+"`ind_brick` はブリックインデックスです． `ind_term` はブリック内部の項のインデックスです(デフォルト値は1)． `sym` "
+"は2つの異なる変数に作用する対称項のためにの右辺の2番目にアクセスすることです(デフォルトは0です)． `ind_iter` "
+"は時間ディスパッチャを使用した場合の反復番号です(デフォルトは1です)．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:115
+msgid "``z = gf_model_get(model M, 'memsize')``"
+msgstr "``z = gf_model_get(model M, 'memsize')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:117
+msgid ""
+"Return a rough approximation of the amount of memory (in bytes) used by the "
+"model."
+msgstr "モデルが使用するメモリ量(バイト単位)の概算値を返します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:121
+msgid "``gf_model_get(model M, 'variable list')``"
+msgstr "``gf_model_get(model M, 'variable list')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:123
+msgid "print to the output the list of variables and constants of the model."
+msgstr "モデルの変数と定数のリストを出力に出力します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:126
+msgid "``gf_model_get(model M, 'brick list')``"
+msgstr "``gf_model_get(model M, 'brick list')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:128
+msgid "print to the output the list of bricks of the model."
+msgstr "モデルのブリックのリストを出力に出力します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:131
+msgid "``gf_model_get(model M, 'list residuals')``"
+msgstr "``gf_model_get(model M, 'list residuals')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:133
+msgid ""
+"print to the output the residuals corresponding to all terms included in the"
+" model."
+msgstr "モデルに含まれるすべての項に対応する残差を出力します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:137
+msgid "``V = gf_model_get(model M, 'variable', string name)``"
+msgstr "``V = gf_model_get(model M, 'variable', string name)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:139
+msgid "Gives the value of a variable or data."
+msgstr "変数またはデータの値を指定します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:142
+msgid ""
+"``V = gf_model_get(model M, 'interpolation', string expr, {mesh_fem mf | "
+"mesh_imd mimd | vec pts,  mesh m}[, int region[, int extrapolation[, int "
+"rg_source]]])``"
+msgstr ""
+"``V = gf_model_get(model M, 'interpolation', string expr, {mesh_fem mf | "
+"mesh_imd mimd | vec pts,  mesh m}[, int region[, int extrapolation[, int "
+"rg_source]]])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:144
+msgid ""
+"Interpolate a certain expression with respect to the mesh_fem `mf` or the "
+"mesh_im_data `mimd` or the set of points `pts` on mesh `m`. The expression "
+"has to be valid according to the high-level generic assembly language "
+"possibly including references to the variables and data of the model."
+msgstr ""
+"mesh_fem `mf` または mesh_im_data `mimd` またはメッシュ `m` 上の点の集合 `pts` "
+"を基準にして特定の式を補間します．式は，モデルの変数とデータへの参照を含む可能性があります，高水準汎用アセンブリ言語に従って有効である必要があります．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:150
+msgid ""
+"The options `extrapolation` and `rg_source` are specific to interpolations "
+"with respect to a set of points `pts`."
+msgstr "オプション `外挿` と `rg_source` は，点 `pts` の集合に関する補間のためのものです．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:154
+msgid ""
+"``V = gf_model_get(model M, 'local_projection', mesh_im mim, string expr, "
+"mesh_fem mf[, int region])``"
+msgstr ""
+"``V = gf_model_get(model M, 'local_projection', mesh_im mim, string expr, "
+"mesh_fem mf[, int region])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:156
+msgid ""
+"Make an elementwise L2 projection of an expression with respect to the "
+"mesh_fem `mf`. This mesh_fem has to be a discontinuous one. The expression "
+"has to be valid according to the high-level generic assembly language "
+"possibly including references to the variables and data of the model."
+msgstr ""
+"mesh_fem `mf` "
+"を基準にして，式の要素ごとのL2投影を作成します．このmesh_femは不連続である必要があります．式は，モデルの変数とデータへの参照を含む可能性があります，上位レベルの汎用アセンブリ言語に従い有効である必要があります．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:164
+msgid "``mf = gf_model_get(model M, 'mesh fem of variable', string name)``"
+msgstr "``mf = gf_model_get(model M, 'mesh fem of variable', string name)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:166
+msgid "Gives access to the `mesh_fem` of a variable or data."
+msgstr "変数またはデータの `mesh_fem` へのアクセスを許可します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:169
+msgid ""
+"``name = gf_model_get(model M, 'mult varname Dirichlet', int ind_brick)``"
+msgstr ""
+"``name = gf_model_get(model M, 'mult varname Dirichlet', int ind_brick)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:171
+msgid ""
+"Gives the name of the multiplier variable for a Dirichlet brick. If the "
+"brick is not a Dirichlet condition with multiplier brick, this function has "
+"an undefined behavior"
+msgstr ""
+"Dirichletブリックの乗数変数の名前を指定します．ブリックが乗数ブリックを持つDirichlet条件ではない場合，この関数の動作は未定義です．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:176
+msgid "``I = gf_model_get(model M, 'interval of variable', string varname)``"
+msgstr "``I = gf_model_get(model M, 'interval of variable', string varname)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:178
+msgid ""
+"Gives the interval of the variable `varname` in the linear system of the "
+"model."
+msgstr "モデルの線形システムの変数 `varname` の間隔を指定します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:182
+msgid "``V = gf_model_get(model M, 'from variables')``"
+msgstr "``V = gf_model_get(model M, 'from variables')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:184
+msgid ""
+"Return the vector of all the degrees of freedom of the model consisting of "
+"the concatenation of the variables of the model (useful to solve your "
+"problem with you own solver)."
+msgstr "モデルの変数を連結したモデルのすべての自由度(独自のソルバを使用して求解するのに便利)のベクトルを返します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:189
+msgid "``gf_model_get(model M, 'assembly'[, string option])``"
+msgstr "``gf_model_get(model M, 'assembly'[, string option])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:191
+msgid ""
+"Assembly of the tangent system taking into account the terms from all "
+"bricks. `option`, if specified, should be 'build_all', 'build_rhs', "
+"'build_matrix', 'build_rhs_with_internal', 'build_matrix_condensed', "
+"'build_all_condensed'. The default is to build the whole tangent linear "
+"system (matrix and rhs). This function is useful to solve your problem with "
+"you own solver."
+msgstr ""
+"すべてのブリックの項を考慮した接線システムのアセンブリです． `option` を指定する場合， 'build_all' ， 'build_rhs' ，"
+" 'build_matrix' ， 'build_rhs_with_internal' ， 'build_matrix_condensed' ， "
+"'build_all_condensed' "
+"とする必要があります．デフォルトでは，接線線形システム全体(行列とrhs)が構築されます．この関数は，独自のソルバを使用して求解する場合に便利です．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:199
+msgid "``{nbit, converged} = gf_model_get(model M, 'solve'[, ...])``"
+msgstr "``{nbit, converged} = gf_model_get(model M, 'solve'[, ...])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:201
+msgid "Run the standard getfem solver."
+msgstr "標準のgetfemソルバーを実行します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:203
+msgid ""
+"Note that you should be able to use your own solver if you want (it is "
+"possible to obtain the tangent matrix and its right hand side with the "
+"gf_model_get(model M, 'tangent matrix') etc.)."
+msgstr ""
+"必要に応じて，独自のソルバを使用できるようにする必要があります( gf_model_get(model M, 'tangent matrix') "
+"などで接線行列とその右辺を得ることができます)．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:207
+msgid "Various options can be specified:"
+msgstr "さまざまなオプションを指定できます．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:210
+msgid "'noisy' or 'very_noisy'"
+msgstr "'noisy' または 'very_noisy'"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:210
+msgid ""
+"the solver will display some information showing the progress (residual "
+"values etc.)."
+msgstr "ソルバが進行状況を示す情報が表示します(残差値など)．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:212
+msgid "'max_iter', int NIT"
+msgstr "'max_iter', int NIT"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:213
+msgid "set the maximum iterations numbers."
+msgstr "最大反復回数を設定します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:214
+msgid "'max_res', @float RES"
+msgstr "'max_res', @float RES"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:215
+msgid "set the target residual value."
+msgstr "目標残差値を設定します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:217
+msgid "'diverged_res', @float RES"
+msgstr "'diverged_res', @float RES"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:217
+msgid ""
+"set the threshold value of the residual beyond which the iterative method is"
+" considered to diverge (default is 1e200)."
+msgstr "反復法が発散したと見なされる残差のしきい値を設定します(デフォルトは1e200です)．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:222
+msgid "'lsolver', string SOLVER_NAME"
+msgstr "'lsolver', string SOLVER_NAME"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:220
+msgid ""
+"select explicitely the solver used for the linear systems (the default value"
+" is 'auto', which lets getfem choose itself). Possible values are 'superlu',"
+" 'mumps' (if supported), 'cg/ildlt', 'gmres/ilu' and 'gmres/ilut'."
+msgstr ""
+"線形システム(デフォルト値は 'auto' で，getfemが自分で選択できるようになっています)に使用するソルバーを明示的に選択します．指定できる値は"
+" 'superlu' ，(サポートされている場合) 'mumps' ， 'cg/ildlt' ， 'gmres/ilut' ，および "
+"'gmres/ilut' です．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:227
+msgid "'lsearch', string LINE_SEARCH_NAME"
+msgstr "'lsearch', string LINE_SEARCH_NAME"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:225
+msgid ""
+"select explicitely the line search method used for the linear systems (the "
+"default value is 'default'). Possible values are 'simplest', 'systematic', "
+"'quadratic' or 'basic'."
+msgstr ""
+"線形システムで使用される線検索方法を明示的に選択します(デフォルト値は 'default' です)．指定できる値は， 'simplest' ， "
+"'systematic' ， 'quadratic' ，または 'basic' です．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:229
+msgid "Return the number of iterations, if an iterative method is used."
+msgstr "反復法が使用される場合，反復回数を返します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:231
+msgid ""
+"Note that it is possible to disable some variables (see gf_model_set(model "
+"M, 'disable variable') ) in order to solve the problem only with respect to "
+"a subset of variables (the disabled variables are then considered as data) "
+"for instance to replace the global Newton strategy with a fixed point one."
+msgstr ""
+"変数のサブセット(無効にされた変数はデータとみなされます)に関してのみ問題を求解するために，いくつかの変数( gf_model_set(model M,"
+" 'disable variable')  "
+"を参照してください)を無効にすることが可能であることに注意してください．例えば，全体Newton法を固定小数点法で置き換えることができます．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:240
+msgid ""
+"``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar"
+" scale]]])``"
+msgstr ""
+"``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar"
+" scale]]])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:242
+msgid ""
+"Test the consistency of the tangent matrix in some random positions and "
+"random directions (useful to test newly created bricks). `EPS` is the value "
+"of the small parameter for the finite difference computation of the "
+"derivative is the random direction (default is 1E-6). `NN` is the number of "
+"tests (default is 100). `scale` is a parameter for the random position "
+"(default is 1, 0 is an acceptable value) around the current position. Each "
+"dof of the random position is chosen in the range [current-scale, "
+"current+scale]."
+msgstr ""
+"ランダムな位置と方向(新しく作成されたブリックをテストするのに便利)で，接線行列の整合性をテストします．EPSは微分の差分計算のための小パラメータの値であり，ランダム方向(デフォルトは1E-6)です．"
+" `NN` はテストの数です(デフォルトは100です)． `scale` "
+"は現在位置の周囲のランダムな位置(デフォルトは1で，0が許容値です)のパラメータです．ランダム位置の各自由度は [current-scale, "
+"current+scale] の範囲内で選択されます．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:254
+msgid ""
+"``gf_model_get(model M, 'test tangent matrix term', string varname1, string "
+"varname2[, scalar EPS[, int NB[, scalar scale]]])``"
+msgstr ""
+"``gf_model_get(model M, 'test tangent matrix term', string varname1, string "
+"varname2[, scalar EPS[, int NB[, scalar scale]]])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:256
+msgid ""
+"Test the consistency of a part of the tangent matrix in some random "
+"positions and random directions (useful to test newly created bricks). The "
+"increment is only made on variable `varname2` and tested on the part of the "
+"residual corresponding to `varname1`. This means that only the term "
+"(`varname1`, `varname2`) of the tangent matrix is tested. `EPS` is the value"
+" of the small parameter for the finite difference computation of the "
+"derivative is the random direction (default is 1E-6). `NN` is the number of "
+"tests (default is 100). `scale` is a parameter for the random position "
+"(default is 1, 0 is an acceptable value) around the current position. Each "
+"dof of the random position is chosen in the range [current-scale, "
+"current+scale]."
+msgstr ""
+"ランダムな位置と方向(新しく作成されたブリックをテストするのに便利)で，接線行列の一部の整合性をテストします．インクリメントは，変数 "
+"`varname2` に対してのみ行われ， `varname1` に対応する残差の部分でテストされます．これは，接線行列の項 (`varname1`, "
+"`varname2`) "
+"のみがテストされることを意味します．EPSは微分の差分計算のための微小パラメータの値(デフォルトは1E-6)であり，ランダム方向です． `NN` "
+"はテストの数です(デフォルトは100です)． `scale` "
+"は現在位置の周囲のランダムな位置(デフォルトは1で，0が許容値です)のパラメータである．ランダム位置の各自由度は [current-scale, "
+"current+scale] の範囲内で選択されます．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:272
+msgid ""
+"``expr = gf_model_get(model M, 'Neumann term', string varname, int region)``"
+msgstr ""
+"``expr = gf_model_get(model M, 'Neumann term', string varname, int region)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:274
+msgid ""
+"Gives the assembly string corresponding to the Neumann term of the fem "
+"variable `varname` on `region`. It is deduced from the assembly string "
+"declared by the model bricks. `region` should be the index of a boundary "
+"region on the mesh where `varname` is defined. Care to call this function "
+"only after all the volumic bricks have been declared. Complains, if a brick "
+"omit to declare an assembly string."
+msgstr ""
+"`region` のfem変数 `varname` "
+"のNeumann項に対応するアセンブリ文字列を返します．モデルブリックによって宣言されたアセンブリ文字列から推定されます． `region` は "
+"`varname` "
+"が定義されているメッシュ上の境界領域のインデックスである必要があります．この関数は，すべての体積ブリックが宣言された後で呼び出すようにしてください．ブリックがアセンブリ文字列の宣言を省略した場合はエラーが発生します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:284
+msgid ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises or "
+"Tresca', string varname, string dataname_lambda, string dataname_mu, "
+"mesh_fem mf_vm[, string version])``"
+msgstr ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises or "
+"Tresca', string varname, string dataname_lambda, string dataname_mu, "
+"mesh_fem mf_vm[, string version])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:286
+msgid ""
+"Compute the Von-Mises stress or the Tresca stress of a field (only valid for"
+" isotropic linearized elasticity in 3D). `version` should be  'Von_Mises' or"
+" 'Tresca' ('Von_Mises' is the default). Parametrized by Lame coefficients."
+msgstr ""
+"Von-Mises 応力またはフィールドのTresca応力(3次元の等方性線形化弾性にのみ有効)を計算します． `version` は "
+"'Von_Mises' または 'Tresca' ( 'Von_Mises' "
+"がデフォルト)でなければなりません．Lame係数によってパラメータ化されます．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:293
+msgid ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
+"pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
+msgstr ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
+"pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:295
+msgid ""
+"Compute the Von-Mises stress  of a displacement field for isotropic "
+"linearized elasticity in 3D or in 2D with plane strain assumption. "
+"Parametrized by Young modulus and Poisson ratio."
+msgstr ""
+"平面ひずみを仮定した3次元または2次元における等方性線形化弾性の変位場のVon-"
+"Mises応力を計算します．Young率とPoisson比によってパラメータ化されます．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:301
+msgid ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
+"pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
+msgstr ""
+"``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
+"pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:303
+msgid ""
+"Compute the Von-Mises stress  of a displacement field for isotropic "
+"linearized elasticity in 3D or in 2D with plane stress assumption. "
+"Parametrized by Young modulus and Poisson ratio."
+msgstr ""
+"平面応力を仮定した3次元または2次元における等方性線形化弾性の変位場のVon-"
+"Mises応力を計算します．Young率とPoisson比によってパラメータ化されます．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:309
+msgid ""
+"``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, "
+"string lawname, string dataname, mesh_fem mf_vm[, string version])``"
+msgstr ""
+"``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, "
+"string lawname, string dataname, mesh_fem mf_vm[, string version])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:311
+msgid ""
+"Compute on `mf_vm` the Von-Mises stress or the Tresca stress of a field for "
+"nonlinear elasticity in 3D. `lawname` is the constitutive law which could be"
+" 'SaintVenant Kirchhoff', 'Mooney Rivlin', 'neo Hookean' or 'Ciarlet "
+"Geymonat'. `dataname` is a vector of parameters for the constitutive law. "
+"Its length depends on the law. It could be a short vector of constant values"
+" or a vector field described on a finite element method for variable "
+"coefficients. `version` should be  'Von_Mises' or 'Tresca' ('Von_Mises' is "
+"the default)."
+msgstr ""
+"3次元の非線形弾性のフィールドのVon-Mises応力またはTresca応力を `mf_vm` で計算します． `lawname` は構成則で， "
+"'SaintVenant Kirchhoff' ， 'Mooney Rivlin' ， 'neo Hookean' ， 'Ciarlet "
+"Geymonat' だ． `dataname` "
+"は構成則のパラメータのベクトルです．長さは法則によります．これは，定数値の短いベクトル，または可変係数の有限要素法で記述されたベクトルフィールドです． "
+"`version` は 'Von_Mises' または 'Tresca' のいずれかです( 'Von_Mises' がデフォルトです)．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:322
+msgid ""
+"``V = gf_model_get(model M, 'compute finite strain elasticity Von Mises',  "
+"string lawname, string varname, string params, mesh_fem mf_vm[, int "
+"region])``"
+msgstr ""
+"``V = gf_model_get(model M, 'compute finite strain elasticity Von Mises',  "
+"string lawname, string varname, string params, mesh_fem mf_vm[, int "
+"region])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:324
+msgid ""
+"Compute on `mf_vm` the Von-Mises stress of a field `varname` for nonlinear "
+"elasticity in 3D. `lawname` is the constitutive law which should be a valid "
+"name. `params` are the parameters law. It could be a short vector of "
+"constant values or may depend on data or variables of the model. Uses the "
+"high-level generic assembly."
+msgstr ""
+"3次元の非線形弾性のフィールド `varname` のVon-Mises応力を `mf_vm` で計算します．`lawname` "
+"は構成則であり，有効な名前である必要があります． `params` "
+"はパラメータ則です．定数値の短いベクトルにすることも，モデルのデータや変数に依存することもできます．高水準汎用アセンブリを使用します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:333
+msgid ""
+"``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string "
+"varname, string lawname, string dataname, mesh_fem mf_sigma)``"
+msgstr ""
+"``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string "
+"varname, string lawname, string dataname, mesh_fem mf_sigma)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:335
+msgid ""
+"Compute on `mf_sigma` the second Piola Kirchhoff stress tensor of a field "
+"for nonlinear elasticity in 3D. `lawname` is the constitutive law which "
+"could be 'SaintVenant Kirchhoff', 'Mooney Rivlin', 'neo Hookean' or 'Ciarlet"
+" Geymonat'. `dataname` is a vector of parameters for the constitutive law. "
+"Its length depends on the law. It could be a short vector of constant values"
+" or a vector field described on a finite element method for variable "
+"coefficients."
+msgstr ""
+"3次元非線形弾性の場の第2Piola Kirchhoff応力テンソルのmf_sigmaを計算します． `lawname` は構成則で "
+"'SaintVenant Kirchhoff' ， 'Mooney Rivlin' ， 'neo Hookean' ，あるいは 'Ciarlet "
+"Geymonat'となります． `dataname` "
+"は構成則のパラメータのベクトルです．長さは法則によります．これは，定数値の短いベクトル，または可変係数の有限要素法で記述されたベクトルフィールドです．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:346
+msgid ""
+"``gf_model_get(model M, 'elastoplasticity next iter', mesh_im mim, string "
+"varname, string previous_dep_name, string projname, string datalambda, "
+"string datamu, string datathreshold, string datasigma)``"
+msgstr ""
+"``gf_model_get(model M, 'elastoplasticity next iter', mesh_im mim, string "
+"varname, string previous_dep_name, string projname, string datalambda, "
+"string datamu, string datathreshold, string datasigma)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:348
+msgid ""
+"Used with the old (obsolete) elastoplasticity brick to pass from an "
+"iteration to the next one. Compute and save the stress constraints sigma for"
+" the next iterations. 'mim' is the integration method to use for the "
+"computation. 'varname' is the main variable of the problem. "
+"'previous_dep_name' represents the displacement at the previous time step. "
+"'projname' is the type of projection to use. For the moment it could only be"
+" 'Von Mises' or 'VM'. 'datalambda' and 'datamu' are the Lame coefficients of"
+" the material. 'datasigma' is a vector which will contain the new stress "
+"constraints values."
+msgstr ""
+"古い(廃止された)弾塑性ブリックとともに使用して，イテレーションから次のイテレーションに渡します．次のイテレーションの応力拘束sigmaを計算して保存します．"
+" 'mim' は，計算に使用する積分法です． 'varname' がこの問題の主要な変数です． 'previous_dep_name' "
+"は前の時間ステップでの変位を表します． 'projname' は使用する投影のタイプです．現時点では 'Von Mises' または 'VM' "
+"でなければなりません． 'datalambda' および 'datamu' は，材料のLame係数です． 'datasigma' "
+"は新しい応力拘束値を格納するベクトルです．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:359
+msgid ""
+"``gf_model_get(model M, 'small strain elastoplasticity next iter', mesh_im "
+"mim,  string lawname, string unknowns_type [, string varnames, ...] [, "
+"string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int"
+" region = -1])``"
+msgstr ""
+"``gf_model_get(model M, 'small strain elastoplasticity next iter', mesh_im "
+"mim,  string lawname, string unknowns_type [, string varnames, ...] [, "
+"string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int"
+" region = -1])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:361
+msgid ""
+"Function that allows to pass from a time step to another for the small "
+"strain plastic brick. The parameters have to be exactly the same than the "
+"one of `add_small_strain_elastoplasticity_brick`, so see the documentation "
+"of this function for the explanations. Basically, this brick computes the "
+"plastic strain and the plastic multiplier and stores them for the next step."
+" Additionaly, it copies the computed displacement to the data that stores "
+"the displacement of the previous time step (typically 'u' to 'Previous_u'). "
+"It has to be called before any use of "
+"`compute_small_strain_elastoplasticity_Von_Mises`."
+msgstr ""
+"微小ひずみ塑性ブリックの時間ステップ間を通過できる関数．パラメータは，`add_small_strain_elastoplasticity_brick`"
+" "
+"とまったく同じでなければなりません．説明については，この関数のドキュメントを参照してください．基本的に，このブリックは塑性歪みと塑性乗数を計算し，次のステップのために保存します．さらに，計算されたディスプレイスメントが，前のタイムステップのディスプレイスメントを格納するデータにコピーされます(通常は"
+" 'u' から 'Previous_u' )．これは， "
+"`compute_small_strain_elastoplasticity_Von_Mises` を使用する前に呼び出す必要があります．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:374
+msgid ""
+"``V = gf_model_get(model M, 'small strain elastoplasticity Von Mises', "
+"mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type [, string "
+"varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = "
+"'timestep']] [, int region])``"
+msgstr ""
+"``V = gf_model_get(model M, 'small strain elastoplasticity Von Mises', "
+"mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type [, string "
+"varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = "
+"'timestep']] [, int region])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:376
+msgid ""
+"This function computes the Von Mises stress field with respect to a small "
+"strain elastoplasticity term, approximated on `mf_vm`, and stores the result"
+" into `VM`.  All other parameters have to be exactly the same as for "
+"`add_small_strain_elastoplasticity_brick`. Remember that "
+"`small_strain_elastoplasticity_next_iter` has to be called before any call "
+"of this function."
+msgstr ""
+"この関数は， `mf_vm` で近似された小さな歪みの弾塑性項に関するフォンミーゼス応力場を計算し，その結果を `VM` "
+"に格納します．その他のパラメータはすべて， `add_small_strain_elastoplasticity_brick` "
+"とまったく同じでなければなりません．この関数を呼び出す前に， `small_strain_elastoplasticity_next_iter` "
+"を呼び出す必要があります．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:385
+msgid ""
+"``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', "
+"string datasigma, mesh_fem mf_vm[, string version])``"
+msgstr ""
+"``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', "
+"string datasigma, mesh_fem mf_vm[, string version])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:387
+msgid ""
+"Compute on `mf_vm` the Von-Mises or the Tresca stress of a field for "
+"plasticity and return it into the vector V. `datasigma` is a vector which "
+"contains the stress constraints values supported by the mesh. `version` "
+"should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
+msgstr ""
+"塑性の場のVon-Mises応力またはTresca応力を `mf_vm` で計算し，ベクトルVに戻します． `datasigma` "
+"はメッシュによってサポートされる応力制約値を含むベクトルです． `version` は 'Von_Mises' または 'Tresca' "
+"('Von_Mises' がデフォルト)でなければなりません．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:392
+msgid ""
+"``V = gf_model_get(model M, 'compute plastic part', mesh_im mim, mesh_fem "
+"mf_pl, string varname, string previous_dep_name, string projname, string "
+"datalambda, string datamu, string datathreshold, string datasigma)``"
+msgstr ""
+"``V = gf_model_get(model M, 'compute plastic part', mesh_im mim, mesh_fem "
+"mf_pl, string varname, string previous_dep_name, string projname, string "
+"datalambda, string datamu, string datathreshold, string datasigma)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:394
+msgid ""
+"Compute on `mf_pl` the plastic part and return it into the vector V. "
+"`datasigma` is a vector which contains the stress constraints values "
+"supported by the mesh."
+msgstr ""
+"プラスチック成形品を `mf_pl` で計算し，ベクトルVに返します． `datasigma` はメッシュでサポートされる応力拘束値を含むベクトルです．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:398
+msgid ""
+"``gf_model_get(model M, 'finite strain elastoplasticity next iter', mesh_im "
+"mim, string lawname, string unknowns_type, [, string varnames, ...] [, "
+"string params, ...] [, int region = -1])``"
+msgstr ""
+"``gf_model_get(model M, 'finite strain elastoplasticity next iter', mesh_im "
+"mim, string lawname, string unknowns_type, [, string varnames, ...] [, "
+"string params, ...] [, int region = -1])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:400
+msgid ""
+"Function that allows to pass from a time step to another for the finite "
+"strain plastic brick. The parameters have to be exactly the same than the "
+"one of `add_finite_strain_elastoplasticity_brick`, so see the documentation "
+"of this function for the explanations. Basically, this brick computes the "
+"plastic strain and the plastic multiplier and stores them for the next step."
+" For the Simo-Miehe law which is currently the only one implemented, this "
+"function updates the state variables defined in the last two entries of "
+"`varnames`, and resets the plastic multiplier field given as the second "
+"entry of `varnames`."
+msgstr ""
+"有限ひずみ塑性ブリックの時間ステップから別のステップへの移行を可能にする関数です．パラメータは， "
+"`add_finite_strain_elastoplasticity_brick` "
+"とまったく同じでなければなりません．説明については，この関数のドキュメントを参照してください．基本的に，このブリックは塑性歪みと塑性乗数を計算し，次のステップのために保存します．現在実装されている唯一のSimo-"
+"Mieheの法則に対して，この関数は `varnames` の最後の2つのエントリで定義されている状態変数を更新し，  `varnames` "
+"の2番目のエントリとして与えられる塑性乗数フィールドをリセットします．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:413
+msgid ""
+"``V = gf_model_get(model M, 'compute finite strain elastoplasticity Von "
+"Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, "
+"[, string varnames, ...] [, string params, ...] [, int region = -1])``"
+msgstr ""
+"``V = gf_model_get(model M, 'compute finite strain elastoplasticity Von "
+"Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, "
+"[, string varnames, ...] [, string params, ...] [, int region = -1])``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:415
+msgid ""
+"Compute on `mf_vm` the Von-Mises or the Tresca stress of a field for "
+"plasticity and return it into the vector V. The first input parameters ar as"
+" in the function 'finite strain elastoplasticity next iter'."
+msgstr ""
+"塑性場のVon-MisesまたはTresca応力を `mf_vm` で計算し，ベクトルVに返します．最初の入力パラメータは関数 'finite "
+"strain elastoplasticity next iter' と同様です．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:420
+msgid ""
+"``V = gf_model_get(model M, 'sliding data group name of large sliding "
+"contact brick', int indbrick)``"
+msgstr ""
+"``V = gf_model_get(model M, 'sliding data group name of large sliding "
+"contact brick', int indbrick)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:422
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:428
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:434
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:440
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:446
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:452
+msgid ""
+"Gives the name of the group of variables corresponding to the sliding data "
+"for an existing large sliding contact brick."
+msgstr "既存の有限すべり接触ブリックの滑りデータに対応する変数のグループの名前を指定します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:426
+msgid ""
+"``V = gf_model_get(model M, 'displacement group name of large sliding "
+"contact brick', int indbrick)``"
+msgstr ""
+"``V = gf_model_get(model M, 'displacement group name of large sliding "
+"contact brick', int indbrick)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:432
+msgid ""
+"``V = gf_model_get(model M, 'transformation name of large sliding contact "
+"brick', int indbrick)``"
+msgstr ""
+"``V = gf_model_get(model M, 'transformation name of large sliding contact "
+"brick', int indbrick)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:438
+msgid ""
+"``V = gf_model_get(model M, 'sliding data group name of Nitsche large "
+"sliding contact brick', int indbrick)``"
+msgstr ""
+"``V = gf_model_get(model M, 'sliding data group name of Nitsche large "
+"sliding contact brick', int indbrick)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:444
+msgid ""
+"``V = gf_model_get(model M, 'displacement group name of Nitsche large "
+"sliding contact brick', int indbrick)``"
+msgstr ""
+"``V = gf_model_get(model M, 'displacement group name of Nitsche large "
+"sliding contact brick', int indbrick)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:450
+msgid ""
+"``V = gf_model_get(model M, 'transformation name of Nitsche large sliding "
+"contact brick', int indbrick)``"
+msgstr ""
+"``V = gf_model_get(model M, 'transformation name of Nitsche large sliding "
+"contact brick', int indbrick)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:456
+msgid ""
+"``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``"
+msgstr ""
+"``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:458
+msgid "Gives the matrix term ind_term of the brick ind_brick if it exists"
+msgstr "存在する場合，ブリック ind_brick のマトリックス項 ind_term を返します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:462
+msgid "``s = gf_model_get(model M, 'char')``"
+msgstr "``s = gf_model_get(model M, 'char')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:464
+msgid "Output a (unique) string representation of the model."
+msgstr "modelの(ユニークな)文字列表現を出力します．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:466
+msgid ""
+"This can be used to perform comparisons between two different model objects."
+" This function is to be completed."
+msgstr "これを使用して，2つの異なるmodelオブジェクト間の比較を実行できます．この機能は完成予定です．"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:472
+msgid "``gf_model_get(model M, 'display')``"
+msgstr "``gf_model_get(model M, 'display')``"
+
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:474
+msgid "displays a short summary for a model object."
+msgstr "modelオブジェクトの概要が表示されます．"

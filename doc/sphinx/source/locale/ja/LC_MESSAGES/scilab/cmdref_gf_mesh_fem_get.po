@@ -1,0 +1,654 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-12 06:31+0000\n"
+"PO-Revision-Date: 2018-07-16 07:02+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:8
+msgid "gf_mesh_fem_get"
+msgstr "gf_mesh_fem_get"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:10
+msgid "**Synopsis**"
+msgstr "**概要**"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:53
+msgid "**Description :**"
+msgstr "**説明 :**"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:56
+msgid "General function for inquiry about mesh_fem objects."
+msgstr "mesh_femオブジェクトに関する汎用的な参照関数．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:59
+msgid "**Command list :**"
+msgstr "**コマンドリスト**"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:63
+msgid "``n = gf_mesh_fem_get(mesh_fem MF, 'nbdof')``"
+msgstr "``n = gf_mesh_fem_get(mesh_fem MF, 'nbdof')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:65
+msgid "Return the number of degrees of freedom (dof) of the mesh_fem."
+msgstr "mesh_femの自由度(dof)の数を返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:68
+msgid "``n = gf_mesh_fem_get(mesh_fem MF, 'nb basic dof')``"
+msgstr "``n = gf_mesh_fem_get(mesh_fem MF, 'nb basic dof')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:70
+msgid "Return the number of basic degrees of freedom (dof) of the mesh_fem."
+msgstr "mesh_femの基本自由度(dof)の数を返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:73
+msgid "``DOF = gf_mesh_fem_get(mesh_fem MF, 'dof from cv',mat CVids)``"
+msgstr "``DOF = gf_mesh_fem_get(mesh_fem MF, 'dof from cv',mat CVids)``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:75
+msgid ""
+"Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof from cv') "
+"instead."
+msgstr ""
+"非推奨の機能です．代わりに gf_mesh_fem_get(mesh_fem MF, 'basic dof from cv') を使用します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:78
+msgid "``DOF = gf_mesh_fem_get(mesh_fem MF, 'basic dof from cv',mat CVids)``"
+msgstr "``DOF = gf_mesh_fem_get(mesh_fem MF, 'basic dof from cv',mat CVids)``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:80
+msgid "Return the dof of the convexes listed in <literal>CVids</literal>."
+msgstr "<literal>CVids</literal> にリストされている凸の自由度を返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:82
+msgid ""
+"WARNING: the Degree of Freedom might be returned in ANY order, do not use "
+"this function in your assembly routines. Use 'basic dof from cvid' instead, "
+"if you want to be able to map a convex number with its associated degrees of"
+" freedom."
+msgstr ""
+"警告: "
+"自由度は任意の順序で返される可能性があります．アセンブリルーチンではこの関数を使用しないでください．凸値に関連する自由度をマップする場合は，代わりに "
+"'basic dof from cvid' を使用します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:87
+msgid ""
+"One can also get the list of basic dof on a set on convex faces, by "
+"indicating on the second row of <literal>CVids</literal> the faces numbers "
+"(with respect to the convex number on the first row)."
+msgstr ""
+"また，(最初の行の凸数に関して)2列目に <literal>CVids</literal> "
+"を表示することで，凸面上の集合の基本的な自由度のリストを得ることができます．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:92
+msgid ""
+"``{DOFs, IDx} = gf_mesh_fem_get(mesh_fem MF, 'dof from cvid'[, mat CVids])``"
+msgstr ""
+"``{DOFs, IDx} = gf_mesh_fem_get(mesh_fem MF, 'dof from cvid'[, mat CVids])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:94
+msgid ""
+"Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof from cvid')"
+" instead."
+msgstr ""
+"非推奨の機能です．代わりに gf_mesh_fem_get(mesh_fem MF, 'basic dof from cvid') を使用します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:98
+msgid ""
+"``{DOFs, IDx} = gf_mesh_fem_get(mesh_fem MF, 'basic dof from cvid'[, mat "
+"CVids])``"
+msgstr ""
+"``{DOFs, IDx} = gf_mesh_fem_get(mesh_fem MF, 'basic dof from cvid'[, mat "
+"CVids])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:100
+msgid "Return the degrees of freedom attached to each convex of the mesh."
+msgstr "メッシュの各凸にアタッチされた自由度を返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:102
+msgid ""
+"If <literal>CVids</literal> is omitted, all the convexes will be considered "
+"(equivalent to <literal>CVids = 1 ... gf_mesh_get(mesh M, 'max "
+"cvid')</literal>)."
+msgstr ""
+"<literal>CVids</literal> を省略すると，すべての凸が考慮されます( <literal>CVids = 1 ... "
+"Mesh.max_cvid(mesh M, 'max cvid')</literal> と同じです)．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:105
+msgid ""
+"<literal>IDx</literal> is a vector, <literal>length(IDx) = "
+"length(CVids)+1</literal>. <literal>DOFs</literal> is a vector containing "
+"the concatenated list of dof of each convex in <literal>CVids</literal>. "
+"Each entry of <literal>IDx</literal> is the position of the corresponding "
+"convex point list in <literal>DOFs</literal>. Hence, for example, the list "
+"of points of the second convex is DOFs(IDx(2):IDx(3)-1)."
+msgstr ""
+"<literal>IDx</literal> はベクトルであり， <literal>length(IDx) = "
+"length(CVids)+1</literal> です． <literal>DOFs</literal>  は "
+"<literal>CVids</literal> の各凸の自由度の連結リストを含むベクトルです． <literal>IDx</literal> "
+"の各エントリは <literal>DOFs</literal> における対応する凸点リストの位置です．従って，例えば，第2凸の点のリストは "
+"DOFs(IDx(2):IDx(3)-1) です．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:111
+msgid ""
+"If <literal>CVids</literal> contains convex #id which do not exist in the "
+"mesh, their point list will be empty."
+msgstr "<literal>CVids</literal> にメッシュに存在しない凸の #id が含まれている場合，点リストは空になります．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:115
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'non conformal dof'[, mat CVids])``"
+msgstr "``gf_mesh_fem_get(mesh_fem MF, 'non conformal dof'[, mat CVids])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:117
+msgid ""
+"Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'non conformal basic "
+"dof') instead."
+msgstr ""
+"非推奨の機能です．代わりに gf_mesh_fem_get(mesh_fem MF, 'non conformal basic dof') "
+"を使用します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:121
+msgid ""
+"``gf_mesh_fem_get(mesh_fem MF, 'non conformal basic dof'[, mat CVids])``"
+msgstr ""
+"``gf_mesh_fem_get(mesh_fem MF, 'non conformal basic dof'[, mat CVids])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:123
+msgid "Return partially linked degrees of freedom."
+msgstr "部分的にリンクされた自由度を返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:125
+msgid ""
+"Return the basic dof located on the border of a convex and which belong to "
+"only one convex, except the ones which are located on the border of the "
+"mesh.  For example, if the convex 'a' and 'b' share a common face, 'a' has a"
+" P1 FEM, and 'b' has a P2 FEM, then the basic dof on the middle of the face "
+"will be returned by this function (this can be useful when searching the "
+"interfaces between classical FEM and hierarchical FEM)."
+msgstr ""
+"メッシュの境界上にあるものを除き，1つの凸にのみ属する凸の境界上にある基本自由度を返します．たとえば，凸の 'a' と 'b' が共通の面を共有し， "
+"'a' にP1 FEMがあり， 'b' にP2 "
+"FEMがある場合，面の中央の基本自由度がこの関数によって返されます(これは，古典的FEMと階層的FEMの間のインターフェースを探索するときに有用です)．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:134
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'qdim')``"
+msgstr "``gf_mesh_fem_get(mesh_fem MF, 'qdim')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:136
+msgid "Return the dimension Q of the field interpolated by the mesh_fem."
+msgstr "mesh_femによって補間されたフィールドの次元Qを返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:138
+msgid ""
+"By default, Q=1 (scalar field). This has an impact on the dof numbering."
+msgstr "デフォルトでは，Q=1(スカラー場)です．これは，自由度の番号付けに影響します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:141
+msgid "``{FEMs, CV2F} = gf_mesh_fem_get(mesh_fem MF, 'fem'[, mat CVids])``"
+msgstr "``{FEMs, CV2F} = gf_mesh_fem_get(mesh_fem MF, 'fem'[, mat CVids])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:143
+msgid "Return a list of FEM used by the mesh_fem."
+msgstr "mesh_femで使用されるFEMのリストを返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:145
+msgid ""
+"<literal>FEMs</literal> is an array of all fem objects found in the convexes"
+" given in <literal>CVids</literal>. If <literal>CV2F</literal> was supplied "
+"as an output argument, it contains, for each convex listed in "
+"<literal>CVids</literal>, the index of its correspounding FEM in "
+"<literal>FEMs</literal>."
+msgstr ""
+"<literal>FEMs</literal> は <literal>CVids</literal> "
+"で与えられた凸にあるすべてのFemオブジェクトの配列です． <literal>CV2F</literal> が出力引数として指定された場合  "
+"<literal>CVids</literal> にリストされている各凸に対し， <literal>FEMs</literal> "
+"内の対応するFEMのインデックスが含まれます．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:150
+msgid ""
+"Convexes which are not part of the mesh, or convexes which do not have any "
+"FEM have their correspounding entry in <literal>CV2F</literal> set to -1."
+msgstr ""
+"メッシュの一部でない凸，またはFEMを持たない凸については  <literal>CV2F</literal> の対応エントリを-1に設定します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:156
+msgid "``CVs = gf_mesh_fem_get(mesh_fem MF, 'convex_index')``"
+msgstr "``CVs = gf_mesh_fem_get(mesh_fem MF, 'convex_index')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:158
+msgid "Return the list of convexes who have an FEM."
+msgstr "FEMを持つ凸のリストを返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:161
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_lagrangian'[, mat CVids])``"
+msgstr "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_lagrangian'[, mat CVids])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:163
+msgid "Test if the mesh_fem is Lagrangian."
+msgstr "mesh_femがLagrangianであるかどうかをテストします．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:165
+msgid ""
+"Lagrangian means that each base function Phi[i] is such that Phi[i](P[j]) = "
+"delta(i,j), where P[j] is the dof location of the jth base function, and "
+"delta(i,j) = 1 if i==j, else 0."
+msgstr ""
+"Lagrangianとは，各基底関数 Phi[i] が， Phi[i](P[j]) = delta(i,j) となることを意味します．ここで P[j] "
+"は，j番目の基底関数の自由度位置であり，i==jなら delta(i,j) = 1 であり，そうでなければ0です．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:169
+msgid ""
+"If <literal>CVids</literal> is omitted, it returns 1 if all convexes in the "
+"mesh are Lagrangian. If <literal>CVids</literal> is used, it returns the "
+"convex indices (with respect to <literal>CVids</literal>) which are "
+"Lagrangian."
+msgstr ""
+"<literal>CVids</literal> を省略すると，メッシュ内のすべての凸状がLagrangianの場合に1を返します． "
+"<literal>CVids</literal> を使用すると，Lagrangianである( <literal>CVids</literal> "
+"に関する)凸インデックスを返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:174
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_equivalent'[, mat CVids])``"
+msgstr "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_equivalent'[, mat CVids])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:176
+msgid "Test if the mesh_fem is equivalent."
+msgstr "mesh_femが等価かどうかをテストします．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:178
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:185
+msgid "See gf_mesh_fem_get(mesh_fem MF, 'is_lagrangian')"
+msgstr "gf_mesh_fem_get(mesh_fem MF, 'is_lagrangian') を参照してください．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:181
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_polynomial'[, mat CVids])``"
+msgstr "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_polynomial'[, mat CVids])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:183
+msgid "Test if all base functions are polynomials."
+msgstr "すべての基本関数が多項式であるかどうかをテストします．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:188
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_reduced')``"
+msgstr "``bB = gf_mesh_fem_get(mesh_fem MF, 'is_reduced')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:190
+msgid "Return 1 if the optional reduction matrix is applied to the dofs."
+msgstr "オプションの縮約マトリックスが自由度に適用される場合は1を返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:193
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'reduction matrix')``"
+msgstr "``bB = gf_mesh_fem_get(mesh_fem MF, 'reduction matrix')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:195
+msgid "Return the optional reduction matrix."
+msgstr "オプションの縮約行列を返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:198
+msgid "``bB = gf_mesh_fem_get(mesh_fem MF, 'extension matrix')``"
+msgstr "``bB = gf_mesh_fem_get(mesh_fem MF, 'extension matrix')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:200
+msgid "Return the optional extension matrix."
+msgstr "オプションの拡張行列を返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:203
+msgid "``Vr = gf_mesh_fem_get(mesh_fem MF, 'reduce vector', vec V)``"
+msgstr "``Vr = gf_mesh_fem_get(mesh_fem MF, 'reduce vector', vec V)``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:205
+msgid ""
+"Multiply the provided vector V with the extension matrix of the mesh_fem."
+msgstr "提供されたベクトルVにmesh_femの拡張行列を乗算します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:208
+msgid "``Ve = gf_mesh_fem_get(mesh_fem MF, 'extend vector', vec V)``"
+msgstr "``Ve = gf_mesh_fem_get(mesh_fem MF, 'extend vector', vec V)``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:210
+msgid ""
+"Multiply the provided vector V with the reduction matrix of the mesh_fem."
+msgstr "与えられたベクトルVにmesh_femの縮約行列を乗算します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:213
+msgid "``DOFs = gf_mesh_fem_get(mesh_fem MF, 'basic dof on region',mat Rs)``"
+msgstr "``DOFs = gf_mesh_fem_get(mesh_fem MF, 'basic dof on region',mat Rs)``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:215
+msgid ""
+"Return the list of basic dof (before the optional reduction) lying on one of"
+" the mesh regions listed in <literal>Rs</literal>."
+msgstr "<literal>Rs</literal> にリストされているメッシュ領域のいずれかにある基本自由度(任意削減前)のリストを返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:218
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:231
+msgid ""
+"More precisely, this function returns the basic dof whose support is non-"
+"null on one of regions whose #ids are listed in <literal>Rs</literal> (note "
+"that for boundary regions, some dof nodes may not lie exactly on the "
+"boundary, for example the dof of Pk(n,0) lies on the center of the convex, "
+"but the base function in not null on the convex border)."
+msgstr ""
+"より正確には，この関数は <literal>Rs</literal> "
+"(境界領域の場合，一部の節点自由度は正確に境界上に存在しない場合があります．たとえば， Pk(n,0) "
+"の自由度は凸の中心に存在しますが，基底関数は凸境界上でnullではありません)に #ids "
+"がリストされている領域のいずれかにおいて，サポートが非NULLである基本的な自由度を返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:226
+msgid "``DOFs = gf_mesh_fem_get(mesh_fem MF, 'dof on region',mat Rs)``"
+msgstr "``DOFs = gf_mesh_fem_get(mesh_fem MF, 'dof on region',mat Rs)``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:228
+msgid ""
+"Return the list of dof (after the optional reduction) lying on one of the "
+"mesh regions listed in <literal>Rs</literal>."
+msgstr "<literal>Rs</literal> にリストされたメッシュ領域のいずれかに存在する自由度(任意削減後)のリストを返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:238
+msgid ""
+"For a reduced mesh_fem a dof is lying on a region if its potential "
+"corresponding shape function is nonzero on this region. The extension matrix"
+" is used to make the correspondence between basic and reduced dofs."
+msgstr ""
+"縮約されたmesh_femの場合，自由度は対応する形状関数のポテンシャルがこの領域でゼロでない場合に領域上にあります．拡張行列を使用して，基本自由度と縮約自由度間の対応を作ります．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:244
+msgid "``DOFpts = gf_mesh_fem_get(mesh_fem MF, 'dof nodes'[, mat DOFids])``"
+msgstr "``DOFpts = gf_mesh_fem_get(mesh_fem MF, 'dof nodes'[, mat DOFids])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:246
+msgid ""
+"Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof nodes') "
+"instead."
+msgstr "非推奨の機能です．代わりに gf_mesh_fem_get(mesh_fem MF, 'basic dof nodes') を使用します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:249
+msgid ""
+"``DOFpts = gf_mesh_fem_get(mesh_fem MF, 'basic dof nodes'[, mat DOFids])``"
+msgstr ""
+"``DOFpts = gf_mesh_fem_get(mesh_fem MF, 'basic dof nodes'[, mat DOFids])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:251
+msgid "Get location of basic degrees of freedom."
+msgstr "基本自由度の位置を取得します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:253
+msgid ""
+"Return the list of interpolation points for the specified dof #IDs in "
+"<literal>DOFids</literal> (if <literal>DOFids</literal> is omitted, all "
+"basic dof are considered)."
+msgstr ""
+"指定した <literal>DOFids</literal> ( <literal>DOFids</literal> "
+"を省略すると，すべての基本自由度が考慮されます)の自由度 #IDs の補間点のリストを返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:258
+msgid "``DOFP = gf_mesh_fem_get(mesh_fem MF, 'dof partition')``"
+msgstr "``DOFP = gf_mesh_fem_get(mesh_fem MF, 'dof partition')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:260
+msgid "Get the 'dof_partition' array."
+msgstr "'dof_partition' 配列を取得します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:262
+msgid ""
+"Return the array which associates an integer (the partition number) to each "
+"convex of the mesh_fem. By default, it is an all-zero array. The degrees of "
+"freedom of each convex of the mesh_fem are connected only to the dof of "
+"neighboring convexes which have the same partition number, hence it is "
+"possible to create partially discontinuous mesh_fem very easily."
+msgstr ""
+"mesh_femの各凸に整数(パーティション番号)を関連付ける配列を返します．既定では，配列はすべてゼロです．mesh_femの各凸の自由度は，同じパーティション番号を持つ隣接する凸の自由度にのみ接続されるため，部分的に不連続なmesh_femを非常に簡単に作成することができます．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:270
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'save',string filename[, string opt])``"
+msgstr ""
+"``gf_mesh_fem_get(mesh_fem MF, 'save',string filename[, string opt])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:272
+msgid ""
+"Save a mesh_fem in a text file (and optionally its linked mesh object if "
+"<literal>opt</literal> is the string 'with_mesh')."
+msgstr ""
+"mesh_femをテキストファイル(オプションで <literal>opt</literal> が文字列 'with_mesh' "
+"の場合はリンクされたメッシュオブジェクト)に保存します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:276
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'char'[, string opt])``"
+msgstr "``gf_mesh_fem_get(mesh_fem MF, 'char'[, string opt])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:278
+msgid "Output a string description of the mesh_fem."
+msgstr "mesh_femの string description を出力します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:280
+msgid ""
+"By default, it does not include the description of the linked mesh object, "
+"except if <literal>opt</literal> is 'with_mesh'."
+msgstr ""
+"デフォルトでは， <literal>opt</literal> が 'with_mesh' "
+"の場合を除き，リンクされたメッシュオブジェクトの説明は含まれません．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:284
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'display')``"
+msgstr "``gf_mesh_fem_get(mesh_fem MF, 'display')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:286
+msgid "displays a short summary for a mesh_fem object."
+msgstr "mesh_femオブジェクトの簡単な概要が表示されます．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:289
+msgid "``m = gf_mesh_fem_get(mesh_fem MF, 'linked mesh')``"
+msgstr "``m = gf_mesh_fem_get(mesh_fem MF, 'linked mesh')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:291
+msgid "Return a reference to the mesh object linked to <literal>mf</literal>."
+msgstr "<literal>mf</literal> にリンクされたmeshオブジェクトへの参照を返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:294
+msgid "``m = gf_mesh_fem_get(mesh_fem MF, 'mesh')``"
+msgstr "``m = gf_mesh_fem_get(mesh_fem MF, 'mesh')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:296
+msgid ""
+"Return a reference to the mesh object linked to <literal>mf</literal>. "
+"(identical to gf_mesh_get(mesh M, 'linked mesh'))"
+msgstr ""
+"<literal>mf</literal> にリンクされたメッシュオブジェクトへの参照を返します( gf_mesh_get(mesh M, "
+"'linked mesh') と同一です)．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:300
+msgid ""
+"``gf_mesh_fem_get(mesh_fem MF, 'export to vtk',string filename, ... "
+"['ascii'], U, 'name'...)``"
+msgstr ""
+"``gf_mesh_fem_get(mesh_fem MF, 'export to vtk',string filename, ... "
+"['ascii'], U, 'name'...)``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:302
+msgid "Export a mesh_fem and some fields to a vtk file."
+msgstr "mesh_femと一部のフィールドをvtkファイルに書き出します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:304
+msgid ""
+"The FEM and geometric transformations will be mapped to order 1 or 2 "
+"isoparametric Pk (or Qk) FEMs (as VTK does not handle higher order "
+"elements). If you need to represent high-order FEMs or high-order geometric "
+"transformations, you should consider gf_slice_get(slice S, 'export to vtk')."
+msgstr ""
+"FEMおよび幾何変換は，次数1または2のアイソパラメトリックPk(またはQk)FEM(VTKでは上位の要素を処理できないため)にマッピングされます．高次FEMまたは高次幾何変換を表す必要がある場合は"
+" gf_slice_get(slice S, 'export to vtk') を考慮する必要があります．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:311
+msgid ""
+"``gf_mesh_fem_get(mesh_fem MF, 'export to vtu',string filename, ... "
+"['ascii'], U, 'name'...)``"
+msgstr ""
+"``gf_mesh_fem_get(mesh_fem MF, 'export to vtu',string filename, ... "
+"['ascii'], U, 'name'...)``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:313
+msgid "Export a mesh_fem and some fields to a vtu file."
+msgstr "mesh_femおよび一部のフィールドをvtuファイルにエクスポートします．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:315
+msgid ""
+"The FEM and geometric transformations will be mapped to order 1 or 2 "
+"isoparametric Pk (or Qk) FEMs (as VTK(XML) does not handle higher order "
+"elements). If you need to represent high-order FEMs or high-order geometric "
+"transformations, you should consider gf_slice_get(slice S, 'export to vtu')."
+msgstr ""
+"FEMおよび幾何変換は，次数1または2のアイソパラメトリックPk(またはQk)FEM(VTK(XML)では上位の要素を処理できないため)にマッピングされます．高次FEMまたは高次幾何変換を表す必要がある場合は"
+" gf_slice_get(slice S, 'export to vtu') を考慮する必要があります．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:322
+msgid ""
+"``gf_mesh_fem_get(mesh_fem MF, 'export to dx',string filename, ...['as', "
+"string mesh_name][,'edges']['serie',string serie_name][,'ascii'][,'append'],"
+" U, 'name'...)``"
+msgstr ""
+"``gf_mesh_fem_get(mesh_fem MF, 'export to dx',string filename, ...['as', "
+"string mesh_name][,'edges']['serie',string serie_name][,'ascii'][,'append'],"
+" U, 'name'...)``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:324
+msgid "Export a mesh_fem and some fields to an OpenDX file."
+msgstr "mesh_femと一部のフィールドをOpenDXファイルに書き出します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:326
+msgid ""
+"This function will fail if the mesh_fem mixes different convex types (i.e. "
+"quads and triangles), or if OpenDX does not handle a specific element type "
+"(i.e. prism connections are not known by OpenDX)."
+msgstr ""
+"mesh_femでさまざまな凸が混在する場合(つまり，四角形と三角形)，またはOpenDXで特定の要素型が処理されない(つまり，プリズム接続はOpenDXでは認識されない)場合，この関数は失敗します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:330
+msgid ""
+"The FEM will be mapped to order 1 Pk (or Qk) FEMs. If you need to represent "
+"high-order FEMs or high-order geometric transformations, you should consider"
+" gf_slice_get(slice S, 'export to dx')."
+msgstr ""
+"FEMは次数1のPk(またはQk)FEMにマップされます．高次FEMまたは高次幾何変換を表す必要がある場合は，gf_slice_get(slice S,"
+" 'export to dx') を使用する必要があります．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:335
+msgid ""
+"``gf_mesh_fem_get(mesh_fem MF, 'export to pos',string filename[, string "
+"name][[,mesh_fem mf1], mat U1, string nameU1[[,mesh_fem mf2], mat U2, string"
+" nameU2,...]])``"
+msgstr ""
+"``gf_mesh_fem_get(mesh_fem MF, 'export to pos',string filename[, string "
+"name][[,mesh_fem mf1], mat U1, string nameU1[[,mesh_fem mf2], mat U2, string"
+" nameU2,...]])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:337
+msgid "Export a mesh_fem and some fields to a pos file."
+msgstr "mesh_femと一部のフィールドをposファイルに書き出します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:339
+msgid ""
+"The FEM and geometric transformations will be mapped to order 1 "
+"isoparametric Pk (or Qk) FEMs (as GMSH does not handle higher order "
+"elements)."
+msgstr ""
+"FEMおよび幾何学的変換は，1次アイソパラメトリックPk(またはQk)FEM(GMSHはより高次の要素を処理しないため)にマッピングされます．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:344
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'dof_from_im',mesh_im mim[, int p])``"
+msgstr "``gf_mesh_fem_get(mesh_fem MF, 'dof_from_im',mesh_im mim[, int p])``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:346
+msgid ""
+"Return a selection of dof who contribute significantly to the mass-matrix "
+"that would be computed with <literal>mf</literal> and the integration method"
+" <literal>mim</literal>."
+msgstr ""
+"<literal>mf</literal> と積分法 <literal>mim</literal> "
+"で計算される質量行列に大きく寄与する自由度を選択し返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:350
+msgid ""
+"<literal>p</literal> represents the dimension on what the integration method"
+" operates (default <literal>p = mesh dimension</literal>)."
+msgstr ""
+"<literal>p</literal> は積分法が作用する次元(デフォルトは <literal>p = メッシュの次元</literal> "
+")を表します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:353
+msgid ""
+"IMPORTANT: you still have to set a valid integration method on the convexes "
+"which are not crosses by the levelset!"
+msgstr "重要:levelsetと交差しない凸には，有効な積分法を設定する必要があります!"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:357
+msgid ""
+"``U = gf_mesh_fem_get(mesh_fem MF, 'interpolate_convex_data',mat Ucv)``"
+msgstr ""
+"``U = gf_mesh_fem_get(mesh_fem MF, 'interpolate_convex_data',mat Ucv)``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:359
+msgid ""
+"Interpolate data given on each convex of the mesh to the mesh_fem dof. The "
+"mesh_fem has to be lagrangian, and should be discontinuous (typically an "
+"FEM_PK(N,0) or FEM_QK(N,0) should be used)."
+msgstr ""
+"メッシュの各凸で指定されたデータをmesh_femの自由度に補間します．mesh_femはlagrangianである必要があり，不連続である必要があります(通常は"
+" FEM_PK(N,0) または FEM_QK(N,0) を使用する必要があります)．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:363
+msgid ""
+"The last dimension of the input vector Ucv should have gf_mesh_get(mesh M, "
+"'max cvid') elements."
+msgstr "入力ベクトルUcvの最後の次元には gf_mesh_get(mesh M, 'max cvid') の要素が必要です．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:366
+msgid ""
+"Example of use: gf_mesh_fem_get(mesh_fem MF, 'interpolate_convex_data', "
+"gf_mesh_get(mesh M, 'quality'))"
+msgstr ""
+"使用例: gf_mesh_fem_get(mesh_fem MF, 'interpolate_convex_data', "
+"gf_mesh_get(mesh M, 'quality'))"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:369
+msgid "``z = gf_mesh_fem_get(mesh_fem MF, 'memsize')``"
+msgstr "``z = gf_mesh_fem_get(mesh_fem MF, 'memsize')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:371
+msgid "Return the amount of memory (in bytes) used by the mesh_fem object."
+msgstr "mesh_fem オブジェクトが使用するメモリ量(バイト単位)を返します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:373
+msgid "The result does not take into account the linked mesh object."
+msgstr "この結果では，リンクされたメッシュオブジェクトは考慮されません．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:376
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'has_linked_mesh_levelset')``"
+msgstr "``gf_mesh_fem_get(mesh_fem MF, 'has_linked_mesh_levelset')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:378
+msgid "Is a mesh_fem_level_set or not."
+msgstr "mesh_fem_level_setかどうかを確認します．"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:381
+msgid "``gf_mesh_fem_get(mesh_fem MF, 'linked_mesh_levelset')``"
+msgstr "``gf_mesh_fem_get(mesh_fem MF, 'linked_mesh_levelset')``"
+
+#: ../source/scilab/cmdref_gf_mesh_fem_get.rst:383
+msgid "if it is a mesh_fem_level_set gives the linked mesh_level_set."
+msgstr "mesh_fem_level_set の場合はリンクされた mesh_level_set を返します．"
