@@ -51,6 +51,7 @@ jobs:
         sudo apt-get install -y --no-install-recommends python3-pip
         sudo apt-get install -y --no-install-recommends sphinx-intl
         sudo apt-get install -y --no-install-recommends python3-venv
+        sudo apt-get install -y --no-install-recommends python3-getfem++
         curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
         mv tx /usr/local/bin/tx
     - name: update
@@ -68,9 +69,7 @@ jobs:
         pip3 install -r ./requirements.txt
         cd getfem
         bash autogen.sh
-        ./configure --prefix=/home/runner/work/venv --with-pic
-        make -j8  >  make.log
-        sudo make install
+        ./configure --with-pic
         sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
@@ -98,7 +97,6 @@ jobs:
         git config --global user.email $EMAIL
         git config --global user.name $NAME
     - name: commit
-      if: contains(github.event.head_commit.message, '[ci skip]') == false && contains(github.ref, 'master')
       env:
         ORGANIZATION: getfem-doc
         REPO: getfem-doc-translations
@@ -110,4 +108,4 @@ jobs:
         $HTML_URL"
         git remote -v
         git remote add github git@github.com:$ORGANIZATION/$REPO.git
-        git push github master
+        git push github HEAD:maint/cleanup-ci
