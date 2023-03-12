@@ -1,0 +1,1190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# 今井俊介 <imai.shunsuke@ark-info-sys.co.jp>, 2019
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-12 06:31+0000\n"
+"PO-Revision-Date: 2018-07-16 07:12+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/documenting/markup.rst:4
+msgid "Additional Markup Constructs"
+msgstr "追加のマークアップ構成"
+
+#: ../source/documenting/markup.rst:6
+msgid ""
+"Sphinx adds a lot of new directives and interpreted text roles to standard "
+"reST markup.  This section contains the reference material for these "
+"facilities. Documentation for \"standard\" reST constructs is not included "
+"here, though they are used in the Python documentation."
+msgstr ""
+"Sphinxは，多くの新しいディレクティブと解釈されたテキストの役割を標準のreStructuredTextマークアップに追加します．このセクションには，これらの機能の参照資料が含まれています．"
+" Pythonのドキュメントで使用されていますが，「標準」のreStructuredTextコンストラクトのドキュメントはここには含まれていません．"
+
+#: ../source/documenting/markup.rst:13
+msgid ""
+"This is just an overview of Sphinx' extended markup capabilities; full "
+"coverage can be found in `its own documentation "
+"<http://sphinx.pocoo.org/contents.html>`_."
+msgstr ""
+"これは，Sphinxの拡張マークアップ機能の概要です．機能全体の範囲は，Sphinxのドキュメント<http://sphinx.pocoo.org/contents.html>`"
+" _にあります．"
+
+#: ../source/documenting/markup.rst:19
+msgid "Meta-information markup"
+msgstr "メタ情報のマークアップ"
+
+#: ../source/documenting/markup.rst:23
+msgid ""
+"Identifies the author of the current section.  The argument should include "
+"the author's name such that it can be used for presentation (though it "
+"isn't) and email address.  The domain name portion of the address should be "
+"lower case.  Example::"
+msgstr ""
+"現在のセクションの作成者を識別します．引数には，プレゼンテーションに使用できる（ただしそうではない）作成者の名前と電子メールアドレスを含める必要があります．アドレスのドメイン名部分は小文字にする必要があります．例::"
+
+#: ../source/documenting/markup.rst:30
+msgid ""
+"Currently, this markup isn't reflected in the output in any way, but it "
+"helps keep track of contributions."
+msgstr "現在，このマークアップは出力には一切反映されていませんが，貢献していただいた箇所を追跡するのに役立ちます．"
+
+#: ../source/documenting/markup.rst:35
+msgid "Module-specific markup"
+msgstr "モジュール固有のマークアップ"
+
+#: ../source/documenting/markup.rst:37
+msgid ""
+"The markup described in this section is used to provide information about a "
+"module being documented.  Each module should be documented in its own file. "
+"Normally this markup appears after the title heading of that file; a typical"
+" file might start like this::"
+msgstr ""
+"このセクションで説明するマークアップは，文書化されているモジュールに関する情報を提供するために使用されます．各モジュールは，そのモジュールのファイルに文書化する必要があります．通常，このマークアップはそのファイルのタイトルヘッダーの後に表示されます．典型的なファイルは次のように始まります::"
+
+#: ../source/documenting/markup.rst:51
+msgid ""
+"As you can see, the module-specific markup consists of two directives, the "
+"``module`` directive and the ``moduleauthor`` directive."
+msgstr ""
+"ご覧のとおり，モジュール固有のマークアップは，2つのディレクティブ，「module」ディレクティブと「moduleauthor」ディレクティブで構成されています．"
+
+#: ../source/documenting/markup.rst:56
+msgid ""
+"This directive marks the beginning of the description of a module (or "
+"package submodule, in which case the name should be fully qualified, "
+"including the package name)."
+msgstr ""
+"このディレクティブは，モジュール（またはパッケージサブモジュール，この場合，パッケージ名を含む名前を完全修飾する必要があります）の説明の開始をマークします．"
+
+#: ../source/documenting/markup.rst:60
+msgid ""
+"The ``platform`` option, if present, is a comma-separated list of the "
+"platforms on which the module is available (if it is available on all "
+"platforms, the option should be omitted).  The keys are short identifiers; "
+"examples that are in use include \"IRIX\", \"Mac\", \"Windows\", and "
+"\"Unix\".  It is important to use a key which has already been used when "
+"applicable."
+msgstr ""
+"`` platform``オプションは，存在する場合，モジュールが利用可能なプラットフォームのコンマ区切りリストです（すべてのプラットフォームで利用可能な場合，本オプションは省略したほうがよいです）．キーは短い識別子です．使用されている例には，「IRIX」，「Mac」，「Windows」，および「Unix」が含まれます．該当する場合は，すでに使用されているキーを使用することが重要です．\n"
+" "
+
+#: ../source/documenting/markup.rst:66
+msgid ""
+"The ``synopsis`` option should consist of one sentence describing the "
+"module's purpose -- it is currently only used in the Global Module Index."
+msgstr ""
+"`` synopsis``オプションは，モジュールの目的を説明する1つの文で構成する必要があります-現在，Global Module "
+"Indexでのみ使用されています．"
+
+#: ../source/documenting/markup.rst:69
+msgid ""
+"The ``deprecated`` option can be given (with no value) to mark a module as "
+"deprecated; it will be designated as such in various locations then."
+msgstr ""
+"``deprecated`` "
+"オプションは，モジュールをdeprecatedとマークするために(値のない)指定をすることができます．各場所で指定されます．"
+
+#: ../source/documenting/markup.rst:74
+msgid ""
+"The ``moduleauthor`` directive, which can appear multiple times, names the "
+"authors of the module code, just like ``sectionauthor`` names the author(s) "
+"of a piece of documentation.  It too does not result in any output "
+"currently."
+msgstr ""
+"``moduleauthor`` 命令は複数回現れることがあり， ``sectionauthor`` "
+"が(複数の)文書の作者を指定するのと同じように，モジュールコードの作者を指定します．この場合も，現在は何も出力されません．"
+
+#: ../source/documenting/markup.rst:80
+msgid ""
+"It is important to make the section title of a module-describing file "
+"meaningful since that value will be inserted in the table-of-contents trees "
+"in overview files."
+msgstr "モジュール記述ファイルのセクションタイトルは，概要ファイルの目次ツリーに挿入されるため，意味のあるものにすることが重要です．"
+
+#: ../source/documenting/markup.rst:86
+msgid "Information units"
+msgstr "情報単位"
+
+#: ../source/documenting/markup.rst:88
+msgid ""
+"There are a number of directives used to describe specific features provided"
+" by modules.  Each directive requires one or more signatures to provide "
+"basic information about what is being described, and the content should be "
+"the description.  The basic version makes entries in the general index; if "
+"no index entry is desired, you can give the directive option flag "
+"``:noindex:``.  The following example shows all of the features of this "
+"directive type::"
+msgstr ""
+"モジュールが提供する特定の機能を記述するために使用される多くのディレクティブがあります．各ディレクティブでは，記述されている内容に関する基本情報を提供するために1つ以上の記号が必要であり，その内容は記述である必要があります．基本バージョンでは，一般インデックスにエントリが作成されます．インデックスエントリが必要ない場合は，ディレクティブオプションフラグ"
+" ``:noindex:`` を指定できます．次の例は，このディレクティブタイプのすべての機能を示しています．"
+
+#: ../source/documenting/markup.rst:101
+msgid ""
+"The signatures of object methods or data attributes should always include "
+"the type name (``.. method:: FileInput.input(...)``), even if it is obvious "
+"from the context which type they belong to; this is to enable consistent "
+"cross-references.  If you describe methods belonging to an abstract "
+"protocol, such as \"context managers\", include a (pseudo-)type name too to "
+"make the index entries more informative."
+msgstr ""
+"オブジェクトメソッドまたはデータ属性の記号には，それらがどのタイプに属しているかがコンテキストから明らかな場合でも，常に型名(``.. method::"
+" FileInput.input(...)``)を含める必要があります．これにより，一貫した相互参照が可能になります． \"context "
+"managers\" などの抽象プロトコルに属するメソッドを記述する場合は，(擬似)タイプ名も含めて，インデックスエントリの情報量を増やします．"
+
+#: ../source/documenting/markup.rst:108
+msgid "The directives are:"
+msgstr "ディレクティブは次のとおりです．"
+
+#: ../source/documenting/markup.rst:112
+msgid ""
+"Describes a C++ function. The signature should be given as in C++, e.g.::"
+msgstr "C++関数について説明します．記号は次のようにC++で与えられるべきです．"
+
+#: ../source/documenting/markup.rst:118
+msgid "Describes a C function. The signature should be given as in C, e.g.::"
+msgstr "C関数について説明します．記名は次のようにCで与えられるべきです．"
+
+#: ../source/documenting/markup.rst:122
+msgid ""
+"This is also used to describe function-like preprocessor macros.  The names "
+"of the arguments should be given so they may be used in the description."
+msgstr "関数型プリプロセッサマクロの記述にも使用されます．引数の名前は，説明で使用できるように指定する必要があります．"
+
+#: ../source/documenting/markup.rst:125
+msgid ""
+"Note that you don't have to backslash-escape asterisks in the signature, as "
+"it is not parsed by the reST inliner."
+msgstr "シグネチャはreSTインラインで解析されないため，バックスラッシュでエスケープするアスタリスクは必要ありません．"
+
+#: ../source/documenting/markup.rst:130
+msgid "Describes a C struct member. Example signature::"
+msgstr "C構造体メンバについて説明します．記名の例"
+
+#: ../source/documenting/markup.rst:134
+msgid ""
+"The text of the description should include the range of values allowed, how "
+"the value should be interpreted, and whether the value can be changed. "
+"References to structure members in text should use the ``member`` role."
+msgstr ""
+"説明のテキストには，許可される値の範囲，値の解釈方法，および値を変更できるかどうかを含める必要があります．構造体のメンバをテキストで参照する場合は， "
+"``member`` ロールを使用する必要があります．"
+
+#: ../source/documenting/markup.rst:140
+msgid ""
+"Describes a \"simple\" C macro.  Simple macros are macros which are used for"
+" code expansion, but which do not take arguments so cannot be described as "
+"functions.  This is not to be used for simple constant definitions.  "
+"Examples of its use in the Python documentation include ``PyObject_HEAD`` "
+"and ``Py_BEGIN_ALLOW_THREADS``."
+msgstr ""
+"\"simple\" "
+"Cマクロについて説明します．単純なマクロは，コードの展開に使用されるマクロですが，引数を取らないため関数として記述できません．これは，単純な定数の定義には使用できません．Pythonマニュアルでの使用例には，"
+" ``PyObject_HEAD`` や ``Py_BEGIN_ALLOW_THREADS`` などがあります．"
+
+#: ../source/documenting/markup.rst:148
+msgid "Describes a C type. The signature should just be the type name."
+msgstr "Cの型を記述します．記名は型名だけでなければなりません．"
+
+#: ../source/documenting/markup.rst:152
+msgid ""
+"Describes a global C variable.  The signature should include the type, such "
+"as::"
+msgstr "グローバルC変数を記述します．記名には，次のような種類を含める必要があります．"
+
+#: ../source/documenting/markup.rst:159
+msgid ""
+"Describes global data in a module, including both variables and values used "
+"as \"defined constants.\"  Class and object attributes are not documented "
+"using this environment."
+msgstr ""
+"\"定義された定数\" "
+"クラスおよびオブジェクト属性として使用される変数と値を含む，モジュール内のグローバルデータについては，この環境での説明はありません．"
+
+#: ../source/documenting/markup.rst:165
+msgid ""
+"Describes an exception class.  The signature can, but need not include "
+"parentheses with constructor arguments."
+msgstr "例外クラスについて説明します．署名には，コンストラクタ引数とともに括弧を含めることができますが，必ずしも含める必要はありません．"
+
+#: ../source/documenting/markup.rst:170
+msgid ""
+"Describes a module-level function.  The signature should include the "
+"parameters, enclosing optional parameters in brackets.  Default values can "
+"be given if it enhances clarity.  For example::"
+msgstr ""
+"モジュールレベルの関数について説明します．署名には，オプションのパラメータを括弧で囲んだパラメータを含める必要があります．わかりやすくするために，デフォルト値を指定できます．次に例を示します．"
+
+#: ../source/documenting/markup.rst:176
+msgid ""
+"Object methods are not documented using this directive. Bound object methods"
+" placed in the module namespace as part of the public interface of the "
+"module are documented using this, as they are equivalent to normal functions"
+" for most purposes."
+msgstr ""
+"このディレクティブを使用したオブジェクトメソッドの説明はありません．モジュールの公開インタフェースの一部としてモジュール名前空間に配置されたバウンドオブジェクトメソッドは，ほとんどの目的で通常の関数と同等であるため，これを使用して記述されます．"
+
+#: ../source/documenting/markup.rst:181
+msgid ""
+"The description should include information about the parameters required and"
+" how they are used (especially whether mutable objects passed as parameters "
+"are modified), side effects, and possible exceptions.  A small example may "
+"be provided."
+msgstr ""
+"説明には，必要なパラメータとその使用方法(特に，パラメータとして渡された可変オブジェクトが変更されたかどうか)，副作用，および考えられる例外に関する情報を含める必要があります．簡単な例を挙げることができます．"
+
+#: ../source/documenting/markup.rst:188
+msgid ""
+"Describes a class.  The signature can include parentheses with parameters "
+"which will be shown as the constructor arguments."
+msgstr "クラスを記述します．記名には，コンストラクター引数として表示されるパラメーターを持つ括弧を含めることができます．"
+
+#: ../source/documenting/markup.rst:193
+msgid ""
+"Describes an object data attribute.  The description should include "
+"information about the type of the data to be expected and whether it may be "
+"changed directly."
+msgstr "オブジェクトデータ属性について説明します．記述には，予想されるデータの種類及びそれを直接変更できるかどうかに関する情報を含めます．"
+
+#: ../source/documenting/markup.rst:199
+msgid ""
+"Describes an object method.  The parameters should not include the ``self`` "
+"parameter.  The description should include similar information to that "
+"described for ``function``."
+msgstr ""
+"オブジェクトメソッドについて説明します．パラメータには ``self`` パラメータを含めないでください．説明には， ``function`` "
+"の説明と同様の情報を含める必要があります．"
+
+#: ../source/documenting/markup.rst:205
+msgid "Describes a Python ``bytecode`` instruction."
+msgstr "Pythonの ``bytecode`` 命令について説明します．"
+
+#: ../source/documenting/markup.rst:209
+msgid ""
+"Describes a command line option or switch.  Option argument names should be "
+"enclosed in angle brackets.  Example::"
+msgstr "コマンドラインオプションまたはスイッチについて説明します．オプションの引数名は山括弧で囲む必要があります．例"
+
+#: ../source/documenting/markup.rst:218
+msgid "Describes an environment variable that Python uses or defines."
+msgstr "Pythonが使用または定義する環境変数について説明します．"
+
+#: ../source/documenting/markup.rst:221
+msgid "There is also a generic version of these directives:"
+msgstr "次のディレクティブの汎用バージョンもあります．"
+
+#: ../source/documenting/markup.rst:225
+msgid ""
+"This directive produces the same formatting as the specific ones explained "
+"above but does not create index entries or cross-referencing targets.  It is"
+" used, for example, to describe the directives in this document. Example::"
+msgstr ""
+"このディレクティブは，前述の特定の書式設定と同じ書式設定を生成しますが，索引エントリや相互参照ターゲットは作成しません．たとえば，このドキュメントのディレクティブを記述するために使用されます．例えば"
+
+#: ../source/documenting/markup.rst:235
+msgid "Showing code examples"
+msgstr "コード例の表示"
+
+#: ../source/documenting/markup.rst:237
+msgid ""
+"Examples of Python source code or interactive sessions are represented using"
+" standard reST literal blocks.  They are started by a ``::`` at the end of "
+"the preceding paragraph and delimited by indentation."
+msgstr ""
+"Pythonソースコードや対話型セッションの例は，標準的なreSTリテラルブロックを使って表現されます．それらは，前の段落の終わりにある ``::`` "
+"で始まり，インデントで区切られます．"
+
+#: ../source/documenting/markup.rst:241
+msgid ""
+"Representing an interactive session requires including the prompts and "
+"output along with the Python code.  No special markup is required for "
+"interactive sessions.  After the last line of input or output presented, "
+"there should not be an \"unused\" primary prompt; this is an example of what"
+" *not* to do::"
+msgstr ""
+"対話型のセッションを表現するには，プロンプトと出力をPythonコードとともに含める必要があります．対話型のセッションでは，特別なマークアップは必要ありません．入力または出力の最後の行が表示された後は，"
+" \"未使用\" プライマリプロンプトは表示されません．これは， *しない* ことの例です．"
+
+#: ../source/documenting/markup.rst:250
+msgid "Syntax highlighting is handled in a smart way:"
+msgstr "構文の強調表示は，次のようなスマートな方法で処理されます．"
+
+#: ../source/documenting/markup.rst:252
+msgid ""
+"There is a \"highlighting language\" for each source file.  Per default, "
+"this is ``'python'`` as the majority of files will have to highlight Python "
+"snippets."
+msgstr ""
+"ソースファイルごとに \"highlighting language\" "
+"があります．デフォルトでは，ほとんどのファイルでPythonスニペットをハイライトする必要があるため，これは ``'python'`` です．"
+
+#: ../source/documenting/markup.rst:256
+msgid ""
+"Within Python highlighting mode, interactive sessions are recognized "
+"automatically and highlighted appropriately."
+msgstr "Pythonのハイライトモードでは，インタラクティブセッションが自動的に認識され，適切にハイライト表示されます．"
+
+#: ../source/documenting/markup.rst:259
+msgid ""
+"The highlighting language can be changed using the ``highlight`` directive, "
+"used as follows::"
+msgstr "ハイライト表示の言語は，次のように ``highlightlang`` ディレクティブを使用して変更できます．"
+
+#: ../source/documenting/markup.rst:264
+msgid ""
+"This language is used until the next ``highlight`` directive is encountered."
+msgstr "この言語は，次の ``highlight`` ディレクティブが検出されるまで使用されます．"
+
+#: ../source/documenting/markup.rst:267
+msgid "The values normally used for the highlighting language are:"
+msgstr "強調表示言語に通常使用される値は次のとおりです．"
+
+#: ../source/documenting/markup.rst:269
+msgid "``python`` (the default)"
+msgstr "``python`` (デフォルト)"
+
+#: ../source/documenting/markup.rst:270
+msgid "``c``"
+msgstr "``c``"
+
+#: ../source/documenting/markup.rst:271
+msgid "``rest``"
+msgstr "``rest``"
+
+#: ../source/documenting/markup.rst:272
+msgid "``none`` (no highlighting)"
+msgstr "``none`` (ハイライトなし)"
+
+#: ../source/documenting/markup.rst:274
+msgid ""
+"If highlighting with the current language fails, the block is not "
+"highlighted in any way."
+msgstr "現在の言語でのハイライト表示に失敗した場合，ブロックはハイライト表示されません．"
+
+#: ../source/documenting/markup.rst:277
+msgid ""
+"Longer displays of verbatim text may be included by storing the example text"
+" in an external file containing only plain text.  The file may be included "
+"using the ``literalinclude`` directive. [1]_ For example, to include the "
+"Python source file :file:`example.py`, use::"
+msgstr ""
+"プレーンテキストのみを含む外部ファイルにサンプルテキストを保存することで，より長い逐語的テキストの表示を含めることができます．ファイルは "
+"``literalinclude`` 指令を使用して含めることができる． [1]_ たとえば，Pythonソースファイル "
+":file:`example.py` を含めるには，次のように指定します．"
+
+#: ../source/documenting/markup.rst:284
+msgid ""
+"The file name is relative to the current file's path.  Documentation-"
+"specific include files should be placed in the ``Doc/includes`` "
+"subdirectory."
+msgstr ""
+"ファイル名は，現在のファイルのパスからの相対パスです．ドキュメント固有のインクルードファイルは，  ``Doc/includes`` "
+"サブディレクトリに置く必要があります．"
+
+#: ../source/documenting/markup.rst:289
+msgid "Inline markup"
+msgstr "インラインマークアップ"
+
+#: ../source/documenting/markup.rst:291
+msgid ""
+"As said before, Sphinx uses interpreted text roles to insert semantic markup"
+" in documents."
+msgstr "前述したように，Sphinxはインタープリターされたテキストロールを使用して，文書にセマンティックmarkupを挿入します．"
+
+#: ../source/documenting/markup.rst:294
+msgid ""
+"Names of local variables, such as function/method arguments, are an "
+"exception, they should be marked simply with ``*var*``."
+msgstr "関数/メソッド引数のようなローカル変数の名前は例外であり，単純に ``*var*`` と印をつけるべきです．"
+
+#: ../source/documenting/markup.rst:297
+msgid "For all other roles, you have to write ``:rolename:`content```."
+msgstr "他の全てのロールについては， ``:rolename:`content``` と書かなければなりません．"
+
+#: ../source/documenting/markup.rst:299
+msgid ""
+"There are some additional facilities that make cross-referencing roles more "
+"versatile:"
+msgstr "クロスリファレンスの役割をより汎用的にする機能がいくつか追加されています．"
+
+#: ../source/documenting/markup.rst:302
+msgid ""
+"You may supply an explicit title and reference target, like in reST direct "
+"hyperlinks: ``:role:`title <target>``` will refer to *target*, but the link "
+"text will be *title*."
+msgstr ""
+"reSTダイレクトハイパーリンクのように，タイトルと参照先を明示的に指定できます． ``:role:`title <target>``` は "
+"*target* を参照しますが，リンクテキストは *title* になります．"
+
+#: ../source/documenting/markup.rst:306
+msgid ""
+"If you prefix the content with ``!``, no reference/hyperlink will be "
+"created."
+msgstr "コンテンツの先頭に ``!`` を付けると，参照やハイパーリンクは作成されません．"
+
+#: ../source/documenting/markup.rst:308
+msgid ""
+"For the Python object roles, if you prefix the content with ``~``, the link "
+"text will only be the last component of the target.  For example, "
+"``:meth:`~Queue.Queue.get``` will refer to ``Queue.Queue.get`` but only "
+"display ``get`` as the link text."
+msgstr ""
+"Pythonオブジェクトロールの場合，コンテンツの先頭に ``~` を付けると，リンクテキストはターゲットの最後のコンポーネントになります．たとえば， "
+"``:meth:`~Queue.Queue.get``` は ``Queue.Queue.get`` を参照しますが， ``get`` "
+"だけをリンクテキストとして表示します．"
+
+#: ../source/documenting/markup.rst:313
+msgid ""
+"In HTML output, the link's ``title`` attribute (that is e.g. shown as a "
+"tool-tip on mouse-hover) will always be the full target name."
+msgstr "HTML出力では，リンクの ``title`` 属性(マウスをかざすとツールチップとして表示される)は常に完全なターゲット名となります．"
+
+#: ../source/documenting/markup.rst:316
+msgid ""
+"The following roles refer to objects in modules and are possibly hyperlinked"
+" if a matching identifier is found:"
+msgstr "次のロールはモジュール内のオブジェクトを参照し，一致する識別子が見つかった場合はハイパーリンクが設定されることがあります．"
+
+#: ../source/documenting/markup.rst:321
+msgid ""
+"The name of a module; a dotted name may be used.  This should also be used "
+"for package names."
+msgstr "モジュールの名前．ドット名を使用できます．パッケージ名にも使用してください．"
+
+#: ../source/documenting/markup.rst:326
+msgid ""
+"The name of a Python function; dotted names may be used.  The role text "
+"should not include trailing parentheses to enhance readability.  The "
+"parentheses are stripped when searching for identifiers."
+msgstr ""
+"Python関数の名前．ドット名を使用できます．読みやすさを向上させるために，ロールテキストに末尾の括弧を含めないでください．識別子を検索するときに括弧が取り除かれます．"
+
+#: ../source/documenting/markup.rst:332
+msgid "The name of a module-level variable or constant."
+msgstr "モジュールレベルの変数または定数の名前です．"
+
+#: ../source/documenting/markup.rst:336
+msgid ""
+"The name of a \"defined\" constant.  This may be a C-language ``#define`` or"
+" a Python variable that is not intended to be changed."
+msgstr "\"定義済み\" 定数の名前．これは，C言語の ``#define`` または変更を意図していないPython変数である可能性があります．"
+
+#: ../source/documenting/markup.rst:341
+msgid "A class name; a dotted name may be used."
+msgstr "クラス名．ドット名を使用できます．"
+
+#: ../source/documenting/markup.rst:345
+msgid ""
+"The name of a method of an object.  The role text should include the type "
+"name and the method name.  A dotted name may be used."
+msgstr "オブジェクトのメソッドの名前．ロールテキストには，タイプ名とメソッド名を含める必要があります．ドット名を使用できます．"
+
+#: ../source/documenting/markup.rst:350
+msgid "The name of a data attribute of an object."
+msgstr "オブジェクトのデータ属性の名前．"
+
+#: ../source/documenting/markup.rst:354
+msgid "The name of an exception. A dotted name may be used."
+msgstr "例外の名前．ドット名を使用できます．"
+
+#: ../source/documenting/markup.rst:356
+msgid ""
+"The name enclosed in this markup can include a module name and/or a class "
+"name. For example, ``:func:`filter``` could refer to a function named "
+"``filter`` in the current module, or the built-in function of that name.  In"
+" contrast, ``:func:`foo.filter``` clearly refers to the ``filter`` function "
+"in the ``foo`` module."
+msgstr ""
+"このmarkupで囲まれた名前には，モジュール名やクラス名を含めることができます．たとえば， ``:func:`filter``` "
+"は，現在のモジュールの ``filter`` "
+"という名前の関数，またはその名前の組み込み関数を参照することができます．対照的に，``:func:`foo.filter``` は ``foo`` "
+"モジュールの ``filter`` 機能を明確に指しています．"
+
+#: ../source/documenting/markup.rst:362
+msgid ""
+"Normally, names in these roles are searched first without any further "
+"qualification, then with the current module name prepended, then with the "
+"current module and class name (if any) prepended.  If you prefix the name "
+"with a dot, this order is reversed.  For example, in the documentation of "
+"the :mod:`codecs` module, ``:func:`open``` always refers to the built-in "
+"function, while ``:func:`.open``` refers to :func:`codecs.open`."
+msgstr ""
+"通常，これらの役割の名前は，最初に修飾子なしで検索され，次に現在のモジュール名が追加され，次に現在のモジュールとクラス名(存在する場合)が追加されます．名前の前にドットを付けると，この順序は逆になります．たとえば，"
+" :mod:`codecs` モジュールのドキュメントでは， ``:func:`open```は常に組み込み関数を指し， "
+"``:func:`.open``` は :func:`codecs.open` を指しています．"
+
+#: ../source/documenting/markup.rst:369
+msgid ""
+"A similar heuristic is used to determine whether the name is an attribute of"
+" the currently documented class."
+msgstr "同様のヒューリスティックを使用して，名前が現在文書化されているクラスの属性であるかどうかを判別します．"
+
+#: ../source/documenting/markup.rst:372
+msgid ""
+"The following roles create cross-references to C-language constructs if they"
+" are defined in the API documentation:"
+msgstr "次の役割は，APIドキュメントで定義されている場合，C言語構文への相互参照を作成します．"
+
+#: ../source/documenting/markup.rst:377
+msgid "The name of a C-language variable."
+msgstr "C言語変数の名前．"
+
+#: ../source/documenting/markup.rst:381
+msgid ""
+"The name of a C-language function. Should include trailing parentheses."
+msgstr "C言語関数の名前．末尾にカッコを含める必要があります．"
+
+#: ../source/documenting/markup.rst:385
+msgid "The name of a \"simple\" C macro, as defined above."
+msgstr "上で定義した \"単純な\" Cマクロの名前．"
+
+#: ../source/documenting/markup.rst:389
+msgid "The name of a C-language type."
+msgstr "C言語型の名前．"
+
+#: ../source/documenting/markup.rst:392
+msgid ""
+"The following role does possibly create a cross-reference, but does not "
+"refer to objects:"
+msgstr "次の役割は相互参照を作成する可能性がありますが，オブジェクトを参照しません．"
+
+#: ../source/documenting/markup.rst:397
+msgid ""
+"The name of a grammar token (used in the reference manual to create links "
+"between production displays)."
+msgstr "文法トークンの名前(リファレンスマニュアルで，プロダクションディスプレイ間のリンクを作成するために使用されます)．"
+
+#: ../source/documenting/markup.rst:401
+msgid ""
+"The following role creates a cross-reference to the term in the glossary:"
+msgstr "次の役割は，用語集内の用語への相互参照を作成することです．"
+
+#: ../source/documenting/markup.rst:405
+msgid ""
+"Reference to a term in the glossary.  The glossary is created using the "
+"``glossary`` directive containing a definition list with terms and "
+"definitions.  It does not have to be in the same file as the ``term`` "
+"markup, in fact, by default the Python docs have one global glossary in the "
+"``glossary.rst`` file."
+msgstr ""
+"用語集内の用語への参照．用語集は，用語と定義の定義リストを含む ``glossary`` ディレクティブを使用して作成されます． ``term`` "
+"markupと同じファイルにある必要はありません．実際，Pythonドキュメントの ``glossary.rst`` "
+"ファイルには，デフォルトでグローバルな用語集が1つあります．"
+
+#: ../source/documenting/markup.rst:411
+msgid ""
+"If you use a term that's not explained in a glossary, you'll get a warning "
+"during build."
+msgstr "用語集で説明されていない用語を使用すると，ビルド中に警告が表示されます．"
+
+#: ../source/documenting/markup.rst:416
+msgid ""
+"The following roles don't do anything special except formatting the text in "
+"a different style:"
+msgstr "次のロールは，テキストを別のスタイルで書式設定する以外は特に何も行いません．"
+
+#: ../source/documenting/markup.rst:421
+msgid "The name of an OS-level command, such as ``rm``."
+msgstr "``rm`` などのOSレベルのコマンドの名前．"
+
+#: ../source/documenting/markup.rst:425
+msgid ""
+"Mark the defining instance of a term in the text.  (No index entries are "
+"generated.)"
+msgstr "テキスト内の用語の定義インスタンスをマークします．(索引項目は生成されません．)"
+
+#: ../source/documenting/markup.rst:430
+msgid "An environment variable.  Index entries are generated."
+msgstr "環境変数．索引項目が生成されます．"
+
+#: ../source/documenting/markup.rst:434
+msgid ""
+"The name of a file or directory.  Within the contents, you can use curly "
+"braces to indicate a \"variable\" part, for example::"
+msgstr "ファイルまたはディレクトリの名前．コンテンツ内では，次のように中括弧を使用して \"変数\" 部分を示すことができます．"
+
+#: ../source/documenting/markup.rst:439
+msgid ""
+"In the built documentation, the ``x`` will be displayed differently to "
+"indicate that it is to be replaced by the Python minor version."
+msgstr "ビルドされたドキュメントでは，  ``x`` はPythonのマイナーバージョンに置き換えられるため，異なる表示になります．"
+
+#: ../source/documenting/markup.rst:444
+msgid ""
+"Labels presented as part of an interactive user interface should be marked "
+"using ``guilabel``.  This includes labels from text-based interfaces such as"
+" those created using :mod:`curses` or other text-based libraries.  Any label"
+" used in the interface should be marked with this role, including button "
+"labels, window titles, field names, menu and menu selection names, and even "
+"values in selection lists."
+msgstr ""
+"対話型ユーザーインターフェイスの一部として表示されるラベルは， ``guilabel`` を使用してマークする必要があります．これには， "
+":mod:`curses` "
+"やその他のテキストベースのライブラリを使用して作成されたテキストベースのインターフェイスのラベルも含まれます．インタフェースで使用されるラベルには，ボタン・ラベル，ウィンドウ・タイトル，フィールド名，メニューおよびメニュー選択名，選択リスト内の値など，このロールを付ける必要があります．"
+
+#: ../source/documenting/markup.rst:453
+msgid ""
+"Mark a sequence of keystrokes.  What form the key sequence takes may depend "
+"on platform- or application-specific conventions.  When there are no "
+"relevant conventions, the names of modifier keys should be spelled out, to "
+"improve accessibility for new users and non-native speakers.  For example, "
+"an *xemacs* key sequence may be marked like ``:kbd:`C-x C-f```, but without "
+"reference to a specific application or platform, the same sequence should be"
+" marked as ``:kbd:`Control-x Control-f```."
+msgstr ""
+"一連のキーストロークをマークします．キーシーケンスの形式は，プラットフォームまたはアプリケーション固有の規則によって異なります．関連する規則がない場合は，修飾キーの名前を記述して，新しいユーザーやネイティブでないユーザーがアクセスしやすいようにする必要があります．例えば，"
+" *xemacs* キーシーケンスが ``:kbd:`C-x C-f``` "
+"のようにマークされるかもしれませんが，特定のアプリケーションやプラットフォームを参照せずに，同じシーケンスが ``:kbd:`Control-x "
+"Control-f``` としてマークされるべきです．"
+
+#: ../source/documenting/markup.rst:463
+msgid "The name of a keyword in Python."
+msgstr "Pythonのキーワードの名前．"
+
+#: ../source/documenting/markup.rst:467
+msgid ""
+"The name of an RFC 822-style mail header.  This markup does not imply that "
+"the header is being used in an email message, but can be used to refer to "
+"any header of the same \"style\".  This is also used for headers defined by "
+"the various MIME specifications.  The header name should be entered in the "
+"same way it would normally be found in practice, with the camel-casing "
+"conventions being preferred where there is more than one common usage. For "
+"example: ``:mailheader:`Content-Type```."
+msgstr ""
+"RFC822形式のメールヘッダーの名前．このmarkupは，ヘッダーが電子メールメッセージで使用されていることを意味するのではなく，同じ "
+"\"スタイル\" "
+"の任意のヘッダーを参照するために使用できます．これは，さまざまなMIME仕様によって定義されたヘッダーにも使用されます．ヘッダ名は，実際に見られるのと同じ方法で入力されるべきであり，2つ以上の一般的な用法がある場合には，camel-"
+"casing規約が好ましいです．例 ``:mailheader:`Content-Type``` ．"
+
+#: ../source/documenting/markup.rst:477
+msgid "The name of a :command:`make` variable."
+msgstr ":command:`make` 変数の名前．"
+
+#: ../source/documenting/markup.rst:481
+msgid ""
+"A reference to a Unix manual page including the section, e.g. "
+"``:manpage:`ls(1)```."
+msgstr "例えば ``:manpage:`ls(1)``` といったセクションを含むUnixマニュアルページへの参照です．"
+
+#: ../source/documenting/markup.rst:486
+msgid ""
+"Menu selections should be marked using the ``menuselection`` role.  This is "
+"used to mark a complete sequence of menu selections, including selecting "
+"submenus and choosing a specific operation, or any subsequence of such a "
+"sequence.  The names of individual selections should be separated by "
+"``-->``."
+msgstr ""
+"メニューの選択には ``menuselection`` "
+"の役割を使って印を付けます．これは，サブメニューの選択および特定の操作の選択を含む，メニュー選択の完全なシーケンス，またはそのようなシーケンスの任意のサブシーケンスをマークするために使用されます．個々の選択項目の名前は"
+" ``-->`` で区切る必要があります．"
+
+#: ../source/documenting/markup.rst:492
+msgid "For example, to mark the selection \"Start > Programs\", use this markup::"
+msgstr "たとえば，選択範囲 \"Start > Programs\" をマークするには，次のmarkupを使用します．"
+
+#: ../source/documenting/markup.rst:496
+msgid ""
+"When including a selection that includes some trailing indicator, such as "
+"the ellipsis some operating systems use to indicate that the command opens a"
+" dialog, the indicator should be omitted from the selection name."
+msgstr ""
+"一部のオペレーティングシステムでコマンドがダイアログを開くことを示すために使用される省略記号など，末尾のインジケータを含む選択を含める場合は，選択名からインジケータを省略する必要があります．"
+
+#: ../source/documenting/markup.rst:502
+msgid ""
+"The name of a MIME type, or a component of a MIME type (the major or minor "
+"portion, taken alone)."
+msgstr "MIMEタイプの名前，またはMIMEタイプのコンポーネント(単独でとられる大部分または小部分)．"
+
+#: ../source/documenting/markup.rst:507
+msgid "The name of a Usenet newsgroup."
+msgstr "Usenet newsgroupの名前．"
+
+#: ../source/documenting/markup.rst:511
+msgid ""
+"A command-line option to an executable program.  The leading hyphen(s) must "
+"be included."
+msgstr "実行可能プログラムのコマンドラインオプションです．先頭の(複数の)ハイフンを含める必要があります．"
+
+#: ../source/documenting/markup.rst:516
+msgid ""
+"The name of an executable program.  This may differ from the file name for "
+"the executable for some platforms.  In particular, the ``.exe`` (or other) "
+"extension should be omitted for Windows programs."
+msgstr ""
+"実行可能プログラムの名前．これは，一部のプラットフォームの実行可能ファイルのファイル名とは異なる場合があります．特に， ``.exe`` "
+"(その他)拡張子はWindowsプログラムでは省略されるべきです．"
+
+#: ../source/documenting/markup.rst:522
+msgid "A regular expression. Quotes should not be included."
+msgstr "正規表現．引用符は含めないでください．"
+
+#: ../source/documenting/markup.rst:526
+msgid ""
+"A piece of literal text, such as code.  Within the contents, you can use "
+"curly braces to indicate a \"variable\" part, as in ``:file:``."
+msgstr ""
+"コードなどのリテラルテキスト． ``:file:`` のように，コンテンツ内で中括弧を使用して \"variable\" 部分を示すことができます．"
+
+#: ../source/documenting/markup.rst:529
+msgid ""
+"If you don't need the \"variable part\" indication, use the standard "
+"````code```` instead."
+msgstr "\"可変部\" 表示が必要ない場合は，代わりに標準の ````code```` を使用してください．"
+
+#: ../source/documenting/markup.rst:534
+msgid "A Python or C variable or parameter name."
+msgstr "PythonまたはCの変数またはパラメータ名．"
+
+#: ../source/documenting/markup.rst:537
+msgid "The following roles generate external links:"
+msgstr "次の役割は外部リンクを生成します．"
+
+#: ../source/documenting/markup.rst:541
+msgid ""
+"A reference to a Python Enhancement Proposal.  This generates appropriate "
+"index entries. The text \"PEP *number*\\ \" is generated; in the HTML "
+"output, this text is a hyperlink to an online copy of the specified PEP."
+msgstr ""
+"Python Enhancement Proposalへの参照．これにより，適切なインデックスエントリが生成されます．テキスト \"PEP "
+"*number*\\ \" が生成されます．HTML出力では，このテキストは指定されたPEPのオンラインコピーへのハイパーリンクです．"
+
+#: ../source/documenting/markup.rst:547
+msgid ""
+"A reference to an Internet Request for Comments.  This generates appropriate"
+" index entries. The text \"RFC *number*\\ \" is generated; in the HTML "
+"output, this text is a hyperlink to an online copy of the specified RFC."
+msgstr ""
+"Internet Request for Commentsへの参照．これにより，適切なインデックスエントリが生成されます．テキスト \"RFC "
+"*number*\\ \" が生成されます．HTML出力では，このテキストは指定されたRFCのオンラインコピーへのハイパーリンクです．"
+
+#: ../source/documenting/markup.rst:552
+msgid ""
+"Note that there are no special roles for including hyperlinks as you can use"
+" the standard reST markup for that purpose."
+msgstr "標準のreST markupを使用できるため，ハイパーリンクを含めるための特別な役割はありません．"
+
+#: ../source/documenting/markup.rst:559
+msgid "Cross-linking markup"
+msgstr "クロスリンクマークアップ"
+
+#: ../source/documenting/markup.rst:561
+msgid ""
+"To support cross-referencing to arbitrary sections in the documentation, the"
+" standard reST labels are \"abused\" a bit: Every label must precede a "
+"section title; and every label name must be unique throughout the entire "
+"documentation source."
+msgstr ""
+"ドキュメント内の任意のセクションへの相互参照をサポートするために，標準のreSTラベルは少し \"abused\" "
+"されます．各ラベルはセクションタイトルの前に置く必要があります．すべてのラベル名は，ドキュメントソース全体で一意である必要があります．"
+
+#: ../source/documenting/markup.rst:566
+msgid ""
+"You can then reference to these sections using the ``:ref:`label-name``` "
+"role."
+msgstr "これらのセクションを参照するには， ``:ref:`label-name``` ロールを使用します．"
+
+#: ../source/documenting/markup.rst:568 ../source/documenting/markup.rst:595
+#: ../source/documenting/markup.rst:618
+msgid "Example::"
+msgstr "例"
+
+#: ../source/documenting/markup.rst:579
+msgid "The ``:ref:`` invocation is replaced with the section title."
+msgstr "``:ref:`` 呼び出しはセクションタイトルに置き換えられる．"
+
+#: ../source/documenting/markup.rst:583
+msgid "Paragraph-level markup"
+msgstr "段落レベルのmarkup"
+
+#: ../source/documenting/markup.rst:585
+msgid ""
+"These directives create short paragraphs and can be used inside information "
+"units as well as normal text:"
+msgstr "これらのディレクティブは短い段落を作成し，通常のテキストと同様に情報単位内で使用できます．"
+
+#: ../source/documenting/markup.rst:590
+msgid ""
+"An especially important bit of information about an API that a user should "
+"be aware of when using whatever bit of API the note pertains to.  The "
+"content of the directive should be written in complete sentences and include"
+" all appropriate punctuation."
+msgstr ""
+"APIに関する特に重要な情報で，注意事項が関連するAPIのあらゆる部分を使用する際にユーザーが注意する必要があります．指示の内容は完全な文章で書かれ，すべての適切な句読点を含むべきである．"
+
+#: ../source/documenting/markup.rst:603
+msgid ""
+"An important bit of information about an API that a user should be very "
+"aware of when using whatever bit of API the warning pertains to.  The "
+"content of the directive should be written in complete sentences and include"
+" all appropriate punctuation. This differs from ``note`` in that it is "
+"recommended over ``note`` for information regarding security."
+msgstr ""
+"APIに関する重要な情報であり，警告が関連するAPIのどの部分を使用する場合でも，ユーザは十分に注意する必要があります．指示の内容は完全な文章で書かれ，すべての適切な句読点を含むべきである．これは，セキュリティに関する情報のために"
+" ``note`` よりも推奨されるという点で ``note`` とは異なります．"
+
+#: ../source/documenting/markup.rst:611
+msgid ""
+"This directive documents the version of Python which added the described "
+"feature to the library or C API. When this applies to an entire module, it "
+"should be placed at the top of the module section before any prose."
+msgstr ""
+"このディレクティブは，記述された機能をライブラリまたはC "
+"APIに追加したPythonのバージョンを記述します．これがモジュール全体に適用される場合は，モジュールセクションの先頭の散文の前に配置する必要があります．"
+
+#: ../source/documenting/markup.rst:615
+msgid ""
+"The first argument must be given and is the version in question; you can add"
+" a second argument consisting of a *brief* explanation of the change."
+msgstr "最初の引数は指定する必要があり，問題のバージョンです．変更の*簡単な*説明で構成される2番目の引数を追加できます．"
+
+#: ../source/documenting/markup.rst:623
+msgid ""
+"Note that there must be no blank line between the directive head and the "
+"explanation; this is to make these blocks visually continuous in the markup."
+msgstr "指示記号と説明の間に空白行があってはならないことに注意してください．これは，markup内でこれらのブロックを視覚的に連続させるためです．"
+
+#: ../source/documenting/markup.rst:628
+msgid ""
+"Similar to ``versionadded``, but describes when and what changed in the "
+"named feature in some way (new parameters, changed side effects, etc.)."
+msgstr ""
+"``versionadded`` "
+"と似ていますが，名前の付いた機能でいつ何が変更されたかを何らかの方法で記述します(新しいパラメータ，変更された副作用など．)．"
+
+#: ../source/documenting/markup.rst:635
+msgid ""
+"Many sections include a list of references to module documentation or "
+"external documents.  These lists are created using the ``seealso`` "
+"directive."
+msgstr ""
+"多くのセクションには，モジュールドキュメントまたは外部ドキュメントへの参照のリストが含まれています．これらのリストは ``seealso`` "
+"ディレクティブを使用して作成されます．"
+
+#: ../source/documenting/markup.rst:638
+msgid ""
+"The ``seealso`` directive is typically placed in a section just before any "
+"sub-sections.  For the HTML output, it is shown boxed off from the main flow"
+" of the text."
+msgstr ""
+"``seealso`` "
+"ディレクティブは通常，サブセクションの直前のセクションに配置されます．HTML出力の場合は，テキストのメインフローから枠で囲んで表示されます．"
+
+#: ../source/documenting/markup.rst:642
+msgid ""
+"The content of the ``seealso`` directive should be a reST definition list. "
+"Example::"
+msgstr "``seealso`` ディレクティブの内容はreST定義リストでなければなりません．例"
+
+#: ../source/documenting/markup.rst:655
+msgid ""
+"This directive creates a paragraph heading that is not used to create a "
+"table of contents node.  It is currently used for the \"Footnotes\" caption."
+msgstr "このディレクティブは，目次ノードの作成に使用されない段落見出しを作成します．現在は \"脚注\" キャプションに使用されています．"
+
+#: ../source/documenting/markup.rst:660
+msgid ""
+"This directive creates a centered boldfaced paragraph.  Use it as follows::"
+msgstr "この指示は，中央に太字の段落を作成します．次のように使用します．"
+
+#: ../source/documenting/markup.rst:668
+msgid "Table-of-contents markup"
+msgstr "目次markup"
+
+#: ../source/documenting/markup.rst:670
+msgid ""
+"Since reST does not have facilities to interconnect several documents, or "
+"split documents into multiple output files, Sphinx uses a custom directive "
+"to add relations between the single files the documentation is made of, as "
+"well as tables of contents.  The ``toctree`` directive is the central "
+"element."
+msgstr ""
+"reSTには複数の文書を相互接続したり，文書を複数の出力ファイルに分割したりする機能がないため，Sphinxではカスタム・ディレクティブを使用して，文書を構成する単一のファイルと目次の間に関係を追加します．"
+" ``toctree`` の指示は中心的な要素です．"
+
+#: ../source/documenting/markup.rst:677
+msgid ""
+"This directive inserts a \"TOC tree\" at the current location, using the "
+"individual TOCs (including \"sub-TOC trees\") of the files given in the "
+"directive body.  A numeric ``maxdepth`` option may be given to indicate the "
+"depth of the tree; by default, all levels are included."
+msgstr ""
+"このディレクティブは，ディレクティブ本体で指定されたファイルの個々のTOC( \"sub-TOC trees\" を含む)を使用して，現在の場所に "
+"\"TOC tree\" を挿入します．ツリーの深さを示すために，数値の ``maxdepth`` "
+"オプションを指定することができます．デフォルトでは，すべてのレベルが含まれます．"
+
+#: ../source/documenting/markup.rst:682
+msgid "Consider this example (taken from the library reference index)::"
+msgstr "(ライブラリ参照インデックスから取得された)次の例を考えてみます"
+
+#: ../source/documenting/markup.rst:693
+msgid "This accomplishes two things:"
+msgstr "これにより，次の2つのことが実現します．"
+
+#: ../source/documenting/markup.rst:695
+msgid ""
+"Tables of contents from all those files are inserted, with a maximum depth "
+"of two, that means one nested heading.  ``toctree`` directives in those "
+"files are also taken into account."
+msgstr ""
+"これらすべてのファイルの目次が挿入されます．最大深さは2で，1つの見出しがネストされます．ファイル内の  ``toctree`` "
+"ディレクティブも考慮されます．"
+
+#: ../source/documenting/markup.rst:698
+msgid ""
+"Sphinx knows that the relative order of the files ``intro.rst``, "
+"``strings.rst`` and so forth, and it knows that they are children of the "
+"shown file, the library index.  From this information it generates \"next "
+"chapter\", \"previous chapter\" and \"parent chapter\" links."
+msgstr ""
+"Sphinxはファイル ``intro.rst`` や ``strings.rst`` "
+"などの相対的な順序を知っており，それらが表示されているファイル，つまりライブラリーインデックスの子であることを知っています．この情報から \"next "
+"chapter\" ， \"previous chapter\" ， \"parent chapter\" リンクが生成されます．"
+
+#: ../source/documenting/markup.rst:703
+msgid ""
+"In the end, all files included in the build process must occur in one "
+"``toctree`` directive; Sphinx will emit a warning if it finds a file that is"
+" not included, because that means that this file will not be reachable "
+"through standard navigation."
+msgstr ""
+"最終的に，構築プロセスに含まれる全てのファイルは，一つの ``toctree`` "
+"ディレクティブ内になければなりません．含まれていないファイルが見つかった場合，Sphinxは警告を発します．"
+
+#: ../source/documenting/markup.rst:708
+msgid ""
+"The special file ``contents.rst`` at the root of the source directory is the"
+" \"root\" of the TOC tree hierarchy; from it the \"Contents\" page is "
+"generated."
+msgstr ""
+"ソースディレクトリのルートにある特殊ファイル ``contents.rst`` は，TOCツリー階層の \"root\" です． "
+"\"Contents\" ページが生成されます．"
+
+#: ../source/documenting/markup.rst:713
+msgid "Index-generating markup"
+msgstr "索引生成markup"
+
+#: ../source/documenting/markup.rst:715
+msgid ""
+"Sphinx automatically creates index entries from all information units (like "
+"functions, classes or attributes) like discussed before."
+msgstr "Sphinxは，前述のように，すべての情報単位(関数，クラス，属性など)から索引項目を自動的に作成します．"
+
+#: ../source/documenting/markup.rst:718
+msgid ""
+"However, there is also an explicit directive available, to make the index "
+"more comprehensive and enable index entries in documents where information "
+"is not mainly contained in information units, such as the language "
+"reference."
+msgstr "しかし，索引をより包括的にし，言語参照などの情報単位に情報が主に含まれていない文書の索引項目を有効にするための明示的な指示もあります．"
+
+#: ../source/documenting/markup.rst:722
+msgid ""
+"The directive is ``index`` and contains one or more index entries.  Each "
+"entry consists of a type and a value, separated by a colon."
+msgstr "ディレクティブは ``index`` で，1つ以上のインデックスエントリを含みます．各エントリは，コロンで区切られた型と値で構成されます．"
+
+#: ../source/documenting/markup.rst:725
+msgid "For example::"
+msgstr "例"
+
+#: ../source/documenting/markup.rst:733
+msgid ""
+"This directive contains five entries, which will be converted to entries in "
+"the generated index which link to the exact location of the index statement "
+"(or, in case of offline media, the corresponding page number)."
+msgstr ""
+"このディレクティブには5つのエントリが含まれています．これらのエントリは，生成されたインデックス内のエントリに変換され，インデックスステートメントの正確な場所にリンクされます(オフラインメディアの場合は，対応するページ番号)．"
+
+#: ../source/documenting/markup.rst:737
+msgid "The possible entry types are:"
+msgstr "可能なエントリタイプは次のとおりです．"
+
+#: ../source/documenting/markup.rst:741
+msgid "single"
+msgstr "single"
+
+#: ../source/documenting/markup.rst:740
+msgid ""
+"Creates a single index entry.  Can be made a subentry by separating the "
+"subentry text with a semicolon (this notation is also used below to describe"
+" what entries are created)."
+msgstr ""
+"単一の索引項目を作成します．サブエントリを作成するには，サブエントリのテキストをセミコロン(以下では，この表記法を使用して，どの項目が作成されるかを説明します．)で区切ります．"
+
+#: ../source/documenting/markup.rst:744
+msgid "pair"
+msgstr "pair"
+
+#: ../source/documenting/markup.rst:744
+msgid ""
+"``pair: loop; statement`` is a shortcut that creates two index entries, "
+"namely ``loop; statement`` and ``statement; loop``."
+msgstr ""
+"``pair: loop; statement`` は， ``loop; statement`` と ``statement; loop`` "
+"の2つのインデックスエントリを作成するショートカットです．"
+
+#: ../source/documenting/markup.rst:748
+msgid "triple"
+msgstr "triple"
+
+#: ../source/documenting/markup.rst:747
+msgid ""
+"Likewise, ``triple: module; search; path`` is a shortcut that creates three "
+"index entries, which are ``module; search path``, ``search; path, module`` "
+"and ``path; module search``."
+msgstr ""
+"同様に， ``triple: module; search; path`` は， ``module; search path`` ， ``search;"
+" path, module`` ， ``path; module search`` の3つのインデックスエントリを作成するショートカットです．"
+
+#: ../source/documenting/markup.rst:752
+msgid "module, keyword, operator, object, exception, statement, builtin"
+msgstr "モジュール，キーワード，演算子，オブジェクト，例外，ステートメント，組み込み"
+
+#: ../source/documenting/markup.rst:751
+msgid ""
+"These all create two index entries.  For example, ``module: hashlib`` "
+"creates the entries ``module; hashlib`` and ``hashlib; module``."
+msgstr ""
+"これらはすべて，2つのインデックスエントリを作成します．たとえば， ``module: hashlib`` はエントリ ``module; "
+"hashlib`` と ``hashlib; module`` を作成します．"
+
+#: ../source/documenting/markup.rst:754
+msgid ""
+"For index directives containing only \"single\" entries, there is a "
+"shorthand notation::"
+msgstr "\"single\" エントリのみを含むインデックスディレクティブには，次のような短縮表記があります．"
+
+#: ../source/documenting/markup.rst:759
+msgid "This creates four index entries."
+msgstr "これにより，4つの索引項目が作成されます．"
+
+#: ../source/documenting/markup.rst:763
+msgid "Grammar production displays"
+msgstr "文法作成画面"
+
+#: ../source/documenting/markup.rst:765
+msgid ""
+"Special markup is available for displaying the productions of a formal "
+"grammar. The markup is simple and does not attempt to model all aspects of "
+"BNF (or any derived forms), but provides enough to allow context-free "
+"grammars to be displayed in a way that causes uses of a symbol to be "
+"rendered as hyperlinks to the definition of the symbol.  There is this "
+"directive:"
+msgstr ""
+"形式文法の生成を表示するために，特別なマークアップを使用できます．このマークアップは単純であり，BNF(または派生した形式)のすべての側面をモデル化しようとするものではありませんが，シンボルの使用をシンボルの定義へのハイパーリンクとして表示するような方法で，コンテキストフリーの文法を表示するのに十分なものです．次の指示があります．"
+
+#: ../source/documenting/markup.rst:773
+msgid ""
+"This directive is used to enclose a group of productions.  Each production "
+"is given on a single line and consists of a name, separated by a colon from "
+"the following definition.  If the definition spans multiple lines, each "
+"continuation line must begin with a colon placed at the same column as in "
+"the first line."
+msgstr ""
+"このディレクティブは，プロダクションのグループを囲むために使用します．各プロダクションは1行で指定され，次の定義からコロンで区切られた名前で構成されます．定義が複数行にまたがる場合，各継続行は最初の行と同じ列に配置されたコロンで始まる必要があります．"
+
+#: ../source/documenting/markup.rst:779
+msgid ""
+"Blank lines are not allowed within ``productionlist`` directive arguments."
+msgstr "空行は ``productionlist`` ディレクティブ引数内では使用できません．"
+
+#: ../source/documenting/markup.rst:781
+msgid ""
+"The definition can contain token names which are marked as interpreted text "
+"(e.g. ``unaryneg ::= \"-\" `integer```) -- this generates cross-references "
+"to the productions of these tokens."
+msgstr ""
+"定義には，解釈済みテキストとしてマークされたトークン名(例 ``unaryneg ::= \"-\" `integer``` "
+")を含めることができます．これにより，これらのトークンの生成への相互参照が生成されます．"
+
+#: ../source/documenting/markup.rst:785
+msgid ""
+"Note that no further reST parsing is done in the production, so that you "
+"don't have to escape ``*`` or ``|`` characters."
+msgstr "本番環境ではそれ以上のreST解析は行われないので， ``*`` や ``|`` 文字を回避する必要はありません．"
+
+#: ../source/documenting/markup.rst:791
+msgid "The following is an example taken from the Python Reference Manual::"
+msgstr "以下は，Python Reference Manualから引用した例です．"
+
+#: ../source/documenting/markup.rst:804
+msgid "Substitutions"
+msgstr "置換"
+
+#: ../source/documenting/markup.rst:806
+msgid ""
+"The documentation system provides three substitutions that are defined by "
+"default. They are set in the build configuration file :file:`conf.py`."
+msgstr ""
+"マニュアルシステムには，デフォルトで定義されている3つの代替があります．これらはビルド設定ファイル :file:`conf.py` に設定されます．"
+
+#: ../source/documenting/markup.rst:811
+msgid ""
+"Replaced by the Python release the documentation refers to.  This is the "
+"full version string including alpha/beta/release candidate tags, e.g. "
+"``2.5.2b3``."
+msgstr ""
+"このドキュメントで言及されているPythonリリースに置き換えられました．これはalpha/beta/release候補タグを含む完全なバージョン文字列で，例えば"
+" ``2.5.2b3`` のようになります．"
+
+#: ../source/documenting/markup.rst:816
+msgid ""
+"Replaced by the Python version the documentation refers to. This consists "
+"only of the major and minor version parts, e.g. ``2.5``, even for version "
+"2.5.1."
+msgstr ""
+"マニュアルに記載されているPythonバージョンに置き換えられました．これは，バージョン 2.5.1 でも ``2.5`` "
+"のようにメジャーバージョンとマイナーバージョンの部分だけで構成されています．"
+
+#: ../source/documenting/markup.rst:822
+msgid ""
+"Replaced by either today's date, or the date set in the build configuration "
+"file.  Normally has the format ``April 14, 2007``."
+msgstr ""
+"今日の日付，または構築構成ファイルで設定された日付で置き換えられます．通常は ``April 14, 2007`` というフォーマットです．"
+
+#: ../source/documenting/markup.rst:827
+msgid "Footnotes"
+msgstr "脚注"
+
+#: ../source/documenting/markup.rst:828
+msgid ""
+"There is a standard ``.. include`` directive, but it raises errors if the "
+"file is not found.  This one only emits a warning."
+msgstr "標準の ``.. include`` ディレクティブがありますが，ファイルが見つからないとエラーが発生します．これは警告のみを発します．"

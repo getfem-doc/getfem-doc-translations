@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-12 06:31+0000\n"
+"PO-Revision-Date: 2018-07-16 07:03+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/project/intro.rst:10
+msgid "Introduction"
+msgstr "前書き"
+
+#: ../source/project/intro.rst:16
+msgid ""
+"The aim of this document is to report details of the internal of |gf| useful"
+" for developers that have no place in the user documentation. It is also to "
+"outline the main prospects for the future development of |gf|. A list of "
+"modifications to be done and main tasks is updated on Savannah |linktask|_."
+msgstr ""
+"この文書の目的は， |gf| 内部の詳細を紹介することです．ユーザードキュメントに書いていない開発者にとって便利な情報を提供します．また，今後の "
+"|gf| 開発のための主な展望を説明することも目的としています．行わなければならない変更の一覧と主なタスクは Savannah の  "
+"|linktask|_ にあります．"
+
+#: ../source/project/intro.rst:23
+msgid ""
+"The |gf| project focuses on the development of an open source generic finite"
+" element library. The goal is to provide a finite element framework which "
+"allows to easily build numerical code for the modelisation of system "
+"described by partial differential equations (p.d.e.). A special attention is"
+" paid to the flexibility of the use of the library in the sense that the "
+"switch from a method offered by the library to another is made as easy as "
+"possible."
+msgstr ""
+"|gf| プロジェクトは，オープンソースの汎用的な有限要素ライブラリの開発を中心に扱っています．偏微分方程式 (PDE) "
+"で記述されたシステムのモデル化のための数値計算コードを容易に構築できる有限要素フレームワークを提供することを目標としてます．提供されている複数の手法の切り替えが可能な限り柔軟にできるように特に注意が払われています．"
+
+#: ../source/project/intro.rst:32
+msgid ""
+"The major point allowing this, compared to traditional finite element codes,"
+" is the complete separation between the description of p.d.e. models and "
+"finite element methods. Moreover, a separation is made between integration "
+"methods (exact or approximated), geometric transformations (linear or not) "
+"and finite element methods of arbitrary degrees described on a reference "
+"element. |gf| can be used to build very general finite elements codes, where"
+" the finite elements, integration methods, dimension of the meshes, are just"
+" some parameters that can be changed very easily, thus allowing a large "
+"spectrum of experimentations. Numerous examples are available in the "
+":file:`tests` directory of the distribution."
+msgstr ""
+"従来の有限要素コードと比較して，それを可能にしている最大の点は，微分方程式モデルと有限要素法の記述を完全に分離したことです．また，(厳密または近似)積分法，(線形または非線形)幾何変換，および参照要素に記述されている任意の次数の有限要素法を分離しています．"
+" |gf| "
+"により汎用的な有限要素コードを構築することができます．有限要素，積分法，メッシュの次元はパラメータとしてとても簡単に変更することができます．これにより，大規模な範囲での実験が可能です．配布物の"
+" :file:`tests` ディレクトリに多数の例があります．"
+
+#: ../source/project/intro.rst:45
+msgid ""
+"The goal is also to make the addition of new finite element method as simple"
+" as possible. For standard method, a description of the finite element shape"
+" functions and the type of connection of degrees of freedom on the reference"
+" element is sufficient. Extensions are provided for Hermite elements, "
+"piecewise polynomial, non-polynomial, vectorial elements and XFem. Examples "
+"of predefined available methods are :math:`P_k` on simplices in arbitrary "
+"degrees and dimensions, :math:`Q_k` on parallelepipeds, :math:`P_1`, "
+":math:`P_2` with bubble functions, Hermite elements, elements with "
+"hierarchic basis (for multigrid methods for instance), discontinuous "
+":math:`P_k` or :math:`Q_k`, XFem, Argyris, HCT, Raviart-Thomas."
+msgstr ""
+"また，新しい有限要素法の追加を可能な限り単純にすることも目標としています．標準的なものであれば, "
+"有限要素の形状関数と参照要素の自由度の関係を記述すれば十分です．Hermite要素，区分多項式，非多項式，ベクトル要素，および XFem "
+"の拡張が提供されています．定義可能な手法の例を次に示します．任意のji次元と寸法の simplices の :math:`P_k` ， "
+":math:`Q_k` 平行六面体， :math:`P_1` ， :math:`P_2` 気泡関数，Hermite要素，階層ベースの要素 "
+"(マルチグリッド法インスタンスのメソッド)，不連続 :math:`P_k` または :math:`Q_k` "
+"'，XFem，Argyris，HCT，Raviart-Thomas です．"
+
+#: ../source/project/intro.rst:57
+msgid ""
+"The library also includes the usual tools for finite elements such as "
+"assembly procedures for classical PDEs, interpolation methods, computation "
+"of norms, mesh operations, boundary conditions, post-processing tools such "
+"as extraction of slices from a mesh ..."
+msgstr ""
+"このライブラリは, 以下のような有限要素を構築するための標準ツールも含んでいます．古典的な微分方程式, 補間法, ノルムの計算, メッシュ操作, "
+"境界条件, メッシュからスライスを抽出するなどの後処理ツール..."
+
+#: ../source/project/intro.rst:64
+msgid ""
+"The aim of the |gf| project is not to provide a ready to use finite element "
+"code allowing for instance structural mechanics computations with a graphic "
+"interface. It is basically a library allowing the build of C++  finite "
+"element codes. However, the Python, Scilab and matlab interfaces allows to "
+"easily build application coupling the definition of the problem, the finite "
+"element methods selection and the graphical post-processing."
+msgstr ""
+"|gf| "
+"プロジェクトは，グラフィックインターフェイスを使用して構造力学計算をすることができる有限要素コードを提供することは目的にしていません．このライブラリは基本的に"
+" C++ での有限要素コードのビルドが可能です．しかし，Python，Scilab および matlab "
+"インタフェースで，問題の定義，有限要素法の選択，およびグラフィカルな後処理のアプリケーションを簡単に構築することが可能です．"
+
+#: ../source/license.txt:3
+msgid "Copyright |copy| |licyears| |gf| project."
+msgstr "Copyright |copy| |licyears| |gf| project."
+
+#: ../source/license.txt:5
+msgid ""
+"The text of the |gf| website and the documentations are available for "
+"modification and reuse under the terms of the |gnufreedoc|_"
+msgstr "|gf| のウェブサイトおよびドキュメンテーションの内容は |gnufreedoc|_ のライセンスの下で変更および再利用可能です．"
+
+#: ../source/license.txt:8
+msgid ""
+"GetFEM  is  free software;  you  can  redistribute  it  and/or modify it "
+"under  the  terms  of the  GNU  Lesser General Public License as published "
+"by  the  Free Software Foundation;  either version 3 of the License,  or (at"
+" your option) any later version along with the GCC Runtime Library Exception"
+" either version 3.1 or (at your option) any later version. This program  is"
+"  distributed  in  the  hope  that it will be useful,  but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or  FITNESS  "
+"FOR  A PARTICULAR PURPOSE.  See the GNU Lesser General Public License and "
+"GCC Runtime Library Exception for more details. You  should  have received a"
+" copy of the GNU Lesser General Public License along  with  this program;  "
+"if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth "
+"Floor, Boston, MA  02110-1301, USA."
+msgstr ""
+"GetFEM is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU Lesser General Public License as published by the Free "
+"Software Foundation; either version 3 of the License, or (at your option) "
+"any later version along with the GCC Runtime Library Exception either "
+"version 3.1 or (at your option) any later version. This program is "
+"distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; "
+"without even the implied warranty of MERCHANTABILITY or FITNESS FOR A "
+"PARTICULAR PURPOSE. See the GNU Lesser General Public License and GCC "
+"Runtime Library Exception for more details. You should have received a copy "
+"of the GNU Lesser General Public License along with this program; if not, "
+"write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, "
+"Boston, MA 02110-1301, USA."
