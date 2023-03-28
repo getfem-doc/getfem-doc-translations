@@ -17,9 +17,11 @@ This repository is inspired by [sphinx-doc/sphinx-doc-translations](https://gith
 
 * RTD project pages for Getfem:
 
-  * :us: [![Documentation Status](https://readthedocs.org/projects/getfem/badge/?version=latest)](https://getfem.readthedocs.io/en/latest/?badge=latest)  (Master) 
-  * :jp: [![Documentation Status](https://readthedocs.org/projects/getfem-ja/badge/?version=latest)](https://getfem.readthedocs.io/ja/latest/?badge=latest)
-  * :brazil: [![Documentation Status](https://readthedocs.org/projects/getfem-pt-br/badge/?version=latest)](https://getfem.readthedocs.io/pt_BR/latest/?badge=latest)
+|           | :globe_with_meridians:                                                                                                                                                    | :brazil:                                                                                                                                                 | 
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | 
+| English   | [![Documentation Status](https://readthedocs.org/projects/getfem/badge/?version=latest)](https://getfem.readthedocs.io/en/latest/?badge=latest)            |                                                                                                                                                          | 
+| 日本語    | [![Documentation Status](https://readthedocs.org/projects/getfem-ja/badge/?version=latest)](https://getfem.readthedocs.io/ja/latest/?badge=latest)         |                                                                                                                                                          | 
+| Português |                                                                                                                                                            | [![Documentation Status](https://readthedocs.org/projects/getfem-pt-br/badge/?version=latest)](https://getfem.readthedocs.io/pt_BR/latest/?badge=latest) | 
 
 ## How to setup a translated documentation project on RTD
 
