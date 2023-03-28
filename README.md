@@ -19,7 +19,7 @@ This repository is inspired by [sphinx-doc/sphinx-doc-translations](https://gith
 
   * English [![Documentation Status](https://readthedocs.org/projects/getfem/badge/?version=latest)](https://getfem.readthedocs.io/en/latest/?badge=latest)  (Master) 
   * 日本語 [![Documentation Status](https://readthedocs.org/projects/getfem-ja/badge/?version=latest)](https://getfem.readthedocs.io/ja/latest/?badge=latest)
-  * Português :brazil: [![Documentation Status](https://readthedocs.org/projects/getfem-pt-br/badge/?version=latest)](https://getfem.readthedocs.io/pt_BR/latest/?badge=latest)
+  * Português in :brazil: [![Documentation Status](https://readthedocs.org/projects/getfem-pt-br/badge/?version=latest)](https://getfem.readthedocs.io/pt_BR/latest/?badge=latest)
 
 ## How to setup a translated documentation project on RTD
 
