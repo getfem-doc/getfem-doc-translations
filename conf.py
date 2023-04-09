@@ -11,7 +11,7 @@ import os
 import pathlib
 
 basedir = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "doc/sphinx/source"
+    os.path.dirname(os.path.abspath(__file__)), "getfem/doc/sphinx/source"
 )
 
 exec(pathlib.Path(os.path.join(basedir, "conf.py")).read_text(), globals())
