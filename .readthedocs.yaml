@@ -38,7 +38,8 @@ build:
       - perl -p -i -e 's/^.*"PDF".*\n//g' .config/ImageMagick/policy.xml
       - perl -p -i -e 's/^.*"XPS".*\n//g' .config/ImageMagick/policy.xml
       - pwd
-      - export MAGICK_CONFIGURE_PATH=`pwd`/.config/ImageMagick
+      - MAGICK_CONFIGURE_PATH=`pwd`/.config/ImageMagick
+      - echo $MAGICK_CONFIGURE_PATH
       - cd getfem && bash autogen.sh && ./configure --with-pic && cd doc/sphinx && make images
 
 sphinx:
