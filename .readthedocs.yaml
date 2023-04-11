@@ -33,7 +33,7 @@ build:
       - mkdir ~/.config/ImageMagick
       - cp /etc/ImageMagick-*/* ~/.config/ImageMagick
       - ls -l ~/.config/ImageMagick
-      - perl -p -i -e 's/"none"/"read|write"/g' ~/.config/ImageMagick/policy.xml
+      - perl -p -i -e 's/\"none\"/\"read|write\"/g' ~/.config/ImageMagick/policy.xml
       - echo $MAGICK_CONFIGURE_PATH
       - cat $MAGICK_CONFIGURE_PATH/policy.xml
       - cd getfem && bash autogen.sh && ./configure --with-pic && cd doc/sphinx && make images
