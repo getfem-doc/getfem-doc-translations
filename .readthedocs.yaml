@@ -29,10 +29,14 @@ build:
     python: "mambaforge-4.10"
   jobs:
     pre_build:
-      - perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
-      - perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
-      - perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
-      - perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
+      - mkdir .config
+      - mkdir .config/ImageMagick
+      - cp /etc/ImageMagick-*/* .config/ImageMagick
+      - perl -p -i -e 's/^.*"EPS".*\n//g' ~/.config/ImageMagick/policy.xml
+      - perl -p -i -e 's/^.*"PS".*\n//g'  ~/.config/ImageMagick/policy.xml
+      - perl -p -i -e 's/^.*"PDF".*\n//g' ~/.config/ImageMagick/policy.xml
+      - perl -p -i -e 's/^.*"XPS".*\n//g' ~/.config/ImageMagick/policy.xml
+      - export MAGICK_CONFIGURE_PATH=~/.config/ImageMagick
       - cd getfem && bash autogen.sh && ./configure --with-pic && cd doc/sphinx && make images
 
 sphinx:
