@@ -86,7 +86,7 @@ jobs:
          tx pull --silent -f -l ja,pt_BR)
         rm -rf ../locale
         rm -rf doc/sphinx/locale/.doctrees
-        cp -r doc/sphinx/locale ../locale
+        cp -r doc/sphinx/source/locale ../locale
         cd ../
         deactivate
     - name: git_config
