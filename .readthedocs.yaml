@@ -33,11 +33,12 @@ build:
       - mkdir .config/ImageMagick
       - cp /etc/ImageMagick-*/* .config/ImageMagick
       - ls -l .config/ImageMagick
-      - perl -p -i -e 's/^.*"EPS".*\n//g' ~/.config/ImageMagick/policy.xml
-      - perl -p -i -e 's/^.*"PS".*\n//g'  ~/.config/ImageMagick/policy.xml
-      - perl -p -i -e 's/^.*"PDF".*\n//g' ~/.config/ImageMagick/policy.xml
-      - perl -p -i -e 's/^.*"XPS".*\n//g' ~/.config/ImageMagick/policy.xml
-      - export MAGICK_CONFIGURE_PATH=~/.config/ImageMagick
+      - perl -p -i -e 's/^.*"EPS".*\n//g' .config/ImageMagick/policy.xml
+      - perl -p -i -e 's/^.*"PS".*\n//g'  .config/ImageMagick/policy.xml
+      - perl -p -i -e 's/^.*"PDF".*\n//g' .config/ImageMagick/policy.xml
+      - perl -p -i -e 's/^.*"XPS".*\n//g' .config/ImageMagick/policy.xml
+      - pwd
+      - export MAGICK_CONFIGURE_PATH=.config/ImageMagick
       - cd getfem && bash autogen.sh && ./configure --with-pic && cd doc/sphinx && make images
 
 sphinx:
