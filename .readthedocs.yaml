@@ -39,6 +39,7 @@ build:
       - perl -p -i -e 's/^.*"XPS".*\n//g' ~/.config/ImageMagick/policy.xml
       - echo $MAGICK_CONFIGURE_PATH
       - cd getfem && bash autogen.sh && ./configure --with-pic && cd doc/sphinx && make images
+      - cd ~ && pwd
 
 sphinx:
    configuration: conf.py
