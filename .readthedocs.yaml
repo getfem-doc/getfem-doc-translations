@@ -32,7 +32,7 @@ build:
       - mkdir ~/.config
       - mkdir ~/.config/ImageMagick
       - cp /etc/ImageMagick-*/* ~/.config/ImageMagick
-      - ls -l .config/ImageMagick
+      - ls -l ~/.config/ImageMagick
       - perl -p -i -e 's/^.*"EPS".*\n//g' ~/.config/ImageMagick/policy.xml
       - perl -p -i -e 's/^.*"PS".*\n//g'  ~/.config/ImageMagick/policy.xml
       - perl -p -i -e 's/^.*"PDF".*\n//g' ~/.config/ImageMagick/policy.xml
