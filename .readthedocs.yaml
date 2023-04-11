@@ -29,7 +29,7 @@ build:
     python: "mambaforge-4.10"
   jobs:
     pre_build:
-      - (cd getfem && bash autogen.sh && ./configure --with-pic && cd doc/sphinx && make images)
+      - cd getfem && bash autogen.sh && ./configure --with-pic && cd doc/sphinx && make images
 
 sphinx:
    configuration: conf.py
