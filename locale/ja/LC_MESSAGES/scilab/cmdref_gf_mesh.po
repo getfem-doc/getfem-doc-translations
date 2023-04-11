@@ -1,0 +1,322 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-02 01:31+0000\n"
+"PO-Revision-Date: 2018-07-16 06:59+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:8
+msgid "gf_mesh"
+msgstr "gf_mesh"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:10
+msgid "**Synopsis**"
+msgstr "**概要**"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:30
+msgid "**Description :**"
+msgstr "**説明 :**"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:33
+msgid "General constructor for mesh objects."
+msgstr "meshオブジェクトの汎用的なコンストラクタ"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:35
+msgid ""
+"This object is able to store any element in any dimension even if you mix "
+"elements with different dimensions."
+msgstr "このオブジェクトは，異なる次元の要素を混在させても，任意の次元の任意の要素を格納できます．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:41
+msgid "**Command list :**"
+msgstr "**コマンドリスト**"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:45
+msgid "``M = gf_mesh('empty', int dim)``"
+msgstr "``M = gf_mesh('empty', int dim)``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:47
+msgid "Create a new empty mesh."
+msgstr "新しい空のメッシュを作成します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:50
+msgid "``M = gf_mesh('cartesian', vec X[, vec Y[, vec Z,..]])``"
+msgstr "``M = gf_mesh('cartesian', vec X[, vec Y[, vec Z,..]])``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:52
+msgid "Build quickly a regular mesh of quadrangles, cubes, etc."
+msgstr "四角形や立方体などの規則的なメッシュを素早く作成します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:55
+msgid "``M = gf_mesh('pyramidal', vec X[, vec Y[, vec Z,..]])``"
+msgstr "``M = gf_mesh('pyramidal', vec X[, vec Y[, vec Z,..]])``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:57
+msgid "Build quickly a regular mesh of pyramids, etc."
+msgstr "角錐などの規則的なメッシュを素早く作成します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:60
+msgid "``M = gf_mesh('cartesian Q1', vec X, vec Y[, vec Z,..])``"
+msgstr "``M = gf_mesh('cartesian Q1', vec X, vec Y[, vec Z,..])``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:62
+msgid ""
+"Build quickly a regular mesh of quadrangles, cubes, etc. with Q1 elements."
+msgstr "四角形や立方体などの規則的なメッシュを Q1 要素で素早く作成します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:66
+msgid "``M = gf_mesh('triangles grid', vec X, vec Y)``"
+msgstr "``M = gf_mesh('triangles grid', vec X, vec Y)``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:68
+msgid "Build quickly a regular mesh of triangles."
+msgstr "三角形などの規則的なメッシュを素早く作成します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:70
+msgid ""
+"This is a very limited and somehow deprecated function (See also "
+"<literal></literal>gf_mesh('ptND')<literal></literal>, "
+"<literal></literal>gf_mesh('regular simplices')<literal></literal> and "
+"<literal></literal>gf_mesh('cartesian')<literal></literal>)."
+msgstr ""
+"これは非常に限定された関数であり，何らかの理由で廃止された関数です( "
+"<literal></literal>gf_mesh('ptND')<literal></literal>, "
+"<literal></literal>gf_mesh('regular simplices')<literal></literal> と "
+"<literal></literal>gf_mesh('cartesian')<literal></literal> も参照)．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:75
+msgid ""
+"``M = gf_mesh('regular simplices', vec X[, vec Y[, vec Z,...]]['degree', int"
+" k]['noised'])``"
+msgstr ""
+"``M = gf_mesh('regular simplices', vec X[, vec Y[, vec Z,...]]['degree', int"
+" k]['noised'])``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:77
+msgid ""
+"Mesh a n-dimensional parallelepiped with simplices (triangles, tetrahedrons "
+"etc) ."
+msgstr "単体(三角形，四面体など)メッシュによるn次元の方体を作成します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:80
+msgid ""
+"The optional degree may be used to build meshes with non linear geometric "
+"transformations."
+msgstr "オプションの次数を使用して，非線形幾何変換でメッシュを構築できます．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:84
+msgid "``M = gf_mesh('curved', mesh m, vec F)``"
+msgstr "``M = gf_mesh('curved', mesh m, vec F)``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:86
+msgid ""
+"Build a curved (n+1)-dimensions mesh from a n-dimensions mesh "
+"<literal>m</literal>."
+msgstr "n次元のメッシュ <literal>m</literal> から曲 (n+1)次元のメッシュを構築します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:88
+msgid ""
+"The points of the new mesh have one additional coordinate, given by the "
+"vector <literal>F</literal>. This can be used to obtain meshes for shells. "
+"<literal>m</literal> may be a mesh_fem object, in that case its linked mesh "
+"will be used."
+msgstr ""
+"新しいメッシュの点には，ベクトル <literal>F</literal> "
+"によって与えられる追加の座標が1つあります．これを使用して，シェルのメッシュを取得できます． <literal>m</literal> "
+"はmesh_femオブジェクトも指定可能です．その場合はリンクされたメッシュが使用されます．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:93
+msgid "``M = gf_mesh('prismatic', mesh m, int nl[, int degree])``"
+msgstr "``M = gf_mesh('prismatic', mesh m, int nl[, int degree])``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:95
+msgid ""
+"Extrude a prismatic mesh <literal>M</literal> from a mesh "
+"<literal>m</literal>."
+msgstr "メッシュ <literal>m</literal> から角柱状メッシュ <literal>M</literal> を押し出します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:97
+msgid ""
+"In the additional dimension there are <literal>nl</literal> layers of "
+"elements distributed from <literal></literal>0<literal></literal> to "
+"<literal></literal>1<literal></literal>. If the optional parameter "
+"<literal>degree</literal> is provided with a value greater than the default "
+"value of <literal></literal>1<literal></literal>, a non-linear "
+"transformation of corresponding degree is considered in the extrusion "
+"direction."
+msgstr ""
+"追加の寸法には，<literal></literal>0<literal></literal>から<literal></literal>1<literal></literal>までの要素の<literal>nl</literal>層があります．オプションのパラメータ<literal>degree</literal>に既定値の<literal></literal>1<literal></literal>より大きい値を指定すると，対応するdegreeの非線形変換が押し出し方向で考慮されます．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:104
+msgid "``M = gf_mesh('pt2D', mat P, imat T[, int n])``"
+msgstr "``M = gf_mesh('pt2D', mat P, imat T[, int n])``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:106
+msgid "Build a mesh from a 2D triangulation."
+msgstr "2次元三角形分割からメッシュを構築します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:108
+msgid ""
+"Each column of <literal>P</literal> contains a point coordinate, and each "
+"column of <literal>T</literal> contains the point indices of a triangle. "
+"<literal>n</literal> is optional and is a zone number. If "
+"<literal>n</literal> is specified then only the zone number "
+"<literal>n</literal> is converted (in that case, <literal>T</literal> is "
+"expected to have 4 rows, the fourth containing these zone numbers)."
+msgstr ""
+"<literal>P</literal> の各列は点座標を含み， <literal>T</literal> の各列は三角形の点インデックスを含みます． "
+"<literal>n</literal> はオプションであり，領域番号です． <literal>n</literal> が指定された場合，領域番号 "
+"<literal>n</literal> のみが変換されます(この場合， <literal>T</literal> "
+"には4つの行があり，4行目には領域番号が入ります)．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:117
+msgid "``M = gf_mesh('ptND', mat P, imat T)``"
+msgstr "``M = gf_mesh('ptND', mat P, imat T)``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:119
+msgid "Build a mesh from a n-dimensional \"triangulation\"."
+msgstr "n次元 \"三角形\" 分割からメッシュを構築します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:121
+msgid ""
+"Similar function to 'pt2D', for building simplexes meshes from a "
+"triangulation given in <literal>T</literal>, and a list of points given in "
+"<literal>P</literal>. The dimension of the mesh will be the number of rows "
+"of <literal>P</literal>, and the dimension of the simplexes will be the "
+"number of rows of <literal>T</literal>."
+msgstr ""
+"<literal>T</literal> で与えられた三角形分割と <literal>P</literal> "
+"で与えられた点のリストから単体メッシュを構築する 'pt2D' と同様の関数．メッシュの次元は <literal>P</literal> "
+"の行数であり，単体の次元は <literal>T</literal> の行数です．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:127
+msgid "``M = gf_mesh('load', string filename)``"
+msgstr "``M = gf_mesh('load', string filename)``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:129
+msgid "Load a mesh from a GetFEM ascii mesh file."
+msgstr "GetFEM ASCIIメッシュファイルからメッシュをロードします．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:131
+msgid ""
+"See also <literal></literal>gf_mesh_get(mesh M, 'save', string "
+"filename)<literal></literal>."
+msgstr ""
+"<literal></literal>gf_mesh_get(mesh M, 'save', string "
+"filename)<literal></literal> も参照してください．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:134
+msgid "``M = gf_mesh('from string', string s)``"
+msgstr "``M = gf_mesh('from string', string s)``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:136
+msgid "Load a mesh from a string description."
+msgstr "文字列の記述からメッシュをロードします．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:138
+msgid ""
+"For example, a string returned by <literal></literal>gf_mesh_get(mesh M, "
+"'char')<literal></literal>."
+msgstr ""
+"例えば， <literal></literal>gf_mesh_get(mesh M, 'char')<literal></literal> "
+"が返す文字列．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:141
+msgid "``M = gf_mesh('import', string format, string filename)``"
+msgstr "``M = gf_mesh('import', string format, string filename)``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:143
+msgid "Import a mesh."
+msgstr "メッシュをインポートする．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:145
+msgid "<literal>format</literal> may be:"
+msgstr "<literal>format</literal>は次のとおりです．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:147
+msgid "'gmsh' for a mesh created with <literal>Gmsh</literal>"
+msgstr "'gmsh' は <literal>Gmsh</literal> で作成されたメッシュを表します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:148
+msgid ""
+"'gmsh_with_lower_dim_elt' for a mesh created with <literal>Gmsh</literal> "
+"and including elements of lower dimension than the mesh"
+msgstr ""
+"<literal>Gmsh</literal> で作成され，メッシュよりも低次元の要素を含むメッシュの "
+"'gmsh_with_lower_dim_elt'"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:149
+msgid "'gid' for a mesh created with <literal>GiD</literal>"
+msgstr "'gid' は <literal>GiD</literal> で作成されたメッシュを表します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:150
+msgid "'cdb' for a mesh created with <literal>ANSYS</literal>"
+msgstr "'cdb' は <literal>ANSYS</literal> で作成されたメッシュを表します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:151
+msgid "'am_fmt' for a mesh created with <literal>EMC2</literal>"
+msgstr "'am_fmt' は <literal>EMC2</literal> で作成されたメッシュを表します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:154
+msgid "``M = gf_mesh('clone', mesh m2)``"
+msgstr "``M = gf_mesh('clone', mesh m2)``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:156
+msgid "Create a copy of a mesh."
+msgstr "メッシュのコピーを作成します．"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:159
+msgid ""
+"``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat "
+"vertices]])``"
+msgstr ""
+"``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat "
+"vertices]])``"
+
+#: ../source/scilab/cmdref_gf_mesh.rst:161
+msgid ""
+"Call the experimental mesher of Getfem on the geometry represented by "
+"<literal>mo</literal>. please control the conformity of the produced mesh. "
+"You can help the mesher by adding a priori vertices in the array "
+"<literal>vertices</literal> which should be of size <literal></literal>n x "
+"m<literal></literal> where <literal></literal>n<literal></literal> n is the "
+"dimension of the mesh and <literal></literal>m<literal></literal> the number"
+" of points. <literal>h</literal> is approximate diameter of the elements. "
+"<literal>K</literal> is the degree of the mesh ( > 1 for curved boundaries)."
+"  The mesher try to optimize the quality of the elements. This operation may"
+" be time consuming. Note that if the mesh generation fails, because of some "
+"random procedure used, it can be run again since it will not give "
+"necessarily the same result due to random procedures used. The messages send"
+" to the console by the mesh generation can be deactivated using "
+"<literal>gf_util('trace level', 2)</literal>. More information can be "
+"obtained by <literal>gf_util('trace level', 4)</literal>. See "
+"<literal></literal>gf_mesher_object<literal></literal> to manipulate "
+"geometric primitives in order to describe the geometry."
+msgstr ""
+"<literal>mo</literal> はGetfemの実験的幾何メッシャーを指します．作成したメッシュの整合性は制御してください．配列  "
+"<literal>vertices</literal> にアプリオリに頂点を追加して，メッシュの次元nを "
+"<literal></literal>n<literal></literal> ，点の数を "
+"<literal></literal>m<literal></literal> として，サイズを <literal></literal>n x "
+"m<literal></literal> とすることで，メッシャーを支援できます． <literal>h</literal> "
+"は要素のおおよその直径です． <literal>K</literal> はメッシュの次数(>1 "
+"曲線境界の場合)です．メッシャは要素の品質を最適化しようとします．この操作には時間がかかる場合があります．メッシュの生成が失敗した場合は，使用されたランダムプロシージャのために必ずしも同じ結果が得られないため，再度実行できます．メッシュ生成によってコンソールに送信されるメッセージは，"
+"  <literal>gf_util('trace level', 2)</literal> を使って非アクティブにすることができる．より詳しい情報は"
+"  <literal>gf_util('trace level', 4)</literal> "
+"で得ることができる．ジオメトリを記述するためにジオメトリプリミティブを操作するには， "
+"<literal></literal>gf_mesher_object<literal></literal> を参照してください．"

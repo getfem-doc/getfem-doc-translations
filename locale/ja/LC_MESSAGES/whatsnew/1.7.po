@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-02 01:31+0000\n"
+"PO-Revision-Date: 2018-07-16 07:13+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/whatsnew/1.7.rst:5
+msgid "What's New in |gf| 1.7"
+msgstr "|gf| 1.7 の新機能"
+
+#: ../source/whatsnew/1.7.rst:7
+msgid "Released, 2005/01/05:"
+msgstr "リリース，2005/01/05．"
+
+#: ../source/whatsnew/1.7.rst:9
+msgid ""
+"An important number of improvements have been done on |gf| 1.7. Note that "
+"the next release will be |gf| 2.0, some of its changes won't maintain "
+"backward compatibility with |gf| 1.7:"
+msgstr ""
+"|gf| 1.7には多くの改善が行われています．次のリリースは |gf| 2.0で，一部の変更では |gf| 1.7との下位互換性が維持されません．"
+
+#: ../source/whatsnew/1.7.rst:13
+msgid ""
+"Introduction of the `model brick` system, which provides a general framework"
+" for the solution of common PDEs. Each brick is dedicated to a specific task"
+" (i.e. \"handle Dirichlet conditions\", \"assembly of the Stokes Problem\", "
+"\"solve a linear system\", etc.). These bricks are then connected to each "
+"other. Examples of use can be found in the \"tests/\" directory of GetFEM."
+msgstr ""
+"共通のPDEを解決するための一般的なフレームワークを提供する `model brick` "
+"システムの導入．各ブリックは特定のタスク(\"Dirichlet条件を扱う\"，\"Stokes問題のアセンブリ\"，\"線形系を解く\"など)専用です．これらのブリックは互いに接続されます．使用例は，GetFEMの"
+" \"tests/\" ディレクトリにあります．"
+
+#: ../source/whatsnew/1.7.rst:21
+msgid ""
+"New models : Small strain plasticity, large strain elasticity, contact and "
+"friction conditions, linearized plates, incompressibility in small and large"
+" strain elasticity."
+msgstr "新しいモデル: 微小ひずみ塑性，有限ひずみ弾性，接触および摩擦条件，線形板，微小ひずみおよび有限ひずみ弾性における非圧縮性．"
+
+#: ../source/whatsnew/1.7.rst:26
+msgid "Simplifications and optimizations in elementary computations."
+msgstr "要素計算における単純化と最適化．"
+
+#: ../source/whatsnew/1.7.rst:28
+msgid ""
+"A direct sparse solver (`SuperLU 3.0 "
+"<http://crd.lbl.gov/~xiaoye/SuperLU/>`_) is available \"out of the box\"."
+msgstr ""
+"直接スパースソルバー (`SuperLU 3.0 <http://crd.lbl.gov/~xiaoye/SuperLU/>`_) を使用できます "
+"\"すぐに使えます\"．"
+
+#: ../source/whatsnew/1.7.rst:32
+msgid ""
+"Ability to export results to `VTK`_ and `OpenDX <http://www.opendx.org>`_."
+msgstr "結果を `VTK`_ と `OpenDX <http://www.opendx.org>`_ にエクスポートする機能．"
+
+#: ../source/whatsnew/1.7.rst:35
+msgid "Major changes in Gmm++ 1.7:"
+msgstr "Gmm++1.7の主な変更点．"
+
+#: ../source/whatsnew/1.7.rst:37
+msgid "New preconditioner ILUTP."
+msgstr "新しい前処理行列ILUTP．"
+
+#: ../source/whatsnew/1.7.rst:39
+msgid "A BFGS algorithm has been developed."
+msgstr "BFGSアルゴリズムを開発しました．"
+
+#: ../source/whatsnew/1.7.rst:41
+msgid "Gmm++ now handles (valid) operations mixing complex and scalars."
+msgstr "Gmm++は，複素数とスカラーが混在する(有効な)操作を扱うようになりました．"
+
+#: ../source/whatsnew/1.7.rst:44
+msgid ""
+"gmm::real_part(V) and gmm::imag_part(V) gives a possibly writable reference "
+"on the real and imaginary part of a complex vector or matrix."
+msgstr ""
+"gmm::real_part(V) と gmm::imag_part(V) "
+"は，複雑なベクトルまたは行列の実数部と虚数部に対する書き込み可能な参照を提供します．"
+
+#: ../source/whatsnew/1.7.rst:48
+msgid "The SuperLU interface has been updated for SuperLU 3.0."
+msgstr "SuperLUインターフェースがSuperLU 3.0用に更新されました．"
+
+#: ../source/whatsnew/1.7.rst:50
+msgid ""
+"getfem-matlab has been renamed \"getfem-interface\" since it now provides an"
+" interface for Matlab and `Python <http://www.python.org>`_ (with the "
+"`Numarray <http://www.stsci.edu/resources/software_hardware/numarray>`_ "
+"package). Note that, while it is `documented "
+"<http://getfem.org/python/index.html>`_ and working, the python interface is"
+" still considered a *work in progress*. You have to enable it explicitly "
+"with ``./configure --enable-python``. An interface to the Gmm++ sparse "
+"matrices and solvers is also provided."
+msgstr ""
+"getfem-matlabは，Matlabと `Python <http://www.python.org>`_ ( `Numarray "
+"<http://www.stsci.edu/resources/software_hardware/numarray>`_  "
+"package)用のインタフェースを提供するようになったため， \"getfem-interface\" "
+"という名前に変更されました．注意して欲しいのは，pythonのインターフェースは`文書化 `documented "
+"<http://getfem.org/python/index.html>`_ "
+"されて動作しているものの，まだ*作業中*と見なされていることです．使用するには ``./configure --enable-python`` "
+"で明示的に有効にする必要があります．Gmm++疎行列とソルバーへのインタフェースも提供されます．"

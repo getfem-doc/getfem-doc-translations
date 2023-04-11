@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-02 01:31+0000\n"
+"PO-Revision-Date: 2018-07-16 07:02+0000\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../source/project/libdesc_event.rst:11
+msgid "Events management"
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:1
+#: ../source/project/libdesc_event.rst:14
+msgid "Description"
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:16
+msgid ""
+"The ``mesh``, |mf|, |mim| and |mo| description are linked together in the "
+"sense that there is some dependencies between them. For instance, when an "
+"element is suppressed to a mesh, the |mf| object has to react."
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:21
+msgid "Files"
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:1
+msgid "File(s)"
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:1
+msgid ":file:`getfem_context.h` and :file:`getfem_context.cc`"
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:1
+msgid ""
+"Define a class `context_dependencies` from which all object has to derive in"
+" order to manage events."
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:31
+msgid "State"
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:33
+msgid ""
+"The main tool to deal with simple dependence of object is in "
+":file:`getfem_context.h`. An object ``context_dependencies`` is defined "
+"there. In order to deal with the dependencies of an object, the object "
+"``context_dependencies`` needs to be a parent class of this object. It adds "
+"the following methods to the object:"
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:41
+msgid ""
+"Add an object (which has to have ``context_dependencies`` as a parent class)"
+" to the list of objects from which the current object depend."
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:46
+msgid ""
+"Indicates to the dependent objects that something has change in the object."
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:50
+msgid ""
+"Check if the object has to be updated. if it is the case it makes first a "
+"check to the dependency list and call the update function of the object. "
+"(the update function of the dependencies are called before the update "
+"function of the current object)."
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:57
+msgid ""
+"Says if the object has still a valid context, i.e. if the object in the "
+"dependency list still exist."
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:60
+msgid "Moreover, the object has to define a method::"
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:64
+msgid ""
+"which is called after a ``context_check()`` if the context has changed."
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:66
+msgid ""
+"An additional system is present in the object |m|. Each individual element "
+"has a version number in order for the objects |mf| and |mim| to detect which"
+" element has changed between two calls."
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:71
+msgid "Perspectives"
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:73
+msgid ""
+"The event management of some objects should be analysed with care. This is "
+"the case for instance of |mls|, |mfls|, |pmf|, etc."
+msgstr ""
+
+#: ../source/project/libdesc_event.rst:75
+msgid ""
+"The event management still have to be improved to be a fully reactive "
+"system."
+msgstr ""

@@ -1,0 +1,360 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-02 01:31+0000\n"
+"PO-Revision-Date: 2018-07-16 07:01+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:8
+msgid "gf_slice_get"
+msgstr "gf_slice_get"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:10
+msgid "**Synopsis**"
+msgstr "**概要**"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:34
+msgid "**Description :**"
+msgstr "**説明 :**"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:37
+msgid "General function for querying information about slice objects."
+msgstr "Sliceオブジェクトに関する情報を照会するための汎用的な関数です．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:40
+msgid "**Command list :**"
+msgstr "**コマンドリスト**"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:44
+msgid "``d = gf_slice_get(slice S, 'dim')``"
+msgstr "``d = gf_slice_get(slice S, 'dim')``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:46
+msgid "Return the dimension of the slice (2 for a 2D mesh, etc..)."
+msgstr "スライスの次数(2次元メッシュであれば2など)を返します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:49
+msgid "``a = gf_slice_get(slice S, 'area')``"
+msgstr "``a = gf_slice_get(slice S, 'area')``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:51
+msgid "Return the area of the slice."
+msgstr "スライスの面積を返します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:54
+msgid "``CVids = gf_slice_get(slice S, 'cvs')``"
+msgstr "``CVids = gf_slice_get(slice S, 'cvs')``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:56
+msgid ""
+"Return the list of convexes of the original mesh contained in the slice."
+msgstr "スライスに含まれる元のメッシュの凸のリストを返します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:59
+msgid "``n = gf_slice_get(slice S, 'nbpts')``"
+msgstr "``n = gf_slice_get(slice S, 'nbpts')``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:61
+msgid "Return the number of points in the slice."
+msgstr "スライス内の点の数を返します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:64
+msgid "``ns = gf_slice_get(slice S, 'nbsplxs'[, int dim])``"
+msgstr "``ns = gf_slice_get(slice S, 'nbsplxs'[, int dim])``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:66
+msgid "Return the number of simplexes in the slice."
+msgstr "スライス内の単体の数を返します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:68
+msgid ""
+"Since the slice may contain points (simplexes of dim 0), segments (simplexes"
+" of dimension 1), triangles etc., the result is a vector of size "
+"gf_slice_get(slice S, 'dim')+1, except if the optional argument "
+"<literal>dim</literal> is used."
+msgstr ""
+"スライスには，点(dim0の単体)，セグメント(次元1の単体)，三角形などが含まれる場合があるため，オプションの引数 "
+"<literal>dim</literal> が使用されている場合を除いて，結果はサイズ  gf_slice_get(slice S, 'dim')+1"
+" のベクトルになります ．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:74
+msgid "``P = gf_slice_get(slice S, 'pts')``"
+msgstr "``P = gf_slice_get(slice S, 'pts')``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:76
+msgid "Return the list of point coordinates."
+msgstr "点座標のリストを返します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:79
+msgid "``{S, CV2S} = gf_slice_get(slice S, 'splxs',int dim)``"
+msgstr "``{S, CV2S} = gf_slice_get(slice S, 'splxs',int dim)``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:81
+msgid "Return the list of simplexes of dimension <literal>dim</literal>."
+msgstr "次元 <literal>dim</literal> の単体のリストを返します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:83
+msgid ""
+"On output, S has 'dim+1' rows, each column contains the point numbers of a "
+"simplex.  The vector <literal>CV2S</literal> can be used to find the list of"
+" simplexes for any convex stored in the slice. For example "
+"'S(:,CV2S(4):CV2S(5)-1)' gives the list of simplexes for the fourth convex."
+msgstr ""
+"出力では，Sには 'dim+1' 行があり，各列には単体の点番号が含まれています．ベクトル <literal>CV2S</literal> "
+"を使用して，スライス内に格納されている任意の凸の単体のリストを見つけることができます．たとえば， 'S(:,CV2S(4):CV2S(5)-1)' "
+"とすると，第4の凸の単体のリストが得られます．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:90
+msgid "``{P, E1, E2} = gf_slice_get(slice S, 'edges')``"
+msgstr "``{P, E1, E2} = gf_slice_get(slice S, 'edges')``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:92
+msgid "Return the edges of the linked mesh contained in the slice."
+msgstr "スライスに含まれるリンクメッシュのエッジを返します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:94
+msgid ""
+"<literal>P</literal> contains the list of all edge vertices, "
+"<literal>E1</literal> contains the indices of each mesh edge in "
+"<literal>P</literal>, and <literal>E2</literal> contains the indices of each"
+" \"edges\" which is on the border of the slice. This function is useless "
+"except for post-processing purposes."
+msgstr ""
+"<literal>P</literal> はすべてのエッジ頂点のリストを含み， <literal>E1</literal> は "
+"<literal>P</literal> における各メッシュエッジのインデックスを含み， <literal>E2</literal> "
+"はスライスの境界上にある各 \"エッジ\" のインデックスを含みます．この機能は，ポスト処理の目的以外には使用できません．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:100
+msgid "``Usl = gf_slice_get(slice S, 'interpolate_convex_data', mat Ucv)``"
+msgstr "``Usl = gf_slice_get(slice S, 'interpolate_convex_data', mat Ucv)``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:102
+msgid "Interpolate data given on each convex of the mesh to the slice nodes."
+msgstr "メッシュの各凸に指定されたデータをスライスの節点で補間します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:104
+msgid ""
+"The input array <literal>Ucv</literal> may have any number of dimensions, "
+"but its last dimension should be equal to gf_mesh_get(mesh M, 'max cvid')."
+msgstr ""
+"入力配列 <literal>Ucv</literal> は任意の数の次元を持つことができますが，その最後の次元は gf_mesh_get(mesh M,"
+" 'max cvid') に等しくなければなりません．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:107
+msgid ""
+"Example of use: gf_slice_get(slice S, 'interpolate_convex_data', "
+"gf_mesh_get(mesh M, 'quality'))."
+msgstr ""
+"使用例: gf_slice_get(slice S, 'interpolate_convex_data', gf_mesh_get(mesh M, "
+"'quality'))．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:110
+msgid "``m = gf_slice_get(slice S, 'linked mesh')``"
+msgstr "``m = gf_slice_get(slice S, 'linked mesh')``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:112
+msgid "Return the mesh on which the slice was taken."
+msgstr "スライスが作成されたメッシュを返します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:115
+msgid "``m = gf_slice_get(slice S, 'mesh')``"
+msgstr "``m = gf_slice_get(slice S, 'mesh')``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:117
+msgid ""
+"Return the mesh on which the slice was taken (identical to 'linked mesh')"
+msgstr "スライスが作成されたメッシュを返します( 'リンクメッシュ' と同一)．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:121
+msgid "``z = gf_slice_get(slice S, 'memsize')``"
+msgstr "``z = gf_slice_get(slice S, 'memsize')``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:123
+msgid "Return the amount of memory (in bytes) used by the slice object."
+msgstr "Sliceオブジェクトが使用するメモリーの量(バイト単位)を返します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:126
+msgid "``gf_slice_get(slice S, 'export to vtk', string filename, ...)``"
+msgstr "``gf_slice_get(slice S, 'export to vtk', string filename, ...)``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:128
+msgid "Export a slice to VTK."
+msgstr "スライスをVTKにエクスポートします．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:130
+#: ../source/scilab/cmdref_gf_slice_get.rst:156
+#: ../source/scilab/cmdref_gf_slice_get.rst:187
+msgid ""
+"Following the <literal>filename</literal>, you may use any of the following "
+"options:"
+msgstr "<literal>filename</literal> の後には，以下のオプションを使うことができます．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:132
+#: ../source/scilab/cmdref_gf_slice_get.rst:158
+#: ../source/scilab/cmdref_gf_slice_get.rst:190
+msgid ""
+"if 'ascii' is not used, the file will contain binary data (non portable, but"
+" fast)."
+msgstr "'ascii' を使用しない場合，ファイルには(ポータブルではないが高速な)バイナリデータが格納されます．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:134
+#: ../source/scilab/cmdref_gf_slice_get.rst:160
+#: ../source/scilab/cmdref_gf_slice_get.rst:192
+msgid ""
+"if 'edges' is used, the edges of the original mesh will be written instead "
+"of the slice content."
+msgstr "'edges' を使用すると，スライスではなくオリジナルのメッシュのエッジが書き込まれます．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:137
+#: ../source/scilab/cmdref_gf_slice_get.rst:163
+#: ../source/scilab/cmdref_gf_slice_get.rst:197
+#: ../source/scilab/cmdref_gf_slice_get.rst:209
+msgid ""
+"More than one dataset may be written, just list them. Each dataset consists "
+"of either:"
+msgstr "複数のデータセットを書き込むこともできますが，それらを一覧表示するだけです．各データセットは次のいずれかで構成されます．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:140
+#: ../source/scilab/cmdref_gf_slice_get.rst:166
+#: ../source/scilab/cmdref_gf_slice_get.rst:200
+msgid ""
+"a field interpolated on the slice (scalar, vector or tensor), followed by an"
+" optional name."
+msgstr "スライス上で補間されるフィールド(スカラー，ベクトル，テンソル)で，その後にオプションの名前が続きます．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:142
+#: ../source/scilab/cmdref_gf_slice_get.rst:168
+#: ../source/scilab/cmdref_gf_slice_get.rst:202
+msgid "a mesh_fem and a field, followed by an optional name."
+msgstr "mesh_femとフィールドを指定し，その後にオプションの名前を指定します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:144
+#: ../source/scilab/cmdref_gf_slice_get.rst:170
+msgid "Examples:"
+msgstr "例"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:146
+msgid ""
+"gf_slice_get(slice S, 'export to vtk', 'test.vtk', Usl, 'first_dataset', mf,"
+" U2, 'second_dataset')"
+msgstr ""
+"gf_slice_get(slice S, 'export to vtk', 'test.vtk', Usl, 'first_dataset', mf,"
+" U2, 'second_dataset')"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:148
+msgid "gf_slice_get(slice S, 'export to vtk', 'test.vtk', 'ascii', mf,U2)"
+msgstr "gf_slice_get(slice S, 'export to vtk', 'test.vtk', 'ascii', mf,U2)"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:149
+msgid ""
+"gf_slice_get(slice S, 'export to vtk', 'test.vtk', 'edges', 'ascii', Uslice)"
+msgstr ""
+"gf_slice_get(slice S, 'export to vtk', 'test.vtk', 'edges', 'ascii', Uslice)"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:152
+msgid "``gf_slice_get(slice S, 'export to vtu', string filename, ...)``"
+msgstr "``gf_slice_get(slice S, 'export to vtu', string filename, ...)``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:154
+msgid "Export a slice to VTK(XML)."
+msgstr "スライスをVTK(XML)にエクスポートします．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:172
+msgid ""
+"gf_slice_get(slice S, 'export to vtu', 'test.vtu', Usl, 'first_dataset', mf,"
+" U2, 'second_dataset')"
+msgstr ""
+"gf_slice_get(slice S, 'export to vtu', 'test.vtu', Usl, 'first_dataset', mf,"
+" U2, 'second_dataset')"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:174
+msgid "gf_slice_get(slice S, 'export to vtu', 'test.vtu', 'ascii', mf,U2)"
+msgstr "gf_slice_get(slice S, 'export to vtu', 'test.vtu', 'ascii', mf,U2)"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:175
+msgid ""
+"gf_slice_get(slice S, 'export to vtu', 'test.vtu', 'edges', 'ascii', Uslice)"
+msgstr ""
+"gf_slice_get(slice S, 'export to vtu', 'test.vtu', 'edges', 'ascii', Uslice)"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:178
+msgid "``gf_slice_get(slice S, 'export to pov', string filename)``"
+msgstr "``gf_slice_get(slice S, 'export to pov', string filename)``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:180
+msgid "Export a the triangles of the slice to POV-RAY."
+msgstr "スライスの三角形をPOV-RAYに書き出します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:183
+msgid "``gf_slice_get(slice S, 'export to dx', string filename, ...)``"
+msgstr "``gf_slice_get(slice S, 'export to dx', string filename, ...)``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:185
+msgid "Export a slice to OpenDX."
+msgstr "スライスをOpenDXに書き出します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:194
+msgid ""
+"if 'append' is used, the opendx file will not be overwritten, and the new "
+"data will be added at the end of the file."
+msgstr "'append' を使用すると，opendxファイルは上書きされず，新しいデータがファイルの最後に追加されます．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:205
+msgid ""
+"``gf_slice_get(slice S, 'export to pos', string filename[, string "
+"name][[,mesh_fem mf1], mat U1, string nameU1[[,mesh_fem mf1], mat U2, string"
+" nameU2,...])``"
+msgstr ""
+"``gf_slice_get(slice S, 'export to pos', string filename[, string "
+"name][[,mesh_fem mf1], mat U1, string nameU1[[,mesh_fem mf1], mat U2, string"
+" nameU2,...])``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:207
+msgid "Export a slice to Gmsh."
+msgstr "スライスをGmshにエクスポートします．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:212
+msgid "a field interpolated on the slice (scalar, vector or tensor)."
+msgstr "スライス上で補間されるフィールド(スカラー，ベクトル，テンソル)．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:213
+msgid "a mesh_fem and a field."
+msgstr "mesh_femとフィールド．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:216
+msgid "``s = gf_slice_get(slice S, 'char')``"
+msgstr "``s = gf_slice_get(slice S, 'char')``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:218
+msgid "Output a (unique) string representation of the slice."
+msgstr "スライスの(一意な)文字列表現を出力します．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:220
+msgid ""
+"This can be used to perform comparisons between two different slice objects."
+" This function is to be completed."
+msgstr "これを使用して，2つの異なるSliceオブジェクト間の比較を実行できます．この機能は完成予定です．"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:226
+msgid "``gf_slice_get(slice S, 'display')``"
+msgstr "``gf_slice_get(slice S, 'display')``"
+
+#: ../source/scilab/cmdref_gf_slice_get.rst:228
+msgid "displays a short summary for a slice object."
+msgstr "Sliceオブジェクトの概要が表示されます．"

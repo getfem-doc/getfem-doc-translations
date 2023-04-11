@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-02 01:31+0000\n"
+"PO-Revision-Date: 2018-07-16 07:01+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:8
+msgid "gf_linsolve"
+msgstr "gf_linsolve"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:10
+msgid "**Synopsis**"
+msgstr "**概要**"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:21
+msgid "**Description :**"
+msgstr "**説明 :**"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:24
+msgid "Various linear system solvers."
+msgstr "各種線形システムソルバー．"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:27
+msgid "**Command list :**"
+msgstr "**コマンドリスト**"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:31
+msgid ""
+"``X = gf_linsolve('gmres', spmat M, vec b[, int restart][, precond "
+"P][,'noisy'][,'res', r][,'maxiter', n])``"
+msgstr ""
+"``X = gf_linsolve('gmres', spmat M, vec b[, int restart][, precond "
+"P][,'noisy'][,'res', r][,'maxiter', n])``"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:33
+msgid ""
+"Solve <literal>M.X = b</literal> with the generalized minimum residuals "
+"method."
+msgstr "GMRES法で <literal>M.X = b</literal> を解く．"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:35
+msgid ""
+"Optionally using <literal>P</literal> as preconditioner. The default value "
+"of the restart parameter is 50."
+msgstr "任意で前処理として <literal>P</literal> を使用します．restartパラメーターのデフォルト値は50です．"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:39
+msgid ""
+"``X = gf_linsolve('cg', spmat M, vec b [, precond P][,'noisy'][,'res', "
+"r][,'maxiter', n])``"
+msgstr ""
+"``X = gf_linsolve('cg', spmat M, vec b [, precond P][,'noisy'][,'res', "
+"r][,'maxiter', n])``"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:41
+msgid "Solve <literal>M.X = b</literal> with the conjugated gradient method."
+msgstr "共役勾配法で <literal>M.X = b</literal> を解きます．"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:43
+msgid "Optionally using <literal>P</literal> as preconditioner."
+msgstr "オプションで前処理 <literal>P</literal> を使用します．"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:46
+msgid ""
+"``X = gf_linsolve('bicgstab', spmat M, vec b [, precond P][,'noisy'][,'res',"
+" r][,'maxiter', n])``"
+msgstr ""
+"``X = gf_linsolve('bicgstab', spmat M, vec b [, precond P][,'noisy'][,'res',"
+" r][,'maxiter', n])``"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:48
+msgid ""
+"Solve <literal>M.X = b</literal> with the bi-conjugated gradient stabilized "
+"method."
+msgstr "双共役勾配安定化法で <literal>M.X = b</literal> を解く．"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:50
+msgid "Optionally using <literal>P</literal> as a preconditioner."
+msgstr "オプションで前処理 <literal>P</literal> を使用します．"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:53
+msgid "``{U, cond} = gf_linsolve('lu', spmat M, vec b)``"
+msgstr "``{U, cond} = gf_linsolve('lu', spmat M, vec b)``"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:55
+msgid "Alias for gf_linsolve('superlu',...)"
+msgstr "gf_linsolve('superlu',...) のエイリアス"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:58
+msgid "``{U, cond} = gf_linsolve('superlu', spmat M, vec b)``"
+msgstr "``{U, cond} = gf_linsolve('superlu', spmat M, vec b)``"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:60
+msgid ""
+"Solve <literal>M.U = b</literal> apply the SuperLU solver (sparse LU "
+"factorization)."
+msgstr "<literal>M.U = b</literal> を解くには，SuperLUソルバ(疎LU分解)を適用します．"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:62
+msgid ""
+"The condition number estimate <literal>cond</literal> is returned with the "
+"solution <literal>U</literal>."
+msgstr "条件数推定値 <literal>cond</literal> は，解 <literal>U</literal> とともに返されます．"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:65
+msgid "``{U, cond} = gf_linsolve('mumps', spmat M, vec b)``"
+msgstr "``{U, cond} = gf_linsolve('mumps', spmat M, vec b)``"
+
+#: ../source/scilab/cmdref_gf_linsolve.rst:67
+msgid "Solve <literal>M.U = b</literal> using the MUMPS solver."
+msgstr "MUMPSソルバーを使用して， <literal>M.U = b</literal> を解きます．"

@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-02 01:31+0000\n"
+"PO-Revision-Date: 2018-07-16 07:04+0000\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../source/userdoc/convect.rst:10
+msgid "A pure convection method"
+msgstr ""
+
+#: ../source/userdoc/convect.rst:12
+msgid ""
+"A method to compute a pure convection is defined in the file "
+":file:`getfem/getfem_convect.h`. The call of the function is::"
+msgstr ""
+
+#: ../source/userdoc/convect.rst:17
+msgid ""
+"where ``mf`` is a variable of type |gf_mf|, ``U`` is a vector which "
+"represent the field to be convected, ``mf_v`` is a |gf_mf| for the velocity "
+"field, ``V`` is the dof vector for the velocity field, ``dt`` is the pseudo "
+"time of convection and ``nt`` the number of iterations for the computation "
+"of characteristics. ``option`` is an option for the boundary condition where"
+" there is a re-entrant convection. The possibilities are "
+"getfem::CONVECT_EXTRAPOLATION (extrapolation of the field on the nearest "
+"element) or getfem::CONVECT_UNCHANGED (no change of the value on the "
+"boundary)."
+msgstr ""
+
+#: ../source/userdoc/convect.rst:22
+msgid "The method integrate the partial differential equation"
+msgstr ""
+
+#: ../source/userdoc/convect.rst:24
+msgid "\\frac{\\partial U}{\\partial t} + V\\cdot\\nabla U = 0,"
+msgstr ""
+
+#: ../source/userdoc/convect.rst:28
+msgid "on the time intervall :math:`[0, dt]`."
+msgstr ""
+
+#: ../source/userdoc/convect.rst:30
+msgid ""
+"The method used is of Galerkin-Characteristic kind. It is a very simple "
+"version which is inconditionnally stable but rather dissipative. See "
+"[ZT1989]_ and also the Freefem++ documentation on convect command."
+msgstr ""
+
+#: ../source/userdoc/convect.rst:34
+msgid ""
+"The defined method works only if ``mf`` is a pure Lagrange finite element "
+"method for the moment. The principle is to convect backward the finite "
+"element nodes by solving the ordinary differential equation:"
+msgstr ""
+
+#: ../source/userdoc/convect.rst:37
+msgid "\\frac{d X}{d t} = -V(X),"
+msgstr ""
+
+#: ../source/userdoc/convect.rst:41
+msgid ""
+"with an initial condition corresponding to each node. This convection is "
+"made with ``nt`` steps. Then the solution is interploated on the convected "
+"nodes."
+msgstr ""
+
+#: ../source/userdoc/convect.rst:44
+msgid ""
+"In order to make the extrapolation not too expensive, the product "
+":math:`dt\\times V` should not be too large."
+msgstr ""
+
+#: ../source/userdoc/convect.rst:47
+msgid ""
+"Note that this method can be used to solve convection dominant problems "
+"coupling it with a splitting scheme."
+msgstr ""
