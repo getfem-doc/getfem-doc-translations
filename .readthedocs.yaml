@@ -25,11 +25,10 @@ build:
     - fig2ps
     - gv
     - python3-vtk7
-    - python3-scipy
   tools:
     python: "mambaforge-4.10"
   jobs:
-    pre_build:
+    post_create_environment:
       - mkdir ~/.config
       - mkdir ~/.config/ImageMagick
       - cp /etc/ImageMagick-*/* ~/.config/ImageMagick
