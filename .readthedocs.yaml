@@ -28,7 +28,7 @@ build:
   tools:
     python: "mambaforge-4.10"
   jobs:
-    post_create_environment:
+    pre_build:
       - mkdir ~/.config
       - mkdir ~/.config/ImageMagick
       - cp /etc/ImageMagick-*/* ~/.config/ImageMagick
@@ -36,7 +36,6 @@ build:
       - perl -p -i -e 's/\"none\"/\"read\|write\"/g' ~/.config/ImageMagick/policy.xml
       - echo $MAGICK_CONFIGURE_PATH
       - cat $MAGICK_CONFIGURE_PATH/policy.xml
-      - cd getfem && bash autogen.sh && ./configure --with-pic && cd doc/sphinx && make images
 
 sphinx:
    configuration: conf.py
