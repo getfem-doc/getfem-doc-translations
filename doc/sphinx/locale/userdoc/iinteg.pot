@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-11 01:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/userdoc/iinteg.rst:10
+msgid "Incorporate new approximated integration methods in |gf|"
+msgstr ""
+
+#: ../source/userdoc/iinteg.rst:12
+msgid "A perl script automatically incorporates new cubature methods from a description file. You can see in the directory ``cubature`` such description files (with extension ``.IM``) . For instance for ``IM_TETRAHEDRON(5)`` the following file describes the method::"
+msgstr ""
+
+#: ../source/userdoc/iinteg.rst:30
+msgid "where ``NAME`` is the name of the method in |gf| (constant integer parameter are allowed), ``N`` is the dimension, ``GEOTRANS`` describes a valid geometric transformation of |gf|. This geometric transformation just defines the reference element on which the integration method is described. ``NBPT`` is the number of integration node definitions. Integration node definitions include a symmetry definition such that the total number of integration nodes would be greater than ``NBPT``."
+msgstr ""
+
+#: ../source/userdoc/iinteg.rst:38
+msgid "Composition of the integration node definition:"
+msgstr ""
+
+#: ../source/userdoc/iinteg.rst:40
+msgid "an integer: 0 = no symmetry, 1 = full symmetric (x6 for a triangle, x4 for a quadrangle, x24 for a tetrahedron ...),"
+msgstr ""
+
+#: ../source/userdoc/iinteg.rst:43
+msgid "the ``N`` coordinates of the integration node,"
+msgstr ""
+
+#: ../source/userdoc/iinteg.rst:45
+msgid "the load."
+msgstr ""
+
+#: ../source/userdoc/iinteg.rst:47
+msgid "``NBF`` is the number of faces of the reference element (should correspond to ``GEOTRANS``). Then follows an already existing integration method for each face (each on a line). This is necessary to make integrations on boundaries."
+msgstr ""
+
+#: ../source/userdoc/iinteg.rst:52
+msgid "The file format is inspired from [EncyclopCubature]_."
+msgstr ""
