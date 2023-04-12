@@ -13,6 +13,7 @@ import subprocess
 
 subprocess.run(["bash", "autogen.sh"], cwd=r"getfem")
 subprocess.run(["./configure", "--with-pic"], cwd=r"getfem")
+subprocess.run(["make", "-j8"], cwd=r"getfem")
 subprocess.run(["make", "images"], cwd=r"getfem/doc/sphinx")
 
 basedir = os.path.join(
