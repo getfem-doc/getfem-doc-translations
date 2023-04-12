@@ -11,12 +11,12 @@ import os
 import pathlib
 
 basedir = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "getfem/doc/sphinx/source"
+    os.path.dirname(os.path.abspath(__file__)), "doc/sphinx/source"
 )
 
 exec(pathlib.Path(os.path.join(basedir, "conf.py")).read_text(), globals())
 
-locale_dirs = [os.path.join(basedir, "../../../../locale/")]
+locale_dirs = [os.path.join(basedir, "./locale/")]
 html_theme = 'alabaster'
 
 def setup(app):

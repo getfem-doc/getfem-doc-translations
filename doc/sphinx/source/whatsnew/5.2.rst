@@ -1,0 +1,35 @@
+.. include:: ../replaces.txt
+
+************************
+  What's New in |gf| 5.2
+************************
+
+The main contribution of this release is the sharp optimization of the high level generic assembly. Speed up in assembly time can be very important. The first pyramidal elements were also designed.
+
+Released version, 2017/06/30.
+
+The main changes are:
+
+   * |gf| project is now hosted by `Savannah <https://savannah.nongnu.org/projects/getfem>`_.
+
+   * Sharp optimization of the high level generic assembly: optimization of
+     the most used instructions and most used elements, optimization of the
+     storage into sparse matrix optimization, factorization of some elementary
+     operations, etc.
+
+   * Isoparametric Lagrange pyramidal elements of degree 1 and 2 have been
+     added together with corresponding quadrature methods.
+
+   * Python interface is now compatible with Python 3.x versions.
+
+   * Import of Ansys meshes.
+
+   * A new transformation has been added to the weak form
+     language for the extrapolation on a neighbour element.
+
+   * Compatibility for Windows and Mac installation has been checked.
+
+   * For std::vector<T> the overload of std::cout << V << endl; added to gmm
+     induces some conflicts. Is has been suppressed. Please use instead
+     std::cout << gmm::vref(V) << endl;
+

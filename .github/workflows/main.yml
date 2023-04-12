@@ -84,9 +84,9 @@ jobs:
          tx push -s --skip;
          rm -rf source/locale/ja source/locale/pt_BR || true;
          tx pull --silent -f -l ja,pt_BR)
-        rm -rf ../locale
+        rm -rf ../doc
         rm -rf doc/sphinx/locale/.doctrees
-        cp -r doc/sphinx/source/locale ../locale
+        cp -r doc ../doc
         cd ../
         deactivate
     - name: git_config
