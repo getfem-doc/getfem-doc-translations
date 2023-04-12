@@ -9,6 +9,11 @@ This conf.py do:
 """
 import os
 import pathlib
+import subprocess
+
+subprocess.run(["bash", "autogen.sh"], cwd=r"getfem")
+subprocess.run(["./configure", "--with-pic"], cwd=r"getfem")
+subprocess.run(["make", "images"], cwd=r"getfem/doc/sphinx")
 
 basedir = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "getfem/doc/sphinx/source"
