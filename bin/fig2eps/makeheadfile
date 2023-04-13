@@ -1,0 +1,344 @@
+#!/usr/bin/perl
+# Copyright (C) 1998-2020 Yves Renard
+#
+# This file is a part of GetFEM
+#
+# GetFEM  is  free software;  you  can  redistribute  it  and/or modify it
+# under  the  terms  of the  GNU  Lesser General Public License as published
+# by  the  Free Software Foundation; either version 3 of the License,  or
+# (at your option) any later version along with the GCC Runtime Library
+# Exception either version 3.1 or (at your option) any later version.
+# This program  is  distributed  in  the  hope  that it will be useful,  but
+# WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+# or  FITNESS  FOR  A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+# License and GCC Runtime Library Exception for more details.
+# You  should  have received a copy of the GNU Lesser General Public License
+# along  with  this program;  if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301, USA.
+
+
+sub clean_line {
+  $_[0] =~ s/\/\*//g;
+  $_[0] =~ s/\/\///g;
+  chomp $_[0];
+  $_[0] =~ s/\*\///g;
+  $_[0] =~ s/^\s*//g;
+  $_[0] =~ s/\s*$//g;
+  $_[0] =~ s/=//g;
+}
+
+sub print_license  {
+
+  my $RES   = $_[0];
+  my $NAME = $_[1];
+
+  if ($NAME =~ /\.pl$/) {
+    for my $i (0 .. $#year1) {
+      print RES "# Copyright (C) $year1[$i]$toyear2[$i] $copyauth[$i]\n";
+    }
+    print RES <<""
+#
+# This file is a part of GetFEM
+#
+# GetFEM  is  free software;  you  can  redistribute  it  and/or modify it
+# under  the  terms  of the  GNU  Lesser General Public License as published
+# by  the  Free Software Foundation;  either version 3 of the License,  or
+# (at your option) any later version along with the GCC Runtime Library
+# Exception either version 3.1 or (at your option) any later version.
+# This program  is  distributed  in  the  hope  that it will be useful,  but
+# WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+# or  FITNESS  FOR  A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+# License and GCC Runtime Library Exception for more details.
+# You  should  have received a copy of the GNU Lesser General Public License
+# along  with  this program;  if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301, USA.
+
+
+;
+
+  } elsif ($NAME =~ /\.m$/ || $NAME =~ /\.IM$/ || $NAME =~ /\.mesh$/
+	   || $NAME =~ /\.param$/) {
+    for my $i (0 .. $#year1) {
+      print RES "% Copyright (C) $year1[$i]$toyear2[$i] $copyauth[$i]\n";
+    }
+    print RES <<""
+%
+% This file is a part of GetFEM
+%
+% GetFEM  is  free software;  you  can  redistribute  it  and/or modify it
+% under  the  terms  of the  GNU  Lesser General Public License as published
+% by  the  Free Software Foundation;  either version 3 of the License,  or
+% (at your option) any later version along with the GCC Runtime Library
+% Exception either version 3.1 or (at your option) any later version.
+% This program  is  distributed  in  the  hope  that it will be useful,  but
+% WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+% or  FITNESS  FOR  A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+% License and GCC Runtime Library Exception for more details.
+% You  should  have received a copy of the GNU Lesser General Public License
+% along  with  this program;  if not, write to the Free Software Foundation,
+% Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301, USA.
+
+
+;
+
+  } else {
+  print RES <<""
+/*===========================================================================\n
+
+;
+    for my $i (0 .. $#year1) {
+      print RES " Copyright (C) $year1[$i]$toyear2[$i] $copyauth[$i]\n";
+    }
+  print RES "\n";
+  print RES <<""
+ This file is a part of GetFEM\n
+ GetFEM  is  free software;  you  can  redistribute  it  and/or modify it
+ under  the  terms  of the  GNU  Lesser General Public License as published
+ by  the  Free Software Foundation;  either version 3 of the License,  or
+ (at your option) any later version along with the GCC Runtime Library
+ Exception either version 3.1 or (at your option) any later version.
+ This program  is  distributed  in  the  hope  that it will be useful,  but
+ WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ or  FITNESS  FOR  A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+ License and GCC Runtime Library Exception for more details.
+ You  should  have received a copy of the GNU Lesser General Public License
+ along  with  this program;  if not, write to the Free Software Foundation,
+ Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301, USA.\n
+
+;
+  if ($NAME =~ /\.h$/) {
+    print RES <<""
+ As a special exception, you  may use  this file  as it is a part of a free
+ software  library  without  restriction.  Specifically,  if   other  files
+ instantiate  templates  or  use macros or inline functions from this file,
+ or  you compile this  file  and  link  it  with other files  to produce an
+ executable, this file  does  not  by itself cause the resulting executable
+ to be covered  by the GNU Lesser General Public License.  This   exception
+ does not  however  invalidate  any  other  reasons why the executable file
+ might be covered by the GNU Lesser General Public License.\n
+
+;
+  }
+print RES <<""
+===========================================================================*/
+
+;
+}
+}
+
+
+
+
+
+
+sub process_file  {
+
+  my $name   = $_[0];
+  my $option = $_[1];
+  open(FILE, "$name");
+
+# try to identify the license
+# $license = 0: no detected license
+#            1: LGPL
+#            2: LGPL with special exception
+#            3: Boost
+#            4: Xerox (superlu)
+#            5: Meshash Library (used by scilab interface)
+#            6: other
+
+# extract information
+  $license = 0;
+  @year1 = (); @year2 = (); @copyauth = ();
+
+  while ($li = <FILE>) {
+
+    if ($license==0 && $li =~ /Copyright/ && $li =~ /Xerox/
+        && $li =~ /Corporation/)
+      { $license = 4; }
+
+    if ($li =~ /Copyright/ && !$license) {
+      $ind=@year1;
+      ($li, $l1) = split('\)', $li, 2);
+      clean_line($l1);
+      $year1[$ind]=int($l1);
+      ($li, $l2) = split('\-', $l1, 2);
+      $year2[$ind]=int($l2);
+      ($li, $copyauth[$ind]) = split(' ', $l1, 2);
+      $copyauth[$ind] =~ s/\*\///g;
+      clean_line($copyauth[$ind]);
+    }
+    if ($license==0 && $li =~ /Boost/ && $li =~ /Software/ && $li =~ /License/)
+      { $license = 3; }
+    if ($license==0 && $li =~ /GNU/ &&  $li =~ /Lesser/ && $li =~ /General/
+        && $li =~ /Public/ && $li =~ /License/)
+      { $license = 1; }
+    if ($license==1 && $li =~ /special/ && $li =~ /exception/)
+      { $license = 2; }
+    if ($license==0 && $li =~ /Meschach/ && $li =~ /Library/
+        && $li =~ /without/)
+      { $license = 5; }
+
+
+    if (($license == 1 || $license == 2) && ($li =~ /=========/))
+      { $li = <FILE>; last; }
+    if ($li =~ /^#/ && !($name =~ /\.pl$/)) { last; }
+    if ($li =~ /USA\./ && ($name =~ /\.pl$/ || $name =~ /\.m$/ || $name =~ /\.mesh$/   || $name =~ /\.IM$/  || $name =~ /\.param$/)) { $li = <FILE>; last; }
+
+  }
+
+  if ($license == 0)
+  { print "No copyright detected.\n"; }
+  elsif ($license == 1)
+  { print "Copyright detected: LGPL\n"; }
+  elsif ($license == 2)
+  { print "Copyright detected: LGPL with special exception\n"; }
+  elsif ($license == 3)
+  { print "Copyright detected: Boost\n"; }
+  elsif ($license == 4)
+  { print "Copyright detected: Xerox\n"; }
+  elsif ($license == 5)
+  { print "Copyright detected: special license from Meschach Library\n"; }
+  else
+  { print "Unknown license detected:\n"; }
+
+  @toyear2 = ();
+  for my $i (0 .. $#year2) {
+    $toyear2[$i]="     ";
+    if ($year2[$i] > 0) { $toyear2[$i] = -$year2[$i]; }
+  }
+  if ($license != 0) {
+    for my $i (0 .. $#year1) {
+      print "                    $year1[$i]$toyear2[$i] $copyauth[$i]\n";
+    }
+  }
+
+  if ($option == 3) {
+
+    do {
+
+      if ($li =~ /Copyright/ || $li =~ /copyright/) {
+        print "Other copyright info:\n$li";
+      }
+      if ($li =~ /Author/ || $li =~ /author/) {
+        print "Other author info:\n$li";
+      }
+      if ($li =~ /License/ || $li =~ /license/) {
+        print "Other license info:\n$li";
+      }
+    } while ($li = <FILE>);
+
+    print "\n";
+
+  }
+
+  if (($option == 2 || $option == 4 || ($option == 1 && $year2[0] != $year)) && $license < 3) {
+
+    if ($license == 0) {
+      print "Copyright notice has to be added : adding LGPL License ?\n";
+    } else {
+      print "Copyright notice has to be updated\n";
+    }
+
+    if ($option == 4 || $option == 2) {
+      $ans = "y";
+    } else {
+      print "Perform the modification ? (Y/[N]) ";
+      $ans = <STDIN>; chomp($ans);
+    }
+    if ($ans eq "y" || $ans eq "Y") {
+      print "Updating license\n\n";
+
+      if ($option != 4) {
+	$year2[0]=$year; $toyear2[0]=-$year;
+        for my $i (1 .. $#year2) { $year2[$i]=$year; }
+      }
+      $enablecpp = "/* -*- c++ -*- (enables emacs c++ mode) */\n";
+
+      if (!($license) && $option != 4) {
+	print "No license !!!!!!";
+        @year1 = ($year);
+        @year2 = (0);
+        @toyear2 = ("");
+        @copyauth = ("Yves Renard.");
+        seek(FILE, 0, 0);
+        # close(FILE);
+        # open(FILE, "$name");
+      }
+      open(RES, ">$name".".newhead");
+      if ($name =~ /\.h/) { print RES $enablecpp; }
+      print_license(RES, $name);
+
+      do {
+        print RES "$li";
+      } while ($li = <FILE>);
+
+      close(RES);
+      close(FILE);
+#      `touch $name.newhead -r $name`; # keep original timestamp
+      `mv -f $name.newhead $name`;
+      
+    }
+  } else { print"\n"; }
+  close(FILE);
+
+}
+
+
+
+
+
+
+
+
+
+
+###############
+# Main program
+###############
+
+# TODO :
+# reconnaissance et modif des licenses de programmes python and scilab.
+
+$year = `date +%Y`;
+chomp $year;
+
+$options = $ARGV[0];
+
+if ($options eq "make") { $option = 1; }
+elsif ($options eq "makeall") { $option = 2; }
+elsif ($options eq "info") { $option = 3; }
+elsif ($options eq "onlytextall") { $option = 4; }
+else {
+  print "Valid options are:\n";
+  print "  make: change the header files where necessary,\n";
+  print "  makeall: change the header files everywhere (use with care),\n";
+  print "  info: show information.\n";
+  print "Should be run on the top of GetFEM tree\n";
+  exit(1);
+}
+
+
+#all the files in the directory and subdirectories
+$allfiles =  `find . -name \"*\"`;
+
+($name, $allfiles) = split('\n', $allfiles, 2);
+while ($name) {
+  if (($name =~ /\.c$/ || $name =~ /\.cc$/ || $name =~ /\.h$/
+       || $name =~ /\.hpp$/ || $name =~ /\.cpp$/ || $name =~ /\.pl$/
+       || $name =~ /\.m$/ || $name =~ /\.IM$/ || $name =~ /\.mesh$/
+       || $name =~ /\.param$/)
+      && !($name =~ /\/superlu\// )
+#      && !($name =~ /\/scilab\// )
+      && !($name =~ /\/getfem_arch_config\.h$/)
+      && !($name =~ /\/libscigetfem_c\.c$/)
+      && !($name =~ /\/interface\/src\/matlab/)
+      && !($name =~ /\.\/doc\//)
+      && !($name =~ /\/auto\_gmm\_torture/)
+      && !($name =~ /\.\/config\.h$/)
+     ) {
+    print "File $name:\n";
+    process_file($name, $option);
+  }
+  ($name, $allfiles) = split('\n', $allfiles, 2);
+}
+

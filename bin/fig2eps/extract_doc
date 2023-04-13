@@ -1,0 +1,2432 @@
+#!/usr/bin/env python3
+# -*- python -*-
+#
+# Copyright (C) 2004-2022 Yves Renard, Julien Pommier.
+#                                                       
+# This file is a part of GetFEM                                         
+#                                                                         
+# GetFEM  is  free software;  you  can  redistribute  it  and/or modify it
+# under  the  terms  of the  GNU  Lesser General Public License as published
+# by  the  Free Software Foundation;  either version 3 of the License,  or
+# (at your option) any later version.
+# This program  is  distributed  in  the  hope  that it will be useful,  but
+# WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+# or  FITNESS  FOR  A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+# License for more details.
+# You  should  have received a copy of the GNU Lesser General Public License
+# along  with  this program;  if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+############################################################################
+"""  Autofunc and autodoc for Python, Matlab and Scilab interfaces.
+
+  This program is used to extract the function prototypes and documentation
+  from C++ interface to Python/Matlab and Scilab interfaces.
+
+  $Id: extract_doc 3304 2009-11-03 13:17:46Z renard $
+"""
+import re
+import string
+import os
+import textwrap
+import sys
+
+class ParseError(Exception):
+    def __init__(self, value):
+      self.value = value
+    def __str__(self):
+      return repr(self.value)
+
+
+def find_closing_brace(s):
+    lev = 0
+    cnt = 0
+    for c in s:
+      if (c == '{'):
+        lev+=1
+      if (c == '}'):
+        lev-=1
+        if (lev == -1):
+          return cnt
+      cnt += 1
+    raise ParseError(s)
+
+
+def find_closing_bracket(s):
+    lev = 0
+    cnt = 0
+    for c in s:
+      if (c == '['):
+        lev+=1
+      if (c == ']'):
+        lev-=1
+        if (lev == -1):
+          return cnt
+      cnt += 1
+    raise ParseError(s)
+
+
+def CellToTuples(d):
+    while 1:
+      s = ''
+      p = d.find('@CELL{')
+      #sys.stderr.write('p=%d\n' % (p,))
+      if (p == -1):
+        s += d
+        break
+      s += d[:p]+'('
+      d = d[p+6:]
+      p2 = find_closing_brace(d)
+      #sys.stderr.write(d[:p2]+'| p2=%d\n' % (p2,))
+      s += d[:p2]+')'+d[p2+1:]
+      d = s
+    return d
+
+
+#
+# Extracting global doc from a file 
+#
+def ExtractGlobalDoc(filename):
+  doc = ''
+  args = ''
+  fl = open(filename)
+  in_doc = 0
+  for l in fl:
+    if (l.strip().startswith('/*@GFDOC')):
+      in_doc = 1
+    elif (in_doc and l.find('@*/') != -1):
+      in_doc = 0
+      doc += l[:l.find('@*/')]
+    elif (in_doc):
+      doc += l
+  fl.close()
+  i = doc.find('@ARGS{');
+  if (i != -1):
+    r = doc[i+6:]
+    j = find_closing_brace(r)
+    args = r[:j]
+    doc = doc[:i] + r[j+1:]
+  return [doc, args]
+
+
+
+#
+# Extracting command extention for a specific language
+#
+def ExtractExt(filename, language):
+  language = language.upper() + 'EXT'
+  doc = ''
+  fl = open(filename)
+  in_doc = 0
+  for l in fl:
+    if (l.strip().startswith('/*@'+language)):
+      in_doc = 1
+    elif (in_doc and l.find('@*/') != -1):
+      in_doc = 0
+      doc += l[:l.find('@*/')]
+    elif (in_doc):
+      doc += l
+  fl.close()
+  return doc
+
+
+#
+# Extracting one sub-command doc from a file 
+#
+def ExtractSubDoc(fl, language):
+    language = language.upper()
+    doc = ''
+    in_doc = 0
+    dtype = 0
+    mname = ''
+    params = ''
+    ret = ''
+    for l in fl:
+        if (in_doc == 0):
+          l = l.strip();
+          if (l.startswith('/*@GET')):
+            in_doc = 1; dtype = 2
+            l = l.strip()[6:].strip()
+          elif (l.startswith('/*@SET')):
+            in_doc = 1
+            dtype = 3
+            l = l.strip()[6:].strip()
+          elif (l.startswith('/*@RDATTR')):
+            in_doc = 1
+            dtype = 1
+            l = l.strip()[9:].strip()
+          elif (l.startswith('/*@FUNC')):
+            in_doc = 1
+            dtype = 4
+            l = l.strip()[7:].strip()
+          elif (l.startswith('/*@INIT')):
+            in_doc = 1
+            dtype = 5
+            l = l.strip()[7:].strip()
+          if (l.startswith('/*@'+language+'GET')):
+            in_doc = 1; dtype = 2
+            l = l.strip()[6+len(language):].strip()
+          elif (l.startswith('/*@'+language+'SET')):
+            in_doc = 1
+            dtype = 3
+            l = l.strip()[6+len(language):].strip()
+          elif (l.startswith('/*@'+language+'RDATTR')):
+            in_doc = 1
+            dtype = 1
+            l = l.strip()[9+len(language):].strip()
+          elif (l.startswith('/*@'+language+'FUNC')):
+            in_doc = 1
+            dtype = 4
+            l = l.strip()[7+len(language):].strip()
+          elif (l.startswith('/*@'+language+'INIT')):
+            in_doc = 1
+            dtype = 5
+            l = l.strip()[7+len(language):].strip()
+        elif (in_doc and l.find('@*/') != -1):
+          in_doc = 0
+          doc += l[:l.find('@*/')]
+          return [1, doc, dtype, mname, params, ret]
+        elif (in_doc):
+          doc += l
+        
+
+        if (in_doc == 1):
+          re = l
+          if (re.find("=") != -1 and re.find("=") < re.find("(")):
+            ret = re[0:re.find("=")].strip()
+            re = re[re.find("=")+1:].strip()
+                
+          if (not re.startswith('(') or not re.endswith(')')):
+            raise ParseError('Syntax error in function definition ' + l)
+          re = (re[1:-1]).strip()
+          if (not re.startswith("'")):
+            raise ParseError('Syntax error in function definition ' + l)
+          re = re[1:]
+          if (re.find("'") == -1):
+            raise ParseError('Syntax error in function definition ' + l)
+          mname = re[:re.find("'")]
+          params = re[re.find("'")+1:]
+          in_doc = 2
+        
+    fl.close()
+    return [0, doc, dtype, mname, params, ret]
+
+#
+# Standard name of a Python or Matlab Object
+#
+
+def StandardObjectName(o):
+  name = ''; initiales = ''
+  # specific names
+  if   (o == 'cvstruct'): name = 'CvStruct'; initiales = 'CVS'
+  elif (o == 'geotrans'): name = 'GeoTrans'; initiales = 'GT'
+  elif (o == 'levelset'): name = 'LevelSet'; initiales = 'LS'
+  elif (o == 'mesh_levelset'):  name = 'MeshLevelSet'; initiales = 'MLS'
+  else:
+    # standard names
+    for f in o.split('_'):
+      name += f[0].upper() + f[1:]
+      initiales += f[0].upper()
+  return [name, initiales]
+
+
+#
+# Filter the documentation for a certain language (matlab, scilab or python)
+#
+
+def FilterDoc(d, language, objects, commands, set_replace = set()):
+
+  markup = ['@MATLAB{', '@PYTHON{', '@SCILAB{']
+  mmarkup = '@' + language.upper() + '{'
+
+  for m in markup:
+    i = d.find(m)
+    while (i != -1):
+      r = d[i+8:]
+      d = d[:i]
+      j = find_closing_brace(r)
+      if (mmarkup == m):
+          d += r[:j]
+      d += r[(j+1):]
+      i = d.find(m)
+
+  if (language == 'scilab'):
+    # Replace the :math:` ... ` by scilab latex xml tag
+    i = d.find(':math:`')
+    while (i != -1):
+      d = d[:i] + d[i:].replace(':math:`','<latex style="text"><![CDATA[',1)
+      d = d[:i] + d[i:].replace('`',']]></latex>',1)
+      i = d.find(':math:`')
+          
+    # Replace the ` ... ` by scilab literal xml tag
+    i = d.find('`')
+    while (i != -1):
+      d = d[:i] + d[i:].replace('`','<literal>',1)
+      d = d[:i] + d[i:].replace('`','</literal>',1)
+      i = d.find('`')
+          
+  if (language == 'matlab' or language == 'scilab'):
+    for o in objects:
+      [r, I] = StandardObjectName(o)
+      # transforme OBJET:INIT en gf_objet
+      d = d.replace(o.upper()+':INIT','gf_'+o)
+      # transforme OBJET:GET(...) en gf_objet_get(O, ...)
+      d = d.replace(o.upper()+':GET(','gf_'+o+'_get('+o+' '+I+', ')
+      d = d.replace(o.upper()+':SET(','gf_'+o+'_set('+o+' '+I+', ')
+      d = d.replace('@t'+o, o)
+
+    for c in commands:
+      d = d.replace('::'+c.upper(),'gf_'+c)
+
+    d = d.replace('@CELL',   '')
+    d = d.replace('@imat',   'imat')
+    d = d.replace('@ivec',   'ivec')
+    d = d.replace('@cvec',   'vec')
+    d = d.replace('@dcvec',  'vec')
+    d = d.replace('@dvec',   'vec')
+    d = d.replace('@vec',    'vec')
+    d = d.replace('@dmat',   'mat')
+    d = d.replace('@mat',    'mat')
+    d = d.replace('@str',    'string')
+    d = d.replace('@int',    'int')
+    d = d.replace('@bool',   'bool')
+    d = d.replace('@real',   'real')
+    d = d.replace('@scalar', 'scalar')
+    d = d.replace('@list',   'list')
+
+    # Objects with no mfiles
+    d = d.replace('@tpoly',  'poly')
+
+    # Authorized abbreviations
+    d = d.replace('@tcs',    'cont_struct')
+    d = d.replace('@tmf',    'mesh_fem')
+    d = d.replace('@tgt',    'geotrans')
+    d = d.replace('@tgf',    'global_function')
+    d = d.replace('@tmo',    'mesher_object')
+    d = d.replace('@tmls',   'mesh_levelset')
+    d = d.replace('@tmim',   'mesh_im')
+    d = d.replace('@tmimd',  'mesh_im_data')
+    d = d.replace('@tls',    'levelset')
+    d = d.replace('@tsl',    'slice')
+    d = d.replace('@tsp',    'spmat')
+    d = d.replace('@tpre',   'precond')
+
+  elif (language == 'python'):
+    d = d.replace('\\', '\\\\')
+    for o in objects:
+      [oname, I] = StandardObjectName(o)
+      # transforme OBJET:INIT en gf_objet
+      d = d.replace(o.upper()+':INIT',oname)
+      # transforme OBJET:GET(...) en gf_objet_get(O, ...)
+      i = d.find(o.upper()+':GET(')
+      while (i != -1):
+        r = d[i+5+len(o):].strip()
+        d = d[:i]
+        if (r[0] != '\''):
+          d += oname+'.get('+r
+        else:
+          j = r[1:].find('\'')
+          com = r[1:(j+1)]
+          com = com.replace(' ', '_');
+          com = com.replace('-', '_');
+          r = r[j+2:].strip()
+          if (r[0] == ','):
+            r = r[1:].strip()
+          d += oname + '.' + com + '(' + r
+        i = d.find(o.upper()+':GET(')
+      i = d.find(o.upper()+':SET(')
+      while (i != -1):
+        r = d[i+5+len(o):].strip()
+        d = d[:i]
+        if (r[0] != '\''):
+          d += oname+'.set('+r
+        else:
+          j = r[1:].find('\'')
+          com = r[1:(j+1)]
+          com = com.replace(' ', '_');
+          com = com.replace('-', '_');
+          r = r[j+2:].strip()
+          if (r[0] == ','):
+            r = r[1:].strip()
+          if (oname+'::'+com in set_replace):
+            d += oname + '.set_' + com + '(' + r
+          else:
+            d += oname + '.' + com + '(' + r
+        i = d.find(o.upper()+':SET(')
+      
+      
+      d = d.replace('@t'+o, oname)
+
+    for c in commands:
+      d = d.replace('::'+c.upper(),'gf_'+c)
+
+    d = CellToTuples(d);
+    d = d.replace('@imat',   'imat')
+    d = d.replace('@ivec',   'ivec')
+    d = d.replace('@cvec',   'vec')
+    d = d.replace('@dcvec',  'vec')
+    d = d.replace('@dvec',   'vec')
+    d = d.replace('@vec',    'vec')
+    d = d.replace('@dmat',   'mat')
+    d = d.replace('@mat',    'mat')
+    d = d.replace('@str',    'string')
+    d = d.replace('@int',    'int')
+    d = d.replace('@bool',   'bool')
+    d = d.replace('@real',   'real')
+    d = d.replace('@scalar', 'scalar')
+    d = d.replace('@list',   'list')
+
+    # Objects with no mfiles
+    d = d.replace('@tpoly',  'poly')
+
+    # Authorized abbreviations
+    d = d.replace('@tcs',    'ContStruct')
+    d = d.replace('@tmf',    'MeshFem')
+    d = d.replace('@tgt',    'GeoTrans')
+    d = d.replace('@tgf',    'GlobalFunction')
+    d = d.replace('@tmo',    'MesherObject')
+    d = d.replace('@tmls',   'MeshLevelSet')
+    d = d.replace('@tmim',   'MeshIm')
+    d = d.replace('@tmimd',  'MeshImData')
+    d = d.replace('@tls',    'LevelSet')
+    d = d.replace('@tsl',    'Slice')
+    d = d.replace('@tsp',    'SpMat')
+    d = d.replace('@tpre',   'Mrecond')
+
+  return d
+
+
+#
+# Filter the arguments for Python
+#
+
+def SynopsisToPythonArgs(s0):
+    s = s0
+    need_star_args = 0
+    if (s.find('(') != -1):
+      s = s.split('(',1)[1].split(')',1)[0]
+    if (s.find('{') != -1):
+      s = s[:s.find('{')]
+      need_star_args = 1
+    if (s.find('...') != -1):
+      s = s[:s.find('...')]
+      need_star_args = 1
+    if (s.find('[',1+s.find('[')) != -1):
+      s = s[:s.find('[',1+s.find('['))]
+      need_star_args = 1
+    if (s.find(']') != -1):
+      s = s[:s.find(']')]
+
+    ll = [re.sub('@[a-z]*','',l).strip() for l in s.split(',')]
+    args = []
+    in_opt_arg = 0
+    for l0 in ll:
+      c = 0
+      for l in l0.split('['):
+        in_opt_arg += c
+        l = l.strip()
+        if (len(l)):
+          if (l[0] != "'"):
+            if not in_opt_arg:
+              args += [l]
+            elif (l.find('=')==-1):
+              args += [l+'=None']
+            else:
+              args += [l]
+          elif (in_opt_arg):
+            need_star_args = 0
+        c = 1
+    if (need_star_args == 1):
+      args += ['*args']
+    return args
+
+def cmp_to_key(mycmp):
+    'Convert a cmp= function into a key= function'
+    class K:
+        def __init__(self, obj, *args):
+            self.obj = obj
+        def __lt__(self, other):
+            return mycmp(self.obj, other.obj) < 0
+        def __gt__(self, other):
+            return mycmp(self.obj, other.obj) > 0
+        def __eq__(self, other):
+            return mycmp(self.obj, other.obj) == 0
+        def __le__(self, other):
+            return mycmp(self.obj, other.obj) <= 0
+        def __ge__(self, other):
+            return mycmp(self.obj, other.obj) >= 0
+        def __ne__(self, other):
+            return mycmp(self.obj, other.obj) != 0
+    return K
+
+#######################################################################
+#
+#
+#
+# Main program
+#
+#
+#
+#######################################################################
+
+
+valid_options = 'matlab-com, octave-com, matlab-doc, scilab-com, scilab-doc, python-com, python-doc'
+
+if (len(sys.argv) != 3):
+    raise SystemExit('Format : extract_doc directory option')
+
+directory = sys.argv[1]
+option = sys.argv[2]
+
+
+#
+# List the filenames and extract object and command names.
+#
+
+fl = os.popen('(cd ' + directory + '; ls gf_*.cc)');
+lines = fl.readlines();
+a = fl.close()
+if (a) : # Windows
+    fl = os.popen('((cd ' + directory + ') & (ls gf_*.cc))');
+    lines = fl.readlines();
+    a = fl.close()
+
+
+objects = set()
+objects.add('eltm');
+commands = set()
+for l in lines:
+    name = l.strip()[3:].split('.cc')[0]; # extract command or object name
+    if (name.endswith("_get")):
+        name = name[:-4];
+        objects.add(name)
+    elif (name.endswith("_set")):
+        name = name[:-4];
+        objects.add(name)
+    else:
+        commands.add(name)
+
+commands = commands.difference(objects)
+
+def cmpobj(x, y):
+    return len(y) - len(x)
+
+set_objects = objects
+set_commands = commands
+
+objects = sorted(objects, key=cmp_to_key(cmpobj))
+commands = sorted(commands, key=cmp_to_key(cmpobj))
+
+if (option == 'pseudo_loc'):
+
+    fl = os.popen('cd ' + directory + ' && ls gf_*.cc')
+
+    for l in fl:
+        l = l.strip()
+        sys.stdout.write(l+' ')
+        
+elif (option == 'pseudo_gen'):
+
+    directory_abs=os.path.abspath(directory)
+    fl = os.popen('ls ' + directory_abs+'/gf_*.cc')
+
+    for l in fl:
+        l = l.strip()
+        sys.stdout.write(l+' ')
+
+elif (option == 'mobj_dirs'):
+
+    for o in objects:
+        [oname, initiale] = StandardObjectName(o)
+        sys.stdout.write('@gf'+oname+' ')
+
+elif (option == 'cubature'):
+    directory_abs=os.path.abspath(directory+'/../../cubature')
+    fl = os.popen('ls ' + directory_abs+'/*.IM')
+
+    for l in fl:
+        l = l.strip()
+        sys.stdout.write(l+' ')
+
+elif (option == 'cubature_loc'):
+    directory_abs=os.path.abspath(directory+'/../../cubature')
+    fl = os.popen('cd ' + directory_abs + ' && ls *.IM')
+
+    for l in fl:
+        l = l.strip()
+        sys.stdout.write(l+' ')
+
+
+#######################################################################
+#
+#
+#
+# Option matlab-com
+#      Extract the matlab commands, produces m-files and Matlab object
+#      sub directories.
+#
+#
+#
+#######################################################################
+
+elif (option == 'matlab-com'):
+
+  language = 'matlab'
+
+  for o in objects+commands:
+
+    for ext in ['', '_set', '_get']:
+
+      src_dir = directory + '/gf_' + o + ext + '.cc'
+
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+
+        mfile = open('gf_'+o+ext+'.m', 'w')
+
+        [r, initiale] = StandardObjectName(o)
+        [gdoc, args] = ExtractGlobalDoc(src_dir);
+        gdoc = FilterDoc(gdoc, language, objects, commands)
+        if (args != ''):
+          args = FilterDoc(args, language, objects, commands) + ', '
+        if (ext == ''):
+          firstarg = '(' + args
+        else:
+          firstarg = '(' + o + ' ' + initiale +', '
+
+        mfile.write('% FUNCTION [...] = gf_' + o + ext + firstarg + '[operation [, args]])\n')
+        mfile.write('%\n')
+        if ((o in set_objects) and (ext == '')):
+          mfile.write('%   General constructor for ' + o + ' objects.\n%\n')
+        for l in gdoc.split('\n'):
+          mfile.write('%   ' + l.strip()+'\n')
+        mfile.write('%\n')
+
+
+        fl = open(src_dir)
+        doc = '';
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+
+        while (ok):
+            params = FilterDoc(params, language, objects, commands)
+            if (ret != ''):
+                ret = FilterDoc(ret, language, objects, commands)
+                ret += ' = '
+            if (mname[0] != '.'):
+              mname = '\'' + mname + '\''
+            else:
+              mname = ''
+              params = params[1:].strip()
+               
+            mfile.write('%   * ' + ret + 'gf_'+o+ext+firstarg+mname + params+')\n')
+            
+
+            doc = FilterDoc(doc, language, objects, commands)
+            for l in doc.split('\n'):
+                mfile.write('%   ' + l.strip()+'\n')
+            mfile.write('%\n')
+            [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+
+        fl.close()
+        matlabext = ExtractExt(src_dir, language);
+
+        mfile.write('%\n')
+        mfile.write('function [varargout]=gf_'+o+ext+'(varargin)\n')
+        if (matlabext != ''):
+          mfile.write('\n' + matlabext + '\n');
+        mfile.write('  if (nargout),\n')
+        mfile.write('    [varargout{1:nargout}]=gf_matlab(\'' + o + ext + '\', varargin{:});\n')
+        mfile.write('  else\n')
+        mfile.write('    gf_matlab(\'' + o + ext + '\', varargin{:});\n')
+        mfile.write('    if (exist(\'ans\', \'var\') == 1), varargout{1}=ans; end;\n')
+        mfile.write('  end;\n')
+        mfile.write('% autogenerated mfile;\n')
+        mfile.close()
+
+  # one pass to find the set methods having identical name with a get method
+  # in that case 'set_' is added to the set method.
+  set_replace = set()
+  ob = sorted(objects)
+  for o in ob:
+    src_dir = directory + '/gf_' + o + '.cc'
+    [oname, initiale] = StandardObjectName(o)
+    sub_com = set()
+    for ext in ['_get', '_set']:
+      src_dir = directory + '/gf_' + o + ext + '.cc'
+      [r, initiale] = StandardObjectName(o)
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+        fl = open(src_dir)
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        while (ok):
+          mname = mname.replace(' ', '_');
+          mname = mname.replace('-', '_');
+          if (mname in sub_com or mname=='classical_fem' or mname=='classical_discontinuous_fem'):
+            set_replace.add(oname+'::'+mname)
+          sub_com.add(mname)
+          [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        fl.close()
+
+  # Build directory and files for Matlab OO-commands
+  for o in objects:
+
+    [oname, I] = StandardObjectName(o)
+    oname = 'gf' + oname
+    # Create directory
+    path = '@'+oname
+    if (not os.path.isdir(path)):
+      os.mkdir(path)
+    
+    # Create pseudo-constructor
+    mfile = open(path+'/'+oname+'.m', 'w')
+    mfile.write('function [m,b]='+oname+'(a, varargin)\n')
+    mfile.write('% ' + oname +' class pseudo-constructor\n')
+    mfile.write('  this_class = \'' + oname +'\';\n')
+    mfile.write('  if (nargin==0) error(\'can''t create an empty ' + o + ' reference\'); end;\n')
+    mfile.write('  if (isa(a,this_class)),\n')
+    mfile.write('    m=a;\n')
+    mfile.write('  else\n')
+    mfile.write('    if (isstruct(a) && isfield(a,\'id\') && isfield(a,\'cid\'))\n')
+    mfile.write('      cname = gf_workspace(\'class name\',a);\n')
+    mfile.write('      if (strcmp(cname, this_class))\n')
+    mfile.write('	 m = a;\n')
+    mfile.write('      else\n')
+    mfile.write('	 m = gf_'+o+'(a,varargin{:});\n')
+    mfile.write('      end;\n')
+    mfile.write('    else\n')
+    mfile.write('      m = gf_'+o+'(a,varargin{:});\n')
+    mfile.write('    end;\n')
+    mfile.write('    m.txt = \'\';\n')
+    mfile.write('    m = class(m, this_class);\n')
+    mfile.write('  end;\n')
+    
+    mfile.write('% autogenerated mfile;\n')
+    mfile.close()
+
+    src_dir = directory + '/gf_' + o + '_get.cc'
+    if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+      # Create display command
+      mfile = open(path+'/display.m', 'w')
+      mfile.write('function display(cs)\n')
+      mfile.write('% ' + oname + '/display displays a short summary for a ' + oname + ' object \n')
+      mfile.write('  for i=1:numel(cs),\n')
+      mfile.write('    gf_' + o + '_get(cs(i), \'display\');\n')
+      mfile.write('  end;\n')
+      mfile.write('% autogenerated mfile;\n')
+      mfile.close()
+      
+      # Create char command
+      mfile = open(path+'/char.m', 'w')
+      mfile.write('function s=char(m)\n')
+      mfile.write('% ' + oname + '/char output a textual representation of the object\n')
+      mfile.write('  s=gf_' + o + '_get(m,\'char\');\n')
+      mfile.write('% autogenerated mfile;\n')
+      mfile.close()
+
+    # Create saveobj command
+    mfile = open(path+'/saveobj.m', 'w')
+    mfile.write('function b=saveobj(a)\n')
+    mfile.write('% ' + oname + '/saveobj\n')
+    mfile.write('% this function is automatically called by matlab when objects of class\n')
+    mfile.write('% ' + oname + 'are saved in a MAT-file\n')
+    mfile.write('  b=a; b.txt=char(a);\n')
+    mfile.write('% autogenerated mfile;\n')
+    mfile.close()
+
+    # Create loadobj command
+    mfile = open(path+'/loadobj.m', 'w')
+    mfile.write('function a=loadobj(a)\n')
+    mfile.write('% ' + oname + '/loadobj\n')
+    mfile.write('% this function is automatically called by matlab when objects of class\n')
+    mfile.write('% ' + oname + 'are loaded from a MAT-file\n')
+    mfile.write('  a=' + oname + '(\'from string\',b.txt);\n')
+    mfile.write('% autogenerated mfile;\n')
+    mfile.close()
+    
+    # Create subref command
+    mfile = open(path+'/subsref.m', 'w')
+    mfile.write('function [varargout]=subsref(obj, index)\n')
+    mfile.write('% ' + oname + '/subsref\n')
+    mfile.write('  nout = max(nargout, 1); cnt=1;\n')
+    mfile.write('  FGET = @gf_'+o+'_get;\n')
+    mfile.write('  FSET = @gf_'+o+'_set;\n')
+    mfile.write('  switch index(1).type\n')
+    mfile.write('    case \'{}\'\n')
+    mfile.write('      error(\'Cell array indexing not supported by ' + oname + ' objects\')\n')
+    mfile.write('    case \'()\'\n')
+    mfile.write('      error(\'array indexing not supported by ' + oname + ' objects\')\n')
+    mfile.write('    case \'.\'\n')
+    mfile.write('      switch index(1).subs\n')
+    mfile.write('        case \'id\'\n')
+    mfile.write('          [varargout{1:nout}] = obj.id;\n')
+    src_dir = directory + '/gf_' + o + '_set.cc'
+    if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+      # + la liste des commandes set ...
+
+      src_dir = directory + '/gf_' + o + '_set.cc'
+      fl = open(src_dir)
+      doc = '';
+      [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+      while (ok):
+        mname = mname.replace(' ', '_');
+        mname = mname.replace('-', '_');
+        if (oname[2:]+'::'+mname in set_replace):
+          mfile.write('        case \'set_' + mname + '\'\n')
+        else:
+          mfile.write('        case \'' + mname + '\'\n')
+        mfile.write('          if (nargout)\n')
+        mfile.write('            [varargout{1:nargout}] = FSET(obj, \'' + mname + '\', index(2).subs{:});\n')
+        mfile.write('          else\n')
+        mfile.write('            FSET(obj, \'' + mname + '\', index(2).subs{:});\n')
+        mfile.write('            if (exist(\'ans\', \'var\') == 1)\n')
+        mfile.write('              varargout{1}=ans;\n')
+        mfile.write('            end;\n')
+        mfile.write('          end;\n')
+        mfile.write('          return;\n')
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+      fl.close()
+      mfile.write('        case \'set\'\n')
+      mfile.write('          if (nargout)\n')
+      mfile.write('            [varargout{1:nargout}] = FSET(obj, index(2).subs{:});\n')
+      mfile.write('          else\n')
+      mfile.write('            FSET(obj,index(2).subs{:});\n')
+      mfile.write('            if (exist(\'ans\', \'var\') == 1)\n')
+      mfile.write('              h=ans;\n')
+      mfile.write('              if (isstruct(h) && isfield(h,\'id\') && isfield(h,\'cid\')), h = gfObject(h); end;\n');
+      mfile.write('              varargout{1}=h;\n')
+      mfile.write('            end;\n')
+      mfile.write('          end;\n')
+      mfile.write('          return;\n')
+    src_dir = directory + '/gf_' + o + '_get.cc'
+    if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+      mfile.write('        case \'get\'\n')
+      mfile.write('          if (nargout) \n')
+      mfile.write('            h = FGET(obj, index(2).subs{:});\n')
+      mfile.write('            if (isstruct(h) && isfield(h,\'id\') && isfield(h,\'cid\')), h = gfObject(h); end;\n');
+      mfile.write('            [varargout{1:nargout}] = h;\n')
+      mfile.write('          else\n')
+      mfile.write('	     FGET(obj,index(2).subs{:});\n')
+      mfile.write('            if (exist(\'ans\', \'var\') == 1)\n')
+      mfile.write('              h=ans;\n')
+      mfile.write('              if (isstruct(h) && isfield(h,\'id\') && isfield(h,\'cid\')), h = gfObject(h); end;\n');
+      mfile.write('              varargout{1}=h;\n')
+      mfile.write('            end;\n')
+      mfile.write('          end;\n')
+      mfile.write('          return;\n')
+    mfile.write('        otherwise\n')
+    mfile.write('          if ((numel(index) > 1) && (strcmp(index(2).type, \'()\')))\n')
+    mfile.write('            h = FGET(obj,index(1).subs, index(2).subs{:});\n')
+    mfile.write('            if (isstruct(h) && isfield(h,\'id\') && isfield(h,\'cid\')), h = gfObject(h); end;\n');
+    mfile.write('            [varargout{1:nargout}] = h;\n')
+    mfile.write('            cnt = cnt + 1;\n')
+    mfile.write('          else\n')
+    mfile.write('            h = FGET(obj, index(1).subs);\n')
+    mfile.write('            if (isstruct(h) && isfield(h,\'id\') && isfield(h,\'cid\')), h = gfObject(h); end;\n');
+    mfile.write('            [varargout{1:nargout}] = h;\n')
+    mfile.write('          end\n')
+    mfile.write('      end\n')
+    mfile.write('  end\n')
+    mfile.write('  % if there are others indexes, let matlab do its work\n')
+    mfile.write('  if (numel(index) > cnt)\n')
+    mfile.write('    for i=1:nout,\n')
+    mfile.write('      varargout{i} = subsref(varargout{i}, index((cnt+1):end));\n')
+    mfile.write('    end;\n')
+    mfile.write('  end;\n')
+    mfile.write('% autogenerated mfile;\n')
+    mfile.close()
+
+    
+    
+    for ext in ['set', 'get']:
+
+      src_dir = directory + '/gf_' + o + '_' + ext + '.cc'
+
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+        mfile = open(path+'/' + ext + '.m', 'w')
+        mfile.write('function varargout=' + ext + '(obj, varargin)\n')
+        mfile.write('% ' + oname + '/' + ext + '.m\n')
+        mfile.write('% see gf_' + o + '_' + ext + ' for more help.\n')
+        mfile.write('if (nargout), \n')
+        mfile.write('  [varargout{1:nargout}] = gf_'+o+'_'+ext+'(obj, varargin{:});\n')
+        mfile.write('else\n')
+        mfile.write('  gf_'+o+'_'+ext+'(obj,varargin{:});\n')
+        mfile.write('  if (exist(\'ans\',\'var\') == 1), varargout{1}=ans;\n')
+        mfile.write('  end;\n')
+        mfile.write('end;\n')
+        mfile.write('% autogenerated mfile;\n')
+        mfile.close() 
+
+#######################################################################
+#
+#
+#
+# Option octave-com
+#      Extract the octave commands, produces m-files and Octave object
+#      sub directories.
+#
+#
+#
+#######################################################################
+
+elif (option == 'octave-com'):
+
+  language = 'matlab'
+
+  for o in objects+commands:
+
+    for ext in ['', '_set', '_get']:
+
+      src_dir = directory + '/gf_' + o + ext + '.cc'
+
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+
+        mfile = open('gf_'+o+ext+'.m', 'w')
+
+        [r, initiale] = StandardObjectName(o)
+        [gdoc, args] = ExtractGlobalDoc(src_dir);
+        gdoc = FilterDoc(gdoc, language, objects, commands)
+        if (args != ''):
+          args = FilterDoc(args, language, objects, commands) + ', '
+        if (ext == ''):
+          firstarg = '(' + args
+        else:
+          firstarg = '(' + o + ' ' + initiale +', '
+
+        mfile.write('% FUNCTION [...] = gf_' + o + ext + firstarg + '[operation [, args]])\n')
+        mfile.write('%\n')
+        if ((o in set_objects) and (ext == '')):
+          mfile.write('%   General constructor for ' + o + ' objects.\n%\n')
+        for l in gdoc.split('\n'):
+          mfile.write('%   ' + l.strip()+'\n')
+        mfile.write('%\n')
+
+
+        fl = open(src_dir)
+        doc = '';
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+
+        while (ok):
+            params = FilterDoc(params, language, objects, commands)
+            if (ret != ''):
+                ret = FilterDoc(ret, language, objects, commands)
+                ret += ' = '
+            if (mname[0] != '.'):
+              mname = '\'' + mname + '\''
+            else:
+              mname = ''
+              params = params[1:].strip()
+               
+            mfile.write('%   * ' + ret + 'gf_'+o+ext+firstarg+mname + params+')\n')
+            
+
+            doc = FilterDoc(doc, language, objects, commands)
+            for l in doc.split('\n'):
+                mfile.write('%   ' + l.strip()+'\n')
+            mfile.write('%\n')
+            [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+
+        fl.close()
+        matlabext = ExtractExt(src_dir, language);
+
+        mfile.write('%\n')
+        mfile.write('function [varargout]=gf_'+o+ext+'(varargin)\n')
+        if (matlabext != ''):
+          mfile.write('\n' + matlabext + '\n');
+        mfile.write('  for i = 1:nargin \n');
+        mfile.write('    if (isobject(varargin{i})) \n');
+        mfile.write('      varargin{i} = struct(varargin{i}); \n');
+        mfile.write('    endif \n');
+        mfile.write('    if (islogical(varargin{i})) \n');
+        mfile.write('      varargin{i} = round(varargin{i}); \n');
+        mfile.write('    endif \n');
+        mfile.write('  endfor \n');
+        mfile.write('  if (nargout),\n')
+        mfile.write('    [varargout{1:nargout}]=gf_octave(\'' + o + ext + '\', varargin{:});\n')
+        mfile.write('  else\n')
+        mfile.write('    gf_octave(\'' + o + ext + '\', varargin{:});\n')
+        mfile.write('    if (exist(\'ans\', \'var\') == 1), varargout{1}=ans; end;\n')
+        mfile.write('  end;\n')
+        mfile.write('% autogenerated mfile;\n')
+        mfile.close()
+
+  # one pass to find the set methods having identical name with a get method
+  # in that case 'set_' is added to the set method.
+  set_replace = set()
+  ob = sorted(objects)
+  for o in ob:
+    src_dir = directory + '/gf_' + o + '.cc'
+    [oname, initiale] = StandardObjectName(o)
+    sub_com = set()
+    for ext in ['_get', '_set']:
+      src_dir = directory + '/gf_' + o + ext + '.cc'
+      [r, initiale] = StandardObjectName(o)
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+        fl = open(src_dir)
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        while (ok):
+          mname = mname.replace(' ', '_');
+          mname = mname.replace('-', '_');
+          if (mname in sub_com or mname=='classical_fem' or mname=='classical_discontinuous_fem'):
+            set_replace.add(oname+'::'+mname)
+          sub_com.add(mname)
+          [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        fl.close()
+
+  # Build directory and files for Matlab OO-commands
+  for o in objects:
+
+    [oname, I] = StandardObjectName(o)
+    oname = 'gf' + oname
+    # Create directory
+    path = '@'+oname
+    if (not os.path.isdir(path)):
+      os.mkdir(path)
+    
+    # Create pseudo-constructor
+    mfile = open(path+'/'+oname+'.m', 'w')
+    mfile.write('function [m,b]='+oname+'(a, varargin)\n')
+    mfile.write('% ' + oname +' class pseudo-constructor\n')
+    mfile.write('  this_class = \'' + oname +'\';\n')
+    mfile.write('  if (nargin==0) error(\'can''t create an empty ' + o + ' reference\'); end;\n')
+    mfile.write('  if (isa(a,this_class)),\n')
+    mfile.write('    m=a;\n')
+    mfile.write('  else\n')
+    mfile.write('    if (isstruct(a) && isfield(a,\'id\') && isfield(a,\'cid\'))\n')
+    mfile.write('      cname = gf_workspace(\'class name\',a);\n')
+    mfile.write('      if (strcmp(cname, this_class))\n')
+    mfile.write('	 m = a;\n')
+    mfile.write('      else\n')
+    mfile.write('	 m = gf_'+o+'(a,varargin{:});\n')
+    mfile.write('      end;\n')
+    mfile.write('    else\n')
+    mfile.write('      m = gf_'+o+'(a,varargin{:});\n')
+    mfile.write('    end;\n')
+    mfile.write('    m.txt = \'\';\n')
+    mfile.write('    m = class(m, this_class);\n')
+    mfile.write('  end;\n')
+    
+    mfile.write('% autogenerated mfile;\n')
+    mfile.close()
+
+    src_dir = directory + '/gf_' + o + '_get.cc'
+    if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+      # Create display command
+      mfile = open(path+'/display.m', 'w')
+      mfile.write('function display(cs)\n')
+      mfile.write('% ' + oname + '/display displays a short summary for a ' + oname + ' object \n')
+      mfile.write('  for i=1:numel(cs),\n')
+      mfile.write('    gf_' + o + '_get(struct(cs(i)), \'display\');\n')
+      mfile.write('  end;\n')
+      mfile.write('% autogenerated mfile;\n')
+      mfile.close()
+      
+      # Create char command
+      mfile = open(path+'/char.m', 'w')
+      mfile.write('function s=char(m)\n')
+      mfile.write('% ' + oname + '/char output a textual representation of the object\n')
+      mfile.write('  s=gf_' + o + '_get(struct(m),\'char\');\n')
+      mfile.write('% autogenerated mfile;\n')
+      mfile.close()
+
+    # Create saveobj command
+    mfile = open(path+'/saveobj.m', 'w')
+    mfile.write('function b=saveobj(a)\n')
+    mfile.write('% ' + oname + '/saveobj\n')
+    mfile.write('% this function is automatically called by octave when objects of class\n')
+    mfile.write('% ' + oname + 'are saved in a MAT-file\n')
+    mfile.write('  b=a; b.txt=char(a);\n')
+    mfile.write('% autogenerated mfile;\n')
+    mfile.close()
+
+    # Create loadobj command
+    mfile = open(path+'/loadobj.m', 'w')
+    mfile.write('function a=loadobj(a)\n')
+    mfile.write('% ' + oname + '/loadobj\n')
+    mfile.write('% this function is automatically called by octave when objects of class\n')
+    mfile.write('% ' + oname + 'are loaded from a MAT-file\n')
+    mfile.write('  a=' + oname + '(\'from string\',b.txt);\n')
+    mfile.write('% autogenerated mfile;\n')
+    mfile.close()
+    
+    # Create subref command
+    mfile = open(path+'/subsref.m', 'w')
+    mfile.write('function [varargout]=subsref(obj, index)\n')
+    mfile.write('% ' + oname + '/subsref\n')
+    mfile.write('  obj=struct(obj);\n')
+    mfile.write('  nout = max(nargout, 1); cnt=1;\n')
+    mfile.write('  FGET = @gf_'+o+'_get;\n')
+    mfile.write('  FSET = @gf_'+o+'_set;\n')
+    mfile.write('  switch index(1).type\n')
+    mfile.write('    case \'{}\'\n')
+    mfile.write('      error(\'Cell array indexing not supported by ' + oname + ' objects\')\n')
+    mfile.write('    case \'()\'\n')
+    mfile.write('      error(\'array indexing not supported by ' + oname + ' objects\')\n')
+    mfile.write('    case \'.\'\n')
+    mfile.write('      switch index(1).subs\n')
+    mfile.write('        case \'id\'\n')
+    mfile.write('          [varargout{1:nout}] = obj.id;\n')
+    src_dir = directory + '/gf_' + o + '_set.cc'
+    if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+      # + la liste des commandes set ...
+
+      src_dir = directory + '/gf_' + o + '_set.cc'
+      fl = open(src_dir)
+      doc = '';
+      [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+      while (ok):
+        mname = mname.replace(' ', '_');
+        mname = mname.replace('-', '_');
+        if (oname[2:]+'::'+mname in set_replace):
+          mfile.write('        case \'set_' + mname + '\'\n')
+        else:
+          mfile.write('        case \'' + mname + '\'\n')
+        mfile.write('          if (nargout)\n')
+        mfile.write('            [varargout{1:nargout}] = FSET(obj, \'' + mname + '\', index(2).subs{:});\n')
+        mfile.write('          else\n')
+        mfile.write('            FSET(obj, \'' + mname + '\', index(2).subs{:});\n')
+        mfile.write('            if (exist(\'ans\', \'var\') == 1)\n')
+        mfile.write('              varargout{1}=ans;\n')
+        mfile.write('            end;\n')
+        mfile.write('          end;\n')
+        mfile.write('          return;\n')
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+      fl.close()
+      mfile.write('        case \'set\'\n')
+      mfile.write('          if (nargout)\n')
+      mfile.write('            [varargout{1:nargout}] = FSET(obj, index(2).subs{:});\n')
+      mfile.write('          else\n')
+      mfile.write('            FSET(obj,index(2).subs{:});\n')
+      mfile.write('            if (exist(\'ans\', \'var\') == 1)\n')
+      mfile.write('              h=ans;\n')
+      mfile.write('              if (isstruct(h) && isfield(h,\'id\') && isfield(h,\'cid\')), h = gfObject(h); end;\n');
+      mfile.write('              varargout{1}=h;\n')
+      mfile.write('            end;\n')
+      mfile.write('          end;\n')
+      mfile.write('          return;\n')
+    src_dir = directory + '/gf_' + o + '_get.cc'
+    if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+      mfile.write('        case \'get\'\n')
+      mfile.write('          if (nargout) \n')
+      mfile.write('            h = FGET(obj, index(2).subs{:});\n')
+      mfile.write('            if (isstruct(h) && isfield(h,\'id\') && isfield(h,\'cid\')), h = gfObject(h); end;\n');
+      mfile.write('            [varargout{1:nargout}] = h;\n')
+      mfile.write('          else\n')
+      mfile.write('	     FGET(obj,index(2).subs{:});\n')
+      mfile.write('            if (exist(\'ans\', \'var\') == 1)\n')
+      mfile.write('              h=ans;\n')
+      mfile.write('              if (isstruct(h) && isfield(h,\'id\') && isfield(h,\'cid\')), h = gfObject(h); end;\n');
+      mfile.write('              varargout{1}=h;\n')
+      mfile.write('            end;\n')
+      mfile.write('          end;\n')
+      mfile.write('          return;\n')
+    mfile.write('        otherwise\n')
+    mfile.write('          if ((numel(index) > 1) && (strcmp(index(2).type, \'()\')))\n')
+    mfile.write('            h = FGET(obj,index(1).subs, index(2).subs{:});\n')
+    mfile.write('            if (isstruct(h) && isfield(h,\'id\') && isfield(h,\'cid\')), h = gfObject(h); end;\n');
+    mfile.write('            [varargout{1:nargout}] = h;\n')
+    mfile.write('            cnt = cnt + 1;\n')
+    mfile.write('          else\n')
+    mfile.write('            h = FGET(obj, index(1).subs);\n')
+    mfile.write('            if (isstruct(h) && isfield(h,\'id\') && isfield(h,\'cid\')), h = gfObject(h); end;\n');
+    mfile.write('            [varargout{1:nargout}] = h;\n')
+    mfile.write('          end\n')
+    mfile.write('      end\n')
+    mfile.write('  end\n')
+    mfile.write('  % if there are others indexes, let octave do its work\n')
+    mfile.write('  if (numel(index) > cnt)\n')
+    mfile.write('    for i=1:nout,\n')
+    mfile.write('      varargout{i} = subsref(varargout{i}, index((cnt+1):end));\n')
+    mfile.write('    end;\n')
+    mfile.write('  end;\n')
+    mfile.write('% autogenerated mfile;\n')
+    mfile.close()
+
+    
+    
+    for ext in ['set', 'get']:
+
+      src_dir = directory + '/gf_' + o + '_' + ext + '.cc'
+
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+        mfile = open(path+'/' + ext + '.m', 'w')
+        mfile.write('function varargout=' + ext + '(obj, varargin)\n')
+        mfile.write('% ' + oname + '/' + ext + '.m\n')
+        mfile.write('% see gf_' + o + '_' + ext + ' for more help.\n')
+        mfile.write('if (nargout), \n')
+        mfile.write('  [varargout{1:nargout}] = gf_'+o+'_'+ext+'(struct(obj), varargin{:});\n')
+        mfile.write('else\n')
+        mfile.write('  gf_'+o+'_'+ext+'(struct(obj),varargin{:});\n')
+        mfile.write('  if (exist(\'ans\',\'var\') == 1), varargout{1}=ans;\n')
+        mfile.write('  end;\n')
+        mfile.write('end;\n')
+        mfile.write('% autogenerated mfile;\n')
+        mfile.close() 
+
+
+
+#######################################################################
+#
+#
+#
+# Option matlab-doc
+#      Extract the matlab documentation for commands in rst format
+#
+#
+#
+#######################################################################
+
+elif (option == 'matlab-doc'):
+
+  language = 'matlab'
+  
+  print('.. Automatically generated file, do not edit it.')
+  print('.. If some modification are necessary, please modify')
+  print('.. the corresponding C++ source or the python program extract_doc')
+  print('')
+  print('')
+  print('.. include:: ../replaces.txt')
+  print('')
+  print('.. highlight:: matlab')
+  print('')
+  print('.. _mlab-cmdref:')
+  print('')
+  print('Command reference')
+  print('=================')
+  print('')
+  print('Please remember that this documentation is not self contained.')
+  print('You should in particular refer to the `user documentation`_ ')
+  print('to have a more extensive description of the structures algorithms ')
+  print('and concepts used.')
+  print('')
+  # print('Types')
+  # print('-----')
+  print('')
+  print('The expected type of each function argument is indicated in this ')
+  print('reference. Here is a list of these types:')
+  print('')
+  print('=====================  ==================================================')
+  print('`int`                  integer value')
+  print('`hobj`                 a handle for any GetFEM object')
+  print('`scalar`               scalar value')
+  print('`string`               string')
+  print('`ivec`                 vector of integer values')
+  print('`vec`                  vector')
+  print('`imat`                 matrix of integer values')
+  print('`mat`                  matrix')
+  print('`spmat`                sparse matrix (both matlab native sparse')
+  print('                       matrices, and GetFEM sparse matrices)')
+  print('`precond`              GetFEM preconditioner object')
+  print('`mesh mesh`            object descriptor (or gfMesh object)')
+  print('`mesh_fem`             mesh fem object descriptor (or gfMeshFem object)')
+  print('`mesh_im`              mesh im object descriptor (or gfMeshIm object)')
+  print('`mesh_im_data`         mesh im data object descriptor (or gfMeshImData object)')
+  print('`mesh_slice`           mesh slice object descriptor (or gfSlice object)')
+  print('`cvstruct`             convex structure descriptor (or gfCvStruct object)')
+  print('`geotrans`             geometric transformation descriptor (or ')
+  print('                       gfGeoTrans object)')
+  print('`fem`                  fem descriptor (or gfFem object)')
+  print('`eltm`                 elementary matrix descriptor (or gfEltm object)')
+  print('`integ`                integration method descriptor (or gfInteg object)')
+  print('`model`                model descriptor (or gfModel object)')
+  print('`global_function`      global function descriptor')
+  print('`mesher_object`        mesher object descriptor')
+  print('`cont_struct`          continuation-structure descriptor')
+  print('=====================  ==================================================')
+  print('') 
+  print('Arguments listed between square brackets are optional. Lists between braces indicate that the argument must match one of the elements of the list. For example::')
+  print('')
+  print('  >> [X,Y]=dummy(int i, \'foo\' | \'bar\' [,vec v])')
+  print('')
+  print('means that the dummy function takes two or three arguments, its first being an integer value, the second a string which is either \'foo\' or \'bar\', and a third optional argument. It returns two values (with the usual matlab meaning, i.e. the caller can always choose to ignore them).')
+  print('')
+  print('')
+  allc = sorted(objects+commands)
+  for o in allc:
+    for ext in ['', '_get', '_set']:
+      src_dir = directory + '/gf_' + o + ext + '.cc'
+      [r, initiale] = StandardObjectName(o)
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+        
+        print('gf_' + o + ext)
+        print('-------------------------------------------')
+        print('')
+        print('**Synopsis**')
+        print('')
+        print('::')
+        print('')
+        [gdoc, args] = ExtractGlobalDoc(src_dir);
+        if (args != ''):
+          args = FilterDoc(args, language, objects, commands) + ', '
+        if (ext == ''):
+          firstarg = '(' + args
+        else:
+          firstarg = '(' + o + ' ' + initiale +', '
+        fl = open(src_dir)
+        doc = '';
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        while (ok):
+          params = FilterDoc(params, language, objects, commands)
+          if (ret != ''):
+            ret = FilterDoc(ret, language, objects, commands)
+            ret += ' = '
+          if (mname[0] != '.'):
+            mname = '\'' + mname + '\''
+          else:
+            mname = ''
+            params = params[1:].strip()
+          print('  ' + ret + 'gf_'+o+ext+firstarg+mname + params+')')
+          [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+
+        fl.close()
+        print('')
+        print('**Description :**')
+        print('')
+        print('')
+        if ((o in set_objects) and (ext == '')):
+          print('General constructor for ' + o + ' objects.\n')
+        gdoc = FilterDoc(gdoc, language, objects, commands)
+        print(gdoc)
+        print('')
+        print('**Command list :**')
+        print('')
+        print('')
+        fl = open(src_dir)
+        doc = '';
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        while (ok):
+          params = FilterDoc(params, language, objects, commands)
+          if (ret != ''):
+            ret = FilterDoc(ret, language, objects, commands)
+            ret += ' = '
+          if (mname[0] != '.'):
+            mname = '\'' + mname + '\''
+          else:
+            mname = ''
+            params = params[1:].strip()
+          print('')
+          print('  ``' + ret + 'gf_'+o+ext+firstarg+mname + params+')``')
+          print('')
+          doc = FilterDoc(doc, language, objects, commands)
+          nbspace = -1; util_pos = -1; nbsp = -1
+          for l in doc.split('\n'):
+            if (nbspace == -1 and len(l.strip()) > 0):
+              nbspace = 0;
+              for i in range(len(l)):
+                if (l[i] == '\t'):
+                    nbspace = (nbspace/8)*8 + 8;
+                elif (l[i].isspace()):
+                    nbspace = nbspace + 1;
+                else: break
+            
+            if (nbspace > 0):
+              util_pos = 0; nbsp = 0
+              for i in range(len(l)):
+                if (l[i] == '\t'):
+                    nbsp = (nbsp/8)*8 + 8;
+                elif (l[i].isspace()):
+                    nbsp = nbsp + 1;
+                else: break
+                util_pos = i + 1
+                if (nbsp >= nbspace): break
+                    
+              l = l[util_pos:]
+              
+            if (nbsp > nbspace):
+                for i in range (nbsp-nbspace):
+                    print(''),
+            
+            if (nbspace >= 0):
+                print('    '+l)
+                
+          print('')
+          [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+    
+        fl.close()
+
+
+#######################################################################
+#
+#
+#
+# Option scilab-com
+#      Extract the scilab documentation for each command in xml format
+#
+#
+#
+#######################################################################
+
+elif (option == 'scilab-com'):
+
+  language = 'scilab'
+
+  # Write XML page related to types
+  
+  mfile = open('getfem_types.xml', 'w')
+  
+  mfile.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+  mfile.write('<refentry version="5.0-subset Scilab" xml:id="getfem_types" xml:lang="en"\n')
+  mfile.write('          xmlns="http://docbook.org/ns/docbook"\n')
+  mfile.write('          xmlns:xlink="http://www.w3.org/1999/xlink"\n')
+  mfile.write('          xmlns:xi="http://www.w3.org/2001/XInclude"\n')
+  mfile.write('          xmlns:svg="http://www.w3.org/2000/svg"\n')
+  mfile.write('          xmlns:mml="http://www.w3.org/1998/Math/MathML"\n')
+  mfile.write('          xmlns:html="http://www.w3.org/1999/xhtml"\n')
+  mfile.write('          xmlns:db="http://docbook.org/ns/docbook">\n')
+
+  mfile.write('  <refnamediv>\n')
+  mfile.write('    <refname>getfem types</refname>\n')
+  mfile.write('    <refpurpose>Types reference</refpurpose>\n')
+  mfile.write('  </refnamediv>\n\n')
+
+  mfile.write('')
+
+  mfile.write('  <refsection>\n')
+  mfile.write('    <title>Description</title>\n')
+  mfile.write('    <para>The expected type of each function argument is indicated in this reference. Here is a list of these types:</para>\n\n')
+  mfile.write('    <variablelist>\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>int</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>integer value</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>hobj</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>a handle for any GetFEM object</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>scalar</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>scalar value</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>string</term>\n');
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>string</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>ivec</term>')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>vector of integer values</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>vec</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>vector</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>imat</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>matrix of integer values</para>')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>mat</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>matrix</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>spmat</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>sparse matrix (both Matlab native sparse matrices, and GetFEM sparse matrices)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>precond</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>GetFEM preconditioner object</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>mesh mesh</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>object descriptor (or gfMesh object)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>mesh_fem</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>mesh fem object descriptor (or gfMeshFem object)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>mesh_im</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>mesh im object descriptor (or gfMeshIm object)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+  
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>mesh_im_data</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>mesh im data object descriptor (or gfMeshImData object)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+  
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>mesh_slice</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>mesh slice object descriptor (or gfSlice object)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>cvstruct</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>convex structure descriptor (or gfCvStruct object)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>geotrans</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>geometric transformation descriptor (or gfGeoTrans object)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>fem</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>fem descriptor (or gfFem object)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>eltm</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>elementary matrix descriptor (or gfEltm object)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>integ</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>integration method descriptor (or gfInteg object)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>model</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>model descriptor (or gfModel object)</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>global_function</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>global function descriptor</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>mesher_object</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>mesher object descriptor</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+
+  mfile.write('      <varlistentry>\n')
+  mfile.write('        <term>cont_struct</term>\n')
+  mfile.write('        <listitem>\n')
+  mfile.write('          <para>continuation-structure descriptor</para>\n')
+  mfile.write('        </listitem>\n')
+  mfile.write('      </varlistentry>\n\n')
+  mfile.write('    </variablelist>\n\n')
+
+  mfile.write('    <para>Arguments listed between square brackets are optional. Lists between braces indicate</para>\n')
+  mfile.write('    <para>that the argument must match one of the elements of the list. For example:</para>\n\n')
+
+  mfile.write('    <programlisting role=""><![CDATA[ >> [X,Y]=dummy(int i, \'foo\' | \'bar\' [,vec v])]]></programlisting>\n\n')
+
+  mfile.write('    <para>means that the dummy function takes two or three arguments, its first being an integer value,</para>\n')
+  mfile.write('    <para>the second a string which is either \'foo\' or \'bar\', and a third optional argument. It returns two</para>\n')
+  mfile.write('    <para>values (with the usual matlab meaning, i.e. the caller can always choose to ignore them).</para>\n')
+  mfile.write('  </refsection>\n')
+  mfile.write('</refentry>\n')
+  
+  mfile.close()
+
+  # Write XML function documentation pages
+  
+  allc = sorted(objects+commands)
+  for o in allc:
+    for ext in ['', '_get', '_set']:
+      src_dir = directory + '/gf_' + o + ext + '.cc'
+      [r, initiale] = StandardObjectName(o)
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+
+        mfile = open('gf_'+o+ext+'.xml', 'w')
+        
+        mfile.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+        mfile.write('<refentry version="5.0-subset Scilab" xml:id="gf_' + o + ext + '" xml:lang="en"\n')
+        mfile.write('          xmlns="http://docbook.org/ns/docbook"\n')
+        mfile.write('          xmlns:xlink="http://www.w3.org/1999/xlink"\n')
+        mfile.write('          xmlns:xi="http://www.w3.org/2001/XInclude"\n')
+        mfile.write('          xmlns:svg="http://www.w3.org/2000/svg"\n')
+        mfile.write('          xmlns:mml="http://www.w3.org/1998/Math/MathML"\n')
+        mfile.write('          xmlns:html="http://www.w3.org/1999/xhtml"\n')
+        mfile.write('          xmlns:db="http://docbook.org/ns/docbook">\n')
+
+        [gdoc, args] = ExtractGlobalDoc(src_dir);
+        gdoc = FilterDoc(gdoc, language, objects, commands)
+
+        mfile.write('  <refnamediv>\n')
+        mfile.write('    <refname>gf_' + o + ext + '</refname>\n')
+        mfile.write('    <refpurpose>' + gdoc + '</refpurpose>\n')
+        mfile.write('  </refnamediv>\n\n')
+        
+        mfile.write('  <refsynopsisdiv>\n')
+        mfile.write('    <title>Calling Sequence</title>\n\n')
+
+        [gdoc, args] = ExtractGlobalDoc(src_dir);
+        if (args != ''):
+          args = FilterDoc(args, language, objects, commands) + ', '
+        if (ext == ''):
+          firstarg = '(' + args
+        else:
+          firstarg = '(' + o + ' ' + initiale +', '
+        fl = open(src_dir)
+        doc = '';
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        while (ok):
+          params = FilterDoc(params, language, objects, commands)
+          if (ret != ''):
+            ret = FilterDoc(ret, language, objects, commands)
+            ret += ' = '
+          if (mname[0] != '.'):
+            mname = '\'' + mname + '\''
+          else:
+            mname = ''
+            params = params[1:].strip()
+          mfile.write('    <synopsis>' + ret + 'gf_'+o+ext+firstarg+mname + params+')</synopsis>\n')
+          [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+
+        mfile.write('  </refsynopsisdiv>\n\n')
+        fl.close()
+        
+        mfile.write('  <refsection>\n')
+        mfile.write('    <title>Description</title>\n')
+
+        if ((o in set_objects) and (ext == '')):
+          mfile.write('    <para>General constructor for ' + o + ' objects.</para>\n\n')
+
+        gdoc = FilterDoc(gdoc, language, objects, commands)
+        mfile.write('    <para>' + gdoc + '</para>\n')
+        mfile.write('  </refsection>\n\n')
+
+        mfile.write('  <refsection>\n')
+        mfile.write('    <title>Command list</title>\n\n')
+        mfile.write('    <itemizedlist>\n')
+
+        fl = open(src_dir)
+        doc = '';
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        while (ok):
+          params = FilterDoc(params, language, objects, commands)
+          if (ret != ''):
+            ret = FilterDoc(ret, language, objects, commands)
+            ret += ' = '
+          if (mname[0] != '.'):
+            mname = '\'' + mname + '\''
+          else:
+            mname = ''
+            params = params[1:].strip()
+
+          mfile.write('    <listitem>\n')
+          mfile.write('    <para><literal>' + ret + 'gf_'+o+ext+firstarg+mname + params+')</literal></para>\n\n')
+
+          mfile.write('    <para>')
+          doc = FilterDoc(doc, language, objects, commands)
+          mfile.write('   ' + doc + '\n')
+
+          mfile.write('    </para>\n')
+          mfile.write('    </listitem>\n\n')
+
+          [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+    
+        fl.close()
+        mfile.write('    </itemizedlist>\n')
+        mfile.write('  </refsection>\n\n')
+
+        mfile.write('  <refsection>\n')
+        mfile.write('    <title>See Also</title>\n')
+        mfile.write('    <simplelist type="inline">\n')
+        mfile.write('      <member><link linkend="getfem_types">getfem types</link></member>\n')
+        mfile.write('    </simplelist>\n')
+        mfile.write('  </refsection>\n\n')
+
+        mfile.write('  <refsection>\n')
+        mfile.write('    <title>Authors</title>\n')
+        mfile.write('    <para>Y. Collette</para>\n')
+        mfile.write('  </refsection>\n\n')
+
+        mfile.write('</refentry>\n')
+
+        mfile.close()
+
+
+#######################################################################
+#
+#
+#
+# Option scilab-doc-rst
+#      Extract the scilab documentation for commands in rst format
+#
+#
+#
+#######################################################################
+
+elif (option == 'scilab-doc-rst'):
+
+  language = 'scilab'
+  
+  print('.. Automatically generated file, do not edit it.')
+  print('.. If some modification are necessary, please modify')
+  print('.. the corresponding C++ source or the python program extract_doc')
+  print('')
+  print('')
+  print('.. include:: ../replaces.txt')
+  print('')
+  print('.. highlight:: matlab')
+  print('')
+  print('.. _scilab-cmdref:')
+  print('')
+  print('Command reference')
+  print('=================')
+  print('')
+  print('Please remember that this documentation is not self contained.')
+  print('You should in particular refer to the `user documentation`_ ')
+  print('to have a more extensive description of the structures algorithms ')
+  print('and concepts used.')
+  print('')
+  # print('Types')
+  # print('-----')
+  print('')
+  print('The expected type of each function argument is indicated in this ')
+  print('reference. Here is a list of these types:')
+  print('')
+  print('=====================  ==================================================')
+  print('`int`                  integer value')
+  print('`hobj`                 a handle for any GetFEM object')
+  print('`scalar`               scalar value')
+  print('`string`               string')
+  print('`ivec`                 vector of integer values')
+  print('`vec`                  vector')
+  print('`imat`                 matrix of integer values')
+  print('`mat`                  matrix')
+  print('`spmat`                sparse matrix (both matlab native sparse')
+  print('                       matrices, and GetFEM sparse matrices)')
+  print('`precond`              GetFEM preconditioner object')
+  print('`mesh mesh`            object descriptor (or gfMesh object)')
+  print('`mesh_fem`             mesh fem object descriptor (or gfMeshFem object)')
+  print('`mesh_im`              mesh im object descriptor (or gfMeshIm object)')
+  print('`mesh_im_data`         mesh im data object descriptor (or gfMeshImData object)')
+  print('`mesh_slice`           mesh slice object descriptor (or gfSlice object)')
+  print('`cvstruct`             convex structure descriptor (or gfCvStruct object)')
+  print('`geotrans`             geometric transformation descriptor (or ')
+  print('                       gfGeoTrans object)')
+  print('`fem`                  fem descriptor (or gfFem object)')
+  print('`eltm`                 elementary matrix descriptor (or gfEltm object)')
+  print('`integ`                integration method descriptor (or gfInteg object)')
+  print('`model`                model descriptor (or gfModel object)')
+  print('`global_function`      global function descriptor')
+  print('`mesher_object`        mesher object descriptor')
+  print('`cont_struct`          continuation-structure descriptor')
+  print('=====================  ==================================================')
+  print('')
+  print('Arguments listed between square brackets are optional. Lists between braces indicate that the argument must match one of the elements of the list. For example::')
+  print('')
+  print('  >> [X,Y]=dummy(int i, \'foo\' | \'bar\' [,vec v])')
+  print('')
+  print('means that the dummy function takes two or three arguments, its first being an integer value, the second a string which is either \'foo\' or \'bar\', and a third optional argument. It returns two values (with the usual matlab meaning, i.e. the caller can always choose to ignore them).')
+  print('')
+  print('')
+  allc = sorted(objects+commands)
+  for o in allc:
+    for ext in ['', '_get', '_set']:
+      src_dir = directory + '/gf_' + o + ext + '.cc'
+      [r, initiale] = StandardObjectName(o)
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+        
+        print('gf_' + o + ext)
+        print('-------------------------------------------')
+        print('')
+        print('**Synopsis**')
+        print('')
+        print('::')
+        print('')
+        [gdoc, args] = ExtractGlobalDoc(src_dir);
+        if (args != ''):
+          args = FilterDoc(args, language, objects, commands) + ', '
+        if (ext == ''):
+          firstarg = '(' + args
+        else:
+          firstarg = '(' + o + ' ' + initiale +', '
+        fl = open(src_dir)
+        doc = '';
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        while (ok):
+          params = FilterDoc(params, language, objects, commands)
+          if (ret != ''):
+            ret = FilterDoc(ret, language, objects, commands)
+            ret += ' = '
+          if (mname[0] != '.'):
+            mname = '\'' + mname + '\''
+          else:
+            mname = ''
+            params = params[1:].strip()
+          print('  ' + ret + 'gf_'+o+ext+firstarg+mname + params+')')
+          [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+
+        fl.close()
+        print('')
+        print('**Description :**')
+        print('')
+        print('')
+        if ((o in set_objects) and (ext == '')):
+          print('General constructor for ' + o + ' objects.\n')
+        gdoc = FilterDoc(gdoc, language, objects, commands)
+        print(gdoc)
+        print('')
+        print('**Command list :**')
+        print('')
+        print('')
+        fl = open(src_dir)
+        doc = '';
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        while (ok):
+          params = FilterDoc(params, language, objects, commands)
+          if (ret != ''):
+            ret = FilterDoc(ret, language, objects, commands)
+            ret += ' = '
+          if (mname[0] != '.'):
+            mname = '\'' + mname + '\''
+          else:
+            mname = ''
+            params = params[1:].strip()
+          print('')
+          print('  ``' + ret + 'gf_'+o+ext+firstarg+mname + params+')``')
+          print('')
+          doc = FilterDoc(doc, language, objects, commands)
+          nbspace = -1; util_pos = -1; nbsp = -1
+          for l in doc.split('\n'):
+            if (nbspace == -1 and len(l.strip()) > 0):
+              nbspace = 0;
+              for i in range(len(l)):
+                if (l[i] == '\t'):
+                    nbspace = (nbspace/8)*8 + 8;
+                elif (l[i].isspace()):
+                    nbspace = nbspace + 1;
+                else: break
+            
+            if (nbspace > 0):
+              util_pos = 0; nbsp = 0
+              for i in range(len(l)):
+                if (l[i] == '\t'):
+                    nbsp = (nbsp/8)*8 + 8;
+                elif (l[i].isspace()):
+                    nbsp = nbsp + 1;
+                else: break
+                util_pos = i + 1
+                if (nbsp >= nbspace): break
+                    
+              l = l[util_pos:]
+              
+            if (nbsp > nbspace):
+                for i in range (nbsp-nbspace):
+                    print (''),
+            
+            if (nbspace >= 0):
+                print('    '+l)
+
+          print('')
+          [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+    
+        fl.close()
+
+
+
+
+#######################################################################
+#
+#
+#
+# Option python-com
+#      Extract the python commands and documentation
+#
+#
+#
+#######################################################################
+
+elif (option == 'python-com' or option == 'python-com-par'):
+  language = 'python'
+
+  print("""#!/usr/bin/env python
+# -*- coding: iso-8859-1 -*-
+#
+# Python GetFEM interface
+#
+# Copyright (C) 2004-2022 Yves Renard, Julien Pommier.
+#
+# This file is a part of GetFEM
+#
+# GetFEM  is  free software;  you  can  redistribute  it  and/or modify it
+# under  the  terms  of the  GNU  Lesser General Public License as published
+# by  the  Free Software Foundation;  either version 3 of the License,  or
+# (at your option) any later version along with the GCC Runtime Library
+# Exception either version 3.1 or (at your option) any later version.
+# This program  is  distributed  in  the  hope  that it will be useful,  but
+# WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+# or  FITNESS  FOR  A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+# License and GCC Runtime Library Exception for more details.
+# You  should  have received a copy of the GNU Lesser General Public License
+# along  with  this program;  if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+# File autogenerated by bin/extract_doc. Do not edit it.
+
+\"\"\"GetFEM-interface classes.
+  Provides access to the pseudo-objects exported by the python-getfem
+  interface.
+\"\"\"
+
+import sys
+import numpy
+""")
+  if (option == 'python-com-par'):
+      print("import mpi4py.MPI as mpi")
+      print("getfem_python_par=True")
+  else:
+      print("getfem_python_par=False")
+
+  print("""
+
+try:
+  import numbers
+except ImportError:
+  numbers = numpy
+  numbers.Number = (int,float,complex)
+
+from numpy import *
+
+try:
+  from ._getfem import *
+except ImportError:
+  from _getfem import *
+
+obj_count = {}
+getfem('workspace', 'clear all')
+
+def generic_constructor(self, clname, *args):
+    \"\"\"Internal function -- acts as a constructor for all GetFEM objects.\"\"\"
+    #print('generic_constructor.'+clname+'('+str(args)+')')
+    if (len(args)==1 and type(args[0]) is GetfemObject):
+      if hasattr(self,'id'):
+        print(\"warning: hasattr(self,'id')!\")
+        print(\"self.id: \",self.id)
+        print(\"args[0]: \",args[0])
+      else:
+        self.id = args[0]
+        #if obj_count.get(self.id,0)==0:
+        # getfem(\"undelete\",self.id)
+    else:
+      self.id = getfem_from_constructor(clname,*args)
+    obj_count[self.id] = obj_count.get(self.id,0)+1
+
+def generic_destructor(self, destructible=True):
+    \"\"\"Internal function -- acts as a destructor for all GetFEM objects.\"\"\"
+    if (not hasattr(self,'id')):
+      return
+    #print(\"Mesh.__del__       \",self.id,'count=',obj_count[self.id])
+    if (self.id in obj_count):
+      obj_count[self.id] = obj_count[self.id]-1
+      if (destructible and obj_count[self.id] == 0):
+        getfem('delete',self.id)
+        #print(\"effective deletion\")
+
+""")
+
+  # one pass to find the set methods having identical name with a get method
+  # in that case 'set_' is added to the set method.
+  set_replace = set()
+  ob = sorted(objects)
+  for o in ob:
+    src_dir = directory + '/gf_' + o + '.cc'
+    [oname, initiale] = StandardObjectName(o)
+    sub_com = set()
+    for ext in ['_get', '_set']:
+      src_dir = directory + '/gf_' + o + ext + '.cc'
+      [r, initiale] = StandardObjectName(o)
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+        fl = open(src_dir)
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        while (ok):
+          mname = mname.replace(' ', '_');
+          mname = mname.replace('-', '_');
+          if (mname in sub_com or mname=='classical_fem' or mname=='classical_discontinuous_fem'):
+            set_replace.add(oname+'::'+mname)
+          sub_com.add(mname)
+          [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        fl.close()
+
+
+
+
+
+  non_destructible_objects = set()
+  non_destructible_objects.add('geotrans');
+  non_destructible_objects.add('fem');
+  non_destructible_objects.add('integ');
+  non_destructible_objects.add('global_function');
+  non_destructible_objects.add('mesher_object');
+  non_destructible_objects.add('eltm');
+  non_destructible_objects.add('cvstruct');
+  for o in ob:
+    src_dir = directory + '/gf_' + o + '.cc'
+    [oname, initiale] = StandardObjectName(o)
+    if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+      [gdoc, args] = ExtractGlobalDoc(src_dir);
+    else:
+      gdoc = ''; args = '';
+    if (args != ''):
+      args = FilterDoc(args, language, objects, commands, set_replace) + ', '
+    firstarg = '(' + args
+
+
+    print('\n#\n# GetFEM class ' + oname + ' definition.\n#\n')
+    print('class ' + oname + ':')
+    print('  """GetFEM ' + oname + ' object\n')
+    gdoc = FilterDoc(gdoc, language, objects, commands, set_replace)
+    print(gdoc)
+    print('  """')
+    print('  def __init__(self, *args):')
+    print('    """General constructor for ' + oname + " objects\n")
+    # documentation for constructors
+    if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+      fl = open(src_dir)
+      [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+      while (ok):
+        params = FilterDoc(params, language, objects, commands, set_replace)
+        if (ret != ''):
+          ret = FilterDoc(ret, language, objects, commands, set_replace)
+          ret += ' = '
+        if (mname[0] != '.'):
+          mname = '\'' + mname + '\''
+        else:
+          mname = ''
+          params = params[1:].strip()
+        print('  * ``' + ret + oname+firstarg+mname + params+')``')
+        doc = FilterDoc(doc, language, objects, commands, set_replace)
+        nbspace = -1; util_pos = -1; nbsp = -1
+        for l in doc.split('\n'):
+          if (nbspace == -1 and len(l.strip()) > 0):
+            nbspace = 0;
+            for i in range(len(l)):
+              if (l[i] == '\t'):
+                  nbspace = (nbspace/8)*8 + 8;
+              elif (l[i].isspace()):
+                  nbspace = nbspace + 1;
+              else: break
+
+          if (nbspace > 0):
+            util_pos = 0; nbsp = 0
+            for i in range(len(l)):
+              if (l[i] == '\t'):
+                  nbsp = (nbsp/8)*8 + 8;
+              elif (l[i].isspace()):
+                  nbsp = nbsp + 1;
+              else: break
+              util_pos = i + 1
+              if (nbsp >= nbspace): break
+
+            l = l[util_pos:]
+
+          if (nbsp > nbspace):
+              for i in range (nbsp-nbspace):
+                  print(''),
+
+          if (nbspace >= 0):
+              print('    '+l)
+              
+        print('')
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+
+      fl.close()
+    print('    """')
+    print('    generic_constructor(self,\'' + o + '\',*args)')
+    print('  def __del__(self):')
+    if (o in non_destructible_objects):
+      print('    generic_destructor(self, destructible=False)')
+    else:
+      print('    generic_destructor(self, destructible=True)')
+    if (os.path.exists(directory + '/gf_' + o + '_get.cc')):
+      print('  def get(self, *args):')
+      print('    return getfem(\''+o+'_get\',self.id, *args)')
+      print('  def __repr__(self):')
+      print('    getfem(\''+o+'_get\',self.id, \'display\')')
+      print('    return \'\'')
+    if (os.path.exists(directory + '/gf_' + o + '_set.cc')):
+      print('  def set(self, *args):')
+      print('    return getfem(\''+o+'_set\',self.id, *args)')
+    print('  def __str__(self):')
+    print('    return self.char()')
+    if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+      pythonext = ExtractExt(src_dir, language);
+      if (pythonext != ''):
+        print('\n' + pythonext)
+    # add the list of get and set methods
+    sub_com = set()
+    for ext in ['_get', '_set']:
+      src_dir = directory + '/gf_' + o + ext + '.cc'
+      [r, initiale] = StandardObjectName(o)
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+        
+        if (args != ''):
+          args = FilterDoc(args, language, objects, commands, set_replace) + ', '
+        if (ext == ''):
+          firstarg = '(' + args
+        else:
+          firstarg = '(' + o + ' ' + initiale +', '
+        fl = open(src_dir)
+        doc = '';
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        while (ok):
+          mname = mname.replace(' ', '_');
+          mname = mname.replace('-', '_');
+          set_extend = False
+          if ((ext == '_set') and (oname+'::'+mname in set_replace)):
+            set_extend = True
+          sub_com.add(mname)
+          mparams = FilterDoc(params, language, objects, commands)
+          params = SynopsisToPythonArgs(params)
+          print('')
+          sys.stdout.write('  def ')
+          mmname = mname
+          if (set_extend): mmname = 'set_' + mname
+          sys.stdout.write(mmname + '(self')
+          for p in params:
+            sys.stdout.write(', ' + p)
+          sys.stdout.write('):\n    """')
+          if (len(params)>0 and params[len(params)-1] == '*args'):
+            if (ret != ''):
+              ret = FilterDoc(ret, language, objects, commands)
+              ret += ' = '
+            if (mmname[0] == '.'):
+              mmname = ''
+              mparams = mparams[1:].strip()
+            sys.stdout.write('Synopsis: ' + ret + oname + '.'+ mmname + '(self' + mparams+')\n\n    ')
+          doc = FilterDoc(doc, language, objects, commands)
+          nbspace = -1; util_pos = -1; nbsp = -1
+          for l in doc.split('\n'):
+            if (nbspace == -1 and len(l.strip()) > 0):
+              nbspace = 0;
+              for i in range(len(l)):
+                if (l[i] == '\t'):
+                    nbspace = (nbspace/8)*8 + 8;
+                elif (l[i].isspace()):
+                    nbspace = nbspace + 1;
+                else: break
+              sys.stdout.write(l.strip())
+            elif (nbspace >= 0):
+              if (nbspace > 0):
+                util_pos = 0; nbsp = 0
+                for i in range(len(l)):
+                  if (l[i] == '\t'):
+                      nbsp = (nbsp/8)*8 + 8;
+                  elif (l[i].isspace()):
+                      nbsp = nbsp + 1;
+                  else: break
+                  util_pos = i + 1
+                  if (nbsp >= nbspace): break
+                    
+                l = l[util_pos:]
+              sys.stdout.write('\n')
+              if (nbsp > nbspace):
+                  for i in range (nbsp-nbspace):
+                      sys.stdout.write(' ')
+            
+              if (nbspace >= 0):
+                  sys.stdout.write('    ' + l)
+                  
+          print('"""')
+          sys.stdout.write('    return self.' + ext[1:] + '("' + mname + '"')
+          for p in params:
+            sys.stdout.write(', ' + p.split('=')[0])
+          sys.stdout.write(')\n\n')
+          [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+    
+        fl.close()
+        pythonext = ExtractExt(src_dir, language);
+        if (pythonext != ''):
+          print('\n' + pythonext)
+
+
+
+  co = sorted(commands)
+  for c in co:
+    src_dir = directory + '/gf_' + c + '.cc'
+    if (c != 'workspace' and os.path.exists(src_dir) and os.path.isfile(src_dir)):
+      print('#\n# ' + c + ' module\n#\n')
+      [gdoc, args] = ExtractGlobalDoc(src_dir);
+      margs = FilterDoc(args, language, objects, commands).strip()
+      args = SynopsisToPythonArgs(args)
+      fl = open(src_dir)
+      doc = '';
+      [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+      while (ok):
+        mname = mname.replace(' ', '_');
+        mname = mname.replace('-', '_');
+        mparams = FilterDoc(params, language, objects, commands).strip()
+        params = SynopsisToPythonArgs(params)
+        print('')
+        if (mname[0] == '.'):
+          sys.stdout.write('def ' + c + '(')
+        else:
+          sys.stdout.write('def ' + c +'_'+mname + '(')
+        first = True
+        for p in args:
+          if (not first): sys.stdout.write(', ')
+          sys.stdout.write(p)
+          first = False
+        for p in params:
+          if (not first): sys.stdout.write(', ')
+          sys.stdout.write(p)
+          first = False
+        sys.stdout.write('):\n  """')
+        if (len(params)>0 and params[len(params)-1] == '*args'):
+            if (ret != ''):
+              ret = FilterDoc(ret, language, objects, commands)
+              ret += ' = '
+            mmname = mname
+            mc = c + '_'
+            if (mmname[0] == '.'):
+              mmname = ''
+              mc = c
+            if (margs == ''):
+              mparams = mparams[1:].strip()
+            sys.stdout.write('Synopsis: ' + ret + mc + mmname + '(' + margs + mparams+')\n\n  ')
+        doc = FilterDoc(doc, language, objects, commands, set_replace)
+        nbspace = -1; util_pos = -1; nbsp = -1
+        for l in doc.split('\n'):
+          if (nbspace == -1 and len(l.strip()) > 0):
+            nbspace = 0;
+            for i in range(len(l)):
+              if (l[i] == '\t'):
+                  nbspace = (nbspace/8)*8 + 8;
+              elif (l[i].isspace()):
+                  nbspace = nbspace + 1;
+              else: break
+            sys.stdout.write(l.strip())
+          elif (nbspace >= 0):
+            if (nbspace > 0):
+              util_pos = 0; nbsp = 0
+              for i in range(len(l)):
+                if (l[i] == '\t'):
+                    nbsp = (nbsp/8)*8 + 8;
+                elif (l[i].isspace()):
+                    nbsp = nbsp + 1;
+                else: break
+                util_pos = i + 1
+                if (nbsp >= nbspace): break
+
+              l = l[util_pos:]
+            sys.stdout.write('\n')
+            if (nbsp > nbspace):
+                for i in range (nbsp-nbspace):
+                    sys.stdout.write(' ')
+
+            if (nbspace >= 0):
+                sys.stdout.write('  ' + l)
+
+        print('"""')
+        sys.stdout.write('  return getfem(\'' + c + '\'')
+        for p in args:
+          sys.stdout.write(', ' + p.split('=')[0])
+        if (mname[0] != '.'):
+          sys.stdout.write(', \'' + mname + '\'')
+        for p in params:
+          sys.stdout.write(', ' + p.split('=')[0])
+        sys.stdout.write(')\n\n')
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+
+      fl.close()
+      pythonext = ExtractExt(src_dir, language);
+      if (pythonext != ''):
+        print('\n' + pythonext)
+
+
+
+
+  print('\ndef memstats():')
+  print('  print("*** GetFEM view of the workspace:")')
+  print('  getfem(\'workspace\',\'stats\')')
+  print('  print("*** Python view of the workspace:")')
+  print('  for id,c in obj_count.items():')
+  print('    if (c):')
+  print('      name=str(factory(id).__class__)')
+  print('      print("%s class %d, id %d : instances=%d" % (name,id.classid,id.objid,c))\n')
+
+  print('def linsolve(what, *args):')
+  print('  return getfem(\'linsolve\', what, *args)')
+  print('def compute(mf, U, what, *args):')
+  print('  return getfem(\'compute\', mf, U, what, *args)')
+  print('def asm(what, *args):')
+  print('  return getfem(\'asm\', what, *args)')
+  print('def util(what, *args):')
+  print('  return getfem(\'util\', what, *args)\n')
+
+  print('\ndef factory(id):')
+  sys.stdout.write('  t = ( ')
+  ob = sorted(objects)
+  first = True
+  for o in ob:
+    [oname, initiale] = StandardObjectName(o)
+    if (not first): sys.stdout.write(',\n        ')
+    sys.stdout.write(oname)
+    first = False
+  print(')[id.classid]')
+  print('  return t(id)\n')
+  print('register_python_factory(factory)')
+
+
+
+
+#######################################################################
+#
+#
+#
+# Option python-doc
+#    Build the file cmdref.rst
+#
+#
+#
+#######################################################################
+
+elif (option == 'python-doc'):
+
+  language = 'python'
+
+  print(".. Autogenerated by interface/bin/extract_doc. Do not edit it.\n")
+  print(".. include:: ../replaces.txt\n")
+  print(".. _api:\n")
+  print("API reference")
+  print("=============\n")
+  print('')
+  print('Please remember that this documentation is not self contained.')
+  print('You should in particular refer to the `user documentation`_ ')
+  print('to have a more extensive description of the structures algorithms ')
+  print('and concepts used.')
+  print('')
+
+  # one pass to find the set methods having identical name with a get method
+  # in that case 'set_' is added to the set method.
+  set_replace = set()
+  ob = sorted(objects)
+  for o in ob:
+    src_dir = directory + '/gf_' + o + '.cc'
+    [oname, initiale] = StandardObjectName(o)
+    sub_com = set()
+    for ext in ['_get', '_set']:
+      src_dir = directory + '/gf_' + o + ext + '.cc'
+      [r, initiale] = StandardObjectName(o)
+      if (os.path.exists(src_dir) and os.path.isfile(src_dir)):
+        fl = open(src_dir)
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        while (ok):
+          mname = mname.replace(' ', '_');
+          mname = mname.replace('-', '_');
+          if (mname in sub_com or mname=='classical_fem' or mname=='classical_discontinuous_fem'):
+            set_replace.add(oname+'::'+mname)
+          sub_com.add(mname)
+          [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+        fl.close()
+
+  
+  ob = sorted(objects)
+  for o in ob:
+    src_dir = directory + '/gf_' + o + '.cc'
+    [oname, initiale] = StandardObjectName(o)
+    print('')
+    print(oname)
+    print('------------------------')
+    print('.. autoclass:: getfem.' + oname)
+    print('  :members:\n')
+    
+  co = sorted(commands)
+  for c in co:
+    src_dir = directory + '/gf_' + c + '.cc'
+    if (c != 'workspace' and os.path.exists(src_dir) and os.path.isfile(src_dir)):
+      print('\nModule ' + c)
+      print('--------------------------\n')
+      [gdoc, args] = ExtractGlobalDoc(src_dir);
+      gdoc = FilterDoc(gdoc, language, objects, commands, set_replace)
+      nbspace = -1; util_pos = -1; nbsp = -1
+      for l in doc.split('\n'):
+        if (nbspace == -1 and len(l.strip()) > 0):
+          nbspace = 0;
+          for i in range(len(l)):
+            if (l[i] == '\t'):
+                nbspace = (nbspace/8)*8 + 8;
+            elif (l[i].isspace()):
+                nbspace = nbspace + 1;
+            else: break
+          sys.stdout.write(l.strip())
+        elif (nbspace >= 0):
+          if (nbspace > 0):
+            util_pos = 0; nbsp = 0
+            for i in range(len(l)):
+              if (l[i] == '\t'):
+                  nbsp = (nbsp/8)*8 + 8;
+              elif (l[i].isspace()):
+                  nbsp = nbsp + 1;
+              else: break
+              util_pos = i + 1
+              if (nbsp >= nbspace): break
+
+            l = l[util_pos:]
+          sys.stdout.write('\n')
+          if (nbsp > nbspace):
+              for i in range (nbsp-nbspace):
+                  sys.stdout.write(' ')
+
+          if (nbspace >= 0):
+              sys.stdout.write('  ' + l)
+              
+      print('')
+      fl = open(src_dir)
+      doc = '';
+      [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+      while (ok):
+        mname = mname.replace(' ', '_');
+        mname = mname.replace('-', '_');
+        print('')
+        if (mname[0] == '.'):
+          print('.. autofunction:: getfem.' + c)
+        else:
+          print('.. autofunction:: getfem.' + c +'_'+mname)
+        [ok, doc, dtype, mname, params, ret] = ExtractSubDoc(fl, language)
+      fl.close()
+
+
+
+else:
+    print('Unrecognized option. Valid options are ' + valid_options)
