@@ -9,6 +9,9 @@ This conf.py do:
 """
 import os
 import pathlib
+import subprocess
+
+subprocess.run(["make", "images"], cwd=r"doc/sphinx")
 
 basedir = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "doc/sphinx/source"
