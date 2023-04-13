@@ -1,0 +1,82 @@
+# Copyright (C) 2001-2020 Yves Renard
+#
+# This file is a part of GetFEM
+#
+# GetFEM  is  free software;  you  can  redistribute  it  and/or modify it
+# under  the  terms  of the  GNU  Lesser General Public License as published
+# by  the  Free Software Foundation;  either version 3 of the License,  or
+# (at your option) any later version.
+# This program  is  distributed  in  the  hope  that it will be useful,  but
+# WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+# or  FITNESS  FOR  A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+# License for more details.
+# You  should  have received a copy of the GNU Lesser General Public License
+# along  with  this program;  if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301, USA.
+
+# -*- perl -*-
+eval 'exec perl -S $0 "$@"'
+  if 0;
+
+$prefix = "dr2dgnplot_tmp";
+$count = int(1000 * rand);
+if ($ENV{TMPDIR} eq "") { $tmpdir = "/tmp"; } else { $tmpdir = $ENV{TMPDIR} }
+if (substr($tmpdir, length($tmpdir)-1, 1) eq "/")
+  { $tmpdir = substr($tmpdir, 0, length($tmpdir)-1); }
+do { $tmp1 = $tmpdir."/".$prefix."\_$count"; ++$count; } while (-f $tmp1);
+do { $tmp2 = $tmpdir."/".$prefix."\_$count"; ++$count; } while (-f $tmp2);
+
+sub catch { `rm -f $tmp1 $tmp2`; }
+$SIG{INT} = 'catch';
+
+
+open(DATAF, $ARGV[0]) or die "Open file impossible : $!\n";
+open(TMPF, ">$tmp1") or die "Open file impossible : $!\n";
+
+
+while ($li = <DATAF>)
+{
+  chomp($li);
+  if (!($li=~/N/ || $li=~/P/ || $li=~/K/ || $li=~/DIM/ || $li=~/%/
+	|| $li=~/DATA/ || $li=~/END/) && $li) {
+
+    $c = 0;
+    while ($li) { $cov[$c++] = $li; $li = <DATAF>; chomp($li); }
+
+    if ($c == 3)  { # P1
+      print TMPF "$cov[0]\n$cov[1]\n$cov[2]\n$cov[0]\n\n";
+    }
+    elsif ($c == 4) {  # Q1
+      print TMPF "$cov[0]\n$cov[1]\n$cov[3]\n$cov[2]\n$cov[0]\n\n";
+    }
+    elsif ($c == 6) {  # P2
+      print TMPF "$cov[0]\n$cov[1]\n$cov[2]\n$cov[4]\n$cov[5]\n";
+      print TMPF "$cov[3]\n$cov[0]\n\n";
+    }
+    elsif ($c == 10)  { # P3
+      print TMPF "$cov[0]\n$cov[1]\n$cov[2]\n$cov[3]\n$cov[6]\n";
+      print TMPF "$cov[8]\n$cov[9]\n$cov[7]\n$cov[4]\n$cov[0]\n\n";
+    }
+    elsif ($c == 15)  { # P4
+      print TMPF "$cov[0]\n$cov[1]\n$cov[2]\n$cov[3]\n$cov[4]\n";
+      print TMPF "$cov[8]\n$cov[11]\n$cov[13]\n$cov[14]\n$cov[12]\n";
+      print TMPF "$cov[9]\n$cov[5]\n$cov[0]\n\n";
+    }
+    else { die "Unknown format with $c lines\n"; }
+  }
+}
+
+close(DATAF);
+close(TMPF);
+
+$muldep = $ARGV[1]; if (!$muldep) { $muldep = 1.0; }
+open(GNF, ">$tmp2") or die "Open file impossible : $!\n";
+print GNF "set data style line \n";
+print GNF "plot  \'$tmp1\' using (\$1+\$3*$muldep):(\$2+\$4*$muldep) title \'solution\', \'$tmp1\' using (\$1):(\$2) title \'mesh\'\n";
+print GNF "pause -1\n";
+print GNF "set term postscript color\n";
+print GNF "set output \'$ARGV[0].ps\'\n";
+print GNF "replot\n";
+close(GNF);
+`gnuplot $tmp2`;
+`rm -f $tmp1 $tmp2`;
