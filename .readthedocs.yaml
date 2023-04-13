@@ -6,6 +6,36 @@ version: 2
 
 sphinx:
    configuration: conf.py
+build:
+  os: "ubuntu-22.04"
+  apt_packages:
+    - automake
+    - libtool
+    - make
+    - g++
+    - libqd-dev
+    - libqhull-dev
+    - libmumps-seq-dev
+    - liblapack-dev
+    - libopenblas-dev
+    - libpython3-dev
+    - dcraw
+    - imagemagick
+    - fig2dev
+    - texlive
+    - xzdec
+    - fig2ps
+    - gv
+    - python3-vtk7
+  tools:
+    python: "mambaforge-4.10"
+  jobs:
+    pre_build:
+      - mkdir ~/.config
+      - mkdir ~/.config/ImageMagick
+      - cp /etc/ImageMagick-*/* ~/.config/ImageMagick
+      - ls -l ~/.config/ImageMagick
+      - perl -p -i -e 's/\"none\"/\"read\|write\"/g' ~/.config/ImageMagick/policy.xml
 
 conda:
   environment: environment.yml
