@@ -8,8 +8,8 @@
 
 This is a project to provide Getfem official documentation with multiple versions and multiple languages on Read The Docs site.
 
-Current procedure is bit tricky because Read The Docs doesn't have a way to specify options for getfem-build command.
-conf.py files for each languages have 'language' and 'locale_dirs' values without having full copy of conf.py of getfem doc. If we want to specify conf.py file that is out of source directory, we will use '-c' option for getfem-build command. Unfortunately Read the Docs can't. If there are any better way, please let me know.
+Current procedure is bit tricky because Read The Docs doesn't have a way to specify options for sphinx-build command.
+conf.py files for each languages have 'language' and 'locale_dirs' values without having full copy of conf.py of getfem doc. If we want to specify conf.py file that is out of source directory, we will use '-c' option for sphinx-build command. Unfortunately Read the Docs can't. If there are any better way, please let me know.
 
 This repository is inspired by [sphinx-doc/sphinx-doc-translations](https://github.com/sphinx-doc/sphinx-doc-translations.git).
 
@@ -17,9 +17,11 @@ This repository is inspired by [sphinx-doc/sphinx-doc-translations](https://gith
 
 * RTD project pages for Getfem:
 
-  * :us: [![Documentation Status](https://readthedocs.org/projects/getfem/badge/?version=latest)](https://getfem.readthedocs.io/en/latest/?badge=latest)  (Master) 
-  * :jp: [![Documentation Status](https://readthedocs.org/projects/getfem-ja/badge/?version=latest)](https://getfem.readthedocs.io/ja/latest/?badge=latest)
-  * :brazil: [![Documentation Status](https://readthedocs.org/projects/getfem-pt-br/badge/?version=latest)](https://getfem.readthedocs.io/pt_BR/latest/?badge=latest)
+English [![Documentation Status](https://readthedocs.org/projects/getfem/badge/?version=latest)](https://getfem.readthedocs.io/en/latest/?badge=latest)
+
+日本語 [![Documentation Status](https://readthedocs.org/projects/getfem-ja/badge/?version=latest)](https://getfem.readthedocs.io/ja/latest/?badge=latest)
+
+Português :brazil: [![Documentation Status](https://readthedocs.org/projects/getfem-pt-br/badge/?version=latest)](https://getfem.readthedocs.io/pt_BR/latest/?badge=latest)
 
 ## How to setup a translated documentation project on RTD
 

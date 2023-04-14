@@ -10,7 +10,7 @@ on:
     - cron:  '0 0 * * *'
 jobs:
   script:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - name: Get Job URL
       uses: Tiryoh/gha-jobid-action@v0
@@ -19,13 +19,13 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         job_name: script
     - name: checkout with submodule
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
         submodules: true
         token: ${{ secrets.PERSONAL_ACCESSTOKEN }}
     - name: Setup SSH
-      uses: MrSquaare/ssh-setup-action@v1
+      uses: MrSquaare/ssh-setup-action@v2
       with:
         host: github.com
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -66,8 +66,9 @@ jobs:
          tx push -s --skip;
          rm -rf source/locale/ja source/locale/pt_BR || true;
          tx pull --silent -f -l ja,pt_BR)
+        rm ../bin/fig2eps
         rm -rf ../doc
-        rm -rf doc/sphinx/locale/.doctrees
+        cp -r bin/fig2eps ../bin/fig2eps
         cp -r doc ../doc
         cd ../
     - name: git_config
