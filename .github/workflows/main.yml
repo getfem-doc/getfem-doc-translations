@@ -84,9 +84,9 @@ jobs:
          tx push -s --skip;
          rm -rf source/locale/ja source/locale/pt_BR || true;
          tx pull --silent -f -l ja,pt_BR)
-        rm -rf ../bin/fig2eps
+        rm ../bin/fig2eps
         rm -rf ../doc
-        cp -r bin ../bin/fig2eps
+        cp -r bin/fig2eps ../bin/fig2eps
         cp -r doc ../doc
         cd ../
         deactivate
