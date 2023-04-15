@@ -4,6 +4,8 @@ repos:
   hooks:
   - id: requirements-txt-fixer
   - id: check-merge-conflict
+  - id: debug-statements
+    exclude: ^(|bin|doc)
   - id: no-commit-to-branch
     args: [--branch, main]
   - id: requirements-txt-fixer
