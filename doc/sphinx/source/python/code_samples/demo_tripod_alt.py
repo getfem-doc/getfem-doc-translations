@@ -57,7 +57,7 @@ print( "mfu.nbdof(): ",mfu.nbdof() )
 print( "np.repeat([[0],[-100],[0]],nbd,1).shape:",np.repeat([[0],[-100],[0]],nbd,1).shape )
 
 K = gf.asm_linear_elasticity(mim, mfu, mfd, np.repeat([Lambda], nbd), np.repeat([Mu], nbd))
-print "K.info: ",K.info # Spmat instance )
+print "K.info: ",K.info ) # Spmat instance
 print "np.repeat([Lambda], nbd).shape:",np.repeat([Lambda], nbd).shape )
 print "np.repeat([Mu], nbd).shape:",np.repeat([Mu], nbd).shape )
 
