@@ -13,26 +13,29 @@
 
 tol = 0.0001
 
-def sint2(x,y):
-  """.
-  returns sin(theta/2) where theta is the angle of 0-(x,y) with the axis Ox
-  """
-  r = sqrt(x*x+y*y)
-  if r < tol:
-    return 0
-  elif y<0:
-    return -sqrt(abs(r-x)/(2*r))
-  return sqrt(abs(r-x)/(2*r))
 
-def cost2(x,y):
-  """.
-  returns cos(theta/2) where theta is the angle of 0-(x,y) with the axis 
-  Ox
-  """
-  r = sqrt(x*x+y*y)
-  if r < tol:
-    return 0
-  return sqrt(abs(r+x)/(2*r))
+def sint2(x, y):
+    """.
+    returns sin(theta/2) where theta is the angle of 0-(x,y) with the axis Ox
+    """
+    r = sqrt(x * x + y * y)
+    if r < tol:
+        return 0
+    elif y < 0:
+        return -sqrt(abs(r - x) / (2 * r))
+    return sqrt(abs(r - x) / (2 * r))
+
+
+def cost2(x, y):
+    """.
+    returns cos(theta/2) where theta is the angle of 0-(x,y) with the axis
+    Ox
+    """
+    r = sqrt(x * x + y * y)
+    if r < tol:
+        return 0
+    return sqrt(abs(r + x) / (2 * r))
+
 
 #
 # analytical solution for a semi-infinite crack [-inf,a] in an
@@ -45,11 +48,12 @@ def cost2(x,y):
 # elts for curved cracks", Stazi, Budyn,Chessa, Belytschko
 #
 
+
 def elasticite2lame(young_modulus, poisson_ratio):
-  """.
-  returns lamé coeficients (lambda, mu) 
-  Ox
-  """
-  mu = young_modulus/(2*(1+poisson_ratio))
-  la = 2*mu*poisson_ratio/(1-poisson_ratio)
-  return (la,mu)
+    """.
+    returns lamé coeficients (lambda, mu)
+    Ox
+    """
+    mu = young_modulus / (2 * (1 + poisson_ratio))
+    la = 2 * mu * poisson_ratio / (1 - poisson_ratio)
+    return (la, mu)
