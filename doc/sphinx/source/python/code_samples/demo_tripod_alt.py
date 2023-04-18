@@ -69,7 +69,7 @@ print( "mfd.eval('identity(3)').shape: ",mfd.eval('identity(3)').shape )
 print( "mfd.eval('[0,0,0]').shape: ",mfd.eval('[0,0,0]').shape )
 
 (N,U0) = H.dirichlet_nullspace(R)
-print( "N.info: ",N.info # Spmat instance )
+print( "N.info: ",N.info ) # Spmat instance
 print( "U0.shape: ",U0.shape )
 
 Nt = gf.Spmat('copy',N)
