@@ -17,14 +17,13 @@ subprocess.run(["make", "png"], cwd=r"doc/sphinx/source/matlab_octave/images")
 subprocess.run(["make", "png"], cwd=r"doc/sphinx/source/python/images")
 subprocess.run(["make", "png"], cwd=r"doc/sphinx/source/scilab/images")
 
-basedir = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "doc/sphinx/source"
-)
+basedir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "doc/sphinx/source")
 
 exec(pathlib.Path(os.path.join(basedir, "conf.py")).read_text(), globals())
 
 locale_dirs = [os.path.join(basedir, "./locale/")]
-html_theme = 'alabaster'
+html_theme = "alabaster"
+
 
 def setup(app):
     from sphinx.ext.autodoc import cut_lines
