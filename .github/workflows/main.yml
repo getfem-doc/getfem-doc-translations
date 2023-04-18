@@ -55,6 +55,7 @@ jobs:
         mv tx /usr/local/bin/tx
     - name: update
       env:
+        SPHINXINTL_TRANSIFEX_ORGANIZATION_NAME: tkoyama010
         SPHINXINTL_TRANSIFEX_USERNAME: api
         SPHINXINTL_TRANSIFEX_PROJECT_NAME: getfem-doc
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
@@ -75,6 +76,7 @@ jobs:
         sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
+        cp ../doc/sphinx/.tx/config  doc/sphinx/.tx/config  
         (cd doc/sphinx;
          make latex;
          make images;
