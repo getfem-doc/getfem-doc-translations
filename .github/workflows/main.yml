@@ -91,11 +91,11 @@ jobs:
         cp -r bin/fig2eps ../bin/fig2eps
         cp -r doc ../doc
         cd ../
-        (cd doc/sphinx/source/userdoc/images; make clean)
-        (cd doc/sphinx/source/project/images; make clean)
         (cd doc/sphinx/source/matlab_octave/images; make clean)
+        (cd doc/sphinx/source/project/images; make clean)
         (cd doc/sphinx/source/python/images; make clean)
         (cd doc/sphinx/source/scilab/images; make clean)
+        (cd doc/sphinx/source/userdoc/images; make clean)
         deactivate
     - name: git_config
       env:
