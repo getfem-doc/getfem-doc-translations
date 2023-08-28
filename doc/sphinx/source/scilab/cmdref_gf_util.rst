@@ -15,6 +15,7 @@ gf_util
   A = gf_util('load matrix', string FMT, string FILENAME)
   tl = gf_util('trace level' [, int level])
   tl = gf_util('warning level', int level)
+  tl = gf_util('set num threads', int nb_threads)
 
 **Description :**
 
@@ -52,4 +53,10 @@ gf_util
     
     0 means no warnings, default level is 3. if no level is given,
     the current warning level is returned. 
+
+
+  ``tl = gf_util('set num threads', int nb_threads)``
+
+    Sets the number of threads for the multithreaded GetFEM version.
+    It is available only when GetFEM is compiled with openmp support. 
 
