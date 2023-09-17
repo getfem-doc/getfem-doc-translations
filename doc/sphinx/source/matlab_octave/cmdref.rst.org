@@ -7073,7 +7073,7 @@ gf_spmat
 ::
 
   SM = gf_spmat('empty', int m [, int n])
-  SM = gf_spmat('copy', mat K [,  I [,  J]])
+  SM = gf_spmat('copy', mat K [,  I [,  J=I]])
   SM = gf_spmat('identity', int n)
   SM = gf_spmat('mult', spmat A, spmat B)
   SM = gf_spmat('add', spmat A, spmat B)
@@ -7114,9 +7114,9 @@ General constructor for spmat objects.
     `m x n`. If `n` is omitted, the matrix dimension is `m x m`.
 
 
-  ``SM = gf_spmat('copy', mat K [,  I [,  J]])``
+  ``SM = gf_spmat('copy', mat K [,  I [,  J=I]])``
 
-    Duplicate a matrix `K` (which might be a spmat or a native matlab
+    Duplicate a matrix `K` (which might be an spmat or a native matlab
     sparse matrix). If index `I` and/or `J` are given, the matrix will
     be a submatrix of `K`. For example::
     
