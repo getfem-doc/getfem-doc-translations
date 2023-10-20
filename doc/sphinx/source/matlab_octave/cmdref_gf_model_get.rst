@@ -28,7 +28,7 @@ gf_model_get
   mf = gf_model_get(model M, 'mesh fem of variable', string name)
   name = gf_model_get(model M, 'mult varname Dirichlet', int ind_brick)
   I = gf_model_get(model M, 'interval of variable', string varname)
-  V = gf_model_get(model M, 'from variables')
+  V = gf_model_get(model M, 'from variables'[, bool with_internal])
   gf_model_get(model M, 'assembly'[, string option])
   {nbit, converged} = gf_model_get(model M, 'solve'[, ...])
   gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar scale]]])
@@ -179,7 +179,7 @@ gf_model_get
     the model.
 
 
-  ``V = gf_model_get(model M, 'from variables')``
+  ``V = gf_model_get(model M, 'from variables'[, bool with_internal])``
 
     Return the vector of all the degrees of freedom of the model consisting
     of the concatenation of the variables of the model (useful

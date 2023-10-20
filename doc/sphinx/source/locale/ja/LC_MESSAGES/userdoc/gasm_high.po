@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-02 01:16+0000\n"
+"POT-Creation-Date: 2023-10-20 01:17+0000\n"
 "PO-Revision-Date: 2018-07-16 07:03+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -408,8 +408,8 @@ msgstr ""
 "\\mu (\\nabla u + (\\nabla u)^T)` "
 "が考えられています．弱定式化の記述に対応する構築文字列は以下のように書くことができます．"
 
-#: ../source/userdoc/gasm_high.rst:129 ../source/userdoc/gasm_high.rst:621
-#: ../source/userdoc/gasm_high.rst:725
+#: ../source/userdoc/gasm_high.rst:129 ../source/userdoc/gasm_high.rst:624
+#: ../source/userdoc/gasm_high.rst:728
 msgid "or::"
 msgstr "または次の通りです．"
 
@@ -1030,10 +1030,6 @@ msgid "``abs(t)``"
 msgstr "``abs(t)``"
 
 #: ../source/userdoc/gasm_high.rst:420
-msgid "``pos_part(t)`` (:math:`tH(t)`)"
-msgstr "``pos_part(t)`` (:math:`tH(t)`)"
-
-#: ../source/userdoc/gasm_high.rst:421
 msgid ""
 "``reg_pos_part(t, eps)`` (:math:`(t-eps/2-t^2/(2eps))H(t-eps) + "
 "t^2H(t)/(2eps)`)"
@@ -1041,11 +1037,27 @@ msgstr ""
 "``reg_pos_part(t, eps)`` (:math:`(t-eps/2-t^2/(2eps))H(t-eps) + "
 "t^2H(t)/(2eps)`)"
 
+#: ../source/userdoc/gasm_high.rst:421
+msgid "``max(t, u)``, ``min(t, u)``"
+msgstr "``max(t, u)``, ``min(t, u)``"
+
 #: ../source/userdoc/gasm_high.rst:422
+msgid "``pos_part(t)`` (:math:`tH(t)`)"
+msgstr "``pos_part(t)`` (:math:`tH(t)`)"
+
+#: ../source/userdoc/gasm_high.rst:423
+msgid "``sqr_pos_part(t)`` (:math:`(tH(t))^2`)"
+msgstr "``sqr_pos_part(t)`` (:math:`(tH(t))^2`)"
+
+#: ../source/userdoc/gasm_high.rst:424
 msgid "``neg_part(t)`` (:math:`-tH(-t)`), ``max(t, u)``, ``min(t, u)``"
 msgstr "``neg_part(t)`` (:math:`-tH(-t)`), ``max(t, u)``, ``min(t, u)``"
 
-#: ../source/userdoc/gasm_high.rst:424
+#: ../source/userdoc/gasm_high.rst:425
+msgid "``sqr_neg_part(t)`` (:math:`(tH(-t))^2`)"
+msgstr "``sqr_neg_part(t)`` (:math:`(tH(-t))^2`)"
+
+#: ../source/userdoc/gasm_high.rst:427
 msgid ""
 "A scalar function can be applied to a scalar expression, but also to a "
 "tensor one. If is is applied to a tensor expression, is is applied "
@@ -1059,11 +1071,11 @@ msgstr ""
 " を持つ関数の場合，2つの非スカラー引数が渡された場合，次元は同じでなければなりません．たとえば， \"max([1;2],[0;3])\" は "
 "\"[0;3]\" を返します．"
 
-#: ../source/userdoc/gasm_high.rst:429
+#: ../source/userdoc/gasm_high.rst:432
 msgid "User defined scalar functions"
 msgstr "ユーザー定義のスカラー関数"
 
-#: ../source/userdoc/gasm_high.rst:431
+#: ../source/userdoc/gasm_high.rst:434
 msgid ""
 "It is possible to add a scalar function to the already predefined ones. Note"
 " that the generic assembly consider only scalar function with one or two "
@@ -1072,7 +1084,7 @@ msgid ""
 msgstr ""
 "すでに定義されているスカラー関数にスカラー関数を追加することは可能です．汎用構築は，1つまたは2つのパラメータを持つスカラー関数のみを考慮します．汎用構築にスカラー関数を追加するには，次のように呼び出します．"
 
-#: ../source/userdoc/gasm_high.rst:439
+#: ../source/userdoc/gasm_high.rst:442
 msgid ""
 "where ``name`` is the name of the function to be defined, ``nb_args`` is "
 "equal to 1 or 2. In the first call, ``expr`` is a string describing the "
@@ -1098,25 +1110,25 @@ msgstr ""
 "は1つのスカラーパラメーターを持つスカラーC関数上のCポインターでなければならず， ``f2`` "
 "は2つのスカラーパラメーターを持つスカラーC関数上のCポインターでなければなりません．"
 
-#: ../source/userdoc/gasm_high.rst:442
+#: ../source/userdoc/gasm_high.rst:445
 msgid "Additionally,::"
 msgstr "さらに，"
 
-#: ../source/userdoc/gasm_high.rst:446
+#: ../source/userdoc/gasm_high.rst:449
 msgid "return true is a function ``name`` is already defined and::"
 msgstr "trueは ``name`` が既に定義されている関数である場合に返されます．"
 
-#: ../source/userdoc/gasm_high.rst:450
+#: ../source/userdoc/gasm_high.rst:453
 msgid ""
 "cancel the definition of an already define function (it has no action if the"
 " function does not exist) which allow to redefine a function."
 msgstr "この関数は関数を再定義することができるように，既に定義済みの関数の定義を取り消します（関数が存在しない場合はアクションはありません）．"
 
-#: ../source/userdoc/gasm_high.rst:454
+#: ../source/userdoc/gasm_high.rst:457
 msgid "Derivatives of defined scalar functions"
 msgstr "定義されたスカラー関数の導関数"
 
-#: ../source/userdoc/gasm_high.rst:456
+#: ../source/userdoc/gasm_high.rst:459
 msgid ""
 "It is possible to refer directly to the derivative of defined functions by "
 "adding the prefix ``Derivative_`` to the function name. For instance, "
@@ -1129,31 +1141,31 @@ msgstr ""
 "``Derivative_sin(t)`` は ``cos(t)`` に相当します． ``pow(t,u)`` "
 "のような2つの引数の関数の場合，関数名の前に接頭辞 ``Derivative_2_`` を付けた2番目の引数に関して導関数を参照できます．"
 
-#: ../source/userdoc/gasm_high.rst:460
+#: ../source/userdoc/gasm_high.rst:463
 msgid "Binary operations"
 msgstr "バイナリ演算"
 
-#: ../source/userdoc/gasm_high.rst:462
+#: ../source/userdoc/gasm_high.rst:465
 msgid "A certain number of binary operations between tensors are available:"
 msgstr "テンソル間の特定の数のバイナリ演算が利用できます．"
 
-#: ../source/userdoc/gasm_high.rst:465
+#: ../source/userdoc/gasm_high.rst:468
 msgid ""
 "``+`` and ``-`` are the standard addition and subtraction of scalar, vector,"
 " matrix or tensors."
 msgstr "``+`` と ``-`` は，スカラ，ベクトル，行列，またはテンソルの標準的な加減算です．"
 
-#: ../source/userdoc/gasm_high.rst:467
+#: ../source/userdoc/gasm_high.rst:470
 msgid ""
 "``*`` stands for the scalar, matrix-vector, matrix-matrix or (fourth order "
 "tensor)-matrix multiplication."
 msgstr "``*`` はスカラ，行列-ベクトル，行列-行列または（4次テンソル）-行列の乗法を表します．"
 
-#: ../source/userdoc/gasm_high.rst:469
+#: ../source/userdoc/gasm_high.rst:472
 msgid "``/`` stands for the division by a scalar."
 msgstr "``/`` はスカラーによる除算を表します．"
 
-#: ../source/userdoc/gasm_high.rst:471
+#: ../source/userdoc/gasm_high.rst:474
 msgid ""
 "``.`` stands for the scalar product of vectors, or more generally to the "
 "contraction of a tensor with respect to its last index with a vector or with"
@@ -1164,7 +1176,7 @@ msgstr ""
 "は，ベクトルのスカラー積を表します．より一般的には，ベクトルを持つ最後のインデックスまたは別のテンソルの最初のインデックスを持つテンソルの収縮を表します．"
 " ``*`` と ``.`` は，行列ベクトルまたは行列と行列の乗算と等価であることに注意してください．"
 
-#: ../source/userdoc/gasm_high.rst:473
+#: ../source/userdoc/gasm_high.rst:476
 msgid ""
 "``:`` stands for the |Frobenius| product of matrices or more generally to "
 "the contraction of a tensor with respect to the two last indices with a "
@@ -1174,29 +1186,29 @@ msgstr ""
 "``:`` は |Frobenius| 行列の積，またはより一般的には，マトリックスを有する2つの最後のインデックスに関するテンソルの収縮を表します． "
 "``*`` と ``:`` は（4次テンソル）行列の乗算と等価であることに注意してください．"
 
-#: ../source/userdoc/gasm_high.rst:475
+#: ../source/userdoc/gasm_high.rst:478
 msgid ""
 "``.*`` stands for the multiplication of two vectors/matrix/tensor "
 "componentwise."
 msgstr "``.*`` は，2つのベクトル/行列/テンソルの成分ごとの乗算を表します．"
 
-#: ../source/userdoc/gasm_high.rst:477
+#: ../source/userdoc/gasm_high.rst:480
 msgid ""
 "``./`` stands for the division of two vectors/matrix/tensor componentwise."
 msgstr "``./`` は，2つのベクトル/行列/テンソルの成分ごとの除算を表します．"
 
-#: ../source/userdoc/gasm_high.rst:479
+#: ../source/userdoc/gasm_high.rst:482
 msgid "``@`` stands for the tensor product."
 msgstr "``@`` はテンソル積を表します．"
 
-#: ../source/userdoc/gasm_high.rst:481
+#: ../source/userdoc/gasm_high.rst:484
 msgid ""
 "``Cross_product(V, W)`` stands for the cross product (vector product) of "
 "``V`` and ``W``. Defined only for three-dimensional vectors."
 msgstr ""
 "``Cross_product(V, W)`` は ``V`` と ``W`` の直積(ベクトル積)を表し，三次元ベクトルに対してのみ定義されます．"
 
-#: ../source/userdoc/gasm_high.rst:483
+#: ../source/userdoc/gasm_high.rst:486
 msgid ""
 "``Contract(A, i, B, j)`` stands for the contraction of tensors A and B with "
 "respect to the ith index of A and jth index of B. The first index is "
@@ -1207,7 +1219,7 @@ msgstr ""
 "は，Aのi番目のインデックスとBのj番目のインデックスに関するテンソルAとBの縮小を表します．最初のインデックスは1です．例えば "
 "``Contract(V,1,W,1)`` は ``V`` と ``W`` の2つのベクトルの ``VW`` に相当します．"
 
-#: ../source/userdoc/gasm_high.rst:485
+#: ../source/userdoc/gasm_high.rst:488
 msgid ""
 "``Contract(A, i, j, B, k, l)`` stands for the double contraction of tensors "
 "A and B with respect to indices i,j of A and indices k,l of B. The first "
@@ -1218,15 +1230,15 @@ msgstr ""
 "はAのインデックスi，jとBのインデックスk，lに関してテンソルAとBの二重収縮を表します．例えば， ``Contract(A,1,2,B,1,2)``"
 " は ``A`` と ``B`` の2つの行列の ``A:B`` に相当します．"
 
-#: ../source/userdoc/gasm_high.rst:489
+#: ../source/userdoc/gasm_high.rst:492
 msgid "Unary operators"
 msgstr "単項演算子"
 
-#: ../source/userdoc/gasm_high.rst:491
+#: ../source/userdoc/gasm_high.rst:494
 msgid "``-`` the unary minus operator: change the sign of an expression."
 msgstr "``-`` 単体マイナス演算子: 式の符号を変更します．"
 
-#: ../source/userdoc/gasm_high.rst:493
+#: ../source/userdoc/gasm_high.rst:496
 msgid ""
 "``'`` stands for the transpose of a matrix or line view of a vector. It a "
 "tensor ``A`` is of order greater than two,``A'`` denotes the inversion of "
@@ -1235,7 +1247,7 @@ msgstr ""
 "``'`` はベクトルの行列またはラインビューの転置を表します．テンソル ``A`` は2より大きい次数であり， ``A'`` "
 "は2つの第1指標の逆数を表示します．"
 
-#: ../source/userdoc/gasm_high.rst:495
+#: ../source/userdoc/gasm_high.rst:498
 msgid ""
 "``Contract(A, i, j)`` stands for the contraction of tensor A with respect to"
 " its ith and jth indices. The first index is numbered 1. For instance, "
@@ -1244,7 +1256,7 @@ msgstr ""
 "``Contract(A, i, j)`` は，i番目とj番目のインデックスに対するテンソルAの収縮を表します．例えば， ``Contract(A, "
 "1, 2)`` は， ``A`` の ``Trace(A)`` に相当します．"
 
-#: ../source/userdoc/gasm_high.rst:497
+#: ../source/userdoc/gasm_high.rst:500
 msgid ""
 "``Swap_indices(A, i, j)`` exchange indices number i and j. The first index "
 "is numbered 1. For instance ``Swap_indices(A, 1, 2)`` is equivalent to "
@@ -1253,7 +1265,7 @@ msgstr ""
 "``Swap_indices(A, i, j)`` はインデックス番号iとjを交換します．たとえば， ``Swap_indices(A, 1, 2)``"
 " は行列 ``A`` の ``A'`` に相当します．"
 
-#: ../source/userdoc/gasm_high.rst:499
+#: ../source/userdoc/gasm_high.rst:502
 msgid ""
 "``Index_move_last(A, i)`` move the index number i in order to be the last "
 "one. For instance, if ``A`` is a fourth order tensor "
@@ -1265,11 +1277,11 @@ msgstr ""
 "``Index_move_last(A, 2)`` の結果はテンソル :math:`B_ {i_1i_3i_4i_2} = A_ "
 "{i_1i_2i_3i_4}` になります．行列の場合， ``Index_move_last(A, 1)`` は ``A'`` に相当します．"
 
-#: ../source/userdoc/gasm_high.rst:503
+#: ../source/userdoc/gasm_high.rst:506
 msgid "Parentheses"
 msgstr "括弧"
 
-#: ../source/userdoc/gasm_high.rst:505
+#: ../source/userdoc/gasm_high.rst:508
 msgid ""
 "Parentheses can be used in a standard way to change the operation order. If "
 "no parentheses are indicated, the usually priority order are used. The "
@@ -1281,11 +1293,11 @@ msgstr ""
 "``.*``, ``./``, ``@``  の通常優先順位が使用されます． 微分なしで，優先度が高いものは単項演算子 ``-`` と ``'`` "
 "に予約されています．"
 
-#: ../source/userdoc/gasm_high.rst:509
+#: ../source/userdoc/gasm_high.rst:512
 msgid "Explicit vectors"
 msgstr "陽なベクトル"
 
-#: ../source/userdoc/gasm_high.rst:511
+#: ../source/userdoc/gasm_high.rst:514
 msgid ""
 "GWFL allows to define explicit vectors (i.e. order 1 tensors) with the "
 "notation ``[a,b,c,d,e]``, i.e. an arbitrary number of components separated "
@@ -1307,11 +1319,11 @@ msgstr ""
 "``[5*Grad_Test_u(2), 2*Grad_Test_u(1)]`` があります．また，オペレータ（転置）を使うと，式 "
 "``[a,b,c,d,e]'`` は ``行ベクトル`` ，つまり1x5行列を表します．"
 
-#: ../source/userdoc/gasm_high.rst:515
+#: ../source/userdoc/gasm_high.rst:518
 msgid "Explicit matrices"
 msgstr "陽な行列"
 
-#: ../source/userdoc/gasm_high.rst:517
+#: ../source/userdoc/gasm_high.rst:520
 msgid ""
 "Similarly to explicit vectors, it is possible to define explicit matrices "
 "(i.e. order 2 tensors) with the notation ``[[a,b],[c,d]]``, i.e. an "
@@ -1327,11 +1339,11 @@ msgstr ""
 "``[[11,12,13;21,22,23]`` "
 "はどちらも同じ2x3行列を表します．成分は，いくつかの数値定数，いくつかの有効な式，試験関数を含むことができます．"
 
-#: ../source/userdoc/gasm_high.rst:521
+#: ../source/userdoc/gasm_high.rst:524
 msgid "Explicit tensors"
 msgstr "陽なテンソル"
 
-#: ../source/userdoc/gasm_high.rst:523
+#: ../source/userdoc/gasm_high.rst:526
 msgid ""
 "Explicit tensors of any order are permitted with the nested format. A tensor"
 " of order ``n`` is written as a succession of tensor of order ``n-1`` of "
@@ -1348,11 +1360,11 @@ msgstr ""
 "``Reshape([1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3], 3, 2, 2, 2)`` "
 "であり，成分はFortranの次数で指定する必要があります．"
 
-#: ../source/userdoc/gasm_high.rst:527
+#: ../source/userdoc/gasm_high.rst:530
 msgid "Access to tensor components"
 msgstr "テンソル成分へのアクセス"
 
-#: ../source/userdoc/gasm_high.rst:528
+#: ../source/userdoc/gasm_high.rst:531
 msgid ""
 "The access to a component of a vector/matrix/tensor can be done by following"
 " a term by a left parenthesis, the list of components and a right "
@@ -1377,27 +1389,27 @@ msgstr ""
 "が宣言された定数ですが，変数として宣言されていない場合は正しいです．コロンはMatlabのようなシンタックスのインデックスの値を置き換えて，例えば行列の行や列にアクセスすることができます．``[1,1;"
 " 2,3](1,:)`` は行列 ``[1,1;2,3]`` の最初の行を示します．また，4次のテンソルで使用することもできます．"
 
-#: ../source/userdoc/gasm_high.rst:531
+#: ../source/userdoc/gasm_high.rst:534
 msgid "Constant expressions"
 msgstr "定数式"
 
-#: ../source/userdoc/gasm_high.rst:533
+#: ../source/userdoc/gasm_high.rst:536
 msgid ""
 "Floating points with standards notations (for instance ``3``, ``1.456``, "
 "``1E-6``)"
 msgstr "標準表記の浮動小数点数（例えば， ``3`` ， ``1.456`` ， ``1E-6`` ）"
 
-#: ../source/userdoc/gasm_high.rst:534
+#: ../source/userdoc/gasm_high.rst:537
 msgid "``pi``: the constant Pi."
 msgstr "``pi``: 定数 Pi ．"
 
-#: ../source/userdoc/gasm_high.rst:535
+#: ../source/userdoc/gasm_high.rst:538
 msgid ""
 "``meshdim``: the dimension of the current mesh (i.e. size of geometrical "
 "nodes)"
 msgstr "``meshdim``: 現在のメッシュの次元（すなわち，幾何学的節点のサイズ）"
 
-#: ../source/userdoc/gasm_high.rst:536
+#: ../source/userdoc/gasm_high.rst:539
 msgid ""
 "``timestep``: the main time step of the model on which this assembly string "
 "is evaluated (defined by ``model.set_time_step(dt)``). Do not work on pure "
@@ -1406,7 +1418,7 @@ msgstr ""
 "``timestep``: この構築文字列が評価されるmodelのメイン時間ステップ（``model.set_time_step(dt)`` "
 "で定義されます）．純粋な作業領域では実行しないでください．"
 
-#: ../source/userdoc/gasm_high.rst:537
+#: ../source/userdoc/gasm_high.rst:540
 msgid ""
 "``Id(n)``: the identity matrix of size :math:`n\\times n`. `n` should be an "
 "integer expression. For instance ``Id(meshdim)`` is allowed."
@@ -1414,7 +1426,7 @@ msgstr ""
 "``Id(n)``: :math:`n\\times n` サイズの単位行列． `n` は整数式でなければなりません．例えば， "
 "``Id(meshdim)`` が許可されます．"
 
-#: ../source/userdoc/gasm_high.rst:538
+#: ../source/userdoc/gasm_high.rst:541
 msgid ""
 "``qdim(u)``: the total dimension of the variable ``u`` (i.e. the  size for "
 "fixed size variables and the total dimension of the vector/tensor field for "
@@ -1422,7 +1434,7 @@ msgid ""
 msgstr ""
 "``qdim(u)``: 変数 ``u`` の全次元（すなわち，固定サイズ変数のサイズとFEM変数のベクトル/テンソルフィールドの合計サイズ）"
 
-#: ../source/userdoc/gasm_high.rst:539
+#: ../source/userdoc/gasm_high.rst:542
 msgid ""
 "``qdims(u)``: the dimensions of the variable ``u`` (i.e. the size for fixed "
 "size variables and the vector of dimensions of the vector/tensor field for "
@@ -1430,11 +1442,11 @@ msgid ""
 msgstr ""
 "``qdims(u)``: 変数 ``u`` のサイズ（すなわち，固定サイズ変数のサイズとFEM変数のベクトル/テンソルフィールドの次元のベクトル）"
 
-#: ../source/userdoc/gasm_high.rst:542
+#: ../source/userdoc/gasm_high.rst:545
 msgid "Special expressions linked to the current position"
 msgstr "現在の位置にリンクされた特殊な表現"
 
-#: ../source/userdoc/gasm_high.rst:544
+#: ../source/userdoc/gasm_high.rst:547
 msgid ""
 "``X`` is the current coordinate on the real element (i.e. the position on "
 "the mesh of the current Gauss point on which the expression is evaluated), "
@@ -1445,20 +1457,20 @@ msgstr ""
 "は実要素上の現在の座標（すなわち，式が評価される現在のGauss点のメッシュ上の位置）です．例えば， ``sin(X(1)+X(2))`` "
 "は2次元以上のメッシュ上で有効な式です．"
 
-#: ../source/userdoc/gasm_high.rst:546
+#: ../source/userdoc/gasm_high.rst:549
 msgid ""
 "``Normal`` the outward unit normal vector to a boundary when integration on "
 "a boundary is performed."
 msgstr "``Normal`` は，境界の積分を行う際の境界の外向きの単位法線ベクトルです．"
 
-#: ../source/userdoc/gasm_high.rst:548
+#: ../source/userdoc/gasm_high.rst:551
 msgid ""
 "``element_size`` gives an estimate of the current element diameter (using "
 "getfem::convex_radius_estimate)."
 msgstr ""
 "``element_size`` は，（ getfem::convex_radius_estimate を使って）現在の要素の直径の推定値を返します．"
 
-#: ../source/userdoc/gasm_high.rst:550
+#: ../source/userdoc/gasm_high.rst:553
 msgid ""
 "``element_K`` gives the gradient of the geometric transformation (see "
 ":ref:`dp-transgeo`) from the reference (parent) element. Could be used only "
@@ -1467,7 +1479,7 @@ msgstr ""
 "``element_K`` は，参照（親）要素からの幾何学変換の勾配（ :ref:`dp-transgeo` "
 "を参照）を与えます．メッシュに混合次元の要素が含まれていない場合にのみ使用できます．"
 
-#: ../source/userdoc/gasm_high.rst:552
+#: ../source/userdoc/gasm_high.rst:555
 msgid ""
 "``element_B`` gives the transpose of the pseudo-inverse of the gradient of "
 "the geometric transformation (see :ref:`dp-transgeo`) from the reference "
@@ -1477,11 +1489,11 @@ msgstr ""
 "``element_B`` は，参照（親）要素からの幾何学変換の勾配の擬似逆行列の転置を与えます（ :ref:`dp-transgeo` "
 "を参照）．メッシュに混合次元の要素が含まれていない場合にのみ使用できます．"
 
-#: ../source/userdoc/gasm_high.rst:557
+#: ../source/userdoc/gasm_high.rst:560
 msgid "Print command"
 msgstr "プリントコマンド"
 
-#: ../source/userdoc/gasm_high.rst:559
+#: ../source/userdoc/gasm_high.rst:562
 msgid ""
 "For debugging purpose, the command ``Print(a)`` is printing the tensor ``a``"
 " and pass it unchanged. For instance  ``Grad_u.Print(Grad_Test_u)`` will "
@@ -1496,11 +1508,11 @@ msgstr ""
 "と同じ効果を持ちますが，各要素の各Gauss積分点に対してテンソル ``Grad_Test_u`` "
 "を出力します．定数項は，構築の最初に1回だけプリントされることに注意してください．項自体の代わりに項の導関数をプリントするように表現できることにも留意してください．"
 
-#: ../source/userdoc/gasm_high.rst:562
+#: ../source/userdoc/gasm_high.rst:565
 msgid "Reshape a tensor"
 msgstr "テンソルを変形する"
 
-#: ../source/userdoc/gasm_high.rst:564
+#: ../source/userdoc/gasm_high.rst:567
 msgid ""
 "The command ``Reshape(t, i, j, ...)`` reshapes the tensor ``t`` (which could"
 " be an expression). The only constraint is that the number of components "
@@ -1514,23 +1526,23 @@ msgstr ""
 " はスカラー変数の ``Grad_u'`` に相当します．成分次数は変更されず， Blas/Lapack "
 "との互換性のためにFortranの次数で古典的に格納されることに注意してください．"
 
-#: ../source/userdoc/gasm_high.rst:567
+#: ../source/userdoc/gasm_high.rst:570
 msgid "Trace, Deviator, Sym and Skew operators"
 msgstr "Trace, Deviator, Sym と Skew 演算子"
 
-#: ../source/userdoc/gasm_high.rst:569
+#: ../source/userdoc/gasm_high.rst:572
 msgid ""
 "Trace, Deviator, Sym and Skew operators are linear operators acting on "
 "square matrices:"
 msgstr "Trace, Deviator, Sym および Skew 演算子は，正方行列に作用する線形演算子です．"
 
-#: ../source/userdoc/gasm_high.rst:571
+#: ../source/userdoc/gasm_high.rst:574
 msgid ""
 "``Trace(m)`` gives the trace (sum of diagonal components) of a square matrix"
 " ``m``."
 msgstr "``Trace(m)`` は正方行列 ``m`` のTrace（対角成分の合計）を返します．"
 
-#: ../source/userdoc/gasm_high.rst:573
+#: ../source/userdoc/gasm_high.rst:576
 msgid ""
 "``Deviator(m)`` gives the deviator of a square matrix ``m``. It is "
 "equivalent to ``m - Trace(m)*Id(m_dim)/m_dim``, where ``m_dim`` is the "
@@ -1539,19 +1551,19 @@ msgstr ""
 "``Deviator(m)`` は正方行列 ``m`` の偏差を与えます． これは ``m-Trace(m)*Id(m_dim)/m_dim`` "
 "に相当します．ここで ``m_dim`` は ``m`` の次元です．"
 
-#: ../source/userdoc/gasm_high.rst:575
+#: ../source/userdoc/gasm_high.rst:578
 msgid ""
 "``Sym(m)`` gives the symmetric part of a square matrix ``m``, i.e. ``(m + "
 "m')/2``."
 msgstr "``Sym(m)`` は正方行列 ``m`` の対称部分，すなわち ``(m + m')/2`` を与えます．"
 
-#: ../source/userdoc/gasm_high.rst:577
+#: ../source/userdoc/gasm_high.rst:580
 msgid ""
 "``Skew(m)`` gives the skew-symmetric part of a square matrix ``m``, i.e. "
 "``(m - m')/2``."
 msgstr "``Skew(m)`` は，正方行列のSkew-対称部分， ``(m - m')/2`` を返します．"
 
-#: ../source/userdoc/gasm_high.rst:579
+#: ../source/userdoc/gasm_high.rst:582
 msgid ""
 "The four operators can be applied on test functions. Which means that for "
 "instance both ``Trace(Grad_u)`` and  ``Trace(Grad_Test_u)`` are valid when "
@@ -1562,11 +1574,11 @@ msgstr ""
 "と同じ次元のベクトルフィールド）であるとき， ``Trace(Grad_u)`` と ``Trace(Grad_Test_u)`` "
 "は有効であることを意味します．(すなわち， ``u`` と次元として同じ次元のベクトルフィールドです．）．"
 
-#: ../source/userdoc/gasm_high.rst:584
+#: ../source/userdoc/gasm_high.rst:587
 msgid "Nonlinear operators"
 msgstr "非線形演算子"
 
-#: ../source/userdoc/gasm_high.rst:586
+#: ../source/userdoc/gasm_high.rst:589
 msgid ""
 "GWFL provides some predefined nonlinear operator. Each nonlinear operator is"
 " available together with its first and second derivatives. Nonlinear "
@@ -1575,7 +1587,7 @@ msgid ""
 msgstr ""
 "GWFLは，あらかじめ定義された非線形演算子を提供します．各非線形演算子は，その第1および第2導関数と共に利用可能です．非線形演算子は，式にいくつかの試験関数が含まれていない限り，適用できます．"
 
-#: ../source/userdoc/gasm_high.rst:588
+#: ../source/userdoc/gasm_high.rst:591
 msgid ""
 "``Norm(v)`` for ``v`` a vector or a matrix gives the euclidean norm of a "
 "vector or a |Frobenius| norm of a matrix."
@@ -1583,7 +1595,7 @@ msgstr ""
 "ベクトルまたは行列である ``v`` に対して ``Norm(v)`` を実行すると，ベクトルのユークリッドのノルムまたは |Frobenius| "
 "行列のノルムが与えられます．"
 
-#: ../source/userdoc/gasm_high.rst:590
+#: ../source/userdoc/gasm_high.rst:593
 msgid ""
 "``Norm_sqr(v)`` for ``v`` a vector or a matrix gives the square of the "
 "euclidean norm of a vector or of the |Frobenius| norm of a matrix. For a "
@@ -1592,7 +1604,7 @@ msgstr ""
 "ベクトルまたは行列のユークリッドのノルムの二乗は， |Frobenius| 行列のノルムベクトルの場合，これは ``v.v`` に相当し，行列は "
 "``m:m`` に相当します．"
 
-#: ../source/userdoc/gasm_high.rst:592
+#: ../source/userdoc/gasm_high.rst:595
 msgid ""
 "``Normalized(v)`` for ``v`` a vector or a matrix gives ``v`` divided by its "
 "euclidean (for vectors) or |Frobenius| (for matrices) norm. In order to "
@@ -1606,7 +1618,7 @@ msgstr ""
 "として実装されています．注意して使用してください． ``Normalized(v)*Norm(v)`` "
 "起源の導関数は間違っています（今後削除されます）， ``v`` の導関数とは非常に異なると考えてください．"
 
-#: ../source/userdoc/gasm_high.rst:594
+#: ../source/userdoc/gasm_high.rst:597
 msgid ""
 "``Normalized_reg(v, eps)`` for ``v`` a vector or a matrix gives a "
 "regularized version of ``Normalized(v)`` : ``v/sqrt(|v|*|v|+eps*eps)``."
@@ -1614,7 +1626,7 @@ msgstr ""
 "``v`` の ``Normalized_reg(v, eps)`` ベクトルまたは行列は ``Normalized(v)`` : "
 "``v/sqrt(|v|*|v|+eps*eps)`` の正規化されたバージョンを与えます．"
 
-#: ../source/userdoc/gasm_high.rst:596
+#: ../source/userdoc/gasm_high.rst:599
 msgid ""
 "``Ball_projection(v, r)`` for ``v`` a vector or a matrix and ``r`` a scalar,"
 " gives the projection of ``v`` on the ball of radius ``r`` and center the "
@@ -1623,11 +1635,11 @@ msgstr ""
 "ベクトルまたは行列 ``v`` とスカラーの ``r`` の ``Ball_projection(v, r)`` は，原点を中心にした半径 ``r`` "
 "のボールに ``v`` の投影を与えます．"
 
-#: ../source/userdoc/gasm_high.rst:598
+#: ../source/userdoc/gasm_high.rst:601
 msgid "``Det(m)`` gives the determinant of a square matrix ``m``."
 msgstr "``Det(m)`` は正方行列 ``m`` の行列式を与えます．"
 
-#: ../source/userdoc/gasm_high.rst:600
+#: ../source/userdoc/gasm_high.rst:603
 msgid ""
 "``Inv(m)`` gives the inverse of a square matrix ``m``. The second derivative"
 " is not available since it is an order 6 tensor. This means that ``Inv(m)`` "
@@ -1637,15 +1649,15 @@ msgstr ""
 "の逆行列を返します．2次導関数は，6次テンソルであるため利用できません．つまり，ポテンシャルエネルギーの記述には ``Inv(m)`` "
 "は使用できません．"
 
-#: ../source/userdoc/gasm_high.rst:602
+#: ../source/userdoc/gasm_high.rst:605
 msgid "``Expm(m)`` gives the exponential of a square matrix ``m``."
 msgstr "``Expm(m)`` は正方行列 ``m`` の指数を与えます．"
 
-#: ../source/userdoc/gasm_high.rst:604
+#: ../source/userdoc/gasm_high.rst:607
 msgid "``Logm(m)`` gives the logarithm of a square matrix ``m``."
 msgstr "``Logm(m)`` は正方行列 ``m`` の対数を返します．"
 
-#: ../source/userdoc/gasm_high.rst:606
+#: ../source/userdoc/gasm_high.rst:609
 msgid ""
 "``Matrix_I2(m)`` gives the second invariants of a square matrix ``m`` which "
 "is defined by ``(sqr(Trace(m)) - Trace(m*m))/2``."
@@ -1653,7 +1665,7 @@ msgstr ""
 "``Matrix_I2(m)`` は ``(sqr(Trace(m)) - Trace(m*m))/2`` で定義される正方行列 ``m`` "
 "の第2の不変量を返します．"
 
-#: ../source/userdoc/gasm_high.rst:608
+#: ../source/userdoc/gasm_high.rst:611
 msgid ""
 "``Matrix_J1(m)`` gives the modified first invariant of a square matrix "
 "defined by ``Trace(m)pow(Det(m),-1/3)``."
@@ -1661,7 +1673,7 @@ msgstr ""
 "``Matrix_J1(m)`` は，  ``Trace(m)pow(Det(m),-1/3)`` "
 "で定義された正方行列の最初の不変量を修正したものです．"
 
-#: ../source/userdoc/gasm_high.rst:610
+#: ../source/userdoc/gasm_high.rst:613
 msgid ""
 "``Matrix_J2(m)`` gives the modified first invariant of a square matrix "
 "defined by ``Matrix_I2(m)*pow(Det(m),-2/3)``."
@@ -1669,11 +1681,11 @@ msgstr ""
 "``Matrix_J2(m)`` は  ``Matrix_I2(m)*pow(Det(m),-2/3)`` "
 "で定義された正方行列の修正された最初の不変量を返します．"
 
-#: ../source/userdoc/gasm_high.rst:615
+#: ../source/userdoc/gasm_high.rst:618
 msgid "Macro definition"
 msgstr "マクロ定義"
 
-#: ../source/userdoc/gasm_high.rst:617
+#: ../source/userdoc/gasm_high.rst:620
 msgid ""
 "GWFL allows the use of macros that are either predefined in the model or "
 "ga_workspace object or directly defined at the begining of an assembly "
@@ -1684,13 +1696,13 @@ msgstr ""
 "オブジェクトであらかじめ定義されているか，構築文字列の先頭に直接定義されているマクロを使用できます．ga_workspace "
 "またはmodelオブジェクトへの定義は次のように行われます．"
 
-#: ../source/userdoc/gasm_high.rst:625
+#: ../source/userdoc/gasm_high.rst:628
 msgid ""
 "The definition of a macro into an assembly string is inserted before any "
 "regular expression, separated by a semicolon with the following syntax::"
 msgstr "マクロの構築文字列への定義は，正規表現の前に次の構文でセミコロンで区切られて挿入されます．"
 
-#: ../source/userdoc/gasm_high.rst:629
+#: ../source/userdoc/gasm_high.rst:632
 msgid ""
 "where ``name`` is he macro name which then can be used in GWFL and contains "
 "also the macro parameters, ``expr`` is a valid expression of GWFL (which may"
@@ -1700,18 +1712,18 @@ msgstr ""
 "``name`` はマクロ名であり，GWFLで使用され，マクロのパラメータも含みます． ``expr`` "
 "はGWFLの有効な式です（それ自体がいくつかのマクロ定義を含むかもしれません）．たとえば，パラメータを持たない有効なマクロは次の通りです．"
 
-#: ../source/userdoc/gasm_high.rst:633
+#: ../source/userdoc/gasm_high.rst:636
 msgid ""
 "where ``alpha`` should be a valid declared variable or data. A valid macro "
 "with two parameters is for instance::"
 msgstr "``alpha`` は有効な宣言された変数またはデータでなければなりません． 2つのパラメータを持つ有効なマクロは，例えば次の通りです．"
 
-#: ../source/userdoc/gasm_high.rst:637
+#: ../source/userdoc/gasm_high.rst:640
 msgid ""
 "The following assembly string is then valid (if ``u`` is a valid variable)::"
 msgstr "次の構築文字列は有効です（ ``u`` が有効な変数である場合）．"
 
-#: ../source/userdoc/gasm_high.rst:641
+#: ../source/userdoc/gasm_high.rst:644
 msgid ""
 "Parameter are allowed to be post-fixed to ``Grad_``, ``Hess_``, ``Test_`` "
 "and ``Test2_`` prefixes, so that the following assembly string is valid::"
@@ -1719,16 +1731,16 @@ msgstr ""
 "パラメータは ``Grad_`` ， ``Hess_`` ， ``Test_`` ， ``Test2_`` "
 "の接頭辞の後に固定することができ，次の構築文字列が有効です．"
 
-#: ../source/userdoc/gasm_high.rst:645
+#: ../source/userdoc/gasm_high.rst:648
 msgid "or with an imbrication of two macros::"
 msgstr "または2つのマクロの組み込みも可能です．"
 
-#: ../source/userdoc/gasm_high.rst:649
+#: ../source/userdoc/gasm_high.rst:652
 msgid ""
 "A macro can be deleted from a ga_workspace or model object as follows::"
 msgstr "マクロは，次のようにga_workspaceオブジェクトまたはmodelオブジェクトから削除できます．"
 
-#: ../source/userdoc/gasm_high.rst:654
+#: ../source/userdoc/gasm_high.rst:657
 msgid ""
 "Note that a macro defined at the begining of an assembly string is only "
 "defined in the assembly string and cannot be used later without being added "
@@ -1737,18 +1749,18 @@ msgstr ""
 "構築文字列の先頭に定義されたマクロはその構築文字列でのみ定義され，後で model または ga_workspace "
 "オブジェクトに追加することなく使用することはできないことに注意してください．"
 
-#: ../source/userdoc/gasm_high.rst:656
+#: ../source/userdoc/gasm_high.rst:659
 msgid ""
 "The macros are expanded inline at the lexical analysis phase. Note that a "
 "the compilation phase, the repeated expressions are automatically factorized"
 " and computed only once."
 msgstr "このマクロは字句解析フェーズでインライン展開されます．コンパイル段階では，繰り返し式は自動的に分解され，1回だけ計算されます．"
 
-#: ../source/userdoc/gasm_high.rst:659
+#: ../source/userdoc/gasm_high.rst:662
 msgid "Explicit Differentiation"
 msgstr "陽な微分"
 
-#: ../source/userdoc/gasm_high.rst:660
+#: ../source/userdoc/gasm_high.rst:663
 msgid ""
 "The workspace object automatically differentiate terms that are of lower "
 "deriation order. However, it is also allowed to explicitly differentiate an "
@@ -1760,25 +1772,25 @@ msgstr ""
 "workspaceオブジェクトは，より低い次数の微分を自動的に微分します．しかしながら，変数に対して式を陽に微分することもできます． "
 "注目すべきは，自動微分はmodel/workspaceの宣言されたすべての変数に関して微分を実行しますが，これは例えばポテンシャルエネルギーを使用する場合に必ずしも期待される挙動ではありません．構文は次の通りです．"
 
-#: ../source/userdoc/gasm_high.rst:664
+#: ../source/userdoc/gasm_high.rst:667
 msgid "For instance, the following expression::"
 msgstr "例えば，次の式の場合"
 
-#: ../source/userdoc/gasm_high.rst:668 ../source/userdoc/gasm_high.rst:685
+#: ../source/userdoc/gasm_high.rst:671 ../source/userdoc/gasm_high.rst:688
 msgid "will result in::"
 msgstr "結果は次の通りです．"
 
-#: ../source/userdoc/gasm_high.rst:672
+#: ../source/userdoc/gasm_high.rst:675
 msgid "So that::"
 msgstr "そのため次のようにします．"
 
-#: ../source/userdoc/gasm_high.rst:676
+#: ../source/userdoc/gasm_high.rst:679
 msgid ""
 "is a valid expression. A third argument can be added to the ``Diff`` command"
 " to specify the direction::"
 msgstr "これは有効な式です．方向を指定するために ``Diff`` コマンドに3番目の引数を追加することができます．"
 
-#: ../source/userdoc/gasm_high.rst:680
+#: ../source/userdoc/gasm_high.rst:683
 msgid ""
 "in that case, it replaces the ``Test_variable`` by the expression "
 "``direction`` which has to be of the same dimension as ``variable``. It "
@@ -1788,21 +1800,21 @@ msgstr ""
 "その場合， ``Test_variable`` を ``variable`` と同じ次元である式 ``direction`` で置き換えます． "
 "``direction`` 方向の ``variable`` に対して ``expression`` の導関数を計算します．例えば．"
 
-#: ../source/userdoc/gasm_high.rst:689
+#: ../source/userdoc/gasm_high.rst:692
 msgid "if ``v`` is any valid expression of the same dimension than ``u``."
 msgstr "``v`` は ``u`` と同じ次元の有効な式です．"
 
-#: ../source/userdoc/gasm_high.rst:692
+#: ../source/userdoc/gasm_high.rst:695
 msgid "Explicit Gradient"
 msgstr "陽な勾配"
 
-#: ../source/userdoc/gasm_high.rst:693
+#: ../source/userdoc/gasm_high.rst:696
 msgid ""
 "It is possible to ask for symbolic computation of the gradient of an "
 "expression with::"
 msgstr "次の関数を使って式の勾配の記号計算をすることができます．"
 
-#: ../source/userdoc/gasm_high.rst:697
+#: ../source/userdoc/gasm_high.rst:700
 msgid ""
 "It will be computed as far as it is possible. The limitations come from the "
 "fact that |gf| is limited to second order derivative of shape function and "
@@ -1811,23 +1823,23 @@ msgid ""
 msgstr ""
 "これは可能な限り計算されます．制限として， |gf| は形状関数の2階微分に限定され，非線形演算子は1次微分と2次微分のみを与えると考えられています．"
 
-#: ../source/userdoc/gasm_high.rst:699
+#: ../source/userdoc/gasm_high.rst:702
 msgid "Of course::"
 msgstr "もちろん，"
 
-#: ../source/userdoc/gasm_high.rst:703
+#: ../source/userdoc/gasm_high.rst:706
 msgid "is equivalent to::"
 msgstr "は次と等価です．"
 
-#: ../source/userdoc/gasm_high.rst:707
+#: ../source/userdoc/gasm_high.rst:710
 msgid "for a varible ``u``."
 msgstr "``u`` は変数です．"
 
-#: ../source/userdoc/gasm_high.rst:712
+#: ../source/userdoc/gasm_high.rst:715
 msgid "Interpolate transformations"
 msgstr "補間変換"
 
-#: ../source/userdoc/gasm_high.rst:714
+#: ../source/userdoc/gasm_high.rst:717
 msgid ""
 "The ``Interpolate`` operation allows to compute integrals between quantities"
 " which are either defined on different part of a mesh or even on different "
@@ -1839,7 +1851,7 @@ msgstr ""
 "``Interpolate`` "
 "演算は，メッシュの異なる部分に定義された量または異なるメッシュに定義された量の間の積分を計算することを可能にします．それはMortar行列を計算するか，または周期的な条件を考慮に入れることができる強力な演算です．しかしながら，これは無視できない計算コストを有するかもしれない補間に基づいていることを覚えておいてください．"
 
-#: ../source/userdoc/gasm_high.rst:716
+#: ../source/userdoc/gasm_high.rst:719
 msgid ""
 "In order to use this functionality, the user have first to declare to the "
 "workspace or to the model object an interpolate transformation which "
@@ -1849,7 +1861,7 @@ msgstr ""
 "この機能を使用するために，ユーザはまず，現在の積分点と同じメッシュまたは別のメッシュ上にある点との間のマップを記述する補間変換を workspace "
 "または model オブジェクトに宣言する必要があります．"
 
-#: ../source/userdoc/gasm_high.rst:718
+#: ../source/userdoc/gasm_high.rst:721
 msgid ""
 "Different kind of transformations can be described. Several kinds of "
 "transformations has been implemented. The first one, described hereafter is "
@@ -1862,13 +1874,13 @@ msgstr ""
 " :ref:`ud-model-contact-friction_raytrace_inter_trans` "
 "を参照）．次のセクションでは，他の変換（隣接要素と要素の外挿）について説明します．"
 
-#: ../source/userdoc/gasm_high.rst:720
+#: ../source/userdoc/gasm_high.rst:723
 msgid ""
 "The transformation defined by an expression can be added to the workspace or"
 " the model thanks to the command::"
 msgstr "式で定義された変換は，次のコマンドにより workspace またはmodelに追加できます．"
 
-#: ../source/userdoc/gasm_high.rst:730
+#: ../source/userdoc/gasm_high.rst:733
 msgid ""
 "where ``workspace`` is a workspace object, ``model`` a model object, "
 "``transname`` is the name given to the transformation, ``source_mesh`` the "
@@ -1880,11 +1892,11 @@ msgstr ""
 "は変換に与えられた名前， ``source_mesh`` は積分が行われるメッシュ， ``target_mesh`` 補間が実行されるメッシュで "
 "``expr`` は，workspace/modelの変数への参照を含むGWFLの正規表現です．"
 
-#: ../source/userdoc/gasm_high.rst:732
+#: ../source/userdoc/gasm_high.rst:735
 msgid "For instance, an expression::"
 msgstr "例えば，次の式は，"
 
-#: ../source/userdoc/gasm_high.rst:737
+#: ../source/userdoc/gasm_high.rst:740
 msgid ""
 "will allow to integrate some expressions at the current position with a "
 "shift of -1 with respect to the first coordinate. This simple kind of "
@@ -1892,15 +1904,15 @@ msgid ""
 msgstr ""
 "現在の位置にある式を最初の座標に対して-1のシフトで積分することができます．この単純な種類の変換を使用して，周期的な条件を規定することができます．"
 
-#: ../source/userdoc/gasm_high.rst:739
+#: ../source/userdoc/gasm_high.rst:742
 msgid "Of course, one may used more complex expressions such as::"
 msgstr "もちろん，もっと複雑な表現も可能です．"
 
-#: ../source/userdoc/gasm_high.rst:747
+#: ../source/userdoc/gasm_high.rst:750
 msgid "where ``u`` is a vector variable of the workspace/model."
 msgstr "ここで ``u`` はworkspace/modelのベクトル変数です．"
 
-#: ../source/userdoc/gasm_high.rst:749
+#: ../source/userdoc/gasm_high.rst:752
 msgid ""
 "Once a transformation is defined in the workspace/model, one can interpolate"
 " a variable or test functions, the position or the unit normal vector to a "
@@ -1908,11 +1920,11 @@ msgid ""
 msgstr ""
 "workspace/modelで変換が定義されると，変数または試験関数，これらの式の1つのために境界への位置または単位法線ベクトルを補間できます．"
 
-#: ../source/userdoc/gasm_high.rst:764
+#: ../source/userdoc/gasm_high.rst:767
 msgid "where ``u`` is the name of the variable to be interpolated."
 msgstr "ここで ``u`` は補間される変数の名前です．"
 
-#: ../source/userdoc/gasm_high.rst:766
+#: ../source/userdoc/gasm_high.rst:769
 msgid ""
 "For instance, the assembly expression to prescribe the equality of a "
 "variable ``u`` with its interpolation (for instance for prescribing a "
@@ -1922,7 +1934,7 @@ msgstr ""
 "例えば，乗算器 ``lambda`` によって，変数 ``u`` "
 "とその補間（例えば，周期的境界条件を規定するため）との等価を規定する構築式は，次のように書くことができます．"
 
-#: ../source/userdoc/gasm_high.rst:770
+#: ../source/userdoc/gasm_high.rst:773
 msgid ""
 "(see :file:`demo\\_periodic\\_laplacian.m` in :file:`interface/tests/matlab-"
 "octave` directory)."
@@ -1930,7 +1942,7 @@ msgstr ""
 "( :file:`interface/tests/matlab-octave` 内の "
 ":file:`demo\\_periodic\\_laplacian.m` を参照してください．)"
 
-#: ../source/userdoc/gasm_high.rst:772
+#: ../source/userdoc/gasm_high.rst:775
 msgid ""
 "In some situations, the interpolation of a point may fail if the transformed"
 " point is outside the target mesh. Both in order to treat this case and to "
@@ -1948,7 +1960,7 @@ msgstr ""
 "を参照），変換は整数識別子が弱形式言語に返されます．この識別子の値0は，ターゲットメッシュ上の対応する位置が見つからなかったことを意味します． "
 "1の値は，対応する点が見つかったことを意味します．この識別子は，GWFLの次の特別なコマンドにより使用できます．"
 
-#: ../source/userdoc/gasm_high.rst:776
+#: ../source/userdoc/gasm_high.rst:779
 msgid ""
 "where ``transname`` is the name of the transformation, ``expr`` is the "
 "expression to be evaluated and ``i`` value of the returned integer "
@@ -1962,14 +1974,14 @@ msgstr ""
 "は省略することができ，この場合，式は非ゼロの識別情報（すなわち，対応する点が見つかったとき）について評価されることに留意してください．例えば，変数 "
 "``u`` とその補間との等価を規定する以前の構築式は，次のように書くことができます．"
 
-#: ../source/userdoc/gasm_high.rst:781
+#: ../source/userdoc/gasm_high.rst:784
 msgid ""
 "In that case, the equality will only be prescribed in the part of the domain"
 " where the transformation succeed and in the other part, the mulitplier is "
 "enforced to vanish."
 msgstr "その場合，等式は，変換が成功する領域の部分でのみ規定され，他の部分では，乗数は消滅するように強制されます．"
 
-#: ../source/userdoc/gasm_high.rst:784
+#: ../source/userdoc/gasm_high.rst:787
 msgid ""
 "**CAUTION**: You have to think that when some variables are used in the "
 "transformation, the computation of the tangent system takes into account "
@@ -1981,11 +1993,11 @@ msgstr ""
 "**注意** : "
 "変換でいくつかの変数が使用される場合，接触モデルの計算でこれらの依存性が考慮されていると考える必要があります．しかし，使用される変数に関する変換の2次導関数は実装されていません．従って，このような変換は，2回微分することができないので，電位の定義には使用できません．"
 
-#: ../source/userdoc/gasm_high.rst:787
+#: ../source/userdoc/gasm_high.rst:790
 msgid "Element extrapolation transformation"
 msgstr "要素外挿変換"
 
-#: ../source/userdoc/gasm_high.rst:789
+#: ../source/userdoc/gasm_high.rst:792
 msgid ""
 "A specific transformation (see previous section) is defined in order to "
 "allows the evaluation of certain quantities by extrapolation with respect to"
@@ -2001,7 +2013,7 @@ msgid ""
 msgstr ""
 "別の要素（一般的に隣接要素）に関してある量の外挿による評価を可能にするために，特定の変換（前の節を参照）が定義されます．点の位置は変わらないので，厳密には変換ではありませんが，評価は試行関数を外挿する別の要素に対して行われます．この変換は，実領域との交差が小さい場合に，実領域との交差が十分に大きい隣接要素上のいくつかの量を実要素上で評価するよりも，実領域との交差が十分に大きい隣接要素上のいくつかの量を外挿する方がロバストである（切断要素を有する）仮想領域法における安定化項に使用されます．このような変換をmodelまたはworkspaceに追加するには次の関数を使用します::"
 
-#: ../source/userdoc/gasm_high.rst:797
+#: ../source/userdoc/gasm_high.rst:800
 msgid ""
 "The map elt_corr should contain the correspondences between the elements "
 "where the transformation is to be applied and the respective elements where "
@@ -2011,17 +2023,17 @@ msgid ""
 msgstr ""
 "マップelt_corrには，変換が適用される要素と，補外が行われる必要があります．それぞれの要素との間の対応関係が含まれている必要があります．マップにリストされていない要素では，変換は適用されず，評価は現在の要素に対して正常に実行されます．"
 
-#: ../source/userdoc/gasm_high.rst:799
+#: ../source/userdoc/gasm_high.rst:802
 msgid ""
 "The following functions allow to change the element correspondence of a "
 "previously added element extrapolation transformation::"
 msgstr "以下の関数は，以前に追加された要素補間変換の要素対応を変更することを可能にします．"
 
-#: ../source/userdoc/gasm_high.rst:811
+#: ../source/userdoc/gasm_high.rst:814
 msgid "Evaluating discontinuities across inter-element edges/faces"
 msgstr "要素間エッジ/面間の不連続性の評価します．"
 
-#: ../source/userdoc/gasm_high.rst:813
+#: ../source/userdoc/gasm_high.rst:816
 msgid ""
 "A specific interpolate transformation (see previous sections), called "
 "``neighbor_element`` is defined by default in all models. This "
@@ -2035,7 +2047,7 @@ msgstr ""
 "``neighbor_element`` "
 "と呼ばれる特定の補間変換（前のセクションを参照）は，デフォルトですべてのmodelで定義されています．この変換は，メッシュの内部エッジ/面，すなわち少なくとも2つの要素によって共有される要素面で計算が行われる場合にのみ使用できます．これは，要素間の面で変数の不連続ジャンプを計算することを目的としています．不連続Galerkinと内部ペナルティ法，ゴーストペナルティ項または事後推定を実装するのに特に適しています．表現は，"
 
-#: ../source/userdoc/gasm_high.rst:826
+#: ../source/userdoc/gasm_high.rst:829
 msgid ""
 "are available (as with any other interpolate transformation) and compute a "
 "field on the current point but on the neighbor element. Of course, "
@@ -2050,21 +2062,21 @@ msgstr ""
 "``Interpolate(X, neighbor_element)`` は，関心のある3Dメッシュの2Dシェル要素を除いて， ``Normal`` "
 "の反対側を返します．"
 
-#: ../source/userdoc/gasm_high.rst:828
+#: ../source/userdoc/gasm_high.rst:831
 msgid "The jump on a variable ``u`` can be computed with::"
 msgstr "変数 ``u`` のジャンプは，"
 
-#: ../source/userdoc/gasm_high.rst:832
+#: ../source/userdoc/gasm_high.rst:835
 msgid "and a penalisation term of the jump can be written::"
 msgstr "ジャンプのペナルティ項を書くことができます．"
 
-#: ../source/userdoc/gasm_high.rst:836
+#: ../source/userdoc/gasm_high.rst:839
 msgid ""
 "Note that the region representing the set of all internal faces of a mesh "
 "can be obtained thanks to the function::"
 msgstr "メッシュのすべての内部面の集合を表す領域は，次の関数により与えられます．"
 
-#: ../source/userdoc/gasm_high.rst:840
+#: ../source/userdoc/gasm_high.rst:843
 msgid ""
 "where ``mr`` is an optional mesh region. If ``mr`` is specified only the "
 "face internal with respect to this region are returned. An important aspect "
@@ -2074,7 +2086,7 @@ msgstr ""
 "ここで ``mr`` はオプションのメッシュ領域です．``mr`` "
 "が指定されていれば，この領域に関して内部の面だけが返されます．重要な点は，各面が1回だけ表され，2つの隣接要素の間で任意に選択されることです．"
 
-#: ../source/userdoc/gasm_high.rst:842
+#: ../source/userdoc/gasm_high.rst:845
 msgid ""
 "See for instance :file:`interface/tests/python/demo_laplacian_DG.py` or "
 ":file:`interface/tests/matlab-octave/demo_laplacian_DG.m` for an example of "
@@ -2083,30 +2095,30 @@ msgstr ""
 "使用例は :file:`interface/tests/python/demo_laplacian_DG.py` や "
 ":file:`interface/tests/matlab-octave/demo_laplacian_DG.m` を参照してください．"
 
-#: ../source/userdoc/gasm_high.rst:844
+#: ../source/userdoc/gasm_high.rst:847
 msgid ""
 "Compared to other interpolate transformations, this transformation is more "
 "optimized and benefits from finite element and geometric transformation pre-"
 "computations."
 msgstr "他の補間変換と比較すると，この変換はより最適化され，有限要素変換および幾何変換前処理で恩恵があります．"
 
-#: ../source/userdoc/gasm_high.rst:849
+#: ../source/userdoc/gasm_high.rst:852
 msgid ""
 "Double domain integrals or terms (convolution - Kernel - Exchange integrals)"
 msgstr "2重領域の積分または項（畳み込み - カーネル - 交換積分）"
 
-#: ../source/userdoc/gasm_high.rst:851
+#: ../source/userdoc/gasm_high.rst:854
 msgid ""
 "In some very special cases, it can be interesting to compute an integral on "
 "the direct product of two domains, i.e. a double integral such as for "
 "instance"
 msgstr "いくつかの非常に特殊な場合には，2つの領域の直積，すなわち例えば2重積分の積分を計算することに着目する必要があります．"
 
-#: ../source/userdoc/gasm_high.rst:853
+#: ../source/userdoc/gasm_high.rst:856
 msgid "\\int_{\\Omega_1}\\int_{\\Omega_2}k(x,y)u(x)v(y)dydx,"
 msgstr "\\int_{\\Omega_1}\\int_{\\Omega_2}k(x,y)u(x)v(y)dydx,"
 
-#: ../source/userdoc/gasm_high.rst:857
+#: ../source/userdoc/gasm_high.rst:860
 msgid ""
 "where :math:`k(x,y)` is a given kernel, :math:`u` a quantity defined on "
 ":math:`\\Omega_1` and  :math:`v` a quantity defined on :math:`\\Omega_2`, "
@@ -2119,13 +2131,13 @@ msgstr ""
 ":math:`\\Omega_2` "
 "は同じ領域にあります．これは，そのような積分を計算するか，または2つの異なる領域上に定義された2つの変数間の相互作用項を定義する際に着目する必要があります．"
 
-#: ../source/userdoc/gasm_high.rst:859
+#: ../source/userdoc/gasm_high.rst:862
 msgid ""
 "CAUTION: Of course, this kind of term have to be used with great care, since"
 " it naturally leads to fully populated stiffness or tangent matrices."
 msgstr "注意: 当然のことながら，この種の項は，通常完全に計算された剛性または接線行列に関連するため，細心の注意を払って使用する必要があります．"
 
-#: ../source/userdoc/gasm_high.rst:862
+#: ../source/userdoc/gasm_high.rst:865
 msgid ""
 "GWFL furnishes a mechanism to compute such a term. First, the secondary "
 "domain has to be declared in the workspace/model with its integration "
@@ -2134,7 +2146,7 @@ msgid ""
 msgstr ""
 "GWFLはそのような項を計算するためのメカニズムを与えます．まず，第2領域は，その積分法を使用してworkspace/model内で宣言されなければなりません．標準的な第2領域の追加は，次の2つの関数のうちの1つを使用して行うことができます．"
 
-#: ../source/userdoc/gasm_high.rst:868
+#: ../source/userdoc/gasm_high.rst:871
 msgid ""
 "where ``model`` or ``workspace`` is the model or workspace where the "
 "secondary domain has to be declared, ``domain_name`` is a string for the "
@@ -2152,7 +2164,7 @@ msgstr ""
 "と呼びます．これらの標準的な第2領域では，第1領域の各要素について領域全体で積分が行われることに着目してください．第1領域の要素に関して必要な要素への積分を制限する特定の第2領域を実装することに着目してください．|gf|"
 " の中の構造体はこれ専用です．"
 
-#: ../source/userdoc/gasm_high.rst:870
+#: ../source/userdoc/gasm_high.rst:873
 msgid ""
 "Once a secondary domain has been declared, it can be specified that a GWFL "
 "expression has to be assembled on the direct product of a current domain and"
@@ -2165,7 +2177,7 @@ msgstr ""
 "メソッドに次の関数を使用して，第2領域の名前を追加する必要があると指定できます． ``add_linear_twodomain_term`` ， "
 "``add_nonlinear_twodomain_term`` または ``add_twodomain_source_term`` の関数となります．"
 
-#: ../source/userdoc/gasm_high.rst:877
+#: ../source/userdoc/gasm_high.rst:880
 msgid ""
 "For the utilisation with the Python/Scilab/Octave/Matlab interface, see the "
 "documentation on ``gf_asm`` command and the ``model`` object."
@@ -2173,30 +2185,30 @@ msgstr ""
 "Python / Scilab / Octave / Matlabインタフェースを利用するには， ``gf_asm`` コマンドと ``model`` "
 "オブジェクトに関するドキュメントを参照してください．"
 
-#: ../source/userdoc/gasm_high.rst:880
+#: ../source/userdoc/gasm_high.rst:883
 msgid ""
 "Inside an expression of GWFL, one can refer to the unit normal vector to a "
 "boundary, to the current position or to the value of a variable thanks to "
 "the expressions::"
 msgstr "GWFLの表現中で，式により，境界への単位法線ベクトル，変数の現在の位置または値を参照することができます．"
 
-#: ../source/userdoc/gasm_high.rst:893
+#: ../source/userdoc/gasm_high.rst:896
 msgid "For instance, a term like"
 msgstr "たとえば，"
 
-#: ../source/userdoc/gasm_high.rst:895
+#: ../source/userdoc/gasm_high.rst:898
 msgid "\\int_{\\Omega_1}\\int_{\\Omega_1}e^{-\\|x-y\\|}u(x)u(y)dydx,"
 msgstr "\\int_{\\Omega_1}\\int_{\\Omega_1}e^{-\\|x-y\\|}u(x)u(y)dydx,"
 
-#: ../source/userdoc/gasm_high.rst:899
+#: ../source/userdoc/gasm_high.rst:902
 msgid "would correspond to the following weak form language expression::"
 msgstr "は次の弱形式言語に対応します．"
 
-#: ../source/userdoc/gasm_high.rst:907
+#: ../source/userdoc/gasm_high.rst:910
 msgid "Elementary transformations"
 msgstr "初等変換"
 
-#: ../source/userdoc/gasm_high.rst:909
+#: ../source/userdoc/gasm_high.rst:912
 msgid ""
 "An elementary transformation is a linear transformation of the shape "
 "functions given by a matrix which may depend on the element which is applied"
@@ -2210,13 +2222,13 @@ msgstr ""
 ":file:`src/getfem_linearized_plates.cc` "
 "にあります．これは，例えば，MITC要素で使用されるような縮約を実行するために，より低い水準の要素上の有限要素の局所射影を定義することを目的とします．"
 
-#: ../source/userdoc/gasm_high.rst:917
+#: ../source/userdoc/gasm_high.rst:920
 msgid ""
 "Once a transformation is defined, it can be added to the model/workspace "
 "with the method::"
 msgstr "変換が定義されると，model/workspaceに次のメソッドを追加することができます．"
 
-#: ../source/userdoc/gasm_high.rst:922
+#: ../source/userdoc/gasm_high.rst:925
 msgid ""
 "where ``pelementary_transformation`` is a pointer to an object deriving from"
 " ``virtual_elementary_transformation``. Once it is added to the "
@@ -2225,7 +2237,7 @@ msgstr ""
 "ここで ``pelementary_transformation`` は ``virtual_elementary_transformation`` "
 "から派生したオブジェクトへのポインタです．model/workspaceに追加されると，GWFLで次の式を使用することができます．"
 
-#: ../source/userdoc/gasm_high.rst:933
+#: ../source/userdoc/gasm_high.rst:936
 msgid ""
 "where ``u`` is one of the FEM variables of the model/workspace, and ``dest``"
 " is an optional parameter which should be a variable or data name of the "
@@ -2236,7 +2248,7 @@ msgstr ""
 "ここで， ``u`` はmodel/workspaceのFEM変数の1つであり， ``dest`` "
 "はオプションのパラメータであり，モデルの変数またはデータ名であり，変換のターゲットfemに対応します．省略した場合，デフォルトでは，最初の変数のfemからそれ自体への変換が行われます．"
 
-#: ../source/userdoc/gasm_high.rst:935
+#: ../source/userdoc/gasm_high.rst:938
 msgid ""
 "A typical transformation is the the one for the projection on rotated RT0 "
 "element for two-dimensional elements which is an ingredient of the MITC "
@@ -2246,7 +2258,7 @@ msgstr ""
 "典型的な変換はMITCプレート要素の成分である二次元要素に対する回転RT0要素上への投影のための変換です．これは関数( "
 ":file:`src/getfem/getfem_linearized_plates.h` に定義されています)のおかげで追加できます．"
 
-#: ../source/userdoc/gasm_high.rst:939
+#: ../source/userdoc/gasm_high.rst:942
 msgid ""
 "Some other transformations are available for the use into Hybrid High-Order "
 "methods (HHO methods, see :ref:`ud-hho` for more information). These "
@@ -2260,11 +2272,11 @@ msgstr ""
 "を参照してください．)に使用できる変換は他にもいくつかあります．これらの変換は，変数または変数自体の勾配の再構成に対応し，HHO法は，要素の内部およびその面上で分離した離散化を有します．次の関数を使用して，さまざまな変換を追加できます("
 " :file:`src/getfem/getfem_HHO.h` で定義されています)．"
 
-#: ../source/userdoc/gasm_high.rst:954
+#: ../source/userdoc/gasm_high.rst:957
 msgid "Xfem discontinuity evaluation (with mesh_fem_level_set)"
 msgstr "Xfem不連続性評価（mesh_fem_level_setを使用）"
 
-#: ../source/userdoc/gasm_high.rst:956
+#: ../source/userdoc/gasm_high.rst:959
 msgid ""
 "When using a fem cut by a level-set (using fem_level_set or "
 "mesh_fem_level_set objects), it is often interesting to integrate the "
@@ -2276,7 +2288,7 @@ msgstr ""
 "オブジェクトを使用）によって有限要素法を切断する場合，変数の不連続ジャンプ，または勾配または平均値のジャンプを組み込むのが面白いことがよくあります．そのために，GWFLに，"
 " ``u`` というFEM変数を用意しています．"
 
-#: ../source/userdoc/gasm_high.rst:976
+#: ../source/userdoc/gasm_high.rst:979
 msgid ""
 "which are only available when the evaluation (integration) is made on the "
 "curve/surface separating two zones of continuity, i.e. on the zero level-set"
@@ -2286,11 +2298,11 @@ msgstr ""
 "これは，連続性の2つのゾーンを分離する曲線/表面，すなわち，考慮されるレベル集合関数のゼロレベル集合（ ``mesh_im_level_set`` "
 "オブジェクトを使用する）で評価（積分）が行われる場合にのみ利用可能です．例えば， ``u`` 変数のジャンプは次のようになります．"
 
-#: ../source/userdoc/gasm_high.rst:980
+#: ../source/userdoc/gasm_high.rst:983
 msgid "and the average by::"
 msgstr "平均値は次のようになります．"
 
-#: ../source/userdoc/gasm_high.rst:984
+#: ../source/userdoc/gasm_high.rst:987
 msgid ""
 "The value ``Xfem_plus(u)`` is the value of ``u`` on the side where the "
 "corresponding level-set function is positive and ``Xfem_minus(u)`` the value"
@@ -2299,7 +2311,7 @@ msgstr ""
 "値 ``Xfem_plus(u)`` は，対応するlevel-set関数が正である側の ``u`` の値であり，level-set関数が負である側の "
 "``Xfem_minus(u)`` の値です．"
 
-#: ../source/userdoc/gasm_high.rst:986
+#: ../source/userdoc/gasm_high.rst:989
 msgid ""
 "Additionally, note that, when integrating on a level-set with a "
 "``mesh_im_level_set`` object, ``Normal`` stands for the normal unit vector "
@@ -2308,11 +2320,11 @@ msgstr ""
 "また， ``mesh_im_level_set`` オブジェクトを持つ level-set上で積分する場合，  ``Normal`` は level-"
 "set 関数の勾配方向に設定されるレベルに対する法線単位ベクトルを表します．"
 
-#: ../source/userdoc/gasm_high.rst:989
+#: ../source/userdoc/gasm_high.rst:992
 msgid "Storage of sub-expressions in a getfem::im_data object during assembly"
 msgstr "構築中の getfem::im_data オブジェクトへのサブ式の格納"
 
-#: ../source/userdoc/gasm_high.rst:991
+#: ../source/userdoc/gasm_high.rst:994
 msgid ""
 "It is possible to store in a vector depending on a getfem::im_data object a "
 "part of an assembly computation, for instance in order to use this "
@@ -2322,13 +2334,13 @@ msgstr ""
 "getfem::im_data "
 "オブジェクトに応じてベクトルに格納することができます．たとえば，この計算を別の構築で使用するために，構築計算の一部にすることができます．これは，同じ式を2回計算しないようにするための補間関数の代替方法です．"
 
-#: ../source/userdoc/gasm_high.rst:993
+#: ../source/userdoc/gasm_high.rst:996
 msgid ""
 "The method to add such an assignment in the assembly is the following for a "
 "model or a ga_workspace::"
 msgstr "このような割り当てを構築に追加する方法は， model または ga_workspace です．"
 
-#: ../source/userdoc/gasm_high.rst:1001
+#: ../source/userdoc/gasm_high.rst:1004
 msgid ""
 "It adds expression `expr` to be evaluated at assembly time and being "
 "assigned to the data `dataname` which has to be of im_data type. `order` "
@@ -2347,10 +2359,10 @@ msgstr ""
 "の場合，代入は他の構築項の計算の前に実行されるため，データを構築の残りの部分で中間結果として使用することができます（データとしてはまだ考慮していることに注意してください，接線系の式の微分は行われません）．before"
 " = 0（デフォルト）の場合，構築の項の後に割り当てが行われます．"
 
-#: ../source/userdoc/gasm_high.rst:1013
+#: ../source/userdoc/gasm_high.rst:1016
 msgid "Additionally, In a model, the method::"
 msgstr "さらに，modelでは，次のメソッドがあります．"
 
-#: ../source/userdoc/gasm_high.rst:1017
+#: ../source/userdoc/gasm_high.rst:1020
 msgid "allows to cancel all the assembly assignments previously added."
 msgstr "これにより，以前に追加された構築割り当てをすべてキャンセルすることができます．"
