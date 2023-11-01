@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-26 01:17+0000\n"
+"POT-Creation-Date: 2023-11-01 01:20+0000\n"
 "PO-Revision-Date: 2018-07-16 07:06+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -931,7 +931,7 @@ msgstr "古典的なベクトル要素"
 
 #: ../source/userdoc/appendixA.rst:650
 msgid "Raviart-Thomas elements"
-msgstr ""
+msgstr "Raviart-Thomas要素"
 
 #: ../source/userdoc/appendixA.rst:657
 msgid ""
@@ -942,16 +942,22 @@ msgid ""
 " of freedom. For the quadrilateral, only the lowest degree element is "
 "implemented yet."
 msgstr ""
+"次元と3次元のRT0要素の例．次元 :math:`P` で次数 :math:`K` の単体上の RTk 要素は，各面に "
+":math:`dfrac{(K+P-1)!}{K!(P-1)!}` 法線成分の自由度と "
+":math:`dfrac{K(K+P-1)!}{K!(P-1)!}` "
+"内部ラグランジュの自由度を持ちます．四辺形については，まだ最低次の要素しか実装されていません．"
 
 #: ../source/userdoc/appendixA.rst:663
 msgid ""
 "Raviart-Thomas element on simplices on dimension :math:`P \\ge 1` and degree"
 " :math:`K \\ge 0`: ``\"FEM_RTK(P,K)\"``"
 msgstr ""
+"次元 :math:`P \\ge 1` ，次数 :math:`K \\ge 0` の次元単体上のRaviart-Thomas要素: "
+"``\"FEM_RTK(P,K)\"``"
 
 #: ../source/userdoc/appendixA.rst:677
 msgid ":math:`\\dfrac{(K+P+1)(K+P-1)!}{K!(P-1)!}`"
-msgstr ""
+msgstr ":math:`\\dfrac{(K+P+1)(K+P-1)!}{K!(P-1)!}`"
 
 #: ../source/userdoc/appendixA.rst:678 ../source/userdoc/appendixA.rst:700
 #: ../source/userdoc/appendixA.rst:727
@@ -997,7 +1003,7 @@ msgstr ":math:`2P`"
 
 #: ../source/userdoc/appendixA.rst:706
 msgid "Brezzi-Douglas-Marini element on simplices"
-msgstr ""
+msgstr "単体のBrezzi-Douglas-Marini要素"
 
 #: ../source/userdoc/appendixA.rst:708
 msgid ""
@@ -1006,16 +1012,21 @@ msgid ""
 "freedom on each face and :math:`\\dfrac{(K-1)(K+P-1)!}{K!(P-1)!}` internal "
 "degrees of freedom. Not yet implemented for quadrilateral."
 msgstr ""
+"次元 :math:`P \\ge 1` ，次数 :math:`K \\ge 1` の単体上の BDM 要素は，各面に "
+":math:`\\dfrac{(K+P-1)!}{K!(P-1)!}` の法線成分自由度と "
+":math:`\\dfrac{(K-1)(K+P-1)!}{K!(P-1)!}` の内部自由度を持ちます．4辺形には未実装です．"
 
 #: ../source/userdoc/appendixA.rst:712
 msgid ""
 "Brezzi-Douglas-Marini element on simplices on dimension :math:`P` and degree"
 " :math:`K`: ``\"FEM_BDMK(P,K)\"``"
 msgstr ""
+"次元 :math:`P` ，次数 :math:`K` の次元単体上のBrezzi-Douglas-Marini要素: "
+"``\"FEM_RTK(P,K)\"``"
 
 #: ../source/userdoc/appendixA.rst:726
 msgid ":math:`\\dfrac{(K+P)!}{K!(P-1)!}`"
-msgstr ""
+msgstr ":math:`\\dfrac{(K+P)!}{K!(P-1)!}`"
 
 #: ../source/userdoc/appendixA.rst:734
 msgid "Nedelec (or Whitney) edge elements"
