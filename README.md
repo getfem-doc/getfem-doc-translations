@@ -1,4 +1,4 @@
-# getfem-doc.org on the Read The Docs. 
+# getfem-doc.org on the Read The Docs.
 
 ![getfem-auto-update](https://github.com/getfem-doc/getfem-doc-translations/workflows/getfem-auto-update/badge.svg)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
