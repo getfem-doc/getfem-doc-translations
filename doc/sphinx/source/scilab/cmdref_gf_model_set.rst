@@ -28,7 +28,7 @@ gf_model_set
   gf_model_set(model M, 'del macro', string name)
   gf_model_set(model M, 'add initialized data', string name, vec V[, sizes])
   gf_model_set(model M, 'variable', string name, vec V)
-  gf_model_set(model M, 'to variables', vec V)
+  gf_model_set(model M, 'to variables', vec V[, bool with_internal])
   gf_model_set(model M, 'delete brick', int ind_brick)
   gf_model_set(model M, 'define variable group', string name[, string varname, ...])
   gf_model_set(model M, 'add elementary rotated RT0 projection', string transname)
@@ -280,7 +280,7 @@ gf_model_set
     Set the value of a variable or data. <literal>name</literal> is the data name.
 
 
-  ``gf_model_set(model M, 'to variables', vec V)``
+  ``gf_model_set(model M, 'to variables', vec V[, bool with_internal])``
 
     Set the value of the variables of the model with the vector <literal>V</literal>.
     Typically, the vector <literal>V</literal> results of the solve of the tangent

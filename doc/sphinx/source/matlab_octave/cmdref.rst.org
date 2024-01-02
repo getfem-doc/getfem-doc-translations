@@ -4124,7 +4124,7 @@ gf_model_get
   mf = gf_model_get(model M, 'mesh fem of variable', string name)
   name = gf_model_get(model M, 'mult varname Dirichlet', int ind_brick)
   I = gf_model_get(model M, 'interval of variable', string varname)
-  V = gf_model_get(model M, 'from variables')
+  V = gf_model_get(model M, 'from variables'[, bool with_internal])
   gf_model_get(model M, 'assembly'[, string option])
   {nbit, converged} = gf_model_get(model M, 'solve'[, ...])
   gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar scale]]])
@@ -4275,7 +4275,7 @@ gf_model_get
     the model.
 
 
-  ``V = gf_model_get(model M, 'from variables')``
+  ``V = gf_model_get(model M, 'from variables'[, bool with_internal])``
 
     Return the vector of all the degrees of freedom of the model consisting
     of the concatenation of the variables of the model (useful
@@ -4593,7 +4593,7 @@ gf_model_set
   gf_model_set(model M, 'del macro', string name)
   gf_model_set(model M, 'add initialized data', string name, vec V[, sizes])
   gf_model_set(model M, 'variable', string name, vec V)
-  gf_model_set(model M, 'to variables', vec V)
+  gf_model_set(model M, 'to variables', vec V[, bool with_internal])
   gf_model_set(model M, 'delete brick', int ind_brick)
   gf_model_set(model M, 'define variable group', string name[, string varname, ...])
   gf_model_set(model M, 'add elementary rotated RT0 projection', string transname)
@@ -4845,7 +4845,7 @@ gf_model_set
     Set the value of a variable or data. `name` is the data name.
 
 
-  ``gf_model_set(model M, 'to variables', vec V)``
+  ``gf_model_set(model M, 'to variables', vec V[, bool with_internal])``
 
     Set the value of the variables of the model with the vector `V`.
     Typically, the vector `V` results of the solve of the tangent
@@ -7073,7 +7073,7 @@ gf_spmat
 ::
 
   SM = gf_spmat('empty', int m [, int n])
-  SM = gf_spmat('copy', mat K [,  I [,  J]])
+  SM = gf_spmat('copy', mat K [,  I [,  J=I]])
   SM = gf_spmat('identity', int n)
   SM = gf_spmat('mult', spmat A, spmat B)
   SM = gf_spmat('add', spmat A, spmat B)
@@ -7114,9 +7114,9 @@ General constructor for spmat objects.
     `m x n`. If `n` is omitted, the matrix dimension is `m x m`.
 
 
-  ``SM = gf_spmat('copy', mat K [,  I [,  J]])``
+  ``SM = gf_spmat('copy', mat K [,  I [,  J=I]])``
 
-    Duplicate a matrix `K` (which might be a spmat or a native matlab
+    Duplicate a matrix `K` (which might be an spmat or a native matlab
     sparse matrix). If index `I` and/or `J` are given, the matrix will
     be a submatrix of `K`. For example::
     
@@ -7405,6 +7405,7 @@ gf_util
   A = gf_util('load matrix', string FMT, string FILENAME)
   tl = gf_util('trace level' [, int level])
   tl = gf_util('warning level', int level)
+  tl = gf_util('set num threads', int nb_threads)
 
 **Description :**
 
@@ -7442,6 +7443,12 @@ gf_util
     
     0 means no warnings, default level is 3. if no level is given,
     the current warning level is returned. 
+
+
+  ``tl = gf_util('set num threads', int nb_threads)``
+
+    Sets the number of threads for the multithreaded GetFEM version.
+    It is available only when GetFEM is compiled with openmp support. 
 
 gf_workspace
 -------------------------------------------

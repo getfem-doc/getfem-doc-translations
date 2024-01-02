@@ -12,7 +12,7 @@ gf_spmat
 ::
 
   SM = gf_spmat('empty', int m [, int n])
-  SM = gf_spmat('copy', mat K [,  I [,  J]])
+  SM = gf_spmat('copy', mat K [,  I [,  J=I]])
   SM = gf_spmat('identity', int n)
   SM = gf_spmat('mult', spmat A, spmat B)
   SM = gf_spmat('add', spmat A, spmat B)
@@ -51,9 +51,9 @@ General constructor for spmat objects.
     <literal>m x n</literal>. If <literal>n</literal> is omitted, the matrix dimension is <literal>m x m</literal>.
 
 
-  ``SM = gf_spmat('copy', mat K [,  I [,  J]])``
+  ``SM = gf_spmat('copy', mat K [,  I [,  J=I]])``
 
-    Duplicate a matrix <literal>K</literal> (which might be a spmat). If index <literal>I</literal> and/or <literal>J</literal> are given, the matrix will
+    Duplicate a matrix <literal>K</literal> (which might be an spmat). If index <literal>I</literal> and/or <literal>J</literal> are given, the matrix will
     be a submatrix of <literal>K</literal>. For example::
     
       

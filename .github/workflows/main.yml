@@ -13,19 +13,19 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - name: Get Job URL
-      uses: Tiryoh/gha-jobid-action@v0
+      uses: Tiryoh/gha-jobid-action@v1
       id: jobs
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         job_name: script
     - name: checkout with submodule
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
         submodules: true
         token: ${{ secrets.PERSONAL_ACCESSTOKEN }}
     - name: Setup SSH
-      uses: MrSquaare/ssh-setup-action@v2
+      uses: MrSquaare/ssh-setup-action@v3
       with:
         host: github.com
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -44,6 +44,7 @@ jobs:
         mv tx /usr/local/bin/tx
     - name: update
       env:
+        SPHINXINTL_TRANSIFEX_ORGANIZATION_NAME: tkoyama010
         SPHINXINTL_TRANSIFEX_USERNAME: api
         SPHINXINTL_TRANSIFEX_PROJECT_NAME: getfem-doc
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
@@ -57,6 +58,7 @@ jobs:
         sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"XPS".*\n//g' /etc/ImageMagick-*/policy.xml
+        cp ../doc/sphinx/.tx/config  doc/sphinx/.tx/config
         (cd doc/sphinx;
          make latex;
          make images;
@@ -71,6 +73,12 @@ jobs:
         cp -r bin/fig2eps ../bin/fig2eps
         cp -r doc ../doc
         cd ../
+        (cd doc/sphinx/source/matlab_octave/images; make clean)
+        (cd doc/sphinx/source/project/images; make clean)
+        (cd doc/sphinx/source/python/images; make clean)
+        (cd doc/sphinx/source/scilab/images; make clean)
+        (cd doc/sphinx/source/userdoc/images; make clean)
+        deactivate
     - name: git_config
       env:
         NAME: "getfem-auto-update"
