@@ -29,28 +29,17 @@ jobs:
       with:
         host: github.com
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - uses: conda-incubator/setup-miniconda@v2
+      with:
+        environment-file: environment.yml
+        activate-environment: getfem-doc-translations
+    - uses: actions/checkout@v2
+    - uses: awalsh128/cache-apt-pkgs-action@latest
+      with:
+        packages: automake libtool make g++ libqd-dev libqhull-dev libmumps-seq-dev liblapack-dev libopenblas-dev libpython3-dev imagemagick fig2dev texlive xzdec fig2ps gv
+        version: 1.0
     - name: install
       run: |
-        sudo apt update
-        sudo apt-get install -y --no-install-recommends automake
-        sudo apt-get install -y --no-install-recommends libtool
-        sudo apt-get install -y --no-install-recommends make
-        sudo apt-get install -y --no-install-recommends g++
-        sudo apt-get install -y --no-install-recommends libqd-dev
-        sudo apt-get install -y --no-install-recommends libqhull-dev
-        sudo apt-get install -y --no-install-recommends libmumps-seq-dev
-        sudo apt-get install -y --no-install-recommends liblapack-dev
-        sudo apt-get install -y --no-install-recommends libopenblas-dev
-        sudo apt-get install -y --no-install-recommends libpython3-dev
-        sudo apt-get install -y --no-install-recommends imagemagick
-        sudo apt-get install -y --no-install-recommends fig2dev
-        sudo apt-get install -y --no-install-recommends texlive
-        sudo apt-get install -y --no-install-recommends xzdec
-        sudo apt-get install -y --no-install-recommends fig2ps
-        sudo apt-get install -y --no-install-recommends gv
-        sudo apt-get install -y --no-install-recommends python3-pip
-        sudo apt-get install -y --no-install-recommends sphinx-intl
-        sudo apt-get install -y --no-install-recommends python3-venv
         curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
         mv tx /usr/local/bin/tx
     - name: update
@@ -61,17 +50,10 @@ jobs:
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
       run: |
         git submodule update
-        python3 -m venv /home/runner/work/venv
-        source /home/runner/work/venv/bin/activate
         (cd getfem; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
-        pip3 config set global.index-url https://pypi.python.org/simple/
-        pip3 install -U pip setuptools
-        pip3 install -r ./requirements.txt
         cd getfem
         bash autogen.sh
-        ./configure --prefix=/home/runner/work/venv --with-pic
-        make -j8  >  make.log
-        sudo make install
+        ./configure --with-pic
         sudo perl -p -i -e 's/^.*"EPS".*\n//g' /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PS".*\n//g'  /etc/ImageMagick-*/policy.xml
         sudo perl -p -i -e 's/^.*"PDF".*\n//g' /etc/ImageMagick-*/policy.xml
@@ -106,7 +88,6 @@ jobs:
         git config --global user.email $EMAIL
         git config --global user.name $NAME
     - name: commit
-      if: contains(github.event.head_commit.message, '[ci skip]') == false && contains(github.ref, 'master')
       env:
         ORGANIZATION: getfem-doc
         REPO: getfem-doc-translations
@@ -118,4 +99,4 @@ jobs:
         $HTML_URL"
         git remote -v
         git remote add github git@github.com:$ORGANIZATION/$REPO.git
-        git push github master
+        git push github HEAD:maint/cleanup-ci
