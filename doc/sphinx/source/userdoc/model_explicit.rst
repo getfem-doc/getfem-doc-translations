@@ -42,4 +42,3 @@ same size as the variable ``varname``. The value of the vector can by changed by
 the command::
 
   getfem::set_private_data_rhs(md, indbrick, L);
-

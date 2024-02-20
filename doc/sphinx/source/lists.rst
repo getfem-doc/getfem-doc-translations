@@ -15,5 +15,3 @@ All kinds of questions or issues about using, installing or improving GetFEM can
 All mailing lists of GetFEM are listed on the page `getfem mailing lists <https://savannah.nongnu.org/mail/?group=getfem>`_.
 
 If you make contributions to GetFEM, you should register to the `getfem-commits mailing list <https://lists.nongnu.org/mailman/listinfo/getfem-commits>`_.
-
-

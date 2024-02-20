@@ -61,4 +61,3 @@ General constructor for global_function objects.
   ``GF = gf_global_function('add', global_function gf1, global_function gf2)``
 
     Create a add of two global functions.
-

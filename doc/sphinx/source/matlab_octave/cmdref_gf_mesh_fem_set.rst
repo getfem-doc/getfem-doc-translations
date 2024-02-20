@@ -121,4 +121,3 @@ gf_mesh_fem_set
 
     For a mesh_fem product object only. Set te enriched dofs and adapt the mesh_fem product.
     
-

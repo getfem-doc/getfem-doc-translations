@@ -69,4 +69,3 @@ gf_cvstruct_get
   ``gf_cvstruct_get(cvstruct CVS, 'display')``
 
     displays a short summary for a cvstruct object.
-

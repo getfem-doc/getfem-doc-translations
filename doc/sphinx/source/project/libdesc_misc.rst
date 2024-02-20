@@ -44,4 +44,3 @@ State
 
 Perspectives
 ^^^^^^^^^^^^
-

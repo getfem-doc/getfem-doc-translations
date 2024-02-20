@@ -20,4 +20,3 @@ Module linsolve
 .. autofunction:: getfem.linsolve_superlu
 
 .. autofunction:: getfem.linsolve_mumps
-

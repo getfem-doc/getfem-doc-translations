@@ -92,4 +92,3 @@ General constructor for spmat objects.
 
     Read a sparse matrix from an Harwell-Boeing or a Matrix-Market file
     .
-

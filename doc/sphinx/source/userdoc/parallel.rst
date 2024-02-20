@@ -113,6 +113,3 @@ Parallelization of getfem is still considered a "work in progress". A certain nu
   * Concerning contact bricks, only integral contact bricks are fully
     parallelized for the moment. Nodal contact bricks work in parallel
     but all the computation is done on the master process.
-
-
-

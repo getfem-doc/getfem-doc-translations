@@ -645,6 +645,3 @@ The function: ::
 computes on ``mf_pl`` the plastic part of the material, that could appear after a load and an unload, into the vector ``Plast``.
 
 Note that ``datasigma`` should be the vector containing the new stress constraint values, i.e. after a load or an unload of the material.
-
-
-

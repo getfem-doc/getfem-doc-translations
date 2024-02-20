@@ -226,4 +226,3 @@ gf_slice_get
   ``gf_slice_get(slice S, 'display')``
 
     displays a short summary for a slice object.
-

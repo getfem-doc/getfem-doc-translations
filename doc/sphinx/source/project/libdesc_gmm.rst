@@ -67,5 +67,3 @@ interfaces to some other packages (DIFFPACK for instance) in order to cover new 
 project. The library is now frequently used as a separate package and has also
 the vocation to collect the contribution of any person who propose some
 improvements, new algorithms or new interfaces.
-
-

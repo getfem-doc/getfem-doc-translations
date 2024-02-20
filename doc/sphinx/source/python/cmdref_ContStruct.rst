@@ -8,5 +8,3 @@ ContStruct
 ------------------------
 .. autoclass:: getfem.ContStruct
   :members:
-
-

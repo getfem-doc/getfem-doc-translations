@@ -17,4 +17,3 @@
 
 
 SUBDIRS = sphinx
-

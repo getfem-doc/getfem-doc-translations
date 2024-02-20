@@ -33,4 +33,3 @@ General constructor for mesh_im_data objects.
     stored data per integration point. If not given, the scalar stored
     data are considered.
     
-

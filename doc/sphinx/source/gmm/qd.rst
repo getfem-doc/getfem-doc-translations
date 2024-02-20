@@ -29,4 +29,3 @@ This disables the 80 bits precision of x86 processors which conflicts with QD. O
   fpu_fix_end(&old_cw);
 
 (see the QD documentation for more details).
-

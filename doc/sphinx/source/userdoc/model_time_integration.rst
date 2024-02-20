@@ -391,5 +391,3 @@ Quasi-static problems
 *********************
 
 ...
-
-

@@ -434,4 +434,3 @@ gf_asm
     boundary conditions (`Q` and `H` are matrices), similar to the
     ones returned by the function ASSEMB from PDETOOL.
     
-

@@ -8,5 +8,3 @@ Mesh
 ------------------------
 .. autoclass:: getfem.Mesh
   :members:
-
-

@@ -8,5 +8,3 @@ MeshLevelSet
 ------------------------
 .. autoclass:: getfem.MeshLevelSet
   :members:
-
-

@@ -67,4 +67,3 @@ gf_precond_get
   ``gf_precond_get(precond P, 'display')``
 
     displays a short summary for a precond object.
-

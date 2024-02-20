@@ -10,4 +10,3 @@ Module delete
 
 
 .. autofunction:: getfem.delete
-

@@ -51,4 +51,3 @@ is added by the following function::
 The difference compared to the basic source term brick is that the data should be
 a vector field (a matrix field if the variable ``varname`` is itself vector
 valued) and a scalar product with the outward unit normal is performed on it.
-

@@ -178,4 +178,3 @@ General constructor for mesh objects.
     can be obtained by `gf_util('trace level', 4)`. See ``gf_mesher_object``
     to manipulate geometric primitives in order to describe the geometry.
     
-

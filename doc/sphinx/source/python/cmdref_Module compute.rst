@@ -38,4 +38,3 @@ Module compute
 .. autofunction:: getfem.compute_error_estimate_nitsche
 
 .. autofunction:: getfem.compute_convect
-

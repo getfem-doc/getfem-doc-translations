@@ -31,4 +31,3 @@ gf_slice_set
     you can use the function to apply a deformation to a slice, or to
     change the dimension of the slice (the number of rows of <literal>P</literal> is not
     required to be equal to gf_slice_get(slice S, 'dim')).
-

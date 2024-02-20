@@ -8,5 +8,3 @@ GlobalFunction
 ------------------------
 .. autoclass:: getfem.GlobalFunction
   :members:
-
-

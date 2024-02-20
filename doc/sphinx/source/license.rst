@@ -13,4 +13,3 @@ GetFEM was born during the PhD thesis of Yves Renard (1994-1998, the first files
 
 
 .. include:: license.txt
-

@@ -8,5 +8,3 @@ GeoTrans
 ------------------------
 .. autoclass:: getfem.GeoTrans
   :members:
-
-

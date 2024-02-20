@@ -122,4 +122,3 @@ gf_cont_struct_get
   ``gf_cont_struct_get(cont_struct CS, 'display')``
 
     Display a short summary for a cont_struct object.
-

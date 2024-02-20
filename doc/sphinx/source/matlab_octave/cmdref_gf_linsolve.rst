@@ -65,4 +65,3 @@ gf_linsolve
   ``{U, cond} = gf_linsolve('mumps', spmat M, vec b)``
 
     Solve `M.U = b` using the MUMPS solver.
-

@@ -202,4 +202,3 @@ gf_compute
     no operation is done).
     This method is rather dissipative, but stable.
     
-

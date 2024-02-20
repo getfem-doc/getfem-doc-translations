@@ -57,4 +57,3 @@ The kernel of the model description is contained in the file
    model_time_integration
    model_contact_friction
    model_contact_friction_large_sliding
-

@@ -267,4 +267,3 @@ Now the code to export the solution with the VonMises stress:
    :scale: 100
 
    Plot of the solution.
-

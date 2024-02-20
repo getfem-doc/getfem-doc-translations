@@ -540,4 +540,3 @@ defined as follows::
 
 Again, here, the term is declared symmetric and then the matrix term and its
 transpose will be added.
-

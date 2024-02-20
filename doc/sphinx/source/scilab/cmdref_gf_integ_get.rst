@@ -96,4 +96,3 @@ gf_integ_get
   ``gf_integ_get(integ I, 'display')``
 
     displays a short summary for a integ object.
-

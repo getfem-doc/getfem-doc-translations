@@ -188,4 +188,3 @@ gf_mesh_set
     that the regions, and the finite element methods and
     integration methods of the mesh_fem and mesh_im objects linked
     to this mesh will be automagically refined.
-

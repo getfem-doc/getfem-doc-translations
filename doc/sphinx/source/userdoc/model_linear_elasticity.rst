@@ -157,4 +157,3 @@ should be a valid integration method on the same mesh::
 
 An example for a nearly incompressibility condition can be found in the program
 :file:`tests/elastostatic.cc`.
-

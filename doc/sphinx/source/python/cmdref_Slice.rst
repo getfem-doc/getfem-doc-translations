@@ -8,5 +8,3 @@ Slice
 ------------------------
 .. autoclass:: getfem.Slice
   :members:
-
-

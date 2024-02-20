@@ -924,4 +924,3 @@ The finite element problem is now solved. We can plot the solution as follows. N
    :scale: 100
 
    Plot of the solution.
-

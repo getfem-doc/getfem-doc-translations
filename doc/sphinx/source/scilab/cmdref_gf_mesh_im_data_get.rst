@@ -60,4 +60,3 @@ gf_mesh_im_data_get
   ``m = gf_mesh_im_data_get(mesh_im_data MID, 'linked mesh')``
 
     Returns a reference to the mesh object linked to <literal>mim</literal>.
-

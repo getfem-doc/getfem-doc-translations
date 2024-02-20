@@ -15,4 +15,3 @@ Subject: <short purpose of this pull request>
 
 ### Relates
 - <URL or Ticket>
-

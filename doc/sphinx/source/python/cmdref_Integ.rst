@@ -8,5 +8,3 @@ Integ
 ------------------------
 .. autoclass:: getfem.Integ
   :members:
-
-

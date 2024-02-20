@@ -97,4 +97,3 @@ General constructor for mesh_im objects.
     For convenience, optional arguments (`im` or `im_degree`) can be
     provided, in that case a call to ``gf_mesh_im_get(mesh_im MI, 'integ')`` is issued
     with these arguments.
-

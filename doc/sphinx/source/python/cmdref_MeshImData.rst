@@ -8,5 +8,3 @@ MeshImData
 ------------------------
 .. autoclass:: getfem.MeshImData
   :members:
-
-

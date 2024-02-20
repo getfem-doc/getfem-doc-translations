@@ -76,4 +76,3 @@ General constructor for integ objects.
     Note that 'exact integration' should be avoided in general, since they
     only apply to linear geometric transformations, are quite slow, and
     subject to numerical stability problems for high degree fem's. 
-

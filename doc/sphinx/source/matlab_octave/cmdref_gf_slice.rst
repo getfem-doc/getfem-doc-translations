@@ -131,4 +131,3 @@ General constructor for slice objects.
 
     Load the slice (and its linked mesh if it is not given as an argument)
     from a text file.
-

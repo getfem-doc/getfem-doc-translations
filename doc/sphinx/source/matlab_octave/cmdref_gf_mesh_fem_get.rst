@@ -407,4 +407,3 @@ gf_mesh_fem_get
       U4=gf_mesh_fem_get(mf,'eval',{'x';'y.*z';4;@myfunctionofxyz})
     
     
-

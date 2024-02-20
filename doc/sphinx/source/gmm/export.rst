@@ -21,4 +21,3 @@ Concerning the Matrix Market format, it is possible to save a ``gmm::csc_matrix<
 
   gmm::MatrixMarket_save("filename", A); // save a csc_matrix.
   gmm::MatrixMarket_load("filename", A); // load a row_matrix or a col_matrix
-

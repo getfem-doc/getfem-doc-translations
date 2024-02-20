@@ -321,4 +321,3 @@ State
 Perspectives
 ^^^^^^^^^^^^
 The interface grows in conjunction with |gf|. The main |gf| functionalities are interfaced.
-

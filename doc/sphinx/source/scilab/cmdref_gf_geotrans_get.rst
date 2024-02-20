@@ -83,4 +83,3 @@ gf_geotrans_get
   ``gf_geotrans_get(geotrans GT, 'display')``
 
     displays a short summary for a geotrans object.
-

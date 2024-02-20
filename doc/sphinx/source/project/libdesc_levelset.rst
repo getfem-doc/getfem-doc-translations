@@ -40,4 +40,3 @@ Perspectives
 ^^^^^^^^^^^^
 
 Clarify the algorithm computing the different zones.
-

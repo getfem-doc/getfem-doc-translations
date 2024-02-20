@@ -206,6 +206,3 @@ Here follows the additional step to build the Matlab interface. You have first, 
     ``c:\msys\home\login\getfem-5.?\interface/tests/matlab``.
     You can also move the ``interface\tests\matlab`` directory into your
     Matlab installation directory.
-
-
-

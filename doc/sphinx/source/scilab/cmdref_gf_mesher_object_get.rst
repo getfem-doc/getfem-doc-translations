@@ -37,4 +37,3 @@ gf_mesher_object_get
   ``gf_mesher_object_get(mesher_object MO, 'display')``
 
     displays a short summary for a mesher_object object.
-

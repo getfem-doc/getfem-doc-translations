@@ -145,4 +145,3 @@ a block Lanczos method (see [ca-re-so1994]_ for instance), a block
 Wiedelann method (in order to be parallelized) or simply
 the computation of more than one vector of the null space at each
 iteration.
-

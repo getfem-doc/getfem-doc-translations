@@ -73,4 +73,3 @@ Perspectives
 The event management of some objects should be analysed with care. This is the case for instance of |mls|, |mfls|, |pmf|, etc.
 
 The event management still have to be improved to be a fully reactive system.
-

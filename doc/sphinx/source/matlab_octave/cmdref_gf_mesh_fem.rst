@@ -116,4 +116,3 @@ General constructor for mesh_fem objects.
     
     If `RCVs` is given, no FEM will be put on the convexes listed in
     `RCVs`.
-

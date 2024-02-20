@@ -60,4 +60,3 @@ Module asm
 .. autofunction:: getfem.asm_nlsgrad_matrix
 
 .. autofunction:: getfem.asm_stabilization_patch_matrix
-

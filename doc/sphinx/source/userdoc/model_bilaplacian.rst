@@ -79,18 +79,3 @@ derivative of `dataname` is considered.
 
 
 The test program :file:`bilaplacian.cc` is a good example of the use of the previous bricks.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
