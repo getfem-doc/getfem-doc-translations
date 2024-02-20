@@ -65,3 +65,5 @@ Glossary
       on which the elementary computations (integrals) are performed.
       For instance, the reference segment in |gf| is the segment [0,1].
       The reference triangle is the triangle (0,0), (0,1), (1,0). etc.
+
+

@@ -71,3 +71,4 @@ mainly thus with regard to the description of degrees of freedom but also perhap
 the description of finite elements which could be partially externalized in a
 similar way to the cubature methods , at least for the simplest finite elements
 (equivalent and polynomial finite elements).
+

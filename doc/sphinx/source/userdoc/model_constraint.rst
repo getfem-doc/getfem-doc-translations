@@ -45,3 +45,4 @@ functions::
   getfem::set_private_data_rhs(md, indbrick, L)
 
 where ``indbrick`` is the index of the brick in the model.
+

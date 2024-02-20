@@ -15,3 +15,4 @@ non-GNU compiler, gcc/g++ (>= 4.8) should be a safe solution. The minimal |sci| 
 
 
 See the `download and install <../download.html>`_ page for the installation of |gf| on different plateforms.
+

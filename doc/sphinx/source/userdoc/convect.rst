@@ -45,3 +45,4 @@ In order to make the extrapolation not too expensive, the product :math:`dt\time
 should not be too large.
 
 Note that this method can be used to solve convection dominant problems coupling it with a splitting scheme.
+

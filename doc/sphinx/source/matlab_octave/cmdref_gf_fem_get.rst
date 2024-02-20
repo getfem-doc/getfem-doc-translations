@@ -139,3 +139,4 @@ gf_fem_get
   ``gf_fem_get(fem F, 'display')``
 
     displays a short summary for a fem object.
+

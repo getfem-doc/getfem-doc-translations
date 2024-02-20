@@ -109,3 +109,4 @@ gf_colormap('tripod');
 % (which can be viewed with 'mayavi -d tripod.vtk -m BandedSurfaceMap')
 % see http://mayavi.sourceforge.net/
 gf_mesh_fem_get(mfdu,'export to vtk','tripod.vtk','ascii',VM,'vm')
+

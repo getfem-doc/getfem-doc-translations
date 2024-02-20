@@ -31,3 +31,4 @@ General constructor for mesh_levelset objects.
   ``MLS = gf_mesh_levelset(mesh m)``
 
     Build a new mesh_levelset object from a mesh and returns its handle. 
+

@@ -781,3 +781,4 @@ parameters to solve evolutionary friction problems.
 ``mim`` represents the integration method on the same mesh as ``varname_u1``.
 Note that it should be accurate enough to integrate efficiently the nonlinear
 terms involved.
+

@@ -12,3 +12,4 @@ Module poly
 .. autofunction:: getfem.poly_print
 
 .. autofunction:: getfem.poly_product
+

@@ -76,3 +76,4 @@ General constructor for eltm objects.
 
     return a descriptor for the integration of the tensorial product of
     elementary matrices <literal>A</literal> and <literal>B</literal>.
+

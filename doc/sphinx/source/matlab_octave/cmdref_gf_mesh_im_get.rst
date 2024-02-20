@@ -119,3 +119,4 @@ gf_mesh_im_get
     Return the amount of memory (in bytes) used by the mesh_im object.
     
     The result does not take into account the linked mesh object.
+

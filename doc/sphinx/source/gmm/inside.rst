@@ -220,3 +220,4 @@ For this, you will generally have to specialize it. For instance, let us take a 
 
 
 The first function dispatch on the second or the third function respectively if the parameter is a vector or a matrix. The third function dispatch again on the fourth and the fifth function respectively if the matrix is row_major or column major. Of course, as the function are declared ``inline``, at least the two dispatcher functions will not be implemented. Which means that this construction is not costly.
+

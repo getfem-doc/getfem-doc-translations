@@ -50,3 +50,5 @@ Perspectives
 No change needed for the moment. An effort could be done on the documentation to
 describe completely how to add a new cubature formula (format of descritption
 files).
+
+

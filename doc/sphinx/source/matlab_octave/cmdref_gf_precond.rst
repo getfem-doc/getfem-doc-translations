@@ -90,3 +90,4 @@ General constructor for precond objects.
   ``PC = gf_precond('spmat', spmat m)``
 
     Preconditioner given explicitely by a sparse matrix.
+

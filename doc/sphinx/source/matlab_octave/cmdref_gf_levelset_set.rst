@@ -36,3 +36,4 @@ gf_levelset_set
   ``gf_levelset_set(levelset LS, 'simplify'[, scalar eps=0.01])``
 
     Simplify dof of level-set optionally with the parameter `eps`.
+

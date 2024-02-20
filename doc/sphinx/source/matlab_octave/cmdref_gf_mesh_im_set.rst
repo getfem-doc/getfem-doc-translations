@@ -43,3 +43,4 @@ gf_mesh_im_set
 
     For a mesh_im levelset object only. Adapt the integration methods to a
     change of the levelset function.
+

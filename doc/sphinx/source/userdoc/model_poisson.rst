@@ -83,3 +83,4 @@ the problem::
   }
 
 Note that the brick can be added in an arbitrary order.
+

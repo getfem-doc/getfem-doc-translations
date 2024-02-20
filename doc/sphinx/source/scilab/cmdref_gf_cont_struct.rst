@@ -99,3 +99,4 @@ General constructor for cont_struct objects.
     - 'noisy' or 'very_noisy'
        determines how detailed information has to be displayed during the
        continuation process (residual values etc.).
+

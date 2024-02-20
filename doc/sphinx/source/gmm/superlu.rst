@@ -22,3 +22,4 @@ To use these functions, you need to install SuperLU and compile your code with t
   g++ ...  -DGMM_USES_SUPERLU (dir_of_superlu)/superlu.a -lblas -I(dir_of_superlu)
 
 Some other functionalities of SuperLU can be interfaced.
+

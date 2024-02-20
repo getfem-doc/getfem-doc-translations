@@ -92,3 +92,4 @@ gf_workspace
 
     Return the class name of object i (if I is a mesh handle, it 
     return gfMesh etc..) 
+

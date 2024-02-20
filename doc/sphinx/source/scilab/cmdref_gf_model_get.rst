@@ -472,3 +472,4 @@ gf_model_get
   ``gf_model_get(model M, 'display')``
 
     displays a short summary for a model object.
+

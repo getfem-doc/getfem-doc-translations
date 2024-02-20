@@ -14,3 +14,4 @@ C++ compiler, libraries and |octv| or |mlab| interaction... In case of troubles 
 non-GNU compiler, gcc/g++ (>= 8.0) should be a safe solution.
 
 See the `download and install <../download.html>`_ page for the installation of |gf| on different plateforms.
+

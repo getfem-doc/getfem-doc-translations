@@ -8,3 +8,5 @@ Spmat
 ------------------------
 .. autoclass:: getfem.Spmat
   :members:
+
+

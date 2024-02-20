@@ -59,3 +59,4 @@ gf_util
 
     Sets the number of threads for the multithreaded GetFEM version.
     It is available only when GetFEM is compiled with openmp support. 
+

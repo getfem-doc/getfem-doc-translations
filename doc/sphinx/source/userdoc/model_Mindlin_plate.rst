@@ -112,3 +112,4 @@ Returns the brick index in the model.
 The projection on rotated RTO element can be added to a model thanks to the following function::
 
   void add_2D_rotated_RT0_projection(model, transname);
+

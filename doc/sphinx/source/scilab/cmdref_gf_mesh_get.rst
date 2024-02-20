@@ -483,3 +483,4 @@ gf_mesh_get
   ``gf_mesh_get(mesh M, 'display')``
 
     displays a short summary for a mesh object.
+

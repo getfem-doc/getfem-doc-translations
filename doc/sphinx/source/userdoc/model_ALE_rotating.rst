@@ -226,3 +226,9 @@ Assuming :math:`\rho^0` the density in the reference being invariant with the co
    \int_{\bar{\Omega}^{0}} \rho^0 \left[\dfrac{\partial^2 \bar{u}}{\partial t^2} - 2\nabla\dfrac{\partial \bar{u}}{\partial t}\dot{Z} - \nabla\bar{u}\ddot{Z}\right]\cdot \bar{v}  - \rho^0 (\nabla\bar{u}\dot{Z}).(\nabla\bar{v}\dot{Z}) d\bar{X} + \int_{\partial \bar{\Omega}^0} \rho^0 (\nabla\bar{u}\dot{Z}).\bar{v}(\dot{Z}.\bar{N}) d\bar{\Gamma},
 
 where :math:`\bar{N}` is the outward unit normal vector on :math:`\partial \bar{\Omega}^0`. Note that the last term vanishes on :math:`(\alpha, \beta) \times \partial \omega^0` but not necessarily on :math:`\{\alpha\} \times \omega^0` and :math:`\{\beta\} \times \omega^0`.
+
+
+
+
+
+

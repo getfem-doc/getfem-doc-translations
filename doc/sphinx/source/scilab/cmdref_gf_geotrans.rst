@@ -43,3 +43,4 @@ General constructor for geotrans objects.
       - GT_LINEAR_PRODUCT(geotrans gt1,geotrans gt2) :
         Linear tensorial product of two transformations
     
+

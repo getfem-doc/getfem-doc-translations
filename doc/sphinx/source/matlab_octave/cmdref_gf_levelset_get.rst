@@ -65,3 +65,4 @@ gf_levelset_get
   ``gf_levelset_get(levelset LS, 'display')``
 
     displays a short summary for a levelset.
+

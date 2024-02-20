@@ -8,3 +8,5 @@ Model
 ------------------------
 .. autoclass:: getfem.Model
   :members:
+
+

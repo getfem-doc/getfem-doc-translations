@@ -216,3 +216,4 @@ gf_compute
     >> Uq=gf_compute(mf_u, U, 'interpolate on Q1 grid', 'regular h', [.05, .05]);
     >> pcolor(squeeze(Uq(1,:,:)));
     
+

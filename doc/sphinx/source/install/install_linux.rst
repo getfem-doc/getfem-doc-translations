@@ -281,3 +281,4 @@ Docker images for GetFEM are published on the `Docker Hub <https://hub.docker.co
    When running python interpreter in v5.4 version::
 
       $ docker run --rm -v `pwd`:/work -t -i getfemdoc/getfem:v5.4 /venv/bin/python3
+

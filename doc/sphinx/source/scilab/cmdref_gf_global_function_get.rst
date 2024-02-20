@@ -61,3 +61,4 @@ gf_global_function_get
   ``gf_global_function_get(global_function GF, 'display')``
 
     displays a short summary for a global_function object.
+

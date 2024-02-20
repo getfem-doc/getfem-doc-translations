@@ -89,3 +89,4 @@
 	<a href="http://lamcos.insa-lyon.fr"><img src="images/logolamcos.png" border="none" alt="Lamcos logo"></a>
       </div>
     </div>
+

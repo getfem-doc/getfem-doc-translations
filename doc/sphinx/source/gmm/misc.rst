@@ -77,3 +77,4 @@ Most of the time it is more convenient to use::
   gmm::fill_random(M); // fill a dense matrix M with random number
   gmm::fill_random(M, cfill); // fill a dense or sparse matrix M with random
                        // numbers.
+

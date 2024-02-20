@@ -142,3 +142,4 @@ gf_spmat_get
   ``{mantissa_r, mantissa_i, exponent} = gf_spmat_get(spmat S, 'determinant')``
 
     returns the matrix determinant calculated using MUMPS.
+

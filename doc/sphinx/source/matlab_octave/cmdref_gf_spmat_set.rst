@@ -101,3 +101,4 @@ gf_spmat_set
     Add `V` to the sub-matrix 'M(I,J)'.
     
     `V` might be a sparse matrix or a full matrix.
+

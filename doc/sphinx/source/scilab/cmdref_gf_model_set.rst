@@ -1937,3 +1937,4 @@ gf_model_set
 
     Adds a contact boundary to an existing unbiased Nitschelarge sliding contact
     with friction brick which is both master and slave. 
+

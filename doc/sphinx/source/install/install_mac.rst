@@ -255,3 +255,4 @@ Once getfem is compiled:
   - You can try to launch a demo with:
     ``cd demos;``
     ``exec demo_static_contact.sce;``
+

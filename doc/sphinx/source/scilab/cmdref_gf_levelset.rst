@@ -49,3 +49,4 @@ General constructor for levelset objects.
     generic assembly language). If <literal>f2</literal> is set; this levelset
     is represented by a primary function and a secondary function defined
     by these expressions. 
+
