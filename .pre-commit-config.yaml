@@ -1,25 +1,4 @@
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.5.0
-  hooks:
-  - id: check-added-large-files
-  - id: check-case-conflict
-  - id: check-merge-conflict
-  - id: check-symlinks
-  - id: check-yaml
-  - id: debug-statements
-    exclude: ^(bin|doc)
-  - id: end-of-file-fixer
-    exclude: ^(bin|doc)
-  - id: mixed-line-ending
-    exclude: ^(bin|doc)
-  - id: name-tests-test
-    args: ["--pytest-test-first"]
-  - id: no-commit-to-branch
-    args: [--branch, main]
-  - id: requirements-txt-fixer
-  - id: trailing-whitespace
-    exclude: ^(bin|doc)
 - repo: https://github.com/python-jsonschema/check-jsonschema
   rev: 0.28.0
   hooks:
@@ -37,10 +16,19 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
-      - id: requirements-txt-fixer
+      - id: check-added-large-files
+      - id: check-case-conflict
       - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-yaml
       - id: debug-statements
         exclude: ^(bin|doc)
+      - id: end-of-file-fixer
+        exclude: ^(bin|doc)
+      - id: mixed-line-ending
+        exclude: ^(bin|doc)
+      - id: name-tests-test
+        args: ["--pytest-test-first"]
       - id: no-commit-to-branch
         args: [--branch, main]
       - id: requirements-txt-fixer
