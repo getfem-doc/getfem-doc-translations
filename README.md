@@ -16,7 +16,7 @@ This repository is inspired by [sphinx-doc/sphinx-doc-translations](https://gith
 
 ## URLs
 
-* RTD project pages for Getfem:
+- RTD project pages for Getfem:
 
 English [![Documentation Status](https://readthedocs.org/projects/getfem/badge/?version=latest)](https://getfem.readthedocs.io/en/latest/?badge=latest)
 
@@ -30,10 +30,9 @@ Detail is here: https://docs.readthedocs.org/en/latest/localization.html#project
 
 Points are:
 
-* We must have RTD projects for each languages.
-* Each projects must have correct Language setting on "Settings" page.
-* Master project has connections to each translated projects on "translations settings" page.
-
+- We must have RTD projects for each languages.
+- Each projects must have correct Language setting on "Settings" page.
+- Master project has connections to each translated projects on "translations settings" page.
 
 ## How to update po files
 
@@ -42,7 +41,6 @@ sh ./locale/update.sh
 ```
 
 After that, you should commit updated po files.
-
 
 ## How to add a language
 
