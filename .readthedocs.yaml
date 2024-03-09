@@ -5,17 +5,17 @@
 version: 2
 
 sphinx:
-   configuration: conf.py
+  configuration: conf.py
 build:
   os: "ubuntu-22.04"
   apt_packages:
     - dcraw
-    - imagemagick
     - fig2dev
-    - texlive
-    - xzdec
     - fig2ps
     - gv
+    - imagemagick
+    - texlive
+    - xzdec
   tools:
     python: "mambaforge-4.10"
   jobs:
