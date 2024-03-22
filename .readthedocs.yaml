@@ -25,6 +25,11 @@ build:
       - cp /etc/ImageMagick-*/* ~/.config/ImageMagick
       - ls -l ~/.config/ImageMagick
       - perl -p -i -e 's/\"none\"/\"read\|write\"/g' ~/.config/ImageMagick/policy.xml
+      - (cd "doc/sphinx/source/matlab_octave/images"; make png)
+      - (cd "doc/sphinx/source/project/images"; make png)
+      - (cd "doc/sphinx/source/python/images"; make png)
+      - (cd "doc/sphinx/source/scilab/images"; make png)
+      - (cd "doc/sphinx/source/userdoc/images"; make png)
 
 conda:
   environment: environment.yml

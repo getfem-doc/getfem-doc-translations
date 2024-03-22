@@ -9,13 +9,6 @@ This conf.py do:
 """
 import os
 import pathlib
-import subprocess
-
-subprocess.run(["make", "png"], cwd=r"doc/sphinx/source/userdoc/images")
-subprocess.run(["make", "png"], cwd=r"doc/sphinx/source/project/images")
-subprocess.run(["make", "png"], cwd=r"doc/sphinx/source/matlab_octave/images")
-subprocess.run(["make", "png"], cwd=r"doc/sphinx/source/python/images")
-subprocess.run(["make", "png"], cwd=r"doc/sphinx/source/scilab/images")
 
 basedir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "doc/sphinx/source")
 
