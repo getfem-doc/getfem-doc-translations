@@ -9,7 +9,6 @@ This conf.py do:
 """
 import os
 import pathlib
-import subprocess
 
 basedir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "doc/sphinx/source")
 
