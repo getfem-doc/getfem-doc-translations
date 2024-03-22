@@ -33,7 +33,7 @@ md = gf.Model('real')
 md.add_fem_variable('u', mf)
 
 # add generic elliptic brick on "u"
-md.add_Laplacian_brick(mim, 'u');
+md.add_Laplacian_brick(mim, 'u')
 
 # add Dirichlet condition
 g = mf.eval('x*(x-1) - y*(y-1)')
