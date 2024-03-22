@@ -40,12 +40,12 @@ else:
     xc = rand() - 0.5
     yc = rand() - 0.5
     R = rand() * 0.09 + 0.02
-    ULS = np.minimum(ULS, ((x - xc)**2 + (y - yc)**2) - R**2)
+    ULS = np.minimum(ULS, ((x - xc)**2 + (y - yc)**2) - R**2);
 
 ls.set_values(ULS)
 
-ULS2 = 1000*np.ones((1,x.size))
-ULS2s = 1000*np.ones((1,x.size))
+ULS2 = 1000*np.ones((1,x.size));
+ULS2s = 1000*np.ones((1,x.size));
 
 for i in xrange(1):
   xc = 0 # rand() - 0.5

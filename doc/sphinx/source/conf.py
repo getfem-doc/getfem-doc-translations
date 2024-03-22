@@ -14,6 +14,7 @@
 
 import os
 import sys
+import time
 
 ###########################################################################
 from getfem import getfem_env

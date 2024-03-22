@@ -90,35 +90,35 @@ if linear:
         md.add_fem_variable('p', mfp)
         md.add_linear_incompressibility_brick(mim, 'u', 'p')
 else:
-    md.add_initialized_data('params', [Lambda, Mu])
+    md.add_initialized_data('params', [Lambda, Mu]);
     if incompressible:
-        lawname = 'Incompressible Mooney Rivlin'
+        lawname = 'Incompressible Mooney Rivlin';
         md.add_finite_strain_elasticity_brick(mim, lawname, 'u', 'params')
-        md.add_fem_variable('p', mfp)
-        md.add_finite_strain_incompressibility_brick(mim, 'u', 'p')
+        md.add_fem_variable('p', mfp);
+        md.add_finite_strain_incompressibility_brick(mim, 'u', 'p');
     else:
-        lawname = 'SaintVenant Kirchhoff'
-        md.add_finite_strain_elasticity_brick(mim, lawname, 'u', 'params')
+        lawname = 'SaintVenant Kirchhoff';
+        md.add_finite_strain_elasticity_brick(mim, lawname, 'u', 'params');
   
 
-md.add_initialized_data('VolumicData', [0,-1,0])
-md.add_source_term_brick(mim, 'u', 'VolumicData')
+md.add_initialized_data('VolumicData', [0,-1,0]);
+md.add_source_term_brick(mim, 'u', 'VolumicData');
 
 # Attach the tripod to the ground
-md.add_Dirichlet_condition_with_multipliers(mim, 'u', mfu, 2)
+md.add_Dirichlet_condition_with_multipliers(mim, 'u', mfu, 2);
 
 print('running solve...')
-md.solve('noisy', 'max iter', 1)
-U = md.variable('u')
+md.solve('noisy', 'max iter', 1);
+U = md.variable('u');
 print('solve done!')
 
 
 mfdu=gf.MeshFem(m,1)
 mfdu.set_fem(gf.Fem('FEM_PK_DISCONTINUOUS(3,1)'))
 if linear:
-  VM = md.compute_isotropic_linearized_Von_Mises_or_Tresca('u','clambda','cmu', mfdu)
+  VM = md.compute_isotropic_linearized_Von_Mises_or_Tresca('u','clambda','cmu', mfdu);
 else:
-  VM = md.compute_finite_strain_elasticity_Von_Mises(lawname, 'u', 'params', mfdu)
+  VM = md.compute_finite_strain_elasticity_Von_Mises(lawname, 'u', 'params', mfdu);
 
 # post-processing
 sl=gf.Slice(('boundary',), mfu, degree)
