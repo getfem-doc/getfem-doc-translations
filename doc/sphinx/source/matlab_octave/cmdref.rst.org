@@ -7404,7 +7404,7 @@ gf_util
   gf_util('save matrix', string FMT, string FILENAME, mat A)
   A = gf_util('load matrix', string FMT, string FILENAME)
   tl = gf_util('trace level' [, int level])
-  tl = gf_util('warning level', int level)
+  tl = gf_util('warning level' [, int level])
   tl = gf_util('set num threads', int nb_threads)
 
 **Description :**
@@ -7437,7 +7437,7 @@ gf_util
     the current trace level is returned. 
 
 
-  ``tl = gf_util('warning level', int level)``
+  ``tl = gf_util('warning level' [, int level])``
 
     Filter the less important warnings displayed by getfem.
     
