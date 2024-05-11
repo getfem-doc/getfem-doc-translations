@@ -19,7 +19,7 @@ gf_mesh_fem
   MF = gf_mesh_fem('product', mesh_fem mf1, mesh_fem mf2)
   MF = gf_mesh_fem('levelset', mesh_levelset mls, mesh_fem mf)
   MF = gf_mesh_fem('global function', mesh m, levelset ls, {global_function GF1,...}[, int Qdim_m])
-  MF = gf_mesh_fem('bspline_uniform', mesh m, int NX[, int NY,] int order[, string bcX_low[, string bcY_low[, string bcX_high][, string bcY_high]]])
+  MF = gf_mesh_fem('bspline_uniform', mesh m, int NX[, int NY[, int NZ]], int order[, string bcX_low[, string bcY_low[, string bcZ_low]][, string bcX_high[, string bcY_high[, string bcZ_high]]]])
   MF = gf_mesh_fem('partial', mesh_fem mf, ivec DOFs[, ivec RCVs])
 
 **Description :**
@@ -99,14 +99,15 @@ General constructor for mesh_fem objects.
     level-set function of <literal>ls</literal>. 
 
 
-  ``MF = gf_mesh_fem('bspline_uniform', mesh m, int NX[, int NY,] int order[, string bcX_low[, string bcY_low[, string bcX_high][, string bcY_high]]])``
+  ``MF = gf_mesh_fem('bspline_uniform', mesh m, int NX[, int NY[, int NZ]], int order[, string bcX_low[, string bcY_low[, string bcZ_low]][, string bcX_high[, string bcY_high[, string bcZ_high]]]])``
 
     Create a mesh_fem on mesh <literal>m</literal>, whose base functions are global functions
-    corresponding to bspline basis of order <literal>order</literal>, in an NX x NY grid
-    (just NX in 1s) that spans the entire bounding box of <literal>m</literal>.
+    corresponding to bspline basis of order <literal>order</literal>, in an NX x NY x NZ
+    grid (just NX in 1D or NX x NY in 2D) that spans the entire bounding
+    box of <literal>m</literal>.
     Optionally boundary conditions at the edges of the domain can be
-    defined with <literal>bcX_low</literal>, <literal>bcY_low</literal>, <literal>bcX_high</literal>, abd <literal>bcY_high</literal> set to
-    'free' (default) or 'periodic' or 'symmetry'. 
+    defined with <literal>bcX_low</literal>, <literal>bcY_low</literal>, <literal>bcZ_low</literal>, <literal>bcX_high</literal>, <literal>bcY_high</literal>,
+    and <literal>bcZ_high</literal> set to 'free' (default) or 'periodic' or 'symmetry'. 
 
 
   ``MF = gf_mesh_fem('partial', mesh_fem mf, ivec DOFs[, ivec RCVs])``
