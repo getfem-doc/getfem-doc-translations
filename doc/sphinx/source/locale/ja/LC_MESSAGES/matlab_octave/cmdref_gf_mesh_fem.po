@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-11 01:15+0000\n"
+"POT-Creation-Date: 2024-05-12 01:21+0000\n"
 "PO-Revision-Date: 2020-04-26 01:50+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -175,6 +175,9 @@ msgid ""
 "int order[, string bcX_low[, string bcY_low[, string bcZ_low]][, string "
 "bcX_high[, string bcY_high[, string bcZ_high]]]])``"
 msgstr ""
+"``MF = gf_mesh_fem('bspline_uniform', mesh m, int NX[, int NY[, int NZ]], "
+"int order[, string bcX_low[, string bcY_low[, string bcZ_low]][, string "
+"bcX_high[, string bcY_high[, string bcZ_high]]]])``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem.rst:104
 msgid ""
@@ -185,6 +188,11 @@ msgid ""
 "with `bcX_low`, `bcY_low`, `bcZ_low`, `bcX_high`, `bcY_high`, and `bcZ_high`"
 " set to 'free' (default) or 'periodic' or 'symmetry'."
 msgstr ""
+"メッシュ `m` にmesh_femを作成します．その基本関数は，次数 `order` の bspline 基底に対応するグローバル関数であり， `m`"
+" のバウンディングボックス全体に渡る NX x NY グリッド (1D で NX または2Dで NX x NY) に配置される．オプションとして, "
+"領域の端に境界条件を定義することができます. `bcX_low`, `bcY_low`, `bcZ_low`, `bcX_high`, "
+"`bcY_high`, と `bcZ_high` は 'free' (default) または 'periodic', 'symmetry' "
+"に設定します."
 
 #: ../source/matlab_octave/cmdref_gf_mesh_fem.rst:113
 msgid "``MF = gf_mesh_fem('partial', mesh_fem mf, ivec DOFs[, ivec RCVs])``"
