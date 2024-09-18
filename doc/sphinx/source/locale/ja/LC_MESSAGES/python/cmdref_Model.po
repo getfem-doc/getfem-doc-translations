@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-11 01:27+0000\n"
+"POT-Creation-Date: 2024-09-18 02:32+0000\n"
 "PO-Revision-Date: 2018-07-16 07:17+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -25,12 +25,12 @@ msgstr ""
 msgid "Model"
 msgstr "Model"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model:1
 msgid "GetFEM Model object"
 msgstr "GetFEM Modelオブジェクト"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model:3
 msgid ""
 "Model variables store the variables and the state data and the description "
@@ -41,22 +41,22 @@ msgstr ""
 "モデル変数には，変数，状態データ，モデルの説明が格納されます．これには，全体接線行列，RHS，および制約条件が含まれます．モデルには  `real` "
 "モデルと `complex` モデルの2つの種類があります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model:9
 msgid "General constructor for Model objects"
 msgstr "Modelオブジェクトの汎用的なコンストラクタ"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model:11
 msgid "``MD = Model('real')`` Build a model for real unknowns."
 msgstr "``MD = Model('real')`` 実数が未知数のモデルを作ります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model:14
 msgid "``MD = Model('complex')`` Build a model for complex unknowns."
 msgstr "``MD = Model('complex')`` 複素数が未知数のモデルを構築します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.Neumann_term:1
 msgid ""
 "Gives the assembly string corresponding to the Neumann term of the fem "
@@ -71,7 +71,7 @@ msgstr ""
 "`varname` "
 "が定義されているメッシュ上の境界領域のインデックスである必要があります．この関数は，すべての体積ブリックが宣言された後で呼び出すようにしてください．ブリックがアセンブリ文字列の宣言を省略した場合はエラーが発生します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Dirichlet_condition_with_Nitsche_method:1
 msgid ""
 "Synopsis: ind = Model.add_Dirichlet_condition_with_Nitsche_method(self, "
@@ -82,7 +82,7 @@ msgstr ""
 "mim, string varname, string Neumannterm, string datagamma0, int region[, "
 "scalar theta][, string dataname])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Dirichlet_condition_with_Nitsche_method:3
 msgid ""
 "Add a Dirichlet condition on the variable `varname` and the mesh region "
@@ -109,7 +109,7 @@ msgstr ""
 "`theta = 0` (デフォルト) "
 "は非線形問題に対してもNeumann項の二次導関数を必要としない最も単純な方法です．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Dirichlet_condition_with_multipliers:1
 msgid ""
 "Add a Dirichlet condition on the variable `varname` and the mesh region "
@@ -137,7 +137,7 @@ msgstr ""
 " `dataname` "
 "はDirichlet条件のオプションのRHSです．定数の場合もあれば，femで記述される場合もあります．スカラー値またはベクトル値で，Dirichlet条件が指定されている変数によって異なります．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Dirichlet_condition_with_penalization:1
 msgid ""
 "Add a Dirichlet condition on the variable `varname` and the mesh region "
@@ -157,7 +157,7 @@ msgstr ""
 " `mf_mult` "
 "はオプションのパラメータで，乗数空間を指定してDirichlet条件を弱めることができます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Dirichlet_condition_with_simplification:1
 msgid ""
 "Adds a (simple) Dirichlet condition on the variable `varname` and the mesh "
@@ -180,7 +180,7 @@ msgstr ""
 " `dataname` はディリクレ条件のオプションの右側です．これは，定数(この場合は，Lagrange femにのみ適用できます)または "
 "`varname` と同じ有限要素法で記述された(重要な)にすることができます．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Fourier_Robin_brick:1
 msgid ""
 "Add a Fourier-Robin term to the model relatively to the variable `varname`. "
@@ -196,7 +196,7 @@ msgstr ""
 "です．高水準汎用アセンブリ言語(ただし，モデルのデータである必要がある複雑なバージョンは除きます．)の任意の有効な式を指定できます． `region` "
 "は，項が追加されるメッシュ領域です．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_HHO_reconstructed_gradient:1
 msgid ""
 "Add to the model the elementary transformation corresponding to the "
@@ -204,7 +204,7 @@ msgid ""
 "the elementary transformation."
 msgstr "このモデルにHHO法に対する勾配の再構成に対応する基本変換を加えました．名前は基本変換に付けられた名前です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_HHO_reconstructed_symmetrized_gradient:1
 msgid ""
 "Add to the model the elementary transformation corresponding to the "
@@ -212,7 +212,7 @@ msgid ""
 "name given to the elementary transformation."
 msgstr "このモデルにHHO法に対する勾配の再構成に対応する基本変換を加えました．名前は基本変換に付けられた名前です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_HHO_reconstructed_symmetrized_value:1
 msgid ""
 "Add to the model the elementary transformation corresponding to the "
@@ -220,7 +220,7 @@ msgid ""
 " The name is the name given to the elementary transformation."
 msgstr "対称化勾配を用いたHHO法に対する変数の再構成に対応する素変換をモデルに加えます．名前は基本変換に付けられた名前です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_HHO_reconstructed_value:1
 msgid ""
 "Add to the model the elementary transformation corresponding to the "
@@ -228,7 +228,7 @@ msgid ""
 "to the elementary transformation."
 msgstr "このモデルにHHO法に対する変数の再構成に対応する基本変換を加えました．名前は基本変換に付けられた名前です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_HHO_stabilization:1
 msgid ""
 "Add to the model the elementary transformation corresponding to the HHO "
@@ -236,7 +236,7 @@ msgid ""
 "transformation."
 msgstr "このモデルにHHO安定化演算子に対応する素変換を加えます．名前は，基本変換に付けられた名前です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_HHO_symmetrized_stabilization:1
 msgid ""
 "Add to the model the elementary transformation corresponding to the HHO "
@@ -244,7 +244,7 @@ msgid ""
 "given to the elementary transformation."
 msgstr "対称化勾配を用いたHHO安定化演算子に対応する素変換をモデルに加えます．名前は，基本変換に付けられた名前です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Helmholtz_brick:1
 msgid ""
 "Add a Helmholtz term to the model relatively to the variable `varname`. "
@@ -255,7 +255,7 @@ msgstr ""
 "変数 `varname` に対して相対的にHelmholtz項をモデルに追加します． `dataexpr` は波数です． `region` "
 "はオプションの項が追加されるメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Houbolt_scheme:1
 msgid ""
 "Attach a Houbolt method for the time discretization of the variable "
@@ -263,7 +263,7 @@ msgid ""
 "the variable"
 msgstr "変数 `varname` の時間離散化にHoubolt法を適用します．変数の2次時間導関数が多くても存在する場合にのみ有効です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Kirchhoff_Love_Neumann_term_brick:1
 msgid ""
 "Add a Neumann term brick for Kirchhoff-Love model on the variable `varname` "
@@ -275,7 +275,7 @@ msgstr ""
 "`dataname_M` は曲げモーメントテンソルを表し， `dataname_divM` "
 "はその発散を表します．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Kirchhoff_Love_plate_brick:1
 msgid ""
 "Add a bilaplacian brick on the variable `varname` and on the mesh region "
@@ -289,7 +289,7 @@ msgstr ""
 "`dataname_nu` をポアソン比とする Kirchhoff-Love "
 "プレートモデルに従って部分的に積分されています．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Laplacian_brick:1
 msgid ""
 "Add a Laplacian term to the model relatively to the variable `varname` (in "
@@ -302,7 +302,7 @@ msgstr ""
 " です)．これがベクトル値の変数である場合，Laplace項がコンポーネントごとに追加されます． `region` "
 "は項が追加されるオプションのメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Mindlin_Reissner_plate_brick:1
 msgid ""
 "Synopsis: ind = Model.add_Mindlin_Reissner_plate_brick(self, MeshIm mim, "
@@ -315,7 +315,7 @@ msgstr ""
 "string param_nu, string param_epsilon, string param_kappa [,int variant [, "
 "int region]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Mindlin_Reissner_plate_brick:3
 msgid ""
 "Add a term corresponding to the classical Reissner-Mindlin plate model for "
@@ -346,9 +346,9 @@ msgstr ""
 "が回転項に使用され， `mim_reduced` が横せん断項に使用される縮約積分に対応します． `variant = 2` "
 "(デフォルト)は，横せん断項の回転RT0要素への投影に対応します．現時点では，(三角形要素のロック現象を除去するだけでは不十分であるため)四角形のみに適用されます．また，高次要素を使用する場合，RT0への投影によって近似の次数が減少することにも注意してください．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Newmark_scheme:1
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_theta_method_for_second_order:1
 msgid ""
 "Attach a theta method for the time discretization of the variable `varname`."
@@ -356,7 +356,7 @@ msgid ""
 "variable."
 msgstr "変数 `varname` の時間離散化にtheta法を適用します．変数の2次時間導関数が多くても存在する場合にのみ有効です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Nitsche_contact_with_rigid_obstacle_brick:1
 msgid ""
 "Synopsis: ind = Model.add_Nitsche_contact_with_rigid_obstacle_brick(self, "
@@ -369,7 +369,7 @@ msgstr ""
 "gamma0name, int region[, scalar theta[, string dataname_friction_coeff[, "
 "string dataname_alpha, string dataname_wt]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Nitsche_contact_with_rigid_obstacle_brick:3
 msgid ""
 "Adds a contact condition with or without Coulomb friction on the variable "
@@ -398,7 +398,7 @@ msgstr ""
 "は摩擦係数で，一定にすることも，有限要素法で定義することもできます．注意: "
 "このブリックはNeumann項を持つ偏微分項に対応するすべてのブリックの後にモデルに追加する必要があります．さらに，このブリックはNeumann項を宣言するブリックにのみ適用できます．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Nitsche_fictitious_domain_contact_brick:1
 msgid ""
 "Synopsis: ind = Model.add_Nitsche_fictitious_domain_contact_brick(self, "
@@ -413,7 +413,7 @@ msgstr ""
 "dataname_friction_coeff[, string dataname_alpha, string dataname_wt1,string "
 "dataname_wt2]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Nitsche_fictitious_domain_contact_brick:3
 msgid ""
 "Adds a contact condition with or without Coulomb friction between two bodies"
@@ -446,7 +446,7 @@ msgstr ""
 "は摩擦係数で，一定にすることも，有限要素法で定義することもできます．注意: このブリックは Neumann "
 "項を持つ偏微分項に対応するすべてのブリックの後にモデルに追加する必要があります．さらに，このブリックはNeumann項を宣言するブリックにのみ適用できます．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Nitsche_large_sliding_contact_brick_raytracing:1
 msgid ""
 "Synopsis: ind = "
@@ -458,7 +458,7 @@ msgstr ""
 "bool unbiased_version, string dataname_r, scalar release_distance[, string "
 "dataname_fr[, string dataname_alpha[, int version]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Nitsche_large_sliding_contact_brick_raytracing:3
 msgid ""
 "Adds a large sliding contact with friction brick to the model based on the "
@@ -481,7 +481,7 @@ msgstr ""
 "とは，使用するNitsche法のバージョンのことです．(バイアスされていない，またはバイアスされているもの)．スレーブ境界ごとに，この境界上の表示変数の関数として材料法則を定義する必要があります．放出距離は慎重に決定すべきです(一般に平均要素サイズの数倍で，ボディの厚さよりも薄いです)．最初は，ブリックは接触境界なしで追加されます．接触境界と剛体には，特別な機能が追加されています．"
 " `version` は非対称バージョンでは0(デフォルト値)，より対称なバージョンでは1(摩擦がなくても完全に対称的でない)です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_Nitsche_midpoint_contact_with_rigid_obstacle_brick:1
 msgid ""
@@ -508,7 +508,7 @@ msgstr ""
 "0` はNeumann項の2次導関数を必要としない最も単純な方法です．オプションのパラメータ `dataname_friction_coeff` "
 "は摩擦係数で，一定にすることも，有限要素法で定義することもできます．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_assembly_assignment:1
 msgid ""
 "Synopsis: Model.add_assembly_assignment(self, string dataname, string "
@@ -517,7 +517,7 @@ msgstr ""
 "概要: Model.add_assembly_assignment(self, string dataname, string expression[,"
 " int region[, int order[, int before]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_assembly_assignment:3
 msgid ""
 "Adds expression `expr` to be evaluated at assembly time and being assigned "
@@ -538,7 +538,7 @@ msgstr ""
 " (0)，弱形式 (1)，接線システム "
 "(2)，または各次数(-1))を表します．デフォルト値は1です．before=1の場合，他のアセンブリ項の計算の前に割り当てが実行され，データが残りのアセンブリで中間結果として使用できるようになります(接線システム式の微分が実行されず，データとみなされることに注意してください)．before=0(デフォルト)の場合，代入はアセンブリ項の後に行われます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_basic_contact_brick:1
 msgid ""
 "Synopsis: ind = Model.add_basic_contact_brick(self, string varname_u, string"
@@ -553,7 +553,7 @@ msgstr ""
 "dataname_alpha[, int augmented_version[, string dataname_gamma, string "
 "dataname_wt]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_basic_contact_brick:3
 msgid ""
 "Add a contact with or without friction brick to the model. If U is the "
@@ -595,7 +595,7 @@ msgstr ""
 "Curnier拡大ラグランジアン，2は対称的なもの(接触とCoulomb摩擦の結合を除きます)，3は拡大乗算器を用いた非対称方法，4は拡大乗算器と De"
 " Saxce 射影を用いた非対称方法です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_basic_contact_brick_two_deformable_bodies:1
 msgid ""
 "Synopsis: ind = Model.add_basic_contact_brick_two_deformable_bodies(self, "
@@ -608,13 +608,13 @@ msgstr ""
 "BN1, Spmat BN2[, string dataname_gap[, string dataname_alpha[, int "
 "augmented_version]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_basic_contact_brick_two_deformable_bodies:3
 msgid ""
 "Add a frictionless contact condition to the model between two deformable"
 msgstr "2つの変形可能モデル間に摩擦なし接触条件を追加します"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_basic_contact_brick_two_deformable_bodies:4
 msgid ""
 "bodies. If U1, U2 are the vector of degrees of freedom on which the "
@@ -639,7 +639,7 @@ msgstr ""
 "`aug_version` は拡大法を示します．1は非対称Alart-"
 "Curnier拡大Lagrangian，2は対称Lagrangian，3は拡大乗数を伴う非対称法です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_bilaplacian_brick:1
 msgid ""
 "Add a bilaplacian brick on the variable `varname` and on the mesh region "
@@ -654,7 +654,7 @@ msgstr ""
 "によって決定される係数であり，定数であるか，有限要素法で記述されます．対応する弱形式は :math:`\\int D(x)\\Delta u(x) "
 "\\Delta v(x) dx` の通りです．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_constraint_with_multipliers:1
 msgid ""
 "Synopsis: ind = Model.add_constraint_with_multipliers(self, string varname, "
@@ -663,7 +663,7 @@ msgstr ""
 "概要: ind = Model.add_constraint_with_multipliers(self, string varname, string"
 " multname, Spmat B, {vec L | string dataname})"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_constraint_with_multipliers:3
 msgid ""
 "Add an additional explicit constraint on the variable `varname` thank to a "
@@ -680,7 +680,7 @@ msgstr ""
 "メソッドを使用すると，いつでも拘束を変更できます． `L` の代わりに `dataname` が指定された場合，ベクトル `L` "
 "は指定された名前のデータとしてモデル内で定義されます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_constraint_with_penalization:1
 msgid ""
 "Synopsis: ind = Model.add_constraint_with_penalization(self, string varname,"
@@ -689,7 +689,7 @@ msgstr ""
 "概要: ind = Model.add_constraint_with_penalization(self, string varname, "
 "scalar coeff, Spmat B, {vec L | string dataname})"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_constraint_with_penalization:3
 msgid ""
 "Add an additional explicit penalized constraint on the variable `varname`. "
@@ -708,7 +708,7 @@ msgstr ""
 "の代わりに  `dataname` が指定された場合，ベクトル `L` "
 "は指定された名前のデータとしてモデル内で定義されます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_contact_boundary_to_unbiased_Nitsche_large_sliding_contact_brick:1
 msgid ""
@@ -716,7 +716,7 @@ msgid ""
 " with friction brick which is both master and slave."
 msgstr "接触境界をマスターとスレーブの両方である摩擦ブリックを持つ既存のバイアスされていないNitschelargeスライド接触に追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_contact_with_rigid_obstacle_brick:1
 msgid ""
 "Synopsis: ind = Model.add_contact_with_rigid_obstacle_brick(self,  MeshIm "
@@ -729,14 +729,14 @@ msgstr ""
 "dataname_r[, string dataname_friction_coeff], int region, string obstacle[, "
 "int augmented_version])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_contact_with_rigid_obstacle_brick:3
 msgid ""
 "DEPRECATED FUNCTION. Use 'add nodal contact with rigid obstacle brick' "
 "instead."
 msgstr "非推奨機能です．代わりに 'add nodal contact with rigid obstacle brick' を使用してください．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_data:1
 msgid ""
 "Add a fixed size data to the model.  `sizes` is either a integer (for a "
@@ -746,7 +746,7 @@ msgstr ""
 "固定サイズのデータをモデルに追加します． `sizes` は整数(スカラーまたはベクトルデータ用)かテンソルデータの次元のベクトルです． `name` "
 "はデータ名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_elastoplasticity_brick:1
 msgid ""
 "Old (obsolete) brick which do not use the high level generic assembly. Add a"
@@ -774,7 +774,7 @@ msgstr ""
 "は材料の塑性閾値です．最後の3つの変数は，定数であったり，同じ有限要素法で記述されていたりします． `region` "
 "は項が追加されるオプションのメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_element_extrapolation_transformation:1
 msgid ""
 "Add a special interpolation transformation which represents the identity "
@@ -788,14 +788,14 @@ msgid ""
 msgstr ""
 "恒等変換を表すが，多項式外挿によって現在の要素以外の別の要素で式を評価できる特別な補間変換を追加します．仮想領域応用における安定化項に使用されます．配列elt_corは2つのエントリからなる配列で，最初の行は変換に関係する要素を含み，2番目の行は外挿が必要なそれぞれの要素を含みます．要素がelt_corにリストされていない場合，評価は現在の要素に対してのみ行われます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_elementary_P0_projection:1
 msgid ""
 "Add the elementary transformation corresponding to the projection P0 "
 "element. The name is the name given to the elementary transformation."
 msgstr "投影P0要素に対応する基本変換を追加します．名前は，基本変換に付けられた名前です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_elementary_rotated_RT0_projection:1
 msgid ""
 "Add the elementary transformation corresponding to the projection on rotated"
@@ -803,7 +803,7 @@ msgid ""
 " given to the elementary transformation."
 msgstr "2次元エレメントの回転RT0エレメント上の投影に対応する基本変換をモデルに追加します．名前は，基本変換に付けられた名前です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_enriched_Mindlin_Reissner_plate_brick:1
 msgid ""
 "Synopsis: ind = Model.add_enriched_Mindlin_Reissner_plate_brick(self, MeshIm"
@@ -816,7 +816,7 @@ msgstr ""
 "varname_theta,string varname_u3, string varname_theta3 , string param_E, "
 "string param_nu, string param_epsilon [,int variant [, int region]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_enriched_Mindlin_Reissner_plate_brick:3
 msgid ""
 "Add a term corresponding to the enriched Reissner-Mindlin plate model for "
@@ -856,7 +856,7 @@ msgstr ""
 " `variant = 3` "
 "は，横せん断項の回転RT0要素への投影と，ピンチ項のP0要素への投影とに対応します．現時点では，(三角形要素のロック現象を除去するだけでは不十分であるため)四角形のみに適用されます．また，高次要素を使用する場合，RT0への投影によって近似の次数が減少することにも注意してください．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_explicit_matrix:1
 msgid ""
 "Synopsis: ind = Model.add_explicit_matrix(self, string varname1, string "
@@ -865,7 +865,7 @@ msgstr ""
 "概要: ind = Model.add_explicit_matrix(self, string varname1, string varname2, "
 "Spmat B[, int issymmetric[, int iscoercive]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_explicit_matrix:3
 msgid ""
 "Add a brick representing an explicit matrix to be added to the tangent "
@@ -885,7 +885,7 @@ msgstr ""
 "`iscoercive` を1に設定します．マトリックスは， Model.set_private_matrix() "
 "コマンドで変更できます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_explicit_rhs:1
 msgid ""
 "Add a brick representing an explicit right hand side to be added to the "
@@ -900,7 +900,7 @@ msgstr ""
 "`dataname` が指定された場合，ベクトル `L` "
 "は指定された名前のデータとしてモデル内で定義されます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_fem_data:1
 msgid ""
 "Add a data to the model linked to a MeshFem. `name` is the data name, "
@@ -910,14 +910,14 @@ msgstr ""
 "MeshFemにリンクされたモデルにデータを追加します． `name` はデータ名であり， `sizes` はオプションのパラメータであり， `mf` "
 "に関して補間的な次元の整数またはベクトルです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_fem_variable:1
 msgid ""
 "Add a variable to the model linked to a MeshFem. `name` is the variable "
 "name."
 msgstr "MeshFemにリンクされたモデルに変数を追加します． `name` は変数名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_filtered_fem_variable:1
 msgid ""
 "Add a variable to the model linked to a MeshFem. The variable is filtered in"
@@ -927,7 +927,7 @@ msgstr ""
 "MeshFemにリンクされたモデルに変数を追加します．変数は，領域上の自由度のみが考慮されるという意味でフィルタリングされます． `name` "
 "は変数名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elasticity_brick:1
 msgid ""
 "Add a nonlinear elasticity term to the model relatively to the variable "
@@ -944,7 +944,7 @@ msgstr ""
 "'Compressible' または 'Incompressible' "
 "という語を付ける必要があります．これらの法則の圧縮性バージョンには，追加の材料係数が1つ必要です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elasticity_brick:11
 msgid ""
 "IMPORTANT : if the variable is defined on a 2D mesh, the plane strain "
@@ -961,7 +961,7 @@ msgstr ""
 " "
 "は項が追加されるオプションのメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．このブリックは，高水準の汎用アセンブリを使用します．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:1
 msgid ""
 "Synopsis: ind = Model.add_finite_strain_elastoplasticity_brick(self, MeshIm "
@@ -972,7 +972,7 @@ msgstr ""
 "string lawname, string unknowns_type [, string varnames, ...] [, string "
 "params, ...] [, int region = -1])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:3
 msgid ""
 "Add a finite strain elastoplasticity brick to the model. For the moment "
@@ -990,17 +990,17 @@ msgstr ""
 "`unknowns_type` によって定義される未知変数求解の可能性をサポートします． \"Simo_Miehe\" "
 "の法則では，モデル内で変数として定義する必要がある次の名前の集合を `varnames` と想定しています．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:13
 msgid "the displacement variable which has to be defined as an unknown,"
 msgstr "未知変数として定義されなければならない変位です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:14
 msgid "the plastic multiplier which has also defined as an unknown,"
 msgstr "可塑乗数も未知と定義されています．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:15
 msgid ""
 "optionally the pressure variable for a mixed displacement-pressure "
@@ -1010,14 +1010,14 @@ msgstr ""
 "オプションで， 'DISPLACEMENT_AND_PLASTIC_MULTIPLIER_AND_PRESSURE' の混合変位-圧力式の圧力変数を "
 "`unknowns_type` で指定します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:18
 msgid ""
 "the name of a (scalar) fem_data or im_data field that holds the plastic "
 "strain at the previous time step, and"
 msgstr "前の時間ステップでの塑性歪みを保持する(スカラー)fem_dataまたはim_dataフィールドの名前です．そして"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:20
 msgid ""
 "the name of a fem_data or im_data field that holds all non-repeated "
@@ -1028,24 +1028,24 @@ msgstr ""
 "直前の時間ステップでの右Cauchy-"
 "Greenテンソルの逆数の非反復成分をすべて保持するfem_dataまたはim_dataフィールドの名前です(平面歪み2次元問題では4要素ベクトル，3次元問題では6要素ベクトルでなければなりません)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:26
 msgid ""
 "The  \"Simo_Miehe\" law also expects as `params` a set of the following "
 "three parameters:"
 msgstr "\"Simo_Miehe\" 法はまた，次の3つのパラメータの集合を `params` としています．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:29
 msgid "an expression for the initial bulk modulus K,"
 msgstr "初期体積弾性率Kの式です，"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:30
 msgid "an expression for the initial shear modulus G,"
 msgstr "初期せん断弾性率Gの式です，"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:31
 msgid ""
 "the name of a user predefined function that decribes the yield limit as a "
@@ -1055,7 +1055,7 @@ msgid ""
 msgstr ""
 "硬化変数(降伏限界と硬化変数の値は，それぞれ適切な応力テンソルと歪テンソルのFrobeniusノルムと仮定します)の関数として降伏限界を表示するユーザ定義関数の名前です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_elastoplasticity_brick:37
 msgid ""
 "As usual, `region` is an optional mesh region on which the term is added. If"
@@ -1065,7 +1065,7 @@ msgstr ""
 "通常， `region` "
 "は項が追加されるオプションのメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_finite_strain_incompressibility_brick:1
 msgid ""
 "Add a finite strain incompressibility condition on `variable` (for large "
@@ -1085,7 +1085,7 @@ msgstr ""
 "が乗数で，``u`` が変位の場合，\"非線形非圧縮性ブリック\" で，``p*(1-Det(Id(meshdim)+Grad_u))`` "
 "の高水準汎用アセンブリを追加すると等しいです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_generalized_Dirichlet_condition_with_Nitsche_method:1
 msgid ""
@@ -1121,7 +1121,7 @@ msgstr ""
 "0` は非線形問題に対してもNeumann項の2次導関数を必要としない最も単純な方法である． `Hname` は行列フィールド `H` "
 "に対応するデータである．定数行列であるか，スカラー関数で記述されている必要があります．モデル内のブリックのインデックスを返します．(このブリックは完全にはテストされていせん)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_generalized_Dirichlet_condition_with_multipliers:1
 msgid ""
@@ -1153,7 +1153,7 @@ msgstr ""
 "はDirichlet条件の右側です．定数の場合もあれば，有限要素法で記述される場合もあります．スカラー値またはベクトル値で，Dirichlet条件が指定されている変数によって異なります．"
 " `Hname` は行列フィールド `H` に対応するデータです．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_generalized_Dirichlet_condition_with_penalization:1
 msgid ""
@@ -1178,7 +1178,7 @@ msgstr ""
 " `Hname` は行列フィールド  `H` に対応するデータです．定数行列であるか，スカラー関数で記述されている必要があります． `mf_mult` "
 "はオプションのパラメータで，乗数空間を指定してDirichlet条件を弱めることができます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_generic_elliptic_brick:1
 msgid ""
 "Add a generic elliptic term to the model relatively to the variable "
@@ -1210,20 +1210,20 @@ msgstr ""
 " `dataname` (例えば \"1\" ， \"sin(X(1))\" ，\"Norm(u)\" "
 "など)は高水準汎用アセンブリ言語の任意の正規表現にすることができます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_im_data:1
 msgid ""
 "Add a data set to the model linked to a MeshImd. `name` is the data name."
 msgstr "MeshImdにリンクされたモデルにデータセットを追加します． `name` はデータ名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_im_variable:1
 msgid ""
 "Add a variable to the model linked to a MeshImd. `name` is the variable "
 "name."
 msgstr "MeshImdにリンクされたモデルに変数を追加します． `name` は変数名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_initialized_data:1
 msgid ""
 "Add an initialized fixed size data to the model. `sizes` an optional "
@@ -1235,7 +1235,7 @@ msgstr ""
 "はオプションのパラメータで，データのフォーマットを記述する整数またはベクトルの次元です．デフォルトでは，データはベクトルフィールドbとみなされます． "
 "`name` はデータ名で， `V` はデータの値です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_initialized_fem_data:1
 msgid ""
 "Add a data to the model linked to a MeshFem. `name` is the data name. The "
@@ -1247,7 +1247,7 @@ msgstr ""
 "で初期化されます．データはスカラーまたはベクトルフィールドです． `sizes` はオプションのパラメータであり， "
 "`mf`に対する補完次元の整数またはベクトルです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_integral_contact_between_nonmatching_meshes_brick:1
 msgid ""
@@ -1264,7 +1264,7 @@ msgstr ""
 "int option [, string dataname_alpha [, string dataname_wt1 , string "
 "dataname_wt2]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_integral_contact_between_nonmatching_meshes_brick:3
 msgid ""
@@ -1299,7 +1299,7 @@ msgstr ""
 "法では3，新しい非対称法では4となります．デフォルト値は1です．摩擦がある場合， `dataname_alpha`  ， `dataname_wt1` "
 "および `dataname_wt2` は，摩擦の進展を解くためのオプションパラメータです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_integral_contact_with_rigid_obstacle_brick:1
 msgid ""
 "Synopsis: ind = Model.add_integral_contact_with_rigid_obstacle_brick(self,  "
@@ -1314,7 +1314,7 @@ msgstr ""
 "string dataname_alpha [, string dataname_wt [, string dataname_gamma [, "
 "string dataname_vt]]]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_integral_contact_with_rigid_obstacle_brick:3
 msgid ""
 "Add a contact with or without friction condition with a rigid obstacle to "
@@ -1351,7 +1351,7 @@ msgstr ""
 "`dataname_wt` は摩擦の進化を解決するためのオプションパラメータです．`dataname_gamma` および `dataname_vt` "
 "は，パラメータに依存するすべり速度を摩擦条件に追加するためのオプションデータを表します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_integral_large_sliding_contact_brick_raytracing:1
 msgid ""
@@ -1364,7 +1364,7 @@ msgstr ""
 "string dataname_r, scalar release_distance, [, string dataname_fr[, string "
 "dataname_alpha[, int version]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_integral_large_sliding_contact_brick_raytracing:3
 msgid ""
@@ -1385,7 +1385,7 @@ msgstr ""
 "オブジェクトを追加します．スレーブ境界ごとに乗数変数を定義する必要があります．リリース距離は慎重に決定すべきです(一般に平均要素サイズの数倍で，物体の厚さよりも薄いです)．最初は，ブリックは接触境界なしで追加されます．接触境界と剛体には，特別な機能が追加されています．"
 " `version` は，非対称バージョンでは0(デフォルト値)，より対称なバージョンでは1(摩擦がなくても完全に対称的でない)です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_internal_im_variable:1
 msgid ""
 "Add a variable to the model, which is linked to a MeshImd and will be "
@@ -1393,7 +1393,7 @@ msgid ""
 "variable name."
 msgstr "モデルに変数を追加します．この変数はMeshImdにリンクされており，接線行列のアセンブリ中に縮約されます． `name` は変数名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_interpolate_transformation_from_expression:1
 msgid ""
 "Add a transformation to the model from mesh `source_mesh` to mesh "
@@ -1407,7 +1407,7 @@ msgstr ""
 "メッシュ `source_mesh` から式 `expr` で指定されるメッシュ `target_mesh` "
 "への変換をモデルに追加します．この式は，モデルの変数を含む高水準汎用アセンブリ式に対応します．注意：接線システムの計算では，使用した変数による変換の導関数が考慮されます．ただし，2次微分は実装されていないため，ポテンシャルの定義ではこのような変換は許されていません．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_isotropic_linearized_elasticity_brick:1
 msgid ""
 "Add an isotropic linearized elasticity term to the model relatively to the "
@@ -1420,7 +1420,7 @@ msgstr ""
 "には，Lame係数を含める必要があります． `region` "
 "は項が追加されるオプションのメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_isotropic_linearized_elasticity_pstrain_brick:1
 msgid ""
 "Add an isotropic linearized elasticity term to the model relatively to the "
@@ -1435,7 +1435,7 @@ msgstr ""
 "には，それぞれYoung率とPoisson比を含める必要があります． `region` "
 "はオプションの項が追加されるメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．2次元メッシュでは，この項は単純な歪み近似と相関します．3次元メッシュでは，標準モデルに対応します．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_isotropic_linearized_elasticity_pstress_brick:1
 msgid ""
 "Add an isotropic linearized elasticity term to the model relatively to the "
@@ -1450,7 +1450,7 @@ msgstr ""
 "には，それぞれYoung率とPoisson比を含める必要があります． `region` "
 "は項が追加されるオプションのメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．2次元メッシュでは，この項は単純応力近似に対応します．3次元メッシュでは，標準モデルに対応します．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_linear_generic_assembly_brick:1
 msgid ""
 "Synopsis: ind = Model.add_linear_generic_assembly_brick(self, MeshIm mim, "
@@ -1459,12 +1459,12 @@ msgstr ""
 "概要: ind = Model.add_linear_generic_assembly_brick(self, MeshIm mim, string "
 "expression[, int region[, int is_symmetric[, int is_coercive]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_linear_generic_assembly_brick:3
 msgid "Deprecated. Use Model.add_linear_term() instead."
 msgstr "非推奨．代わりに Model.add_linear_term() を使用します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_linear_incompressibility_brick:1
 msgid ""
 "Synopsis: ind = Model.add_linear_incompressibility_brick(self, MeshIm mim, "
@@ -1474,7 +1474,7 @@ msgstr ""
 "概要: ind = Model.add_linear_incompressibility_brick(self, MeshIm mim, string "
 "varname, string multname_pressure[, int region[, string dataexpr_coeff]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_linear_incompressibility_brick:3
 msgid ""
 "Add a linear incompressibility condition on `variable`. `multname_pressure` "
@@ -1492,7 +1492,7 @@ msgstr ""
 "は，たとえば，非圧縮性に近い弾性に対するオプションのペナルティ係数です．この場合，それはLame係数の逆数である :math:`\\lambda` "
 "です．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_linear_term:1
 msgid ""
 "Synopsis: ind = Model.add_linear_term(self, MeshIm mim, string expression[, "
@@ -1501,7 +1501,7 @@ msgstr ""
 "概要: ind = Model.add_linear_term(self, MeshIm mim, string expression[, int "
 "region[, int is_symmetric[, int is_coercive]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_linear_term:3
 msgid ""
 "Adds a matrix term given by the assembly string `expr` which will be "
@@ -1522,7 +1522,7 @@ msgstr ""
 "を使用して組み立てられます．線形であると仮定すると，行列項のみが考慮されます．項を非線形ではなく線形と宣言する利点は，項が1回だけ組み立てられ，残差にアセンブリが必要ないことです．式にいくつかの変数が含まれ，式がポテンシャルまたは一次(すなわち，弱形式の微分ではなく，弱形式を記述する)場合，式はすべての変数に関して微分することに注意してください．項が対称か，強制でないかどうかを指定できます．よくわからない場合は，対称ではなく，強制的ではないと宣言した方がよいでしょう．しかし，一部のソルバー(例えば共役勾配)は非強制問題には使用できません．"
 " `brickname` はブリックのオプション名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_linear_twodomain_term:1
 msgid ""
 "Synopsis: ind = Model.add_linear_twodomain_term(self, MeshIm mim, string "
@@ -1533,7 +1533,7 @@ msgstr ""
 "expression, int region, string secondary_domain[, int is_symmetric[, int "
 "is_coercive]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_linear_twodomain_term:3
 msgid ""
 "Adds a linear term given by a weak form language expression like "
@@ -1543,7 +1543,7 @@ msgid ""
 msgstr ""
 "Modelのような弱形式言語式で与えられる線形項を追加します．add_linear_term()ではなく，二つのドメインの直接の積上での統合の場合には，最初に``mim''と``region''で指定されたものと``secondary_domain''で指定されたものを最初にモデルに宣言しなければなりません．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_lumped_mass_for_first_order_brick:1
 msgid ""
 "Synopsis: ind = Model.add_lumped_mass_for_first_order_brick(self, MeshIm "
@@ -1552,7 +1552,7 @@ msgstr ""
 "概要: ind = Model.add_lumped_mass_for_first_order_brick(self, MeshIm mim, "
 "string varname[, string dataexpr_rho[, int region]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_lumped_mass_for_first_order_brick:3
 msgid ""
 "Add lumped mass for first order term to the model relatively to the variable"
@@ -1565,7 +1565,7 @@ msgstr ""
 "は密度(省略した場合は1)です． `region` "
 "は，項が追加されるオプションのメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_macro:1
 msgid ""
 "Define a new macro for the high generic assembly language. The name include "
@@ -1581,7 +1581,7 @@ msgstr ""
 "name='grad(u)'， expr='Grad_u' という形式も使用できますが，この場合，パラメータ 'u' "
 "はマクロの使用時にのみ変数名として許可されます．マクロは，キーワード 'Def' を使用してアセンブリ文字列内に直接定義できます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_mass_brick:1
 msgid ""
 "Synopsis: ind = Model.add_mass_brick(self, MeshIm mim, string varname[, "
@@ -1590,7 +1590,7 @@ msgstr ""
 "概要: ind = Model.add_mass_brick(self, MeshIm mim, string varname[, string "
 "dataexpr_rho[, int region]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_mass_brick:3
 msgid ""
 "Add mass term to the model relatively to the variable `varname`. If "
@@ -1603,7 +1603,7 @@ msgstr ""
 "`region` "
 "は，項が追加されるオプションのメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_master_contact_boundary_to_biased_Nitsche_large_sliding_contact_brick:1
 msgid ""
@@ -1611,7 +1611,7 @@ msgid ""
 " contact with friction brick."
 msgstr "摩擦ブリックと既存のバイアスされたNitscheの有限スライド接触にマスター接触境界を追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_master_contact_boundary_to_large_sliding_contact_brick:1
 msgid ""
@@ -1619,7 +1619,7 @@ msgid ""
 "friction brick."
 msgstr "摩擦ブリックを持つ既存の有限すべり接触にマスター接触境界を追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_master_contact_boundary_to_projection_transformation:1
 msgid ""
@@ -1630,7 +1630,7 @@ msgstr ""
 "特定の境界 `region` 上に対応する変位変数 `dispname` "
 "を持つマスター接触境界を，`transname`という既存の投影補間変換に追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_master_contact_boundary_to_raytracing_transformation:1
 msgid ""
@@ -1641,7 +1641,7 @@ msgstr ""
 "特定の境界 `region` 上の対応する変位変数 `dispname` を持つマスター接触境界を `transname` "
 "という既存のレイトレーシング補間変換に追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_master_slave_contact_boundary_to_large_sliding_contact_brick:1
 msgid ""
@@ -1649,7 +1649,7 @@ msgid ""
 "brick which is both master and slave (allowing the self-contact)."
 msgstr "接触境界を，マスターでもスレーブでもある摩擦ブリックの既存の有限スライド接触に追加します(自己接触は許容します)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_multiplier:1
 msgid ""
 "Add a particular variable linked to a fem being a multiplier with respect to"
@@ -1661,7 +1661,7 @@ msgstr ""
 "有限要素法にリンクされた特定の変数を，原始変数に対する乗数として追加します．自由度は ``gmm::range_basis`` "
 "関数でフィルタリングされ，乗数と原始変数をリンクするモデルの項に適用されます．これは，主変数に対する線形独立制約のみを保持するためです．境界乗数用に最適化されています．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nodal_contact_between_nonmatching_meshes_brick:1
 msgid ""
 "Synopsis: ind = "
@@ -1675,7 +1675,7 @@ msgstr ""
 "multname_n[, string multname_t], string dataname_r[, string dataname_fr], "
 "int rg1, int rg2[, int slave1, int slave2, int augmented_version])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nodal_contact_between_nonmatching_meshes_brick:3
 msgid ""
 "Add a contact with or without friction condition between two faces of one or"
@@ -1723,7 +1723,7 @@ msgstr ""
 "は拡大戦略を示しｍす: 1は非対称のAlart-"
 "Curnier拡張Lagrangian，2は対称のもの(接触とCoulomb摩擦の結合を除きます)，3は新しい非対称法です．基本的に，このブリックは行列BNとBTとベクトルgapとalphaを計算し，基本的な接触ブリックを呼び出します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nodal_contact_with_rigid_obstacle_brick:1
 msgid ""
 "Synopsis: ind = Model.add_nodal_contact_with_rigid_obstacle_brick(self,  "
@@ -1736,7 +1736,7 @@ msgstr ""
 "dataname_r[, string dataname_friction_coeff], int region, string obstacle[, "
 "int augmented_version])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nodal_contact_with_rigid_obstacle_brick:3
 msgid ""
 "Add a contact with or without friction condition with a rigid obstacle to "
@@ -1777,7 +1777,7 @@ msgstr ""
 " 1は非対称のAlart-"
 "Curnier拡張Lagrangian，2は対称(接触とCoulomb摩擦の結合を除く)，3は新しい非対称方法です．基本的に，このブリックは行列BNおよびベクトルgapおよびalphaを計算し，基本接触ブリックを呼び出します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonlinear_elasticity_brick:1
 msgid ""
 "Add a nonlinear elasticity term to the model relatively to the variable "
@@ -1813,7 +1813,7 @@ msgstr ""
 "`region` "
 "はオプションの項が追加されるメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．このブリックは，低水準汎用アセンブリを使用します．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonlinear_generic_assembly_brick:1
 msgid ""
 "Synopsis: ind = Model.add_nonlinear_generic_assembly_brick(self, MeshIm mim,"
@@ -1822,12 +1822,12 @@ msgstr ""
 "概要: ind = Model.add_nonlinear_generic_assembly_brick(self, MeshIm mim, "
 "string expression[, int region[, int is_symmetric[, int is_coercive]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonlinear_generic_assembly_brick:3
 msgid "Deprecated. Use Model.add_nonlinear_term() instead."
 msgstr "非推奨． Model.add_nonlinear_term() を使用します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonlinear_incompressibility_brick:1
 msgid ""
 "Add a nonlinear incompressibility condition on `variable` (for large strain "
@@ -1842,7 +1842,7 @@ msgstr ""
 "は圧力を表す変数です．圧力を記述する有限要素法と主変数との間の入力条件を満たす必要があることに注意してください． `region` "
 "はオプションの項が追加されるメッシュ領域です．指定しない場合は，メッシュ全体に追加されます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonlinear_term:1
 msgid ""
 "Synopsis: ind = Model.add_nonlinear_term(self, MeshIm mim, string "
@@ -1851,7 +1851,7 @@ msgstr ""
 "概要: ind = Model.add_nonlinear_term(self, MeshIm mim, string expression[, int"
 " region[, int is_symmetric[, int is_coercive]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonlinear_term:3
 msgid ""
 "Adds a nonlinear term given by the assembly string `expr` which will be "
@@ -1867,7 +1867,7 @@ msgstr ""
 "で組み立てられます．この表現は，ポテンシャルまたは弱形式を表すことができます．2次項(すなわち，2次試験関数Test2を含みます)は使用できません．項が対称か，強制かどうかを指定できます．よくわからない場合は，対称ではなく，強制ではないと宣言した方がよいでしょう．しかし，一部のソルバー(例えば共役勾配)は非強制問題には使用できません．"
 " `brickname` はブリックのオプション名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonlinear_twodomain_term:1
 msgid ""
 "Synopsis: ind = Model.add_nonlinear_twodomain_term(self, MeshIm mim, string "
@@ -1878,7 +1878,7 @@ msgstr ""
 "expression, int region, string secondary_domain[, int is_symmetric[, int "
 "is_coercive]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonlinear_twodomain_term:3
 msgid ""
 "Adds a nonlinear term given by a weak form language expression like "
@@ -1890,7 +1890,7 @@ msgstr ""
 "のようではなく，二つのドメインの直積上での積分の場合には，最初に ``mim`` と ``region`` で指定されたものと "
 "``secondary_domain`` で指定されたものを最初にモデルに宣言しなければなりません．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonmatching_meshes_contact_brick:1
 msgid ""
 "Synopsis: ind = Model.add_nonmatching_meshes_contact_brick(self,  MeshIm "
@@ -1903,7 +1903,7 @@ msgstr ""
 "string multname_t], string dataname_r[, string dataname_fr], int rg1, int "
 "rg2[, int slave1, int slave2, int augmented_version])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonmatching_meshes_contact_brick:3
 msgid ""
 "DEPRECATED FUNCTION. Use 'add nodal contact between nonmatching meshes "
@@ -1911,7 +1911,7 @@ msgid ""
 msgstr ""
 "非推奨機能です．代わりに 'add nodal contact between nonmatching meshes brick' を使用してください．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_normal_Dirichlet_condition_with_Nitsche_method:1
 msgid ""
 "Synopsis: ind = "
@@ -1923,7 +1923,7 @@ msgstr ""
 "MeshIm mim, string varname, string Neumannterm, string gamma0name, int "
 "region[, scalar theta][, string dataname])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_normal_Dirichlet_condition_with_Nitsche_method:3
 msgid ""
 "Add a Dirichlet condition to the normal component of the vector (or tensor) "
@@ -1954,7 +1954,7 @@ msgstr ""
 "0` "
 "は非線形問題に対してもNeumann項の2次導関数を必要としない最も単純な方法である．モデル内のブリックのインデックスを返します．(このブリックは完全にはテストされていません)"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_normal_Dirichlet_condition_with_multipliers:1
 msgid ""
 "Add a Dirichlet condition to the normal component of the vector (or tensor) "
@@ -1984,7 +1984,7 @@ msgstr ""
 " `dataname` "
 "はDirichlet条件のオプションの右辺です．定数の場合もあれば，有限要素法で記述される場合もあります．スカラー値またはベクトル値で，Dirichlet条件が指定されている変数によって決まります(変数がベクトル値の場合はスカラー，テンソル値の場合はベクトルです)．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_normal_Dirichlet_condition_with_penalization:1
 msgid ""
 "Add a Dirichlet condition to the normal component of the vector (or tensor) "
@@ -2006,7 +2006,7 @@ msgstr ""
 " `mf_mult` "
 "はオプションのパラメータで，乗数空間を指定してDirichlet条件を弱めることができます．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_normal_derivative_Dirichlet_condition_with_multipliers:1
 msgid ""
@@ -2039,7 +2039,7 @@ msgstr ""
 " `dataname` はDirichlet条件の右辺を表すオプションのパラメータです．もし `R_must_be_derivated` が "
 "`true` に設定されていれば， `dataname` の正規導関数が考慮されます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_normal_derivative_Dirichlet_condition_with_penalization:1
 msgid ""
@@ -2062,7 +2062,7 @@ msgstr ""
 "はDirichlet条件の右辺を表すオプションのパラメータです．もし `R_must_be_derivated` が `true` に設定されていれば，"
 "  `dataname` の正規導関数が考慮されます．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_normal_derivative_source_term_brick:1
 msgid ""
 "Add a normal derivative source term brick :math:`F = \\int b.\\partial_n v` "
@@ -2071,7 +2071,7 @@ msgstr ""
 "変数 `varname` とメッシュ領域 `region` に通常の微分ソース項ブリック :math:`F = \\int b.\\partial_n "
 "v` を追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_normal_derivative_source_term_brick:5
 msgid ""
 "Update the right hand side of the linear system. `dataname` represents `b` "
@@ -2080,7 +2080,7 @@ msgstr ""
 "線形システムの右辺を更新します． `dataname` は `b` を表し，  `varname` は `v` "
 "を表します．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_normal_source_term_brick:1
 msgid ""
 "Add a source term on the variable `varname` on a boundary `region`. This "
@@ -2097,7 +2097,7 @@ msgstr ""
 "`dataepxpr` "
 "によって表され，これは，高水準汎用アセンブリ言語(ただし，モデルの宣言されたデータでなければならない複素数バージョンは除きます)の任意の正規表現であり得る．境界への外向き法線単位ベクトルを持つスカラー積が実行されます．このブリックの主な目的は事前処理として法線を持つスカラー積を実行せずにベクトルデータでNeumann条件を表現することです．モデル内のブリックインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_penalized_contact_between_nonmatching_meshes_brick:1
 msgid ""
@@ -2114,7 +2114,7 @@ msgstr ""
 "dataname_lambda, [, string dataname_alpha [, string dataname_wt1, string "
 "dataname_wt2]]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_penalized_contact_between_nonmatching_meshes_brick:3
 msgid ""
@@ -2142,7 +2142,7 @@ msgstr ""
 " `dataname_alpha` ， `dataname_wt1`  および `dataname_wt2` "
 "は進展摩擦の問題を解決するためのオプションのパラメータです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_penalized_contact_with_rigid_obstacle_brick:1
 msgid ""
 "Synopsis: ind = Model.add_penalized_contact_with_rigid_obstacle_brick(self,"
@@ -2155,7 +2155,7 @@ msgstr ""
 "string dataname_coeff], int region [, int option, string dataname_lambda, [,"
 " string dataname_alpha [, string dataname_wt]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_penalized_contact_with_rigid_obstacle_brick:3
 msgid ""
 "Add a penalized contact with or without friction condition with a rigid "
@@ -2177,7 +2177,7 @@ msgstr ""
 " `dataname_lambda` "
 "はオプションが2の場合に使用されるオプションのパラメータです．その場合，ペナルティ項はlambda単位でシフトされます(これは，対応する拡張Lagrangian定式化上でのUzawaアルゴリズムの使用を可能にします)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_pointwise_constraints_with_given_multipliers:1
 msgid ""
 "Synopsis: ind = Model.add_pointwise_constraints_with_given_multipliers(self,"
@@ -2188,7 +2188,7 @@ msgstr ""
 "string varname, string multname, string dataname_pt[, string dataname_unitv]"
 " [, string dataname_val])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_pointwise_constraints_with_given_multipliers:3
 msgid ""
 "Add some pointwise constraints on the variable `varname` using a given "
@@ -2212,7 +2212,7 @@ msgstr ""
 " `dataname_val` "
 "は異なる点で規定される値のベクトルです．このブリックはNeumann問題における剛体変位を消滅させるために特別に設計されています．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_pointwise_constraints_with_multipliers:1
 msgid ""
 "Synopsis: ind = Model.add_pointwise_constraints_with_multipliers(self, "
@@ -2223,7 +2223,7 @@ msgstr ""
 "varname, string dataname_pt[, string dataname_unitv] [, string "
 "dataname_val])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_pointwise_constraints_with_multipliers:3
 msgid ""
 "Add some pointwise constraints on the variable `varname` using multiplier. "
@@ -2246,7 +2246,7 @@ msgstr ""
 " `dataname_val` "
 "は，異なる点で規定される値のベクトルです．このブリックは，Neumann問題における剛体変位を消滅させるために特別に設計されている．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_pointwise_constraints_with_penalization:1
 msgid ""
 "Synopsis: ind = Model.add_pointwise_constraints_with_penalization(self, "
@@ -2257,7 +2257,7 @@ msgstr ""
 "varname, scalar coeff, string dataname_pt[, string dataname_unitv] [, string"
 " dataname_val])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_pointwise_constraints_with_penalization:3
 msgid ""
 "Add some pointwise constraints on the variable `varname` thanks to a "
@@ -2282,7 +2282,7 @@ msgstr ""
 " `dataname_val` "
 "は異なる点で規定される値のベクトルです．このブリックはNeumann問題における剛体変位を消滅させるために特別に設計されています．モデル内のブリックのインデックスを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_projection_transformation:1
 msgid ""
 "Add a projection interpolate transformation called `transname` to a model to"
@@ -2293,7 +2293,7 @@ msgstr ""
 "`transname` という名前の投影補間変換を，汎用アセンブリブリックで使用するモデルに追加します．注意: "
 "現時点では，モデルの計算で変換の導関数は考慮されません．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_raytracing_transformation:1
 msgid ""
 "Add a raytracing interpolate transformation called `transname` to a model to"
@@ -2304,10 +2304,10 @@ msgstr ""
 "汎用アセンブリブリックで使用されるモデルに  `transname` というレイトレーシング補間変換を追加します．注意: "
 "現時点ではモデルの計算で変換の導関数は考慮されません．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_rigid_obstacle_to_Nitsche_large_sliding_contact_brick:1
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_rigid_obstacle_to_large_sliding_contact_brick:1
 msgid ""
 "Adds a rigid obstacle to an existing large sliding contact with friction "
@@ -2318,7 +2318,7 @@ msgstr ""
 "摩擦ブリックとの既存の有限すべり接触に，硬質の障害物を追加します． `expr` は高水準汎用アセンブリ言語(ここで， `x` "
 "はメッシュの現在の点です)を使用した式であり，障害物までの符号付き距離である必要があります． `N` はメッシュの次元です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_rigid_obstacle_to_projection_transformation:1
 msgid ""
 "Add a rigid obstacle whose geometry corresponds to the zero level-set of the"
@@ -2327,7 +2327,7 @@ msgid ""
 msgstr ""
 "ジオメトリが高水準汎用アセンブリ式 `expr` の0レベルセットに対応する剛体障害を `transname` という既存の投影補間変換に追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_rigid_obstacle_to_raytracing_transformation:1
 msgid ""
 "Add a rigid obstacle whose geometry corresponds to the zero level-set of the"
@@ -2337,7 +2337,7 @@ msgstr ""
 "ジオメトリが上位レベルの汎用アセンブリ式 `expr` の0レベルセットに対応する剛体な障害物を "
 "`transname`という既存のレイトレーシング補間変換に追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_slave_contact_boundary_to_biased_Nitsche_large_sliding_contact_brick:1
 msgid ""
@@ -2345,7 +2345,7 @@ msgid ""
 "contact with friction brick."
 msgstr "摩擦ブリックとの既存のバイアスされたNitscheの有限滑り接触にスレーブ接触境界を追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_slave_contact_boundary_to_large_sliding_contact_brick:1
 msgid ""
@@ -2353,7 +2353,7 @@ msgid ""
 "friction brick."
 msgstr "摩擦ブリックを持つ既存の有限滑り接触にスレーブ接触境界を追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_slave_contact_boundary_to_projection_transformation:1
 msgid ""
@@ -2364,7 +2364,7 @@ msgstr ""
 "特定の境界 `region` 上の対応する変位変数 `dispname` を持つスレーブ接触境界を "
 "`transname`という既存の投影補間変換に追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.add_slave_contact_boundary_to_raytracing_transformation:1
 msgid ""
@@ -2375,7 +2375,7 @@ msgstr ""
 "特定の境界 `region` 上の対応するディスプレイスメント変数 `dispname` を持つスレーブコンタクト境界を， `transname` "
 "という既存のレイトレーシング補間変換に追加します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_small_strain_elastoplasticity_brick:1
 msgid ""
 "Synopsis: ind = Model.add_small_strain_elastoplasticity_brick(self, MeshIm "
@@ -2388,7 +2388,7 @@ msgstr ""
 "params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int region"
 " = -1])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_small_strain_elastoplasticity_brick:3
 msgid ""
 "Adds a small strain plasticity term to the model `M`. This is the main "
@@ -2430,12 +2430,12 @@ msgstr ""
 "により)モデルで定義された時間ステップです．または，任意の式(データ名，定数値...)を使用できます．時間ステップは，1つの反復から次のイテレーションに変更できます．"
 " `region` はメッシュ領域です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_small_strain_elastoplasticity_brick:29
 msgid "The available plasticity laws are:"
 msgstr "使用可能な塑性則は次のとおりです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_small_strain_elastoplasticity_brick:31
 msgid ""
 "'Prandtl Reuss' (or 'isotropic perfect plasticity'). Isotropic elasto-"
@@ -2469,7 +2469,7 @@ msgstr ""
 " 'xi', 'Previous_Ep', 'lambda', 'mu', 'sigma_y', '1', 'timestep'); "
 "です．重要:この法則は3次元表現を実装することに注意してください．2次元で使用する場合，式は2次元に単純に転置されます．平面歪み近似については，以下を参照してください．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_small_strain_elastoplasticity_brick:50
 msgid ""
 "\"plane strain Prandtl Reuss\" (or \"plane strain isotropic perfect "
@@ -2479,7 +2479,7 @@ msgstr ""
 "\"平面ひずみPrandtl Reuss\" (または "
 "\"平面ひずみ等方性完全塑性\")前述の法則と同じですが，平面ひずみ近似に適用されます．2次元でのみ使用できます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_small_strain_elastoplasticity_brick:54
 msgid ""
 "\"Prandtl Reuss linear hardening\" (or \"isotropic plasticity linear "
@@ -2500,7 +2500,7 @@ msgstr ""
 "hardening', 0, 'u', 'xi', 'Previous_Ep', 'Previous_alpha', 'lambda', 'mu', "
 "'sigma_y', 'H_k', H_i', '1', 'timestep'); です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_small_strain_elastoplasticity_brick:64
 msgid ""
 "\"plane strain Prandtl Reuss linear hardening\" (or \"plane strain isotropic"
@@ -2510,7 +2510,7 @@ msgstr ""
 "\"平面ひずみPrandtl Reuss線形硬化\" (または "
 "\"平面ひずみ等方性塑性線形硬化\")．前の法則と同じですが，平面ひずみ近似に適合しています．2次元でのみ使用できます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_small_strain_elastoplasticity_brick:69
 msgid ""
 "See GetFEM user documentation for further explanations on the discretization"
@@ -2520,7 +2520,7 @@ msgid ""
 msgstr ""
 "塑性流動の離散化および実装された塑性則の詳細についてはGetFEMユーザーマニュアルを参照してください．時間の積分法に関するGetFEMユーザーマニュアル(過渡問題の積分)も参照してください．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_small_strain_elastoplasticity_brick:74
 msgid ""
 "IMPORTANT : remember that `small_strain_elastoplasticity_next_iter` has to "
@@ -2531,7 +2531,7 @@ msgstr ""
 "重要: `small_strain_elastoplasticity_next_iter` "
 "は各時間ステップの終了時，次の時間ステップの前(と後処理の前: 塑性歪みおよび塑性乗数の値を設定します)に呼び出す必要があります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_source_term:1
 msgid ""
 "Adds a source term given by the assembly string `expr` which will be "
@@ -2545,7 +2545,7 @@ msgstr ""
 "を使用してアセンブルされます．残差項のみが考慮されます．式にいくつかの変数が含まれていて，式がポテンシャルである場合，式はすべての変数に関して微分されることに注意してください．"
 " `brickname` はブリックのオプション名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_source_term_brick:1
 msgid ""
 "Synopsis: ind = Model.add_source_term_brick(self, MeshIm mim, string "
@@ -2554,7 +2554,7 @@ msgstr ""
 "概要: ind = Model.add_source_term_brick(self, MeshIm mim, string varname, "
 "string dataexpr[, int region[, string directdataname]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_source_term_brick:3
 msgid ""
 "Add a source term to the model relatively to the variable `varname`. The "
@@ -2572,12 +2572,12 @@ msgstr ""
 "はオプションで項を追加するメッシュ領域です．追加のオプションデータ `directdataname` "
 "を設定することもできます．対応するデータベクトルは，アセンブリなしで右側に直接追加されます．regionが境界である場合，このブリックでNeumann境界条件を設定することができます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_source_term_generic_assembly_brick:1
 msgid "Deprecated. Use Model.add_source_term() instead."
 msgstr "廃止予定です． Model.add_source_term() を代わりに使用してください．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_standard_secondary_domain:1
 msgid ""
 "Add a secondary domain to the model which can be used in a weak-form "
@@ -2588,14 +2588,14 @@ msgstr ""
 "2つのドメインの積を統合するために，弱形式言語の表現で使用できるセカンダリドメインをモデルに追加します． `name` "
 "はセカンダリドメインの名前であり， `mim` はこのドメイン上の積分法であり， `region` は積分が実行される領域です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_theta_method_for_first_order:1
 msgid ""
 "Attach a theta method for the time discretization of the variable `varname`."
 " Valid only if there is at most first order time derivative of the variable."
 msgstr "変数 `varname` の時間離散化にtheta法を適用します．変数の最大でも1次の時間導関数が存在する場合にのみ有効です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_twodomain_source_term:1
 msgid ""
 "Adds a source term given by a weak form language expression like "
@@ -2608,7 +2608,7 @@ msgstr ""
 "と``region`` によって指定されたものと ``secondary_domain`` "
 "によって指定されたものがあり，後者は最初にモデルに宣言されなければなりません．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_variable:1
 msgid ""
 "Add a variable to the model of constant sizes. `sizes` is either a integer "
@@ -2618,7 +2618,7 @@ msgstr ""
 "一定サイズのモデルに変数を追加します． `sizes` は整数(スカラー変数またはベクトル変数の場合)かテンソル変数の次元のベクトルです． `name`"
 " は変数名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.assembly:1
 msgid ""
 "Assembly of the tangent system taking into account the terms from all "
@@ -2633,12 +2633,12 @@ msgstr ""
 "'build_all_condensed' "
 "とする必要があります．デフォルトでは，接線線形システム全体(行列とrhs)が構築されます．この関数は，独自のソルバを使用して求解する場合に便利です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.brick_list:1
 msgid "print to the output the list of bricks of the model."
 msgstr "モデルのブリックのリストを出力に出力します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.brick_term_rhs:1
 msgid ""
 "Gives the access to the part of the right hand side of a term of a "
@@ -2654,7 +2654,7 @@ msgstr ""
 "は2つの異なる変数に作用する対称項のためにの右辺の2番目にアクセスすることです(デフォルトは0です)． `ind_iter` "
 "は時間ディスパッチャを使用した場合の反復番号です(デフォルトは0です)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.change_penalization_coeff:1
 msgid ""
 "Change the penalization coefficient of a Dirichlet condition with "
@@ -2663,29 +2663,29 @@ msgid ""
 msgstr ""
 "penalizationブリックを使用してDirichlet条件のpenalization係数を変更します．ブリックがこの種類でない場合，この関数の動作は定義されていません．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.char:1
 msgid "Output a (unique) string representation of the Model."
 msgstr "Modelの(ユニークな)文字列表現を出力します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.char:3
 msgid ""
 "This can be used to perform comparisons between two different Model objects."
 " This function is to be completed."
 msgstr "これを使用して，2つの異なるModelオブジェクト間の比較を実行できます．この機能は完成予定です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.clear:1
 msgid "Clear the model."
 msgstr "モデルをクリアします．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.clear_assembly_assignment:1
 msgid "Delete all added assembly assignments"
 msgstr "追加されたアセンブリの割り当てをすべて削除します"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_Von_Mises_or_Tresca:1
 msgid ""
 "Compute on `mf_vm` the Von-Mises stress or the Tresca stress of a field for "
@@ -2703,7 +2703,7 @@ msgstr ""
 "は構成則のパラメータのベクトルです．長さは法則によります．これは，定数値の短いベクトル，または可変係数の有限要素法で記述されたベクトルフィールドです． "
 "`version` は 'Von_Mises' または 'Tresca' のいずれかです( 'Von_Mises' がデフォルトです)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_elastoplasticity_Von_Mises_or_Tresca:1
 msgid ""
 "Compute on `mf_vm` the Von-Mises or the Tresca stress of a field for "
@@ -2715,7 +2715,7 @@ msgstr ""
 "はメッシュによってサポートされる応力制約値を含むベクトルです． `version` は 'Von_Mises' または 'Tresca' "
 "('Von_Mises' がデフォルト)でなければなりません．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_finite_strain_elasticity_Von_Mises:1
 msgid ""
 "Compute on `mf_vm` the Von-Mises stress of a field `varname` for nonlinear "
@@ -2728,7 +2728,7 @@ msgstr ""
 "は構成則であり，有効な名前である必要があります． `params` "
 "はパラメータ則です．定数値の短いベクトルにすることも，モデルのデータや変数に依存することもできます．高水準汎用アセンブリを使用します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_finite_strain_elastoplasticity_Von_Mises:1
 msgid ""
 "Synopsis: V = Model.compute_finite_strain_elastoplasticity_Von_Mises(self, "
@@ -2739,7 +2739,7 @@ msgstr ""
 "mim, MeshFem mf_vm, string lawname, string unknowns_type, [, string "
 "varnames, ...] [, string params, ...] [, int region = -1])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_finite_strain_elastoplasticity_Von_Mises:3
 msgid ""
 "Compute on `mf_vm` the Von-Mises or the Tresca stress of a field for "
@@ -2749,7 +2749,7 @@ msgstr ""
 "塑性場のVon-MisesまたはTresca応力を `mf_vm` で計算し，ベクトルVに返します．最初の入力パラメータは関数 'finite "
 "strain elastoplasticity next iter' と同様です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_isotropic_linearized_Von_Mises_or_Tresca:1
 msgid ""
 "Compute the Von-Mises stress or the Tresca stress of a field (only valid for"
@@ -2760,7 +2760,7 @@ msgstr ""
 "'Von_Mises' または 'Tresca' ( 'Von_Mises' "
 "がデフォルト)でなければなりません．Lame係数によってパラメータ化されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_isotropic_linearized_Von_Mises_pstrain:1
 msgid ""
 "Compute the Von-Mises stress  of a displacement field for isotropic "
@@ -2770,7 +2770,7 @@ msgstr ""
 "平面ひずみを仮定した3次元または2次元における等方性線形化弾性の変位場のVon-"
 "Mises応力を計算します．Young率とPoisson比によってパラメータ化されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_isotropic_linearized_Von_Mises_pstress:1
 msgid ""
 "Compute the Von-Mises stress  of a displacement field for isotropic "
@@ -2780,7 +2780,7 @@ msgstr ""
 "平面応力を仮定した3次元または2次元における等方性線形化弾性の変位場のVon-"
 "Mises応力を計算します．Young率とPoisson比によってパラメータ化されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_plastic_part:1
 msgid ""
 "Compute on `mf_pl` the plastic part and return it into the vector V. "
@@ -2789,7 +2789,7 @@ msgid ""
 msgstr ""
 "プラスチック成形品を `mf_pl` で計算し，ベクトルVに返します． `datasigma` はメッシュでサポートされる応力拘束値を含むベクトルです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_second_Piola_Kirchhoff_tensor:1
 msgid ""
 "Compute on `mf_sigma` the second Piola Kirchhoff stress tensor of a field "
@@ -2805,18 +2805,18 @@ msgstr ""
 "Geymonat'となります． `dataname` "
 "は構成則のパラメータのベクトルです．長さは法則によります．これは，定数値の短いベクトル，または可変係数の有限要素法で記述されたベクトルフィールドです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.contact_brick_set_BN:1
 msgid "Can be used to set the BN matrix of a basic contact/friction brick."
 msgstr "基本的な接触/摩擦ブリックのBNマトリックスの設定に使用できます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.contact_brick_set_BT:1
 msgid ""
 "Can be used to set the BT matrix of a basic contact with friction brick."
 msgstr "摩擦ブリックとの基本接触のBTマトリックスの設定に使用できます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.define_variable_group:1
 msgid ""
 "Synopsis: Model.define_variable_group(self, string name[, string varname, "
@@ -2824,34 +2824,34 @@ msgid ""
 msgstr ""
 "概要: Model.define_variable_group(self, string name[, string varname, ...])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.define_variable_group:3
 msgid ""
 "Defines a group of variables for the interpolation (mainly for the "
 "raytracing interpolation transformation."
 msgstr "補間 (主にレイトレーシング補間変換の変数のグループを定義します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.del_macro:1
 msgid ""
 "Delete a previously defined macro for the high generic assembly language."
 msgstr "汎用アセンブリ言語用に定義済みのマクロを削除します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.delete_brick:1
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.delete_variable:1
 msgid "Delete a variable or a data from the model."
 msgstr "モデルから変数またはデータを削除します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.disable_bricks:1
 msgid ""
 "Disable a brick (the brick will no longer participate to the building of the"
 " tangent linear system)."
 msgstr "ブリックを無効にします(ブリックは接線線形システムの構築に関与しなくなります)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.disable_variable:1
 msgid ""
 "Disable a variable for a solve (and its attached multipliers). The next "
@@ -2861,34 +2861,34 @@ msgid ""
 msgstr ""
 "求解のため変数(とその添付乗数)を使用不可にします．次の求解は，残りの変数に対してのみ実行されます．これにより，モデルの異なる部分を別々に求解できます．変数の強連成がある場合は，固定小数点方式を使用できます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.displacement_group_name_of_Nitsche_large_sliding_contact_brick:1
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.displacement_group_name_of_large_sliding_contact_brick:1
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.sliding_data_group_name_of_Nitsche_large_sliding_contact_brick:1
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.sliding_data_group_name_of_large_sliding_contact_brick:1
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
 #: getfem.getfem.Model.transformation_name_of_Nitsche_large_sliding_contact_brick:1
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.transformation_name_of_large_sliding_contact_brick:1
 msgid ""
 "Gives the name of the group of variables corresponding to the sliding data "
 "for an existing large sliding contact brick."
 msgstr "既存の有限すべり接触ブリックの滑りデータに対応する変数のグループの名前を指定します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.display:1
 msgid "displays a short summary for a Model object."
 msgstr "Modelオブジェクトの概要が表示されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.elastoplasticity_next_iter:1
 msgid ""
 "Used with the old (obsolete) elastoplasticity brick to pass from an "
@@ -2907,17 +2907,17 @@ msgstr ""
 "でなければなりません． 'datalambda' および 'datamu' は，材料のLame係数です． 'datasigma' "
 "は新しい応力拘束値を格納するベクトルです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.enable_bricks:1
 msgid "Enable a disabled brick."
 msgstr "無効なブリックを有効にします．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.enable_variable:1
 msgid "Enable a disabled variable (and its attached multipliers)."
 msgstr "使用不可の変数を使用可能にします(付属の乗数)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.finite_strain_elastoplasticity_next_iter:1
 msgid ""
 "Synopsis: Model.finite_strain_elastoplasticity_next_iter(self, MeshIm mim, "
@@ -2928,7 +2928,7 @@ msgstr ""
 "lawname, string unknowns_type, [, string varnames, ...] [, string params, "
 "...] [, int region = -1])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.finite_strain_elastoplasticity_next_iter:3
 msgid ""
 "Function that allows to pass from a time step to another for the finite "
@@ -2947,13 +2947,13 @@ msgstr ""
 "Mieheの法則に対して，この関数は `varnames` の最後の2つのエントリで定義されている状態変数を更新し，  `varnames` "
 "の2番目のエントリとして与えられる塑性乗数フィールドをリセットします．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.first_iter:1
 msgid ""
 "To be executed before the first iteration of a time integration scheme."
 msgstr "時間積分スキームの最初の反復の前に実行します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.from_variables:1
 msgid ""
 "Return the vector of all the degrees of freedom of the model consisting of "
@@ -2961,17 +2961,17 @@ msgid ""
 "problem with you own solver)."
 msgstr "モデルの変数を連結したモデルのすべての自由度(独自のソルバを使用して求解するのに便利)のベクトルを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.get_time:1
 msgid "Give the value of the data `t` corresponding to the current time."
 msgstr "現在時刻に対応するデータ `t` の値を指定します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.get_time_step:1
 msgid "Gives the value of the time step."
 msgstr "タイムステップの値を指定します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.interpolation:1
 msgid ""
 "Synopsis: V = Model.interpolation(self, string expr, {MeshFem mf | MeshImd "
@@ -2981,7 +2981,7 @@ msgstr ""
 "概要: V = Model.interpolation(self, string expr, {MeshFem mf | MeshImd mimd | "
 "vec pts, Mesh m}[, int region[, int extrapolation[, int rg_source]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.interpolation:3
 msgid ""
 "Interpolate a certain expression with respect to the mesh_fem `mf` or the "
@@ -2992,33 +2992,33 @@ msgstr ""
 "mesh_fem `mf` または mesh_im_data `mimd` またはメッシュ `m` 上の点の集合 `pts` "
 "を基準にして特定の式を補間します．式は，モデルの変数とデータへの参照を含む可能性があります，高水準汎用アセンブリ言語に従って有効である必要があります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.interpolation:9
 msgid ""
 "The options `extrapolation` and `rg_source` are specific to interpolations "
 "with respect to a set of points `pts`."
 msgstr "オプション `外挿` と `rg_source` は，点 `pts` の集合に関する補間のためのものです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.interval_of_variable:1
 msgid ""
 "Gives the interval of the variable `varname` in the linear system of the "
 "model."
 msgstr "モデルの線形システムの変数 `varname` の間隔を指定します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.is_complex:1
 msgid "Return 0 is the model is real, 1 if it is complex."
 msgstr "モデルが実数の場合は0を返し，複素数の場合は1を返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.list_residuals:1
 msgid ""
 "print to the output the residuals corresponding to all terms included in the"
 " model."
 msgstr "モデルに含まれるすべての項に対応する残差を出力します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.local_projection:1
 msgid ""
 "Make an elementwise L2 projection of an expression with respect to the "
@@ -3029,24 +3029,24 @@ msgstr ""
 "mesh_fem `mf` "
 "を基準にして，式の要素ごとのL2投影を作成します．このmesh_femは不連続である必要があります．式は，モデルの変数とデータへの参照を含む可能性があります，上位レベルの汎用アセンブリ言語に従い有効である必要があります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.matrix_term:1
 msgid "Gives the matrix term ind_term of the brick ind_brick if it exists"
 msgstr "存在する場合，ブリック ind_brick のマトリックス項 ind_term を返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.memsize:1
 msgid ""
 "Return a rough approximation of the amount of memory (in bytes) used by the "
 "model."
 msgstr "モデルが使用するメモリ量(バイト単位)の概算値を返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.mesh_fem_of_variable:1
 msgid "Gives access to the `mesh_fem` of a variable or data."
 msgstr "変数またはデータの `mesh_fem` へのアクセスを許可します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.mult_varname_Dirichlet:1
 msgid ""
 "Gives the name of the multiplier variable for a Dirichlet brick. If the "
@@ -3055,18 +3055,18 @@ msgid ""
 msgstr ""
 "Dirichletブリックの乗数変数の名前を指定します．ブリックが乗数ブリックを持つDirichlet条件ではない場合，この関数の動作は未定義です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.nbdof:1
 msgid "Return the total number of degrees of freedom of the model."
 msgstr "モデルの自由度の総数を返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.next_iter:1
 msgid ""
 "To be executed at the end of each iteration of a time integration scheme."
 msgstr "時間積分スキームの各反復の終了時に実行されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.perform_init_time_derivative:1
 msgid ""
 "By calling this function, indicates that the next solve will compute the "
@@ -3079,7 +3079,7 @@ msgstr ""
 "この関数を呼び出すことにより，時間積分スキームによって必要とされる導関数に対応するデータを初期化するためには，次の求解が(非常に)小さな時間ステップ "
 "`ddt` (主に時間問題では1次の初期時間微分，時間問題では2次の2次時間微分)の解を計算することを示します．次の求解では，変数の値は変更されません．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.resize_variable:1
 msgid ""
 "Resize a  constant size variable of the model.  `sizes` is either a integer "
@@ -3089,39 +3089,39 @@ msgstr ""
 "モデルの一定サイズ変数のサイズを変更します． `sizes` は(スカラー変数またはベクトル変数の場合)整数かテンソル変数の次元のベクトルです． "
 "`name` は変数名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.rhs:1
 msgid "Return the right hand side of the tangent problem."
 msgstr "接線問題の右辺を返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.set_element_extrapolation_correspondence:1
 msgid ""
 "Change the correspondence map of an element extrapolation interpolate "
 "transformation."
 msgstr "要素外挿補間変換の対応マップを変更します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.set_private_matrix:1
 msgid ""
 "For some specific bricks having an internal sparse matrix (explicit bricks: "
 "'constraint brick' and 'explicit matrix brick'), set this matrix."
 msgstr "内部に疎行列がある特定のブリック(陽なブリック: '拘束ブリック' と '陽な行列ブリック' )では，この行列を設定します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.set_private_rhs:1
 msgid ""
 "For some specific bricks having an internal right hand side vector (explicit"
 " bricks: 'constraint brick' and 'explicit rhs brick'), set this rhs."
 msgstr "内部右辺ベクトル(陽なブリック: '拘束ブリック' と '陽なブリック')を持つ特定のブリックでは，このrhsを設定します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.set_time:1
 msgid ""
 "Set the value of the data `t` corresponding to the current time to `t`."
 msgstr "現在時刻 `t` に対応するデータの値を `t` に設定します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.set_time_step:1
 msgid ""
 "Set the value of the time step to `dt`. This value can be change from a step"
@@ -3131,12 +3131,12 @@ msgstr ""
 "時間ステップの値を `dt` "
 "に設定します．この値は，すべてのワンステップスキームでステップから別のステップに変更できます(すなわち現時点では，提案されているすべての時間積分法)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.set_variable:1
 msgid "Set the value of a variable or data. `name` is the data name."
 msgstr "変数またはデータの値を設定します． `name` はデータ名です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.shift_variables_for_time_integration:1
 msgid ""
 "Function used to shift the variables of a model to the data corresponding of"
@@ -3147,7 +3147,7 @@ msgid ""
 msgstr ""
 "モデルの変数を，時間積分スキームの前の時間ステップの他の値に対応するデータにシフトするために使用される関数です．時間積分スキームが宣言されている変数ごとに，スキームが呼び出されてシフトが実行されます．この関数は，2つのタイムステップの間に呼び出す必要があります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.small_strain_elastoplasticity_Von_Mises:1
 msgid ""
 "Synopsis: V = Model.small_strain_elastoplasticity_Von_Mises(self, MeshIm "
@@ -3160,7 +3160,7 @@ msgstr ""
 " [, string params, ...] [, string theta = '1' [, string dt = 'timestep']] [,"
 " int region])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.small_strain_elastoplasticity_Von_Mises:3
 msgid ""
 "This function computes the Von Mises stress field with respect to a small "
@@ -3175,7 +3175,7 @@ msgstr ""
 "とまったく同じでなければなりません．この関数を呼び出す前に， `small_strain_elastoplasticity_next_iter` "
 "を呼び出す必要があります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.small_strain_elastoplasticity_next_iter:1
 msgid ""
 "Synopsis: Model.small_strain_elastoplasticity_next_iter(self, MeshIm mim,  "
@@ -3187,7 +3187,7 @@ msgstr ""
 "lawname, string unknowns_type [, string varnames, ...] [, string params, "
 "...] [, string theta = '1' [, string dt = 'timestep']] [, int region = -1])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.small_strain_elastoplasticity_next_iter:3
 msgid ""
 "Function that allows to pass from a time step to another for the small "
@@ -3206,17 +3206,17 @@ msgstr ""
 " 'u' から 'Previous_u' )．これは， "
 "`compute_small_strain_elastoplasticity_Von_Mises` を使用する前に呼び出す必要があります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:1
 msgid "Synopsis: (nbit, converged) = Model.solve(self[, ...])"
 msgstr "概要: (nbit, converged) = Model.solve(self[, ...])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:3
 msgid "Run the standard getfem solver."
 msgstr "標準のgetfemソルバーを実行します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:5
 msgid ""
 "Note that you should be able to use your own solver if you want (it is "
@@ -3226,61 +3226,61 @@ msgstr ""
 "必要に応じて，独自のソルバを使用できるようにする必要があります( Model.tangent_matrix() "
 "などで接線行列とその右辺を得ることができます)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:9
 msgid "Various options can be specified:"
 msgstr "さまざまなオプションを指定できます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:11
 msgid "'noisy' or 'very_noisy'"
 msgstr "'noisy' または 'very_noisy'"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:12
 msgid ""
 "the solver will display some information showing the progress (residual "
 "values etc.)."
 msgstr "ソルバが進行状況を示す情報が表示します(残差値など)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:14
 msgid "'max_iter', int NIT"
 msgstr "'max_iter', int NIT"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:15
 msgid "set the maximum iterations numbers."
 msgstr "最大反復回数を設定します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:16
 msgid "'max_res', @float RES"
 msgstr "'max_res', @float RES"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:17
 msgid "set the target residual value."
 msgstr "目標残差値を設定します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:18
 msgid "'diverged_res', @float RES"
 msgstr "'diverged_res', @float RES"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:19
 msgid ""
 "set the threshold value of the residual beyond which the iterative method is"
 " considered to diverge (default is 1e200)."
 msgstr "反復法が発散したと見なされる残差のしきい値を設定します(デフォルトは1e200です)．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:21
 msgid "'lsolver', string SOLVER_NAME"
 msgstr "'lsolver', string SOLVER_NAME"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:22
 msgid ""
 "select explicitely the solver used for the linear systems (the default value"
@@ -3291,12 +3291,12 @@ msgstr ""
 " 'superlu' ，(サポートされている場合) 'mumps' ， 'cg/ildlt' ， 'gmres/ilut' ，および "
 "'gmres/ilut' です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:26
 msgid "'lsearch', string LINE_SEARCH_NAME"
 msgstr "'lsearch', string LINE_SEARCH_NAME"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:27
 msgid ""
 "select explicitely the line search method used for the linear systems (the "
@@ -3306,12 +3306,12 @@ msgstr ""
 "線形システムで使用される線検索方法を明示的に選択します(デフォルト値は 'default' です)．指定できる値は， 'simplest' ， "
 "'systematic' ， 'quadratic' ，または 'basic' です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:31
 msgid "Return the number of iterations, if an iterative method is used."
 msgstr "反復法が使用される場合，反復回数を返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.solve:33
 msgid ""
 "Note that it is possible to disable some variables (see "
@@ -3324,12 +3324,12 @@ msgstr ""
 "Model.disable_variable() "
 "を参照してください)を無効にすることが可能であることに注意してください．例えば，全体Newton法を固定小数点法で置き換えることができます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.tangent_matrix:1
 msgid "Return the tangent matrix stored in the model ."
 msgstr "モデルに格納されている接線行列を返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.test_tangent_matrix:1
 msgid ""
 "Synopsis: Model.test_tangent_matrix(self[, scalar EPS[, int NB[, scalar "
@@ -3337,7 +3337,7 @@ msgid ""
 msgstr ""
 "概要: Model.test_tangent_matrix(self[, scalar EPS[, int NB[, scalar scale]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.test_tangent_matrix:3
 msgid ""
 "Test the consistency of the tangent matrix in some random positions and "
@@ -3354,7 +3354,7 @@ msgstr ""
 "は現在位置の周囲のランダムな位置(デフォルトは1で，0が許容値です)のパラメータです．ランダム位置の各自由度は [current-scale, "
 "current+scale] の範囲内で選択されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.test_tangent_matrix_term:1
 msgid ""
 "Synopsis: Model.test_tangent_matrix_term(self, string varname1, string "
@@ -3363,7 +3363,7 @@ msgstr ""
 "概要: Model.test_tangent_matrix_term(self, string varname1, string varname2[, "
 "scalar EPS[, int NB[, scalar scale]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.test_tangent_matrix_term:3
 msgid ""
 "Test the consistency of a part of the tangent matrix in some random "
@@ -3386,7 +3386,7 @@ msgstr ""
 "は現在位置の周囲のランダムな位置(デフォルトは1で，0が許容値です)のパラメータである．ランダム位置の各自由度は [current-scale, "
 "current+scale] の範囲内で選択されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.to_variables:1
 msgid ""
 "Set the value of the variables of the model with the vector `V`. Typically, "
@@ -3396,12 +3396,12 @@ msgstr ""
 "ベクトル `V` でモデルの変数の値を設定します．通常，ベクトル `V` "
 "は接線線形システム(独自のソルバを使用して問題を解決するのに便利)のソルバの結果です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.variable:1
 msgid "Gives the value of a variable or data."
 msgstr "変数またはデータの値を指定します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.variable_list:1
 msgid "print to the output the list of variables and constants of the model."
 msgstr "モデルの変数と定数のリストを出力に出力します．"
