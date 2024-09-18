@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-11 01:27+0000\n"
+"POT-Creation-Date: 2024-09-18 02:32+0000\n"
 "PO-Revision-Date: 2018-07-16 07:18+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Module asm"
 msgstr "モジュール asm"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_generic:1
 msgid ""
 "Synopsis: (...) = asm_generic(MeshIm mim, int order, string expression, int "
@@ -38,13 +38,13 @@ msgstr ""
 "is_variable[, {MeshFem mf, MeshImd mimd}], value], ['select_output', "
 "'varname1'[, 'varname2]], ...)"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_generic:3
 msgid ""
 "High-level generic assembly procedure for volumic or boundary assembly."
 msgstr "ボリュームアセンブリまたは境界アセンブリの高水準の汎用アセンブリ手順．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_generic:5
 msgid ""
 "Performs the generic assembly of `expression` with the integration method "
@@ -55,7 +55,7 @@ msgstr ""
 "積分法 `mim` を使用して，インデックス `region` (-1はメッシュのすべての要素を意味します)のメッシュ領域上で `expression`"
 " の汎用アセンブリを実行します．同じメッシュを積分法と，変数に対応するすべての有限要素法またはmesh_im_dataで共有する必要があります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_generic:11
 msgid ""
 "`order` indicates either that the (scalar) potential (order = 0) or the "
@@ -65,7 +65,7 @@ msgstr ""
 "`order` は，(スカラー)ポテンシャル (order=0) "
 "，(ベクトル)残差(order=1)，または接線(行列)(order=2)のいずれかが計算されることを示します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_generic:15
 msgid ""
 "`model` is an optional parameter allowing to take into account all variables"
@@ -76,7 +76,7 @@ msgstr ""
 "`model` はモデルのすべての変数とデータを考慮に入れることができるオプションのパラメータです．モデルのすべての使用可能な変数は，たとえ "
 "`expression` に存在しなくても，全体系での自由度に対応する返されたベクトル/行列の空間を占めることに注意してください．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_generic:21
 msgid ""
 "The variables and constants (data) are listed after the region number (or "
@@ -92,7 +92,7 @@ msgid ""
 msgstr ""
 "変数と定数(データ)は，領域番号(またはオプションでモデル)の後にリストされます．変数/定数ごとに，最初に名前を指定する必要があります(アセンブリ文字列で参照されるとおり)．次に，変数または定数を宣言するために，それぞれ1または0に等しい整数が必要です．次に，fem変数/定数の場合は有限要素法，積分点で定義されたデータの場合はmesh_im_data，および変数/定数の値を表すベクトルが必要です．任意の数の変数/定数を指定できます．変数と定数の違いは，試験関数は変数に対してのみ使用でき，定数に対しては使用できないことです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_generic:33
 msgid ""
 "`select_output` is an optional parameter which allows to reduce the output "
@@ -103,7 +103,7 @@ msgstr ""
 "`select_output` は出力ベクトル( `order` が1の場合)または行列( `order` "
 "が2の場合)を指定された変数の自由度まで減らすことができるオプションのパラメータです．ベクトル出力には1つの変数を指定し，行列出力には2つの変数を指定する必要があります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_generic:39
 msgid ""
 "Note that if several variables are given, the assembly of the tangent "
@@ -116,19 +116,19 @@ msgstr ""
 "複数の変数が与えられた場合，正接行列/残差ベクトルのアセンブリは，関数の呼び出しの順序を考慮して行われます(最初の変数の自由度，次に2番目の変数の自由度，というように続きます)．モデルが提供されている場合，一部のモデル変数が"
 " `expression` に現れない場合でも，モデルのすべての自由度が最初にカウントされます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_generic:46
 msgid "For example, the L2 norm of a vector field \"u\" can be computed with::"
 msgstr "例えば，ベクトルフィールド \"u\" のL2ノルムは"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_generic:52
 msgid ""
 "The nonhomogeneous Laplacian stiffness matrix of a scalar field can be "
 "evaluated with::"
 msgstr "スカラー場の不均質Laplacian剛性行列は以下で評価できます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_mass_matrix:1
 msgid ""
 "Synopsis: M = asm_mass_matrix(MeshIm mim, MeshFem mf1[, MeshFem mf2[, int "
@@ -137,50 +137,50 @@ msgstr ""
 "概要: M = asm_mass_matrix(MeshIm mim, MeshFem mf1[, MeshFem mf2[, int "
 "region]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_mass_matrix:3
 msgid "Assembly of a mass matrix."
 msgstr "質量行列のアセンブリ．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_bilaplacian:5
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_bilaplacian_KL:5
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_boundary_qu_term:7
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_helmholtz:5
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_laplacian:5
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_linear_elasticity:6
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_lsneuman_matrix:3
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_mass_matrix:5
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nlsgrad_matrix:3
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_stabilization_patch_matrix:3
 msgid "Return a SpMat object."
 msgstr "SpMatオブジェクトを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_laplacian:1
 msgid "Assembly of the matrix for the Laplacian problem."
 msgstr "Laplacian問題の行列の組み立て．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_laplacian:3
 msgid ":math:`\\nabla\\cdot(a(x)\\nabla u)`  with `a` a scalar."
 msgstr ":math:`\\nabla\\cdot(a(x)\\nabla u)` ここで `a` はスカラーです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_linear_elasticity:1
 msgid "Assembles of the matrix for the linear (isotropic) elasticity problem."
 msgstr "線形(等方性)弾性問題のためのマトリックスの集合．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_linear_elasticity:3
 msgid ""
 ":math:`\\nabla\\cdot(C(x):\\nabla u)` with :math:`C` defined via `lambda_d` "
@@ -189,7 +189,7 @@ msgstr ""
 ":math:`\\nabla\\cdot(C(x):\\nabla u)` ここで :math:`C` は `lambda_d` と `mu_d` "
 "によって定義されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nonlinear_elasticity:1
 msgid ""
 "Synopsis: TRHS = asm_nonlinear_elasticity(MeshIm mim, MeshFem mf_u, vec U, "
@@ -202,21 +202,21 @@ msgstr ""
 "tangent matrix', MeshFem mf_p, vec P|'incompressible rhs', MeshFem mf_p, vec"
 " P})"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nonlinear_elasticity:3
 msgid ""
 "Assembles terms (tangent matrix and right hand side) for nonlinear "
 "elasticity."
 msgstr "非線形弾性の項(接線行列と右辺)をアセンブルします．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nonlinear_elasticity:5
 msgid ""
 "The solution `U` is required at the current time-step. The `law` may be "
 "choosen among:"
 msgstr "現在の時間ステップでは解 `U` が必要です． `law` は次の中から選択することができます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nonlinear_elasticity:8
 msgid ""
 "'SaintVenant Kirchhoff': Linearized law, should be avoided. This law has the"
@@ -225,7 +225,7 @@ msgstr ""
 "'SaintVenant Kirchhoff': "
 "線形則，避けるべきです．この法則には，パラメータとして，lambdaおよびmuと呼ばれる2つの通常のLame係数があります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nonlinear_elasticity:11
 msgid ""
 "'Mooney Rivlin': This law has three parameters, called C1, C2 and D1. Can be"
@@ -237,7 +237,7 @@ msgstr ""
 "'incompressible' "
 "を付けることで，特定のバージョンを強制するころができます．デフォルトでは，最初の2つの材料係数のみを必要とする非圧縮性バージョンが考慮されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nonlinear_elasticity:16
 msgid ""
 "'neo Hookean': A special case of the 'Mooney Rivlin' law that requires one "
@@ -247,7 +247,7 @@ msgstr ""
 "'neo Hookean':  'Mooney Rivlin' 法の特殊なケースです．材料係数がひとつ少なくなります (C2 = "
 "0)．デフォルトでは圧縮性のバージョンが使用されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nonlinear_elasticity:19
 msgid ""
 "'Ciarlet Geymonat': This law has 3 parameters, called lambda, mu and gamma, "
@@ -256,7 +256,7 @@ msgstr ""
 "'Ciarlet Geymonat': この法則にはlambda，mu と gammaと呼ばれる3つのパラメータがあります．ここでgammaは "
 "]-lambda/2-mu, -mu[ になるように選択されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nonlinear_elasticity:23
 msgid ""
 "The parameters of the material law are described on the MeshFem `mf_d`. The "
@@ -266,7 +266,7 @@ msgstr ""
 "材料法則のパラメータは，MeshFem `mf_d` で記述します．行列 `params` では，行はパラメータに対応し列は `nbdof(mf_d)`"
 " に対応します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nonlinear_elasticity:27
 msgid ""
 "The last argument selects what is to be built: either the tangent matrix, or"
@@ -274,7 +274,7 @@ msgid ""
 "followed by a MeshFem `mf_p`, for the pression."
 msgstr "最後の引数は作成するもの，接線行列またはRHS，を選択します．非圧縮性を考慮する場合，圧縮にはMeshFem `mf_p` が必要です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nonlinear_elasticity:32
 msgid ""
 "Return a SpMat object (tangent matrix), vec object (right hand side), tuple "
@@ -283,41 +283,41 @@ msgid ""
 msgstr ""
 "SpMatオブジェクト(接線行列)，vecオブジェクト(右辺)，SpMatオブジェクトのタプル(非圧縮接線行列)，またはvecオブジェクトのタプル(非圧縮性右辺)を返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_helmholtz:1
 msgid "Assembly of the matrix for the Helmholtz problem."
 msgstr "Helmholtz問題の行列の組み立て．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_helmholtz:3
 msgid ":math:`\\Delta u + k^2 u` = 0,  with `k` complex scalar."
 msgstr ":math:`\\Delta u + k^2 u` = 0 ，ただし `k` は複素数スカラーです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_bilaplacian:1
 msgid "Assembly of the matrix for the Bilaplacian problem."
 msgstr "Bilaplacian問題のための行列の組み立てです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_bilaplacian:3
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_bilaplacian_KL:3
 msgid ":math:`\\Delta(a(x)\\Delta u) = 0`   with `a` scalar."
 msgstr ":math:`\\Delta(a(x)\\Delta u) = 0` ただし `a` はスカラーです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_bilaplacian_KL:1
 msgid ""
 "Assembly of the matrix for the Bilaplacian problem with Kirchhoff-Love "
 "formulation."
 msgstr "Kirchhoff-Love 定式化を用いたBilaplacian問題に対する行列の組み立て．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_volumic_source:1
 msgid "Assembly of a volumic source term."
 msgstr "体積ソース項のアセンブリ．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_volumic_source:3
 msgid ""
 "Output a vector `V`, assembled on the MeshFem `mf_u`, using the data vector "
@@ -326,23 +326,23 @@ msgstr ""
 "データMeshFem `mf_d` で定義されたデータベクトル `fd` を使用して，MeshFem `mf_u` 上で組み立てられたベクトル `V` "
 "を出力します． `fd` は実数値でも複素数値でもよいです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_boundary_source:7
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_integral_contact_Uzawa_projection:7
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_level_set_normal_source_term:6
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_volumic_source:7
 msgid "Return a vec object."
 msgstr "vecオブジェクトを返します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_boundary_source:1
 msgid "Assembly of a boundary source term."
 msgstr "境界ソース項の構築．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_boundary_source:3
 msgid ""
 "`G` should be a [Qdim x N] matrix, where N is the number of dof of `mf_d`, "
@@ -352,12 +352,12 @@ msgstr ""
 "`G` は [Qdim x N] 行列でなければなりません．ここでNは `mf_d` "
 "の自由度数であり，(MeshFemの作成時に設定される)Qdimは未知のuの次元です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_dirichlet:1
 msgid "Assembly of Dirichlet conditions of type `h.u = r`."
 msgstr "`h.u = r` 型のDirichlet条件の集合です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_dirichlet:3
 msgid ""
 "Handle `h.u = r` where h is a square matrix (of any rank) whose size is "
@@ -368,17 +368,17 @@ msgstr ""
 "ハンドル `h.u = r` ここでhは(あらゆるrankの)正方行列で，その大きさは未知のuの次元と等しいです．この行列は `H` ， `mf_d` "
 "の自由度ごとに1列ずつ格納され，各列には行列hの値がFortranの次数で格納されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_dirichlet:8
 msgid "`H(:,j) = [h11(x_j) h21(x_j) h12(x_j) h22(x_j)]`"
 msgstr "`H(:,j) = [h11(x_j) h21(x_j) h12(x_j) h22(x_j)]`"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_dirichlet:12
 msgid "if u is a 2D vector field."
 msgstr "uが2次元ベクトルフィールドの場合．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_dirichlet:14
 msgid ""
 "Of course, if the unknown is a scalar field, you just have to set `H = "
@@ -387,7 +387,7 @@ msgstr ""
 "もちろん，未知のスカラーフィールドである場合，単に `H = ones(1, N)` を設定する必要があります．ここでNは `mf_d` "
 "の自由度数です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_dirichlet:17
 msgid ""
 "This is basically the same than calling gf_asm('boundary qu term') for `H` "
@@ -397,17 +397,17 @@ msgstr ""
 "これは基本的に， gf_asm('boundary qu term') を `H` に対して呼び出し， gf_asm('neumann') を `R` "
 "に対して呼び出すのと同じですが，この関数は(可能な場合) 'より良い ' (より多くの対角線)制約行列を生成しようとします．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_dirichlet:22
 msgid "See also Spmat.Dirichlet_nullspace()."
 msgstr "Spmat.Dirichlet_nullspace() も参照してください．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_boundary_qu_term:1
 msgid "Assembly of a boundary qu term."
 msgstr "境界qu項のアセンブリです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_boundary_qu_term:3
 msgid ""
 "`q` should be be a [Qdim x Qdim x N] array, where N is the number of dof of "
@@ -417,7 +417,7 @@ msgstr ""
 "`q` は [Qdim x Qdim x N] 配列でなければなりません．ここでNは `mf_d` "
 "の自由度数であり，Qdimは(MeshFemの作成時に設定される)未知変数uの次元です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_define_function:1
 msgid ""
 "Synopsis: asm_define_function(string name, int nb_args, string expression[, "
@@ -426,7 +426,7 @@ msgstr ""
 "概要: asm_define_function(string name, int nb_args, string expression[, string"
 " expression_derivative_t[, string expression_derivative_u]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_define_function:3
 msgid ""
 "Define a new function `name` which can be used in high level generic "
@@ -448,14 +448,14 @@ msgstr ""
 "`expression_derivative_t` と `expression_derivative_u` は `t` と `u` "
 "に関する導関数のオプション式です．指定されていない場合は，記号による微分が使用されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_undefine_function:1
 msgid ""
 "Cancel the definition of a previously defined function `name` for the high "
 "level generic assembly."
 msgstr "高水準の汎用アセンブリに対して以前に定義された関数 `name` の定義をキャンセルします．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_define_linear_hardening_function:1
 msgid ""
 "Synopsis: asm_define_linear_hardening_function(string name, scalar sigma_y0,"
@@ -464,7 +464,7 @@ msgstr ""
 "概要: asm_define_linear_hardening_function(string name, scalar sigma_y0, "
 "scalar H, ... [string 'Frobenius'])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_define_linear_hardening_function:3
 msgid ""
 "Define a new linear hardening function under the name `name`, with initial "
@@ -476,7 +476,7 @@ msgstr ""
 "初期降伏応力が `sigma_y0` で硬化係数がHの新しい線形硬化関数をnameという名前で定義します．値が 'Frobenius' "
 "の特別な文字列引数が指定された場合，硬化関数はVon-Mises相当ではなく，入力ひずみと出力応力のFrobeniusノルムで表されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_define_Ramberg_Osgood_hardening_function:1
 msgid ""
 "Synopsis: asm_define_Ramberg_Osgood_hardening_function(string name, scalar "
@@ -487,7 +487,7 @@ msgstr ""
 "sigma_ref, {scalar eps_ref | scalar E, scalar alpha}, scalar n[, string "
 "'Frobenius'])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_define_Ramberg_Osgood_hardening_function:3
 msgid ""
 "Define a new Ramberg Osgood hardening function under the name `name`, with "
@@ -500,7 +500,7 @@ msgstr ""
 "'Frobenius' の特別な文字列引数が指定されている場合，硬化関数は，Von-"
 "Mises相当ではなく，入力ひずみと出力応力のFrobeniusノルムで表されます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_expression_analysis:1
 msgid ""
 "Synopsis: asm_expression_analysis(string expression [, {Mesh mesh | MeshIm "
@@ -511,14 +511,14 @@ msgstr ""
 "[, der_order] [, Model model] [, string varname, int is_variable[, {MeshFem "
 "mf | MeshImd mimd}], ...])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_expression_analysis:3
 msgid ""
 "Analyse a high-level generic assembly expression and print information about"
 " the provided expression."
 msgstr "高水準汎用アセンブリ表現を解析し，指定された表現に関する情報を出力します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_volumic:1
 msgid ""
 "Synopsis: (...) = asm_volumic(,CVLST], expr [, mesh_ims, mesh_fems, "
@@ -526,12 +526,12 @@ msgid ""
 msgstr ""
 "概要: (...) = asm_volumic(,CVLST], expr [, mesh_ims, mesh_fems, data...])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_volumic:3
 msgid "Low-level generic assembly procedure for volumic assembly."
 msgstr "体積構築の低水準汎用アセンブリ手順．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_volumic:5
 msgid ""
 "The expression `expr` is evaluated over the MeshFem's listed in the "
@@ -544,17 +544,17 @@ msgstr ""
 "は引数(オプションのデータ)にリストされたMeshFemに対して評価され，出力引数に割り当てられます．アセンブリ式の構文の詳細については，getfemユーザマニュアル(か"
 " GetFEM のソースファイル getfem_assembling.h )を参照してください．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_volumic:11
 msgid "For example, the L2 norm of a field can be computed with::"
 msgstr "たとえば，フィールドのL2ノルムは次のように計算できます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_volumic:17
 msgid "The Laplacian stiffness matrix can be evaluated with::"
 msgstr "Laplacian剛性マトリックスは，次の式で評価できます．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_boundary:1
 msgid ""
 "Synopsis: (...) = asm_boundary(int bnum, string expr [, MeshIm mim, MeshFem "
@@ -563,31 +563,31 @@ msgstr ""
 "概要: (...) = asm_boundary(int bnum, string expr [, MeshIm mim, MeshFem mf, "
 "data...])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_boundary:3
 msgid "Low-level generic boundary assembly."
 msgstr "低水準の汎用境界のアセンブリです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_boundary:5
 msgid "See the help for gf_asm('volumic')."
 msgstr "gf_asm('volumic') のヘルプを参照してください．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_interpolation_matrix:1
 msgid ""
 "Synopsis: Mi = asm_interpolation_matrix(MeshFem mf, {MeshFem mfi | vec pts})"
 msgstr ""
 "概要: Mi = asm_interpolation_matrix(MeshFem mf, {MeshFem mfi | vec pts})"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_interpolation_matrix:3
 msgid ""
 "Build the interpolation matrix from a MeshFem onto another MeshFem or a set "
 "of points."
 msgstr "MeshFemから別のMeshFemまたは点集合の補間行列を構築します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_interpolation_matrix:5
 msgid ""
 "Return a matrix `Mi`, such that `V = Mi.U` is equal to "
@@ -600,12 +600,12 @@ msgstr ""
 "と等しいです．反復補間に便利です．これは単なる補間であり，ここでは基本的な積分は行われず， `mfi` "
 "はlagrangianでなければならないことに注意してください．より汎用的なケースでは，質量行列を介してL2投影を行う必要があります．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_interpolation_matrix:12
 msgid "`Mi` is a SpMat object."
 msgstr "`Mi` はSpMatオブジェクトです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_extrapolation_matrix:1
 msgid ""
 "Synopsis: Me = asm_extrapolation_matrix(MeshFem mf,  {MeshFem mfe | vec "
@@ -613,14 +613,14 @@ msgid ""
 msgstr ""
 "概要: Me = asm_extrapolation_matrix(MeshFem mf, {MeshFem mfe | vec pts})"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_extrapolation_matrix:3
 msgid ""
 "Build the extrapolation matrix from a MeshFem onto another MeshFem or a set "
 "of points."
 msgstr "MeshFemから別のMeshFemまたは点の集合に外挿行列を構築します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_extrapolation_matrix:5
 msgid ""
 "Return a matrix `Me`, such that `V = Me.U` is equal to "
@@ -628,12 +628,12 @@ msgid ""
 msgstr ""
 "行列Meを返します． `V = Me.U` は gf_compute('extrapolate_on',mfe) と等しいです．反復外挿に便利です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_extrapolation_matrix:9
 msgid "`Me` is a SpMat object."
 msgstr "`Me` はSpMatオブジェクトです．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_integral_contact_Uzawa_projection:1
 msgid ""
 "Synopsis: B = asm_integral_contact_Uzawa_projection(int bnum, MeshIm mim, "
@@ -646,19 +646,19 @@ msgstr ""
 "obstacle, scalar r [, {scalar coeff | MeshFem mf_coeff, vec coeff} [, int "
 "option[, scalar alpha, vec W]]])"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_integral_contact_Uzawa_projection:3
 msgid "Specific assembly procedure for the use of an Uzawa algorithm to solve"
 msgstr "Uzawaアルゴリズムを用いて解くための具体的な構築手順です．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_integral_contact_Uzawa_projection:4
 msgid ""
 "contact problems. Projects the term $-(\\lambda - r (u_N-g))_-$ on the "
 "finite element space of $\\lambda$."
 msgstr "接触問題． $-(\\lambda - r (u_N-g))_-$ の項を $\\lambda$ の有限要素空間に投影します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_level_set_normal_source_term:1
 msgid ""
 "Performs an assembly of the source term represented by `vec_lambda` on "
@@ -669,17 +669,17 @@ msgstr ""
 "境界 `bnum` 上の `mf_u` 上で定義されたベクトルフィールドのlevelset関数(levelsetの法線)の勾配方向の成分と考えられる "
 "`mf_lambda` 上で `vec_lambda` で表されるソース項のアセンブリを実行します．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_lsneuman_matrix:1
 msgid "Assembly of a level set Neuman  matrix."
 msgstr "levelset行列のアセンブリ．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_nlsgrad_matrix:1
 msgid "Assembly of a nlsgrad matrix."
 msgstr "nlsgrad行列のアセンブリ．"
 
-#: ../../../../../../venv/lib/python3.10/site-packages/getfem/getfem.pydocstring
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.asm_stabilization_patch_matrix:1
 msgid "Assembly of stabilization patch matrix ."
 msgstr "安定化パッチ行列のアセンブリ．"
