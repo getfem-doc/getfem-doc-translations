@@ -7,6 +7,7 @@ This conf.py do:
 - Specify `locale_dirs` and `gettext_compact`.
 - Overrides source directory as 'doc/sphinx/source`.
 """
+
 import os
 import pathlib
 
