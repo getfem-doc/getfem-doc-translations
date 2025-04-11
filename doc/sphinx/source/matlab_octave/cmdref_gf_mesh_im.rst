@@ -22,7 +22,7 @@ gf_mesh_im
 
 General constructor for mesh_im objects.
 
-  This object represents an integration method defined on a whole mesh (an 
+  This object represents an integration method defined on a whole mesh (and
   potentially on its boundaries).
 
 
@@ -65,7 +65,7 @@ General constructor for mesh_im objects.
     
     the syntax is very simple, for example if there are 3 different
     levelset,
-     
+    
      "a*b*c" is the intersection of the domains defined by each
      levelset (this is the default behaviour if this function is not
      called).
@@ -74,7 +74,7 @@ General constructor for mesh_im objects.
     
      "c-(a+b)" is the domain of the third levelset minus the union of
      the domains of the two others.
-     
+    
      "!a" is the complementary of the domain of a (i.e. it is the
      domain where a(x)>0)
     

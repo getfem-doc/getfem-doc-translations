@@ -227,7 +227,7 @@ gf_model_get
        Possible values are 'simplest', 'systematic', 'quadratic' or 'basic'.
     
       Return the number of iterations, if an iterative method is used.
-      
+    
       Note that it is possible to disable some variables
       (see gf_model_set(model M, 'disable variable') ) in order to
       solve the problem only with respect to a subset of variables (the

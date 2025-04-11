@@ -228,7 +228,7 @@ gf_model_set
   ``gf_model_set(model M, 'add fem data', string name, mesh_fem mf[, sizes])``
 
     Add a data to the model linked to a mesh_fem. <literal>name</literal> is the data name,
-    <literal>sizes</literal> an optional parameter which is either an 
+    <literal>sizes</literal> an optional parameter which is either an
     integer  or a vector of suplementary dimensions with respect to <literal>mf</literal>. 
 
 
@@ -236,7 +236,7 @@ gf_model_set
 
     Add a data to the model linked to a mesh_fem. <literal>name</literal> is the data name.
     The data is initiakized with <literal>V</literal>. The data can be a scalar or vector
-    field. <literal>sizes</literal> an optional parameter which is either an 
+    field. <literal>sizes</literal> an optional parameter which is either an
     integer or a vector of suplementary dimensions with respect to <literal>mf</literal>.
 
 
@@ -269,7 +269,7 @@ gf_model_set
   ``gf_model_set(model M, 'add initialized data', string name, vec V[, sizes])``
 
     Add an initialized fixed size data to the model. <literal>sizes</literal> an
-    optional parameter which is either an 
+    optional parameter which is either an
     integer  or a vector dimensions that describes the format of the
     data. By default, the data is considered to b a vector field.
     <literal>name</literal> is the data name and <literal>V</literal> is the value of the data.
@@ -542,7 +542,7 @@ gf_model_set
 
   ``gf_model_set(model M, 'add assembly assignment', string dataname, string expression[, int region[, int order[, int before]]])``
 
-    Adds expression <literal>expr</literal> to be evaluated at assembly time and being	 
+    Adds expression <literal>expr</literal> to be evaluated at assembly time and being
     assigned to the data <literal>dataname</literal> which has to be of im_data type.
     This allows for instance to store a sub-expression of an assembly
     computation to be used on an other assembly. It can be used for instance
@@ -554,14 +554,14 @@ gf_model_set
     of the other assembly terms, such that the data can be used in the
     remaining of the assembly as an intermediary result (be careful that it is
     still considered as a data, no derivation of the expression is performed
-    for the tangent system). 	 
+    for the tangent system).
     If before = 0 (default), the assignement is done after the assembly terms.
     
 
 
   ``gf_model_set(model M, 'clear assembly assignment')``
 
-    Delete all added assembly assignments 	 
+    Delete all added assembly assignments
     
 
 
@@ -646,7 +646,7 @@ gf_model_set
     This brick is to be reserved for simple Dirichlet conditions (only dof
     declared on the corresponding boundary are prescribed). The application
     of this brick on reduced dof may be problematic. Intrinsic vectorial
-    finite element method are not supported. 
+    finite element method are not supported.
     <literal>dataname</literal> is the optional right hand side of  the Dirichlet condition.
     It could be constant (but in that case, it can only be applied to
     Lagrange f.e.m.) or (important) described on the same finite
@@ -680,7 +680,7 @@ gf_model_set
     region <literal>region</literal>. This region should be a boundary. <literal>Neumannterm</literal>
     is the expression of the Neumann term (obtained by the Green formula)
     described as an expression of the high-level
-    generic assembly language. This term can be obtained by 
+    generic assembly language. This term can be obtained by
     gf_model_get(model M, 'Neumann term', varname, region) once all volumic bricks have
     been added to the model. The Dirichlet
     condition is prescribed with Nitsche's method. <literal>datag</literal> is the optional
@@ -756,7 +756,7 @@ gf_model_set
     This region should be a boundary. <literal>Neumannterm</literal>
     is the expression of the Neumann term (obtained by the Green formula)
     described as an expression of the high-level
-    generic assembly language. This term can be obtained by 
+    generic assembly language. This term can be obtained by
     gf_model_get(model M, 'Neumann term', varname, region) once all volumic bricks have
     been added to the model. The Dirichlet
     condition is prescribed with Nitsche's method. <literal>dataname</literal> is the optional
@@ -768,7 +768,7 @@ gf_model_set
     <literal>theta = -1</literal> corresponds to the skew-symmetric method which is
     inconditionally coercive. <literal>theta = 0</literal> is the simplest method
     for which the second derivative of the Neumann term is not necessary
-    even for nonlinear problems. 
+    even for nonlinear problems.
     Returns the brick index in the model.
     (This brick is not fully tested)
     
@@ -828,7 +828,7 @@ gf_model_set
     The region should be a boundary.   <literal>Neumannterm</literal>
     is the expression of the Neumann term (obtained by the Green formula)
     described as an expression of the high-level
-    generic assembly language. This term can be obtained by 
+    generic assembly language. This term can be obtained by
     gf_model_get(model M, 'Neumann term', varname, region) once all volumic bricks have
     been added to the model.  The Dirichlet
     condition is prescribed with Nitsche's method. <literal>dataname</literal> is the optional
@@ -1021,7 +1021,7 @@ gf_model_set
     on the whole mesh.
     On two-dimensional meshes, the term will correpsond to a plain strain
     approximation. On three-dimensional meshes, it will correspond to the
-    standard model. 
+    standard model.
     Return the brick index in the model.
 
 
@@ -1035,7 +1035,7 @@ gf_model_set
     on the whole mesh.
     On two-dimensional meshes, the term will correpsond to a plain stress
     approximation. On three-dimensional meshes, it will correspond to the
-    standard model. 
+    standard model.
     Return the brick index in the model.
 
 
@@ -1206,7 +1206,7 @@ gf_model_set
   ``ind = gf_model_set(model M, 'add finite strain elastoplasticity brick', mesh_im mim , string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, int region = -1])``
 
     Add a finite strain elastoplasticity brick to the model.
-    For the moment there is only one supported law defined through 
+    For the moment there is only one supported law defined through
     <literal>lawname</literal> as "Simo_Miehe".
     This law supports to possibilities of unknown variables to solve for
     defined by means of <literal>unknowns_type</literal> set to either
@@ -1391,8 +1391,8 @@ gf_model_set
     model for which <literal>varname_ua</literal> is the membrane displacements,
     <literal>varname_u3</literal> is the transverse displacement,
     <literal>varname_theta</literal> the rotation of
-    fibers normal to the midplane, 
-    <literal>varname_theta3</literal> the pinching,     
+    fibers normal to the midplane,
+    <literal>varname_theta3</literal> the pinching,
     'param_E' the Young Modulus,
     <literal>param_nu</literal> the poisson ratio,
     <literal>param_epsilon</literal> the plate thickness. Note that since this brick
@@ -1417,7 +1417,7 @@ gf_model_set
     For the moment, this is adapted to quadrilateral only (because it is not sufficient to
     remove the locking phenomenon on triangle elements). Note also that if
     you use high order elements, the projection on RT0 will reduce the order
-    of the approximation.   
+    of the approximation.
     Returns the brick index in the model.
       
 
@@ -1622,7 +1622,7 @@ gf_model_set
     range of acceptabe values (close to the Young modulus of the elastic
     body, see Getfem user documentation).  <literal>dataname_friction_coeff</literal> is
     the friction coefficient. It could be a scalar or a vector of values
-    representing the friction coefficient on each contact node. 
+    representing the friction coefficient on each contact node.
     The parameter <literal>augmented_version</literal>
     indicates the augmentation strategy : 1 for the non-symmetric
     Alart-Curnier augmented Lagrangian, 2 for the symmetric one (except for
@@ -1735,25 +1735,25 @@ gf_model_set
   ``ind = gf_model_set(model M, 'add Nitsche fictitious domain contact brick', mesh_im mim, string varname1, string varname2, string dataname_d1, string dataname_d2, string gamma0name [, scalar theta[, string dataname_friction_coeff[, string dataname_alpha, string dataname_wt1,string dataname_wt2]]])``
 
     Adds a contact condition with or without Coulomb friction between
-    two bodies in a fictitious domain. The contact condition is applied on 
-    the variable <literal>varname_u1</literal> corresponds with the first and slave body 
-    with Nitsche's method and on the variable <literal>varname_u2</literal> corresponds 
-    with the second and master body with Nitsche's method. 
+    two bodies in a fictitious domain. The contact condition is applied on
+    the variable <literal>varname_u1</literal> corresponds with the first and slave body
+    with Nitsche's method and on the variable <literal>varname_u2</literal> corresponds
+    with the second and master body with Nitsche's method.
     The contact condition is evaluated on the fictitious slave boundary.
-    The first body should be described by the level-set <literal>dataname_d1</literal> 
+    The first body should be described by the level-set <literal>dataname_d1</literal>
     and the second body should be described by the level-set <literal>dataname_d2</literal>.
-    <literal>gamma0name</literal> is the Nitsche's method parameter. 
-    <literal>theta</literal> is a scalar value which can be positive or negative. 
+    <literal>gamma0name</literal> is the Nitsche's method parameter.
+    <literal>theta</literal> is a scalar value which can be positive or negative.
     <literal>theta = 1</literal> corresponds to the standard symmetric method which is
     conditionally coercive for  <literal>gamma0</literal> small.
     <literal>theta = -1</literal> corresponds to the skew-symmetric method which is inconditionally coercive.
     <literal>theta = 0</literal> is the simplest method for which the second derivative of
     the Neumann term is not necessary. The optional parameter <literal>dataname_friction_coeff</literal>
-    is the friction coefficient which could be constant or defined on a finite element method. 
+    is the friction coefficient which could be constant or defined on a finite element method.
     CAUTION: This brick has to be added in the model after all the bricks
     corresponding to partial differential terms having a Neumann term.
     Moreover, This brick can only be applied to bricks declaring their
-    Neumann terms. Returns the brick index in the model. 
+    Neumann terms. Returns the brick index in the model.
     
 
 

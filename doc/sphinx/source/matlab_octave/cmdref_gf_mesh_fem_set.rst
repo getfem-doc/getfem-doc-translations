@@ -90,7 +90,7 @@ gf_mesh_fem_set
     Set reduction mesh fem
     This function selects the degrees of freedom of the finite element
     method by selecting a set of independent vectors of the matrix RM.
-    The numer of columns of RM should corresponds to the number of degrees
+    The number of columns of RM should correspond to the number of degrees
     of freedom of the finite element method.  
 
 

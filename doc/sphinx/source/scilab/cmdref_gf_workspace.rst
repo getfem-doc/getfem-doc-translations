@@ -24,7 +24,7 @@ gf_workspace
 **Description :**
 
 
-    Getfem workspace management function. 
+    Getfem workspace management function.
 
     Getfem uses its own workspaces in Matlab, independently of the
     matlab workspaces (this is due to some limitations in the memory
@@ -90,6 +90,6 @@ gf_workspace
 
   ``gf_workspace('class name', i)``
 
-    Return the class name of object i (if I is a mesh handle, it 
+    Return the class name of object i (if I is a mesh handle, it
     return gfMesh etc..) 
 
