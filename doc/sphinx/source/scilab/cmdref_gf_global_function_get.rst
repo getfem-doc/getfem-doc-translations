@@ -20,7 +20,7 @@ gf_global_function_get
 **Description :**
 
 
-    General function for querying information about global_function objects.
+  General function for querying information about global_function objects.
 
 
 **Command list :**
@@ -55,7 +55,6 @@ gf_global_function_get
     This can be used to perform comparisons between two
     different global_function objects.
     This function is to be completed.
-    
 
 
   ``gf_global_function_get(global_function GF, 'display')``

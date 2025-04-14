@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-11 01:48+0000\n"
+"POT-Creation-Date: 2025-04-14 01:55+0000\n"
 "PO-Revision-Date: 2020-04-26 01:50+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -100,23 +100,21 @@ msgstr "levelsetによって暗黙的に定義されたパーティションに�
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im.rst:59
 msgid ""
-"The `where` argument define the domain of integration with respect to the "
+"The `where` argument defines the domain of integration with respect to the "
 "levelset, it has to be chosen among 'ALL', 'INSIDE', 'OUTSIDE' and "
 "'BOUNDARY'."
 msgstr ""
-"`where` 引数はlevelsetに関する積分領域を定義します．この引数は 'ALL', 'INSIDE', 'OUTSIDE' および "
-"'BOUNDARY' の中から選択する必要があります．"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im.rst:63
 msgid ""
-"it can be completed by a string defining the boolean operation to define the"
+"It can be completed by a string defining the boolean operation to define the"
 " integration domain when there is more than one levelset."
-msgstr "複数のlevelsetがある場合は，ブール演算を定義する文字列を使用して積分領域を定義できます．"
+msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im.rst:66
 msgid ""
-"the syntax is very simple, for example if there are 3 different levelset,"
-msgstr "構文は非常に単純です．たとえば，3つの異なるレベルセットがある場合，"
+"The syntax is very simple, for example if there are 3 different levelsets,"
+msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im.rst:69
 msgid ""
@@ -152,24 +150,21 @@ msgstr "インスタンス INSIDE(a*b*c) 用"
 
 #: ../source/matlab_octave/cmdref_gf_mesh_im.rst:86
 msgid ""
-"CAUTION: this integration method will be defined only on the element cut by "
-"the level-set. For the 'ALL', 'INSIDE' and 'OUTSIDE' options it is mandatory"
-" to use the method ``gf_mesh_im_set(mesh_im MI, 'integ')`` to define the "
+"CAUTION: this integration method will be defined only on elements cut by the"
+" level-set. For the 'ALL', 'INSIDE' and 'OUTSIDE' options it is mandatory to"
+" use the method ``gf_mesh_im_set(mesh_im MI, 'integ')`` to define the "
 "integration method on the remaining elements."
 msgstr ""
-"注意：この積分法は level-set で切り取られた要素にのみ定義されます． 'ALL' ， 'INSIDE' と  'OUTSIDE' "
-"オプションの場合は，必ず ``gf_mesh_im_set(mesh_im MI, 'integ')`` "
-"メソッドを使って残りの要素の積分法を定義する必要があります．"
 
-#: ../source/matlab_octave/cmdref_gf_mesh_im.rst:93
+#: ../source/matlab_octave/cmdref_gf_mesh_im.rst:92
 msgid "``MIM = gf_mesh_im(mesh m, [{integ im|int im_degree}])``"
 msgstr "``MIM = gf_mesh_im(mesh m, [{integ im|int im_degree}])``"
 
-#: ../source/matlab_octave/cmdref_gf_mesh_im.rst:95
+#: ../source/matlab_octave/cmdref_gf_mesh_im.rst:94
 msgid "Build a new mesh_im object."
 msgstr "新しいmesh_imオブジェクトを構築します．"
 
-#: ../source/matlab_octave/cmdref_gf_mesh_im.rst:97
+#: ../source/matlab_octave/cmdref_gf_mesh_im.rst:96
 msgid ""
 "For convenience, optional arguments (`im` or `im_degree`) can be provided, "
 "in that case a call to ``gf_mesh_im_get(mesh_im MI, 'integ')`` is issued "

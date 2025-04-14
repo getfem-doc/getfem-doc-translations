@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-09 01:48+0000\n"
+"POT-Creation-Date: 2025-04-14 01:55+0000\n"
 "PO-Revision-Date: 2018-07-16 07:17+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -182,7 +182,9 @@ msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Mesh:83
-msgid "``M = Mesh('import', string format, string filename)`` Import a mesh."
+msgid ""
+"``M = Mesh('import', string format, string filename)`` Import a mesh from "
+"the file `filename`."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
@@ -218,22 +220,40 @@ msgid "'am_fmt' for a mesh created with `EMC2`"
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
-#: of getfem.getfem.Mesh:94
+#: of getfem.getfem.Mesh:93
+msgid ""
+"'structured' for a structured cartesian mesh. In this case `filename` is a "
+"string describing the mesh e.g. "
+"\"GT='GT_QK(2,2)';ORG=[0,0];SIZES=[1,1];NSUBDIV=[5,10]\""
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Mesh:96
+msgid ""
+"'structured_ball' for a structured mesh of a circular disc or a sphere. In "
+"this case `filename` is a string describing the mesh "
+"\"GT='GT_QK(2,2)';ORG=[0,0];SIZES=[4];NSUBDIV=[3,4];SYMMETRIES=1\" The "
+"number of symmetries divides a circle into a half (1) or quarter of circle "
+"(2). Similarly a sphere can be divided with up to 3 symmetry planes."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.Mesh:103
 msgid "``M = Mesh('clone', Mesh m2)`` Create a copy of a mesh."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
-#: of getfem.getfem.Mesh:97
+#: of getfem.getfem.Mesh:106
 msgid ""
 "``M = Mesh('generate', MesherObject mo, scalar h[, int K = 1[, mat "
-"vertices]])`` Call the experimental mesher of Getfem on the geometry "
-"represented by `mo`. please control the conformity of the produced mesh. You"
+"vertices]])`` Call the experimental mesher of GetFEM on the geometry "
+"represented by `mo`. Please control the conformity of the produced mesh. You"
 " can help the mesher by adding a priori vertices in the array `vertices` "
 "which should be of size ``n x m`` where ``n`` n is the dimension of the mesh"
 " and ``m`` the number of points. `h` is approximate diameter of the "
-"elements. `K` is the degree of the mesh ( > 1 for curved boundaries).  The "
-"mesher try to optimize the quality of the elements. This operation may be "
-"time consuming. Note that if the mesh generation fails, because of some "
+"elements. `K` is the degree of the mesh (>1 for curved boundaries). The "
+"mesher will try to optimize the quality of the elements. This operation may "
+"be time consuming. Note that if the mesh generation fails, because of some "
 "random procedure used, it can be run again since it will not give "
 "necessarily the same result due to random procedures used. The messages send"
 " to the console by the mesh generation can be deactivated using "
@@ -438,7 +458,7 @@ msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Mesh.delete_region:1
-msgid "Remove the regions whose #ids are listed in `RIDs`"
+msgid "Remove the regions whose #ids are listed in `RIDs`."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
@@ -968,7 +988,7 @@ msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Mesh.transform:1
-msgid "Applies the matrix `T` to each point of the mesh."
+msgid "Applies the transformation matrix `T` to each point of the mesh."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
@@ -981,7 +1001,7 @@ msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Mesh.translate:1
-msgid "Translates each point of the mesh from `V`."
+msgid "Translates each point of the mesh with the vector `V`."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring

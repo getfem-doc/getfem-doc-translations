@@ -276,14 +276,14 @@ gf_mesh_get
 
     Return the set of faces shared at least by two elements in CVIDs.
     Each face is represented only once and is arbitrarily chosen
-    between the two neighbor elements. 
+    between the two neighbor elements.
 
 
   ``CVFIDs = gf_mesh_get(mesh M, 'all faces'[, CVIDs])``
 
     Return the set of faces of the in CVIDs (in all the mesh if CVIDs is
     omitted). Note that the face shared by two neighbor elements will be
-    represented twice. 
+    represented twice.
 
 
   ``CVFIDs = gf_mesh_get(mesh M, 'outer faces with direction', vec v, scalar angle[, dim][, CVIDs])``
@@ -324,7 +324,7 @@ gf_mesh_get
     Return convex face of the neighbor element if it exists.
     If the convex have more than one neighbor
     relatively to the face <literal></literal>f<literal></literal> (think to bar elements in 3D for instance),
-    return the first face found. 
+    return the first face found.
 
 
   ``CVFIDs = gf_mesh_get(mesh M, 'faces from cvid'[, ivec CVIDs][, 'merge'])``
@@ -406,7 +406,7 @@ gf_mesh_get
 
   ``RIDs = gf_mesh_get(mesh M, 'boundaries')``
 
-    DEPRECATED FUNCTION. Use 'regions' instead. 
+    DEPRECATED FUNCTION. Use 'regions' instead.
 
 
   ``RIDs = gf_mesh_get(mesh M, 'regions')``
@@ -416,7 +416,7 @@ gf_mesh_get
 
   ``RIDs = gf_mesh_get(mesh M, 'boundary')``
 
-    DEPRECATED FUNCTION. Use 'region' instead. 
+    DEPRECATED FUNCTION. Use 'region' instead.
 
 
   ``CVFIDs = gf_mesh_get(mesh M, 'region', ivec RIDs)``

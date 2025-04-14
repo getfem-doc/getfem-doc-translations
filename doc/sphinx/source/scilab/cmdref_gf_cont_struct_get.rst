@@ -21,6 +21,7 @@ gf_cont_struct_get
   E = gf_cont_struct_get(cont_struct CS, 'Moore-Penrose continuation', vec solution, scalar parameter, vec tangent_sol, scalar tangent_par, scalar h)
   t = gf_cont_struct_get(cont_struct CS, 'non-smooth bifurcation test', vec solution1, scalar parameter1, vec tangent_sol1, scalar tangent_par1, vec solution2, scalar parameter2, vec tangent_sol2, scalar tangent_par2)
   t = gf_cont_struct_get(cont_struct CS, 'bifurcation test function')
+  gf_cont_struct_get(cont_struct CS, 'non-smooth branching', vec solution, scalar parameter, vec tangent_sol, scalar tangent_par)
   {X, gamma, T_X, T_gamma} = gf_cont_struct_get(cont_struct CS, 'sing_data')
   s = gf_cont_struct_get(cont_struct CS, 'char')
   gf_cont_struct_get(cont_struct CS, 'display')
@@ -102,6 +103,20 @@ gf_cont_struct_get
     of differentiability.
 
 
+  ``gf_cont_struct_get(cont_struct CS, 'non-smooth branching', vec solution, scalar parameter, vec tangent_sol, scalar tangent_par)``
+
+    Approximate a non-smooth point close to the point given by <literal>solution</literal>
+    and <literal>parameter</literal> and locate one-sided smooth solution branches
+    emanating from there. Save the approximation of the non-smooth point
+    as a singular point into the cont_struct object together with the array of
+    the tangents to the located solution branches that direct away from
+    the non-smooth point. It is supposed that the point given by
+    <literal>solution</literal> and <literal>parameter</literal> is a point on a smooth solution branch
+    within the distance equal to the minimum step size from the end point
+    of this branch, and the corresponding tangent given by <literal>tangent_sol</literal>
+    and <literal>tangent_par</literal> is directed towards the end point.
+
+
   ``{X, gamma, T_X, T_gamma} = gf_cont_struct_get(cont_struct CS, 'sing_data')``
 
     Return a singular point (<literal>X</literal>, <literal>gamma</literal>) stored in the cont_struct object and a
@@ -116,7 +131,6 @@ gf_cont_struct_get
     This can be used for performing comparisons between two
     different cont_struct objects.
     This function is to be completed.
-    
 
 
   ``gf_cont_struct_get(cont_struct CS, 'display')``

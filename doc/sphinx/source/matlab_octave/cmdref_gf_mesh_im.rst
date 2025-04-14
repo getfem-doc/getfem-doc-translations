@@ -56,15 +56,15 @@ General constructor for mesh_im objects.
     Build an integration method conformal to a partition defined
     implicitly by a levelset.
     
-    The `where` argument define the domain of integration with respect to
+    The `where` argument defines the domain of integration with respect to
     the levelset, it has to be chosen among 'ALL', 'INSIDE', 'OUTSIDE' and
     'BOUNDARY'.
     
-    it can be completed by a string defining the boolean operation
+    It can be completed by a string defining the boolean operation
     to define the integration domain when there is more than one levelset.
     
-    the syntax is very simple, for example if there are 3 different
-    levelset,
+    The syntax is very simple, for example if there are 3 different
+    levelsets,
     
      "a*b*c" is the intersection of the domains defined by each
      levelset (this is the default behaviour if this function is not
@@ -78,16 +78,15 @@ General constructor for mesh_im objects.
      "!a" is the complementary of the domain of a (i.e. it is the
      domain where a(x)>0)
     
-     The first levelset is always referred to with "a", the second
-     with "b", and so on.
+    The first levelset is always referred to with "a", the second
+    with "b", and so on.
     
-    for intance INSIDE(a*b*c)
+     for intance INSIDE(a*b*c)
     
-    CAUTION: this integration method will be defined only on the element
+    CAUTION: this integration method will be defined only on elements
     cut by the level-set. For the 'ALL', 'INSIDE' and 'OUTSIDE' options
     it is mandatory to use the method ``gf_mesh_im_set(mesh_im MI, 'integ')`` to define
     the integration method on the remaining elements.
-    
 
 
   ``MIM = gf_mesh_im(mesh m, [{integ im|int im_degree}])``

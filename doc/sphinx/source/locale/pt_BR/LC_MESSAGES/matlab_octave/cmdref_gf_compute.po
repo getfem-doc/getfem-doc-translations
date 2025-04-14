@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-06 01:52+0000\n"
+"POT-Creation-Date: 2025-04-14 01:55+0000\n"
 "PO-Revision-Date: 2020-04-26 01:49+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -173,56 +173,56 @@ msgid ""
 "then all the mesh convexes will be used. U should be a row vector."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:140
+#: ../source/matlab_octave/cmdref_gf_compute.rst:139
 msgid ""
 "``Ui = gf_compute(mesh_fem MF, vec U, 'interpolate on', {mesh_fem mfi | "
 "slice sli | vec pts})``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:142
+#: ../source/matlab_octave/cmdref_gf_compute.rst:141
 msgid ""
 "Interpolate a field on another mesh_fem or a slice or a list of points."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:144
+#: ../source/matlab_octave/cmdref_gf_compute.rst:143
 msgid "Interpolation on another mesh_fem `mfi`:"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:145
+#: ../source/matlab_octave/cmdref_gf_compute.rst:144
 msgid ""
 "`mfi` has to be Lagrangian. If `mf` and `mfi` share the same mesh object, "
 "the interpolation will be much faster."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:147
+#: ../source/matlab_octave/cmdref_gf_compute.rst:146
 msgid "Interpolation on a slice `sli`:"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:148
+#: ../source/matlab_octave/cmdref_gf_compute.rst:147
 msgid ""
 "this is similar to interpolation on a refined P1-discontinuous mesh, but it "
 "is much faster. This can also be used with gf_slice('points') to obtain "
 "field values at a given set of points."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:152
+#: ../source/matlab_octave/cmdref_gf_compute.rst:151
 msgid "Interpolation on a set of points `pts`"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:154
+#: ../source/matlab_octave/cmdref_gf_compute.rst:153
 msgid "See also gf_asm('interpolation matrix')"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:158
+#: ../source/matlab_octave/cmdref_gf_compute.rst:156
 msgid ""
 "``Ue = gf_compute(mesh_fem MF, vec U, 'extrapolate on', mesh_fem mfe)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:160
+#: ../source/matlab_octave/cmdref_gf_compute.rst:158
 msgid "Extrapolate a field on another mesh_fem."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:162
+#: ../source/matlab_octave/cmdref_gf_compute.rst:160
 msgid ""
 "If the mesh of `mfe` is stricly included in the mesh of `mf`, this function "
 "does stricly the same job as gf_compute('interpolate_on'). However, if the "
@@ -231,43 +231,43 @@ msgid ""
 "`mf` will be extrapolated."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:169
+#: ../source/matlab_octave/cmdref_gf_compute.rst:167
 msgid "See also gf_asm('extrapolation matrix')"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:172
+#: ../source/matlab_octave/cmdref_gf_compute.rst:170
 msgid "``E = gf_compute(mesh_fem MF, vec U, 'error estimate', mesh_im mim)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:174
+#: ../source/matlab_octave/cmdref_gf_compute.rst:172
 msgid "Compute an a posteriori error estimate."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:176
-#: ../source/matlab_octave/cmdref_gf_compute.rst:184
+#: ../source/matlab_octave/cmdref_gf_compute.rst:174
+#: ../source/matlab_octave/cmdref_gf_compute.rst:182
 msgid ""
 "Currently there is only one which is available: for each convex, the jump of"
 " the normal derivative is integrated on its faces."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:180
+#: ../source/matlab_octave/cmdref_gf_compute.rst:178
 msgid ""
 "``E = gf_compute(mesh_fem MF, vec U, 'error estimate nitsche', mesh_im mim, "
 "int GAMMAC, int GAMMAN, scalar lambda_, scalar mu_, scalar gamma0, scalar "
 "f_coeff, scalar vertical_force)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:182
+#: ../source/matlab_octave/cmdref_gf_compute.rst:180
 msgid "Compute an a posteriori error estimate in the case of Nitsche method."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:188
+#: ../source/matlab_octave/cmdref_gf_compute.rst:186
 msgid ""
 "``gf_compute(mesh_fem MF, vec U, 'convect', mesh_fem mf_v, vec V, scalar dt,"
 " int nt[, string option[, vec per_min, vec per_max]])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:190
+#: ../source/matlab_octave/cmdref_gf_compute.rst:188
 msgid ""
 "Compute a convection of `U` with regards to a steady state velocity field "
 "`V` with a Characteristic-Galerkin method. The result is returned in-place "
@@ -283,13 +283,13 @@ msgid ""
 "operation is done). This method is rather dissipative, but stable."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:208
+#: ../source/matlab_octave/cmdref_gf_compute.rst:205
 msgid ""
 "``[U2[,MF2,[,X[,Y[,Z]]]]] = gf_compute(mesh_fem MF, vec U, 'interpolate on "
 "Q1 grid', {'regular h', hxyz | 'regular N', Nxyz | X[,Y[,Z]]})``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:210
+#: ../source/matlab_octave/cmdref_gf_compute.rst:207
 msgid ""
 "Creates a cartesian Q1 mesh fem and interpolates U on it. The returned field"
 " U2 is organized in a matrix such that in can be drawn via the MATLAB "
@@ -297,7 +297,7 @@ msgid ""
 "scalar field)"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_compute.rst:215
+#: ../source/matlab_octave/cmdref_gf_compute.rst:212
 msgid ""
 "example (mf_u is a 2D mesh_fem): >> Uq=gf_compute(mf_u, U, 'interpolate on "
 "Q1 grid', 'regular h', [.05, .05]); >> pcolor(squeeze(Uq(1,:,:)));"

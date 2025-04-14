@@ -99,12 +99,12 @@ gf_mesh_set
 
   ``gf_mesh_set(mesh M, 'translate', vec V)``
 
-    Translates each point of the mesh from `V`.
+    Translates each point of the mesh with the vector `V`.
 
 
   ``gf_mesh_set(mesh M, 'transform', mat T)``
 
-    Applies the matrix `T` to each point of the mesh.
+    Applies the transformation matrix `T` to each point of the mesh.
     
     Note that `T` is not required to be a ``NxN`` matrix (with
     ``N = gf_mesh_get(mesh M, 'dim')``). Hence it is possible to transform
@@ -160,7 +160,7 @@ gf_mesh_set
 
   ``gf_mesh_set(mesh M, 'delete region', ivec RIDs)``
 
-    Remove the regions whose #ids are listed in `RIDs`
+    Remove the regions whose #ids are listed in `RIDs`.
 
 
   ``gf_mesh_set(mesh M, 'merge', mesh m2[, scalar  tol])``

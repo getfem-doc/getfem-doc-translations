@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-06 01:52+0000\n"
+"POT-Creation-Date: 2025-04-14 01:55+0000\n"
 "PO-Revision-Date: 2018-07-16 06:58+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -127,63 +127,63 @@ msgid ""
 "evaluated with::"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:119
+#: ../source/scilab/cmdref_gf_asm.rst:118
 msgid ""
 "``M = gf_asm('mass matrix', mesh_im mim, mesh_fem mf1[, mesh_fem mf2[, int "
 "region]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:121
+#: ../source/scilab/cmdref_gf_asm.rst:120
 msgid "Assembly of a mass matrix."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:123
-#: ../source/scilab/cmdref_gf_asm.rst:133
-#: ../source/scilab/cmdref_gf_asm.rst:144
-#: ../source/scilab/cmdref_gf_asm.rst:191
-#: ../source/scilab/cmdref_gf_asm.rst:201
-#: ../source/scilab/cmdref_gf_asm.rst:211
-#: ../source/scilab/cmdref_gf_asm.rst:273
-#: ../source/scilab/cmdref_gf_asm.rst:406
-#: ../source/scilab/cmdref_gf_asm.rst:414
-#: ../source/scilab/cmdref_gf_asm.rst:422
+#: ../source/scilab/cmdref_gf_asm.rst:122
+#: ../source/scilab/cmdref_gf_asm.rst:131
+#: ../source/scilab/cmdref_gf_asm.rst:141
+#: ../source/scilab/cmdref_gf_asm.rst:186
+#: ../source/scilab/cmdref_gf_asm.rst:195
+#: ../source/scilab/cmdref_gf_asm.rst:204
+#: ../source/scilab/cmdref_gf_asm.rst:263
+#: ../source/scilab/cmdref_gf_asm.rst:390
+#: ../source/scilab/cmdref_gf_asm.rst:397
+#: ../source/scilab/cmdref_gf_asm.rst:404
 msgid "Return a spmat object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:127
+#: ../source/scilab/cmdref_gf_asm.rst:125
 msgid ""
 "``L = gf_asm('laplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec a[,"
 " int region])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:129
+#: ../source/scilab/cmdref_gf_asm.rst:127
 msgid "Assembly of the matrix for the Laplacian problem."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:131
+#: ../source/scilab/cmdref_gf_asm.rst:129
 msgid ""
 "<latex style=\"text\"><![CDATA[\\nabla\\cdot(a(x)\\nabla u)]]></latex>  with"
 " <literal>a</literal> a scalar."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:137
+#: ../source/scilab/cmdref_gf_asm.rst:134
 msgid ""
 "``Le = gf_asm('linear elasticity', mesh_im mim, mesh_fem mf_u, mesh_fem "
 "mf_d, vec lambda_d, vec mu_d[, int region])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:139
+#: ../source/scilab/cmdref_gf_asm.rst:136
 msgid "Assembles of the matrix for the linear (isotropic) elasticity problem."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:141
+#: ../source/scilab/cmdref_gf_asm.rst:138
 msgid ""
 "<latex style=\"text\"><![CDATA[\\nabla\\cdot(C(x):\\nabla u)]]></latex> with"
 " <latex style=\"text\"><![CDATA[C]]></latex> defined via "
 "<literal>lambda_d</literal> and <literal>mu_d</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:148
+#: ../source/scilab/cmdref_gf_asm.rst:144
 msgid ""
 "``TRHS = gf_asm('nonlinear elasticity', mesh_im mim, mesh_fem mf_u, vec U, "
 "string law, mesh_fem mf_d, mat params, {'tangent "
@@ -191,25 +191,25 @@ msgid ""
 "P|'incompressible rhs', mesh_fem mf_p, vec P})``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:150
+#: ../source/scilab/cmdref_gf_asm.rst:146
 msgid ""
 "Assembles terms (tangent matrix and right hand side) for nonlinear "
 "elasticity."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:152
+#: ../source/scilab/cmdref_gf_asm.rst:148
 msgid ""
 "The solution <literal>U</literal> is required at the current time-step. The "
 "<literal>law</literal> may be choosen among:"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:155
+#: ../source/scilab/cmdref_gf_asm.rst:151
 msgid ""
 "'SaintVenant Kirchhoff': Linearized law, should be avoided. This law has the"
 " two usual Lame coefficients as parameters, called lambda and mu."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:158
+#: ../source/scilab/cmdref_gf_asm.rst:154
 msgid ""
 "'Mooney Rivlin': This law has three parameters, called C1, C2 and D1. Can be"
 " preceded with the words 'compressible' or 'incompressible' to force a "
@@ -217,20 +217,20 @@ msgid ""
 " requires only the first two material coefficients."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:163
+#: ../source/scilab/cmdref_gf_asm.rst:159
 msgid ""
 "'neo Hookean': A special case of the 'Mooney Rivlin' law that requires one "
 "material coefficient less (C2 = 0). By default, its compressible version is "
 "used."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:166
+#: ../source/scilab/cmdref_gf_asm.rst:162
 msgid ""
 "'Ciarlet Geymonat': This law has 3 parameters, called lambda, mu and gamma, "
 "with gamma chosen such that gamma is in ]-lambda/2-mu, -mu[."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:170
+#: ../source/scilab/cmdref_gf_asm.rst:166
 msgid ""
 "The parameters of the material law are described on the mesh_fem "
 "<literal>mf_d</literal>. The matrix <literal>params</literal> should have "
@@ -238,76 +238,76 @@ msgid ""
 "parameter."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:174
+#: ../source/scilab/cmdref_gf_asm.rst:170
 msgid ""
 "The last argument selects what is to be built: either the tangent matrix, or"
 " the right hand side. If the incompressibility is considered, it should be "
 "followed by a mesh_fem <literal>mf_p</literal>, for the pression."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:179
+#: ../source/scilab/cmdref_gf_asm.rst:175
 msgid ""
 "Return a spmat object (tangent matrix), vec object (right hand side), tuple "
 "of spmat objects (incompressible tangent matrix), or tuple of vec objects "
 "(incompressible right hand side)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:185
+#: ../source/scilab/cmdref_gf_asm.rst:180
 msgid ""
 "``A = gf_asm('helmholtz', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec k[,"
 " int region])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:187
+#: ../source/scilab/cmdref_gf_asm.rst:182
 msgid "Assembly of the matrix for the Helmholtz problem."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:189
+#: ../source/scilab/cmdref_gf_asm.rst:184
 msgid ""
 "<latex style=\"text\"><![CDATA[\\Delta u + k^2 u]]></latex> = 0,  with "
 "<literal>k</literal> complex scalar."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:195
+#: ../source/scilab/cmdref_gf_asm.rst:189
 msgid ""
 "``A = gf_asm('bilaplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec "
 "a[, int region])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:197
+#: ../source/scilab/cmdref_gf_asm.rst:191
 msgid "Assembly of the matrix for the Bilaplacian problem."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:199
-#: ../source/scilab/cmdref_gf_asm.rst:209
+#: ../source/scilab/cmdref_gf_asm.rst:193
+#: ../source/scilab/cmdref_gf_asm.rst:202
 msgid ""
 "<latex style=\"text\"><![CDATA[\\Delta(a(x)\\Delta u) = 0]]></latex>   with "
 "<literal>a</literal> scalar."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:205
+#: ../source/scilab/cmdref_gf_asm.rst:198
 msgid ""
 "``A = gf_asm('bilaplacian KL', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, "
 "vec a, vec nu[, int region])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:207
+#: ../source/scilab/cmdref_gf_asm.rst:200
 msgid ""
 "Assembly of the matrix for the Bilaplacian problem with Kirchhoff-Love "
 "formulation."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:215
+#: ../source/scilab/cmdref_gf_asm.rst:207
 msgid ""
 "``V = gf_asm('volumic source', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, "
 "vec fd[, int region])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:217
+#: ../source/scilab/cmdref_gf_asm.rst:209
 msgid "Assembly of a volumic source term."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:219
+#: ../source/scilab/cmdref_gf_asm.rst:211
 msgid ""
 "Output a vector <literal>V</literal>, assembled on the mesh_fem "
 "<literal>mf_u</literal>, using the data vector <literal>fd</literal> defined"
@@ -315,41 +315,41 @@ msgid ""
 "real or complex-valued."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:223
-#: ../source/scilab/cmdref_gf_asm.rst:235
-#: ../source/scilab/cmdref_gf_asm.rst:387
-#: ../source/scilab/cmdref_gf_asm.rst:398
+#: ../source/scilab/cmdref_gf_asm.rst:215
+#: ../source/scilab/cmdref_gf_asm.rst:226
+#: ../source/scilab/cmdref_gf_asm.rst:373
+#: ../source/scilab/cmdref_gf_asm.rst:383
 msgid "Return a vec object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:227
+#: ../source/scilab/cmdref_gf_asm.rst:218
 msgid ""
 "``B = gf_asm('boundary source', int bnum, mesh_im mim, mesh_fem mf_u, "
 "mesh_fem mf_d, vec G)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:229
+#: ../source/scilab/cmdref_gf_asm.rst:220
 msgid "Assembly of a boundary source term."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:231
+#: ../source/scilab/cmdref_gf_asm.rst:222
 msgid ""
 "<literal>G</literal> should be a [Qdim x N] matrix, where N is the number of"
 " dof of <literal>mf_d</literal>, and Qdim is the dimension of the unkown u "
 "(that is set when creating the mesh_fem)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:239
+#: ../source/scilab/cmdref_gf_asm.rst:229
 msgid ""
 "``{HH, RR} = gf_asm('dirichlet', int bnum, mesh_im mim, mesh_fem mf_u, "
 "mesh_fem mf_d, mat H, vec R [, scalar threshold])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:241
+#: ../source/scilab/cmdref_gf_asm.rst:231
 msgid "Assembly of Dirichlet conditions of type <literal>h.u = r</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:243
+#: ../source/scilab/cmdref_gf_asm.rst:233
 msgid ""
 "Handle <literal>h.u = r</literal> where h is a square matrix (of any rank) "
 "whose size is equal to the dimension of the unkown u. This matrix is stored "
@@ -357,22 +357,22 @@ msgid ""
 " column containing the values of the matrix h stored in fortran order:"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:248
+#: ../source/scilab/cmdref_gf_asm.rst:238
 msgid "<literal>H(:,j) = [h11(x_j) h21(x_j) h12(x_j) h22(x_j)]</literal>"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:252
+#: ../source/scilab/cmdref_gf_asm.rst:242
 msgid "if u is a 2D vector field."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:254
+#: ../source/scilab/cmdref_gf_asm.rst:244
 msgid ""
 "Of course, if the unknown is a scalar field, you just have to set <literal>H"
 " = ones(1, N)</literal>, where N is the number of dof of "
 "<literal>mf_d</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:257
+#: ../source/scilab/cmdref_gf_asm.rst:247
 msgid ""
 "This is basically the same than calling gf_asm('boundary qu term') for "
 "<literal>H</literal> and calling gf_asm('neumann') for <literal>R</literal>,"
@@ -380,34 +380,34 @@ msgid ""
 "constraints matrix (when possible)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:262
+#: ../source/scilab/cmdref_gf_asm.rst:252
 msgid "See also gf_spmat_get(spmat S, 'Dirichlet_nullspace')."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:265
+#: ../source/scilab/cmdref_gf_asm.rst:255
 msgid ""
 "``Q = gf_asm('boundary qu term',int boundary_num, mesh_im mim, mesh_fem "
 "mf_u, mesh_fem mf_d, mat q)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:267
+#: ../source/scilab/cmdref_gf_asm.rst:257
 msgid "Assembly of a boundary qu term."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:269
+#: ../source/scilab/cmdref_gf_asm.rst:259
 msgid ""
 "<literal>q</literal> should be be a [Qdim x Qdim x N] array, where N is the "
 "number of dof of <literal>mf_d</literal>, and Qdim is the dimension of the "
 "unkown u (that is set when creating the mesh_fem)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:277
+#: ../source/scilab/cmdref_gf_asm.rst:266
 msgid ""
 "``gf_asm('define function', string name, int nb_args, string expression[, "
 "string expression_derivative_t[, string expression_derivative_u]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:279
+#: ../source/scilab/cmdref_gf_asm.rst:268
 msgid ""
 "Define a new function <literal>name</literal> which can be used in high "
 "level generic assembly. The function can have one or two parameters. In "
@@ -424,23 +424,23 @@ msgid ""
 "If they are not furnished, a symbolic derivation is used."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:294
+#: ../source/scilab/cmdref_gf_asm.rst:283
 msgid "``gf_asm('undefine function', string name)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:296
+#: ../source/scilab/cmdref_gf_asm.rst:285
 msgid ""
 "Cancel the definition of a previously defined function "
 "<literal>name</literal> for the high level generic assembly."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:300
+#: ../source/scilab/cmdref_gf_asm.rst:289
 msgid ""
 "``gf_asm('define linear hardening function', string name, scalar sigma_y0, "
 "scalar H, ... [string 'Frobenius'])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:302
+#: ../source/scilab/cmdref_gf_asm.rst:291
 msgid ""
 "Define a new linear hardening function under the name "
 "<literal>name</literal>, with initial yield stress "
@@ -450,14 +450,14 @@ msgid ""
 " instead of their Von-Mises equivalents."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:309
+#: ../source/scilab/cmdref_gf_asm.rst:298
 msgid ""
 "``gf_asm('define Ramberg Osgood hardening function', string name, scalar "
 "sigma_ref, {scalar eps_ref | scalar E, scalar alpha}, scalar n[, string "
 "'Frobenius'])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:311
+#: ../source/scilab/cmdref_gf_asm.rst:300
 msgid ""
 "Define a new Ramberg Osgood hardening function under the name "
 "<literal>name</literal>, with initial yield stress "
@@ -467,30 +467,30 @@ msgid ""
 " instead of their Von-Mises equivalents."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:318
+#: ../source/scilab/cmdref_gf_asm.rst:307
 msgid ""
 "``gf_asm('expression analysis', string expression [, {mesh mesh | mesh_im "
 "mim}] [, der_order] [, model model] [, string varname, int is_variable[, "
 "{mesh_fem mf | mesh_imd mimd}], ...])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:320
+#: ../source/scilab/cmdref_gf_asm.rst:309
 msgid ""
 "Analyse a high-level generic assembly expression and print information about"
 " the provided expression."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:324
+#: ../source/scilab/cmdref_gf_asm.rst:313
 msgid ""
 "``{...} = gf_asm('volumic' [,CVLST], expr [, mesh_ims, mesh_fems, "
 "data...])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:326
+#: ../source/scilab/cmdref_gf_asm.rst:315
 msgid "Low-level generic assembly procedure for volumic assembly."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:328
+#: ../source/scilab/cmdref_gf_asm.rst:317
 msgid ""
 "The expression <literal>expr</literal> is evaluated over the mesh_fem's "
 "listed in the arguments (with optional data) and assigned to the output "
@@ -499,41 +499,41 @@ msgid ""
 "the GetFEM sources)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:334
+#: ../source/scilab/cmdref_gf_asm.rst:323
 msgid "For example, the L2 norm of a field can be computed with::"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:340
+#: ../source/scilab/cmdref_gf_asm.rst:329
 msgid "The Laplacian stiffness matrix can be evaluated with::"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:347
+#: ../source/scilab/cmdref_gf_asm.rst:336
 msgid ""
 "``{...} = gf_asm('boundary', int bnum, string expr [, mesh_im mim, mesh_fem "
 "mf, data...])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:349
+#: ../source/scilab/cmdref_gf_asm.rst:338
 msgid "Low-level generic boundary assembly."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:351
+#: ../source/scilab/cmdref_gf_asm.rst:340
 msgid "See the help for gf_asm('volumic')."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:354
+#: ../source/scilab/cmdref_gf_asm.rst:343
 msgid ""
 "``Mi = gf_asm('interpolation matrix', mesh_fem mf, {mesh_fem mfi | vec "
 "pts})``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:356
+#: ../source/scilab/cmdref_gf_asm.rst:345
 msgid ""
 "Build the interpolation matrix from a mesh_fem onto another mesh_fem or a "
 "set of points."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:358
+#: ../source/scilab/cmdref_gf_asm.rst:347
 msgid ""
 "Return a matrix <literal>Mi</literal>, such that <literal>V = Mi.U</literal>"
 " is equal to gf_compute('interpolate_on',mfi). Useful for repeated "
@@ -543,34 +543,34 @@ msgid ""
 "via the mass matrix."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:365
+#: ../source/scilab/cmdref_gf_asm.rst:353
 msgid "<literal>Mi</literal> is a spmat object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:369
+#: ../source/scilab/cmdref_gf_asm.rst:356
 msgid ""
 "``Me = gf_asm('extrapolation matrix',mesh_fem mf,  {mesh_fem mfe | vec "
 "pts})``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:371
+#: ../source/scilab/cmdref_gf_asm.rst:358
 msgid ""
 "Build the extrapolation matrix from a mesh_fem onto another mesh_fem or a "
 "set of points."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:373
+#: ../source/scilab/cmdref_gf_asm.rst:360
 msgid ""
 "Return a matrix <literal>Me</literal>, such that <literal>V = Me.U</literal>"
 " is equal to gf_compute('extrapolate_on',mfe). Useful for repeated "
 "extrapolations."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:377
+#: ../source/scilab/cmdref_gf_asm.rst:364
 msgid "<literal>Me</literal> is a spmat object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:381
+#: ../source/scilab/cmdref_gf_asm.rst:367
 msgid ""
 "``B = gf_asm('integral contact Uzawa projection', int bnum, mesh_im mim, "
 "mesh_fem mf_u, vec U, mesh_fem mf_lambda, vec vec_lambda, mesh_fem "
@@ -578,24 +578,21 @@ msgid ""
 "vec coeff} [, int option[, scalar alpha, vec W]]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:383
-msgid "Specific assembly procedure for the use of an Uzawa algorithm to solve"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_asm.rst:384
+#: ../source/scilab/cmdref_gf_asm.rst:369
 msgid ""
+"Specific assembly procedure for the use of an Uzawa algorithm to solve "
 "contact problems. Projects the term $-(\\lambda - r (u_N-g))_-$ on the "
 "finite element space of $\\lambda$."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:391
+#: ../source/scilab/cmdref_gf_asm.rst:376
 msgid ""
 "``B = gf_asm('level set normal source term', int bnum, mesh_im mim, mesh_fem"
 " mf_u, mesh_fem mf_lambda, vec vec_lambda, mesh_fem mf_levelset, vec "
 "levelset)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:393
+#: ../source/scilab/cmdref_gf_asm.rst:378
 msgid ""
 "Performs an assembly of the source term represented by "
 "<literal>vec_lambda</literal> on <literal>mf_lambda</literal> considered to "
@@ -604,32 +601,32 @@ msgid ""
 "<literal>mf_u</literal> on the boundary <literal>bnum</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:402
+#: ../source/scilab/cmdref_gf_asm.rst:386
 msgid ""
 "``M = gf_asm('lsneuman matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, "
 "levelset ls[, int region])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:404
+#: ../source/scilab/cmdref_gf_asm.rst:388
 msgid "Assembly of a level set Neuman  matrix."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:410
+#: ../source/scilab/cmdref_gf_asm.rst:393
 msgid ""
 "``M = gf_asm('nlsgrad matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, "
 "levelset ls[, int region])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:412
+#: ../source/scilab/cmdref_gf_asm.rst:395
 msgid "Assembly of a nlsgrad matrix."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:418
+#: ../source/scilab/cmdref_gf_asm.rst:400
 msgid ""
 "``M = gf_asm('stabilization patch matrix', @tm mesh, mesh_fem mf,  mesh_im "
 "mim, real ratio, real h)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_asm.rst:420
+#: ../source/scilab/cmdref_gf_asm.rst:402
 msgid "Assembly of stabilization patch matrix ."
 msgstr ""

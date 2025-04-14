@@ -31,7 +31,6 @@ gf_mesher_object_get
     This can be used to perform comparisons between two
     different mesher_object objects.
     This function is to be completed.
-    
 
 
   ``gf_mesher_object_get(mesher_object MO, 'display')``

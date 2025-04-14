@@ -134,7 +134,6 @@ gf_compute
     indicate the list of convex number that should be consider, if not
     used then all the mesh convexes will be used. U should be a row
     vector.
-    
 
 
   ``Ui = gf_compute(mesh_fem MF, vec U, 'interpolate on', {mesh_fem mfi | slice sli | vec pts})``
@@ -152,7 +151,6 @@ gf_compute
     - Interpolation on a set of points `pts`
     
     See also gf_asm('interpolation matrix')
-    
 
 
   ``Ue = gf_compute(mesh_fem MF, vec U, 'extrapolate on', mesh_fem mfe)``
@@ -202,7 +200,6 @@ gf_compute
     of the periodic domain (on components where per_max[k] < per_min[k]
     no operation is done).
     This method is rather dissipative, but stable.
-    
 
 
   ``[U2[,MF2,[,X[,Y[,Z]]]]] = gf_compute(mesh_fem MF, vec U, 'interpolate on Q1 grid', {'regular h', hxyz | 'regular N', Nxyz | X[,Y[,Z]]})``

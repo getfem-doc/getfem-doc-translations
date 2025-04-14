@@ -30,12 +30,12 @@ gf_util
   ``gf_util('save matrix', string FMT, string FILENAME, mat A)``
 
     Exports a sparse matrix into the file named FILENAME, using
-    Harwell-Boeing (FMT='hb') or Matrix-Market (FMT='mm') formatting. 
+    Harwell-Boeing (FMT='hb') or Matrix-Market (FMT='mm') formatting.
 
 
   ``A = gf_util('load matrix', string FMT, string FILENAME)``
 
-    Imports a sparse matrix from a file. 
+    Imports a sparse matrix from a file.
 
 
   ``tl = gf_util('trace level' [, int level])``
@@ -44,7 +44,7 @@ gf_util
     
     Typically the messages printed by the model bricks, 0 means no
     trace message (default is 3). if no level is given,
-    the current trace level is returned. 
+    the current trace level is returned.
 
 
   ``tl = gf_util('warning level' [, int level])``
@@ -52,11 +52,11 @@ gf_util
     Filter the less important warnings displayed by getfem.
     
     0 means no warnings, default level is 3. if no level is given,
-    the current warning level is returned. 
+    the current warning level is returned.
 
 
   ``tl = gf_util('set num threads', int nb_threads)``
 
     Sets the number of threads for the multithreaded GetFEM version.
-    It is available only when GetFEM is compiled with openmp support. 
+    It is available only when GetFEM is compiled with openmp support.
 

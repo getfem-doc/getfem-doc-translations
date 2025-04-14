@@ -113,7 +113,6 @@ gf_asm
       gf_asm('laplacian', mim, mf, mf_data, A) or equivalently with:
     
       gf_asm('generic', mim, 2, 'A*Grad_Test2_u.Grad_Test_u', -1, 'u', 1, mf, U, 'A', 0, mf_data, A);
-    
       
 
 
@@ -122,7 +121,6 @@ gf_asm
     Assembly of a mass matrix.
     
     Return a spmat object.
-    
 
 
   ``L = gf_asm('laplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec a[, int region])``
@@ -132,7 +130,6 @@ gf_asm
     :math:`\nabla\cdot(a(x)\nabla u)`  with `a` a scalar.
     
     Return a spmat object.
-    
 
 
   ``Le = gf_asm('linear elasticity', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec lambda_d, vec mu_d[, int region])``
@@ -143,7 +140,6 @@ gf_asm
     with :math:`C` defined via `lambda_d` and `mu_d`.
     
     Return a spmat object.
-    
 
 
   ``TRHS = gf_asm('nonlinear elasticity', mesh_im mim, mesh_fem mf_u, vec U, string law, mesh_fem mf_d, mat params, {'tangent matrix'|'rhs'|'incompressible tangent matrix', mesh_fem mf_p, vec P|'incompressible rhs', mesh_fem mf_p, vec P})``
@@ -180,7 +176,6 @@ gf_asm
     Return a spmat object (tangent matrix), vec object (right hand
     side), tuple of spmat objects (incompressible tangent matrix), or
     tuple of vec objects (incompressible right hand side).
-    
 
 
   ``A = gf_asm('helmholtz', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec k[, int region])``
@@ -190,7 +185,6 @@ gf_asm
     :math:`\Delta u + k^2 u` = 0,  with `k` complex scalar.
     
     Return a spmat object.
-    
 
 
   ``A = gf_asm('bilaplacian', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec a[, int region])``
@@ -200,7 +194,6 @@ gf_asm
     :math:`\Delta(a(x)\Delta u) = 0`   with `a` scalar.
     
     Return a spmat object.
-    
 
 
   ``A = gf_asm('bilaplacian KL', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec a, vec nu[, int region])``
@@ -210,7 +203,6 @@ gf_asm
     :math:`\Delta(a(x)\Delta u) = 0`   with `a` scalar.
     
     Return a spmat object.
-    
 
 
   ``V = gf_asm('volumic source', mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec fd[, int region])``
@@ -222,7 +214,6 @@ gf_asm
     complex-valued.
     
     Return a vec object.
-    
 
 
   ``B = gf_asm('boundary source', int bnum, mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, vec G)``
@@ -234,7 +225,6 @@ gf_asm
     when creating the mesh_fem).
     
     Return a vec object.
-    
 
 
   ``{HH, RR} = gf_asm('dirichlet', int bnum, mesh_im mim, mesh_fem mf_u, mesh_fem mf_d, mat H, vec R [, scalar threshold])``
@@ -272,7 +262,6 @@ gf_asm
     is set when creating the mesh_fem).
     
     Return a spmat object.
-    
 
 
   ``gf_asm('define function', string name, int nb_args, string expression[, string expression_derivative_t[, string expression_derivative_u]])``
@@ -289,13 +278,13 @@ gf_asm
     function. `expression_derivative_t` and `expression_derivative_u`
     are optional expressions for the derivatives with respect
     to `t` and `u`. If they are not furnished, a symbolic derivation
-    is used. 
+    is used.
 
 
   ``gf_asm('undefine function', string name)``
 
     Cancel the definition of a previously defined function `name`
-    for the high level generic assembly.  
+    for the high level generic assembly.
 
 
   ``gf_asm('define linear hardening function', string name, scalar sigma_y0, scalar H, ... [string 'Frobenius'])``
@@ -304,7 +293,7 @@ gf_asm
     initial yield stress `sigma_y0` and hardening modulus H.
     If an extra string argument with the value 'Frobenius' is provided,
     the hardening function is expressed in terms of Frobenius norms of its
-    input strain and output stress, instead of their Von-Mises equivalents. 
+    input strain and output stress, instead of their Von-Mises equivalents.
 
 
   ``gf_asm('define Ramberg Osgood hardening function', string name, scalar sigma_ref, {scalar eps_ref | scalar E, scalar alpha}, scalar n[, string 'Frobenius'])``
@@ -313,7 +302,7 @@ gf_asm
     with initial yield stress `sigma_y0` and hardening modulus H.
     If an extra string argument with the value 'Frobenius' is provided,
     the hardening function is expressed in terms of Frobenius norms of its
-    input strain and output stress, instead of their Von-Mises equivalents. 
+    input strain and output stress, instead of their Von-Mises equivalents.
 
 
   ``gf_asm('expression analysis', string expression [, {mesh mesh | mesh_im mim}] [, der_order] [, model model] [, string varname, int is_variable[, {mesh_fem mf | mesh_imd mimd}], ...])``
@@ -358,13 +347,11 @@ gf_asm
     
     Return a matrix `Mi`, such that `V = Mi.U` is equal to
     gf_compute('interpolate_on',mfi). Useful for repeated interpolations.
-    Note that this is just interpolation, no elementary integrations
-    are involved here, and `mfi` has to be lagrangian. In the more
-    general case, you would have to do a L2 projection via the mass
-    matrix.
+    Note that this is just interpolation, no elementary integrations are
+    involved here, and `mfi` has to be lagrangian. In the more general
+    case, you would have to do a L2 projection via the mass matrix.
     
     `Mi` is a spmat object.
-    
 
 
   ``Me = gf_asm('extrapolation matrix',mesh_fem mf,  {mesh_fem mfe | vec pts})``
@@ -376,17 +363,15 @@ gf_asm
     extrapolations.
     
     `Me` is a spmat object.
-    
 
 
   ``B = gf_asm('integral contact Uzawa projection', int bnum, mesh_im mim, mesh_fem mf_u, vec U, mesh_fem mf_lambda, vec vec_lambda, mesh_fem mf_obstacle, vec obstacle, scalar r [, {scalar coeff | mesh_fem mf_coeff, vec coeff} [, int option[, scalar alpha, vec W]]])``
 
     Specific assembly procedure for the use of an Uzawa algorithm to solve
-      contact problems. Projects the term $-(\lambda - r (u_N-g))_-$ on the
-      finite element space of $\lambda$.
+    contact problems. Projects the term $-(\lambda - r (u_N-g))_-$ on the
+    finite element space of $\lambda$.
     
     Return a vec object.
-    
 
 
   ``B = gf_asm('level set normal source term', int bnum, mesh_im mim, mesh_fem mf_u, mesh_fem mf_lambda, vec vec_lambda, mesh_fem mf_levelset, vec levelset)``
@@ -397,7 +382,6 @@ gf_asm
     field defined on `mf_u` on the boundary `bnum`.
     
     Return a vec object.
-    
 
 
   ``M = gf_asm('lsneuman matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, levelset ls[, int region])``
@@ -405,7 +389,6 @@ gf_asm
     Assembly of a level set Neuman  matrix.
     
     Return a spmat object.
-    
 
 
   ``M = gf_asm('nlsgrad matrix', mesh_im mim, mesh_fem mf1, mesh_fem mf2, levelset ls[, int region])``
@@ -413,7 +396,6 @@ gf_asm
     Assembly of a nlsgrad matrix.
     
     Return a spmat object.
-    
 
 
   ``M = gf_asm('stabilization patch matrix', @tm mesh, mesh_fem mf,  mesh_im mim, real ratio, real h)``
@@ -421,7 +403,6 @@ gf_asm
     Assembly of stabilization patch matrix .
     
     Return a spmat object.
-    
 
 
   ``{Q, G, H, R, F} = gf_asm('pdetool boundary conditions', mf_u, mf_d, b, e[, f_expr])``

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-29 01:45+0000\n"
+"POT-Creation-Date: 2025-04-14 01:55+0000\n"
 "PO-Revision-Date: 2020-04-26 01:50+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -234,8 +234,8 @@ msgid "``M = gf_mesh('import', string format, string filename)``"
 msgstr "``M = gf_mesh('import', string format, string filename)``"
 
 #: ../source/matlab_octave/cmdref_gf_mesh.rst:147
-msgid "Import a mesh."
-msgstr "メッシュをインポートする．"
+msgid "Import a mesh from the file `filename`."
+msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh.rst:149
 msgid "`format` may be:"
@@ -263,15 +263,31 @@ msgstr "'cdb' は `ANSYS` で作成されたメッシュを表します．"
 msgid "'am_fmt' for a mesh created with `EMC2`"
 msgstr "'am_fmt' は `EMC2` で作成されたメッシュを表します．"
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:158
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:156
+msgid ""
+"'structured' for a structured cartesian mesh. In this case `filename` is a "
+"string describing the mesh e.g. "
+"\"GT='GT_QK(2,2)';ORG=[0,0];SIZES=[1,1];NSUBDIV=[5,10]\""
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:159
+msgid ""
+"'structured_ball' for a structured mesh of a circular disc or a sphere. In "
+"this case `filename` is a string describing the mesh "
+"\"GT='GT_QK(2,2)';ORG=[0,0];SIZES=[4];NSUBDIV=[3,4];SYMMETRIES=1\" The "
+"number of symmetries divides a circle into a half (1) or quarter of circle "
+"(2). Similarly a sphere can be divided with up to 3 symmetry planes."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:167
 msgid "``M = gf_mesh('clone', mesh m2)``"
 msgstr "``M = gf_mesh('clone', mesh m2)``"
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:160
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:169
 msgid "Create a copy of a mesh."
 msgstr "メッシュのコピーを作成します．"
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:163
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:172
 msgid ""
 "``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat "
 "vertices]])``"
@@ -279,14 +295,14 @@ msgstr ""
 "``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat "
 "vertices]])``"
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:165
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:174
 msgid ""
-"Call the experimental mesher of Getfem on the geometry represented by `mo`. "
-"please control the conformity of the produced mesh. You can help the mesher "
+"Call the experimental mesher of GetFEM on the geometry represented by `mo`. "
+"Please control the conformity of the produced mesh. You can help the mesher "
 "by adding a priori vertices in the array `vertices` which should be of size "
 "``n x m`` where ``n`` n is the dimension of the mesh and ``m`` the number of"
 " points. `h` is approximate diameter of the elements. `K` is the degree of "
-"the mesh ( > 1 for curved boundaries).  The mesher try to optimize the "
+"the mesh (>1 for curved boundaries). The mesher will try to optimize the "
 "quality of the elements. This operation may be time consuming. Note that if "
 "the mesh generation fails, because of some random procedure used, it can be "
 "run again since it will not give necessarily the same result due to random "
@@ -295,10 +311,3 @@ msgid ""
 "obtained by `gf_util('trace level', 4)`. See ``gf_mesher_object`` to "
 "manipulate geometric primitives in order to describe the geometry."
 msgstr ""
-"`mo` はGetfemの実験的幾何メッシャーを指します．作成したメッシュの整合性は制御してください．配列  `vertices` "
-"にアプリオリに頂点を追加して，メッシュの次元nを ``n`` ，点の数を ``m`` として，サイズを ``n x m`` "
-"とすることで，メッシャーを支援できます． `h` は要素のおおよその直径です． `K` はメッシュの次数(>1 "
-"曲線境界の場合)です．メッシャは要素の品質を最適化しようとします．この操作には時間がかかる場合があります．メッシュの生成が失敗した場合は，使用されたランダムプロシージャのために必ずしも同じ結果が得られないため，再度実行できます．メッシュ生成によってコンソールに送信されるメッセージは，"
-"  `gf_util('trace level', 2)` を使って非アクティブにすることができる．より詳しい情報は  `gf_util('trace "
-"level', 4)` で得ることができる．ジオメトリを記述するためにジオメトリプリミティブを操作するには， ``gf_mesher_object`` "
-"を参照してください．"

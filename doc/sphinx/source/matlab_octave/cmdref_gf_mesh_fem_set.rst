@@ -91,7 +91,7 @@ gf_mesh_fem_set
     This function selects the degrees of freedom of the finite element
     method by selecting a set of independent vectors of the matrix RM.
     The number of columns of RM should correspond to the number of degrees
-    of freedom of the finite element method.  
+    of freedom of the finite element method.
 
 
   ``gf_mesh_fem_set(mesh_fem MF, 'dof partition', ivec DOFP)``
@@ -114,11 +114,11 @@ gf_mesh_fem_set
   ``gf_mesh_fem_set(mesh_fem MF, 'adapt')``
 
     For a mesh_fem levelset object only. Adapt the mesh_fem object to a
-    change of the levelset function. 
+    change of the levelset function.
 
 
   ``gf_mesh_fem_set(mesh_fem MF, 'set enriched dofs', ivec DOFs)``
 
-    For a mesh_fem product object only. Set te enriched dofs and adapt the mesh_fem product.
-    
+    For a mesh_fem product object only. Set te enriched dofs and adapt the mesh_fem
+    product.
 

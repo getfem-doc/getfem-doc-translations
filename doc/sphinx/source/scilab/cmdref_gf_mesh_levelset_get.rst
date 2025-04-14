@@ -68,7 +68,6 @@ gf_mesh_levelset_get
     This can be used to perform comparisons between two
     different mesh_levelset objects.
     This function is to be completed.
-    
 
 
   ``gf_mesh_levelset_get(mesh_levelset MLS, 'display')``

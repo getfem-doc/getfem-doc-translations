@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-11 01:48+0000\n"
+"POT-Creation-Date: 2025-04-14 01:55+0000\n"
 "PO-Revision-Date: 2018-07-16 07:17+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -252,8 +252,8 @@ msgstr ""
 msgid ""
 "Attach a Houbolt method for the time discretization of the variable "
 "`varname`. Valid only if there is at most second order time derivative of "
-"the variable"
-msgstr "変数 `varname` の時間離散化にHoubolt法を適用します．変数の2次時間導関数が多くても存在する場合にのみ有効です．"
+"the variable."
+msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Kirchhoff_Love_Neumann_term_brick:1
@@ -603,12 +603,7 @@ msgstr ""
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_basic_contact_brick_two_deformable_bodies:3
 msgid ""
-"Add a frictionless contact condition to the model between two deformable"
-msgstr "2つの変形可能モデル間に摩擦なし接触条件を追加します"
-
-#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
-#: of getfem.getfem.Model.add_basic_contact_brick_two_deformable_bodies:4
-msgid ""
+"Add a frictionless contact condition to the model between two deformable "
 "bodies. If U1, U2 are the vector of degrees of freedom on which the "
 "unilateral constraint is applied, the matrices `BN1` and `BN2` have to be "
 "such that this condition is defined by $B_{N1} U_1 B_{N2} U_2 + \\le gap$. "
@@ -623,13 +618,6 @@ msgid ""
 "Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for the "
 "unsymmetric method with augmented multiplier."
 msgstr ""
-"体．U1，U2が片側拘束が適用される自由度のベクトルである場合，行列 `BN1` および `BN2` は，この条件が $B_{N1} U_1 "
-"B_{N2} U_2 + \\le gap$ によって定義されるようでなければならない．この制約は，次元が `BN` の行数に等しくなければならない乗数"
-" `multname_n` によって規定されます．拡張パラメータ `r` は許容値(Getfemユーザマニュアルを参照)の範囲内で選択されるべきです． "
-"`dataname_gap` は初期ギャップを表すオプションのパラメータです．単一の値または値のベクトルを指定できます． "
-"`dataname_alpha` は，増大パラメータ(Getfemユーザマニュアルを参照)のためのオプションの均質化パラメータである．パラメータ "
-"`aug_version` は拡大法を示します．1は非対称Alart-"
-"Curnier拡大Lagrangian，2は対称Lagrangian，3は拡大乗数を伴う非対称法です．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_bilaplacian_brick:1
@@ -1730,7 +1718,7 @@ msgid ""
 "freedom on boundary `region` multiplied by :math:`d-1` where :math:`d` is "
 "the domain dimension. It represents the friction equivalent nodal forces. "
 "The augmentation parameter `r` should be chosen in a range of acceptabe "
-"values (close to the Young modulus of the elastic body, see Getfem user "
+"values (close to the Young modulus of the elastic body, see GetFEM user "
 "documentation).  `dataname_friction_coeff` is the friction coefficient. It "
 "could be a scalar or a vector of values representing the friction "
 "coefficient on each contact node. The parameter `augmented_version` "
@@ -1740,18 +1728,6 @@ msgid ""
 "Basically, this brick compute the matrix BN and the vectors gap and alpha "
 "and calls the basic contact brick."
 msgstr ""
-"摩擦条件の有無にかかわらず，剛体障害物のある接触をモデルに追加します．条件は， `region` に対応する境界上の変数 `varname_u` "
-"に適用されます．剛障害物は，障害物への符号付き距離である文字列 `obstacle` で記述します．この文字列は，座標が2次元では 'x'， 'y' "
-"，3次元では'x'， 'y'， 'z' の式である必要があります．たとえば，障害物が :math:`z \\le 0` "
-"に対応する場合，対応する符号付き距離は単に \"z\" になります． `multname_n` はサイズが境界 `region` "
-"の自由度数である固定サイズ変数でなければなりません．これは接触等価節点力を表します．摩擦条件を追加するには，  `multname_t` および "
-"`dataname_friction_coeff` パラメータを追加する必要があります．`multname_t` "
-"は固定サイズの変数でなければならず，そのサイズは境界`region` 上の自由度の数に :math:`d-1` を乗じたものである．ここで "
-":math:`d` は領域の次元です．これは摩擦相当節点力を表します．拡張パラメータ `r` "
-"は許容値(弾性体のYoung率に近い値．Getfemのユーザードキュメントを参照)の範囲内で選択される必要があります．`dataname_friction_coeff`"
-" は摩擦係数です．各接触節点の摩擦係数を表すスカラー値または値のベクトルです．パラメータ `augmented_version` は拡大戦略を示します:"
-" 1は非対称のAlart-"
-"Curnier拡張Lagrangian，2は対称(接触とCoulomb摩擦の結合を除く)，3は新しい非対称方法です．基本的に，このブリックは行列BNおよびベクトルgapおよびalphaを計算し，基本接触ブリックを呼び出します．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonlinear_elasticity_brick:1
@@ -2675,11 +2651,8 @@ msgid ""
 "Compute on `mf_vm` the Von-Mises or the Tresca stress of a field for "
 "plasticity and return it into the vector V. `datasigma` is a vector which "
 "contains the stress constraints values supported by the mesh. `version` "
-"should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
+"should be 'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
 msgstr ""
-"塑性の場のVon-Mises応力またはTresca応力を `mf_vm` で計算し，ベクトルVに戻します． `datasigma` "
-"はメッシュによってサポートされる応力制約値を含むベクトルです． `version` は 'Von_Mises' または 'Tresca' "
-"('Von_Mises' がデフォルト)でなければなりません．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_finite_strain_elasticity_Von_Mises:1
@@ -2731,20 +2704,16 @@ msgstr ""
 msgid ""
 "Compute the Von-Mises stress  of a displacement field for isotropic "
 "linearized elasticity in 3D or in 2D with plane strain assumption. "
-"Parametrized by Young modulus and Poisson ratio."
+"Parametrized by Young's modulus and Poisson ratio."
 msgstr ""
-"平面ひずみを仮定した3次元または2次元における等方性線形化弾性の変位場のVon-"
-"Mises応力を計算します．Young率とPoisson比によってパラメータ化されます．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_isotropic_linearized_Von_Mises_pstress:1
 msgid ""
 "Compute the Von-Mises stress  of a displacement field for isotropic "
 "linearized elasticity in 3D or in 2D with plane stress assumption. "
-"Parametrized by Young modulus and Poisson ratio."
+"Parametrized by Young's modulus and Poisson ratio."
 msgstr ""
-"平面応力を仮定した3次元または2次元における等方性線形化弾性の変位場のVon-"
-"Mises応力を計算します．Young率とPoisson比によってパラメータ化されます．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_plastic_part:1
