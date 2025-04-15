@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-29 01:45+0000\n"
+"POT-Creation-Date: 2025-04-15 01:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:02+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../source/project/libdesc_interface.rst:11
-msgid "Interface with scripts languages (Python, Scilab and Matlab)"
+msgid "Interface with scripting languages (Python, Scilab and Matlab)"
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:13
@@ -102,21 +102,23 @@ msgid ""
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:57
-msgid ":file:`getfemint_gsparse.h`, :file:`getfemint_precond.h`, etc."
+msgid ""
+":file:`getfemint_gsparse.h`, :file:`getfemint_gprecond.h`, "
+":file:`getfemint_gmumps.h`, etc."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:59
+#: ../source/project/libdesc_interface.rst:60
 msgid ""
 "Files specific to an interfaced object if needed. (getfemint_gsparse which "
 "export some kind of mutable sparse matrix that can switch between different "
 "storage types, and real of complex elements)."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:63
+#: ../source/project/libdesc_interface.rst:64
 msgid ":file:`gf_workspace.cc`, :file:`gf_delete.cc`."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:65
+#: ../source/project/libdesc_interface.rst:66
 msgid ""
 "Memory management for getfem objects. There is a layer which handles the "
 "dependency between for example a ``mesh`` and a ``mesh_fem``. It makes sure "
@@ -126,18 +128,18 @@ msgid ""
 "passing incorrect argument to the getfem interface."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:74
+#: ../source/project/libdesc_interface.rst:75
 msgid ""
 "It also provides a kind of workspace stack, which was designed to simplify "
 "handling and cleaning of many getfem objects in matlab (since matlab does "
 "not have \"object destructors\")."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:78
+#: ../source/project/libdesc_interface.rst:79
 msgid ":file:`getfemint.h`, :file:`getfemint.cc`."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:80
+#: ../source/project/libdesc_interface.rst:81
 msgid ""
 "Define the ``mexarg_in``, ``mexarg_out`` classes, which are used to parse "
 "the list of input and output arguments to the getfem interface functions. "
@@ -145,13 +147,13 @@ msgid ""
 "moved into :file:`gfm_mex.c`."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:86
+#: ../source/project/libdesc_interface.rst:87
 msgid ""
 ":file:`gf_mesh.cc`, :file:`gf_mesh_get.cc`, :file:`gf_mesh_set.cc`, "
 ":file:`gf_fem.cc`, etc."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:89
+#: ../source/project/libdesc_interface.rst:90
 msgid ""
 "All the functions exported be the getfem interfaces, sorted by object type "
 "(``gf_mesh*``, ``gf_mesh_fem*``, ``gf_fem*``), and then organized as one for"
@@ -163,11 +165,11 @@ msgid ""
 " matlab, or ``Mesh.nbpts()`` in python)."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:98
+#: ../source/project/libdesc_interface.rst:99
 msgid ":file:`matlab/gfm_rpx_mexint.c`."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:100
+#: ../source/project/libdesc_interface.rst:101
 msgid ""
 "An alternative to :file:`gfm_mex.c` which is used when the ``--enable-"
 "matlab-rpc`` is passed to the ``./configure`` script. The main use for that "
@@ -177,36 +179,36 @@ msgid ""
 "without having to mess with matlab (it is pain to debug)."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:107
+#: ../source/project/libdesc_interface.rst:108
 msgid ":file:`python/getfem.py`."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:109
+#: ../source/project/libdesc_interface.rst:110
 msgid ""
 "The python interface is available as a \":file:`getfem.py`\" file which is "
 "produced during compilation by the python script "
 "\":file:`bin/extract_doc.py`\"."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:116
+#: ../source/project/libdesc_interface.rst:117
 msgid "Objects, methods and functions of the interface"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:118
+#: ../source/project/libdesc_interface.rst:119
 msgid ""
 "The main concepts manipulated by the interface are a limited number of "
 "objects (Fem, Mesh, MeshFem, Model ...), the associated methods and some "
 "functions defined on these objects."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:121
+#: ../source/project/libdesc_interface.rst:122
 msgid ""
 "A special effort has been done to facilitate the addition of new objects, "
 "methods and functions to the interface without doing it separately for each "
 "part supported script language (Python, Scilab, Octave, Matlab)."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:124
+#: ../source/project/libdesc_interface.rst:125
 msgid ""
 "All the information needed to build the interface for the different objects,"
 " methods and functions is contained in the files `interface/src/gf*.cc`. A "
@@ -217,39 +219,39 @@ msgid ""
 "documentations."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:126
+#: ../source/project/libdesc_interface.rst:127
 msgid ""
 "To make all the things work automatically, a certain number of rules have to"
 " be respected:"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:129
+#: ../source/project/libdesc_interface.rst:130
 msgid "An object have to be defined by three files on the interface"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:131
+#: ../source/project/libdesc_interface.rst:132
 msgid ":file:`gf_objectname.cc` : contains the constructors of the object"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:133
+#: ../source/project/libdesc_interface.rst:134
 msgid ""
 ":file:`gf_objectname_get.cc` : contains the methods which only get some "
 "information about the object (if any)."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:135
+#: ../source/project/libdesc_interface.rst:136
 msgid ""
 ":file:`gf_objectname_set.cc` : contains the methods which transform the "
 "object (if any)."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:137
+#: ../source/project/libdesc_interface.rst:138
 msgid ""
 "A list of function is defined by only one file :file:`gf_commandname.cc`. It"
 " contains a list of sub-commands."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:141
+#: ../source/project/libdesc_interface.rst:142
 msgid ""
 "For each file, the main commentary on the list of functions or methods is "
 "delimited by the tags '/*@GFDOC' and '@*/'. For a file corresponding to the "
@@ -257,7 +259,7 @@ msgid ""
 "description of the object."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:144
+#: ../source/project/libdesc_interface.rst:145
 msgid ""
 "Each non trivial file gf_*.cc contains a macro allowing to define the "
 "methods of the object or the sub-commands. In particular, this system allows"
@@ -265,16 +267,16 @@ msgid ""
 " to declare a new method/function with the following syntax::"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:160
+#: ../source/project/libdesc_interface.rst:161
 msgid ""
-"The first three line are a c++ commentary which describes the call of the "
+"The first three lines are a C++ comment which describes the call of the "
 "method/function with a special syntax and also gives a description of the "
 "method/function which will be included in the documentations. The first line"
-" of this commentary is important since it will be analyzed to produce the "
-"right interface for Python, Octave, Matlab and Scilab."
+" of this comment is important since it will be analyzed to produce the right"
+" interface for Python, Octave, Matlab and Scilab."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:166
+#: ../source/project/libdesc_interface.rst:167
 msgid ""
 "The syntax for the description of the call of a method/function is the "
 "following: After ``/*@`` a special keyword should be present. It is either "
@@ -286,13 +288,13 @@ msgid ""
 "list."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:175
+#: ../source/project/libdesc_interface.rst:176
 msgid ""
 "If the method/function returns a value, then a name for the return value is "
 "given (which is arbitrary) followed by ``=``."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:178
+#: ../source/project/libdesc_interface.rst:179
 msgid ""
 "The parameters of the method/function are described. For a method, the "
 "object itself is not mentionned. The first parameter should be the method or"
@@ -301,124 +303,128 @@ msgid ""
 " the command name is not required)."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:184
+#: ../source/project/libdesc_interface.rst:185
 msgid ""
 "The other parameters, if any, should be declared with a type. Predefined "
 "types are the following:"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:187
+#: ../source/project/libdesc_interface.rst:188
 msgid "``@CELL``   : a cell array,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:188
+#: ../source/project/libdesc_interface.rst:189
 msgid "``@imat``   : matrix of integers,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:189
+#: ../source/project/libdesc_interface.rst:190
 msgid "``@ivec``   : vector of integers,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:190
+#: ../source/project/libdesc_interface.rst:191
 msgid "``@cvec``   : vector of complex values,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:191
+#: ../source/project/libdesc_interface.rst:192
 msgid "``@dcvec``  : vector of complex values,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:192
+#: ../source/project/libdesc_interface.rst:193
 msgid "``@dvec``   : vector of real values,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:193
+#: ../source/project/libdesc_interface.rst:194
 msgid "``@vec``    : vector of real or complex values,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:194
+#: ../source/project/libdesc_interface.rst:195
 msgid "``@dmat``   : matrix of real values,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:195
+#: ../source/project/libdesc_interface.rst:196
 msgid "``@mat``    : matrix of real or complex values,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:196
+#: ../source/project/libdesc_interface.rst:197
 msgid "``@str``    : a string,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:197
+#: ../source/project/libdesc_interface.rst:198
 msgid "``@int``    : an integer,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:198
+#: ../source/project/libdesc_interface.rst:199
 msgid "``@bool``   : a boolean,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:199
+#: ../source/project/libdesc_interface.rst:200
 msgid "``@real``   : a real value,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:200
+#: ../source/project/libdesc_interface.rst:201
 msgid "``@scalar`` : a real or complex value,"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:201
+#: ../source/project/libdesc_interface.rst:202
 msgid "``@list``   : a list."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:203
+#: ../source/project/libdesc_interface.rst:204
 msgid ""
 "Moreover, ``@tobj`` refers to an object defined by the interface. For "
-"instance, ou can refer to ``@tmesh``, ``@tmesh_fem``, ``@tfem``, etc. There "
-"are some authorized abbreviations:"
-msgstr ""
-
-#: ../source/project/libdesc_interface.rst:207
-msgid "``@tcs``  for  ``@tcont_struct``"
+"instance, you can refer to ``@tmesh``, ``@tmesh_fem``, ``@tfem``, etc. There"
+" are some authorized abbreviations:"
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:208
-msgid "``@tmf``  for  ``@tmesh_fem``"
+msgid "``@tcs``  for  ``@tcont_struct``"
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:209
-msgid "``@tgt``  for  ``@tgeotrans``"
+msgid "``@tmf``  for  ``@tmesh_fem``"
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:210
-msgid "``@tgf``  for  ``@tglobal_function``"
+msgid "``@tgt``  for  ``@tgeotrans``"
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:211
-msgid "``@tmo``  for  ``@tmesher_object``"
+msgid "``@tgf``  for  ``@tglobal_function``"
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:212
-msgid "``@tmls``  for  ``@tmesh_levelset``"
+msgid "``@tmo``  for  ``@tmesher_object``"
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:213
-msgid "``@tmim``  for  ``@tmesh_im``"
+msgid "``@tmls`` for  ``@tmesh_levelset``"
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:214
-msgid "``@tls``  for  ``@tlevelset``"
+msgid "``@tmim`` for  ``@tmesh_im``"
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:215
-msgid "``@tsl``  for  ``@tslice``"
+msgid "``@tls``  for  ``@tlevelset``"
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:216
-msgid "``@tsp``  for  ``@tspmat``"
+msgid "``@tsl``  for  ``@tslice``"
 msgstr ""
 
 #: ../source/project/libdesc_interface.rst:217
-msgid "``@tpre``  for  ``@tprecond``"
+msgid "``@tsp``  for  ``@tspmat``"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:220
+#: ../source/project/libdesc_interface.rst:218
+msgid "``@tpre`` for  ``@tprecond``"
+msgstr ""
+
+#: ../source/project/libdesc_interface.rst:219
+msgid "``@tmct`` for  ``@tmumps_context``"
+msgstr ""
+
+#: ../source/project/libdesc_interface.rst:222
 msgid ""
 "Three dots at the end of the parameter list (``...``) mean that additional "
 "parameters are possible. Optional parameters can be described with brackets."
@@ -426,7 +432,7 @@ msgid ""
 "interpreted by the :file:`extract_doc` script to build the python interface."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:226
+#: ../source/project/libdesc_interface.rst:228
 msgid ""
 "The second to fifth parameters of the macro correspond respectively to the "
 "minimum number of input arguments, the maximum one, the minimum number of "
@@ -434,25 +440,25 @@ msgid ""
 "dynamically verified."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:231
+#: ../source/project/libdesc_interface.rst:233
 msgid "Additional parameters for the function lists ...."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:233
+#: ../source/project/libdesc_interface.rst:235
 msgid ""
 "For unknown reasons, the body of the function cannot contain multiple "
 "declarations such as ``int a, b;`` (c++ believes that it is an additional "
 "parameter of the macro)."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:239
+#: ../source/project/libdesc_interface.rst:241
 msgid ""
 "The parts of documentation included in the c++ commentaries should be in "
 "`reStructuredText`_ format. In particular, math formulas can be included "
 "with \\:math\\:\\`f(x) = 3x^2+2x+4\\` or with::"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:247
+#: ../source/project/libdesc_interface.rst:249
 msgid ""
 "It is possible to refer to another method or function of the interface with "
 "the syntax ``INIT::OBJNAME('method-name', ...)``, ``GET::OBJNAME('method-"
@@ -461,7 +467,7 @@ msgid ""
 "right syntax depending on the language (Octave, Matlab, Scilab or Python)."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:253
+#: ../source/project/libdesc_interface.rst:255
 msgid ""
 "Still in the documentations, parts for a specific language can be added by "
 "``@MATLAB{specific part ...}``, ``@SCILAB{specific part ...}`` and "
@@ -473,17 +479,17 @@ msgid ""
 ":file:`gf_mesh_fem_get.cc`."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:263
+#: ../source/project/libdesc_interface.rst:265
 msgid ""
 "For Python and the Matlab object, if a `SET` method has the same name as a "
 "`GET` method, the `SET` method is prefixed by `set_`."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:273
+#: ../source/project/libdesc_interface.rst:275
 msgid "Adding a new function or object method to the getfem interface"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:275
+#: ../source/project/libdesc_interface.rst:277
 msgid ""
 "If one want to add a new function ``gf_mesh_get(m, \"foobar\", .)``, then "
 "the main file to modify is :file:`gf_mesh_get.cc`. Remember to check every "
@@ -492,7 +498,7 @@ msgid ""
 "macro defined in :file:`gf_mesh_get.cc` to add your function."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:279
+#: ../source/project/libdesc_interface.rst:281
 msgid ""
 "Do not forget to add documentation for that function: in "
 ":file:`gf_mesh_get.cc`, this is the documentation that appears in the "
@@ -501,38 +507,38 @@ msgid ""
 "autogenerated documentation."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:284
+#: ../source/project/libdesc_interface.rst:286
 msgid ""
 "IMPORTANT. Note that the array indices start at 0 in Python and 1 in Octave,"
 " Matlab and Scilab. A specific function::"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:288
+#: ../source/project/libdesc_interface.rst:290
 msgid ""
 "whose value is 0 in python and 1 in Octave, Matlab and Scilab has to be used"
 " to exchange indices and array of indices. Take care not to make the "
 "correction twice. Some Array of indices are automatically shifted."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:291
+#: ../source/project/libdesc_interface.rst:293
 msgid "Adding a new object to the getfem interface"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:293
+#: ../source/project/libdesc_interface.rst:295
 msgid ""
 "In order to add a new object to the interface, you have to build the new "
 "corresponding sources :file:`gf_obj.cc`, :file:`gf_obj_get.cc` and "
 ":file:`gf_obj_set.cc`. Of course you can take the existing ones as a model."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:295
+#: ../source/project/libdesc_interface.rst:297
 msgid ""
 "For the management of the object, you have to declare the class at the "
 "begining of :file:`getfemint.h` (with respect to the alphabetic order), and "
 "declare three functions::"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:301
+#: ../source/project/libdesc_interface.rst:303
 msgid ""
 "where \"name\" is the name of the object in the interface and "
 "``object_class`` is the class name in getfem (for instance  ``getfem::mesh``"
@@ -540,7 +546,7 @@ msgid ""
 " a shared pointer in |gf|, the third function can return a shared pointer."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:303
+#: ../source/project/libdesc_interface.rst:305
 msgid ""
 "IMPORTANT: In order to be interfaced, a |gf| object has to derive from "
 "``dal::static_stored_object``. However, if it is not the case, a wrapper "
@@ -548,7 +554,7 @@ msgid ""
 "of :file:`getfemint.h`)."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:305
+#: ../source/project/libdesc_interface.rst:307
 msgid ""
 "The previous three functions have to be implemented at the end of "
 ":file:`getfemint.cc`.It is possible to use one of the two macros defined in "
@@ -556,20 +562,20 @@ msgid ""
 "second one for an object which is manipulated in |gf| with a shared pointer."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:307
+#: ../source/project/libdesc_interface.rst:309
 msgid ""
 "You have also to complete functions ``name_of_getfemint_class_id`` and "
 "``class_id_of_object`` at the end of :file:`getfemint.cc`."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:310
+#: ../source/project/libdesc_interface.rst:312
 msgid ""
 "You have to add the call of the interface function in "
 ":file:`getfem_interface.cc` and modifiy the file :file:`bin/extract_doc` and"
 " run the configure file."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:312
+#: ../source/project/libdesc_interface.rst:314
 msgid ""
 "The methods ``get('char')`` and ``get('display')`` should be defined for "
 "each object. The first one should give a string allowing the object to be "
@@ -578,22 +584,22 @@ msgid ""
 "object from a file."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:314
+#: ../source/project/libdesc_interface.rst:316
 msgid ""
 "For the Scilab interface the file "
 ":file:`sci_gateway/c/builder_gateway_c.sce.in` has to be modified and the "
 "files in the directory :file:`macros/overload`."
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:318
+#: ../source/project/libdesc_interface.rst:320
 msgid "State"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:322
+#: ../source/project/libdesc_interface.rst:324
 msgid "Perspectives"
 msgstr ""
 
-#: ../source/project/libdesc_interface.rst:323
+#: ../source/project/libdesc_interface.rst:325
 msgid ""
 "The interface grows in conjunction with |gf|. The main |gf| functionalities "
 "are interfaced."

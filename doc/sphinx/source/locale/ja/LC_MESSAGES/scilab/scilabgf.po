@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-29 01:45+0000\n"
+"POT-Creation-Date: 2025-04-15 01:51+0000\n"
 "PO-Revision-Date: 2018-07-16 07:01+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -221,39 +221,52 @@ msgid "``gf_model_set`` : modify a |mlab_md| object."
 msgstr "``gf_model_set`` : mlab_md| オブジェクトを修正します．"
 
 #: ../source/scilab/scilabgf.rst:71
+msgid "``gf_mumps_context`` : create a |mlab_mumps| object."
+msgstr ""
+
+#: ../source/scilab/scilabgf.rst:72
+msgid ""
+"``gf_mumps_context_get`` : retrieve information from a |mlab_mumps| object."
+msgstr ""
+
+#: ../source/scilab/scilabgf.rst:73
+msgid "``gf_mumps_context_set`` : modify a |mlab_mumps| object."
+msgstr ""
+
+#: ../source/scilab/scilabgf.rst:74
 msgid "``gf_global_function`` : create a gfGlobalFunction object."
 msgstr "``gf_global_function`` : gfGlobalFunctionオブジェクトを作成します．"
 
-#: ../source/scilab/scilabgf.rst:72
+#: ../source/scilab/scilabgf.rst:75
 msgid ""
 "``gf_model_get`` : retrieve information from a gfGlobalFunction object."
 msgstr "``gf_model_get`` : gfGlobalFunctionオブジェクトから情報を取得します．"
 
-#: ../source/scilab/scilabgf.rst:73
+#: ../source/scilab/scilabgf.rst:76
 msgid "``gf_model_set`` : modify a GlobalFunction object."
 msgstr "``gf_model_set`` : GlobalFunctionオブジェクトを変更します．"
 
-#: ../source/scilab/scilabgf.rst:74
+#: ../source/scilab/scilabgf.rst:77
 msgid "``gf_plot_mesh`` : plotting of mesh."
 msgstr "``gf_plot_mesh`` : メッシュのプロット．"
 
-#: ../source/scilab/scilabgf.rst:75
+#: ../source/scilab/scilabgf.rst:78
 msgid "``gf_plot`` : plotting of 2D and 3D fields."
 msgstr "``gf_plot`` : 2Dおよび3Dフィールドのプロット．"
 
-#: ../source/scilab/scilabgf.rst:76
+#: ../source/scilab/scilabgf.rst:79
 msgid "``gf_plot_1D`` : plotting of 1D fields."
 msgstr "``gf_plot_1D`` : 1Dフィールドのプロット．"
 
-#: ../source/scilab/scilabgf.rst:77
+#: ../source/scilab/scilabgf.rst:80
 msgid "``gf_plot_slice`` : plotting of a mesh slice."
 msgstr "``gf_plot_slice`` : メッシュスライスのプロット．"
 
-#: ../source/scilab/scilabgf.rst:81
+#: ../source/scilab/scilabgf.rst:84
 msgid "Objects"
 msgstr "オブジェクト"
 
-#: ../source/scilab/scilabgf.rst:83
+#: ../source/scilab/scilabgf.rst:86
 msgid ""
 "Various \"objects\" can be manipulated by the |gfm| toolbox, see fig. "
 ":ref:`scilab-fig-hierarchy`. The MESH and MESHFEM objects are the two most "
@@ -262,30 +275,30 @@ msgstr ""
 "|gfm| ツールボックスでは，さまざまな \"objects\" を操作できます．図 :ref:`scilab-fig-hierarchy` "
 "を参照してください．MESHオブジェクトとMESHFEMオブジェクトは，最も重要な2つのオブジェクトです．"
 
-#: ../source/scilab/scilabgf.rst:91
+#: ../source/scilab/scilabgf.rst:94
 msgid "|gfm| objects hierarchy."
 msgstr "|gfm| オブジェクト階層．"
 
-#: ../source/scilab/scilabgf.rst:94
+#: ../source/scilab/scilabgf.rst:97
 msgid ""
 ":envvar:`gfGeoTrans`: geometric transformations (defines the shape/position "
 "of the convexes), created with ``gf_geotrans``"
 msgstr ""
 ":envvar:`gfGeoTrans`: 幾何学的な変換(凸の形状/位置を定義します)が， ``gf_geotrans`` で作成されます．"
 
-#: ../source/scilab/scilabgf.rst:96
+#: ../source/scilab/scilabgf.rst:99
 msgid ""
 ":envvar:`gfGlobalFunction`: represent a global function for the enrichment "
 "of finite element methods."
 msgstr ":envvar:`gfGlobalFunction`:  は有限要素法を強化するための大域関数を表します．"
 
-#: ../source/scilab/scilabgf.rst:97
+#: ../source/scilab/scilabgf.rst:100
 msgid ""
 ":envvar:`gfMesh` : mesh structure (nodes, convexes, geometric "
 "transformations for each convex), created with ``gf_mesh``"
 msgstr ":envvar:`gfMesh` : ``gf_mesh`` で作成されたメッシュ構造(節点，凸形，各凸形の幾何変換)"
 
-#: ../source/scilab/scilabgf.rst:99
+#: ../source/scilab/scilabgf.rst:102
 msgid ""
 ":envvar:`gfInteg` : integration method (exact, quadrature formula...).  "
 "Although not linked directly to GEOTRANS, an integration method is usually "
@@ -295,26 +308,26 @@ msgstr ""
 "積分法(正確な求積公式...)．GEOTRANSに直接リンクされているわけではありませんが，積分法は通常，与えられた凸構造に固有のものです． "
 "``gf_integ`` で作成されます．"
 
-#: ../source/scilab/scilabgf.rst:102
+#: ../source/scilab/scilabgf.rst:105
 msgid ""
 ":envvar:`gfFem` : the finite element method (one per convex, can be PK, QK, "
 "HERMITE, etc.). Created with ``gf_fem``"
 msgstr ""
 ":envvar:`gfFem` : 有限要素法(凸ごとに1つ，PK，QK，HERMITEなどがあります．)． ``gf_fem`` で作成します．"
 
-#: ../source/scilab/scilabgf.rst:104
+#: ../source/scilab/scilabgf.rst:107
 msgid ""
 ":envvar:`gfCvStruct` : stores formal information convex structures (nb. of "
 "points, nb. of faces which are themselves convex structures)."
 msgstr ":envvar:`gfCvStruct` : 凸構造の形式情報(凸の構造である点の数，面の数)を格納します．"
 
-#: ../source/scilab/scilabgf.rst:106
+#: ../source/scilab/scilabgf.rst:109
 msgid ""
 ":envvar:`gfMeshFem` : object linked to a mesh, where each convex has been "
 "assigned an FEM. Created with ``gf_mesh_fem``."
 msgstr ":envvar:`gfMeshFem` : メッシュにリンクされたオブジェクトで，各凸にFEMが割り当てられています．"
 
-#: ../source/scilab/scilabgf.rst:108
+#: ../source/scilab/scilabgf.rst:111
 msgid ""
 ":envvar:`gfMeshImM` : object linked to a mesh, where each convex has been "
 "assigned an integration method. Created with ``gf_mesh_im``."
@@ -322,7 +335,7 @@ msgstr ""
 ":envvar:`gfMeshImM` : メッシュにリンクされたオブジェクトで，各凸部に積分メソッドが割り当てられています． "
 "``gf_mesh_im`` で作成します．"
 
-#: ../source/scilab/scilabgf.rst:110
+#: ../source/scilab/scilabgf.rst:113
 msgid ""
 ":envvar:`gfMeshSlice` : object linked to a mesh, very similar to a "
 "P1-discontinuous |mlab_mf|. Used for fast interpolation and plotting."
@@ -330,7 +343,7 @@ msgstr ""
 ":envvar:`gfMeshSlice` : メッシュにリンクされたオブジェクトで，P1-不連続 |mlab_mf| "
 "によく似ています．高速な補間とプロットに使用します．"
 
-#: ../source/scilab/scilabgf.rst:112
+#: ../source/scilab/scilabgf.rst:115
 msgid ""
 ":envvar:`gfMdBrick` : |mlab_mbr| , an abstraction of a part of solver (for "
 "example, the part which build the tangent matrix, the part which handles the"
@@ -343,7 +356,7 @@ msgstr ""
 "条件を処理するパーツなどです)．これらのオブジェクトは，さまざまな問題に対する完全なソルバを構築するためにスタックされます．通常は，|mlab_mf| "
 "， |mlab_mim| などを使用します．非推奨のオブジェクトで，現在はgfModelに置き換えられています．"
 
-#: ../source/scilab/scilabgf.rst:117
+#: ../source/scilab/scilabgf.rst:120
 msgid ""
 ":envvar:`gfMdState` : \"model state\", holds the global data for a stack of "
 "mdbricks (global tangent matrix, right hand side etc.). Deprecated object, "
@@ -352,7 +365,7 @@ msgstr ""
 ":envvar:`gfMdState` : \"model state\" "
 "は，mdbricks(グローバル接線行列，右辺など)のスタックのグローバルデータを保持します．非推奨オブジェクトです．現在はgfModelに置き換えられています．"
 
-#: ../source/scilab/scilabgf.rst:119
+#: ../source/scilab/scilabgf.rst:122
 msgid ""
 ":envvar:`gfModel` : \"model\", holds the global data, variables and "
 "description of a model. Evolution of \"model state\" object for 4.0 version "
@@ -361,7 +374,7 @@ msgstr ""
 ":envvar:`gfModel` :  \"model\" は，modelのグローバルデータ，変数，および説明を保持します． |gf| "
 "のバージョン4.0の \"model state\" オブジェクトの開発．"
 
-#: ../source/scilab/scilabgf.rst:122
+#: ../source/scilab/scilabgf.rst:125
 msgid ""
 "The |gfm| toolbox uses its own :envvar:`memory management`. Hence |gf| "
 "objects are not cleared when a::"
@@ -369,11 +382,11 @@ msgstr ""
 "cツールボックスは，独自の:envvar:`memory "
 "management`を使用します．したがって，次の場合，|gf|オブジェクトは消去されません．"
 
-#: ../source/scilab/scilabgf.rst:127
+#: ../source/scilab/scilabgf.rst:130
 msgid "is issued at the |sci| prompt, but instead the function::"
 msgstr "が |sci| プロンプトで発行されますが，代わりに次の関数が発行されます．"
 
-#: ../source/scilab/scilabgf.rst:131
+#: ../source/scilab/scilabgf.rst:134
 msgid ""
 "should be used. The various |gfm| object can be accessed via *handles* (or "
 "*descriptors*), which are just |sci| structures containing 32-bits integer "
@@ -383,23 +396,23 @@ msgstr ""
 ")を介してアクセスできます．これは，実際のオブジェクトへの32ビット整数識別子を含む単なる |sci| 構造体です．したがって， |sci| "
 "コマンドは次のようになります．"
 
-#: ../source/scilab/scilabgf.rst:137
+#: ../source/scilab/scilabgf.rst:140
 msgid ""
 "does not report the memory consumption of |gf| objects (except the marginal "
 "space used by the handle). Instead, you should use::"
 msgstr "は |gf| オブジェクト(ハンドルによって使用される余白を除く)のメモリ消費を報告しません．代わりに，次を使用してください．"
 
-#: ../source/scilab/scilabgf.rst:142
+#: ../source/scilab/scilabgf.rst:145
 msgid "There are two kinds of |gfm| objects:"
 msgstr "|gfm| オブジェクトには次の2種類があります．"
 
-#: ../source/scilab/scilabgf.rst:144
+#: ../source/scilab/scilabgf.rst:147
 msgid ""
 "static ones, which can not be deleted: ELTM, FEM, INTEG, GEOTRANS and "
 "CVSTRUCT. Hopefully their memory consumption is very low."
 msgstr "ELTM，FEM，INTEG，GEOTRANS，CVSTRUCTなど，削除できない静的なものがあります．"
 
-#: ../source/scilab/scilabgf.rst:146
+#: ../source/scilab/scilabgf.rst:149
 msgid ""
 "dynamic ones, which can be destroyed, and are handled by the "
 "``gf_workspace`` function: MESH, MESHFEM, MESHIM, SLICE, SPMAT, PRECOND."
@@ -407,7 +420,7 @@ msgstr ""
 "これは，MESH，MESHFEM，MESHHIM，SLICE，SPMAT，PRECONDなどの  ``gf_workspace`` "
 "関数によって処理されます．"
 
-#: ../source/scilab/scilabgf.rst:149
+#: ../source/scilab/scilabgf.rst:152
 msgid ""
 "The objects MESH and MESHFEM are not independent: a MESHFEM object is always"
 " linked to a MESH object, and a MESH object can be used by several MESHFEM "

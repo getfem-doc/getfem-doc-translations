@@ -48,6 +48,7 @@ reference. Here is a list of these types:
 `global_function`      global function descriptor
 `mesher_object`        mesher object descriptor
 `cont_struct`          continuation-structure descriptor
+`mumps_context`        mumps context descriptor (or gfMumpsContext object)
 =====================  ==================================================
 
 Arguments listed between square brackets are optional. Lists between braces indicate that the argument must match one of the elements of the list. For example::
@@ -1889,7 +1890,7 @@ gf_linsolve
   X = gf_linsolve('bicgstab', spmat M, vec b [, precond P][,'noisy'][,'res', r][,'maxiter', n])
   {U, cond} = gf_linsolve('lu', spmat M, vec b)
   {U, cond} = gf_linsolve('superlu', spmat M, vec b)
-  {U, cond} = gf_linsolve('mumps', spmat M, vec b)
+  {U, cond} = gf_linsolve('mumps', spmat M, vec b, ... ['sym'])
 
 **Description :**
 
@@ -1935,12 +1936,15 @@ gf_linsolve
     The condition number estimate `cond` is returned with the solution `U`.
 
 
-  ``{U, cond} = gf_linsolve('mumps', spmat M, vec b)``
+  ``{U, cond} = gf_linsolve('mumps', spmat M, vec b, ... ['sym'])``
 
     Solve `M.U = b` using the MUMPS solver.
     
     The right hand side `b` can optionally by a matrix with several columns
     in order to solve multiple right hand sides at once.
+    
+    If the option `sym` is provided, the symmetric version of the MUMPS
+    solver will be used.
 
 gf_mesh
 -------------------------------------------
@@ -6449,6 +6453,215 @@ gf_model_set
 
     Adds a contact boundary to an existing unbiased Nitschelarge sliding contact
     with friction brick which is both master and slave.
+
+gf_mumps_context
+-------------------------------------------
+
+**Synopsis**
+
+::
+
+  CTX = gf_mumps_context(string sym, string datatype)
+
+**Description :**
+
+
+General constructor for mumps_context objects.
+
+
+
+**Command list :**
+
+
+
+  ``CTX = gf_mumps_context(string sym, string datatype)``
+
+    The argument `sym` should be 'symmetric' or 'unsymmetric' or empty.
+    Default value is 'unsymmetric'.
+    The argument `datatype` should be 'real' or 'complex' or empty.
+    Default value is 'real'.
+
+gf_mumps_context_get
+-------------------------------------------
+
+**Synopsis**
+
+::
+
+  gf_mumps_context_get(mumps_context MC, 'display')
+  K = gf_mumps_context_get(mumps_context MC, 'matrix')
+  vec = gf_mumps_context_get(mumps_context MC, 'vector')
+  VAL = gf_mumps_context_get(mumps_context MC, 'ICNTL', int ind)
+  VAL = gf_mumps_context_get(mumps_context MC, 'INFOG', int ind)
+  VAL = gf_mumps_context_get(mumps_context MC, 'RINFO', int ind)
+  VAL = gf_mumps_context_get(mumps_context MC, 'RINFOG', int ind)
+
+**Description :**
+
+
+  General function for querying information about a mumps_context object.
+*/
+
+void gf_mumps_context_get(getfemint::mexargs_in& in,
+                          getfemint::mexargs_out& out) {
+
+  if (in.narg() < 2) THROW_BADARG("Wrong number of input arguments");
+
+  const gmumps *pctx   = to_mumps_context_object(in.pop());
+  std::string init_cmd = in.pop().to_string();
+  std::string cmd      = cmd_normalize(init_cmd);
+
+  if (check_cmd(cmd, "display", in, out, 0, 0, 0, 0)) {
+    /*@GET ('display')
+      Display a short summary for a mumps_context object.
+
+**Command list :**
+
+
+
+  ``gf_mumps_context_get(mumps_context MC, 'display')``
+
+    Display a short summary for a mumps_context object.
+
+
+  ``K = gf_mumps_context_get(mumps_context MC, 'matrix')``
+
+    The mumps_context object in the scripting API cannot return
+    a reference to the ija matrix stored in C++. It just
+    displays information about the stored matrix.
+
+
+  ``vec = gf_mumps_context_get(mumps_context MC, 'vector')``
+
+    Outputs a copy of the vector stored in the mumps_context object.
+    Before the solution, it contains the right hand side of the system.
+    After the solution, it contains the solution.
+
+
+  ``VAL = gf_mumps_context_get(mumps_context MC, 'ICNTL', int ind)``
+
+    Output the ICNTL array entry at 1-based index `ind` stored in
+    the mumps_context object.
+    
+    Capital naming convention is used to imply Fortran indexing.
+
+
+  ``VAL = gf_mumps_context_get(mumps_context MC, 'INFOG', int ind)``
+
+    Output the INFOG array entry at 1-based index `ind` stored in
+    the mumps_context object.
+    
+    Capital naming convention is used to imply Fortran indexing.
+
+
+  ``VAL = gf_mumps_context_get(mumps_context MC, 'RINFO', int ind)``
+
+    Output the RINFO array entry at 1-based index `ind` stored in
+    the mumps_context object.
+    
+    Capital naming convention is used to imply Fortran indexing.
+
+
+  ``VAL = gf_mumps_context_get(mumps_context MC, 'RINFOG', int ind)``
+
+    Output the RINFOG array entry at 1-based index `ind` stored in
+    the mumps_context object.
+    
+    Capital naming convention is used to imply Fortran indexing.
+
+gf_mumps_context_set
+-------------------------------------------
+
+**Synopsis**
+
+::
+
+  gf_mumps_context_set(mumps_context MC, 'matrix', mat A)
+  gf_mumps_context_set(mumps_context MC, 'vector', vec b)
+  gf_mumps_context_set(mumps_context MC, 'ICNTL', int ind, int val)
+  gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)
+  gf_mumps_context_set(mumps_context MC, 'analyze')
+  gf_mumps_context_set(mumps_context MC, 'factorize')
+  SOL = gf_mumps_context_set(mumps_context MC, 'solve')
+  gf_mumps_context_set(mumps_context MC, 'analyze and factorize')
+  SOL = gf_mumps_context_set(mumps_context MC, 'analyze factorize and solve')
+
+**Description :**
+
+
+  General function for modifying mumps_context objects
+*/
+
+void gf_mumps_context_set(getfemint::mexargs_in& in,
+                          getfemint::mexargs_out& out) {
+
+  if (in.narg() < 2) THROW_BADARG("Wrong number of input arguments");
+
+  gmumps *pctx         = to_mumps_context_object(in.pop());
+  std::string init_cmd = in.pop().to_string();
+  std::string cmd      = cmd_normalize(init_cmd);
+
+  if (check_cmd(cmd, "matrix", in, out, 1, 1, 0, 0)) {
+    /*@SET ('matrix', mat A)
+      Set the matrix mat A for the mumps_context object.
+
+**Command list :**
+
+
+
+  ``gf_mumps_context_set(mumps_context MC, 'matrix', mat A)``
+
+    Set the matrix mat A for the mumps_context object.
+
+
+  ``gf_mumps_context_set(mumps_context MC, 'vector', vec b)``
+
+    Set the right hand side vec b for the mumps_context object.
+
+
+  ``gf_mumps_context_set(mumps_context MC, 'ICNTL', int ind, int val)``
+
+    Set the integer option at 1-based index `ind` in the ICNTL vector
+    of the mumps_context object to value `val`.
+    
+    Capital naming convention is used to imply Fortran indexing.
+
+
+  ``gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)``
+
+    Set the scalar option at 1-based index `ind` in the CNTL vector
+    of the mumps_context object to value `val`.
+    
+    Capital naming convention is used to imply Fortran indexing.
+
+
+  ``gf_mumps_context_set(mumps_context MC, 'analyze')``
+
+    Run the MUMPS analysis job for the mumps_context object.
+
+
+  ``gf_mumps_context_set(mumps_context MC, 'factorize')``
+
+    Run the MUMPS factorization job for the mumps_context object.
+
+
+  ``SOL = gf_mumps_context_set(mumps_context MC, 'solve')``
+
+    Run the MUMPS solve job (only) for the mumps_context object.
+    
+    The analysis and factorization jobs need to be run first
+    before calling this function.
+
+
+  ``gf_mumps_context_set(mumps_context MC, 'analyze and factorize')``
+
+    Run the MUMPS analysis and factorization jobs for the mumps_context object.
+
+
+  ``SOL = gf_mumps_context_set(mumps_context MC, 'analyze factorize and solve')``
+
+    Run the MUMPS analysis, factorization and solve jobs for the mumps_context
+    object. It returns the solution vector.
 
 gf_poly
 -------------------------------------------

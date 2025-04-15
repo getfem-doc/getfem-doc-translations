@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2025 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.4.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-15 01:51+0000\n"
+"PO-Revision-Date: 2025-04-15 01:51+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
+"Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:8
+msgid "gf_mumps_context_set"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:10
+msgid "**Synopsis**"
+msgstr "**概要**"
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:24
+msgid "**Description :**"
+msgstr "**説明 :**"
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:27
+msgid "General function for modifying mumps_context objects"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:28
+msgid "*/"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:30
+msgid "void gf_mumps_context_set(getfemint::mexargs_in& in,"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:31
+msgid "getfemint::mexargs_out& out) {"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:33
+msgid "if (in.narg() < 2) THROW_BADARG(\"Wrong number of input arguments\");"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:35
+msgid ""
+"gmumps *pctx         = to_mumps_context_object(in.pop()); std::string "
+"init_cmd = in.pop().to_string(); std::string cmd      = "
+"cmd_normalize(init_cmd);"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:39
+msgid "if (check_cmd(cmd, \"matrix\", in, out, 1, 1, 0, 0)) {"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:40
+msgid "/*@SET ('matrix', mat A)"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:41
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:49
+msgid "Set the matrix mat A for the mumps_context object."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:43
+msgid "**Command list :**"
+msgstr "**コマンドリスト**"
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:47
+msgid "``gf_mumps_context_set(mumps_context MC, 'matrix', mat A)``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:52
+msgid "``gf_mumps_context_set(mumps_context MC, 'vector', vec b)``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:54
+msgid "Set the right hand side vec b for the mumps_context object."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:57
+msgid "``gf_mumps_context_set(mumps_context MC, 'ICNTL', int ind, int val)``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:59
+msgid ""
+"Set the integer option at 1-based index `ind` in the ICNTL vector of the "
+"mumps_context object to value `val`."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:62
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:70
+msgid "Capital naming convention is used to imply Fortran indexing."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:65
+msgid ""
+"``gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:67
+msgid ""
+"Set the scalar option at 1-based index `ind` in the CNTL vector of the "
+"mumps_context object to value `val`."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:73
+msgid "``gf_mumps_context_set(mumps_context MC, 'analyze')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:75
+msgid "Run the MUMPS analysis job for the mumps_context object."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:78
+msgid "``gf_mumps_context_set(mumps_context MC, 'factorize')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:80
+msgid "Run the MUMPS factorization job for the mumps_context object."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:83
+msgid "``SOL = gf_mumps_context_set(mumps_context MC, 'solve')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:85
+msgid "Run the MUMPS solve job (only) for the mumps_context object."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:87
+msgid ""
+"The analysis and factorization jobs need to be run first before calling this"
+" function."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:91
+msgid "``gf_mumps_context_set(mumps_context MC, 'analyze and factorize')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:93
+msgid ""
+"Run the MUMPS analysis and factorization jobs for the mumps_context object."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:96
+msgid ""
+"``SOL = gf_mumps_context_set(mumps_context MC, 'analyze factorize and "
+"solve')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:98
+msgid ""
+"Run the MUMPS analysis, factorization and solve jobs for the mumps_context "
+"object. It returns the solution vector."
+msgstr ""
