@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-14 01:55+0000\n"
+"POT-Creation-Date: 2025-04-18 01:47+0000\n"
 "PO-Revision-Date: 2018-07-16 06:59+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,7 +41,7 @@ msgstr "mesh_imオブジェクトの汎用的なコンストラクタ"
 msgid ""
 "This object represents an integration method defined on a whole mesh (and "
 "potentially on its boundaries)."
-msgstr ""
+msgstr "このオブジェクトは，メッシュ全体で定義された積分法を表します(そして潜在的に境界にあります)．"
 
 #: ../source/scilab/cmdref_gf_mesh_im.rst:29
 msgid "**Command list :**"
@@ -108,17 +108,19 @@ msgid ""
 " respect to the levelset, it has to be chosen among 'ALL', 'INSIDE', "
 "'OUTSIDE' and 'BOUNDARY'."
 msgstr ""
+"<literal>where</literal> 引数はlevelsetに関する積分領域を定義します．この引数は 'ALL', 'INSIDE', "
+"'OUTSIDE' および 'BOUNDARY' の中から選択する必要があります．"
 
 #: ../source/scilab/cmdref_gf_mesh_im.rst:63
 msgid ""
 "It can be completed by a string defining the boolean operation to define the"
 " integration domain when there is more than one levelset."
-msgstr ""
+msgstr "複数のlevelsetがある場合は，ブール演算を定義する文字列を使用して積分領域を定義できます．"
 
 #: ../source/scilab/cmdref_gf_mesh_im.rst:66
 msgid ""
 "The syntax is very simple, for example if there are 3 different levelsets,"
-msgstr ""
+msgstr "構文は非常に単純です．たとえば，3つの異なるレベルセットがある場合，"
 
 #: ../source/scilab/cmdref_gf_mesh_im.rst:69
 msgid ""
@@ -160,6 +162,9 @@ msgid ""
 "'integ')<literal></literal> to define the integration method on the "
 "remaining elements."
 msgstr ""
+"注意：この積分法は level-set で切り取られた要素にのみ定義されます． 'ALL' ， 'INSIDE' と  'OUTSIDE' "
+"オプションの場合は，必ず <literal></literal>gf_mesh_im_set(mesh_im MI, "
+"'integ')<literal></literal> メソッドを使って残りの要素の積分法を定義する必要があります．"
 
 #: ../source/scilab/cmdref_gf_mesh_im.rst:92
 msgid "``MIM = gf_mesh_im(mesh m, [{integ im|int im_degree}])``"

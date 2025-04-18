@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-14 01:55+0000\n"
+"POT-Creation-Date: 2025-04-18 01:47+0000\n"
 "PO-Revision-Date: 2018-07-16 07:17+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -100,6 +100,14 @@ msgid ""
 "which the second derivative of the Neumann term is not necessary even for "
 "nonlinear problems. Return the brick index in the model."
 msgstr ""
+"変数 `varname` とメッシュ領域 `region` "
+"にDirichlet条件を追加します．この領域は境界である必要があります．Neumann項は，高水準汎用アセンブリ言語の表現である(Green公式により得られる)Neumann項の式です．すべての体積ブリックをモデルに追加すると，この項は"
+" Model.Neumann_term(varname, region) によって得られます "
+"．Dirichlet条件はNitsche法により処理されます． `datag` はDirichlet条件のオプションのRHSです． "
+"`datagamma0` はNitsche法のパラメータです． `theta` は正または負のスカラー値です． `theta = 1` は "
+"`gamma0` が小さい場合に条件的が強制される標準的な対称法です． `theta = -1` は無条件に強制的なskew対称法に対応します． "
+"`theta = 0` (デフォルト) "
+"は非線形問題に対してもNeumann項の二次導関数を必要としない最も単純な方法です．モデル内のブリックインデックスを返します．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Dirichlet_condition_with_multipliers:1
@@ -253,7 +261,7 @@ msgid ""
 "Attach a Houbolt method for the time discretization of the variable "
 "`varname`. Valid only if there is at most second order time derivative of "
 "the variable."
-msgstr ""
+msgstr "変数 `varname` の時間離散化にHoubolt法を適用します．変数の2次時間導関数が多くても存在する場合にのみ有効です．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_Kirchhoff_Love_Neumann_term_brick:1
@@ -618,6 +626,13 @@ msgid ""
 "Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for the "
 "unsymmetric method with augmented multiplier."
 msgstr ""
+"2つの変形可能な体の間のモデルに摩擦のない接触条件を追加します。体．U1，U2が片側拘束が適用される自由度のベクトルである場合，行列 `BN1` および"
+" `BN2` は，この条件が $B_{N1} U_1 B_{N2} U_2 + \\le gap$ "
+"によって定義されるようでなければならない．この制約は，次元が `BN` の行数に等しくなければならない乗数 `multname_n` "
+"によって規定されます．拡張パラメータ `r` は許容値(Getfemユーザマニュアルを参照)の範囲内で選択されるべきです． `dataname_gap`"
+" は初期ギャップを表すオプションのパラメータです．単一の値または値のベクトルを指定できます． `dataname_alpha` "
+"は，増大パラメータ(Getfemユーザマニュアルを参照)のためのオプションの均質化パラメータである．パラメータ `aug_version` "
+"は拡大法を示します．1は非対称Alart-Curnier拡大Lagrangian，2は対称Lagrangian，3は拡大乗数を伴う非対称法です．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_bilaplacian_brick:1
@@ -887,6 +902,8 @@ msgid ""
 "`sizes` an optional parameter which is either an integer  or a vector of "
 "suplementary dimensions with respect to `mf`."
 msgstr ""
+"MeshFemにリンクされたモデルにデータを追加します． `name` はデータ名であり， `sizes` はオプションのパラメータであり， `mf` "
+"に関して補間的な次元の整数またはベクトルです．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_fem_variable:1
@@ -1087,6 +1104,17 @@ msgid ""
 "`H`. It has to be a constant matrix or described on a scalar fem. Returns "
 "the brick index in the model. (This brick is not fully tested)"
 msgstr ""
+"変数 `varname` とメッシュ領域 `region` にDirichlet条件を追加します．このバージョンはベクトルフィールド用です．これは "
+"@f$ Hu = r @f$ という条件を規定しており，ここで `H` は行列フィールドです．注意: "
+"行列Hの固有値はすべて1または0である必要があります．領域は境界である必要があります． `Neumannterm` "
+"は高水準汎用アセンブリ言語の表現として説明されるNeumann項(Green公式により得られる)の表現です．この項は "
+"Model.Neumann_term(varname, region) "
+"によってmodelに追加されます．すべてのボリュームブリックがモデルに追加されると．ディリクレ条件はNitsche法で処理されています． "
+"`dataname` はDirichlet条件のオプションの右辺です．これは一定であるか，または有限要素法で記述できます． `gamma0name` "
+"はNitsche法のパラメータです． `theta` は正または負のスカラー値です． `theta = 1` は `gamma0` "
+"が小さい場合に条件的に強制される標準的な対称法に相当する． `theta = -1` は無条件に強制的なskew対称法に対応します． `theta = "
+"0` は非線形問題に対してもNeumann項の2次導関数を必要としない最も単純な方法である． `Hname` は行列フィールド `H` "
+"に対応するデータである．定数行列であるか，スカラー関数で記述されている必要があります．モデル内のブリックのインデックスを返します．(このブリックは完全にはテストされていせん)．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
@@ -1210,6 +1238,9 @@ msgid ""
 "`sizes` an optional parameter which is either an integer or a vector of "
 "suplementary dimensions with respect to `mf`."
 msgstr ""
+"MeshFemにリンクされたモデルにデータを追加します． `name` はデータ名です．データは `V` "
+"で初期化されます．データはスカラーまたはベクトルフィールドです． `sizes` はオプションのパラメータであり， "
+"`mf`に対する補完次元の整数またはベクトルです．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of
@@ -1728,6 +1759,18 @@ msgid ""
 "Basically, this brick compute the matrix BN and the vectors gap and alpha "
 "and calls the basic contact brick."
 msgstr ""
+"摩擦条件の有無にかかわらず，剛体障害物のある接触をモデルに追加します．条件は， `region` に対応する境界上の変数 `varname_u` "
+"に適用されます．剛障害物は，障害物への符号付き距離である文字列 `obstacle` で記述します．この文字列は，座標が2次元では 'x'， 'y' "
+"，3次元では'x'， 'y'， 'z' の式である必要があります．たとえば，障害物が :math:`z \\le 0` "
+"に対応する場合，対応する符号付き距離は単に \"z\" になります． `multname_n` はサイズが境界 `region` "
+"の自由度数である固定サイズ変数でなければなりません．これは接触等価節点力を表します．摩擦条件を追加するには，  `multname_t` および "
+"`dataname_friction_coeff` パラメータを追加する必要があります．`multname_t` "
+"は固定サイズの変数でなければならず，そのサイズは境界`region` 上の自由度の数に :math:`d-1` を乗じたものである．ここで "
+":math:`d` は領域の次元です．これは摩擦相当節点力を表します．拡張パラメータ `r` "
+"は許容値(弾性体のYoung率に近い値．GetFEMのユーザードキュメントを参照)の範囲内で選択される必要があります．`dataname_friction_coeff`"
+" は摩擦係数です．各接触節点の摩擦係数を表すスカラー値または値のベクトルです．パラメータ `augmented_version` は拡大戦略を示します:"
+" 1は非対称のAlart-"
+"Curnier拡張Lagrangian，2は対称(接触とCoulomb摩擦の結合を除く)，3は新しい非対称方法です．基本的に，このブリックは行列BNおよびベクトルgapおよびalphaを計算し，基本接触ブリックを呼び出します．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_nonlinear_elasticity_brick:1
@@ -1895,6 +1938,16 @@ msgid ""
 "nonlinear problems. Returns the brick index in the model. (This brick is not"
 " fully tested)"
 msgstr ""
+"ベクトル(またはテンソル)値変数 `varname` の法線コンポーネントとメッシュ領域 `region` "
+"にDirichlet条件を追加します．この領域は境界である必要があります． `Neumannterm` "
+"は，高水準汎用アセンブリ言語の表現として説明されるNeumann項(Green公式により得られる)の表現である．この項は "
+"Model.Neumann_term(varname, region) "
+"によって得られます．すべてのボリュームブリックがモデルに追加されると，ディリクレ条件はNitscheの方法で処方される． `dataname` "
+"はDirichlet条件のオプションの右辺です．これは一定であるか，または有限要素法で記述できます． `gamma0name` "
+"はNitsche法パラメータです． `theta` は正または負のスカラー値です． `theta = 1` は `gamma0` "
+"が小さい場合に条件的に強制される標準的な対称法に相当する． `theta = -1` は無条件に強制的なskew対称法に対応します． `theta = "
+"0` "
+"は非線形問題に対してもNeumann項の2次導関数を必要としない最も単純な方法である．モデル内のブリックのインデックスを返します．(このブリックは完全にはテストされていません)"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.add_normal_Dirichlet_condition_with_multipliers:1
@@ -2653,6 +2706,9 @@ msgid ""
 "contains the stress constraints values supported by the mesh. `version` "
 "should be 'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
 msgstr ""
+"塑性の場のVon-Mises応力またはTresca応力を `mf_vm` で計算し，ベクトルVに戻します． `datasigma` "
+"はメッシュによってサポートされる応力制約値を含むベクトルです． `version` は 'Von_Mises' または 'Tresca' "
+"('Von_Mises' がデフォルト)でなければなりません．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_finite_strain_elasticity_Von_Mises:1
@@ -2706,6 +2762,8 @@ msgid ""
 "linearized elasticity in 3D or in 2D with plane strain assumption. "
 "Parametrized by Young's modulus and Poisson ratio."
 msgstr ""
+"平面ひずみを仮定した3次元または2次元における等方性線形化弾性の変位場のVon-"
+"Mises応力を計算します．Young率とPoisson比によってパラメータ化されます．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_isotropic_linearized_Von_Mises_pstress:1
@@ -2714,6 +2772,8 @@ msgid ""
 "linearized elasticity in 3D or in 2D with plane stress assumption. "
 "Parametrized by Young's modulus and Poisson ratio."
 msgstr ""
+"平面応力を仮定した3次元または2次元における等方性線形化弾性の変位場のVon-"
+"Mises応力を計算します．Young率とPoisson比によってパラメータ化されます．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.Model.compute_plastic_part:1

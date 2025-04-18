@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2023
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-14 01:55+0000\n"
+"POT-Creation-Date: 2025-04-18 01:47+0000\n"
 "PO-Revision-Date: 2020-04-26 01:50+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2481,7 +2481,7 @@ msgid ""
 "Attach a Houbolt method for the time discretization of the variable "
 "`varname`. Valid only if there is at most second order time derivative of "
 "the variable."
-msgstr ""
+msgstr "変数 `varname` の時間離散化にHoubolt法を適用します．変数の2次時間導関数が多くても存在する場合にのみ有効です．"
 
 #: ../source/matlab_octave/cmdref_gf_model_set.rst:1491
 msgid "``gf_model_set(model M, 'disable bricks', ivec bricks_indices)``"
@@ -2624,6 +2624,13 @@ msgid ""
 "Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for the "
 "unsymmetric method with augmented multiplier."
 msgstr ""
+"2つの変形可能な体の間のモデルに摩擦のない接触条件を追加します。体．U1，U2が片側拘束が適用される自由度のベクトルである場合，行列 `BN1` および"
+" `BN2` は，この条件が $B_{N1} U_1 B_{N2} U_2 + \\le gap$ "
+"によって定義されるようでなければならない．この制約は，次元が `BN` の行数に等しくなければならない乗数 `multname_n` "
+"によって規定されます．拡張パラメータ `r` は許容値(Getfemユーザマニュアルを参照)の範囲内で選択されるべきです． `dataname_gap`"
+" は初期ギャップを表すオプションのパラメータです．単一の値または値のベクトルを指定できます． `dataname_alpha` "
+"は，増大パラメータ(Getfemユーザマニュアルを参照)のためのオプションの均質化パラメータである．パラメータ `aug_version` "
+"は拡大法を示します．1は非対称Alart-Curnier拡大Lagrangian，2は対称Lagrangian，3は拡大乗数を伴う非対称法です．"
 
 #: ../source/matlab_octave/cmdref_gf_model_set.rst:1581
 msgid ""
@@ -2685,6 +2692,18 @@ msgid ""
 "Basically, this brick compute the matrix BN and the vectors gap and alpha "
 "and calls the basic contact brick."
 msgstr ""
+"摩擦条件の有無にかかわらず，剛体障害物のある接触をモデルに追加します．条件は， `region` に対応する境界上の変数 `varname_u` "
+"に適用されます．剛障害物は，障害物への符号付き距離である文字列 `obstacle` で記述します．この文字列は，座標が2次元では 'x'， 'y' "
+"，3次元では'x'， 'y'， 'z' の式である必要があります．たとえば，障害物が :math:`z \\le 0` "
+"に対応する場合，対応する符号付き距離は単に \"z\" になります． `multname_n` はサイズが境界 `region` "
+"の自由度数である固定サイズ変数でなければなりません．これは接触等価節点力を表します．摩擦条件を追加するには，  `multname_t` および "
+"`dataname_friction_coeff` パラメータを追加する必要があります．`multname_t` "
+"は固定サイズの変数でなければならず，そのサイズは境界`region` 上の自由度の数に :math:`d-1` を乗じたものである．ここで "
+":math:`d` は領域の次元です．これは摩擦相当節点力を表します．拡張パラメータ `r` "
+"は許容値(弾性体のYoung率に近い値．GetFEMのユーザードキュメントを参照)の範囲内で選択される必要があります．`dataname_friction_coeff`"
+" は摩擦係数です．各接触節点の摩擦係数を表すスカラー値または値のベクトルです．パラメータ `augmented_version` は拡大戦略を示します:"
+" 1は非対称のAlart-"
+"Curnier拡張Lagrangian，2は対称(接触とCoulomb摩擦の結合を除く)，3は新しい非対称方法です．基本的に，このブリックは行列BNおよびベクトルgapおよびalphaを計算し，基本接触ブリックを呼び出します．"
 
 #: ../source/matlab_octave/cmdref_gf_model_set.rst:1623
 msgid ""

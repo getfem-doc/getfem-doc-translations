@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-14 01:55+0000\n"
+"POT-Creation-Date: 2025-04-18 01:47+0000\n"
 "PO-Revision-Date: 2020-04-26 01:51+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgstr "**説明 :**"
 
 #: ../source/matlab_octave/cmdref_gf_workspace.rst:27
 msgid "GetFEM workspace management function."
-msgstr ""
+msgstr "GetFEM workspace管理関数．"
 
 #: ../source/matlab_octave/cmdref_gf_workspace.rst:29
 msgid ""
@@ -47,6 +47,9 @@ msgid ""
 "invoke gf_workspace('pop') (you can use matlab exceptions handling to do "
 "this cleanly when the function exits on an error)."
 msgstr ""
+"GetFEMは，matlabワークスペースから独立して，Matlab内の独自のワークスペースを使用します(これは，matlabオブジェクトのメモリー管理にいくつかの制限があるためです．)．デフォルトでは，すべてのgetfem変数はrootのgetfemワークスペースに属します．関数は，最初に"
+" gf_workspace('push') を呼び出すことで，独自のワークスペースを作成できます．終了時に，関数 gf_workspace('pop')"
+" を呼び出さなければなりません(関数がエラーで終了したときに，matlab例外処理を使用してこれを適切に行うことができます．)．"
 
 #: ../source/matlab_octave/cmdref_gf_workspace.rst:39
 msgid "**Command list :**"
