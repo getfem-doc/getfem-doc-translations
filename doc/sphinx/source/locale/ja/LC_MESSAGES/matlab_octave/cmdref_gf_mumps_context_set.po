@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-18 01:47+0000\n"
+"POT-Creation-Date: 2025-04-21 18:04+0000\n"
 "PO-Revision-Date: 2025-04-15 01:51+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -43,7 +43,7 @@ msgstr "*/"
 
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:30
 msgid "void gf_mumps_context_set(getfemint::mexargs_in& in,"
-msgstr ""
+msgstr "void gf_mumps_context_set(getfemint::mexargs_in& in,"
 
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:31
 msgid "getfemint::mexargs_out& out) {"
@@ -59,14 +59,17 @@ msgid ""
 "init_cmd = in.pop().to_string(); std::string cmd      = "
 "cmd_normalize(init_cmd);"
 msgstr ""
+"gmumps *pctx         = to_mumps_context_object(in.pop()); std::string "
+"init_cmd = in.pop().to_string(); std::string cmd      = "
+"cmd_normalize(init_cmd);"
 
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:39
 msgid "if (check_cmd(cmd, \"matrix\", in, out, 1, 1, 0, 0)) {"
-msgstr ""
+msgstr "if (check_cmd(cmd, \"matrix\", in, out, 1, 1, 0, 0)) {"
 
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:40
 msgid "/*@SET ('matrix', mat A)"
-msgstr ""
+msgstr "/*@SET ('matrix', mat A)"
 
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:41
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:49
@@ -108,6 +111,7 @@ msgstr ""
 msgid ""
 "``gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)``"
 msgstr ""
+"``gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)``"
 
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:67
 msgid ""
@@ -143,7 +147,7 @@ msgstr ""
 msgid ""
 "The analysis and factorization jobs need to be run first before calling this"
 " function."
-msgstr ""
+msgstr "この関数を呼び出す前に、まず解析と因数分解のジョブを実行する必要があります。"
 
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:91
 msgid "``gf_mumps_context_set(mumps_context MC, 'analyze and factorize')``"
