@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-21 18:04+0000\n"
+"POT-Creation-Date: 2025-04-28 01:53+0000\n"
 "PO-Revision-Date: 2025-04-15 01:51+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../source/python/cmdref_MumpsContext.rst:8
 msgid "MumpsContext"
-msgstr ""
+msgstr "MumpsContext"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext:1
@@ -43,6 +43,9 @@ msgid ""
 "'unsymmetric'. The argument `datatype` should be 'real' or 'complex' or "
 "empty. Default value is 'real'."
 msgstr ""
+"``CTX = MumpsContext(string sym, string datatype)`` 引数 `sym` は 'symmetric' "
+"または 'unsymmetric' 、あるいは空でなければなりません。 デフォルト値は 'unsymmetric' です。 引数 `datatype` "
+"は'real'か'complex'か空でなければなりません。デフォルト値は 'real' です。"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.CNTL:1
@@ -64,35 +67,35 @@ msgstr ""
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.set_ICNTL:4
 msgid "Capital naming convention is used to imply Fortran indexing."
-msgstr ""
+msgstr "大文字の命名規則は、Fortranのインデックスを意味します。"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.ICNTL:1
 msgid ""
 "Output the ICNTL array entry at 1-based index `ind` stored in the "
 "mumps_context object."
-msgstr ""
+msgstr "mumps_context オブジェクトに格納されている1ベースのインデックス `ind` にあるICNTL配列エントリーを出力します。"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.INFOG:1
 msgid ""
 "Output the INFOG array entry at 1-based index `ind` stored in the "
 "mumps_context object."
-msgstr ""
+msgstr "mumps_context オブジェクトに格納されている1ベースのインデックス `ind` にあるINFOG配列エントリーを出力します。"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.RINFO:1
 msgid ""
 "Output the RINFO array entry at 1-based index `ind` stored in the "
 "mumps_context object."
-msgstr ""
+msgstr "mumps_context オブジェクトに格納されている1ベースのインデックス `ind` にあるRINFO配列エントリーを出力します。"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.RINFOG:1
 msgid ""
 "Output the RINFOG array entry at 1-based index `ind` stored in the "
 "mumps_context object."
-msgstr ""
+msgstr "mumps_context オブジェクトに格納されている1ベースのインデックス `ind` にあるRINFOG配列エントリーを出力します。"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.analyze:1
@@ -103,19 +106,19 @@ msgstr "mumps_context オブジェクトに対してMUMPS分析ジョブを実�
 #: of getfem.getfem.MumpsContext.analyze_and_factorize:1
 msgid ""
 "Run the MUMPS analysis and factorization jobs for the mumps_context object."
-msgstr ""
+msgstr "mumps_context オブジェクトのMUMPS解析および因数分解ジョブを実行します．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.analyze_factorize_and_solve:1
 msgid ""
 "Run the MUMPS analysis, factorization and solve jobs for the mumps_context "
 "object. It returns the solution vector."
-msgstr ""
+msgstr "mumps_context オブジェクトの MUMPS 解析、因数分解、解ジョブを実行します。これは解ベクトルを返します。"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.display:1
 msgid "Display a short summary for a mumps_context object."
-msgstr ""
+msgstr "mumps_context オブジェクトの概要が表示されます．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.factorize:1
@@ -129,6 +132,8 @@ msgid ""
 "the ija matrix stored in C++. It just displays information about the stored "
 "matrix."
 msgstr ""
+"スクリプトAPIのmumps_contextオブジェクトは、C++に格納されているija行列への参照を返すことはできません。 "
+"保存されている行列に関する情報を表示するだけです。"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.set_ICNTL:1
@@ -140,17 +145,17 @@ msgstr ""
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.set_matrix:1
 msgid "Set the matrix mat A for the mumps_context object."
-msgstr ""
+msgstr "mumps_context オブジェクトに行列 mat A を設定します。"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.set_vector:1
 msgid "Set the right hand side vec b for the mumps_context object."
-msgstr ""
+msgstr "mumps_context オブジェクトの右辺vec bを設定します。"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.solve:1
 msgid "Run the MUMPS solve job (only) for the mumps_context object."
-msgstr ""
+msgstr "mumps_context オブジェクトに対してMUMPSsolveジョブ (のみ) を実行します．"
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.solve:3

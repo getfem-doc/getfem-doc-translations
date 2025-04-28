@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-21 18:04+0000\n"
+"POT-Creation-Date: 2025-04-28 01:53+0000\n"
 "PO-Revision-Date: 2025-04-15 01:51+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -60,19 +60,22 @@ msgid ""
 "init_cmd = in.pop().to_string(); std::string cmd      = "
 "cmd_normalize(init_cmd);"
 msgstr ""
+"const gmumps *pctx   = to_mumps_context_object(in.pop()); std::string "
+"init_cmd = in.pop().to_string(); std::string cmd      = "
+"cmd_normalize(init_cmd);"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:37
 msgid "if (check_cmd(cmd, \"display\", in, out, 0, 0, 0, 0)) {"
-msgstr ""
+msgstr "if (check_cmd(cmd, \"display\", in, out, 0, 0, 0, 0)) {"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:38
 msgid "/*@GET ('display')"
-msgstr ""
+msgstr "/*@GET ('display')"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:39
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:47
 msgid "Display a short summary for a mumps_context object."
-msgstr ""
+msgstr "mumps_context オブジェクトの概要が表示されます．"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:41
 msgid "**Command list :**"
@@ -92,10 +95,12 @@ msgid ""
 "the ija matrix stored in C++. It just displays information about the stored "
 "matrix."
 msgstr ""
+"スクリプトAPIのmumps_contextオブジェクトは、C++に格納されているija行列への参照を返すことはできません。 "
+"保存されている行列に関する情報を表示するだけです。"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:57
 msgid "``vec = gf_mumps_context_get(mumps_context MC, 'vector')``"
-msgstr ""
+msgstr "``vec = gf_mumps_context_get(mumps_context MC, 'vector')``"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:59
 msgid ""
@@ -115,40 +120,48 @@ msgid ""
 "Output the ICNTL array entry at 1-based index <literal>ind</literal> stored "
 "in the mumps_context object."
 msgstr ""
+"mumps_context オブジェクトに格納されている1ベースのインデックス <literal>ind</literal> "
+"にあるICNTL配列エントリーを出力します。"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:69
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:77
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:85
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:93
 msgid "Capital naming convention is used to imply Fortran indexing."
-msgstr ""
+msgstr "大文字の命名規則は、Fortranのインデックスを意味します。"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:72
 msgid "``VAL = gf_mumps_context_get(mumps_context MC, 'INFOG', int ind)``"
-msgstr ""
+msgstr "``VAL = gf_mumps_context_get(mumps_context MC, 'INFOG', int ind)``"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:74
 msgid ""
 "Output the INFOG array entry at 1-based index <literal>ind</literal> stored "
 "in the mumps_context object."
 msgstr ""
+"mumps_context オブジェクトに格納されている1ベースのインデックス <literal>ind</literal> "
+"にあるINFOG配列エントリーを出力します。"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:80
 msgid "``VAL = gf_mumps_context_get(mumps_context MC, 'RINFO', int ind)``"
-msgstr ""
+msgstr "``VAL = gf_mumps_context_get(mumps_context MC, 'RINFO', int ind)``"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:82
 msgid ""
 "Output the RINFO array entry at 1-based index <literal>ind</literal> stored "
 "in the mumps_context object."
 msgstr ""
+"mumps_context オブジェクトに格納されている1ベースのインデックス <literal>ind</literal> "
+"にあるRINFO配列エントリーを出力します。"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:88
 msgid "``VAL = gf_mumps_context_get(mumps_context MC, 'RINFOG', int ind)``"
-msgstr ""
+msgstr "``VAL = gf_mumps_context_get(mumps_context MC, 'RINFOG', int ind)``"
 
 #: ../source/scilab/cmdref_gf_mumps_context_get.rst:90
 msgid ""
 "Output the RINFOG array entry at 1-based index <literal>ind</literal> stored"
 " in the mumps_context object."
 msgstr ""
+"mumps_context オブジェクトに格納されている1ベースのインデックス <literal>ind</literal> "
+"にあるRINFOG配列エントリーを出力します。"
