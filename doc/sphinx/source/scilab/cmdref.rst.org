@@ -6514,6 +6514,7 @@ gf_mumps_context_set
   gf_mumps_context_set(mumps_context MC, 'factorize')
   SOL = gf_mumps_context_set(mumps_context MC, 'solve')
   gf_mumps_context_set(mumps_context MC, 'analyze and factorize')
+  SOL = gf_mumps_context_set(mumps_context MC, 'factorize and solve')
   SOL = gf_mumps_context_set(mumps_context MC, 'analyze factorize and solve')
 
 **Description :**
@@ -6521,6 +6522,34 @@ gf_mumps_context_set
 
   General function for modifying mumps_context objects
 */
+
+inline void return_mumps_solution(getfemint::mexargs_out& out,
+                                  const gmumps *pctx) {
+  if (out.remaining()) {
+    if (pctx->is_complex()) {
+      int nrhs = int(pctx->vector_c().size()) / pctx->nrows();
+      GMM_ASSERT1(nrhs * pctx->nrows() == int(pctx->vector_c().size()),
+                  "Inconsistent dimensions in MUMPS context object");
+      if (nrhs == 1)
+        out.pop().from_dcvector(pctx->vector_c());
+      else {
+        carray x = out.pop().create_carray(pctx->nrows(), nrhs);
+        gmm::copy(pctx->vector_c(), x);
+      }
+    } else {
+      int nrhs = int(pctx->vector_r().size()) / pctx->nrows();
+      GMM_ASSERT1(nrhs * pctx->nrows() == int(pctx->vector_r().size()),
+                  "Inconsistent dimensions in MUMPS context object");
+      if (nrhs == 1)
+        out.pop().from_dcvector(pctx->vector_r());
+      else {
+        darray x = out.pop().create_darray(pctx->nrows(), nrhs);
+        gmm::copy(pctx->vector_r(), x);
+      }
+    }
+  }
+}
+
 
 void gf_mumps_context_set(getfemint::mexargs_in& in,
                           getfemint::mexargs_out& out) {
@@ -6581,6 +6610,8 @@ void gf_mumps_context_set(getfemint::mexargs_in& in,
     
     The analysis and factorization jobs need to be run first
     before calling this function.
+    
+    It returns the solution vector (on all processes if MPI is used).
 
 
   ``gf_mumps_context_set(mumps_context MC, 'analyze and factorize')``
@@ -6588,10 +6619,21 @@ void gf_mumps_context_set(getfemint::mexargs_in& in,
     Run the MUMPS analysis and factorization jobs for the mumps_context object.
 
 
+  ``SOL = gf_mumps_context_set(mumps_context MC, 'factorize and solve')``
+
+    Run the MUMPS factorization and solve jobs for the mumps_context object.
+    
+    The analysis job needs to be run first before calling this function.
+    
+    It returns the solution vector (on all processes if MPI is used).
+
+
   ``SOL = gf_mumps_context_set(mumps_context MC, 'analyze factorize and solve')``
 
     Run the MUMPS analysis, factorization and solve jobs for the mumps_context
-    object. It returns the solution vector.
+    object.
+    
+    It returns the solution vector (on all processes if MPI is used).
 
 gf_poly
 -------------------------------------------

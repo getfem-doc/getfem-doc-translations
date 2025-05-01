@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-15 01:51+0000\n"
+"POT-Creation-Date: 2025-05-01 01:59+0000\n"
 "PO-Revision-Date: 2025-04-15 01:51+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -25,139 +25,234 @@ msgstr ""
 msgid "**Synopsis**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:24
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:25
 msgid "**Description :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:27
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:28
 msgid "General function for modifying mumps_context objects"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:28
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:29
 msgid "*/"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:30
-msgid "void gf_mumps_context_set(getfemint::mexargs_in& in,"
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:31
+msgid "inline void return_mumps_solution(getfemint::mexargs_out& out,"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:31
-msgid "getfemint::mexargs_out& out) {"
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:32
+msgid "const gmumps *pctx) {"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_mumps_context_set.rst:33
-msgid "if (in.narg() < 2) THROW_BADARG(\"Wrong number of input arguments\");"
+msgid "if (out.remaining()) {"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:34
+msgid "if (pctx->is_complex()) {"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_mumps_context_set.rst:35
+msgid ""
+"int nrhs = int(pctx->vector_c().size()) / pctx->nrows(); GMM_ASSERT1(nrhs * "
+"pctx->nrows() == int(pctx->vector_c().size()),"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:37
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:47
+msgid "\"Inconsistent dimensions in MUMPS context object\");"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:38
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:48
+msgid "if (nrhs == 1)"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:39
+msgid "out.pop().from_dcvector(pctx->vector_c());"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:40
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:50
+msgid "else {"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:41
+msgid ""
+"carray x = out.pop().create_carray(pctx->nrows(), nrhs); "
+"gmm::copy(pctx->vector_c(), x);"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:43
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:53
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:54
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:55
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:56
+msgid "}"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:44
+msgid "} else {"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:45
+msgid ""
+"int nrhs = int(pctx->vector_r().size()) / pctx->nrows(); GMM_ASSERT1(nrhs * "
+"pctx->nrows() == int(pctx->vector_r().size()),"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:49
+msgid "out.pop().from_dcvector(pctx->vector_r());"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:51
+msgid ""
+"darray x = out.pop().create_darray(pctx->nrows(), nrhs); "
+"gmm::copy(pctx->vector_r(), x);"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:59
+msgid "void gf_mumps_context_set(getfemint::mexargs_in& in,"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:60
+msgid "getfemint::mexargs_out& out) {"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:62
+msgid "if (in.narg() < 2) THROW_BADARG(\"Wrong number of input arguments\");"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:64
 msgid ""
 "gmumps *pctx         = to_mumps_context_object(in.pop()); std::string "
 "init_cmd = in.pop().to_string(); std::string cmd      = "
 "cmd_normalize(init_cmd);"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:39
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:68
 msgid "if (check_cmd(cmd, \"matrix\", in, out, 1, 1, 0, 0)) {"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:40
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:69
 msgid "/*@SET ('matrix', mat A)"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:41
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:49
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:70
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:78
 msgid "Set the matrix mat A for the mumps_context object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:43
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:72
 msgid "**Command list :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:47
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:76
 msgid "``gf_mumps_context_set(mumps_context MC, 'matrix', mat A)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:52
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:81
 msgid "``gf_mumps_context_set(mumps_context MC, 'vector', vec b)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:54
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:83
 msgid "Set the right hand side vec b for the mumps_context object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:57
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:86
 msgid "``gf_mumps_context_set(mumps_context MC, 'ICNTL', int ind, int val)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:59
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:88
 msgid ""
 "Set the integer option at 1-based index <literal>ind</literal> in the ICNTL "
 "vector of the mumps_context object to value <literal>val</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:62
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:70
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:91
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:99
 msgid "Capital naming convention is used to imply Fortran indexing."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:65
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:94
 msgid ""
 "``gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:67
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:96
 msgid ""
 "Set the scalar option at 1-based index <literal>ind</literal> in the CNTL "
 "vector of the mumps_context object to value <literal>val</literal>."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:73
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:102
 msgid "``gf_mumps_context_set(mumps_context MC, 'analyze')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:75
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:104
 msgid "Run the MUMPS analysis job for the mumps_context object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:78
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:107
 msgid "``gf_mumps_context_set(mumps_context MC, 'factorize')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:80
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:109
 msgid "Run the MUMPS factorization job for the mumps_context object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:83
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:112
 msgid "``SOL = gf_mumps_context_set(mumps_context MC, 'solve')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:85
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:114
 msgid "Run the MUMPS solve job (only) for the mumps_context object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:87
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:116
 msgid ""
 "The analysis and factorization jobs need to be run first before calling this"
 " function."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:91
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:119
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:133
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:141
+msgid "It returns the solution vector (on all processes if MPI is used)."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:122
 msgid "``gf_mumps_context_set(mumps_context MC, 'analyze and factorize')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:93
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:124
 msgid ""
 "Run the MUMPS analysis and factorization jobs for the mumps_context object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:96
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:127
+msgid ""
+"``SOL = gf_mumps_context_set(mumps_context MC, 'factorize and solve')``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:129
+msgid ""
+"Run the MUMPS factorization and solve jobs for the mumps_context object."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:131
+msgid "The analysis job needs to be run first before calling this function."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:136
 msgid ""
 "``SOL = gf_mumps_context_set(mumps_context MC, 'analyze factorize and "
 "solve')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:98
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:138
 msgid ""
 "Run the MUMPS analysis, factorization and solve jobs for the mumps_context "
-"object. It returns the solution vector."
+"object."
 msgstr ""
