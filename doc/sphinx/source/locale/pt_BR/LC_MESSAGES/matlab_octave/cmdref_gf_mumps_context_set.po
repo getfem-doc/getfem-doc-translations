@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-01 01:59+0000\n"
+"POT-Creation-Date: 2025-05-04 01:59+0000\n"
 "PO-Revision-Date: 2025-04-15 01:51+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -25,234 +25,267 @@ msgstr ""
 msgid "**Synopsis**"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:25
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:27
 msgid "**Description :**"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:28
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:30
 msgid "General function for modifying mumps_context objects"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:29
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:31
 msgid "*/"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:31
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:33
 msgid "inline void return_mumps_solution(getfemint::mexargs_out& out,"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:32
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:34
 msgid "const gmumps *pctx) {"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:33
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:35
 msgid "if (out.remaining()) {"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:34
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:36
 msgid "if (pctx->is_complex()) {"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:35
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:37
 msgid ""
 "int nrhs = int(pctx->vector_c().size()) / pctx->nrows(); GMM_ASSERT1(nrhs * "
 "pctx->nrows() == int(pctx->vector_c().size()),"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:37
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:47
-msgid "\"Inconsistent dimensions in MUMPS context object\");"
-msgstr ""
-
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:38
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:48
-msgid "if (nrhs == 1)"
-msgstr ""
-
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:39
-msgid "out.pop().from_dcvector(pctx->vector_c());"
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:49
+msgid "\"Inconsistent dimensions in MUMPS context object\");"
 msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:40
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:50
-msgid "else {"
+msgid "if (nrhs == 1)"
 msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:41
+msgid "out.pop().from_dcvector(pctx->vector_c());"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:42
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:52
+msgid "else {"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:43
 msgid ""
 "carray x = out.pop().create_carray(pctx->nrows(), nrhs); "
 "gmm::copy(pctx->vector_c(), x);"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:43
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:53
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:54
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:45
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:55
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:56
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:57
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:58
 msgid "}"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:44
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:46
 msgid "} else {"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:45
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:47
 msgid ""
 "int nrhs = int(pctx->vector_r().size()) / pctx->nrows(); GMM_ASSERT1(nrhs * "
 "pctx->nrows() == int(pctx->vector_r().size()),"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:49
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:51
 msgid "out.pop().from_dcvector(pctx->vector_r());"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:51
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:53
 msgid ""
 "darray x = out.pop().create_darray(pctx->nrows(), nrhs); "
 "gmm::copy(pctx->vector_r(), x);"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:59
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:61
 msgid "void gf_mumps_context_set(getfemint::mexargs_in& in,"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:60
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:62
 msgid "getfemint::mexargs_out& out) {"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:62
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:64
 msgid "if (in.narg() < 2) THROW_BADARG(\"Wrong number of input arguments\");"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:64
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:66
 msgid ""
 "gmumps *pctx         = to_mumps_context_object(in.pop()); std::string "
 "init_cmd = in.pop().to_string(); std::string cmd      = "
 "cmd_normalize(init_cmd);"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:68
-msgid "if (check_cmd(cmd, \"matrix\", in, out, 1, 1, 0, 0)) {"
-msgstr ""
-
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:69
-msgid "/*@SET ('matrix', mat A)"
-msgstr ""
-
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:70
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:78
-msgid "Set the matrix mat A for the mumps_context object."
+msgid "bool distributed_matrix ="
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:71
+msgid "check_cmd(cmd, \"distributed matrix\", in, out, 1, 1, 0, 0);"
 msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:72
+msgid "if (distributed_matrix ||"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:73
+msgid "check_cmd(cmd, \"matrix\", in, out, 1, 1, 0, 0)) {"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:74
+msgid "/*@SET ('matrix', mat A)"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:75
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:83
+msgid "Set the matrix mat A for the mumps_context object."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:77
 msgid "**Command list :**"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:76
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:81
 msgid "``gf_mumps_context_set(mumps_context MC, 'matrix', mat A)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:81
-msgid "``gf_mumps_context_set(mumps_context MC, 'vector', vec b)``"
-msgstr ""
-
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:83
-msgid "Set the right hand side vec b for the mumps_context object."
-msgstr ""
-
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:86
-msgid "``gf_mumps_context_set(mumps_context MC, 'ICNTL', int ind, int val)``"
+msgid ""
+"``gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A)``"
 msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:88
+msgid ""
+"Set the matrix mat A for the mumps_context object distributed over all "
+"processes. It also sets ICNTL(5) to 0 and ICNTL(18) to 3."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:92
+msgid "``gf_mumps_context_set(mumps_context MC, 'vector', vec b)``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:94
+msgid "Set the right hand side vec b for the mumps_context object."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:97
+msgid "``gf_mumps_context_set(mumps_context MC, 'ICNTL', int ind, int val)``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:99
 msgid ""
 "Set the integer option at 1-based index `ind` in the ICNTL vector of the "
 "mumps_context object to value `val`."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:91
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:99
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:102
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:110
 msgid "Capital naming convention is used to imply Fortran indexing."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:94
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:105
 msgid ""
 "``gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:96
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:107
 msgid ""
 "Set the scalar option at 1-based index `ind` in the CNTL vector of the "
 "mumps_context object to value `val`."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:102
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:113
+msgid "``gf_mumps_context_set(mumps_context MC, 'error check')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:115
+msgid "Check the error status of the mumps_context object."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:118
 msgid "``gf_mumps_context_set(mumps_context MC, 'analyze')``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:104
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:120
 msgid "Run the MUMPS analysis job for the mumps_context object."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:107
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:123
 msgid "``gf_mumps_context_set(mumps_context MC, 'factorize')``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:109
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:125
 msgid "Run the MUMPS factorization job for the mumps_context object."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:112
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:128
 msgid "``SOL = gf_mumps_context_set(mumps_context MC, 'solve')``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:114
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:130
 msgid "Run the MUMPS solve job (only) for the mumps_context object."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:116
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:132
 msgid ""
 "The analysis and factorization jobs need to be run first before calling this"
-" function."
+" function. An error check is performed after the solve."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:119
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:133
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:141
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:136
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:151
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:159
 msgid "It returns the solution vector (on all processes if MPI is used)."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:122
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:139
 msgid "``gf_mumps_context_set(mumps_context MC, 'analyze and factorize')``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:124
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:141
 msgid ""
 "Run the MUMPS analysis and factorization jobs for the mumps_context object."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:127
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:144
 msgid ""
 "``SOL = gf_mumps_context_set(mumps_context MC, 'factorize and solve')``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:129
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:146
 msgid ""
 "Run the MUMPS factorization and solve jobs for the mumps_context object."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:131
-msgid "The analysis job needs to be run first before calling this function."
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:148
+msgid ""
+"The analysis job needs to be run first before calling this function. An "
+"error check is performed after the solve."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:136
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:154
 msgid ""
 "``SOL = gf_mumps_context_set(mumps_context MC, 'analyze factorize and "
 "solve')``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:138
+#: ../source/matlab_octave/cmdref_gf_mumps_context_set.rst:156
 msgid ""
 "Run the MUMPS analysis, factorization and solve jobs for the mumps_context "
-"object."
+"object. An error check is also performed after the solve."
 msgstr ""

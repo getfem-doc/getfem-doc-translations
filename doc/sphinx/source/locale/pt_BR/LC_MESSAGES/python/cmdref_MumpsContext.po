@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-01 01:59+0000\n"
+"POT-Creation-Date: 2025-05-04 01:59+0000\n"
 "PO-Revision-Date: 2025-04-15 01:51+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -105,21 +105,36 @@ msgstr ""
 #: of getfem.getfem.MumpsContext.analyze_factorize_and_solve:1
 msgid ""
 "Run the MUMPS analysis, factorization and solve jobs for the mumps_context "
-"object."
+"object. An error check is also performed after the solve."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.analyze_factorize_and_solve:4
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
-#: of getfem.getfem.MumpsContext.factorize_and_solve:5
+#: of getfem.getfem.MumpsContext.factorize_and_solve:6
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
-#: of getfem.getfem.MumpsContext.solve:6
+#: of getfem.getfem.MumpsContext.solve:7
 msgid "It returns the solution vector (on all processes if MPI is used)."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.display:1
 msgid "Display a short summary for a mumps_context object."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.MumpsContext.distributed_matrix:1
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.MumpsContext.matrix:1
+msgid ""
+"The mumps_context object in the scripting API cannot return a reference to "
+"the ija matrix stored in C++. It just displays information about the stored "
+"matrix."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.MumpsContext.error_check:1
+msgid "Check the error status of the mumps_context object."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
@@ -135,15 +150,9 @@ msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.factorize_and_solve:3
-msgid "The analysis job needs to be run first before calling this function."
-msgstr ""
-
-#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
-#: of getfem.getfem.MumpsContext.matrix:1
 msgid ""
-"The mumps_context object in the scripting API cannot return a reference to "
-"the ija matrix stored in C++. It just displays information about the stored "
-"matrix."
+"The analysis job needs to be run first before calling this function. An "
+"error check is performed after the solve."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
@@ -151,6 +160,13 @@ msgstr ""
 msgid ""
 "Set the integer option at 1-based index `ind` in the ICNTL vector of the "
 "mumps_context object to value `val`."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.MumpsContext.set_distributed_matrix:1
+msgid ""
+"Set the matrix mat A for the mumps_context object distributed over all "
+"processes. It also sets ICNTL(5) to 0 and ICNTL(18) to 3."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
@@ -172,7 +188,7 @@ msgstr ""
 #: of getfem.getfem.MumpsContext.solve:3
 msgid ""
 "The analysis and factorization jobs need to be run first before calling this"
-" function."
+" function. An error check is performed after the solve."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring

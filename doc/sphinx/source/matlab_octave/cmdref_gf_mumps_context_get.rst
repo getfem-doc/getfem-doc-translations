@@ -13,6 +13,7 @@ gf_mumps_context_get
 
   gf_mumps_context_get(mumps_context MC, 'display')
   K = gf_mumps_context_get(mumps_context MC, 'matrix')
+  K = gf_mumps_context_get(mumps_context MC, 'distributed matrix')
   vec = gf_mumps_context_get(mumps_context MC, 'vector')
   VAL = gf_mumps_context_get(mumps_context MC, 'ICNTL', int ind)
   VAL = gf_mumps_context_get(mumps_context MC, 'INFOG', int ind)
@@ -48,6 +49,13 @@ void gf_mumps_context_get(getfemint::mexargs_in& in,
 
 
   ``K = gf_mumps_context_get(mumps_context MC, 'matrix')``
+
+    The mumps_context object in the scripting API cannot return
+    a reference to the ija matrix stored in C++. It just
+    displays information about the stored matrix.
+
+
+  ``K = gf_mumps_context_get(mumps_context MC, 'distributed matrix')``
 
     The mumps_context object in the scripting API cannot return
     a reference to the ija matrix stored in C++. It just

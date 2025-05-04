@@ -12,9 +12,11 @@ gf_mumps_context_set
 ::
 
   gf_mumps_context_set(mumps_context MC, 'matrix', mat A)
+  gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A)
   gf_mumps_context_set(mumps_context MC, 'vector', vec b)
   gf_mumps_context_set(mumps_context MC, 'ICNTL', int ind, int val)
   gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)
+  gf_mumps_context_set(mumps_context MC, 'error check')
   gf_mumps_context_set(mumps_context MC, 'analyze')
   gf_mumps_context_set(mumps_context MC, 'factorize')
   SOL = gf_mumps_context_set(mumps_context MC, 'solve')
@@ -65,7 +67,10 @@ void gf_mumps_context_set(getfemint::mexargs_in& in,
   std::string init_cmd = in.pop().to_string();
   std::string cmd      = cmd_normalize(init_cmd);
 
-  if (check_cmd(cmd, "matrix", in, out, 1, 1, 0, 0)) {
+  bool distributed_matrix =
+    check_cmd(cmd, "distributed matrix", in, out, 1, 1, 0, 0);
+  if (distributed_matrix ||
+      check_cmd(cmd, "matrix", in, out, 1, 1, 0, 0)) {
     /*@SET ('matrix', mat A)
       Set the matrix mat A for the mumps_context object.
 
@@ -76,6 +81,12 @@ void gf_mumps_context_set(getfemint::mexargs_in& in,
   ``gf_mumps_context_set(mumps_context MC, 'matrix', mat A)``
 
     Set the matrix mat A for the mumps_context object.
+
+
+  ``gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A)``
+
+    Set the matrix mat A for the mumps_context object distributed over all
+    processes. It also sets ICNTL(5) to 0 and ICNTL(18) to 3.
 
 
   ``gf_mumps_context_set(mumps_context MC, 'vector', vec b)``
@@ -99,6 +110,11 @@ void gf_mumps_context_set(getfemint::mexargs_in& in,
     Capital naming convention is used to imply Fortran indexing.
 
 
+  ``gf_mumps_context_set(mumps_context MC, 'error check')``
+
+    Check the error status of the mumps_context object.
+
+
   ``gf_mumps_context_set(mumps_context MC, 'analyze')``
 
     Run the MUMPS analysis job for the mumps_context object.
@@ -114,7 +130,8 @@ void gf_mumps_context_set(getfemint::mexargs_in& in,
     Run the MUMPS solve job (only) for the mumps_context object.
     
     The analysis and factorization jobs need to be run first
-    before calling this function.
+    before calling this function. An error check is performed after
+    the solve.
     
     It returns the solution vector (on all processes if MPI is used).
 
@@ -129,6 +146,7 @@ void gf_mumps_context_set(getfemint::mexargs_in& in,
     Run the MUMPS factorization and solve jobs for the mumps_context object.
     
     The analysis job needs to be run first before calling this function.
+    An error check is performed after the solve.
     
     It returns the solution vector (on all processes if MPI is used).
 
@@ -136,7 +154,7 @@ void gf_mumps_context_set(getfemint::mexargs_in& in,
   ``SOL = gf_mumps_context_set(mumps_context MC, 'analyze factorize and solve')``
 
     Run the MUMPS analysis, factorization and solve jobs for the mumps_context
-    object.
+    object. An error check is also performed after the solve.
     
     It returns the solution vector (on all processes if MPI is used).
 

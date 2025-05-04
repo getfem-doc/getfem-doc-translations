@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-28 01:53+0000\n"
+"POT-Creation-Date: 2025-05-04 01:59+0000\n"
 "PO-Revision-Date: 2025-04-15 01:51+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -29,32 +29,32 @@ msgstr "gf_mumps_context_get"
 msgid "**Synopsis**"
 msgstr "**概要**"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:22
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:23
 msgid "**Description :**"
 msgstr "**説明 :**"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:25
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:26
 msgid ""
 "General function for querying information about a mumps_context object."
 msgstr "mumps_contextオブジェクトに関する情報を照会するための汎用的な関数です．"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:26
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:27
 msgid "*/"
 msgstr "*/"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:28
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:29
 msgid "void gf_mumps_context_get(getfemint::mexargs_in& in,"
 msgstr "void gf_mumps_context_get(getfemint::mexargs_in& in,"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:29
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:30
 msgid "getfemint::mexargs_out& out) {"
 msgstr "getfemint::mexargs_out& out) {"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:31
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:32
 msgid "if (in.narg() < 2) THROW_BADARG(\"Wrong number of input arguments\");"
 msgstr "if (in.narg() < 2) THROW_BADARG(\"Wrong number of input arguments\");"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:33
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:34
 msgid ""
 "const gmumps *pctx   = to_mumps_context_object(in.pop()); std::string "
 "init_cmd = in.pop().to_string(); std::string cmd      = "
@@ -64,32 +64,33 @@ msgstr ""
 "init_cmd = in.pop().to_string(); std::string cmd      = "
 "cmd_normalize(init_cmd);"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:37
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:38
 msgid "if (check_cmd(cmd, \"display\", in, out, 0, 0, 0, 0)) {"
 msgstr "if (check_cmd(cmd, \"display\", in, out, 0, 0, 0, 0)) {"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:38
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:39
 msgid "/*@GET ('display')"
 msgstr "/*@GET ('display')"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:39
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:47
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:40
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:48
 msgid "Display a short summary for a mumps_context object."
 msgstr "mumps_context オブジェクトの概要が表示されます．"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:41
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:42
 msgid "**Command list :**"
 msgstr "**コマンドリスト**"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:45
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:46
 msgid "``gf_mumps_context_get(mumps_context MC, 'display')``"
 msgstr "``gf_mumps_context_get(mumps_context MC, 'display')``"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:50
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:51
 msgid "``K = gf_mumps_context_get(mumps_context MC, 'matrix')``"
 msgstr "``K = gf_mumps_context_get(mumps_context MC, 'matrix')``"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:52
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:53
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:60
 msgid ""
 "The mumps_context object in the scripting API cannot return a reference to "
 "the ija matrix stored in C++. It just displays information about the stored "
@@ -98,11 +99,15 @@ msgstr ""
 "スクリプトAPIのmumps_contextオブジェクトは、C++に格納されているija行列への参照を返すことはできません。 "
 "保存されている行列に関する情報を表示するだけです。"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:57
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:58
+msgid "``K = gf_mumps_context_get(mumps_context MC, 'distributed matrix')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:65
 msgid "``vec = gf_mumps_context_get(mumps_context MC, 'vector')``"
 msgstr "``vec = gf_mumps_context_get(mumps_context MC, 'vector')``"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:59
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:67
 msgid ""
 "Outputs a copy of the vector stored in the mumps_context object. Before the "
 "solution, it contains the right hand side of the system. After the solution,"
@@ -111,48 +116,48 @@ msgstr ""
 "mumps_contextオブジェクトに格納されているベクトルのコピーを出力します。解答の前に、システムの右辺が含まれています。 "
 "解析の後、その解が入っています。"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:64
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:72
 msgid "``VAL = gf_mumps_context_get(mumps_context MC, 'ICNTL', int ind)``"
 msgstr "``VAL = gf_mumps_context_get(mumps_context MC, 'ICNTL', int ind)``"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:66
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:74
 msgid ""
 "Output the ICNTL array entry at 1-based index `ind` stored in the "
 "mumps_context object."
 msgstr "mumps_context オブジェクトに格納されている1ベースのインデックス `ind` にあるICNTL配列エントリーを出力します。"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:69
 #: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:77
 #: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:85
 #: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:93
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:101
 msgid "Capital naming convention is used to imply Fortran indexing."
 msgstr "大文字の命名規則は、Fortranのインデックスを意味します。"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:72
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:80
 msgid "``VAL = gf_mumps_context_get(mumps_context MC, 'INFOG', int ind)``"
 msgstr "``VAL = gf_mumps_context_get(mumps_context MC, 'INFOG', int ind)``"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:74
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:82
 msgid ""
 "Output the INFOG array entry at 1-based index `ind` stored in the "
 "mumps_context object."
 msgstr "mumps_context オブジェクトに格納されている1ベースのインデックス `ind` にあるINFOG配列エントリーを出力します。"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:80
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:88
 msgid "``VAL = gf_mumps_context_get(mumps_context MC, 'RINFO', int ind)``"
 msgstr "``VAL = gf_mumps_context_get(mumps_context MC, 'RINFO', int ind)``"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:82
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:90
 msgid ""
 "Output the RINFO array entry at 1-based index `ind` stored in the "
 "mumps_context object."
 msgstr "mumps_context オブジェクトに格納されている1ベースのインデックス `ind` にあるRINFO配列エントリーを出力します。"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:88
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:96
 msgid "``VAL = gf_mumps_context_get(mumps_context MC, 'RINFOG', int ind)``"
 msgstr "``VAL = gf_mumps_context_get(mumps_context MC, 'RINFOG', int ind)``"
 
-#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:90
+#: ../source/matlab_octave/cmdref_gf_mumps_context_get.rst:98
 msgid ""
 "Output the RINFOG array entry at 1-based index `ind` stored in the "
 "mumps_context object."
