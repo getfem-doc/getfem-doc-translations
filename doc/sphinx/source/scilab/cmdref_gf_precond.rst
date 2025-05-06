@@ -60,7 +60,7 @@ General constructor for precond objects.
 
     Create an ILU (Incomplete LU) preconditioner for the sparse
     matrix <literal>m</literal>. This preconditioner has the same sparsity pattern
-    than <literal>m</literal> (no fill-in).  
+    than <literal>m</literal> (no fill-in).
 
 
   ``PC = gf_precond('ildltt', spmat m[, int fillin[, scalar threshold]])``

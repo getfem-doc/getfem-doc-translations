@@ -50,7 +50,7 @@ General constructor for global_function objects.
 
     Create a global function from strings `val`, `grad` and `hess`.
     This function could be improved by using the derivation of the generic
-    assembly language ... to be done. 
+    assembly language ... to be done.
 
 
   ``GF = gf_global_function('product', global_function F, global_function G)``

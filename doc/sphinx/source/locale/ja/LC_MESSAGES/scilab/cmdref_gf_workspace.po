@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-26 01:33+0000\n"
+"POT-Creation-Date: 2025-04-18 01:47+0000\n"
 "PO-Revision-Date: 2018-07-16 07:00+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,12 +34,12 @@ msgid "**Description :**"
 msgstr "**説明 :**"
 
 #: ../source/scilab/cmdref_gf_workspace.rst:27
-msgid "Getfem workspace management function."
-msgstr "Getfem workspace管理関数．"
+msgid "GetFEM workspace management function."
+msgstr "GetFEM workspace管理関数．"
 
 #: ../source/scilab/cmdref_gf_workspace.rst:29
 msgid ""
-"Getfem uses its own workspaces in Matlab, independently of the matlab "
+"GetFEM uses its own workspaces in Matlab, independently of the matlab "
 "workspaces (this is due to some limitations in the memory management of "
 "matlab objects). By default, all getfem variables belong to the root getfem "
 "workspace. A function can create its own workspace by invoking "
@@ -47,27 +47,27 @@ msgid ""
 "invoke gf_workspace('pop') (you can use matlab exceptions handling to do "
 "this cleanly when the function exits on an error)."
 msgstr ""
-"Getfemは，matlabワークスペースから独立して，Matlab内の独自のワークスペースを使用します(これは，matlabオブジェクトのメモリー管理にいくつかの制限があるためです．)．デフォルトでは，すべてのgetfem変数はrootのgetfemワークスペースに属します．関数は，最初に"
+"GetFEMは，matlabワークスペースから独立して，Matlab内の独自のワークスペースを使用します(これは，matlabオブジェクトのメモリー管理にいくつかの制限があるためです．)．デフォルトでは，すべてのgetfem変数はrootのgetfemワークスペースに属します．関数は，最初に"
 " gf_workspace('push') を呼び出すことで，独自のワークスペースを作成できます．終了時に，関数 gf_workspace('pop')"
 " を呼び出さなければなりません(関数がエラーで終了したときに，matlab例外処理を使用してこれを適切に行うことができます．)．"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:40
+#: ../source/scilab/cmdref_gf_workspace.rst:39
 msgid "**Command list :**"
 msgstr "**コマンドリスト**"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:44
+#: ../source/scilab/cmdref_gf_workspace.rst:43
 msgid "``gf_workspace('push')``"
 msgstr "``gf_workspace('push')``"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:46
+#: ../source/scilab/cmdref_gf_workspace.rst:45
 msgid "Create a new temporary workspace on the workspace stack."
 msgstr "workspaceスタックに新しい一時workspaceを作成します．"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:49
+#: ../source/scilab/cmdref_gf_workspace.rst:48
 msgid "``gf_workspace('pop',  [,i,j, ...])``"
 msgstr "``gf_workspace('pop',  [,i,j, ...])``"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:51
+#: ../source/scilab/cmdref_gf_workspace.rst:50
 msgid ""
 "Leave the current workspace, destroying all getfem objects belonging to it, "
 "except the one listed after 'pop', and the ones moved to parent workspace by"
@@ -76,27 +76,27 @@ msgstr ""
 "現在のワークスペースをそのままにして，それに属するすべてのgetfemオブジェクトを破棄します．ただし， 'pop' "
 "の後にリストされているオブジェクトと， gf_workspace('keep')によって親ワークスペースに移動されたオブジェクトは除きます．"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:56
+#: ../source/scilab/cmdref_gf_workspace.rst:55
 msgid "``gf_workspace('stat')``"
 msgstr "``gf_workspace('stat')``"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:58
+#: ../source/scilab/cmdref_gf_workspace.rst:57
 msgid "Print informations about variables in current workspace."
 msgstr "現在のワークスペースの変数に関する情報を表示します．"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:61
+#: ../source/scilab/cmdref_gf_workspace.rst:60
 msgid "``gf_workspace('stats')``"
 msgstr "``gf_workspace('stats')``"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:63
+#: ../source/scilab/cmdref_gf_workspace.rst:62
 msgid "Print informations about all getfem variables."
 msgstr "すべてのgetfem変数に関する情報を出力します．"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:66
+#: ../source/scilab/cmdref_gf_workspace.rst:65
 msgid "``gf_workspace('keep', i[,j,k...])``"
 msgstr "``gf_workspace('keep', i[,j,k...])``"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:68
+#: ../source/scilab/cmdref_gf_workspace.rst:67
 msgid ""
 "prevent the listed variables from being deleted when gf_workspace(\"pop\") "
 "will be called by moving these variables in the parent workspace."
@@ -104,39 +104,39 @@ msgstr ""
 "これらの変数を親ワークスペースに移動して gf_workspace(\"pop\") "
 "を呼び出したときに，リストされている変数が削除されないようにします．"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:73
+#: ../source/scilab/cmdref_gf_workspace.rst:72
 msgid "``gf_workspace('keep all')``"
 msgstr "``gf_workspace('keep all')``"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:75
+#: ../source/scilab/cmdref_gf_workspace.rst:74
 msgid ""
 "prevent all variables from being deleted when gf_workspace(\"pop\") will be "
 "called by moving the variables in the parent workspace."
 msgstr "親作業領域の変数を移動してgf_workspace(\"pop\") が呼び出されるときに，すべての変数が削除されないようにします．"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:80
+#: ../source/scilab/cmdref_gf_workspace.rst:79
 msgid "``gf_workspace('clear')``"
 msgstr "``gf_workspace('clear')``"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:82
+#: ../source/scilab/cmdref_gf_workspace.rst:81
 msgid "Clear the current workspace."
 msgstr "現在のworkspaceをクリアします．"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:85
+#: ../source/scilab/cmdref_gf_workspace.rst:84
 msgid "``gf_workspace('clear all')``"
 msgstr "``gf_workspace('clear all')``"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:87
+#: ../source/scilab/cmdref_gf_workspace.rst:86
 msgid ""
 "Clear every workspace, and returns to the main workspace (you should not "
 "need this command)."
 msgstr "すべてのworkspaceをクリアし，メインのworkspaceに戻ります(このコマンドは不要です)．"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:91
+#: ../source/scilab/cmdref_gf_workspace.rst:90
 msgid "``gf_workspace('class name', i)``"
 msgstr "``gf_workspace('class name', i)``"
 
-#: ../source/scilab/cmdref_gf_workspace.rst:93
+#: ../source/scilab/cmdref_gf_workspace.rst:92
 msgid ""
 "Return the class name of object i (if I is a mesh handle, it return gfMesh "
 "etc..)"

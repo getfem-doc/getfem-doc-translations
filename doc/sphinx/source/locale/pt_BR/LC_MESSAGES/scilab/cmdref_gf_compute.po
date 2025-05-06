@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-02 01:34+0000\n"
+"POT-Creation-Date: 2025-05-04 01:59+0000\n"
 "PO-Revision-Date: 2018-07-16 06:59+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -188,57 +188,57 @@ msgid ""
 "then all the mesh convexes will be used. U should be a row vector."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:139
+#: ../source/scilab/cmdref_gf_compute.rst:138
 msgid ""
 "``Ui = gf_compute(mesh_fem MF, vec U, 'interpolate on', {mesh_fem mfi | "
 "slice sli | vec pts})``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:141
+#: ../source/scilab/cmdref_gf_compute.rst:140
 msgid ""
 "Interpolate a field on another mesh_fem or a slice or a list of points."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:143
+#: ../source/scilab/cmdref_gf_compute.rst:142
 msgid "Interpolation on another mesh_fem <literal>mfi</literal>:"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:144
+#: ../source/scilab/cmdref_gf_compute.rst:143
 msgid ""
 "<literal>mfi</literal> has to be Lagrangian. If <literal>mf</literal> and "
 "<literal>mfi</literal> share the same mesh object, the interpolation will be"
 " much faster."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:146
+#: ../source/scilab/cmdref_gf_compute.rst:145
 msgid "Interpolation on a slice <literal>sli</literal>:"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:147
+#: ../source/scilab/cmdref_gf_compute.rst:146
 msgid ""
 "this is similar to interpolation on a refined P1-discontinuous mesh, but it "
 "is much faster. This can also be used with gf_slice('points') to obtain "
 "field values at a given set of points."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:151
+#: ../source/scilab/cmdref_gf_compute.rst:150
 msgid "Interpolation on a set of points <literal>pts</literal>"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:153
+#: ../source/scilab/cmdref_gf_compute.rst:152
 msgid "See also gf_asm('interpolation matrix')"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:157
+#: ../source/scilab/cmdref_gf_compute.rst:155
 msgid ""
 "``Ue = gf_compute(mesh_fem MF, vec U, 'extrapolate on', mesh_fem mfe)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:159
+#: ../source/scilab/cmdref_gf_compute.rst:157
 msgid "Extrapolate a field on another mesh_fem."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:161
+#: ../source/scilab/cmdref_gf_compute.rst:159
 msgid ""
 "If the mesh of <literal>mfe</literal> is stricly included in the mesh of "
 "<literal>mf</literal>, this function does stricly the same job as "
@@ -248,43 +248,43 @@ msgid ""
 "outside <literal>mf</literal> will be extrapolated."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:168
+#: ../source/scilab/cmdref_gf_compute.rst:166
 msgid "See also gf_asm('extrapolation matrix')"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:171
+#: ../source/scilab/cmdref_gf_compute.rst:169
 msgid "``E = gf_compute(mesh_fem MF, vec U, 'error estimate', mesh_im mim)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:173
+#: ../source/scilab/cmdref_gf_compute.rst:171
 msgid "Compute an a posteriori error estimate."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:175
-#: ../source/scilab/cmdref_gf_compute.rst:183
+#: ../source/scilab/cmdref_gf_compute.rst:173
+#: ../source/scilab/cmdref_gf_compute.rst:181
 msgid ""
 "Currently there is only one which is available: for each convex, the jump of"
 " the normal derivative is integrated on its faces."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:179
+#: ../source/scilab/cmdref_gf_compute.rst:177
 msgid ""
 "``E = gf_compute(mesh_fem MF, vec U, 'error estimate nitsche', mesh_im mim, "
 "int GAMMAC, int GAMMAN, scalar lambda_, scalar mu_, scalar gamma0, scalar "
 "f_coeff, scalar vertical_force)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:181
+#: ../source/scilab/cmdref_gf_compute.rst:179
 msgid "Compute an a posteriori error estimate in the case of Nitsche method."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:187
+#: ../source/scilab/cmdref_gf_compute.rst:185
 msgid ""
 "``gf_compute(mesh_fem MF, vec U, 'convect', mesh_fem mf_v, vec V, scalar dt,"
 " int nt[, string option[, vec per_min, vec per_max]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_compute.rst:189
+#: ../source/scilab/cmdref_gf_compute.rst:187
 msgid ""
 "Compute a convection of <literal>U</literal> with regards to a steady state "
 "velocity field <literal>V</literal> with a Characteristic-Galerkin method. "

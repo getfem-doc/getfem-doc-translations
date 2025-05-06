@@ -72,7 +72,7 @@ General constructor for spmat objects.
 
     Create a sparse matrix as the product of the sparse matrices <literal>A</literal> and
     <literal>B</literal>. It requires that <literal>A</literal> and <literal>B</literal> be both real or both complex, you
-    may have to use <literal></literal>gf_spmat_set(spmat S, 'to_complex')<literal></literal> 
+    may have to use <literal></literal>gf_spmat_set(spmat S, 'to_complex')<literal></literal>.
 
 
   ``SM = gf_spmat('add', spmat A, spmat B)``

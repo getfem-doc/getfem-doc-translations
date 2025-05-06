@@ -16,7 +16,7 @@ gf_linsolve
   X = gf_linsolve('bicgstab', spmat M, vec b [, precond P][,'noisy'][,'res', r][,'maxiter', n])
   {U, cond} = gf_linsolve('lu', spmat M, vec b)
   {U, cond} = gf_linsolve('superlu', spmat M, vec b)
-  {U, cond} = gf_linsolve('mumps', spmat M, vec b)
+  {U, cond} = gf_linsolve('mumps', spmat M, vec b, ... ['sym'])
 
 **Description :**
 
@@ -62,7 +62,13 @@ gf_linsolve
     The condition number estimate <literal>cond</literal> is returned with the solution <literal>U</literal>.
 
 
-  ``{U, cond} = gf_linsolve('mumps', spmat M, vec b)``
+  ``{U, cond} = gf_linsolve('mumps', spmat M, vec b, ... ['sym'])``
 
     Solve <literal>M.U = b</literal> using the MUMPS solver.
+    
+    The right hand side <literal>b</literal> can optionally by a matrix with several columns
+    in order to solve multiple right hand sides at once.
+    
+    If the option <literal>sym</literal> is provided, the symmetric version of the MUMPS
+    solver will be used.
 

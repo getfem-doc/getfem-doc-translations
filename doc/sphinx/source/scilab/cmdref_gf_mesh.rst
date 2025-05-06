@@ -140,7 +140,7 @@ General constructor for mesh objects.
 
   ``M = gf_mesh('import', string format, string filename)``
 
-    Import a mesh.
+    Import a mesh from the file <literal>filename</literal>.
     
     <literal>format</literal> may be:
     
@@ -149,6 +149,15 @@ General constructor for mesh objects.
     - 'gid' for a mesh created with <literal>GiD</literal>
     - 'cdb' for a mesh created with <literal>ANSYS</literal>
     - 'am_fmt' for a mesh created with <literal>EMC2</literal>
+    - 'structured' for a structured cartesian mesh.
+      In this case <literal>filename</literal> is a string describing the mesh
+      e.g. "GT='GT_QK(2,2)';ORG=[0,0];SIZES=[1,1];NSUBDIV=[5,10]"
+    - 'structured_ball' for a structured mesh of a circular disc or a sphere.
+      In this case <literal>filename</literal> is a string describing the mesh
+      "GT='GT_QK(2,2)';ORG=[0,0];SIZES=[4];NSUBDIV=[3,4];SYMMETRIES=1"
+      The number of symmetries divides a circle into a half (1) or quarter
+      of circle (2). Similarly a sphere can be divided with up to 3 symmetry
+      planes.
 
 
   ``M = gf_mesh('clone', mesh m2)``
@@ -158,20 +167,18 @@ General constructor for mesh objects.
 
   ``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat vertices]])``
 
-    Call the experimental mesher of Getfem on the geometry
-    represented by <literal>mo</literal>. please control the conformity of the produced mesh.
-    You can help the mesher by adding a priori vertices in the array
-    <literal>vertices</literal> which should be of size <literal></literal>n x m<literal></literal> where <literal></literal>n<literal></literal> n is the
-    dimension of the mesh and <literal></literal>m<literal></literal> the number of points. <literal>h</literal> is
-    approximate diameter of the elements. <literal>K</literal> is the degree of the
-    mesh ( > 1 for curved boundaries).  The mesher try to optimize the
-    quality of the elements. This operation may be time consuming.
-    Note that if the mesh generation fails, because of some random
-    procedure used, it can be run again since it will not give necessarily
-    the same result due to random procedures used.
+    Call the experimental mesher of GetFEM on the geometry represented
+    by <literal>mo</literal>. Please control the conformity of the produced mesh. You can
+    help the mesher by adding a priori vertices in the array <literal>vertices</literal>
+    which should be of size <literal></literal>n x m<literal></literal> where <literal></literal>n<literal></literal> n is the dimension of
+    the mesh and <literal></literal>m<literal></literal> the number of points. <literal>h</literal> is approximate diameter
+    of the elements. <literal>K</literal> is the degree of the mesh (>1 for curved boundaries).
+    The mesher will try to optimize the quality of the elements. This
+    operation may be time consuming. Note that if the mesh generation fails,
+    because of some random procedure used, it can be run again since it will
+    not give necessarily the same result due to random procedures used.
     The messages send to the console by the mesh generation can be
     deactivated using <literal>gf_util('trace level', 2)</literal>. More information
     can be obtained by <literal>gf_util('trace level', 4)</literal>. See <literal></literal>gf_mesher_object<literal></literal>
     to manipulate geometric primitives in order to describe the geometry.
-    
 

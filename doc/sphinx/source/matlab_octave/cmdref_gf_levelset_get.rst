@@ -59,7 +59,6 @@ gf_levelset_get
     This can be used to perform comparisons between two
     different levelset objects.
     This function is to be completed.
-    
 
 
   ``gf_levelset_get(levelset LS, 'display')``

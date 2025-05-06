@@ -48,8 +48,8 @@ gf_fem_get
 
   ``n = gf_fem_get(fem F, 'index of global dof', cv)``
 
-    Return the index of global dof for special fems such as interpolated fem.
-    
+    Return the index of global dof for special fems such as interpolated
+    fem.
 
 
   ``d = gf_fem_get(fem F, 'dim')``
@@ -70,7 +70,7 @@ gf_fem_get
     
     Some specific fem may require a convex number <literal>cv</literal> to give their
     result (for example 'interpolated_fem'). In most of the case, you
-    can omit this convex number. 
+    can omit this convex number.
 
 
   ``b = gf_fem_get(fem F, 'is_equivalent')``
@@ -123,7 +123,6 @@ gf_fem_get
 
     Return the polynomial expressions of its basis functions in
     the reference convex.
-    
     The result is expressed as a cell array of
     strings. Of course this will fail on non-polynomial fem's. 
 

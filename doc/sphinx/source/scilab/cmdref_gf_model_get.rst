@@ -85,7 +85,6 @@ gf_model_get
   ``t = gf_model_get(model M, 'get time')``
 
     Give the value of the data <literal>t</literal> corresponding to the current time.
-    
 
 
   ``T = gf_model_get(model M, 'tangent_matrix')``
@@ -109,7 +108,6 @@ gf_model_get
     terms acting on two different variables (default is 0).
     <literal>ind_iter</literal> is the iteration number when time dispatchers are
     used (default is 1).
-    
 
 
   ``z = gf_model_get(model M, 'memsize')``
@@ -183,7 +181,7 @@ gf_model_get
 
     Return the vector of all the degrees of freedom of the model consisting
     of the concatenation of the variables of the model (useful
-    to solve your problem with you own solver). 
+    to solve your problem with you own solver).
 
 
   ``gf_model_get(model M, 'assembly'[, string option])``
@@ -193,7 +191,7 @@ gf_model_get
     'build_rhs', 'build_matrix', 'build_rhs_with_internal',
     'build_matrix_condensed', 'build_all_condensed'.
     The default is to build the whole tangent linear system (matrix and rhs).
-    This function is useful to solve your problem with you own solver. 
+    This function is useful to solve your problem with you own solver.
 
 
   ``{nbit, converged} = gf_model_get(model M, 'solve'[, ...])``
@@ -227,14 +225,12 @@ gf_model_get
        Possible values are 'simplest', 'systematic', 'quadratic' or 'basic'.
     
       Return the number of iterations, if an iterative method is used.
-      
+    
       Note that it is possible to disable some variables
       (see gf_model_set(model M, 'disable variable') ) in order to
       solve the problem only with respect to a subset of variables (the
       disabled variables are then considered as data) for instance to
       replace the global Newton strategy with a fixed point one.
-    
-      
 
 
   ``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar scale]]])``
@@ -248,7 +244,6 @@ gf_model_get
     the current position.
     Each dof of the random position is chosen in the range
     [current-scale, current+scale].
-    
 
 
   ``gf_model_get(model M, 'test tangent matrix term', string varname1, string varname2[, scalar EPS[, int NB[, scalar scale]]])``
@@ -266,7 +261,6 @@ gf_model_get
     around the current position.
     Each dof of the random position is chosen in the range
     [current-scale, current+scale].
-    
 
 
   ``expr = gf_model_get(model M, 'Neumann term', string varname, int region)``
@@ -277,8 +271,7 @@ gf_model_get
     <literal>region</literal> should be the index of a boundary region
     on the mesh where <literal>varname</literal> is defined. Care to call this function
     only after all the volumic bricks have been declared.
-    Complains, if a brick
-    omit to declare an assembly string. 
+    Complains, if a brick omit to declare an assembly string.
 
 
   ``V = gf_model_get(model M, 'compute isotropic linearized Von Mises or Tresca', string varname, string dataname_lambda, string dataname_mu, mesh_fem mf_vm[, string version])``
@@ -287,23 +280,20 @@ gf_model_get
     valid for isotropic linearized elasticity in 3D). <literal>version</literal> should
     be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default).
     Parametrized by Lame coefficients.
-    
 
 
   ``V = gf_model_get(model M, 'compute isotropic linearized Von Mises pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``
 
     Compute the Von-Mises stress  of a displacement field for isotropic
     linearized elasticity in 3D or in 2D with plane strain assumption.
-    Parametrized by Young modulus and Poisson ratio.
-    
+    Parametrized by Young's modulus and Poisson ratio.
 
 
   ``V = gf_model_get(model M, 'compute isotropic linearized Von Mises pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``
 
     Compute the Von-Mises stress  of a displacement field for isotropic
     linearized elasticity in 3D or in 2D with plane stress assumption.
-    Parametrized by Young modulus and Poisson ratio.
-    
+    Parametrized by Young's modulus and Poisson ratio.
 
 
   ``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, string lawname, string dataname, mesh_fem mf_vm[, string version])``
@@ -316,7 +306,6 @@ gf_model_get
     depends on the law. It could be a short vector of constant values or a
     vector field described on a finite element method for variable coefficients.
     <literal>version</literal> should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default).
-    
 
 
   ``V = gf_model_get(model M, 'compute finite strain elasticity Von Mises',  string lawname, string varname, string params, mesh_fem mf_vm[, int region])``
@@ -327,7 +316,6 @@ gf_model_get
     a short vector of constant values or may depend on data or variables
     of the model.
     Uses the high-level generic assembly.
-    
 
 
   ``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string varname, string lawname, string dataname, mesh_fem mf_sigma)``
@@ -340,7 +328,6 @@ gf_model_get
     depends on the law. It could be a short vector of constant values or a
     vector field described on a finite element method for variable
     coefficients.
-    
 
 
   ``gf_model_get(model M, 'elastoplasticity next iter', mesh_im mim, string varname, string previous_dep_name, string projname, string datalambda, string datamu, string datathreshold, string datasigma)``
@@ -368,7 +355,6 @@ gf_model_get
     that stores the displacement of the previous time step (typically
     'u' to 'Previous_u'). It has to be called before any use of
     <literal>compute_small_strain_elastoplasticity_Von_Mises</literal>.
-    
 
 
   ``V = gf_model_get(model M, 'small strain elastoplasticity Von Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type [, string varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int region])``
@@ -379,20 +365,21 @@ gf_model_get
     exactly the same as for <literal>add_small_strain_elastoplasticity_brick</literal>.
     Remember that <literal>small_strain_elastoplasticity_next_iter</literal> has to be called
     before any call of this function.
-    
 
 
   ``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', string datasigma, mesh_fem mf_vm[, string version])``
 
     Compute on <literal>mf_vm</literal> the Von-Mises or the Tresca stress of a field for plasticity and return it into the vector V.
-    <literal>datasigma</literal> is a vector which contains the stress constraints values supported by the mesh.
-    <literal>version</literal> should be  'Von_Mises' or 'Tresca' ('Von_Mises' is the default).
+    <literal>datasigma</literal> is a vector which contains the stress constraints values
+    supported by the mesh. <literal>version</literal> should be 'Von_Mises' or 'Tresca'
+    ('Von_Mises' is the default).
 
 
   ``V = gf_model_get(model M, 'compute plastic part', mesh_im mim, mesh_fem mf_pl, string varname, string previous_dep_name, string projname, string datalambda, string datamu, string datathreshold, string datasigma)``
 
     Compute on <literal>mf_pl</literal> the plastic part and return it into the vector V.
-    <literal>datasigma</literal> is a vector which contains the stress constraints values supported by the mesh.
+    <literal>datasigma</literal> is a vector which contains the stress constraints values
+    supported by the mesh.
 
 
   ``gf_model_get(model M, 'finite strain elastoplasticity next iter', mesh_im mim, string lawname, string unknowns_type, [, string varnames, ...] [, string params, ...] [, int region = -1])``
@@ -407,14 +394,13 @@ gf_model_get
     this function updates the state variables defined in the last two
     entries of <literal>varnames</literal>, and resets the plastic multiplier field given
     as the second entry of <literal>varnames</literal>.
-    
 
 
   ``V = gf_model_get(model M, 'compute finite strain elastoplasticity Von Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, [, string varnames, ...] [, string params, ...] [, int region = -1])``
 
-    Compute on <literal>mf_vm</literal> the Von-Mises or the Tresca stress of a field for plasticity and return it into the vector V.
-    The first input parameters ar as in the function 'finite strain elastoplasticity next iter'.
-    
+    Compute on <literal>mf_vm</literal> the Von-Mises or the Tresca stress of a field for
+    plasticity and return it into the vector V. The first input parameters
+    ar as in the function 'finite strain elastoplasticity next iter'.
 
 
   ``V = gf_model_get(model M, 'sliding data group name of large sliding contact brick', int indbrick)``
@@ -456,7 +442,6 @@ gf_model_get
   ``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``
 
     Gives the matrix term ind_term of the brick ind_brick if it exists
-    
 
 
   ``s = gf_model_get(model M, 'char')``
@@ -466,7 +451,6 @@ gf_model_get
     This can be used to perform comparisons between two
     different model objects.
     This function is to be completed.
-    
 
 
   ``gf_model_get(model M, 'display')``

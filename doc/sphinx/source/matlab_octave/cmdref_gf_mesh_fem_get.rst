@@ -55,7 +55,7 @@ gf_mesh_fem_get
 
 
   General function for inquiry about mesh_fem objects.
-  
+
 
 **Command list :**
 
@@ -80,7 +80,7 @@ gf_mesh_fem_get
 
     Return the dof of the convexes listed in `CVids`.
     
-    WARNING: the Degree of Freedom might be returned in ANY order, do
+    WARNING: the degrees of freedom might be returned in ANY order, do
     not use this function in your assembly routines. Use 'basic dof from cvid'
     instead, if you want to be able to map a convex number with its
     associated degrees of freedom.
@@ -93,7 +93,6 @@ gf_mesh_fem_get
   ``{DOFs, IDx} = gf_mesh_fem_get(mesh_fem MF, 'dof from cvid'[, mat CVids])``
 
     Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof from cvid') instead.
-    
 
 
   ``{DOFs, IDx} = gf_mesh_fem_get(mesh_fem MF, 'basic dof from cvid'[, mat CVids])``
@@ -116,7 +115,6 @@ gf_mesh_fem_get
   ``gf_mesh_fem_get(mesh_fem MF, 'non conformal dof'[, mat CVids])``
 
     Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'non conformal basic dof') instead.
-    
 
 
   ``gf_mesh_fem_get(mesh_fem MF, 'non conformal basic dof'[, mat CVids])``
@@ -253,7 +251,7 @@ gf_mesh_fem_get
 
   ``DOFpts = gf_mesh_fem_get(mesh_fem MF, 'dof nodes'[, mat DOFids])``
 
-    Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof nodes') instead. 
+    Deprecated function. Use gf_mesh_fem_get(mesh_fem MF, 'basic dof nodes') instead.
 
 
   ``DOFpts = gf_mesh_fem_get(mesh_fem MF, 'basic dof nodes'[, mat DOFids])``
@@ -385,12 +383,12 @@ gf_mesh_fem_get
 
   ``gf_mesh_fem_get(mesh_fem MF, 'has_linked_mesh_levelset')``
 
-    Is a mesh_fem_level_set or not. 
+    Is a mesh_fem_level_set or not.
 
 
   ``gf_mesh_fem_get(mesh_fem MF, 'linked_mesh_levelset')``
 
-    if it is a mesh_fem_level_set gives the linked mesh_level_set. 
+    if it is a mesh_fem_level_set gives the linked mesh_level_set.
 
 
   ``U = gf_mesh_fem_get(mesh_fem MF, 'eval', expr [, DOFLST])``

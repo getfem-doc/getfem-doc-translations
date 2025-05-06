@@ -35,7 +35,7 @@ gf_mesh_im_set
     via gf_integ('IM_SOMETHING'), or to let getfem choose a suitable
     integration method with <literal>im_degree</literal> (choosen such that polynomials
     of <latex style="text"><![CDATA[\text{degree} \leq \text{im\_degree}]]></latex> are exactly integrated.
-    If <literal>im_degree=-1</literal>, then the dummy integration method IM_NONE will 
+    If <literal>im_degree=-1</literal>, then the dummy integration method IM_NONE will
     be used.)
 
 

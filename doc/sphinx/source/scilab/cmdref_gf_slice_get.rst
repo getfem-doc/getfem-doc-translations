@@ -220,7 +220,6 @@ gf_slice_get
     This can be used to perform comparisons between two
     different slice objects.
     This function is to be completed.
-    
 
 
   ``gf_slice_get(slice S, 'display')``

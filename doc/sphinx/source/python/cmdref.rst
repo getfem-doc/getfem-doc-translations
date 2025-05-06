@@ -33,6 +33,7 @@ and concepts used.
    cmdref_MeshLevelSet
    cmdref_MesherObject
    cmdref_Model
+   cmdref_MumpsContext
    cmdref_Precond
    cmdref_Slice
    cmdref_Spmat

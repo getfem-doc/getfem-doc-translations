@@ -131,7 +131,6 @@ gf_spmat_get
     This can be used to perform comparisons between two
     different spmat objects.
     This function is to be completed.
-    
 
 
   ``gf_spmat_get(spmat S, 'display')``

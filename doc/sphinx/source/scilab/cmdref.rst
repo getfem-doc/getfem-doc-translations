@@ -48,6 +48,7 @@ reference. Here is a list of these types:
 `global_function`      global function descriptor
 `mesher_object`        mesher object descriptor
 `cont_struct`          continuation-structure descriptor
+`mumps_context`        mumps context descriptor (or gfMumpsContext object)
 =====================  ==================================================
 
 Arguments listed between square brackets are optional. Lists between braces indicate that the argument must match one of the elements of the list. For example::
@@ -100,6 +101,9 @@ means that the dummy function takes two or three arguments, its first being an i
    cmdref_gf_model
    cmdref_gf_model_get
    cmdref_gf_model_set
+   cmdref_gf_mumps_context
+   cmdref_gf_mumps_context_get
+   cmdref_gf_mumps_context_set
    cmdref_gf_poly
    cmdref_gf_precond
    cmdref_gf_precond_get

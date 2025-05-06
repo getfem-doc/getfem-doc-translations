@@ -96,7 +96,7 @@ General constructor for mesh_fem objects.
 
     Create a mesh_fem whose base functions are global function given by the
     user in the system of coordinate defined by the iso-values of the two
-    level-set function of <literal>ls</literal>. 
+    level-set function of <literal>ls</literal>.
 
 
   ``MF = gf_mesh_fem('bspline_uniform', mesh m, int NX[, int NY[, int NZ]], int order[, string bcX_low[, string bcY_low[, string bcZ_low]][, string bcX_high[, string bcY_high[, string bcZ_high]]]])``
@@ -107,7 +107,7 @@ General constructor for mesh_fem objects.
     box of <literal>m</literal>.
     Optionally boundary conditions at the edges of the domain can be
     defined with <literal>bcX_low</literal>, <literal>bcY_low</literal>, <literal>bcZ_low</literal>, <literal>bcX_high</literal>, <literal>bcY_high</literal>,
-    and <literal>bcZ_high</literal> set to 'free' (default) or 'periodic' or 'symmetry'. 
+    and <literal>bcZ_high</literal> set to 'free' (default) or 'periodic' or 'symmetry'.
 
 
   ``MF = gf_mesh_fem('partial', mesh_fem mf, ivec DOFs[, ivec RCVs])``

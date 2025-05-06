@@ -18,3 +18,5 @@ Module util
 .. autofunction:: getfem.util_warning_level
 
 .. autofunction:: getfem.util_set_num_threads
+
+.. autofunction:: getfem.util_mpi_parallelism_level

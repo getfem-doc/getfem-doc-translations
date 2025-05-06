@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-26 01:33+0000\n"
+"POT-Creation-Date: 2025-05-04 01:59+0000\n"
 "PO-Revision-Date: 2018-07-16 07:01+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -25,70 +25,84 @@ msgstr ""
 msgid "**Synopsis**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:20
+#: ../source/scilab/cmdref_gf_util.rst:21
 msgid "**Description :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:23
+#: ../source/scilab/cmdref_gf_util.rst:24
 msgid "Performs various operations which do not fit elsewhere."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:26
+#: ../source/scilab/cmdref_gf_util.rst:27
 msgid "**Command list :**"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:30
+#: ../source/scilab/cmdref_gf_util.rst:31
 msgid "``gf_util('save matrix', string FMT, string FILENAME, mat A)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:32
+#: ../source/scilab/cmdref_gf_util.rst:33
 msgid ""
 "Exports a sparse matrix into the file named FILENAME, using Harwell-Boeing "
 "(FMT='hb') or Matrix-Market (FMT='mm') formatting."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:36
+#: ../source/scilab/cmdref_gf_util.rst:37
 msgid "``A = gf_util('load matrix', string FMT, string FILENAME)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:38
+#: ../source/scilab/cmdref_gf_util.rst:39
 msgid "Imports a sparse matrix from a file."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:41
+#: ../source/scilab/cmdref_gf_util.rst:42
 msgid "``tl = gf_util('trace level' [, int level])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:43
+#: ../source/scilab/cmdref_gf_util.rst:44
 msgid "Set the verbosity of some GetFEM routines."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:45
+#: ../source/scilab/cmdref_gf_util.rst:46
 msgid ""
 "Typically the messages printed by the model bricks, 0 means no trace message"
 " (default is 3). if no level is given, the current trace level is returned."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:50
+#: ../source/scilab/cmdref_gf_util.rst:51
 msgid "``tl = gf_util('warning level' [, int level])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:52
+#: ../source/scilab/cmdref_gf_util.rst:53
 msgid "Filter the less important warnings displayed by getfem."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:54
+#: ../source/scilab/cmdref_gf_util.rst:55
 msgid ""
 "0 means no warnings, default level is 3. if no level is given, the current "
 "warning level is returned."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:58
+#: ../source/scilab/cmdref_gf_util.rst:59
 msgid "``tl = gf_util('set num threads', int nb_threads)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:60
+#: ../source/scilab/cmdref_gf_util.rst:61
 msgid ""
 "Sets the number of threads for the multithreaded GetFEM version. It is "
 "available only when GetFEM is compiled with openmp support."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_util.rst:65
+msgid "``tl = gf_util('mpi parallelism level')``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_util.rst:67
+msgid "Return the level of MPI parallelism GetFEM is compiled with."
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_util.rst:69
+msgid ""
+"0 means no MPI parallelism, 1 means assembly is parallelized, and 2 means "
+"that both assembly and solve (with MUMPS) are MPI parallel."
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-26 01:33+0000\n"
+"POT-Creation-Date: 2025-05-04 01:59+0000\n"
 "PO-Revision-Date: 2020-04-26 01:50+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -216,7 +216,7 @@ msgid "``M = gf_mesh('import', string format, string filename)``"
 msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh.rst:147
-msgid "Import a mesh."
+msgid "Import a mesh from the file `filename`."
 msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_mesh.rst:149
@@ -245,28 +245,44 @@ msgstr ""
 msgid "'am_fmt' for a mesh created with `EMC2`"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:158
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:156
+msgid ""
+"'structured' for a structured cartesian mesh. In this case `filename` is a "
+"string describing the mesh e.g. "
+"\"GT='GT_QK(2,2)';ORG=[0,0];SIZES=[1,1];NSUBDIV=[5,10]\""
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:159
+msgid ""
+"'structured_ball' for a structured mesh of a circular disc or a sphere. In "
+"this case `filename` is a string describing the mesh "
+"\"GT='GT_QK(2,2)';ORG=[0,0];SIZES=[4];NSUBDIV=[3,4];SYMMETRIES=1\" The "
+"number of symmetries divides a circle into a half (1) or quarter of circle "
+"(2). Similarly a sphere can be divided with up to 3 symmetry planes."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:167
 msgid "``M = gf_mesh('clone', mesh m2)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:160
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:169
 msgid "Create a copy of a mesh."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:163
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:172
 msgid ""
 "``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat "
 "vertices]])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:165
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:174
 msgid ""
-"Call the experimental mesher of Getfem on the geometry represented by `mo`. "
-"please control the conformity of the produced mesh. You can help the mesher "
+"Call the experimental mesher of GetFEM on the geometry represented by `mo`. "
+"Please control the conformity of the produced mesh. You can help the mesher "
 "by adding a priori vertices in the array `vertices` which should be of size "
 "``n x m`` where ``n`` n is the dimension of the mesh and ``m`` the number of"
 " points. `h` is approximate diameter of the elements. `K` is the degree of "
-"the mesh ( > 1 for curved boundaries).  The mesher try to optimize the "
+"the mesh (>1 for curved boundaries). The mesher will try to optimize the "
 "quality of the elements. This operation may be time consuming. Note that if "
 "the mesh generation fails, because of some random procedure used, it can be "
 "run again since it will not give necessarily the same result due to random "
