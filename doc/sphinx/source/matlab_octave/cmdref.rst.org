@@ -6476,10 +6476,12 @@ General constructor for mumps_context objects.
 
   ``CTX = gf_mumps_context(string sym, string datatype)``
 
-    The argument `sym` should be 'symmetric' or 'unsymmetric' or empty.
-    Default value is 'unsymmetric'.
-    The argument `datatype` should be 'real' or 'complex' or empty.
-    Default value is 'real'.
+    The argument `sym` should be 'symmetric' or 'general symmetric',
+    'symmetric positive definite', 'unsymmetric', or empty.
+    Default value (empty) is 'unsymmetric' (MUMPS option 0).
+    The option 'symmetric' is equivalent to 'general symmetric'
+    (MUMPS option 2). The argument `datatype` should be 'real' or
+    'complex' or empty. Default value (empty) is 'real'.
 
 gf_mumps_context_get
 -------------------------------------------
@@ -6584,8 +6586,8 @@ gf_mumps_context_set
 
 ::
 
-  gf_mumps_context_set(mumps_context MC, 'matrix', mat A)
-  gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A)
+  gf_mumps_context_set(mumps_context MC, 'matrix', mat A[, vec rows[, vec cols]])
+  gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A[, vec rows[, vec cols]])
   gf_mumps_context_set(mumps_context MC, 'vector', vec b)
   gf_mumps_context_set(mumps_context MC, 'ICNTL', int ind, int val)
   gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)
@@ -6640,26 +6642,38 @@ void gf_mumps_context_set(getfemint::mexargs_in& in,
   std::string init_cmd = in.pop().to_string();
   std::string cmd      = cmd_normalize(init_cmd);
 
-  bool distributed_matrix =
-    check_cmd(cmd, "distributed matrix", in, out, 1, 1, 0, 0);
-  if (distributed_matrix ||
-      check_cmd(cmd, "matrix", in, out, 1, 1, 0, 0)) {
-    /*@SET ('matrix', mat A)
-      Set the matrix mat A for the mumps_context object.
+  const bool distr_mat =
+    check_cmd(cmd, "distributed matrix", in, out, 1, 3, 0, 0);
+  if (distr_mat || check_cmd(cmd, "matrix", in, out, 1, 3, 0, 0)) {
+    /*@SET ('matrix', mat A[, vec rows[, vec cols]])
+      Set mat A(rows,cols) as the matrix for the mumps_context object.
+
+      Optional vectors vec rows and vec cols are used for selecting
+      and/or permuting rows and columns from input matrix mat A.
+      They are 0-based in Python and 1-based in Matlab/Octave.
 
 **Command list :**
 
 
 
-  ``gf_mumps_context_set(mumps_context MC, 'matrix', mat A)``
+  ``gf_mumps_context_set(mumps_context MC, 'matrix', mat A[, vec rows[, vec cols]])``
 
-    Set the matrix mat A for the mumps_context object.
+    Set mat A(rows,cols) as the matrix for the mumps_context object.
+    
+    Optional vectors vec rows and vec cols are used for selecting
+    and/or permuting rows and columns from input matrix mat A.
+    They are 0-based in Python and 1-based in Matlab/Octave.
 
 
-  ``gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A)``
+  ``gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A[, vec rows[, vec cols]])``
 
-    Set the matrix mat A for the mumps_context object distributed over all
-    processes. It also sets ICNTL(5) to 0 and ICNTL(18) to 3.
+    Set mat A(rows,cols) as the matrix A for the mumps_context object,
+    distributed over all processes.
+    It also sets ICNTL(5) to 0 and ICNTL(18) to 3.
+    
+    Optional vectors vec rows and vec cols are used for selecting
+    and/or permuting rows and columns from input matrix mat A.
+    They are 0-based in Python and 1-based in Matlab/Octave.
 
 
   ``gf_mumps_context_set(mumps_context MC, 'vector', vec b)``

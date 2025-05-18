@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 01:59+0000\n"
+"POT-Creation-Date: 2025-05-18 01:59+0000\n"
 "PO-Revision-Date: 2025-04-15 01:51+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -35,9 +35,11 @@ msgstr ""
 #: of getfem.getfem.MumpsContext:8
 msgid ""
 "``CTX = MumpsContext(string sym, string datatype)`` The argument `sym` "
-"should be 'symmetric' or 'unsymmetric' or empty. Default value is "
-"'unsymmetric'. The argument `datatype` should be 'real' or 'complex' or "
-"empty. Default value is 'real'."
+"should be 'symmetric' or 'general symmetric', 'symmetric positive definite',"
+" 'unsymmetric', or empty. Default value (empty) is 'unsymmetric' (MUMPS "
+"option 0). The option 'symmetric' is equivalent to 'general symmetric' "
+"(MUMPS option 2). The argument `datatype` should be 'real' or 'complex' or "
+"empty. Default value (empty) is 'real'."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
@@ -165,13 +167,36 @@ msgstr ""
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.set_distributed_matrix:1
 msgid ""
-"Set the matrix mat A for the mumps_context object distributed over all "
-"processes. It also sets ICNTL(5) to 0 and ICNTL(18) to 3."
+"Synopsis: MumpsContext.set_distributed_matrix(self, mat A[, vec rows[, vec "
+"cols]])"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.MumpsContext.set_distributed_matrix:3
+msgid ""
+"Set mat A(rows,cols) as the matrix A for the mumps_context object, "
+"distributed over all processes. It also sets ICNTL(5) to 0 and ICNTL(18) to "
+"3."
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.MumpsContext.set_distributed_matrix:7
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.MumpsContext.set_matrix:5
+msgid ""
+"Optional vectors vec rows and vec cols are used for selecting and/or "
+"permuting rows and columns from input matrix mat A. They are 0-based in "
+"Python and 1-based in Matlab/Octave."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
 #: of getfem.getfem.MumpsContext.set_matrix:1
-msgid "Set the matrix mat A for the mumps_context object."
+msgid "Synopsis: MumpsContext.set_matrix(self, mat A[, vec rows[, vec cols]])"
+msgstr ""
+
+#: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
+#: of getfem.getfem.MumpsContext.set_matrix:3
+msgid "Set mat A(rows,cols) as the matrix for the mumps_context object."
 msgstr ""
 
 #: ../../../../../../venv/lib/python3.12/site-packages/getfem/getfem.pydocstring
