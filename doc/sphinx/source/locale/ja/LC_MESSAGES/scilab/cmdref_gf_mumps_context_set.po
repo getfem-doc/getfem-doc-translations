@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-08 02:05+0000\n"
+"POT-Creation-Date: 2025-06-24 01:58+0000\n"
 "PO-Revision-Date: 2025-04-15 01:51+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -37,173 +37,54 @@ msgstr "**説明 :**"
 msgid "General function for modifying mumps_context objects"
 msgstr "mumps_contextオブジェクトを修正するための汎用的な関数"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:31
-msgid "*/"
-msgstr "*/"
-
 #: ../source/scilab/cmdref_gf_mumps_context_set.rst:33
-msgid "inline void return_mumps_solution(getfemint::mexargs_out& out,"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:34
-msgid "const gmumps *pctx) {"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:35
-msgid "if (out.remaining()) {"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:36
-msgid "if (pctx->is_complex()) {"
-msgstr ""
+msgid "**Command list :**"
+msgstr "**コマンドリスト**"
 
 #: ../source/scilab/cmdref_gf_mumps_context_set.rst:37
 msgid ""
-"int nrhs = int(pctx->vector_c().size()) / pctx->nrows(); GMM_ASSERT1(nrhs * "
-"pctx->nrows() == int(pctx->vector_c().size()),"
+"``gf_mumps_context_set(mumps_context MC, 'matrix', mat A[, vec rows[, vec "
+"cols]])``"
 msgstr ""
 
 #: ../source/scilab/cmdref_gf_mumps_context_set.rst:39
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:49
-msgid "\"Inconsistent dimensions in MUMPS context object\");"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:40
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:50
-msgid "if (nrhs == 1)"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:41
-msgid "out.pop().from_dcvector(pctx->vector_c());"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:42
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:52
-msgid "else {"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:43
-msgid ""
-"carray x = out.pop().create_carray(pctx->nrows(), nrhs); "
-"gmm::copy(pctx->vector_c(), x);"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:45
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:55
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:56
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:57
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:58
-msgid "}"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:46
-msgid "} else {"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:47
-msgid ""
-"int nrhs = int(pctx->vector_r().size()) / pctx->nrows(); GMM_ASSERT1(nrhs * "
-"pctx->nrows() == int(pctx->vector_r().size()),"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:51
-msgid "out.pop().from_dcvector(pctx->vector_r());"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:53
-msgid ""
-"darray x = out.pop().create_darray(pctx->nrows(), nrhs); "
-"gmm::copy(pctx->vector_r(), x);"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:61
-msgid "void gf_mumps_context_set(getfemint::mexargs_in& in,"
-msgstr "void gf_mumps_context_set(getfemint::mexargs_in& in,"
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:62
-msgid "getfemint::mexargs_out& out) {"
-msgstr "getfemint::mexargs_out& out) {"
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:64
-msgid "if (in.narg() < 2) THROW_BADARG(\"Wrong number of input arguments\");"
-msgstr "if (in.narg() < 2) THROW_BADARG(\"Wrong number of input arguments\");"
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:66
-msgid ""
-"gmumps *pctx         = to_mumps_context_object(in.pop()); std::string "
-"init_cmd = in.pop().to_string(); std::string cmd      = "
-"cmd_normalize(init_cmd);"
-msgstr ""
-"gmumps *pctx         = to_mumps_context_object(in.pop()); std::string "
-"init_cmd = in.pop().to_string(); std::string cmd      = "
-"cmd_normalize(init_cmd);"
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:70
-msgid "const bool distr_mat ="
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:71
-msgid "check_cmd(cmd, \"distributed matrix\", in, out, 1, 3, 0, 0);"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:72
-msgid "if (distr_mat || check_cmd(cmd, \"matrix\", in, out, 1, 3, 0, 0)) {"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:73
-msgid "/*@SET ('matrix', mat A[, vec rows[, vec cols]])"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:74
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:86
 msgid "Set mat A(rows,cols) as the matrix for the mumps_context object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:76
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:88
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:99
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:41
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:52
 msgid ""
 "Optional vectors vec rows and vec cols are used for selecting and/or "
 "permuting rows and columns from input matrix mat A. They are 0-based in "
 "Python and 1-based in Matlab/Octave."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:80
-msgid "**Command list :**"
-msgstr "**コマンドリスト**"
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:84
-msgid ""
-"``gf_mumps_context_set(mumps_context MC, 'matrix', mat A[, vec rows[, vec "
-"cols]])``"
-msgstr ""
-
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:93
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:46
 msgid ""
 "``gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A[, vec "
 "rows[, vec cols]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:95
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:48
 msgid ""
 "Set mat A(rows,cols) as the matrix A for the mumps_context object, "
 "distributed over all processes. It also sets ICNTL(5) to 0 and ICNTL(18) to "
 "3."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:104
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:57
 msgid "``gf_mumps_context_set(mumps_context MC, 'vector', vec b)``"
 msgstr "``gf_mumps_context_set(mumps_context MC, 'vector', vec b)``"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:106
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:59
 msgid "Set the right hand side vec b for the mumps_context object."
 msgstr "mumps_context オブジェクトの右辺vec bを設定します。"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:109
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:62
 msgid "``gf_mumps_context_set(mumps_context MC, 'ICNTL', int ind, int val)``"
 msgstr "``gf_mumps_context_set(mumps_context MC, 'ICNTL', int ind, int val)``"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:111
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:64
 msgid ""
 "Set the integer option at 1-based index <literal>ind</literal> in the ICNTL "
 "vector of the mumps_context object to value <literal>val</literal>."
@@ -211,18 +92,18 @@ msgstr ""
 "mumps_context オブジェクトの ICNTL ベクトルの1ベースのインデックス <literal>ind</literal> "
 "のインテジャーオプションに値 <literal>val</literal> を設定します。"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:114
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:122
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:67
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:75
 msgid "Capital naming convention is used to imply Fortran indexing."
 msgstr "大文字の命名規則は、Fortranのインデックスを意味します。"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:117
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:70
 msgid ""
 "``gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)``"
 msgstr ""
 "``gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)``"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:119
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:72
 msgid ""
 "Set the scalar option at 1-based index <literal>ind</literal> in the CNTL "
 "vector of the mumps_context object to value <literal>val</literal>."
@@ -230,76 +111,76 @@ msgstr ""
 "mumps_context オブジェクトの CNTL ベクトルの1ベースのインデックス <literal>ind</literal> "
 "のスカラーオプションに値 <literal>val</literal> を設定します。"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:125
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:78
 msgid "``gf_mumps_context_set(mumps_context MC, 'error check')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:127
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:80
 msgid "Check the error status of the mumps_context object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:130
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:83
 msgid "``gf_mumps_context_set(mumps_context MC, 'analyze')``"
 msgstr "``gf_mumps_context_set(mumps_context MC, 'analyze')``"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:132
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:85
 msgid "Run the MUMPS analysis job for the mumps_context object."
 msgstr "mumps_context オブジェクトに対してMUMPS分析ジョブを実行します．"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:135
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:88
 msgid "``gf_mumps_context_set(mumps_context MC, 'factorize')``"
 msgstr "``gf_mumps_context_set(mumps_context MC, 'factorize')``"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:137
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:90
 msgid "Run the MUMPS factorization job for the mumps_context object."
 msgstr "mumps_context オブジェクトに対してMUMPS分解ジョブを実行します．"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:140
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:93
 msgid "``SOL = gf_mumps_context_set(mumps_context MC, 'solve')``"
 msgstr "``SOL = gf_mumps_context_set(mumps_context MC, 'solve')``"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:142
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:95
 msgid "Run the MUMPS solve job (only) for the mumps_context object."
 msgstr "mumps_context オブジェクトに対してMUMPSsolveジョブ (のみ) を実行します．"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:144
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:97
 msgid ""
 "The analysis and factorization jobs need to be run first before calling this"
 " function. An error check is performed after the solve."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:148
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:163
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:171
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:101
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:116
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:124
 msgid "It returns the solution vector (on all processes if MPI is used)."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:151
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:104
 msgid "``gf_mumps_context_set(mumps_context MC, 'analyze and factorize')``"
 msgstr "``gf_mumps_context_set(mumps_context MC, 'analyze and factorize')``"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:153
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:106
 msgid ""
 "Run the MUMPS analysis and factorization jobs for the mumps_context object."
 msgstr "mumps_context オブジェクトのMUMPS解析および因数分解ジョブを実行します．"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:156
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:109
 msgid ""
 "``SOL = gf_mumps_context_set(mumps_context MC, 'factorize and solve')``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:158
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:111
 msgid ""
 "Run the MUMPS factorization and solve jobs for the mumps_context object."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:160
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:113
 msgid ""
 "The analysis job needs to be run first before calling this function. An "
 "error check is performed after the solve."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:166
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:119
 msgid ""
 "``SOL = gf_mumps_context_set(mumps_context MC, 'analyze factorize and "
 "solve')``"
@@ -307,7 +188,7 @@ msgstr ""
 "``SOL = gf_mumps_context_set(mumps_context MC, 'analyze factorize and "
 "solve')``"
 
-#: ../source/scilab/cmdref_gf_mumps_context_set.rst:168
+#: ../source/scilab/cmdref_gf_mumps_context_set.rst:121
 msgid ""
 "Run the MUMPS analysis, factorization and solve jobs for the mumps_context "
 "object. An error check is also performed after the solve."

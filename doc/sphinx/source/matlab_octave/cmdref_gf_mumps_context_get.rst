@@ -24,20 +24,7 @@ gf_mumps_context_get
 
 
   General function for querying information about a mumps_context object.
-*/
 
-void gf_mumps_context_get(getfemint::mexargs_in& in,
-                          getfemint::mexargs_out& out) {
-
-  if (in.narg() < 2) THROW_BADARG("Wrong number of input arguments");
-
-  const gmumps *pctx   = to_mumps_context_object(in.pop());
-  std::string init_cmd = in.pop().to_string();
-  std::string cmd      = cmd_normalize(init_cmd);
-
-  if (check_cmd(cmd, "display", in, out, 0, 0, 0, 0)) {
-    /*@GET ('display')
-      Display a short summary for a mumps_context object.
 
 **Command list :**
 
