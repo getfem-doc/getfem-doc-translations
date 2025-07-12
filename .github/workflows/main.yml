@@ -16,7 +16,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Get Job URL
-        uses: Tiryoh/gha-jobid-action@v1
+        uses: Tiryoh/gha-jobid-action@be260d8673c9211a84cdcf37794ebd654ba81eef # v1
         id: jobs
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -29,7 +29,7 @@ jobs:
           submodules: true
           token: ${{ secrets.PERSONAL_ACCESSTOKEN }}
       - name: Setup SSH
-        uses: MrSquaare/ssh-setup-action@v3
+        uses: MrSquaare/ssh-setup-action@2d028b70b5e397cf8314c6eaea229a6c3e34977a # v3
         with:
           host: github.com
           private-key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -56,7 +56,7 @@ jobs:
           sudo apt-get install -y --no-install-recommends texlive
           sudo apt-get install -y --no-install-recommends xzdec
           curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
-          mv tx /usr/local/bin/tx
+          sudo mv tx /usr/local/bin/tx
       - name: update
         env:
           SPHINXINTL_TRANSIFEX_ORGANIZATION_NAME: tkoyama010

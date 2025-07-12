@@ -14,6 +14,8 @@ This conf.py do:
 """
 
 from pathlib import Path
+from sphinx.ext.autodoc import cut_lines
+from sphinx.util import logging
 
 basedir = Path(__file__).resolve().parent / "doc/sphinx/source"
 exec((basedir / "conf.py").read_text(), globals())  # noqa: S102
@@ -23,8 +25,6 @@ html_theme = "alabaster"
 
 
 def setup(app):  # noqa: D103,ANN001,ANN201
-    from sphinx.ext.autodoc import cut_lines
-
     app.srcdir = Path(basedir)
     app.confdir = Path(app.srcdir)
     app.connect("autodoc-process-docstring", cut_lines(4, what=["module"]))
@@ -36,8 +36,6 @@ def setup(app):  # noqa: D103,ANN001,ANN201
     )
 
     # workaround for RTD
-    from sphinx.util import logging
-
     logger = logging.getLogger(__name__)
     app.info = lambda *args, **kwargs: logger.info(*args, **kwargs)
     app.warn = lambda *args, **kwargs: logger.warning(*args, **kwargs)
