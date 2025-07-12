@@ -14,6 +14,7 @@ This conf.py do:
 """
 
 from pathlib import Path
+
 from sphinx.ext.autodoc import cut_lines
 from sphinx.util import logging
 
