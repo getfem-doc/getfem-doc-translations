@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2023
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-02 02:42+0000\n"
+"POT-Creation-Date: 2026-04-18 02:46+0000\n"
 "PO-Revision-Date: 2018-07-16 07:16+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,15 +31,12 @@ msgstr "熱および電気弾性連成の例 (単純な非線形連成問題，�
 msgid ""
 "This example aims to present a simple example of a multiphysics problem with"
 " a nonlinear coupling of a displacement field, a temperature field and an "
-"electric potential field. It also aims to compare the use of the C++ library"
-" and the different interfaces. The corresponding demo files are present in "
-"the test directories of |gf| (`tests/`, `interface/tests/python`, "
-"`interface/scr/scilab/demos` and `interface/tests/matlab`)."
+"electric potential field. It also aims to compare the use of the GetFEM C++ "
+"API and the GetFEM scripting interfaces. The corresponding demo files are "
+"available in the test directories of |gf| (`tests/`, "
+"`interface/tests/python`, `interface/scr/scilab/demos` and "
+"`interface/tests/matlab`)."
 msgstr ""
-"この例では，変位フィールド，温度フィールド，および電位フィールドの非線形連成のマルチフィジックス問題の簡単な例を紹介します．また，C++ "
-"ライブラリと各インターフェイスの使用法を比較することも目的としています．対応するデモファイルは， |gf| のテストディレクトリにあります( "
-"`tests/` ， `interface/tests/python` ， `interface/scr/scilab/demos` ，  "
-"`interface/tests/matlab` )．"
 
 #: ../source/tutorial/thermo_coupling.rst:13
 msgid "The problem setting"
@@ -49,668 +46,564 @@ msgstr "問題の設定"
 msgid ""
 "Let :math:`\\Omega \\subset \\rm I\\hspace{-0.15em}R^2` be the reference "
 "configuration of a 2D plate (see the geometry :ref:`here <tut-fig-"
-"meshthermo>`) of thickness :math:`\\varepsilon` submitted to external "
-"forces, electric potential and heating. We will denote by  :math:`\\theta : "
-"\\Omega \\rightarrow \\rm I\\hspace{-0.15em}R` the temperature field (in "
-"|degreC|),  :math:`V : \\Omega \\rightarrow \\rm I\\hspace{-0.15em}R` the "
-"electric potential field and :math:`u : \\Omega \\rightarrow \\rm "
-"I\\hspace{-0.15em}R^2` the membrane displacement field."
+"meshthermo>`) of thickness :math:`t` submitted to external forces, electric "
+"potential and heating. We will denote by :math:`T : \\Omega \\rightarrow "
+"\\rm I\\hspace{-0.15em}R` the temperature field (in |degreC|), :math:`V : "
+"\\Omega \\rightarrow \\rm I\\hspace{-0.15em}R` the electric potential field "
+"and :math:`u : \\Omega \\rightarrow \\rm I\\hspace{-0.15em}R^2` the in-plane"
+" displacement field."
 msgstr ""
-":math:`\\Omega \\subset \\rm I\\hspace{-0.15em}R^2` は，2次元板の基準配置です( :ref:`ここ "
-"<tut-fig-meshthermo>` のジオメトリを参照してください)，ここで厚さ :math:`\\varepsilon` "
-"は外部力，電位および加熱に寄与します．ここで， :math:`\\theta : \\Omega \\rightarrow \\rm "
-"I\\hspace{-0.15em}R` は( |degreC| 内の)温度フィールド， :math:`V : \\Omega \\rightarrow"
-" \\rm I\\hspace{-0.15em}R` は電位フィールドです．また， :math:`u : \\Omega \\rightarrow "
-"\\rm I\\hspace{-0.15em}R^2` は膜変位場です．"
 
 #: ../source/tutorial/thermo_coupling.rst:18
-#: ../source/tutorial/thermo_coupling.rst:668
+#: ../source/tutorial/thermo_coupling.rst:665
 msgid "Thermal problem"
 msgstr "熱問題"
 
 #: ../source/tutorial/thermo_coupling.rst:20
 msgid ""
-"The lateral faces of the plates are supposed to be in thermal insulation "
-"since the front and back faces of the plate are supposed to be in thermal "
-"exchange with the air (supposed at 20 |degreC|) with a heat transfer "
-"coefficient :math:`D`."
+"The left and right sides of the plate as well as the hole surfaces, "
+"alltogether denoted with :math:`\\Gamma_i`, are supposed to be in thermal "
+"insulation. The bottom and top sides, denoted with :math:`\\Gamma_c`, as "
+"well as the front and back faces of the plate are supposed to be in thermal "
+"exchange with surrounding air at temperature :math:`T_{air} = 20` |degreC|) "
+"with a heat transfer coefficient :math:`D`."
 msgstr ""
-"プレートの表裏面は，熱伝達係数 :math:`D` の (20 |degreC| の) "
-"空気と熱交換しており，プレートの側面は断熱であると想定されています．"
 
 #: ../source/tutorial/thermo_coupling.rst:22
 msgid ""
-"The equation on the temperature :math:`\\theta` and boundary condition can "
-"be written as follows:"
-msgstr "熱方程式 :math:`\\theta` と境界条件は次のように書くことができます．"
+"The heat transfer equation for the temperature field :math:`T` including all"
+" relevant boundary conditions can be written as follows:"
+msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:24
 msgid ""
 "\\left\\{\\begin{array}{l}\n"
-"-\\mbox{div}(\\varepsilon\\kappa(\\nabla \\theta)) + 2D(\\theta - T_0) - \\varepsilon\\sigma|\\nabla V|^2 = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
-"\\kappa\\nabla \\theta \\cdot n = 0 ~~ \\mbox{ on } \\partial \\Omega,\n"
+"-\\mbox{div}(t\\ \\kappa\\ \\nabla T) + 2\\ D\\ (T - T_{air}) - \\dfrac{t}{\\rho}|\\nabla V|^2 = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
+"\\kappa\\nabla T \\cdot n = 0 ~~ \\mbox{ on } \\partial \\Gamma_i,\\\\\n"
+"\\kappa\\nabla T \\cdot n = D(T-T_{air}) ~~ \\mbox{ on } \\partial \\Gamma_c,\n"
 "\\end{array} \\right."
 msgstr ""
-"\\left\\{\\begin{array}{l}\n"
-"-\\mbox{div}(\\varepsilon\\kappa(\\nabla \\theta)) + 2D(\\theta - T_0) - \\varepsilon\\sigma|\\nabla V|^2 = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
-"\\kappa\\nabla \\theta \\cdot n = 0 ~~ \\mbox{ on } \\partial \\Omega,\n"
-"\\end{array} \\right."
 
-#: ../source/tutorial/thermo_coupling.rst:32
+#: ../source/tutorial/thermo_coupling.rst:33
 msgid ""
-"where the thermal conductivity is designed by :math:`\\kappa`, :math:`T_0` "
-"is the temperature of the air, :math:`\\partial \\Omega` the boundary of the"
-" domain :math:`\\Omega` and :math:`n` the outward unit normal vector to "
-":math:`\\Omega` on :math:`\\partial \\Omega`."
+"where :math:`\\kappa` is the thermal conductivity and :math:`n` the outward "
+"unit normal vector to :math:`\\Omega` on :math:`\\partial \\Omega`."
 msgstr ""
-":math:`\\kappa` は熱伝達率， :math:`T_0` は空気の温度， :math:`\\partial \\Omega` は，領域 "
-":math:`\\Omega` の境界であり :math:`n` は :math:`\\partial \\Omega` 上の "
-":math:`\\Omega` への外向きの単位法線ベクトルです．"
 
-#: ../source/tutorial/thermo_coupling.rst:34
+#: ../source/tutorial/thermo_coupling.rst:35
 msgid ""
-"The term :math:`\\sigma|\\nabla V|^2` is a nonlinear coupling term "
-"corresponding to the Joule heating term, where :math:`\\sigma` is the "
-"electrical conductivity."
+"The term :math:`1/\\rho|\\nabla V|^2` is a coupling term corresponding to "
+"Joule heating due to electric current, where :math:`\\rho` is the electric "
+"resistivity, hence :math:`1/\\rho` is the electric conductivity."
 msgstr ""
-"項 :math:`\\sigma|\\nabla V|^2` は，Joule加熱項に対応する非線形連成項であり， :math:`\\sigma` "
-"は電気伝導率です．"
 
-#: ../source/tutorial/thermo_coupling.rst:37
-#: ../source/tutorial/thermo_coupling.rst:612
+#: ../source/tutorial/thermo_coupling.rst:39
+#: ../source/tutorial/thermo_coupling.rst:615
 msgid "Electric potential problem"
 msgstr "電位問題"
 
-#: ../source/tutorial/thermo_coupling.rst:39
-msgid ""
-"We consider a potential difference of :math:`0.1V` between the right and "
-"left lateral face of the plate. The other faces are considered electrically "
-"insulated. The equation for the electric potential reads as"
-msgstr ""
-"プレートの左右の側面の間には :math:`0.1V` の電位差があるとします．他の面は電気的に絶縁されていると考えます．電位の方程式は次の通りです．"
-
 #: ../source/tutorial/thermo_coupling.rst:41
 msgid ""
+"We consider a potential difference of :math:`0.1V` between the left and "
+"right lateral faces of the plate. All other faces are considered "
+"electrically insulated. The governing equation for the electric potential is"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:43
+msgid ""
 " \\left\\{\\begin{array}{l}\n"
-"-\\mbox{div}(\\varepsilon\\sigma(\\nabla V)) = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
-"\\sigma\\nabla V \\cdot n = 0 ~~ \\mbox{ on the top an bottom lateral faces}, \\\\\n"
-"V = 0 ~~ \\mbox{ on the right lateral face}, \\\\\n"
+"-\\mbox{div}(t/\\rho\\ \\nabla V) = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
+"\\nabla V \\cdot n = 0 ~~ \\mbox{ on the top, bottom, and hole faces}, \\\\\n"
 "V = 0.1 ~~ \\mbox{ on the left lateral face}, \\\\\n"
+"V = 0 ~~ \\mbox{ on the right lateral face}, \\\\\n"
 "\\end{array} \\right."
 msgstr ""
-" \\left\\{\\begin{array}{l}\n"
-"-\\mbox{div}(\\varepsilon\\sigma(\\nabla V)) = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
-"\\sigma\\nabla V \\cdot n = 0 ~~ \\mbox{ on the top an bottom lateral faces}, \\\\\n"
-"V = 0 ~~ \\mbox{ on the right lateral face}, \\\\\n"
-"V = 0.1 ~~ \\mbox{ on the left lateral face}, \\\\\n"
-"\\end{array} \\right."
-
-#: ../source/tutorial/thermo_coupling.rst:50
-msgid ""
-"where :math:`\\sigma` is still the electrical conductivity. Moreover, we "
-"consider that :math:`\\sigma` depends on the temperature as follows:"
-msgstr "ここでも :math:`\\sigma` は電気伝導率です．さらに， :math:`\\sigma` は次のように温度に依存すると考えます．"
 
 #: ../source/tutorial/thermo_coupling.rst:52
-msgid "\\sigma = \\dfrac{1}{\\rho_0(1+\\alpha(\\theta - T_0))},"
-msgstr "\\sigma = \\dfrac{1}{\\rho_0(1+\\alpha(\\theta - T_0))},"
-
-#: ../source/tutorial/thermo_coupling.rst:56
 msgid ""
-"where :math:`T_0` is a reference temperature (air temperature here), "
-":math:`\\rho_0` the resistance temperature coefficient at :math:`T_0` and "
-":math:`\\alpha` a second resistance temperature coefficient."
+"where :math:`\\rho` is still the electric resistivity. Moreover, we consider"
+" that :math:`\\rho` depends on the temperature as follows:"
 msgstr ""
-"ここで :math:`T_0` は参照温度 (ここでは空気温度) であり， :math:`\\rho_0` は :math:`T_0` "
-"上の抵抗温度係数であり，:math:`\\alpha` は第2抵抗温度係数です．"
 
-#: ../source/tutorial/thermo_coupling.rst:61
+#: ../source/tutorial/thermo_coupling.rst:54
+msgid "\\rho(T) = \\rho_0(1+\\alpha(T - T_0)),"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:58
+msgid ""
+"where :math:`T_0` is a reference temperature, :math:`\\rho_0` the "
+"resistivity at :math:`T_0` and :math:`\\alpha` is the resistivity-"
+"temperature coefficient."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:63
 msgid "Deformation problem"
 msgstr "変形問題"
 
-#: ../source/tutorial/thermo_coupling.rst:63
-msgid ""
-"We consider the membrane small deformation of the plate under a force "
-"applied on the right lateral face and influenced by the heating of the "
-"plate. The displacement :math:`u` will be solution of the following problem "
-"(linearized elasticity):"
-msgstr ""
-"右側面に加わる力の下でプレートの微小変形を考慮し, プレートの加熱によって影響を受けるとします．変位 :math:`u` "
-"は，次の(線形化された弾性)問題の解になります．"
-
 #: ../source/tutorial/thermo_coupling.rst:65
 msgid ""
-" \\left\\{\\begin{array}{l}\n"
-"-\\mbox{div}(\\bar{\\sigma}(u)) = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
-"\\bar{\\sigma}\\ n = 0 ~~ \\mbox{ on the top an bottom lateral faces}, \\\\\n"
-"\\bar{\\sigma}\\ n = F ~~ \\mbox{ on the right lateral face}, \\\\\n"
-"u = 0 ~~ \\mbox{ on the left lateral face},\n"
-"\\end{array} \\right."
+"We consider the planar deformation of the plate under a force applied on the"
+" right lateral face and influenced by the heating of the plate, assuming "
+"plane stress conditions. For linearized elasticity the displacement field "
+":math:`u` has to satisfy the following equations:"
 msgstr ""
-" \\left\\{\\begin{array}{l}\n"
-"-\\mbox{div}(\\bar{\\sigma}(u)) = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
-"\\bar{\\sigma}\\ n = 0 ~~ \\mbox{ on the top an bottom lateral faces}, \\\\\n"
-"\\bar{\\sigma}\\ n = F ~~ \\mbox{ on the right lateral face}, \\\\\n"
-"u = 0 ~~ \\mbox{ on the left lateral face},\n"
-"\\end{array} \\right."
 
-#: ../source/tutorial/thermo_coupling.rst:74
+#: ../source/tutorial/thermo_coupling.rst:67
 msgid ""
-"where :math:`F` is the force density applied on the right lateral boundary "
-"and :math:`\\bar{\\sigma}(u)` is the Cauchy stress tensor defined by"
+" \\left\\{\\begin{array}{l}\n"
+"-\\mbox{div}(\\sigma(u)) = 0 ~~ \\mbox{ in } \\Omega, \\\\\n"
+"u = 0 ~~ \\mbox{ on the left lateral face},\\\\\n"
+"\\sigma\\ n = F ~~ \\mbox{ on the right lateral face}, \\\\\n"
+"\\sigma\\ n = 0 ~~ \\mbox{ on all remaining faces},\n"
+"\\end{array} \\right."
 msgstr ""
-"ここで :math:`F` は右横方向の境界に加えられる力密度であり， :math:`\\bar{\\sigma}(u)` "
-"は次のように定義されたCauchy応力テンソルです．"
 
 #: ../source/tutorial/thermo_coupling.rst:76
 msgid ""
-"\\bar{\\sigma}(u) = \\lambda^* \\mbox{div}(u) I + 2\\mu "
-"\\bar{\\varepsilon}(u) + \\beta(T_0-\\theta) I,"
+"where :math:`F` is the force density applied on the right lateral boundary "
+"and :math:`\\sigma(u)` is the Cauchy stress tensor defined by"
 msgstr ""
-"\\bar{\\sigma}(u) = \\lambda^* \\mbox{div}(u) I + 2\\mu "
-"\\bar{\\varepsilon}(u) + \\beta(T_0-\\theta) I,"
 
-#: ../source/tutorial/thermo_coupling.rst:80
+#: ../source/tutorial/thermo_coupling.rst:78
 msgid ""
-":math:`\\bar{\\varepsilon}(u) = (\\nabla u + (\\nabla u)^T)/2` being the "
-"linearized strain tensor, :math:`I` the identity second order tensor and "
-":math:`\\lambda^*, \\mu` being the |Lame| coefficients defined  by"
+"\\sigma(u) = \\dfrac{E\\nu}{1-\\nu^2} (\\mbox{div}(u) - "
+"2\\alpha_{th}(T\\!-\\!T_0)) I + \\dfrac{E\\nu}{1+\\nu} (\\varepsilon(u) - "
+"\\alpha_{th}(T\\!-\\!T_0) I),"
 msgstr ""
-":math:`\\bar{\\varepsilon}(u) = (\\nabla u + (\\nabla u)^T)/2` "
-"は，線形化されたひずみテンソルであり， :math:`I` は2次単位テンソルで， :math:`\\lambda^*, \\mu` は |Lame| "
-"係数であり次のように定義されます．"
 
 #: ../source/tutorial/thermo_coupling.rst:82
 msgid ""
-"&\\lambda = \\dfrac{E\\nu}{(1+\\nu)(1-2\\nu)}, \\\\\n"
-"&\\mu = \\dfrac{E}{2(1+\\nu)}, \\\\\n"
-"&\\lambda^* = \\dfrac{2\\lambda\\mu}{\\lambda+2*\\mu},"
+"with :math:`\\varepsilon(u) = (\\nabla u + (\\nabla u)^T)/2` being the "
+"linearized strain tensor, :math:`I` the identity second order tensor, "
+":math:`E` and :math:`\\nu` the Young modulus and Poisson ratio of the "
+"material, and :math:`\\alpha_{th}` the thermal expansion coefficient."
 msgstr ""
-"&\\lambda = \\dfrac{E\\nu}{(1+\\nu)(1-2\\nu)}, \\\\\n"
-"&\\mu = \\dfrac{E}{2(1+\\nu)}, \\\\\n"
-"&\\lambda^* = \\dfrac{2\\lambda\\mu}{\\lambda+2*\\mu},"
 
-#: ../source/tutorial/thermo_coupling.rst:88
-msgid ""
-"from :math:`E` the Young modulus and :math:`\\nu` the Poisson ratio of the "
-"material."
-msgstr ":math:`E` は材料のヤング係数であり :math:`\\nu` はポアソン比です．"
-
-#: ../source/tutorial/thermo_coupling.rst:90
-msgid ""
-"The term :math:`\\beta(T_0-\\theta) I` corresponds to the thermal expansion "
-"term, where :math:`\\beta = \\alpha_{th} E/(1-2\\nu)`, :math:`\\alpha_{th}` "
-"being the thermal expansion coefficient."
-msgstr ""
-"項 :math:`\\beta(T_0-\\theta) I` は，熱膨張の項に対応しています．ここで :math:`\\beta = "
-"\\alpha_{th} E/(1-2\\nu)` で， :math:`\\alpha_{th}` は熱膨張係数です．"
-
-#: ../source/tutorial/thermo_coupling.rst:94
+#: ../source/tutorial/thermo_coupling.rst:86
 msgid "The weak formulation"
 msgstr "弱定式化"
 
-#: ../source/tutorial/thermo_coupling.rst:96
+#: ../source/tutorial/thermo_coupling.rst:88
 msgid ""
 "An important step is to obtain the weak formulation of the coupled system of"
-" equations. This is a crucial step since the finite element formulation is "
-"based on the weak formulation (Galerkin approximation) and the weak "
-"formulation is the only one which can give us the expression of the terms to"
-" be added."
+" equations. This is a crucial step since representing PDEs using standard "
+"finite element theory relies on their weak formulation (Galerkin "
+"approximation)."
 msgstr ""
-"方程式の連成系方程式の弱定式化は重要なステップです．有限要素の定式化は弱定式化 (Galerkin近似) "
-"に基づいており，弱定式化は追加される項を表現する唯一の方法であるため，これはきわめて重要なステップです．"
 
-#: ../source/tutorial/thermo_coupling.rst:98
+#: ../source/tutorial/thermo_coupling.rst:90
 msgid ""
 "Weak formulation of each partial differential equation is obtained by "
 "multiplying the equation with a test function corresponding to the main "
-"unknown satisfying homogeneous Dirichlet conditions where the main unknown "
-"satisfies a Dirichlet condition, then integrating over the domain "
-":math:`\\Omega` and performing some integrations by parts (using Green's "
-"formula). The weak formulation of the system of partial differential "
-"equations reads:"
+"unknown. The test function needs to satisfy homogeneous Dirichlet conditions"
+" everywhere where the main unknown is prescribed by a Dirichlet condition. "
+"Then integrating over the domain :math:`\\Omega` and performing some "
+"integrations by parts (using Green's formula) leads to the weak formulation "
+"of the system of partial differential in the form:"
 msgstr ""
-"各偏微分方程式の弱定式化は，未知数に対応する試験関数を式に掛けることにより得られます．未知数はDirichlet条件を満たし条件は均質であるとします．その後"
-" :math:`\\Omega` 領域上の積分と(Greenの式を使用した)部分のいくつかの積分を実行します．偏微分方程式系の弱定式化は次の通りです．"
 
-#: ../source/tutorial/thermo_coupling.rst:100
+#: ../source/tutorial/thermo_coupling.rst:92
 msgid ""
-"&\\mbox{Find } \\theta, V, u \\mbox{ with } V = 0.1, u = 0 \\mbox{ on the left face}, V = 0 \\mbox{ on the right face}, \\\\\n"
-"& \\int_{\\Omega} \\varepsilon\\kappa\\nabla\\theta\\cdot\\nabla\\delta_{\\theta} + 2D\\theta\\delta_{\\theta}d\\Omega = \\int_{\\Omega} (2DT_0 + \\varepsilon\\sigma|\\nabla V|^2)\\delta_{\\theta} d\\Omega ~~~\\mbox{ for all } \\delta_{\\theta}, \\\\\n"
-"& \\int_{\\Omega} \\varepsilon\\sigma\\nabla V\\cdot\\nabla\\delta_V = 0 d\\Omega ~~~ \\mbox{ for all } \\delta_V \\mbox{ satisfying } \\delta_V = 0 \\mbox{ on the left and right faces}, \\\\\n"
-"& \\int_{\\Omega} \\bar{\\sigma}(u):\\bar{\\varepsilon}(\\delta_u)d\\Omega = \\int_{\\Gamma_N} F\\cdot \\delta_u d\\Gamma ~~~ \\mbox{ for all } \\delta_{u} \\mbox{ satisfying } \\delta_u = 0 \\mbox{ on the left face},"
+"&\\mbox{Find } T, V, u \\mbox{ with } V = 0.1, u = 0 \\mbox{ on the left face}, V = 0 \\mbox{ on the right face}, \\\\\n"
+"& \\int_{\\Omega} t\\ \\kappa\\ \\nabla T\\cdot\\nabla\\delta T + 2\\ D\\ (T - T_0)\\ \\delta T + \\dfrac{t}{\\rho(T)}||\\nabla V||^2\\ \\delta T\\ d\\Omega = 0 ~~~\\mbox{ for all } \\delta T, \\\\\n"
+"& \\int_{\\Omega} \\dfrac{t}{\\rho(T)}\\nabla V\\cdot\\nabla\\delta V\\ d\\Omega = 0 ~~~ \\mbox{ for all } \\delta V \\mbox{ satisfying } \\delta V = 0 \\mbox{ on the left and right faces}, \\\\\n"
+"& \\int_{\\Omega} t\\ \\sigma(u):\\varepsilon(\\delta u)\\ d\\Omega - \\int_{\\Gamma_N} t\\ F\\cdot \\delta u\\ d\\Gamma = 0 ~~~ \\mbox{ for all } \\delta u \\mbox{ satisfying } \\delta u = 0 \\mbox{ on the left face},"
 msgstr ""
-"&\\mbox{Find } \\theta, V, u \\mbox{ with } V = 0.1, u = 0 \\mbox{ on the left face}, V = 0 \\mbox{ on the right face}, \\\\\n"
-"& \\int_{\\Omega} \\varepsilon\\kappa\\nabla\\theta\\cdot\\nabla\\delta_{\\theta} + 2D\\theta\\delta_{\\theta}d\\Omega = \\int_{\\Omega} (2DT_0 + \\varepsilon\\sigma|\\nabla V|^2)\\delta_{\\theta} d\\Omega ~~~\\mbox{ for all } \\delta_{\\theta}, \\\\\n"
-"& \\int_{\\Omega} \\varepsilon\\sigma\\nabla V\\cdot\\nabla\\delta_V = 0 d\\Omega ~~~ \\mbox{ for all } \\delta_V \\mbox{ satisfying } \\delta_V = 0 \\mbox{ on the left and right faces}, \\\\\n"
-"& \\int_{\\Omega} \\bar{\\sigma}(u):\\bar{\\varepsilon}(\\delta_u)d\\Omega = \\int_{\\Gamma_N} F\\cdot \\delta_u d\\Gamma ~~~ \\mbox{ for all } \\delta_{u} \\mbox{ satisfying } \\delta_u = 0 \\mbox{ on the left face},"
 
-#: ../source/tutorial/thermo_coupling.rst:108
+#: ../source/tutorial/thermo_coupling.rst:99
 msgid ""
-"where :math:`\\delta_{\\theta}, \\delta_V, \\delta_u` are the test functions"
-" corresponding to :math:`\\theta, V, u`, respectively, :math:`\\Gamma_N` "
-"denotes the right boundary where the density of force :math:`F` is applied "
-"and :math:`\\bar{\\sigma}:\\bar{\\varepsilon}` is the Frobenius scalar "
-"product between second order tensors."
+"where :math:`\\delta T, \\delta V, \\delta u` are the test functions "
+"corresponding to :math:`T, V, u`, respectively, :math:`\\Gamma_N` denotes "
+"the right boundary where the density of force :math:`F` is applied and "
+":math:`\\sigma:\\varepsilon` is the Frobenius scalar product between second "
+"order tensors."
 msgstr ""
-"ここで :math:`\\delta_{\\theta}, \\delta_V, \\delta_u` は，それぞれ， :math:`\\theta, "
-"V, u` に対応する試験関数です， :math:`\\Gamma_N` は力密度 :math:`F` がかかる右の境界を示します．そして "
-":math:`\\bar{\\sigma}:\\bar{\\varepsilon}` は2次テンソル同士のFrobeniusスカラー積です．"
 
-#: ../source/tutorial/thermo_coupling.rst:111
-msgid "Implementation in C++ and with the interface"
-msgstr "C++ での実装とインターフェイス"
+#: ../source/tutorial/thermo_coupling.rst:102
+msgid "Implementation in C++ and in script languages"
+msgstr ""
 
-#: ../source/tutorial/thermo_coupling.rst:113
+#: ../source/tutorial/thermo_coupling.rst:104
 msgid ""
 "Let us now make a detailed presentation of the use of |gf| to approximate "
 "the problem. We build simultaneously a C++, Python, Scilab and Matlab "
-"program. For Matlab and Scilab programs, we will not use the oriented object"
-" commands (see :ref:`mlab-oocmd` how to use them)"
+"program. In the scripts for Matlab/Octave we choose not to make use of the "
+"object oriented syntax (see :ref:`mlab-oocmd` on how to use the OO syntax "
+"and its computational overhead)."
 msgstr ""
-"次に，問題を近似する |gf| の使用法についての詳細なプレゼンテーションを行います．C++，Python，Scilab と Matlab "
-"プログラムを同時に構築します．Matlab および Scilab プログラムでは，オブジェクト指向コマンドを使用しません (使用する方法は "
-":ref:`mlab-oocmd` を参照してください)"
 
-#: ../source/tutorial/thermo_coupling.rst:116
+#: ../source/tutorial/thermo_coupling.rst:109
 msgid "Initialization"
 msgstr "初期化"
 
-#: ../source/tutorial/thermo_coupling.rst:118
+#: ../source/tutorial/thermo_coupling.rst:111
 msgid ""
 "First, in C++, ones has to include a certain number of headers for the model"
-" object, the generic assembly, the linear algebra interface (Gmm++), the "
-"experimental mesher and the export facilities. For Python, this is simpler, "
-"|gf| can be imported globally (numpy has also to be imported). For Scilab, "
-"the library has first to be loaded in the Scilab console (this is not "
-"described here) and for Matlab, nothing is necessary, except a "
-"`gf_workspace('clear all')` which allows to clear all |gf| variables."
+" object, the generic assembly, the experimental mesher, and the export "
+"functionality. For Python, |gf| can just be imported globally, and typically"
+" numpy needs to be imported as well. For Scilab, the library has first to be"
+" loaded in the Scilab console (this is not described here) and for "
+"Matlab/Octave, it is only recommended to call `gf_workspace('clear all')` to"
+" ensure there are no leftover |gf| variables in memory."
 msgstr ""
-"まず，C++ では，モデルオブジェクト，ジェネリックアセンブリ，線形代数インターフェイス (Gmm++) "
-"，実験用メッシュ，およびエクスポート機能に対して，特定の数のヘッダーをインクルードしなければなりません．Python の場合，これは簡単です． |gf|"
-" をグローバルにインポートするだけです(numpy もインポートする必要があります)．Scilab の場合，最初にライブラリを Scilab "
-"コンソールにロードします (ここでは説明しません)，Matlab の場合，すべての |gf| 変数をクリアする `gf_workspace('clear"
-" all')` 以外，何も必要ありません．"
 
-#: ../source/tutorial/thermo_coupling.rst:123
-#: ../source/tutorial/thermo_coupling.rst:161
+#: ../source/tutorial/thermo_coupling.rst:121
 #: ../source/tutorial/thermo_coupling.rst:209
-#: ../source/tutorial/thermo_coupling.rst:276
-#: ../source/tutorial/thermo_coupling.rst:374
-#: ../source/tutorial/thermo_coupling.rst:431
-#: ../source/tutorial/thermo_coupling.rst:491
-#: ../source/tutorial/thermo_coupling.rst:545
-#: ../source/tutorial/thermo_coupling.rst:619
+#: ../source/tutorial/thermo_coupling.rst:275
+#: ../source/tutorial/thermo_coupling.rst:353
+#: ../source/tutorial/thermo_coupling.rst:420
+#: ../source/tutorial/thermo_coupling.rst:487
+#: ../source/tutorial/thermo_coupling.rst:559
+#: ../source/tutorial/thermo_coupling.rst:626
 #: ../source/tutorial/thermo_coupling.rst:675
-#: ../source/tutorial/thermo_coupling.rst:730
+#: ../source/tutorial/thermo_coupling.rst:722
 #: ../source/tutorial/thermo_coupling.rst:759
-#: ../source/tutorial/thermo_coupling.rst:808
-msgid "**C++**"
-msgstr "**C++**"
+#: ../source/tutorial/thermo_coupling.rst:809
+msgid "C++"
+msgstr ""
 
-#: ../source/tutorial/thermo_coupling.rst:138
-#: ../source/tutorial/thermo_coupling.rst:223
-#: ../source/tutorial/thermo_coupling.rst:302
-#: ../source/tutorial/thermo_coupling.rst:382
-#: ../source/tutorial/thermo_coupling.rst:443
-#: ../source/tutorial/thermo_coupling.rst:498
-#: ../source/tutorial/thermo_coupling.rst:560
-#: ../source/tutorial/thermo_coupling.rst:633
+#: ../source/tutorial/thermo_coupling.rst:137
+#: ../source/tutorial/thermo_coupling.rst:224
+#: ../source/tutorial/thermo_coupling.rst:298
+#: ../source/tutorial/thermo_coupling.rst:362
+#: ../source/tutorial/thermo_coupling.rst:433
+#: ../source/tutorial/thermo_coupling.rst:495
+#: ../source/tutorial/thermo_coupling.rst:575
+#: ../source/tutorial/thermo_coupling.rst:639
 #: ../source/tutorial/thermo_coupling.rst:687
-#: ../source/tutorial/thermo_coupling.rst:735
-#: ../source/tutorial/thermo_coupling.rst:770
-#: ../source/tutorial/thermo_coupling.rst:838
-msgid "**Python**"
-msgstr "**Python**"
+#: ../source/tutorial/thermo_coupling.rst:728
+#: ../source/tutorial/thermo_coupling.rst:771
+#: ../source/tutorial/thermo_coupling.rst:837
+msgid "Python"
+msgstr "Python"
 
-#: ../source/tutorial/thermo_coupling.rst:143
-#: ../source/tutorial/thermo_coupling.rst:234
-#: ../source/tutorial/thermo_coupling.rst:326
-#: ../source/tutorial/thermo_coupling.rst:388
-#: ../source/tutorial/thermo_coupling.rst:453
-#: ../source/tutorial/thermo_coupling.rst:505
-#: ../source/tutorial/thermo_coupling.rst:574
-#: ../source/tutorial/thermo_coupling.rst:644
-#: ../source/tutorial/thermo_coupling.rst:698
-#: ../source/tutorial/thermo_coupling.rst:739
-#: ../source/tutorial/thermo_coupling.rst:779
-#: ../source/tutorial/thermo_coupling.rst:859
-msgid "**Scilab**"
-msgstr "**Scilab**"
-
-#: ../source/tutorial/thermo_coupling.rst:147
-#: ../source/tutorial/thermo_coupling.rst:245
-#: ../source/tutorial/thermo_coupling.rst:345
-#: ../source/tutorial/thermo_coupling.rst:396
-#: ../source/tutorial/thermo_coupling.rst:463
-#: ../source/tutorial/thermo_coupling.rst:512
-#: ../source/tutorial/thermo_coupling.rst:592
-#: ../source/tutorial/thermo_coupling.rst:655
-#: ../source/tutorial/thermo_coupling.rst:709
-#: ../source/tutorial/thermo_coupling.rst:743
-#: ../source/tutorial/thermo_coupling.rst:788
-#: ../source/tutorial/thermo_coupling.rst:891
-msgid "**Matlab**"
-msgstr "**Matlab**"
-
-#: ../source/tutorial/thermo_coupling.rst:154
+#: ../source/tutorial/thermo_coupling.rst:153
 msgid "Parameters of the model"
 msgstr "モデルのパラメータ"
 
-#: ../source/tutorial/thermo_coupling.rst:156
+#: ../source/tutorial/thermo_coupling.rst:155
 msgid ""
 "Let us now define the different physical and numerical parameters of the "
-"problem. For script languages (Python, Scilab and Matlab) there is no "
-"differences."
+"problem. For script languages (Python, Matlab/Octave, and Scilab) exactly "
+"the same syntax can be used."
 msgstr ""
-"ここで，問題のさまざまな物理パラメータおよび数値パラメータを定義しましょう．スクリプト言語 (Python，Scilab と Matlab) "
-"には違いはありません．"
 
-#: ../source/tutorial/thermo_coupling.rst:181
+#: ../source/tutorial/thermo_coupling.rst:161
+msgid "**C++**"
+msgstr "**C++**"
+
+#: ../source/tutorial/thermo_coupling.rst:178
 msgid "**Scripts**"
 msgstr "**Scripts**"
 
-#: ../source/tutorial/thermo_coupling.rst:200
+#: ../source/tutorial/thermo_coupling.rst:192
 msgid "Mesh generation"
 msgstr "メッシュ生成"
 
-#: ../source/tutorial/thermo_coupling.rst:202
+#: ../source/tutorial/thermo_coupling.rst:194
 msgid ""
-"|gf| has some limited meshing facilities which are described here. We are "
-"going to use them. However, there is no guaranty of the quality and "
-"conformity of the obtained mesh, so it is better to verify the mesh if you "
-"use |gf| meshing facilities. You can also use external meshers (GiD or Gmsh "
-"for instance) and import them (see :ref:`ud-load_save_mesh`)."
+"|gf| has some limited mesh generation capabilities which are described here."
+" However, GetFEM is not meant to be used as a general purpose mesher, there "
+"is no guaranty of the quality and conformity of the obtained mesh. You "
+"should better always verify the quality of the generated mesh if you use "
+"|gf|'s built-in meshing tools. You can also use external meshers like GMSH, "
+"ANSYS, or GiD, and import the generated meshes (see :ref:`ud-"
+"load_save_mesh`)."
 msgstr ""
-"|gf| "
-"には，ここで説明するいくつかの制約のあるメッシュ機能があります．ここではそれらを使用するつもりです．しかし，得られたメッシュの品質と適合性は保証していません．そのため，"
-" |gf| のメッシュ作成機能を使用する場合はメッシュを確認することをお勧めします．また，外部メッシャ (例えばGiD または Gmsh) "
-"を使用してインポートすることもできます( :ref:`ud-load_save_mesh` をご覧ください)．"
 
-#: ../source/tutorial/thermo_coupling.rst:204
+#: ../source/tutorial/thermo_coupling.rst:199
 msgid ""
-"The geometry of the domain is supposed to be a rectangle with three circular"
-" holes (see :ref:`tut-fig-meshthermo`). The geometry is described thanks to "
-"some geometrical primitives and union/setminus operations (see "
-":file:`src/getfem/getfem_mesher.h` file). In the following, `h` stands for "
+"The geometry of the domain in the present example is a rectangle with three "
+"circular holes (see :ref:`tut-fig-meshthermo`). The mesh for this geometry "
+"is produced by combining geometrical primitives with boolean operations (see"
+" :file:`src/getfem/getfem_mesher.h` file). In the following, `h` stands for "
 "the mesh size and `2` is the degree of the mesh (this means that the "
-"transformation is of degree two, we used curved edges)."
+"transformation is of degree two, we used curved edges). In order to get "
+"isoparametric elements, the parameter `elements_degree`, used later in the "
+"definition of finite element spaces, needs also to be set equal to 2. "
+"Otherwise subparametric or superparametric elements will be produced."
 msgstr ""
-"領域のジオメトリは，3つの円形の穴がある長方形であるとします ( :ref:`tut-fig-meshthermo` "
-"を参照)．ジオメトリは，いくつかの初等幾何と union/setminus 操作によって記述します ( "
-":file:`src/getfem/getfem_mesher.h` ファイルを参照してください)．以下では， `h` はメッシュサイズを表し， `2`"
-" はメッシュの次数を表します (これは変換が次数2であり，曲線エッジを使用することを意味します)．"
 
-#: ../source/tutorial/thermo_coupling.rst:262
+#: ../source/tutorial/thermo_coupling.rst:255
 msgid "The obtained mesh."
 msgstr "得られたメッシュ．"
 
-#: ../source/tutorial/thermo_coupling.rst:269
+#: ../source/tutorial/thermo_coupling.rst:262
 msgid "Boundary selection"
 msgstr "境界の選択"
 
-#: ../source/tutorial/thermo_coupling.rst:271
+#: ../source/tutorial/thermo_coupling.rst:264
 msgid ""
 "Since we have different boundary conditions on the different parts of the "
-"boundary, we have to number the different parts of the boundary (in the "
-"hole, thermal and electrical insulation together with a stress free boundary"
-" conditions are assumed). Thus, we have to select the element faces on the "
-"mesh and define mesh regions (see :ref:`ud-mesh_regions`) 1, 2, 3, 4 to be "
-"the right boundary, the left one, the top one and the bottom one "
-"respectively. These boundary numbers will be used in the model bricks."
+"boundary, we have to number different parts of the boundary accordingly. "
+"Sets of elements or element faces on the mesh are defined in so called mesh "
+"regions (see :ref:`ud-mesh_regions`) with a unique integer identifier. "
+"Regions with identifiers 1, 2, 3, and 4 are defined for the right, left, top"
+" and bottom sides, respectively. These boundary numbers will be used in the "
+"definitions of different terms in the model equations."
 msgstr ""
-"境界のそれぞれの部分には異なる境界条件を設定するため，境界のさまざまな部分には番号を付けます "
-"(穴には，熱と電気の絶縁と，応力自由境界条件が想定されます)．したがって，メッシュ上の要素面を選択し，メッシュ領域を定義する必要があります ( "
-":ref:`ud-mesh_regions` "
-"を参照)，1，2，3，4はそれぞれ右境界，左境界，上境界，下境界です．これらの境界番号は，モデルのブリックで使用されます．"
 
-#: ../source/tutorial/thermo_coupling.rst:367
+#: ../source/tutorial/thermo_coupling.rst:343
 msgid "Mesh draw"
 msgstr "メッシュの描画"
 
-#: ../source/tutorial/thermo_coupling.rst:369
+#: ../source/tutorial/thermo_coupling.rst:345
 msgid ""
-"In order to preview the mesh and to control its validity, the following "
+"In order to preview the mesh and verify its quality, the following "
 "instructions can be used:"
-msgstr "メッシュをプレビューし，その妥当性を制御するために，次の手順を使用します．"
+msgstr ""
 
-#: ../source/tutorial/thermo_coupling.rst:405
+#: ../source/tutorial/thermo_coupling.rst:379
+msgid ""
+"For Matlab/Octave call `pause(1);` and for Scilab call `sleep(1000);` just "
+"after."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:381
 msgid ""
 "In C++ and with the Python interface, an external graphical post-processor "
 "has to be used (for instance, gmsh, Mayavi2, PyVista or Paraview). With "
-"Scilab and Matlab interfaces, the internal plot facilities can be used (see "
-"the result :ref:`tut-fig-meshthermo`)."
+"Scilab and Matlab/Octave interfaces, the internal plot facilities can be "
+"used (see the result :ref:`tut-fig-meshthermo`)."
 msgstr ""
-"C++ および Python インターフェイスでは，外部グラフィカルポストプロセッサを使用する必要があります "
-"(たとえば，gmsh，Mayavi2，PyVista，または Paraview)．Scilab および Matlab "
-"インタフェースでは，内部プロット機能を使用することができます (結果は :ref:`tut-fig-meshthermo` を参照)．"
 
-#: ../source/tutorial/thermo_coupling.rst:409
+#: ../source/tutorial/thermo_coupling.rst:386
 msgid "Definition of finite element methods and integration method"
 msgstr "有限要素法と積分法の定義"
 
-#: ../source/tutorial/thermo_coupling.rst:411
+#: ../source/tutorial/thermo_coupling.rst:388
 msgid ""
-"We will define three finite element methods. The first one, `mfu` is to "
-"approximate the displacement field. This is a vector field. This is defined "
-"in C++ by"
+"We will define three finite element methods. The first one, `mfu`, is to "
+"approximate the displacement field which is a vector field. Its definition "
+"in C++ is"
 msgstr ""
-"3つの有限要素法を定義します．最初の1つは，変位フィールドを近似する `mfu` です．これはベクトルフィールドで C++ では次のように定義されます．"
 
-#: ../source/tutorial/thermo_coupling.rst:418
+#: ../source/tutorial/thermo_coupling.rst:397
 msgid ""
-"where the `2` stands for the dimension of the vector field. The second line "
-"sets the finite element used. `classical_finite_element` means a continuous "
-"Lagrange element and remember that `elements_degree` has been set to `2` "
-"which means that we will use quadratic (isoparametric) elements."
+"where the argument `2` stands for the dimension of the vector field. The "
+"second line sets the finite element used, where `classical_finite_element` "
+"means a continuous Lagrange element. Remember that `elements_degree` has "
+"been set to `2` which means that we will use quadratic (isoparametric) "
+"elements."
 msgstr ""
-"ここで， `2` はベクトル場の次元を表します．2行目は，使用する有限要素を設定します． `classical_finite_element` "
-"は，連続したLagrange要素を意味し，`elements_degree` は `2` に設定されています．これは2次の (アイソパラメトリック) "
-"要素を使用することを意味します．"
 
-#: ../source/tutorial/thermo_coupling.rst:420
+#: ../source/tutorial/thermo_coupling.rst:401
 msgid ""
 "There is a wide choice of pre-existing finite element methods in |gf|, see "
 ":ref:`ud-appendixa`. However, Lagrange finite element methods are the most "
-"used in practice."
+"common in practice."
 msgstr ""
-"|gf| では，既存の有限要素法を幅広く選択肢できます． :ref:`ud-appendixa` を参照してください．しかし，実際には Lagrange"
-" 有限要素法が最も使用されています．"
 
-#: ../source/tutorial/thermo_coupling.rst:422
+#: ../source/tutorial/thermo_coupling.rst:404
 msgid ""
-"The second finite element method is a scalar one, `mft` with which we will "
-"approximate both the temperature field and the electric potential field. A "
-"single finite element method can serve to approximate an arbitrary number of"
-" finite element variables."
+"The second finite element method is a scalar one, `mft`, which will "
+"approximate both the temperature and the electric potential fields. Several "
+"finite element variables can share the same finite element method if "
+"necessary."
 msgstr ""
-"第2の有限要素法はスカラーで，温度場と電位場の両方を近似する `mft` です．単一の有限要素法で任意の数の有限要素変数を近似すると便利です．"
 
-#: ../source/tutorial/thermo_coupling.rst:424
+#: ../source/tutorial/thermo_coupling.rst:407
 msgid ""
-"The third finite element method is a discontinuous scalar Lagrange one which"
-" will allow us to interpolate the derivative of one of the variables (for "
-"instance to interpolate the Von Mises stress)."
+"The third finite element method, `mfvm`, is a discontinuous Lagrange one for"
+" a scalar field, which will allow us to post-process quantities which are "
+"discotinuous at element boundaries, such as the gradient of some "
+"approximated field variables, in particular the Von Mises stress field."
 msgstr ""
-"3番目の有限要素法は不連続なスカラーLagrangeで，1変数の導関数を補間することができます (たとえば，Von Mises応力の補間)．"
 
-#: ../source/tutorial/thermo_coupling.rst:426
+#: ../source/tutorial/thermo_coupling.rst:409
 msgid ""
 "The last thing to define is an integration method `mim`. There is no default"
-" integration method in |gf| so this is mandatory to define an integration "
-"method. Of course, the order of the integration method have to be chosen "
-"sufficient to make a convenient integration of the selected finite element "
-"method. Here, the square of `elements_degree` is sufficient."
+" integration method in |gf|, so it is mandatory to define an integration "
+"method. Of course, the order of the integration method has to be chosen "
+"sufficient large to provide full integration of the relevant finite element "
+"terms. In the present example, a polynomial order equal to the double of "
+"`elements_degree` is sufficient."
 msgstr ""
-"最後に定義するのは，積分法 `mim` です．|gf| "
-"にデフォルトの積分法はありません．したがって，これは積分法を定義するためには必須です．もちろん，積分法の次数は，選択された有限要素法に好都合な積分を行うため，十分に選定しなければなりません．ここでは，"
-" `elements_degree` の2乗で十分です．"
 
-#: ../source/tutorial/thermo_coupling.rst:478
+#: ../source/tutorial/thermo_coupling.rst:459
 msgid "Model definition"
 msgstr "モデルの定義"
 
-#: ../source/tutorial/thermo_coupling.rst:480
+#: ../source/tutorial/thermo_coupling.rst:461
 msgid ""
-"The model object in |gf| gather the variables of the models (the unknowns), "
-"the data and what is called the model bricks. The model bricks are some "
-"parts of the model (linear or nonlinear terms) applied on a single variable "
-"or linking several variables. They are used to make the assembly of the "
-"(tangent) linear system (see :ref:`ud-model-object` for more details)."
+"It is not strictly mandatory to use the model object in |gf|, but it is "
+"indeed a very powerful object. It is used to gather all defined variables "
+"(unknowns) and data, whether these are defined in a finite element space, on"
+" integration points, or globally. It also gathers all PDE terms that involve"
+" the various variables and data, numbers the degrees of freedom from all "
+"unknowns, and combines all assembled terms into a global tangent system "
+"consistently."
 msgstr ""
-"|gf| "
-"のモデルオブジェクトは(未知)変数，データ，およびモデルブリックと呼ばれるものの集まりです．モデルブリックは，単一の変数か，複数の変数をリンクしているモデルの一部"
-" (線形または非線形項) です．これらは，(接線) 線形システムの構築のために使用されます (詳細については :ref:`ud-model-"
-"object` を参照してください)．"
 
-#: ../source/tutorial/thermo_coupling.rst:482
+#: ../source/tutorial/thermo_coupling.rst:465
 msgid ""
-"This is not strictly mandatory to use the model object since one may use "
-"directly the assembly procedures and build by it own the (tangent) linear "
-"system. The model object allows a rapid build of the model since most "
-"classical parts of a model are pre-programmed: standard boundary conditions,"
-" standard partial differential equations, use of multipliers to prescribe a "
-"constraint ... Moreover, some bricks are designed to extend the "
-"possibilities of the standard bricks (generic assembly bricks, explicit "
-"matrix brick ...). Thus, it is recommended to use the framework of the model"
-" object."
+"For each model object, the user can add predefined PDE terms, so-called "
+"model bricks, or preferably add linear/nonlinear terms using symbolic "
+"expressions written in the generic weak form language (GWFL) (see :ref:`ud-"
+"gasm-high`). The added terms can involve a single variable or several "
+"variables with arbitrary couplings. The model object automates the assembly "
+"of the (tangent) linear system (see :ref:`ud-model-object` for more "
+"details)."
 msgstr ""
-"直接構築を行い(接線) "
-"線形システムを作成することも可能なため，モデルオブジェクトを使用することは厳密には必須ではありません．しかし，モデルオブジェクトは，モデルのほとんどの既往な部分が事前にプログラムされているので，モデルの素早い構築が可能です．"
-" 標準境界条件，標準偏微分方程式，制約を処理するための乗数の使用などが整備されています．さらに，いくつかのブリックは，標準ブリック "
-"(ジェネリックアセンブリブリック，陽なマトリックスブリックなど) "
-"の拡張が可能なように設計されています．そのため，モデルオブジェクトのフレームワークを使用することをお勧めします．"
 
-#: ../source/tutorial/thermo_coupling.rst:484
+#: ../source/tutorial/thermo_coupling.rst:469
 msgid ""
-"There are two versions of the model: the real one and the complex one. "
-"Complex models have to be reserved for special applications (some "
-"electromagnetism problems for instance) where it is advantageous to solve a "
-"complex linear system."
+"The alternative to using the model object is to use lower-level assembly "
+"procedures directly and incorporate their results into the overall (tangent)"
+" linear system manually. However, it is generally highly recommended to use "
+"the framework of the model object, as it allows for rapid implementation of "
+"a model. All common boundary conditions, PDE terms, multiplier- enforced "
+"constraints, etc., can be easily provided in a very compact form as GWFL "
+"expressions. Many common terms are predefined in so-called bricks; however, "
+"nowadays these are somewhat obsolete, as the use of GWFL is almost as "
+"compact and at the same time more transparent. There are a few specific "
+"model bricks that act directly on the discretized system, such as the "
+"explicit matrix brick and the explicit rhs brick, which provide operations "
+"that cannot be expressed in GWFL."
 msgstr ""
-"モデルには実数と複素数の2つのバージョンがあります．複素数モデルは複雑な線形システムを解くのに有利な特殊なアプリケーション "
-"(例えば，いくつかの電磁気学の問題など) のために予約されています．"
 
-#: ../source/tutorial/thermo_coupling.rst:486
+#: ../source/tutorial/thermo_coupling.rst:475
 msgid ""
-"Let us declare a real model with the three variables corresponding to the "
-"three fields to be computed:"
-msgstr "計算される3つのフィールドに対応する3つの変数を持つ実際のモデルを宣言してみましょう ．"
+"When defining a model object, there are two options to choose from: real-"
+"number and complex-number model versions. Complex-number models are reserved"
+" for special applications (e.g., some electromagnetism problems) where it is"
+" advantageous to solve a complex-number linear system. They support most, "
+"but not all, features available in the real-number model version."
+msgstr ""
 
-#: ../source/tutorial/thermo_coupling.rst:522
-msgid "Membrane elastic deformation problem"
-msgstr "弾性膜変形問題"
+#: ../source/tutorial/thermo_coupling.rst:479
+msgid ""
+"Let us declare a real-number model with the three variables corresponding to"
+" the three unknown fields:"
+msgstr ""
 
-#: ../source/tutorial/thermo_coupling.rst:524
+#: ../source/tutorial/thermo_coupling.rst:516
+msgid "Plane stress elastic deformation problem"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:518
 msgid ""
 "Let us now begin by the elastic deformation problem. We will use the "
-"predefined brick added by `add_isotropic_linearized_elasticity_brick` below."
-" Basically it adds the term corresponding to"
+"`add_linear_term` function of the model object to add a linear term to the "
+"model by means of a GWFL symbolic expression. Specifically for the plane "
+"stress problem we will add the term"
 msgstr ""
-"ここでは，弾性変形問題から始めましょう．以下の `add_isotropic_linearized_elasticity_brick` "
-"によって追加されている定義済みのブリックを使用します．対応する項は以下の通りです．"
+
+#: ../source/tutorial/thermo_coupling.rst:522
+msgid "\\int_{\\Omega} t\\ \\sigma\\!:\\!\\varepsilon(\\delta u)\\ d\\Omega"
+msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:526
-msgid ""
-"\\int_{\\Omega} (\\lambda^* \\mbox{div}(u) I + 2\\mu "
-"\\bar{\\varepsilon}(u)):\\bar{\\varepsilon}(\\delta_u)dx,"
+msgid "to the tangent linear system, with"
 msgstr ""
-"\\int_{\\Omega} (\\lambda^* \\mbox{div}(u) I + 2\\mu "
-"\\bar{\\varepsilon}(u)):\\bar{\\varepsilon}(\\delta_u)dx,"
 
-#: ../source/tutorial/thermo_coupling.rst:530
+#: ../source/tutorial/thermo_coupling.rst:528
 msgid ""
-"to the tangent linear system. In order to use this model brick, the data "
-"corresponding to the |Lame| coefficient have to be added to the model first."
-" Here, the |Lame| coefficients are constant over the domain. However, it it "
-"also possible to define some non-constant data. Note also that instead of "
-"using this predefined brick, one can use equivalently GWFL, the generic weak"
-" form language term `add_linear_term(md mim, \"lambda*(Div_u*Div_Test_u) + "
-"mu*((Grad_u + Grad_u'):Grad_Test_u)\"`."
+"\\sigma = \\dfrac{E\\nu}{1\\!+\\!\\nu}\\left(\\dfrac{\\nu}{1\\!-\\!\\nu} "
+"(\\mbox{div}(u) - 2\\alpha_{th}(T\\!-\\!T_0)) I +  (\\varepsilon(u) - "
+"\\alpha_{th}(T\\!-\\!T_0) I)\\right)"
 msgstr ""
-"この追加を接線線形システムに対して行います．このモデルブリックを使用するために， |Lame| "
-"係数に対応するデータは，最初にモデルに追加する必要があります．ここでは， |Lame| "
-"係数は，領域に対して一定です．ただし，一部の非定数データを定義することもできます．また，この定義済みのブリックを使用する代わりに，GWFL，汎用弱形式言語項"
-" `add_linear_term(md mim, \"lambda*(Div_u*Div_Test_u) + mu*((Grad_u + "
-"Grad_u'):Grad_Test_u)\"` を使用することもできます．"
 
 #: ../source/tutorial/thermo_coupling.rst:532
-msgid "Concerning the coupling term"
-msgstr "連成項"
-
-#: ../source/tutorial/thermo_coupling.rst:534
-msgid "\\int_{\\Omega} (\\beta\\theta I) :\\bar{\\varepsilon}(\\delta_u)dx,"
-msgstr "\\int_{\\Omega} (\\beta\\theta I) :\\bar{\\varepsilon}(\\delta_u)dx,"
+msgid ""
+"In order to add this term, global scalar data corresponding to the elastic "
+"constants :math:`E` and :math:`\\nu`, as well as the constants :math:`t`, "
+":math:`T_0`, and :math:`\\alpha_{th}`, have to be added to the model first. "
+"If any of these data were not constant, it is also possible to define them "
+"as a finite element field or at integration points directly (not shown "
+"here). Note that this term, already incorporates the thermomechanical "
+"coupling between the displacement and temperature fields. For the isothermal"
+" case, one could alternatively also use a predefined brick, a black-box "
+"term, added to the model with the "
+"`add_isotropic_linearized_elasticity_brick` function. Terms provided by GWFL"
+" expressions are unambigouous, and they are compiled into a list of "
+"optimized assembly instructions which are executed on each Gauss point."
+msgstr ""
 
 #: ../source/tutorial/thermo_coupling.rst:538
 msgid ""
-"there is no predefined brick and we use directly a GWFL term "
-"`add_linear_term(md mim, \"beta*theta*Div_Test_u)\"`. See :ref:`ud-gasm-"
-"high` for more details on GWFL. Basically, the principle is that the "
-"assembly string is compiled into a list of optimized assembly instructions "
-"which are executed on each Gauss point."
+"The second term to add to the elasticity problem is the external load on the"
+" right boundary, corresponding to the term"
 msgstr ""
-"は定義済みのブリックはなく，GWFL項 `add_linear_term(md mim, \"beta*theta*Div_Test_u)\"` "
-"を直接使用します．GWFLの詳細については， :ref:`ud-gasm-high` "
-"を参照してください．基本的に，アセンブリ文字列は，各Gauss点で実行される最適化されたアセンブリ命令のリストでコンパイルされます．"
 
 #: ../source/tutorial/thermo_coupling.rst:540
-msgid ""
-"The following program allows to take into account the whole elastic "
-"deformation equation. Note the use of specific brick to prescribe the "
-"Dirichlet condition on the left boundary. There is several option to "
-"prescribe a Dirichlet condition (see :ref:`ud-model-Dirichlet`)."
+msgid "- \\int_{\\Gamma_N} t\\ F\\cdot \\delta u\\ d\\Gamma"
 msgstr ""
-"以下のプログラムは，全体の弾性変形方程式を考慮に入れることができます．左側の境界に Dirichlet "
-"条件を規定するために，既定のブリックを使用します．Dirichlet条件を定義するいくつかのオプションがあります( :ref:`ud-model-"
-"Dirichlet` を参照)．"
 
-#: ../source/tutorial/thermo_coupling.rst:614
+#: ../source/tutorial/thermo_coupling.rst:544
 msgid ""
-"Similarly, the following program take into account the electric potential "
-"equation. Note the definition of the  electrical conductivity "
-":math:`\\sigma` and again the use of GWFL terms."
+"This term is added to the model using the `add_linear_term` function with "
+"the GWFL expression `\"-t*F*Test_u(1)\"`, and the region number "
+"`RIGHT_BOUND=1`. The predefined brick term alternative to this expression "
+"would be by using the function `add_source_term_brick` (not used here)."
 msgstr ""
-"同様に，以下のプログラムは，電位方程式を記述しています．電気伝導率 :math:`\\sigma` とGWFLの項の使用方法に注意してください．"
 
-#: ../source/tutorial/thermo_coupling.rst:670
-msgid "Now, the program to take into account the thermal problem:"
-msgstr "ここで，熱問題を記述するプログラムは次の通りです．"
+#: ../source/tutorial/thermo_coupling.rst:547
+msgid ""
+"A predefined brick will be used for the Dirichlet condition on the left "
+"boundary. There are several options to prescribe a Dirichlet condition (see "
+":ref:`ud-model-Dirichlet`), but here the function "
+"`add_Dirichlet_condition_with_multipliers` will be used. It would be rather "
+"easy to achieve the same effect just with an appropriate GWFL expression and"
+" the generic `add_linear_term` function, but the more specific function "
+"spares the user from defining the Lagrange multiplier variable, as this is "
+"taken care of internally inside the "
+"`add_Dirichlet_condition_with_multipliers` function."
+msgstr ""
 
-#: ../source/tutorial/thermo_coupling.rst:723
+#: ../source/tutorial/thermo_coupling.rst:551
+msgid ""
+"The following snippets show the definition of the entire elastic deformation"
+" equation with thermal expansion."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:617
+msgid ""
+"Similarly, the following snippets define the electric potential equations. "
+"Note the definition of the electric resistivity function :math:`\\rho(T)` as"
+" a macro, and again the heavy use of GWFL expression inside the functions "
+"`add_linear_term` and `add_nonlinear_term`."
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:667
+msgid ""
+"Finally, the definition of the thermal problem is done in the following "
+"snippets:"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:712
 msgid "Model solve"
 msgstr "モデルの求解"
 
-#: ../source/tutorial/thermo_coupling.rst:725
+#: ../source/tutorial/thermo_coupling.rst:714
 msgid "Once the model is correctly defined, we can simply solve it by:"
 msgstr "モデルを正しく定義したら，次のようにして簡単に解くことができます．"
 
-#: ../source/tutorial/thermo_coupling.rst:748
+#: ../source/tutorial/thermo_coupling.rst:741
 msgid ""
-"Since the problem is globally nonlinear, a Newton method is used to "
-"iteratively solve the problem. It needs a few iterations (about 4 in that "
-"case)."
-msgstr "問題は大域的に非線形であるため，Newton法を用いて問題を反復的に解きます．数回のイテレーションが必要です (この場合は約4です)．"
+"Since the problem has some nonlinear terms, a Newton method is used to "
+"iteratively solve the problem. It takes just a few iterations (about 4 in "
+"this case) to converge at the prescribed residual threshold."
+msgstr ""
 
-#: ../source/tutorial/thermo_coupling.rst:752
+#: ../source/tutorial/thermo_coupling.rst:746
 msgid "Model solve with two steps"
 msgstr "2ステップでのモデルの求解"
 
-#: ../source/tutorial/thermo_coupling.rst:754
+#: ../source/tutorial/thermo_coupling.rst:748
 msgid ""
 "Another option to solve the problem is to solve first the thermal and "
-"electric potential problems. Indeed, in our model, the thermal and  electric"
-" potential do not depend on the deformation. Once the  thermal and electric "
-"potential problem, we then solve the deformation problem. This can be done "
-"as follows:"
+"electric potential problems. Indeed, in our model, the thermal and electric "
+"potential equations do not depend on the deformation. Once the thermal and "
+"electric potential problems are solved, then we can solve the deformation "
+"problem. This can be done as follows:"
 msgstr ""
-"別の解き方として，最初に熱と電位の問題を解くこともできます．今回のモデルでは，熱および電位は変形に依存しません．熱と電位の問題を解いてから変形の問題を解くには，次のように実行します．"
 
-#: ../source/tutorial/thermo_coupling.rst:801
+#: ../source/tutorial/thermo_coupling.rst:795
 msgid "Export/visualization of the solution"
 msgstr "解のエクスポート/可視化"
 
-#: ../source/tutorial/thermo_coupling.rst:803
+#: ../source/tutorial/thermo_coupling.rst:797
 msgid ""
 "The finite element problem is now solved. We can plot the solution as "
 "follows. Note that for the C++ and Python programs, it is necessary to use "
@@ -724,6 +617,10 @@ msgstr ""
 " `ga_interpolation_Lagrange_fem` を参照)．また，複雑なエクスポートやスライスの作成も可能です ( :ref:`ud-"
 "export` をご覧ください)．"
 
-#: ../source/tutorial/thermo_coupling.rst:926
+#: ../source/tutorial/thermo_coupling.rst:889
+msgid "Scilab"
+msgstr ""
+
+#: ../source/tutorial/thermo_coupling.rst:930
 msgid "Plot of the solution."
 msgstr "解のプロット．"
