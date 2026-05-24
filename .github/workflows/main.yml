@@ -27,7 +27,6 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
           submodules: true
-          token: ${{ secrets.PERSONAL_ACCESSTOKEN }}
       - name: Setup SSH
         uses: MrSquaare/ssh-setup-action@c818628b924a4bd863903a56c0e526db47bba6f4 # v3
         with:
