@@ -11,8 +11,8 @@ gf_mumps_context_set
 
 ::
 
-  gf_mumps_context_set(mumps_context MC, 'matrix', mat A)
-  gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A)
+  gf_mumps_context_set(mumps_context MC, 'matrix', mat A[, vec rows[, vec cols]])
+  gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A[, vec rows[, vec cols]])
   gf_mumps_context_set(mumps_context MC, 'vector', vec b)
   gf_mumps_context_set(mumps_context MC, 'ICNTL', int ind, int val)
   gf_mumps_context_set(mumps_context MC, 'CNTL', int ind, scalar val)
@@ -28,65 +28,30 @@ gf_mumps_context_set
 
 
   General function for modifying mumps_context objects
-*/
 
-inline void return_mumps_solution(getfemint::mexargs_out& out,
-                                  const gmumps *pctx) {
-  if (out.remaining()) {
-    if (pctx->is_complex()) {
-      int nrhs = int(pctx->vector_c().size()) / pctx->nrows();
-      GMM_ASSERT1(nrhs * pctx->nrows() == int(pctx->vector_c().size()),
-                  "Inconsistent dimensions in MUMPS context object");
-      if (nrhs == 1)
-        out.pop().from_dcvector(pctx->vector_c());
-      else {
-        carray x = out.pop().create_carray(pctx->nrows(), nrhs);
-        gmm::copy(pctx->vector_c(), x);
-      }
-    } else {
-      int nrhs = int(pctx->vector_r().size()) / pctx->nrows();
-      GMM_ASSERT1(nrhs * pctx->nrows() == int(pctx->vector_r().size()),
-                  "Inconsistent dimensions in MUMPS context object");
-      if (nrhs == 1)
-        out.pop().from_dcvector(pctx->vector_r());
-      else {
-        darray x = out.pop().create_darray(pctx->nrows(), nrhs);
-        gmm::copy(pctx->vector_r(), x);
-      }
-    }
-  }
-}
-
-
-void gf_mumps_context_set(getfemint::mexargs_in& in,
-                          getfemint::mexargs_out& out) {
-
-  if (in.narg() < 2) THROW_BADARG("Wrong number of input arguments");
-
-  gmumps *pctx         = to_mumps_context_object(in.pop());
-  std::string init_cmd = in.pop().to_string();
-  std::string cmd      = cmd_normalize(init_cmd);
-
-  bool distributed_matrix =
-    check_cmd(cmd, "distributed matrix", in, out, 1, 1, 0, 0);
-  if (distributed_matrix ||
-      check_cmd(cmd, "matrix", in, out, 1, 1, 0, 0)) {
-    /*@SET ('matrix', mat A)
-      Set the matrix mat A for the mumps_context object.
 
 **Command list :**
 
 
 
-  ``gf_mumps_context_set(mumps_context MC, 'matrix', mat A)``
+  ``gf_mumps_context_set(mumps_context MC, 'matrix', mat A[, vec rows[, vec cols]])``
 
-    Set the matrix mat A for the mumps_context object.
+    Set mat A(rows,cols) as the matrix for the mumps_context object.
+    
+    Optional vectors vec rows and vec cols are used for selecting
+    and/or permuting rows and columns from input matrix mat A.
+    They are 0-based in Python and 1-based in Matlab/Octave.
 
 
-  ``gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A)``
+  ``gf_mumps_context_set(mumps_context MC, 'distributed matrix', mat A[, vec rows[, vec cols]])``
 
-    Set the matrix mat A for the mumps_context object distributed over all
-    processes. It also sets ICNTL(5) to 0 and ICNTL(18) to 3.
+    Set mat A(rows,cols) as the matrix A for the mumps_context object,
+    distributed over all processes.
+    It also sets ICNTL(5) to 0 and ICNTL(18) to 3.
+    
+    Optional vectors vec rows and vec cols are used for selecting
+    and/or permuting rows and columns from input matrix mat A.
+    They are 0-based in Python and 1-based in Matlab/Octave.
 
 
   ``gf_mumps_context_set(mumps_context MC, 'vector', vec b)``

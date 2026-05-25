@@ -26,8 +26,10 @@ General constructor for mumps_context objects.
 
   ``CTX = gf_mumps_context(string sym, string datatype)``
 
-    The argument <literal>sym</literal> should be 'symmetric' or 'unsymmetric' or empty.
-    Default value is 'unsymmetric'.
-    The argument <literal>datatype</literal> should be 'real' or 'complex' or empty.
-    Default value is 'real'.
+    The argument <literal>sym</literal> should be 'symmetric' or 'general symmetric',
+    'symmetric positive definite', 'unsymmetric', or empty.
+    Default value (empty) is 'unsymmetric' (MUMPS option 0).
+    The option 'symmetric' is equivalent to 'general symmetric'
+    (MUMPS option 2). The argument <literal>datatype</literal> should be 'real' or
+    'complex' or empty. Default value (empty) is 'real'.
 
