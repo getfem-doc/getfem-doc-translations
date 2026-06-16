@@ -65,7 +65,7 @@ gf_util
 
   ``tl = gf_util('mpi parallelism level')``
 
-    Return the level of MPI parallelism GetFEM is compiled with.
+    Returns the level of MPI parallelism GetFEM is compiled with.
     
     0 means no MPI parallelism,
     1 means assembly is parallelized, and
@@ -74,8 +74,6 @@ gf_util
 
   ``tl = gf_util('mumps linked')``
 
-    Return if mumps is linked to GetFEM or not.
+    Returns 1 if mumps is linked in GetFEM and 0 otherwise.
     
-    0 means no 
-    1 means yes.
 
