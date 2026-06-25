@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2004-2025 GetFEM project
+# Copyright (C) 2004-2026 GetFEM project
 # This file is distributed under the same license as the GetFEM package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM 5.4.4\n"
+"Project-Id-Version: GetFEM 5.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 03:39+0000\n"
+"POT-Creation-Date: 2026-06-16 04:33+0000\n"
 "PO-Revision-Date: 2020-04-26 01:51+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -25,84 +25,92 @@ msgstr ""
 msgid "**Synopsis**"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:21
+#: ../source/matlab_octave/cmdref_gf_util.rst:22
 msgid "**Description :**"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:24
+#: ../source/matlab_octave/cmdref_gf_util.rst:25
 msgid "Performs various operations which do not fit elsewhere."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:27
+#: ../source/matlab_octave/cmdref_gf_util.rst:28
 msgid "**Command list :**"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:31
+#: ../source/matlab_octave/cmdref_gf_util.rst:32
 msgid "``gf_util('save matrix', string FMT, string FILENAME, mat A)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:33
+#: ../source/matlab_octave/cmdref_gf_util.rst:34
 msgid ""
 "Exports a sparse matrix into the file named FILENAME, using Harwell-Boeing "
 "(FMT='hb') or Matrix-Market (FMT='mm') formatting."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:37
+#: ../source/matlab_octave/cmdref_gf_util.rst:38
 msgid "``A = gf_util('load matrix', string FMT, string FILENAME)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:39
+#: ../source/matlab_octave/cmdref_gf_util.rst:40
 msgid "Imports a sparse matrix from a file."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:42
+#: ../source/matlab_octave/cmdref_gf_util.rst:43
 msgid "``tl = gf_util('trace level' [, int level])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:44
+#: ../source/matlab_octave/cmdref_gf_util.rst:45
 msgid "Set the verbosity of some GetFEM routines."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:46
+#: ../source/matlab_octave/cmdref_gf_util.rst:47
 msgid ""
 "Typically the messages printed by the model bricks, 0 means no trace message"
 " (default is 3). if no level is given, the current trace level is returned."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:51
+#: ../source/matlab_octave/cmdref_gf_util.rst:52
 msgid "``tl = gf_util('warning level' [, int level])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:53
+#: ../source/matlab_octave/cmdref_gf_util.rst:54
 msgid "Filter the less important warnings displayed by getfem."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:55
+#: ../source/matlab_octave/cmdref_gf_util.rst:56
 msgid ""
 "0 means no warnings, default level is 3. if no level is given, the current "
 "warning level is returned."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:59
+#: ../source/matlab_octave/cmdref_gf_util.rst:60
 msgid "``tl = gf_util('set num threads', int nb_threads)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:61
+#: ../source/matlab_octave/cmdref_gf_util.rst:62
 msgid ""
 "Sets the number of threads for the multithreaded GetFEM version. It is "
 "available only when GetFEM is compiled with openmp support."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:65
+#: ../source/matlab_octave/cmdref_gf_util.rst:66
 msgid "``tl = gf_util('mpi parallelism level')``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:67
-msgid "Return the level of MPI parallelism GetFEM is compiled with."
+#: ../source/matlab_octave/cmdref_gf_util.rst:68
+msgid "Returns the level of MPI parallelism GetFEM is compiled with."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_util.rst:69
+#: ../source/matlab_octave/cmdref_gf_util.rst:70
 msgid ""
 "0 means no MPI parallelism, 1 means assembly is parallelized, and 2 means "
 "that both assembly and solve (with MUMPS) are MPI parallel."
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_util.rst:75
+msgid "``tl = gf_util('mumps linked')``"
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_util.rst:77
+msgid "Returns 1 if mumps is linked in GetFEM and 0 otherwise."
 msgstr ""

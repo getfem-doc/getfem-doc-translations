@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2004-2025 GetFEM project
+# Copyright (C) 2004-2026 GetFEM project
 # This file is distributed under the same license as the GetFEM package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM 5.4.4\n"
+"Project-Id-Version: GetFEM 5.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 03:39+0000\n"
+"POT-Creation-Date: 2026-06-16 04:33+0000\n"
 "PO-Revision-Date: 2018-07-16 07:01+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -29,23 +29,23 @@ msgstr "gf_util"
 msgid "**Synopsis**"
 msgstr "**概要**"
 
-#: ../source/scilab/cmdref_gf_util.rst:21
+#: ../source/scilab/cmdref_gf_util.rst:22
 msgid "**Description :**"
 msgstr "**説明 :**"
 
-#: ../source/scilab/cmdref_gf_util.rst:24
+#: ../source/scilab/cmdref_gf_util.rst:25
 msgid "Performs various operations which do not fit elsewhere."
 msgstr "ほかの場所にはないさまざまな操作を実行します．"
 
-#: ../source/scilab/cmdref_gf_util.rst:27
+#: ../source/scilab/cmdref_gf_util.rst:28
 msgid "**Command list :**"
 msgstr "**コマンドリスト**"
 
-#: ../source/scilab/cmdref_gf_util.rst:31
+#: ../source/scilab/cmdref_gf_util.rst:32
 msgid "``gf_util('save matrix', string FMT, string FILENAME, mat A)``"
 msgstr "``gf_util('save matrix', string FMT, string FILENAME, mat A)``"
 
-#: ../source/scilab/cmdref_gf_util.rst:33
+#: ../source/scilab/cmdref_gf_util.rst:34
 msgid ""
 "Exports a sparse matrix into the file named FILENAME, using Harwell-Boeing "
 "(FMT='hb') or Matrix-Market (FMT='mm') formatting."
@@ -53,66 +53,74 @@ msgstr ""
 "Harwell-Boeingフォーマット (FMT='hb') またはMatrix-Marketフォーマット (FMT='mm') "
 "を使用して，疎行列をFILENAMEという名前のファイルにエクスポートします．"
 
-#: ../source/scilab/cmdref_gf_util.rst:37
+#: ../source/scilab/cmdref_gf_util.rst:38
 msgid "``A = gf_util('load matrix', string FMT, string FILENAME)``"
 msgstr "``A = gf_util('load matrix', string FMT, string FILENAME)``"
 
-#: ../source/scilab/cmdref_gf_util.rst:39
+#: ../source/scilab/cmdref_gf_util.rst:40
 msgid "Imports a sparse matrix from a file."
 msgstr "ファイルから疎行列をインポートします．"
 
-#: ../source/scilab/cmdref_gf_util.rst:42
+#: ../source/scilab/cmdref_gf_util.rst:43
 msgid "``tl = gf_util('trace level' [, int level])``"
 msgstr "``tl = gf_util('trace level' [, int level])``"
 
-#: ../source/scilab/cmdref_gf_util.rst:44
+#: ../source/scilab/cmdref_gf_util.rst:45
 msgid "Set the verbosity of some GetFEM routines."
 msgstr "GetFEMルーチンの冗長性を設定します．"
 
-#: ../source/scilab/cmdref_gf_util.rst:46
+#: ../source/scilab/cmdref_gf_util.rst:47
 msgid ""
 "Typically the messages printed by the model bricks, 0 means no trace message"
 " (default is 3). if no level is given, the current trace level is returned."
 msgstr ""
 "通常，モデルブリックによって出力されるメッセージは，0でトレースメッセージがないことを意味します(デフォルトは3です)．レベルが指定されていない場合は，現在のトレースレベルが返されます．"
 
-#: ../source/scilab/cmdref_gf_util.rst:51
+#: ../source/scilab/cmdref_gf_util.rst:52
 msgid "``tl = gf_util('warning level' [, int level])``"
 msgstr "``tl = gf_util('warning level' [, int level])``"
 
-#: ../source/scilab/cmdref_gf_util.rst:53
+#: ../source/scilab/cmdref_gf_util.rst:54
 msgid "Filter the less important warnings displayed by getfem."
 msgstr "重要度の低い警告をgetfemでフィルタリングします．"
 
-#: ../source/scilab/cmdref_gf_util.rst:55
+#: ../source/scilab/cmdref_gf_util.rst:56
 msgid ""
 "0 means no warnings, default level is 3. if no level is given, the current "
 "warning level is returned."
 msgstr "0は警告なし，デフォルトのレベルは3です．レベルが指定されていない場合は，現在の警告レベルが返されます．"
 
-#: ../source/scilab/cmdref_gf_util.rst:59
+#: ../source/scilab/cmdref_gf_util.rst:60
 msgid "``tl = gf_util('set num threads', int nb_threads)``"
 msgstr "``tl = gf_util('set num threads', int nb_threads)``"
 
-#: ../source/scilab/cmdref_gf_util.rst:61
+#: ../source/scilab/cmdref_gf_util.rst:62
 msgid ""
 "Sets the number of threads for the multithreaded GetFEM version. It is "
 "available only when GetFEM is compiled with openmp support."
 msgstr ""
 "マルチスレッド版GetFEMのスレッド数を設定します．これは，GetFEMがopenmpサポート付きでコンパイルされている場合にのみ使用可能です．"
 
-#: ../source/scilab/cmdref_gf_util.rst:65
+#: ../source/scilab/cmdref_gf_util.rst:66
 msgid "``tl = gf_util('mpi parallelism level')``"
 msgstr "``tl = gf_util('mpi parallelism level')``"
 
-#: ../source/scilab/cmdref_gf_util.rst:67
-msgid "Return the level of MPI parallelism GetFEM is compiled with."
-msgstr "GetFEMがコンパイル時に設定されたMPI並列処理のレベルを返します。"
+#: ../source/scilab/cmdref_gf_util.rst:68
+msgid "Returns the level of MPI parallelism GetFEM is compiled with."
+msgstr ""
 
-#: ../source/scilab/cmdref_gf_util.rst:69
+#: ../source/scilab/cmdref_gf_util.rst:70
 msgid ""
 "0 means no MPI parallelism, 1 means assembly is parallelized, and 2 means "
 "that both assembly and solve (with MUMPS) are MPI parallel."
 msgstr ""
 "0 は MPI 並列化なしを意味し、1 はアセンブリが並列化されていることを意味し、2 はアセンブリとソルバー (MUMPS を使用) の両方が MPI"
 " 並列化されていることを意味します。"
+
+#: ../source/scilab/cmdref_gf_util.rst:75
+msgid "``tl = gf_util('mumps linked')``"
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_util.rst:77
+msgid "Returns 1 if mumps is linked in GetFEM and 0 otherwise."
+msgstr ""

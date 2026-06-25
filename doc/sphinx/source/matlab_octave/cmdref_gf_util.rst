@@ -17,6 +17,7 @@ gf_util
   tl = gf_util('warning level' [, int level])
   tl = gf_util('set num threads', int nb_threads)
   tl = gf_util('mpi parallelism level')
+  tl = gf_util('mumps linked')
 
 **Description :**
 
@@ -64,9 +65,15 @@ gf_util
 
   ``tl = gf_util('mpi parallelism level')``
 
-    Return the level of MPI parallelism GetFEM is compiled with.
+    Returns the level of MPI parallelism GetFEM is compiled with.
     
     0 means no MPI parallelism,
     1 means assembly is parallelized, and
     2 means that both assembly and solve (with MUMPS) are MPI parallel.
+
+
+  ``tl = gf_util('mumps linked')``
+
+    Returns 1 if mumps is linked in GetFEM and 0 otherwise.
+    
 
