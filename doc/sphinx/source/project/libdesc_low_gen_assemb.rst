@@ -14,7 +14,7 @@ The low-level generic assembly module in |gf|
 Description
 ^^^^^^^^^^^
 
-First version of the generic assembly. Base on tensor reduction. Not very convenient for nonlinear terms. The high-level generic assembly have to be prefered now.
+First version of the generic assembly. Based on tensor reduction. Not very convenient for nonlinear terms. The high-level generic assembly is preferred now.
 
 Files
 ^^^^^

@@ -11,7 +11,7 @@
 Compute arbitrary terms - high-level generic assembly procedures - Generic Weak-Form Language (GWFL)
 ====================================================================================================
 
-This section presents what is now the main generic assembly of |gf|. It is a high-level generic assembly in the sense that it is based on Generic Weak Form Language (GWFL, [GetFEM2020]_) to describe the weak formulation of boundary value problems of partial differential equations. A symbolic differentiation algorithm is used. It simplifies a lot the approximation of nonlinear coupled problems since only the weak form is necessary to be described, the tangent system being automatically computed. Moreover, GWFL is compiled into optimized instructions before the evaluation on each integration point in order to obtain a an optimal computational cost.
+This section presents what is now the main generic assembly of |gf|. It is a high-level generic assembly in the sense that it is based on Generic Weak Form Language (GWFL, [GetFEM2020]_) to describe the weak formulation of boundary value problems of partial differential equations. A symbolic differentiation algorithm is used. It simplifies a lot the approximation of nonlinear coupled problems since only the weak form is necessary to be described, the tangent system being automatically computed. Moreover, GWFL is compiled into optimized instructions before the evaluation on each integration point in order to obtain an optimal computational cost.
 
 The header file to be included to use the high-level generic assembly procedures in C++ is :file:`getfem/generic\_assembly.h`.
 
@@ -106,7 +106,7 @@ for ``a`` a scalar coefficient, the corresponding assembly string is::
 
   a*Grad_u.Grad_Test_u - my_f*Test_u
 
-where ``a`` has to be declared as a scalar constant or a scalar field. Not that is is also possible to describe it explicitly. For instance the problem
+where ``a`` has to be declared as a scalar constant or a scalar field. Note that it is also possible to describe it explicitly. For instance the problem
 
 .. math::
 
@@ -146,11 +146,11 @@ Derivation order and symbolic differentiation
 
 The derivation order of the assembly string is automatically detected. This means that if no test functions are found, the order will be considered to be 0 (potential energy), if first order test functions are found, the order will be considered to be 1 (weak formulation) and if both first and second order test functions are found, the order will be considered to be 2 (tangent system).
 
-In order to perform an assembly (see next section), one should specify the order (0, 1 or 2). If an order 1 string is furnished and an order 2 assembly is required, a symbolic differentiation of the expression is performed. The same if an order 0 string is furnished and if an order 1 or 2 assembly is required. Of course, the converse is not true. If an order 1 expression is given and an order 0 assembly is expected, no integration is performed. This should not be generally not possible since an arbitrary weak formulation do not necessary derive from a potential energy.
+In order to perform an assembly (see next section), one should specify the order (0, 1 or 2). If an order 1 string is furnished and an order 2 assembly is required, a symbolic differentiation of the expression is performed. The same if an order 0 string is furnished and if an order 1 or 2 assembly is required. Of course, the converse is not true. If an order 1 expression is given and an order 0 assembly is expected, no integration is performed. This should not be generally not possible since an arbitrary weak formulation does not necessarily derive from a potential energy.
 
 The standard way to use the generic assembly is to furnish order 1 expressions (i.e. a weak formulation). If a potential energy exists, one may furnish it. However, it will be derived twice to obtain the tangent system which could result in complicated expressions. For nonlinear problems, it is not allowed to furnish order 2 expressions directly. The reason is that the weak formulation is necessary to obtain the residual. So nothing could be done with a tangent term without having the corresponding order 1 term.
 
-IMPORTANT REMARK: Note that for coupled problems, a global potential frequently do not exists. So that the part of problems directly defined with a potential may be difficult to couple. To illustrate this, if you defined a potential with some parameters (elasticity coefficients for instance), and the couplingconsists in a variation of these coefficients with respect to another variable, then the weak formulation do not consist of course in the derivative of the potential with respect to the coefficients which has generally no sense. This is the reason why the definition through a potential should be the exception.
+IMPORTANT REMARK: Note that for coupled problems, a global potential frequently does not exist. So that the part of problems directly defined with a potential may be difficult to couple. To illustrate this, if you defined a potential with some parameters (elasticity coefficients for instance), and the coupling consists in a variation of these coefficients with respect to another variable, then the weak formulation does not consist of course in the derivative of the potential with respect to the coefficients which has generally no meaning. This is the reason why the definition through a potential should be the exception.
 
 
 C++ Call of the assembly
@@ -191,7 +191,7 @@ where ``"my expression"`` is the assembly string, ``mim`` is a ``getfem::mesh_im
 
 As it is explained in the previous section, the order of the string will be automatically detected and a symbolic differentiation will be performed to obtain the corresponding tangent term.
 
-Once assembly strings are added to the workspace, is is possible to call::
+Once assembly strings are added to the workspace, it is possible to call::
 
   workspace.assembly(order);
 
@@ -318,7 +318,7 @@ As another example, let us describe a simple nonlinear elasticity problem. Assum
 
 where :math:`\lambda, \mu` are the |Lame| coefficients and  :math:`E` is the strain tensor given by :math:`E = (\nabla u + (\nabla u)^T + (\nabla u)^T\nabla u)/2`.
 
-This is possible to perform the assembly of the corresponding tangent problem as follows::
+It is possible to perform the assembly of the corresponding tangent problem as follows::
 
   getfem::ga_workspace workspace;
   getfem::size_type nbdofu = mf_u.nb_dof();
@@ -373,7 +373,7 @@ Order four tensors are necessary for instance to express elasticity tensors or i
 The variables
 -------------
 
-A list of variables should be given to the ``ga_worspace`` object (directly or through a model object). The variables are described on a finite element method or can be a simple vector of unknowns. This means that it is possible also to couple algebraic equations to pde ones on a model. A variable name should begin by a letter (case sensitive) or an underscore followed by a letter, a number or an underscore. Some name are reserved, this is the case of operators names (``Det``, ``Norm``, ``Trace``, ``Deviator``, ...) and thus cannot be used as variable names. The name should not begin by ``Test_``, ``Test2_``, ``Grad_``, ``Div_`` or ``Hess_``. The variable name should not correspond to a predefined function (``sin``, ``cos``, ``acos`` ...) and to constants (``pi``, ``Normal``, ``X``, ``Id`` ...).
+A list of variables should be given to the ``ga_worspace`` object (directly or through a model object). The variables are described on a finite element method or can be a simple vector of unknowns. This means that it is possible also to couple algebraic equations to pde ones on a model. A variable name should begin by a letter (case sensitive) or an underscore followed by a letter, a number or an underscore. Some names are reserved, this is the case of operators names (``Det``, ``Norm``, ``Trace``, ``Deviator``, ...) and thus cannot be used as variable names. The name should not begin by ``Test_``, ``Test2_``, ``Grad_``, ``Div_`` or ``Hess_``. The variable name should not correspond to a predefined function (``sin``, ``cos``, ``acos`` ...) and to constants (``pi``, ``Normal``, ``X``, ``Id`` ...).
 
 The constants or data
 ---------------------
@@ -385,18 +385,18 @@ Test functions
 --------------
 
 Each variable is associated with first order and second order test functions.
-The first order test function are used in the weak formulation (which derive form the potential equation if it exists) and the second order test functions are used in the tangent system. For a variable ``u`` the associated test functions are ``Test_u`` and ``Test2_u``. The assembly string have to be linear with respect to test functions. As a result of the presence of the term ``Test_u`` on a assembly string, the expression will be evaluated for each shape function of the finite element corresponding to the variable ``u``. On a given element, if the finite element have ``N`` shape functions ans if ``u`` is a scalar field, the value of ``Test_u`` will be the value of each shape function on the current point. So ``Test_u`` return if face a vector of ``N`` values. But of course, this is implicit in the language. So one do not have to care about this.
+The first order test functions are used in the weak formulation (which derive from the potential equation if it exists) and the second order test functions are used in the tangent system. For a variable ``u`` the associated test functions are ``Test_u`` and ``Test2_u``. The assembly strings have to be linear with respect to test functions. As a result of the presence of the term ``Test_u`` on an assembly string, the expression will be evaluated for each shape function of the finite element corresponding to the variable ``u``. On a given element, if the finite element has ``N`` shape functions and if ``u`` is a scalar field, the value of ``Test_u`` will be the value of each shape function on the current point. So ``Test_u`` represents in fact a vector of ``N`` values. But of course, this is implicit in the language. So the user does not have to care about this.
 
 
 Gradient
 --------
 
-The gradient of a variable or of test functions are identified by ``Grad_`` followed by the variable name or by ``Test_`` followed itself by the variable name. This is available for FEM variables (or constants) only. For instance ``Grad_u``, ``Grad_v``, ``Grad_p``, ``Grad_pressure``, ``Grad_electric_field`` and ``Grad_Test_u``, ``Grad_Test_v``, ``Grad_Test_p``, ``Grad_Test_pressure``, ``Grad_Test_electric_field``. The gradient is either a vector for scalar variables or a matrix for vector field variables. In the latter case, the first index corresponds to the vector field dimension and the second one to the index of the partial derivative.  ``Div_u`` and ``Div_Test_u`` are some optimized shortcuts for ``Trace(Grad_u)`` and ``Trace(Grad_Test_u)``, respectively.
+The gradient of a variable or of test functions is identified by ``Grad_`` followed by the variable name or by ``Test_`` followed itself by the variable name. This is available for FEM variables (or constants) only. For instance ``Grad_u``, ``Grad_v``, ``Grad_p``, ``Grad_pressure``, ``Grad_electric_field`` and ``Grad_Test_u``, ``Grad_Test_v``, ``Grad_Test_p``, ``Grad_Test_pressure``, ``Grad_Test_electric_field``. The gradient is either a vector for scalar variables or a matrix for vector field variables. In the latter case, the first index corresponds to the vector field dimension and the second one to the index of the partial derivative.  ``Div_u`` and ``Div_Test_u`` are some optimized shortcuts for ``Trace(Grad_u)`` and ``Trace(Grad_Test_u)``, respectively.
 
 Hessian
 -------
 
-Similarly, the Hessian of a variable or of test functions are identified by ``Hess_`` followed by the variable name or by ``Test_`` followed itself by the variable name. This is available for FEM variables only. For instance ``Hess_u``, ``Hess_v``, ``Hess_p``, ``Hess_pressure``, ``Hess_electric_field`` and ``Hess_Test_u``, ``Hess_Test_v``, ``Hess_Test_p``, ``Hess_Test_pressure``, ``Hess_Test_electric_field``. The Hessian is either a matrix for scalar variables or a third order tensor for vector field variables. In the latter case, the first index corresponds to the vector field dimension and the two remaining to the indices of partial derivatives.
+Similarly, the Hessian of a variable or of test functions is identified by ``Hess_`` followed by the variable name or by ``Test_`` followed itself by the variable name. This is available for FEM variables only. For instance ``Hess_u``, ``Hess_v``, ``Hess_p``, ``Hess_pressure``, ``Hess_electric_field`` and ``Hess_Test_u``, ``Hess_Test_v``, ``Hess_Test_p``, ``Hess_Test_pressure``, ``Hess_Test_electric_field``. The Hessian is either a matrix for scalar variables or a third order tensor for vector field variables. In the latter case, the first index corresponds to the vector field dimension and the two remaining to the indices of partial derivatives.
 
 
 Predefined scalar functions
@@ -424,7 +424,7 @@ A certain number of predefined scalar functions can be used. The exhaustive list
   - ``neg_part(t)`` (:math:`-tH(-t)`), ``max(t, u)``, ``min(t, u)``
   - ``sqr_neg_part(t)`` (:math:`(tH(-t))^2`)
 
-A scalar function can be applied to a scalar expression, but also to a tensor one. If is is applied to a tensor expression, is is applied componentwise and the result is a tensor with the same dimensions. For functions having two arguments (pow(t,u), min(t,u) ...) if two non-scalar arguments are passed, the dimension have to be the same. For instance "max([1;2],[0;3])" will return "[0;3]".
+A scalar function can be applied to a scalar expression, but also to a tensor one. If it is applied to a tensor expression, it is applied componentwise and the result is a tensor with the same dimensions. For functions having two arguments (pow(t,u), min(t,u) ...) if two non-scalar arguments are passed, the dimension have to be the same. For instance "max([1;2],[0;3])" will return "[0;3]".
 
 
 
@@ -617,7 +617,7 @@ GWFL provides some predefined nonlinear operator. Each nonlinear operator is ava
 Macro definition
 ----------------
 
-GWFL allows the use of macros that are either predefined in the model or ga_workspace object or directly defined at the begining of an assembly string. The definition into a ga_workspace or model object is done as follows::
+GWFL allows the use of macros that are either predefined in the model or ga_workspace object or directly defined at the beginning of an assembly string. The definition into a ga_workspace or model object is done as follows::
 
   workspace.add_macro(name, expr)
 
@@ -654,13 +654,13 @@ A macro can be deleted from a ga_workspace or model object as follows::
   workspace.del_macro(name)
   model.del_macro(name)
 
-Note that a macro defined at the begining of an assembly string is only defined in the assembly string and cannot be used later without being added in a model or ga_workspace object.
+Note that a macro defined at the beginning of an assembly string is only defined in the assembly string and cannot be used later without being added in a model or ga_workspace object.
 
 The macros are expanded inline at the lexical analysis phase. Note that a the compilation phase, the repeated expressions are automatically factorized and computed only once.
 
 Explicit Differentiation
 ------------------------
-The workspace object automatically differentiate terms that are of lower deriation order. However, it is also allowed to explicitly differentiate an expression with respect to a variable. One interest is that the automatic differentiation performs a derivative with respect to all the declared variables of model/workspace but this is not necessarily the expected behavior when using a potential energy, for instance. The syntax is::
+The workspace object automatically differentiates terms that are of lower derivation order. However, it is also allowed to explicitly differentiate an expression with respect to a variable. One interest is that the automatic differentiation performs a derivative with respect to all the declared variables of model/workspace but this is not necessarily the expected behavior when using a potential energy, for instance. The syntax is::
 
   Diff(expression, variable)
 
@@ -707,7 +707,7 @@ is equivalent to::
 
   Grad_u
 
-for a varible ``u``.
+for a variable ``u``.
 
 .. _ud-gasm-high-transf:
 
@@ -789,7 +789,7 @@ In that case, the equality will only be prescribed in the part of the domain whe
 Element extrapolation transformation
 ------------------------------------
 
-A specific transformation (see previous section) is defined in order to allows the evaluation of certain quantities by extrapolation with respect to another element (in general a neighbor element). This is not strictly speaking a transformation since the point location remain unchanged, but the evaluation is made on another element extrapolating the shape functions outside it. This transformation is used for stabilization term in fictitious domain applications (with cut elements) where it is more robust to extrapolate some quantities on a neighbor element having a sufficiently large intersection with the real domain than evaluating them on the current element if it has a small intersection with the real domain. The functions allowing to add such a transformation to a model or a workspace are::
+A specific transformation (see previous section) is defined in order to allow the evaluation of certain quantities by extrapolation with respect to another element (in general a neighbor element). This is not strictly speaking a transformation since the point location remains unchanged, but the evaluation is made on another element extrapolating the shape functions outside it. This transformation is used for stabilization terms in fictitious domain applications (with cut elements) where it is more robust to extrapolate some quantities on a neighbor element having a sufficiently large intersection with the real domain than evaluating them on the current element if it has a small intersection with the real domain. The functions allowing to add such a transformation to a model or a workspace are::
 
   add_element_extrapolation_transformation
   (model, transname, my_mesh, std::map<size_type, size_type> &elt_corr);
@@ -935,7 +935,7 @@ where ``pelementary_transformation`` is a pointer to an object deriving from ``v
 
 where ``u`` is one of the FEM variables of the model/workspace, and ``dest`` is an optional parameter which should be a variable or data name of the model and will correspond to the target fem of the transformation. If omitted, by default, the transformation is from the fem of the first variable to itself. 
 
-A typical transformation is the the one for the projection on rotated RT0 element for two-dimensional elements which is an ingredient of the MITC plate element. It can be added thanks to the function (defined in :file:`src/getfem/getfem_linearized_plates.h`)::
+A typical transformation is the one for the projection on rotated RT0 element for two-dimensional elements which is an ingredient of the MITC plate element. It can be added thanks to the function (defined in :file:`src/getfem/getfem_linearized_plates.h`)::
 
   add_2D_rotated_RT0_projection(model, transname)
 
@@ -991,7 +991,7 @@ Additionally, note that, when integrating on a level-set with a ``mesh_im_level_
 Storage of sub-expressions in a getfem::im_data object during assembly
 ----------------------------------------------------------------------
 
-It is possible to store in a vector depending on a getfem::im_data object a part of an assembly computation, for instance in order to use this computation in another assembly. This is an alternative to the interpolation functions which allows not to compute twice the same expression.
+It is possible to store in a vector depending on a getfem::im_data object a part of an assembly computation, for instance in order to use this computation in another assembly. This is an alternative to the interpolation functions which allows to avoid computing the same expression twice.
 
 The method to add such an assignment in the assembly is the following for a model or a ga_workspace::
 
@@ -1003,10 +1003,10 @@ The method to add such an assignment in the assembly is the following for a mode
 
 It adds expression `expr` to be evaluated at assembly time and being
 assigned to the data `dataname` which has to be of im_data type.
-`order` represents the order of assembly where this assignement has to be
+`order` represents the order of assembly where this assignment has to be
 done (potential(0), weak form(1) or tangent system(2) or at each
 order(-1)). The default value is 1.
-If before = 1, the the assignement is performed before the computation
+If before = 1, the assignment is performed before the computation
 of the other assembly terms, such that the data can be used in the
 remaining of the assembly as an intermediary result (be careful that it is
 still considered as a data, no derivation of the expression is performed for

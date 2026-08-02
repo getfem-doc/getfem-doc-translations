@@ -11,14 +11,14 @@ Tools for HHO (Hybrid High-Order) methods
 
 
 
-HHO method are hybrid methods in the sense that they have both degrees of freedom located on the element of a mesh and on the faces of the elements which represent separated approximations. HHO method are primal methods in the sense that both the degree of freedom in the element and on the faces represent the main unknown of the problem (no lagrange multipliers is introduced). The interest of these methods, first developped in  [Di-Er2015]_, [Di-Er2017]_ is their accuracy and their great robustness, in particular with respect to the element shapes and their locking-free properties. Moreover, they can be extended without difficulty to the approximation of nonlinear problems (see [AB-ER-PI2018]_ for hyper-elasticity, [AB-ER-PI2019]_ for plasticity and [ca-ch-er2019]_ for contact problems).
+HHO methods are hybrid methods in the sense that they have both degrees of freedom located on the elements of a mesh and on the faces of the elements which represent separated approximations. HHO methods are primal methods in the sense that both the degrees of freedom in the element and on the faces represent the main unknown of the problem (no Lagrange multipliers are introduced). The interest of these methods, first developed in [Di-Er2015]_, [Di-Er2017]_ is their accuracy and their great robustness, in particular with respect to the element shapes and their locking-free properties. Moreover, they can be extended without difficulty to the approximation of nonlinear problems (see [AB-ER-PI2018]_ for hyper-elasticity, [AB-ER-PI2019]_ for plasticity and [ca-ch-er2019]_ for contact problems).
 
 HHO methods can be applied to arbitrary shape elements. However, the implementation in |gf| is for the moment limited to standard elements : simplices, quadrilaterals, hexahedrons, ... Moreover this implementation is still experimental and not pretending to optimality. For the moment, there is no tool to make an automatic condensation of internal dofs.
 
 HHO elements
 ------------
 
-HHO elements are composite ones having a polynomial approximation space for the interior of the element and a polynomial approximation for each face of the element. Moreover, this is a discontinous approximation, in the sens that no continuity is prescribed between the approximation inside the element and the approximation on the faces, neither than between the approximations on two different faces of the element. However, when two neighbor elements share a face, the approximation on this face is shared by the two elements. |gf| provide a specific method simply called ``FEM_HHO(fem_int, fem_face1, fem_face2, ...)`` which allows to build an hybrid method from standard finite element spaces. For instance, on a triangle, a possible HHO method can be obtained with::
+HHO elements are composite ones having a polynomial approximation space for the interior of the element and a polynomial approximation for each face of the element. Moreover, this is a discontinuous approximation, in the sense that no continuity is prescribed between the approximation inside the element and the approximation on the faces, nor between the approximations on two different faces of the element. However, when two neighbor elements share a face, the approximation on this face is shared by the two elements. |gf| provides a specific method simply called ``FEM_HHO(fem_int, fem_face1, fem_face2, ...)`` which allows to build an hybrid method from standard finite element spaces. For instance, on a triangle, a possible HHO method can be obtained with::
 
   getfem::pfem pf = getfem::fem_descriptor("HHO(FEM_SIMPLEX_IPK(2,2), FEM_SIMPLEX_CIPK(1,2))");
 
@@ -28,8 +28,8 @@ For the moment, the fursnished element for interior and faces are
 - ``FEM_SIMPLEX_IPK(n,k)`` : interior PK element of degree k for the simplices in dimension n (equivalent to ``FEM_PK_DISCONTINUOUS(n,k,0.1)``).
 - ``FEM_QUAD_IPK(n,k)`` : interior PK element of degree k for the quadrilaterals in dimension n.
 - ``FEM_PRISM_IPK(n,k)`` : interior PK element of degree k for the prisms in dimension n.
-- ``FEM_SIMPLEX_CIPK(n,k)`` : interior PK element on simplices which is additionnaly connectable. Designed to be use on HHO element face. 
-- ``FEM_QUAD_CIPK(k)`` : interior PK element on a quadrilateral which is additionnaly connectable. Designed to be use on HHO element face. 
+- ``FEM_SIMPLEX_CIPK(n,k)`` : interior PK element on simplices which is additionally connectable. Designed to be used on HHO element faces.
+- ``FEM_QUAD_CIPK(k)`` : interior PK element on a quadrilateral which is additionally connectable. Designed to be used on HHO element faces.
 
 Reconstruction operators
 ------------------------
@@ -52,7 +52,7 @@ In order to be used, the elementary transformation corresponding to this operato
 
 where ``transname`` is an arbitrary name which will designate the transformation in GWFL (the generic weak form language). Then, it will be possible to refer to the reconstructed gradient of a variable ``u`` into GWFL as ``Elementary_transformation(u, HHO_grad, Gu)``, if ``transname="HHO_grad"``. The third parameter of the transformation ``Gu`` should be a fem variable or a data of the model. This variable will not be used on itself but will determine the finite element space of the reconstruction (the space :math:`V_G`).
 
-This is an example of use with the Python interface for a two-dimensional triangule mesh ``m`` ::
+This is an example of use with the Python interface for a two-dimensional triangular mesh ``m`` ::
 
   mfu   = gf.MeshFem(m, 1)
   mfgu  = gf.MeshFem(m, N)

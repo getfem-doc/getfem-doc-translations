@@ -15,7 +15,7 @@ ALE Support for object having a large rigid body motion
 ALE terms for rotating objects
 ------------------------------
 
-This section present a set of bricks facilitating the use of an ALE formulation for rotating bodies having a rotational symmetry (typically a train wheel).
+This section presents a set of bricks facilitating the use of an ALE formulation for rotating bodies having a rotational symmetry (typically a train wheel).
 
 Theoretical background
 ++++++++++++++++++++++
@@ -72,7 +72,7 @@ With :math:`\bar{X} = R(t)X` the new considered deformation is
   \bar{\varphi}(t,\bar{X}) = \varphi(X) - Z(t)
 
 
-Thanks to the rotation symmetry of the reference configuration :math:`\Omega^0:`, we note that :math:`\bar{\Omega}^0 = r(t, \Omega^0)` is independant of :math:`t` and will serve as the new reference configuration. This is illustrated in the following figure:
+Thanks to the rotation symmetry of the reference configuration :math:`\Omega^0:`, we note that :math:`\bar{\Omega}^0 = r(t, \Omega^0)` is independent of :math:`t` and will serve as the new reference configuration. This is illustrated in the following figure:
 
 .. _ud-fig-rotating_cylinder_conf:
 
@@ -167,7 +167,7 @@ where ``parameters`` are the parameters ...
 ALE terms for a uniformly translated part of an object
 ------------------------------------------------------
 
-This section present a set of bricks facilitating the use of an ALE formulation for an object being potentially infinite in one direction and which whose part of interests (on which the computation is considered) is translated uniformly in that direction (typically a bar).
+This section presents a set of bricks facilitating the use of an ALE formulation for an object being potentially infinite in one direction and whose part of interest (on which the computation is considered) is translated uniformly in that direction (typically a bar).
 
 Theoretical background
 ++++++++++++++++++++++
@@ -189,7 +189,7 @@ and :math:`\bar{\varphi}(t, X) : \rm I\hspace{-0.15em}R_+ \times \bar{\Omega}^{0
 .. math::
   \bar{\varphi}(t,\bar{X}) = \varphi(t,X), ~~~\mbox{ with } \bar{X} = X - Z(t),
 
-where :math:`Z(t) = z(t)E_1`. The interest of :math:`\bar{\Omega}^{0}` is of course to be time independant. Of course, some special boundary conditions have to be defined on :math:`\{\alpha\} \times \omega^0` and :math:`\{\beta\} \times \omega^0` (absorbing or periodic boundary conditions) in order to approximate the fact that the body is infinite.
+where :math:`Z(t) = z(t)E_1`. The interest of :math:`\bar{\Omega}^{0}` is of course to be time independent. Of course, some special boundary conditions have to be defined on :math:`\{\alpha\} \times \omega^0` and :math:`\{\beta\} \times \omega^0` (absorbing or periodic boundary conditions) in order to approximate the fact that the body is infinite.
 
 .. _ud-fig-translating_bar:
 

@@ -277,7 +277,7 @@ Other examples
   in the area where the stress is singular (the transition between the clamped
   area and the neumann boundary).
 
-* the :file:`demo_nonlinear_elasticity.py` script shows a 3D bar which is is
+* the :file:`demo_nonlinear_elasticity.py` script shows a 3D bar which is
   bended and twisted. This is a quasi-static problem as the deformation is
   applied in many steps. At each step, a non-linear (large deformations)
   elasticity problem is solved.

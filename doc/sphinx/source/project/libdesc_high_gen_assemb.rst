@@ -25,7 +25,7 @@ Files
    :widths: 8, 15
 
    :file:`getfem_generic_assembly.h`, "Main header for exported definitions. Only this header has to be included to use the generic assembly. Other headers of the module are for internal use only."
-   :file:`getfem_generic_assembly_tree.h` and :file:`getfem_generic_assembly_tree.cc`, "Definition of the tree structure and basic operations on it, including reading an assembly string and transform it in a syntax tree and make the invert transformation of a tree into a string."
+   :file:`getfem_generic_assembly_tree.h` and :file:`getfem_generic_assembly_tree.cc`, "Definition of the tree structure and basic operations on it, including reading an assembly string and transforming it into a syntax tree and making the inverse transformation of a tree into a string."
    :file:`getfem_generic_assembly_function_and_operators.h` and :file:`getfem_generic_assembly_function_and_operators.cc`, "Definition of redefined function and nonlinear operator of GWFL."
    :file:`getfem_generic_assembly_semantic.h` and :file:`getfem_generic_assembly_semantic.cc`, "Semantic analysis and enrichment of the syntax tree. Include some operations such as making the derivation of a tree with respect to a variable or computing the tree corresponding to the gradient of an expression."
    :file:`getfem_generic_assembly_workspace.cc`, "Methodes of the workspace object (defined in :file:`getfem_generic_assembly.h`)."
@@ -36,7 +36,7 @@ Files
 A few implementation details
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The assembly string is transformed in an assembly tree by a set of function in :file:`src/getfem\_generic\_assembly.cc`. The process has 6 steps:
+The assembly string is transformed into an assembly tree by a set of functions in :file:`src/getfem\_generic\_assembly.cc`. The process has 6 steps:
 
  - Lexical analysis with the procedure ``ga_get_token(...)``.
 
@@ -59,7 +59,7 @@ Moreover, there is specifics function for interpolation operations (ga_interpola
 Assembly tree
 ^^^^^^^^^^^^^
 
-Assembly strings are transformed into assembly trees by ``ga_read_string(...)``. Assembly trees are syntax trees that are progressively enriched in information in the differents steps (semantic analysis, derivation, compilation).
+Assembly strings are transformed into assembly trees by ``ga_read_string(...)``. Assembly trees are syntax trees that are progressively enriched in information in the different steps (semantic analysis, derivation, compilation).
 
 The object ``ga_tree`` represents an assembly tree. It is a copyable object that only contains a pointer to the root of the tree. Each tree node is an object ``ga_tree_node`` that contains the main following information:
 
@@ -139,7 +139,7 @@ Optimized instructions for variable evaluation, operations, vector and matrix as
 Predefined functions
 ^^^^^^^^^^^^^^^^^^^^
 
-Some predefined scalar functions are available in GWFL in order to describe a weak formulation (or also to make basic algebraic computations). This is limited to scalar functions of one or two arguments. Due to the automatic differentiation used to obtain the tangent system of described problems, the derivative each function have to be available. The principle retained is the following: For each predefined function is available:
+Some predefined scalar functions are available in GWFL in order to describe a weak formulation (or also to make basic algebraic computations). This is limited to scalar functions of one or two arguments. Due to the automatic differentiation used to obtain the tangent system of described problems, the derivative of each function has to be available. The principle retained is the following: For each predefined function is available:
   - A C++ function which computes the value given the argument(s).
   - The support of the function in the first each argument in term of a
     (possibly infinite) interval (this is for simplification of expressions).

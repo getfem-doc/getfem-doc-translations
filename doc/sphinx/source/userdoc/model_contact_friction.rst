@@ -19,7 +19,7 @@ Approximation of contact
 ++++++++++++++++++++++++
 
 For small deformation problems submitted
-a simple (compared to large deformation !) expression of the contact with friction condition is usually used where the tangential displacement do not influence the normal one. This is an approximation in the sense that if an obstacle is not perfectly flat, the tangential displacement of course influence the point where the contact holds. This will not be the case in small deformation where the contact condition can be considered to be described on the reference configuration.
+a simple (compared to large deformation !) expression of the contact with friction condition is usually used where the tangential displacement does not influence the normal one. This is an approximation in the sense that if an obstacle is not perfectly flat, the tangential displacement of course influences the point where the contact holds. This will not be the case in small deformation where the contact condition can be considered to be described on the reference configuration.
 
 There are mainly two largely used discretizations of the contact with friction condition in this framework: a direct nodal contact condition (usually prescribed on the displacement finite element nodes) or a weak nodal contact condition (usually prescribed on the multiplier finite element nodes). The two discretization leads to similar system. However, the interpretation of quantities is not the same. A third approach is developed on Getfem contact bricks: a weak integral contact condition. It needs the computation of a non-linear integral on the contact boundary at each iteration but the numerical resolution is potentially more scalable because it derives directly from continuous principles.
 
@@ -311,7 +311,7 @@ This function adds a frictionless contact brick on ``varname_u`` thanks to a mul
 
 The parameter `aug_version` indicates the augmentation strategy : 1 for the non-symmetric Alart-Curnier augmented Lagrangian, 2 for the symmetric one, 3 for the unsymmetric method based on augmented multipliers.
 
-Note that is possible to change the basic contact matrix :math:`B_N` by using::
+Note that it is possible to change the basic contact matrix :math:`B_N` by using::
 
      getfem::contact_brick_set_BN(md, indbrick);
 
@@ -349,7 +349,7 @@ The parameter `aug_version` indicates the augmentation strategy :
 3 for the unsymmetric method based on augmented multipliers and
 4 for the unsymmetric method based on augmented multipliers with De Saxce projection.
 
-Note that is possible to change the basic contact matrices :math:`B_N` and :math:`B_T` by using::
+Note that it is possible to change the basic contact matrices :math:`B_N` and :math:`B_T` by using::
 
      getfem::contact_brick_set_BN(md, indbrick);
      getfem::contact_brick_set_BT(md, indbrick);

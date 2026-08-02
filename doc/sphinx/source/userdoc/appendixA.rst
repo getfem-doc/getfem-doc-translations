@@ -452,13 +452,13 @@ Elements with hierarchical basis
 
 The idea behind hierarchical basis is the description of the solution at different
 level: a rough level, a more refined level ... In the same discretization some
-degrees of freedom represent the rough description, some other the more rafined
+degrees of freedom represent the rough description, some other the more refined
 and so on. This corresponds to imbricated spaces of discretization. The
 hierarchical basis contains a basis of each of these spaces (this is not the case
 in classical Lagrange elements when the mesh is refined).
 
 Among the advantages, the condition number of rigidity matrices can be greatly
-improved, it allows local raffinement and a resolution with a multigrid approach.
+improved, it allows local refinement and a resolution with a multigrid approach.
 
 Hierarchical elements with respect to the degree
 +++++++++++++++++++++++++++++++++++++++++++++++++

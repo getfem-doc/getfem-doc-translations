@@ -157,7 +157,7 @@ where :math:`X` is the vector of coordinates of the point. We add this transform
 
   md.add_interpolate_transformation_from_expression('Proj1', mesh1, mesh2, '[X(1);0]')
 
-As a consequence, it will be possible to use this transformation, from the mesh of the wheel to the mesh of the foundation, into GWFL expressions. Notes that this is here a very simple constant expression. More complex expressions depending on the data or even the variables of the model can be used. If the expression of a transformation depends on the variable of the model, the tangent linear system will automatically takes into account this dependence (see :ref:`ud-gasm-high-transf` for more details). Note also that transformation corresponding to a large sliding contact and automatically searching for the correspondence between contact boundaries exist in |gf| (see :ref:`ud-model-contact-friction-large-hlgav`).
+As a consequence, it will be possible to use this transformation, from the mesh of the wheel to the mesh of the foundation, into GWFL expressions. Note that this is here a very simple constant expression. More complex expressions depending on the data or even the variables of the model can be used. If the expression of a transformation depends on the variable of the model, the tangent linear system will automatically take into account this dependence (see :ref:`ud-gasm-high-transf` for more details). Note also that transformation corresponding to a large sliding contact and automatically searching for the correspondence between contact boundaries exist in |gf| (see :ref:`ud-model-contact-friction-large-hlgav`).
 
 Using the defined transformation, we can write an integral contact condition using an augmented Lagrangian formulation (see :ref:`ud-model-contact-friction` for more details). The corresponding term (to be added to the rest of the weak formulation) reads:
 
@@ -183,7 +183,7 @@ Using GWFL, the contact condition can be added by:
 Prescribing the rigidity of the rim and the vertical force
 **********************************************************
 
-We have now to prescribe the rigidity of the rim. This is a non-standard condition, since we do not know a priori what will be the vertical displacement of the rim. We can use an additional unknown for that vertical displacement. We add an additional fixed size variable `alpha_D` (which mean that it does not a finite element field) of size 1 with
+We have now to prescribe the rigidity of the rim. This is a non-standard condition, since we do not know a priori what will be the vertical displacement of the rim. We can use an additional unknown for that vertical displacement. We add an additional fixed size variable `alpha_D` (which mean that it does not have a finite element field) of size 1 with
 
 .. code-block:: python
 
@@ -218,7 +218,7 @@ For more robustness, a small penalization on :math:`alpha_D` can be added
   md.add_linear_term(mim1, '1E-6*alpha_D*Test_alpha_D');
 
 
-Note that the fixed size variable `alpha_D` is linked to each points of the rim boundary. This means that the line of the tangent matrix corresponding to `alpha_D` may have a lot of nonzero components. This is why such a use of fixed size variable have to be done with care.
+Note that the fixed size variable `alpha_D` is linked to each points of the rim boundary. This means that the line of the tangent matrix corresponding to `alpha_D` may have a lot of nonzero components. This is why such a use of fixed size variables has to be done with care.
 
 Model solve
 ***********

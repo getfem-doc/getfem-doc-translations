@@ -16,7 +16,7 @@ Example of a complete Poisson problem
 The following example is a part of the test program
 :file:`tests/laplacian_with_bricks.cc`. Construction of the mesh and finite
 element methods are omitted. It is assumed that a mesh is build and two finite
-element methods ``mf_u`` and ``mf_rhs`` are build on this mesh. Is is also
+element methods ``mf_u`` and ``mf_rhs`` are built on this mesh. It is also
 assumed that ``NEUMANN_BOUNDARY_NUM`` and ``DIRICHLET_BOUNDARY_NUM`` are two
 valid boundary indices on that mesh. The code begins by the definition of three
 functions which are interpolated on ``mf_rhs`` in order to build the data for the

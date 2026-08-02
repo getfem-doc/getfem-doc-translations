@@ -112,7 +112,7 @@ and for a matrix type::
   gmm::linalg_traits<M>::do_clear(m)  --> make a clear on the matrix
 
 
-This is this structure you have to fill in to interface a new vector or matrix type. You can see some examples in ``gmm/gmm_interface.h`` . Most of the generic algorithms are in ``gmm/gmm_blas.h`` .
+This is the structure you have to fill in to interface a new vector or matrix type. You can see some examples in ``gmm/gmm_interface.h`` . Most of the generic algorithms are in ``gmm/gmm_blas.h`` .
 
 
 How to iterate on the components of a vector

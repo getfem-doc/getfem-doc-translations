@@ -50,7 +50,7 @@ The raytracing transformation is added without any slave or master contact bound
              const std::string &transname, const mesh &m,
              const std::string &dispname, size_type region)
 
-where ``dispname`` is the variable name which represent the displacement on that contact
+where ``dispname`` is the variable name which represents the displacement on that contact
 boundary. The difference between master and slave contact boundary is that the contact detection is to be performed starting from a slave or master boundary toward a master boundary. The contact detection is not performed toward a slave boundary. Consequently, only the influence boxes of the elements of the master surfaces are computed and stored.
 
 It is also possible to add a rigid obstacle (considered as a master surface) thanks to the function::
@@ -59,9 +59,9 @@ It is also possible to add a rigid obstacle (considered as a master surface) tha
              const std::string &transname,
              const std::string &expr, size_type N)
 
-where ``expr`` is the expression of a signed distance to the obstacle using the syntax of GWFL (``X`` being the current position, ``X(0)``, ``X(1)`` ... the corresponding components). For instance an expression ``X(0) + 5`` will correspond to a flat obstacle lying on the right of the position ``-5`` of the first coordinate. Be aware that the expression have to be close to a signed distance, which in particular means that the gradient norm have to be close to 1.
+where ``expr`` is the expression of a signed distance to the obstacle using the syntax of GWFL (``X`` being the current position, ``X(0)``, ``X(1)`` ... the corresponding components). For instance an expression ``X(0) + 5`` will correspond to a flat obstacle lying on the right of the position ``-5`` of the first coordinate. Be aware that the expression has to be close to a signed distance, which in particular means that the gradient norm has to be close to 1.
 
-In order to distinguish between non-contact situations and the occurence of a contact with another deformable body or with a rigid obstacle, the transformation returns an integer identifier which can be used by the `Interpolate_filter` command of GWFL (see :ref:`ud-gasm-high-transf`). The different values:
+In order to distinguish between non-contact situations and the occurrence of a contact with another deformable body or with a rigid obstacle, the transformation returns an integer identifier which can be used by the `Interpolate_filter` command of GWFL (see :ref:`ud-gasm-high-transf`). The different values:
 
 * 0 : no contact found on this Gauss point
 
@@ -262,7 +262,7 @@ The following nonlinear operators are defined in GWFL (see :ref:`ud-gasm-high`):
 
     where :math:`(\cdot)_-` is the negative part (:math:`(x)_- = (-x)_+`) and :math:`f_1, f_2, f_3` are the three components of the friction coefficient. Note that the components :math:`f_2, f_3` are optional. If a scalar fiction coefficient is given (only :math:`f_1`) then this corresponds to the classical Coulomb friction law. If a vector of two components is given  (only :math:`f_1, f_2`) then this corresponds to a Coulomb friction with a given threshold. Finally, if a vector of three components is given, the friction law correspongs to the expression of :math:`\tau` given above.
 
-    The expression :math:`P_{B(n,\tau)}(q)` refers to the orthogonal projection (this is link to the return mapping algorithm) on the tangential ball (with respect to :math:`n` of radius :math:`\tau`.
+    The expression :math:`P_{B(n,\tau)}(q)` refers to the orthogonal projection (this is linked to the return mapping algorithm) on the tangential ball (with respect to :math:`n` of radius :math:`\tau`.
 
     The derivatives can be expressed as follows with :math:`T_n = (I - n \otimes n)` and :math:`q_{_T} = T_n q`:
 

@@ -14,7 +14,7 @@ A method to compute a pure convection is defined in the file
 
   getfem::convect(mf, U, mf_v, V, dt, nt, option = CONVECT_EXTRAPOLATION);
 
-where ``mf`` is a variable of type |gf_mf|, ``U`` is a vector which represent the
+where ``mf`` is a variable of type |gf_mf|, ``U`` is a vector which represents the
 field to be convected, ``mf_v`` is a |gf_mf| for the velocity field, ``V`` is the
 dof vector for the velocity field, ``dt`` is the pseudo time of convection and
 ``nt`` the number of iterations for the computation of characteristics. ``option`` is an option for the boundary condition where there is a re-entrant convection. The possibilities are getfem::CONVECT_EXTRAPOLATION (extrapolation of the field on the nearest element) or getfem::CONVECT_UNCHANGED (no change of the value on the boundary).

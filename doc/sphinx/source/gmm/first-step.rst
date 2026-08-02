@@ -51,7 +51,7 @@ You have more than one possibility to solve a linear system. If you have a dense
   std::cout << M << " times " << gmm::vref(X) << " is equal to " << gmm::vref(Bagain) << endl;
 
 
-If, now, you have a sparse system coming for example from a pde discretization, you have various iterative solvers, with or without preconditioners. This is an example with a precontionned GMRES::
+If, now, you have a sparse system coming for example from a pde discretization, you have various iterative solvers, with or without preconditioners. This is an example with a preconditioned GMRES::
 
   int nbdof = 1000; // number of degrees of freedom.
   gmm::row_matrix< gmm::rsvector<double> > M(nbdof, nbdof); // a sparse matrix

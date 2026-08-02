@@ -117,7 +117,7 @@ You can run a ::
   git pull origin master
   git merge master
 
-in order to integrate the modifications which has been validated and integrated to the master branch. This is recommended to run this command before any request for integration of a modification in the master branch.
+in order to integrate the modifications which have been validated and integrated to the master branch. This is recommended to run this command before any request for integration of a modification in the master branch.
 
 
 Some useful git commands

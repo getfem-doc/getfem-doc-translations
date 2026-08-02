@@ -73,7 +73,7 @@ The next example is still the Stokes problem, inside a 3D cylindrical tank. The 
 Helmholtz equation
 ------------------
 
-This is a basic 2D scattering example. An incoming plane wave is scaterred by a perfectly
+This is a basic 2D scattering example. An incoming plane wave is scattered by a perfectly
 reflective circular obstacle. The mesh is made of only 25 quadrangles whose geometric
 transformations are polynomials of degree 6. Computations are done with a P10 FEM, hence
 it is possible to have 2 wavelength per element ! (with a P1 fem, the rule is at least 6
@@ -85,7 +85,7 @@ elements per wavelength). The source is here: :ref:`helmholtz-source`.
 
 .. centered:: |im-helm1| |im-helm2|
 
-helmholtz mesh the real part of the scaterred field
+helmholtz mesh the real part of the scattered field
 
 
 Eigenmodes of a structure (thanks to Paolo Bertolo)

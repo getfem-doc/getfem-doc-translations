@@ -229,7 +229,7 @@ Post treatment
 
 Several tools are available to represent the solution only on a side of a levels-set or on both taking into account the discontinuity (for Xfem approximation).
 
-When a cut-mesh ``mls`` is used (i.e. a ``getfem::mesh_level_set`` object), is is possible to obtain the set of all sub-elements with the command::
+When a cut-mesh ``mls`` is used (i.e. a ``getfem::mesh_level_set`` object), it is possible to obtain the set of all sub-elements with the command::
 
   mls.global_cut_mesh(mcut);
 

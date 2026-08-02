@@ -124,7 +124,7 @@ with the complementary condition
 
 where :math:`0 < \theta \le 1` is the parameter of the :math:`\theta`-scheme. We exclude :math:`\theta = 0` because we will not consider explicit integration of plasticity. Let us recall that :math:`\theta = 1` corresponds to the backward Euler scheme and :math:`\theta = 1/2` to the Crank-Nicolson scheme (or trapezoidal rule) which is a second order consistent scheme. Note that the complementarity condition for the quantities at time step :math:`n` is prescribed at the previous time step (:math:`\sigma_{n}, \alpha_n, \mbox{and } \gamma_n` are supposed to be already determined).
 
-A solution would be to solve the whole problem with all the unknows, that is :math:`u_{n+1},  \gamma_{n+1}, \varepsilon^p_{n+1} \mbox{ and } A_{n+1}`. This is of course possible but would be a rather expensive strategy because of the resulting high number of degrees of freedom. A classical strategy (the return mapping one for instance, see [SO-PE-OW2008]_ or the closest point projection one) consist in integrating locally the plastic flow on each Gauss point of the considered integration method separately, or more precisely to consider on each Gauss point the maps
+A solution would be to solve the whole problem with all the unknowns, that is :math:`u_{n+1},  \gamma_{n+1}, \varepsilon^p_{n+1} \mbox{ and } A_{n+1}`. This is of course possible but would be a rather expensive strategy because of the resulting high number of degrees of freedom. A classical strategy (the return mapping one for instance, see [SO-PE-OW2008]_ or the closest point projection one) consists in integrating locally the plastic flow on each Gauss point of the considered integration method separately, or more precisely to consider on each Gauss point the maps
 
 .. math::
    {\mathscr E}^p : (u_{n+1}, \zeta_n, \eta_n) \mapsto \varepsilon^p_{n+1}
@@ -594,7 +594,7 @@ before any call of this function.
 A specific brick based on the low-level generic assembly for perfect plasticity
 ================================================================================
 
-This is an previous version of a elastoplasticity brick which is restricted to  isotropic perfect plasticity and is based on the low-level generic assembly. Its specificity which could be interesting for testing is that the flow rule is integrated on  finite element nodes (not on Gauss points).
+This is a previous version of an elastoplasticity brick which is restricted to isotropic perfect plasticity and is based on the low-level generic assembly. Its specificity which could be interesting for testing is that the flow rule is integrated on finite element nodes (not on Gauss points).
 
 The function adding this brick to a model is: ::
 

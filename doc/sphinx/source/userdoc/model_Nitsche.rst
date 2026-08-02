@@ -24,7 +24,7 @@ In the following, considering a variable :math:`u`, we will denote by
 the sum of all Neumann terms on this variable.
 Note that the Neumann term :math:`G` will often depend on the variable :math:`u` but it may also depend on other variables of the model.
 This is the case for instance for mixed formulations of incompressible elasticity.
-The Neumann terms depend also frequently on some parameters of the model (elasticity coefficients ...) but this is assumed to be contained in its expression.
+The Neumann terms depend also frequently on some parameters of the model (elasticity coefficients ...) but this is assumed to be contained in their expression.
 
 For instance, if there is a Laplace term (:math:`\Delta u`), applied on the variable :math:`u`, the Neumann term will be :math:`G = \dfrac{\partial u}{\partial n}` where :math:`n` is the outward unit normal on the considered boundary.
 If :math:`u` represents the displacements of a deformable body, the Neumann term will be :math:`G = \sigma(u)n`, where :math:`\sigma(u)` is the stress tensor depending on the constitutive law.
