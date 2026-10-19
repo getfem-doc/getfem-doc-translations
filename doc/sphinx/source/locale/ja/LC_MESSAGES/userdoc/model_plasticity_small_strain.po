@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 04:44+0000\n"
+"POT-Creation-Date: 2026-10-19 03:52+0000\n"
 "PO-Revision-Date: 2018-07-16 07:05+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -418,15 +418,9 @@ msgid ""
 " with a Newton method and for :math:`u_{n+1}` the unique remaining variable."
 " The advantage of the return mapping strategy is that the unique variable of"
 " the global solve is the displacement :math:`u_{n+1}`. A nonlinear solve on "
-"each Gauss point is often necessary which is usualy performed with a local "
+"each Gauss point is often necessary which is usually performed with a local "
 "Newton method."
 msgstr ""
-"これは，特に次のことを意味します :math:`(\\varepsilon^p_{n+1}, \\alpha_{n+1}) = ({\\mathscr "
-"E}^p(u_{n+1},  \\zeta_n, \\eta_n), {\\mathscr A}(u_{n+1}, \\zeta_{n}, "
-"\\eta_n))` は方程式 :eq:`thetascheme1` と :eq:`thetascheme2` "
-"の解です．これらの写像とそれらの接線モジュラス（通常，一貫した接線モジュラスと呼ばれる）は，Newton法を用いた問題のグローバルな解法で使用され，:math:`u_{n+1}`"
-" は一意な残りの変数です．Return Mapping法の利点は，グローバル解の一意の変数が変位 :math:`u_{n+1}` "
-"であることです．各Gauss点上の非線形解法がしばしば必要であり，通常はローカルNewton法で実行されます．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:145
 msgid ""
@@ -462,11 +456,9 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:151
 msgid ""
-"so that our two main unknows are now :math:`u_{n+1} \\mbox{ and } "
+"so that our two main unknowns are now :math:`u_{n+1} \\mbox{ and } "
 "\\xi_{n+1}`. The discretized plastic flow rule integration now reads:"
 msgstr ""
-"私たちの2つの主要な未知数は :math:`u_{n+1} \\mbox{ と } \\xi_{n+1}` "
-"になりました．離散化された塑性流れ則の積分は，次のようになります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:153
 msgid ""
@@ -581,17 +573,13 @@ msgstr ""
 #: ../source/userdoc/model_plasticity_small_strain.rst:187
 msgid ""
 "NOTE : The notation :math:`\\Delta \\xi_{n+1} = \\Delta t \\xi_{n+1}` is "
-"often used in the litterature. The choice here is to preserve the "
-"distinction between the two quantities, mainly because ot the possible use "
-"of adaptative time step : when the time step is changing, the value "
+"often used in the literature. The choice here is to preserve the distinction"
+" between the two quantities, mainly because of the possible use of "
+"adaptative time step : when the time step is changing, the value "
 ":math:`\\xi_n` has to be multiplied by the new time step, so that it is "
 "preferable to store :math:`\\xi_n` instead of :math:`\\Delta \\xi_{n}` when "
 "using the :math:`\\theta`-scheme."
 msgstr ""
-"注記：表記法 :math:`\\Delta \\xi_{n+1} = \\Delta t \\xi_{n+1}` "
-"は書体でよく使われます．ここでは，2つの量の間の差異を保存するためこれを選択しています．これは主に，適応可能な時間ステップの使用のためです．時間ステップが変化するとき，値"
-" :math:`\\xi_n` は， :math:`\\theta` -法で， :math:`\\Delta \\xi_{n}` の代わりに "
-":math:`\\xi_n` を使用することが望ましいです．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:191
 msgid "Plane strain approximation"
@@ -744,14 +732,11 @@ msgstr ""
 msgid ""
 "the in-plane components of the stress tensor. For elastoplasticity, it "
 "consists generally to apply the 2D plastic flow rule, prescribing the out-"
-"plane components of the stress tensor to be zero with the additionnal "
+"plane components of the stress tensor to be zero with the additional "
 "variables :math:`\\varepsilon^e_{1,3}`, :math:`\\varepsilon^e_{2,3}`, "
 ":math:`\\varepsilon^e_{3,3}` being unknown (see for instance [SO-PE-"
 "OW2008]_)."
 msgstr ""
-"のように応力テンソルの面内成分を与えます．弾塑性の場合，一般に，付加的な未知変数 :math:`\\varepsilon^e_{1,3}`, "
-":math:`\\varepsilon^e_{2,3}`, :math:`\\varepsilon^e_{3,3}` "
-"により，応力テンソルの面外成分をゼロにするように2次の塑性流れ則を適用することにより成り立ちます．（例えば， [SO-PE-OW2008]_ を参照）．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:241
 msgid ""
@@ -842,8 +827,8 @@ msgstr ""
 #: ../source/userdoc/model_plasticity_small_strain.rst:275
 msgid ""
 "Perfect isotropic associated elastoplasticity with Von-Mises criterion "
-"(Prandl-Reuss model)"
-msgstr "Von-Mises基準（Prandl-Reussモデル）を伴う完全な等方性弾性熱可塑性"
+"(Prandtl-Reuss model)"
+msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:277
 msgid ""
@@ -1152,12 +1137,10 @@ msgstr "線形等方性および移動硬化とVon-Mises基準を用いた等方
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:362
 msgid ""
-"We consider an isotropic elastic reponse and the internal variable "
+"We consider an isotropic elastic response and the internal variable "
 ":math:`\\alpha : \\Omega \\rightarrow \\rm I\\hspace{-0.15em}R` being the "
 "accumulated plastic strain which satisfies"
 msgstr ""
-"等方性弾性応答と内部変数 :math:`\\alpha : \\Omega \\rightarrow \\rm I\\hspace{-0.15em}R`"
-" を以下の条件を満たす累積塑性歪として考察します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:364
 msgid ""
@@ -1418,10 +1401,8 @@ msgid ""
 "and for the elimination of the multiplier, :math:`\\beta` has the same "
 "expression as in the previous section adapting the value of :math:`\\|B\\|`."
 " The expressions of :math:`\\bar{\\zeta}_n` and :math:`\\eta_n` have to be "
-"adapted accoringly."
+"adapted accordingly."
 msgstr ""
-":math:`\\beta` は，前の節で述べた式と同じ式 :math:`\\|B\\|` を持ちます． :math:`\\bar{\\zeta}_n`"
-" と :math:`\\eta_n` の表現は，条件に応じて適用する必要があります．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:450
 msgid "Souza-Auricchio elastoplasticity law (for shape memory alloys)"
@@ -1642,9 +1623,9 @@ msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:560
 msgid ""
-"Additionaly, the following function allow to pass from a time step to "
+"Additionally, the following function allow to pass from a time step to "
 "another for the small strain plastic brick: ::"
-msgstr "さらに，以下の関数は，微小塑性ひずみブリック要素の時間ステップをすすめることを許可します．"
+msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:567
 msgid ""
@@ -1652,15 +1633,11 @@ msgid ""
 "`add_small_strain_elastoplasticity_brick`,  so see the documentation of this"
 " function for any explanations. Basically, this brick computes the plastic "
 "strain and the plastic multiplier and stores them for the next step. "
-"Additionaly, it copies the computed displacement to the data that stores the"
-" displacement of the previous time step (typically \"u\" to "
+"Additionally, it copies the computed displacement to the data that stores "
+"the displacement of the previous time step (typically \"u\" to "
 "\"Previous\\_u\"). It has to be called before any use of "
 "`compute_small_strain_elastoplasticity_Von_Mises`."
 msgstr ""
-"パラメータは `add_small_strain_elastoplasticity_brick` "
-"のパラメータとまったく同じでなければなりません．そのため，この関数の説明を参照してください．基本的には，このブリック要素は塑性ひずみと塑性積演算子を計算し，次のステップのために保存します．さらに，計算された変位を前の時間ステップの変位を格納するデータに（通常は"
-" \"u\" から \"Previous\\_u\" に）コピーします． この関数は "
-"`compute_small_strain_elastoplasticity_Von_Mises` を使う前に呼び出さなければなりません．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:577
 msgid "The function ::"
@@ -1759,8 +1736,8 @@ msgid ""
 msgstr "この関数は，Newton法を使用して解かれる接ベクトルと右辺ベクトルを構築します．"
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:618
-msgid "Additionaly, The function: ::"
-msgstr "さらに，次の関数は ::"
+msgid "Additionally, The function: ::"
+msgstr ""
 
 #: ../source/userdoc/model_plasticity_small_strain.rst:623
 msgid ""

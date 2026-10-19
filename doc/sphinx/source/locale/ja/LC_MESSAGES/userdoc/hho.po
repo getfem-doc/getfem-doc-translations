@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2023
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 04:44+0000\n"
+"POT-Creation-Date: 2026-10-19 03:52+0000\n"
 "PO-Revision-Date: 2019-09-25 04:03+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,7 +74,7 @@ msgstr ""
 msgid ""
 "The first argument to ``FEM_HHO(...)`` is the fem for the interior of the "
 "element. It has to be a discontinuous FEM. The method "
-"``FEM_SIMPLEX_IPK(2,2)`` is a discontinous method having its degrees of "
+"``FEM_SIMPLEX_IPK(2,2)`` is a discontinuous method having its degrees of "
 "freedom in the strict interior of the element, which ensure that no dof "
 "identification will be done. The second argument is the fem for the faces "
 "(if only one method is given, it will be applied to all faces, but it is "
@@ -84,15 +84,10 @@ msgid ""
 "difference with ``FEM_PK(2,2)`` since the degree of freedom on the faces "
 "will be identified with the interior ones)."
 msgstr ""
-"``FEM_HHO(...)`` の最初の引数は要素の内部に対するfemです．不連続FEMでなければならないが， "
-"``FEM_SIMPLEX_IPK(2,2)`` "
-"法は要素内部の厳密な自由度を有する不連続法であり，dof同定を行わないことを保証します．2番目の引数は，面のfemです(1つの方法しか指定されていない場合は，すべての面に適用されますが，面ごとに異なる方法を指定することもできます．)．与えられた手法が不連続型(実際，面の自由度は内側の自由度で識別されるため，"
-" ``FEM_HHO(FEM_PK(2,2), FEM_PK(1,2))`` のような方法は ``FEM_PK(2,2)`` "
-"と変わりません．)であるという事実についての検証ではありません．"
 
 #: ../source/userdoc/hho.rst:27
 msgid ""
-"For the moment, the fursnished element for interior and faces are - "
+"For the moment, the furnished element for interior and faces are - "
 "``FEM_SIMPLEX_IPK(n,k)`` : interior PK element of degree k for the simplices"
 " in dimension n (equivalent to ``FEM_PK_DISCONTINUOUS(n,k,0.1)``). - "
 "``FEM_QUAD_IPK(n,k)`` : interior PK element of degree k for the "
@@ -113,12 +108,9 @@ msgid ""
 "For a variable ``u``, we will note :math:`u_{T}` its value in the interior "
 "of the element :math:`T` and :math:`u_{\\partial T}` its value on the "
 "boundary of :math:`T` (corresponding to the two different approximations). "
-"The reconstruction operators are implemeted in |gf| as elementary "
+"The reconstruction operators are implemented in |gf| as elementary "
 "transformations, as described in the section :ref:`ud-gasm-high-elem-trans`."
 msgstr ""
-"変数 ``u`` について，要素 :math:`T` の内部における :math:`u_{T}` の値と， :math:`T` "
-"(2つの異なる近似に対応する)の境界における :math:`u_{\\partial T}` の値に注目します．再構成演算子は，セクション "
-":ref:`ud-gasm-high-elem-trans` で説明されているように，基本変換として|gf|で実装されます．"
 
 #: ../source/userdoc/hho.rst:40
 msgid "Reconstructed gradient"
@@ -251,13 +243,11 @@ msgstr "再構築された変数"
 
 #: ../source/userdoc/hho.rst:95
 msgid ""
-"A recontruction of higher order can be done using both the approximation on "
-"the interior and the approximation on the faces. The recontructed variable "
-":math:`D(u)` will be the solution to the local Neumann problem on a chosen "
+"A reconstruction of higher order can be done using both the approximation on"
+" the interior and the approximation on the faces. The reconstructed variable"
+" :math:`D(u)` will be the solution to the local Neumann problem on a chosen "
 "space :math:`V_D`"
 msgstr ""
-"高次の再構成は，内部の近似とフェースの近似の両方を使用して行うことができます．再構成された変数 :math:`D(u)` は，選択された空間 "
-":math:`V_D` 上の局所Neumann問題の解になります"
 
 #: ../source/userdoc/hho.rst:97
 msgid ""
@@ -295,14 +285,12 @@ msgstr "対称化された勾配を持つ再構築された変数"
 
 #: ../source/userdoc/hho.rst:115
 msgid ""
-"A variant of the recontruction of a variable is the one using a symmetrized "
-"gradient. It can be used only for vector field variables and additionally "
+"A variant of the reconstruction of a variable is the one using a symmetrized"
+" gradient. It can be used only for vector field variables and additionally "
 "when the vector field dimension is the same as the domain dimension. The "
-"recontructed variable :math:`D(u)` will be the solution to the local Neumann"
-" problem on a chosen space :math:`V_D`"
+"reconstructed variable :math:`D(u)` will be the solution to the local "
+"Neumann problem on a chosen space :math:`V_D`"
 msgstr ""
-"変数の再構成の変形は，対称化された勾配を使用するものである．ベクトルフィールド変数にのみ使用でき，さらにベクトルフィールドの次元がドメインの次元と同じ場合にも使用できます．再構成された変数"
-" :math:`D(u)` は，選択された空間 :math:`V_D` 上の局所Neumann問題に対する解であるだろう"
 
 #: ../source/userdoc/hho.rst:117
 msgid ""

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-16 03:45+0000\n"
+"POT-Creation-Date: 2026-10-19 03:52+0000\n"
 "PO-Revision-Date: 2018-07-16 07:15+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -27,12 +27,10 @@ msgstr "反復ソルバー"
 
 #: ../source/gmm/iter.rst:14
 msgid ""
-"Most of the solvers provided in |gmm| come frorm ITL with slight "
+"Most of the solvers provided in |gmm| come from ITL with slight "
 "modifications (gmres has been optimized and adapted for complex matrices). "
 "Include the file ``gmm/gmm_iter_solvers.h`` to use them."
 msgstr ""
-"|gmm| で提供されているソルバーのほとんどは，ITLから少しだけ変更を加えたものです(gresが最適化され，複雑な行列に適用されています)．ファイル"
-"  ``gmm/gmm_iter_solvers.h`` をインクルードします．"
 
 #: ../source/gmm/iter.rst:17
 msgid "iterations"
@@ -64,12 +62,10 @@ msgstr "使用可能な線形ソルバのリストを次に示します．"
 
 #: ../source/gmm/iter.rst:66
 msgid ""
-"The solver ``gmm::constrained_cg(A, C, X, B, PS, PR, iter);`` solve a system"
-" with linear constraints, ``C`` is a matrix which represents the "
-"constraints. But it is still experimental."
+"The solver ``gmm::constrained_cg(A, C, X, B, F, PS, PR, iter);`` solve a "
+"system with linear constraints :math:`CX \\le F`, ``C`` is a matrix which "
+"represents the constraints. But it is still experimental."
 msgstr ""
-"ソルバ ``gmm::constrained_cg(A, C, X, B, PS, PR, iter);`` は線形拘束でシステムを解きます ，  "
-"``C`` は拘束を表す行列です．しかし，まだ実験段階です．"
 
 #: ../source/gmm/iter.rst:68
 msgid ""

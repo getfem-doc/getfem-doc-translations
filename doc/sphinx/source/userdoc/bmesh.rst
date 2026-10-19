@@ -94,7 +94,7 @@ For other elements than simplices, it is still possible to use
 geometric transformation.
 
 * ``bgeot::parallelepiped_geotrans(N, 1)`` describes the usual transformation for
-  parallelepipeds of dimension ``N`` (quadrilateron for ``N=2``, hexahedron for
+  parallelepipeds of dimension ``N`` (quadrilateral for ``N=2``, hexahedron for
   ``N=3``, ...)
 
 * ``bgeot::prism_geotrans(N, 1)`` describes the usual transformation for prisms of
@@ -156,15 +156,16 @@ More specialized regular mesh functions are also available::
 
   getfem::parallelepiped_regular_simplex_mesh(mymesh, N, org, ivect, iref);
   getfem::parallelepiped_regular_prism_mesh(mymesh, N, org, ivect, iref);
-  getfem::parallelepiped_regular_pyramid_mesh(mymesh, N, org, ivect, iref);
+  getfem::parallelepiped_regular_pyramid_mesh(mymesh, org, ivect, iref);
   getfem::parallelepiped_regular_mesh(mymesh, N, org, ivect, iref);
 
 where ``mymesh`` is a mesh variable in which the structured mesh will be built,
 ``N`` is the dimension (limited to 4 for simplices, 5 for prisms, unlimited for
-parallelepipeds), ``org`` is of type ``bgeot::base_node`` and represents the
-origin of the mesh, ``ivect`` is an iterator on an array of ``N`` vectors to
-build the parallelepiped domain, ``iref`` is an iterator on an array of ``N``
-integers representing the number of division on each direction.
+parallelepipeds, while pyramid meshes are always three-dimensional),``org`` is
+of type ``bgeot::base_node`` and represents the origin of the mesh, ``ivect``
+is an iterator on an array of ``N`` vectors to build the parallelepiped domain,
+``iref`` is an iterator on an array of ``N`` integers representing the number
+of division on each direction.
 
 For instance, to build a mesh with tetrahedrons for a unit cube with
 :math:`10\times~10\times~10` cells one can write::
@@ -506,7 +507,7 @@ The "cdb" format specifier is for reading meshes from `ANSYS <http://www.ansys.c
 exported in blocked format with the CDWRITE command. Currently the
 `ANSYS`_ element types 42,45,73,82,87,89,90,92,95,162,182,183,185,186,187
 and 191 can be imported, this however does not include any finite element
-techology linked to these elements but only their geometry.
+technology linked to these elements but only their geometry.
 The "noboite" format is for TetMesh-GHS3D, and the
 "am_fmt" and "emc2_mesh" are for files built with `EMC2`_ (but 2D only).
 
