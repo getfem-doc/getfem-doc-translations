@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-25 03:51+0000\n"
+"POT-Creation-Date: 2026-11-06 05:46+0000\n"
 "PO-Revision-Date: 2020-04-26 01:50+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -314,10 +314,19 @@ msgid ""
 msgstr ""
 
 #: ../source/matlab_octave/cmdref_gf_model_get.rst:227
-msgid "Return the number of iterations, if an iterative method is used."
+msgid ""
+"Return the number of iterations, if an iterative method is used, and whether"
+" the solver converged. For a linear problem, `converged` is 0 when the "
+"linear solver failed: singular matrix detected by the solver (zero pivot), "
+"or computed solution whose normwise backward error |K U - F| / (|K| |U| + "
+"|F|) exceeds max(`max_res`, 1e-8) (for instance a solver leaving a zero "
+"solution). On a singular but compatible system, a solution may be found "
+"while `converged` is 0: it is then not unique. A numerically singular or "
+"very ill-conditioned matrix is not always detected, since the backward error"
+" of a stable direct solver remains small: check |K U - F| / |F| if needed."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:229
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:238
 msgid ""
 "Note that it is possible to disable some variables (see gf_model_set(model "
 "M, 'disable variable') ) in order to solve the problem only with respect to "
@@ -325,13 +334,13 @@ msgid ""
 "for instance to replace the global Newton strategy with a fixed point one."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:236
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:245
 msgid ""
 "``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar"
 " scale]]])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:238
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:247
 msgid ""
 "Test the consistency of the tangent matrix in some random positions and "
 "random directions (useful to test newly created bricks). `EPS` is the value "
@@ -343,13 +352,13 @@ msgid ""
 "current+scale]."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:249
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:258
 msgid ""
 "``gf_model_get(model M, 'test tangent matrix term', string varname1, string "
 "varname2[, scalar EPS[, int NB[, scalar scale]]])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:251
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:260
 msgid ""
 "Test the consistency of a part of the tangent matrix in some random "
 "positions and random directions (useful to test newly created bricks). The "
@@ -364,12 +373,12 @@ msgid ""
 "current+scale]."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:266
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:275
 msgid ""
 "``expr = gf_model_get(model M, 'Neumann term', string varname, int region)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:268
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:277
 msgid ""
 "Gives the assembly string corresponding to the Neumann term of the fem "
 "variable `varname` on `region`. It is deduced from the assembly string "
@@ -379,53 +388,53 @@ msgid ""
 "omit to declare an assembly string."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:277
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:286
 msgid ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises or "
 "Tresca', string varname, string dataname_lambda, string dataname_mu, "
 "mesh_fem mf_vm[, string version])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:279
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:288
 msgid ""
 "Compute the Von-Mises stress or the Tresca stress of a field (only valid for"
 " isotropic linearized elasticity in 3D). `version` should be  'Von_Mises' or"
 " 'Tresca' ('Von_Mises' is the default). Parametrized by Lame coefficients."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:285
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:294
 msgid ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
 "pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:287
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:296
 msgid ""
 "Compute the Von-Mises stress  of a displacement field for isotropic "
 "linearized elasticity in 3D or in 2D with plane strain assumption. "
 "Parametrized by Young's modulus and Poisson ratio."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:292
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:301
 msgid ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
 "pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:294
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:303
 msgid ""
 "Compute the Von-Mises stress  of a displacement field for isotropic "
 "linearized elasticity in 3D or in 2D with plane stress assumption. "
 "Parametrized by Young's modulus and Poisson ratio."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:299
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:308
 msgid ""
 "``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, "
 "string lawname, string dataname, mesh_fem mf_vm[, string version])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:301
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:310
 msgid ""
 "Compute on `mf_vm` the Von-Mises stress or the Tresca stress of a field for "
 "nonlinear elasticity in 3D. `lawname` is the constitutive law which could be"
@@ -437,14 +446,14 @@ msgid ""
 "the default)."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:311
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:320
 msgid ""
 "``V = gf_model_get(model M, 'compute finite strain elasticity Von Mises',  "
 "string lawname, string varname, string params, mesh_fem mf_vm[, int "
 "region])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:313
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:322
 msgid ""
 "Compute on `mf_vm` the Von-Mises stress of a field `varname` for nonlinear "
 "elasticity in 3D. `lawname` is the constitutive law which should be a valid "
@@ -453,13 +462,13 @@ msgid ""
 "high-level generic assembly."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:321
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:330
 msgid ""
 "``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string "
 "varname, string lawname, string dataname, mesh_fem mf_sigma)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:323
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:332
 msgid ""
 "Compute on `mf_sigma` the second Piola Kirchhoff stress tensor of a field "
 "for nonlinear elasticity in 3D. `lawname` is the constitutive law which "
@@ -470,14 +479,14 @@ msgid ""
 "coefficients."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:333
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:342
 msgid ""
 "``gf_model_get(model M, 'elastoplasticity next iter', mesh_im mim, string "
 "varname, string previous_dep_name, string projname, string datalambda, "
 "string datamu, string datathreshold, string datasigma)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:335
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:344
 msgid ""
 "Used with the old (obsolete) elastoplasticity brick to pass from an "
 "iteration to the next one. Compute and save the stress constraints sigma for"
@@ -490,7 +499,7 @@ msgid ""
 "constraints values."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:346
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:355
 msgid ""
 "``gf_model_get(model M, 'small strain elastoplasticity next iter', mesh_im "
 "mim,  string lawname, string unknowns_type [, string varnames, ...] [, "
@@ -498,7 +507,7 @@ msgid ""
 " region = -1])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:348
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:357
 msgid ""
 "Function that allows to pass from a time step to another for the small "
 "strain plastic brick. The parameters have to be exactly the same than the "
@@ -511,7 +520,7 @@ msgid ""
 "`compute_small_strain_elastoplasticity_Von_Mises`."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:360
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:369
 msgid ""
 "``V = gf_model_get(model M, 'small strain elastoplasticity Von Mises', "
 "mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type [, string "
@@ -519,7 +528,7 @@ msgid ""
 "'timestep']] [, int region])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:362
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:371
 msgid ""
 "This function computes the Von Mises stress field with respect to a small "
 "strain elastoplasticity term, approximated on `mf_vm`, and stores the result"
@@ -529,13 +538,13 @@ msgid ""
 "of this function."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:370
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:379
 msgid ""
 "``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', "
 "string datasigma, mesh_fem mf_vm[, string version])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:372
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:381
 msgid ""
 "Compute on `mf_vm` the Von-Mises or the Tresca stress of a field for "
 "plasticity and return it into the vector V. `datasigma` is a vector which "
@@ -543,28 +552,28 @@ msgid ""
 "should be 'Von_Mises' or 'Tresca' ('Von_Mises' is the default)."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:378
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:387
 msgid ""
 "``V = gf_model_get(model M, 'compute plastic part', mesh_im mim, mesh_fem "
 "mf_pl, string varname, string previous_dep_name, string projname, string "
 "datalambda, string datamu, string datathreshold, string datasigma)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:380
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:389
 msgid ""
 "Compute on `mf_pl` the plastic part and return it into the vector V. "
 "`datasigma` is a vector which contains the stress constraints values "
 "supported by the mesh."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:385
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:394
 msgid ""
 "``gf_model_get(model M, 'finite strain elastoplasticity next iter', mesh_im "
 "mim, string lawname, string unknowns_type, [, string varnames, ...] [, "
 "string params, ...] [, int region = -1])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:387
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:396
 msgid ""
 "Function that allows to pass from a time step to another for the finite "
 "strain plastic brick. The parameters have to be exactly the same than the "
@@ -577,94 +586,94 @@ msgid ""
 "entry of `varnames`."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:399
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:408
 msgid ""
 "``V = gf_model_get(model M, 'compute finite strain elastoplasticity Von "
 "Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, "
 "[, string varnames, ...] [, string params, ...] [, int region = -1])``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:401
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:410
 msgid ""
 "Compute on `mf_vm` the Von-Mises or the Tresca stress of a field for "
 "plasticity and return it into the vector V. The first input parameters ar as"
 " in the function 'finite strain elastoplasticity next iter'."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:406
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:415
 msgid ""
 "``V = gf_model_get(model M, 'sliding data group name of large sliding "
 "contact brick', int indbrick)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:408
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:414
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:420
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:426
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:432
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:438
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:417
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:423
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:429
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:435
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:441
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:447
 msgid ""
 "Gives the name of the group of variables corresponding to the sliding data "
 "for an existing large sliding contact brick."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:412
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:421
 msgid ""
 "``V = gf_model_get(model M, 'displacement group name of large sliding "
 "contact brick', int indbrick)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:418
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:427
 msgid ""
 "``V = gf_model_get(model M, 'transformation name of large sliding contact "
 "brick', int indbrick)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:424
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:433
 msgid ""
 "``V = gf_model_get(model M, 'sliding data group name of Nitsche large "
 "sliding contact brick', int indbrick)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:430
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:439
 msgid ""
 "``V = gf_model_get(model M, 'displacement group name of Nitsche large "
 "sliding contact brick', int indbrick)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:436
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:445
 msgid ""
 "``V = gf_model_get(model M, 'transformation name of Nitsche large sliding "
 "contact brick', int indbrick)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:442
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:451
 msgid ""
 "``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:444
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:453
 msgid "Gives the matrix term ind_term of the brick ind_brick if it exists"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:447
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:456
 msgid "``s = gf_model_get(model M, 'char')``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:449
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:458
 msgid "Output a (unique) string representation of the model."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:451
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:460
 msgid ""
 "This can be used to perform comparisons between two different model objects."
 " This function is to be completed."
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:456
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:465
 msgid "``gf_model_get(model M, 'display')``"
 msgstr ""
 
-#: ../source/matlab_octave/cmdref_gf_model_get.rst:458
+#: ../source/matlab_octave/cmdref_gf_model_get.rst:467
 msgid "displays a short summary for a model object."
 msgstr ""
