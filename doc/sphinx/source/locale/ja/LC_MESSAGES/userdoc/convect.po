@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2026 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-08 22:20+0000\n"
+"PO-Revision-Date: 2026-11-08 14:05+0000\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2026\n"
+"Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../source/userdoc/convect.rst:10
+msgid "A pure convection method"
+msgstr "純対流法"
+
+#: ../source/userdoc/convect.rst:12
+msgid ""
+"A method to compute a pure convection is defined in the file "
+":file:`getfem/getfem_convect.h`. The call of the function is::"
+msgstr ""
+"純粋な対流を計算する方法は，ファイル :file:`getfem/getfem_convect.h` で定義されています．関数の呼び出しは::"
+
+#: ../source/userdoc/convect.rst:17
+msgid ""
+"where ``mf`` is a variable of type |gf_mf|, ``U`` is a vector which "
+"represents the field to be convected, ``mf_v`` is a |gf_mf| for the velocity"
+" field, ``V`` is the dof vector for the velocity field, ``dt`` is the pseudo"
+" time of convection and ``nt`` the number of iterations for the computation "
+"of characteristics. ``option`` is an option for the boundary condition where"
+" there is a re-entrant convection. The possibilities are "
+"getfem::CONVECT_EXTRAPOLATION (extrapolation of the field on the nearest "
+"element) or getfem::CONVECT_UNCHANGED (no change of the value on the "
+"boundary)."
+msgstr ""
+"ここで、``mf`` は |gf_mf| 型の変数、``U`` は輸送される場を表すベクトル、``mf_v`` は速度場の |gf_mf|、``V`` "
+"は速度場の自由度ベクトル、``dt`` は輸送の擬似時間、``nt`` は特性曲線の計算のための反復回数です。``option`` "
+"は再流入する輸送がある場合の境界条件のオプションです。可能性は "
+"getfem::CONVECT_EXTRAPOLATION(最も近い要素上への場の外挿)または "
+"getfem::CONVECT_UNCHANGED(境界上の値を変更しない)です。"
+
+#: ../source/userdoc/convect.rst:22
+msgid "The method integrate the partial differential equation"
+msgstr "この方法は，偏微分方程式"
+
+#: ../source/userdoc/convect.rst:24
+msgid "\\frac{\\partial U}{\\partial t} + V\\cdot\\nabla U = 0,"
+msgstr "\\frac{\\partial U}{\\partial t} + V\\cdot\\nabla U = 0,"
+
+#: ../source/userdoc/convect.rst:28
+msgid "on the time interval :math:`[0, dt]`."
+msgstr "時間区間 :math:`[0, dt]` 上で。"
+
+#: ../source/userdoc/convect.rst:30
+msgid ""
+"The method used is of Galerkin-Characteristic kind. It is a very simple "
+"version which is unconditionally stable but rather dissipative. See "
+"[ZT1989]_ and also the Freefem++ documentation on convect command."
+msgstr ""
+"使用される方法はガレルキン特性法の一種です。無条件に安定ですが、かなり拡散的な非常に単純なバージョンです。[ZT1989]_ と convect "
+"コマンドに関する Freefem++ のドキュメントも参照してください。"
+
+#: ../source/userdoc/convect.rst:34
+msgid ""
+"The defined method works only if ``mf`` is a pure Lagrange finite element "
+"method for the moment. The principle is to convect backward the finite "
+"element nodes by solving the ordinary differential equation:"
+msgstr ""
+"定義されたメソッドは ``mf`` "
+"がその時点の純粋なLagrange有限要素法である場合にのみ機能します．原理は常微分方程式を解くことによって有限要素節点を逆方向に対流させることです．"
+
+#: ../source/userdoc/convect.rst:37
+msgid "\\frac{d X}{d t} = -V(X),"
+msgstr "\\frac{d X}{d t} = -V(X),"
+
+#: ../source/userdoc/convect.rst:41
+msgid ""
+"with an initial condition corresponding to each node. This convection is "
+"made with ``nt`` steps. Then the solution is interpolated on the convected "
+"nodes."
+msgstr "各節点に対応する初期条件を用いて行います。この輸送は ``nt`` ステップで行われます。その後、解は輸送された節点上に補間されます。"
+
+#: ../source/userdoc/convect.rst:44
+msgid ""
+"In order to make the extrapolation not too expensive, the product "
+":math:`dt\\times V` should not be too large."
+msgstr "外挿をそれほど高コストにしないために，積 :math:`dt\\times V` は大きすぎてはいけません．"
+
+#: ../source/userdoc/convect.rst:47
+msgid ""
+"Note that this method can be used to solve convection dominant problems "
+"coupling it with a splitting scheme."
+msgstr "この方法は分割スキームと結合する対流優位問題を解決するために使用することができることに留意してください．"
