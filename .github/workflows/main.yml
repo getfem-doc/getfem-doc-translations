@@ -85,7 +85,9 @@ jobs:
            sphinx-build -T -b gettext source locale ;
            sphinx-intl update-txconfig-resources -p locale -d source/locale --transifex-organization-name="tkoyama010";
            cat .tx/config;
-           tx push -s --skip)
+           tx push -s --skip;
+           rm -rf source/locale/ja source/locale/pt_BR || true;
+           tx pull -l ja,pt_BR)
           rm ../bin/fig2eps
           rm -rf ../doc
           cp -r bin/fig2eps ../bin/fig2eps
