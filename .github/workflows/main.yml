@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-24.04
     permissions:
       contents: write
-      pull-requests: write
     steps:
       - name: Get Job URL
         uses: Tiryoh/gha-jobid-action@be260d8673c9211a84cdcf37794ebd654ba81eef # v1
@@ -86,9 +85,7 @@ jobs:
            sphinx-build -T -b gettext source locale ;
            sphinx-intl update-txconfig-resources -p locale -d source/locale --transifex-organization-name="tkoyama010";
            cat .tx/config;
-           tx push -s --skip;
-           rm -rf source/locale/ja source/locale/pt_BR || true;
-           tx pull --silent -f -l ja,pt_BR)
+           tx push -s --skip)
           rm ../bin/fig2eps
           rm -rf ../doc
           cp -r bin/fig2eps ../bin/fig2eps
