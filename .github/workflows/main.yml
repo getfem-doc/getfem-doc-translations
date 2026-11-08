@@ -28,7 +28,7 @@ jobs:
           persist-credentials: false
           submodules: true
       - name: Setup SSH
-        uses: MrSquaare/ssh-setup-action@c818628b924a4bd863903a56c0e526db47bba6f4 # v3
+        uses: MrSquaare/ssh-setup-action@84a60849dca0e42e04b9b73f930036654e4672ab # v4.0.0
         with:
           host: github.com
           private-key: ${{ secrets.SSH_PRIVATE_KEY }}
