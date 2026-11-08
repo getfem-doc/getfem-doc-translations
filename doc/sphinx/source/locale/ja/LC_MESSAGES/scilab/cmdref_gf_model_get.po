@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GetFEM 5.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-24 18:47+0000\n"
+"POT-Creation-Date: 2026-11-06 05:46+0000\n"
 "PO-Revision-Date: 2018-07-16 07:00+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -358,10 +358,20 @@ msgstr ""
 "'systematic' ， 'quadratic' ，または 'basic' です．"
 
 #: ../source/scilab/cmdref_gf_model_get.rst:227
-msgid "Return the number of iterations, if an iterative method is used."
-msgstr "反復法が使用される場合，反復回数を返します．"
+msgid ""
+"Return the number of iterations, if an iterative method is used, and whether"
+" the solver converged. For a linear problem, <literal>converged</literal> is"
+" 0 when the linear solver failed: singular matrix detected by the solver "
+"(zero pivot), or computed solution whose normwise backward error |K U - F| /"
+" (|K| |U| + |F|) exceeds max(<literal>max_res</literal>, 1e-8) (for instance"
+" a solver leaving a zero solution). On a singular but compatible system, a "
+"solution may be found while <literal>converged</literal> is 0: it is then "
+"not unique. A numerically singular or very ill-conditioned matrix is not "
+"always detected, since the backward error of a stable direct solver remains "
+"small: check |K U - F| / |F| if needed."
+msgstr ""
 
-#: ../source/scilab/cmdref_gf_model_get.rst:229
+#: ../source/scilab/cmdref_gf_model_get.rst:238
 msgid ""
 "Note that it is possible to disable some variables (see gf_model_set(model "
 "M, 'disable variable') ) in order to solve the problem only with respect to "
@@ -372,7 +382,7 @@ msgstr ""
 " 'disable variable')  "
 "を参照してください)を無効にすることが可能であることに注意してください．例えば，全体Newton法を固定小数点法で置き換えることができます．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:236
+#: ../source/scilab/cmdref_gf_model_get.rst:245
 msgid ""
 "``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar"
 " scale]]])``"
@@ -380,7 +390,7 @@ msgstr ""
 "``gf_model_get(model M, 'test tangent matrix'[, scalar EPS[, int NB[, scalar"
 " scale]]])``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:238
+#: ../source/scilab/cmdref_gf_model_get.rst:247
 msgid ""
 "Test the consistency of the tangent matrix in some random positions and "
 "random directions (useful to test newly created bricks). "
@@ -396,7 +406,7 @@ msgstr ""
 "は現在位置の周囲のランダムな位置(デフォルトは1で，0が許容値です)のパラメータです．ランダム位置の各自由度は [current-scale, "
 "current+scale] の範囲内で選択されます．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:249
+#: ../source/scilab/cmdref_gf_model_get.rst:258
 msgid ""
 "``gf_model_get(model M, 'test tangent matrix term', string varname1, string "
 "varname2[, scalar EPS[, int NB[, scalar scale]]])``"
@@ -404,7 +414,7 @@ msgstr ""
 "``gf_model_get(model M, 'test tangent matrix term', string varname1, string "
 "varname2[, scalar EPS[, int NB[, scalar scale]]])``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:251
+#: ../source/scilab/cmdref_gf_model_get.rst:260
 msgid ""
 "Test the consistency of a part of the tangent matrix in some random "
 "positions and random directions (useful to test newly created bricks). The "
@@ -428,13 +438,13 @@ msgstr ""
 "は現在位置の周囲のランダムな位置(デフォルトは1で，0が許容値です)のパラメータである．ランダム位置の各自由度は [current-scale, "
 "current+scale] の範囲内で選択されます．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:266
+#: ../source/scilab/cmdref_gf_model_get.rst:275
 msgid ""
 "``expr = gf_model_get(model M, 'Neumann term', string varname, int region)``"
 msgstr ""
 "``expr = gf_model_get(model M, 'Neumann term', string varname, int region)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:268
+#: ../source/scilab/cmdref_gf_model_get.rst:277
 msgid ""
 "Gives the assembly string corresponding to the Neumann term of the fem "
 "variable <literal>varname</literal> on <literal>region</literal>. It is "
@@ -449,7 +459,7 @@ msgstr ""
 "<literal>region</literal> は <literal>varname</literal> "
 "が定義されているメッシュ上の境界領域のインデックスである必要があります．この関数は，すべての体積ブリックが宣言された後で呼び出すようにしてください．ブリックがアセンブリ文字列の宣言を省略した場合はエラーが発生します．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:277
+#: ../source/scilab/cmdref_gf_model_get.rst:286
 msgid ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises or "
 "Tresca', string varname, string dataname_lambda, string dataname_mu, "
@@ -459,7 +469,7 @@ msgstr ""
 "Tresca', string varname, string dataname_lambda, string dataname_mu, "
 "mesh_fem mf_vm[, string version])``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:279
+#: ../source/scilab/cmdref_gf_model_get.rst:288
 msgid ""
 "Compute the Von-Mises stress or the Tresca stress of a field (only valid for"
 " isotropic linearized elasticity in 3D). <literal>version</literal> should "
@@ -470,7 +480,7 @@ msgstr ""
 "<literal>version</literal> は 'Von_Mises' または 'Tresca' ( 'Von_Mises' "
 "がデフォルト)でなければなりません．Lame係数によってパラメータ化されます．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:285
+#: ../source/scilab/cmdref_gf_model_get.rst:294
 msgid ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
 "pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
@@ -478,7 +488,7 @@ msgstr ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
 "pstrain', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:287
+#: ../source/scilab/cmdref_gf_model_get.rst:296
 msgid ""
 "Compute the Von-Mises stress  of a displacement field for isotropic "
 "linearized elasticity in 3D or in 2D with plane strain assumption. "
@@ -487,7 +497,7 @@ msgstr ""
 "平面ひずみを仮定した3次元または2次元における等方性線形化弾性の変位場のVon-"
 "Mises応力を計算します．Young率とPoisson比によってパラメータ化されます．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:292
+#: ../source/scilab/cmdref_gf_model_get.rst:301
 msgid ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
 "pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
@@ -495,7 +505,7 @@ msgstr ""
 "``V = gf_model_get(model M, 'compute isotropic linearized Von Mises "
 "pstress', string varname, string data_E, string data_nu, mesh_fem mf_vm)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:294
+#: ../source/scilab/cmdref_gf_model_get.rst:303
 msgid ""
 "Compute the Von-Mises stress  of a displacement field for isotropic "
 "linearized elasticity in 3D or in 2D with plane stress assumption. "
@@ -504,7 +514,7 @@ msgstr ""
 "平面応力を仮定した3次元または2次元における等方性線形化弾性の変位場のVon-"
 "Mises応力を計算します．Young率とPoisson比によってパラメータ化されます．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:299
+#: ../source/scilab/cmdref_gf_model_get.rst:308
 msgid ""
 "``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, "
 "string lawname, string dataname, mesh_fem mf_vm[, string version])``"
@@ -512,7 +522,7 @@ msgstr ""
 "``V = gf_model_get(model M, 'compute Von Mises or Tresca', string varname, "
 "string lawname, string dataname, mesh_fem mf_vm[, string version])``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:301
+#: ../source/scilab/cmdref_gf_model_get.rst:310
 msgid ""
 "Compute on <literal>mf_vm</literal> the Von-Mises stress or the Tresca "
 "stress of a field for nonlinear elasticity in 3D. <literal>lawname</literal>"
@@ -531,7 +541,7 @@ msgstr ""
 "<literal>version</literal> は 'Von_Mises' または 'Tresca' のいずれかです( 'Von_Mises' "
 "がデフォルトです)．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:311
+#: ../source/scilab/cmdref_gf_model_get.rst:320
 msgid ""
 "``V = gf_model_get(model M, 'compute finite strain elasticity Von Mises',  "
 "string lawname, string varname, string params, mesh_fem mf_vm[, int "
@@ -541,7 +551,7 @@ msgstr ""
 "string lawname, string varname, string params, mesh_fem mf_vm[, int "
 "region])``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:313
+#: ../source/scilab/cmdref_gf_model_get.rst:322
 msgid ""
 "Compute on <literal>mf_vm</literal> the Von-Mises stress of a field "
 "<literal>varname</literal> for nonlinear elasticity in 3D. "
@@ -555,7 +565,7 @@ msgstr ""
 "は構成則であり，有効な名前である必要があります． <literal>params</literal> "
 "はパラメータ則です．定数値の短いベクトルにすることも，モデルのデータや変数に依存することもできます．高水準汎用アセンブリを使用します．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:321
+#: ../source/scilab/cmdref_gf_model_get.rst:330
 msgid ""
 "``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string "
 "varname, string lawname, string dataname, mesh_fem mf_sigma)``"
@@ -563,7 +573,7 @@ msgstr ""
 "``V = gf_model_get(model M, 'compute second Piola Kirchhoff tensor', string "
 "varname, string lawname, string dataname, mesh_fem mf_sigma)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:323
+#: ../source/scilab/cmdref_gf_model_get.rst:332
 msgid ""
 "Compute on <literal>mf_sigma</literal> the second Piola Kirchhoff stress "
 "tensor of a field for nonlinear elasticity in 3D. <literal>lawname</literal>"
@@ -578,7 +588,7 @@ msgstr ""
 " 'neo Hookean' ，あるいは 'Ciarlet Geymonat'となります． <literal>dataname</literal> "
 "は構成則のパラメータのベクトルです．長さは法則によります．これは，定数値の短いベクトル，または可変係数の有限要素法で記述されたベクトルフィールドです．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:333
+#: ../source/scilab/cmdref_gf_model_get.rst:342
 msgid ""
 "``gf_model_get(model M, 'elastoplasticity next iter', mesh_im mim, string "
 "varname, string previous_dep_name, string projname, string datalambda, "
@@ -588,7 +598,7 @@ msgstr ""
 "varname, string previous_dep_name, string projname, string datalambda, "
 "string datamu, string datathreshold, string datasigma)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:335
+#: ../source/scilab/cmdref_gf_model_get.rst:344
 msgid ""
 "Used with the old (obsolete) elastoplasticity brick to pass from an "
 "iteration to the next one. Compute and save the stress constraints sigma for"
@@ -606,7 +616,7 @@ msgstr ""
 "でなければなりません． 'datalambda' および 'datamu' は，材料のLame係数です． 'datasigma' "
 "は新しい応力拘束値を格納するベクトルです．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:346
+#: ../source/scilab/cmdref_gf_model_get.rst:355
 msgid ""
 "``gf_model_get(model M, 'small strain elastoplasticity next iter', mesh_im "
 "mim,  string lawname, string unknowns_type [, string varnames, ...] [, "
@@ -618,7 +628,7 @@ msgstr ""
 "string params, ...] [, string theta = '1' [, string dt = 'timestep']] [, int"
 " region = -1])``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:348
+#: ../source/scilab/cmdref_gf_model_get.rst:357
 msgid ""
 "Function that allows to pass from a time step to another for the small "
 "strain plastic brick. The parameters have to be exactly the same than the "
@@ -637,7 +647,7 @@ msgstr ""
 "<literal>compute_small_strain_elastoplasticity_Von_Mises</literal> "
 "を使用する前に呼び出す必要があります．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:360
+#: ../source/scilab/cmdref_gf_model_get.rst:369
 msgid ""
 "``V = gf_model_get(model M, 'small strain elastoplasticity Von Mises', "
 "mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type [, string "
@@ -649,7 +659,7 @@ msgstr ""
 "varnames, ...] [, string params, ...] [, string theta = '1' [, string dt = "
 "'timestep']] [, int region])``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:362
+#: ../source/scilab/cmdref_gf_model_get.rst:371
 msgid ""
 "This function computes the Von Mises stress field with respect to a small "
 "strain elastoplasticity term, approximated on <literal>mf_vm</literal>, and "
@@ -665,7 +675,7 @@ msgstr ""
 "とまったく同じでなければなりません．この関数を呼び出す前に， "
 "<literal>small_strain_elastoplasticity_next_iter</literal> を呼び出す必要があります．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:370
+#: ../source/scilab/cmdref_gf_model_get.rst:379
 msgid ""
 "``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', "
 "string datasigma, mesh_fem mf_vm[, string version])``"
@@ -673,7 +683,7 @@ msgstr ""
 "``V = gf_model_get(model M, 'compute elastoplasticity Von Mises or Tresca', "
 "string datasigma, mesh_fem mf_vm[, string version])``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:372
+#: ../source/scilab/cmdref_gf_model_get.rst:381
 msgid ""
 "Compute on <literal>mf_vm</literal> the Von-Mises or the Tresca stress of a "
 "field for plasticity and return it into the vector V. "
@@ -686,7 +696,7 @@ msgstr ""
 "<literal>version</literal> は 'Von_Mises' または 'Tresca' ('Von_Mises' "
 "がデフォルト)でなければなりません．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:378
+#: ../source/scilab/cmdref_gf_model_get.rst:387
 msgid ""
 "``V = gf_model_get(model M, 'compute plastic part', mesh_im mim, mesh_fem "
 "mf_pl, string varname, string previous_dep_name, string projname, string "
@@ -696,7 +706,7 @@ msgstr ""
 "mf_pl, string varname, string previous_dep_name, string projname, string "
 "datalambda, string datamu, string datathreshold, string datasigma)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:380
+#: ../source/scilab/cmdref_gf_model_get.rst:389
 msgid ""
 "Compute on <literal>mf_pl</literal> the plastic part and return it into the "
 "vector V. <literal>datasigma</literal> is a vector which contains the stress"
@@ -705,7 +715,7 @@ msgstr ""
 "プラスチック成形品を <literal>mf_pl</literal> で計算し，ベクトルVに返します． "
 "<literal>datasigma</literal> はメッシュでサポートされる応力拘束値を含むベクトルです．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:385
+#: ../source/scilab/cmdref_gf_model_get.rst:394
 msgid ""
 "``gf_model_get(model M, 'finite strain elastoplasticity next iter', mesh_im "
 "mim, string lawname, string unknowns_type, [, string varnames, ...] [, "
@@ -715,7 +725,7 @@ msgstr ""
 "mim, string lawname, string unknowns_type, [, string varnames, ...] [, "
 "string params, ...] [, int region = -1])``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:387
+#: ../source/scilab/cmdref_gf_model_get.rst:396
 msgid ""
 "Function that allows to pass from a time step to another for the finite "
 "strain plastic brick. The parameters have to be exactly the same than the "
@@ -733,7 +743,7 @@ msgstr ""
 "Mieheの法則に対して，この関数は <literal>varnames</literal> の最後の2つのエントリで定義されている状態変数を更新し，"
 "  <literal>varnames</literal> の2番目のエントリとして与えられる塑性乗数フィールドをリセットします．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:399
+#: ../source/scilab/cmdref_gf_model_get.rst:408
 msgid ""
 "``V = gf_model_get(model M, 'compute finite strain elastoplasticity Von "
 "Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, "
@@ -743,7 +753,7 @@ msgstr ""
 "Mises', mesh_im mim, mesh_fem mf_vm, string lawname, string unknowns_type, "
 "[, string varnames, ...] [, string params, ...] [, int region = -1])``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:401
+#: ../source/scilab/cmdref_gf_model_get.rst:410
 msgid ""
 "Compute on <literal>mf_vm</literal> the Von-Mises or the Tresca stress of a "
 "field for plasticity and return it into the vector V. The first input "
@@ -753,7 +763,7 @@ msgstr ""
 "で計算し，ベクトルVに返します．最初の入力パラメータは関数 'finite strain elastoplasticity next iter' "
 "と同様です．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:406
+#: ../source/scilab/cmdref_gf_model_get.rst:415
 msgid ""
 "``V = gf_model_get(model M, 'sliding data group name of large sliding "
 "contact brick', int indbrick)``"
@@ -761,18 +771,18 @@ msgstr ""
 "``V = gf_model_get(model M, 'sliding data group name of large sliding "
 "contact brick', int indbrick)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:408
-#: ../source/scilab/cmdref_gf_model_get.rst:414
-#: ../source/scilab/cmdref_gf_model_get.rst:420
-#: ../source/scilab/cmdref_gf_model_get.rst:426
-#: ../source/scilab/cmdref_gf_model_get.rst:432
-#: ../source/scilab/cmdref_gf_model_get.rst:438
+#: ../source/scilab/cmdref_gf_model_get.rst:417
+#: ../source/scilab/cmdref_gf_model_get.rst:423
+#: ../source/scilab/cmdref_gf_model_get.rst:429
+#: ../source/scilab/cmdref_gf_model_get.rst:435
+#: ../source/scilab/cmdref_gf_model_get.rst:441
+#: ../source/scilab/cmdref_gf_model_get.rst:447
 msgid ""
 "Gives the name of the group of variables corresponding to the sliding data "
 "for an existing large sliding contact brick."
 msgstr "既存の有限すべり接触ブリックの滑りデータに対応する変数のグループの名前を指定します．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:412
+#: ../source/scilab/cmdref_gf_model_get.rst:421
 msgid ""
 "``V = gf_model_get(model M, 'displacement group name of large sliding "
 "contact brick', int indbrick)``"
@@ -780,7 +790,7 @@ msgstr ""
 "``V = gf_model_get(model M, 'displacement group name of large sliding "
 "contact brick', int indbrick)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:418
+#: ../source/scilab/cmdref_gf_model_get.rst:427
 msgid ""
 "``V = gf_model_get(model M, 'transformation name of large sliding contact "
 "brick', int indbrick)``"
@@ -788,7 +798,7 @@ msgstr ""
 "``V = gf_model_get(model M, 'transformation name of large sliding contact "
 "brick', int indbrick)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:424
+#: ../source/scilab/cmdref_gf_model_get.rst:433
 msgid ""
 "``V = gf_model_get(model M, 'sliding data group name of Nitsche large "
 "sliding contact brick', int indbrick)``"
@@ -796,7 +806,7 @@ msgstr ""
 "``V = gf_model_get(model M, 'sliding data group name of Nitsche large "
 "sliding contact brick', int indbrick)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:430
+#: ../source/scilab/cmdref_gf_model_get.rst:439
 msgid ""
 "``V = gf_model_get(model M, 'displacement group name of Nitsche large "
 "sliding contact brick', int indbrick)``"
@@ -804,7 +814,7 @@ msgstr ""
 "``V = gf_model_get(model M, 'displacement group name of Nitsche large "
 "sliding contact brick', int indbrick)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:436
+#: ../source/scilab/cmdref_gf_model_get.rst:445
 msgid ""
 "``V = gf_model_get(model M, 'transformation name of Nitsche large sliding "
 "contact brick', int indbrick)``"
@@ -812,34 +822,34 @@ msgstr ""
 "``V = gf_model_get(model M, 'transformation name of Nitsche large sliding "
 "contact brick', int indbrick)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:442
+#: ../source/scilab/cmdref_gf_model_get.rst:451
 msgid ""
 "``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``"
 msgstr ""
 "``M = gf_model_get(model M, 'matrix term', int ind_brick, int ind_term)``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:444
+#: ../source/scilab/cmdref_gf_model_get.rst:453
 msgid "Gives the matrix term ind_term of the brick ind_brick if it exists"
 msgstr "存在する場合，ブリック ind_brick のマトリックス項 ind_term を返します．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:447
+#: ../source/scilab/cmdref_gf_model_get.rst:456
 msgid "``s = gf_model_get(model M, 'char')``"
 msgstr "``s = gf_model_get(model M, 'char')``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:449
+#: ../source/scilab/cmdref_gf_model_get.rst:458
 msgid "Output a (unique) string representation of the model."
 msgstr "modelの(ユニークな)文字列表現を出力します．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:451
+#: ../source/scilab/cmdref_gf_model_get.rst:460
 msgid ""
 "This can be used to perform comparisons between two different model objects."
 " This function is to be completed."
 msgstr "これを使用して，2つの異なるmodelオブジェクト間の比較を実行できます．この機能は完成予定です．"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:456
+#: ../source/scilab/cmdref_gf_model_get.rst:465
 msgid "``gf_model_get(model M, 'display')``"
 msgstr "``gf_model_get(model M, 'display')``"
 
-#: ../source/scilab/cmdref_gf_model_get.rst:458
+#: ../source/scilab/cmdref_gf_model_get.rst:467
 msgid "displays a short summary for a model object."
 msgstr "modelオブジェクトの概要が表示されます．"

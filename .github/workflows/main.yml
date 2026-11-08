@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-24.04
     permissions:
       contents: write
-      pull-requests: write
     steps:
       - name: Get Job URL
         uses: Tiryoh/gha-jobid-action@be260d8673c9211a84cdcf37794ebd654ba81eef # v1
@@ -22,13 +21,13 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: script
       - name: checkout with submodule
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           fetch-depth: 0
           persist-credentials: false
           submodules: true
       - name: Setup SSH
-        uses: MrSquaare/ssh-setup-action@c818628b924a4bd863903a56c0e526db47bba6f4 # v3
+        uses: MrSquaare/ssh-setup-action@84a60849dca0e42e04b9b73f930036654e4672ab # v4.0.0
         with:
           host: github.com
           private-key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -86,9 +85,7 @@ jobs:
            sphinx-build -T -b gettext source locale ;
            sphinx-intl update-txconfig-resources -p locale -d source/locale --transifex-organization-name="tkoyama010";
            cat .tx/config;
-           tx push -s --skip;
-           rm -rf source/locale/ja source/locale/pt_BR || true;
-           tx pull --silent -f -l ja,pt_BR)
+           tx push -s --skip)
           rm ../bin/fig2eps
           rm -rf ../doc
           cp -r bin/fig2eps ../bin/fig2eps

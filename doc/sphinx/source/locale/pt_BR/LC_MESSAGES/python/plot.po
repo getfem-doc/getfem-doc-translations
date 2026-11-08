@@ -1,0 +1,431 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2026 GetFEM project
+# This file is distributed under the same license as the GetFEM package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GetFEM 5.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-03 05:58+0000\n"
+"PO-Revision-Date: 2026-11-03 05:59+0000\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../source/python/plot.rst:10
+msgid "Visualisation of meshes and fields"
+msgstr ""
+
+#: ../source/python/plot.rst:12
+msgid ""
+"The module ``getfem_plot`` displays meshes and finite element fields "
+"directly from |py|, in the same spirit as the functions ``gf_plot_mesh``, "
+"``gf_plot`` and ``gf_plot_slice`` of the Matlab/Octave interface. It relies "
+"on two optional libraries, which are only imported when they are used:"
+msgstr ""
+
+#: ../source/python/plot.rst:17
+msgid ""
+"`Matplotlib <https://matplotlib.org>`_, for 1D and 2D plots (well suited to "
+"figures for papers) and small 3D surfaces;"
+msgstr ""
+
+#: ../source/python/plot.rst:19
+msgid ""
+"`PyVista <https://pyvista.org>`_ (based on VTK), for 3D plots that can be "
+"rotated, zoomed and panned with the mouse, also inside Jupyter notebooks, or"
+" rendered off-screen to image files."
+msgstr ""
+
+#: ../source/python/plot.rst:23
+msgid "They can be installed with::"
+msgstr ""
+
+#: ../source/python/plot.rst:27
+msgid ""
+"In 3D, PyVista is used when it is available; otherwise the module falls back"
+" on Matplotlib with a warning (Matplotlib is slow for large surfaces and "
+"only sorts the faces approximately in depth). The renderer can be chosen "
+"explicitly with ``backend=\"matplotlib\"`` or ``backend=\"pyvista\"``."
+msgstr ""
+
+#: ../source/python/plot.rst:34
+msgid "Quick start"
+msgstr ""
+
+#: ../source/python/plot.rst:50
+msgid ""
+"For a 3D elasticity problem with a displacement ``U`` on a vector "
+"``MeshFem`` ``mfu``::"
+msgstr ""
+
+#: ../source/python/plot.rst:63
+msgid ""
+"A complete example is given by the test ``check_plot.py`` in the directory "
+"``interface/tests/python/`` of the |gf| distribution."
+msgstr ""
+
+#: ../source/python/plot.rst:68
+msgid "How it works"
+msgstr ""
+
+#: ../source/python/plot.rst:70
+msgid ""
+"A field is not drawn directly: it is first evaluated on a *slice* of the "
+"mesh (see the ``Slice`` object), then the points, simplexes and values of "
+"the slice are given to the renderer as |np| arrays. This has several "
+"consequences:"
+msgstr ""
+
+#: ../source/python/plot.rst:74
+msgid ""
+"In 3D, only the surface is drawn: the default slice operation is "
+"``('boundary',)``, which keeps only the triangles of the skin of the domain."
+" Any other slice operation can be passed with ``slice_op`` (planar cuts, "
+"iso-values, balls, intersections, ...)."
+msgstr ""
+
+#: ../source/python/plot.rst:78
+msgid ""
+"High order elements and curved geometric transformations are represented by "
+"refining each convex ``refine`` times (default 3 for fields)."
+msgstr ""
+
+#: ../source/python/plot.rst:80
+msgid ""
+"The points of the slice are not shared between convexes, so discontinuous "
+"fields keep their jumps."
+msgstr ""
+
+#: ../source/python/plot.rst:82
+msgid ""
+"The deformation is applied by building the slice on the deformed mesh, so "
+"that the colour, the arrows and the mesh edges all follow it."
+msgstr ""
+
+#: ../source/python/plot.rst:87
+msgid "Plotting a field: ``plot``"
+msgstr ""
+
+#: ../source/python/plot.rst:89
+msgid ""
+"``gfp.plot(mf, U, **options)`` draws the field ``U`` defined on ``mf``:"
+msgstr ""
+
+#: ../source/python/plot.rst:92 ../source/python/plot.rst:177
+msgid "option"
+msgstr ""
+
+#: ../source/python/plot.rst:92 ../source/python/plot.rst:177
+msgid "meaning"
+msgstr ""
+
+#: ../source/python/plot.rst:94
+msgid "``name``"
+msgstr ""
+
+#: ../source/python/plot.rst:94
+msgid "name of the field, used in the colour bar"
+msgstr ""
+
+#: ../source/python/plot.rst:95
+msgid "``component``"
+msgstr ""
+
+#: ../source/python/plot.rst:95
+msgid ""
+"``None`` or ``'norm'`` (norm of a vector field, the default), or the index "
+"of a component"
+msgstr ""
+
+#: ../source/python/plot.rst:97
+msgid "``slice_op``, ``refine``"
+msgstr ""
+
+#: ../source/python/plot.rst:97
+msgid "slice operation and refinement (see above)"
+msgstr ""
+
+#: ../source/python/plot.rst:98 ../source/python/plot.rst:187
+msgid "``cvlst``"
+msgstr ""
+
+#: ../source/python/plot.rst:98
+msgid "restrict to a list of convexes or a region"
+msgstr ""
+
+#: ../source/python/plot.rst:99 ../source/python/plot.rst:189
+msgid "``deformation``"
+msgstr ""
+
+#: ../source/python/plot.rst:99
+msgid "displacement vector, defined on ``deformation_mf`` (default ``mf``)"
+msgstr ""
+
+#: ../source/python/plot.rst:101
+msgid "``deformation_scale``"
+msgstr ""
+
+#: ../source/python/plot.rst:101
+msgid ""
+"a number, or ``'p%'`` for a maximal displacement of p% of the size of the "
+"mesh (default ``'10%'``)"
+msgstr ""
+
+#: ../source/python/plot.rst:103
+msgid "``mesh_edges``"
+msgstr ""
+
+#: ../source/python/plot.rst:103
+msgid "draw the edges of the mesh (default ``True``)"
+msgstr ""
+
+#: ../source/python/plot.rst:104
+msgid "``faces``"
+msgstr ""
+
+#: ../source/python/plot.rst:104
+msgid ""
+"draw the coloured surface (``False`` to draw only the arrows or the edges)"
+msgstr ""
+
+#: ../source/python/plot.rst:106
+msgid "``quiver``"
+msgstr ""
+
+#: ../source/python/plot.rst:106
+msgid "draw arrows for a vector field; ``quiver_count`` sets their number"
+msgstr ""
+
+#: ../source/python/plot.rst:108
+msgid "``contours``"
+msgstr ""
+
+#: ../source/python/plot.rst:108
+msgid "draw this number of iso-value levels"
+msgstr ""
+
+#: ../source/python/plot.rst:109
+msgid "``cmap``, ``clim``"
+msgstr ""
+
+#: ../source/python/plot.rst:109
+msgid "colour map and range of the colour bar"
+msgstr ""
+
+#: ../source/python/plot.rst:110
+msgid "``title``, ``axis_labels``"
+msgstr ""
+
+#: ../source/python/plot.rst:110
+msgid "title and names of the axes"
+msgstr ""
+
+#: ../source/python/plot.rst:111
+msgid "``edge_color``"
+msgstr ""
+
+#: ../source/python/plot.rst:111
+msgid "colour of the mesh edges"
+msgstr ""
+
+#: ../source/python/plot.rst:112
+msgid "``face_color``"
+msgstr ""
+
+#: ../source/python/plot.rst:112
+msgid "colour of the faces when there is no data"
+msgstr ""
+
+#: ../source/python/plot.rst:113
+msgid "``quiver_color``"
+msgstr ""
+
+#: ../source/python/plot.rst:113
+msgid "colour of the arrows"
+msgstr ""
+
+#: ../source/python/plot.rst:114
+msgid "``line_color``"
+msgstr ""
+
+#: ../source/python/plot.rst:114
+msgid "colour of the curves (e.g. streamlines)"
+msgstr ""
+
+#: ../source/python/plot.rst:115
+msgid "``line_width``"
+msgstr ""
+
+#: ../source/python/plot.rst:115
+msgid "width of the curves"
+msgstr ""
+
+#: ../source/python/plot.rst:116
+msgid "``show_axes``, ``colorbar``"
+msgstr ""
+
+#: ../source/python/plot.rst:116
+msgid "display the axes / the colour bar"
+msgstr ""
+
+#: ../source/python/plot.rst:119
+msgid ""
+"With Matplotlib, ``ax=`` draws in existing axes and ``(fig, ax)`` is "
+"returned; use ``show=True`` to open the window. With PyVista, ``plotter=`` "
+"adds to an existing ``pyvista.Plotter``, which is returned; ``axes_style`` "
+"is ``'grid'`` (default, graduated axes), ``'bounds'`` or ``'triad'``, and "
+"``notebook``, ``off_screen`` and ``screenshot`` are passed to PyVista."
+msgstr ""
+
+#: ../source/python/plot.rst:125
+msgid ""
+"``gfp.plot_slice(sl, mf, U)`` does the same for any ``Slice`` built by the "
+"user, or draws the slice itself when no field is given (a slice made of "
+"curves, such as streamlines, is drawn as tubes with PyVista)."
+msgstr ""
+
+#: ../source/python/plot.rst:129
+msgid ""
+"Several slices can be combined in the same scene by passing the PyVista "
+"plotter (or the Matplotlib axes) returned by the first call::"
+msgstr ""
+
+#: ../source/python/plot.rst:137
+msgid ""
+"See ``demo_stokes_3D_tank_draw.py`` in ``interface/tests/python/`` for a "
+"complete example. ``gfp.available_backends()`` returns the renderers which "
+"are installed."
+msgstr ""
+
+#: ../source/python/plot.rst:143
+msgid "Saving figures"
+msgstr ""
+
+#: ../source/python/plot.rst:145
+msgid ""
+"In the interactive PyVista window, the key ``i`` saves the current view "
+"(after any rotation or zoom) in the files ``getfem_plot_001.png``, "
+"``getfem_plot_002.png``, ... of the current directory, without overwriting "
+"existing files. This is set by the options ``save_key``, ``save_filename`` "
+"(possibly with a counter field ``{:03d}``) and ``save_scale`` (magnification"
+" of the image with respect to the window)::"
+msgstr ""
+
+#: ../source/python/plot.rst:154
+msgid ""
+"The format is given by the extension: bitmap (``png``, ``jpg``, ...) or "
+"vector graphics (``svg``, ``eps``, ``ps``, ``pdf``, ``tex``). In vector "
+"formats, the colour gradients of the surfaces are less faithful than in a "
+"bitmap of high resolution (``save_scale=3`` for instance)."
+msgstr ""
+
+#: ../source/python/plot.rst:159
+msgid ""
+"From a script, ``gfp.save_view(pl, \"fig.png\")`` saves the view of a "
+"plotter ``pl``. To keep the view chosen interactively, show the window with "
+"``pl.show(auto_close=False)``: after closing it, ``gfp.save_view`` saves the"
+" last view as a bitmap image, and ``pl.camera_position`` can be stored to "
+"reproduce the same view later off-screen. Images can also be produced "
+"without any window with ``off_screen=True, screenshot=\"file.png\"``."
+msgstr ""
+
+#: ../source/python/plot.rst:166
+msgid ""
+"The Matplotlib windows have their own button to save the figure, and "
+"``fig.savefig(\"file.pdf\")`` can be used in scripts."
+msgstr ""
+
+#: ../source/python/plot.rst:171
+msgid "Plotting a mesh: ``plot_mesh``"
+msgstr ""
+
+#: ../source/python/plot.rst:173
+msgid ""
+"``gfp.plot_mesh(m, **options)`` draws a mesh (its skin in 3D). ``m`` can "
+"also be a ``MeshFem``, which is required for the dof numbers."
+msgstr ""
+
+#: ../source/python/plot.rst:179
+msgid "``regions``"
+msgstr ""
+
+#: ../source/python/plot.rst:179
+msgid ""
+"regions to highlight, each with its own colour and an entry in the legend"
+msgstr ""
+
+#: ../source/python/plot.rst:181
+msgid "``vertices``"
+msgstr ""
+
+#: ../source/python/plot.rst:181
+msgid "display the vertex numbers"
+msgstr ""
+
+#: ../source/python/plot.rst:182
+msgid "``convexes``"
+msgstr ""
+
+#: ../source/python/plot.rst:182
+msgid "display the convex numbers"
+msgstr ""
+
+#: ../source/python/plot.rst:183
+msgid "``dof``"
+msgstr ""
+
+#: ../source/python/plot.rst:183
+msgid ""
+"display the basic dof numbers at their nodes (the dofs sharing a node are "
+"displayed together)"
+msgstr ""
+
+#: ../source/python/plot.rst:185
+msgid "``quality``"
+msgstr ""
+
+#: ../source/python/plot.rst:185
+msgid "colour each convex with its quality (0 to 1)"
+msgstr ""
+
+#: ../source/python/plot.rst:186
+msgid "``edges``, ``faces``"
+msgstr ""
+
+#: ../source/python/plot.rst:186
+msgid "draw the edges / fill the faces"
+msgstr ""
+
+#: ../source/python/plot.rst:187
+msgid "restrict to these convexes, or to these faces with a two-row array"
+msgstr ""
+
+#: ../source/python/plot.rst:189
+msgid "as for ``plot``; the numbers follow the deformed mesh"
+msgstr ""
+
+#: ../source/python/plot.rst:193
+msgid ""
+"In 3D, only the numbers lying on the skin are displayed and PyVista hides "
+"the ones which are behind the surface."
+msgstr ""
+
+#: ../source/python/plot.rst:198
+msgid "Using the extracted data"
+msgstr ""
+
+#: ../source/python/plot.rst:200
+msgid ""
+"The functions ``gfp.slice_field`` and ``gfp.slice_mesh`` only extract the "
+"data and return a ``SliceData`` object, with the attributes ``points`` (n x "
+"3 array), ``simplexes`` (dictionary dimension -> array of point indices), "
+"``values`` (n or n x q array), ``edges`` and ``name``. It can be used with "
+"any other plotting tool, and ``gfp.to_pyvista(data)`` converts it to a "
+"``pyvista.UnstructuredGrid``."
+msgstr ""
