@@ -32,9 +32,8 @@ repos:
         exclude: ^doc/
       - id: ruff-format
         exclude: ^doc/
-  # pre-commit/mirrors-prettier is archived; migrate to rbubley/mirrors-prettier or another maintained hook
-  - repo: https://github.com/pre-commit/mirrors-prettier # zizmor: ignore[archived-uses]
-    rev: v4.0.0-alpha.8
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.9.10
     hooks:
       - id: prettier
         exclude: ^(bin|doc)
