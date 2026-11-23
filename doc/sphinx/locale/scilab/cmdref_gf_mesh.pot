@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM 5.5\n"
+"Project-Id-Version: GetFEM 5.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-22 05:46+0000\n"
+"POT-Creation-Date: 2026-11-23 06:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -208,18 +208,22 @@ msgstr ""
 msgid "'structured_ball' for a structured mesh of a circular disc or a sphere. In this case <literal>filename</literal> is a string describing the mesh \"GT='GT_QK(2,2)';ORG=[0,0];SIZES=[4];NSUBDIV=[3,4];SYMMETRIES=1\" The number of symmetries divides a circle into a half (1) or quarter of circle (2). Similarly a sphere can be divided with up to 3 symmetry planes."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:163
+#: ../source/scilab/cmdref_gf_mesh.rst:161
+msgid "'structured_ball_shell' for a structured mesh of a ball shell (a ring in 2D), e.g. \"GT='GT_QK(2,2)';ORG=[0,0];SIZES=[4,1];NSUBDIV=[3,2]\" with SIZES the outer radius and the thickness and NSUBDIV the circumferential and radial subdivisions (SYMMETRIES as for 'structured_ball'). With an ORG of dimension dim(GT)+1, the sphere (or circle) itself is meshed with elements of dimension dim(GT), for shells for instance, e.g. \"GT='GT_QK(2,2)';ORG=[0,0,0];SIZES=[4];NSUBDIV=[3];SYMMETRIES=2\""
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mesh.rst:171
 msgid "``M = gf_mesh('clone', mesh m2)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:165
+#: ../source/scilab/cmdref_gf_mesh.rst:173
 msgid "Create a copy of a mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:168
+#: ../source/scilab/cmdref_gf_mesh.rst:176
 msgid "``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat vertices]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:170
+#: ../source/scilab/cmdref_gf_mesh.rst:178
 msgid "Call the experimental mesher of GetFEM on the geometry represented by <literal>mo</literal>. Please control the conformity of the produced mesh. You can help the mesher by adding a priori vertices in the array <literal>vertices</literal> which should be of size <literal></literal>n x m<literal></literal> where <literal></literal>n<literal></literal> n is the dimension of the mesh and <literal></literal>m<literal></literal> the number of points. <literal>h</literal> is approximate diameter of the elements. <literal>K</literal> is the degree of the mesh (>1 for curved boundaries). The mesher will try to optimize the quality of the elements. This operation may be time consuming. Note that if the mesh generation fails, because of some random procedure used, it can be run again since it will not give necessarily the same result due to random procedures used. The messages send to the console by the mesh generation can be deactivated using <literal>gf_util('trace level', 2)</literal>. More information can be obtained by <literal>gf_util('trace level', 4)</literal>. See <literal></literal>gf_mesher_object<literal></literal> to manipulate geometric primitives in order to describe the geometry."
 msgstr ""

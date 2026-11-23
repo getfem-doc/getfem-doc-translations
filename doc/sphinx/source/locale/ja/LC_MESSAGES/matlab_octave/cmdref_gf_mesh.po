@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM 5.5\n"
+"Project-Id-Version: GetFEM 5.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-08 22:42+0000\n"
+"POT-Creation-Date: 2026-11-23 06:29+0000\n"
 "PO-Revision-Date: 2020-04-26 01:50+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/87607/ja/)\n"
@@ -284,15 +284,26 @@ msgstr ""
 "\"GT='GT_QK(2,2)';ORG=[0,0];SIZES=[4];NSUBDIV=[3,4];SYMMETRIES=1\" "
 "です。対称数は円を半分（1）または 4 分の 1（2）に分割します。同様に、球は最大 3 つの対称面で分割できます。"
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:167
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:165
+msgid ""
+"'structured_ball_shell' for a structured mesh of a ball shell (a ring in "
+"2D), e.g. \"GT='GT_QK(2,2)';ORG=[0,0];SIZES=[4,1];NSUBDIV=[3,2]\" with SIZES"
+" the outer radius and the thickness and NSUBDIV the circumferential and "
+"radial subdivisions (SYMMETRIES as for 'structured_ball'). With an ORG of "
+"dimension dim(GT)+1, the sphere (or circle) itself is meshed with elements "
+"of dimension dim(GT), for shells for instance, e.g. "
+"\"GT='GT_QK(2,2)';ORG=[0,0,0];SIZES=[4];NSUBDIV=[3];SYMMETRIES=2\""
+msgstr ""
+
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:175
 msgid "``M = gf_mesh('clone', mesh m2)``"
 msgstr "``M = gf_mesh('clone', mesh m2)``"
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:169
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:177
 msgid "Create a copy of a mesh."
 msgstr "メッシュのコピーを作成します．"
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:172
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:180
 msgid ""
 "``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat "
 "vertices]])``"
@@ -300,7 +311,7 @@ msgstr ""
 "``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat "
 "vertices]])``"
 
-#: ../source/matlab_octave/cmdref_gf_mesh.rst:174
+#: ../source/matlab_octave/cmdref_gf_mesh.rst:182
 msgid ""
 "Call the experimental mesher of GetFEM on the geometry represented by `mo`. "
 "Please control the conformity of the produced mesh. You can help the mesher "

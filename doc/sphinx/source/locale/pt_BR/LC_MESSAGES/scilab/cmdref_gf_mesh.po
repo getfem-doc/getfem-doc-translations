@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GetFEM 5.5\n"
+"Project-Id-Version: GetFEM 5.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-08 22:49+0000\n"
+"POT-Creation-Date: 2026-11-23 06:29+0000\n"
 "PO-Revision-Date: 2018-07-16 06:59+0000\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/tkoyama010/teams/87607/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -262,21 +262,32 @@ msgid ""
 "(2). Similarly a sphere can be divided with up to 3 symmetry planes."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:163
+#: ../source/scilab/cmdref_gf_mesh.rst:161
+msgid ""
+"'structured_ball_shell' for a structured mesh of a ball shell (a ring in "
+"2D), e.g. \"GT='GT_QK(2,2)';ORG=[0,0];SIZES=[4,1];NSUBDIV=[3,2]\" with SIZES"
+" the outer radius and the thickness and NSUBDIV the circumferential and "
+"radial subdivisions (SYMMETRIES as for 'structured_ball'). With an ORG of "
+"dimension dim(GT)+1, the sphere (or circle) itself is meshed with elements "
+"of dimension dim(GT), for shells for instance, e.g. "
+"\"GT='GT_QK(2,2)';ORG=[0,0,0];SIZES=[4];NSUBDIV=[3];SYMMETRIES=2\""
+msgstr ""
+
+#: ../source/scilab/cmdref_gf_mesh.rst:171
 msgid "``M = gf_mesh('clone', mesh m2)``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:165
+#: ../source/scilab/cmdref_gf_mesh.rst:173
 msgid "Create a copy of a mesh."
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:168
+#: ../source/scilab/cmdref_gf_mesh.rst:176
 msgid ""
 "``M = gf_mesh('generate', mesher_object mo, scalar h[, int K = 1[, mat "
 "vertices]])``"
 msgstr ""
 
-#: ../source/scilab/cmdref_gf_mesh.rst:170
+#: ../source/scilab/cmdref_gf_mesh.rst:178
 msgid ""
 "Call the experimental mesher of GetFEM on the geometry represented by "
 "<literal>mo</literal>. Please control the conformity of the produced mesh. "
